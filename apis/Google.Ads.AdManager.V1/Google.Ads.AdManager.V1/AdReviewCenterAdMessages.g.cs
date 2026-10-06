@@ -29,7 +29,7 @@ namespace Google.Ads.AdManager.V1 {
             "Z2xlL2Fkcy9hZG1hbmFnZXIvdjEvYWRfcmV2aWV3X2NlbnRlcl9hZF9lbnVt",
             "cy5wcm90bxo/Z29vZ2xlL2Fkcy9hZG1hbmFnZXIvdjEvZXhjaGFuZ2Vfc3lu",
             "ZGljYXRpb25fcHJvZHVjdF9lbnVtLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxk",
-            "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIvsE",
+            "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIooH",
             "ChBBZFJldmlld0NlbnRlckFkEhEKBG5hbWUYASABKAlCA+BBCBIjChZhZF9y",
             "ZXZpZXdfY2VudGVyX2FkX2lkGAIgASgJQgPgQQMSbQoMcHJvZHVjdF90eXBl",
             "GAMgASgOMlIuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuRXhjaGFuZ2VTeW5k",
@@ -39,20 +39,27 @@ namespace Google.Ads.AdManager.V1 {
             "ZFN0YXR1cxJ7ChZtYW51YWxfcmV2aWV3X3N0YXR1c2VzGAYgAygOMlYuZ29v",
             "Z2xlLmFkcy5hZG1hbmFnZXIudjEuTWFudWFsQWRSZXZpZXdDZW50ZXJBZFN0",
             "YXR1c0VudW0uTWFudWFsQWRSZXZpZXdDZW50ZXJBZFN0YXR1c0ID4EEDEh0K",
-            "C3ByZXZpZXdfdXJsGAUgASgJQgPgQQNIAIgBATq3AepBswEKKWFkbWFuYWdl",
-            "ci5nb29nbGVhcGlzLmNvbS9BZFJldmlld0NlbnRlckFkEmFuZXR3b3Jrcy97",
-            "bmV0d29ya19jb2RlfS93ZWJQcm9wZXJ0aWVzL3t3ZWJfcHJvcGVydHlfY29k",
-            "ZX0vYWRSZXZpZXdDZW50ZXJBZHMve2FkX3Jldmlld19jZW50ZXJfYWR9KhFh",
-            "ZFJldmlld0NlbnRlckFkczIQYWRSZXZpZXdDZW50ZXJBZEIOCgxfcHJldmll",
-            "d191cmxC0QEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUIdQWRSZXZp",
-            "ZXdDZW50ZXJBZE1lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcv",
-            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdl",
-            "cqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1h",
-            "bmFnZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "C3ByZXZpZXdfdXJsGAUgASgJQgPgQQNIAIgBARIfChJhc3NldF9wcmV2aWV3",
+            "X3VybHMYDSADKAlCA+BBAxIkChdhZHZlcnRpc2VyX2Rpc3BsYXlfbmFtZRgH",
+            "IAEoCUID4EEDEhsKDmxhbmd1YWdlX2NvZGVzGAggAygJQgPgQQMSGQoMcmVn",
+            "aW9uX2NvZGVzGAkgAygJQgPgQQMSVwoIYWRfdHlwZXMYCiADKA4yQC5nb29n",
+            "bGUuYWRzLmFkbWFuYWdlci52MS5BcmNDcmVhdGl2ZUZvcm1hdEVudW0uQXJj",
+            "Q3JlYXRpdmVGb3JtYXRCA+BBAxIdChBkZXN0aW5hdGlvbl91cmxzGAwgAygJ",
+            "QgPgQQMSFgoJbGFiZWxfaWRzGA4gAygJQgPgQQM6twHqQbMBCilhZG1hbmFn",
+            "ZXIuZ29vZ2xlYXBpcy5jb20vQWRSZXZpZXdDZW50ZXJBZBJhbmV0d29ya3Mv",
+            "e25ldHdvcmtfY29kZX0vd2ViUHJvcGVydGllcy97d2ViX3Byb3BlcnR5X2Nv",
+            "ZGV9L2FkUmV2aWV3Q2VudGVyQWRzL3thZF9yZXZpZXdfY2VudGVyX2FkfSoR",
+            "YWRSZXZpZXdDZW50ZXJBZHMyEGFkUmV2aWV3Q2VudGVyQWRCDgoMX3ByZXZp",
+            "ZXdfdXJsQtEBChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFCHUFkUmV2",
+            "aWV3Q2VudGVyQWRNZXNzYWdlc1Byb3RvUAFaQGdvb2dsZS5nb2xhbmcub3Jn",
+            "L2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1hbmFn",
+            "ZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNcQWRN",
+            "YW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.AdReviewCenterAdEnumsReflection.Descriptor, global::Google.Ads.AdManager.V1.ExchangeSyndicationProductEnumReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdReviewCenterAd), global::Google.Ads.AdManager.V1.AdReviewCenterAd.Parser, new[]{ "Name", "AdReviewCenterAdId", "ProductType", "Status", "ManualReviewStatuses", "PreviewUrl" }, new[]{ "PreviewUrl" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdReviewCenterAd), global::Google.Ads.AdManager.V1.AdReviewCenterAd.Parser, new[]{ "Name", "AdReviewCenterAdId", "ProductType", "Status", "ManualReviewStatuses", "PreviewUrl", "AssetPreviewUrls", "AdvertiserDisplayName", "LanguageCodes", "RegionCodes", "AdTypes", "DestinationUrls", "LabelIds" }, new[]{ "PreviewUrl" }, null, null, null)
           }));
     }
     #endregion
@@ -104,6 +111,13 @@ namespace Google.Ads.AdManager.V1 {
       status_ = other.status_;
       manualReviewStatuses_ = other.manualReviewStatuses_.Clone();
       previewUrl_ = other.previewUrl_;
+      assetPreviewUrls_ = other.assetPreviewUrls_.Clone();
+      advertiserDisplayName_ = other.advertiserDisplayName_;
+      languageCodes_ = other.languageCodes_.Clone();
+      regionCodes_ = other.regionCodes_.Clone();
+      adTypes_ = other.adTypes_.Clone();
+      destinationUrls_ = other.destinationUrls_.Clone();
+      labelIds_ = other.labelIds_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -225,6 +239,113 @@ namespace Google.Ads.AdManager.V1 {
       previewUrl_ = null;
     }
 
+    /// <summary>Field number for the "asset_preview_urls" field.</summary>
+    public const int AssetPreviewUrlsFieldNumber = 13;
+    private static readonly pb::FieldCodec<string> _repeated_assetPreviewUrls_codec
+        = pb::FieldCodec.ForString(106);
+    private readonly pbc::RepeatedField<string> assetPreviewUrls_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. The preview URLs that can be embedded or accessed directly
+    /// which will present the rendered contents of the ad, each with a different
+    /// asset. These URLs expire 72 hours after being retrieved.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> AssetPreviewUrls {
+      get { return assetPreviewUrls_; }
+    }
+
+    /// <summary>Field number for the "advertiser_display_name" field.</summary>
+    public const int AdvertiserDisplayNameFieldNumber = 7;
+    private string advertiserDisplayName_ = "";
+    /// <summary>
+    /// Output only. The advertiser name of the Ad Review Center ad. Specifies the
+    /// detected advertiser for Google Display Network (GDN) ads, and individual
+    /// network name for real-time bidding (RTB) ads.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AdvertiserDisplayName {
+      get { return advertiserDisplayName_; }
+      set {
+        advertiserDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "language_codes" field.</summary>
+    public const int LanguageCodesFieldNumber = 8;
+    private static readonly pb::FieldCodec<string> _repeated_languageCodes_codec
+        = pb::FieldCodec.ForString(66);
+    private readonly pbc::RepeatedField<string> languageCodes_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. The language codes of the Ad Review Center ad. Languages
+    /// detected are represented by their BCP 47 code. For example, 'en', 'fr',
+    /// 'es-419', or 'zh-cn'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> LanguageCodes {
+      get { return languageCodes_; }
+    }
+
+    /// <summary>Field number for the "region_codes" field.</summary>
+    public const int RegionCodesFieldNumber = 9;
+    private static readonly pb::FieldCodec<string> _repeated_regionCodes_codec
+        = pb::FieldCodec.ForString(74);
+    private readonly pbc::RepeatedField<string> regionCodes_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. The region codes of the Ad Review Center ad.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> RegionCodes {
+      get { return regionCodes_; }
+    }
+
+    /// <summary>Field number for the "ad_types" field.</summary>
+    public const int AdTypesFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.ArcCreativeFormatEnum.Types.ArcCreativeFormat> _repeated_adTypes_codec
+        = pb::FieldCodec.ForEnum(82, x => (int) x, x => (global::Google.Ads.AdManager.V1.ArcCreativeFormatEnum.Types.ArcCreativeFormat) x);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.ArcCreativeFormatEnum.Types.ArcCreativeFormat> adTypes_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.ArcCreativeFormatEnum.Types.ArcCreativeFormat>();
+    /// <summary>
+    /// Output only. The ad types of the Ad Review Center ad.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.ArcCreativeFormatEnum.Types.ArcCreativeFormat> AdTypes {
+      get { return adTypes_; }
+    }
+
+    /// <summary>Field number for the "destination_urls" field.</summary>
+    public const int DestinationUrlsFieldNumber = 12;
+    private static readonly pb::FieldCodec<string> _repeated_destinationUrls_codec
+        = pb::FieldCodec.ForString(98);
+    private readonly pbc::RepeatedField<string> destinationUrls_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. The destination URLs of the Ad Review Center ad.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> DestinationUrls {
+      get { return destinationUrls_; }
+    }
+
+    /// <summary>Field number for the "label_ids" field.</summary>
+    public const int LabelIdsFieldNumber = 14;
+    private static readonly pb::FieldCodec<string> _repeated_labelIds_codec
+        = pb::FieldCodec.ForString(114);
+    private readonly pbc::RepeatedField<string> labelIds_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. The
+    /// [labelIds][google.ads.admanager.v1.FetchAdReviewCenterCustomLabelsResponse.CustomLabel.label_id]
+    /// associated with this Ad Review Center ad.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> LabelIds {
+      get { return labelIds_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -246,6 +367,13 @@ namespace Google.Ads.AdManager.V1 {
       if (Status != other.Status) return false;
       if(!manualReviewStatuses_.Equals(other.manualReviewStatuses_)) return false;
       if (PreviewUrl != other.PreviewUrl) return false;
+      if(!assetPreviewUrls_.Equals(other.assetPreviewUrls_)) return false;
+      if (AdvertiserDisplayName != other.AdvertiserDisplayName) return false;
+      if(!languageCodes_.Equals(other.languageCodes_)) return false;
+      if(!regionCodes_.Equals(other.regionCodes_)) return false;
+      if(!adTypes_.Equals(other.adTypes_)) return false;
+      if(!destinationUrls_.Equals(other.destinationUrls_)) return false;
+      if(!labelIds_.Equals(other.labelIds_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -259,6 +387,13 @@ namespace Google.Ads.AdManager.V1 {
       if (Status != global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus.Unspecified) hash ^= Status.GetHashCode();
       hash ^= manualReviewStatuses_.GetHashCode();
       if (HasPreviewUrl) hash ^= PreviewUrl.GetHashCode();
+      hash ^= assetPreviewUrls_.GetHashCode();
+      if (AdvertiserDisplayName.Length != 0) hash ^= AdvertiserDisplayName.GetHashCode();
+      hash ^= languageCodes_.GetHashCode();
+      hash ^= regionCodes_.GetHashCode();
+      hash ^= adTypes_.GetHashCode();
+      hash ^= destinationUrls_.GetHashCode();
+      hash ^= labelIds_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -298,6 +433,16 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteString(PreviewUrl);
       }
       manualReviewStatuses_.WriteTo(output, _repeated_manualReviewStatuses_codec);
+      if (AdvertiserDisplayName.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(AdvertiserDisplayName);
+      }
+      languageCodes_.WriteTo(output, _repeated_languageCodes_codec);
+      regionCodes_.WriteTo(output, _repeated_regionCodes_codec);
+      adTypes_.WriteTo(output, _repeated_adTypes_codec);
+      destinationUrls_.WriteTo(output, _repeated_destinationUrls_codec);
+      assetPreviewUrls_.WriteTo(output, _repeated_assetPreviewUrls_codec);
+      labelIds_.WriteTo(output, _repeated_labelIds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -329,6 +474,16 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteString(PreviewUrl);
       }
       manualReviewStatuses_.WriteTo(ref output, _repeated_manualReviewStatuses_codec);
+      if (AdvertiserDisplayName.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(AdvertiserDisplayName);
+      }
+      languageCodes_.WriteTo(ref output, _repeated_languageCodes_codec);
+      regionCodes_.WriteTo(ref output, _repeated_regionCodes_codec);
+      adTypes_.WriteTo(ref output, _repeated_adTypes_codec);
+      destinationUrls_.WriteTo(ref output, _repeated_destinationUrls_codec);
+      assetPreviewUrls_.WriteTo(ref output, _repeated_assetPreviewUrls_codec);
+      labelIds_.WriteTo(ref output, _repeated_labelIds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -355,6 +510,15 @@ namespace Google.Ads.AdManager.V1 {
       if (HasPreviewUrl) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PreviewUrl);
       }
+      size += assetPreviewUrls_.CalculateSize(_repeated_assetPreviewUrls_codec);
+      if (AdvertiserDisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AdvertiserDisplayName);
+      }
+      size += languageCodes_.CalculateSize(_repeated_languageCodes_codec);
+      size += regionCodes_.CalculateSize(_repeated_regionCodes_codec);
+      size += adTypes_.CalculateSize(_repeated_adTypes_codec);
+      size += destinationUrls_.CalculateSize(_repeated_destinationUrls_codec);
+      size += labelIds_.CalculateSize(_repeated_labelIds_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -383,6 +547,15 @@ namespace Google.Ads.AdManager.V1 {
       if (other.HasPreviewUrl) {
         PreviewUrl = other.PreviewUrl;
       }
+      assetPreviewUrls_.Add(other.assetPreviewUrls_);
+      if (other.AdvertiserDisplayName.Length != 0) {
+        AdvertiserDisplayName = other.AdvertiserDisplayName;
+      }
+      languageCodes_.Add(other.languageCodes_);
+      regionCodes_.Add(other.regionCodes_);
+      adTypes_.Add(other.adTypes_);
+      destinationUrls_.Add(other.destinationUrls_);
+      labelIds_.Add(other.labelIds_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -427,6 +600,35 @@ namespace Google.Ads.AdManager.V1 {
             manualReviewStatuses_.AddEntriesFrom(input, _repeated_manualReviewStatuses_codec);
             break;
           }
+          case 58: {
+            AdvertiserDisplayName = input.ReadString();
+            break;
+          }
+          case 66: {
+            languageCodes_.AddEntriesFrom(input, _repeated_languageCodes_codec);
+            break;
+          }
+          case 74: {
+            regionCodes_.AddEntriesFrom(input, _repeated_regionCodes_codec);
+            break;
+          }
+          case 82:
+          case 80: {
+            adTypes_.AddEntriesFrom(input, _repeated_adTypes_codec);
+            break;
+          }
+          case 98: {
+            destinationUrls_.AddEntriesFrom(input, _repeated_destinationUrls_codec);
+            break;
+          }
+          case 106: {
+            assetPreviewUrls_.AddEntriesFrom(input, _repeated_assetPreviewUrls_codec);
+            break;
+          }
+          case 114: {
+            labelIds_.AddEntriesFrom(input, _repeated_labelIds_codec);
+            break;
+          }
         }
       }
     #endif
@@ -469,6 +671,35 @@ namespace Google.Ads.AdManager.V1 {
           case 50:
           case 48: {
             manualReviewStatuses_.AddEntriesFrom(ref input, _repeated_manualReviewStatuses_codec);
+            break;
+          }
+          case 58: {
+            AdvertiserDisplayName = input.ReadString();
+            break;
+          }
+          case 66: {
+            languageCodes_.AddEntriesFrom(ref input, _repeated_languageCodes_codec);
+            break;
+          }
+          case 74: {
+            regionCodes_.AddEntriesFrom(ref input, _repeated_regionCodes_codec);
+            break;
+          }
+          case 82:
+          case 80: {
+            adTypes_.AddEntriesFrom(ref input, _repeated_adTypes_codec);
+            break;
+          }
+          case 98: {
+            destinationUrls_.AddEntriesFrom(ref input, _repeated_destinationUrls_codec);
+            break;
+          }
+          case 106: {
+            assetPreviewUrls_.AddEntriesFrom(ref input, _repeated_assetPreviewUrls_codec);
+            break;
+          }
+          case 114: {
+            labelIds_.AddEntriesFrom(ref input, _repeated_labelIds_codec);
             break;
           }
         }

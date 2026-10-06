@@ -27,6 +27,7 @@ using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Ads.AdManager.V1
 {
@@ -47,7 +48,9 @@ namespace Google.Ads.AdManager.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetNativeStyleSettings = existing.GetNativeStyleSettings;
             ListNativeStylesSettings = existing.ListNativeStylesSettings;
+            CreateNativeStyleSettings = existing.CreateNativeStyleSettings;
             BatchCreateNativeStylesSettings = existing.BatchCreateNativeStylesSettings;
+            UpdateNativeStyleSettings = existing.UpdateNativeStyleSettings;
             BatchUpdateNativeStylesSettings = existing.BatchUpdateNativeStylesSettings;
             BatchActivateNativeStylesSettings = existing.BatchActivateNativeStylesSettings;
             BatchDeactivateNativeStylesSettings = existing.BatchDeactivateNativeStylesSettings;
@@ -83,6 +86,19 @@ namespace Google.Ads.AdManager.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NativeStyleServiceClient.CreateNativeStyle</c> and <c>NativeStyleServiceClient.CreateNativeStyleAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateNativeStyleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>NativeStyleServiceClient.BatchCreateNativeStyles</c> and
         /// <c>NativeStyleServiceClient.BatchCreateNativeStylesAsync</c>.
         /// </summary>
@@ -93,6 +109,19 @@ namespace Google.Ads.AdManager.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings BatchCreateNativeStylesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NativeStyleServiceClient.UpdateNativeStyle</c> and <c>NativeStyleServiceClient.UpdateNativeStyleAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateNativeStyleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -558,6 +587,139 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
+        /// Creates a `NativeStyle` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NativeStyle CreateNativeStyle(CreateNativeStyleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a `NativeStyle` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NativeStyle> CreateNativeStyleAsync(CreateNativeStyleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a `NativeStyle` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NativeStyle> CreateNativeStyleAsync(CreateNativeStyleRequest request, st::CancellationToken cancellationToken) =>
+            CreateNativeStyleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a `NativeStyle` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `NativeStyle` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="nativeStyle">
+        /// Required. The `NativeStyle` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NativeStyle CreateNativeStyle(string parent, NativeStyle nativeStyle, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNativeStyle(new CreateNativeStyleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                NativeStyle = gax::GaxPreconditions.CheckNotNull(nativeStyle, nameof(nativeStyle)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `NativeStyle` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `NativeStyle` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="nativeStyle">
+        /// Required. The `NativeStyle` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NativeStyle> CreateNativeStyleAsync(string parent, NativeStyle nativeStyle, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNativeStyleAsync(new CreateNativeStyleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                NativeStyle = gax::GaxPreconditions.CheckNotNull(nativeStyle, nameof(nativeStyle)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `NativeStyle` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `NativeStyle` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="nativeStyle">
+        /// Required. The `NativeStyle` to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NativeStyle> CreateNativeStyleAsync(string parent, NativeStyle nativeStyle, st::CancellationToken cancellationToken) =>
+            CreateNativeStyleAsync(parent, nativeStyle, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a `NativeStyle` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `NativeStyle` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="nativeStyle">
+        /// Required. The `NativeStyle` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NativeStyle CreateNativeStyle(NetworkName parent, NativeStyle nativeStyle, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNativeStyle(new CreateNativeStyleRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                NativeStyle = gax::GaxPreconditions.CheckNotNull(nativeStyle, nameof(nativeStyle)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `NativeStyle` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `NativeStyle` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="nativeStyle">
+        /// Required. The `NativeStyle` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NativeStyle> CreateNativeStyleAsync(NetworkName parent, NativeStyle nativeStyle, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNativeStyleAsync(new CreateNativeStyleRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                NativeStyle = gax::GaxPreconditions.CheckNotNull(nativeStyle, nameof(nativeStyle)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `NativeStyle` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `NativeStyle` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="nativeStyle">
+        /// Required. The `NativeStyle` to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NativeStyle> CreateNativeStyleAsync(NetworkName parent, NativeStyle nativeStyle, st::CancellationToken cancellationToken) =>
+            CreateNativeStyleAsync(parent, nativeStyle, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates `NativeStyle` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -719,6 +881,89 @@ namespace Google.Ads.AdManager.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<BatchCreateNativeStylesResponse> BatchCreateNativeStylesAsync(NetworkName parent, scg::IEnumerable<CreateNativeStyleRequest> requests, st::CancellationToken cancellationToken) =>
             BatchCreateNativeStylesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a `NativeStyle` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NativeStyle UpdateNativeStyle(UpdateNativeStyleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a `NativeStyle` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NativeStyle> UpdateNativeStyleAsync(UpdateNativeStyleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a `NativeStyle` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NativeStyle> UpdateNativeStyleAsync(UpdateNativeStyleRequest request, st::CancellationToken cancellationToken) =>
+            UpdateNativeStyleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a `NativeStyle` object.
+        /// </summary>
+        /// <param name="nativeStyle">
+        /// Required. The `NativeStyle` to update.
+        /// 
+        /// The `NativeStyle`'s `name` is used to identify the `NativeStyle` to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NativeStyle UpdateNativeStyle(NativeStyle nativeStyle, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateNativeStyle(new UpdateNativeStyleRequest
+            {
+                NativeStyle = gax::GaxPreconditions.CheckNotNull(nativeStyle, nameof(nativeStyle)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a `NativeStyle` object.
+        /// </summary>
+        /// <param name="nativeStyle">
+        /// Required. The `NativeStyle` to update.
+        /// 
+        /// The `NativeStyle`'s `name` is used to identify the `NativeStyle` to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NativeStyle> UpdateNativeStyleAsync(NativeStyle nativeStyle, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateNativeStyleAsync(new UpdateNativeStyleRequest
+            {
+                NativeStyle = gax::GaxPreconditions.CheckNotNull(nativeStyle, nameof(nativeStyle)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a `NativeStyle` object.
+        /// </summary>
+        /// <param name="nativeStyle">
+        /// Required. The `NativeStyle` to update.
+        /// 
+        /// The `NativeStyle`'s `name` is used to identify the `NativeStyle` to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NativeStyle> UpdateNativeStyleAsync(NativeStyle nativeStyle, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateNativeStyleAsync(nativeStyle, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Batch updates `NativeStyle` objects.
@@ -1338,7 +1583,11 @@ namespace Google.Ads.AdManager.V1
 
         private readonly gaxgrpc::ApiCall<ListNativeStylesRequest, ListNativeStylesResponse> _callListNativeStyles;
 
+        private readonly gaxgrpc::ApiCall<CreateNativeStyleRequest, NativeStyle> _callCreateNativeStyle;
+
         private readonly gaxgrpc::ApiCall<BatchCreateNativeStylesRequest, BatchCreateNativeStylesResponse> _callBatchCreateNativeStyles;
+
+        private readonly gaxgrpc::ApiCall<UpdateNativeStyleRequest, NativeStyle> _callUpdateNativeStyle;
 
         private readonly gaxgrpc::ApiCall<BatchUpdateNativeStylesRequest, BatchUpdateNativeStylesResponse> _callBatchUpdateNativeStyles;
 
@@ -1369,9 +1618,15 @@ namespace Google.Ads.AdManager.V1
             _callListNativeStyles = clientHelper.BuildApiCall<ListNativeStylesRequest, ListNativeStylesResponse>("ListNativeStyles", grpcClient.ListNativeStylesAsync, grpcClient.ListNativeStyles, effectiveSettings.ListNativeStylesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListNativeStyles);
             Modify_ListNativeStylesApiCall(ref _callListNativeStyles);
+            _callCreateNativeStyle = clientHelper.BuildApiCall<CreateNativeStyleRequest, NativeStyle>("CreateNativeStyle", grpcClient.CreateNativeStyleAsync, grpcClient.CreateNativeStyle, effectiveSettings.CreateNativeStyleSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateNativeStyle);
+            Modify_CreateNativeStyleApiCall(ref _callCreateNativeStyle);
             _callBatchCreateNativeStyles = clientHelper.BuildApiCall<BatchCreateNativeStylesRequest, BatchCreateNativeStylesResponse>("BatchCreateNativeStyles", grpcClient.BatchCreateNativeStylesAsync, grpcClient.BatchCreateNativeStyles, effectiveSettings.BatchCreateNativeStylesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchCreateNativeStyles);
             Modify_BatchCreateNativeStylesApiCall(ref _callBatchCreateNativeStyles);
+            _callUpdateNativeStyle = clientHelper.BuildApiCall<UpdateNativeStyleRequest, NativeStyle>("UpdateNativeStyle", grpcClient.UpdateNativeStyleAsync, grpcClient.UpdateNativeStyle, effectiveSettings.UpdateNativeStyleSettings).WithGoogleRequestParam("native_style.name", request => request.NativeStyle?.Name);
+            Modify_ApiCall(ref _callUpdateNativeStyle);
+            Modify_UpdateNativeStyleApiCall(ref _callUpdateNativeStyle);
             _callBatchUpdateNativeStyles = clientHelper.BuildApiCall<BatchUpdateNativeStylesRequest, BatchUpdateNativeStylesResponse>("BatchUpdateNativeStyles", grpcClient.BatchUpdateNativeStylesAsync, grpcClient.BatchUpdateNativeStyles, effectiveSettings.BatchUpdateNativeStylesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchUpdateNativeStyles);
             Modify_BatchUpdateNativeStylesApiCall(ref _callBatchUpdateNativeStyles);
@@ -1393,7 +1648,11 @@ namespace Google.Ads.AdManager.V1
 
         partial void Modify_ListNativeStylesApiCall(ref gaxgrpc::ApiCall<ListNativeStylesRequest, ListNativeStylesResponse> call);
 
+        partial void Modify_CreateNativeStyleApiCall(ref gaxgrpc::ApiCall<CreateNativeStyleRequest, NativeStyle> call);
+
         partial void Modify_BatchCreateNativeStylesApiCall(ref gaxgrpc::ApiCall<BatchCreateNativeStylesRequest, BatchCreateNativeStylesResponse> call);
+
+        partial void Modify_UpdateNativeStyleApiCall(ref gaxgrpc::ApiCall<UpdateNativeStyleRequest, NativeStyle> call);
 
         partial void Modify_BatchUpdateNativeStylesApiCall(ref gaxgrpc::ApiCall<BatchUpdateNativeStylesRequest, BatchUpdateNativeStylesResponse> call);
 
@@ -1412,7 +1671,11 @@ namespace Google.Ads.AdManager.V1
 
         partial void Modify_ListNativeStylesRequest(ref ListNativeStylesRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateNativeStyleRequest(ref CreateNativeStyleRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_BatchCreateNativeStylesRequest(ref BatchCreateNativeStylesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateNativeStyleRequest(ref UpdateNativeStyleRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BatchUpdateNativeStylesRequest(ref BatchUpdateNativeStylesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1471,6 +1734,30 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
+        /// Creates a `NativeStyle` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override NativeStyle CreateNativeStyle(CreateNativeStyleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateNativeStyleRequest(ref request, ref callSettings);
+            return _callCreateNativeStyle.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a `NativeStyle` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<NativeStyle> CreateNativeStyleAsync(CreateNativeStyleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateNativeStyleRequest(ref request, ref callSettings);
+            return _callCreateNativeStyle.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Creates `NativeStyle` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1492,6 +1779,30 @@ namespace Google.Ads.AdManager.V1
         {
             Modify_BatchCreateNativeStylesRequest(ref request, ref callSettings);
             return _callBatchCreateNativeStyles.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a `NativeStyle` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override NativeStyle UpdateNativeStyle(UpdateNativeStyleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateNativeStyleRequest(ref request, ref callSettings);
+            return _callUpdateNativeStyle.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a `NativeStyle` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<NativeStyle> UpdateNativeStyleAsync(UpdateNativeStyleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateNativeStyleRequest(ref request, ref callSettings);
+            return _callUpdateNativeStyle.Async(request, callSettings);
         }
 
         /// <summary>

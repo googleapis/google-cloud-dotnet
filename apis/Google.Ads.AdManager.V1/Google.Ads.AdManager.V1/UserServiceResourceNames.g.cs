@@ -30,4 +30,76 @@ namespace Google.Ads.AdManager.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class ListUsersRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateUserRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchCreateUsersRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchUpdateUsersRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchActivateUsersRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchDeactivateUsersRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }

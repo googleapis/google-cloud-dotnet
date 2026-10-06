@@ -47,7 +47,7 @@ namespace Google.Ads.AdManager.V1 {
   #region Messages
   /// <summary>
   /// Wrapper message for
-  /// [ThirdPartyDataDeclarationTypeEnum][google.ads.admanager.v1.ThirdPartyDataDeclarationTypeEnum]
+  /// [ThirdPartyDataDeclarationType][google.ads.admanager.v1.ThirdPartyDataDeclarationTypeEnum.ThirdPartyDataDeclarationType]
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ThirdPartyDataDeclarationTypeEnum : pb::IMessage<ThirdPartyDataDeclarationTypeEnum>

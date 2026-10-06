@@ -245,7 +245,8 @@ namespace Google.Ads.AdManager.V1 {
         /// https://support.google.com/admanager/answer/7519021#spotlight
         ///
         /// Cost per action. The line item
-        /// [type][google.ads.admanager.v1.LineItem.line_item_type] must be one of:
+        /// [lineItemType][google.ads.admanager.v1.LineItem.line_item_type] must be
+        /// one of:
         ///
         /// * [LineItemTypeEnum.LineItemType.SPONSORSHIP][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.SPONSORSHIP]
         /// * [LineItemTypeEnum.LineItemType.STANDARD][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.STANDARD]
@@ -256,7 +257,8 @@ namespace Google.Ads.AdManager.V1 {
         [pbr::OriginalName("CPA")] Cpa = 1,
         /// <summary>
         /// Cost per click. The line item
-        /// [type][google.ads.admanager.v1.LineItem.line_item_type] must be one of:
+        /// [lineItemType][google.ads.admanager.v1.LineItem.line_item_type] must be
+        /// one of:
         ///
         /// * [LineItemTypeEnum.LineItemType.SPONSORSHIP][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.SPONSORSHIP]
         /// * [LineItemTypeEnum.LineItemType.STANDARD][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.STANDARD]
@@ -268,7 +270,8 @@ namespace Google.Ads.AdManager.V1 {
         [pbr::OriginalName("CPC")] Cpc = 2,
         /// <summary>
         /// Cost per day. The line item
-        /// [type][google.ads.admanager.v1.LineItem.line_item_type] must be one of:
+        /// [lineItemType][google.ads.admanager.v1.LineItem.line_item_type] must be
+        /// one of:
         ///
         /// * [LineItemTypeEnum.LineItemType.SPONSORSHIP][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.SPONSORSHIP]
         /// * [LineItemTypeEnum.LineItemType.NETWORK][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.NETWORK]
@@ -276,7 +279,8 @@ namespace Google.Ads.AdManager.V1 {
         [pbr::OriginalName("CPD")] Cpd = 3,
         /// <summary>
         /// Cost per mille (thousand) impressions. The line item
-        /// [type][google.ads.admanager.v1.LineItem.line_item_type] must be one of:
+        /// [lineItemType][google.ads.admanager.v1.LineItem.line_item_type] must be
+        /// one of:
         ///
         /// * [LineItemTypeEnum.LineItemType.SPONSORSHIP][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.SPONSORSHIP]
         /// * [LineItemTypeEnum.LineItemType.STANDARD][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.STANDARD]
@@ -288,29 +292,32 @@ namespace Google.Ads.AdManager.V1 {
         [pbr::OriginalName("CPM")] Cpm = 4,
         /// <summary>
         /// Cost per mille (thousand) Active View viewable impressions. The line item
-        /// [type][google.ads.admanager.v1.LineItem.line_item_type] must be one of:
+        /// [lineItemType][google.ads.admanager.v1.LineItem.line_item_type] must be
+        /// one of:
         ///
         /// * [LineItemTypeEnum.LineItemType.STANDARD][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.STANDARD]
         /// </summary>
         [pbr::OriginalName("VCPM")] Vcpm = 5,
         /// <summary>
         /// Cost per millie (thousand) in-target impressions. The line item
-        /// [type][google.ads.admanager.v1.LineItem.line_item_type] must be one of:
+        /// [lineItemType][google.ads.admanager.v1.LineItem.line_item_type] must be
+        /// one of:
         ///
         /// * [LineItemTypeEnum.LineItemType.STANDARD][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.STANDARD]
         /// </summary>
         [pbr::OriginalName("CPM_IN_TARGET")] CpmInTarget = 6,
         /// <summary>
         /// Cost for the entire flight of the deal. The line item
-        /// [type][google.ads.admanager.v1.LineItem.line_item_type] must be must be
-        /// one of:
+        /// [lineItemType][google.ads.admanager.v1.LineItem.line_item_type] must be
+        /// must be one of:
         ///
         /// * [LineItemTypeEnum.LineItemType.SPONSORSHIP][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.SPONSORSHIP]
         /// </summary>
         [pbr::OriginalName("CPF")] Cpf = 7,
         /// <summary>
         /// Cost per completed view. The line item
-        /// [type][google.ads.admanager.v1.LineItem.line_item_type] must be one of:
+        /// [lineItemType][google.ads.admanager.v1.LineItem.line_item_type] must be
+        /// one of:
         ///
         /// * [LineItemTypeEnum.LineItemType.STANDARD][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.STANDARD].
         /// </summary>

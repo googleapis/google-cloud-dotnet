@@ -747,7 +747,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for 'CreateEntitySignalsMapping' method.
+  /// Request object for `CreateEntitySignalsMapping` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateEntitySignalsMappingRequest : pb::IMessage<CreateEntitySignalsMappingRequest>
@@ -1001,7 +1001,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for 'UpdateEntitySignalsMapping' method.
+  /// Request object for `UpdateEntitySignalsMapping` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateEntitySignalsMappingRequest : pb::IMessage<UpdateEntitySignalsMappingRequest>

@@ -25,21 +25,393 @@ namespace Google.Ads.AdManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci9nb29nbGUvYWRzL2FkbWFuYWdlci92MS9jcmVhdGl2ZV9tZXNzYWdlcy5w",
-            "cm90bxIXZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEaH2dvb2dsZS9hcGkvZmll",
-            "bGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8i",
-            "uQEKCENyZWF0aXZlEhEKBG5hbWUYASABKAlCA+BBCBIeCgxkaXNwbGF5X25h",
-            "bWUYCCABKAlCA+BBAkgAiAEBOmnqQWYKIWFkbWFuYWdlci5nb29nbGVhcGlz",
-            "LmNvbS9DcmVhdGl2ZRIsbmV0d29ya3Mve25ldHdvcmtfY29kZX0vY3JlYXRp",
-            "dmVzL3tjcmVhdGl2ZX0qCWNyZWF0aXZlczIIY3JlYXRpdmVCDwoNX2Rpc3Bs",
-            "YXlfbmFtZULJAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhVDcmVh",
-            "dGl2ZU1lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoCF0dv",
-            "b2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFnZXJc",
-            "VjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "cm90bxIXZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEaK2dvb2dsZS9hZHMvYWRt",
+            "YW5hZ2VyL3YxL2FwcGxpZWRfbGFiZWwucHJvdG8aLGdvb2dsZS9hZHMvYWRt",
+            "YW5hZ2VyL3YxL2NyZWF0aXZlX2Fzc2V0LnByb3RvGixnb29nbGUvYWRzL2Fk",
+            "bWFuYWdlci92MS9jcmVhdGl2ZV9lbnVtcy5wcm90bxoyZ29vZ2xlL2Fkcy9h",
+            "ZG1hbmFnZXIvdjEvY3JlYXRpdmVfcGxhY2Vob2xkZXIucHJvdG8aT2dvb2ds",
+            "ZS9hZHMvYWRtYW5hZ2VyL3YxL2NyZWF0aXZlX3RoaXJkX3BhcnR5X2RhdGFf",
+            "ZGVjbGFyYXRpb25fc3RhdHVzX2VudW0ucHJvdG8aM2dvb2dsZS9hZHMvYWRt",
+            "YW5hZ2VyL3YxL2N1c3RvbV9jcmVhdGl2ZV9hc3NldC5wcm90bxowZ29vZ2xl",
+            "L2Fkcy9hZG1hbmFnZXIvdjEvY3VzdG9tX2ZpZWxkX3ZhbHVlLnByb3RvGixn",
+            "b29nbGUvYWRzL2FkbWFuYWdlci92MS9kZWxpdmVyeV9lbnVtcy5wcm90bxpP",
+            "Z29vZ2xlL2Fkcy9hZG1hbmFnZXIvdjEvcmljaF9tZWRpYV9zdHVkaW9fY3Jl",
+            "YXRpdmVfYmlsbGluZ19hdHRyaWJ1dGVfZW51bS5wcm90bxpEZ29vZ2xlL2Fk",
+            "cy9hZG1hbmFnZXIvdjEvcmljaF9tZWRpYV9zdHVkaW9fY3JlYXRpdmVfZm9y",
+            "bWF0X2VudW0ucHJvdG8aOGdvb2dsZS9hZHMvYWRtYW5hZ2VyL3YxL3JpY2hf",
+            "bWVkaWFfc3R1ZGlvX21lc3NhZ2VzLnByb3RvGiJnb29nbGUvYWRzL2FkbWFu",
+            "YWdlci92MS9zaXplLnByb3RvGjRnb29nbGUvYWRzL2FkbWFuYWdlci92MS9z",
+            "a2lwcGFibGVfYWRfdHlwZV9lbnVtLnByb3RvGjpnb29nbGUvYWRzL2FkbWFu",
+            "YWdlci92MS90aGlyZF9wYXJ0eV9kYXRhX2RlY2xhcmF0aW9uLnByb3RvGjVn",
+            "b29nbGUvYWRzL2FkbWFuYWdlci92MS92YXN0X3JlZGlyZWN0X3R5cGVfZW51",
+            "bS5wcm90bxowZ29vZ2xlL2Fkcy9hZG1hbmFnZXIvdjEvdmlkZW9fdHJhY2tp",
+            "bmdfdXJsLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
+            "Ghlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh5nb29nbGUvcHJvdG9idWYv",
+            "ZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJv",
+            "dG8ithgKCENyZWF0aXZlElcKFGFkX2V4Y2hhbmdlX2NyZWF0aXZlGBQgASgL",
+            "MjIuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQWRFeGNoYW5nZUNyZWF0aXZl",
+            "RGV0YWlsc0ID4EEBSAASUQoRYWRfc2Vuc2VfY3JlYXRpdmUYFiABKAsyLy5n",
+            "b29nbGUuYWRzLmFkbWFuYWdlci52MS5BZFNlbnNlQ3JlYXRpdmVEZXRhaWxz",
+            "QgPgQQFIABJkChthc3BlY3RfcmF0aW9faW1hZ2VfY3JlYXRpdmUYFyABKAsy",
+            "OC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5Bc3BlY3RSYXRpb0ltYWdlQ3Jl",
+            "YXRpdmVEZXRhaWxzQgPgQQFIABJMCg5hdWRpb19jcmVhdGl2ZRgYIAEoCzIt",
+            "Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkF1ZGlvQ3JlYXRpdmVEZXRhaWxz",
+            "QgPgQQFIABJdChdhdWRpb19yZWRpcmVjdF9jcmVhdGl2ZRgZIAEoCzI1Lmdv",
+            "b2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkF1ZGlvUmVkaXJlY3RDcmVhdGl2ZURl",
+            "dGFpbHNCA+BBAUgAEl0KF2NsaWNrX3RyYWNraW5nX2NyZWF0aXZlGBogASgL",
+            "MjUuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ2xpY2tUcmFja2luZ0NyZWF0",
+            "aXZlRGV0YWlsc0ID4EEBSAASTgoPY3VzdG9tX2NyZWF0aXZlGBIgASgLMi4u",
+            "Z29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3VzdG9tQ3JlYXRpdmVEZXRhaWxz",
+            "QgPgQQFIABJMCg5odG1sNV9jcmVhdGl2ZRghIAEoCzItLmdvb2dsZS5hZHMu",
+            "YWRtYW5hZ2VyLnYxLkh0bWw1Q3JlYXRpdmVEZXRhaWxzQgPgQQFIABJMCg5p",
+            "bWFnZV9jcmVhdGl2ZRgTIAEoCzItLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYx",
+            "LkltYWdlQ3JlYXRpdmVEZXRhaWxzQgPgQQFIABJbChZpbWFnZV9vdmVybGF5",
+            "X2NyZWF0aXZlGCMgASgLMjQuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuSW1h",
+            "Z2VPdmVybGF5Q3JlYXRpdmVEZXRhaWxzQgPgQQFIABJdChdpbWFnZV9yZWRp",
+            "cmVjdF9jcmVhdGl2ZRgkIAEoCzI1Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYx",
+            "LkltYWdlUmVkaXJlY3RDcmVhdGl2ZURldGFpbHNCA+BBAUgAEmwKH2ltYWdl",
+            "X3JlZGlyZWN0X292ZXJsYXlfY3JlYXRpdmUYJSABKAsyPC5nb29nbGUuYWRz",
+            "LmFkbWFuYWdlci52MS5JbWFnZVJlZGlyZWN0T3ZlcmxheUNyZWF0aXZlRGV0",
+            "YWlsc0ID4EEBSAASYwoaaW50ZXJuYWxfcmVkaXJlY3RfY3JlYXRpdmUYJiAB",
+            "KAsyOC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5JbnRlcm5hbFJlZGlyZWN0",
+            "Q3JlYXRpdmVEZXRhaWxzQgPgQQFIABJVChNsZWdhY3lfZGZwX2NyZWF0aXZl",
+            "GCcgASgLMjEuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuTGVnYWN5RGZwQ3Jl",
+            "YXRpdmVEZXRhaWxzQgPgQQFIABJaChVwcm9ncmFtbWF0aWNfY3JlYXRpdmUY",
+            "KiABKAsyNC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5Qcm9ncmFtbWF0aWND",
+            "cmVhdGl2ZURldGFpbHNCA+BBAUgAEmIKGnJpY2hfbWVkaWFfc3R1ZGlvX2Ny",
+            "ZWF0aXZlGCsgASgLMjcuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuUmljaE1l",
+            "ZGlhU3R1ZGlvQ3JlYXRpdmVEZXRhaWxzQgPgQQFIABJWChRzZXRfdG9wX2Jv",
+            "eF9jcmVhdGl2ZRguIAEoCzIxLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlNl",
+            "dFRvcEJveENyZWF0aXZlRGV0YWlsc0ID4EEBSAASUgoRdGVtcGxhdGVfY3Jl",
+            "YXRpdmUYLyABKAsyMC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5UZW1wbGF0",
+            "ZUNyZWF0aXZlRGV0YWlsc0ID4EEBSAASVwoUdGhpcmRfcGFydHlfY3JlYXRp",
+            "dmUYMCABKAsyMi5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5UaGlyZFBhcnR5",
+            "Q3JlYXRpdmVEZXRhaWxzQgPgQQFIABJbChZ2YXN0X3JlZGlyZWN0X2NyZWF0",
+            "aXZlGDEgASgLMjQuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuVmFzdFJlZGly",
+            "ZWN0Q3JlYXRpdmVEZXRhaWxzQgPgQQFIABJMCg52aWRlb19jcmVhdGl2ZRgz",
+            "IAEoCzItLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlZpZGVvQ3JlYXRpdmVE",
+            "ZXRhaWxzQgPgQQFIABJdChd2aWRlb19yZWRpcmVjdF9jcmVhdGl2ZRg1IAEo",
+            "CzI1Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlZpZGVvUmVkaXJlY3RDcmVh",
+            "dGl2ZURldGFpbHNCA+BBAUgAEhEKBG5hbWUYASABKAlCA+BBCBIeCgxkaXNw",
+            "bGF5X25hbWUYCCABKAlCA+BBAkgBiAEBEkEKCmFkdmVydGlzZXIYAiABKAlC",
+            "KOBBAvpBIgogYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0NvbXBhbnlIAogB",
+            "ARI0Cgt1cGRhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxJLChNjdXN0b21fZmllbGRfdmFsdWVzGEwgAygLMikuZ29v",
+            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuQ3VzdG9tRmllbGRWYWx1ZUID4EEBEh0K",
+            "C3ByZXZpZXdfdXJsGAQgASgJQgPgQQNIA4gBARIzCgRzaXplGAUgASgLMh0u",
+            "Z29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuU2l6ZUIG4EEC4EEFEl0KHHRoaXJk",
+            "X3BhcnR5X2RhdGFfZGVjbGFyYXRpb24YOyABKAsyMi5nb29nbGUuYWRzLmFk",
+            "bWFuYWdlci52MS5UaGlyZFBhcnR5RGF0YURlY2xhcmF0aW9uQgPgQQESowEK",
+            "I3RoaXJkX3BhcnR5X2RhdGFfZGVjbGFyYXRpb25fc3RhdHVzGDwgASgOMmwu",
+            "Z29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3JlYXRpdmVUaGlyZFBhcnR5RGF0",
+            "YURlY2xhcmF0aW9uU3RhdHVzRW51bS5DcmVhdGl2ZVRoaXJkUGFydHlEYXRh",
+            "RGVjbGFyYXRpb25TdGF0dXNCA+BBA0gEiAEBEkAKLnNlbGZfZGVjbGFyZWRf",
+            "ZXVyb3BlYW5fdW5pb25fcG9saXRpY2FsX2NvbnRlbnQYDSABKAhCA+BBAUgF",
+            "iAEBEicKEmFkX2JhZGdpbmdfZW5hYmxlZBgRIAEoCEIG4EEB4EEHSAaIAQES",
+            "QgoOYXBwbGllZF9sYWJlbHMYOCADKAsyJS5nb29nbGUuYWRzLmFkbWFuYWdl",
+            "ci52MS5BcHBsaWVkTGFiZWxCA+BBARJSChZidXllcl9wbGFjZW1lbnRfY29u",
+            "ZmlnGFEgASgLMi0uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQnV5ZXJQbGFj",
+            "ZW1lbnRDb25maWdCA+BBATpp6kFmCiFhZG1hbmFnZXIuZ29vZ2xlYXBpcy5j",
+            "b20vQ3JlYXRpdmUSLG5ldHdvcmtzL3tuZXR3b3JrX2NvZGV9L2NyZWF0aXZl",
+            "cy97Y3JlYXRpdmV9KgljcmVhdGl2ZXMyCGNyZWF0aXZlQgkKB2RldGFpbHNC",
+            "DwoNX2Rpc3BsYXlfbmFtZUINCgtfYWR2ZXJ0aXNlckIOCgxfcHJldmlld191",
+            "cmxCJgokX3RoaXJkX3BhcnR5X2RhdGFfZGVjbGFyYXRpb25fc3RhdHVzQjEK",
+            "L19zZWxmX2RlY2xhcmVkX2V1cm9wZWFuX3VuaW9uX3BvbGl0aWNhbF9jb250",
+            "ZW50QhUKE19hZF9iYWRnaW5nX2VuYWJsZWQisAIKGUFkRXhjaGFuZ2VDcmVh",
+            "dGl2ZURldGFpbHMSIQoPbmF0aXZlX2VsaWdpYmxlGAEgASgIQgPgQQFIAIgB",
+            "ARIeCgxpbnRlcnN0aXRpYWwYAiABKAhCA+BBAUgBiAEBEiwKGmFsbG93c19h",
+            "bGxfcmVxdWVzdGVkX3NpemVzGAMgASgIQgPgQQFIAogBARIZCgdzbG90X2lk",
+            "GAQgASgJQgPgQQNIA4gBARIiChBiYWNrZmlsbF9zbmlwcGV0GAUgASgJQgPg",
+            "QQFIBIgBAUISChBfbmF0aXZlX2VsaWdpYmxlQg8KDV9pbnRlcnN0aXRpYWxC",
+            "HQobX2FsbG93c19hbGxfcmVxdWVzdGVkX3NpemVzQgoKCF9zbG90X2lkQhMK",
+            "EV9iYWNrZmlsbF9zbmlwcGV0IngKFkFkU2Vuc2VDcmVhdGl2ZURldGFpbHMS",
+            "GQoHc2xvdF9pZBgBIAEoCUID4EEDSACIAQESIgoQYmFja2ZpbGxfc25pcHBl",
+            "dBgCIAEoCUID4EEBSAGIAQFCCgoIX3Nsb3RfaWRCEwoRX2JhY2tmaWxsX3Nu",
+            "aXBwZXQijAMKH0FzcGVjdFJhdGlvSW1hZ2VDcmVhdGl2ZURldGFpbHMSGgoI",
+            "YWx0X3RleHQYASABKAlCA+BBAUgAiAEBEiEKD2Rlc3RpbmF0aW9uX3VybBgC",
+            "IAEoCUID4EEBSAGIAQESegoUZGVzdGluYXRpb25fdXJsX3R5cGUYAyABKA4y",
+            "Ui5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5DcmVhdGl2ZURlc3RpbmF0aW9u",
+            "VXJsVHlwZUVudW0uQ3JlYXRpdmVEZXN0aW5hdGlvblVybFR5cGVCA+BBAUgC",
+            "iAEBEkEKDGltYWdlX2Fzc2V0cxgEIAMoCzImLmdvb2dsZS5hZHMuYWRtYW5h",
+            "Z2VyLnYxLkNyZWF0aXZlQXNzZXRCA+BBAhIxCiR0aGlyZF9wYXJ0eV9pbXBy",
+            "ZXNzaW9uX3RyYWNraW5nX3VybHMYBSADKAlCA+BBAUILCglfYWx0X3RleHRC",
+            "EgoQX2Rlc3RpbmF0aW9uX3VybEIXChVfZGVzdGluYXRpb25fdXJsX3R5cGUi",
+            "UQoUQXVkaW9DcmVhdGl2ZURldGFpbHMSOQoJdmFzdF9pbmZvGAEgASgLMiEu",
+            "Z29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuVmFzdEluZm9CA+BBASJZChxBdWRp",
+            "b1JlZGlyZWN0Q3JlYXRpdmVEZXRhaWxzEjkKCXZhc3RfaW5mbxgBIAEoCzIh",
+            "Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlZhc3RJbmZvQgPgQQEiWwocQ2xp",
+            "Y2tUcmFja2luZ0NyZWF0aXZlRGV0YWlscxIkChJjbGlja190cmFja2luZ191",
+            "cmwYASABKAlCA+BBAUgAiAEBQhUKE19jbGlja190cmFja2luZ191cmwiowYK",
+            "FUN1c3RvbUNyZWF0aXZlRGV0YWlscxIeCgxodG1sX3NuaXBwZXQYASABKAlC",
+            "A+BBAkgAiAEBEh0KEGFtcF9odG1sX3NuaXBwZXQYAiABKAlIAYgBARIZCgxp",
+            "bnRlcnN0aXRpYWwYAyABKAhIAogBARIhCg9kZXN0aW5hdGlvbl91cmwYDCAB",
+            "KAlCA+BBAUgDiAEBEnoKFGRlc3RpbmF0aW9uX3VybF90eXBlGA0gASgOMlIu",
+            "Z29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3JlYXRpdmVEZXN0aW5hdGlvblVy",
+            "bFR5cGVFbnVtLkNyZWF0aXZlRGVzdGluYXRpb25VcmxUeXBlQgPgQQFIBIgB",
+            "ARInChVzYWZlX2ZyYW1lX2NvbXBhdGlibGUYBSABKAhCA+BBBEgFiAEBEjEK",
+            "H2VmZmVjdGl2ZV9zYWZlX2ZyYW1lX2NvbXBhdGlibGUYBiABKAhCA+BBA0gG",
+            "iAEBEjEKJHRoaXJkX3BhcnR5X2ltcHJlc3Npb25fdHJhY2tpbmdfdXJscxgH",
+            "IAMoCUID4EEBEnYKEmxvY2tlZF9vcmllbnRhdGlvbhgIIAEoDjJQLmdvb2ds",
+            "ZS5hZHMuYWRtYW5hZ2VyLnYxLkNyZWF0aXZlTG9ja2VkT3JpZW50YXRpb25F",
+            "bnVtLkNyZWF0aXZlTG9ja2VkT3JpZW50YXRpb25CA+BBAUgHiAEBElEKFmN1",
+            "c3RvbV9jcmVhdGl2ZV9hc3NldHMYDiADKAsyLC5nb29nbGUuYWRzLmFkbWFu",
+            "YWdlci52MS5DdXN0b21DcmVhdGl2ZUFzc2V0QgPgQQFCDwoNX2h0bWxfc25p",
+            "cHBldEITChFfYW1wX2h0bWxfc25pcHBldEIPCg1faW50ZXJzdGl0aWFsQhIK",
+            "EF9kZXN0aW5hdGlvbl91cmxCFwoVX2Rlc3RpbmF0aW9uX3VybF90eXBlQhgK",
+            "Fl9zYWZlX2ZyYW1lX2NvbXBhdGlibGVCIgogX2VmZmVjdGl2ZV9zYWZlX2Zy",
+            "YW1lX2NvbXBhdGlibGVCFQoTX2xvY2tlZF9vcmllbnRhdGlvbiL6AwoUSHRt",
+            "bDVDcmVhdGl2ZURldGFpbHMSdgoSbG9ja2VkX29yaWVudGF0aW9uGAEgASgO",
+            "MlAuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3JlYXRpdmVMb2NrZWRPcmll",
+            "bnRhdGlvbkVudW0uQ3JlYXRpdmVMb2NrZWRPcmllbnRhdGlvbkID4EEBSACI",
+            "AQESHwoNb3ZlcnJpZGVfc2l6ZRgCIAEoCEID4EEBSAGIAQESMQokdGhpcmRf",
+            "cGFydHlfaW1wcmVzc2lvbl90cmFja2luZ191cmxzGAMgAygJQgPgQQESMAoe",
+            "dGhpcmRfcGFydHlfY2xpY2tfdHJhY2tpbmdfdXJsGAQgASgJQgPgQQFIAogB",
+            "ARInChVzYWZlX2ZyYW1lX2NvbXBhdGlibGUYByABKAhCA+BBAUgDiAEBEkUK",
+            "C2h0bWw1X2Fzc2V0GAggASgLMiYuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEu",
+            "Q3JlYXRpdmVBc3NldEID4EECSASIAQFCFQoTX2xvY2tlZF9vcmllbnRhdGlv",
+            "bkIQCg5fb3ZlcnJpZGVfc2l6ZUIhCh9fdGhpcmRfcGFydHlfY2xpY2tfdHJh",
+            "Y2tpbmdfdXJsQhgKFl9zYWZlX2ZyYW1lX2NvbXBhdGlibGVCDgoMX2h0bWw1",
+            "X2Fzc2V0IscFChRJbWFnZUNyZWF0aXZlRGV0YWlscxIVCghhbHRfdGV4dBgB",
+            "IAEoCUgAiAEBEiEKD2Rlc3RpbmF0aW9uX3VybBgIIAEoCUID4EEBSAGIAQES",
+            "egoUZGVzdGluYXRpb25fdXJsX3R5cGUYCSABKA4yUi5nb29nbGUuYWRzLmFk",
+            "bWFuYWdlci52MS5DcmVhdGl2ZURlc3RpbmF0aW9uVXJsVHlwZUVudW0uQ3Jl",
+            "YXRpdmVEZXN0aW5hdGlvblVybFR5cGVCA+BBAUgCiAEBEjEKJHRoaXJkX3Bh",
+            "cnR5X2ltcHJlc3Npb25fdHJhY2tpbmdfdXJscxgDIAMoCUID4EEBEiUKE2Ft",
+            "cF9kZXN0aW5hdGlvbl91cmwYBCABKAlCA+BBAUgDiAEBEnYKEmxvY2tlZF9v",
+            "cmllbnRhdGlvbhgFIAEoDjJQLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkNy",
+            "ZWF0aXZlTG9ja2VkT3JpZW50YXRpb25FbnVtLkNyZWF0aXZlTG9ja2VkT3Jp",
+            "ZW50YXRpb25CA+BBAUgEiAEBEkMKE3ByaW1hcnlfaW1hZ2VfYXNzZXQYBiAB",
+            "KAsyJi5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5DcmVhdGl2ZUFzc2V0EkYK",
+            "FnNlY29uZGFyeV9pbWFnZV9hc3NldHMYByADKAsyJi5nb29nbGUuYWRzLmFk",
+            "bWFuYWdlci52MS5DcmVhdGl2ZUFzc2V0Eh8KDW92ZXJyaWRlX3NpemUYCiAB",
+            "KAhCA+BBAUgFiAEBQgsKCV9hbHRfdGV4dEISChBfZGVzdGluYXRpb25fdXJs",
+            "QhcKFV9kZXN0aW5hdGlvbl91cmxfdHlwZUIWChRfYW1wX2Rlc3RpbmF0aW9u",
+            "X3VybEIVChNfbG9ja2VkX29yaWVudGF0aW9uQhAKDl9vdmVycmlkZV9zaXpl",
+            "IssJChtJbWFnZU92ZXJsYXlDcmVhdGl2ZURldGFpbHMSdgoSbG9ja2VkX29y",
+            "aWVudGF0aW9uGAEgASgOMlAuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3Jl",
+            "YXRpdmVMb2NrZWRPcmllbnRhdGlvbkVudW0uQ3JlYXRpdmVMb2NrZWRPcmll",
+            "bnRhdGlvbkID4EEBSACIAQESIQoPZGVzdGluYXRpb25fdXJsGAMgASgJQgPg",
+            "QQFIAYgBARJ6ChRkZXN0aW5hdGlvbl91cmxfdHlwZRgEIAEoDjJSLmdvb2ds",
+            "ZS5hZHMuYWRtYW5hZ2VyLnYxLkNyZWF0aXZlRGVzdGluYXRpb25VcmxUeXBl",
+            "RW51bS5DcmVhdGl2ZURlc3RpbmF0aW9uVXJsVHlwZUID4EEBSAKIAQESHwoN",
+            "b3ZlcnJpZGVfc2l6ZRgFIAEoCEID4EEBSAOIAQESSAoTcHJpbWFyeV9pbWFn",
+            "ZV9hc3NldBgGIAEoCzImLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkNyZWF0",
+            "aXZlQXNzZXRCA+BBAhIrChljcmVhdGl2ZV9zZXRfZGlzcGxheV9uYW1lGAcg",
+            "ASgJQgPgQQNIBIgBARJHCgxjcmVhdGl2ZV9zZXQYCCABKAlCLOBBA/pBJgok",
+            "YWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0NyZWF0aXZlU2V0SAWIAQESRgoT",
+            "Y29tcGFuaW9uX2NyZWF0aXZlcxgJIAMoCUIp4EED+kEjCiFhZG1hbmFnZXIu",
+            "Z29vZ2xlYXBpcy5jb20vQ3JlYXRpdmUSRQoNdHJhY2tpbmdfdXJscxgKIAMo",
+            "CzIpLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlZpZGVvVHJhY2tpbmdVcmxC",
+            "A+BBARIjChFjdXN0b21fcGFyYW1ldGVycxgLIAEoCUID4EEBSAaIAQESMAoI",
+            "ZHVyYXRpb24YDCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BB",
+            "ARJOChNleHBlY3RlZF9jb21wYW5pb25zGA0gAygLMiwuZ29vZ2xlLmFkcy5h",
+            "ZG1hbmFnZXIudjEuQ3JlYXRpdmVQbGFjZWhvbGRlckID4EEBEoIBCiJleHBl",
+            "Y3RlZF9jb21wYW5pb25fZGVsaXZlcnlfb3B0aW9uGA4gASgOMkwuZ29vZ2xl",
+            "LmFkcy5hZG1hbmFnZXIudjEuQ29tcGFuaW9uRGVsaXZlcnlPcHRpb25FbnVt",
+            "LkNvbXBhbmlvbkRlbGl2ZXJ5T3B0aW9uQgPgQQNIB4gBARIiChB2YXN0X3By",
+            "ZXZpZXdfdXJsGBAgASgJQgPgQQNICIgBAUIVChNfbG9ja2VkX29yaWVudGF0",
+            "aW9uQhIKEF9kZXN0aW5hdGlvbl91cmxCFwoVX2Rlc3RpbmF0aW9uX3VybF90",
+            "eXBlQhAKDl9vdmVycmlkZV9zaXplQhwKGl9jcmVhdGl2ZV9zZXRfZGlzcGxh",
+            "eV9uYW1lQg8KDV9jcmVhdGl2ZV9zZXRCFAoSX2N1c3RvbV9wYXJhbWV0ZXJz",
+            "QiUKI19leHBlY3RlZF9jb21wYW5pb25fZGVsaXZlcnlfb3B0aW9uQhMKEV92",
+            "YXN0X3ByZXZpZXdfdXJsIvECChxJbWFnZVJlZGlyZWN0Q3JlYXRpdmVEZXRh",
+            "aWxzEiEKD2Rlc3RpbmF0aW9uX3VybBgFIAEoCUID4EEBSACIAQESegoUZGVz",
+            "dGluYXRpb25fdXJsX3R5cGUYBiABKA4yUi5nb29nbGUuYWRzLmFkbWFuYWdl",
+            "ci52MS5DcmVhdGl2ZURlc3RpbmF0aW9uVXJsVHlwZUVudW0uQ3JlYXRpdmVE",
+            "ZXN0aW5hdGlvblVybFR5cGVCA+BBAUgBiAEBEhoKCGFsdF90ZXh0GAIgASgJ",
+            "QgPgQQFIAogBARIbCglpbWFnZV91cmwYAyABKAlCA+BBAkgDiAEBEjEKJHRo",
+            "aXJkX3BhcnR5X2ltcHJlc3Npb25fdHJhY2tpbmdfdXJscxgEIAMoCUID4EEB",
+            "QhIKEF9kZXN0aW5hdGlvbl91cmxCFwoVX2Rlc3RpbmF0aW9uX3VybF90eXBl",
+            "QgsKCV9hbHRfdGV4dEIMCgpfaW1hZ2VfdXJsItAICiNJbWFnZVJlZGlyZWN0",
+            "T3ZlcmxheUNyZWF0aXZlRGV0YWlscxIhCg9kZXN0aW5hdGlvbl91cmwYAiAB",
+            "KAlCA+BBAUgAiAEBEnoKFGRlc3RpbmF0aW9uX3VybF90eXBlGAMgASgOMlIu",
+            "Z29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3JlYXRpdmVEZXN0aW5hdGlvblVy",
+            "bFR5cGVFbnVtLkNyZWF0aXZlRGVzdGluYXRpb25VcmxUeXBlQgPgQQFIAYgB",
+            "ARIbCglpbWFnZV91cmwYASABKAlCA+BBAkgCiAEBEjsKCmFzc2V0X3NpemUY",
+            "ByABKAsyHS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5TaXplQgPgQQFIA4gB",
+            "ARI1CghkdXJhdGlvbhgIIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
+            "bkID4EEBSASIAQESRQoNdHJhY2tpbmdfdXJscxgJIAMoCzIpLmdvb2dsZS5h",
+            "ZHMuYWRtYW5hZ2VyLnYxLlZpZGVvVHJhY2tpbmdVcmxCA+BBARIjChFjdXN0",
+            "b21fcGFyYW1ldGVycxgKIAEoCUID4EEBSAWIAQESTgoTZXhwZWN0ZWRfY29t",
+            "cGFuaW9ucxgLIAMoCzIsLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkNyZWF0",
+            "aXZlUGxhY2Vob2xkZXJCA+BBARKCAQoiZXhwZWN0ZWRfY29tcGFuaW9uX2Rl",
+            "bGl2ZXJ5X29wdGlvbhgMIAEoDjJMLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYx",
+            "LkNvbXBhbmlvbkRlbGl2ZXJ5T3B0aW9uRW51bS5Db21wYW5pb25EZWxpdmVy",
+            "eU9wdGlvbkID4EEDSAaIAQESIgoQdmFzdF9wcmV2aWV3X3VybBgOIAEoCUID",
+            "4EEDSAeIAQESKwoZY3JlYXRpdmVfc2V0X2Rpc3BsYXlfbmFtZRgEIAEoCUID",
+            "4EEDSAiIAQESRwoMY3JlYXRpdmVfc2V0GAUgASgJQizgQQP6QSYKJGFkbWFu",
+            "YWdlci5nb29nbGVhcGlzLmNvbS9DcmVhdGl2ZVNldEgJiAEBEkYKE2NvbXBh",
+            "bmlvbl9jcmVhdGl2ZXMYBiADKAlCKeBBAfpBIwohYWRtYW5hZ2VyLmdvb2ds",
+            "ZWFwaXMuY29tL0NyZWF0aXZlQhIKEF9kZXN0aW5hdGlvbl91cmxCFwoVX2Rl",
+            "c3RpbmF0aW9uX3VybF90eXBlQgwKCl9pbWFnZV91cmxCDQoLX2Fzc2V0X3Np",
+            "emVCCwoJX2R1cmF0aW9uQhQKEl9jdXN0b21fcGFyYW1ldGVyc0IlCiNfZXhw",
+            "ZWN0ZWRfY29tcGFuaW9uX2RlbGl2ZXJ5X29wdGlvbkITChFfdmFzdF9wcmV2",
+            "aWV3X3VybEIcChpfY3JlYXRpdmVfc2V0X2Rpc3BsYXlfbmFtZUIPCg1fY3Jl",
+            "YXRpdmVfc2V0ItwFCh9JbnRlcm5hbFJlZGlyZWN0Q3JlYXRpdmVEZXRhaWxz",
+            "EnYKEmxvY2tlZF9vcmllbnRhdGlvbhgBIAEoDjJQLmdvb2dsZS5hZHMuYWRt",
+            "YW5hZ2VyLnYxLkNyZWF0aXZlTG9ja2VkT3JpZW50YXRpb25FbnVtLkNyZWF0",
+            "aXZlTG9ja2VkT3JpZW50YXRpb25CA+BBAUgAiAEBEjsKCmFzc2V0X3NpemUY",
+            "BSABKAsyHS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5TaXplQgPgQQNIAYgB",
+            "ARInChVpbnRlcm5hbF9yZWRpcmVjdF91cmwYBiABKAlCA+BBAkgCiAEBEh8K",
+            "DW92ZXJyaWRlX3NpemUYByABKAhCA+BBAUgDiAEBEh4KDGludGVyc3RpdGlh",
+            "bBgCIAEoCEID4EEBSASIAQESawoPc3NsX3NjYW5fcmVzdWx0GAMgASgOMkgu",
+            "Z29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3JlYXRpdmVTc2xTY2FuUmVzdWx0",
+            "RW51bS5DcmVhdGl2ZVNzbFNjYW5SZXN1bHRCA+BBA0gFiAEBEmsKE3NzbF9t",
+            "YW51YWxfb3ZlcnJpZGUYBCABKA4yRC5nb29nbGUuYWRzLmFkbWFuYWdlci52",
+            "MS5DcmVhdGl2ZVNzbE92ZXJyaWRlRW51bS5DcmVhdGl2ZVNzbE92ZXJyaWRl",
+            "QgPgQQFIBogBARIxCiR0aGlyZF9wYXJ0eV9pbXByZXNzaW9uX3RyYWNraW5n",
+            "X3VybHMYCCADKAlCA+BBAUIVChNfbG9ja2VkX29yaWVudGF0aW9uQg0KC19h",
+            "c3NldF9zaXplQhgKFl9pbnRlcm5hbF9yZWRpcmVjdF91cmxCEAoOX292ZXJy",
+            "aWRlX3NpemVCDwoNX2ludGVyc3RpdGlhbEISChBfc3NsX3NjYW5fcmVzdWx0",
+            "QhYKFF9zc2xfbWFudWFsX292ZXJyaWRlIhoKGExlZ2FjeURmcENyZWF0aXZl",
+            "RGV0YWlscyIdChtQcm9ncmFtbWF0aWNDcmVhdGl2ZURldGFpbHMi4wsKHlJp",
+            "Y2hNZWRpYVN0dWRpb0NyZWF0aXZlRGV0YWlscxJ2ChJsb2NrZWRfb3JpZW50",
+            "YXRpb24YASABKA4yUC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5DcmVhdGl2",
+            "ZUxvY2tlZE9yaWVudGF0aW9uRW51bS5DcmVhdGl2ZUxvY2tlZE9yaWVudGF0",
+            "aW9uQgPgQQFIAIgBARIkChJzdHVkaW9fY3JlYXRpdmVfaWQYAyABKANCA+BB",
+            "A0gBiAEBEnsKD2NyZWF0aXZlX2Zvcm1hdBgEIAEoDjJYLmdvb2dsZS5hZHMu",
+            "YWRtYW5hZ2VyLnYxLlJpY2hNZWRpYVN0dWRpb0NyZWF0aXZlRm9ybWF0RW51",
+            "bS5SaWNoTWVkaWFTdHVkaW9DcmVhdGl2ZUZvcm1hdEID4EEBSAKIAQESIQoP",
+            "dG90YWxfZmlsZV9zaXplGAYgASgDQgPgQQNIA4gBARIYCgthZF90YWdfa2V5",
+            "cxgHIAMoCUID4EEBEh4KEWN1c3RvbV9rZXlfdmFsdWVzGAggAygJQgPgQQES",
+            "HAoKc3VydmV5X3VybBgJIAEoCUID4EEBSASIAQESJQoTYWxsX2ltcHJlc3Np",
+            "b25zX3VybBgKIAEoCUID4EEBSAWIAQESLAoacmljaF9tZWRpYV9pbXByZXNz",
+            "aW9uc191cmwYCyABKAlCA+BBAUgGiAEBEi4KHGJhY2t1cF9pbWFnZV9pbXBy",
+            "ZXNzaW9uc191cmwYDCABKAlCA+BBAUgHiAEBEh4KDG92ZXJyaWRlX2NzcxgN",
+            "IAEoCUID4EEBSAiIAQESLwodcmVxdWlyZWRfZmxhc2hfcGx1Z2luX3ZlcnNp",
+            "b24YDiABKAlCA+BBA0gJiAEBEjUKCGR1cmF0aW9uGA8gASgLMhkuZ29vZ2xl",
+            "LnByb3RvYnVmLkR1cmF0aW9uQgPgQQFICogBARKRAQoRYmlsbGluZ19hdHRy",
+            "aWJ1dGUYECABKA4ybC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5SaWNoTWVk",
+            "aWFTdHVkaW9DcmVhdGl2ZUJpbGxpbmdBdHRyaWJ1dGVFbnVtLlJpY2hNZWRp",
+            "YVN0dWRpb0NyZWF0aXZlQmlsbGluZ0F0dHJpYnV0ZUID4EEBSAuIAQEScQoo",
+            "cmljaF9tZWRpYV9zdHVkaW9fY2hpbGRfYXNzZXRfcHJvcGVydGllcxgRIAMo",
+            "CzI6Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlJpY2hNZWRpYVN0dWRpb0No",
+            "aWxkQXNzZXRQcm9wZXJ0eUID4EEDEmsKD3NzbF9zY2FuX3Jlc3VsdBgSIAEo",
+            "DjJILmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkNyZWF0aXZlU3NsU2NhblJl",
+            "c3VsdEVudW0uQ3JlYXRpdmVTc2xTY2FuUmVzdWx0QgPgQQNIDIgBARJrChNz",
+            "c2xfbWFudWFsX292ZXJyaWRlGBMgASgOMkQuZ29vZ2xlLmFkcy5hZG1hbmFn",
+            "ZXIudjEuQ3JlYXRpdmVTc2xPdmVycmlkZUVudW0uQ3JlYXRpdmVTc2xPdmVy",
+            "cmlkZUID4EEBSA2IAQFCFQoTX2xvY2tlZF9vcmllbnRhdGlvbkIVChNfc3R1",
+            "ZGlvX2NyZWF0aXZlX2lkQhIKEF9jcmVhdGl2ZV9mb3JtYXRCEgoQX3RvdGFs",
+            "X2ZpbGVfc2l6ZUINCgtfc3VydmV5X3VybEIWChRfYWxsX2ltcHJlc3Npb25z",
+            "X3VybEIdChtfcmljaF9tZWRpYV9pbXByZXNzaW9uc191cmxCHwodX2JhY2t1",
+            "cF9pbWFnZV9pbXByZXNzaW9uc191cmxCDwoNX292ZXJyaWRlX2Nzc0IgCh5f",
+            "cmVxdWlyZWRfZmxhc2hfcGx1Z2luX3ZlcnNpb25CCwoJX2R1cmF0aW9uQhQK",
+            "El9iaWxsaW5nX2F0dHJpYnV0ZUISChBfc3NsX3NjYW5fcmVzdWx0QhYKFF9z",
+            "c2xfbWFudWFsX292ZXJyaWRlIlUKGFNldFRvcEJveENyZWF0aXZlRGV0YWls",
+            "cxI5Cgl2YXN0X2luZm8YASABKAsyIS5nb29nbGUuYWRzLmFkbWFuYWdlci52",
+            "MS5WYXN0SW5mb0ID4EEBIrMDChdUZW1wbGF0ZUNyZWF0aXZlRGV0YWlscxIl",
+            "ChNhbXBfZGVzdGluYXRpb25fdXJsGAEgASgJQgPgQQFIAIgBARJ2ChJsb2Nr",
+            "ZWRfb3JpZW50YXRpb24YAiABKA4yUC5nb29nbGUuYWRzLmFkbWFuYWdlci52",
+            "MS5DcmVhdGl2ZUxvY2tlZE9yaWVudGF0aW9uRW51bS5DcmVhdGl2ZUxvY2tl",
+            "ZE9yaWVudGF0aW9uQgPgQQFIAYgBARIhCg9kZXN0aW5hdGlvbl91cmwYEiAB",
+            "KAlCA+BBAUgCiAEBEnoKFGRlc3RpbmF0aW9uX3VybF90eXBlGBMgASgOMlIu",
+            "Z29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3JlYXRpdmVEZXN0aW5hdGlvblVy",
+            "bFR5cGVFbnVtLkNyZWF0aXZlRGVzdGluYXRpb25VcmxUeXBlQgPgQQFIA4gB",
+            "AUIWChRfYW1wX2Rlc3RpbmF0aW9uX3VybEIVChNfbG9ja2VkX29yaWVudGF0",
+            "aW9uQhIKEF9kZXN0aW5hdGlvbl91cmxCFwoVX2Rlc3RpbmF0aW9uX3VybF90",
+            "eXBlIoYHChlUaGlyZFBhcnR5Q3JlYXRpdmVEZXRhaWxzEhQKB3NuaXBwZXQY",
+            "BCABKAlIAIgBARIiChBleHBhbmRlZF9zbmlwcGV0GAUgASgJQgPgQQNIAYgB",
+            "ARJ2ChJsb2NrZWRfb3JpZW50YXRpb24YASABKA4yUC5nb29nbGUuYWRzLmFk",
+            "bWFuYWdlci52MS5DcmVhdGl2ZUxvY2tlZE9yaWVudGF0aW9uRW51bS5DcmVh",
+            "dGl2ZUxvY2tlZE9yaWVudGF0aW9uQgPgQQFIAogBARJrCg9zc2xfc2Nhbl9y",
+            "ZXN1bHQYAiABKA4ySC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5DcmVhdGl2",
+            "ZVNzbFNjYW5SZXN1bHRFbnVtLkNyZWF0aXZlU3NsU2NhblJlc3VsdEID4EED",
+            "SAOIAQESawoTc3NsX21hbnVhbF9vdmVycmlkZRgDIAEoDjJELmdvb2dsZS5h",
+            "ZHMuYWRtYW5hZ2VyLnYxLkNyZWF0aXZlU3NsT3ZlcnJpZGVFbnVtLkNyZWF0",
+            "aXZlU3NsT3ZlcnJpZGVCA+BBAUgEiAEBEicKFXNhZmVfZnJhbWVfY29tcGF0",
+            "aWJsZRgGIAEoCEID4EEBSAWIAQESMQokdGhpcmRfcGFydHlfaW1wcmVzc2lv",
+            "bl90cmFja2luZ191cmxzGAcgAygJQgPgQQESIgoQYW1wX3JlZGlyZWN0X3Vy",
+            "bBgIIAEoCUID4EEBSAaIAQESIQoPZGVzdGluYXRpb25fdXJsGAogASgJQgPg",
+            "QQFIB4gBARJ6ChRkZXN0aW5hdGlvbl91cmxfdHlwZRgLIAEoDjJSLmdvb2ds",
+            "ZS5hZHMuYWRtYW5hZ2VyLnYxLkNyZWF0aXZlRGVzdGluYXRpb25VcmxUeXBl",
+            "RW51bS5DcmVhdGl2ZURlc3RpbmF0aW9uVXJsVHlwZUID4EEBSAiIAQFCCgoI",
+            "X3NuaXBwZXRCEwoRX2V4cGFuZGVkX3NuaXBwZXRCFQoTX2xvY2tlZF9vcmll",
+            "bnRhdGlvbkISChBfc3NsX3NjYW5fcmVzdWx0QhYKFF9zc2xfbWFudWFsX292",
+            "ZXJyaWRlQhgKFl9zYWZlX2ZyYW1lX2NvbXBhdGlibGVCEwoRX2FtcF9yZWRp",
+            "cmVjdF91cmxCEgoQX2Rlc3RpbmF0aW9uX3VybEIXChVfZGVzdGluYXRpb25f",
+            "dXJsX3R5cGUi0QYKG1Zhc3RSZWRpcmVjdENyZWF0aXZlRGV0YWlscxIeCgx2",
+            "YXN0X3htbF91cmwYFiABKAlCA+BBAkgAiAEBEmQKEnZhc3RfcmVkaXJlY3Rf",
+            "dHlwZRgEIAEoDjI+Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlZhc3RSZWRp",
+            "cmVjdFR5cGVFbnVtLlZhc3RSZWRpcmVjdFR5cGVCA+BBAkgBiAEBEjAKCGR1",
+            "cmF0aW9uGAUgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQIS",
+            "JgoUdmFzdF9wcmljaW5nX2VuYWJsZWQYCCABKAhCA+BBAUgCiAEBEiwKGnBy",
+            "b2dyYW1tYXRpY19kZW1hbmRfc291cmNlGAkgASgIQgPgQQFIA4gBARIxCh9z",
+            "ZXJ2ZXJfc2lkZV91bndyYXBwaW5nX2Rpc2FibGVkGAogASgIQgPgQQFIBIgB",
+            "ARJFCg10cmFja2luZ191cmxzGAwgAygLMikuZ29vZ2xlLmFkcy5hZG1hbmFn",
+            "ZXIudjEuVmlkZW9UcmFja2luZ1VybEID4EEBEiIKEHZhc3RfcHJldmlld191",
+            "cmwYECABKAlCA+BBA0gFiAEBEhcKBWF1ZGlvGBUgASgIQgPgQQFIBogBARIh",
+            "Cg9kZXN0aW5hdGlvbl91cmwYAiABKAlCA+BBAUgHiAEBEnoKFGRlc3RpbmF0",
+            "aW9uX3VybF90eXBlGAMgASgOMlIuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEu",
+            "Q3JlYXRpdmVEZXN0aW5hdGlvblVybFR5cGVFbnVtLkNyZWF0aXZlRGVzdGlu",
+            "YXRpb25VcmxUeXBlQgPgQQFICIgBAUIPCg1fdmFzdF94bWxfdXJsQhUKE192",
+            "YXN0X3JlZGlyZWN0X3R5cGVCFwoVX3Zhc3RfcHJpY2luZ19lbmFibGVkQh0K",
+            "G19wcm9ncmFtbWF0aWNfZGVtYW5kX3NvdXJjZUIiCiBfc2VydmVyX3NpZGVf",
+            "dW53cmFwcGluZ19kaXNhYmxlZEITChFfdmFzdF9wcmV2aWV3X3VybEIICgZf",
+            "YXVkaW9CEgoQX2Rlc3RpbmF0aW9uX3VybEIXChVfZGVzdGluYXRpb25fdXJs",
+            "X3R5cGUiUQoUVmlkZW9DcmVhdGl2ZURldGFpbHMSOQoJdmFzdF9pbmZvGAEg",
+            "ASgLMiEuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuVmFzdEluZm9CA+BBASJZ",
+            "ChxWaWRlb1JlZGlyZWN0Q3JlYXRpdmVEZXRhaWxzEjkKCXZhc3RfaW5mbxgB",
+            "IAEoCzIhLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlZhc3RJbmZvQgPgQQEi",
+            "+AcKCFZhc3RJbmZvEjAKCGR1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3Rv",
+            "YnVmLkR1cmF0aW9uQgPgQQESKQoXYWxsb3dfZHVyYXRpb25fb3ZlcnJpZGUY",
+            "AiABKAhCA+BBAUgAiAEBEkUKDXRyYWNraW5nX3VybHMYAyADKAsyKS5nb29n",
+            "bGUuYWRzLmFkbWFuYWdlci52MS5WaWRlb1RyYWNraW5nVXJsQgPgQQESIwoR",
+            "Y3VzdG9tX3BhcmFtZXRlcnMYBCABKAlCA+BBAUgBiAEBEhcKBWFkX2lkGAUg",
+            "ASgJQgPgQQFIAogBARJUCgphZF9pZF90eXBlGAYgASgOMjYuZ29vZ2xlLmFk",
+            "cy5hZG1hbmFnZXIudjEuVmFzdEFkSWRUeXBlRW51bS5WYXN0QWRJZFR5cGVC",
+            "A+BBAUgDiAEBEmEKEXNraXBwYWJsZV9hZF90eXBlGAcgASgOMjwuZ29vZ2xl",
+            "LmFkcy5hZG1hbmFnZXIudjEuU2tpcHBhYmxlQWRUeXBlRW51bS5Ta2lwcGFi",
+            "bGVBZFR5cGVCA+BBAUgEiAEBEiIKEHZhc3RfcHJldmlld191cmwYCCABKAlC",
+            "A+BBA0gFiAEBEisKGWNyZWF0aXZlX3NldF9kaXNwbGF5X25hbWUYDiABKAlC",
+            "A+BBA0gGiAEBEkcKDGNyZWF0aXZlX3NldBgPIAEoCUIs4EED+kEmCiRhZG1h",
+            "bmFnZXIuZ29vZ2xlYXBpcy5jb20vQ3JlYXRpdmVTZXRIB4gBARIhCg9kZXN0",
+            "aW5hdGlvbl91cmwYECABKAlCA+BBAUgIiAEBEnoKFGRlc3RpbmF0aW9uX3Vy",
+            "bF90eXBlGBEgASgOMlIuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3JlYXRp",
+            "dmVEZXN0aW5hdGlvblVybFR5cGVFbnVtLkNyZWF0aXZlRGVzdGluYXRpb25V",
+            "cmxUeXBlQgPgQQFICYgBARJGChNjb21wYW5pb25fY3JlYXRpdmVzGBIgAygJ",
+            "QingQQH6QSMKIWFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9DcmVhdGl2ZUIa",
+            "ChhfYWxsb3dfZHVyYXRpb25fb3ZlcnJpZGVCFAoSX2N1c3RvbV9wYXJhbWV0",
+            "ZXJzQggKBl9hZF9pZEINCgtfYWRfaWRfdHlwZUIUChJfc2tpcHBhYmxlX2Fk",
+            "X3R5cGVCEwoRX3Zhc3RfcHJldmlld191cmxCHAoaX2NyZWF0aXZlX3NldF9k",
+            "aXNwbGF5X25hbWVCDwoNX2NyZWF0aXZlX3NldEISChBfZGVzdGluYXRpb25f",
+            "dXJsQhcKFV9kZXN0aW5hdGlvbl91cmxfdHlwZSKMAQoUQnV5ZXJQbGFjZW1l",
+            "bnRDb25maWcSHgoMcGxhY2VtZW50X2lkGAEgASgJQgPgQQFIAIgBARIoChZw",
+            "bGFjZW1lbnRfZGlzcGxheV9uYW1lGAIgASgJQgPgQQFIAYgBAUIPCg1fcGxh",
+            "Y2VtZW50X2lkQhkKF19wbGFjZW1lbnRfZGlzcGxheV9uYW1lQskBChtjb20u",
+            "Z29vZ2xlLmFkcy5hZG1hbmFnZXIudjFCFUNyZWF0aXZlTWVzc2FnZXNQcm90",
+            "b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fk",
+            "cy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFn",
+            "ZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRz",
+            "OjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.AppliedLabelReflection.Descriptor, global::Google.Ads.AdManager.V1.CreativeAssetReflection.Descriptor, global::Google.Ads.AdManager.V1.CreativeEnumsReflection.Descriptor, global::Google.Ads.AdManager.V1.CreativePlaceholderReflection.Descriptor, global::Google.Ads.AdManager.V1.CreativeThirdPartyDataDeclarationStatusEnumReflection.Descriptor, global::Google.Ads.AdManager.V1.CustomCreativeAssetReflection.Descriptor, global::Google.Ads.AdManager.V1.CustomFieldValueReflection.Descriptor, global::Google.Ads.AdManager.V1.DeliveryEnumsReflection.Descriptor, global::Google.Ads.AdManager.V1.RichMediaStudioCreativeBillingAttributeEnumReflection.Descriptor, global::Google.Ads.AdManager.V1.RichMediaStudioCreativeFormatEnumReflection.Descriptor, global::Google.Ads.AdManager.V1.RichMediaStudioMessagesReflection.Descriptor, global::Google.Ads.AdManager.V1.SizeReflection.Descriptor, global::Google.Ads.AdManager.V1.SkippableAdTypeEnumReflection.Descriptor, global::Google.Ads.AdManager.V1.ThirdPartyDataDeclarationReflection.Descriptor, global::Google.Ads.AdManager.V1.VastRedirectTypeEnumReflection.Descriptor, global::Google.Ads.AdManager.V1.VideoTrackingUrlReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Creative), global::Google.Ads.AdManager.V1.Creative.Parser, new[]{ "Name", "DisplayName" }, new[]{ "DisplayName" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Creative), global::Google.Ads.AdManager.V1.Creative.Parser, new[]{ "AdExchangeCreative", "AdSenseCreative", "AspectRatioImageCreative", "AudioCreative", "AudioRedirectCreative", "ClickTrackingCreative", "CustomCreative", "Html5Creative", "ImageCreative", "ImageOverlayCreative", "ImageRedirectCreative", "ImageRedirectOverlayCreative", "InternalRedirectCreative", "LegacyDfpCreative", "ProgrammaticCreative", "RichMediaStudioCreative", "SetTopBoxCreative", "TemplateCreative", "ThirdPartyCreative", "VastRedirectCreative", "VideoCreative", "VideoRedirectCreative", "Name", "DisplayName", "Advertiser", "UpdateTime", "CustomFieldValues", "PreviewUrl", "Size", "ThirdPartyDataDeclaration", "ThirdPartyDataDeclarationStatus", "SelfDeclaredEuropeanUnionPoliticalContent", "AdBadgingEnabled", "AppliedLabels", "BuyerPlacementConfig" }, new[]{ "Details", "DisplayName", "Advertiser", "PreviewUrl", "ThirdPartyDataDeclarationStatus", "SelfDeclaredEuropeanUnionPoliticalContent", "AdBadgingEnabled" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdExchangeCreativeDetails), global::Google.Ads.AdManager.V1.AdExchangeCreativeDetails.Parser, new[]{ "NativeEligible", "Interstitial", "AllowsAllRequestedSizes", "SlotId", "BackfillSnippet" }, new[]{ "NativeEligible", "Interstitial", "AllowsAllRequestedSizes", "SlotId", "BackfillSnippet" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdSenseCreativeDetails), global::Google.Ads.AdManager.V1.AdSenseCreativeDetails.Parser, new[]{ "SlotId", "BackfillSnippet" }, new[]{ "SlotId", "BackfillSnippet" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AspectRatioImageCreativeDetails), global::Google.Ads.AdManager.V1.AspectRatioImageCreativeDetails.Parser, new[]{ "AltText", "DestinationUrl", "DestinationUrlType", "ImageAssets", "ThirdPartyImpressionTrackingUrls" }, new[]{ "AltText", "DestinationUrl", "DestinationUrlType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AudioCreativeDetails), global::Google.Ads.AdManager.V1.AudioCreativeDetails.Parser, new[]{ "VastInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AudioRedirectCreativeDetails), global::Google.Ads.AdManager.V1.AudioRedirectCreativeDetails.Parser, new[]{ "VastInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ClickTrackingCreativeDetails), global::Google.Ads.AdManager.V1.ClickTrackingCreativeDetails.Parser, new[]{ "ClickTrackingUrl" }, new[]{ "ClickTrackingUrl" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.CustomCreativeDetails), global::Google.Ads.AdManager.V1.CustomCreativeDetails.Parser, new[]{ "HtmlSnippet", "AmpHtmlSnippet", "Interstitial", "DestinationUrl", "DestinationUrlType", "SafeFrameCompatible", "EffectiveSafeFrameCompatible", "ThirdPartyImpressionTrackingUrls", "LockedOrientation", "CustomCreativeAssets" }, new[]{ "HtmlSnippet", "AmpHtmlSnippet", "Interstitial", "DestinationUrl", "DestinationUrlType", "SafeFrameCompatible", "EffectiveSafeFrameCompatible", "LockedOrientation" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Html5CreativeDetails), global::Google.Ads.AdManager.V1.Html5CreativeDetails.Parser, new[]{ "LockedOrientation", "OverrideSize", "ThirdPartyImpressionTrackingUrls", "ThirdPartyClickTrackingUrl", "SafeFrameCompatible", "Html5Asset" }, new[]{ "LockedOrientation", "OverrideSize", "ThirdPartyClickTrackingUrl", "SafeFrameCompatible", "Html5Asset" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ImageCreativeDetails), global::Google.Ads.AdManager.V1.ImageCreativeDetails.Parser, new[]{ "AltText", "DestinationUrl", "DestinationUrlType", "ThirdPartyImpressionTrackingUrls", "AmpDestinationUrl", "LockedOrientation", "PrimaryImageAsset", "SecondaryImageAssets", "OverrideSize" }, new[]{ "AltText", "DestinationUrl", "DestinationUrlType", "AmpDestinationUrl", "LockedOrientation", "OverrideSize" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ImageOverlayCreativeDetails), global::Google.Ads.AdManager.V1.ImageOverlayCreativeDetails.Parser, new[]{ "LockedOrientation", "DestinationUrl", "DestinationUrlType", "OverrideSize", "PrimaryImageAsset", "CreativeSetDisplayName", "CreativeSet", "CompanionCreatives", "TrackingUrls", "CustomParameters", "Duration", "ExpectedCompanions", "ExpectedCompanionDeliveryOption", "VastPreviewUrl" }, new[]{ "LockedOrientation", "DestinationUrl", "DestinationUrlType", "OverrideSize", "CreativeSetDisplayName", "CreativeSet", "CustomParameters", "ExpectedCompanionDeliveryOption", "VastPreviewUrl" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ImageRedirectCreativeDetails), global::Google.Ads.AdManager.V1.ImageRedirectCreativeDetails.Parser, new[]{ "DestinationUrl", "DestinationUrlType", "AltText", "ImageUrl", "ThirdPartyImpressionTrackingUrls" }, new[]{ "DestinationUrl", "DestinationUrlType", "AltText", "ImageUrl" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ImageRedirectOverlayCreativeDetails), global::Google.Ads.AdManager.V1.ImageRedirectOverlayCreativeDetails.Parser, new[]{ "DestinationUrl", "DestinationUrlType", "ImageUrl", "AssetSize", "Duration", "TrackingUrls", "CustomParameters", "ExpectedCompanions", "ExpectedCompanionDeliveryOption", "VastPreviewUrl", "CreativeSetDisplayName", "CreativeSet", "CompanionCreatives" }, new[]{ "DestinationUrl", "DestinationUrlType", "ImageUrl", "AssetSize", "Duration", "CustomParameters", "ExpectedCompanionDeliveryOption", "VastPreviewUrl", "CreativeSetDisplayName", "CreativeSet" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.InternalRedirectCreativeDetails), global::Google.Ads.AdManager.V1.InternalRedirectCreativeDetails.Parser, new[]{ "LockedOrientation", "AssetSize", "InternalRedirectUrl", "OverrideSize", "Interstitial", "SslScanResult", "SslManualOverride", "ThirdPartyImpressionTrackingUrls" }, new[]{ "LockedOrientation", "AssetSize", "InternalRedirectUrl", "OverrideSize", "Interstitial", "SslScanResult", "SslManualOverride" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.LegacyDfpCreativeDetails), global::Google.Ads.AdManager.V1.LegacyDfpCreativeDetails.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ProgrammaticCreativeDetails), global::Google.Ads.AdManager.V1.ProgrammaticCreativeDetails.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.RichMediaStudioCreativeDetails), global::Google.Ads.AdManager.V1.RichMediaStudioCreativeDetails.Parser, new[]{ "LockedOrientation", "StudioCreativeId", "CreativeFormat", "TotalFileSize", "AdTagKeys", "CustomKeyValues", "SurveyUrl", "AllImpressionsUrl", "RichMediaImpressionsUrl", "BackupImageImpressionsUrl", "OverrideCss", "RequiredFlashPluginVersion", "Duration", "BillingAttribute", "RichMediaStudioChildAssetProperties", "SslScanResult", "SslManualOverride" }, new[]{ "LockedOrientation", "StudioCreativeId", "CreativeFormat", "TotalFileSize", "SurveyUrl", "AllImpressionsUrl", "RichMediaImpressionsUrl", "BackupImageImpressionsUrl", "OverrideCss", "RequiredFlashPluginVersion", "Duration", "BillingAttribute", "SslScanResult", "SslManualOverride" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.SetTopBoxCreativeDetails), global::Google.Ads.AdManager.V1.SetTopBoxCreativeDetails.Parser, new[]{ "VastInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.TemplateCreativeDetails), global::Google.Ads.AdManager.V1.TemplateCreativeDetails.Parser, new[]{ "AmpDestinationUrl", "LockedOrientation", "DestinationUrl", "DestinationUrlType" }, new[]{ "AmpDestinationUrl", "LockedOrientation", "DestinationUrl", "DestinationUrlType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ThirdPartyCreativeDetails), global::Google.Ads.AdManager.V1.ThirdPartyCreativeDetails.Parser, new[]{ "Snippet", "ExpandedSnippet", "LockedOrientation", "SslScanResult", "SslManualOverride", "SafeFrameCompatible", "ThirdPartyImpressionTrackingUrls", "AmpRedirectUrl", "DestinationUrl", "DestinationUrlType" }, new[]{ "Snippet", "ExpandedSnippet", "LockedOrientation", "SslScanResult", "SslManualOverride", "SafeFrameCompatible", "AmpRedirectUrl", "DestinationUrl", "DestinationUrlType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.VastRedirectCreativeDetails), global::Google.Ads.AdManager.V1.VastRedirectCreativeDetails.Parser, new[]{ "VastXmlUrl", "VastRedirectType", "Duration", "VastPricingEnabled", "ProgrammaticDemandSource", "ServerSideUnwrappingDisabled", "TrackingUrls", "VastPreviewUrl", "Audio", "DestinationUrl", "DestinationUrlType" }, new[]{ "VastXmlUrl", "VastRedirectType", "VastPricingEnabled", "ProgrammaticDemandSource", "ServerSideUnwrappingDisabled", "VastPreviewUrl", "Audio", "DestinationUrl", "DestinationUrlType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.VideoCreativeDetails), global::Google.Ads.AdManager.V1.VideoCreativeDetails.Parser, new[]{ "VastInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.VideoRedirectCreativeDetails), global::Google.Ads.AdManager.V1.VideoRedirectCreativeDetails.Parser, new[]{ "VastInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.VastInfo), global::Google.Ads.AdManager.V1.VastInfo.Parser, new[]{ "Duration", "AllowDurationOverride", "TrackingUrls", "CustomParameters", "AdId", "AdIdType", "SkippableAdType", "VastPreviewUrl", "CreativeSetDisplayName", "CreativeSet", "DestinationUrl", "DestinationUrlType", "CompanionCreatives" }, new[]{ "AllowDurationOverride", "CustomParameters", "AdId", "AdIdType", "SkippableAdType", "VastPreviewUrl", "CreativeSetDisplayName", "CreativeSet", "DestinationUrl", "DestinationUrlType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BuyerPlacementConfig), global::Google.Ads.AdManager.V1.BuyerPlacementConfig.Parser, new[]{ "PlacementId", "PlacementDisplayName" }, new[]{ "PlacementId", "PlacementDisplayName" }, null, null, null)
           }));
     }
     #endregion
@@ -57,6 +429,7 @@ namespace Google.Ads.AdManager.V1 {
   {
     private static readonly pb::MessageParser<Creative> _parser = new pb::MessageParser<Creative>(() => new Creative());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Creative> Parser { get { return _parser; } }
@@ -84,8 +457,89 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Creative(Creative other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       displayName_ = other.displayName_;
+      advertiser_ = other.advertiser_;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      customFieldValues_ = other.customFieldValues_.Clone();
+      previewUrl_ = other.previewUrl_;
+      size_ = other.size_ != null ? other.size_.Clone() : null;
+      thirdPartyDataDeclaration_ = other.thirdPartyDataDeclaration_ != null ? other.thirdPartyDataDeclaration_.Clone() : null;
+      thirdPartyDataDeclarationStatus_ = other.thirdPartyDataDeclarationStatus_;
+      selfDeclaredEuropeanUnionPoliticalContent_ = other.selfDeclaredEuropeanUnionPoliticalContent_;
+      adBadgingEnabled_ = other.adBadgingEnabled_;
+      appliedLabels_ = other.appliedLabels_.Clone();
+      buyerPlacementConfig_ = other.buyerPlacementConfig_ != null ? other.buyerPlacementConfig_.Clone() : null;
+      switch (other.DetailsCase) {
+        case DetailsOneofCase.AdExchangeCreative:
+          AdExchangeCreative = other.AdExchangeCreative.Clone();
+          break;
+        case DetailsOneofCase.AdSenseCreative:
+          AdSenseCreative = other.AdSenseCreative.Clone();
+          break;
+        case DetailsOneofCase.AspectRatioImageCreative:
+          AspectRatioImageCreative = other.AspectRatioImageCreative.Clone();
+          break;
+        case DetailsOneofCase.AudioCreative:
+          AudioCreative = other.AudioCreative.Clone();
+          break;
+        case DetailsOneofCase.AudioRedirectCreative:
+          AudioRedirectCreative = other.AudioRedirectCreative.Clone();
+          break;
+        case DetailsOneofCase.ClickTrackingCreative:
+          ClickTrackingCreative = other.ClickTrackingCreative.Clone();
+          break;
+        case DetailsOneofCase.CustomCreative:
+          CustomCreative = other.CustomCreative.Clone();
+          break;
+        case DetailsOneofCase.Html5Creative:
+          Html5Creative = other.Html5Creative.Clone();
+          break;
+        case DetailsOneofCase.ImageCreative:
+          ImageCreative = other.ImageCreative.Clone();
+          break;
+        case DetailsOneofCase.ImageOverlayCreative:
+          ImageOverlayCreative = other.ImageOverlayCreative.Clone();
+          break;
+        case DetailsOneofCase.ImageRedirectCreative:
+          ImageRedirectCreative = other.ImageRedirectCreative.Clone();
+          break;
+        case DetailsOneofCase.ImageRedirectOverlayCreative:
+          ImageRedirectOverlayCreative = other.ImageRedirectOverlayCreative.Clone();
+          break;
+        case DetailsOneofCase.InternalRedirectCreative:
+          InternalRedirectCreative = other.InternalRedirectCreative.Clone();
+          break;
+        case DetailsOneofCase.LegacyDfpCreative:
+          LegacyDfpCreative = other.LegacyDfpCreative.Clone();
+          break;
+        case DetailsOneofCase.ProgrammaticCreative:
+          ProgrammaticCreative = other.ProgrammaticCreative.Clone();
+          break;
+        case DetailsOneofCase.RichMediaStudioCreative:
+          RichMediaStudioCreative = other.RichMediaStudioCreative.Clone();
+          break;
+        case DetailsOneofCase.SetTopBoxCreative:
+          SetTopBoxCreative = other.SetTopBoxCreative.Clone();
+          break;
+        case DetailsOneofCase.TemplateCreative:
+          TemplateCreative = other.TemplateCreative.Clone();
+          break;
+        case DetailsOneofCase.ThirdPartyCreative:
+          ThirdPartyCreative = other.ThirdPartyCreative.Clone();
+          break;
+        case DetailsOneofCase.VastRedirectCreative:
+          VastRedirectCreative = other.VastRedirectCreative.Clone();
+          break;
+        case DetailsOneofCase.VideoCreative:
+          VideoCreative = other.VideoCreative.Clone();
+          break;
+        case DetailsOneofCase.VideoRedirectCreative:
+          VideoRedirectCreative = other.VideoRedirectCreative.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -93,6 +547,362 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Creative Clone() {
       return new Creative(this);
+    }
+
+    /// <summary>Field number for the "ad_exchange_creative" field.</summary>
+    public const int AdExchangeCreativeFieldNumber = 20;
+    /// <summary>
+    /// Optional. An Ad Exchange dynamic allocation creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.AdExchangeCreativeDetails AdExchangeCreative {
+      get { return detailsCase_ == DetailsOneofCase.AdExchangeCreative ? (global::Google.Ads.AdManager.V1.AdExchangeCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.AdExchangeCreative;
+      }
+    }
+
+    /// <summary>Field number for the "ad_sense_creative" field.</summary>
+    public const int AdSenseCreativeFieldNumber = 22;
+    /// <summary>
+    /// Optional. An AdSense dynamic allocation creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.AdSenseCreativeDetails AdSenseCreative {
+      get { return detailsCase_ == DetailsOneofCase.AdSenseCreative ? (global::Google.Ads.AdManager.V1.AdSenseCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.AdSenseCreative;
+      }
+    }
+
+    /// <summary>Field number for the "aspect_ratio_image_creative" field.</summary>
+    public const int AspectRatioImageCreativeFieldNumber = 23;
+    /// <summary>
+    /// Optional. A Creative intended for mobile platforms that displays an
+    /// image, whose size is defined as an aspect ratio. It can have multiple
+    /// images whose dimensions conform to that aspect ratio.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.AspectRatioImageCreativeDetails AspectRatioImageCreative {
+      get { return detailsCase_ == DetailsOneofCase.AspectRatioImageCreative ? (global::Google.Ads.AdManager.V1.AspectRatioImageCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.AspectRatioImageCreative;
+      }
+    }
+
+    /// <summary>Field number for the "audio_creative" field.</summary>
+    public const int AudioCreativeFieldNumber = 24;
+    /// <summary>
+    /// Optional. A Creative that contains Ad Manager hosted audio ads and is
+    /// served via VAST XML.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.AudioCreativeDetails AudioCreative {
+      get { return detailsCase_ == DetailsOneofCase.AudioCreative ? (global::Google.Ads.AdManager.V1.AudioCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.AudioCreative;
+      }
+    }
+
+    /// <summary>Field number for the "audio_redirect_creative" field.</summary>
+    public const int AudioRedirectCreativeFieldNumber = 25;
+    /// <summary>
+    /// Optional. A Creative that contains externally hosted audio ads and is
+    /// served via VAST XML.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.AudioRedirectCreativeDetails AudioRedirectCreative {
+      get { return detailsCase_ == DetailsOneofCase.AudioRedirectCreative ? (global::Google.Ads.AdManager.V1.AudioRedirectCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.AudioRedirectCreative;
+      }
+    }
+
+    /// <summary>Field number for the "click_tracking_creative" field.</summary>
+    public const int ClickTrackingCreativeFieldNumber = 26;
+    /// <summary>
+    /// Optional. A creative that is used for tracking clicks on ads that are
+    /// served directly from the customers' web servers or media servers. NOTE:
+    /// The size attribute is not used for click tracking creative and it will
+    /// not be persisted upon save.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ClickTrackingCreativeDetails ClickTrackingCreative {
+      get { return detailsCase_ == DetailsOneofCase.ClickTrackingCreative ? (global::Google.Ads.AdManager.V1.ClickTrackingCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.ClickTrackingCreative;
+      }
+    }
+
+    /// <summary>Field number for the "custom_creative" field.</summary>
+    public const int CustomCreativeFieldNumber = 18;
+    /// <summary>
+    /// Optional. A Creative that contains a custom HTML snippet and file assets.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CustomCreativeDetails CustomCreative {
+      get { return detailsCase_ == DetailsOneofCase.CustomCreative ? (global::Google.Ads.AdManager.V1.CustomCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.CustomCreative;
+      }
+    }
+
+    /// <summary>Field number for the "html5_creative" field.</summary>
+    public const int Html5CreativeFieldNumber = 33;
+    /// <summary>
+    /// Optional. A Creative that contains a zipped HTML5 bundle asset, a list of
+    /// third party impression trackers, and a third party click tracker.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.Html5CreativeDetails Html5Creative {
+      get { return detailsCase_ == DetailsOneofCase.Html5Creative ? (global::Google.Ads.AdManager.V1.Html5CreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.Html5Creative;
+      }
+    }
+
+    /// <summary>Field number for the "image_creative" field.</summary>
+    public const int ImageCreativeFieldNumber = 19;
+    /// <summary>
+    /// Optional. A Creative that displays an image.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ImageCreativeDetails ImageCreative {
+      get { return detailsCase_ == DetailsOneofCase.ImageCreative ? (global::Google.Ads.AdManager.V1.ImageCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.ImageCreative;
+      }
+    }
+
+    /// <summary>Field number for the "image_overlay_creative" field.</summary>
+    public const int ImageOverlayCreativeFieldNumber = 35;
+    /// <summary>
+    /// Optional. An overlay Creative that displays an image and is served via
+    /// VAST 2.0 XML. Overlays cover part of the video content they are displayed
+    /// on top of.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ImageOverlayCreativeDetails ImageOverlayCreative {
+      get { return detailsCase_ == DetailsOneofCase.ImageOverlayCreative ? (global::Google.Ads.AdManager.V1.ImageOverlayCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.ImageOverlayCreative;
+      }
+    }
+
+    /// <summary>Field number for the "image_redirect_creative" field.</summary>
+    public const int ImageRedirectCreativeFieldNumber = 36;
+    /// <summary>
+    /// Optional. A Creative that loads an image asset from a specified URL.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ImageRedirectCreativeDetails ImageRedirectCreative {
+      get { return detailsCase_ == DetailsOneofCase.ImageRedirectCreative ? (global::Google.Ads.AdManager.V1.ImageRedirectCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.ImageRedirectCreative;
+      }
+    }
+
+    /// <summary>Field number for the "image_redirect_overlay_creative" field.</summary>
+    public const int ImageRedirectOverlayCreativeFieldNumber = 37;
+    /// <summary>
+    /// Optional. An overlay Creative that loads an image asset from a specified
+    /// URL and is served via VAST XML. Overlays cover part of the video content
+    /// they are displayed on top of. This creative is read only.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ImageRedirectOverlayCreativeDetails ImageRedirectOverlayCreative {
+      get { return detailsCase_ == DetailsOneofCase.ImageRedirectOverlayCreative ? (global::Google.Ads.AdManager.V1.ImageRedirectOverlayCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.ImageRedirectOverlayCreative;
+      }
+    }
+
+    /// <summary>Field number for the "internal_redirect_creative" field.</summary>
+    public const int InternalRedirectCreativeFieldNumber = 38;
+    /// <summary>
+    /// Optional. A Creative hosted by Campaign Manager 360.
+    ///
+    /// Similar to third-party creatives, a Campaign Manager 360 tag is used to
+    /// retrieve a creative asset. However, Campaign Manager 360 tags are not
+    /// sent to the user's browser. Instead, they are processed internally within
+    /// the Google Marketing Platform system.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.InternalRedirectCreativeDetails InternalRedirectCreative {
+      get { return detailsCase_ == DetailsOneofCase.InternalRedirectCreative ? (global::Google.Ads.AdManager.V1.InternalRedirectCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.InternalRedirectCreative;
+      }
+    }
+
+    /// <summary>Field number for the "legacy_dfp_creative" field.</summary>
+    public const int LegacyDfpCreativeFieldNumber = 39;
+    /// <summary>
+    /// Optional. A Creative that isn't supported by Google DFP, but was migrated
+    /// from DART. Creatives of this type cannot be created or modified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.LegacyDfpCreativeDetails LegacyDfpCreative {
+      get { return detailsCase_ == DetailsOneofCase.LegacyDfpCreative ? (global::Google.Ads.AdManager.V1.LegacyDfpCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.LegacyDfpCreative;
+      }
+    }
+
+    /// <summary>Field number for the "programmatic_creative" field.</summary>
+    public const int ProgrammaticCreativeFieldNumber = 42;
+    /// <summary>
+    /// Optional. A Creative used for programmatic trafficking. This creative
+    /// will be auto-created with the right approval from the buyer. This
+    /// creative cannot be created through the API. This creative can be updated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ProgrammaticCreativeDetails ProgrammaticCreative {
+      get { return detailsCase_ == DetailsOneofCase.ProgrammaticCreative ? (global::Google.Ads.AdManager.V1.ProgrammaticCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.ProgrammaticCreative;
+      }
+    }
+
+    /// <summary>Field number for the "rich_media_studio_creative" field.</summary>
+    public const int RichMediaStudioCreativeFieldNumber = 43;
+    /// <summary>
+    /// Optional. A Creative that is created by a Rich Media Studio. You cannot
+    /// create this creative, but you can update some fields of this creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.RichMediaStudioCreativeDetails RichMediaStudioCreative {
+      get { return detailsCase_ == DetailsOneofCase.RichMediaStudioCreative ? (global::Google.Ads.AdManager.V1.RichMediaStudioCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.RichMediaStudioCreative;
+      }
+    }
+
+    /// <summary>Field number for the "set_top_box_creative" field.</summary>
+    public const int SetTopBoxCreativeFieldNumber = 46;
+    /// <summary>
+    /// Optional. A Creative that will be served into cable set-top boxes. There
+    /// are no assets for this creative type, as they are hosted by external
+    /// cable systems.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.SetTopBoxCreativeDetails SetTopBoxCreative {
+      get { return detailsCase_ == DetailsOneofCase.SetTopBoxCreative ? (global::Google.Ads.AdManager.V1.SetTopBoxCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.SetTopBoxCreative;
+      }
+    }
+
+    /// <summary>Field number for the "template_creative" field.</summary>
+    public const int TemplateCreativeFieldNumber = 47;
+    /// <summary>
+    /// Optional. A Creative that is created by the specified creative template.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.TemplateCreativeDetails TemplateCreative {
+      get { return detailsCase_ == DetailsOneofCase.TemplateCreative ? (global::Google.Ads.AdManager.V1.TemplateCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.TemplateCreative;
+      }
+    }
+
+    /// <summary>Field number for the "third_party_creative" field.</summary>
+    public const int ThirdPartyCreativeFieldNumber = 48;
+    /// <summary>
+    /// Optional. A Creative that is served by a 3rd-party vendor.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ThirdPartyCreativeDetails ThirdPartyCreative {
+      get { return detailsCase_ == DetailsOneofCase.ThirdPartyCreative ? (global::Google.Ads.AdManager.V1.ThirdPartyCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.ThirdPartyCreative;
+      }
+    }
+
+    /// <summary>Field number for the "vast_redirect_creative" field.</summary>
+    public const int VastRedirectCreativeFieldNumber = 49;
+    /// <summary>
+    /// Optional. A Creative that points to an externally hosted VAST ad and is
+    /// served via VAST XML as a VAST Wrapper.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.VastRedirectCreativeDetails VastRedirectCreative {
+      get { return detailsCase_ == DetailsOneofCase.VastRedirectCreative ? (global::Google.Ads.AdManager.V1.VastRedirectCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.VastRedirectCreative;
+      }
+    }
+
+    /// <summary>Field number for the "video_creative" field.</summary>
+    public const int VideoCreativeFieldNumber = 51;
+    /// <summary>
+    /// Optional. A Creative that contains Ad Manager hosted video ads and is
+    /// served via VAST XML.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.VideoCreativeDetails VideoCreative {
+      get { return detailsCase_ == DetailsOneofCase.VideoCreative ? (global::Google.Ads.AdManager.V1.VideoCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.VideoCreative;
+      }
+    }
+
+    /// <summary>Field number for the "video_redirect_creative" field.</summary>
+    public const int VideoRedirectCreativeFieldNumber = 53;
+    /// <summary>
+    /// Optional. A Creative that contains externally hosted video ads and is
+    /// served via VAST XML.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.VideoRedirectCreativeDetails VideoRedirectCreative {
+      get { return detailsCase_ == DetailsOneofCase.VideoRedirectCreative ? (global::Google.Ads.AdManager.V1.VideoRedirectCreativeDetails) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.VideoRedirectCreative;
+      }
     }
 
     /// <summary>Field number for the "name" field.</summary>
@@ -141,6 +951,303 @@ namespace Google.Ads.AdManager.V1 {
       displayName_ = null;
     }
 
+    /// <summary>Field number for the "advertiser" field.</summary>
+    public const int AdvertiserFieldNumber = 2;
+    private readonly static string AdvertiserDefaultValue = "";
+
+    private string advertiser_;
+    /// <summary>
+    /// Required. The resource name of the Company, which is of type
+    /// Company.Type.ADVERTISER, to which this Creative belongs. Format:
+    /// "networks/{network_code}/companies/{company_id}"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Advertiser {
+      get { return advertiser_ ?? AdvertiserDefaultValue; }
+      set {
+        advertiser_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "advertiser" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAdvertiser {
+      get { return advertiser_ != null; }
+    }
+    /// <summary>Clears the value of the "advertiser" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAdvertiser() {
+      advertiser_ = null;
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. The instant this Creative was last modified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "custom_field_values" field.</summary>
+    public const int CustomFieldValuesFieldNumber = 76;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.CustomFieldValue> _repeated_customFieldValues_codec
+        = pb::FieldCodec.ForMessage(610, global::Google.Ads.AdManager.V1.CustomFieldValue.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.CustomFieldValue> customFieldValues_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.CustomFieldValue>();
+    /// <summary>
+    /// Optional. The values of the custom fields associated with this creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.CustomFieldValue> CustomFieldValues {
+      get { return customFieldValues_; }
+    }
+
+    /// <summary>Field number for the "preview_url" field.</summary>
+    public const int PreviewUrlFieldNumber = 4;
+    private readonly static string PreviewUrlDefaultValue = "";
+
+    private string previewUrl_;
+    /// <summary>
+    /// Output only. The URL of the creative for previewing the media.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PreviewUrl {
+      get { return previewUrl_ ?? PreviewUrlDefaultValue; }
+      set {
+        previewUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "preview_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPreviewUrl {
+      get { return previewUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "preview_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPreviewUrl() {
+      previewUrl_ = null;
+    }
+
+    /// <summary>Field number for the "size" field.</summary>
+    public const int SizeFieldNumber = 5;
+    private global::Google.Ads.AdManager.V1.Size size_;
+    /// <summary>
+    /// Required. Immutable. The Size of the creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.Size Size {
+      get { return size_; }
+      set {
+        size_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "third_party_data_declaration" field.</summary>
+    public const int ThirdPartyDataDeclarationFieldNumber = 59;
+    private global::Google.Ads.AdManager.V1.ThirdPartyDataDeclaration thirdPartyDataDeclaration_;
+    /// <summary>
+    /// Optional. The third party companies associated with this creative.
+    /// This is distinct from any associated companies that Google may detect
+    /// programmatically.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ThirdPartyDataDeclaration ThirdPartyDataDeclaration {
+      get { return thirdPartyDataDeclaration_; }
+      set {
+        thirdPartyDataDeclaration_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "third_party_data_declaration_status" field.</summary>
+    public const int ThirdPartyDataDeclarationStatusFieldNumber = 60;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeThirdPartyDataDeclarationStatusEnum.Types.CreativeThirdPartyDataDeclarationStatus ThirdPartyDataDeclarationStatusDefaultValue = global::Google.Ads.AdManager.V1.CreativeThirdPartyDataDeclarationStatusEnum.Types.CreativeThirdPartyDataDeclarationStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeThirdPartyDataDeclarationStatusEnum.Types.CreativeThirdPartyDataDeclarationStatus thirdPartyDataDeclarationStatus_;
+    /// <summary>
+    /// Output only. The status of the publisher's `ThirdPartyDataDeclaration`,
+    /// when compared with the set of third party companies detected via automated
+    /// scanning.
+    ///
+    /// For example, if automated scanning detects more companies than have been
+    /// declared, this status will be
+    /// [CreativeThirdPartyDataDeclarationStatus.INCOMPLETE][google.ads.admanager.v1.CreativeThirdPartyDataDeclarationStatusEnum.CreativeThirdPartyDataDeclarationStatus.INCOMPLETE].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeThirdPartyDataDeclarationStatusEnum.Types.CreativeThirdPartyDataDeclarationStatus ThirdPartyDataDeclarationStatus {
+      get { if ((_hasBits0 & 4) != 0) { return thirdPartyDataDeclarationStatus_; } else { return ThirdPartyDataDeclarationStatusDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        thirdPartyDataDeclarationStatus_ = value;
+      }
+    }
+    /// <summary>Gets whether the "third_party_data_declaration_status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasThirdPartyDataDeclarationStatus {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "third_party_data_declaration_status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearThirdPartyDataDeclarationStatus() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "self_declared_european_union_political_content" field.</summary>
+    public const int SelfDeclaredEuropeanUnionPoliticalContentFieldNumber = 13;
+    private readonly static bool SelfDeclaredEuropeanUnionPoliticalContentDefaultValue = false;
+
+    private bool selfDeclaredEuropeanUnionPoliticalContent_;
+    /// <summary>
+    /// Optional. Whether this creative contains self-declared European Union
+    /// political content.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SelfDeclaredEuropeanUnionPoliticalContent {
+      get { if ((_hasBits0 & 1) != 0) { return selfDeclaredEuropeanUnionPoliticalContent_; } else { return SelfDeclaredEuropeanUnionPoliticalContentDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        selfDeclaredEuropeanUnionPoliticalContent_ = value;
+      }
+    }
+    /// <summary>Gets whether the "self_declared_european_union_political_content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSelfDeclaredEuropeanUnionPoliticalContent {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "self_declared_european_union_political_content" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSelfDeclaredEuropeanUnionPoliticalContent() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "ad_badging_enabled" field.</summary>
+    public const int AdBadgingEnabledFieldNumber = 17;
+    private readonly static bool AdBadgingEnabledDefaultValue = false;
+
+    private bool adBadgingEnabled_;
+    /// <summary>
+    /// Optional. Non-empty default. Whether the creative has ad badging enabled.
+    ///
+    /// Defaults to false for VastRedirectCreative, ThirdPartyCreative,
+    /// AudioRedirectCreative, ProgrammaticCreative, LegacyDfpMobileCreative,
+    /// FlashOverlayCreative, GraphicalInterstitialCreative,
+    /// LegacyDfpCreative, MobileAdNetworkCreative,
+    /// MobileVideoInterstitialCreative, SdkMediationCreative, and
+    /// FlashCreative types.
+    ///
+    /// Defaults to true for all other creative types.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AdBadgingEnabled {
+      get { if ((_hasBits0 & 2) != 0) { return adBadgingEnabled_; } else { return AdBadgingEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        adBadgingEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ad_badging_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAdBadgingEnabled {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "ad_badging_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAdBadgingEnabled() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "applied_labels" field.</summary>
+    public const int AppliedLabelsFieldNumber = 56;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.AppliedLabel> _repeated_appliedLabels_codec
+        = pb::FieldCodec.ForMessage(450, global::Google.Ads.AdManager.V1.AppliedLabel.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.AppliedLabel> appliedLabels_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.AppliedLabel>();
+    /// <summary>
+    /// Optional. The set of labels applied directly to this creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.AppliedLabel> AppliedLabels {
+      get { return appliedLabels_; }
+    }
+
+    /// <summary>Field number for the "buyer_placement_config" field.</summary>
+    public const int BuyerPlacementConfigFieldNumber = 81;
+    private global::Google.Ads.AdManager.V1.BuyerPlacementConfig buyerPlacementConfig_;
+    /// <summary>
+    /// Optional. The buyer placement configuration for this creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.BuyerPlacementConfig BuyerPlacementConfig {
+      get { return buyerPlacementConfig_; }
+      set {
+        buyerPlacementConfig_ = value;
+      }
+    }
+
+    private object details_;
+    /// <summary>Enum of possible cases for the "details" oneof.</summary>
+    public enum DetailsOneofCase {
+      None = 0,
+      AdExchangeCreative = 20,
+      AdSenseCreative = 22,
+      AspectRatioImageCreative = 23,
+      AudioCreative = 24,
+      AudioRedirectCreative = 25,
+      ClickTrackingCreative = 26,
+      CustomCreative = 18,
+      Html5Creative = 33,
+      ImageCreative = 19,
+      ImageOverlayCreative = 35,
+      ImageRedirectCreative = 36,
+      ImageRedirectOverlayCreative = 37,
+      InternalRedirectCreative = 38,
+      LegacyDfpCreative = 39,
+      ProgrammaticCreative = 42,
+      RichMediaStudioCreative = 43,
+      SetTopBoxCreative = 46,
+      TemplateCreative = 47,
+      ThirdPartyCreative = 48,
+      VastRedirectCreative = 49,
+      VideoCreative = 51,
+      VideoRedirectCreative = 53,
+    }
+    private DetailsOneofCase detailsCase_ = DetailsOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DetailsOneofCase DetailsCase {
+      get { return detailsCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDetails() {
+      detailsCase_ = DetailsOneofCase.None;
+      details_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -156,8 +1263,42 @@ namespace Google.Ads.AdManager.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(AdExchangeCreative, other.AdExchangeCreative)) return false;
+      if (!object.Equals(AdSenseCreative, other.AdSenseCreative)) return false;
+      if (!object.Equals(AspectRatioImageCreative, other.AspectRatioImageCreative)) return false;
+      if (!object.Equals(AudioCreative, other.AudioCreative)) return false;
+      if (!object.Equals(AudioRedirectCreative, other.AudioRedirectCreative)) return false;
+      if (!object.Equals(ClickTrackingCreative, other.ClickTrackingCreative)) return false;
+      if (!object.Equals(CustomCreative, other.CustomCreative)) return false;
+      if (!object.Equals(Html5Creative, other.Html5Creative)) return false;
+      if (!object.Equals(ImageCreative, other.ImageCreative)) return false;
+      if (!object.Equals(ImageOverlayCreative, other.ImageOverlayCreative)) return false;
+      if (!object.Equals(ImageRedirectCreative, other.ImageRedirectCreative)) return false;
+      if (!object.Equals(ImageRedirectOverlayCreative, other.ImageRedirectOverlayCreative)) return false;
+      if (!object.Equals(InternalRedirectCreative, other.InternalRedirectCreative)) return false;
+      if (!object.Equals(LegacyDfpCreative, other.LegacyDfpCreative)) return false;
+      if (!object.Equals(ProgrammaticCreative, other.ProgrammaticCreative)) return false;
+      if (!object.Equals(RichMediaStudioCreative, other.RichMediaStudioCreative)) return false;
+      if (!object.Equals(SetTopBoxCreative, other.SetTopBoxCreative)) return false;
+      if (!object.Equals(TemplateCreative, other.TemplateCreative)) return false;
+      if (!object.Equals(ThirdPartyCreative, other.ThirdPartyCreative)) return false;
+      if (!object.Equals(VastRedirectCreative, other.VastRedirectCreative)) return false;
+      if (!object.Equals(VideoCreative, other.VideoCreative)) return false;
+      if (!object.Equals(VideoRedirectCreative, other.VideoRedirectCreative)) return false;
       if (Name != other.Name) return false;
       if (DisplayName != other.DisplayName) return false;
+      if (Advertiser != other.Advertiser) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if(!customFieldValues_.Equals(other.customFieldValues_)) return false;
+      if (PreviewUrl != other.PreviewUrl) return false;
+      if (!object.Equals(Size, other.Size)) return false;
+      if (!object.Equals(ThirdPartyDataDeclaration, other.ThirdPartyDataDeclaration)) return false;
+      if (ThirdPartyDataDeclarationStatus != other.ThirdPartyDataDeclarationStatus) return false;
+      if (SelfDeclaredEuropeanUnionPoliticalContent != other.SelfDeclaredEuropeanUnionPoliticalContent) return false;
+      if (AdBadgingEnabled != other.AdBadgingEnabled) return false;
+      if(!appliedLabels_.Equals(other.appliedLabels_)) return false;
+      if (!object.Equals(BuyerPlacementConfig, other.BuyerPlacementConfig)) return false;
+      if (DetailsCase != other.DetailsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -165,8 +1306,42 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (detailsCase_ == DetailsOneofCase.AdExchangeCreative) hash ^= AdExchangeCreative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.AdSenseCreative) hash ^= AdSenseCreative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.AspectRatioImageCreative) hash ^= AspectRatioImageCreative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.AudioCreative) hash ^= AudioCreative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.AudioRedirectCreative) hash ^= AudioRedirectCreative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.ClickTrackingCreative) hash ^= ClickTrackingCreative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.CustomCreative) hash ^= CustomCreative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.Html5Creative) hash ^= Html5Creative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.ImageCreative) hash ^= ImageCreative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.ImageOverlayCreative) hash ^= ImageOverlayCreative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.ImageRedirectCreative) hash ^= ImageRedirectCreative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.ImageRedirectOverlayCreative) hash ^= ImageRedirectOverlayCreative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.InternalRedirectCreative) hash ^= InternalRedirectCreative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.LegacyDfpCreative) hash ^= LegacyDfpCreative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.ProgrammaticCreative) hash ^= ProgrammaticCreative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.RichMediaStudioCreative) hash ^= RichMediaStudioCreative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.SetTopBoxCreative) hash ^= SetTopBoxCreative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.TemplateCreative) hash ^= TemplateCreative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.ThirdPartyCreative) hash ^= ThirdPartyCreative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.VastRedirectCreative) hash ^= VastRedirectCreative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.VideoCreative) hash ^= VideoCreative.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.VideoRedirectCreative) hash ^= VideoRedirectCreative.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasAdvertiser) hash ^= Advertiser.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      hash ^= customFieldValues_.GetHashCode();
+      if (HasPreviewUrl) hash ^= PreviewUrl.GetHashCode();
+      if (size_ != null) hash ^= Size.GetHashCode();
+      if (thirdPartyDataDeclaration_ != null) hash ^= ThirdPartyDataDeclaration.GetHashCode();
+      if (HasThirdPartyDataDeclarationStatus) hash ^= ThirdPartyDataDeclarationStatus.GetHashCode();
+      if (HasSelfDeclaredEuropeanUnionPoliticalContent) hash ^= SelfDeclaredEuropeanUnionPoliticalContent.GetHashCode();
+      if (HasAdBadgingEnabled) hash ^= AdBadgingEnabled.GetHashCode();
+      hash ^= appliedLabels_.GetHashCode();
+      if (buyerPlacementConfig_ != null) hash ^= BuyerPlacementConfig.GetHashCode();
+      hash ^= (int) detailsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -189,9 +1364,135 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (HasAdvertiser) {
+        output.WriteRawTag(18);
+        output.WriteString(Advertiser);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      if (HasPreviewUrl) {
+        output.WriteRawTag(34);
+        output.WriteString(PreviewUrl);
+      }
+      if (size_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Size);
+      }
       if (HasDisplayName) {
         output.WriteRawTag(66);
         output.WriteString(DisplayName);
+      }
+      if (HasSelfDeclaredEuropeanUnionPoliticalContent) {
+        output.WriteRawTag(104);
+        output.WriteBool(SelfDeclaredEuropeanUnionPoliticalContent);
+      }
+      if (HasAdBadgingEnabled) {
+        output.WriteRawTag(136, 1);
+        output.WriteBool(AdBadgingEnabled);
+      }
+      if (detailsCase_ == DetailsOneofCase.CustomCreative) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(CustomCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ImageCreative) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(ImageCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.AdExchangeCreative) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(AdExchangeCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.AdSenseCreative) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(AdSenseCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.AspectRatioImageCreative) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(AspectRatioImageCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.AudioCreative) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(AudioCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.AudioRedirectCreative) {
+        output.WriteRawTag(202, 1);
+        output.WriteMessage(AudioRedirectCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ClickTrackingCreative) {
+        output.WriteRawTag(210, 1);
+        output.WriteMessage(ClickTrackingCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.Html5Creative) {
+        output.WriteRawTag(138, 2);
+        output.WriteMessage(Html5Creative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ImageOverlayCreative) {
+        output.WriteRawTag(154, 2);
+        output.WriteMessage(ImageOverlayCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ImageRedirectCreative) {
+        output.WriteRawTag(162, 2);
+        output.WriteMessage(ImageRedirectCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ImageRedirectOverlayCreative) {
+        output.WriteRawTag(170, 2);
+        output.WriteMessage(ImageRedirectOverlayCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.InternalRedirectCreative) {
+        output.WriteRawTag(178, 2);
+        output.WriteMessage(InternalRedirectCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.LegacyDfpCreative) {
+        output.WriteRawTag(186, 2);
+        output.WriteMessage(LegacyDfpCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ProgrammaticCreative) {
+        output.WriteRawTag(210, 2);
+        output.WriteMessage(ProgrammaticCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.RichMediaStudioCreative) {
+        output.WriteRawTag(218, 2);
+        output.WriteMessage(RichMediaStudioCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.SetTopBoxCreative) {
+        output.WriteRawTag(242, 2);
+        output.WriteMessage(SetTopBoxCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.TemplateCreative) {
+        output.WriteRawTag(250, 2);
+        output.WriteMessage(TemplateCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ThirdPartyCreative) {
+        output.WriteRawTag(130, 3);
+        output.WriteMessage(ThirdPartyCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.VastRedirectCreative) {
+        output.WriteRawTag(138, 3);
+        output.WriteMessage(VastRedirectCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.VideoCreative) {
+        output.WriteRawTag(154, 3);
+        output.WriteMessage(VideoCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.VideoRedirectCreative) {
+        output.WriteRawTag(170, 3);
+        output.WriteMessage(VideoRedirectCreative);
+      }
+      appliedLabels_.WriteTo(output, _repeated_appliedLabels_codec);
+      if (thirdPartyDataDeclaration_ != null) {
+        output.WriteRawTag(218, 3);
+        output.WriteMessage(ThirdPartyDataDeclaration);
+      }
+      if (HasThirdPartyDataDeclarationStatus) {
+        output.WriteRawTag(224, 3);
+        output.WriteEnum((int) ThirdPartyDataDeclarationStatus);
+      }
+      customFieldValues_.WriteTo(output, _repeated_customFieldValues_codec);
+      if (buyerPlacementConfig_ != null) {
+        output.WriteRawTag(138, 5);
+        output.WriteMessage(BuyerPlacementConfig);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -207,9 +1508,135 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (HasAdvertiser) {
+        output.WriteRawTag(18);
+        output.WriteString(Advertiser);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      if (HasPreviewUrl) {
+        output.WriteRawTag(34);
+        output.WriteString(PreviewUrl);
+      }
+      if (size_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Size);
+      }
       if (HasDisplayName) {
         output.WriteRawTag(66);
         output.WriteString(DisplayName);
+      }
+      if (HasSelfDeclaredEuropeanUnionPoliticalContent) {
+        output.WriteRawTag(104);
+        output.WriteBool(SelfDeclaredEuropeanUnionPoliticalContent);
+      }
+      if (HasAdBadgingEnabled) {
+        output.WriteRawTag(136, 1);
+        output.WriteBool(AdBadgingEnabled);
+      }
+      if (detailsCase_ == DetailsOneofCase.CustomCreative) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(CustomCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ImageCreative) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(ImageCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.AdExchangeCreative) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(AdExchangeCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.AdSenseCreative) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(AdSenseCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.AspectRatioImageCreative) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(AspectRatioImageCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.AudioCreative) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(AudioCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.AudioRedirectCreative) {
+        output.WriteRawTag(202, 1);
+        output.WriteMessage(AudioRedirectCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ClickTrackingCreative) {
+        output.WriteRawTag(210, 1);
+        output.WriteMessage(ClickTrackingCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.Html5Creative) {
+        output.WriteRawTag(138, 2);
+        output.WriteMessage(Html5Creative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ImageOverlayCreative) {
+        output.WriteRawTag(154, 2);
+        output.WriteMessage(ImageOverlayCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ImageRedirectCreative) {
+        output.WriteRawTag(162, 2);
+        output.WriteMessage(ImageRedirectCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ImageRedirectOverlayCreative) {
+        output.WriteRawTag(170, 2);
+        output.WriteMessage(ImageRedirectOverlayCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.InternalRedirectCreative) {
+        output.WriteRawTag(178, 2);
+        output.WriteMessage(InternalRedirectCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.LegacyDfpCreative) {
+        output.WriteRawTag(186, 2);
+        output.WriteMessage(LegacyDfpCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ProgrammaticCreative) {
+        output.WriteRawTag(210, 2);
+        output.WriteMessage(ProgrammaticCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.RichMediaStudioCreative) {
+        output.WriteRawTag(218, 2);
+        output.WriteMessage(RichMediaStudioCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.SetTopBoxCreative) {
+        output.WriteRawTag(242, 2);
+        output.WriteMessage(SetTopBoxCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.TemplateCreative) {
+        output.WriteRawTag(250, 2);
+        output.WriteMessage(TemplateCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ThirdPartyCreative) {
+        output.WriteRawTag(130, 3);
+        output.WriteMessage(ThirdPartyCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.VastRedirectCreative) {
+        output.WriteRawTag(138, 3);
+        output.WriteMessage(VastRedirectCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.VideoCreative) {
+        output.WriteRawTag(154, 3);
+        output.WriteMessage(VideoCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.VideoRedirectCreative) {
+        output.WriteRawTag(170, 3);
+        output.WriteMessage(VideoRedirectCreative);
+      }
+      appliedLabels_.WriteTo(ref output, _repeated_appliedLabels_codec);
+      if (thirdPartyDataDeclaration_ != null) {
+        output.WriteRawTag(218, 3);
+        output.WriteMessage(ThirdPartyDataDeclaration);
+      }
+      if (HasThirdPartyDataDeclarationStatus) {
+        output.WriteRawTag(224, 3);
+        output.WriteEnum((int) ThirdPartyDataDeclarationStatus);
+      }
+      customFieldValues_.WriteTo(ref output, _repeated_customFieldValues_codec);
+      if (buyerPlacementConfig_ != null) {
+        output.WriteRawTag(138, 5);
+        output.WriteMessage(BuyerPlacementConfig);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -221,11 +1648,106 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (detailsCase_ == DetailsOneofCase.AdExchangeCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AdExchangeCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.AdSenseCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AdSenseCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.AspectRatioImageCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AspectRatioImageCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.AudioCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AudioCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.AudioRedirectCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AudioRedirectCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ClickTrackingCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ClickTrackingCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.CustomCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CustomCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.Html5Creative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Html5Creative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ImageCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ImageCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ImageOverlayCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ImageOverlayCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ImageRedirectCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ImageRedirectCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ImageRedirectOverlayCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ImageRedirectOverlayCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.InternalRedirectCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(InternalRedirectCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.LegacyDfpCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(LegacyDfpCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ProgrammaticCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ProgrammaticCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.RichMediaStudioCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(RichMediaStudioCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.SetTopBoxCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SetTopBoxCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.TemplateCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(TemplateCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.ThirdPartyCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ThirdPartyCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.VastRedirectCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(VastRedirectCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.VideoCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(VideoCreative);
+      }
+      if (detailsCase_ == DetailsOneofCase.VideoRedirectCreative) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(VideoRedirectCreative);
+      }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (HasDisplayName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (HasAdvertiser) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Advertiser);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      size += customFieldValues_.CalculateSize(_repeated_customFieldValues_codec);
+      if (HasPreviewUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PreviewUrl);
+      }
+      if (size_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Size);
+      }
+      if (thirdPartyDataDeclaration_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ThirdPartyDataDeclaration);
+      }
+      if (HasThirdPartyDataDeclarationStatus) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) ThirdPartyDataDeclarationStatus);
+      }
+      if (HasSelfDeclaredEuropeanUnionPoliticalContent) {
+        size += 1 + 1;
+      }
+      if (HasAdBadgingEnabled) {
+        size += 2 + 1;
+      }
+      size += appliedLabels_.CalculateSize(_repeated_appliedLabels_codec);
+      if (buyerPlacementConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(BuyerPlacementConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -245,6 +1767,182 @@ namespace Google.Ads.AdManager.V1 {
       if (other.HasDisplayName) {
         DisplayName = other.DisplayName;
       }
+      if (other.HasAdvertiser) {
+        Advertiser = other.Advertiser;
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      customFieldValues_.Add(other.customFieldValues_);
+      if (other.HasPreviewUrl) {
+        PreviewUrl = other.PreviewUrl;
+      }
+      if (other.size_ != null) {
+        if (size_ == null) {
+          Size = new global::Google.Ads.AdManager.V1.Size();
+        }
+        Size.MergeFrom(other.Size);
+      }
+      if (other.thirdPartyDataDeclaration_ != null) {
+        if (thirdPartyDataDeclaration_ == null) {
+          ThirdPartyDataDeclaration = new global::Google.Ads.AdManager.V1.ThirdPartyDataDeclaration();
+        }
+        ThirdPartyDataDeclaration.MergeFrom(other.ThirdPartyDataDeclaration);
+      }
+      if (other.HasThirdPartyDataDeclarationStatus) {
+        ThirdPartyDataDeclarationStatus = other.ThirdPartyDataDeclarationStatus;
+      }
+      if (other.HasSelfDeclaredEuropeanUnionPoliticalContent) {
+        SelfDeclaredEuropeanUnionPoliticalContent = other.SelfDeclaredEuropeanUnionPoliticalContent;
+      }
+      if (other.HasAdBadgingEnabled) {
+        AdBadgingEnabled = other.AdBadgingEnabled;
+      }
+      appliedLabels_.Add(other.appliedLabels_);
+      if (other.buyerPlacementConfig_ != null) {
+        if (buyerPlacementConfig_ == null) {
+          BuyerPlacementConfig = new global::Google.Ads.AdManager.V1.BuyerPlacementConfig();
+        }
+        BuyerPlacementConfig.MergeFrom(other.BuyerPlacementConfig);
+      }
+      switch (other.DetailsCase) {
+        case DetailsOneofCase.AdExchangeCreative:
+          if (AdExchangeCreative == null) {
+            AdExchangeCreative = new global::Google.Ads.AdManager.V1.AdExchangeCreativeDetails();
+          }
+          AdExchangeCreative.MergeFrom(other.AdExchangeCreative);
+          break;
+        case DetailsOneofCase.AdSenseCreative:
+          if (AdSenseCreative == null) {
+            AdSenseCreative = new global::Google.Ads.AdManager.V1.AdSenseCreativeDetails();
+          }
+          AdSenseCreative.MergeFrom(other.AdSenseCreative);
+          break;
+        case DetailsOneofCase.AspectRatioImageCreative:
+          if (AspectRatioImageCreative == null) {
+            AspectRatioImageCreative = new global::Google.Ads.AdManager.V1.AspectRatioImageCreativeDetails();
+          }
+          AspectRatioImageCreative.MergeFrom(other.AspectRatioImageCreative);
+          break;
+        case DetailsOneofCase.AudioCreative:
+          if (AudioCreative == null) {
+            AudioCreative = new global::Google.Ads.AdManager.V1.AudioCreativeDetails();
+          }
+          AudioCreative.MergeFrom(other.AudioCreative);
+          break;
+        case DetailsOneofCase.AudioRedirectCreative:
+          if (AudioRedirectCreative == null) {
+            AudioRedirectCreative = new global::Google.Ads.AdManager.V1.AudioRedirectCreativeDetails();
+          }
+          AudioRedirectCreative.MergeFrom(other.AudioRedirectCreative);
+          break;
+        case DetailsOneofCase.ClickTrackingCreative:
+          if (ClickTrackingCreative == null) {
+            ClickTrackingCreative = new global::Google.Ads.AdManager.V1.ClickTrackingCreativeDetails();
+          }
+          ClickTrackingCreative.MergeFrom(other.ClickTrackingCreative);
+          break;
+        case DetailsOneofCase.CustomCreative:
+          if (CustomCreative == null) {
+            CustomCreative = new global::Google.Ads.AdManager.V1.CustomCreativeDetails();
+          }
+          CustomCreative.MergeFrom(other.CustomCreative);
+          break;
+        case DetailsOneofCase.Html5Creative:
+          if (Html5Creative == null) {
+            Html5Creative = new global::Google.Ads.AdManager.V1.Html5CreativeDetails();
+          }
+          Html5Creative.MergeFrom(other.Html5Creative);
+          break;
+        case DetailsOneofCase.ImageCreative:
+          if (ImageCreative == null) {
+            ImageCreative = new global::Google.Ads.AdManager.V1.ImageCreativeDetails();
+          }
+          ImageCreative.MergeFrom(other.ImageCreative);
+          break;
+        case DetailsOneofCase.ImageOverlayCreative:
+          if (ImageOverlayCreative == null) {
+            ImageOverlayCreative = new global::Google.Ads.AdManager.V1.ImageOverlayCreativeDetails();
+          }
+          ImageOverlayCreative.MergeFrom(other.ImageOverlayCreative);
+          break;
+        case DetailsOneofCase.ImageRedirectCreative:
+          if (ImageRedirectCreative == null) {
+            ImageRedirectCreative = new global::Google.Ads.AdManager.V1.ImageRedirectCreativeDetails();
+          }
+          ImageRedirectCreative.MergeFrom(other.ImageRedirectCreative);
+          break;
+        case DetailsOneofCase.ImageRedirectOverlayCreative:
+          if (ImageRedirectOverlayCreative == null) {
+            ImageRedirectOverlayCreative = new global::Google.Ads.AdManager.V1.ImageRedirectOverlayCreativeDetails();
+          }
+          ImageRedirectOverlayCreative.MergeFrom(other.ImageRedirectOverlayCreative);
+          break;
+        case DetailsOneofCase.InternalRedirectCreative:
+          if (InternalRedirectCreative == null) {
+            InternalRedirectCreative = new global::Google.Ads.AdManager.V1.InternalRedirectCreativeDetails();
+          }
+          InternalRedirectCreative.MergeFrom(other.InternalRedirectCreative);
+          break;
+        case DetailsOneofCase.LegacyDfpCreative:
+          if (LegacyDfpCreative == null) {
+            LegacyDfpCreative = new global::Google.Ads.AdManager.V1.LegacyDfpCreativeDetails();
+          }
+          LegacyDfpCreative.MergeFrom(other.LegacyDfpCreative);
+          break;
+        case DetailsOneofCase.ProgrammaticCreative:
+          if (ProgrammaticCreative == null) {
+            ProgrammaticCreative = new global::Google.Ads.AdManager.V1.ProgrammaticCreativeDetails();
+          }
+          ProgrammaticCreative.MergeFrom(other.ProgrammaticCreative);
+          break;
+        case DetailsOneofCase.RichMediaStudioCreative:
+          if (RichMediaStudioCreative == null) {
+            RichMediaStudioCreative = new global::Google.Ads.AdManager.V1.RichMediaStudioCreativeDetails();
+          }
+          RichMediaStudioCreative.MergeFrom(other.RichMediaStudioCreative);
+          break;
+        case DetailsOneofCase.SetTopBoxCreative:
+          if (SetTopBoxCreative == null) {
+            SetTopBoxCreative = new global::Google.Ads.AdManager.V1.SetTopBoxCreativeDetails();
+          }
+          SetTopBoxCreative.MergeFrom(other.SetTopBoxCreative);
+          break;
+        case DetailsOneofCase.TemplateCreative:
+          if (TemplateCreative == null) {
+            TemplateCreative = new global::Google.Ads.AdManager.V1.TemplateCreativeDetails();
+          }
+          TemplateCreative.MergeFrom(other.TemplateCreative);
+          break;
+        case DetailsOneofCase.ThirdPartyCreative:
+          if (ThirdPartyCreative == null) {
+            ThirdPartyCreative = new global::Google.Ads.AdManager.V1.ThirdPartyCreativeDetails();
+          }
+          ThirdPartyCreative.MergeFrom(other.ThirdPartyCreative);
+          break;
+        case DetailsOneofCase.VastRedirectCreative:
+          if (VastRedirectCreative == null) {
+            VastRedirectCreative = new global::Google.Ads.AdManager.V1.VastRedirectCreativeDetails();
+          }
+          VastRedirectCreative.MergeFrom(other.VastRedirectCreative);
+          break;
+        case DetailsOneofCase.VideoCreative:
+          if (VideoCreative == null) {
+            VideoCreative = new global::Google.Ads.AdManager.V1.VideoCreativeDetails();
+          }
+          VideoCreative.MergeFrom(other.VideoCreative);
+          break;
+        case DetailsOneofCase.VideoRedirectCreative:
+          if (VideoRedirectCreative == null) {
+            VideoRedirectCreative = new global::Google.Ads.AdManager.V1.VideoRedirectCreativeDetails();
+          }
+          VideoRedirectCreative.MergeFrom(other.VideoRedirectCreative);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -268,8 +1966,262 @@ namespace Google.Ads.AdManager.V1 {
             Name = input.ReadString();
             break;
           }
+          case 18: {
+            Advertiser = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 34: {
+            PreviewUrl = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (size_ == null) {
+              Size = new global::Google.Ads.AdManager.V1.Size();
+            }
+            input.ReadMessage(Size);
+            break;
+          }
           case 66: {
             DisplayName = input.ReadString();
+            break;
+          }
+          case 104: {
+            SelfDeclaredEuropeanUnionPoliticalContent = input.ReadBool();
+            break;
+          }
+          case 136: {
+            AdBadgingEnabled = input.ReadBool();
+            break;
+          }
+          case 146: {
+            global::Google.Ads.AdManager.V1.CustomCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.CustomCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.CustomCreative) {
+              subBuilder.MergeFrom(CustomCreative);
+            }
+            input.ReadMessage(subBuilder);
+            CustomCreative = subBuilder;
+            break;
+          }
+          case 154: {
+            global::Google.Ads.AdManager.V1.ImageCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.ImageCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.ImageCreative) {
+              subBuilder.MergeFrom(ImageCreative);
+            }
+            input.ReadMessage(subBuilder);
+            ImageCreative = subBuilder;
+            break;
+          }
+          case 162: {
+            global::Google.Ads.AdManager.V1.AdExchangeCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.AdExchangeCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.AdExchangeCreative) {
+              subBuilder.MergeFrom(AdExchangeCreative);
+            }
+            input.ReadMessage(subBuilder);
+            AdExchangeCreative = subBuilder;
+            break;
+          }
+          case 178: {
+            global::Google.Ads.AdManager.V1.AdSenseCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.AdSenseCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.AdSenseCreative) {
+              subBuilder.MergeFrom(AdSenseCreative);
+            }
+            input.ReadMessage(subBuilder);
+            AdSenseCreative = subBuilder;
+            break;
+          }
+          case 186: {
+            global::Google.Ads.AdManager.V1.AspectRatioImageCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.AspectRatioImageCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.AspectRatioImageCreative) {
+              subBuilder.MergeFrom(AspectRatioImageCreative);
+            }
+            input.ReadMessage(subBuilder);
+            AspectRatioImageCreative = subBuilder;
+            break;
+          }
+          case 194: {
+            global::Google.Ads.AdManager.V1.AudioCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.AudioCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.AudioCreative) {
+              subBuilder.MergeFrom(AudioCreative);
+            }
+            input.ReadMessage(subBuilder);
+            AudioCreative = subBuilder;
+            break;
+          }
+          case 202: {
+            global::Google.Ads.AdManager.V1.AudioRedirectCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.AudioRedirectCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.AudioRedirectCreative) {
+              subBuilder.MergeFrom(AudioRedirectCreative);
+            }
+            input.ReadMessage(subBuilder);
+            AudioRedirectCreative = subBuilder;
+            break;
+          }
+          case 210: {
+            global::Google.Ads.AdManager.V1.ClickTrackingCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.ClickTrackingCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.ClickTrackingCreative) {
+              subBuilder.MergeFrom(ClickTrackingCreative);
+            }
+            input.ReadMessage(subBuilder);
+            ClickTrackingCreative = subBuilder;
+            break;
+          }
+          case 266: {
+            global::Google.Ads.AdManager.V1.Html5CreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.Html5CreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.Html5Creative) {
+              subBuilder.MergeFrom(Html5Creative);
+            }
+            input.ReadMessage(subBuilder);
+            Html5Creative = subBuilder;
+            break;
+          }
+          case 282: {
+            global::Google.Ads.AdManager.V1.ImageOverlayCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.ImageOverlayCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.ImageOverlayCreative) {
+              subBuilder.MergeFrom(ImageOverlayCreative);
+            }
+            input.ReadMessage(subBuilder);
+            ImageOverlayCreative = subBuilder;
+            break;
+          }
+          case 290: {
+            global::Google.Ads.AdManager.V1.ImageRedirectCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.ImageRedirectCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.ImageRedirectCreative) {
+              subBuilder.MergeFrom(ImageRedirectCreative);
+            }
+            input.ReadMessage(subBuilder);
+            ImageRedirectCreative = subBuilder;
+            break;
+          }
+          case 298: {
+            global::Google.Ads.AdManager.V1.ImageRedirectOverlayCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.ImageRedirectOverlayCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.ImageRedirectOverlayCreative) {
+              subBuilder.MergeFrom(ImageRedirectOverlayCreative);
+            }
+            input.ReadMessage(subBuilder);
+            ImageRedirectOverlayCreative = subBuilder;
+            break;
+          }
+          case 306: {
+            global::Google.Ads.AdManager.V1.InternalRedirectCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.InternalRedirectCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.InternalRedirectCreative) {
+              subBuilder.MergeFrom(InternalRedirectCreative);
+            }
+            input.ReadMessage(subBuilder);
+            InternalRedirectCreative = subBuilder;
+            break;
+          }
+          case 314: {
+            global::Google.Ads.AdManager.V1.LegacyDfpCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.LegacyDfpCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.LegacyDfpCreative) {
+              subBuilder.MergeFrom(LegacyDfpCreative);
+            }
+            input.ReadMessage(subBuilder);
+            LegacyDfpCreative = subBuilder;
+            break;
+          }
+          case 338: {
+            global::Google.Ads.AdManager.V1.ProgrammaticCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.ProgrammaticCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.ProgrammaticCreative) {
+              subBuilder.MergeFrom(ProgrammaticCreative);
+            }
+            input.ReadMessage(subBuilder);
+            ProgrammaticCreative = subBuilder;
+            break;
+          }
+          case 346: {
+            global::Google.Ads.AdManager.V1.RichMediaStudioCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.RichMediaStudioCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.RichMediaStudioCreative) {
+              subBuilder.MergeFrom(RichMediaStudioCreative);
+            }
+            input.ReadMessage(subBuilder);
+            RichMediaStudioCreative = subBuilder;
+            break;
+          }
+          case 370: {
+            global::Google.Ads.AdManager.V1.SetTopBoxCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.SetTopBoxCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.SetTopBoxCreative) {
+              subBuilder.MergeFrom(SetTopBoxCreative);
+            }
+            input.ReadMessage(subBuilder);
+            SetTopBoxCreative = subBuilder;
+            break;
+          }
+          case 378: {
+            global::Google.Ads.AdManager.V1.TemplateCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.TemplateCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.TemplateCreative) {
+              subBuilder.MergeFrom(TemplateCreative);
+            }
+            input.ReadMessage(subBuilder);
+            TemplateCreative = subBuilder;
+            break;
+          }
+          case 386: {
+            global::Google.Ads.AdManager.V1.ThirdPartyCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.ThirdPartyCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.ThirdPartyCreative) {
+              subBuilder.MergeFrom(ThirdPartyCreative);
+            }
+            input.ReadMessage(subBuilder);
+            ThirdPartyCreative = subBuilder;
+            break;
+          }
+          case 394: {
+            global::Google.Ads.AdManager.V1.VastRedirectCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.VastRedirectCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.VastRedirectCreative) {
+              subBuilder.MergeFrom(VastRedirectCreative);
+            }
+            input.ReadMessage(subBuilder);
+            VastRedirectCreative = subBuilder;
+            break;
+          }
+          case 410: {
+            global::Google.Ads.AdManager.V1.VideoCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.VideoCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.VideoCreative) {
+              subBuilder.MergeFrom(VideoCreative);
+            }
+            input.ReadMessage(subBuilder);
+            VideoCreative = subBuilder;
+            break;
+          }
+          case 426: {
+            global::Google.Ads.AdManager.V1.VideoRedirectCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.VideoRedirectCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.VideoRedirectCreative) {
+              subBuilder.MergeFrom(VideoRedirectCreative);
+            }
+            input.ReadMessage(subBuilder);
+            VideoRedirectCreative = subBuilder;
+            break;
+          }
+          case 450: {
+            appliedLabels_.AddEntriesFrom(input, _repeated_appliedLabels_codec);
+            break;
+          }
+          case 474: {
+            if (thirdPartyDataDeclaration_ == null) {
+              ThirdPartyDataDeclaration = new global::Google.Ads.AdManager.V1.ThirdPartyDataDeclaration();
+            }
+            input.ReadMessage(ThirdPartyDataDeclaration);
+            break;
+          }
+          case 480: {
+            ThirdPartyDataDeclarationStatus = (global::Google.Ads.AdManager.V1.CreativeThirdPartyDataDeclarationStatusEnum.Types.CreativeThirdPartyDataDeclarationStatus) input.ReadEnum();
+            break;
+          }
+          case 610: {
+            customFieldValues_.AddEntriesFrom(input, _repeated_customFieldValues_codec);
+            break;
+          }
+          case 650: {
+            if (buyerPlacementConfig_ == null) {
+              BuyerPlacementConfig = new global::Google.Ads.AdManager.V1.BuyerPlacementConfig();
+            }
+            input.ReadMessage(BuyerPlacementConfig);
             break;
           }
         }
@@ -295,8 +2247,11342 @@ namespace Google.Ads.AdManager.V1 {
             Name = input.ReadString();
             break;
           }
+          case 18: {
+            Advertiser = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 34: {
+            PreviewUrl = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (size_ == null) {
+              Size = new global::Google.Ads.AdManager.V1.Size();
+            }
+            input.ReadMessage(Size);
+            break;
+          }
           case 66: {
             DisplayName = input.ReadString();
+            break;
+          }
+          case 104: {
+            SelfDeclaredEuropeanUnionPoliticalContent = input.ReadBool();
+            break;
+          }
+          case 136: {
+            AdBadgingEnabled = input.ReadBool();
+            break;
+          }
+          case 146: {
+            global::Google.Ads.AdManager.V1.CustomCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.CustomCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.CustomCreative) {
+              subBuilder.MergeFrom(CustomCreative);
+            }
+            input.ReadMessage(subBuilder);
+            CustomCreative = subBuilder;
+            break;
+          }
+          case 154: {
+            global::Google.Ads.AdManager.V1.ImageCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.ImageCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.ImageCreative) {
+              subBuilder.MergeFrom(ImageCreative);
+            }
+            input.ReadMessage(subBuilder);
+            ImageCreative = subBuilder;
+            break;
+          }
+          case 162: {
+            global::Google.Ads.AdManager.V1.AdExchangeCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.AdExchangeCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.AdExchangeCreative) {
+              subBuilder.MergeFrom(AdExchangeCreative);
+            }
+            input.ReadMessage(subBuilder);
+            AdExchangeCreative = subBuilder;
+            break;
+          }
+          case 178: {
+            global::Google.Ads.AdManager.V1.AdSenseCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.AdSenseCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.AdSenseCreative) {
+              subBuilder.MergeFrom(AdSenseCreative);
+            }
+            input.ReadMessage(subBuilder);
+            AdSenseCreative = subBuilder;
+            break;
+          }
+          case 186: {
+            global::Google.Ads.AdManager.V1.AspectRatioImageCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.AspectRatioImageCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.AspectRatioImageCreative) {
+              subBuilder.MergeFrom(AspectRatioImageCreative);
+            }
+            input.ReadMessage(subBuilder);
+            AspectRatioImageCreative = subBuilder;
+            break;
+          }
+          case 194: {
+            global::Google.Ads.AdManager.V1.AudioCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.AudioCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.AudioCreative) {
+              subBuilder.MergeFrom(AudioCreative);
+            }
+            input.ReadMessage(subBuilder);
+            AudioCreative = subBuilder;
+            break;
+          }
+          case 202: {
+            global::Google.Ads.AdManager.V1.AudioRedirectCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.AudioRedirectCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.AudioRedirectCreative) {
+              subBuilder.MergeFrom(AudioRedirectCreative);
+            }
+            input.ReadMessage(subBuilder);
+            AudioRedirectCreative = subBuilder;
+            break;
+          }
+          case 210: {
+            global::Google.Ads.AdManager.V1.ClickTrackingCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.ClickTrackingCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.ClickTrackingCreative) {
+              subBuilder.MergeFrom(ClickTrackingCreative);
+            }
+            input.ReadMessage(subBuilder);
+            ClickTrackingCreative = subBuilder;
+            break;
+          }
+          case 266: {
+            global::Google.Ads.AdManager.V1.Html5CreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.Html5CreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.Html5Creative) {
+              subBuilder.MergeFrom(Html5Creative);
+            }
+            input.ReadMessage(subBuilder);
+            Html5Creative = subBuilder;
+            break;
+          }
+          case 282: {
+            global::Google.Ads.AdManager.V1.ImageOverlayCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.ImageOverlayCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.ImageOverlayCreative) {
+              subBuilder.MergeFrom(ImageOverlayCreative);
+            }
+            input.ReadMessage(subBuilder);
+            ImageOverlayCreative = subBuilder;
+            break;
+          }
+          case 290: {
+            global::Google.Ads.AdManager.V1.ImageRedirectCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.ImageRedirectCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.ImageRedirectCreative) {
+              subBuilder.MergeFrom(ImageRedirectCreative);
+            }
+            input.ReadMessage(subBuilder);
+            ImageRedirectCreative = subBuilder;
+            break;
+          }
+          case 298: {
+            global::Google.Ads.AdManager.V1.ImageRedirectOverlayCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.ImageRedirectOverlayCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.ImageRedirectOverlayCreative) {
+              subBuilder.MergeFrom(ImageRedirectOverlayCreative);
+            }
+            input.ReadMessage(subBuilder);
+            ImageRedirectOverlayCreative = subBuilder;
+            break;
+          }
+          case 306: {
+            global::Google.Ads.AdManager.V1.InternalRedirectCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.InternalRedirectCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.InternalRedirectCreative) {
+              subBuilder.MergeFrom(InternalRedirectCreative);
+            }
+            input.ReadMessage(subBuilder);
+            InternalRedirectCreative = subBuilder;
+            break;
+          }
+          case 314: {
+            global::Google.Ads.AdManager.V1.LegacyDfpCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.LegacyDfpCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.LegacyDfpCreative) {
+              subBuilder.MergeFrom(LegacyDfpCreative);
+            }
+            input.ReadMessage(subBuilder);
+            LegacyDfpCreative = subBuilder;
+            break;
+          }
+          case 338: {
+            global::Google.Ads.AdManager.V1.ProgrammaticCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.ProgrammaticCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.ProgrammaticCreative) {
+              subBuilder.MergeFrom(ProgrammaticCreative);
+            }
+            input.ReadMessage(subBuilder);
+            ProgrammaticCreative = subBuilder;
+            break;
+          }
+          case 346: {
+            global::Google.Ads.AdManager.V1.RichMediaStudioCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.RichMediaStudioCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.RichMediaStudioCreative) {
+              subBuilder.MergeFrom(RichMediaStudioCreative);
+            }
+            input.ReadMessage(subBuilder);
+            RichMediaStudioCreative = subBuilder;
+            break;
+          }
+          case 370: {
+            global::Google.Ads.AdManager.V1.SetTopBoxCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.SetTopBoxCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.SetTopBoxCreative) {
+              subBuilder.MergeFrom(SetTopBoxCreative);
+            }
+            input.ReadMessage(subBuilder);
+            SetTopBoxCreative = subBuilder;
+            break;
+          }
+          case 378: {
+            global::Google.Ads.AdManager.V1.TemplateCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.TemplateCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.TemplateCreative) {
+              subBuilder.MergeFrom(TemplateCreative);
+            }
+            input.ReadMessage(subBuilder);
+            TemplateCreative = subBuilder;
+            break;
+          }
+          case 386: {
+            global::Google.Ads.AdManager.V1.ThirdPartyCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.ThirdPartyCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.ThirdPartyCreative) {
+              subBuilder.MergeFrom(ThirdPartyCreative);
+            }
+            input.ReadMessage(subBuilder);
+            ThirdPartyCreative = subBuilder;
+            break;
+          }
+          case 394: {
+            global::Google.Ads.AdManager.V1.VastRedirectCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.VastRedirectCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.VastRedirectCreative) {
+              subBuilder.MergeFrom(VastRedirectCreative);
+            }
+            input.ReadMessage(subBuilder);
+            VastRedirectCreative = subBuilder;
+            break;
+          }
+          case 410: {
+            global::Google.Ads.AdManager.V1.VideoCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.VideoCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.VideoCreative) {
+              subBuilder.MergeFrom(VideoCreative);
+            }
+            input.ReadMessage(subBuilder);
+            VideoCreative = subBuilder;
+            break;
+          }
+          case 426: {
+            global::Google.Ads.AdManager.V1.VideoRedirectCreativeDetails subBuilder = new global::Google.Ads.AdManager.V1.VideoRedirectCreativeDetails();
+            if (detailsCase_ == DetailsOneofCase.VideoRedirectCreative) {
+              subBuilder.MergeFrom(VideoRedirectCreative);
+            }
+            input.ReadMessage(subBuilder);
+            VideoRedirectCreative = subBuilder;
+            break;
+          }
+          case 450: {
+            appliedLabels_.AddEntriesFrom(ref input, _repeated_appliedLabels_codec);
+            break;
+          }
+          case 474: {
+            if (thirdPartyDataDeclaration_ == null) {
+              ThirdPartyDataDeclaration = new global::Google.Ads.AdManager.V1.ThirdPartyDataDeclaration();
+            }
+            input.ReadMessage(ThirdPartyDataDeclaration);
+            break;
+          }
+          case 480: {
+            ThirdPartyDataDeclarationStatus = (global::Google.Ads.AdManager.V1.CreativeThirdPartyDataDeclarationStatusEnum.Types.CreativeThirdPartyDataDeclarationStatus) input.ReadEnum();
+            break;
+          }
+          case 610: {
+            customFieldValues_.AddEntriesFrom(ref input, _repeated_customFieldValues_codec);
+            break;
+          }
+          case 650: {
+            if (buyerPlacementConfig_ == null) {
+              BuyerPlacementConfig = new global::Google.Ads.AdManager.V1.BuyerPlacementConfig();
+            }
+            input.ReadMessage(BuyerPlacementConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// An Ad Exchange dynamic allocation creative.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AdExchangeCreativeDetails : pb::IMessage<AdExchangeCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AdExchangeCreativeDetails> _parser = new pb::MessageParser<AdExchangeCreativeDetails>(() => new AdExchangeCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AdExchangeCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AdExchangeCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AdExchangeCreativeDetails(AdExchangeCreativeDetails other) : this() {
+      _hasBits0 = other._hasBits0;
+      nativeEligible_ = other.nativeEligible_;
+      interstitial_ = other.interstitial_;
+      allowsAllRequestedSizes_ = other.allowsAllRequestedSizes_;
+      slotId_ = other.slotId_;
+      backfillSnippet_ = other.backfillSnippet_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AdExchangeCreativeDetails Clone() {
+      return new AdExchangeCreativeDetails(this);
+    }
+
+    /// <summary>Field number for the "native_eligible" field.</summary>
+    public const int NativeEligibleFieldNumber = 1;
+    private readonly static bool NativeEligibleDefaultValue = false;
+
+    private bool nativeEligible_;
+    /// <summary>
+    /// Optional. Whether this creative is eligible for native ad-serving. This
+    /// value is optional and defaults to false.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool NativeEligible {
+      get { if ((_hasBits0 & 1) != 0) { return nativeEligible_; } else { return NativeEligibleDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        nativeEligible_ = value;
+      }
+    }
+    /// <summary>Gets whether the "native_eligible" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNativeEligible {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "native_eligible" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNativeEligible() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "interstitial" field.</summary>
+    public const int InterstitialFieldNumber = 2;
+    private readonly static bool InterstitialDefaultValue = false;
+
+    private bool interstitial_;
+    /// <summary>
+    /// Optional. True if this creative is interstitial. An interstitial creative
+    /// will not consider an impression served until it is fully rendered in the
+    /// browser.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Interstitial {
+      get { if ((_hasBits0 & 2) != 0) { return interstitial_; } else { return InterstitialDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        interstitial_ = value;
+      }
+    }
+    /// <summary>Gets whether the "interstitial" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInterstitial {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "interstitial" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInterstitial() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "allows_all_requested_sizes" field.</summary>
+    public const int AllowsAllRequestedSizesFieldNumber = 3;
+    private readonly static bool AllowsAllRequestedSizesDefaultValue = false;
+
+    private bool allowsAllRequestedSizes_;
+    /// <summary>
+    /// Optional. True if this creative is eligible for all requested sizes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AllowsAllRequestedSizes {
+      get { if ((_hasBits0 & 4) != 0) { return allowsAllRequestedSizes_; } else { return AllowsAllRequestedSizesDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        allowsAllRequestedSizes_ = value;
+      }
+    }
+    /// <summary>Gets whether the "allows_all_requested_sizes" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAllowsAllRequestedSizes {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "allows_all_requested_sizes" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAllowsAllRequestedSizes() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "slot_id" field.</summary>
+    public const int SlotIdFieldNumber = 4;
+    private readonly static string SlotIdDefaultValue = "";
+
+    private string slotId_;
+    /// <summary>
+    /// Output only. The ID of ad slot (inventory) that an advertiser might want to
+    /// target.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SlotId {
+      get { return slotId_ ?? SlotIdDefaultValue; }
+      set {
+        slotId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "slot_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSlotId {
+      get { return slotId_ != null; }
+    }
+    /// <summary>Clears the value of the "slot_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSlotId() {
+      slotId_ = null;
+    }
+
+    /// <summary>Field number for the "backfill_snippet" field.</summary>
+    public const int BackfillSnippetFieldNumber = 5;
+    private readonly static string BackfillSnippetDefaultValue = "";
+
+    private string backfillSnippet_;
+    /// <summary>
+    /// Optional. The code snippet (ad tag) from Ad Exchange or AdSense to traffic
+    /// the dynamic allocation creative. Only valid Ad Exchange or AdSense
+    /// parameters will be considered. Any extraneous HTML or JavaScript will be
+    /// ignored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string BackfillSnippet {
+      get { return backfillSnippet_ ?? BackfillSnippetDefaultValue; }
+      set {
+        backfillSnippet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "backfill_snippet" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBackfillSnippet {
+      get { return backfillSnippet_ != null; }
+    }
+    /// <summary>Clears the value of the "backfill_snippet" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBackfillSnippet() {
+      backfillSnippet_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AdExchangeCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AdExchangeCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (NativeEligible != other.NativeEligible) return false;
+      if (Interstitial != other.Interstitial) return false;
+      if (AllowsAllRequestedSizes != other.AllowsAllRequestedSizes) return false;
+      if (SlotId != other.SlotId) return false;
+      if (BackfillSnippet != other.BackfillSnippet) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasNativeEligible) hash ^= NativeEligible.GetHashCode();
+      if (HasInterstitial) hash ^= Interstitial.GetHashCode();
+      if (HasAllowsAllRequestedSizes) hash ^= AllowsAllRequestedSizes.GetHashCode();
+      if (HasSlotId) hash ^= SlotId.GetHashCode();
+      if (HasBackfillSnippet) hash ^= BackfillSnippet.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasNativeEligible) {
+        output.WriteRawTag(8);
+        output.WriteBool(NativeEligible);
+      }
+      if (HasInterstitial) {
+        output.WriteRawTag(16);
+        output.WriteBool(Interstitial);
+      }
+      if (HasAllowsAllRequestedSizes) {
+        output.WriteRawTag(24);
+        output.WriteBool(AllowsAllRequestedSizes);
+      }
+      if (HasSlotId) {
+        output.WriteRawTag(34);
+        output.WriteString(SlotId);
+      }
+      if (HasBackfillSnippet) {
+        output.WriteRawTag(42);
+        output.WriteString(BackfillSnippet);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasNativeEligible) {
+        output.WriteRawTag(8);
+        output.WriteBool(NativeEligible);
+      }
+      if (HasInterstitial) {
+        output.WriteRawTag(16);
+        output.WriteBool(Interstitial);
+      }
+      if (HasAllowsAllRequestedSizes) {
+        output.WriteRawTag(24);
+        output.WriteBool(AllowsAllRequestedSizes);
+      }
+      if (HasSlotId) {
+        output.WriteRawTag(34);
+        output.WriteString(SlotId);
+      }
+      if (HasBackfillSnippet) {
+        output.WriteRawTag(42);
+        output.WriteString(BackfillSnippet);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasNativeEligible) {
+        size += 1 + 1;
+      }
+      if (HasInterstitial) {
+        size += 1 + 1;
+      }
+      if (HasAllowsAllRequestedSizes) {
+        size += 1 + 1;
+      }
+      if (HasSlotId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SlotId);
+      }
+      if (HasBackfillSnippet) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BackfillSnippet);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AdExchangeCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasNativeEligible) {
+        NativeEligible = other.NativeEligible;
+      }
+      if (other.HasInterstitial) {
+        Interstitial = other.Interstitial;
+      }
+      if (other.HasAllowsAllRequestedSizes) {
+        AllowsAllRequestedSizes = other.AllowsAllRequestedSizes;
+      }
+      if (other.HasSlotId) {
+        SlotId = other.SlotId;
+      }
+      if (other.HasBackfillSnippet) {
+        BackfillSnippet = other.BackfillSnippet;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            NativeEligible = input.ReadBool();
+            break;
+          }
+          case 16: {
+            Interstitial = input.ReadBool();
+            break;
+          }
+          case 24: {
+            AllowsAllRequestedSizes = input.ReadBool();
+            break;
+          }
+          case 34: {
+            SlotId = input.ReadString();
+            break;
+          }
+          case 42: {
+            BackfillSnippet = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            NativeEligible = input.ReadBool();
+            break;
+          }
+          case 16: {
+            Interstitial = input.ReadBool();
+            break;
+          }
+          case 24: {
+            AllowsAllRequestedSizes = input.ReadBool();
+            break;
+          }
+          case 34: {
+            SlotId = input.ReadString();
+            break;
+          }
+          case 42: {
+            BackfillSnippet = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// An AdSense dynamic allocation creative.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AdSenseCreativeDetails : pb::IMessage<AdSenseCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AdSenseCreativeDetails> _parser = new pb::MessageParser<AdSenseCreativeDetails>(() => new AdSenseCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AdSenseCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AdSenseCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AdSenseCreativeDetails(AdSenseCreativeDetails other) : this() {
+      slotId_ = other.slotId_;
+      backfillSnippet_ = other.backfillSnippet_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AdSenseCreativeDetails Clone() {
+      return new AdSenseCreativeDetails(this);
+    }
+
+    /// <summary>Field number for the "slot_id" field.</summary>
+    public const int SlotIdFieldNumber = 1;
+    private readonly static string SlotIdDefaultValue = "";
+
+    private string slotId_;
+    /// <summary>
+    /// Output only. The ID of ad slot (inventory) that an advertiser might want to
+    /// target.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SlotId {
+      get { return slotId_ ?? SlotIdDefaultValue; }
+      set {
+        slotId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "slot_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSlotId {
+      get { return slotId_ != null; }
+    }
+    /// <summary>Clears the value of the "slot_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSlotId() {
+      slotId_ = null;
+    }
+
+    /// <summary>Field number for the "backfill_snippet" field.</summary>
+    public const int BackfillSnippetFieldNumber = 2;
+    private readonly static string BackfillSnippetDefaultValue = "";
+
+    private string backfillSnippet_;
+    /// <summary>
+    /// Optional. The code snippet (ad tag) from Ad Exchange or AdSense to traffic
+    /// the dynamic allocation creative. Only valid Ad Exchange or AdSense
+    /// parameters will be considered. Any extraneous HTML or JavaScript will be
+    /// ignored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string BackfillSnippet {
+      get { return backfillSnippet_ ?? BackfillSnippetDefaultValue; }
+      set {
+        backfillSnippet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "backfill_snippet" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBackfillSnippet {
+      get { return backfillSnippet_ != null; }
+    }
+    /// <summary>Clears the value of the "backfill_snippet" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBackfillSnippet() {
+      backfillSnippet_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AdSenseCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AdSenseCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SlotId != other.SlotId) return false;
+      if (BackfillSnippet != other.BackfillSnippet) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasSlotId) hash ^= SlotId.GetHashCode();
+      if (HasBackfillSnippet) hash ^= BackfillSnippet.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasSlotId) {
+        output.WriteRawTag(10);
+        output.WriteString(SlotId);
+      }
+      if (HasBackfillSnippet) {
+        output.WriteRawTag(18);
+        output.WriteString(BackfillSnippet);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasSlotId) {
+        output.WriteRawTag(10);
+        output.WriteString(SlotId);
+      }
+      if (HasBackfillSnippet) {
+        output.WriteRawTag(18);
+        output.WriteString(BackfillSnippet);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasSlotId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SlotId);
+      }
+      if (HasBackfillSnippet) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BackfillSnippet);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AdSenseCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasSlotId) {
+        SlotId = other.SlotId;
+      }
+      if (other.HasBackfillSnippet) {
+        BackfillSnippet = other.BackfillSnippet;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            SlotId = input.ReadString();
+            break;
+          }
+          case 18: {
+            BackfillSnippet = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            SlotId = input.ReadString();
+            break;
+          }
+          case 18: {
+            BackfillSnippet = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A Creative intended for mobile platforms that displays an image, whose size
+  /// is defined as an aspect ratio. It can have multiple images whose dimensions
+  /// conform to that aspect ratio.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AspectRatioImageCreativeDetails : pb::IMessage<AspectRatioImageCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AspectRatioImageCreativeDetails> _parser = new pb::MessageParser<AspectRatioImageCreativeDetails>(() => new AspectRatioImageCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AspectRatioImageCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AspectRatioImageCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AspectRatioImageCreativeDetails(AspectRatioImageCreativeDetails other) : this() {
+      _hasBits0 = other._hasBits0;
+      altText_ = other.altText_;
+      destinationUrl_ = other.destinationUrl_;
+      destinationUrlType_ = other.destinationUrlType_;
+      imageAssets_ = other.imageAssets_.Clone();
+      thirdPartyImpressionTrackingUrls_ = other.thirdPartyImpressionTrackingUrls_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AspectRatioImageCreativeDetails Clone() {
+      return new AspectRatioImageCreativeDetails(this);
+    }
+
+    /// <summary>Field number for the "alt_text" field.</summary>
+    public const int AltTextFieldNumber = 1;
+    private readonly static string AltTextDefaultValue = "";
+
+    private string altText_;
+    /// <summary>
+    /// Optional. The text that is served along with the image creative, primarily
+    /// for accessibility. If no suitable image size is available for the device,
+    /// this text replaces the image completely. This field is optional and has a
+    /// maximum length of 500 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AltText {
+      get { return altText_ ?? AltTextDefaultValue; }
+      set {
+        altText_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "alt_text" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAltText {
+      get { return altText_ != null; }
+    }
+    /// <summary>Clears the value of the "alt_text" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAltText() {
+      altText_ = null;
+    }
+
+    /// <summary>Field number for the "destination_url" field.</summary>
+    public const int DestinationUrlFieldNumber = 2;
+    private readonly static string DestinationUrlDefaultValue = "";
+
+    private string destinationUrl_;
+    /// <summary>
+    /// Optional. The URL that the user is directed to if they click on the
+    /// creative. This attribute is required unless the `destinationUrlType` is
+    /// `NONE`, and has a maximum length of 1024 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DestinationUrl {
+      get { return destinationUrl_ ?? DestinationUrlDefaultValue; }
+      set {
+        destinationUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "destination_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationUrl {
+      get { return destinationUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "destination_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationUrl() {
+      destinationUrl_ = null;
+    }
+
+    /// <summary>Field number for the "destination_url_type" field.</summary>
+    public const int DestinationUrlTypeFieldNumber = 3;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType DestinationUrlTypeDefaultValue = global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType destinationUrlType_;
+    /// <summary>
+    /// Optional. The action that should be performed if the user clicks on the
+    /// creative. This attribute defaults to `CLICK_TO_WEB`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType DestinationUrlType {
+      get { if ((_hasBits0 & 1) != 0) { return destinationUrlType_; } else { return DestinationUrlTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        destinationUrlType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "destination_url_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationUrlType {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "destination_url_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationUrlType() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "image_assets" field.</summary>
+    public const int ImageAssetsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.CreativeAsset> _repeated_imageAssets_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Ads.AdManager.V1.CreativeAsset.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreativeAsset> imageAssets_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreativeAsset>();
+    /// <summary>
+    /// Required. The images associated with this creative. The ad server will
+    /// choose one based on the capabilities of the device. Each asset should have
+    /// a size which is of the same aspect ratio as the Creative.size. This
+    /// attribute is required and must have at least one asset.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreativeAsset> ImageAssets {
+      get { return imageAssets_; }
+    }
+
+    /// <summary>Field number for the "third_party_impression_tracking_urls" field.</summary>
+    public const int ThirdPartyImpressionTrackingUrlsFieldNumber = 5;
+    private static readonly pb::FieldCodec<string> _repeated_thirdPartyImpressionTrackingUrls_codec
+        = pb::FieldCodec.ForString(42);
+    private readonly pbc::RepeatedField<string> thirdPartyImpressionTrackingUrls_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Third party impression tracking URLs to ping when this creative
+    /// is displayed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ThirdPartyImpressionTrackingUrls {
+      get { return thirdPartyImpressionTrackingUrls_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AspectRatioImageCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AspectRatioImageCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AltText != other.AltText) return false;
+      if (DestinationUrl != other.DestinationUrl) return false;
+      if (DestinationUrlType != other.DestinationUrlType) return false;
+      if(!imageAssets_.Equals(other.imageAssets_)) return false;
+      if(!thirdPartyImpressionTrackingUrls_.Equals(other.thirdPartyImpressionTrackingUrls_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasAltText) hash ^= AltText.GetHashCode();
+      if (HasDestinationUrl) hash ^= DestinationUrl.GetHashCode();
+      if (HasDestinationUrlType) hash ^= DestinationUrlType.GetHashCode();
+      hash ^= imageAssets_.GetHashCode();
+      hash ^= thirdPartyImpressionTrackingUrls_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasAltText) {
+        output.WriteRawTag(10);
+        output.WriteString(AltText);
+      }
+      if (HasDestinationUrl) {
+        output.WriteRawTag(18);
+        output.WriteString(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) DestinationUrlType);
+      }
+      imageAssets_.WriteTo(output, _repeated_imageAssets_codec);
+      thirdPartyImpressionTrackingUrls_.WriteTo(output, _repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasAltText) {
+        output.WriteRawTag(10);
+        output.WriteString(AltText);
+      }
+      if (HasDestinationUrl) {
+        output.WriteRawTag(18);
+        output.WriteString(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) DestinationUrlType);
+      }
+      imageAssets_.WriteTo(ref output, _repeated_imageAssets_codec);
+      thirdPartyImpressionTrackingUrls_.WriteTo(ref output, _repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasAltText) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AltText);
+      }
+      if (HasDestinationUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DestinationUrlType);
+      }
+      size += imageAssets_.CalculateSize(_repeated_imageAssets_codec);
+      size += thirdPartyImpressionTrackingUrls_.CalculateSize(_repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AspectRatioImageCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasAltText) {
+        AltText = other.AltText;
+      }
+      if (other.HasDestinationUrl) {
+        DestinationUrl = other.DestinationUrl;
+      }
+      if (other.HasDestinationUrlType) {
+        DestinationUrlType = other.DestinationUrlType;
+      }
+      imageAssets_.Add(other.imageAssets_);
+      thirdPartyImpressionTrackingUrls_.Add(other.thirdPartyImpressionTrackingUrls_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            AltText = input.ReadString();
+            break;
+          }
+          case 18: {
+            DestinationUrl = input.ReadString();
+            break;
+          }
+          case 24: {
+            DestinationUrlType = (global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            imageAssets_.AddEntriesFrom(input, _repeated_imageAssets_codec);
+            break;
+          }
+          case 42: {
+            thirdPartyImpressionTrackingUrls_.AddEntriesFrom(input, _repeated_thirdPartyImpressionTrackingUrls_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            AltText = input.ReadString();
+            break;
+          }
+          case 18: {
+            DestinationUrl = input.ReadString();
+            break;
+          }
+          case 24: {
+            DestinationUrlType = (global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            imageAssets_.AddEntriesFrom(ref input, _repeated_imageAssets_codec);
+            break;
+          }
+          case 42: {
+            thirdPartyImpressionTrackingUrls_.AddEntriesFrom(ref input, _repeated_thirdPartyImpressionTrackingUrls_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A Creative that contains Ad Manager hosted audio ads and is served via VAST
+  /// XML.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AudioCreativeDetails : pb::IMessage<AudioCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AudioCreativeDetails> _parser = new pb::MessageParser<AudioCreativeDetails>(() => new AudioCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AudioCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AudioCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AudioCreativeDetails(AudioCreativeDetails other) : this() {
+      vastInfo_ = other.vastInfo_ != null ? other.vastInfo_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AudioCreativeDetails Clone() {
+      return new AudioCreativeDetails(this);
+    }
+
+    /// <summary>Field number for the "vast_info" field.</summary>
+    public const int VastInfoFieldNumber = 1;
+    private global::Google.Ads.AdManager.V1.VastInfo vastInfo_;
+    /// <summary>
+    /// Optional. Fields common to Video Ad Serving Template (VAST) creatives
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.VastInfo VastInfo {
+      get { return vastInfo_; }
+      set {
+        vastInfo_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AudioCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AudioCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(VastInfo, other.VastInfo)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (vastInfo_ != null) hash ^= VastInfo.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (vastInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(VastInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (vastInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(VastInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (vastInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VastInfo);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AudioCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.vastInfo_ != null) {
+        if (vastInfo_ == null) {
+          VastInfo = new global::Google.Ads.AdManager.V1.VastInfo();
+        }
+        VastInfo.MergeFrom(other.VastInfo);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (vastInfo_ == null) {
+              VastInfo = new global::Google.Ads.AdManager.V1.VastInfo();
+            }
+            input.ReadMessage(VastInfo);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (vastInfo_ == null) {
+              VastInfo = new global::Google.Ads.AdManager.V1.VastInfo();
+            }
+            input.ReadMessage(VastInfo);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A Creative that contains externally hosted audio ads and is served via VAST
+  /// XML.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AudioRedirectCreativeDetails : pb::IMessage<AudioRedirectCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AudioRedirectCreativeDetails> _parser = new pb::MessageParser<AudioRedirectCreativeDetails>(() => new AudioRedirectCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AudioRedirectCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AudioRedirectCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AudioRedirectCreativeDetails(AudioRedirectCreativeDetails other) : this() {
+      vastInfo_ = other.vastInfo_ != null ? other.vastInfo_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AudioRedirectCreativeDetails Clone() {
+      return new AudioRedirectCreativeDetails(this);
+    }
+
+    /// <summary>Field number for the "vast_info" field.</summary>
+    public const int VastInfoFieldNumber = 1;
+    private global::Google.Ads.AdManager.V1.VastInfo vastInfo_;
+    /// <summary>
+    /// Optional. Fields common to Video Ad Serving Template (VAST) creatives
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.VastInfo VastInfo {
+      get { return vastInfo_; }
+      set {
+        vastInfo_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AudioRedirectCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AudioRedirectCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(VastInfo, other.VastInfo)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (vastInfo_ != null) hash ^= VastInfo.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (vastInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(VastInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (vastInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(VastInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (vastInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VastInfo);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AudioRedirectCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.vastInfo_ != null) {
+        if (vastInfo_ == null) {
+          VastInfo = new global::Google.Ads.AdManager.V1.VastInfo();
+        }
+        VastInfo.MergeFrom(other.VastInfo);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (vastInfo_ == null) {
+              VastInfo = new global::Google.Ads.AdManager.V1.VastInfo();
+            }
+            input.ReadMessage(VastInfo);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (vastInfo_ == null) {
+              VastInfo = new global::Google.Ads.AdManager.V1.VastInfo();
+            }
+            input.ReadMessage(VastInfo);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A creative that is used for tracking clicks on ads that are served directly
+  /// from the customers' web servers or media servers. NOTE: The size attribute
+  /// is not used for click tracking creative and it will not be persisted upon
+  /// save.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ClickTrackingCreativeDetails : pb::IMessage<ClickTrackingCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ClickTrackingCreativeDetails> _parser = new pb::MessageParser<ClickTrackingCreativeDetails>(() => new ClickTrackingCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ClickTrackingCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ClickTrackingCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ClickTrackingCreativeDetails(ClickTrackingCreativeDetails other) : this() {
+      clickTrackingUrl_ = other.clickTrackingUrl_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ClickTrackingCreativeDetails Clone() {
+      return new ClickTrackingCreativeDetails(this);
+    }
+
+    /// <summary>Field number for the "click_tracking_url" field.</summary>
+    public const int ClickTrackingUrlFieldNumber = 1;
+    private readonly static string ClickTrackingUrlDefaultValue = "";
+
+    private string clickTrackingUrl_;
+    /// <summary>
+    /// Optional. The click tracking URL.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ClickTrackingUrl {
+      get { return clickTrackingUrl_ ?? ClickTrackingUrlDefaultValue; }
+      set {
+        clickTrackingUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "click_tracking_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasClickTrackingUrl {
+      get { return clickTrackingUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "click_tracking_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearClickTrackingUrl() {
+      clickTrackingUrl_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ClickTrackingCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ClickTrackingCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ClickTrackingUrl != other.ClickTrackingUrl) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasClickTrackingUrl) hash ^= ClickTrackingUrl.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasClickTrackingUrl) {
+        output.WriteRawTag(10);
+        output.WriteString(ClickTrackingUrl);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasClickTrackingUrl) {
+        output.WriteRawTag(10);
+        output.WriteString(ClickTrackingUrl);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasClickTrackingUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClickTrackingUrl);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ClickTrackingCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasClickTrackingUrl) {
+        ClickTrackingUrl = other.ClickTrackingUrl;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ClickTrackingUrl = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ClickTrackingUrl = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A Creative that contains a custom HTML snippet and file assets.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CustomCreativeDetails : pb::IMessage<CustomCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CustomCreativeDetails> _parser = new pb::MessageParser<CustomCreativeDetails>(() => new CustomCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CustomCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CustomCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CustomCreativeDetails(CustomCreativeDetails other) : this() {
+      _hasBits0 = other._hasBits0;
+      htmlSnippet_ = other.htmlSnippet_;
+      ampHtmlSnippet_ = other.ampHtmlSnippet_;
+      interstitial_ = other.interstitial_;
+      destinationUrl_ = other.destinationUrl_;
+      destinationUrlType_ = other.destinationUrlType_;
+      safeFrameCompatible_ = other.safeFrameCompatible_;
+      effectiveSafeFrameCompatible_ = other.effectiveSafeFrameCompatible_;
+      thirdPartyImpressionTrackingUrls_ = other.thirdPartyImpressionTrackingUrls_.Clone();
+      lockedOrientation_ = other.lockedOrientation_;
+      customCreativeAssets_ = other.customCreativeAssets_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CustomCreativeDetails Clone() {
+      return new CustomCreativeDetails(this);
+    }
+
+    /// <summary>Field number for the "html_snippet" field.</summary>
+    public const int HtmlSnippetFieldNumber = 1;
+    private readonly static string HtmlSnippetDefaultValue = "";
+
+    private string htmlSnippet_;
+    /// <summary>
+    /// Required. The HTML snippet that this creative delivers.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string HtmlSnippet {
+      get { return htmlSnippet_ ?? HtmlSnippetDefaultValue; }
+      set {
+        htmlSnippet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "html_snippet" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasHtmlSnippet {
+      get { return htmlSnippet_ != null; }
+    }
+    /// <summary>Clears the value of the "html_snippet" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearHtmlSnippet() {
+      htmlSnippet_ = null;
+    }
+
+    /// <summary>Field number for the "amp_html_snippet" field.</summary>
+    public const int AmpHtmlSnippetFieldNumber = 2;
+    private readonly static string AmpHtmlSnippetDefaultValue = "";
+
+    private string ampHtmlSnippet_;
+    /// <summary>
+    /// The AMP HTML snippet that this creative delivers.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AmpHtmlSnippet {
+      get { return ampHtmlSnippet_ ?? AmpHtmlSnippetDefaultValue; }
+      set {
+        ampHtmlSnippet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "amp_html_snippet" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAmpHtmlSnippet {
+      get { return ampHtmlSnippet_ != null; }
+    }
+    /// <summary>Clears the value of the "amp_html_snippet" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAmpHtmlSnippet() {
+      ampHtmlSnippet_ = null;
+    }
+
+    /// <summary>Field number for the "interstitial" field.</summary>
+    public const int InterstitialFieldNumber = 3;
+    private readonly static bool InterstitialDefaultValue = false;
+
+    private bool interstitial_;
+    /// <summary>
+    /// Whether this custom creative is an interstitial. An interstitial creative
+    /// will not consider an impression served until it is fully rendered in the
+    /// browser.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Interstitial {
+      get { if ((_hasBits0 & 1) != 0) { return interstitial_; } else { return InterstitialDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        interstitial_ = value;
+      }
+    }
+    /// <summary>Gets whether the "interstitial" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInterstitial {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "interstitial" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInterstitial() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "destination_url" field.</summary>
+    public const int DestinationUrlFieldNumber = 12;
+    private readonly static string DestinationUrlDefaultValue = "";
+
+    private string destinationUrl_;
+    /// <summary>
+    /// Optional. The URL that the user is directed to if they click on the
+    /// creative. This attribute is required unless the `destinationUrlType` is
+    /// `NONE`, and has a maximum length of 1024 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DestinationUrl {
+      get { return destinationUrl_ ?? DestinationUrlDefaultValue; }
+      set {
+        destinationUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "destination_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationUrl {
+      get { return destinationUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "destination_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationUrl() {
+      destinationUrl_ = null;
+    }
+
+    /// <summary>Field number for the "destination_url_type" field.</summary>
+    public const int DestinationUrlTypeFieldNumber = 13;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType DestinationUrlTypeDefaultValue = global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType destinationUrlType_;
+    /// <summary>
+    /// Optional. The action that should be performed if the user clicks on the
+    /// creative. This attribute defaults to `CLICK_TO_WEB`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType DestinationUrlType {
+      get { if ((_hasBits0 & 16) != 0) { return destinationUrlType_; } else { return DestinationUrlTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 16;
+        destinationUrlType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "destination_url_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationUrlType {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "destination_url_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationUrlType() {
+      _hasBits0 &= ~16;
+    }
+
+    /// <summary>Field number for the "safe_frame_compatible" field.</summary>
+    public const int SafeFrameCompatibleFieldNumber = 5;
+    private readonly static bool SafeFrameCompatibleDefaultValue = false;
+
+    private bool safeFrameCompatible_;
+    /// <summary>
+    /// Input only. Whether the creative is compatible for SafeFrame rendering.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SafeFrameCompatible {
+      get { if ((_hasBits0 & 2) != 0) { return safeFrameCompatible_; } else { return SafeFrameCompatibleDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        safeFrameCompatible_ = value;
+      }
+    }
+    /// <summary>Gets whether the "safe_frame_compatible" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSafeFrameCompatible {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "safe_frame_compatible" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSafeFrameCompatible() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "effective_safe_frame_compatible" field.</summary>
+    public const int EffectiveSafeFrameCompatibleFieldNumber = 6;
+    private readonly static bool EffectiveSafeFrameCompatibleDefaultValue = false;
+
+    private bool effectiveSafeFrameCompatible_;
+    /// <summary>
+    /// Output only. The effective value of whether the creative is compatible for
+    /// SafeFrame rendering, as decided by the service.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EffectiveSafeFrameCompatible {
+      get { if ((_hasBits0 & 4) != 0) { return effectiveSafeFrameCompatible_; } else { return EffectiveSafeFrameCompatibleDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        effectiveSafeFrameCompatible_ = value;
+      }
+    }
+    /// <summary>Gets whether the "effective_safe_frame_compatible" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEffectiveSafeFrameCompatible {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "effective_safe_frame_compatible" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEffectiveSafeFrameCompatible() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "third_party_impression_tracking_urls" field.</summary>
+    public const int ThirdPartyImpressionTrackingUrlsFieldNumber = 7;
+    private static readonly pb::FieldCodec<string> _repeated_thirdPartyImpressionTrackingUrls_codec
+        = pb::FieldCodec.ForString(58);
+    private readonly pbc::RepeatedField<string> thirdPartyImpressionTrackingUrls_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Impression tracking URLs to ping when this creative is displayed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ThirdPartyImpressionTrackingUrls {
+      get { return thirdPartyImpressionTrackingUrls_; }
+    }
+
+    /// <summary>Field number for the "locked_orientation" field.</summary>
+    public const int LockedOrientationFieldNumber = 8;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation LockedOrientationDefaultValue = global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation lockedOrientation_;
+    /// <summary>
+    /// Optional. A locked orientation for this creative to be displayed in.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation LockedOrientation {
+      get { if ((_hasBits0 & 8) != 0) { return lockedOrientation_; } else { return LockedOrientationDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        lockedOrientation_ = value;
+      }
+    }
+    /// <summary>Gets whether the "locked_orientation" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLockedOrientation {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "locked_orientation" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLockedOrientation() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "custom_creative_assets" field.</summary>
+    public const int CustomCreativeAssetsFieldNumber = 14;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.CustomCreativeAsset> _repeated_customCreativeAssets_codec
+        = pb::FieldCodec.ForMessage(114, global::Google.Ads.AdManager.V1.CustomCreativeAsset.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.CustomCreativeAsset> customCreativeAssets_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.CustomCreativeAsset>();
+    /// <summary>
+    /// Optional. File assets that are associated with this creative, and can be
+    /// referenced in the snippet.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.CustomCreativeAsset> CustomCreativeAssets {
+      get { return customCreativeAssets_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CustomCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CustomCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (HtmlSnippet != other.HtmlSnippet) return false;
+      if (AmpHtmlSnippet != other.AmpHtmlSnippet) return false;
+      if (Interstitial != other.Interstitial) return false;
+      if (DestinationUrl != other.DestinationUrl) return false;
+      if (DestinationUrlType != other.DestinationUrlType) return false;
+      if (SafeFrameCompatible != other.SafeFrameCompatible) return false;
+      if (EffectiveSafeFrameCompatible != other.EffectiveSafeFrameCompatible) return false;
+      if(!thirdPartyImpressionTrackingUrls_.Equals(other.thirdPartyImpressionTrackingUrls_)) return false;
+      if (LockedOrientation != other.LockedOrientation) return false;
+      if(!customCreativeAssets_.Equals(other.customCreativeAssets_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasHtmlSnippet) hash ^= HtmlSnippet.GetHashCode();
+      if (HasAmpHtmlSnippet) hash ^= AmpHtmlSnippet.GetHashCode();
+      if (HasInterstitial) hash ^= Interstitial.GetHashCode();
+      if (HasDestinationUrl) hash ^= DestinationUrl.GetHashCode();
+      if (HasDestinationUrlType) hash ^= DestinationUrlType.GetHashCode();
+      if (HasSafeFrameCompatible) hash ^= SafeFrameCompatible.GetHashCode();
+      if (HasEffectiveSafeFrameCompatible) hash ^= EffectiveSafeFrameCompatible.GetHashCode();
+      hash ^= thirdPartyImpressionTrackingUrls_.GetHashCode();
+      if (HasLockedOrientation) hash ^= LockedOrientation.GetHashCode();
+      hash ^= customCreativeAssets_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasHtmlSnippet) {
+        output.WriteRawTag(10);
+        output.WriteString(HtmlSnippet);
+      }
+      if (HasAmpHtmlSnippet) {
+        output.WriteRawTag(18);
+        output.WriteString(AmpHtmlSnippet);
+      }
+      if (HasInterstitial) {
+        output.WriteRawTag(24);
+        output.WriteBool(Interstitial);
+      }
+      if (HasSafeFrameCompatible) {
+        output.WriteRawTag(40);
+        output.WriteBool(SafeFrameCompatible);
+      }
+      if (HasEffectiveSafeFrameCompatible) {
+        output.WriteRawTag(48);
+        output.WriteBool(EffectiveSafeFrameCompatible);
+      }
+      thirdPartyImpressionTrackingUrls_.WriteTo(output, _repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (HasLockedOrientation) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) LockedOrientation);
+      }
+      if (HasDestinationUrl) {
+        output.WriteRawTag(98);
+        output.WriteString(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) DestinationUrlType);
+      }
+      customCreativeAssets_.WriteTo(output, _repeated_customCreativeAssets_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasHtmlSnippet) {
+        output.WriteRawTag(10);
+        output.WriteString(HtmlSnippet);
+      }
+      if (HasAmpHtmlSnippet) {
+        output.WriteRawTag(18);
+        output.WriteString(AmpHtmlSnippet);
+      }
+      if (HasInterstitial) {
+        output.WriteRawTag(24);
+        output.WriteBool(Interstitial);
+      }
+      if (HasSafeFrameCompatible) {
+        output.WriteRawTag(40);
+        output.WriteBool(SafeFrameCompatible);
+      }
+      if (HasEffectiveSafeFrameCompatible) {
+        output.WriteRawTag(48);
+        output.WriteBool(EffectiveSafeFrameCompatible);
+      }
+      thirdPartyImpressionTrackingUrls_.WriteTo(ref output, _repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (HasLockedOrientation) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) LockedOrientation);
+      }
+      if (HasDestinationUrl) {
+        output.WriteRawTag(98);
+        output.WriteString(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) DestinationUrlType);
+      }
+      customCreativeAssets_.WriteTo(ref output, _repeated_customCreativeAssets_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasHtmlSnippet) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(HtmlSnippet);
+      }
+      if (HasAmpHtmlSnippet) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AmpHtmlSnippet);
+      }
+      if (HasInterstitial) {
+        size += 1 + 1;
+      }
+      if (HasDestinationUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DestinationUrlType);
+      }
+      if (HasSafeFrameCompatible) {
+        size += 1 + 1;
+      }
+      if (HasEffectiveSafeFrameCompatible) {
+        size += 1 + 1;
+      }
+      size += thirdPartyImpressionTrackingUrls_.CalculateSize(_repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (HasLockedOrientation) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LockedOrientation);
+      }
+      size += customCreativeAssets_.CalculateSize(_repeated_customCreativeAssets_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CustomCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasHtmlSnippet) {
+        HtmlSnippet = other.HtmlSnippet;
+      }
+      if (other.HasAmpHtmlSnippet) {
+        AmpHtmlSnippet = other.AmpHtmlSnippet;
+      }
+      if (other.HasInterstitial) {
+        Interstitial = other.Interstitial;
+      }
+      if (other.HasDestinationUrl) {
+        DestinationUrl = other.DestinationUrl;
+      }
+      if (other.HasDestinationUrlType) {
+        DestinationUrlType = other.DestinationUrlType;
+      }
+      if (other.HasSafeFrameCompatible) {
+        SafeFrameCompatible = other.SafeFrameCompatible;
+      }
+      if (other.HasEffectiveSafeFrameCompatible) {
+        EffectiveSafeFrameCompatible = other.EffectiveSafeFrameCompatible;
+      }
+      thirdPartyImpressionTrackingUrls_.Add(other.thirdPartyImpressionTrackingUrls_);
+      if (other.HasLockedOrientation) {
+        LockedOrientation = other.LockedOrientation;
+      }
+      customCreativeAssets_.Add(other.customCreativeAssets_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            HtmlSnippet = input.ReadString();
+            break;
+          }
+          case 18: {
+            AmpHtmlSnippet = input.ReadString();
+            break;
+          }
+          case 24: {
+            Interstitial = input.ReadBool();
+            break;
+          }
+          case 40: {
+            SafeFrameCompatible = input.ReadBool();
+            break;
+          }
+          case 48: {
+            EffectiveSafeFrameCompatible = input.ReadBool();
+            break;
+          }
+          case 58: {
+            thirdPartyImpressionTrackingUrls_.AddEntriesFrom(input, _repeated_thirdPartyImpressionTrackingUrls_codec);
+            break;
+          }
+          case 64: {
+            LockedOrientation = (global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            DestinationUrl = input.ReadString();
+            break;
+          }
+          case 104: {
+            DestinationUrlType = (global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType) input.ReadEnum();
+            break;
+          }
+          case 114: {
+            customCreativeAssets_.AddEntriesFrom(input, _repeated_customCreativeAssets_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            HtmlSnippet = input.ReadString();
+            break;
+          }
+          case 18: {
+            AmpHtmlSnippet = input.ReadString();
+            break;
+          }
+          case 24: {
+            Interstitial = input.ReadBool();
+            break;
+          }
+          case 40: {
+            SafeFrameCompatible = input.ReadBool();
+            break;
+          }
+          case 48: {
+            EffectiveSafeFrameCompatible = input.ReadBool();
+            break;
+          }
+          case 58: {
+            thirdPartyImpressionTrackingUrls_.AddEntriesFrom(ref input, _repeated_thirdPartyImpressionTrackingUrls_codec);
+            break;
+          }
+          case 64: {
+            LockedOrientation = (global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            DestinationUrl = input.ReadString();
+            break;
+          }
+          case 104: {
+            DestinationUrlType = (global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType) input.ReadEnum();
+            break;
+          }
+          case 114: {
+            customCreativeAssets_.AddEntriesFrom(ref input, _repeated_customCreativeAssets_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A Creative that contains a zipped HTML5 bundle asset, a list of third party
+  /// impression trackers, and a third party click tracker.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Html5CreativeDetails : pb::IMessage<Html5CreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Html5CreativeDetails> _parser = new pb::MessageParser<Html5CreativeDetails>(() => new Html5CreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Html5CreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Html5CreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Html5CreativeDetails(Html5CreativeDetails other) : this() {
+      _hasBits0 = other._hasBits0;
+      lockedOrientation_ = other.lockedOrientation_;
+      overrideSize_ = other.overrideSize_;
+      thirdPartyImpressionTrackingUrls_ = other.thirdPartyImpressionTrackingUrls_.Clone();
+      thirdPartyClickTrackingUrl_ = other.thirdPartyClickTrackingUrl_;
+      safeFrameCompatible_ = other.safeFrameCompatible_;
+      html5Asset_ = other.html5Asset_ != null ? other.html5Asset_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Html5CreativeDetails Clone() {
+      return new Html5CreativeDetails(this);
+    }
+
+    /// <summary>Field number for the "locked_orientation" field.</summary>
+    public const int LockedOrientationFieldNumber = 1;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation LockedOrientationDefaultValue = global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation lockedOrientation_;
+    /// <summary>
+    /// Optional. A locked orientation for this creative to be displayed in.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation LockedOrientation {
+      get { if ((_hasBits0 & 1) != 0) { return lockedOrientation_; } else { return LockedOrientationDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        lockedOrientation_ = value;
+      }
+    }
+    /// <summary>Gets whether the "locked_orientation" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLockedOrientation {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "locked_orientation" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLockedOrientation() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "override_size" field.</summary>
+    public const int OverrideSizeFieldNumber = 2;
+    private readonly static bool OverrideSizeDefaultValue = false;
+
+    private bool overrideSize_;
+    /// <summary>
+    /// Optional. Allows the creative size to differ from the actual HTML5 asset
+    /// size.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool OverrideSize {
+      get { if ((_hasBits0 & 2) != 0) { return overrideSize_; } else { return OverrideSizeDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        overrideSize_ = value;
+      }
+    }
+    /// <summary>Gets whether the "override_size" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOverrideSize {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "override_size" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOverrideSize() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "third_party_impression_tracking_urls" field.</summary>
+    public const int ThirdPartyImpressionTrackingUrlsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_thirdPartyImpressionTrackingUrls_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> thirdPartyImpressionTrackingUrls_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Impression tracking URLs to ping when this creative is displayed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ThirdPartyImpressionTrackingUrls {
+      get { return thirdPartyImpressionTrackingUrls_; }
+    }
+
+    /// <summary>Field number for the "third_party_click_tracking_url" field.</summary>
+    public const int ThirdPartyClickTrackingUrlFieldNumber = 4;
+    private readonly static string ThirdPartyClickTrackingUrlDefaultValue = "";
+
+    private string thirdPartyClickTrackingUrl_;
+    /// <summary>
+    /// Optional. A click tracking URL to ping when this creative is clicked.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ThirdPartyClickTrackingUrl {
+      get { return thirdPartyClickTrackingUrl_ ?? ThirdPartyClickTrackingUrlDefaultValue; }
+      set {
+        thirdPartyClickTrackingUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "third_party_click_tracking_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasThirdPartyClickTrackingUrl {
+      get { return thirdPartyClickTrackingUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "third_party_click_tracking_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearThirdPartyClickTrackingUrl() {
+      thirdPartyClickTrackingUrl_ = null;
+    }
+
+    /// <summary>Field number for the "safe_frame_compatible" field.</summary>
+    public const int SafeFrameCompatibleFieldNumber = 7;
+    private readonly static bool SafeFrameCompatibleDefaultValue = false;
+
+    private bool safeFrameCompatible_;
+    /// <summary>
+    /// Optional. Whether the creative is compatible for SafeFrame rendering.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SafeFrameCompatible {
+      get { if ((_hasBits0 & 4) != 0) { return safeFrameCompatible_; } else { return SafeFrameCompatibleDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        safeFrameCompatible_ = value;
+      }
+    }
+    /// <summary>Gets whether the "safe_frame_compatible" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSafeFrameCompatible {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "safe_frame_compatible" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSafeFrameCompatible() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "html5_asset" field.</summary>
+    public const int Html5AssetFieldNumber = 8;
+    private global::Google.Ads.AdManager.V1.CreativeAsset html5Asset_;
+    /// <summary>
+    /// Required. The HTML5 asset. To preview the HTML5 asset, use the
+    /// `CreativeAsset.asset_url`. In this field, the
+    /// `CreativeAsset.asset_byte_array` must be a zip bundle and the
+    /// `CreativeAsset.file_name` must have a zip extension.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeAsset Html5Asset {
+      get { return html5Asset_; }
+      set {
+        html5Asset_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Html5CreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Html5CreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (LockedOrientation != other.LockedOrientation) return false;
+      if (OverrideSize != other.OverrideSize) return false;
+      if(!thirdPartyImpressionTrackingUrls_.Equals(other.thirdPartyImpressionTrackingUrls_)) return false;
+      if (ThirdPartyClickTrackingUrl != other.ThirdPartyClickTrackingUrl) return false;
+      if (SafeFrameCompatible != other.SafeFrameCompatible) return false;
+      if (!object.Equals(Html5Asset, other.Html5Asset)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasLockedOrientation) hash ^= LockedOrientation.GetHashCode();
+      if (HasOverrideSize) hash ^= OverrideSize.GetHashCode();
+      hash ^= thirdPartyImpressionTrackingUrls_.GetHashCode();
+      if (HasThirdPartyClickTrackingUrl) hash ^= ThirdPartyClickTrackingUrl.GetHashCode();
+      if (HasSafeFrameCompatible) hash ^= SafeFrameCompatible.GetHashCode();
+      if (html5Asset_ != null) hash ^= Html5Asset.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasLockedOrientation) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) LockedOrientation);
+      }
+      if (HasOverrideSize) {
+        output.WriteRawTag(16);
+        output.WriteBool(OverrideSize);
+      }
+      thirdPartyImpressionTrackingUrls_.WriteTo(output, _repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (HasThirdPartyClickTrackingUrl) {
+        output.WriteRawTag(34);
+        output.WriteString(ThirdPartyClickTrackingUrl);
+      }
+      if (HasSafeFrameCompatible) {
+        output.WriteRawTag(56);
+        output.WriteBool(SafeFrameCompatible);
+      }
+      if (html5Asset_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Html5Asset);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasLockedOrientation) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) LockedOrientation);
+      }
+      if (HasOverrideSize) {
+        output.WriteRawTag(16);
+        output.WriteBool(OverrideSize);
+      }
+      thirdPartyImpressionTrackingUrls_.WriteTo(ref output, _repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (HasThirdPartyClickTrackingUrl) {
+        output.WriteRawTag(34);
+        output.WriteString(ThirdPartyClickTrackingUrl);
+      }
+      if (HasSafeFrameCompatible) {
+        output.WriteRawTag(56);
+        output.WriteBool(SafeFrameCompatible);
+      }
+      if (html5Asset_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Html5Asset);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasLockedOrientation) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LockedOrientation);
+      }
+      if (HasOverrideSize) {
+        size += 1 + 1;
+      }
+      size += thirdPartyImpressionTrackingUrls_.CalculateSize(_repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (HasThirdPartyClickTrackingUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ThirdPartyClickTrackingUrl);
+      }
+      if (HasSafeFrameCompatible) {
+        size += 1 + 1;
+      }
+      if (html5Asset_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Html5Asset);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Html5CreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasLockedOrientation) {
+        LockedOrientation = other.LockedOrientation;
+      }
+      if (other.HasOverrideSize) {
+        OverrideSize = other.OverrideSize;
+      }
+      thirdPartyImpressionTrackingUrls_.Add(other.thirdPartyImpressionTrackingUrls_);
+      if (other.HasThirdPartyClickTrackingUrl) {
+        ThirdPartyClickTrackingUrl = other.ThirdPartyClickTrackingUrl;
+      }
+      if (other.HasSafeFrameCompatible) {
+        SafeFrameCompatible = other.SafeFrameCompatible;
+      }
+      if (other.html5Asset_ != null) {
+        if (html5Asset_ == null) {
+          Html5Asset = new global::Google.Ads.AdManager.V1.CreativeAsset();
+        }
+        Html5Asset.MergeFrom(other.Html5Asset);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            LockedOrientation = (global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            OverrideSize = input.ReadBool();
+            break;
+          }
+          case 26: {
+            thirdPartyImpressionTrackingUrls_.AddEntriesFrom(input, _repeated_thirdPartyImpressionTrackingUrls_codec);
+            break;
+          }
+          case 34: {
+            ThirdPartyClickTrackingUrl = input.ReadString();
+            break;
+          }
+          case 56: {
+            SafeFrameCompatible = input.ReadBool();
+            break;
+          }
+          case 66: {
+            if (html5Asset_ == null) {
+              Html5Asset = new global::Google.Ads.AdManager.V1.CreativeAsset();
+            }
+            input.ReadMessage(Html5Asset);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            LockedOrientation = (global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            OverrideSize = input.ReadBool();
+            break;
+          }
+          case 26: {
+            thirdPartyImpressionTrackingUrls_.AddEntriesFrom(ref input, _repeated_thirdPartyImpressionTrackingUrls_codec);
+            break;
+          }
+          case 34: {
+            ThirdPartyClickTrackingUrl = input.ReadString();
+            break;
+          }
+          case 56: {
+            SafeFrameCompatible = input.ReadBool();
+            break;
+          }
+          case 66: {
+            if (html5Asset_ == null) {
+              Html5Asset = new global::Google.Ads.AdManager.V1.CreativeAsset();
+            }
+            input.ReadMessage(Html5Asset);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A Creative that displays an image.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ImageCreativeDetails : pb::IMessage<ImageCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ImageCreativeDetails> _parser = new pb::MessageParser<ImageCreativeDetails>(() => new ImageCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ImageCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImageCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImageCreativeDetails(ImageCreativeDetails other) : this() {
+      _hasBits0 = other._hasBits0;
+      altText_ = other.altText_;
+      destinationUrl_ = other.destinationUrl_;
+      destinationUrlType_ = other.destinationUrlType_;
+      thirdPartyImpressionTrackingUrls_ = other.thirdPartyImpressionTrackingUrls_.Clone();
+      ampDestinationUrl_ = other.ampDestinationUrl_;
+      lockedOrientation_ = other.lockedOrientation_;
+      primaryImageAsset_ = other.primaryImageAsset_ != null ? other.primaryImageAsset_.Clone() : null;
+      secondaryImageAssets_ = other.secondaryImageAssets_.Clone();
+      overrideSize_ = other.overrideSize_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImageCreativeDetails Clone() {
+      return new ImageCreativeDetails(this);
+    }
+
+    /// <summary>Field number for the "alt_text" field.</summary>
+    public const int AltTextFieldNumber = 1;
+    private readonly static string AltTextDefaultValue = "";
+
+    private string altText_;
+    /// <summary>
+    /// Alternative text to be rendered along with the creative used mainly for
+    /// accessibility. This field has a maximum length of 500
+    /// characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AltText {
+      get { return altText_ ?? AltTextDefaultValue; }
+      set {
+        altText_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "alt_text" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAltText {
+      get { return altText_ != null; }
+    }
+    /// <summary>Clears the value of the "alt_text" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAltText() {
+      altText_ = null;
+    }
+
+    /// <summary>Field number for the "destination_url" field.</summary>
+    public const int DestinationUrlFieldNumber = 8;
+    private readonly static string DestinationUrlDefaultValue = "";
+
+    private string destinationUrl_;
+    /// <summary>
+    /// Optional. The URL that the user is directed to if they click on the
+    /// creative. This attribute is required unless the `destinationUrlType` is
+    /// `NONE`, and has a maximum length of 1024 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DestinationUrl {
+      get { return destinationUrl_ ?? DestinationUrlDefaultValue; }
+      set {
+        destinationUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "destination_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationUrl {
+      get { return destinationUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "destination_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationUrl() {
+      destinationUrl_ = null;
+    }
+
+    /// <summary>Field number for the "destination_url_type" field.</summary>
+    public const int DestinationUrlTypeFieldNumber = 9;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType DestinationUrlTypeDefaultValue = global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType destinationUrlType_;
+    /// <summary>
+    /// Optional. The action that should be performed if the user clicks on the
+    /// creative. This attribute defaults to `CLICK_TO_WEB`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType DestinationUrlType {
+      get { if ((_hasBits0 & 2) != 0) { return destinationUrlType_; } else { return DestinationUrlTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        destinationUrlType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "destination_url_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationUrlType {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "destination_url_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationUrlType() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "third_party_impression_tracking_urls" field.</summary>
+    public const int ThirdPartyImpressionTrackingUrlsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_thirdPartyImpressionTrackingUrls_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> thirdPartyImpressionTrackingUrls_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Impression tracking URLs to ping when this creative is displayed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ThirdPartyImpressionTrackingUrls {
+      get { return thirdPartyImpressionTrackingUrls_; }
+    }
+
+    /// <summary>Field number for the "amp_destination_url" field.</summary>
+    public const int AmpDestinationUrlFieldNumber = 4;
+    private readonly static string AmpDestinationUrlDefaultValue = "";
+
+    private string ampDestinationUrl_;
+    /// <summary>
+    /// Optional. The AMP destination URL for this creative. This must be a valid
+    /// URL, including the `http://` or `https://` scheme.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AmpDestinationUrl {
+      get { return ampDestinationUrl_ ?? AmpDestinationUrlDefaultValue; }
+      set {
+        ampDestinationUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "amp_destination_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAmpDestinationUrl {
+      get { return ampDestinationUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "amp_destination_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAmpDestinationUrl() {
+      ampDestinationUrl_ = null;
+    }
+
+    /// <summary>Field number for the "locked_orientation" field.</summary>
+    public const int LockedOrientationFieldNumber = 5;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation LockedOrientationDefaultValue = global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation lockedOrientation_;
+    /// <summary>
+    /// Optional. A locked orientation for this creative to be displayed in.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation LockedOrientation {
+      get { if ((_hasBits0 & 1) != 0) { return lockedOrientation_; } else { return LockedOrientationDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        lockedOrientation_ = value;
+      }
+    }
+    /// <summary>Gets whether the "locked_orientation" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLockedOrientation {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "locked_orientation" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLockedOrientation() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "primary_image_asset" field.</summary>
+    public const int PrimaryImageAssetFieldNumber = 6;
+    private global::Google.Ads.AdManager.V1.CreativeAsset primaryImageAsset_;
+    /// <summary>
+    /// The primary image asset associated with this creative. This attribute is
+    /// required.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeAsset PrimaryImageAsset {
+      get { return primaryImageAsset_; }
+      set {
+        primaryImageAsset_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "secondary_image_assets" field.</summary>
+    public const int SecondaryImageAssetsFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.CreativeAsset> _repeated_secondaryImageAssets_codec
+        = pb::FieldCodec.ForMessage(58, global::Google.Ads.AdManager.V1.CreativeAsset.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreativeAsset> secondaryImageAssets_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreativeAsset>();
+    /// <summary>
+    /// Secondary image assets associated with this creative. This
+    /// attribute is optional.
+    ///
+    /// Secondary image assets can be used to store different resolution versions
+    /// of the primary asset for use on non-standard density screens.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreativeAsset> SecondaryImageAssets {
+      get { return secondaryImageAssets_; }
+    }
+
+    /// <summary>Field number for the "override_size" field.</summary>
+    public const int OverrideSizeFieldNumber = 10;
+    private readonly static bool OverrideSizeDefaultValue = false;
+
+    private bool overrideSize_;
+    /// <summary>
+    /// Optional. Allows the creative size to differ from the actual image asset
+    /// size.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool OverrideSize {
+      get { if ((_hasBits0 & 4) != 0) { return overrideSize_; } else { return OverrideSizeDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        overrideSize_ = value;
+      }
+    }
+    /// <summary>Gets whether the "override_size" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOverrideSize {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "override_size" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOverrideSize() {
+      _hasBits0 &= ~4;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ImageCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ImageCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AltText != other.AltText) return false;
+      if (DestinationUrl != other.DestinationUrl) return false;
+      if (DestinationUrlType != other.DestinationUrlType) return false;
+      if(!thirdPartyImpressionTrackingUrls_.Equals(other.thirdPartyImpressionTrackingUrls_)) return false;
+      if (AmpDestinationUrl != other.AmpDestinationUrl) return false;
+      if (LockedOrientation != other.LockedOrientation) return false;
+      if (!object.Equals(PrimaryImageAsset, other.PrimaryImageAsset)) return false;
+      if(!secondaryImageAssets_.Equals(other.secondaryImageAssets_)) return false;
+      if (OverrideSize != other.OverrideSize) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasAltText) hash ^= AltText.GetHashCode();
+      if (HasDestinationUrl) hash ^= DestinationUrl.GetHashCode();
+      if (HasDestinationUrlType) hash ^= DestinationUrlType.GetHashCode();
+      hash ^= thirdPartyImpressionTrackingUrls_.GetHashCode();
+      if (HasAmpDestinationUrl) hash ^= AmpDestinationUrl.GetHashCode();
+      if (HasLockedOrientation) hash ^= LockedOrientation.GetHashCode();
+      if (primaryImageAsset_ != null) hash ^= PrimaryImageAsset.GetHashCode();
+      hash ^= secondaryImageAssets_.GetHashCode();
+      if (HasOverrideSize) hash ^= OverrideSize.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasAltText) {
+        output.WriteRawTag(10);
+        output.WriteString(AltText);
+      }
+      thirdPartyImpressionTrackingUrls_.WriteTo(output, _repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (HasAmpDestinationUrl) {
+        output.WriteRawTag(34);
+        output.WriteString(AmpDestinationUrl);
+      }
+      if (HasLockedOrientation) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) LockedOrientation);
+      }
+      if (primaryImageAsset_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(PrimaryImageAsset);
+      }
+      secondaryImageAssets_.WriteTo(output, _repeated_secondaryImageAssets_codec);
+      if (HasDestinationUrl) {
+        output.WriteRawTag(66);
+        output.WriteString(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) DestinationUrlType);
+      }
+      if (HasOverrideSize) {
+        output.WriteRawTag(80);
+        output.WriteBool(OverrideSize);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasAltText) {
+        output.WriteRawTag(10);
+        output.WriteString(AltText);
+      }
+      thirdPartyImpressionTrackingUrls_.WriteTo(ref output, _repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (HasAmpDestinationUrl) {
+        output.WriteRawTag(34);
+        output.WriteString(AmpDestinationUrl);
+      }
+      if (HasLockedOrientation) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) LockedOrientation);
+      }
+      if (primaryImageAsset_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(PrimaryImageAsset);
+      }
+      secondaryImageAssets_.WriteTo(ref output, _repeated_secondaryImageAssets_codec);
+      if (HasDestinationUrl) {
+        output.WriteRawTag(66);
+        output.WriteString(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) DestinationUrlType);
+      }
+      if (HasOverrideSize) {
+        output.WriteRawTag(80);
+        output.WriteBool(OverrideSize);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasAltText) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AltText);
+      }
+      if (HasDestinationUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DestinationUrlType);
+      }
+      size += thirdPartyImpressionTrackingUrls_.CalculateSize(_repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (HasAmpDestinationUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AmpDestinationUrl);
+      }
+      if (HasLockedOrientation) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LockedOrientation);
+      }
+      if (primaryImageAsset_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PrimaryImageAsset);
+      }
+      size += secondaryImageAssets_.CalculateSize(_repeated_secondaryImageAssets_codec);
+      if (HasOverrideSize) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ImageCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasAltText) {
+        AltText = other.AltText;
+      }
+      if (other.HasDestinationUrl) {
+        DestinationUrl = other.DestinationUrl;
+      }
+      if (other.HasDestinationUrlType) {
+        DestinationUrlType = other.DestinationUrlType;
+      }
+      thirdPartyImpressionTrackingUrls_.Add(other.thirdPartyImpressionTrackingUrls_);
+      if (other.HasAmpDestinationUrl) {
+        AmpDestinationUrl = other.AmpDestinationUrl;
+      }
+      if (other.HasLockedOrientation) {
+        LockedOrientation = other.LockedOrientation;
+      }
+      if (other.primaryImageAsset_ != null) {
+        if (primaryImageAsset_ == null) {
+          PrimaryImageAsset = new global::Google.Ads.AdManager.V1.CreativeAsset();
+        }
+        PrimaryImageAsset.MergeFrom(other.PrimaryImageAsset);
+      }
+      secondaryImageAssets_.Add(other.secondaryImageAssets_);
+      if (other.HasOverrideSize) {
+        OverrideSize = other.OverrideSize;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            AltText = input.ReadString();
+            break;
+          }
+          case 26: {
+            thirdPartyImpressionTrackingUrls_.AddEntriesFrom(input, _repeated_thirdPartyImpressionTrackingUrls_codec);
+            break;
+          }
+          case 34: {
+            AmpDestinationUrl = input.ReadString();
+            break;
+          }
+          case 40: {
+            LockedOrientation = (global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            if (primaryImageAsset_ == null) {
+              PrimaryImageAsset = new global::Google.Ads.AdManager.V1.CreativeAsset();
+            }
+            input.ReadMessage(PrimaryImageAsset);
+            break;
+          }
+          case 58: {
+            secondaryImageAssets_.AddEntriesFrom(input, _repeated_secondaryImageAssets_codec);
+            break;
+          }
+          case 66: {
+            DestinationUrl = input.ReadString();
+            break;
+          }
+          case 72: {
+            DestinationUrlType = (global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType) input.ReadEnum();
+            break;
+          }
+          case 80: {
+            OverrideSize = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            AltText = input.ReadString();
+            break;
+          }
+          case 26: {
+            thirdPartyImpressionTrackingUrls_.AddEntriesFrom(ref input, _repeated_thirdPartyImpressionTrackingUrls_codec);
+            break;
+          }
+          case 34: {
+            AmpDestinationUrl = input.ReadString();
+            break;
+          }
+          case 40: {
+            LockedOrientation = (global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            if (primaryImageAsset_ == null) {
+              PrimaryImageAsset = new global::Google.Ads.AdManager.V1.CreativeAsset();
+            }
+            input.ReadMessage(PrimaryImageAsset);
+            break;
+          }
+          case 58: {
+            secondaryImageAssets_.AddEntriesFrom(ref input, _repeated_secondaryImageAssets_codec);
+            break;
+          }
+          case 66: {
+            DestinationUrl = input.ReadString();
+            break;
+          }
+          case 72: {
+            DestinationUrlType = (global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType) input.ReadEnum();
+            break;
+          }
+          case 80: {
+            OverrideSize = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// An overlay Creative that displays an image and is served via VAST 2.0 XML.
+  /// Overlays cover part of the video content they are displayed on top of.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ImageOverlayCreativeDetails : pb::IMessage<ImageOverlayCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ImageOverlayCreativeDetails> _parser = new pb::MessageParser<ImageOverlayCreativeDetails>(() => new ImageOverlayCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ImageOverlayCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImageOverlayCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImageOverlayCreativeDetails(ImageOverlayCreativeDetails other) : this() {
+      _hasBits0 = other._hasBits0;
+      lockedOrientation_ = other.lockedOrientation_;
+      destinationUrl_ = other.destinationUrl_;
+      destinationUrlType_ = other.destinationUrlType_;
+      overrideSize_ = other.overrideSize_;
+      primaryImageAsset_ = other.primaryImageAsset_ != null ? other.primaryImageAsset_.Clone() : null;
+      creativeSetDisplayName_ = other.creativeSetDisplayName_;
+      creativeSet_ = other.creativeSet_;
+      companionCreatives_ = other.companionCreatives_.Clone();
+      trackingUrls_ = other.trackingUrls_.Clone();
+      customParameters_ = other.customParameters_;
+      duration_ = other.duration_ != null ? other.duration_.Clone() : null;
+      expectedCompanions_ = other.expectedCompanions_.Clone();
+      expectedCompanionDeliveryOption_ = other.expectedCompanionDeliveryOption_;
+      vastPreviewUrl_ = other.vastPreviewUrl_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImageOverlayCreativeDetails Clone() {
+      return new ImageOverlayCreativeDetails(this);
+    }
+
+    /// <summary>Field number for the "locked_orientation" field.</summary>
+    public const int LockedOrientationFieldNumber = 1;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation LockedOrientationDefaultValue = global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation lockedOrientation_;
+    /// <summary>
+    /// Optional. A locked orientation for this creative to be displayed in.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation LockedOrientation {
+      get { if ((_hasBits0 & 1) != 0) { return lockedOrientation_; } else { return LockedOrientationDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        lockedOrientation_ = value;
+      }
+    }
+    /// <summary>Gets whether the "locked_orientation" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLockedOrientation {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "locked_orientation" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLockedOrientation() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "destination_url" field.</summary>
+    public const int DestinationUrlFieldNumber = 3;
+    private readonly static string DestinationUrlDefaultValue = "";
+
+    private string destinationUrl_;
+    /// <summary>
+    /// Optional. The URL that the user is directed to if they click on the
+    /// creative. This attribute is required unless the `destinationUrlType` is
+    /// `NONE`, and has a maximum length of 1024 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DestinationUrl {
+      get { return destinationUrl_ ?? DestinationUrlDefaultValue; }
+      set {
+        destinationUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "destination_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationUrl {
+      get { return destinationUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "destination_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationUrl() {
+      destinationUrl_ = null;
+    }
+
+    /// <summary>Field number for the "destination_url_type" field.</summary>
+    public const int DestinationUrlTypeFieldNumber = 4;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType DestinationUrlTypeDefaultValue = global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType destinationUrlType_;
+    /// <summary>
+    /// Optional. The action that should be performed if the user clicks on the
+    /// creative. This attribute defaults to `CLICK_TO_WEB`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType DestinationUrlType {
+      get { if ((_hasBits0 & 2) != 0) { return destinationUrlType_; } else { return DestinationUrlTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        destinationUrlType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "destination_url_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationUrlType {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "destination_url_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationUrlType() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "override_size" field.</summary>
+    public const int OverrideSizeFieldNumber = 5;
+    private readonly static bool OverrideSizeDefaultValue = false;
+
+    private bool overrideSize_;
+    /// <summary>
+    /// Optional. Allows the creative size to differ from the actual image asset
+    /// size.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool OverrideSize {
+      get { if ((_hasBits0 & 4) != 0) { return overrideSize_; } else { return OverrideSizeDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        overrideSize_ = value;
+      }
+    }
+    /// <summary>Gets whether the "override_size" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOverrideSize {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "override_size" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOverrideSize() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "primary_image_asset" field.</summary>
+    public const int PrimaryImageAssetFieldNumber = 6;
+    private global::Google.Ads.AdManager.V1.CreativeAsset primaryImageAsset_;
+    /// <summary>
+    /// Required. The primary image asset associated with this creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeAsset PrimaryImageAsset {
+      get { return primaryImageAsset_; }
+      set {
+        primaryImageAsset_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "creative_set_display_name" field.</summary>
+    public const int CreativeSetDisplayNameFieldNumber = 7;
+    private readonly static string CreativeSetDisplayNameDefaultValue = "";
+
+    private string creativeSetDisplayName_;
+    /// <summary>
+    /// Output only. The display name of the creative set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CreativeSetDisplayName {
+      get { return creativeSetDisplayName_ ?? CreativeSetDisplayNameDefaultValue; }
+      set {
+        creativeSetDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "creative_set_display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCreativeSetDisplayName {
+      get { return creativeSetDisplayName_ != null; }
+    }
+    /// <summary>Clears the value of the "creative_set_display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCreativeSetDisplayName() {
+      creativeSetDisplayName_ = null;
+    }
+
+    /// <summary>Field number for the "creative_set" field.</summary>
+    public const int CreativeSetFieldNumber = 8;
+    private readonly static string CreativeSetDefaultValue = "";
+
+    private string creativeSet_;
+    /// <summary>
+    /// Output only. The resource name of the creative set.
+    /// Format: "networks/{network_code}/creativeSets/{creative_set_id}"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CreativeSet {
+      get { return creativeSet_ ?? CreativeSetDefaultValue; }
+      set {
+        creativeSet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "creative_set" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCreativeSet {
+      get { return creativeSet_ != null; }
+    }
+    /// <summary>Clears the value of the "creative_set" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCreativeSet() {
+      creativeSet_ = null;
+    }
+
+    /// <summary>Field number for the "companion_creatives" field.</summary>
+    public const int CompanionCreativesFieldNumber = 9;
+    private static readonly pb::FieldCodec<string> _repeated_companionCreatives_codec
+        = pb::FieldCodec.ForString(74);
+    private readonly pbc::RepeatedField<string> companionCreatives_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. The resource names of the companion creatives that are
+    /// associated with this creative. Format:
+    /// "networks/{network_code}/creatives/{creative_id}"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> CompanionCreatives {
+      get { return companionCreatives_; }
+    }
+
+    /// <summary>Field number for the "tracking_urls" field.</summary>
+    public const int TrackingUrlsFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.VideoTrackingUrl> _repeated_trackingUrls_codec
+        = pb::FieldCodec.ForMessage(82, global::Google.Ads.AdManager.V1.VideoTrackingUrl.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.VideoTrackingUrl> trackingUrls_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.VideoTrackingUrl>();
+    /// <summary>
+    /// Optional. URLs that will be pinged when conversion events happen.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.VideoTrackingUrl> TrackingUrls {
+      get { return trackingUrls_; }
+    }
+
+    /// <summary>Field number for the "custom_parameters" field.</summary>
+    public const int CustomParametersFieldNumber = 11;
+    private readonly static string CustomParametersDefaultValue = "";
+
+    private string customParameters_;
+    /// <summary>
+    /// Optional. A comma separated key=value list of parameters that will be
+    /// supplied to the creative, written into the VAST `AdParameters` node.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomParameters {
+      get { return customParameters_ ?? CustomParametersDefaultValue; }
+      set {
+        customParameters_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "custom_parameters" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCustomParameters {
+      get { return customParameters_ != null; }
+    }
+    /// <summary>Clears the value of the "custom_parameters" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCustomParameters() {
+      customParameters_ = null;
+    }
+
+    /// <summary>Field number for the "duration" field.</summary>
+    public const int DurationFieldNumber = 12;
+    private global::Google.Protobuf.WellKnownTypes.Duration duration_;
+    /// <summary>
+    /// Optional. Minimum suggested duration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration Duration {
+      get { return duration_; }
+      set {
+        duration_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "expected_companions" field.</summary>
+    public const int ExpectedCompanionsFieldNumber = 13;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.CreativePlaceholder> _repeated_expectedCompanions_codec
+        = pb::FieldCodec.ForMessage(106, global::Google.Ads.AdManager.V1.CreativePlaceholder.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreativePlaceholder> expectedCompanions_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreativePlaceholder>();
+    /// <summary>
+    /// Optional. `CreativePlaceholder` objects a creative set should fulfill.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreativePlaceholder> ExpectedCompanions {
+      get { return expectedCompanions_; }
+    }
+
+    /// <summary>Field number for the "expected_companion_delivery_option" field.</summary>
+    public const int ExpectedCompanionDeliveryOptionFieldNumber = 14;
+    private readonly static global::Google.Ads.AdManager.V1.CompanionDeliveryOptionEnum.Types.CompanionDeliveryOption ExpectedCompanionDeliveryOptionDefaultValue = global::Google.Ads.AdManager.V1.CompanionDeliveryOptionEnum.Types.CompanionDeliveryOption.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CompanionDeliveryOptionEnum.Types.CompanionDeliveryOption expectedCompanionDeliveryOption_;
+    /// <summary>
+    /// Output only. The companion delivery option this set will be served with.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CompanionDeliveryOptionEnum.Types.CompanionDeliveryOption ExpectedCompanionDeliveryOption {
+      get { if ((_hasBits0 & 8) != 0) { return expectedCompanionDeliveryOption_; } else { return ExpectedCompanionDeliveryOptionDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        expectedCompanionDeliveryOption_ = value;
+      }
+    }
+    /// <summary>Gets whether the "expected_companion_delivery_option" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasExpectedCompanionDeliveryOption {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "expected_companion_delivery_option" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExpectedCompanionDeliveryOption() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "vast_preview_url" field.</summary>
+    public const int VastPreviewUrlFieldNumber = 16;
+    private readonly static string VastPreviewUrlDefaultValue = "";
+
+    private string vastPreviewUrl_;
+    /// <summary>
+    /// Output only. An ad tag URL that will return a preview of the VAST XML
+    /// response specific to this creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VastPreviewUrl {
+      get { return vastPreviewUrl_ ?? VastPreviewUrlDefaultValue; }
+      set {
+        vastPreviewUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "vast_preview_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVastPreviewUrl {
+      get { return vastPreviewUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "vast_preview_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVastPreviewUrl() {
+      vastPreviewUrl_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ImageOverlayCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ImageOverlayCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (LockedOrientation != other.LockedOrientation) return false;
+      if (DestinationUrl != other.DestinationUrl) return false;
+      if (DestinationUrlType != other.DestinationUrlType) return false;
+      if (OverrideSize != other.OverrideSize) return false;
+      if (!object.Equals(PrimaryImageAsset, other.PrimaryImageAsset)) return false;
+      if (CreativeSetDisplayName != other.CreativeSetDisplayName) return false;
+      if (CreativeSet != other.CreativeSet) return false;
+      if(!companionCreatives_.Equals(other.companionCreatives_)) return false;
+      if(!trackingUrls_.Equals(other.trackingUrls_)) return false;
+      if (CustomParameters != other.CustomParameters) return false;
+      if (!object.Equals(Duration, other.Duration)) return false;
+      if(!expectedCompanions_.Equals(other.expectedCompanions_)) return false;
+      if (ExpectedCompanionDeliveryOption != other.ExpectedCompanionDeliveryOption) return false;
+      if (VastPreviewUrl != other.VastPreviewUrl) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasLockedOrientation) hash ^= LockedOrientation.GetHashCode();
+      if (HasDestinationUrl) hash ^= DestinationUrl.GetHashCode();
+      if (HasDestinationUrlType) hash ^= DestinationUrlType.GetHashCode();
+      if (HasOverrideSize) hash ^= OverrideSize.GetHashCode();
+      if (primaryImageAsset_ != null) hash ^= PrimaryImageAsset.GetHashCode();
+      if (HasCreativeSetDisplayName) hash ^= CreativeSetDisplayName.GetHashCode();
+      if (HasCreativeSet) hash ^= CreativeSet.GetHashCode();
+      hash ^= companionCreatives_.GetHashCode();
+      hash ^= trackingUrls_.GetHashCode();
+      if (HasCustomParameters) hash ^= CustomParameters.GetHashCode();
+      if (duration_ != null) hash ^= Duration.GetHashCode();
+      hash ^= expectedCompanions_.GetHashCode();
+      if (HasExpectedCompanionDeliveryOption) hash ^= ExpectedCompanionDeliveryOption.GetHashCode();
+      if (HasVastPreviewUrl) hash ^= VastPreviewUrl.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasLockedOrientation) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) LockedOrientation);
+      }
+      if (HasDestinationUrl) {
+        output.WriteRawTag(26);
+        output.WriteString(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) DestinationUrlType);
+      }
+      if (HasOverrideSize) {
+        output.WriteRawTag(40);
+        output.WriteBool(OverrideSize);
+      }
+      if (primaryImageAsset_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(PrimaryImageAsset);
+      }
+      if (HasCreativeSetDisplayName) {
+        output.WriteRawTag(58);
+        output.WriteString(CreativeSetDisplayName);
+      }
+      if (HasCreativeSet) {
+        output.WriteRawTag(66);
+        output.WriteString(CreativeSet);
+      }
+      companionCreatives_.WriteTo(output, _repeated_companionCreatives_codec);
+      trackingUrls_.WriteTo(output, _repeated_trackingUrls_codec);
+      if (HasCustomParameters) {
+        output.WriteRawTag(90);
+        output.WriteString(CustomParameters);
+      }
+      if (duration_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Duration);
+      }
+      expectedCompanions_.WriteTo(output, _repeated_expectedCompanions_codec);
+      if (HasExpectedCompanionDeliveryOption) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) ExpectedCompanionDeliveryOption);
+      }
+      if (HasVastPreviewUrl) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(VastPreviewUrl);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasLockedOrientation) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) LockedOrientation);
+      }
+      if (HasDestinationUrl) {
+        output.WriteRawTag(26);
+        output.WriteString(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) DestinationUrlType);
+      }
+      if (HasOverrideSize) {
+        output.WriteRawTag(40);
+        output.WriteBool(OverrideSize);
+      }
+      if (primaryImageAsset_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(PrimaryImageAsset);
+      }
+      if (HasCreativeSetDisplayName) {
+        output.WriteRawTag(58);
+        output.WriteString(CreativeSetDisplayName);
+      }
+      if (HasCreativeSet) {
+        output.WriteRawTag(66);
+        output.WriteString(CreativeSet);
+      }
+      companionCreatives_.WriteTo(ref output, _repeated_companionCreatives_codec);
+      trackingUrls_.WriteTo(ref output, _repeated_trackingUrls_codec);
+      if (HasCustomParameters) {
+        output.WriteRawTag(90);
+        output.WriteString(CustomParameters);
+      }
+      if (duration_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Duration);
+      }
+      expectedCompanions_.WriteTo(ref output, _repeated_expectedCompanions_codec);
+      if (HasExpectedCompanionDeliveryOption) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) ExpectedCompanionDeliveryOption);
+      }
+      if (HasVastPreviewUrl) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(VastPreviewUrl);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasLockedOrientation) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LockedOrientation);
+      }
+      if (HasDestinationUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DestinationUrlType);
+      }
+      if (HasOverrideSize) {
+        size += 1 + 1;
+      }
+      if (primaryImageAsset_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PrimaryImageAsset);
+      }
+      if (HasCreativeSetDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CreativeSetDisplayName);
+      }
+      if (HasCreativeSet) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CreativeSet);
+      }
+      size += companionCreatives_.CalculateSize(_repeated_companionCreatives_codec);
+      size += trackingUrls_.CalculateSize(_repeated_trackingUrls_codec);
+      if (HasCustomParameters) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomParameters);
+      }
+      if (duration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Duration);
+      }
+      size += expectedCompanions_.CalculateSize(_repeated_expectedCompanions_codec);
+      if (HasExpectedCompanionDeliveryOption) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExpectedCompanionDeliveryOption);
+      }
+      if (HasVastPreviewUrl) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(VastPreviewUrl);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ImageOverlayCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasLockedOrientation) {
+        LockedOrientation = other.LockedOrientation;
+      }
+      if (other.HasDestinationUrl) {
+        DestinationUrl = other.DestinationUrl;
+      }
+      if (other.HasDestinationUrlType) {
+        DestinationUrlType = other.DestinationUrlType;
+      }
+      if (other.HasOverrideSize) {
+        OverrideSize = other.OverrideSize;
+      }
+      if (other.primaryImageAsset_ != null) {
+        if (primaryImageAsset_ == null) {
+          PrimaryImageAsset = new global::Google.Ads.AdManager.V1.CreativeAsset();
+        }
+        PrimaryImageAsset.MergeFrom(other.PrimaryImageAsset);
+      }
+      if (other.HasCreativeSetDisplayName) {
+        CreativeSetDisplayName = other.CreativeSetDisplayName;
+      }
+      if (other.HasCreativeSet) {
+        CreativeSet = other.CreativeSet;
+      }
+      companionCreatives_.Add(other.companionCreatives_);
+      trackingUrls_.Add(other.trackingUrls_);
+      if (other.HasCustomParameters) {
+        CustomParameters = other.CustomParameters;
+      }
+      if (other.duration_ != null) {
+        if (duration_ == null) {
+          Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        Duration.MergeFrom(other.Duration);
+      }
+      expectedCompanions_.Add(other.expectedCompanions_);
+      if (other.HasExpectedCompanionDeliveryOption) {
+        ExpectedCompanionDeliveryOption = other.ExpectedCompanionDeliveryOption;
+      }
+      if (other.HasVastPreviewUrl) {
+        VastPreviewUrl = other.VastPreviewUrl;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            LockedOrientation = (global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            DestinationUrl = input.ReadString();
+            break;
+          }
+          case 32: {
+            DestinationUrlType = (global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType) input.ReadEnum();
+            break;
+          }
+          case 40: {
+            OverrideSize = input.ReadBool();
+            break;
+          }
+          case 50: {
+            if (primaryImageAsset_ == null) {
+              PrimaryImageAsset = new global::Google.Ads.AdManager.V1.CreativeAsset();
+            }
+            input.ReadMessage(PrimaryImageAsset);
+            break;
+          }
+          case 58: {
+            CreativeSetDisplayName = input.ReadString();
+            break;
+          }
+          case 66: {
+            CreativeSet = input.ReadString();
+            break;
+          }
+          case 74: {
+            companionCreatives_.AddEntriesFrom(input, _repeated_companionCreatives_codec);
+            break;
+          }
+          case 82: {
+            trackingUrls_.AddEntriesFrom(input, _repeated_trackingUrls_codec);
+            break;
+          }
+          case 90: {
+            CustomParameters = input.ReadString();
+            break;
+          }
+          case 98: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
+          case 106: {
+            expectedCompanions_.AddEntriesFrom(input, _repeated_expectedCompanions_codec);
+            break;
+          }
+          case 112: {
+            ExpectedCompanionDeliveryOption = (global::Google.Ads.AdManager.V1.CompanionDeliveryOptionEnum.Types.CompanionDeliveryOption) input.ReadEnum();
+            break;
+          }
+          case 130: {
+            VastPreviewUrl = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            LockedOrientation = (global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            DestinationUrl = input.ReadString();
+            break;
+          }
+          case 32: {
+            DestinationUrlType = (global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType) input.ReadEnum();
+            break;
+          }
+          case 40: {
+            OverrideSize = input.ReadBool();
+            break;
+          }
+          case 50: {
+            if (primaryImageAsset_ == null) {
+              PrimaryImageAsset = new global::Google.Ads.AdManager.V1.CreativeAsset();
+            }
+            input.ReadMessage(PrimaryImageAsset);
+            break;
+          }
+          case 58: {
+            CreativeSetDisplayName = input.ReadString();
+            break;
+          }
+          case 66: {
+            CreativeSet = input.ReadString();
+            break;
+          }
+          case 74: {
+            companionCreatives_.AddEntriesFrom(ref input, _repeated_companionCreatives_codec);
+            break;
+          }
+          case 82: {
+            trackingUrls_.AddEntriesFrom(ref input, _repeated_trackingUrls_codec);
+            break;
+          }
+          case 90: {
+            CustomParameters = input.ReadString();
+            break;
+          }
+          case 98: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
+          case 106: {
+            expectedCompanions_.AddEntriesFrom(ref input, _repeated_expectedCompanions_codec);
+            break;
+          }
+          case 112: {
+            ExpectedCompanionDeliveryOption = (global::Google.Ads.AdManager.V1.CompanionDeliveryOptionEnum.Types.CompanionDeliveryOption) input.ReadEnum();
+            break;
+          }
+          case 130: {
+            VastPreviewUrl = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A Creative that loads an image asset from a specified URL.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ImageRedirectCreativeDetails : pb::IMessage<ImageRedirectCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ImageRedirectCreativeDetails> _parser = new pb::MessageParser<ImageRedirectCreativeDetails>(() => new ImageRedirectCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ImageRedirectCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImageRedirectCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImageRedirectCreativeDetails(ImageRedirectCreativeDetails other) : this() {
+      _hasBits0 = other._hasBits0;
+      destinationUrl_ = other.destinationUrl_;
+      destinationUrlType_ = other.destinationUrlType_;
+      altText_ = other.altText_;
+      imageUrl_ = other.imageUrl_;
+      thirdPartyImpressionTrackingUrls_ = other.thirdPartyImpressionTrackingUrls_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImageRedirectCreativeDetails Clone() {
+      return new ImageRedirectCreativeDetails(this);
+    }
+
+    /// <summary>Field number for the "destination_url" field.</summary>
+    public const int DestinationUrlFieldNumber = 5;
+    private readonly static string DestinationUrlDefaultValue = "";
+
+    private string destinationUrl_;
+    /// <summary>
+    /// Optional. The URL that the user is directed to if they click on the
+    /// creative. This attribute is required unless the `destinationUrlType` is
+    /// `NONE`, and has a maximum length of 1024 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DestinationUrl {
+      get { return destinationUrl_ ?? DestinationUrlDefaultValue; }
+      set {
+        destinationUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "destination_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationUrl {
+      get { return destinationUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "destination_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationUrl() {
+      destinationUrl_ = null;
+    }
+
+    /// <summary>Field number for the "destination_url_type" field.</summary>
+    public const int DestinationUrlTypeFieldNumber = 6;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType DestinationUrlTypeDefaultValue = global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType destinationUrlType_;
+    /// <summary>
+    /// Optional. The action that should be performed if the user clicks on the
+    /// creative. This attribute defaults to `CLICK_TO_WEB`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType DestinationUrlType {
+      get { if ((_hasBits0 & 1) != 0) { return destinationUrlType_; } else { return DestinationUrlTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        destinationUrlType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "destination_url_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationUrlType {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "destination_url_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationUrlType() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "alt_text" field.</summary>
+    public const int AltTextFieldNumber = 2;
+    private readonly static string AltTextDefaultValue = "";
+
+    private string altText_;
+    /// <summary>
+    /// Optional. Alternative text to be rendered along with the creative used
+    /// mainly for accessibility. This field has a maximum length of 500
+    /// characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AltText {
+      get { return altText_ ?? AltTextDefaultValue; }
+      set {
+        altText_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "alt_text" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAltText {
+      get { return altText_ != null; }
+    }
+    /// <summary>Clears the value of the "alt_text" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAltText() {
+      altText_ = null;
+    }
+
+    /// <summary>Field number for the "image_url" field.</summary>
+    public const int ImageUrlFieldNumber = 3;
+    private readonly static string ImageUrlDefaultValue = "";
+
+    private string imageUrl_;
+    /// <summary>
+    /// Required. The URL where the actual asset resides. This field has a maximum
+    /// length of 1024 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ImageUrl {
+      get { return imageUrl_ ?? ImageUrlDefaultValue; }
+      set {
+        imageUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "image_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasImageUrl {
+      get { return imageUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "image_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearImageUrl() {
+      imageUrl_ = null;
+    }
+
+    /// <summary>Field number for the "third_party_impression_tracking_urls" field.</summary>
+    public const int ThirdPartyImpressionTrackingUrlsFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_thirdPartyImpressionTrackingUrls_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> thirdPartyImpressionTrackingUrls_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Impression tracking URLs to ping when this creative is displayed.
+    /// Each string has a maximum length of 1024 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ThirdPartyImpressionTrackingUrls {
+      get { return thirdPartyImpressionTrackingUrls_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ImageRedirectCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ImageRedirectCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DestinationUrl != other.DestinationUrl) return false;
+      if (DestinationUrlType != other.DestinationUrlType) return false;
+      if (AltText != other.AltText) return false;
+      if (ImageUrl != other.ImageUrl) return false;
+      if(!thirdPartyImpressionTrackingUrls_.Equals(other.thirdPartyImpressionTrackingUrls_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasDestinationUrl) hash ^= DestinationUrl.GetHashCode();
+      if (HasDestinationUrlType) hash ^= DestinationUrlType.GetHashCode();
+      if (HasAltText) hash ^= AltText.GetHashCode();
+      if (HasImageUrl) hash ^= ImageUrl.GetHashCode();
+      hash ^= thirdPartyImpressionTrackingUrls_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasAltText) {
+        output.WriteRawTag(18);
+        output.WriteString(AltText);
+      }
+      if (HasImageUrl) {
+        output.WriteRawTag(26);
+        output.WriteString(ImageUrl);
+      }
+      thirdPartyImpressionTrackingUrls_.WriteTo(output, _repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (HasDestinationUrl) {
+        output.WriteRawTag(42);
+        output.WriteString(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) DestinationUrlType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasAltText) {
+        output.WriteRawTag(18);
+        output.WriteString(AltText);
+      }
+      if (HasImageUrl) {
+        output.WriteRawTag(26);
+        output.WriteString(ImageUrl);
+      }
+      thirdPartyImpressionTrackingUrls_.WriteTo(ref output, _repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (HasDestinationUrl) {
+        output.WriteRawTag(42);
+        output.WriteString(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) DestinationUrlType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasDestinationUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DestinationUrlType);
+      }
+      if (HasAltText) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AltText);
+      }
+      if (HasImageUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImageUrl);
+      }
+      size += thirdPartyImpressionTrackingUrls_.CalculateSize(_repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ImageRedirectCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasDestinationUrl) {
+        DestinationUrl = other.DestinationUrl;
+      }
+      if (other.HasDestinationUrlType) {
+        DestinationUrlType = other.DestinationUrlType;
+      }
+      if (other.HasAltText) {
+        AltText = other.AltText;
+      }
+      if (other.HasImageUrl) {
+        ImageUrl = other.ImageUrl;
+      }
+      thirdPartyImpressionTrackingUrls_.Add(other.thirdPartyImpressionTrackingUrls_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            AltText = input.ReadString();
+            break;
+          }
+          case 26: {
+            ImageUrl = input.ReadString();
+            break;
+          }
+          case 34: {
+            thirdPartyImpressionTrackingUrls_.AddEntriesFrom(input, _repeated_thirdPartyImpressionTrackingUrls_codec);
+            break;
+          }
+          case 42: {
+            DestinationUrl = input.ReadString();
+            break;
+          }
+          case 48: {
+            DestinationUrlType = (global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            AltText = input.ReadString();
+            break;
+          }
+          case 26: {
+            ImageUrl = input.ReadString();
+            break;
+          }
+          case 34: {
+            thirdPartyImpressionTrackingUrls_.AddEntriesFrom(ref input, _repeated_thirdPartyImpressionTrackingUrls_codec);
+            break;
+          }
+          case 42: {
+            DestinationUrl = input.ReadString();
+            break;
+          }
+          case 48: {
+            DestinationUrlType = (global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// An overlay Creative that loads an image asset from a specified URL and is
+  /// served via VAST XML. Overlays cover part of the video content they are
+  /// displayed on top of. This creative is read only.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ImageRedirectOverlayCreativeDetails : pb::IMessage<ImageRedirectOverlayCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ImageRedirectOverlayCreativeDetails> _parser = new pb::MessageParser<ImageRedirectOverlayCreativeDetails>(() => new ImageRedirectOverlayCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ImageRedirectOverlayCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImageRedirectOverlayCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImageRedirectOverlayCreativeDetails(ImageRedirectOverlayCreativeDetails other) : this() {
+      _hasBits0 = other._hasBits0;
+      destinationUrl_ = other.destinationUrl_;
+      destinationUrlType_ = other.destinationUrlType_;
+      imageUrl_ = other.imageUrl_;
+      assetSize_ = other.assetSize_ != null ? other.assetSize_.Clone() : null;
+      duration_ = other.duration_ != null ? other.duration_.Clone() : null;
+      trackingUrls_ = other.trackingUrls_.Clone();
+      customParameters_ = other.customParameters_;
+      expectedCompanions_ = other.expectedCompanions_.Clone();
+      expectedCompanionDeliveryOption_ = other.expectedCompanionDeliveryOption_;
+      vastPreviewUrl_ = other.vastPreviewUrl_;
+      creativeSetDisplayName_ = other.creativeSetDisplayName_;
+      creativeSet_ = other.creativeSet_;
+      companionCreatives_ = other.companionCreatives_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImageRedirectOverlayCreativeDetails Clone() {
+      return new ImageRedirectOverlayCreativeDetails(this);
+    }
+
+    /// <summary>Field number for the "destination_url" field.</summary>
+    public const int DestinationUrlFieldNumber = 2;
+    private readonly static string DestinationUrlDefaultValue = "";
+
+    private string destinationUrl_;
+    /// <summary>
+    /// Optional. The URL that the user is directed to if they click on the
+    /// creative. This attribute is required unless the `destinationUrlType` is
+    /// `NONE`, and has a maximum length of 1024 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DestinationUrl {
+      get { return destinationUrl_ ?? DestinationUrlDefaultValue; }
+      set {
+        destinationUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "destination_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationUrl {
+      get { return destinationUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "destination_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationUrl() {
+      destinationUrl_ = null;
+    }
+
+    /// <summary>Field number for the "destination_url_type" field.</summary>
+    public const int DestinationUrlTypeFieldNumber = 3;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType DestinationUrlTypeDefaultValue = global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType destinationUrlType_;
+    /// <summary>
+    /// Optional. The action that should be performed if the user clicks on the
+    /// creative. This attribute defaults to `CLICK_TO_WEB`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType DestinationUrlType {
+      get { if ((_hasBits0 & 1) != 0) { return destinationUrlType_; } else { return DestinationUrlTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        destinationUrlType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "destination_url_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationUrlType {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "destination_url_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationUrlType() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "image_url" field.</summary>
+    public const int ImageUrlFieldNumber = 1;
+    private readonly static string ImageUrlDefaultValue = "";
+
+    private string imageUrl_;
+    /// <summary>
+    /// Required. The URL where the actual image asset resides. This attribute is
+    /// required and has a maximum length of 1024 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ImageUrl {
+      get { return imageUrl_ ?? ImageUrlDefaultValue; }
+      set {
+        imageUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "image_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasImageUrl {
+      get { return imageUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "image_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearImageUrl() {
+      imageUrl_ = null;
+    }
+
+    /// <summary>Field number for the "asset_size" field.</summary>
+    public const int AssetSizeFieldNumber = 7;
+    private global::Google.Ads.AdManager.V1.Size assetSize_;
+    /// <summary>
+    /// Optional. The size of the image asset. Note that this may differ from the
+    /// creative size if the asset is not expected to fill the entire video player.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.Size AssetSize {
+      get { return assetSize_; }
+      set {
+        assetSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "duration" field.</summary>
+    public const int DurationFieldNumber = 8;
+    private global::Google.Protobuf.WellKnownTypes.Duration duration_;
+    /// <summary>
+    /// Optional. Minimum suggested duration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration Duration {
+      get { return duration_; }
+      set {
+        duration_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "tracking_urls" field.</summary>
+    public const int TrackingUrlsFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.VideoTrackingUrl> _repeated_trackingUrls_codec
+        = pb::FieldCodec.ForMessage(74, global::Google.Ads.AdManager.V1.VideoTrackingUrl.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.VideoTrackingUrl> trackingUrls_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.VideoTrackingUrl>();
+    /// <summary>
+    /// Optional. URLs that will be pinged when conversion events happen.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.VideoTrackingUrl> TrackingUrls {
+      get { return trackingUrls_; }
+    }
+
+    /// <summary>Field number for the "custom_parameters" field.</summary>
+    public const int CustomParametersFieldNumber = 10;
+    private readonly static string CustomParametersDefaultValue = "";
+
+    private string customParameters_;
+    /// <summary>
+    /// Optional. A comma separated key=value list of parameters that will be
+    /// supplied to the creative, written into the VAST `AdParameters` node.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomParameters {
+      get { return customParameters_ ?? CustomParametersDefaultValue; }
+      set {
+        customParameters_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "custom_parameters" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCustomParameters {
+      get { return customParameters_ != null; }
+    }
+    /// <summary>Clears the value of the "custom_parameters" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCustomParameters() {
+      customParameters_ = null;
+    }
+
+    /// <summary>Field number for the "expected_companions" field.</summary>
+    public const int ExpectedCompanionsFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.CreativePlaceholder> _repeated_expectedCompanions_codec
+        = pb::FieldCodec.ForMessage(90, global::Google.Ads.AdManager.V1.CreativePlaceholder.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreativePlaceholder> expectedCompanions_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreativePlaceholder>();
+    /// <summary>
+    /// Optional. `CreativePlaceholder` objects a creative set should fulfill.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreativePlaceholder> ExpectedCompanions {
+      get { return expectedCompanions_; }
+    }
+
+    /// <summary>Field number for the "expected_companion_delivery_option" field.</summary>
+    public const int ExpectedCompanionDeliveryOptionFieldNumber = 12;
+    private readonly static global::Google.Ads.AdManager.V1.CompanionDeliveryOptionEnum.Types.CompanionDeliveryOption ExpectedCompanionDeliveryOptionDefaultValue = global::Google.Ads.AdManager.V1.CompanionDeliveryOptionEnum.Types.CompanionDeliveryOption.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CompanionDeliveryOptionEnum.Types.CompanionDeliveryOption expectedCompanionDeliveryOption_;
+    /// <summary>
+    /// Output only. The companion delivery option this set will be served with.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CompanionDeliveryOptionEnum.Types.CompanionDeliveryOption ExpectedCompanionDeliveryOption {
+      get { if ((_hasBits0 & 2) != 0) { return expectedCompanionDeliveryOption_; } else { return ExpectedCompanionDeliveryOptionDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        expectedCompanionDeliveryOption_ = value;
+      }
+    }
+    /// <summary>Gets whether the "expected_companion_delivery_option" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasExpectedCompanionDeliveryOption {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "expected_companion_delivery_option" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExpectedCompanionDeliveryOption() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "vast_preview_url" field.</summary>
+    public const int VastPreviewUrlFieldNumber = 14;
+    private readonly static string VastPreviewUrlDefaultValue = "";
+
+    private string vastPreviewUrl_;
+    /// <summary>
+    /// Output only. An ad tag URL that will return a preview of the VAST XML
+    /// response specific to this creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VastPreviewUrl {
+      get { return vastPreviewUrl_ ?? VastPreviewUrlDefaultValue; }
+      set {
+        vastPreviewUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "vast_preview_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVastPreviewUrl {
+      get { return vastPreviewUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "vast_preview_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVastPreviewUrl() {
+      vastPreviewUrl_ = null;
+    }
+
+    /// <summary>Field number for the "creative_set_display_name" field.</summary>
+    public const int CreativeSetDisplayNameFieldNumber = 4;
+    private readonly static string CreativeSetDisplayNameDefaultValue = "";
+
+    private string creativeSetDisplayName_;
+    /// <summary>
+    /// Output only. The display name of the creative set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CreativeSetDisplayName {
+      get { return creativeSetDisplayName_ ?? CreativeSetDisplayNameDefaultValue; }
+      set {
+        creativeSetDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "creative_set_display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCreativeSetDisplayName {
+      get { return creativeSetDisplayName_ != null; }
+    }
+    /// <summary>Clears the value of the "creative_set_display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCreativeSetDisplayName() {
+      creativeSetDisplayName_ = null;
+    }
+
+    /// <summary>Field number for the "creative_set" field.</summary>
+    public const int CreativeSetFieldNumber = 5;
+    private readonly static string CreativeSetDefaultValue = "";
+
+    private string creativeSet_;
+    /// <summary>
+    /// Output only. The resource name of the creative set.
+    /// Format: "networks/{network_code}/creativeSets/{creative_set_id}"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CreativeSet {
+      get { return creativeSet_ ?? CreativeSetDefaultValue; }
+      set {
+        creativeSet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "creative_set" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCreativeSet {
+      get { return creativeSet_ != null; }
+    }
+    /// <summary>Clears the value of the "creative_set" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCreativeSet() {
+      creativeSet_ = null;
+    }
+
+    /// <summary>Field number for the "companion_creatives" field.</summary>
+    public const int CompanionCreativesFieldNumber = 6;
+    private static readonly pb::FieldCodec<string> _repeated_companionCreatives_codec
+        = pb::FieldCodec.ForString(50);
+    private readonly pbc::RepeatedField<string> companionCreatives_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The companion creatives that are associated with this creative.
+    /// Format: "networks/{network_code}/creatives/{creative_id}"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> CompanionCreatives {
+      get { return companionCreatives_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ImageRedirectOverlayCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ImageRedirectOverlayCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DestinationUrl != other.DestinationUrl) return false;
+      if (DestinationUrlType != other.DestinationUrlType) return false;
+      if (ImageUrl != other.ImageUrl) return false;
+      if (!object.Equals(AssetSize, other.AssetSize)) return false;
+      if (!object.Equals(Duration, other.Duration)) return false;
+      if(!trackingUrls_.Equals(other.trackingUrls_)) return false;
+      if (CustomParameters != other.CustomParameters) return false;
+      if(!expectedCompanions_.Equals(other.expectedCompanions_)) return false;
+      if (ExpectedCompanionDeliveryOption != other.ExpectedCompanionDeliveryOption) return false;
+      if (VastPreviewUrl != other.VastPreviewUrl) return false;
+      if (CreativeSetDisplayName != other.CreativeSetDisplayName) return false;
+      if (CreativeSet != other.CreativeSet) return false;
+      if(!companionCreatives_.Equals(other.companionCreatives_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasDestinationUrl) hash ^= DestinationUrl.GetHashCode();
+      if (HasDestinationUrlType) hash ^= DestinationUrlType.GetHashCode();
+      if (HasImageUrl) hash ^= ImageUrl.GetHashCode();
+      if (assetSize_ != null) hash ^= AssetSize.GetHashCode();
+      if (duration_ != null) hash ^= Duration.GetHashCode();
+      hash ^= trackingUrls_.GetHashCode();
+      if (HasCustomParameters) hash ^= CustomParameters.GetHashCode();
+      hash ^= expectedCompanions_.GetHashCode();
+      if (HasExpectedCompanionDeliveryOption) hash ^= ExpectedCompanionDeliveryOption.GetHashCode();
+      if (HasVastPreviewUrl) hash ^= VastPreviewUrl.GetHashCode();
+      if (HasCreativeSetDisplayName) hash ^= CreativeSetDisplayName.GetHashCode();
+      if (HasCreativeSet) hash ^= CreativeSet.GetHashCode();
+      hash ^= companionCreatives_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasImageUrl) {
+        output.WriteRawTag(10);
+        output.WriteString(ImageUrl);
+      }
+      if (HasDestinationUrl) {
+        output.WriteRawTag(18);
+        output.WriteString(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) DestinationUrlType);
+      }
+      if (HasCreativeSetDisplayName) {
+        output.WriteRawTag(34);
+        output.WriteString(CreativeSetDisplayName);
+      }
+      if (HasCreativeSet) {
+        output.WriteRawTag(42);
+        output.WriteString(CreativeSet);
+      }
+      companionCreatives_.WriteTo(output, _repeated_companionCreatives_codec);
+      if (assetSize_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(AssetSize);
+      }
+      if (duration_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Duration);
+      }
+      trackingUrls_.WriteTo(output, _repeated_trackingUrls_codec);
+      if (HasCustomParameters) {
+        output.WriteRawTag(82);
+        output.WriteString(CustomParameters);
+      }
+      expectedCompanions_.WriteTo(output, _repeated_expectedCompanions_codec);
+      if (HasExpectedCompanionDeliveryOption) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) ExpectedCompanionDeliveryOption);
+      }
+      if (HasVastPreviewUrl) {
+        output.WriteRawTag(114);
+        output.WriteString(VastPreviewUrl);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasImageUrl) {
+        output.WriteRawTag(10);
+        output.WriteString(ImageUrl);
+      }
+      if (HasDestinationUrl) {
+        output.WriteRawTag(18);
+        output.WriteString(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) DestinationUrlType);
+      }
+      if (HasCreativeSetDisplayName) {
+        output.WriteRawTag(34);
+        output.WriteString(CreativeSetDisplayName);
+      }
+      if (HasCreativeSet) {
+        output.WriteRawTag(42);
+        output.WriteString(CreativeSet);
+      }
+      companionCreatives_.WriteTo(ref output, _repeated_companionCreatives_codec);
+      if (assetSize_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(AssetSize);
+      }
+      if (duration_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Duration);
+      }
+      trackingUrls_.WriteTo(ref output, _repeated_trackingUrls_codec);
+      if (HasCustomParameters) {
+        output.WriteRawTag(82);
+        output.WriteString(CustomParameters);
+      }
+      expectedCompanions_.WriteTo(ref output, _repeated_expectedCompanions_codec);
+      if (HasExpectedCompanionDeliveryOption) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) ExpectedCompanionDeliveryOption);
+      }
+      if (HasVastPreviewUrl) {
+        output.WriteRawTag(114);
+        output.WriteString(VastPreviewUrl);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasDestinationUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DestinationUrlType);
+      }
+      if (HasImageUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImageUrl);
+      }
+      if (assetSize_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AssetSize);
+      }
+      if (duration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Duration);
+      }
+      size += trackingUrls_.CalculateSize(_repeated_trackingUrls_codec);
+      if (HasCustomParameters) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomParameters);
+      }
+      size += expectedCompanions_.CalculateSize(_repeated_expectedCompanions_codec);
+      if (HasExpectedCompanionDeliveryOption) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExpectedCompanionDeliveryOption);
+      }
+      if (HasVastPreviewUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VastPreviewUrl);
+      }
+      if (HasCreativeSetDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CreativeSetDisplayName);
+      }
+      if (HasCreativeSet) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CreativeSet);
+      }
+      size += companionCreatives_.CalculateSize(_repeated_companionCreatives_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ImageRedirectOverlayCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasDestinationUrl) {
+        DestinationUrl = other.DestinationUrl;
+      }
+      if (other.HasDestinationUrlType) {
+        DestinationUrlType = other.DestinationUrlType;
+      }
+      if (other.HasImageUrl) {
+        ImageUrl = other.ImageUrl;
+      }
+      if (other.assetSize_ != null) {
+        if (assetSize_ == null) {
+          AssetSize = new global::Google.Ads.AdManager.V1.Size();
+        }
+        AssetSize.MergeFrom(other.AssetSize);
+      }
+      if (other.duration_ != null) {
+        if (duration_ == null) {
+          Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        Duration.MergeFrom(other.Duration);
+      }
+      trackingUrls_.Add(other.trackingUrls_);
+      if (other.HasCustomParameters) {
+        CustomParameters = other.CustomParameters;
+      }
+      expectedCompanions_.Add(other.expectedCompanions_);
+      if (other.HasExpectedCompanionDeliveryOption) {
+        ExpectedCompanionDeliveryOption = other.ExpectedCompanionDeliveryOption;
+      }
+      if (other.HasVastPreviewUrl) {
+        VastPreviewUrl = other.VastPreviewUrl;
+      }
+      if (other.HasCreativeSetDisplayName) {
+        CreativeSetDisplayName = other.CreativeSetDisplayName;
+      }
+      if (other.HasCreativeSet) {
+        CreativeSet = other.CreativeSet;
+      }
+      companionCreatives_.Add(other.companionCreatives_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ImageUrl = input.ReadString();
+            break;
+          }
+          case 18: {
+            DestinationUrl = input.ReadString();
+            break;
+          }
+          case 24: {
+            DestinationUrlType = (global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            CreativeSetDisplayName = input.ReadString();
+            break;
+          }
+          case 42: {
+            CreativeSet = input.ReadString();
+            break;
+          }
+          case 50: {
+            companionCreatives_.AddEntriesFrom(input, _repeated_companionCreatives_codec);
+            break;
+          }
+          case 58: {
+            if (assetSize_ == null) {
+              AssetSize = new global::Google.Ads.AdManager.V1.Size();
+            }
+            input.ReadMessage(AssetSize);
+            break;
+          }
+          case 66: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
+          case 74: {
+            trackingUrls_.AddEntriesFrom(input, _repeated_trackingUrls_codec);
+            break;
+          }
+          case 82: {
+            CustomParameters = input.ReadString();
+            break;
+          }
+          case 90: {
+            expectedCompanions_.AddEntriesFrom(input, _repeated_expectedCompanions_codec);
+            break;
+          }
+          case 96: {
+            ExpectedCompanionDeliveryOption = (global::Google.Ads.AdManager.V1.CompanionDeliveryOptionEnum.Types.CompanionDeliveryOption) input.ReadEnum();
+            break;
+          }
+          case 114: {
+            VastPreviewUrl = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ImageUrl = input.ReadString();
+            break;
+          }
+          case 18: {
+            DestinationUrl = input.ReadString();
+            break;
+          }
+          case 24: {
+            DestinationUrlType = (global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            CreativeSetDisplayName = input.ReadString();
+            break;
+          }
+          case 42: {
+            CreativeSet = input.ReadString();
+            break;
+          }
+          case 50: {
+            companionCreatives_.AddEntriesFrom(ref input, _repeated_companionCreatives_codec);
+            break;
+          }
+          case 58: {
+            if (assetSize_ == null) {
+              AssetSize = new global::Google.Ads.AdManager.V1.Size();
+            }
+            input.ReadMessage(AssetSize);
+            break;
+          }
+          case 66: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
+          case 74: {
+            trackingUrls_.AddEntriesFrom(ref input, _repeated_trackingUrls_codec);
+            break;
+          }
+          case 82: {
+            CustomParameters = input.ReadString();
+            break;
+          }
+          case 90: {
+            expectedCompanions_.AddEntriesFrom(ref input, _repeated_expectedCompanions_codec);
+            break;
+          }
+          case 96: {
+            ExpectedCompanionDeliveryOption = (global::Google.Ads.AdManager.V1.CompanionDeliveryOptionEnum.Types.CompanionDeliveryOption) input.ReadEnum();
+            break;
+          }
+          case 114: {
+            VastPreviewUrl = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A Creative hosted by Campaign Manager 360.
+  ///
+  /// Similar to third-party creatives, a Campaign Manager 360 tag is used to
+  /// retrieve a creative asset. However, Campaign Manager 360 tags are not sent
+  /// to the user's browser. Instead, they are processed internally within the
+  /// Google Marketing Platform system.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class InternalRedirectCreativeDetails : pb::IMessage<InternalRedirectCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<InternalRedirectCreativeDetails> _parser = new pb::MessageParser<InternalRedirectCreativeDetails>(() => new InternalRedirectCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<InternalRedirectCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InternalRedirectCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InternalRedirectCreativeDetails(InternalRedirectCreativeDetails other) : this() {
+      _hasBits0 = other._hasBits0;
+      lockedOrientation_ = other.lockedOrientation_;
+      assetSize_ = other.assetSize_ != null ? other.assetSize_.Clone() : null;
+      internalRedirectUrl_ = other.internalRedirectUrl_;
+      overrideSize_ = other.overrideSize_;
+      interstitial_ = other.interstitial_;
+      sslScanResult_ = other.sslScanResult_;
+      sslManualOverride_ = other.sslManualOverride_;
+      thirdPartyImpressionTrackingUrls_ = other.thirdPartyImpressionTrackingUrls_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InternalRedirectCreativeDetails Clone() {
+      return new InternalRedirectCreativeDetails(this);
+    }
+
+    /// <summary>Field number for the "locked_orientation" field.</summary>
+    public const int LockedOrientationFieldNumber = 1;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation LockedOrientationDefaultValue = global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation lockedOrientation_;
+    /// <summary>
+    /// Optional. A locked orientation for this creative to be displayed in.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation LockedOrientation {
+      get { if ((_hasBits0 & 1) != 0) { return lockedOrientation_; } else { return LockedOrientationDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        lockedOrientation_ = value;
+      }
+    }
+    /// <summary>Gets whether the "locked_orientation" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLockedOrientation {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "locked_orientation" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLockedOrientation() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "asset_size" field.</summary>
+    public const int AssetSizeFieldNumber = 5;
+    private global::Google.Ads.AdManager.V1.Size assetSize_;
+    /// <summary>
+    /// Output only. The asset size of an internal redirect creative. Note that
+    /// this may differ from `size` if users set `override_size` to true.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.Size AssetSize {
+      get { return assetSize_; }
+      set {
+        assetSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "internal_redirect_url" field.</summary>
+    public const int InternalRedirectUrlFieldNumber = 6;
+    private readonly static string InternalRedirectUrlDefaultValue = "";
+
+    private string internalRedirectUrl_;
+    /// <summary>
+    /// Required. The internal redirect URL of the Campaign Manager 360 hosted
+    /// creative. This attribute has a maximum length of 1024 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string InternalRedirectUrl {
+      get { return internalRedirectUrl_ ?? InternalRedirectUrlDefaultValue; }
+      set {
+        internalRedirectUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "internal_redirect_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInternalRedirectUrl {
+      get { return internalRedirectUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "internal_redirect_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInternalRedirectUrl() {
+      internalRedirectUrl_ = null;
+    }
+
+    /// <summary>Field number for the "override_size" field.</summary>
+    public const int OverrideSizeFieldNumber = 7;
+    private readonly static bool OverrideSizeDefaultValue = false;
+
+    private bool overrideSize_;
+    /// <summary>
+    /// Optional. Allows the creative size to differ from the actual size specified
+    /// in the internal redirect's url.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool OverrideSize {
+      get { if ((_hasBits0 & 16) != 0) { return overrideSize_; } else { return OverrideSizeDefaultValue; } }
+      set {
+        _hasBits0 |= 16;
+        overrideSize_ = value;
+      }
+    }
+    /// <summary>Gets whether the "override_size" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOverrideSize {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "override_size" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOverrideSize() {
+      _hasBits0 &= ~16;
+    }
+
+    /// <summary>Field number for the "interstitial" field.</summary>
+    public const int InterstitialFieldNumber = 2;
+    private readonly static bool InterstitialDefaultValue = false;
+
+    private bool interstitial_;
+    /// <summary>
+    /// Optional. Whether this creative is interstitial.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Interstitial {
+      get { if ((_hasBits0 & 2) != 0) { return interstitial_; } else { return InterstitialDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        interstitial_ = value;
+      }
+    }
+    /// <summary>Gets whether the "interstitial" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInterstitial {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "interstitial" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInterstitial() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "ssl_scan_result" field.</summary>
+    public const int SslScanResultFieldNumber = 3;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeSslScanResultEnum.Types.CreativeSslScanResult SslScanResultDefaultValue = global::Google.Ads.AdManager.V1.CreativeSslScanResultEnum.Types.CreativeSslScanResult.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeSslScanResultEnum.Types.CreativeSslScanResult sslScanResult_;
+    /// <summary>
+    /// Output only. The SSL compatibility scan result of this creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeSslScanResultEnum.Types.CreativeSslScanResult SslScanResult {
+      get { if ((_hasBits0 & 4) != 0) { return sslScanResult_; } else { return SslScanResultDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        sslScanResult_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ssl_scan_result" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSslScanResult {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "ssl_scan_result" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSslScanResult() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "ssl_manual_override" field.</summary>
+    public const int SslManualOverrideFieldNumber = 4;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeSslOverrideEnum.Types.CreativeSslOverride SslManualOverrideDefaultValue = global::Google.Ads.AdManager.V1.CreativeSslOverrideEnum.Types.CreativeSslOverride.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeSslOverrideEnum.Types.CreativeSslOverride sslManualOverride_;
+    /// <summary>
+    /// Optional. The manual override for the SSL compatibility of this creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeSslOverrideEnum.Types.CreativeSslOverride SslManualOverride {
+      get { if ((_hasBits0 & 8) != 0) { return sslManualOverride_; } else { return SslManualOverrideDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        sslManualOverride_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ssl_manual_override" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSslManualOverride {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "ssl_manual_override" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSslManualOverride() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "third_party_impression_tracking_urls" field.</summary>
+    public const int ThirdPartyImpressionTrackingUrlsFieldNumber = 8;
+    private static readonly pb::FieldCodec<string> _repeated_thirdPartyImpressionTrackingUrls_codec
+        = pb::FieldCodec.ForString(66);
+    private readonly pbc::RepeatedField<string> thirdPartyImpressionTrackingUrls_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Impression tracking URLs to ping when this creative is displayed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ThirdPartyImpressionTrackingUrls {
+      get { return thirdPartyImpressionTrackingUrls_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as InternalRedirectCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(InternalRedirectCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (LockedOrientation != other.LockedOrientation) return false;
+      if (!object.Equals(AssetSize, other.AssetSize)) return false;
+      if (InternalRedirectUrl != other.InternalRedirectUrl) return false;
+      if (OverrideSize != other.OverrideSize) return false;
+      if (Interstitial != other.Interstitial) return false;
+      if (SslScanResult != other.SslScanResult) return false;
+      if (SslManualOverride != other.SslManualOverride) return false;
+      if(!thirdPartyImpressionTrackingUrls_.Equals(other.thirdPartyImpressionTrackingUrls_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasLockedOrientation) hash ^= LockedOrientation.GetHashCode();
+      if (assetSize_ != null) hash ^= AssetSize.GetHashCode();
+      if (HasInternalRedirectUrl) hash ^= InternalRedirectUrl.GetHashCode();
+      if (HasOverrideSize) hash ^= OverrideSize.GetHashCode();
+      if (HasInterstitial) hash ^= Interstitial.GetHashCode();
+      if (HasSslScanResult) hash ^= SslScanResult.GetHashCode();
+      if (HasSslManualOverride) hash ^= SslManualOverride.GetHashCode();
+      hash ^= thirdPartyImpressionTrackingUrls_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasLockedOrientation) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) LockedOrientation);
+      }
+      if (HasInterstitial) {
+        output.WriteRawTag(16);
+        output.WriteBool(Interstitial);
+      }
+      if (HasSslScanResult) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) SslScanResult);
+      }
+      if (HasSslManualOverride) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) SslManualOverride);
+      }
+      if (assetSize_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(AssetSize);
+      }
+      if (HasInternalRedirectUrl) {
+        output.WriteRawTag(50);
+        output.WriteString(InternalRedirectUrl);
+      }
+      if (HasOverrideSize) {
+        output.WriteRawTag(56);
+        output.WriteBool(OverrideSize);
+      }
+      thirdPartyImpressionTrackingUrls_.WriteTo(output, _repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasLockedOrientation) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) LockedOrientation);
+      }
+      if (HasInterstitial) {
+        output.WriteRawTag(16);
+        output.WriteBool(Interstitial);
+      }
+      if (HasSslScanResult) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) SslScanResult);
+      }
+      if (HasSslManualOverride) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) SslManualOverride);
+      }
+      if (assetSize_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(AssetSize);
+      }
+      if (HasInternalRedirectUrl) {
+        output.WriteRawTag(50);
+        output.WriteString(InternalRedirectUrl);
+      }
+      if (HasOverrideSize) {
+        output.WriteRawTag(56);
+        output.WriteBool(OverrideSize);
+      }
+      thirdPartyImpressionTrackingUrls_.WriteTo(ref output, _repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasLockedOrientation) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LockedOrientation);
+      }
+      if (assetSize_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AssetSize);
+      }
+      if (HasInternalRedirectUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(InternalRedirectUrl);
+      }
+      if (HasOverrideSize) {
+        size += 1 + 1;
+      }
+      if (HasInterstitial) {
+        size += 1 + 1;
+      }
+      if (HasSslScanResult) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SslScanResult);
+      }
+      if (HasSslManualOverride) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SslManualOverride);
+      }
+      size += thirdPartyImpressionTrackingUrls_.CalculateSize(_repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(InternalRedirectCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasLockedOrientation) {
+        LockedOrientation = other.LockedOrientation;
+      }
+      if (other.assetSize_ != null) {
+        if (assetSize_ == null) {
+          AssetSize = new global::Google.Ads.AdManager.V1.Size();
+        }
+        AssetSize.MergeFrom(other.AssetSize);
+      }
+      if (other.HasInternalRedirectUrl) {
+        InternalRedirectUrl = other.InternalRedirectUrl;
+      }
+      if (other.HasOverrideSize) {
+        OverrideSize = other.OverrideSize;
+      }
+      if (other.HasInterstitial) {
+        Interstitial = other.Interstitial;
+      }
+      if (other.HasSslScanResult) {
+        SslScanResult = other.SslScanResult;
+      }
+      if (other.HasSslManualOverride) {
+        SslManualOverride = other.SslManualOverride;
+      }
+      thirdPartyImpressionTrackingUrls_.Add(other.thirdPartyImpressionTrackingUrls_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            LockedOrientation = (global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            Interstitial = input.ReadBool();
+            break;
+          }
+          case 24: {
+            SslScanResult = (global::Google.Ads.AdManager.V1.CreativeSslScanResultEnum.Types.CreativeSslScanResult) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            SslManualOverride = (global::Google.Ads.AdManager.V1.CreativeSslOverrideEnum.Types.CreativeSslOverride) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            if (assetSize_ == null) {
+              AssetSize = new global::Google.Ads.AdManager.V1.Size();
+            }
+            input.ReadMessage(AssetSize);
+            break;
+          }
+          case 50: {
+            InternalRedirectUrl = input.ReadString();
+            break;
+          }
+          case 56: {
+            OverrideSize = input.ReadBool();
+            break;
+          }
+          case 66: {
+            thirdPartyImpressionTrackingUrls_.AddEntriesFrom(input, _repeated_thirdPartyImpressionTrackingUrls_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            LockedOrientation = (global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            Interstitial = input.ReadBool();
+            break;
+          }
+          case 24: {
+            SslScanResult = (global::Google.Ads.AdManager.V1.CreativeSslScanResultEnum.Types.CreativeSslScanResult) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            SslManualOverride = (global::Google.Ads.AdManager.V1.CreativeSslOverrideEnum.Types.CreativeSslOverride) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            if (assetSize_ == null) {
+              AssetSize = new global::Google.Ads.AdManager.V1.Size();
+            }
+            input.ReadMessage(AssetSize);
+            break;
+          }
+          case 50: {
+            InternalRedirectUrl = input.ReadString();
+            break;
+          }
+          case 56: {
+            OverrideSize = input.ReadBool();
+            break;
+          }
+          case 66: {
+            thirdPartyImpressionTrackingUrls_.AddEntriesFrom(ref input, _repeated_thirdPartyImpressionTrackingUrls_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A Creative that isn't supported by Google DFP, but was migrated from DART.
+  /// Creatives of this type cannot be created or modified.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class LegacyDfpCreativeDetails : pb::IMessage<LegacyDfpCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<LegacyDfpCreativeDetails> _parser = new pb::MessageParser<LegacyDfpCreativeDetails>(() => new LegacyDfpCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<LegacyDfpCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LegacyDfpCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LegacyDfpCreativeDetails(LegacyDfpCreativeDetails other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LegacyDfpCreativeDetails Clone() {
+      return new LegacyDfpCreativeDetails(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as LegacyDfpCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(LegacyDfpCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(LegacyDfpCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A Creative used for programmatic trafficking. This creative will be
+  /// auto-created with the right approval from the buyer. This creative cannot be
+  /// created through the API. This creative can be updated.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ProgrammaticCreativeDetails : pb::IMessage<ProgrammaticCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProgrammaticCreativeDetails> _parser = new pb::MessageParser<ProgrammaticCreativeDetails>(() => new ProgrammaticCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ProgrammaticCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProgrammaticCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProgrammaticCreativeDetails(ProgrammaticCreativeDetails other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProgrammaticCreativeDetails Clone() {
+      return new ProgrammaticCreativeDetails(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ProgrammaticCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ProgrammaticCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ProgrammaticCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A Creative that is created by a Rich Media Studio. You cannot create this
+  /// creative, but you can update some fields of this creative.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RichMediaStudioCreativeDetails : pb::IMessage<RichMediaStudioCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RichMediaStudioCreativeDetails> _parser = new pb::MessageParser<RichMediaStudioCreativeDetails>(() => new RichMediaStudioCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RichMediaStudioCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RichMediaStudioCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RichMediaStudioCreativeDetails(RichMediaStudioCreativeDetails other) : this() {
+      _hasBits0 = other._hasBits0;
+      lockedOrientation_ = other.lockedOrientation_;
+      studioCreativeId_ = other.studioCreativeId_;
+      creativeFormat_ = other.creativeFormat_;
+      totalFileSize_ = other.totalFileSize_;
+      adTagKeys_ = other.adTagKeys_.Clone();
+      customKeyValues_ = other.customKeyValues_.Clone();
+      surveyUrl_ = other.surveyUrl_;
+      allImpressionsUrl_ = other.allImpressionsUrl_;
+      richMediaImpressionsUrl_ = other.richMediaImpressionsUrl_;
+      backupImageImpressionsUrl_ = other.backupImageImpressionsUrl_;
+      overrideCss_ = other.overrideCss_;
+      requiredFlashPluginVersion_ = other.requiredFlashPluginVersion_;
+      duration_ = other.duration_ != null ? other.duration_.Clone() : null;
+      billingAttribute_ = other.billingAttribute_;
+      richMediaStudioChildAssetProperties_ = other.richMediaStudioChildAssetProperties_.Clone();
+      sslScanResult_ = other.sslScanResult_;
+      sslManualOverride_ = other.sslManualOverride_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RichMediaStudioCreativeDetails Clone() {
+      return new RichMediaStudioCreativeDetails(this);
+    }
+
+    /// <summary>Field number for the "locked_orientation" field.</summary>
+    public const int LockedOrientationFieldNumber = 1;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation LockedOrientationDefaultValue = global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation lockedOrientation_;
+    /// <summary>
+    /// Optional. A locked orientation for this creative to be displayed in.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation LockedOrientation {
+      get { if ((_hasBits0 & 1) != 0) { return lockedOrientation_; } else { return LockedOrientationDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        lockedOrientation_ = value;
+      }
+    }
+    /// <summary>Gets whether the "locked_orientation" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLockedOrientation {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "locked_orientation" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLockedOrientation() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "studio_creative_id" field.</summary>
+    public const int StudioCreativeIdFieldNumber = 3;
+    private readonly static long StudioCreativeIdDefaultValue = 0L;
+
+    private long studioCreativeId_;
+    /// <summary>
+    /// Output only. The creative ID as known by Rich Media Studio creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long StudioCreativeId {
+      get { if ((_hasBits0 & 2) != 0) { return studioCreativeId_; } else { return StudioCreativeIdDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        studioCreativeId_ = value;
+      }
+    }
+    /// <summary>Gets whether the "studio_creative_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStudioCreativeId {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "studio_creative_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStudioCreativeId() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "creative_format" field.</summary>
+    public const int CreativeFormatFieldNumber = 4;
+    private readonly static global::Google.Ads.AdManager.V1.RichMediaStudioCreativeFormatEnum.Types.RichMediaStudioCreativeFormat CreativeFormatDefaultValue = global::Google.Ads.AdManager.V1.RichMediaStudioCreativeFormatEnum.Types.RichMediaStudioCreativeFormat.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.RichMediaStudioCreativeFormatEnum.Types.RichMediaStudioCreativeFormat creativeFormat_;
+    /// <summary>
+    /// Optional. The creative format of the Rich Media Studio creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.RichMediaStudioCreativeFormatEnum.Types.RichMediaStudioCreativeFormat CreativeFormat {
+      get { if ((_hasBits0 & 4) != 0) { return creativeFormat_; } else { return CreativeFormatDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        creativeFormat_ = value;
+      }
+    }
+    /// <summary>Gets whether the "creative_format" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCreativeFormat {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "creative_format" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCreativeFormat() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "total_file_size" field.</summary>
+    public const int TotalFileSizeFieldNumber = 6;
+    private readonly static long TotalFileSizeDefaultValue = 0L;
+
+    private long totalFileSize_;
+    /// <summary>
+    /// Output only. The total size of all assets in bytes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long TotalFileSize {
+      get { if ((_hasBits0 & 8) != 0) { return totalFileSize_; } else { return TotalFileSizeDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        totalFileSize_ = value;
+      }
+    }
+    /// <summary>Gets whether the "total_file_size" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTotalFileSize {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "total_file_size" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTotalFileSize() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "ad_tag_keys" field.</summary>
+    public const int AdTagKeysFieldNumber = 7;
+    private static readonly pb::FieldCodec<string> _repeated_adTagKeys_codec
+        = pb::FieldCodec.ForString(58);
+    private readonly pbc::RepeatedField<string> adTagKeys_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Ad tag keys.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> AdTagKeys {
+      get { return adTagKeys_; }
+    }
+
+    /// <summary>Field number for the "custom_key_values" field.</summary>
+    public const int CustomKeyValuesFieldNumber = 8;
+    private static readonly pb::FieldCodec<string> _repeated_customKeyValues_codec
+        = pb::FieldCodec.ForString(66);
+    private readonly pbc::RepeatedField<string> customKeyValues_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Custom key values.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> CustomKeyValues {
+      get { return customKeyValues_; }
+    }
+
+    /// <summary>Field number for the "survey_url" field.</summary>
+    public const int SurveyUrlFieldNumber = 9;
+    private readonly static string SurveyUrlDefaultValue = "";
+
+    private string surveyUrl_;
+    /// <summary>
+    /// Optional. The survey URL for this creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SurveyUrl {
+      get { return surveyUrl_ ?? SurveyUrlDefaultValue; }
+      set {
+        surveyUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "survey_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSurveyUrl {
+      get { return surveyUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "survey_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSurveyUrl() {
+      surveyUrl_ = null;
+    }
+
+    /// <summary>Field number for the "all_impressions_url" field.</summary>
+    public const int AllImpressionsUrlFieldNumber = 10;
+    private readonly static string AllImpressionsUrlDefaultValue = "";
+
+    private string allImpressionsUrl_;
+    /// <summary>
+    /// Optional. The tracking URL to be triggered when an ad starts to play,
+    /// whether Rich Media or backup content is displayed. Behaves like the /imp
+    /// URL that DART used to track impressions. This URL can't exceed 1024
+    /// characters and must start with http:// or https://.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AllImpressionsUrl {
+      get { return allImpressionsUrl_ ?? AllImpressionsUrlDefaultValue; }
+      set {
+        allImpressionsUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "all_impressions_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAllImpressionsUrl {
+      get { return allImpressionsUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "all_impressions_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAllImpressionsUrl() {
+      allImpressionsUrl_ = null;
+    }
+
+    /// <summary>Field number for the "rich_media_impressions_url" field.</summary>
+    public const int RichMediaImpressionsUrlFieldNumber = 11;
+    private readonly static string RichMediaImpressionsUrlDefaultValue = "";
+
+    private string richMediaImpressionsUrl_;
+    /// <summary>
+    /// Optional. The tracking URL to be triggered when any rich media artwork is
+    /// displayed in an ad. Behaves like the /imp URL that DART used to track
+    /// impressions. This URL can't exceed 1024 characters and must start with
+    /// http:// or https://.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RichMediaImpressionsUrl {
+      get { return richMediaImpressionsUrl_ ?? RichMediaImpressionsUrlDefaultValue; }
+      set {
+        richMediaImpressionsUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "rich_media_impressions_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRichMediaImpressionsUrl {
+      get { return richMediaImpressionsUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "rich_media_impressions_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRichMediaImpressionsUrl() {
+      richMediaImpressionsUrl_ = null;
+    }
+
+    /// <summary>Field number for the "backup_image_impressions_url" field.</summary>
+    public const int BackupImageImpressionsUrlFieldNumber = 12;
+    private readonly static string BackupImageImpressionsUrlDefaultValue = "";
+
+    private string backupImageImpressionsUrl_;
+    /// <summary>
+    /// Optional. The tracking URL to be triggered when the Rich Media backup image
+    /// is served.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string BackupImageImpressionsUrl {
+      get { return backupImageImpressionsUrl_ ?? BackupImageImpressionsUrlDefaultValue; }
+      set {
+        backupImageImpressionsUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "backup_image_impressions_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBackupImageImpressionsUrl {
+      get { return backupImageImpressionsUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "backup_image_impressions_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBackupImageImpressionsUrl() {
+      backupImageImpressionsUrl_ = null;
+    }
+
+    /// <summary>Field number for the "override_css" field.</summary>
+    public const int OverrideCssFieldNumber = 13;
+    private readonly static string OverrideCssDefaultValue = "";
+
+    private string overrideCss_;
+    /// <summary>
+    /// Optional. The override CSS. You can put custom CSS code here to repair
+    /// creative styling; e.g. `tr td { background-color:#FBB; }`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OverrideCss {
+      get { return overrideCss_ ?? OverrideCssDefaultValue; }
+      set {
+        overrideCss_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "override_css" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOverrideCss {
+      get { return overrideCss_ != null; }
+    }
+    /// <summary>Clears the value of the "override_css" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOverrideCss() {
+      overrideCss_ = null;
+    }
+
+    /// <summary>Field number for the "required_flash_plugin_version" field.</summary>
+    public const int RequiredFlashPluginVersionFieldNumber = 14;
+    private readonly static string RequiredFlashPluginVersionDefaultValue = "";
+
+    private string requiredFlashPluginVersion_;
+    /// <summary>
+    /// Output only. The Flash plugin version required to view this creative; e.g.
+    /// `Flash 10.2/AS 3`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequiredFlashPluginVersion {
+      get { return requiredFlashPluginVersion_ ?? RequiredFlashPluginVersionDefaultValue; }
+      set {
+        requiredFlashPluginVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "required_flash_plugin_version" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRequiredFlashPluginVersion {
+      get { return requiredFlashPluginVersion_ != null; }
+    }
+    /// <summary>Clears the value of the "required_flash_plugin_version" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRequiredFlashPluginVersion() {
+      requiredFlashPluginVersion_ = null;
+    }
+
+    /// <summary>Field number for the "duration" field.</summary>
+    public const int DurationFieldNumber = 15;
+    private global::Google.Protobuf.WellKnownTypes.Duration duration_;
+    /// <summary>
+    /// Optional. The duration of the creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration Duration {
+      get { return duration_; }
+      set {
+        duration_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "billing_attribute" field.</summary>
+    public const int BillingAttributeFieldNumber = 16;
+    private readonly static global::Google.Ads.AdManager.V1.RichMediaStudioCreativeBillingAttributeEnum.Types.RichMediaStudioCreativeBillingAttribute BillingAttributeDefaultValue = global::Google.Ads.AdManager.V1.RichMediaStudioCreativeBillingAttributeEnum.Types.RichMediaStudioCreativeBillingAttribute.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.RichMediaStudioCreativeBillingAttributeEnum.Types.RichMediaStudioCreativeBillingAttribute billingAttribute_;
+    /// <summary>
+    /// Optional. The billing attribute associated with this creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.RichMediaStudioCreativeBillingAttributeEnum.Types.RichMediaStudioCreativeBillingAttribute BillingAttribute {
+      get { if ((_hasBits0 & 16) != 0) { return billingAttribute_; } else { return BillingAttributeDefaultValue; } }
+      set {
+        _hasBits0 |= 16;
+        billingAttribute_ = value;
+      }
+    }
+    /// <summary>Gets whether the "billing_attribute" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBillingAttribute {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "billing_attribute" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBillingAttribute() {
+      _hasBits0 &= ~16;
+    }
+
+    /// <summary>Field number for the "rich_media_studio_child_asset_properties" field.</summary>
+    public const int RichMediaStudioChildAssetPropertiesFieldNumber = 17;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.RichMediaStudioChildAssetProperty> _repeated_richMediaStudioChildAssetProperties_codec
+        = pb::FieldCodec.ForMessage(138, global::Google.Ads.AdManager.V1.RichMediaStudioChildAssetProperty.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.RichMediaStudioChildAssetProperty> richMediaStudioChildAssetProperties_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.RichMediaStudioChildAssetProperty>();
+    /// <summary>
+    /// Output only. Child assets associated with this creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.RichMediaStudioChildAssetProperty> RichMediaStudioChildAssetProperties {
+      get { return richMediaStudioChildAssetProperties_; }
+    }
+
+    /// <summary>Field number for the "ssl_scan_result" field.</summary>
+    public const int SslScanResultFieldNumber = 18;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeSslScanResultEnum.Types.CreativeSslScanResult SslScanResultDefaultValue = global::Google.Ads.AdManager.V1.CreativeSslScanResultEnum.Types.CreativeSslScanResult.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeSslScanResultEnum.Types.CreativeSslScanResult sslScanResult_;
+    /// <summary>
+    /// Output only. The SSL compatibility scan result of this creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeSslScanResultEnum.Types.CreativeSslScanResult SslScanResult {
+      get { if ((_hasBits0 & 32) != 0) { return sslScanResult_; } else { return SslScanResultDefaultValue; } }
+      set {
+        _hasBits0 |= 32;
+        sslScanResult_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ssl_scan_result" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSslScanResult {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "ssl_scan_result" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSslScanResult() {
+      _hasBits0 &= ~32;
+    }
+
+    /// <summary>Field number for the "ssl_manual_override" field.</summary>
+    public const int SslManualOverrideFieldNumber = 19;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeSslOverrideEnum.Types.CreativeSslOverride SslManualOverrideDefaultValue = global::Google.Ads.AdManager.V1.CreativeSslOverrideEnum.Types.CreativeSslOverride.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeSslOverrideEnum.Types.CreativeSslOverride sslManualOverride_;
+    /// <summary>
+    /// Optional. The manual override for the SSL compatibility of this creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeSslOverrideEnum.Types.CreativeSslOverride SslManualOverride {
+      get { if ((_hasBits0 & 64) != 0) { return sslManualOverride_; } else { return SslManualOverrideDefaultValue; } }
+      set {
+        _hasBits0 |= 64;
+        sslManualOverride_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ssl_manual_override" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSslManualOverride {
+      get { return (_hasBits0 & 64) != 0; }
+    }
+    /// <summary>Clears the value of the "ssl_manual_override" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSslManualOverride() {
+      _hasBits0 &= ~64;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RichMediaStudioCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RichMediaStudioCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (LockedOrientation != other.LockedOrientation) return false;
+      if (StudioCreativeId != other.StudioCreativeId) return false;
+      if (CreativeFormat != other.CreativeFormat) return false;
+      if (TotalFileSize != other.TotalFileSize) return false;
+      if(!adTagKeys_.Equals(other.adTagKeys_)) return false;
+      if(!customKeyValues_.Equals(other.customKeyValues_)) return false;
+      if (SurveyUrl != other.SurveyUrl) return false;
+      if (AllImpressionsUrl != other.AllImpressionsUrl) return false;
+      if (RichMediaImpressionsUrl != other.RichMediaImpressionsUrl) return false;
+      if (BackupImageImpressionsUrl != other.BackupImageImpressionsUrl) return false;
+      if (OverrideCss != other.OverrideCss) return false;
+      if (RequiredFlashPluginVersion != other.RequiredFlashPluginVersion) return false;
+      if (!object.Equals(Duration, other.Duration)) return false;
+      if (BillingAttribute != other.BillingAttribute) return false;
+      if(!richMediaStudioChildAssetProperties_.Equals(other.richMediaStudioChildAssetProperties_)) return false;
+      if (SslScanResult != other.SslScanResult) return false;
+      if (SslManualOverride != other.SslManualOverride) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasLockedOrientation) hash ^= LockedOrientation.GetHashCode();
+      if (HasStudioCreativeId) hash ^= StudioCreativeId.GetHashCode();
+      if (HasCreativeFormat) hash ^= CreativeFormat.GetHashCode();
+      if (HasTotalFileSize) hash ^= TotalFileSize.GetHashCode();
+      hash ^= adTagKeys_.GetHashCode();
+      hash ^= customKeyValues_.GetHashCode();
+      if (HasSurveyUrl) hash ^= SurveyUrl.GetHashCode();
+      if (HasAllImpressionsUrl) hash ^= AllImpressionsUrl.GetHashCode();
+      if (HasRichMediaImpressionsUrl) hash ^= RichMediaImpressionsUrl.GetHashCode();
+      if (HasBackupImageImpressionsUrl) hash ^= BackupImageImpressionsUrl.GetHashCode();
+      if (HasOverrideCss) hash ^= OverrideCss.GetHashCode();
+      if (HasRequiredFlashPluginVersion) hash ^= RequiredFlashPluginVersion.GetHashCode();
+      if (duration_ != null) hash ^= Duration.GetHashCode();
+      if (HasBillingAttribute) hash ^= BillingAttribute.GetHashCode();
+      hash ^= richMediaStudioChildAssetProperties_.GetHashCode();
+      if (HasSslScanResult) hash ^= SslScanResult.GetHashCode();
+      if (HasSslManualOverride) hash ^= SslManualOverride.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasLockedOrientation) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) LockedOrientation);
+      }
+      if (HasStudioCreativeId) {
+        output.WriteRawTag(24);
+        output.WriteInt64(StudioCreativeId);
+      }
+      if (HasCreativeFormat) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) CreativeFormat);
+      }
+      if (HasTotalFileSize) {
+        output.WriteRawTag(48);
+        output.WriteInt64(TotalFileSize);
+      }
+      adTagKeys_.WriteTo(output, _repeated_adTagKeys_codec);
+      customKeyValues_.WriteTo(output, _repeated_customKeyValues_codec);
+      if (HasSurveyUrl) {
+        output.WriteRawTag(74);
+        output.WriteString(SurveyUrl);
+      }
+      if (HasAllImpressionsUrl) {
+        output.WriteRawTag(82);
+        output.WriteString(AllImpressionsUrl);
+      }
+      if (HasRichMediaImpressionsUrl) {
+        output.WriteRawTag(90);
+        output.WriteString(RichMediaImpressionsUrl);
+      }
+      if (HasBackupImageImpressionsUrl) {
+        output.WriteRawTag(98);
+        output.WriteString(BackupImageImpressionsUrl);
+      }
+      if (HasOverrideCss) {
+        output.WriteRawTag(106);
+        output.WriteString(OverrideCss);
+      }
+      if (HasRequiredFlashPluginVersion) {
+        output.WriteRawTag(114);
+        output.WriteString(RequiredFlashPluginVersion);
+      }
+      if (duration_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(Duration);
+      }
+      if (HasBillingAttribute) {
+        output.WriteRawTag(128, 1);
+        output.WriteEnum((int) BillingAttribute);
+      }
+      richMediaStudioChildAssetProperties_.WriteTo(output, _repeated_richMediaStudioChildAssetProperties_codec);
+      if (HasSslScanResult) {
+        output.WriteRawTag(144, 1);
+        output.WriteEnum((int) SslScanResult);
+      }
+      if (HasSslManualOverride) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) SslManualOverride);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasLockedOrientation) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) LockedOrientation);
+      }
+      if (HasStudioCreativeId) {
+        output.WriteRawTag(24);
+        output.WriteInt64(StudioCreativeId);
+      }
+      if (HasCreativeFormat) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) CreativeFormat);
+      }
+      if (HasTotalFileSize) {
+        output.WriteRawTag(48);
+        output.WriteInt64(TotalFileSize);
+      }
+      adTagKeys_.WriteTo(ref output, _repeated_adTagKeys_codec);
+      customKeyValues_.WriteTo(ref output, _repeated_customKeyValues_codec);
+      if (HasSurveyUrl) {
+        output.WriteRawTag(74);
+        output.WriteString(SurveyUrl);
+      }
+      if (HasAllImpressionsUrl) {
+        output.WriteRawTag(82);
+        output.WriteString(AllImpressionsUrl);
+      }
+      if (HasRichMediaImpressionsUrl) {
+        output.WriteRawTag(90);
+        output.WriteString(RichMediaImpressionsUrl);
+      }
+      if (HasBackupImageImpressionsUrl) {
+        output.WriteRawTag(98);
+        output.WriteString(BackupImageImpressionsUrl);
+      }
+      if (HasOverrideCss) {
+        output.WriteRawTag(106);
+        output.WriteString(OverrideCss);
+      }
+      if (HasRequiredFlashPluginVersion) {
+        output.WriteRawTag(114);
+        output.WriteString(RequiredFlashPluginVersion);
+      }
+      if (duration_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(Duration);
+      }
+      if (HasBillingAttribute) {
+        output.WriteRawTag(128, 1);
+        output.WriteEnum((int) BillingAttribute);
+      }
+      richMediaStudioChildAssetProperties_.WriteTo(ref output, _repeated_richMediaStudioChildAssetProperties_codec);
+      if (HasSslScanResult) {
+        output.WriteRawTag(144, 1);
+        output.WriteEnum((int) SslScanResult);
+      }
+      if (HasSslManualOverride) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) SslManualOverride);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasLockedOrientation) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LockedOrientation);
+      }
+      if (HasStudioCreativeId) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StudioCreativeId);
+      }
+      if (HasCreativeFormat) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CreativeFormat);
+      }
+      if (HasTotalFileSize) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalFileSize);
+      }
+      size += adTagKeys_.CalculateSize(_repeated_adTagKeys_codec);
+      size += customKeyValues_.CalculateSize(_repeated_customKeyValues_codec);
+      if (HasSurveyUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SurveyUrl);
+      }
+      if (HasAllImpressionsUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AllImpressionsUrl);
+      }
+      if (HasRichMediaImpressionsUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RichMediaImpressionsUrl);
+      }
+      if (HasBackupImageImpressionsUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BackupImageImpressionsUrl);
+      }
+      if (HasOverrideCss) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OverrideCss);
+      }
+      if (HasRequiredFlashPluginVersion) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequiredFlashPluginVersion);
+      }
+      if (duration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Duration);
+      }
+      if (HasBillingAttribute) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) BillingAttribute);
+      }
+      size += richMediaStudioChildAssetProperties_.CalculateSize(_repeated_richMediaStudioChildAssetProperties_codec);
+      if (HasSslScanResult) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) SslScanResult);
+      }
+      if (HasSslManualOverride) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) SslManualOverride);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RichMediaStudioCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasLockedOrientation) {
+        LockedOrientation = other.LockedOrientation;
+      }
+      if (other.HasStudioCreativeId) {
+        StudioCreativeId = other.StudioCreativeId;
+      }
+      if (other.HasCreativeFormat) {
+        CreativeFormat = other.CreativeFormat;
+      }
+      if (other.HasTotalFileSize) {
+        TotalFileSize = other.TotalFileSize;
+      }
+      adTagKeys_.Add(other.adTagKeys_);
+      customKeyValues_.Add(other.customKeyValues_);
+      if (other.HasSurveyUrl) {
+        SurveyUrl = other.SurveyUrl;
+      }
+      if (other.HasAllImpressionsUrl) {
+        AllImpressionsUrl = other.AllImpressionsUrl;
+      }
+      if (other.HasRichMediaImpressionsUrl) {
+        RichMediaImpressionsUrl = other.RichMediaImpressionsUrl;
+      }
+      if (other.HasBackupImageImpressionsUrl) {
+        BackupImageImpressionsUrl = other.BackupImageImpressionsUrl;
+      }
+      if (other.HasOverrideCss) {
+        OverrideCss = other.OverrideCss;
+      }
+      if (other.HasRequiredFlashPluginVersion) {
+        RequiredFlashPluginVersion = other.RequiredFlashPluginVersion;
+      }
+      if (other.duration_ != null) {
+        if (duration_ == null) {
+          Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        Duration.MergeFrom(other.Duration);
+      }
+      if (other.HasBillingAttribute) {
+        BillingAttribute = other.BillingAttribute;
+      }
+      richMediaStudioChildAssetProperties_.Add(other.richMediaStudioChildAssetProperties_);
+      if (other.HasSslScanResult) {
+        SslScanResult = other.SslScanResult;
+      }
+      if (other.HasSslManualOverride) {
+        SslManualOverride = other.SslManualOverride;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            LockedOrientation = (global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            StudioCreativeId = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            CreativeFormat = (global::Google.Ads.AdManager.V1.RichMediaStudioCreativeFormatEnum.Types.RichMediaStudioCreativeFormat) input.ReadEnum();
+            break;
+          }
+          case 48: {
+            TotalFileSize = input.ReadInt64();
+            break;
+          }
+          case 58: {
+            adTagKeys_.AddEntriesFrom(input, _repeated_adTagKeys_codec);
+            break;
+          }
+          case 66: {
+            customKeyValues_.AddEntriesFrom(input, _repeated_customKeyValues_codec);
+            break;
+          }
+          case 74: {
+            SurveyUrl = input.ReadString();
+            break;
+          }
+          case 82: {
+            AllImpressionsUrl = input.ReadString();
+            break;
+          }
+          case 90: {
+            RichMediaImpressionsUrl = input.ReadString();
+            break;
+          }
+          case 98: {
+            BackupImageImpressionsUrl = input.ReadString();
+            break;
+          }
+          case 106: {
+            OverrideCss = input.ReadString();
+            break;
+          }
+          case 114: {
+            RequiredFlashPluginVersion = input.ReadString();
+            break;
+          }
+          case 122: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
+          case 128: {
+            BillingAttribute = (global::Google.Ads.AdManager.V1.RichMediaStudioCreativeBillingAttributeEnum.Types.RichMediaStudioCreativeBillingAttribute) input.ReadEnum();
+            break;
+          }
+          case 138: {
+            richMediaStudioChildAssetProperties_.AddEntriesFrom(input, _repeated_richMediaStudioChildAssetProperties_codec);
+            break;
+          }
+          case 144: {
+            SslScanResult = (global::Google.Ads.AdManager.V1.CreativeSslScanResultEnum.Types.CreativeSslScanResult) input.ReadEnum();
+            break;
+          }
+          case 152: {
+            SslManualOverride = (global::Google.Ads.AdManager.V1.CreativeSslOverrideEnum.Types.CreativeSslOverride) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            LockedOrientation = (global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            StudioCreativeId = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            CreativeFormat = (global::Google.Ads.AdManager.V1.RichMediaStudioCreativeFormatEnum.Types.RichMediaStudioCreativeFormat) input.ReadEnum();
+            break;
+          }
+          case 48: {
+            TotalFileSize = input.ReadInt64();
+            break;
+          }
+          case 58: {
+            adTagKeys_.AddEntriesFrom(ref input, _repeated_adTagKeys_codec);
+            break;
+          }
+          case 66: {
+            customKeyValues_.AddEntriesFrom(ref input, _repeated_customKeyValues_codec);
+            break;
+          }
+          case 74: {
+            SurveyUrl = input.ReadString();
+            break;
+          }
+          case 82: {
+            AllImpressionsUrl = input.ReadString();
+            break;
+          }
+          case 90: {
+            RichMediaImpressionsUrl = input.ReadString();
+            break;
+          }
+          case 98: {
+            BackupImageImpressionsUrl = input.ReadString();
+            break;
+          }
+          case 106: {
+            OverrideCss = input.ReadString();
+            break;
+          }
+          case 114: {
+            RequiredFlashPluginVersion = input.ReadString();
+            break;
+          }
+          case 122: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
+          case 128: {
+            BillingAttribute = (global::Google.Ads.AdManager.V1.RichMediaStudioCreativeBillingAttributeEnum.Types.RichMediaStudioCreativeBillingAttribute) input.ReadEnum();
+            break;
+          }
+          case 138: {
+            richMediaStudioChildAssetProperties_.AddEntriesFrom(ref input, _repeated_richMediaStudioChildAssetProperties_codec);
+            break;
+          }
+          case 144: {
+            SslScanResult = (global::Google.Ads.AdManager.V1.CreativeSslScanResultEnum.Types.CreativeSslScanResult) input.ReadEnum();
+            break;
+          }
+          case 152: {
+            SslManualOverride = (global::Google.Ads.AdManager.V1.CreativeSslOverrideEnum.Types.CreativeSslOverride) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A Creative that will be served into cable set-top boxes. There are no assets
+  /// for this creative type, as they are hosted by external cable systems.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SetTopBoxCreativeDetails : pb::IMessage<SetTopBoxCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SetTopBoxCreativeDetails> _parser = new pb::MessageParser<SetTopBoxCreativeDetails>(() => new SetTopBoxCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SetTopBoxCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetTopBoxCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetTopBoxCreativeDetails(SetTopBoxCreativeDetails other) : this() {
+      vastInfo_ = other.vastInfo_ != null ? other.vastInfo_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetTopBoxCreativeDetails Clone() {
+      return new SetTopBoxCreativeDetails(this);
+    }
+
+    /// <summary>Field number for the "vast_info" field.</summary>
+    public const int VastInfoFieldNumber = 1;
+    private global::Google.Ads.AdManager.V1.VastInfo vastInfo_;
+    /// <summary>
+    /// Optional. Fields common to Video Ad Serving Template (VAST) creatives
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.VastInfo VastInfo {
+      get { return vastInfo_; }
+      set {
+        vastInfo_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SetTopBoxCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SetTopBoxCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(VastInfo, other.VastInfo)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (vastInfo_ != null) hash ^= VastInfo.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (vastInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(VastInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (vastInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(VastInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (vastInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VastInfo);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SetTopBoxCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.vastInfo_ != null) {
+        if (vastInfo_ == null) {
+          VastInfo = new global::Google.Ads.AdManager.V1.VastInfo();
+        }
+        VastInfo.MergeFrom(other.VastInfo);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (vastInfo_ == null) {
+              VastInfo = new global::Google.Ads.AdManager.V1.VastInfo();
+            }
+            input.ReadMessage(VastInfo);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (vastInfo_ == null) {
+              VastInfo = new global::Google.Ads.AdManager.V1.VastInfo();
+            }
+            input.ReadMessage(VastInfo);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A Creative that is created by the specified creative template.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TemplateCreativeDetails : pb::IMessage<TemplateCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TemplateCreativeDetails> _parser = new pb::MessageParser<TemplateCreativeDetails>(() => new TemplateCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TemplateCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TemplateCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TemplateCreativeDetails(TemplateCreativeDetails other) : this() {
+      _hasBits0 = other._hasBits0;
+      ampDestinationUrl_ = other.ampDestinationUrl_;
+      lockedOrientation_ = other.lockedOrientation_;
+      destinationUrl_ = other.destinationUrl_;
+      destinationUrlType_ = other.destinationUrlType_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TemplateCreativeDetails Clone() {
+      return new TemplateCreativeDetails(this);
+    }
+
+    /// <summary>Field number for the "amp_destination_url" field.</summary>
+    public const int AmpDestinationUrlFieldNumber = 1;
+    private readonly static string AmpDestinationUrlDefaultValue = "";
+
+    private string ampDestinationUrl_;
+    /// <summary>
+    /// Optional. The AMP destination URL for this creative. This must be a valid
+    /// URL, including the `http://` or `https://` scheme.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AmpDestinationUrl {
+      get { return ampDestinationUrl_ ?? AmpDestinationUrlDefaultValue; }
+      set {
+        ampDestinationUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "amp_destination_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAmpDestinationUrl {
+      get { return ampDestinationUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "amp_destination_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAmpDestinationUrl() {
+      ampDestinationUrl_ = null;
+    }
+
+    /// <summary>Field number for the "locked_orientation" field.</summary>
+    public const int LockedOrientationFieldNumber = 2;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation LockedOrientationDefaultValue = global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation lockedOrientation_;
+    /// <summary>
+    /// Optional. A locked orientation for this creative to be displayed in.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation LockedOrientation {
+      get { if ((_hasBits0 & 1) != 0) { return lockedOrientation_; } else { return LockedOrientationDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        lockedOrientation_ = value;
+      }
+    }
+    /// <summary>Gets whether the "locked_orientation" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLockedOrientation {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "locked_orientation" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLockedOrientation() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "destination_url" field.</summary>
+    public const int DestinationUrlFieldNumber = 18;
+    private readonly static string DestinationUrlDefaultValue = "";
+
+    private string destinationUrl_;
+    /// <summary>
+    /// Optional. The URL that the user is directed to if they click on the
+    /// creative. This attribute is required unless the `destinationUrlType` is
+    /// `NONE`, and has a maximum length of 1024 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DestinationUrl {
+      get { return destinationUrl_ ?? DestinationUrlDefaultValue; }
+      set {
+        destinationUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "destination_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationUrl {
+      get { return destinationUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "destination_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationUrl() {
+      destinationUrl_ = null;
+    }
+
+    /// <summary>Field number for the "destination_url_type" field.</summary>
+    public const int DestinationUrlTypeFieldNumber = 19;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType DestinationUrlTypeDefaultValue = global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType destinationUrlType_;
+    /// <summary>
+    /// Optional. The action that should be performed if the user clicks on the
+    /// creative. This attribute defaults to `CLICK_TO_WEB`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType DestinationUrlType {
+      get { if ((_hasBits0 & 2) != 0) { return destinationUrlType_; } else { return DestinationUrlTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        destinationUrlType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "destination_url_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationUrlType {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "destination_url_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationUrlType() {
+      _hasBits0 &= ~2;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TemplateCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TemplateCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AmpDestinationUrl != other.AmpDestinationUrl) return false;
+      if (LockedOrientation != other.LockedOrientation) return false;
+      if (DestinationUrl != other.DestinationUrl) return false;
+      if (DestinationUrlType != other.DestinationUrlType) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasAmpDestinationUrl) hash ^= AmpDestinationUrl.GetHashCode();
+      if (HasLockedOrientation) hash ^= LockedOrientation.GetHashCode();
+      if (HasDestinationUrl) hash ^= DestinationUrl.GetHashCode();
+      if (HasDestinationUrlType) hash ^= DestinationUrlType.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasAmpDestinationUrl) {
+        output.WriteRawTag(10);
+        output.WriteString(AmpDestinationUrl);
+      }
+      if (HasLockedOrientation) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) LockedOrientation);
+      }
+      if (HasDestinationUrl) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) DestinationUrlType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasAmpDestinationUrl) {
+        output.WriteRawTag(10);
+        output.WriteString(AmpDestinationUrl);
+      }
+      if (HasLockedOrientation) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) LockedOrientation);
+      }
+      if (HasDestinationUrl) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) DestinationUrlType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasAmpDestinationUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AmpDestinationUrl);
+      }
+      if (HasLockedOrientation) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LockedOrientation);
+      }
+      if (HasDestinationUrl) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) DestinationUrlType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TemplateCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasAmpDestinationUrl) {
+        AmpDestinationUrl = other.AmpDestinationUrl;
+      }
+      if (other.HasLockedOrientation) {
+        LockedOrientation = other.LockedOrientation;
+      }
+      if (other.HasDestinationUrl) {
+        DestinationUrl = other.DestinationUrl;
+      }
+      if (other.HasDestinationUrlType) {
+        DestinationUrlType = other.DestinationUrlType;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            AmpDestinationUrl = input.ReadString();
+            break;
+          }
+          case 16: {
+            LockedOrientation = (global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation) input.ReadEnum();
+            break;
+          }
+          case 146: {
+            DestinationUrl = input.ReadString();
+            break;
+          }
+          case 152: {
+            DestinationUrlType = (global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            AmpDestinationUrl = input.ReadString();
+            break;
+          }
+          case 16: {
+            LockedOrientation = (global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation) input.ReadEnum();
+            break;
+          }
+          case 146: {
+            DestinationUrl = input.ReadString();
+            break;
+          }
+          case 152: {
+            DestinationUrlType = (global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A Creative that is served by a 3rd-party vendor.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ThirdPartyCreativeDetails : pb::IMessage<ThirdPartyCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ThirdPartyCreativeDetails> _parser = new pb::MessageParser<ThirdPartyCreativeDetails>(() => new ThirdPartyCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ThirdPartyCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ThirdPartyCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ThirdPartyCreativeDetails(ThirdPartyCreativeDetails other) : this() {
+      _hasBits0 = other._hasBits0;
+      snippet_ = other.snippet_;
+      expandedSnippet_ = other.expandedSnippet_;
+      lockedOrientation_ = other.lockedOrientation_;
+      sslScanResult_ = other.sslScanResult_;
+      sslManualOverride_ = other.sslManualOverride_;
+      safeFrameCompatible_ = other.safeFrameCompatible_;
+      thirdPartyImpressionTrackingUrls_ = other.thirdPartyImpressionTrackingUrls_.Clone();
+      ampRedirectUrl_ = other.ampRedirectUrl_;
+      destinationUrl_ = other.destinationUrl_;
+      destinationUrlType_ = other.destinationUrlType_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ThirdPartyCreativeDetails Clone() {
+      return new ThirdPartyCreativeDetails(this);
+    }
+
+    /// <summary>Field number for the "snippet" field.</summary>
+    public const int SnippetFieldNumber = 4;
+    private readonly static string SnippetDefaultValue = "";
+
+    private string snippet_;
+    /// <summary>
+    /// The HTML snippet that this creative delivers.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Snippet {
+      get { return snippet_ ?? SnippetDefaultValue; }
+      set {
+        snippet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "snippet" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSnippet {
+      get { return snippet_ != null; }
+    }
+    /// <summary>Clears the value of the "snippet" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSnippet() {
+      snippet_ = null;
+    }
+
+    /// <summary>Field number for the "expanded_snippet" field.</summary>
+    public const int ExpandedSnippetFieldNumber = 5;
+    private readonly static string ExpandedSnippetDefaultValue = "";
+
+    private string expandedSnippet_;
+    /// <summary>
+    /// Output only. The HTML snippet that this creative delivers with macros
+    /// expanded.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ExpandedSnippet {
+      get { return expandedSnippet_ ?? ExpandedSnippetDefaultValue; }
+      set {
+        expandedSnippet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "expanded_snippet" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasExpandedSnippet {
+      get { return expandedSnippet_ != null; }
+    }
+    /// <summary>Clears the value of the "expanded_snippet" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExpandedSnippet() {
+      expandedSnippet_ = null;
+    }
+
+    /// <summary>Field number for the "locked_orientation" field.</summary>
+    public const int LockedOrientationFieldNumber = 1;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation LockedOrientationDefaultValue = global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation lockedOrientation_;
+    /// <summary>
+    /// Optional. A locked orientation for this creative to be displayed in.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation LockedOrientation {
+      get { if ((_hasBits0 & 1) != 0) { return lockedOrientation_; } else { return LockedOrientationDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        lockedOrientation_ = value;
+      }
+    }
+    /// <summary>Gets whether the "locked_orientation" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLockedOrientation {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "locked_orientation" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLockedOrientation() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "ssl_scan_result" field.</summary>
+    public const int SslScanResultFieldNumber = 2;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeSslScanResultEnum.Types.CreativeSslScanResult SslScanResultDefaultValue = global::Google.Ads.AdManager.V1.CreativeSslScanResultEnum.Types.CreativeSslScanResult.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeSslScanResultEnum.Types.CreativeSslScanResult sslScanResult_;
+    /// <summary>
+    /// Output only. The SSL compatibility scan result of this creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeSslScanResultEnum.Types.CreativeSslScanResult SslScanResult {
+      get { if ((_hasBits0 & 2) != 0) { return sslScanResult_; } else { return SslScanResultDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        sslScanResult_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ssl_scan_result" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSslScanResult {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "ssl_scan_result" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSslScanResult() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "ssl_manual_override" field.</summary>
+    public const int SslManualOverrideFieldNumber = 3;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeSslOverrideEnum.Types.CreativeSslOverride SslManualOverrideDefaultValue = global::Google.Ads.AdManager.V1.CreativeSslOverrideEnum.Types.CreativeSslOverride.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeSslOverrideEnum.Types.CreativeSslOverride sslManualOverride_;
+    /// <summary>
+    /// Optional. The manual override for the SSL compatibility of this creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeSslOverrideEnum.Types.CreativeSslOverride SslManualOverride {
+      get { if ((_hasBits0 & 4) != 0) { return sslManualOverride_; } else { return SslManualOverrideDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        sslManualOverride_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ssl_manual_override" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSslManualOverride {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "ssl_manual_override" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSslManualOverride() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "safe_frame_compatible" field.</summary>
+    public const int SafeFrameCompatibleFieldNumber = 6;
+    private readonly static bool SafeFrameCompatibleDefaultValue = false;
+
+    private bool safeFrameCompatible_;
+    /// <summary>
+    /// Optional. Whether the Creative is compatible for SafeFrame rendering.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SafeFrameCompatible {
+      get { if ((_hasBits0 & 8) != 0) { return safeFrameCompatible_; } else { return SafeFrameCompatibleDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        safeFrameCompatible_ = value;
+      }
+    }
+    /// <summary>Gets whether the "safe_frame_compatible" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSafeFrameCompatible {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "safe_frame_compatible" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSafeFrameCompatible() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "third_party_impression_tracking_urls" field.</summary>
+    public const int ThirdPartyImpressionTrackingUrlsFieldNumber = 7;
+    private static readonly pb::FieldCodec<string> _repeated_thirdPartyImpressionTrackingUrls_codec
+        = pb::FieldCodec.ForString(58);
+    private readonly pbc::RepeatedField<string> thirdPartyImpressionTrackingUrls_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of impression tracking URLs to ping when this creative is
+    /// displayed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ThirdPartyImpressionTrackingUrls {
+      get { return thirdPartyImpressionTrackingUrls_; }
+    }
+
+    /// <summary>Field number for the "amp_redirect_url" field.</summary>
+    public const int AmpRedirectUrlFieldNumber = 8;
+    private readonly static string AmpRedirectUrlDefaultValue = "";
+
+    private string ampRedirectUrl_;
+    /// <summary>
+    /// Optional. The URL of the AMP creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AmpRedirectUrl {
+      get { return ampRedirectUrl_ ?? AmpRedirectUrlDefaultValue; }
+      set {
+        ampRedirectUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "amp_redirect_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAmpRedirectUrl {
+      get { return ampRedirectUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "amp_redirect_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAmpRedirectUrl() {
+      ampRedirectUrl_ = null;
+    }
+
+    /// <summary>Field number for the "destination_url" field.</summary>
+    public const int DestinationUrlFieldNumber = 10;
+    private readonly static string DestinationUrlDefaultValue = "";
+
+    private string destinationUrl_;
+    /// <summary>
+    /// Optional. The URL that the user is directed to if they click on the
+    /// creative. This attribute is required unless the `destinationUrlType` is
+    /// `NONE`, and has a maximum length of 1024 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DestinationUrl {
+      get { return destinationUrl_ ?? DestinationUrlDefaultValue; }
+      set {
+        destinationUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "destination_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationUrl {
+      get { return destinationUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "destination_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationUrl() {
+      destinationUrl_ = null;
+    }
+
+    /// <summary>Field number for the "destination_url_type" field.</summary>
+    public const int DestinationUrlTypeFieldNumber = 11;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType DestinationUrlTypeDefaultValue = global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType destinationUrlType_;
+    /// <summary>
+    /// Optional. The action that should be performed if the user clicks on the
+    /// creative. This attribute defaults to `CLICK_TO_WEB`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType DestinationUrlType {
+      get { if ((_hasBits0 & 16) != 0) { return destinationUrlType_; } else { return DestinationUrlTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 16;
+        destinationUrlType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "destination_url_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationUrlType {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "destination_url_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationUrlType() {
+      _hasBits0 &= ~16;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ThirdPartyCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ThirdPartyCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Snippet != other.Snippet) return false;
+      if (ExpandedSnippet != other.ExpandedSnippet) return false;
+      if (LockedOrientation != other.LockedOrientation) return false;
+      if (SslScanResult != other.SslScanResult) return false;
+      if (SslManualOverride != other.SslManualOverride) return false;
+      if (SafeFrameCompatible != other.SafeFrameCompatible) return false;
+      if(!thirdPartyImpressionTrackingUrls_.Equals(other.thirdPartyImpressionTrackingUrls_)) return false;
+      if (AmpRedirectUrl != other.AmpRedirectUrl) return false;
+      if (DestinationUrl != other.DestinationUrl) return false;
+      if (DestinationUrlType != other.DestinationUrlType) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasSnippet) hash ^= Snippet.GetHashCode();
+      if (HasExpandedSnippet) hash ^= ExpandedSnippet.GetHashCode();
+      if (HasLockedOrientation) hash ^= LockedOrientation.GetHashCode();
+      if (HasSslScanResult) hash ^= SslScanResult.GetHashCode();
+      if (HasSslManualOverride) hash ^= SslManualOverride.GetHashCode();
+      if (HasSafeFrameCompatible) hash ^= SafeFrameCompatible.GetHashCode();
+      hash ^= thirdPartyImpressionTrackingUrls_.GetHashCode();
+      if (HasAmpRedirectUrl) hash ^= AmpRedirectUrl.GetHashCode();
+      if (HasDestinationUrl) hash ^= DestinationUrl.GetHashCode();
+      if (HasDestinationUrlType) hash ^= DestinationUrlType.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasLockedOrientation) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) LockedOrientation);
+      }
+      if (HasSslScanResult) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) SslScanResult);
+      }
+      if (HasSslManualOverride) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) SslManualOverride);
+      }
+      if (HasSnippet) {
+        output.WriteRawTag(34);
+        output.WriteString(Snippet);
+      }
+      if (HasExpandedSnippet) {
+        output.WriteRawTag(42);
+        output.WriteString(ExpandedSnippet);
+      }
+      if (HasSafeFrameCompatible) {
+        output.WriteRawTag(48);
+        output.WriteBool(SafeFrameCompatible);
+      }
+      thirdPartyImpressionTrackingUrls_.WriteTo(output, _repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (HasAmpRedirectUrl) {
+        output.WriteRawTag(66);
+        output.WriteString(AmpRedirectUrl);
+      }
+      if (HasDestinationUrl) {
+        output.WriteRawTag(82);
+        output.WriteString(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) DestinationUrlType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasLockedOrientation) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) LockedOrientation);
+      }
+      if (HasSslScanResult) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) SslScanResult);
+      }
+      if (HasSslManualOverride) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) SslManualOverride);
+      }
+      if (HasSnippet) {
+        output.WriteRawTag(34);
+        output.WriteString(Snippet);
+      }
+      if (HasExpandedSnippet) {
+        output.WriteRawTag(42);
+        output.WriteString(ExpandedSnippet);
+      }
+      if (HasSafeFrameCompatible) {
+        output.WriteRawTag(48);
+        output.WriteBool(SafeFrameCompatible);
+      }
+      thirdPartyImpressionTrackingUrls_.WriteTo(ref output, _repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (HasAmpRedirectUrl) {
+        output.WriteRawTag(66);
+        output.WriteString(AmpRedirectUrl);
+      }
+      if (HasDestinationUrl) {
+        output.WriteRawTag(82);
+        output.WriteString(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) DestinationUrlType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasSnippet) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Snippet);
+      }
+      if (HasExpandedSnippet) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ExpandedSnippet);
+      }
+      if (HasLockedOrientation) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LockedOrientation);
+      }
+      if (HasSslScanResult) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SslScanResult);
+      }
+      if (HasSslManualOverride) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SslManualOverride);
+      }
+      if (HasSafeFrameCompatible) {
+        size += 1 + 1;
+      }
+      size += thirdPartyImpressionTrackingUrls_.CalculateSize(_repeated_thirdPartyImpressionTrackingUrls_codec);
+      if (HasAmpRedirectUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AmpRedirectUrl);
+      }
+      if (HasDestinationUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DestinationUrlType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ThirdPartyCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasSnippet) {
+        Snippet = other.Snippet;
+      }
+      if (other.HasExpandedSnippet) {
+        ExpandedSnippet = other.ExpandedSnippet;
+      }
+      if (other.HasLockedOrientation) {
+        LockedOrientation = other.LockedOrientation;
+      }
+      if (other.HasSslScanResult) {
+        SslScanResult = other.SslScanResult;
+      }
+      if (other.HasSslManualOverride) {
+        SslManualOverride = other.SslManualOverride;
+      }
+      if (other.HasSafeFrameCompatible) {
+        SafeFrameCompatible = other.SafeFrameCompatible;
+      }
+      thirdPartyImpressionTrackingUrls_.Add(other.thirdPartyImpressionTrackingUrls_);
+      if (other.HasAmpRedirectUrl) {
+        AmpRedirectUrl = other.AmpRedirectUrl;
+      }
+      if (other.HasDestinationUrl) {
+        DestinationUrl = other.DestinationUrl;
+      }
+      if (other.HasDestinationUrlType) {
+        DestinationUrlType = other.DestinationUrlType;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            LockedOrientation = (global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            SslScanResult = (global::Google.Ads.AdManager.V1.CreativeSslScanResultEnum.Types.CreativeSslScanResult) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            SslManualOverride = (global::Google.Ads.AdManager.V1.CreativeSslOverrideEnum.Types.CreativeSslOverride) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            Snippet = input.ReadString();
+            break;
+          }
+          case 42: {
+            ExpandedSnippet = input.ReadString();
+            break;
+          }
+          case 48: {
+            SafeFrameCompatible = input.ReadBool();
+            break;
+          }
+          case 58: {
+            thirdPartyImpressionTrackingUrls_.AddEntriesFrom(input, _repeated_thirdPartyImpressionTrackingUrls_codec);
+            break;
+          }
+          case 66: {
+            AmpRedirectUrl = input.ReadString();
+            break;
+          }
+          case 82: {
+            DestinationUrl = input.ReadString();
+            break;
+          }
+          case 88: {
+            DestinationUrlType = (global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            LockedOrientation = (global::Google.Ads.AdManager.V1.CreativeLockedOrientationEnum.Types.CreativeLockedOrientation) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            SslScanResult = (global::Google.Ads.AdManager.V1.CreativeSslScanResultEnum.Types.CreativeSslScanResult) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            SslManualOverride = (global::Google.Ads.AdManager.V1.CreativeSslOverrideEnum.Types.CreativeSslOverride) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            Snippet = input.ReadString();
+            break;
+          }
+          case 42: {
+            ExpandedSnippet = input.ReadString();
+            break;
+          }
+          case 48: {
+            SafeFrameCompatible = input.ReadBool();
+            break;
+          }
+          case 58: {
+            thirdPartyImpressionTrackingUrls_.AddEntriesFrom(ref input, _repeated_thirdPartyImpressionTrackingUrls_codec);
+            break;
+          }
+          case 66: {
+            AmpRedirectUrl = input.ReadString();
+            break;
+          }
+          case 82: {
+            DestinationUrl = input.ReadString();
+            break;
+          }
+          case 88: {
+            DestinationUrlType = (global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A Creative that points to an externally hosted VAST ad and is served via
+  /// VAST XML as a VAST Wrapper.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class VastRedirectCreativeDetails : pb::IMessage<VastRedirectCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VastRedirectCreativeDetails> _parser = new pb::MessageParser<VastRedirectCreativeDetails>(() => new VastRedirectCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VastRedirectCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[20]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VastRedirectCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VastRedirectCreativeDetails(VastRedirectCreativeDetails other) : this() {
+      _hasBits0 = other._hasBits0;
+      vastXmlUrl_ = other.vastXmlUrl_;
+      vastRedirectType_ = other.vastRedirectType_;
+      duration_ = other.duration_ != null ? other.duration_.Clone() : null;
+      vastPricingEnabled_ = other.vastPricingEnabled_;
+      programmaticDemandSource_ = other.programmaticDemandSource_;
+      serverSideUnwrappingDisabled_ = other.serverSideUnwrappingDisabled_;
+      trackingUrls_ = other.trackingUrls_.Clone();
+      vastPreviewUrl_ = other.vastPreviewUrl_;
+      audio_ = other.audio_;
+      destinationUrl_ = other.destinationUrl_;
+      destinationUrlType_ = other.destinationUrlType_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VastRedirectCreativeDetails Clone() {
+      return new VastRedirectCreativeDetails(this);
+    }
+
+    /// <summary>Field number for the "vast_xml_url" field.</summary>
+    public const int VastXmlUrlFieldNumber = 22;
+    private readonly static string VastXmlUrlDefaultValue = "";
+
+    private string vastXmlUrl_;
+    /// <summary>
+    /// Required. The URL where the 3rd party VAST XML is hosted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VastXmlUrl {
+      get { return vastXmlUrl_ ?? VastXmlUrlDefaultValue; }
+      set {
+        vastXmlUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "vast_xml_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVastXmlUrl {
+      get { return vastXmlUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "vast_xml_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVastXmlUrl() {
+      vastXmlUrl_ = null;
+    }
+
+    /// <summary>Field number for the "vast_redirect_type" field.</summary>
+    public const int VastRedirectTypeFieldNumber = 4;
+    private readonly static global::Google.Ads.AdManager.V1.VastRedirectTypeEnum.Types.VastRedirectType VastRedirectTypeDefaultValue = global::Google.Ads.AdManager.V1.VastRedirectTypeEnum.Types.VastRedirectType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.VastRedirectTypeEnum.Types.VastRedirectType vastRedirectType_;
+    /// <summary>
+    /// Required. The type of VAST ad that this redirects to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.VastRedirectTypeEnum.Types.VastRedirectType VastRedirectType {
+      get { if ((_hasBits0 & 2) != 0) { return vastRedirectType_; } else { return VastRedirectTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        vastRedirectType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "vast_redirect_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVastRedirectType {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "vast_redirect_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVastRedirectType() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "duration" field.</summary>
+    public const int DurationFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Duration duration_;
+    /// <summary>
+    /// Required. The duration of the VAST ad.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration Duration {
+      get { return duration_; }
+      set {
+        duration_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "vast_pricing_enabled" field.</summary>
+    public const int VastPricingEnabledFieldNumber = 8;
+    private readonly static bool VastPricingEnabledDefaultValue = false;
+
+    private bool vastPricingEnabled_;
+    /// <summary>
+    /// Optional. Whether pricing information from the VAST response will be used
+    /// during ad selection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool VastPricingEnabled {
+      get { if ((_hasBits0 & 4) != 0) { return vastPricingEnabled_; } else { return VastPricingEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        vastPricingEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "vast_pricing_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVastPricingEnabled {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "vast_pricing_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVastPricingEnabled() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "programmatic_demand_source" field.</summary>
+    public const int ProgrammaticDemandSourceFieldNumber = 9;
+    private readonly static bool ProgrammaticDemandSourceDefaultValue = false;
+
+    private bool programmaticDemandSource_;
+    /// <summary>
+    /// Optional. Whether this is a redirect to a programmatic demand source.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ProgrammaticDemandSource {
+      get { if ((_hasBits0 & 8) != 0) { return programmaticDemandSource_; } else { return ProgrammaticDemandSourceDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        programmaticDemandSource_ = value;
+      }
+    }
+    /// <summary>Gets whether the "programmatic_demand_source" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasProgrammaticDemandSource {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "programmatic_demand_source" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearProgrammaticDemandSource() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "server_side_unwrapping_disabled" field.</summary>
+    public const int ServerSideUnwrappingDisabledFieldNumber = 10;
+    private readonly static bool ServerSideUnwrappingDisabledDefaultValue = false;
+
+    private bool serverSideUnwrappingDisabled_;
+    /// <summary>
+    /// Optional. Whether server-side unwrapping is disabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ServerSideUnwrappingDisabled {
+      get { if ((_hasBits0 & 16) != 0) { return serverSideUnwrappingDisabled_; } else { return ServerSideUnwrappingDisabledDefaultValue; } }
+      set {
+        _hasBits0 |= 16;
+        serverSideUnwrappingDisabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "server_side_unwrapping_disabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasServerSideUnwrappingDisabled {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "server_side_unwrapping_disabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearServerSideUnwrappingDisabled() {
+      _hasBits0 &= ~16;
+    }
+
+    /// <summary>Field number for the "tracking_urls" field.</summary>
+    public const int TrackingUrlsFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.VideoTrackingUrl> _repeated_trackingUrls_codec
+        = pb::FieldCodec.ForMessage(98, global::Google.Ads.AdManager.V1.VideoTrackingUrl.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.VideoTrackingUrl> trackingUrls_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.VideoTrackingUrl>();
+    /// <summary>
+    /// Optional. URLs that will be pinged when conversion events happen.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.VideoTrackingUrl> TrackingUrls {
+      get { return trackingUrls_; }
+    }
+
+    /// <summary>Field number for the "vast_preview_url" field.</summary>
+    public const int VastPreviewUrlFieldNumber = 16;
+    private readonly static string VastPreviewUrlDefaultValue = "";
+
+    private string vastPreviewUrl_;
+    /// <summary>
+    /// Output only. An ad tag URL that will return a preview of the VAST XML
+    /// response specific to this creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VastPreviewUrl {
+      get { return vastPreviewUrl_ ?? VastPreviewUrlDefaultValue; }
+      set {
+        vastPreviewUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "vast_preview_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVastPreviewUrl {
+      get { return vastPreviewUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "vast_preview_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVastPreviewUrl() {
+      vastPreviewUrl_ = null;
+    }
+
+    /// <summary>Field number for the "audio" field.</summary>
+    public const int AudioFieldNumber = 21;
+    private readonly static bool AudioDefaultValue = false;
+
+    private bool audio_;
+    /// <summary>
+    /// Optional. Whether the 3rd party VAST XML points to an audio ad. When true,
+    /// `size` will always be 1x1.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Audio {
+      get { if ((_hasBits0 & 32) != 0) { return audio_; } else { return AudioDefaultValue; } }
+      set {
+        _hasBits0 |= 32;
+        audio_ = value;
+      }
+    }
+    /// <summary>Gets whether the "audio" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAudio {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "audio" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAudio() {
+      _hasBits0 &= ~32;
+    }
+
+    /// <summary>Field number for the "destination_url" field.</summary>
+    public const int DestinationUrlFieldNumber = 2;
+    private readonly static string DestinationUrlDefaultValue = "";
+
+    private string destinationUrl_;
+    /// <summary>
+    /// Optional. The URL that the user is directed to if they click on the
+    /// creative. This attribute is required unless the `destinationUrlType` is
+    /// `NONE`, and has a maximum length of 1024 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DestinationUrl {
+      get { return destinationUrl_ ?? DestinationUrlDefaultValue; }
+      set {
+        destinationUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "destination_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationUrl {
+      get { return destinationUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "destination_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationUrl() {
+      destinationUrl_ = null;
+    }
+
+    /// <summary>Field number for the "destination_url_type" field.</summary>
+    public const int DestinationUrlTypeFieldNumber = 3;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType DestinationUrlTypeDefaultValue = global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType destinationUrlType_;
+    /// <summary>
+    /// Optional. The action that should be performed if the user clicks on the
+    /// creative. This attribute defaults to `CLICK_TO_WEB`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType DestinationUrlType {
+      get { if ((_hasBits0 & 1) != 0) { return destinationUrlType_; } else { return DestinationUrlTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        destinationUrlType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "destination_url_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationUrlType {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "destination_url_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationUrlType() {
+      _hasBits0 &= ~1;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VastRedirectCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VastRedirectCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (VastXmlUrl != other.VastXmlUrl) return false;
+      if (VastRedirectType != other.VastRedirectType) return false;
+      if (!object.Equals(Duration, other.Duration)) return false;
+      if (VastPricingEnabled != other.VastPricingEnabled) return false;
+      if (ProgrammaticDemandSource != other.ProgrammaticDemandSource) return false;
+      if (ServerSideUnwrappingDisabled != other.ServerSideUnwrappingDisabled) return false;
+      if(!trackingUrls_.Equals(other.trackingUrls_)) return false;
+      if (VastPreviewUrl != other.VastPreviewUrl) return false;
+      if (Audio != other.Audio) return false;
+      if (DestinationUrl != other.DestinationUrl) return false;
+      if (DestinationUrlType != other.DestinationUrlType) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasVastXmlUrl) hash ^= VastXmlUrl.GetHashCode();
+      if (HasVastRedirectType) hash ^= VastRedirectType.GetHashCode();
+      if (duration_ != null) hash ^= Duration.GetHashCode();
+      if (HasVastPricingEnabled) hash ^= VastPricingEnabled.GetHashCode();
+      if (HasProgrammaticDemandSource) hash ^= ProgrammaticDemandSource.GetHashCode();
+      if (HasServerSideUnwrappingDisabled) hash ^= ServerSideUnwrappingDisabled.GetHashCode();
+      hash ^= trackingUrls_.GetHashCode();
+      if (HasVastPreviewUrl) hash ^= VastPreviewUrl.GetHashCode();
+      if (HasAudio) hash ^= Audio.GetHashCode();
+      if (HasDestinationUrl) hash ^= DestinationUrl.GetHashCode();
+      if (HasDestinationUrlType) hash ^= DestinationUrlType.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasDestinationUrl) {
+        output.WriteRawTag(18);
+        output.WriteString(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) DestinationUrlType);
+      }
+      if (HasVastRedirectType) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) VastRedirectType);
+      }
+      if (duration_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Duration);
+      }
+      if (HasVastPricingEnabled) {
+        output.WriteRawTag(64);
+        output.WriteBool(VastPricingEnabled);
+      }
+      if (HasProgrammaticDemandSource) {
+        output.WriteRawTag(72);
+        output.WriteBool(ProgrammaticDemandSource);
+      }
+      if (HasServerSideUnwrappingDisabled) {
+        output.WriteRawTag(80);
+        output.WriteBool(ServerSideUnwrappingDisabled);
+      }
+      trackingUrls_.WriteTo(output, _repeated_trackingUrls_codec);
+      if (HasVastPreviewUrl) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(VastPreviewUrl);
+      }
+      if (HasAudio) {
+        output.WriteRawTag(168, 1);
+        output.WriteBool(Audio);
+      }
+      if (HasVastXmlUrl) {
+        output.WriteRawTag(178, 1);
+        output.WriteString(VastXmlUrl);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasDestinationUrl) {
+        output.WriteRawTag(18);
+        output.WriteString(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) DestinationUrlType);
+      }
+      if (HasVastRedirectType) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) VastRedirectType);
+      }
+      if (duration_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Duration);
+      }
+      if (HasVastPricingEnabled) {
+        output.WriteRawTag(64);
+        output.WriteBool(VastPricingEnabled);
+      }
+      if (HasProgrammaticDemandSource) {
+        output.WriteRawTag(72);
+        output.WriteBool(ProgrammaticDemandSource);
+      }
+      if (HasServerSideUnwrappingDisabled) {
+        output.WriteRawTag(80);
+        output.WriteBool(ServerSideUnwrappingDisabled);
+      }
+      trackingUrls_.WriteTo(ref output, _repeated_trackingUrls_codec);
+      if (HasVastPreviewUrl) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(VastPreviewUrl);
+      }
+      if (HasAudio) {
+        output.WriteRawTag(168, 1);
+        output.WriteBool(Audio);
+      }
+      if (HasVastXmlUrl) {
+        output.WriteRawTag(178, 1);
+        output.WriteString(VastXmlUrl);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasVastXmlUrl) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(VastXmlUrl);
+      }
+      if (HasVastRedirectType) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) VastRedirectType);
+      }
+      if (duration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Duration);
+      }
+      if (HasVastPricingEnabled) {
+        size += 1 + 1;
+      }
+      if (HasProgrammaticDemandSource) {
+        size += 1 + 1;
+      }
+      if (HasServerSideUnwrappingDisabled) {
+        size += 1 + 1;
+      }
+      size += trackingUrls_.CalculateSize(_repeated_trackingUrls_codec);
+      if (HasVastPreviewUrl) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(VastPreviewUrl);
+      }
+      if (HasAudio) {
+        size += 2 + 1;
+      }
+      if (HasDestinationUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DestinationUrlType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VastRedirectCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasVastXmlUrl) {
+        VastXmlUrl = other.VastXmlUrl;
+      }
+      if (other.HasVastRedirectType) {
+        VastRedirectType = other.VastRedirectType;
+      }
+      if (other.duration_ != null) {
+        if (duration_ == null) {
+          Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        Duration.MergeFrom(other.Duration);
+      }
+      if (other.HasVastPricingEnabled) {
+        VastPricingEnabled = other.VastPricingEnabled;
+      }
+      if (other.HasProgrammaticDemandSource) {
+        ProgrammaticDemandSource = other.ProgrammaticDemandSource;
+      }
+      if (other.HasServerSideUnwrappingDisabled) {
+        ServerSideUnwrappingDisabled = other.ServerSideUnwrappingDisabled;
+      }
+      trackingUrls_.Add(other.trackingUrls_);
+      if (other.HasVastPreviewUrl) {
+        VastPreviewUrl = other.VastPreviewUrl;
+      }
+      if (other.HasAudio) {
+        Audio = other.Audio;
+      }
+      if (other.HasDestinationUrl) {
+        DestinationUrl = other.DestinationUrl;
+      }
+      if (other.HasDestinationUrlType) {
+        DestinationUrlType = other.DestinationUrlType;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            DestinationUrl = input.ReadString();
+            break;
+          }
+          case 24: {
+            DestinationUrlType = (global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            VastRedirectType = (global::Google.Ads.AdManager.V1.VastRedirectTypeEnum.Types.VastRedirectType) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
+          case 64: {
+            VastPricingEnabled = input.ReadBool();
+            break;
+          }
+          case 72: {
+            ProgrammaticDemandSource = input.ReadBool();
+            break;
+          }
+          case 80: {
+            ServerSideUnwrappingDisabled = input.ReadBool();
+            break;
+          }
+          case 98: {
+            trackingUrls_.AddEntriesFrom(input, _repeated_trackingUrls_codec);
+            break;
+          }
+          case 130: {
+            VastPreviewUrl = input.ReadString();
+            break;
+          }
+          case 168: {
+            Audio = input.ReadBool();
+            break;
+          }
+          case 178: {
+            VastXmlUrl = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            DestinationUrl = input.ReadString();
+            break;
+          }
+          case 24: {
+            DestinationUrlType = (global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            VastRedirectType = (global::Google.Ads.AdManager.V1.VastRedirectTypeEnum.Types.VastRedirectType) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
+          case 64: {
+            VastPricingEnabled = input.ReadBool();
+            break;
+          }
+          case 72: {
+            ProgrammaticDemandSource = input.ReadBool();
+            break;
+          }
+          case 80: {
+            ServerSideUnwrappingDisabled = input.ReadBool();
+            break;
+          }
+          case 98: {
+            trackingUrls_.AddEntriesFrom(ref input, _repeated_trackingUrls_codec);
+            break;
+          }
+          case 130: {
+            VastPreviewUrl = input.ReadString();
+            break;
+          }
+          case 168: {
+            Audio = input.ReadBool();
+            break;
+          }
+          case 178: {
+            VastXmlUrl = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A Creative that contains Ad Manager hosted video ads and is served via VAST
+  /// XML.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class VideoCreativeDetails : pb::IMessage<VideoCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VideoCreativeDetails> _parser = new pb::MessageParser<VideoCreativeDetails>(() => new VideoCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VideoCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VideoCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VideoCreativeDetails(VideoCreativeDetails other) : this() {
+      vastInfo_ = other.vastInfo_ != null ? other.vastInfo_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VideoCreativeDetails Clone() {
+      return new VideoCreativeDetails(this);
+    }
+
+    /// <summary>Field number for the "vast_info" field.</summary>
+    public const int VastInfoFieldNumber = 1;
+    private global::Google.Ads.AdManager.V1.VastInfo vastInfo_;
+    /// <summary>
+    /// Optional. Fields common to Video Ad Serving Template (VAST) creatives
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.VastInfo VastInfo {
+      get { return vastInfo_; }
+      set {
+        vastInfo_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VideoCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VideoCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(VastInfo, other.VastInfo)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (vastInfo_ != null) hash ^= VastInfo.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (vastInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(VastInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (vastInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(VastInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (vastInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VastInfo);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VideoCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.vastInfo_ != null) {
+        if (vastInfo_ == null) {
+          VastInfo = new global::Google.Ads.AdManager.V1.VastInfo();
+        }
+        VastInfo.MergeFrom(other.VastInfo);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (vastInfo_ == null) {
+              VastInfo = new global::Google.Ads.AdManager.V1.VastInfo();
+            }
+            input.ReadMessage(VastInfo);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (vastInfo_ == null) {
+              VastInfo = new global::Google.Ads.AdManager.V1.VastInfo();
+            }
+            input.ReadMessage(VastInfo);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A Creative that contains externally hosted video ads and is served via VAST
+  /// XML.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class VideoRedirectCreativeDetails : pb::IMessage<VideoRedirectCreativeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VideoRedirectCreativeDetails> _parser = new pb::MessageParser<VideoRedirectCreativeDetails>(() => new VideoRedirectCreativeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VideoRedirectCreativeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[22]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VideoRedirectCreativeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VideoRedirectCreativeDetails(VideoRedirectCreativeDetails other) : this() {
+      vastInfo_ = other.vastInfo_ != null ? other.vastInfo_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VideoRedirectCreativeDetails Clone() {
+      return new VideoRedirectCreativeDetails(this);
+    }
+
+    /// <summary>Field number for the "vast_info" field.</summary>
+    public const int VastInfoFieldNumber = 1;
+    private global::Google.Ads.AdManager.V1.VastInfo vastInfo_;
+    /// <summary>
+    /// Optional. Fields common to Video Ad Serving Template (VAST) creatives
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.VastInfo VastInfo {
+      get { return vastInfo_; }
+      set {
+        vastInfo_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VideoRedirectCreativeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VideoRedirectCreativeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(VastInfo, other.VastInfo)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (vastInfo_ != null) hash ^= VastInfo.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (vastInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(VastInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (vastInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(VastInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (vastInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VastInfo);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VideoRedirectCreativeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.vastInfo_ != null) {
+        if (vastInfo_ == null) {
+          VastInfo = new global::Google.Ads.AdManager.V1.VastInfo();
+        }
+        VastInfo.MergeFrom(other.VastInfo);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (vastInfo_ == null) {
+              VastInfo = new global::Google.Ads.AdManager.V1.VastInfo();
+            }
+            input.ReadMessage(VastInfo);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (vastInfo_ == null) {
+              VastInfo = new global::Google.Ads.AdManager.V1.VastInfo();
+            }
+            input.ReadMessage(VastInfo);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Fields common to Video Ad Serving Template (VAST) creatives.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class VastInfo : pb::IMessage<VastInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VastInfo> _parser = new pb::MessageParser<VastInfo>(() => new VastInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VastInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[23]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VastInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VastInfo(VastInfo other) : this() {
+      _hasBits0 = other._hasBits0;
+      duration_ = other.duration_ != null ? other.duration_.Clone() : null;
+      allowDurationOverride_ = other.allowDurationOverride_;
+      trackingUrls_ = other.trackingUrls_.Clone();
+      customParameters_ = other.customParameters_;
+      adId_ = other.adId_;
+      adIdType_ = other.adIdType_;
+      skippableAdType_ = other.skippableAdType_;
+      vastPreviewUrl_ = other.vastPreviewUrl_;
+      creativeSetDisplayName_ = other.creativeSetDisplayName_;
+      creativeSet_ = other.creativeSet_;
+      destinationUrl_ = other.destinationUrl_;
+      destinationUrlType_ = other.destinationUrlType_;
+      companionCreatives_ = other.companionCreatives_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VastInfo Clone() {
+      return new VastInfo(this);
+    }
+
+    /// <summary>Field number for the "duration" field.</summary>
+    public const int DurationFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Duration duration_;
+    /// <summary>
+    /// Optional. The expected duration of this creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration Duration {
+      get { return duration_; }
+      set {
+        duration_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "allow_duration_override" field.</summary>
+    public const int AllowDurationOverrideFieldNumber = 2;
+    private readonly static bool AllowDurationOverrideDefaultValue = false;
+
+    private bool allowDurationOverride_;
+    /// <summary>
+    /// Optional. Allows the creative duration to differ from the actual asset
+    /// durations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AllowDurationOverride {
+      get { if ((_hasBits0 & 1) != 0) { return allowDurationOverride_; } else { return AllowDurationOverrideDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        allowDurationOverride_ = value;
+      }
+    }
+    /// <summary>Gets whether the "allow_duration_override" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAllowDurationOverride {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "allow_duration_override" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAllowDurationOverride() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "tracking_urls" field.</summary>
+    public const int TrackingUrlsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.VideoTrackingUrl> _repeated_trackingUrls_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Ads.AdManager.V1.VideoTrackingUrl.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.VideoTrackingUrl> trackingUrls_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.VideoTrackingUrl>();
+    /// <summary>
+    /// Optional. URLs that will be pinged when conversion events happen.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.VideoTrackingUrl> TrackingUrls {
+      get { return trackingUrls_; }
+    }
+
+    /// <summary>Field number for the "custom_parameters" field.</summary>
+    public const int CustomParametersFieldNumber = 4;
+    private readonly static string CustomParametersDefaultValue = "";
+
+    private string customParameters_;
+    /// <summary>
+    /// Optional. A comma separated key=value list of parameters that will be
+    /// supplied to the creative, written into the VAST `AdParameters` node.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomParameters {
+      get { return customParameters_ ?? CustomParametersDefaultValue; }
+      set {
+        customParameters_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "custom_parameters" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCustomParameters {
+      get { return customParameters_ != null; }
+    }
+    /// <summary>Clears the value of the "custom_parameters" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCustomParameters() {
+      customParameters_ = null;
+    }
+
+    /// <summary>Field number for the "ad_id" field.</summary>
+    public const int AdIdFieldNumber = 5;
+    private readonly static string AdIdDefaultValue = "";
+
+    private string adId_;
+    /// <summary>
+    /// Optional. The ad id associated with the video as defined by the `adIdType`
+    /// registry. This field is required if `adIdType` is not `NONE`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AdId {
+      get { return adId_ ?? AdIdDefaultValue; }
+      set {
+        adId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "ad_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAdId {
+      get { return adId_ != null; }
+    }
+    /// <summary>Clears the value of the "ad_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAdId() {
+      adId_ = null;
+    }
+
+    /// <summary>Field number for the "ad_id_type" field.</summary>
+    public const int AdIdTypeFieldNumber = 6;
+    private readonly static global::Google.Ads.AdManager.V1.VastAdIdTypeEnum.Types.VastAdIdType AdIdTypeDefaultValue = global::Google.Ads.AdManager.V1.VastAdIdTypeEnum.Types.VastAdIdType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.VastAdIdTypeEnum.Types.VastAdIdType adIdType_;
+    /// <summary>
+    /// Optional. The registry which the ad id of this creative belongs to. This
+    /// field defaults to `NONE`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.VastAdIdTypeEnum.Types.VastAdIdType AdIdType {
+      get { if ((_hasBits0 & 2) != 0) { return adIdType_; } else { return AdIdTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        adIdType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ad_id_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAdIdType {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "ad_id_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAdIdType() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "skippable_ad_type" field.</summary>
+    public const int SkippableAdTypeFieldNumber = 7;
+    private readonly static global::Google.Ads.AdManager.V1.SkippableAdTypeEnum.Types.SkippableAdType SkippableAdTypeDefaultValue = global::Google.Ads.AdManager.V1.SkippableAdTypeEnum.Types.SkippableAdType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.SkippableAdTypeEnum.Types.SkippableAdType skippableAdType_;
+    /// <summary>
+    /// Optional. The type of skippable ad.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.SkippableAdTypeEnum.Types.SkippableAdType SkippableAdType {
+      get { if ((_hasBits0 & 4) != 0) { return skippableAdType_; } else { return SkippableAdTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        skippableAdType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "skippable_ad_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSkippableAdType {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "skippable_ad_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSkippableAdType() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "vast_preview_url" field.</summary>
+    public const int VastPreviewUrlFieldNumber = 8;
+    private readonly static string VastPreviewUrlDefaultValue = "";
+
+    private string vastPreviewUrl_;
+    /// <summary>
+    /// Output only. An ad tag URL that will return a preview of the VAST XML
+    /// response specific to this creative.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VastPreviewUrl {
+      get { return vastPreviewUrl_ ?? VastPreviewUrlDefaultValue; }
+      set {
+        vastPreviewUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "vast_preview_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVastPreviewUrl {
+      get { return vastPreviewUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "vast_preview_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVastPreviewUrl() {
+      vastPreviewUrl_ = null;
+    }
+
+    /// <summary>Field number for the "creative_set_display_name" field.</summary>
+    public const int CreativeSetDisplayNameFieldNumber = 14;
+    private readonly static string CreativeSetDisplayNameDefaultValue = "";
+
+    private string creativeSetDisplayName_;
+    /// <summary>
+    /// Output only. The display name of the creative set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CreativeSetDisplayName {
+      get { return creativeSetDisplayName_ ?? CreativeSetDisplayNameDefaultValue; }
+      set {
+        creativeSetDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "creative_set_display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCreativeSetDisplayName {
+      get { return creativeSetDisplayName_ != null; }
+    }
+    /// <summary>Clears the value of the "creative_set_display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCreativeSetDisplayName() {
+      creativeSetDisplayName_ = null;
+    }
+
+    /// <summary>Field number for the "creative_set" field.</summary>
+    public const int CreativeSetFieldNumber = 15;
+    private readonly static string CreativeSetDefaultValue = "";
+
+    private string creativeSet_;
+    /// <summary>
+    /// Output only. The resource name of the creative set.
+    /// Format: "networks/{network_code}/creativeSets/{creative_set_id}"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CreativeSet {
+      get { return creativeSet_ ?? CreativeSetDefaultValue; }
+      set {
+        creativeSet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "creative_set" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCreativeSet {
+      get { return creativeSet_ != null; }
+    }
+    /// <summary>Clears the value of the "creative_set" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCreativeSet() {
+      creativeSet_ = null;
+    }
+
+    /// <summary>Field number for the "destination_url" field.</summary>
+    public const int DestinationUrlFieldNumber = 16;
+    private readonly static string DestinationUrlDefaultValue = "";
+
+    private string destinationUrl_;
+    /// <summary>
+    /// Optional. The URL that the user is directed to if they click on the
+    /// creative. This attribute is required unless the `destinationUrlType` is
+    /// `NONE`, and has a maximum length of 1024 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DestinationUrl {
+      get { return destinationUrl_ ?? DestinationUrlDefaultValue; }
+      set {
+        destinationUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "destination_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationUrl {
+      get { return destinationUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "destination_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationUrl() {
+      destinationUrl_ = null;
+    }
+
+    /// <summary>Field number for the "destination_url_type" field.</summary>
+    public const int DestinationUrlTypeFieldNumber = 17;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType DestinationUrlTypeDefaultValue = global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType destinationUrlType_;
+    /// <summary>
+    /// Optional. The action that should be performed if the user clicks on the
+    /// creative. This attribute defaults to `CLICK_TO_WEB`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType DestinationUrlType {
+      get { if ((_hasBits0 & 8) != 0) { return destinationUrlType_; } else { return DestinationUrlTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        destinationUrlType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "destination_url_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationUrlType {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "destination_url_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationUrlType() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "companion_creatives" field.</summary>
+    public const int CompanionCreativesFieldNumber = 18;
+    private static readonly pb::FieldCodec<string> _repeated_companionCreatives_codec
+        = pb::FieldCodec.ForString(146);
+    private readonly pbc::RepeatedField<string> companionCreatives_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The companion creatives that are associated with this creative.
+    /// Format: "networks/{network_code}/creatives/{creative_id}"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> CompanionCreatives {
+      get { return companionCreatives_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VastInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VastInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Duration, other.Duration)) return false;
+      if (AllowDurationOverride != other.AllowDurationOverride) return false;
+      if(!trackingUrls_.Equals(other.trackingUrls_)) return false;
+      if (CustomParameters != other.CustomParameters) return false;
+      if (AdId != other.AdId) return false;
+      if (AdIdType != other.AdIdType) return false;
+      if (SkippableAdType != other.SkippableAdType) return false;
+      if (VastPreviewUrl != other.VastPreviewUrl) return false;
+      if (CreativeSetDisplayName != other.CreativeSetDisplayName) return false;
+      if (CreativeSet != other.CreativeSet) return false;
+      if (DestinationUrl != other.DestinationUrl) return false;
+      if (DestinationUrlType != other.DestinationUrlType) return false;
+      if(!companionCreatives_.Equals(other.companionCreatives_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (duration_ != null) hash ^= Duration.GetHashCode();
+      if (HasAllowDurationOverride) hash ^= AllowDurationOverride.GetHashCode();
+      hash ^= trackingUrls_.GetHashCode();
+      if (HasCustomParameters) hash ^= CustomParameters.GetHashCode();
+      if (HasAdId) hash ^= AdId.GetHashCode();
+      if (HasAdIdType) hash ^= AdIdType.GetHashCode();
+      if (HasSkippableAdType) hash ^= SkippableAdType.GetHashCode();
+      if (HasVastPreviewUrl) hash ^= VastPreviewUrl.GetHashCode();
+      if (HasCreativeSetDisplayName) hash ^= CreativeSetDisplayName.GetHashCode();
+      if (HasCreativeSet) hash ^= CreativeSet.GetHashCode();
+      if (HasDestinationUrl) hash ^= DestinationUrl.GetHashCode();
+      if (HasDestinationUrlType) hash ^= DestinationUrlType.GetHashCode();
+      hash ^= companionCreatives_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (duration_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Duration);
+      }
+      if (HasAllowDurationOverride) {
+        output.WriteRawTag(16);
+        output.WriteBool(AllowDurationOverride);
+      }
+      trackingUrls_.WriteTo(output, _repeated_trackingUrls_codec);
+      if (HasCustomParameters) {
+        output.WriteRawTag(34);
+        output.WriteString(CustomParameters);
+      }
+      if (HasAdId) {
+        output.WriteRawTag(42);
+        output.WriteString(AdId);
+      }
+      if (HasAdIdType) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) AdIdType);
+      }
+      if (HasSkippableAdType) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) SkippableAdType);
+      }
+      if (HasVastPreviewUrl) {
+        output.WriteRawTag(66);
+        output.WriteString(VastPreviewUrl);
+      }
+      if (HasCreativeSetDisplayName) {
+        output.WriteRawTag(114);
+        output.WriteString(CreativeSetDisplayName);
+      }
+      if (HasCreativeSet) {
+        output.WriteRawTag(122);
+        output.WriteString(CreativeSet);
+      }
+      if (HasDestinationUrl) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) DestinationUrlType);
+      }
+      companionCreatives_.WriteTo(output, _repeated_companionCreatives_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (duration_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Duration);
+      }
+      if (HasAllowDurationOverride) {
+        output.WriteRawTag(16);
+        output.WriteBool(AllowDurationOverride);
+      }
+      trackingUrls_.WriteTo(ref output, _repeated_trackingUrls_codec);
+      if (HasCustomParameters) {
+        output.WriteRawTag(34);
+        output.WriteString(CustomParameters);
+      }
+      if (HasAdId) {
+        output.WriteRawTag(42);
+        output.WriteString(AdId);
+      }
+      if (HasAdIdType) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) AdIdType);
+      }
+      if (HasSkippableAdType) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) SkippableAdType);
+      }
+      if (HasVastPreviewUrl) {
+        output.WriteRawTag(66);
+        output.WriteString(VastPreviewUrl);
+      }
+      if (HasCreativeSetDisplayName) {
+        output.WriteRawTag(114);
+        output.WriteString(CreativeSetDisplayName);
+      }
+      if (HasCreativeSet) {
+        output.WriteRawTag(122);
+        output.WriteString(CreativeSet);
+      }
+      if (HasDestinationUrl) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) DestinationUrlType);
+      }
+      companionCreatives_.WriteTo(ref output, _repeated_companionCreatives_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (duration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Duration);
+      }
+      if (HasAllowDurationOverride) {
+        size += 1 + 1;
+      }
+      size += trackingUrls_.CalculateSize(_repeated_trackingUrls_codec);
+      if (HasCustomParameters) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomParameters);
+      }
+      if (HasAdId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AdId);
+      }
+      if (HasAdIdType) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AdIdType);
+      }
+      if (HasSkippableAdType) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SkippableAdType);
+      }
+      if (HasVastPreviewUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VastPreviewUrl);
+      }
+      if (HasCreativeSetDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CreativeSetDisplayName);
+      }
+      if (HasCreativeSet) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CreativeSet);
+      }
+      if (HasDestinationUrl) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(DestinationUrl);
+      }
+      if (HasDestinationUrlType) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) DestinationUrlType);
+      }
+      size += companionCreatives_.CalculateSize(_repeated_companionCreatives_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VastInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.duration_ != null) {
+        if (duration_ == null) {
+          Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        Duration.MergeFrom(other.Duration);
+      }
+      if (other.HasAllowDurationOverride) {
+        AllowDurationOverride = other.AllowDurationOverride;
+      }
+      trackingUrls_.Add(other.trackingUrls_);
+      if (other.HasCustomParameters) {
+        CustomParameters = other.CustomParameters;
+      }
+      if (other.HasAdId) {
+        AdId = other.AdId;
+      }
+      if (other.HasAdIdType) {
+        AdIdType = other.AdIdType;
+      }
+      if (other.HasSkippableAdType) {
+        SkippableAdType = other.SkippableAdType;
+      }
+      if (other.HasVastPreviewUrl) {
+        VastPreviewUrl = other.VastPreviewUrl;
+      }
+      if (other.HasCreativeSetDisplayName) {
+        CreativeSetDisplayName = other.CreativeSetDisplayName;
+      }
+      if (other.HasCreativeSet) {
+        CreativeSet = other.CreativeSet;
+      }
+      if (other.HasDestinationUrl) {
+        DestinationUrl = other.DestinationUrl;
+      }
+      if (other.HasDestinationUrlType) {
+        DestinationUrlType = other.DestinationUrlType;
+      }
+      companionCreatives_.Add(other.companionCreatives_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
+          case 16: {
+            AllowDurationOverride = input.ReadBool();
+            break;
+          }
+          case 26: {
+            trackingUrls_.AddEntriesFrom(input, _repeated_trackingUrls_codec);
+            break;
+          }
+          case 34: {
+            CustomParameters = input.ReadString();
+            break;
+          }
+          case 42: {
+            AdId = input.ReadString();
+            break;
+          }
+          case 48: {
+            AdIdType = (global::Google.Ads.AdManager.V1.VastAdIdTypeEnum.Types.VastAdIdType) input.ReadEnum();
+            break;
+          }
+          case 56: {
+            SkippableAdType = (global::Google.Ads.AdManager.V1.SkippableAdTypeEnum.Types.SkippableAdType) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            VastPreviewUrl = input.ReadString();
+            break;
+          }
+          case 114: {
+            CreativeSetDisplayName = input.ReadString();
+            break;
+          }
+          case 122: {
+            CreativeSet = input.ReadString();
+            break;
+          }
+          case 130: {
+            DestinationUrl = input.ReadString();
+            break;
+          }
+          case 136: {
+            DestinationUrlType = (global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType) input.ReadEnum();
+            break;
+          }
+          case 146: {
+            companionCreatives_.AddEntriesFrom(input, _repeated_companionCreatives_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
+          case 16: {
+            AllowDurationOverride = input.ReadBool();
+            break;
+          }
+          case 26: {
+            trackingUrls_.AddEntriesFrom(ref input, _repeated_trackingUrls_codec);
+            break;
+          }
+          case 34: {
+            CustomParameters = input.ReadString();
+            break;
+          }
+          case 42: {
+            AdId = input.ReadString();
+            break;
+          }
+          case 48: {
+            AdIdType = (global::Google.Ads.AdManager.V1.VastAdIdTypeEnum.Types.VastAdIdType) input.ReadEnum();
+            break;
+          }
+          case 56: {
+            SkippableAdType = (global::Google.Ads.AdManager.V1.SkippableAdTypeEnum.Types.SkippableAdType) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            VastPreviewUrl = input.ReadString();
+            break;
+          }
+          case 114: {
+            CreativeSetDisplayName = input.ReadString();
+            break;
+          }
+          case 122: {
+            CreativeSet = input.ReadString();
+            break;
+          }
+          case 130: {
+            DestinationUrl = input.ReadString();
+            break;
+          }
+          case 136: {
+            DestinationUrlType = (global::Google.Ads.AdManager.V1.CreativeDestinationUrlTypeEnum.Types.CreativeDestinationUrlType) input.ReadEnum();
+            break;
+          }
+          case 146: {
+            companionCreatives_.AddEntriesFrom(ref input, _repeated_companionCreatives_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Represents the buyer placement configuration for a creative.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BuyerPlacementConfig : pb::IMessage<BuyerPlacementConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BuyerPlacementConfig> _parser = new pb::MessageParser<BuyerPlacementConfig>(() => new BuyerPlacementConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BuyerPlacementConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CreativeMessagesReflection.Descriptor.MessageTypes[24]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BuyerPlacementConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BuyerPlacementConfig(BuyerPlacementConfig other) : this() {
+      placementId_ = other.placementId_;
+      placementDisplayName_ = other.placementDisplayName_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BuyerPlacementConfig Clone() {
+      return new BuyerPlacementConfig(this);
+    }
+
+    /// <summary>Field number for the "placement_id" field.</summary>
+    public const int PlacementIdFieldNumber = 1;
+    private readonly static string PlacementIdDefaultValue = "";
+
+    private string placementId_;
+    /// <summary>
+    /// Optional. The ID of the buyer placement.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PlacementId {
+      get { return placementId_ ?? PlacementIdDefaultValue; }
+      set {
+        placementId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "placement_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPlacementId {
+      get { return placementId_ != null; }
+    }
+    /// <summary>Clears the value of the "placement_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPlacementId() {
+      placementId_ = null;
+    }
+
+    /// <summary>Field number for the "placement_display_name" field.</summary>
+    public const int PlacementDisplayNameFieldNumber = 2;
+    private readonly static string PlacementDisplayNameDefaultValue = "";
+
+    private string placementDisplayName_;
+    /// <summary>
+    /// Optional. The name of the buyer placement.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PlacementDisplayName {
+      get { return placementDisplayName_ ?? PlacementDisplayNameDefaultValue; }
+      set {
+        placementDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "placement_display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPlacementDisplayName {
+      get { return placementDisplayName_ != null; }
+    }
+    /// <summary>Clears the value of the "placement_display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPlacementDisplayName() {
+      placementDisplayName_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BuyerPlacementConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BuyerPlacementConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PlacementId != other.PlacementId) return false;
+      if (PlacementDisplayName != other.PlacementDisplayName) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasPlacementId) hash ^= PlacementId.GetHashCode();
+      if (HasPlacementDisplayName) hash ^= PlacementDisplayName.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasPlacementId) {
+        output.WriteRawTag(10);
+        output.WriteString(PlacementId);
+      }
+      if (HasPlacementDisplayName) {
+        output.WriteRawTag(18);
+        output.WriteString(PlacementDisplayName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasPlacementId) {
+        output.WriteRawTag(10);
+        output.WriteString(PlacementId);
+      }
+      if (HasPlacementDisplayName) {
+        output.WriteRawTag(18);
+        output.WriteString(PlacementDisplayName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasPlacementId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlacementId);
+      }
+      if (HasPlacementDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlacementDisplayName);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BuyerPlacementConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasPlacementId) {
+        PlacementId = other.PlacementId;
+      }
+      if (other.HasPlacementDisplayName) {
+        PlacementDisplayName = other.PlacementDisplayName;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PlacementId = input.ReadString();
+            break;
+          }
+          case 18: {
+            PlacementDisplayName = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PlacementId = input.ReadString();
+            break;
+          }
+          case 18: {
+            PlacementDisplayName = input.ReadString();
             break;
           }
         }

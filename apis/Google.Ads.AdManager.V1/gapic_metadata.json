@@ -55,10 +55,22 @@
                 "BatchAllowAdReviewCenterAdsAsync"
               ]
             },
+            "BatchApplyAdReviewCenterCustomLabels": {
+              "methods": [
+                "BatchApplyAdReviewCenterCustomLabels",
+                "BatchApplyAdReviewCenterCustomLabelsAsync"
+              ]
+            },
             "BatchBlockAdReviewCenterAds": {
               "methods": [
                 "BatchBlockAdReviewCenterAds",
                 "BatchBlockAdReviewCenterAdsAsync"
+              ]
+            },
+            "FetchAdReviewCenterCustomLabels": {
+              "methods": [
+                "FetchAdReviewCenterCustomLabels",
+                "FetchAdReviewCenterCustomLabelsAsync"
               ]
             },
             "SearchAdReviewCenterAds": {
@@ -346,6 +358,12 @@
                 "BatchRejectAudienceSegmentsAsync"
               ]
             },
+            "BatchUpdateAudienceSegments": {
+              "methods": [
+                "BatchUpdateAudienceSegments",
+                "BatchUpdateAudienceSegmentsAsync"
+              ]
+            },
             "CreateAudienceSegment": {
               "methods": [
                 "CreateAudienceSegment",
@@ -362,6 +380,12 @@
               "methods": [
                 "ListAudienceSegments",
                 "ListAudienceSegmentsAsync"
+              ]
+            },
+            "UpdateAudienceSegment": {
+              "methods": [
+                "UpdateAudienceSegment",
+                "UpdateAudienceSegmentAsync"
               ]
             }
           }
@@ -827,6 +851,39 @@
               "methods": [
                 "ListContent",
                 "ListContentAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "CreativeService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CreativeServiceClient",
+          "rpcs": {
+            "BatchActivateCreatives": {
+              "methods": [
+                "BatchActivateCreatives",
+                "BatchActivateCreativesAsync"
+              ]
+            },
+            "BatchDeactivateCreatives": {
+              "methods": [
+                "BatchDeactivateCreatives",
+                "BatchDeactivateCreativesAsync"
+              ]
+            },
+            "GetCreative": {
+              "methods": [
+                "GetCreative",
+                "GetCreativeAsync"
+              ]
+            },
+            "ListCreatives": {
+              "methods": [
+                "ListCreatives",
+                "ListCreativesAsync"
               ]
             }
           }
@@ -1352,6 +1409,33 @@
         }
       }
     },
+    "ForecastService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ForecastServiceClient",
+          "rpcs": {
+            "RunAvailabilityForecast": {
+              "methods": [
+                "RunAvailabilityForecast",
+                "RunAvailabilityForecastAsync"
+              ]
+            },
+            "RunDeliveryForecast": {
+              "methods": [
+                "RunDeliveryForecast",
+                "RunDeliveryForecastAsync"
+              ]
+            },
+            "RunTrafficData": {
+              "methods": [
+                "RunTrafficData",
+                "RunTrafficDataAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "GeoTargetService": {
       "clients": {
         "grpc": {
@@ -1430,11 +1514,110 @@
         }
       }
     },
+    "LineItemCreativeAssociationService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "LineItemCreativeAssociationServiceClient",
+          "rpcs": {
+            "GetLineItemCreativeAssociation": {
+              "methods": [
+                "GetLineItemCreativeAssociation",
+                "GetLineItemCreativeAssociationAsync"
+              ]
+            },
+            "ListLineItemCreativeAssociations": {
+              "methods": [
+                "ListLineItemCreativeAssociations",
+                "ListLineItemCreativeAssociationsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "LineItemService": {
       "clients": {
         "grpc": {
           "libraryClient": "LineItemServiceClient",
           "rpcs": {
+            "BatchActivateLineItems": {
+              "methods": [
+                "BatchActivateLineItems",
+                "BatchActivateLineItemsAsync"
+              ]
+            },
+            "BatchArchiveLineItems": {
+              "methods": [
+                "BatchArchiveLineItems",
+                "BatchArchiveLineItemsAsync"
+              ]
+            },
+            "BatchCreateLineItems": {
+              "methods": [
+                "BatchCreateLineItems",
+                "BatchCreateLineItemsAsync"
+              ]
+            },
+            "BatchDeleteLineItems": {
+              "methods": [
+                "BatchDeleteLineItems",
+                "BatchDeleteLineItemsAsync"
+              ]
+            },
+            "BatchPauseLineItems": {
+              "methods": [
+                "BatchPauseLineItems",
+                "BatchPauseLineItemsAsync"
+              ]
+            },
+            "BatchReleaseLineItems": {
+              "methods": [
+                "BatchReleaseLineItems",
+                "BatchReleaseLineItemsAsync"
+              ]
+            },
+            "BatchReserveAndOverbookLineItems": {
+              "methods": [
+                "BatchReserveAndOverbookLineItems",
+                "BatchReserveAndOverbookLineItemsAsync"
+              ]
+            },
+            "BatchReserveLineItems": {
+              "methods": [
+                "BatchReserveLineItems",
+                "BatchReserveLineItemsAsync"
+              ]
+            },
+            "BatchResumeAndOverbookLineItems": {
+              "methods": [
+                "BatchResumeAndOverbookLineItems",
+                "BatchResumeAndOverbookLineItemsAsync"
+              ]
+            },
+            "BatchResumeLineItems": {
+              "methods": [
+                "BatchResumeLineItems",
+                "BatchResumeLineItemsAsync"
+              ]
+            },
+            "BatchUnarchiveLineItems": {
+              "methods": [
+                "BatchUnarchiveLineItems",
+                "BatchUnarchiveLineItemsAsync"
+              ]
+            },
+            "BatchUpdateLineItems": {
+              "methods": [
+                "BatchUpdateLineItems",
+                "BatchUpdateLineItemsAsync"
+              ]
+            },
+            "CreateLineItem": {
+              "methods": [
+                "CreateLineItem",
+                "CreateLineItemAsync"
+              ]
+            },
             "GetLineItem": {
               "methods": [
                 "GetLineItem",
@@ -1445,6 +1628,33 @@
               "methods": [
                 "ListLineItems",
                 "ListLineItemsAsync"
+              ]
+            },
+            "UpdateLineItem": {
+              "methods": [
+                "UpdateLineItem",
+                "UpdateLineItemAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "LineItemTemplateService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "LineItemTemplateServiceClient",
+          "rpcs": {
+            "GetLineItemTemplate": {
+              "methods": [
+                "GetLineItemTemplate",
+                "GetLineItemTemplateAsync"
+              ]
+            },
+            "ListLineItemTemplates": {
+              "methods": [
+                "ListLineItemTemplates",
+                "ListLineItemTemplatesAsync"
               ]
             }
           }
@@ -1660,6 +1870,12 @@
                 "BatchUpdateNativeStylesAsync"
               ]
             },
+            "CreateNativeStyle": {
+              "methods": [
+                "CreateNativeStyle",
+                "CreateNativeStyleAsync"
+              ]
+            },
             "GetNativeStyle": {
               "methods": [
                 "GetNativeStyle",
@@ -1670,6 +1886,12 @@
               "methods": [
                 "ListNativeStyles",
                 "ListNativeStylesAsync"
+              ]
+            },
+            "UpdateNativeStyle": {
+              "methods": [
+                "UpdateNativeStyle",
+                "UpdateNativeStyleAsync"
               ]
             }
           }
@@ -2452,10 +2674,52 @@
         "grpc": {
           "libraryClient": "UserServiceClient",
           "rpcs": {
+            "BatchActivateUsers": {
+              "methods": [
+                "BatchActivateUsers",
+                "BatchActivateUsersAsync"
+              ]
+            },
+            "BatchCreateUsers": {
+              "methods": [
+                "BatchCreateUsers",
+                "BatchCreateUsersAsync"
+              ]
+            },
+            "BatchDeactivateUsers": {
+              "methods": [
+                "BatchDeactivateUsers",
+                "BatchDeactivateUsersAsync"
+              ]
+            },
+            "BatchUpdateUsers": {
+              "methods": [
+                "BatchUpdateUsers",
+                "BatchUpdateUsersAsync"
+              ]
+            },
+            "CreateUser": {
+              "methods": [
+                "CreateUser",
+                "CreateUserAsync"
+              ]
+            },
             "GetUser": {
               "methods": [
                 "GetUser",
                 "GetUserAsync"
+              ]
+            },
+            "ListUsers": {
+              "methods": [
+                "ListUsers",
+                "ListUsersAsync"
+              ]
+            },
+            "UpdateUser": {
+              "methods": [
+                "UpdateUser",
+                "UpdateUserAsync"
               ]
             }
           }

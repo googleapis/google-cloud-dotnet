@@ -371,7 +371,9 @@ namespace Google.Ads.AdManager.V1 {
         /// <summary>Field number for the "dropdown_value" field.</summary>
         public const int DropdownValueFieldNumber = 1;
         /// <summary>
-        /// The custom_field_option_id, if the CustomFieldDataType is DROPDOWN.
+        /// The custom_field_option_id, if the
+        /// [CustomFieldDataType][google.ads.admanager.v1.CustomFieldDataTypeEnum.CustomFieldDataType]
+        /// is [DROPDOWN][CustomFieldDataTypeEnum.CustomFieldDataType.DROPDOWN].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -400,7 +402,10 @@ namespace Google.Ads.AdManager.V1 {
         /// <summary>Field number for the "string_value" field.</summary>
         public const int StringValueFieldNumber = 2;
         /// <summary>
-        /// The value, if the CustomFieldDataType is STRING.
+        /// The value, if the
+        /// [CustomFieldDataType][google.ads.admanager.v1.CustomFieldDataTypeEnum.CustomFieldDataType]
+        /// is
+        /// [STRING][google.ads.admanager.v1.CustomFieldDataTypeEnum.CustomFieldDataType.STRING].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -429,7 +434,10 @@ namespace Google.Ads.AdManager.V1 {
         /// <summary>Field number for the "number_value" field.</summary>
         public const int NumberValueFieldNumber = 3;
         /// <summary>
-        /// The value, if the CustomFieldDataType is NUMBER.
+        /// The value, if the
+        /// [CustomFieldDataType][google.ads.admanager.v1.CustomFieldDataTypeEnum.CustomFieldDataType]
+        /// is
+        /// [NUMBER][google.ads.admanager.v1.CustomFieldDataTypeEnum.CustomFieldDataType.NUMBER].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -458,7 +466,10 @@ namespace Google.Ads.AdManager.V1 {
         /// <summary>Field number for the "toggle_value" field.</summary>
         public const int ToggleValueFieldNumber = 4;
         /// <summary>
-        /// The value, if the CustomFieldDataType is TOGGLE.
+        /// The value, if the
+        /// [CustomFieldDataType][google.ads.admanager.v1.CustomFieldDataTypeEnum.CustomFieldDataType]
+        /// is
+        /// [TOGGLE][google.ads.admanager.v1.CustomFieldDataTypeEnum.CustomFieldDataType.TOGGLE].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -312,7 +312,7 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// Required. The maximum allowed duration for ads in the `AdSpot`. This field
     /// is required and must be greater than
-    /// [min_ad_duration][google.ads.admanager.v1.AdSpot.min_ad_duration].
+    /// [minAdDuration][google.ads.admanager.v1.AdSpot.min_ad_duration].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

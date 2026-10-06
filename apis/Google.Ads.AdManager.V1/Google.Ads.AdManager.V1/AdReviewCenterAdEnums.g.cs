@@ -33,16 +33,21 @@ namespace Google.Ads.AdManager.V1 {
             "dWFsQWRSZXZpZXdDZW50ZXJBZFN0YXR1cxIxCi1NQU5VQUxfQURfUkVWSUVX",
             "X0NFTlRFUl9BRF9TVEFUVVNfVU5TUEVDSUZJRUQQABILCgdBTExPV0VEEAES",
             "CwoHQkxPQ0tFRBACEgwKCEFSQ0hJVkVEEAMSCwoHUEVORElORxAEEgsKB1NF",
-            "UlZJTkcQBULOAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhpBZFJl",
-            "dmlld0NlbnRlckFkRW51bXNQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9n",
-            "ZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2Vy",
-            "qgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFu",
-            "YWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
+            "UlZJTkcQBSKfAQoVQXJjQ3JlYXRpdmVGb3JtYXRFbnVtIoUBChFBcmNDcmVh",
+            "dGl2ZUZvcm1hdBIjCh9BUkNfQ1JFQVRJVkVfRk9STUFUX1VOU1BFQ0lGSUVE",
+            "EAASCAoEVEVYVBABEgkKBUlNQUdFEAISCQoFVklERU8QAxIJCgVBVURJTxAE",
+            "EhAKDEFQUF9JTlNUQUxMUxAFEg4KClJJQ0hfTUVESUEQBkLOAQobY29tLmdv",
+            "b2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhpBZFJldmlld0NlbnRlckFkRW51bXNQ",
+            "cm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
+            "L2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1h",
+            "bmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6",
+            "QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum), global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ManualAdReviewCenterAdStatusEnum), global::Google.Ads.AdManager.V1.ManualAdReviewCenterAdStatusEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.ManualAdReviewCenterAdStatusEnum.Types.ManualAdReviewCenterAdStatus) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ManualAdReviewCenterAdStatusEnum), global::Google.Ads.AdManager.V1.ManualAdReviewCenterAdStatusEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.ManualAdReviewCenterAdStatusEnum.Types.ManualAdReviewCenterAdStatus) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ArcCreativeFormatEnum), global::Google.Ads.AdManager.V1.ArcCreativeFormatEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.ArcCreativeFormatEnum.Types.ArcCreativeFormat) }, null, null)
           }));
     }
     #endregion
@@ -440,6 +445,218 @@ namespace Google.Ads.AdManager.V1 {
         /// This ad is allowed to serve by default and has not been reviewed.
         /// </summary>
         [pbr::OriginalName("SERVING")] Serving = 5,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Wrapper message for
+  /// [ArcCreativeFormat][google.ads.admanager.v1.ArcCreativeFormatEnum.ArcCreativeFormat]
+  ///
+  /// Message representing the ad review center creative formats which is about how
+  /// the creative is rendered for the end user.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ArcCreativeFormatEnum : pb::IMessage<ArcCreativeFormatEnum>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ArcCreativeFormatEnum> _parser = new pb::MessageParser<ArcCreativeFormatEnum>(() => new ArcCreativeFormatEnum());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ArcCreativeFormatEnum> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.AdReviewCenterAdEnumsReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ArcCreativeFormatEnum() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ArcCreativeFormatEnum(ArcCreativeFormatEnum other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ArcCreativeFormatEnum Clone() {
+      return new ArcCreativeFormatEnum(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ArcCreativeFormatEnum);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ArcCreativeFormatEnum other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ArcCreativeFormatEnum other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ArcCreativeFormatEnum message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Specifies the status of an ArcCreativeFormat.
+      ///
+      /// New values may be added in the future.
+      /// </summary>
+      public enum ArcCreativeFormat {
+        /// <summary>
+        /// Not specified value
+        /// </summary>
+        [pbr::OriginalName("ARC_CREATIVE_FORMAT_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Text based creatives.
+        /// </summary>
+        [pbr::OriginalName("TEXT")] Text = 1,
+        /// <summary>
+        /// Image creatives.
+        /// </summary>
+        [pbr::OriginalName("IMAGE")] Image = 2,
+        /// <summary>
+        /// Video creatives.
+        /// </summary>
+        [pbr::OriginalName("VIDEO")] Video = 3,
+        /// <summary>
+        /// Audio creatives.
+        /// </summary>
+        [pbr::OriginalName("AUDIO")] Audio = 4,
+        /// <summary>
+        /// Creatives leading to mobile app stores.
+        /// </summary>
+        [pbr::OriginalName("APP_INSTALLS")] AppInstalls = 5,
+        /// <summary>
+        /// Creatives leading to rich media.
+        /// </summary>
+        [pbr::OriginalName("RICH_MEDIA")] RichMedia = 6,
       }
 
     }

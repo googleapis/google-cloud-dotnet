@@ -71,6 +71,58 @@ namespace Google.Ads.AdManager.V1 {
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListLineItemsRequest> __Marshaller_google_ads_admanager_v1_ListLineItemsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListLineItemsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListLineItemsResponse> __Marshaller_google_ads_admanager_v1_ListLineItemsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListLineItemsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.CreateLineItemRequest> __Marshaller_google_ads_admanager_v1_CreateLineItemRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.CreateLineItemRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreateLineItemsRequest> __Marshaller_google_ads_admanager_v1_BatchCreateLineItemsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreateLineItemsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreateLineItemsResponse> __Marshaller_google_ads_admanager_v1_BatchCreateLineItemsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreateLineItemsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.UpdateLineItemRequest> __Marshaller_google_ads_admanager_v1_UpdateLineItemRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.UpdateLineItemRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateLineItemsRequest> __Marshaller_google_ads_admanager_v1_BatchUpdateLineItemsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateLineItemsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateLineItemsResponse> __Marshaller_google_ads_admanager_v1_BatchUpdateLineItemsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateLineItemsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchActivateLineItemsRequest> __Marshaller_google_ads_admanager_v1_BatchActivateLineItemsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchActivateLineItemsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchActivateLineItemsResponse> __Marshaller_google_ads_admanager_v1_BatchActivateLineItemsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchActivateLineItemsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchPauseLineItemsRequest> __Marshaller_google_ads_admanager_v1_BatchPauseLineItemsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchPauseLineItemsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchPauseLineItemsResponse> __Marshaller_google_ads_admanager_v1_BatchPauseLineItemsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchPauseLineItemsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchResumeLineItemsRequest> __Marshaller_google_ads_admanager_v1_BatchResumeLineItemsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchResumeLineItemsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchResumeLineItemsResponse> __Marshaller_google_ads_admanager_v1_BatchResumeLineItemsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchResumeLineItemsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchResumeAndOverbookLineItemsRequest> __Marshaller_google_ads_admanager_v1_BatchResumeAndOverbookLineItemsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchResumeAndOverbookLineItemsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchResumeAndOverbookLineItemsResponse> __Marshaller_google_ads_admanager_v1_BatchResumeAndOverbookLineItemsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchResumeAndOverbookLineItemsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDeleteLineItemsRequest> __Marshaller_google_ads_admanager_v1_BatchDeleteLineItemsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDeleteLineItemsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchReserveLineItemsRequest> __Marshaller_google_ads_admanager_v1_BatchReserveLineItemsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchReserveLineItemsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchReserveLineItemsResponse> __Marshaller_google_ads_admanager_v1_BatchReserveLineItemsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchReserveLineItemsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchReserveAndOverbookLineItemsRequest> __Marshaller_google_ads_admanager_v1_BatchReserveAndOverbookLineItemsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchReserveAndOverbookLineItemsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchReserveAndOverbookLineItemsResponse> __Marshaller_google_ads_admanager_v1_BatchReserveAndOverbookLineItemsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchReserveAndOverbookLineItemsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchReleaseLineItemsRequest> __Marshaller_google_ads_admanager_v1_BatchReleaseLineItemsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchReleaseLineItemsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchReleaseLineItemsResponse> __Marshaller_google_ads_admanager_v1_BatchReleaseLineItemsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchReleaseLineItemsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchArchiveLineItemsRequest> __Marshaller_google_ads_admanager_v1_BatchArchiveLineItemsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchArchiveLineItemsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchArchiveLineItemsResponse> __Marshaller_google_ads_admanager_v1_BatchArchiveLineItemsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchArchiveLineItemsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUnarchiveLineItemsRequest> __Marshaller_google_ads_admanager_v1_BatchUnarchiveLineItemsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUnarchiveLineItemsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUnarchiveLineItemsResponse> __Marshaller_google_ads_admanager_v1_BatchUnarchiveLineItemsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUnarchiveLineItemsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.AdManager.V1.GetLineItemRequest, global::Google.Ads.AdManager.V1.LineItem> __Method_GetLineItem = new grpc::Method<global::Google.Ads.AdManager.V1.GetLineItemRequest, global::Google.Ads.AdManager.V1.LineItem>(
@@ -87,6 +139,118 @@ namespace Google.Ads.AdManager.V1 {
         "ListLineItems",
         __Marshaller_google_ads_admanager_v1_ListLineItemsRequest,
         __Marshaller_google_ads_admanager_v1_ListLineItemsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.CreateLineItemRequest, global::Google.Ads.AdManager.V1.LineItem> __Method_CreateLineItem = new grpc::Method<global::Google.Ads.AdManager.V1.CreateLineItemRequest, global::Google.Ads.AdManager.V1.LineItem>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateLineItem",
+        __Marshaller_google_ads_admanager_v1_CreateLineItemRequest,
+        __Marshaller_google_ads_admanager_v1_LineItem);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchCreateLineItemsRequest, global::Google.Ads.AdManager.V1.BatchCreateLineItemsResponse> __Method_BatchCreateLineItems = new grpc::Method<global::Google.Ads.AdManager.V1.BatchCreateLineItemsRequest, global::Google.Ads.AdManager.V1.BatchCreateLineItemsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchCreateLineItems",
+        __Marshaller_google_ads_admanager_v1_BatchCreateLineItemsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchCreateLineItemsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.UpdateLineItemRequest, global::Google.Ads.AdManager.V1.LineItem> __Method_UpdateLineItem = new grpc::Method<global::Google.Ads.AdManager.V1.UpdateLineItemRequest, global::Google.Ads.AdManager.V1.LineItem>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateLineItem",
+        __Marshaller_google_ads_admanager_v1_UpdateLineItemRequest,
+        __Marshaller_google_ads_admanager_v1_LineItem);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateLineItemsRequest, global::Google.Ads.AdManager.V1.BatchUpdateLineItemsResponse> __Method_BatchUpdateLineItems = new grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateLineItemsRequest, global::Google.Ads.AdManager.V1.BatchUpdateLineItemsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchUpdateLineItems",
+        __Marshaller_google_ads_admanager_v1_BatchUpdateLineItemsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchUpdateLineItemsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchActivateLineItemsRequest, global::Google.Ads.AdManager.V1.BatchActivateLineItemsResponse> __Method_BatchActivateLineItems = new grpc::Method<global::Google.Ads.AdManager.V1.BatchActivateLineItemsRequest, global::Google.Ads.AdManager.V1.BatchActivateLineItemsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchActivateLineItems",
+        __Marshaller_google_ads_admanager_v1_BatchActivateLineItemsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchActivateLineItemsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchPauseLineItemsRequest, global::Google.Ads.AdManager.V1.BatchPauseLineItemsResponse> __Method_BatchPauseLineItems = new grpc::Method<global::Google.Ads.AdManager.V1.BatchPauseLineItemsRequest, global::Google.Ads.AdManager.V1.BatchPauseLineItemsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchPauseLineItems",
+        __Marshaller_google_ads_admanager_v1_BatchPauseLineItemsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchPauseLineItemsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchResumeLineItemsRequest, global::Google.Ads.AdManager.V1.BatchResumeLineItemsResponse> __Method_BatchResumeLineItems = new grpc::Method<global::Google.Ads.AdManager.V1.BatchResumeLineItemsRequest, global::Google.Ads.AdManager.V1.BatchResumeLineItemsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchResumeLineItems",
+        __Marshaller_google_ads_admanager_v1_BatchResumeLineItemsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchResumeLineItemsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchResumeAndOverbookLineItemsRequest, global::Google.Ads.AdManager.V1.BatchResumeAndOverbookLineItemsResponse> __Method_BatchResumeAndOverbookLineItems = new grpc::Method<global::Google.Ads.AdManager.V1.BatchResumeAndOverbookLineItemsRequest, global::Google.Ads.AdManager.V1.BatchResumeAndOverbookLineItemsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchResumeAndOverbookLineItems",
+        __Marshaller_google_ads_admanager_v1_BatchResumeAndOverbookLineItemsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchResumeAndOverbookLineItemsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchDeleteLineItemsRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_BatchDeleteLineItems = new grpc::Method<global::Google.Ads.AdManager.V1.BatchDeleteLineItemsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchDeleteLineItems",
+        __Marshaller_google_ads_admanager_v1_BatchDeleteLineItemsRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchReserveLineItemsRequest, global::Google.Ads.AdManager.V1.BatchReserveLineItemsResponse> __Method_BatchReserveLineItems = new grpc::Method<global::Google.Ads.AdManager.V1.BatchReserveLineItemsRequest, global::Google.Ads.AdManager.V1.BatchReserveLineItemsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchReserveLineItems",
+        __Marshaller_google_ads_admanager_v1_BatchReserveLineItemsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchReserveLineItemsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchReserveAndOverbookLineItemsRequest, global::Google.Ads.AdManager.V1.BatchReserveAndOverbookLineItemsResponse> __Method_BatchReserveAndOverbookLineItems = new grpc::Method<global::Google.Ads.AdManager.V1.BatchReserveAndOverbookLineItemsRequest, global::Google.Ads.AdManager.V1.BatchReserveAndOverbookLineItemsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchReserveAndOverbookLineItems",
+        __Marshaller_google_ads_admanager_v1_BatchReserveAndOverbookLineItemsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchReserveAndOverbookLineItemsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchReleaseLineItemsRequest, global::Google.Ads.AdManager.V1.BatchReleaseLineItemsResponse> __Method_BatchReleaseLineItems = new grpc::Method<global::Google.Ads.AdManager.V1.BatchReleaseLineItemsRequest, global::Google.Ads.AdManager.V1.BatchReleaseLineItemsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchReleaseLineItems",
+        __Marshaller_google_ads_admanager_v1_BatchReleaseLineItemsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchReleaseLineItemsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchArchiveLineItemsRequest, global::Google.Ads.AdManager.V1.BatchArchiveLineItemsResponse> __Method_BatchArchiveLineItems = new grpc::Method<global::Google.Ads.AdManager.V1.BatchArchiveLineItemsRequest, global::Google.Ads.AdManager.V1.BatchArchiveLineItemsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchArchiveLineItems",
+        __Marshaller_google_ads_admanager_v1_BatchArchiveLineItemsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchArchiveLineItemsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchUnarchiveLineItemsRequest, global::Google.Ads.AdManager.V1.BatchUnarchiveLineItemsResponse> __Method_BatchUnarchiveLineItems = new grpc::Method<global::Google.Ads.AdManager.V1.BatchUnarchiveLineItemsRequest, global::Google.Ads.AdManager.V1.BatchUnarchiveLineItemsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchUnarchiveLineItems",
+        __Marshaller_google_ads_admanager_v1_BatchUnarchiveLineItemsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchUnarchiveLineItemsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -118,6 +282,174 @@ namespace Google.Ads.AdManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.ListLineItemsResponse> ListLineItems(global::Google.Ads.AdManager.V1.ListLineItemsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a `LineItem` object.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.LineItem> CreateLineItem(global::Google.Ads.AdManager.V1.CreateLineItemRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchCreateLineItemsResponse> BatchCreateLineItems(global::Google.Ads.AdManager.V1.BatchCreateLineItemsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a `LineItem` object.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.LineItem> UpdateLineItem(global::Google.Ads.AdManager.V1.UpdateLineItemRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch updates `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchUpdateLineItemsResponse> BatchUpdateLineItems(global::Google.Ads.AdManager.V1.BatchUpdateLineItemsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch activates `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchActivateLineItemsResponse> BatchActivateLineItems(global::Google.Ads.AdManager.V1.BatchActivateLineItemsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch pauses `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchPauseLineItemsResponse> BatchPauseLineItems(global::Google.Ads.AdManager.V1.BatchPauseLineItemsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch resumes `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchResumeLineItemsResponse> BatchResumeLineItems(global::Google.Ads.AdManager.V1.BatchResumeLineItemsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch resumes and overbooks `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchResumeAndOverbookLineItemsResponse> BatchResumeAndOverbookLineItems(global::Google.Ads.AdManager.V1.BatchResumeAndOverbookLineItemsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch deletes `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> BatchDeleteLineItems(global::Google.Ads.AdManager.V1.BatchDeleteLineItemsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch reserves `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchReserveLineItemsResponse> BatchReserveLineItems(global::Google.Ads.AdManager.V1.BatchReserveLineItemsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch reserves and overbooks `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchReserveAndOverbookLineItemsResponse> BatchReserveAndOverbookLineItems(global::Google.Ads.AdManager.V1.BatchReserveAndOverbookLineItemsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch releases `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchReleaseLineItemsResponse> BatchReleaseLineItems(global::Google.Ads.AdManager.V1.BatchReleaseLineItemsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch archives `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchArchiveLineItemsResponse> BatchArchiveLineItems(global::Google.Ads.AdManager.V1.BatchArchiveLineItemsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch unarchives `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchUnarchiveLineItemsResponse> BatchUnarchiveLineItems(global::Google.Ads.AdManager.V1.BatchUnarchiveLineItemsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -247,6 +579,678 @@ namespace Google.Ads.AdManager.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListLineItems, null, options, request);
       }
+      /// <summary>
+      /// Creates a `LineItem` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.LineItem CreateLineItem(global::Google.Ads.AdManager.V1.CreateLineItemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateLineItem(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a `LineItem` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.LineItem CreateLineItem(global::Google.Ads.AdManager.V1.CreateLineItemRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateLineItem, null, options, request);
+      }
+      /// <summary>
+      /// Creates a `LineItem` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.LineItem> CreateLineItemAsync(global::Google.Ads.AdManager.V1.CreateLineItemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateLineItemAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a `LineItem` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.LineItem> CreateLineItemAsync(global::Google.Ads.AdManager.V1.CreateLineItemRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateLineItem, null, options, request);
+      }
+      /// <summary>
+      /// Creates `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchCreateLineItemsResponse BatchCreateLineItems(global::Google.Ads.AdManager.V1.BatchCreateLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateLineItems(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchCreateLineItemsResponse BatchCreateLineItems(global::Google.Ads.AdManager.V1.BatchCreateLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchCreateLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Creates `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchCreateLineItemsResponse> BatchCreateLineItemsAsync(global::Google.Ads.AdManager.V1.BatchCreateLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateLineItemsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchCreateLineItemsResponse> BatchCreateLineItemsAsync(global::Google.Ads.AdManager.V1.BatchCreateLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchCreateLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Updates a `LineItem` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.LineItem UpdateLineItem(global::Google.Ads.AdManager.V1.UpdateLineItemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateLineItem(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a `LineItem` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.LineItem UpdateLineItem(global::Google.Ads.AdManager.V1.UpdateLineItemRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateLineItem, null, options, request);
+      }
+      /// <summary>
+      /// Updates a `LineItem` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.LineItem> UpdateLineItemAsync(global::Google.Ads.AdManager.V1.UpdateLineItemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateLineItemAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a `LineItem` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.LineItem> UpdateLineItemAsync(global::Google.Ads.AdManager.V1.UpdateLineItemRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateLineItem, null, options, request);
+      }
+      /// <summary>
+      /// Batch updates `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdateLineItemsResponse BatchUpdateLineItems(global::Google.Ads.AdManager.V1.BatchUpdateLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateLineItems(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch updates `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdateLineItemsResponse BatchUpdateLineItems(global::Google.Ads.AdManager.V1.BatchUpdateLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch updates `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdateLineItemsResponse> BatchUpdateLineItemsAsync(global::Google.Ads.AdManager.V1.BatchUpdateLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateLineItemsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch updates `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdateLineItemsResponse> BatchUpdateLineItemsAsync(global::Google.Ads.AdManager.V1.BatchUpdateLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchUpdateLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch activates `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchActivateLineItemsResponse BatchActivateLineItems(global::Google.Ads.AdManager.V1.BatchActivateLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchActivateLineItems(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch activates `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchActivateLineItemsResponse BatchActivateLineItems(global::Google.Ads.AdManager.V1.BatchActivateLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchActivateLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch activates `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchActivateLineItemsResponse> BatchActivateLineItemsAsync(global::Google.Ads.AdManager.V1.BatchActivateLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchActivateLineItemsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch activates `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchActivateLineItemsResponse> BatchActivateLineItemsAsync(global::Google.Ads.AdManager.V1.BatchActivateLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchActivateLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch pauses `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchPauseLineItemsResponse BatchPauseLineItems(global::Google.Ads.AdManager.V1.BatchPauseLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchPauseLineItems(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch pauses `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchPauseLineItemsResponse BatchPauseLineItems(global::Google.Ads.AdManager.V1.BatchPauseLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchPauseLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch pauses `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchPauseLineItemsResponse> BatchPauseLineItemsAsync(global::Google.Ads.AdManager.V1.BatchPauseLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchPauseLineItemsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch pauses `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchPauseLineItemsResponse> BatchPauseLineItemsAsync(global::Google.Ads.AdManager.V1.BatchPauseLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchPauseLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch resumes `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchResumeLineItemsResponse BatchResumeLineItems(global::Google.Ads.AdManager.V1.BatchResumeLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchResumeLineItems(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch resumes `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchResumeLineItemsResponse BatchResumeLineItems(global::Google.Ads.AdManager.V1.BatchResumeLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchResumeLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch resumes `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchResumeLineItemsResponse> BatchResumeLineItemsAsync(global::Google.Ads.AdManager.V1.BatchResumeLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchResumeLineItemsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch resumes `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchResumeLineItemsResponse> BatchResumeLineItemsAsync(global::Google.Ads.AdManager.V1.BatchResumeLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchResumeLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch resumes and overbooks `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchResumeAndOverbookLineItemsResponse BatchResumeAndOverbookLineItems(global::Google.Ads.AdManager.V1.BatchResumeAndOverbookLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchResumeAndOverbookLineItems(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch resumes and overbooks `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchResumeAndOverbookLineItemsResponse BatchResumeAndOverbookLineItems(global::Google.Ads.AdManager.V1.BatchResumeAndOverbookLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchResumeAndOverbookLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch resumes and overbooks `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchResumeAndOverbookLineItemsResponse> BatchResumeAndOverbookLineItemsAsync(global::Google.Ads.AdManager.V1.BatchResumeAndOverbookLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchResumeAndOverbookLineItemsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch resumes and overbooks `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchResumeAndOverbookLineItemsResponse> BatchResumeAndOverbookLineItemsAsync(global::Google.Ads.AdManager.V1.BatchResumeAndOverbookLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchResumeAndOverbookLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch deletes `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty BatchDeleteLineItems(global::Google.Ads.AdManager.V1.BatchDeleteLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeleteLineItems(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch deletes `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty BatchDeleteLineItems(global::Google.Ads.AdManager.V1.BatchDeleteLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchDeleteLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch deletes `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> BatchDeleteLineItemsAsync(global::Google.Ads.AdManager.V1.BatchDeleteLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeleteLineItemsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch deletes `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> BatchDeleteLineItemsAsync(global::Google.Ads.AdManager.V1.BatchDeleteLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchDeleteLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch reserves `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchReserveLineItemsResponse BatchReserveLineItems(global::Google.Ads.AdManager.V1.BatchReserveLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchReserveLineItems(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch reserves `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchReserveLineItemsResponse BatchReserveLineItems(global::Google.Ads.AdManager.V1.BatchReserveLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchReserveLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch reserves `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchReserveLineItemsResponse> BatchReserveLineItemsAsync(global::Google.Ads.AdManager.V1.BatchReserveLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchReserveLineItemsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch reserves `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchReserveLineItemsResponse> BatchReserveLineItemsAsync(global::Google.Ads.AdManager.V1.BatchReserveLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchReserveLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch reserves and overbooks `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchReserveAndOverbookLineItemsResponse BatchReserveAndOverbookLineItems(global::Google.Ads.AdManager.V1.BatchReserveAndOverbookLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchReserveAndOverbookLineItems(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch reserves and overbooks `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchReserveAndOverbookLineItemsResponse BatchReserveAndOverbookLineItems(global::Google.Ads.AdManager.V1.BatchReserveAndOverbookLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchReserveAndOverbookLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch reserves and overbooks `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchReserveAndOverbookLineItemsResponse> BatchReserveAndOverbookLineItemsAsync(global::Google.Ads.AdManager.V1.BatchReserveAndOverbookLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchReserveAndOverbookLineItemsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch reserves and overbooks `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchReserveAndOverbookLineItemsResponse> BatchReserveAndOverbookLineItemsAsync(global::Google.Ads.AdManager.V1.BatchReserveAndOverbookLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchReserveAndOverbookLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch releases `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchReleaseLineItemsResponse BatchReleaseLineItems(global::Google.Ads.AdManager.V1.BatchReleaseLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchReleaseLineItems(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch releases `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchReleaseLineItemsResponse BatchReleaseLineItems(global::Google.Ads.AdManager.V1.BatchReleaseLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchReleaseLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch releases `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchReleaseLineItemsResponse> BatchReleaseLineItemsAsync(global::Google.Ads.AdManager.V1.BatchReleaseLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchReleaseLineItemsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch releases `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchReleaseLineItemsResponse> BatchReleaseLineItemsAsync(global::Google.Ads.AdManager.V1.BatchReleaseLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchReleaseLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch archives `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchArchiveLineItemsResponse BatchArchiveLineItems(global::Google.Ads.AdManager.V1.BatchArchiveLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchArchiveLineItems(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch archives `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchArchiveLineItemsResponse BatchArchiveLineItems(global::Google.Ads.AdManager.V1.BatchArchiveLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchArchiveLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch archives `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchArchiveLineItemsResponse> BatchArchiveLineItemsAsync(global::Google.Ads.AdManager.V1.BatchArchiveLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchArchiveLineItemsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch archives `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchArchiveLineItemsResponse> BatchArchiveLineItemsAsync(global::Google.Ads.AdManager.V1.BatchArchiveLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchArchiveLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch unarchives `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUnarchiveLineItemsResponse BatchUnarchiveLineItems(global::Google.Ads.AdManager.V1.BatchUnarchiveLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUnarchiveLineItems(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch unarchives `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUnarchiveLineItemsResponse BatchUnarchiveLineItems(global::Google.Ads.AdManager.V1.BatchUnarchiveLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchUnarchiveLineItems, null, options, request);
+      }
+      /// <summary>
+      /// Batch unarchives `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUnarchiveLineItemsResponse> BatchUnarchiveLineItemsAsync(global::Google.Ads.AdManager.V1.BatchUnarchiveLineItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUnarchiveLineItemsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch unarchives `LineItem` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUnarchiveLineItemsResponse> BatchUnarchiveLineItemsAsync(global::Google.Ads.AdManager.V1.BatchUnarchiveLineItemsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchUnarchiveLineItems, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override LineItemServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -262,7 +1266,21 @@ namespace Google.Ads.AdManager.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetLineItem, serviceImpl.GetLineItem)
-          .AddMethod(__Method_ListLineItems, serviceImpl.ListLineItems).Build();
+          .AddMethod(__Method_ListLineItems, serviceImpl.ListLineItems)
+          .AddMethod(__Method_CreateLineItem, serviceImpl.CreateLineItem)
+          .AddMethod(__Method_BatchCreateLineItems, serviceImpl.BatchCreateLineItems)
+          .AddMethod(__Method_UpdateLineItem, serviceImpl.UpdateLineItem)
+          .AddMethod(__Method_BatchUpdateLineItems, serviceImpl.BatchUpdateLineItems)
+          .AddMethod(__Method_BatchActivateLineItems, serviceImpl.BatchActivateLineItems)
+          .AddMethod(__Method_BatchPauseLineItems, serviceImpl.BatchPauseLineItems)
+          .AddMethod(__Method_BatchResumeLineItems, serviceImpl.BatchResumeLineItems)
+          .AddMethod(__Method_BatchResumeAndOverbookLineItems, serviceImpl.BatchResumeAndOverbookLineItems)
+          .AddMethod(__Method_BatchDeleteLineItems, serviceImpl.BatchDeleteLineItems)
+          .AddMethod(__Method_BatchReserveLineItems, serviceImpl.BatchReserveLineItems)
+          .AddMethod(__Method_BatchReserveAndOverbookLineItems, serviceImpl.BatchReserveAndOverbookLineItems)
+          .AddMethod(__Method_BatchReleaseLineItems, serviceImpl.BatchReleaseLineItems)
+          .AddMethod(__Method_BatchArchiveLineItems, serviceImpl.BatchArchiveLineItems)
+          .AddMethod(__Method_BatchUnarchiveLineItems, serviceImpl.BatchUnarchiveLineItems).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -274,6 +1292,20 @@ namespace Google.Ads.AdManager.V1 {
     {
       serviceBinder.AddMethod(__Method_GetLineItem, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.GetLineItemRequest, global::Google.Ads.AdManager.V1.LineItem>(serviceImpl.GetLineItem));
       serviceBinder.AddMethod(__Method_ListLineItems, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.ListLineItemsRequest, global::Google.Ads.AdManager.V1.ListLineItemsResponse>(serviceImpl.ListLineItems));
+      serviceBinder.AddMethod(__Method_CreateLineItem, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.CreateLineItemRequest, global::Google.Ads.AdManager.V1.LineItem>(serviceImpl.CreateLineItem));
+      serviceBinder.AddMethod(__Method_BatchCreateLineItems, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchCreateLineItemsRequest, global::Google.Ads.AdManager.V1.BatchCreateLineItemsResponse>(serviceImpl.BatchCreateLineItems));
+      serviceBinder.AddMethod(__Method_UpdateLineItem, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.UpdateLineItemRequest, global::Google.Ads.AdManager.V1.LineItem>(serviceImpl.UpdateLineItem));
+      serviceBinder.AddMethod(__Method_BatchUpdateLineItems, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchUpdateLineItemsRequest, global::Google.Ads.AdManager.V1.BatchUpdateLineItemsResponse>(serviceImpl.BatchUpdateLineItems));
+      serviceBinder.AddMethod(__Method_BatchActivateLineItems, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchActivateLineItemsRequest, global::Google.Ads.AdManager.V1.BatchActivateLineItemsResponse>(serviceImpl.BatchActivateLineItems));
+      serviceBinder.AddMethod(__Method_BatchPauseLineItems, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchPauseLineItemsRequest, global::Google.Ads.AdManager.V1.BatchPauseLineItemsResponse>(serviceImpl.BatchPauseLineItems));
+      serviceBinder.AddMethod(__Method_BatchResumeLineItems, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchResumeLineItemsRequest, global::Google.Ads.AdManager.V1.BatchResumeLineItemsResponse>(serviceImpl.BatchResumeLineItems));
+      serviceBinder.AddMethod(__Method_BatchResumeAndOverbookLineItems, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchResumeAndOverbookLineItemsRequest, global::Google.Ads.AdManager.V1.BatchResumeAndOverbookLineItemsResponse>(serviceImpl.BatchResumeAndOverbookLineItems));
+      serviceBinder.AddMethod(__Method_BatchDeleteLineItems, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchDeleteLineItemsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.BatchDeleteLineItems));
+      serviceBinder.AddMethod(__Method_BatchReserveLineItems, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchReserveLineItemsRequest, global::Google.Ads.AdManager.V1.BatchReserveLineItemsResponse>(serviceImpl.BatchReserveLineItems));
+      serviceBinder.AddMethod(__Method_BatchReserveAndOverbookLineItems, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchReserveAndOverbookLineItemsRequest, global::Google.Ads.AdManager.V1.BatchReserveAndOverbookLineItemsResponse>(serviceImpl.BatchReserveAndOverbookLineItems));
+      serviceBinder.AddMethod(__Method_BatchReleaseLineItems, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchReleaseLineItemsRequest, global::Google.Ads.AdManager.V1.BatchReleaseLineItemsResponse>(serviceImpl.BatchReleaseLineItems));
+      serviceBinder.AddMethod(__Method_BatchArchiveLineItems, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchArchiveLineItemsRequest, global::Google.Ads.AdManager.V1.BatchArchiveLineItemsResponse>(serviceImpl.BatchArchiveLineItems));
+      serviceBinder.AddMethod(__Method_BatchUnarchiveLineItems, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchUnarchiveLineItemsRequest, global::Google.Ads.AdManager.V1.BatchUnarchiveLineItemsResponse>(serviceImpl.BatchUnarchiveLineItems));
     }
 
   }

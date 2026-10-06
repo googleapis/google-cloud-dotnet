@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     using Google.Ads.AdManager.V1;
     using Google.Api.Gax;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
@@ -394,6 +395,99 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateNativeStyle</summary>
+        public void CreateNativeStyleRequestObject()
+        {
+            // Snippet: CreateNativeStyle(CreateNativeStyleRequest, CallSettings)
+            // Create client
+            NativeStyleServiceClient nativeStyleServiceClient = NativeStyleServiceClient.Create();
+            // Initialize request argument(s)
+            CreateNativeStyleRequest request = new CreateNativeStyleRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                NativeStyle = new NativeStyle(),
+            };
+            // Make the request
+            NativeStyle response = nativeStyleServiceClient.CreateNativeStyle(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNativeStyleAsync</summary>
+        public async Task CreateNativeStyleRequestObjectAsync()
+        {
+            // Snippet: CreateNativeStyleAsync(CreateNativeStyleRequest, CallSettings)
+            // Additional: CreateNativeStyleAsync(CreateNativeStyleRequest, CancellationToken)
+            // Create client
+            NativeStyleServiceClient nativeStyleServiceClient = await NativeStyleServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateNativeStyleRequest request = new CreateNativeStyleRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                NativeStyle = new NativeStyle(),
+            };
+            // Make the request
+            NativeStyle response = await nativeStyleServiceClient.CreateNativeStyleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNativeStyle</summary>
+        public void CreateNativeStyle()
+        {
+            // Snippet: CreateNativeStyle(string, NativeStyle, CallSettings)
+            // Create client
+            NativeStyleServiceClient nativeStyleServiceClient = NativeStyleServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            NativeStyle nativeStyle = new NativeStyle();
+            // Make the request
+            NativeStyle response = nativeStyleServiceClient.CreateNativeStyle(parent, nativeStyle);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNativeStyleAsync</summary>
+        public async Task CreateNativeStyleAsync()
+        {
+            // Snippet: CreateNativeStyleAsync(string, NativeStyle, CallSettings)
+            // Additional: CreateNativeStyleAsync(string, NativeStyle, CancellationToken)
+            // Create client
+            NativeStyleServiceClient nativeStyleServiceClient = await NativeStyleServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            NativeStyle nativeStyle = new NativeStyle();
+            // Make the request
+            NativeStyle response = await nativeStyleServiceClient.CreateNativeStyleAsync(parent, nativeStyle);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNativeStyle</summary>
+        public void CreateNativeStyleResourceNames()
+        {
+            // Snippet: CreateNativeStyle(NetworkName, NativeStyle, CallSettings)
+            // Create client
+            NativeStyleServiceClient nativeStyleServiceClient = NativeStyleServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            NativeStyle nativeStyle = new NativeStyle();
+            // Make the request
+            NativeStyle response = nativeStyleServiceClient.CreateNativeStyle(parent, nativeStyle);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNativeStyleAsync</summary>
+        public async Task CreateNativeStyleResourceNamesAsync()
+        {
+            // Snippet: CreateNativeStyleAsync(NetworkName, NativeStyle, CallSettings)
+            // Additional: CreateNativeStyleAsync(NetworkName, NativeStyle, CancellationToken)
+            // Create client
+            NativeStyleServiceClient nativeStyleServiceClient = await NativeStyleServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            NativeStyle nativeStyle = new NativeStyle();
+            // Make the request
+            NativeStyle response = await nativeStyleServiceClient.CreateNativeStyleAsync(parent, nativeStyle);
+            // End snippet
+        }
+
         /// <summary>Snippet for BatchCreateNativeStyles</summary>
         public void BatchCreateNativeStylesRequestObject()
         {
@@ -502,6 +596,70 @@ namespace GoogleCSharpSnippets
             };
             // Make the request
             BatchCreateNativeStylesResponse response = await nativeStyleServiceClient.BatchCreateNativeStylesAsync(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNativeStyle</summary>
+        public void UpdateNativeStyleRequestObject()
+        {
+            // Snippet: UpdateNativeStyle(UpdateNativeStyleRequest, CallSettings)
+            // Create client
+            NativeStyleServiceClient nativeStyleServiceClient = NativeStyleServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateNativeStyleRequest request = new UpdateNativeStyleRequest
+            {
+                NativeStyle = new NativeStyle(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            NativeStyle response = nativeStyleServiceClient.UpdateNativeStyle(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNativeStyleAsync</summary>
+        public async Task UpdateNativeStyleRequestObjectAsync()
+        {
+            // Snippet: UpdateNativeStyleAsync(UpdateNativeStyleRequest, CallSettings)
+            // Additional: UpdateNativeStyleAsync(UpdateNativeStyleRequest, CancellationToken)
+            // Create client
+            NativeStyleServiceClient nativeStyleServiceClient = await NativeStyleServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateNativeStyleRequest request = new UpdateNativeStyleRequest
+            {
+                NativeStyle = new NativeStyle(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            NativeStyle response = await nativeStyleServiceClient.UpdateNativeStyleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNativeStyle</summary>
+        public void UpdateNativeStyle()
+        {
+            // Snippet: UpdateNativeStyle(NativeStyle, FieldMask, CallSettings)
+            // Create client
+            NativeStyleServiceClient nativeStyleServiceClient = NativeStyleServiceClient.Create();
+            // Initialize request argument(s)
+            NativeStyle nativeStyle = new NativeStyle();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            NativeStyle response = nativeStyleServiceClient.UpdateNativeStyle(nativeStyle, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNativeStyleAsync</summary>
+        public async Task UpdateNativeStyleAsync()
+        {
+            // Snippet: UpdateNativeStyleAsync(NativeStyle, FieldMask, CallSettings)
+            // Additional: UpdateNativeStyleAsync(NativeStyle, FieldMask, CancellationToken)
+            // Create client
+            NativeStyleServiceClient nativeStyleServiceClient = await NativeStyleServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NativeStyle nativeStyle = new NativeStyle();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            NativeStyle response = await nativeStyleServiceClient.UpdateNativeStyleAsync(nativeStyle, updateMask);
             // End snippet
         }
 

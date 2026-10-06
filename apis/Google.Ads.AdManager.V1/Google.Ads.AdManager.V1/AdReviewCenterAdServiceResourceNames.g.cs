@@ -70,4 +70,42 @@ namespace Google.Ads.AdManager.V1
             get => new gax::ResourceNameList<AdReviewCenterAdName>(Names, s => string.IsNullOrEmpty(s) ? null : AdReviewCenterAdName.Parse(s, allowUnparsed: true));
         }
     }
+
+    public partial class FetchAdReviewCenterCustomLabelsRequest
+    {
+        /// <summary>
+        /// <see cref="WebPropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public WebPropertyName ParentAsWebPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : WebPropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchApplyAdReviewCenterCustomLabelsRequest
+    {
+        /// <summary>
+        /// <see cref="WebPropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public WebPropertyName ParentAsWebPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : WebPropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class BatchLabelAction
+            {
+                /// <summary>
+                /// <see cref="AdReviewCenterAdName"/>-typed view over the <see cref="Names"/> resource name property.
+                /// </summary>
+                public gax::ResourceNameList<AdReviewCenterAdName> AdReviewCenterAdNames
+                {
+                    get => new gax::ResourceNameList<AdReviewCenterAdName>(Names, s => string.IsNullOrEmpty(s) ? null : AdReviewCenterAdName.Parse(s, allowUnparsed: true));
+                }
+            }
+        }
+    }
 }

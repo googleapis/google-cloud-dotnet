@@ -41,6 +41,18 @@ namespace GoogleCSharpSnippets
                 DateTimeRange = new Interval(),
                 SearchText = { "", },
                 BuyerAccountId = { 0L, },
+                AdResponseId = { "", },
+                AdvertiserDisplayNames = { "", },
+                LanguageCodes = { "", },
+                RegionCodes = { "", },
+                AdTypes =
+                {
+                    ArcCreativeFormatEnum.Types.ArcCreativeFormat.Unspecified,
+                },
+                AdvertiserApps = { "", },
+                PublisherDomains = { "", },
+                NewInLastDays = 0,
+                LabelIds = { "", },
             };
             // Make the request
             PagedEnumerable<SearchAdReviewCenterAdsResponse, AdReviewCenterAd> response = adReviewCenterAdServiceClient.SearchAdReviewCenterAds(request);
@@ -94,6 +106,18 @@ namespace GoogleCSharpSnippets
                 DateTimeRange = new Interval(),
                 SearchText = { "", },
                 BuyerAccountId = { 0L, },
+                AdResponseId = { "", },
+                AdvertiserDisplayNames = { "", },
+                LanguageCodes = { "", },
+                RegionCodes = { "", },
+                AdTypes =
+                {
+                    ArcCreativeFormatEnum.Types.ArcCreativeFormat.Unspecified,
+                },
+                AdvertiserApps = { "", },
+                PublisherDomains = { "", },
+                NewInLastDays = 0,
+                LabelIds = { "", },
             };
             // Make the request
             PagedAsyncEnumerable<SearchAdReviewCenterAdsResponse, AdReviewCenterAd> response = adReviewCenterAdServiceClient.SearchAdReviewCenterAdsAsync(request);
@@ -691,6 +715,184 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 BatchBlockAdReviewCenterAdsResponse retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchAdReviewCenterCustomLabels</summary>
+        public void FetchAdReviewCenterCustomLabelsRequestObject()
+        {
+            // Snippet: FetchAdReviewCenterCustomLabels(FetchAdReviewCenterCustomLabelsRequest, CallSettings)
+            // Create client
+            AdReviewCenterAdServiceClient adReviewCenterAdServiceClient = AdReviewCenterAdServiceClient.Create();
+            // Initialize request argument(s)
+            FetchAdReviewCenterCustomLabelsRequest request = new FetchAdReviewCenterCustomLabelsRequest
+            {
+                ParentAsWebPropertyName = WebPropertyName.FromNetworkCodeWebProperty("[NETWORK_CODE]", "[WEB_PROPERTY]"),
+            };
+            // Make the request
+            FetchAdReviewCenterCustomLabelsResponse response = adReviewCenterAdServiceClient.FetchAdReviewCenterCustomLabels(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchAdReviewCenterCustomLabelsAsync</summary>
+        public async Task FetchAdReviewCenterCustomLabelsRequestObjectAsync()
+        {
+            // Snippet: FetchAdReviewCenterCustomLabelsAsync(FetchAdReviewCenterCustomLabelsRequest, CallSettings)
+            // Additional: FetchAdReviewCenterCustomLabelsAsync(FetchAdReviewCenterCustomLabelsRequest, CancellationToken)
+            // Create client
+            AdReviewCenterAdServiceClient adReviewCenterAdServiceClient = await AdReviewCenterAdServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchAdReviewCenterCustomLabelsRequest request = new FetchAdReviewCenterCustomLabelsRequest
+            {
+                ParentAsWebPropertyName = WebPropertyName.FromNetworkCodeWebProperty("[NETWORK_CODE]", "[WEB_PROPERTY]"),
+            };
+            // Make the request
+            FetchAdReviewCenterCustomLabelsResponse response = await adReviewCenterAdServiceClient.FetchAdReviewCenterCustomLabelsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchAdReviewCenterCustomLabels</summary>
+        public void FetchAdReviewCenterCustomLabels()
+        {
+            // Snippet: FetchAdReviewCenterCustomLabels(string, CallSettings)
+            // Create client
+            AdReviewCenterAdServiceClient adReviewCenterAdServiceClient = AdReviewCenterAdServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]/webProperties/[WEB_PROPERTY]";
+            // Make the request
+            FetchAdReviewCenterCustomLabelsResponse response = adReviewCenterAdServiceClient.FetchAdReviewCenterCustomLabels(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchAdReviewCenterCustomLabelsAsync</summary>
+        public async Task FetchAdReviewCenterCustomLabelsAsync()
+        {
+            // Snippet: FetchAdReviewCenterCustomLabelsAsync(string, CallSettings)
+            // Additional: FetchAdReviewCenterCustomLabelsAsync(string, CancellationToken)
+            // Create client
+            AdReviewCenterAdServiceClient adReviewCenterAdServiceClient = await AdReviewCenterAdServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]/webProperties/[WEB_PROPERTY]";
+            // Make the request
+            FetchAdReviewCenterCustomLabelsResponse response = await adReviewCenterAdServiceClient.FetchAdReviewCenterCustomLabelsAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchAdReviewCenterCustomLabels</summary>
+        public void FetchAdReviewCenterCustomLabelsResourceNames()
+        {
+            // Snippet: FetchAdReviewCenterCustomLabels(WebPropertyName, CallSettings)
+            // Create client
+            AdReviewCenterAdServiceClient adReviewCenterAdServiceClient = AdReviewCenterAdServiceClient.Create();
+            // Initialize request argument(s)
+            WebPropertyName parent = WebPropertyName.FromNetworkCodeWebProperty("[NETWORK_CODE]", "[WEB_PROPERTY]");
+            // Make the request
+            FetchAdReviewCenterCustomLabelsResponse response = adReviewCenterAdServiceClient.FetchAdReviewCenterCustomLabels(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchAdReviewCenterCustomLabelsAsync</summary>
+        public async Task FetchAdReviewCenterCustomLabelsResourceNamesAsync()
+        {
+            // Snippet: FetchAdReviewCenterCustomLabelsAsync(WebPropertyName, CallSettings)
+            // Additional: FetchAdReviewCenterCustomLabelsAsync(WebPropertyName, CancellationToken)
+            // Create client
+            AdReviewCenterAdServiceClient adReviewCenterAdServiceClient = await AdReviewCenterAdServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            WebPropertyName parent = WebPropertyName.FromNetworkCodeWebProperty("[NETWORK_CODE]", "[WEB_PROPERTY]");
+            // Make the request
+            FetchAdReviewCenterCustomLabelsResponse response = await adReviewCenterAdServiceClient.FetchAdReviewCenterCustomLabelsAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchApplyAdReviewCenterCustomLabels</summary>
+        public void BatchApplyAdReviewCenterCustomLabelsRequestObject()
+        {
+            // Snippet: BatchApplyAdReviewCenterCustomLabels(BatchApplyAdReviewCenterCustomLabelsRequest, CallSettings)
+            // Create client
+            AdReviewCenterAdServiceClient adReviewCenterAdServiceClient = AdReviewCenterAdServiceClient.Create();
+            // Initialize request argument(s)
+            BatchApplyAdReviewCenterCustomLabelsRequest request = new BatchApplyAdReviewCenterCustomLabelsRequest
+            {
+                ParentAsWebPropertyName = WebPropertyName.FromNetworkCodeWebProperty("[NETWORK_CODE]", "[WEB_PROPERTY]"),
+                AddLabels = new BatchApplyAdReviewCenterCustomLabelsRequest.Types.BatchLabelAction(),
+                RemoveLabels = new BatchApplyAdReviewCenterCustomLabelsRequest.Types.BatchLabelAction(),
+            };
+            // Make the request
+            BatchApplyAdReviewCenterCustomLabelsResponse response = adReviewCenterAdServiceClient.BatchApplyAdReviewCenterCustomLabels(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchApplyAdReviewCenterCustomLabelsAsync</summary>
+        public async Task BatchApplyAdReviewCenterCustomLabelsRequestObjectAsync()
+        {
+            // Snippet: BatchApplyAdReviewCenterCustomLabelsAsync(BatchApplyAdReviewCenterCustomLabelsRequest, CallSettings)
+            // Additional: BatchApplyAdReviewCenterCustomLabelsAsync(BatchApplyAdReviewCenterCustomLabelsRequest, CancellationToken)
+            // Create client
+            AdReviewCenterAdServiceClient adReviewCenterAdServiceClient = await AdReviewCenterAdServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchApplyAdReviewCenterCustomLabelsRequest request = new BatchApplyAdReviewCenterCustomLabelsRequest
+            {
+                ParentAsWebPropertyName = WebPropertyName.FromNetworkCodeWebProperty("[NETWORK_CODE]", "[WEB_PROPERTY]"),
+                AddLabels = new BatchApplyAdReviewCenterCustomLabelsRequest.Types.BatchLabelAction(),
+                RemoveLabels = new BatchApplyAdReviewCenterCustomLabelsRequest.Types.BatchLabelAction(),
+            };
+            // Make the request
+            BatchApplyAdReviewCenterCustomLabelsResponse response = await adReviewCenterAdServiceClient.BatchApplyAdReviewCenterCustomLabelsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchApplyAdReviewCenterCustomLabels</summary>
+        public void BatchApplyAdReviewCenterCustomLabels()
+        {
+            // Snippet: BatchApplyAdReviewCenterCustomLabels(string, CallSettings)
+            // Create client
+            AdReviewCenterAdServiceClient adReviewCenterAdServiceClient = AdReviewCenterAdServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]/webProperties/[WEB_PROPERTY]";
+            // Make the request
+            BatchApplyAdReviewCenterCustomLabelsResponse response = adReviewCenterAdServiceClient.BatchApplyAdReviewCenterCustomLabels(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchApplyAdReviewCenterCustomLabelsAsync</summary>
+        public async Task BatchApplyAdReviewCenterCustomLabelsAsync()
+        {
+            // Snippet: BatchApplyAdReviewCenterCustomLabelsAsync(string, CallSettings)
+            // Additional: BatchApplyAdReviewCenterCustomLabelsAsync(string, CancellationToken)
+            // Create client
+            AdReviewCenterAdServiceClient adReviewCenterAdServiceClient = await AdReviewCenterAdServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]/webProperties/[WEB_PROPERTY]";
+            // Make the request
+            BatchApplyAdReviewCenterCustomLabelsResponse response = await adReviewCenterAdServiceClient.BatchApplyAdReviewCenterCustomLabelsAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchApplyAdReviewCenterCustomLabels</summary>
+        public void BatchApplyAdReviewCenterCustomLabelsResourceNames()
+        {
+            // Snippet: BatchApplyAdReviewCenterCustomLabels(WebPropertyName, CallSettings)
+            // Create client
+            AdReviewCenterAdServiceClient adReviewCenterAdServiceClient = AdReviewCenterAdServiceClient.Create();
+            // Initialize request argument(s)
+            WebPropertyName parent = WebPropertyName.FromNetworkCodeWebProperty("[NETWORK_CODE]", "[WEB_PROPERTY]");
+            // Make the request
+            BatchApplyAdReviewCenterCustomLabelsResponse response = adReviewCenterAdServiceClient.BatchApplyAdReviewCenterCustomLabels(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchApplyAdReviewCenterCustomLabelsAsync</summary>
+        public async Task BatchApplyAdReviewCenterCustomLabelsResourceNamesAsync()
+        {
+            // Snippet: BatchApplyAdReviewCenterCustomLabelsAsync(WebPropertyName, CallSettings)
+            // Additional: BatchApplyAdReviewCenterCustomLabelsAsync(WebPropertyName, CancellationToken)
+            // Create client
+            AdReviewCenterAdServiceClient adReviewCenterAdServiceClient = await AdReviewCenterAdServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            WebPropertyName parent = WebPropertyName.FromNetworkCodeWebProperty("[NETWORK_CODE]", "[WEB_PROPERTY]");
+            // Make the request
+            BatchApplyAdReviewCenterCustomLabelsResponse response = await adReviewCenterAdServiceClient.BatchApplyAdReviewCenterCustomLabelsAsync(parent);
             // End snippet
         }
     }

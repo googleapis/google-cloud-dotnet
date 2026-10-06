@@ -46,6 +46,18 @@ namespace GoogleCSharpSnippets
                 DateTimeRange = new Interval(),
                 SearchText = { "", },
                 BuyerAccountId = { 0L, },
+                AdResponseId = { "", },
+                AdvertiserDisplayNames = { "", },
+                LanguageCodes = { "", },
+                RegionCodes = { "", },
+                AdTypes =
+                {
+                    ArcCreativeFormatEnum.Types.ArcCreativeFormat.Unspecified,
+                },
+                AdvertiserApps = { "", },
+                PublisherDomains = { "", },
+                NewInLastDays = 0,
+                LabelIds = { "", },
             };
             // Make the request
             PagedAsyncEnumerable<SearchAdReviewCenterAdsResponse, AdReviewCenterAd> response = adReviewCenterAdServiceClient.SearchAdReviewCenterAdsAsync(request);

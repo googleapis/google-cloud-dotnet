@@ -489,7 +489,7 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s. Format:
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher]. Format:
         /// `networks/{network_code}`
         /// </param>
         /// <param name="pageToken">
@@ -524,7 +524,7 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s. Format:
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher]. Format:
         /// `networks/{network_code}`
         /// </param>
         /// <param name="pageToken">
@@ -559,7 +559,7 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s. Format:
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher]. Format:
         /// `networks/{network_code}`
         /// </param>
         /// <param name="pageToken">
@@ -594,7 +594,7 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s. Format:
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher]. Format:
         /// `networks/{network_code}`
         /// </param>
         /// <param name="pageToken">
@@ -801,10 +801,9 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be created.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the CreateChildPublisherRequest must match this
-        /// field.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be created.
+        /// Format: `networks/{network_code}` The parent field in the
+        /// CreateChildPublisherRequest must match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
@@ -827,10 +826,9 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be created.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the CreateChildPublisherRequest must match this
-        /// field.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be created.
+        /// Format: `networks/{network_code}` The parent field in the
+        /// CreateChildPublisherRequest must match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
@@ -853,10 +851,9 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be created.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the CreateChildPublisherRequest must match this
-        /// field.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be created.
+        /// Format: `networks/{network_code}` The parent field in the
+        /// CreateChildPublisherRequest must match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
@@ -872,10 +869,9 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be created.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the CreateChildPublisherRequest must match this
-        /// field.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be created.
+        /// Format: `networks/{network_code}` The parent field in the
+        /// CreateChildPublisherRequest must match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
@@ -898,10 +894,9 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be created.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the CreateChildPublisherRequest must match this
-        /// field.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be created.
+        /// Format: `networks/{network_code}` The parent field in the
+        /// CreateChildPublisherRequest must match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
@@ -924,10 +919,9 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be created.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the CreateChildPublisherRequest must match this
-        /// field.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be created.
+        /// Format: `networks/{network_code}` The parent field in the
+        /// CreateChildPublisherRequest must match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
@@ -1066,10 +1060,9 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be updated.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the UpdateChildPublisherRequest must match this
-        /// field.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be updated.
+        /// Format: `networks/{network_code}` The parent field in the
+        /// UpdateChildPublisherRequest must match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
@@ -1093,10 +1086,9 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be updated.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the UpdateChildPublisherRequest must match this
-        /// field.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be updated.
+        /// Format: `networks/{network_code}` The parent field in the
+        /// UpdateChildPublisherRequest must match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
@@ -1120,10 +1112,9 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be updated.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the UpdateChildPublisherRequest must match this
-        /// field.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be updated.
+        /// Format: `networks/{network_code}` The parent field in the
+        /// UpdateChildPublisherRequest must match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
@@ -1140,10 +1131,9 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be updated.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the UpdateChildPublisherRequest must match this
-        /// field.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be updated.
+        /// Format: `networks/{network_code}` The parent field in the
+        /// UpdateChildPublisherRequest must match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
@@ -1167,10 +1157,9 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be updated.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the UpdateChildPublisherRequest must match this
-        /// field.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be updated.
+        /// Format: `networks/{network_code}` The parent field in the
+        /// UpdateChildPublisherRequest must match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
@@ -1194,10 +1183,9 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be updated.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the UpdateChildPublisherRequest must match this
-        /// field.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be updated.
+        /// Format: `networks/{network_code}` The parent field in the
+        /// UpdateChildPublisherRequest must match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
@@ -1267,7 +1255,7 @@ namespace Google.Ads.AdManager.V1
         /// </param>
         /// <param name="names">
         /// Required. Resource names of the
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that should be
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] that should be
         /// resent invitation emails. Format:
         /// `networks/{network_code}/childPublisher/{child_publisher_id}`
         /// </param>
@@ -1297,7 +1285,7 @@ namespace Google.Ads.AdManager.V1
         /// </param>
         /// <param name="names">
         /// Required. Resource names of the
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that should be
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] that should be
         /// resent invitation emails. Format:
         /// `networks/{network_code}/childPublisher/{child_publisher_id}`
         /// </param>
@@ -1327,7 +1315,7 @@ namespace Google.Ads.AdManager.V1
         /// </param>
         /// <param name="names">
         /// Required. Resource names of the
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that should be
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] that should be
         /// resent invitation emails. Format:
         /// `networks/{network_code}/childPublisher/{child_publisher_id}`
         /// </param>
@@ -1350,7 +1338,7 @@ namespace Google.Ads.AdManager.V1
         /// </param>
         /// <param name="names">
         /// Required. Resource names of the
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that should be
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] that should be
         /// resent invitation emails. Format:
         /// `networks/{network_code}/childPublisher/{child_publisher_id}`
         /// </param>
@@ -1380,7 +1368,7 @@ namespace Google.Ads.AdManager.V1
         /// </param>
         /// <param name="names">
         /// Required. Resource names of the
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that should be
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] that should be
         /// resent invitation emails. Format:
         /// `networks/{network_code}/childPublisher/{child_publisher_id}`
         /// </param>
@@ -1410,7 +1398,7 @@ namespace Google.Ads.AdManager.V1
         /// </param>
         /// <param name="names">
         /// Required. Resource names of the
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that should be
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] that should be
         /// resent invitation emails. Format:
         /// `networks/{network_code}/childPublisher/{child_publisher_id}`
         /// </param>
@@ -1632,7 +1620,7 @@ namespace Google.Ads.AdManager.V1
         /// associated with an Ad Manager network.
         /// 
         /// To sever the relationship from the parent publisher's side, use
-        /// [BatchWithdrawChildPublisher][].
+        /// `BatchWithdrawChildPublishers`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1654,7 +1642,7 @@ namespace Google.Ads.AdManager.V1
         /// associated with an Ad Manager network.
         /// 
         /// To sever the relationship from the parent publisher's side, use
-        /// [BatchWithdrawChildPublisher][].
+        /// `BatchWithdrawChildPublishers`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1676,7 +1664,7 @@ namespace Google.Ads.AdManager.V1
         /// associated with an Ad Manager network.
         /// 
         /// To sever the relationship from the parent publisher's side, use
-        /// [BatchWithdrawChildPublisher][].
+        /// `BatchWithdrawChildPublishers`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1698,14 +1686,14 @@ namespace Google.Ads.AdManager.V1
         /// associated with an Ad Manager network.
         /// 
         /// To sever the relationship from the parent publisher's side, use
-        /// [BatchWithdrawChildPublisher][].
+        /// `BatchWithdrawChildPublishers`.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `networks/{network_code}`
         /// </param>
         /// <param name="names">
         /// Required. Resource names of the
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to reject.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] to reject.
         /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1734,14 +1722,14 @@ namespace Google.Ads.AdManager.V1
         /// associated with an Ad Manager network.
         /// 
         /// To sever the relationship from the parent publisher's side, use
-        /// [BatchWithdrawChildPublisher][].
+        /// `BatchWithdrawChildPublishers`.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `networks/{network_code}`
         /// </param>
         /// <param name="names">
         /// Required. Resource names of the
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to reject.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] to reject.
         /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1770,14 +1758,14 @@ namespace Google.Ads.AdManager.V1
         /// associated with an Ad Manager network.
         /// 
         /// To sever the relationship from the parent publisher's side, use
-        /// [BatchWithdrawChildPublisher][].
+        /// `BatchWithdrawChildPublishers`.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `networks/{network_code}`
         /// </param>
         /// <param name="names">
         /// Required. Resource names of the
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to reject.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] to reject.
         /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1799,14 +1787,14 @@ namespace Google.Ads.AdManager.V1
         /// associated with an Ad Manager network.
         /// 
         /// To sever the relationship from the parent publisher's side, use
-        /// [BatchWithdrawChildPublisher][].
+        /// `BatchWithdrawChildPublishers`.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `networks/{network_code}`
         /// </param>
         /// <param name="names">
         /// Required. Resource names of the
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to reject.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] to reject.
         /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1835,14 +1823,14 @@ namespace Google.Ads.AdManager.V1
         /// associated with an Ad Manager network.
         /// 
         /// To sever the relationship from the parent publisher's side, use
-        /// [BatchWithdrawChildPublisher][].
+        /// `BatchWithdrawChildPublishers`.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `networks/{network_code}`
         /// </param>
         /// <param name="names">
         /// Required. Resource names of the
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to reject.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] to reject.
         /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1871,14 +1859,14 @@ namespace Google.Ads.AdManager.V1
         /// associated with an Ad Manager network.
         /// 
         /// To sever the relationship from the parent publisher's side, use
-        /// [BatchWithdrawChildPublisher][].
+        /// `BatchWithdrawChildPublishers`.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `networks/{network_code}`
         /// </param>
         /// <param name="names">
         /// Required. Resource names of the
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to reject.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] to reject.
         /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1887,12 +1875,12 @@ namespace Google.Ads.AdManager.V1
             BatchRejectChildPublishersAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// Batch withdraws [ChildPublishers][google.ads.admanager.v1.ChildPublisher].
         /// 
         /// Only expired, pending, and accepted
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] can be withdrawn.
         /// Rejected or withdrawn
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be ignored.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1901,12 +1889,12 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// Batch withdraws [ChildPublishers][google.ads.admanager.v1.ChildPublisher].
         /// 
         /// Only expired, pending, and accepted
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] can be withdrawn.
         /// Rejected or withdrawn
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be ignored.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1915,12 +1903,12 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// Batch withdraws [ChildPublishers][google.ads.admanager.v1.ChildPublisher].
         /// 
         /// Only expired, pending, and accepted
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] can be withdrawn.
         /// Rejected or withdrawn
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be ignored.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1929,19 +1917,19 @@ namespace Google.Ads.AdManager.V1
             BatchWithdrawChildPublishersAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// Batch withdraws [ChildPublishers][google.ads.admanager.v1.ChildPublisher].
         /// 
         /// Only expired, pending, and accepted
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] can be withdrawn.
         /// Rejected or withdrawn
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be ignored.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `networks/{network_code}`
         /// </param>
         /// <param name="names">
         /// Required. Resource names of the
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to withdraw.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] to withdraw.
         /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1957,19 +1945,19 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// Batch withdraws [ChildPublishers][google.ads.admanager.v1.ChildPublisher].
         /// 
         /// Only expired, pending, and accepted
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] can be withdrawn.
         /// Rejected or withdrawn
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be ignored.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `networks/{network_code}`
         /// </param>
         /// <param name="names">
         /// Required. Resource names of the
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to withdraw.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] to withdraw.
         /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1985,19 +1973,19 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// Batch withdraws [ChildPublishers][google.ads.admanager.v1.ChildPublisher].
         /// 
         /// Only expired, pending, and accepted
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] can be withdrawn.
         /// Rejected or withdrawn
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be ignored.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `networks/{network_code}`
         /// </param>
         /// <param name="names">
         /// Required. Resource names of the
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to withdraw.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] to withdraw.
         /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2006,19 +1994,19 @@ namespace Google.Ads.AdManager.V1
             BatchWithdrawChildPublishersAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// Batch withdraws [ChildPublishers][google.ads.admanager.v1.ChildPublisher].
         /// 
         /// Only expired, pending, and accepted
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] can be withdrawn.
         /// Rejected or withdrawn
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be ignored.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `networks/{network_code}`
         /// </param>
         /// <param name="names">
         /// Required. Resource names of the
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to withdraw.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] to withdraw.
         /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2034,19 +2022,19 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// Batch withdraws [ChildPublishers][google.ads.admanager.v1.ChildPublisher].
         /// 
         /// Only expired, pending, and accepted
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] can be withdrawn.
         /// Rejected or withdrawn
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be ignored.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `networks/{network_code}`
         /// </param>
         /// <param name="names">
         /// Required. Resource names of the
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to withdraw.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] to withdraw.
         /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2062,19 +2050,19 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// Batch withdraws [ChildPublishers][google.ads.admanager.v1.ChildPublisher].
         /// 
         /// Only expired, pending, and accepted
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] can be withdrawn.
         /// Rejected or withdrawn
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be ignored.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `networks/{network_code}`
         /// </param>
         /// <param name="names">
         /// Required. Resource names of the
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to withdraw.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] to withdraw.
         /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2440,7 +2428,7 @@ namespace Google.Ads.AdManager.V1
         /// associated with an Ad Manager network.
         /// 
         /// To sever the relationship from the parent publisher's side, use
-        /// [BatchWithdrawChildPublisher][].
+        /// `BatchWithdrawChildPublishers`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2465,7 +2453,7 @@ namespace Google.Ads.AdManager.V1
         /// associated with an Ad Manager network.
         /// 
         /// To sever the relationship from the parent publisher's side, use
-        /// [BatchWithdrawChildPublisher][].
+        /// `BatchWithdrawChildPublishers`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2477,12 +2465,12 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// Batch withdraws [ChildPublishers][google.ads.admanager.v1.ChildPublisher].
         /// 
         /// Only expired, pending, and accepted
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] can be withdrawn.
         /// Rejected or withdrawn
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be ignored.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2494,12 +2482,12 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// Batch withdraws [ChildPublishers][google.ads.admanager.v1.ChildPublisher].
         /// 
         /// Only expired, pending, and accepted
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] can be withdrawn.
         /// Rejected or withdrawn
-        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be ignored.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

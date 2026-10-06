@@ -46,7 +46,7 @@ namespace Google.Ads.AdManager.V1 {
   #region Messages
   /// <summary>
   /// Wrapper message for
-  /// [CdnSecurityPolicy][google.ads.admanager.v1.CdnSecurityPolicy]
+  /// [CdnSecurityPolicyType][google.ads.admanager.v1.CdnSecurityPolicyTypeEnum.CdnSecurityPolicyType]
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CdnSecurityPolicyTypeEnum : pb::IMessage<CdnSecurityPolicyTypeEnum>

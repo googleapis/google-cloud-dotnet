@@ -387,7 +387,7 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of
-        /// [Partner][google.ads.admanager.v1.Partner]s. Format:
+        /// [Partners][google.ads.admanager.v1.Partner]. Format:
         /// `networks/{network_code}`
         /// </param>
         /// <param name="pageToken">
@@ -422,7 +422,7 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of
-        /// [Partner][google.ads.admanager.v1.Partner]s. Format:
+        /// [Partners][google.ads.admanager.v1.Partner]. Format:
         /// `networks/{network_code}`
         /// </param>
         /// <param name="pageToken">
@@ -457,7 +457,7 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of
-        /// [Partner][google.ads.admanager.v1.Partner]s. Format:
+        /// [Partners][google.ads.admanager.v1.Partner]. Format:
         /// `networks/{network_code}`
         /// </param>
         /// <param name="pageToken">
@@ -492,7 +492,7 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of
-        /// [Partner][google.ads.admanager.v1.Partner]s. Format:
+        /// [Partners][google.ads.admanager.v1.Partner]. Format:
         /// `networks/{network_code}`
         /// </param>
         /// <param name="pageToken">
@@ -640,10 +640,9 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where
-        /// [Partner][google.ads.admanager.v1.Partner]s will be updated. Format:
-        /// `networks/{network_code}` The parent field in the
-        /// [UpdatePartnerRequest][google.ads.admanager.v1.UpdatePartnerRequest] must
-        /// match this field.
+        /// [Partners][google.ads.admanager.v1.Partner] will be updated. Format:
+        /// `networks/{network_code}` The parent field in the `UpdatePartnerRequest`
+        /// must match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [Partner][google.ads.admanager.v1.Partner] objects to update.
@@ -666,10 +665,9 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where
-        /// [Partner][google.ads.admanager.v1.Partner]s will be updated. Format:
-        /// `networks/{network_code}` The parent field in the
-        /// [UpdatePartnerRequest][google.ads.admanager.v1.UpdatePartnerRequest] must
-        /// match this field.
+        /// [Partners][google.ads.admanager.v1.Partner] will be updated. Format:
+        /// `networks/{network_code}` The parent field in the `UpdatePartnerRequest`
+        /// must match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [Partner][google.ads.admanager.v1.Partner] objects to update.
@@ -692,10 +690,9 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where
-        /// [Partner][google.ads.admanager.v1.Partner]s will be updated. Format:
-        /// `networks/{network_code}` The parent field in the
-        /// [UpdatePartnerRequest][google.ads.admanager.v1.UpdatePartnerRequest] must
-        /// match this field.
+        /// [Partners][google.ads.admanager.v1.Partner] will be updated. Format:
+        /// `networks/{network_code}` The parent field in the `UpdatePartnerRequest`
+        /// must match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [Partner][google.ads.admanager.v1.Partner] objects to update.
@@ -711,10 +708,9 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where
-        /// [Partner][google.ads.admanager.v1.Partner]s will be updated. Format:
-        /// `networks/{network_code}` The parent field in the
-        /// [UpdatePartnerRequest][google.ads.admanager.v1.UpdatePartnerRequest] must
-        /// match this field.
+        /// [Partners][google.ads.admanager.v1.Partner] will be updated. Format:
+        /// `networks/{network_code}` The parent field in the `UpdatePartnerRequest`
+        /// must match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [Partner][google.ads.admanager.v1.Partner] objects to update.
@@ -737,10 +733,9 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where
-        /// [Partner][google.ads.admanager.v1.Partner]s will be updated. Format:
-        /// `networks/{network_code}` The parent field in the
-        /// [UpdatePartnerRequest][google.ads.admanager.v1.UpdatePartnerRequest] must
-        /// match this field.
+        /// [Partners][google.ads.admanager.v1.Partner] will be updated. Format:
+        /// `networks/{network_code}` The parent field in the `UpdatePartnerRequest`
+        /// must match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [Partner][google.ads.admanager.v1.Partner] objects to update.
@@ -763,10 +758,9 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where
-        /// [Partner][google.ads.admanager.v1.Partner]s will be updated. Format:
-        /// `networks/{network_code}` The parent field in the
-        /// [UpdatePartnerRequest][google.ads.admanager.v1.UpdatePartnerRequest] must
-        /// match this field.
+        /// [Partners][google.ads.admanager.v1.Partner] will be updated. Format:
+        /// `networks/{network_code}` The parent field in the `UpdatePartnerRequest`
+        /// must match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [Partner][google.ads.admanager.v1.Partner] objects to update.

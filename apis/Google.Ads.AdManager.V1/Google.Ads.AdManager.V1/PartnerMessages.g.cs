@@ -454,9 +454,11 @@ namespace Google.Ads.AdManager.V1 {
     /// Optional. The credit status of the
     /// [Partner][google.ads.admanager.v1.Partner].
     ///
-    /// This attribute defaults to [CompanyCreditStatus.ACTIVE][] if basic
-    /// settings are enabled and [CompanyCreditStatus.ON_HOLD][] if advance
-    /// settings are enabled.
+    /// This attribute defaults to
+    /// [CompanyCreditStatusEnum.CompanyCreditStatus.ACTIVE][google.ads.admanager.v1.CompanyCreditStatusEnum.CompanyCreditStatus.ACTIVE]
+    /// if basic settings are enabled and
+    /// [CompanyCreditStatusEnum.CompanyCreditStatus.ON_HOLD][google.ads.admanager.v1.CompanyCreditStatusEnum.CompanyCreditStatus.ON_HOLD]
+    /// if advance settings are enabled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
