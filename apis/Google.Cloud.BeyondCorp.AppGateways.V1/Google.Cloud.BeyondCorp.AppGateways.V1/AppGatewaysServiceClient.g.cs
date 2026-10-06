@@ -36,6 +36,7 @@ using wkt = Google.Protobuf.WellKnownTypes;
 namespace Google.Cloud.BeyondCorp.AppGateways.V1
 {
     /// <summary>Settings for <see cref="AppGatewaysServiceClient"/> instances.</summary>
+    [sys::ObsoleteAttribute]
     public sealed partial class AppGatewaysServiceSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>Get a new instance of the default <see cref="AppGatewaysServiceSettings"/>.</summary>
@@ -166,6 +167,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
     /// Builder class for <see cref="AppGatewaysServiceClient"/> to provide simple configuration of credentials,
     /// endpoint etc.
     /// </summary>
+    [sys::ObsoleteAttribute]
     public sealed partial class AppGatewaysServiceClientBuilder : gaxgrpc::ClientBuilderBase<AppGatewaysServiceClient>
     {
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
@@ -230,7 +232,12 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
     /// 
     /// The AppGatewaysService service provides methods to manage
     /// (create/read/update/delete) BeyondCorp AppGateways.
+    /// 
+    /// 
+    /// Deprecated: App Connector is deprecated and creation of new App Connector
+    /// resources is no longer permitted. Use Security Gateway instead.
     /// </remarks>
+    [sys::ObsoleteAttribute]
     public abstract partial class AppGatewaysServiceClient
     {
         /// <summary>
@@ -326,6 +333,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AppGateway"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListAppGatewaysResponse, AppGateway> ListAppGateways(ListAppGatewaysRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -335,6 +343,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AppGateway"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListAppGatewaysResponse, AppGateway> ListAppGatewaysAsync(ListAppGatewaysRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -355,6 +364,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AppGateway"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListAppGatewaysResponse, AppGateway> ListAppGateways(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListAppGatewaysRequest request = new ListAppGatewaysRequest
@@ -389,6 +399,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AppGateway"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListAppGatewaysResponse, AppGateway> ListAppGatewaysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListAppGatewaysRequest request = new ListAppGatewaysRequest
@@ -423,6 +434,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AppGateway"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListAppGatewaysResponse, AppGateway> ListAppGateways(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListAppGatewaysRequest request = new ListAppGatewaysRequest
@@ -457,6 +469,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AppGateway"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListAppGatewaysResponse, AppGateway> ListAppGatewaysAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListAppGatewaysRequest request = new ListAppGatewaysRequest
@@ -480,6 +493,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual AppGateway GetAppGateway(GetAppGatewayRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -489,6 +503,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<AppGateway> GetAppGatewayAsync(GetAppGatewayRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -498,6 +513,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<AppGateway> GetAppGatewayAsync(GetAppGatewayRequest request, st::CancellationToken cancellationToken) =>
             GetAppGatewayAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -510,6 +526,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual AppGateway GetAppGateway(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetAppGateway(new GetAppGatewayRequest
             {
@@ -525,6 +542,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<AppGateway> GetAppGatewayAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetAppGatewayAsync(new GetAppGatewayRequest
             {
@@ -540,6 +558,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<AppGateway> GetAppGatewayAsync(string name, st::CancellationToken cancellationToken) =>
             GetAppGatewayAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -552,6 +571,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual AppGateway GetAppGateway(AppGatewayName name, gaxgrpc::CallSettings callSettings = null) =>
             GetAppGateway(new GetAppGatewayRequest
             {
@@ -567,6 +587,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<AppGateway> GetAppGatewayAsync(AppGatewayName name, gaxgrpc::CallSettings callSettings = null) =>
             GetAppGatewayAsync(new GetAppGatewayRequest
             {
@@ -582,6 +603,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<AppGateway> GetAppGatewayAsync(AppGatewayName name, st::CancellationToken cancellationToken) =>
             GetAppGatewayAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -591,6 +613,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<AppGateway, AppGatewayOperationMetadata> CreateAppGateway(CreateAppGatewayRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -600,6 +623,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppGateway, AppGatewayOperationMetadata>> CreateAppGatewayAsync(CreateAppGatewayRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -609,6 +633,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppGateway, AppGatewayOperationMetadata>> CreateAppGatewayAsync(CreateAppGatewayRequest request, st::CancellationToken cancellationToken) =>
             CreateAppGatewayAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -623,6 +648,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<AppGateway, AppGatewayOperationMetadata> PollOnceCreateAppGateway(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<AppGateway, AppGatewayOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAppGatewayOperationsClient, callSettings);
 
@@ -635,6 +661,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppGateway, AppGatewayOperationMetadata>> PollOnceCreateAppGatewayAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<AppGateway, AppGatewayOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAppGatewayOperationsClient, callSettings);
 
@@ -656,6 +683,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<AppGateway, AppGatewayOperationMetadata> CreateAppGateway(string parent, AppGateway appGateway, string appGatewayId, gaxgrpc::CallSettings callSettings = null) =>
             CreateAppGateway(new CreateAppGatewayRequest
             {
@@ -682,6 +710,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppGateway, AppGatewayOperationMetadata>> CreateAppGatewayAsync(string parent, AppGateway appGateway, string appGatewayId, gaxgrpc::CallSettings callSettings = null) =>
             CreateAppGatewayAsync(new CreateAppGatewayRequest
             {
@@ -708,6 +737,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppGateway, AppGatewayOperationMetadata>> CreateAppGatewayAsync(string parent, AppGateway appGateway, string appGatewayId, st::CancellationToken cancellationToken) =>
             CreateAppGatewayAsync(parent, appGateway, appGatewayId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -729,6 +759,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<AppGateway, AppGatewayOperationMetadata> CreateAppGateway(gagr::LocationName parent, AppGateway appGateway, string appGatewayId, gaxgrpc::CallSettings callSettings = null) =>
             CreateAppGateway(new CreateAppGatewayRequest
             {
@@ -755,6 +786,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppGateway, AppGatewayOperationMetadata>> CreateAppGatewayAsync(gagr::LocationName parent, AppGateway appGateway, string appGatewayId, gaxgrpc::CallSettings callSettings = null) =>
             CreateAppGatewayAsync(new CreateAppGatewayRequest
             {
@@ -781,6 +813,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppGateway, AppGatewayOperationMetadata>> CreateAppGatewayAsync(gagr::LocationName parent, AppGateway appGateway, string appGatewayId, st::CancellationToken cancellationToken) =>
             CreateAppGatewayAsync(parent, appGateway, appGatewayId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -790,6 +823,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, AppGatewayOperationMetadata> DeleteAppGateway(DeleteAppGatewayRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -799,6 +833,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, AppGatewayOperationMetadata>> DeleteAppGatewayAsync(DeleteAppGatewayRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -808,6 +843,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, AppGatewayOperationMetadata>> DeleteAppGatewayAsync(DeleteAppGatewayRequest request, st::CancellationToken cancellationToken) =>
             DeleteAppGatewayAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -822,6 +858,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, AppGatewayOperationMetadata> PollOnceDeleteAppGateway(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<wkt::Empty, AppGatewayOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAppGatewayOperationsClient, callSettings);
 
@@ -834,6 +871,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, AppGatewayOperationMetadata>> PollOnceDeleteAppGatewayAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<wkt::Empty, AppGatewayOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAppGatewayOperationsClient, callSettings);
 
@@ -846,6 +884,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, AppGatewayOperationMetadata> DeleteAppGateway(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteAppGateway(new DeleteAppGatewayRequest
             {
@@ -861,6 +900,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, AppGatewayOperationMetadata>> DeleteAppGatewayAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteAppGatewayAsync(new DeleteAppGatewayRequest
             {
@@ -876,6 +916,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, AppGatewayOperationMetadata>> DeleteAppGatewayAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteAppGatewayAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -888,6 +929,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, AppGatewayOperationMetadata> DeleteAppGateway(AppGatewayName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteAppGateway(new DeleteAppGatewayRequest
             {
@@ -903,6 +945,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, AppGatewayOperationMetadata>> DeleteAppGatewayAsync(AppGatewayName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteAppGatewayAsync(new DeleteAppGatewayRequest
             {
@@ -918,6 +961,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, AppGatewayOperationMetadata>> DeleteAppGatewayAsync(AppGatewayName name, st::CancellationToken cancellationToken) =>
             DeleteAppGatewayAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
@@ -938,7 +982,12 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
     /// 
     /// The AppGatewaysService service provides methods to manage
     /// (create/read/update/delete) BeyondCorp AppGateways.
+    /// 
+    /// 
+    /// Deprecated: App Connector is deprecated and creation of new App Connector
+    /// resources is no longer permitted. Use Security Gateway instead.
     /// </remarks>
+    [sys::ObsoleteAttribute]
     public sealed partial class AppGatewaysServiceClientImpl : AppGatewaysServiceClient
     {
         private readonly gaxgrpc::ApiCall<ListAppGatewaysRequest, ListAppGatewaysResponse> _callListAppGateways;
@@ -968,16 +1017,24 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
             DeleteAppGatewayOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAppGatewayOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
+#pragma warning disable CS0612
             _callListAppGateways = clientHelper.BuildApiCall<ListAppGatewaysRequest, ListAppGatewaysResponse>("ListAppGateways", grpcClient.ListAppGatewaysAsync, grpcClient.ListAppGateways, effectiveSettings.ListAppGatewaysSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callListAppGateways);
             Modify_ListAppGatewaysApiCall(ref _callListAppGateways);
+#pragma warning disable CS0612
             _callGetAppGateway = clientHelper.BuildApiCall<GetAppGatewayRequest, AppGateway>("GetAppGateway", grpcClient.GetAppGatewayAsync, grpcClient.GetAppGateway, effectiveSettings.GetAppGatewaySettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGetAppGateway);
             Modify_GetAppGatewayApiCall(ref _callGetAppGateway);
+#pragma warning disable CS0612
             _callCreateAppGateway = clientHelper.BuildApiCall<CreateAppGatewayRequest, lro::Operation>("CreateAppGateway", grpcClient.CreateAppGatewayAsync, grpcClient.CreateAppGateway, effectiveSettings.CreateAppGatewaySettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callCreateAppGateway);
             Modify_CreateAppGatewayApiCall(ref _callCreateAppGateway);
+#pragma warning disable CS0612
             _callDeleteAppGateway = clientHelper.BuildApiCall<DeleteAppGatewayRequest, lro::Operation>("DeleteAppGateway", grpcClient.DeleteAppGatewayAsync, grpcClient.DeleteAppGateway, effectiveSettings.DeleteAppGatewaySettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callDeleteAppGateway);
             Modify_DeleteAppGatewayApiCall(ref _callDeleteAppGateway);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -1018,6 +1075,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AppGateway"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedEnumerable<ListAppGatewaysResponse, AppGateway> ListAppGateways(ListAppGatewaysRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListAppGatewaysRequest(ref request, ref callSettings);
@@ -1030,6 +1088,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AppGateway"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedAsyncEnumerable<ListAppGatewaysResponse, AppGateway> ListAppGatewaysAsync(ListAppGatewaysRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListAppGatewaysRequest(ref request, ref callSettings);
@@ -1042,6 +1101,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override AppGateway GetAppGateway(GetAppGatewayRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetAppGatewayRequest(ref request, ref callSettings);
@@ -1054,6 +1114,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<AppGateway> GetAppGatewayAsync(GetAppGatewayRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetAppGatewayRequest(ref request, ref callSettings);
@@ -1069,6 +1130,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override lro::Operation<AppGateway, AppGatewayOperationMetadata> CreateAppGateway(CreateAppGatewayRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateAppGatewayRequest(ref request, ref callSettings);
@@ -1081,6 +1143,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override async stt::Task<lro::Operation<AppGateway, AppGatewayOperationMetadata>> CreateAppGatewayAsync(CreateAppGatewayRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateAppGatewayRequest(ref request, ref callSettings);
@@ -1096,6 +1159,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override lro::Operation<wkt::Empty, AppGatewayOperationMetadata> DeleteAppGateway(DeleteAppGatewayRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteAppGatewayRequest(ref request, ref callSettings);
@@ -1108,6 +1172,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override async stt::Task<lro::Operation<wkt::Empty, AppGatewayOperationMetadata>> DeleteAppGatewayAsync(DeleteAppGatewayRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteAppGatewayRequest(ref request, ref callSettings);

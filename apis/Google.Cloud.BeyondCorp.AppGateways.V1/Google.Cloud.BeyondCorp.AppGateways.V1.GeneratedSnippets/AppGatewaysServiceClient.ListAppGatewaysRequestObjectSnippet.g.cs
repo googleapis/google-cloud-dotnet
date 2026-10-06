@@ -32,6 +32,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void ListAppGatewaysRequestObject()
         {
             // Create client
@@ -44,7 +45,9 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
             };
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAppGatewaysResponse, AppGateway> response = appGatewaysServiceClient.ListAppGateways(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (AppGateway item in response)

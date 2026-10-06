@@ -20,6 +20,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.BeyondCorp.AppGateways.V1;
     using Google.LongRunning;
+    using System;
 
     public sealed partial class GeneratedAppGatewaysServiceClientSnippets
     {
@@ -31,6 +32,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void CreateAppGatewayResourceNames()
         {
             // Create client
@@ -40,7 +42,9 @@ namespace GoogleCSharpSnippets
             AppGateway appGateway = new AppGateway();
             string appGatewayId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AppGateway, AppGatewayOperationMetadata> response = appGatewaysServiceClient.CreateAppGateway(parent, appGateway, appGatewayId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppGateway, AppGatewayOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -50,7 +54,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppGateway, AppGatewayOperationMetadata> retrievedResponse = appGatewaysServiceClient.PollOnceCreateAppGateway(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

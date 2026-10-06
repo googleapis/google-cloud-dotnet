@@ -40,6 +40,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// An optional action to invoke on the client builder. This is invoked before services from
         /// <paramref name="services"/> are used.
         /// </param>
+        [sys::ObsoleteAttribute]
         public static IServiceCollection AddAppGatewaysServiceClient(this IServiceCollection services, sys::Action<gcbav::AppGatewaysServiceClientBuilder> action = null) =>
             services.AddSingleton(provider =>
             {
@@ -58,6 +59,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// An optional action to invoke on the client builder. This is invoked before services from
         /// <paramref name="services"/> are used.
         /// </param>
+        [sys::ObsoleteAttribute]
         public static IServiceCollection AddAppGatewaysServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcbav::AppGatewaysServiceClientBuilder> action) =>
             services.AddSingleton(provider =>
             {
