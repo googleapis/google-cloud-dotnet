@@ -166,7 +166,8 @@ namespace Google.Ads.AdManager.V1 {
     private global::Google.Ads.AdManager.V1.SlateStatusEnum.Types.SlateStatus status_;
     /// <summary>
     /// Output only. The status of this Slate. Slates are created in the
-    /// [SlateStatus.ACTIVE][] state.
+    /// [SlateStatusEnum.SlateStatus.ACTIVE][google.ads.admanager.v1.SlateStatusEnum.SlateStatus.ACTIVE]
+    /// state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

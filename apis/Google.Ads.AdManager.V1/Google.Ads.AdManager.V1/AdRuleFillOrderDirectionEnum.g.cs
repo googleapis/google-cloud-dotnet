@@ -215,7 +215,7 @@ namespace Google.Ads.AdManager.V1 {
     public static partial class Types {
       /// <summary>
       /// Defines the fill order direction of ad breaks with
-      /// AdBreakOptimizationType.POSITION.
+      /// [AdBreakOptimizationTypeEnum.AdBreakOptimizationType.POSITION][google.ads.admanager.v1.AdBreakOptimizationTypeEnum.AdBreakOptimizationType.POSITION].
       /// </summary>
       public enum AdRuleFillOrderDirection {
         /// <summary>

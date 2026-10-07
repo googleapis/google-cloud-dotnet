@@ -121,7 +121,7 @@ namespace Google.Ads.AdManager.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request object for [GetViewabilityProvider][] method.
+  /// Request object for `GetViewabilityProvider` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetViewabilityProviderRequest : pb::IMessage<GetViewabilityProviderRequest>
@@ -327,7 +327,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for [ListViewabilityProviders][] method.
+  /// Request object for `ListViewabilityProviders` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListViewabilityProvidersRequest : pb::IMessage<ListViewabilityProvidersRequest>
@@ -384,7 +384,7 @@ namespace Google.Ads.AdManager.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent, which owns this collection of
-    /// [ViewabilityProvider][google.ads.admanager.v1.ViewabilityProvider]s.
+    /// [ViewabilityProviders][google.ads.admanager.v1.ViewabilityProvider].
     /// Format: `networks/{network_code}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -401,9 +401,9 @@ namespace Google.Ads.AdManager.V1 {
     private int pageSize_;
     /// <summary>
     /// Optional. The maximum number of
-    /// [ViewabilityProvider][google.ads.admanager.v1.ViewabilityProvider]s to
+    /// [ViewabilityProviders][google.ads.admanager.v1.ViewabilityProvider] to
     /// return. The service may return fewer than this value. If unspecified, at
-    /// most 50 [ViewabilityProvider][google.ads.admanager.v1.ViewabilityProvider]s
+    /// most 50 [ViewabilityProviders][google.ads.admanager.v1.ViewabilityProvider]
     /// will be returned. The maximum value is 1000; values above 1000 will be
     /// coerced to 1000.
     /// </summary>
@@ -420,12 +420,11 @@ namespace Google.Ads.AdManager.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A page token, received from a previous
-    /// [ListViewabilityProviders][] call. Provide this to retrieve the subsequent
-    /// page.
+    /// Optional. A page token, received from a previous `ListViewabilityProviders`
+    /// call. Provide this to retrieve the subsequent page.
     ///
     /// When paginating, all other parameters provided to
-    /// [ListViewabilityProviders][] must match the call that provided the page
+    /// `ListViewabilityProviders` must match the call that provided the page
     /// token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -764,7 +763,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Response object for [ListViewabilityProviders][] containing matching
+  /// Response object for `ListViewabilityProviders` containing matching
   /// [ViewabilityProvider][google.ads.admanager.v1.ViewabilityProvider] objects.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1051,7 +1050,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for [CreateViewabilityProvider][] method.
+  /// Request object for `CreateViewabilityProvider` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateViewabilityProviderRequest : pb::IMessage<CreateViewabilityProviderRequest>
@@ -1308,7 +1307,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for [BatchCreateViewabilityProviders][] method.
+  /// Request object for `BatchCreateViewabilityProviders` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchCreateViewabilityProvidersRequest : pb::IMessage<BatchCreateViewabilityProvidersRequest>
@@ -1361,7 +1360,7 @@ namespace Google.Ads.AdManager.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent resource where
-    /// [ViewabilityProvider][google.ads.admanager.v1.ViewabilityProvider]s will be
+    /// [ViewabilityProviders][google.ads.admanager.v1.ViewabilityProvider] will be
     /// created. Format: `networks/{network_code}` The parent field in the
     /// CreateViewabilityProviderRequest must match this field.
     /// </summary>
@@ -1546,7 +1545,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Response object for [BatchCreateViewabilityProviders][] method.
+  /// Response object for `BatchCreateViewabilityProviders` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchCreateViewabilityProvidersResponse : pb::IMessage<BatchCreateViewabilityProvidersResponse>
@@ -1740,7 +1739,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for [UpdateViewabilityProvider][] method.
+  /// Request object for `UpdateViewabilityProvider` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateViewabilityProviderRequest : pb::IMessage<UpdateViewabilityProviderRequest>
@@ -2009,7 +2008,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for [BatchUpdateViewabilityProviders][] method.
+  /// Request object for `BatchUpdateViewabilityProviders` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchUpdateViewabilityProvidersRequest : pb::IMessage<BatchUpdateViewabilityProvidersRequest>
@@ -2062,7 +2061,7 @@ namespace Google.Ads.AdManager.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent resource where
-    /// [ViewabilityProvider][google.ads.admanager.v1.ViewabilityProvider]s will be
+    /// [ViewabilityProviders][google.ads.admanager.v1.ViewabilityProvider] will be
     /// updated. Format: `networks/{network_code}` The parent field in the
     /// UpdateViewabilityProviderRequest must match this field.
     /// </summary>
@@ -2247,7 +2246,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Response object for [BatchUpdateViewabilityProviders][] method.
+  /// Response object for `BatchUpdateViewabilityProviders` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchUpdateViewabilityProvidersResponse : pb::IMessage<BatchUpdateViewabilityProvidersResponse>

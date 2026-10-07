@@ -159,7 +159,7 @@ namespace Google.Ads.AdManager.V1 {
     private string masterCreative_;
     /// <summary>
     /// Required. Immutable. The master
-    /// [Creative](google.ads.admanager.v1.Creative) to which the `CreativeSet` is
+    /// [Creative][google.ads.admanager.v1.Creative] to which the `CreativeSet` is
     /// associated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

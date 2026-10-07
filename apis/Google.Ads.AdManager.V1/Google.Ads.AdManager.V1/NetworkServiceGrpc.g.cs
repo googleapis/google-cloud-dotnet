@@ -193,7 +193,9 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+      /// Returns the
+      /// [DefaultThirdPartyDataDeclaration][google.ads.admanager.v1.DefaultThirdPartyDataDeclaration]
+      /// for this network.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -482,7 +484,9 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ProvisionTestNetwork, null, options, request);
       }
       /// <summary>
-      /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+      /// Returns the
+      /// [DefaultThirdPartyDataDeclaration][google.ads.admanager.v1.DefaultThirdPartyDataDeclaration]
+      /// for this network.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -495,7 +499,9 @@ namespace Google.Ads.AdManager.V1 {
         return GetDefaultThirdPartyDataDeclaration(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+      /// Returns the
+      /// [DefaultThirdPartyDataDeclaration][google.ads.admanager.v1.DefaultThirdPartyDataDeclaration]
+      /// for this network.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -506,7 +512,9 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetDefaultThirdPartyDataDeclaration, null, options, request);
       }
       /// <summary>
-      /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+      /// Returns the
+      /// [DefaultThirdPartyDataDeclaration][google.ads.admanager.v1.DefaultThirdPartyDataDeclaration]
+      /// for this network.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -519,7 +527,9 @@ namespace Google.Ads.AdManager.V1 {
         return GetDefaultThirdPartyDataDeclarationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+      /// Returns the
+      /// [DefaultThirdPartyDataDeclaration][google.ads.admanager.v1.DefaultThirdPartyDataDeclaration]
+      /// for this network.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

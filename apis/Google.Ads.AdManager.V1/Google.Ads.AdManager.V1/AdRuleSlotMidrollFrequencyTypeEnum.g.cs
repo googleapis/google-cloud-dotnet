@@ -235,7 +235,9 @@ namespace Google.Ads.AdManager.V1 {
         /// </summary>
         [pbr::OriginalName("EVERY_N_SECONDS")] EveryNSeconds = 2,
         /// <summary>
-        /// Same as `FIXED_TIME`, except the values represent the ordinal cue
+        /// Same as
+        /// [AdRuleSlotMidrollFrequencyTypeEnum.AdRuleSlotMidrollFrequencyType.FIXED_TIME][google.ads.admanager.v1.AdRuleSlotMidrollFrequencyTypeEnum.AdRuleSlotMidrollFrequencyType.FIXED_TIME],
+        /// except the values represent the ordinal cue
         /// points ("1,3,5", for example).
         /// </summary>
         [pbr::OriginalName("FIXED_CUE_POINTS")] FixedCuePoints = 3,

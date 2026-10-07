@@ -406,8 +406,9 @@ namespace Google.Ads.AdManager.V1
         /// Lists [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of [Companies][].
-        /// Format: `networks/{network_code}`
+        /// Required. The parent, which owns this collection of
+        /// [Companies][google.ads.admanager.v1.Company]. Format:
+        /// `networks/{network_code}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -440,8 +441,9 @@ namespace Google.Ads.AdManager.V1
         /// Lists [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of [Companies][].
-        /// Format: `networks/{network_code}`
+        /// Required. The parent, which owns this collection of
+        /// [Companies][google.ads.admanager.v1.Company]. Format:
+        /// `networks/{network_code}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -474,8 +476,9 @@ namespace Google.Ads.AdManager.V1
         /// Lists [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of [Companies][].
-        /// Format: `networks/{network_code}`
+        /// Required. The parent, which owns this collection of
+        /// [Companies][google.ads.admanager.v1.Company]. Format:
+        /// `networks/{network_code}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -508,8 +511,9 @@ namespace Google.Ads.AdManager.V1
         /// Lists [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of [Companies][].
-        /// Format: `networks/{network_code}`
+        /// Required. The parent, which owns this collection of
+        /// [Companies][google.ads.admanager.v1.Company]. Format:
+        /// `networks/{network_code}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -708,10 +712,10 @@ namespace Google.Ads.AdManager.V1
         /// Creates [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where [Companies][] will be created.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the CreateCompanyRequest must match this
-        /// field.
+        /// Required. The parent resource where
+        /// [Companies][google.ads.admanager.v1.Company] will be created. Format:
+        /// `networks/{network_code}` The parent field in the CreateCompanyRequest must
+        /// match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [Company][google.ads.admanager.v1.Company] objects to create.
@@ -733,10 +737,10 @@ namespace Google.Ads.AdManager.V1
         /// Creates [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where [Companies][] will be created.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the CreateCompanyRequest must match this
-        /// field.
+        /// Required. The parent resource where
+        /// [Companies][google.ads.admanager.v1.Company] will be created. Format:
+        /// `networks/{network_code}` The parent field in the CreateCompanyRequest must
+        /// match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [Company][google.ads.admanager.v1.Company] objects to create.
@@ -758,10 +762,10 @@ namespace Google.Ads.AdManager.V1
         /// Creates [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where [Companies][] will be created.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the CreateCompanyRequest must match this
-        /// field.
+        /// Required. The parent resource where
+        /// [Companies][google.ads.admanager.v1.Company] will be created. Format:
+        /// `networks/{network_code}` The parent field in the CreateCompanyRequest must
+        /// match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [Company][google.ads.admanager.v1.Company] objects to create.
@@ -776,10 +780,10 @@ namespace Google.Ads.AdManager.V1
         /// Creates [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where [Companies][] will be created.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the CreateCompanyRequest must match this
-        /// field.
+        /// Required. The parent resource where
+        /// [Companies][google.ads.admanager.v1.Company] will be created. Format:
+        /// `networks/{network_code}` The parent field in the CreateCompanyRequest must
+        /// match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [Company][google.ads.admanager.v1.Company] objects to create.
@@ -801,10 +805,10 @@ namespace Google.Ads.AdManager.V1
         /// Creates [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where [Companies][] will be created.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the CreateCompanyRequest must match this
-        /// field.
+        /// Required. The parent resource where
+        /// [Companies][google.ads.admanager.v1.Company] will be created. Format:
+        /// `networks/{network_code}` The parent field in the CreateCompanyRequest must
+        /// match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [Company][google.ads.admanager.v1.Company] objects to create.
@@ -826,10 +830,10 @@ namespace Google.Ads.AdManager.V1
         /// Creates [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where [Companies][] will be created.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the CreateCompanyRequest must match this
-        /// field.
+        /// Required. The parent resource where
+        /// [Companies][google.ads.admanager.v1.Company] will be created. Format:
+        /// `networks/{network_code}` The parent field in the CreateCompanyRequest must
+        /// match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [Company][google.ads.admanager.v1.Company] objects to create.
@@ -957,10 +961,10 @@ namespace Google.Ads.AdManager.V1
         /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where [Companies][] will be updated.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the UpdateCompanyRequest must match this
-        /// field.
+        /// Required. The parent resource where
+        /// [Companies][google.ads.admanager.v1.Company] will be updated. Format:
+        /// `networks/{network_code}` The parent field in the UpdateCompanyRequest must
+        /// match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [Company][google.ads.admanager.v1.Company] objects to update.
@@ -982,10 +986,10 @@ namespace Google.Ads.AdManager.V1
         /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where [Companies][] will be updated.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the UpdateCompanyRequest must match this
-        /// field.
+        /// Required. The parent resource where
+        /// [Companies][google.ads.admanager.v1.Company] will be updated. Format:
+        /// `networks/{network_code}` The parent field in the UpdateCompanyRequest must
+        /// match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [Company][google.ads.admanager.v1.Company] objects to update.
@@ -1007,10 +1011,10 @@ namespace Google.Ads.AdManager.V1
         /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where [Companies][] will be updated.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the UpdateCompanyRequest must match this
-        /// field.
+        /// Required. The parent resource where
+        /// [Companies][google.ads.admanager.v1.Company] will be updated. Format:
+        /// `networks/{network_code}` The parent field in the UpdateCompanyRequest must
+        /// match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [Company][google.ads.admanager.v1.Company] objects to update.
@@ -1025,10 +1029,10 @@ namespace Google.Ads.AdManager.V1
         /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where [Companies][] will be updated.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the UpdateCompanyRequest must match this
-        /// field.
+        /// Required. The parent resource where
+        /// [Companies][google.ads.admanager.v1.Company] will be updated. Format:
+        /// `networks/{network_code}` The parent field in the UpdateCompanyRequest must
+        /// match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [Company][google.ads.admanager.v1.Company] objects to update.
@@ -1050,10 +1054,10 @@ namespace Google.Ads.AdManager.V1
         /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where [Companies][] will be updated.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the UpdateCompanyRequest must match this
-        /// field.
+        /// Required. The parent resource where
+        /// [Companies][google.ads.admanager.v1.Company] will be updated. Format:
+        /// `networks/{network_code}` The parent field in the UpdateCompanyRequest must
+        /// match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [Company][google.ads.admanager.v1.Company] objects to update.
@@ -1075,10 +1079,10 @@ namespace Google.Ads.AdManager.V1
         /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where [Companies][] will be updated.
-        /// Format: `networks/{network_code}`
-        /// The parent field in the UpdateCompanyRequest must match this
-        /// field.
+        /// Required. The parent resource where
+        /// [Companies][google.ads.admanager.v1.Company] will be updated. Format:
+        /// `networks/{network_code}` The parent field in the UpdateCompanyRequest must
+        /// match this field.
         /// </param>
         /// <param name="requests">
         /// Required. The [Company][google.ads.admanager.v1.Company] objects to update.

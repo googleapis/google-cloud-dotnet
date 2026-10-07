@@ -1596,7 +1596,7 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// The companions for this ad unit size. Companions are only valid if the
     /// environment is
-    /// [VIDEO_PLAYER][google.ads.admanager.v1.EnvironmentTypeEnum.EnvironmentType].
+    /// [VIDEO_PLAYER][google.ads.admanager.v1.EnvironmentTypeEnum.EnvironmentType.VIDEO_PLAYER].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

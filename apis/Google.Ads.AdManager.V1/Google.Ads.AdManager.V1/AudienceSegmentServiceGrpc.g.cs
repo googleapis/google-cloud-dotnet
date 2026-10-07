@@ -78,6 +78,12 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreateAudienceSegmentsResponse> __Marshaller_google_ads_admanager_v1_BatchCreateAudienceSegmentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreateAudienceSegmentsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.UpdateAudienceSegmentRequest> __Marshaller_google_ads_admanager_v1_UpdateAudienceSegmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.UpdateAudienceSegmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateAudienceSegmentsRequest> __Marshaller_google_ads_admanager_v1_BatchUpdateAudienceSegmentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateAudienceSegmentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateAudienceSegmentsResponse> __Marshaller_google_ads_admanager_v1_BatchUpdateAudienceSegmentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateAudienceSegmentsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsRequest> __Marshaller_google_ads_admanager_v1_BatchActivateAudienceSegmentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsResponse> __Marshaller_google_ads_admanager_v1_BatchActivateAudienceSegmentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsResponse.Parser));
@@ -129,6 +135,22 @@ namespace Google.Ads.AdManager.V1 {
         "BatchCreateAudienceSegments",
         __Marshaller_google_ads_admanager_v1_BatchCreateAudienceSegmentsRequest,
         __Marshaller_google_ads_admanager_v1_BatchCreateAudienceSegmentsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.UpdateAudienceSegmentRequest, global::Google.Ads.AdManager.V1.AudienceSegment> __Method_UpdateAudienceSegment = new grpc::Method<global::Google.Ads.AdManager.V1.UpdateAudienceSegmentRequest, global::Google.Ads.AdManager.V1.AudienceSegment>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAudienceSegment",
+        __Marshaller_google_ads_admanager_v1_UpdateAudienceSegmentRequest,
+        __Marshaller_google_ads_admanager_v1_AudienceSegment);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateAudienceSegmentsRequest, global::Google.Ads.AdManager.V1.BatchUpdateAudienceSegmentsResponse> __Method_BatchUpdateAudienceSegments = new grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateAudienceSegmentsRequest, global::Google.Ads.AdManager.V1.BatchUpdateAudienceSegmentsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchUpdateAudienceSegments",
+        __Marshaller_google_ads_admanager_v1_BatchUpdateAudienceSegmentsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchUpdateAudienceSegmentsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsRequest, global::Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsResponse> __Method_BatchActivateAudienceSegments = new grpc::Method<global::Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsRequest, global::Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsResponse>(
@@ -224,6 +246,30 @@ namespace Google.Ads.AdManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchCreateAudienceSegmentsResponse> BatchCreateAudienceSegments(global::Google.Ads.AdManager.V1.BatchCreateAudienceSegmentsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an `AudienceSegment` object.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.AudienceSegment> UpdateAudienceSegment(global::Google.Ads.AdManager.V1.UpdateAudienceSegmentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch updates `AudienceSegment` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchUpdateAudienceSegmentsResponse> BatchUpdateAudienceSegments(global::Google.Ads.AdManager.V1.BatchUpdateAudienceSegmentsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -510,6 +556,102 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchCreateAudienceSegments, null, options, request);
       }
       /// <summary>
+      /// Updates an `AudienceSegment` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.AudienceSegment UpdateAudienceSegment(global::Google.Ads.AdManager.V1.UpdateAudienceSegmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAudienceSegment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an `AudienceSegment` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.AudienceSegment UpdateAudienceSegment(global::Google.Ads.AdManager.V1.UpdateAudienceSegmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAudienceSegment, null, options, request);
+      }
+      /// <summary>
+      /// Updates an `AudienceSegment` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.AudienceSegment> UpdateAudienceSegmentAsync(global::Google.Ads.AdManager.V1.UpdateAudienceSegmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAudienceSegmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an `AudienceSegment` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.AudienceSegment> UpdateAudienceSegmentAsync(global::Google.Ads.AdManager.V1.UpdateAudienceSegmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAudienceSegment, null, options, request);
+      }
+      /// <summary>
+      /// Batch updates `AudienceSegment` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdateAudienceSegmentsResponse BatchUpdateAudienceSegments(global::Google.Ads.AdManager.V1.BatchUpdateAudienceSegmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateAudienceSegments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch updates `AudienceSegment` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdateAudienceSegmentsResponse BatchUpdateAudienceSegments(global::Google.Ads.AdManager.V1.BatchUpdateAudienceSegmentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateAudienceSegments, null, options, request);
+      }
+      /// <summary>
+      /// Batch updates `AudienceSegment` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdateAudienceSegmentsResponse> BatchUpdateAudienceSegmentsAsync(global::Google.Ads.AdManager.V1.BatchUpdateAudienceSegmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateAudienceSegmentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch updates `AudienceSegment` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdateAudienceSegmentsResponse> BatchUpdateAudienceSegmentsAsync(global::Google.Ads.AdManager.V1.BatchUpdateAudienceSegmentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchUpdateAudienceSegments, null, options, request);
+      }
+      /// <summary>
       /// Activates `AudienceSegment` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -767,6 +909,8 @@ namespace Google.Ads.AdManager.V1 {
           .AddMethod(__Method_ListAudienceSegments, serviceImpl.ListAudienceSegments)
           .AddMethod(__Method_CreateAudienceSegment, serviceImpl.CreateAudienceSegment)
           .AddMethod(__Method_BatchCreateAudienceSegments, serviceImpl.BatchCreateAudienceSegments)
+          .AddMethod(__Method_UpdateAudienceSegment, serviceImpl.UpdateAudienceSegment)
+          .AddMethod(__Method_BatchUpdateAudienceSegments, serviceImpl.BatchUpdateAudienceSegments)
           .AddMethod(__Method_BatchActivateAudienceSegments, serviceImpl.BatchActivateAudienceSegments)
           .AddMethod(__Method_BatchDeactivateAudienceSegments, serviceImpl.BatchDeactivateAudienceSegments)
           .AddMethod(__Method_BatchApproveAudienceSegments, serviceImpl.BatchApproveAudienceSegments)
@@ -785,6 +929,8 @@ namespace Google.Ads.AdManager.V1 {
       serviceBinder.AddMethod(__Method_ListAudienceSegments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.ListAudienceSegmentsRequest, global::Google.Ads.AdManager.V1.ListAudienceSegmentsResponse>(serviceImpl.ListAudienceSegments));
       serviceBinder.AddMethod(__Method_CreateAudienceSegment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.CreateAudienceSegmentRequest, global::Google.Ads.AdManager.V1.AudienceSegment>(serviceImpl.CreateAudienceSegment));
       serviceBinder.AddMethod(__Method_BatchCreateAudienceSegments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchCreateAudienceSegmentsRequest, global::Google.Ads.AdManager.V1.BatchCreateAudienceSegmentsResponse>(serviceImpl.BatchCreateAudienceSegments));
+      serviceBinder.AddMethod(__Method_UpdateAudienceSegment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.UpdateAudienceSegmentRequest, global::Google.Ads.AdManager.V1.AudienceSegment>(serviceImpl.UpdateAudienceSegment));
+      serviceBinder.AddMethod(__Method_BatchUpdateAudienceSegments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchUpdateAudienceSegmentsRequest, global::Google.Ads.AdManager.V1.BatchUpdateAudienceSegmentsResponse>(serviceImpl.BatchUpdateAudienceSegments));
       serviceBinder.AddMethod(__Method_BatchActivateAudienceSegments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsRequest, global::Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsResponse>(serviceImpl.BatchActivateAudienceSegments));
       serviceBinder.AddMethod(__Method_BatchDeactivateAudienceSegments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchDeactivateAudienceSegmentsRequest, global::Google.Ads.AdManager.V1.BatchDeactivateAudienceSegmentsResponse>(serviceImpl.BatchDeactivateAudienceSegments));
       serviceBinder.AddMethod(__Method_BatchApproveAudienceSegments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchApproveAudienceSegmentsRequest, global::Google.Ads.AdManager.V1.BatchApproveAudienceSegmentsResponse>(serviceImpl.BatchApproveAudienceSegments));

@@ -53,6 +53,8 @@ namespace Google.Ads.AdManager.V1
             BatchAllowAdReviewCenterAdsOperationsSettings = existing.BatchAllowAdReviewCenterAdsOperationsSettings.Clone();
             BatchBlockAdReviewCenterAdsSettings = existing.BatchBlockAdReviewCenterAdsSettings;
             BatchBlockAdReviewCenterAdsOperationsSettings = existing.BatchBlockAdReviewCenterAdsOperationsSettings.Clone();
+            FetchAdReviewCenterCustomLabelsSettings = existing.FetchAdReviewCenterCustomLabelsSettings;
+            BatchApplyAdReviewCenterCustomLabelsSettings = existing.BatchApplyAdReviewCenterCustomLabelsSettings;
             OnCopy(existing);
         }
 
@@ -133,6 +135,32 @@ namespace Google.Ads.AdManager.V1
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AdReviewCenterAdServiceClient.FetchAdReviewCenterCustomLabels</c> and
+        /// <c>AdReviewCenterAdServiceClient.FetchAdReviewCenterCustomLabelsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchAdReviewCenterCustomLabelsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AdReviewCenterAdServiceClient.BatchApplyAdReviewCenterCustomLabels</c> and
+        /// <c>AdReviewCenterAdServiceClient.BatchApplyAdReviewCenterCustomLabelsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchApplyAdReviewCenterCustomLabelsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AdReviewCenterAdServiceSettings"/> object.</returns>
         public AdReviewCenterAdServiceSettings Clone() => new AdReviewCenterAdServiceSettings(this);
@@ -192,7 +220,7 @@ namespace Google.Ads.AdManager.V1
 
     /// <summary>AdReviewCenterAdService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Provides methods for handling AdReviewCenterAd objects.
+    /// Provides methods for handling `AdReviewCenterAd` objects.
     /// </remarks>
     public abstract partial class AdReviewCenterAdServiceClient
     {
@@ -954,11 +982,428 @@ namespace Google.Ads.AdManager.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<BatchBlockAdReviewCenterAdsResponse, BatchAdReviewCenterAdsOperationMetadata>> BatchBlockAdReviewCenterAdsAsync(WebPropertyName parent, st::CancellationToken cancellationToken) =>
             BatchBlockAdReviewCenterAdsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches all custom labels for a publisher. Custom labels can help you
+        /// filter and find creatives with the associated label. For more information,
+        /// see https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchAdReviewCenterCustomLabelsResponse FetchAdReviewCenterCustomLabels(FetchAdReviewCenterCustomLabelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches all custom labels for a publisher. Custom labels can help you
+        /// filter and find creatives with the associated label. For more information,
+        /// see https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchAdReviewCenterCustomLabelsResponse> FetchAdReviewCenterCustomLabelsAsync(FetchAdReviewCenterCustomLabelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches all custom labels for a publisher. Custom labels can help you
+        /// filter and find creatives with the associated label. For more information,
+        /// see https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchAdReviewCenterCustomLabelsResponse> FetchAdReviewCenterCustomLabelsAsync(FetchAdReviewCenterCustomLabelsRequest request, st::CancellationToken cancellationToken) =>
+            FetchAdReviewCenterCustomLabelsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches all custom labels for a publisher. Custom labels can help you
+        /// filter and find creatives with the associated label. For more information,
+        /// see https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of AdReviewCenterAds
+        /// custom labels. Format:
+        /// networks/{network_code}/webProperties/{web_property_code}
+        /// 
+        /// Since a network can only have a single web property of each
+        /// `ExchangeSyndicationProduct`, you can use the
+        /// `ExchangeSyndicationProduct` as an alias for the web property code:
+        /// 
+        /// `networks/{network_code}/webProperties/display`
+        /// 
+        /// `networks/{network_code}/webProperties/videoAndAudio`
+        /// 
+        /// `networks/{network_code}/webProperties/mobileApp`
+        /// 
+        /// `networks/{network_code}/webProperties/games`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchAdReviewCenterCustomLabelsResponse FetchAdReviewCenterCustomLabels(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            FetchAdReviewCenterCustomLabels(new FetchAdReviewCenterCustomLabelsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches all custom labels for a publisher. Custom labels can help you
+        /// filter and find creatives with the associated label. For more information,
+        /// see https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of AdReviewCenterAds
+        /// custom labels. Format:
+        /// networks/{network_code}/webProperties/{web_property_code}
+        /// 
+        /// Since a network can only have a single web property of each
+        /// `ExchangeSyndicationProduct`, you can use the
+        /// `ExchangeSyndicationProduct` as an alias for the web property code:
+        /// 
+        /// `networks/{network_code}/webProperties/display`
+        /// 
+        /// `networks/{network_code}/webProperties/videoAndAudio`
+        /// 
+        /// `networks/{network_code}/webProperties/mobileApp`
+        /// 
+        /// `networks/{network_code}/webProperties/games`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchAdReviewCenterCustomLabelsResponse> FetchAdReviewCenterCustomLabelsAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            FetchAdReviewCenterCustomLabelsAsync(new FetchAdReviewCenterCustomLabelsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches all custom labels for a publisher. Custom labels can help you
+        /// filter and find creatives with the associated label. For more information,
+        /// see https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of AdReviewCenterAds
+        /// custom labels. Format:
+        /// networks/{network_code}/webProperties/{web_property_code}
+        /// 
+        /// Since a network can only have a single web property of each
+        /// `ExchangeSyndicationProduct`, you can use the
+        /// `ExchangeSyndicationProduct` as an alias for the web property code:
+        /// 
+        /// `networks/{network_code}/webProperties/display`
+        /// 
+        /// `networks/{network_code}/webProperties/videoAndAudio`
+        /// 
+        /// `networks/{network_code}/webProperties/mobileApp`
+        /// 
+        /// `networks/{network_code}/webProperties/games`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchAdReviewCenterCustomLabelsResponse> FetchAdReviewCenterCustomLabelsAsync(string parent, st::CancellationToken cancellationToken) =>
+            FetchAdReviewCenterCustomLabelsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches all custom labels for a publisher. Custom labels can help you
+        /// filter and find creatives with the associated label. For more information,
+        /// see https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of AdReviewCenterAds
+        /// custom labels. Format:
+        /// networks/{network_code}/webProperties/{web_property_code}
+        /// 
+        /// Since a network can only have a single web property of each
+        /// `ExchangeSyndicationProduct`, you can use the
+        /// `ExchangeSyndicationProduct` as an alias for the web property code:
+        /// 
+        /// `networks/{network_code}/webProperties/display`
+        /// 
+        /// `networks/{network_code}/webProperties/videoAndAudio`
+        /// 
+        /// `networks/{network_code}/webProperties/mobileApp`
+        /// 
+        /// `networks/{network_code}/webProperties/games`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchAdReviewCenterCustomLabelsResponse FetchAdReviewCenterCustomLabels(WebPropertyName parent, gaxgrpc::CallSettings callSettings = null) =>
+            FetchAdReviewCenterCustomLabels(new FetchAdReviewCenterCustomLabelsRequest
+            {
+                ParentAsWebPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches all custom labels for a publisher. Custom labels can help you
+        /// filter and find creatives with the associated label. For more information,
+        /// see https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of AdReviewCenterAds
+        /// custom labels. Format:
+        /// networks/{network_code}/webProperties/{web_property_code}
+        /// 
+        /// Since a network can only have a single web property of each
+        /// `ExchangeSyndicationProduct`, you can use the
+        /// `ExchangeSyndicationProduct` as an alias for the web property code:
+        /// 
+        /// `networks/{network_code}/webProperties/display`
+        /// 
+        /// `networks/{network_code}/webProperties/videoAndAudio`
+        /// 
+        /// `networks/{network_code}/webProperties/mobileApp`
+        /// 
+        /// `networks/{network_code}/webProperties/games`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchAdReviewCenterCustomLabelsResponse> FetchAdReviewCenterCustomLabelsAsync(WebPropertyName parent, gaxgrpc::CallSettings callSettings = null) =>
+            FetchAdReviewCenterCustomLabelsAsync(new FetchAdReviewCenterCustomLabelsRequest
+            {
+                ParentAsWebPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches all custom labels for a publisher. Custom labels can help you
+        /// filter and find creatives with the associated label. For more information,
+        /// see https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of AdReviewCenterAds
+        /// custom labels. Format:
+        /// networks/{network_code}/webProperties/{web_property_code}
+        /// 
+        /// Since a network can only have a single web property of each
+        /// `ExchangeSyndicationProduct`, you can use the
+        /// `ExchangeSyndicationProduct` as an alias for the web property code:
+        /// 
+        /// `networks/{network_code}/webProperties/display`
+        /// 
+        /// `networks/{network_code}/webProperties/videoAndAudio`
+        /// 
+        /// `networks/{network_code}/webProperties/mobileApp`
+        /// 
+        /// `networks/{network_code}/webProperties/games`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchAdReviewCenterCustomLabelsResponse> FetchAdReviewCenterCustomLabelsAsync(WebPropertyName parent, st::CancellationToken cancellationToken) =>
+            FetchAdReviewCenterCustomLabelsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Performs batch apply on custom labels associated with Ad review center ads.
+        /// Custom labels can help you filter and find creatives with the associated
+        /// label. For more information, see
+        /// https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchApplyAdReviewCenterCustomLabelsResponse BatchApplyAdReviewCenterCustomLabels(BatchApplyAdReviewCenterCustomLabelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Performs batch apply on custom labels associated with Ad review center ads.
+        /// Custom labels can help you filter and find creatives with the associated
+        /// label. For more information, see
+        /// https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchApplyAdReviewCenterCustomLabelsResponse> BatchApplyAdReviewCenterCustomLabelsAsync(BatchApplyAdReviewCenterCustomLabelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Performs batch apply on custom labels associated with Ad review center ads.
+        /// Custom labels can help you filter and find creatives with the associated
+        /// label. For more information, see
+        /// https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchApplyAdReviewCenterCustomLabelsResponse> BatchApplyAdReviewCenterCustomLabelsAsync(BatchApplyAdReviewCenterCustomLabelsRequest request, st::CancellationToken cancellationToken) =>
+            BatchApplyAdReviewCenterCustomLabelsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Performs batch apply on custom labels associated with Ad review center ads.
+        /// Custom labels can help you filter and find creatives with the associated
+        /// label. For more information, see
+        /// https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of AdReviewCenterAds.
+        /// Format: networks/{network_code}/webProperties/{web_property_code}
+        /// 
+        /// Since a network can only have a single web property of each
+        /// `ExchangeSyndicationProduct`, you can use the
+        /// `ExchangeSyndicationProduct` as an alias for the web property code:
+        /// 
+        /// `networks/{network_code}/webProperties/display`
+        /// 
+        /// `networks/{network_code}/webProperties/videoAndAudio`
+        /// 
+        /// `networks/{network_code}/webProperties/mobileApp`
+        /// 
+        /// `networks/{network_code}/webProperties/games`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchApplyAdReviewCenterCustomLabelsResponse BatchApplyAdReviewCenterCustomLabels(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            BatchApplyAdReviewCenterCustomLabels(new BatchApplyAdReviewCenterCustomLabelsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Performs batch apply on custom labels associated with Ad review center ads.
+        /// Custom labels can help you filter and find creatives with the associated
+        /// label. For more information, see
+        /// https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of AdReviewCenterAds.
+        /// Format: networks/{network_code}/webProperties/{web_property_code}
+        /// 
+        /// Since a network can only have a single web property of each
+        /// `ExchangeSyndicationProduct`, you can use the
+        /// `ExchangeSyndicationProduct` as an alias for the web property code:
+        /// 
+        /// `networks/{network_code}/webProperties/display`
+        /// 
+        /// `networks/{network_code}/webProperties/videoAndAudio`
+        /// 
+        /// `networks/{network_code}/webProperties/mobileApp`
+        /// 
+        /// `networks/{network_code}/webProperties/games`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchApplyAdReviewCenterCustomLabelsResponse> BatchApplyAdReviewCenterCustomLabelsAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            BatchApplyAdReviewCenterCustomLabelsAsync(new BatchApplyAdReviewCenterCustomLabelsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Performs batch apply on custom labels associated with Ad review center ads.
+        /// Custom labels can help you filter and find creatives with the associated
+        /// label. For more information, see
+        /// https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of AdReviewCenterAds.
+        /// Format: networks/{network_code}/webProperties/{web_property_code}
+        /// 
+        /// Since a network can only have a single web property of each
+        /// `ExchangeSyndicationProduct`, you can use the
+        /// `ExchangeSyndicationProduct` as an alias for the web property code:
+        /// 
+        /// `networks/{network_code}/webProperties/display`
+        /// 
+        /// `networks/{network_code}/webProperties/videoAndAudio`
+        /// 
+        /// `networks/{network_code}/webProperties/mobileApp`
+        /// 
+        /// `networks/{network_code}/webProperties/games`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchApplyAdReviewCenterCustomLabelsResponse> BatchApplyAdReviewCenterCustomLabelsAsync(string parent, st::CancellationToken cancellationToken) =>
+            BatchApplyAdReviewCenterCustomLabelsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Performs batch apply on custom labels associated with Ad review center ads.
+        /// Custom labels can help you filter and find creatives with the associated
+        /// label. For more information, see
+        /// https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of AdReviewCenterAds.
+        /// Format: networks/{network_code}/webProperties/{web_property_code}
+        /// 
+        /// Since a network can only have a single web property of each
+        /// `ExchangeSyndicationProduct`, you can use the
+        /// `ExchangeSyndicationProduct` as an alias for the web property code:
+        /// 
+        /// `networks/{network_code}/webProperties/display`
+        /// 
+        /// `networks/{network_code}/webProperties/videoAndAudio`
+        /// 
+        /// `networks/{network_code}/webProperties/mobileApp`
+        /// 
+        /// `networks/{network_code}/webProperties/games`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchApplyAdReviewCenterCustomLabelsResponse BatchApplyAdReviewCenterCustomLabels(WebPropertyName parent, gaxgrpc::CallSettings callSettings = null) =>
+            BatchApplyAdReviewCenterCustomLabels(new BatchApplyAdReviewCenterCustomLabelsRequest
+            {
+                ParentAsWebPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Performs batch apply on custom labels associated with Ad review center ads.
+        /// Custom labels can help you filter and find creatives with the associated
+        /// label. For more information, see
+        /// https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of AdReviewCenterAds.
+        /// Format: networks/{network_code}/webProperties/{web_property_code}
+        /// 
+        /// Since a network can only have a single web property of each
+        /// `ExchangeSyndicationProduct`, you can use the
+        /// `ExchangeSyndicationProduct` as an alias for the web property code:
+        /// 
+        /// `networks/{network_code}/webProperties/display`
+        /// 
+        /// `networks/{network_code}/webProperties/videoAndAudio`
+        /// 
+        /// `networks/{network_code}/webProperties/mobileApp`
+        /// 
+        /// `networks/{network_code}/webProperties/games`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchApplyAdReviewCenterCustomLabelsResponse> BatchApplyAdReviewCenterCustomLabelsAsync(WebPropertyName parent, gaxgrpc::CallSettings callSettings = null) =>
+            BatchApplyAdReviewCenterCustomLabelsAsync(new BatchApplyAdReviewCenterCustomLabelsRequest
+            {
+                ParentAsWebPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Performs batch apply on custom labels associated with Ad review center ads.
+        /// Custom labels can help you filter and find creatives with the associated
+        /// label. For more information, see
+        /// https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of AdReviewCenterAds.
+        /// Format: networks/{network_code}/webProperties/{web_property_code}
+        /// 
+        /// Since a network can only have a single web property of each
+        /// `ExchangeSyndicationProduct`, you can use the
+        /// `ExchangeSyndicationProduct` as an alias for the web property code:
+        /// 
+        /// `networks/{network_code}/webProperties/display`
+        /// 
+        /// `networks/{network_code}/webProperties/videoAndAudio`
+        /// 
+        /// `networks/{network_code}/webProperties/mobileApp`
+        /// 
+        /// `networks/{network_code}/webProperties/games`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchApplyAdReviewCenterCustomLabelsResponse> BatchApplyAdReviewCenterCustomLabelsAsync(WebPropertyName parent, st::CancellationToken cancellationToken) =>
+            BatchApplyAdReviewCenterCustomLabelsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>AdReviewCenterAdService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Provides methods for handling AdReviewCenterAd objects.
+    /// Provides methods for handling `AdReviewCenterAd` objects.
     /// </remarks>
     public sealed partial class AdReviewCenterAdServiceClientImpl : AdReviewCenterAdServiceClient
     {
@@ -967,6 +1412,10 @@ namespace Google.Ads.AdManager.V1
         private readonly gaxgrpc::ApiCall<BatchAllowAdReviewCenterAdsRequest, lro::Operation> _callBatchAllowAdReviewCenterAds;
 
         private readonly gaxgrpc::ApiCall<BatchBlockAdReviewCenterAdsRequest, lro::Operation> _callBatchBlockAdReviewCenterAds;
+
+        private readonly gaxgrpc::ApiCall<FetchAdReviewCenterCustomLabelsRequest, FetchAdReviewCenterCustomLabelsResponse> _callFetchAdReviewCenterCustomLabels;
+
+        private readonly gaxgrpc::ApiCall<BatchApplyAdReviewCenterCustomLabelsRequest, BatchApplyAdReviewCenterCustomLabelsResponse> _callBatchApplyAdReviewCenterCustomLabels;
 
         /// <summary>
         /// Constructs a client wrapper for the AdReviewCenterAdService service, with the specified gRPC client and
@@ -997,6 +1446,12 @@ namespace Google.Ads.AdManager.V1
             _callBatchBlockAdReviewCenterAds = clientHelper.BuildApiCall<BatchBlockAdReviewCenterAdsRequest, lro::Operation>("BatchBlockAdReviewCenterAds", grpcClient.BatchBlockAdReviewCenterAdsAsync, grpcClient.BatchBlockAdReviewCenterAds, effectiveSettings.BatchBlockAdReviewCenterAdsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchBlockAdReviewCenterAds);
             Modify_BatchBlockAdReviewCenterAdsApiCall(ref _callBatchBlockAdReviewCenterAds);
+            _callFetchAdReviewCenterCustomLabels = clientHelper.BuildApiCall<FetchAdReviewCenterCustomLabelsRequest, FetchAdReviewCenterCustomLabelsResponse>("FetchAdReviewCenterCustomLabels", grpcClient.FetchAdReviewCenterCustomLabelsAsync, grpcClient.FetchAdReviewCenterCustomLabels, effectiveSettings.FetchAdReviewCenterCustomLabelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callFetchAdReviewCenterCustomLabels);
+            Modify_FetchAdReviewCenterCustomLabelsApiCall(ref _callFetchAdReviewCenterCustomLabels);
+            _callBatchApplyAdReviewCenterCustomLabels = clientHelper.BuildApiCall<BatchApplyAdReviewCenterCustomLabelsRequest, BatchApplyAdReviewCenterCustomLabelsResponse>("BatchApplyAdReviewCenterCustomLabels", grpcClient.BatchApplyAdReviewCenterCustomLabelsAsync, grpcClient.BatchApplyAdReviewCenterCustomLabels, effectiveSettings.BatchApplyAdReviewCenterCustomLabelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchApplyAdReviewCenterCustomLabels);
+            Modify_BatchApplyAdReviewCenterCustomLabelsApiCall(ref _callBatchApplyAdReviewCenterCustomLabels);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1008,6 +1463,10 @@ namespace Google.Ads.AdManager.V1
 
         partial void Modify_BatchBlockAdReviewCenterAdsApiCall(ref gaxgrpc::ApiCall<BatchBlockAdReviewCenterAdsRequest, lro::Operation> call);
 
+        partial void Modify_FetchAdReviewCenterCustomLabelsApiCall(ref gaxgrpc::ApiCall<FetchAdReviewCenterCustomLabelsRequest, FetchAdReviewCenterCustomLabelsResponse> call);
+
+        partial void Modify_BatchApplyAdReviewCenterCustomLabelsApiCall(ref gaxgrpc::ApiCall<BatchApplyAdReviewCenterCustomLabelsRequest, BatchApplyAdReviewCenterCustomLabelsResponse> call);
+
         partial void OnConstruction(AdReviewCenterAdService.AdReviewCenterAdServiceClient grpcClient, AdReviewCenterAdServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC AdReviewCenterAdService client</summary>
@@ -1018,6 +1477,10 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_BatchAllowAdReviewCenterAdsRequest(ref BatchAllowAdReviewCenterAdsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BatchBlockAdReviewCenterAdsRequest(ref BatchBlockAdReviewCenterAdsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchAdReviewCenterCustomLabelsRequest(ref FetchAdReviewCenterCustomLabelsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchApplyAdReviewCenterCustomLabelsRequest(ref BatchApplyAdReviewCenterCustomLabelsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Searches for AdReviewCenterAds.
@@ -1107,6 +1570,64 @@ namespace Google.Ads.AdManager.V1
         {
             Modify_BatchBlockAdReviewCenterAdsRequest(ref request, ref callSettings);
             return new lro::Operation<BatchBlockAdReviewCenterAdsResponse, BatchAdReviewCenterAdsOperationMetadata>(await _callBatchBlockAdReviewCenterAds.Async(request, callSettings).ConfigureAwait(false), BatchBlockAdReviewCenterAdsOperationsClient);
+        }
+
+        /// <summary>
+        /// Fetches all custom labels for a publisher. Custom labels can help you
+        /// filter and find creatives with the associated label. For more information,
+        /// see https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FetchAdReviewCenterCustomLabelsResponse FetchAdReviewCenterCustomLabels(FetchAdReviewCenterCustomLabelsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchAdReviewCenterCustomLabelsRequest(ref request, ref callSettings);
+            return _callFetchAdReviewCenterCustomLabels.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches all custom labels for a publisher. Custom labels can help you
+        /// filter and find creatives with the associated label. For more information,
+        /// see https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FetchAdReviewCenterCustomLabelsResponse> FetchAdReviewCenterCustomLabelsAsync(FetchAdReviewCenterCustomLabelsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchAdReviewCenterCustomLabelsRequest(ref request, ref callSettings);
+            return _callFetchAdReviewCenterCustomLabels.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Performs batch apply on custom labels associated with Ad review center ads.
+        /// Custom labels can help you filter and find creatives with the associated
+        /// label. For more information, see
+        /// https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchApplyAdReviewCenterCustomLabelsResponse BatchApplyAdReviewCenterCustomLabels(BatchApplyAdReviewCenterCustomLabelsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchApplyAdReviewCenterCustomLabelsRequest(ref request, ref callSettings);
+            return _callBatchApplyAdReviewCenterCustomLabels.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Performs batch apply on custom labels associated with Ad review center ads.
+        /// Custom labels can help you filter and find creatives with the associated
+        /// label. For more information, see
+        /// https://support.google.com/admanager/answer/13812863.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchApplyAdReviewCenterCustomLabelsResponse> BatchApplyAdReviewCenterCustomLabelsAsync(BatchApplyAdReviewCenterCustomLabelsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchApplyAdReviewCenterCustomLabelsRequest(ref request, ref callSettings);
+            return _callBatchApplyAdReviewCenterCustomLabels.Async(request, callSettings);
         }
     }
 

@@ -260,5 +260,74 @@ namespace Google.Ads.AdManager.V1
             get => string.IsNullOrEmpty(Name) ? null : gaav::CreativeName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="CompanyName"/>-typed view over the <see cref="Advertiser"/> resource name property.
+        /// </summary>
+        public CompanyName AdvertiserAsCompanyName
+        {
+            get => string.IsNullOrEmpty(Advertiser) ? null : CompanyName.Parse(Advertiser, allowUnparsed: true);
+            set => Advertiser = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ImageOverlayCreativeDetails
+    {
+        /// <summary>
+        /// <see cref="CreativeSetName"/>-typed view over the <see cref="CreativeSet"/> resource name property.
+        /// </summary>
+        public CreativeSetName CreativeSetAsCreativeSetName
+        {
+            get => string.IsNullOrEmpty(CreativeSet) ? null : CreativeSetName.Parse(CreativeSet, allowUnparsed: true);
+            set => CreativeSet = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="CreativeName"/>-typed view over the <see cref="CompanionCreatives"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<CreativeName> CompanionCreativesAsCreativeNames
+        {
+            get => new gax::ResourceNameList<CreativeName>(CompanionCreatives, s => string.IsNullOrEmpty(s) ? null : CreativeName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class ImageRedirectOverlayCreativeDetails
+    {
+        /// <summary>
+        /// <see cref="CreativeSetName"/>-typed view over the <see cref="CreativeSet"/> resource name property.
+        /// </summary>
+        public CreativeSetName CreativeSetAsCreativeSetName
+        {
+            get => string.IsNullOrEmpty(CreativeSet) ? null : CreativeSetName.Parse(CreativeSet, allowUnparsed: true);
+            set => CreativeSet = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="CreativeName"/>-typed view over the <see cref="CompanionCreatives"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<CreativeName> CompanionCreativesAsCreativeNames
+        {
+            get => new gax::ResourceNameList<CreativeName>(CompanionCreatives, s => string.IsNullOrEmpty(s) ? null : CreativeName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class VastInfo
+    {
+        /// <summary>
+        /// <see cref="CreativeSetName"/>-typed view over the <see cref="CreativeSet"/> resource name property.
+        /// </summary>
+        public CreativeSetName CreativeSetAsCreativeSetName
+        {
+            get => string.IsNullOrEmpty(CreativeSet) ? null : CreativeSetName.Parse(CreativeSet, allowUnparsed: true);
+            set => CreativeSet = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="CreativeName"/>-typed view over the <see cref="CompanionCreatives"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<CreativeName> CompanionCreativesAsCreativeNames
+        {
+            get => new gax::ResourceNameList<CreativeName>(CompanionCreatives, s => string.IsNullOrEmpty(s) ? null : CreativeName.Parse(s, allowUnparsed: true));
+        }
     }
 }

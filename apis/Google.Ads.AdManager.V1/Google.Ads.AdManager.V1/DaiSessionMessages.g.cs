@@ -2894,7 +2894,7 @@ namespace Google.Ads.AdManager.V1 {
             /// response. This value is only populated for VMAP ad requests when video
             /// playlist internal redirects are enabled. For details, see [Internal
             /// redirect to Google Campaign Manager
-            /// 360](https://support.google.com/admanager/answer/9580500?hl=en&amp;sjid=487826991051851731-NA).
+            /// 360](https://support.google.com/admanager/answer/9580500).
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

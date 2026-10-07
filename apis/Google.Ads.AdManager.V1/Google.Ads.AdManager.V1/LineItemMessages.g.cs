@@ -1551,7 +1551,9 @@ namespace Google.Ads.AdManager.V1 {
     ///    For example a LineItem specifies 750x350, 400x200 but only a 750x350 was
     ///    uploaded. Or LineItem specifies 750x350 with an expected count of 2, but
     ///    only one was uploaded.
-    ///  - The [Creative.applied_labels][] of an associated Creative don't match
+    ///  - The
+    ///  [Creative.applied_labels][google.ads.admanager.v1.Creative.applied_labels]
+    ///  of an associated Creative don't match
     ///    the
     ///    [CreativePlaceholder.applied_labels][google.ads.admanager.v1.CreativePlaceholder.applied_labels]
     ///    of the LineItem. For example LineItem specifies 750x350 with a Foo
@@ -1877,8 +1879,9 @@ namespace Google.Ads.AdManager.V1 {
     /// [CreativePlaceholder.creative_targeting_display_name][google.ads.admanager.v1.CreativePlaceholder.creative_targeting_display_name]
     /// field by referencing the [CreativeTargeting.display_name][] field. It also
     /// needs to be re-specified in the
-    /// [LineItemCreativeAssociation.targeting_display_name][] field when
-    /// associating a line item with a creative that fits into that placeholder.
+    /// [LineItemCreativeAssociation.targeting_display_name][google.ads.admanager.v1.LineItemCreativeAssociation.targeting_display_name]
+    /// field when associating a line item with a creative that fits into that
+    /// placeholder.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

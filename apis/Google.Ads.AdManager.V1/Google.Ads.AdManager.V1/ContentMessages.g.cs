@@ -301,9 +301,10 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// Output only. The list of any errors that occurred during the most recent
     /// DAI ingestion process of the HLS media. This attribute will be empty if the
-    /// hlsIngestStatus is [DaiIngestStatus.SUCCESS][] or if the `Content` is
-    /// not eligible for dynamic ad insertion or if the `Content` does not have
-    /// HLS media.
+    /// [hlsIngestStatus][google.ads.admanager.v1.Content.hls_ingest_status] is
+    /// [DaiIngestStatusEnum.DaiIngestStatus.SUCCESS][google.ads.admanager.v1.DaiIngestStatusEnum.DaiIngestStatus.SUCCESS]
+    /// or if the `Content` is not eligible for dynamic ad insertion or if the
+    /// `Content` does not have HLS media.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -369,9 +370,11 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// Output only. The list of any errors that occurred during the most recent
     /// DAI ingestion process of the DASH media. This attribute will be empty if
-    /// the hlsIngestStatus is [DaiIngestStatus.SUCCESS][] or if the `Content` is
-    /// not eligible for dynamic ad insertion or if the `Content` does not have
-    /// DASH media.
+    /// the [dashIngestStatus][google.ads.admanager.v1.Content.dash_ingest_status]
+    /// is
+    /// [DaiIngestStatusEnum.DaiIngestStatus.SUCCESS][google.ads.admanager.v1.DaiIngestStatusEnum.DaiIngestStatus.SUCCESS]
+    /// or if the `Content` is not eligible for dynamic ad insertion or if the
+    /// `Content` does not have DASH media.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

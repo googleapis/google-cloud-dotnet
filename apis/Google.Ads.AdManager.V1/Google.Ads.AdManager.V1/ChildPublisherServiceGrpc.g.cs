@@ -315,7 +315,7 @@ namespace Google.Ads.AdManager.V1 {
       /// associated with an Ad Manager network.
       ///
       /// To sever the relationship from the parent publisher's side, use
-      /// [BatchWithdrawChildPublisher][].
+      /// `BatchWithdrawChildPublishers`.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -327,12 +327,12 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+      /// Batch withdraws [ChildPublishers][google.ads.admanager.v1.ChildPublisher].
       ///
       /// Only expired, pending, and accepted
-      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+      /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] can be withdrawn.
       /// Rejected or withdrawn
-      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be ignored.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -826,7 +826,7 @@ namespace Google.Ads.AdManager.V1 {
       /// associated with an Ad Manager network.
       ///
       /// To sever the relationship from the parent publisher's side, use
-      /// [BatchWithdrawChildPublisher][].
+      /// `BatchWithdrawChildPublishers`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -852,7 +852,7 @@ namespace Google.Ads.AdManager.V1 {
       /// associated with an Ad Manager network.
       ///
       /// To sever the relationship from the parent publisher's side, use
-      /// [BatchWithdrawChildPublisher][].
+      /// `BatchWithdrawChildPublishers`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -876,7 +876,7 @@ namespace Google.Ads.AdManager.V1 {
       /// associated with an Ad Manager network.
       ///
       /// To sever the relationship from the parent publisher's side, use
-      /// [BatchWithdrawChildPublisher][].
+      /// `BatchWithdrawChildPublishers`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -902,7 +902,7 @@ namespace Google.Ads.AdManager.V1 {
       /// associated with an Ad Manager network.
       ///
       /// To sever the relationship from the parent publisher's side, use
-      /// [BatchWithdrawChildPublisher][].
+      /// `BatchWithdrawChildPublishers`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -913,12 +913,12 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchRejectChildPublishers, null, options, request);
       }
       /// <summary>
-      /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+      /// Batch withdraws [ChildPublishers][google.ads.admanager.v1.ChildPublisher].
       ///
       /// Only expired, pending, and accepted
-      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+      /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] can be withdrawn.
       /// Rejected or withdrawn
-      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be ignored.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -931,12 +931,12 @@ namespace Google.Ads.AdManager.V1 {
         return BatchWithdrawChildPublishers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+      /// Batch withdraws [ChildPublishers][google.ads.admanager.v1.ChildPublisher].
       ///
       /// Only expired, pending, and accepted
-      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+      /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] can be withdrawn.
       /// Rejected or withdrawn
-      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be ignored.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -947,12 +947,12 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchWithdrawChildPublishers, null, options, request);
       }
       /// <summary>
-      /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+      /// Batch withdraws [ChildPublishers][google.ads.admanager.v1.ChildPublisher].
       ///
       /// Only expired, pending, and accepted
-      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+      /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] can be withdrawn.
       /// Rejected or withdrawn
-      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be ignored.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -965,12 +965,12 @@ namespace Google.Ads.AdManager.V1 {
         return BatchWithdrawChildPublishersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+      /// Batch withdraws [ChildPublishers][google.ads.admanager.v1.ChildPublisher].
       ///
       /// Only expired, pending, and accepted
-      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+      /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] can be withdrawn.
       /// Rejected or withdrawn
-      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be ignored.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

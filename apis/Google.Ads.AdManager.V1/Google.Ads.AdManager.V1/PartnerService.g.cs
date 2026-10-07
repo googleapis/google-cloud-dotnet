@@ -87,7 +87,7 @@ namespace Google.Ads.AdManager.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request object for [GetPartner][] method.
+  /// Request object for `GetPartner` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetPartnerRequest : pb::IMessage<GetPartnerRequest>
@@ -293,7 +293,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for [ListPartners][] method.
+  /// Request object for `ListPartners` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPartnersRequest : pb::IMessage<ListPartnersRequest>
@@ -350,7 +350,7 @@ namespace Google.Ads.AdManager.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent, which owns this collection of
-    /// [Partner][google.ads.admanager.v1.Partner]s. Format:
+    /// [Partners][google.ads.admanager.v1.Partner]. Format:
     /// `networks/{network_code}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -366,9 +366,9 @@ namespace Google.Ads.AdManager.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of [Partner][google.ads.admanager.v1.Partner]s
+    /// Optional. The maximum number of [Partners][google.ads.admanager.v1.Partner]
     /// to return. The service may return fewer than this value. If unspecified, at
-    /// most 50 [Partner][google.ads.admanager.v1.Partner]s will be returned. The
+    /// most 50 [Partners][google.ads.admanager.v1.Partner] will be returned. The
     /// maximum value is 1000; values greater than 1000 will be coerced to 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -384,10 +384,10 @@ namespace Google.Ads.AdManager.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A page token, received from a previous [ListPartners][] call.
+    /// Optional. A page token, received from a previous `ListPartners` call.
     /// Provide this to retrieve the subsequent page.
     ///
-    /// When paginating, all other parameters provided to [ListPartners][] must
+    /// When paginating, all other parameters provided to `ListPartners` must
     /// match the call that provided the page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -722,9 +722,8 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Response object for
-  /// [ListPartnersRequest][google.ads.admanager.v1.ListPartnersRequest] containing
-  /// matching [Partner][google.ads.admanager.v1.Partner] objects.
+  /// Response object for `ListPartnersRequest` containing matching
+  /// [Partner][google.ads.admanager.v1.Partner] objects.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPartnersResponse : pb::IMessage<ListPartnersResponse>
@@ -1009,7 +1008,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for [UpdatePartner][] method.
+  /// Request object for `UpdatePartner` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdatePartnerRequest : pb::IMessage<UpdatePartnerRequest>
@@ -1274,7 +1273,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for [BatchUpdatePartners][] method.
+  /// Request object for `BatchUpdatePartners` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchUpdatePartnersRequest : pb::IMessage<BatchUpdatePartnersRequest>
@@ -1327,10 +1326,9 @@ namespace Google.Ads.AdManager.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent resource where
-    /// [Partner][google.ads.admanager.v1.Partner]s will be updated. Format:
-    /// `networks/{network_code}` The parent field in the
-    /// [UpdatePartnerRequest][google.ads.admanager.v1.UpdatePartnerRequest] must
-    /// match this field.
+    /// [Partners][google.ads.admanager.v1.Partner] will be updated. Format:
+    /// `networks/{network_code}` The parent field in the `UpdatePartnerRequest`
+    /// must match this field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1512,7 +1510,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Response object for [BatchUpdatePartners][] method.
+  /// Response object for `BatchUpdatePartners` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchUpdatePartnersResponse : pb::IMessage<BatchUpdatePartnersResponse>

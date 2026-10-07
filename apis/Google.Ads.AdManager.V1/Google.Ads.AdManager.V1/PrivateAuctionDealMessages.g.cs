@@ -217,7 +217,7 @@ namespace Google.Ads.AdManager.V1 {
     private long privateAuctionId_;
     /// <summary>
     /// Immutable. The ID of the
-    /// [PrivateAuction](google.ads.admanager.v1.PrivateAuction).
+    /// [PrivateAuction][google.ads.admanager.v1.PrivateAuction].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -248,7 +248,7 @@ namespace Google.Ads.AdManager.V1 {
     private string privateAuctionDisplayName_;
     /// <summary>
     /// Output only. The display name of the
-    /// [PrivateAuction](google.ads.admanager.v1.PrivateAuction).
+    /// [PrivateAuction][google.ads.admanager.v1.PrivateAuction].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

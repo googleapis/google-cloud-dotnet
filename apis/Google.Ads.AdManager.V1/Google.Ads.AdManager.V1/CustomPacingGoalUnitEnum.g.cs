@@ -222,7 +222,8 @@ namespace Google.Ads.AdManager.V1 {
         [pbr::OriginalName("CUSTOM_PACING_GOAL_UNIT_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// The custom pacing goal amounts represent absolute numbers corresponding
-        /// to the line item's [Goal.unitType][].
+        /// to the line item's
+        /// [Goal.unitType][google.ads.admanager.v1.Goal.unit_type].
         /// </summary>
         [pbr::OriginalName("ABSOLUTE")] Absolute = 1,
         /// <summary>

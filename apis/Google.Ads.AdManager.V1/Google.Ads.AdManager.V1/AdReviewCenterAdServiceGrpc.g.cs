@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Ads.AdManager.V1 {
   /// <summary>
-  /// Provides methods for handling AdReviewCenterAd objects.
+  /// Provides methods for handling `AdReviewCenterAd` objects.
   /// </summary>
   public static partial class AdReviewCenterAdService
   {
@@ -73,6 +73,14 @@ namespace Google.Ads.AdManager.V1 {
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchBlockAdReviewCenterAdsRequest> __Marshaller_google_ads_admanager_v1_BatchBlockAdReviewCenterAdsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchBlockAdReviewCenterAdsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.FetchAdReviewCenterCustomLabelsRequest> __Marshaller_google_ads_admanager_v1_FetchAdReviewCenterCustomLabelsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.FetchAdReviewCenterCustomLabelsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.FetchAdReviewCenterCustomLabelsResponse> __Marshaller_google_ads_admanager_v1_FetchAdReviewCenterCustomLabelsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.FetchAdReviewCenterCustomLabelsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchApplyAdReviewCenterCustomLabelsRequest> __Marshaller_google_ads_admanager_v1_BatchApplyAdReviewCenterCustomLabelsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchApplyAdReviewCenterCustomLabelsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchApplyAdReviewCenterCustomLabelsResponse> __Marshaller_google_ads_admanager_v1_BatchApplyAdReviewCenterCustomLabelsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchApplyAdReviewCenterCustomLabelsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.AdManager.V1.SearchAdReviewCenterAdsRequest, global::Google.Ads.AdManager.V1.SearchAdReviewCenterAdsResponse> __Method_SearchAdReviewCenterAds = new grpc::Method<global::Google.Ads.AdManager.V1.SearchAdReviewCenterAdsRequest, global::Google.Ads.AdManager.V1.SearchAdReviewCenterAdsResponse>(
@@ -97,6 +105,22 @@ namespace Google.Ads.AdManager.V1 {
         "BatchBlockAdReviewCenterAds",
         __Marshaller_google_ads_admanager_v1_BatchBlockAdReviewCenterAdsRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.FetchAdReviewCenterCustomLabelsRequest, global::Google.Ads.AdManager.V1.FetchAdReviewCenterCustomLabelsResponse> __Method_FetchAdReviewCenterCustomLabels = new grpc::Method<global::Google.Ads.AdManager.V1.FetchAdReviewCenterCustomLabelsRequest, global::Google.Ads.AdManager.V1.FetchAdReviewCenterCustomLabelsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchAdReviewCenterCustomLabels",
+        __Marshaller_google_ads_admanager_v1_FetchAdReviewCenterCustomLabelsRequest,
+        __Marshaller_google_ads_admanager_v1_FetchAdReviewCenterCustomLabelsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchApplyAdReviewCenterCustomLabelsRequest, global::Google.Ads.AdManager.V1.BatchApplyAdReviewCenterCustomLabelsResponse> __Method_BatchApplyAdReviewCenterCustomLabels = new grpc::Method<global::Google.Ads.AdManager.V1.BatchApplyAdReviewCenterCustomLabelsRequest, global::Google.Ads.AdManager.V1.BatchApplyAdReviewCenterCustomLabelsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchApplyAdReviewCenterCustomLabels",
+        __Marshaller_google_ads_admanager_v1_BatchApplyAdReviewCenterCustomLabelsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchApplyAdReviewCenterCustomLabelsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -146,6 +170,35 @@ namespace Google.Ads.AdManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BatchBlockAdReviewCenterAds(global::Google.Ads.AdManager.V1.BatchBlockAdReviewCenterAdsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetches all custom labels for a publisher. Custom labels can help you
+      /// filter and find creatives with the associated label. For more information,
+      /// see https://support.google.com/admanager/answer/13812863.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.FetchAdReviewCenterCustomLabelsResponse> FetchAdReviewCenterCustomLabels(global::Google.Ads.AdManager.V1.FetchAdReviewCenterCustomLabelsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Performs batch apply on custom labels associated with Ad review center ads.
+      /// Custom labels can help you filter and find creatives with the associated
+      /// label. For more information, see
+      /// https://support.google.com/admanager/answer/13812863.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchApplyAdReviewCenterCustomLabelsResponse> BatchApplyAdReviewCenterCustomLabels(global::Google.Ads.AdManager.V1.BatchApplyAdReviewCenterCustomLabelsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -347,6 +400,122 @@ namespace Google.Ads.AdManager.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchBlockAdReviewCenterAds, null, options, request);
       }
+      /// <summary>
+      /// Fetches all custom labels for a publisher. Custom labels can help you
+      /// filter and find creatives with the associated label. For more information,
+      /// see https://support.google.com/admanager/answer/13812863.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.FetchAdReviewCenterCustomLabelsResponse FetchAdReviewCenterCustomLabels(global::Google.Ads.AdManager.V1.FetchAdReviewCenterCustomLabelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchAdReviewCenterCustomLabels(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches all custom labels for a publisher. Custom labels can help you
+      /// filter and find creatives with the associated label. For more information,
+      /// see https://support.google.com/admanager/answer/13812863.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.FetchAdReviewCenterCustomLabelsResponse FetchAdReviewCenterCustomLabels(global::Google.Ads.AdManager.V1.FetchAdReviewCenterCustomLabelsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchAdReviewCenterCustomLabels, null, options, request);
+      }
+      /// <summary>
+      /// Fetches all custom labels for a publisher. Custom labels can help you
+      /// filter and find creatives with the associated label. For more information,
+      /// see https://support.google.com/admanager/answer/13812863.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.FetchAdReviewCenterCustomLabelsResponse> FetchAdReviewCenterCustomLabelsAsync(global::Google.Ads.AdManager.V1.FetchAdReviewCenterCustomLabelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchAdReviewCenterCustomLabelsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches all custom labels for a publisher. Custom labels can help you
+      /// filter and find creatives with the associated label. For more information,
+      /// see https://support.google.com/admanager/answer/13812863.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.FetchAdReviewCenterCustomLabelsResponse> FetchAdReviewCenterCustomLabelsAsync(global::Google.Ads.AdManager.V1.FetchAdReviewCenterCustomLabelsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchAdReviewCenterCustomLabels, null, options, request);
+      }
+      /// <summary>
+      /// Performs batch apply on custom labels associated with Ad review center ads.
+      /// Custom labels can help you filter and find creatives with the associated
+      /// label. For more information, see
+      /// https://support.google.com/admanager/answer/13812863.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchApplyAdReviewCenterCustomLabelsResponse BatchApplyAdReviewCenterCustomLabels(global::Google.Ads.AdManager.V1.BatchApplyAdReviewCenterCustomLabelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchApplyAdReviewCenterCustomLabels(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Performs batch apply on custom labels associated with Ad review center ads.
+      /// Custom labels can help you filter and find creatives with the associated
+      /// label. For more information, see
+      /// https://support.google.com/admanager/answer/13812863.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchApplyAdReviewCenterCustomLabelsResponse BatchApplyAdReviewCenterCustomLabels(global::Google.Ads.AdManager.V1.BatchApplyAdReviewCenterCustomLabelsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchApplyAdReviewCenterCustomLabels, null, options, request);
+      }
+      /// <summary>
+      /// Performs batch apply on custom labels associated with Ad review center ads.
+      /// Custom labels can help you filter and find creatives with the associated
+      /// label. For more information, see
+      /// https://support.google.com/admanager/answer/13812863.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchApplyAdReviewCenterCustomLabelsResponse> BatchApplyAdReviewCenterCustomLabelsAsync(global::Google.Ads.AdManager.V1.BatchApplyAdReviewCenterCustomLabelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchApplyAdReviewCenterCustomLabelsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Performs batch apply on custom labels associated with Ad review center ads.
+      /// Custom labels can help you filter and find creatives with the associated
+      /// label. For more information, see
+      /// https://support.google.com/admanager/answer/13812863.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchApplyAdReviewCenterCustomLabelsResponse> BatchApplyAdReviewCenterCustomLabelsAsync(global::Google.Ads.AdManager.V1.BatchApplyAdReviewCenterCustomLabelsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchApplyAdReviewCenterCustomLabels, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AdReviewCenterAdServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -363,7 +532,9 @@ namespace Google.Ads.AdManager.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_SearchAdReviewCenterAds, serviceImpl.SearchAdReviewCenterAds)
           .AddMethod(__Method_BatchAllowAdReviewCenterAds, serviceImpl.BatchAllowAdReviewCenterAds)
-          .AddMethod(__Method_BatchBlockAdReviewCenterAds, serviceImpl.BatchBlockAdReviewCenterAds).Build();
+          .AddMethod(__Method_BatchBlockAdReviewCenterAds, serviceImpl.BatchBlockAdReviewCenterAds)
+          .AddMethod(__Method_FetchAdReviewCenterCustomLabels, serviceImpl.FetchAdReviewCenterCustomLabels)
+          .AddMethod(__Method_BatchApplyAdReviewCenterCustomLabels, serviceImpl.BatchApplyAdReviewCenterCustomLabels).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -376,6 +547,8 @@ namespace Google.Ads.AdManager.V1 {
       serviceBinder.AddMethod(__Method_SearchAdReviewCenterAds, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.SearchAdReviewCenterAdsRequest, global::Google.Ads.AdManager.V1.SearchAdReviewCenterAdsResponse>(serviceImpl.SearchAdReviewCenterAds));
       serviceBinder.AddMethod(__Method_BatchAllowAdReviewCenterAds, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchAllowAdReviewCenterAdsRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchAllowAdReviewCenterAds));
       serviceBinder.AddMethod(__Method_BatchBlockAdReviewCenterAds, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchBlockAdReviewCenterAdsRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchBlockAdReviewCenterAds));
+      serviceBinder.AddMethod(__Method_FetchAdReviewCenterCustomLabels, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.FetchAdReviewCenterCustomLabelsRequest, global::Google.Ads.AdManager.V1.FetchAdReviewCenterCustomLabelsResponse>(serviceImpl.FetchAdReviewCenterCustomLabels));
+      serviceBinder.AddMethod(__Method_BatchApplyAdReviewCenterCustomLabels, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchApplyAdReviewCenterCustomLabelsRequest, global::Google.Ads.AdManager.V1.BatchApplyAdReviewCenterCustomLabelsResponse>(serviceImpl.BatchApplyAdReviewCenterCustomLabels));
     }
 
   }

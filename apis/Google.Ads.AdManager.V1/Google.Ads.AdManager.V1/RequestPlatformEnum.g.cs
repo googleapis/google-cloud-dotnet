@@ -45,7 +45,8 @@ namespace Google.Ads.AdManager.V1 {
   }
   #region Messages
   /// <summary>
-  /// Wrapper message for [RequestPlatform].
+  /// Wrapper message for
+  /// [RequestPlatform][google.ads.admanager.v1.RequestPlatformEnum.RequestPlatform].
   ///
   /// Describes the platform from which a request is made and on which the ad is
   /// rendered. In the event of multiple platforms, the platform that ultimately
