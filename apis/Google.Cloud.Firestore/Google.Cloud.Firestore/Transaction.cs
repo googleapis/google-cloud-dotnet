@@ -72,14 +72,12 @@ namespace Google.Cloud.Firestore
         /// <param name="documentReference">The document reference to fetch. Must not be null.</param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>A snapshot of the given document with respect to this transaction.</returns>
-        public Task<DocumentSnapshot> GetSnapshotAsync(DocumentReference documentReference, CancellationToken cancellationToken = default)
+        public async Task<DocumentSnapshot> GetSnapshotAsync(DocumentReference documentReference, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(documentReference, nameof(documentReference));
             GaxPreconditions.CheckState(_writes.IsEmpty, "Firestore transactions require all reads to be executed before all writes.");
-            using (var cts = CancellationTokenSource.CreateLinkedTokenSource(CancellationToken, cancellationToken))
-            {
-                return documentReference.GetSnapshotAsync(TransactionId, cts.Token);
-            }
+            using var cts = CancellationTokenSource.CreateLinkedTokenSource(CancellationToken, cancellationToken);
+            return await documentReference.GetSnapshotAsync(TransactionId, cts.Token).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -110,13 +108,11 @@ namespace Google.Cloud.Firestore
         /// case no field mask is applied, and the complete documents are retrieved.</param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>The document snapshots, in the same order as <paramref name="documentReferences"/>.</returns>
-        public Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documentReferences, FieldMask fieldMask, CancellationToken cancellationToken = default)
+        public async Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documentReferences, FieldMask fieldMask, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckState(_writes.IsEmpty, "Firestore transactions require all reads to be executed before all writes.");
-            using (var cts = CancellationTokenSource.CreateLinkedTokenSource(CancellationToken, cancellationToken))
-            {
-                return Database.GetAllSnapshotsAsync(documentReferences, TransactionId, fieldMask, cts.Token);
-            }
+            using var cts = CancellationTokenSource.CreateLinkedTokenSource(CancellationToken, cancellationToken);
+            return await Database.GetAllSnapshotsAsync(documentReferences, TransactionId, fieldMask, cts.Token).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -126,14 +122,12 @@ namespace Google.Cloud.Firestore
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>A snapshot of results of the given query with respect to this transaction.</returns>
-        public Task<QuerySnapshot> GetSnapshotAsync(Query query, CancellationToken cancellationToken = default)
+        public async Task<QuerySnapshot> GetSnapshotAsync(Query query, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(query, nameof(query));
             GaxPreconditions.CheckState(_writes.IsEmpty, "Firestore transactions require all reads to be executed before all writes.");
-            using (var cts = CancellationTokenSource.CreateLinkedTokenSource(CancellationToken, cancellationToken))
-            {
-                return query.GetSnapshotAsync(TransactionId, cts.Token);
-            }
+            using var cts = CancellationTokenSource.CreateLinkedTokenSource(CancellationToken, cancellationToken);
+            return await query.GetSnapshotAsync(TransactionId, cts.Token).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -142,12 +136,12 @@ namespace Google.Cloud.Firestore
         /// <param name="query">The aggregate query to execute. Must not be null.</param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>A <see cref="AggregateQuerySnapshot"/> of results of the given query with respect to this transaction.</returns>
-        public Task<AggregateQuerySnapshot> GetSnapshotAsync(AggregateQuery query, CancellationToken cancellationToken = default)
+        public async Task<AggregateQuerySnapshot> GetSnapshotAsync(AggregateQuery query, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(query, nameof(query));
             GaxPreconditions.CheckState(_writes.IsEmpty, "Firestore transactions require all reads to be executed before all writes.");
             using var cts = CancellationTokenSource.CreateLinkedTokenSource(CancellationToken, cancellationToken);
-            return query.GetSnapshotAsync(TransactionId, cts.Token);
+            return await query.GetSnapshotAsync(TransactionId, cts.Token).ConfigureAwait(false);
         }
 
         /// <summary>
