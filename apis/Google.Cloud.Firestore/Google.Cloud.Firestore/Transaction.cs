@@ -76,8 +76,8 @@ namespace Google.Cloud.Firestore
         {
             GaxPreconditions.CheckNotNull(documentReference, nameof(documentReference));
             GaxPreconditions.CheckState(_writes.IsEmpty, "Firestore transactions require all reads to be executed before all writes.");
-            using var cts = CancellationTokenSource.CreateLinkedTokenSource(CancellationToken, cancellationToken);
-            return await documentReference.GetSnapshotAsync(TransactionId, cts.Token).ConfigureAwait(false);
+            using var linkedCts = CreateEffectiveCancellationToken(cancellationToken, out var effectiveToken);
+            return await documentReference.GetSnapshotAsync(TransactionId, effectiveToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -111,8 +111,8 @@ namespace Google.Cloud.Firestore
         public async Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documentReferences, FieldMask fieldMask, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckState(_writes.IsEmpty, "Firestore transactions require all reads to be executed before all writes.");
-            using var cts = CancellationTokenSource.CreateLinkedTokenSource(CancellationToken, cancellationToken);
-            return await Database.GetAllSnapshotsAsync(documentReferences, TransactionId, fieldMask, cts.Token).ConfigureAwait(false);
+            using var linkedCts = CreateEffectiveCancellationToken(cancellationToken, out var effectiveToken);
+            return await Database.GetAllSnapshotsAsync(documentReferences, TransactionId, fieldMask, effectiveToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -126,8 +126,8 @@ namespace Google.Cloud.Firestore
         {
             GaxPreconditions.CheckNotNull(query, nameof(query));
             GaxPreconditions.CheckState(_writes.IsEmpty, "Firestore transactions require all reads to be executed before all writes.");
-            using var cts = CancellationTokenSource.CreateLinkedTokenSource(CancellationToken, cancellationToken);
-            return await query.GetSnapshotAsync(TransactionId, cts.Token).ConfigureAwait(false);
+            using var linkedCts = CreateEffectiveCancellationToken(cancellationToken, out var effectiveToken);
+            return await query.GetSnapshotAsync(TransactionId, effectiveToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -140,8 +140,8 @@ namespace Google.Cloud.Firestore
         {
             GaxPreconditions.CheckNotNull(query, nameof(query));
             GaxPreconditions.CheckState(_writes.IsEmpty, "Firestore transactions require all reads to be executed before all writes.");
-            using var cts = CancellationTokenSource.CreateLinkedTokenSource(CancellationToken, cancellationToken);
-            return await query.GetSnapshotAsync(TransactionId, cts.Token).ConfigureAwait(false);
+            using var linkedCts = CreateEffectiveCancellationToken(cancellationToken, out var effectiveToken);
+            return await query.GetSnapshotAsync(TransactionId, effectiveToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -231,5 +231,34 @@ namespace Google.Cloud.Firestore
         /// <returns>A task representing the asynchronous operation.</returns>
         internal Task RollbackAsync() =>
             Database.Client.RollbackAsync(Database.RootPath, TransactionId, CancellationToken);
+
+        /// <summary>
+        /// Selects the effective cancellation token to use for a read operation, creating a linked token source only if both
+        /// the transaction's overall token and the caller's per-operation token are cancelable.
+        /// The caller must dispose any returned <see cref="CancellationTokenSource"/>.
+        /// </summary>
+        private CancellationTokenSource CreateEffectiveCancellationToken(CancellationToken callerToken, out CancellationToken effectiveToken)
+        {
+            var transactionToken = CancellationToken;
+
+            // If the caller did not pass a cancelable token, only monitor the transaction token.
+            if (!callerToken.CanBeCanceled)
+            {
+                effectiveToken = transactionToken;
+                return null;
+            }
+
+            // If the transaction token is not cancelable, only monitor the caller's token.
+            if (!transactionToken.CanBeCanceled)
+            {
+                effectiveToken = callerToken;
+                return null;
+            }
+
+            // Both tokens can be canceled, so link them together.
+            var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(transactionToken, callerToken);
+            effectiveToken = linkedCts.Token;
+            return linkedCts;
+        }
     }
 }
