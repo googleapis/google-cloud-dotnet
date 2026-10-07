@@ -323,6 +323,18 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         }
     }
 
+    public partial class ResolveInstanceConfigRequest
+    {
+        /// <summary>
+        /// <see cref="AppConnectorName"/>-typed view over the <see cref="AppConnector"/> resource name property.
+        /// </summary>
+        public AppConnectorName AppConnectorAsAppConnectorName
+        {
+            get => string.IsNullOrEmpty(AppConnector) ? null : AppConnectorName.Parse(AppConnector, allowUnparsed: true);
+            set => AppConnector = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ReportStatusRequest
     {
         /// <summary>

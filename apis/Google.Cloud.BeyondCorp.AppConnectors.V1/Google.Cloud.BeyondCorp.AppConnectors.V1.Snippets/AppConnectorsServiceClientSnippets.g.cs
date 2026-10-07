@@ -25,6 +25,7 @@ namespace GoogleCSharpSnippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
+    [ObsoleteAttribute]
     public sealed class AllGeneratedAppConnectorsServiceClientSnippets
     {
         /// <summary>Snippet for ListAppConnectors</summary>
@@ -41,7 +42,9 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
             };
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAppConnectorsResponse, AppConnector> response = appConnectorsServiceClient.ListAppConnectors(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (AppConnector item in response)
@@ -91,7 +94,9 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
             };
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAppConnectorsResponse, AppConnector> response = appConnectorsServiceClient.ListAppConnectorsAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await foreach (AppConnector item in response)
@@ -136,7 +141,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAppConnectorsResponse, AppConnector> response = appConnectorsServiceClient.ListAppConnectors(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (AppConnector item in response)
@@ -181,7 +188,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAppConnectorsResponse, AppConnector> response = appConnectorsServiceClient.ListAppConnectorsAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await foreach (AppConnector item in response)
@@ -226,7 +235,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAppConnectorsResponse, AppConnector> response = appConnectorsServiceClient.ListAppConnectors(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (AppConnector item in response)
@@ -271,7 +282,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAppConnectorsResponse, AppConnector> response = appConnectorsServiceClient.ListAppConnectorsAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await foreach (AppConnector item in response)
@@ -319,7 +332,9 @@ namespace GoogleCSharpSnippets
                 AppConnectorName = AppConnectorName.FromProjectLocationAppConnector("[PROJECT]", "[LOCATION]", "[APP_CONNECTOR]"),
             };
             // Make the request
+#pragma warning disable CS0612
             AppConnector response = appConnectorsServiceClient.GetAppConnector(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -336,7 +351,9 @@ namespace GoogleCSharpSnippets
                 AppConnectorName = AppConnectorName.FromProjectLocationAppConnector("[PROJECT]", "[LOCATION]", "[APP_CONNECTOR]"),
             };
             // Make the request
+#pragma warning disable CS0612
             AppConnector response = await appConnectorsServiceClient.GetAppConnectorAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -349,7 +366,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/appConnectors/[APP_CONNECTOR]";
             // Make the request
+#pragma warning disable CS0612
             AppConnector response = appConnectorsServiceClient.GetAppConnector(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -363,7 +382,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/appConnectors/[APP_CONNECTOR]";
             // Make the request
+#pragma warning disable CS0612
             AppConnector response = await appConnectorsServiceClient.GetAppConnectorAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -376,7 +397,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AppConnectorName name = AppConnectorName.FromProjectLocationAppConnector("[PROJECT]", "[LOCATION]", "[APP_CONNECTOR]");
             // Make the request
+#pragma warning disable CS0612
             AppConnector response = appConnectorsServiceClient.GetAppConnector(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -390,7 +413,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AppConnectorName name = AppConnectorName.FromProjectLocationAppConnector("[PROJECT]", "[LOCATION]", "[APP_CONNECTOR]");
             // Make the request
+#pragma warning disable CS0612
             AppConnector response = await appConnectorsServiceClient.GetAppConnectorAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -410,7 +435,9 @@ namespace GoogleCSharpSnippets
                 ValidateOnly = false,
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> response = appConnectorsServiceClient.CreateAppConnector(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppConnector, AppConnectorOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -420,7 +447,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> retrievedResponse = appConnectorsServiceClient.PollOnceCreateAppConnector(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -447,7 +476,9 @@ namespace GoogleCSharpSnippets
                 ValidateOnly = false,
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> response = await appConnectorsServiceClient.CreateAppConnectorAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppConnector, AppConnectorOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -457,7 +488,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> retrievedResponse = await appConnectorsServiceClient.PollOnceCreateAppConnectorAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -478,7 +511,9 @@ namespace GoogleCSharpSnippets
             AppConnector appConnector = new AppConnector();
             string appConnectorId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> response = appConnectorsServiceClient.CreateAppConnector(parent, appConnector, appConnectorId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppConnector, AppConnectorOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -488,7 +523,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> retrievedResponse = appConnectorsServiceClient.PollOnceCreateAppConnector(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -510,7 +547,9 @@ namespace GoogleCSharpSnippets
             AppConnector appConnector = new AppConnector();
             string appConnectorId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> response = await appConnectorsServiceClient.CreateAppConnectorAsync(parent, appConnector, appConnectorId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppConnector, AppConnectorOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -520,7 +559,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> retrievedResponse = await appConnectorsServiceClient.PollOnceCreateAppConnectorAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -541,7 +582,9 @@ namespace GoogleCSharpSnippets
             AppConnector appConnector = new AppConnector();
             string appConnectorId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> response = appConnectorsServiceClient.CreateAppConnector(parent, appConnector, appConnectorId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppConnector, AppConnectorOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -551,7 +594,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> retrievedResponse = appConnectorsServiceClient.PollOnceCreateAppConnector(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -573,7 +618,9 @@ namespace GoogleCSharpSnippets
             AppConnector appConnector = new AppConnector();
             string appConnectorId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> response = await appConnectorsServiceClient.CreateAppConnectorAsync(parent, appConnector, appConnectorId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppConnector, AppConnectorOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -583,7 +630,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> retrievedResponse = await appConnectorsServiceClient.PollOnceCreateAppConnectorAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -608,7 +657,9 @@ namespace GoogleCSharpSnippets
                 ValidateOnly = false,
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> response = appConnectorsServiceClient.UpdateAppConnector(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppConnector, AppConnectorOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -618,7 +669,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> retrievedResponse = appConnectorsServiceClient.PollOnceUpdateAppConnector(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -644,7 +697,9 @@ namespace GoogleCSharpSnippets
                 ValidateOnly = false,
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> response = await appConnectorsServiceClient.UpdateAppConnectorAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppConnector, AppConnectorOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -654,7 +709,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> retrievedResponse = await appConnectorsServiceClient.PollOnceUpdateAppConnectorAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -674,7 +731,9 @@ namespace GoogleCSharpSnippets
             AppConnector appConnector = new AppConnector();
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> response = appConnectorsServiceClient.UpdateAppConnector(appConnector, updateMask);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppConnector, AppConnectorOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -684,7 +743,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> retrievedResponse = appConnectorsServiceClient.PollOnceUpdateAppConnector(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -705,7 +766,9 @@ namespace GoogleCSharpSnippets
             AppConnector appConnector = new AppConnector();
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> response = await appConnectorsServiceClient.UpdateAppConnectorAsync(appConnector, updateMask);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppConnector, AppConnectorOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -715,7 +778,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> retrievedResponse = await appConnectorsServiceClient.PollOnceUpdateAppConnectorAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -739,7 +804,9 @@ namespace GoogleCSharpSnippets
                 ValidateOnly = false,
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, AppConnectorOperationMetadata> response = appConnectorsServiceClient.DeleteAppConnector(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, AppConnectorOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -749,7 +816,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, AppConnectorOperationMetadata> retrievedResponse = appConnectorsServiceClient.PollOnceDeleteAppConnector(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -774,7 +843,9 @@ namespace GoogleCSharpSnippets
                 ValidateOnly = false,
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, AppConnectorOperationMetadata> response = await appConnectorsServiceClient.DeleteAppConnectorAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, AppConnectorOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -784,7 +855,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, AppConnectorOperationMetadata> retrievedResponse = await appConnectorsServiceClient.PollOnceDeleteAppConnectorAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -803,7 +876,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/appConnectors/[APP_CONNECTOR]";
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, AppConnectorOperationMetadata> response = appConnectorsServiceClient.DeleteAppConnector(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, AppConnectorOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -813,7 +888,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, AppConnectorOperationMetadata> retrievedResponse = appConnectorsServiceClient.PollOnceDeleteAppConnector(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -833,7 +910,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/appConnectors/[APP_CONNECTOR]";
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, AppConnectorOperationMetadata> response = await appConnectorsServiceClient.DeleteAppConnectorAsync(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, AppConnectorOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -843,7 +922,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, AppConnectorOperationMetadata> retrievedResponse = await appConnectorsServiceClient.PollOnceDeleteAppConnectorAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -862,7 +943,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AppConnectorName name = AppConnectorName.FromProjectLocationAppConnector("[PROJECT]", "[LOCATION]", "[APP_CONNECTOR]");
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, AppConnectorOperationMetadata> response = appConnectorsServiceClient.DeleteAppConnector(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, AppConnectorOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -872,7 +955,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, AppConnectorOperationMetadata> retrievedResponse = appConnectorsServiceClient.PollOnceDeleteAppConnector(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -892,7 +977,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AppConnectorName name = AppConnectorName.FromProjectLocationAppConnector("[PROJECT]", "[LOCATION]", "[APP_CONNECTOR]");
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, AppConnectorOperationMetadata> response = await appConnectorsServiceClient.DeleteAppConnectorAsync(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, AppConnectorOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -902,13 +989,114 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, AppConnectorOperationMetadata> retrievedResponse = await appConnectorsServiceClient.PollOnceDeleteAppConnectorAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResolveInstanceConfig</summary>
+        public void ResolveInstanceConfigRequestObject()
+        {
+            // Snippet: ResolveInstanceConfig(ResolveInstanceConfigRequest, CallSettings)
+            // Create client
+            AppConnectorsServiceClient appConnectorsServiceClient = AppConnectorsServiceClient.Create();
+            // Initialize request argument(s)
+            ResolveInstanceConfigRequest request = new ResolveInstanceConfigRequest
+            {
+                AppConnectorAsAppConnectorName = AppConnectorName.FromProjectLocationAppConnector("[PROJECT]", "[LOCATION]", "[APP_CONNECTOR]"),
+            };
+            // Make the request
+#pragma warning disable CS0612
+            ResolveInstanceConfigResponse response = appConnectorsServiceClient.ResolveInstanceConfig(request);
+#pragma warning restore CS0612
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResolveInstanceConfigAsync</summary>
+        public async Task ResolveInstanceConfigRequestObjectAsync()
+        {
+            // Snippet: ResolveInstanceConfigAsync(ResolveInstanceConfigRequest, CallSettings)
+            // Additional: ResolveInstanceConfigAsync(ResolveInstanceConfigRequest, CancellationToken)
+            // Create client
+            AppConnectorsServiceClient appConnectorsServiceClient = await AppConnectorsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ResolveInstanceConfigRequest request = new ResolveInstanceConfigRequest
+            {
+                AppConnectorAsAppConnectorName = AppConnectorName.FromProjectLocationAppConnector("[PROJECT]", "[LOCATION]", "[APP_CONNECTOR]"),
+            };
+            // Make the request
+#pragma warning disable CS0612
+            ResolveInstanceConfigResponse response = await appConnectorsServiceClient.ResolveInstanceConfigAsync(request);
+#pragma warning restore CS0612
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResolveInstanceConfig</summary>
+        public void ResolveInstanceConfig()
+        {
+            // Snippet: ResolveInstanceConfig(string, CallSettings)
+            // Create client
+            AppConnectorsServiceClient appConnectorsServiceClient = AppConnectorsServiceClient.Create();
+            // Initialize request argument(s)
+            string appConnector = "projects/[PROJECT]/locations/[LOCATION]/appConnectors/[APP_CONNECTOR]";
+            // Make the request
+#pragma warning disable CS0612
+            ResolveInstanceConfigResponse response = appConnectorsServiceClient.ResolveInstanceConfig(appConnector);
+#pragma warning restore CS0612
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResolveInstanceConfigAsync</summary>
+        public async Task ResolveInstanceConfigAsync()
+        {
+            // Snippet: ResolveInstanceConfigAsync(string, CallSettings)
+            // Additional: ResolveInstanceConfigAsync(string, CancellationToken)
+            // Create client
+            AppConnectorsServiceClient appConnectorsServiceClient = await AppConnectorsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string appConnector = "projects/[PROJECT]/locations/[LOCATION]/appConnectors/[APP_CONNECTOR]";
+            // Make the request
+#pragma warning disable CS0612
+            ResolveInstanceConfigResponse response = await appConnectorsServiceClient.ResolveInstanceConfigAsync(appConnector);
+#pragma warning restore CS0612
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResolveInstanceConfig</summary>
+        public void ResolveInstanceConfigResourceNames()
+        {
+            // Snippet: ResolveInstanceConfig(AppConnectorName, CallSettings)
+            // Create client
+            AppConnectorsServiceClient appConnectorsServiceClient = AppConnectorsServiceClient.Create();
+            // Initialize request argument(s)
+            AppConnectorName appConnector = AppConnectorName.FromProjectLocationAppConnector("[PROJECT]", "[LOCATION]", "[APP_CONNECTOR]");
+            // Make the request
+#pragma warning disable CS0612
+            ResolveInstanceConfigResponse response = appConnectorsServiceClient.ResolveInstanceConfig(appConnector);
+#pragma warning restore CS0612
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResolveInstanceConfigAsync</summary>
+        public async Task ResolveInstanceConfigResourceNamesAsync()
+        {
+            // Snippet: ResolveInstanceConfigAsync(AppConnectorName, CallSettings)
+            // Additional: ResolveInstanceConfigAsync(AppConnectorName, CancellationToken)
+            // Create client
+            AppConnectorsServiceClient appConnectorsServiceClient = await AppConnectorsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AppConnectorName appConnector = AppConnectorName.FromProjectLocationAppConnector("[PROJECT]", "[LOCATION]", "[APP_CONNECTOR]");
+            // Make the request
+#pragma warning disable CS0612
+            ResolveInstanceConfigResponse response = await appConnectorsServiceClient.ResolveInstanceConfigAsync(appConnector);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -927,7 +1115,9 @@ namespace GoogleCSharpSnippets
                 ValidateOnly = false,
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> response = appConnectorsServiceClient.ReportStatus(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppConnector, AppConnectorOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -937,7 +1127,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> retrievedResponse = appConnectorsServiceClient.PollOnceReportStatus(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -963,7 +1155,9 @@ namespace GoogleCSharpSnippets
                 ValidateOnly = false,
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> response = await appConnectorsServiceClient.ReportStatusAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppConnector, AppConnectorOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -973,7 +1167,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> retrievedResponse = await appConnectorsServiceClient.PollOnceReportStatusAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -993,7 +1189,9 @@ namespace GoogleCSharpSnippets
             string appConnector = "projects/[PROJECT]/locations/[LOCATION]/appConnectors/[APP_CONNECTOR]";
             ResourceInfo resourceInfo = new ResourceInfo();
             // Make the request
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> response = appConnectorsServiceClient.ReportStatus(appConnector, resourceInfo);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppConnector, AppConnectorOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -1003,7 +1201,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> retrievedResponse = appConnectorsServiceClient.PollOnceReportStatus(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1024,7 +1224,9 @@ namespace GoogleCSharpSnippets
             string appConnector = "projects/[PROJECT]/locations/[LOCATION]/appConnectors/[APP_CONNECTOR]";
             ResourceInfo resourceInfo = new ResourceInfo();
             // Make the request
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> response = await appConnectorsServiceClient.ReportStatusAsync(appConnector, resourceInfo);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppConnector, AppConnectorOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -1034,7 +1236,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> retrievedResponse = await appConnectorsServiceClient.PollOnceReportStatusAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1054,7 +1258,9 @@ namespace GoogleCSharpSnippets
             AppConnectorName appConnector = AppConnectorName.FromProjectLocationAppConnector("[PROJECT]", "[LOCATION]", "[APP_CONNECTOR]");
             ResourceInfo resourceInfo = new ResourceInfo();
             // Make the request
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> response = appConnectorsServiceClient.ReportStatus(appConnector, resourceInfo);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppConnector, AppConnectorOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -1064,7 +1270,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> retrievedResponse = appConnectorsServiceClient.PollOnceReportStatus(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1085,7 +1293,9 @@ namespace GoogleCSharpSnippets
             AppConnectorName appConnector = AppConnectorName.FromProjectLocationAppConnector("[PROJECT]", "[LOCATION]", "[APP_CONNECTOR]");
             ResourceInfo resourceInfo = new ResourceInfo();
             // Make the request
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> response = await appConnectorsServiceClient.ReportStatusAsync(appConnector, resourceInfo);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppConnector, AppConnectorOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -1095,7 +1305,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> retrievedResponse = await appConnectorsServiceClient.PollOnceReportStatusAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

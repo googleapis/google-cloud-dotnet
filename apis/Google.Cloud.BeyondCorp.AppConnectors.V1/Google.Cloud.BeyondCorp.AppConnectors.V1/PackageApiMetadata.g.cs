@@ -45,38 +45,38 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
                 },
                 {
                     "google.iam.v1.IAMPolicy.GetIamPolicy",
-                    // { "get": "/v1/{resource=projects/*/locations/*/appConnections/*}:getIamPolicy", "additionalBindings": [ { "get": "/v1/{resource=projects/*/locations/*/appConnectors/*}:getIamPolicy" }, { "get": "/v1/{resource=projects/*/locations/*/appGateways/*}:getIamPolicy" }, { "get": "/v1/{resource=projects/*/locations/*/clientConnectorServices/*}:getIamPolicy" }, { "get": "/v1/{resource=projects/*/locations/*/clientGateways/*}:getIamPolicy" } ] }
-                    proto::ByteString.FromBase64("EkMvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovYXBwQ29ubmVjdGlvbnMvKn06Z2V0SWFtUG9saWN5WkQSQi92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hcHBDb25uZWN0b3JzLyp9OmdldElhbVBvbGljeVpCEkAvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovYXBwR2F0ZXdheXMvKn06Z2V0SWFtUG9saWN5Wk4STC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jbGllbnRDb25uZWN0b3JTZXJ2aWNlcy8qfTpnZXRJYW1Qb2xpY3laRRJDL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NsaWVudEdhdGV3YXlzLyp9OmdldElhbVBvbGljeQ==")
+                    // { "get": "/v1/{resource=projects/*/locations/*/appConnections/*}:getIamPolicy", "additionalBindings": [ { "get": "/v1/{resource=projects/*/locations/*/appConnectors/*}:getIamPolicy" }, { "get": "/v1/{resource=projects/*/locations/*/appGateways/*}:getIamPolicy" }, { "get": "/v1/{resource=projects/*/locations/*/securityGateways/*}:getIamPolicy" }, { "get": "/v1/{resource=projects/*/locations/*/securityGateways/*/applications/*}:getIamPolicy" } ] }
+                    proto::ByteString.FromBase64("EkMvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovYXBwQ29ubmVjdGlvbnMvKn06Z2V0SWFtUG9saWN5WkQSQi92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hcHBDb25uZWN0b3JzLyp9OmdldElhbVBvbGljeVpCEkAvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovYXBwR2F0ZXdheXMvKn06Z2V0SWFtUG9saWN5WkcSRS92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zZWN1cml0eUdhdGV3YXlzLyp9OmdldElhbVBvbGljeVpWElQvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovc2VjdXJpdHlHYXRld2F5cy8qL2FwcGxpY2F0aW9ucy8qfTpnZXRJYW1Qb2xpY3k=")
                 },
                 {
                     "google.iam.v1.IAMPolicy.SetIamPolicy",
-                    // { "post": "/v1/{resource=projects/*/locations/*/appConnections/*}:setIamPolicy", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=projects/*/locations/*/appConnectors/*}:setIamPolicy", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/appGateways/*}:setIamPolicy", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/clientConnectorServices/*}:setIamPolicy", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/clientGateways/*}:setIamPolicy", "body": "*" } ] }
-                    proto::ByteString.FromBase64("IkMvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovYXBwQ29ubmVjdGlvbnMvKn06c2V0SWFtUG9saWN5OgEqWkciQi92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hcHBDb25uZWN0b3JzLyp9OnNldElhbVBvbGljeToBKlpFIkAvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovYXBwR2F0ZXdheXMvKn06c2V0SWFtUG9saWN5OgEqWlEiTC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jbGllbnRDb25uZWN0b3JTZXJ2aWNlcy8qfTpzZXRJYW1Qb2xpY3k6ASpaSCJDL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NsaWVudEdhdGV3YXlzLyp9OnNldElhbVBvbGljeToBKg==")
+                    // { "post": "/v1/{resource=projects/*/locations/*/appConnections/*}:setIamPolicy", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=projects/*/locations/*/appConnectors/*}:setIamPolicy", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/appGateways/*}:setIamPolicy", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/securityGateways/*}:setIamPolicy", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/securityGateways/*/applications/*}:setIamPolicy", "body": "*" } ] }
+                    proto::ByteString.FromBase64("IkMvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovYXBwQ29ubmVjdGlvbnMvKn06c2V0SWFtUG9saWN5OgEqWkciQi92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hcHBDb25uZWN0b3JzLyp9OnNldElhbVBvbGljeToBKlpFIkAvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovYXBwR2F0ZXdheXMvKn06c2V0SWFtUG9saWN5OgEqWkoiRS92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zZWN1cml0eUdhdGV3YXlzLyp9OnNldElhbVBvbGljeToBKlpZIlQvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovc2VjdXJpdHlHYXRld2F5cy8qL2FwcGxpY2F0aW9ucy8qfTpzZXRJYW1Qb2xpY3k6ASo=")
                 },
                 {
                     "google.iam.v1.IAMPolicy.TestIamPermissions",
-                    // { "post": "/v1/{resource=projects/*/locations/*/appConnections/*}:testIamPermissions", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=projects/*/locations/*/appConnectors/*}:testIamPermissions", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/appGateways/*}:testIamPermissions", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/clientConnectorServices/*}:testIamPermissions", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/clientGateways/*}:testIamPermissions", "body": "*" } ] }
-                    proto::ByteString.FromBase64("IkkvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovYXBwQ29ubmVjdGlvbnMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqWk0iSC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hcHBDb25uZWN0b3JzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKlpLIkYvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovYXBwR2F0ZXdheXMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqWlciUi92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jbGllbnRDb25uZWN0b3JTZXJ2aWNlcy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASpaTiJJL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NsaWVudEdhdGV3YXlzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKg==")
+                    // { "post": "/v1/{resource=projects/*/locations/*/appConnections/*}:testIamPermissions", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=projects/*/locations/*/appConnectors/*}:testIamPermissions", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/appGateways/*}:testIamPermissions", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/securityGateways/*}:testIamPermissions", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/securityGateways/*/applications/*}:testIamPermissions", "body": "*" } ] }
+                    proto::ByteString.FromBase64("IkkvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovYXBwQ29ubmVjdGlvbnMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqWk0iSC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hcHBDb25uZWN0b3JzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKlpLIkYvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovYXBwR2F0ZXdheXMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqWlAiSy92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zZWN1cml0eUdhdGV3YXlzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKlpfIlovdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovc2VjdXJpdHlHYXRld2F5cy8qL2FwcGxpY2F0aW9ucy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASo=")
                 },
                 {
                     "google.longrunning.Operations.CancelOperation",
-                    // { "post": "/v1/{name=projects/*/locations/*/operations/*}:cancel", "body": "*" }
-                    proto::ByteString.FromBase64("IjUvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9OmNhbmNlbDoBKg==")
+                    // { "post": "/v1/{name=projects/*/locations/*/operations/*}:cancel", "body": "*", "additionalBindings": [ { "post": "/v1/{name=organizations/*/locations/*/operations/*}:cancel", "body": "*" } ] }
+                    proto::ByteString.FromBase64("IjUvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9OmNhbmNlbDoBKlo/IjovdjEve25hbWU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn06Y2FuY2VsOgEq")
                 },
                 {
                     "google.longrunning.Operations.DeleteOperation",
-                    // { "delete": "/v1/{name=projects/*/locations/*/operations/*}" }
-                    proto::ByteString.FromBase64("Ki4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9")
+                    // { "delete": "/v1/{name=projects/*/locations/*/operations/*}", "additionalBindings": [ { "delete": "/v1/{name=organizations/*/locations/*/operations/*}" } ] }
+                    proto::ByteString.FromBase64("Ki4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9WjUqMy92MS97bmFtZT1vcmdhbml6YXRpb25zLyovbG9jYXRpb25zLyovb3BlcmF0aW9ucy8qfQ==")
                 },
                 {
                     "google.longrunning.Operations.GetOperation",
-                    // { "get": "/v1/{name=projects/*/locations/*/operations/*}" }
-                    proto::ByteString.FromBase64("Ei4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9")
+                    // { "get": "/v1/{name=projects/*/locations/*/operations/*}", "additionalBindings": [ { "get": "/v1/{name=organizations/*/locations/*/operations/*}" } ] }
+                    proto::ByteString.FromBase64("Ei4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9WjUSMy92MS97bmFtZT1vcmdhbml6YXRpb25zLyovbG9jYXRpb25zLyovb3BlcmF0aW9ucy8qfQ==")
                 },
                 {
                     "google.longrunning.Operations.ListOperations",
-                    // { "get": "/v1/{name=projects/*/locations/*}/operations" }
-                    proto::ByteString.FromBase64("EiwvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vb3BlcmF0aW9ucw==")
+                    // { "get": "/v1/{name=projects/*/locations/*}/operations", "additionalBindings": [ { "get": "/v1/{name=organizations/*/locations/*}/operations" } ] }
+                    proto::ByteString.FromBase64("EiwvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vb3BlcmF0aW9uc1ozEjEvdjEve25hbWU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qfS9vcGVyYXRpb25z")
                 },
             });
 
