@@ -263,9 +263,9 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// Optional. This end time of the AdRule. This attribute is required
     /// unless
-    /// [end_time_unlimited][google.ads.admanager.v1.AdRule.end_time_unlimited] is
+    /// [endTimeUnlimited][google.ads.admanager.v1.AdRule.end_time_unlimited] is
     /// set to true. If specified, it must be after the
-    /// [start_time][google.ads.admanager.v1.AdRule.start_time].
+    /// [startTime][google.ads.admanager.v1.AdRule.start_time].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -314,7 +314,8 @@ namespace Google.Ads.AdManager.V1 {
     private global::Google.Ads.AdManager.V1.AdRuleStatusEnum.Types.AdRuleStatus status_;
     /// <summary>
     /// Output only. The AdRuleStatus of the AdRule. This attribute is read-only
-    /// and defaults to [AdRuleStatus.INACTIVE][].
+    /// and defaults to
+    /// [AdRuleStatusEnum.AdRuleStatus.INACTIVE][google.ads.admanager.v1.AdRuleStatusEnum.AdRuleStatus.INACTIVE].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -345,7 +346,8 @@ namespace Google.Ads.AdManager.V1 {
     private global::Google.Ads.AdManager.V1.AdRuleFrequencyCapBehaviorEnum.Types.AdRuleFrequencyCapBehavior frequencyCapBehavior_;
     /// <summary>
     /// Optional. The FrequencyCapBehavior of the AdRule. This attribute is
-    /// optional and defaults to [FrequencyCapBehavior.DEFER][].
+    /// optional and defaults to
+    /// [AdRuleFrequencyCapBehaviorEnum.AdRuleFrequencyCapBehavior.DEFER][google.ads.admanager.v1.AdRuleFrequencyCapBehaviorEnum.AdRuleFrequencyCapBehavior.DEFER].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1045,7 +1047,8 @@ namespace Google.Ads.AdManager.V1 {
     private global::Google.Ads.AdManager.V1.AdRuleSlotBehaviorEnum.Types.AdRuleSlotBehavior slotBehavior_;
     /// <summary>
     /// Optional. The AdRuleSlotBehavior for video ads for this slot. This
-    /// attribute is optional and defaults to [AdRuleSlotBehavior.DEFER][].
+    /// attribute is optional and defaults to
+    /// [AdRuleSlotBehaviorEnum.AdRuleSlotBehavior.DEFER][google.ads.admanager.v1.AdRuleSlotBehaviorEnum.AdRuleSlotBehavior.DEFER].
     /// Indicates whether video ads are allowed for this slot, or if the decision
     /// is deferred to alower-priority ad rule.
     /// </summary>
@@ -1095,7 +1098,8 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// Optional. The frequency type for video ads in this ad rule slot. This
     /// attribute is required for mid-rolls, but if this is not a mid-roll, the
-    /// value is set to [AdRuleSlotMidrollFrequencyType.NONE][].
+    /// value is set to
+    /// [AdRuleSlotMidrollFrequencyTypeEnum.AdRuleSlotMidrollFrequencyType.NONE][google.ads.admanager.v1.AdRuleSlotMidrollFrequencyTypeEnum.AdRuleSlotMidrollFrequencyType.NONE].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1127,12 +1131,12 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// Optional. The mid-roll frequency of this ad rule slot for video ads. This
     /// attribute is required for mid-rolls, but if MidrollFrequencyType is set to
-    /// [AdRuleSlotMidrollFrequencyType.NONE][], this value should be ignored. For
-    /// example, if this slot has a frequency type of
-    /// [AdRuleSlotMidrollFrequencyType.EVERY_N_SECONDS][] and
-    /// # videoMidrollFrequency = "60", this would mean "play a mid-roll every 60
-    ///
-    /// seconds."
+    /// [AdRuleSlotMidrollFrequencyTypeEnum.AdRuleSlotMidrollFrequencyType.NONE][google.ads.admanager.v1.AdRuleSlotMidrollFrequencyTypeEnum.AdRuleSlotMidrollFrequencyType.NONE],
+    /// this value should be ignored. For example, if this slot has a frequency
+    /// type of
+    /// [AdRuleSlotMidrollFrequencyTypeEnum.AdRuleSlotMidrollFrequencyType.EVERY_N_SECONDS][google.ads.admanager.v1.AdRuleSlotMidrollFrequencyTypeEnum.AdRuleSlotMidrollFrequencyType.EVERY_N_SECONDS]
+    /// and #videoMidrollFrequency = "60", this would mean "play a mid-roll every
+    /// 60 seconds."
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1162,7 +1166,8 @@ namespace Google.Ads.AdManager.V1 {
     private global::Google.Ads.AdManager.V1.AdRuleSlotBumperEnum.Types.AdRuleSlotBumper bumper_;
     /// <summary>
     /// Optional. The AdRuleSlotBumper for this slot. This attribute is optional
-    /// and defaults to [AdRuleSlotBumper.NONE][].
+    /// and defaults to
+    /// [AdRuleSlotBumperEnum.AdRuleSlotBumper.NONE][google.ads.admanager.v1.AdRuleSlotBumperEnum.AdRuleSlotBumper.NONE].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

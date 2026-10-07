@@ -177,7 +177,7 @@ namespace Google.Ads.AdManager.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request object for [GetChildPublisher][] method.
+  /// Request object for `GetChildPublisher` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetChildPublisherRequest : pb::IMessage<GetChildPublisherRequest>
@@ -383,7 +383,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for [ListChildPublishers][] method.
+  /// Request object for `ListChildPublishers` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListChildPublishersRequest : pb::IMessage<ListChildPublishersRequest>
@@ -440,7 +440,7 @@ namespace Google.Ads.AdManager.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent, which owns this collection of
-    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s. Format:
+    /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher]. Format:
     /// `networks/{network_code}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -457,9 +457,9 @@ namespace Google.Ads.AdManager.V1 {
     private int pageSize_;
     /// <summary>
     /// Optional. The maximum number of
-    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to return. The
+    /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] to return. The
     /// service may return fewer than this value. If unspecified, at most 50
-    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be returned.
+    /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be returned.
     /// The maximum value is 1000; values greater than 1000 will be coerced to
     /// 1000.
     /// </summary>
@@ -476,10 +476,10 @@ namespace Google.Ads.AdManager.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A page token, received from a previous [ListChildPublishers][]
+    /// Optional. A page token, received from a previous `ListChildPublishers`
     /// call. Provide this to retrieve the subsequent page.
     ///
-    /// When paginating, all other parameters provided to [ListChildPublishers][]
+    /// When paginating, all other parameters provided to `ListChildPublishers`
     /// must match the call that provided the page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -820,7 +820,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Response object for [ListChildPublishers][] containing matching
+  /// Response object for `ListChildPublishers` containing matching
   /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher] objects.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1106,7 +1106,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for [CreateChildPublisher][] method.
+  /// Request object for `CreateChildPublisher` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateChildPublisherRequest : pb::IMessage<CreateChildPublisherRequest>
@@ -1362,7 +1362,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for [BatchCreateChildPublishers][] method.
+  /// Request object for `BatchCreateChildPublishers` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchCreateChildPublishersRequest : pb::IMessage<BatchCreateChildPublishersRequest>
@@ -1415,10 +1415,9 @@ namespace Google.Ads.AdManager.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent resource where
-    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be created.
-    /// Format: `networks/{network_code}`
-    /// The parent field in the CreateChildPublisherRequest must match this
-    /// field.
+    /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be created.
+    /// Format: `networks/{network_code}` The parent field in the
+    /// CreateChildPublisherRequest must match this field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1600,7 +1599,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Response object for [BatchCreateChildPublishers][] method.
+  /// Response object for `BatchCreateChildPublishers` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchCreateChildPublishersResponse : pb::IMessage<BatchCreateChildPublishersResponse>
@@ -1794,7 +1793,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for [UpdateChildPublisher][] method.
+  /// Request object for `UpdateChildPublisher` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateChildPublisherRequest : pb::IMessage<UpdateChildPublisherRequest>
@@ -2061,7 +2060,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for [BatchUpdateChildPublishers][] method.
+  /// Request object for `BatchUpdateChildPublishers` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchUpdateChildPublishersRequest : pb::IMessage<BatchUpdateChildPublishersRequest>
@@ -2114,10 +2113,9 @@ namespace Google.Ads.AdManager.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent resource where
-    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be updated.
-    /// Format: `networks/{network_code}`
-    /// The parent field in the UpdateChildPublisherRequest must match this
-    /// field.
+    /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] will be updated.
+    /// Format: `networks/{network_code}` The parent field in the
+    /// UpdateChildPublisherRequest must match this field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2299,7 +2297,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Response object for [BatchUpdateChildPublishers][] method.
+  /// Response object for `BatchUpdateChildPublishers` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchUpdateChildPublishersResponse : pb::IMessage<BatchUpdateChildPublishersResponse>
@@ -2968,7 +2966,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request message for [BatchRenegotiateChildPublisherAgreements][] method.
+  /// Request message for `BatchRenegotiateChildPublisherAgreements` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchRenegotiateChildPublisherAgreementsRequest : pb::IMessage<BatchRenegotiateChildPublisherAgreementsRequest>
@@ -3202,7 +3200,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Response message for [BatchRenegotiateChildPublisherAgreements][] method.
+  /// Response message for `BatchRenegotiateChildPublisherAgreements` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchRenegotiateChildPublisherAgreementsResponse : pb::IMessage<BatchRenegotiateChildPublisherAgreementsResponse>
@@ -3366,7 +3364,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request message for [BatchResendChildPublisherInvitationEmails][] method.
+  /// Request message for `BatchResendChildPublisherInvitationEmails` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchResendChildPublisherInvitationEmailsRequest : pb::IMessage<BatchResendChildPublisherInvitationEmailsRequest>
@@ -3436,7 +3434,7 @@ namespace Google.Ads.AdManager.V1 {
     private readonly pbc::RepeatedField<string> names_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Required. Resource names of the
-    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that should be
+    /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] that should be
     /// resent invitation emails. Format:
     /// `networks/{network_code}/childPublisher/{child_publisher_id}`
     /// </summary>
@@ -3602,7 +3600,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Response message for [BatchResendChildPublisherInvitationEmails][] method.
+  /// Response message for `BatchResendChildPublisherInvitationEmails` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchResendChildPublisherInvitationEmailsResponse : pb::IMessage<BatchResendChildPublisherInvitationEmailsResponse>
@@ -3766,7 +3764,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request message for [BatchWithdrawChildPublishers][] method.
+  /// Request message for `BatchWithdrawChildPublishers` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchWithdrawChildPublishersRequest : pb::IMessage<BatchWithdrawChildPublishersRequest>
@@ -3836,7 +3834,7 @@ namespace Google.Ads.AdManager.V1 {
     private readonly pbc::RepeatedField<string> names_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Required. Resource names of the
-    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to withdraw.
+    /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] to withdraw.
     /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4001,7 +3999,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Response message for [BatchWithdrawChildPublishers][] method.
+  /// Response message for `BatchWithdrawChildPublishers` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchWithdrawChildPublishersResponse : pb::IMessage<BatchWithdrawChildPublishersResponse>
@@ -4165,7 +4163,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request message for [BatchRejectChildPublishers][] method.
+  /// Request message for `BatchRejectChildPublishers` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchRejectChildPublishersRequest : pb::IMessage<BatchRejectChildPublishersRequest>
@@ -4235,7 +4233,7 @@ namespace Google.Ads.AdManager.V1 {
     private readonly pbc::RepeatedField<string> names_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Required. Resource names of the
-    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to reject.
+    /// [ChildPublishers][google.ads.admanager.v1.ChildPublisher] to reject.
     /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4400,7 +4398,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Response message for [BatchRejectChildPublishers][] method.
+  /// Response message for `BatchRejectChildPublishers` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchRejectChildPublishersResponse : pb::IMessage<BatchRejectChildPublishersResponse>

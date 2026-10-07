@@ -48,8 +48,8 @@ namespace Google.Ads.AdManager.V1 {
   #region Messages
   /// <summary>
   /// Represents a
-  /// [ConversionEventEnum][google.ads.admanager.v1.ConversionEventEnum] to URL
-  /// pair that will be pinged when the event happens.
+  /// [ConversionEvent][google.ads.admanager.v1.ConversionEventEnum.ConversionEvent]
+  /// to URL pair that will be pinged when the event happens.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VideoTrackingUrl : pb::IMessage<VideoTrackingUrl>

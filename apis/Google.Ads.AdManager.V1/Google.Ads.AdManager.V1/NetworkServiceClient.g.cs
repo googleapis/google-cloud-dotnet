@@ -545,7 +545,9 @@ namespace Google.Ads.AdManager.V1
             ProvisionTestNetworkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+        /// Returns the
+        /// [DefaultThirdPartyDataDeclaration][google.ads.admanager.v1.DefaultThirdPartyDataDeclaration]
+        /// for this network.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -554,7 +556,9 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+        /// Returns the
+        /// [DefaultThirdPartyDataDeclaration][google.ads.admanager.v1.DefaultThirdPartyDataDeclaration]
+        /// for this network.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -563,7 +567,9 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+        /// Returns the
+        /// [DefaultThirdPartyDataDeclaration][google.ads.admanager.v1.DefaultThirdPartyDataDeclaration]
+        /// for this network.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -572,7 +578,9 @@ namespace Google.Ads.AdManager.V1
             GetDefaultThirdPartyDataDeclarationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+        /// Returns the
+        /// [DefaultThirdPartyDataDeclaration][google.ads.admanager.v1.DefaultThirdPartyDataDeclaration]
+        /// for this network.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of DefaultThirdPartyDataDeclaration.
@@ -587,7 +595,9 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+        /// Returns the
+        /// [DefaultThirdPartyDataDeclaration][google.ads.admanager.v1.DefaultThirdPartyDataDeclaration]
+        /// for this network.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of DefaultThirdPartyDataDeclaration.
@@ -602,7 +612,9 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+        /// Returns the
+        /// [DefaultThirdPartyDataDeclaration][google.ads.admanager.v1.DefaultThirdPartyDataDeclaration]
+        /// for this network.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of DefaultThirdPartyDataDeclaration.
@@ -614,7 +626,9 @@ namespace Google.Ads.AdManager.V1
             GetDefaultThirdPartyDataDeclarationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+        /// Returns the
+        /// [DefaultThirdPartyDataDeclaration][google.ads.admanager.v1.DefaultThirdPartyDataDeclaration]
+        /// for this network.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of DefaultThirdPartyDataDeclaration.
@@ -629,7 +643,9 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+        /// Returns the
+        /// [DefaultThirdPartyDataDeclaration][google.ads.admanager.v1.DefaultThirdPartyDataDeclaration]
+        /// for this network.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of DefaultThirdPartyDataDeclaration.
@@ -644,7 +660,9 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+        /// Returns the
+        /// [DefaultThirdPartyDataDeclaration][google.ads.admanager.v1.DefaultThirdPartyDataDeclaration]
+        /// for this network.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of DefaultThirdPartyDataDeclaration.
@@ -857,7 +875,9 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+        /// Returns the
+        /// [DefaultThirdPartyDataDeclaration][google.ads.admanager.v1.DefaultThirdPartyDataDeclaration]
+        /// for this network.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -869,7 +889,9 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+        /// Returns the
+        /// [DefaultThirdPartyDataDeclaration][google.ads.admanager.v1.DefaultThirdPartyDataDeclaration]
+        /// for this network.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

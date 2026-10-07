@@ -107,7 +107,7 @@ namespace Google.Ads.AdManager.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request object for [GetCompany][] method.
+  /// Request object for `GetCompany` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetCompanyRequest : pb::IMessage<GetCompanyRequest>
@@ -312,7 +312,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for [ListCompanies][] method.
+  /// Request object for `ListCompanies` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCompaniesRequest : pb::IMessage<ListCompaniesRequest>
@@ -368,8 +368,9 @@ namespace Google.Ads.AdManager.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent, which owns this collection of [Companies][].
-    /// Format: `networks/{network_code}`
+    /// Required. The parent, which owns this collection of
+    /// [Companies][google.ads.admanager.v1.Company]. Format:
+    /// `networks/{network_code}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -384,10 +385,11 @@ namespace Google.Ads.AdManager.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of [Companies][] to return. The service may
-    /// return fewer than this value. If unspecified, at most 50 [Companies][] will
-    /// be returned. The maximum value is 1000; values greater than 1000 will be
-    /// coerced to 1000.
+    /// Optional. The maximum number of
+    /// [Companies][google.ads.admanager.v1.Company] to return. The service may
+    /// return fewer than this value. If unspecified, at most 50
+    /// [Companies][google.ads.admanager.v1.Company] will be returned. The maximum
+    /// value is 1000; values greater than 1000 will be coerced to 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -402,10 +404,10 @@ namespace Google.Ads.AdManager.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A page token, received from a previous [ListCompanies][] call.
+    /// Optional. A page token, received from a previous `ListCompanies` call.
     /// Provide this to retrieve the subsequent page.
     ///
-    /// When paginating, all other parameters provided to [ListCompanies][] must
+    /// When paginating, all other parameters provided to `ListCompanies` must
     /// match the call that provided the page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -744,9 +746,8 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Response object for
-  /// [ListCompaniesRequest][google.ads.admanager.v1.ListCompaniesRequest]
-  /// containing matching [Company][google.ads.admanager.v1.Company] objects.
+  /// Response object for `ListCompaniesRequest` containing matching
+  /// [Company][google.ads.admanager.v1.Company] objects.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCompaniesResponse : pb::IMessage<ListCompaniesResponse>
@@ -1031,7 +1032,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for [CreateCompany][] method.
+  /// Request object for `CreateCompany` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateCompanyRequest : pb::IMessage<CreateCompanyRequest>
@@ -1286,7 +1287,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for [BatchCreateCompanies][] method.
+  /// Request object for `BatchCreateCompanies` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchCreateCompaniesRequest : pb::IMessage<BatchCreateCompaniesRequest>
@@ -1338,10 +1339,10 @@ namespace Google.Ads.AdManager.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource where [Companies][] will be created.
-    /// Format: `networks/{network_code}`
-    /// The parent field in the CreateCompanyRequest must match this
-    /// field.
+    /// Required. The parent resource where
+    /// [Companies][google.ads.admanager.v1.Company] will be created. Format:
+    /// `networks/{network_code}` The parent field in the CreateCompanyRequest must
+    /// match this field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1523,7 +1524,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Response object for [BatchCreateCompanies][] method.
+  /// Response object for `BatchCreateCompanies` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchCreateCompaniesResponse : pb::IMessage<BatchCreateCompaniesResponse>
@@ -1716,7 +1717,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for [UpdateCompany][] method.
+  /// Request object for `UpdateCompany` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateCompanyRequest : pb::IMessage<UpdateCompanyRequest>
@@ -1981,7 +1982,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for [BatchUpdateCompanies][] method.
+  /// Request object for `BatchUpdateCompanies` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchUpdateCompaniesRequest : pb::IMessage<BatchUpdateCompaniesRequest>
@@ -2033,10 +2034,10 @@ namespace Google.Ads.AdManager.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource where [Companies][] will be updated.
-    /// Format: `networks/{network_code}`
-    /// The parent field in the UpdateCompanyRequest must match this
-    /// field.
+    /// Required. The parent resource where
+    /// [Companies][google.ads.admanager.v1.Company] will be updated. Format:
+    /// `networks/{network_code}` The parent field in the UpdateCompanyRequest must
+    /// match this field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2218,7 +2219,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Response object for [BatchUpdateCompanies][] method.
+  /// Response object for `BatchUpdateCompanies` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchUpdateCompaniesResponse : pb::IMessage<BatchUpdateCompaniesResponse>

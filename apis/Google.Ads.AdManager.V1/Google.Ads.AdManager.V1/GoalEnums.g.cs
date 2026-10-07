@@ -227,8 +227,9 @@ namespace Google.Ads.AdManager.V1 {
         [pbr::OriginalName("GOAL_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// No goal is specified for the number of ads delivered.
-        /// The line item [type][google.ads.admanager.v1.LineItem.line_item_type]
-        /// must be one of:
+        /// The line item
+        /// [lineItemType][google.ads.admanager.v1.LineItem.line_item_type] must be
+        /// one of:
         ///
         /// * [LineItemTypeEnum.LineItemType.PRICE_PRIORITY][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.PRICE_PRIORITY]
         /// * [LineItemTypeEnum.LineItemType.AD_EXCHANGE][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.AD_EXCHANGE]
@@ -238,8 +239,9 @@ namespace Google.Ads.AdManager.V1 {
         /// <summary>
         /// There is a goal on the number of ads delivered for this line item during
         /// its entire lifetime.
-        /// The line item [type][google.ads.admanager.v1.LineItem.line_item_type]
-        /// must be one of:
+        /// The line item
+        /// [lineItemType][google.ads.admanager.v1.LineItem.line_item_type] must be
+        /// one of:
         ///
         /// * [LineItemTypeEnum.LineItemType.STANDARD][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.STANDARD]
         /// * [LineItemTypeEnum.LineItemType.BULK][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.BULK]
@@ -252,8 +254,9 @@ namespace Google.Ads.AdManager.V1 {
         [pbr::OriginalName("LIFETIME")] Lifetime = 2,
         /// <summary>
         /// There is a daily goal on the number of ads delivered for this line item.
-        /// The line item [type][google.ads.admanager.v1.LineItem.line_item_type]
-        /// must be one of:
+        /// The line item
+        /// [lineItemType][google.ads.admanager.v1.LineItem.line_item_type] must be
+        /// one of:
         ///
         /// * [LineItemTypeEnum.LineItemType.SPONSORSHIP][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.SPONSORSHIP]
         /// * [LineItemTypeEnum.LineItemType.NETWORK][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.NETWORK]
@@ -442,7 +445,7 @@ namespace Google.Ads.AdManager.V1 {
     public static partial class Types {
       /// <summary>
       /// Indicates the type of unit used for defining a reservation. The
-      /// [LineItem.cost_type][google.ads.admanager.v1.LineItem.cost_type] can differ
+      /// [LineItem.costType][google.ads.admanager.v1.LineItem.cost_type] can differ
       /// from the UnitType - an ad can have an impression goal, but be billed by its
       /// click. Usually CostType and UnitType will refer to the same unit.
       /// </summary>
@@ -458,8 +461,9 @@ namespace Google.Ads.AdManager.V1 {
         [pbr::OriginalName("IMPRESSIONS")] Impressions = 1,
         /// <summary>
         /// The number of clicks reported by creatives associated with the line item.
-        /// The line item [type][google.ads.admanager.v1.LineItem.line_item_type]
-        /// must be one of:
+        /// The line item
+        /// [lineItemType][google.ads.admanager.v1.LineItem.line_item_type] must be
+        /// one of:
         ///
         /// * [LineItemTypeEnum.LineItemType.STANDARD][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.STANDARD]
         /// * [LineItemTypeEnum.LineItemType.BULK][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.BULK]
@@ -470,7 +474,7 @@ namespace Google.Ads.AdManager.V1 {
         /// The number of click-through Cost-Per-Action (CPA) conversions from
         /// creatives associated with the line item. This is only supported as
         /// secondary goal and the
-        /// [LineItem.cost_type][google.ads.admanager.v1.LineItem.cost_type] must be
+        /// [LineItem.costType][google.ads.admanager.v1.LineItem.cost_type] must be
         /// [CostTypeEnum.CostType.CPA][].
         /// </summary>
         [pbr::OriginalName("CLICK_THROUGH_CPA_CONVERSIONS")] ClickThroughCpaConversions = 3,
@@ -478,20 +482,21 @@ namespace Google.Ads.AdManager.V1 {
         /// The number of view-through Cost-Per-Action (CPA) conversions from
         /// creatives associated with the line item. This is only supported as
         /// secondary goal and the
-        /// [LineItem.cost_type][google.ads.admanager.v1.LineItem.cost_type] must be
-        /// [CostTypeEnum.CostType.CPA}.
+        /// [LineItem.costType][google.ads.admanager.v1.LineItem.cost_type] must be
+        /// [CostTypeEnum.CostType.CPA][].
         /// </summary>
         [pbr::OriginalName("VIEW_THROUGH_CPA_CONVERSIONS")] ViewThroughCpaConversions = 4,
         /// <summary>
         /// The number of total Cost-Per-Action (CPA) conversions from creatives
         /// associated with the line item. This is only supported as secondary goal
-        /// and the [LineItem.cost_type} must be [CostTypeEnum.CostType.CPA}.
+        /// and the [LineItem.costType][google.ads.admanager.v1.LineItem.cost_type]
+        /// must be [CostTypeEnum.CostType.CPA][].
         /// </summary>
         [pbr::OriginalName("TOTAL_CPA_CONVERSIONS")] TotalCpaConversions = 5,
         /// <summary>
         /// The number of viewable impressions reported by creatives associated with
         /// the line item. The
-        /// [LineItem.line_item_type][google.ads.admanager.v1.LineItem.line_item_type]
+        /// [LineItem.lineItemType][google.ads.admanager.v1.LineItem.line_item_type]
         /// must be
         /// [LineItemTypeEnum.LineItemType.STANDARD][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.STANDARD].
         /// </summary>
@@ -499,7 +504,7 @@ namespace Google.Ads.AdManager.V1 {
         /// <summary>
         /// The number of in-target impressions reported by third party measurements.
         /// The
-        /// [LineItem.line_item_type][google.ads.admanager.v1.LineItem.line_item_type]
+        /// [LineItem.lineItemType][google.ads.admanager.v1.LineItem.line_item_type]
         /// must be
         /// [LineItemTypeEnum.LineItemType.STANDARD][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.STANDARD].
         /// </summary>
@@ -509,7 +514,7 @@ namespace Google.Ads.AdManager.V1 {
         /// line item. A completed view is defined as having watched the entirety of
         /// the in-stream video ad and is only supported for standard reservation
         /// video line items. The
-        /// [LineItem.line_item_type][google.ads.admanager.v1.LineItem.line_item_type]
+        /// [LineItem.lineItemType][google.ads.admanager.v1.LineItem.line_item_type]
         /// must be
         /// [LineItemTypeEnum.LineItemType.STANDARD][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.STANDARD].
         /// </summary>

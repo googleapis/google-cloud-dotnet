@@ -138,9 +138,11 @@ namespace Google.Ads.AdManager.V1 {
     /// Optional. The companions that the creative is expected to have. This
     /// attribute can only be set if the line item it belongs to has an
     /// [EnvironmentType][google.ads.admanager.v1.EnvironmentTypeEnum.EnvironmentType]
-    /// of VIDEO_PLAYER or
-    /// [roadblocking_type][google.ads.admanager.v1.LineItem.roadblocking_type] of
-    /// CREATIVE_SET.
+    /// of
+    /// [VIDEO_PLAYER][google.ads.admanager.v1.EnvironmentTypeEnum.EnvironmentType.VIDEO_PLAYER]
+    /// or [roadblockingType][google.ads.admanager.v1.LineItem.roadblocking_type]
+    /// of
+    /// [CREATIVE_SET][google.ads.admanager.v1.RoadblockingTypeEnum.RoadblockingType.CREATIVE_SET].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

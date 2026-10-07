@@ -147,8 +147,10 @@ namespace Google.Ads.AdManager.V1 {
 
     private global::Google.Ads.AdManager.V1.ViewabilityPartnerEnum.Types.ViewabilityPartner viewabilityPartner_;
     /// <summary>
-    /// Optional. A field to determine the type of ViewabilityPartner. This field
-    /// default is NONE.
+    /// Optional. A field to determine the type of
+    /// [ViewabilityPartner][google.ads.admanager.v1.ViewabilityPartnerEnum.ViewabilityPartner].
+    /// This field default is
+    /// [NONE][google.ads.admanager.v1.ViewabilityPartnerEnum.ViewabilityPartner.NONE].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -237,8 +239,10 @@ namespace Google.Ads.AdManager.V1 {
 
     private global::Google.Ads.AdManager.V1.ViewabilityPartnerEnum.Types.ViewabilityPartner publisherViewabilityPartner_;
     /// <summary>
-    /// Optional. A field to determine the type of publisher's viewability partner.
-    /// This field default is NONE.
+    /// Optional. A field to determine the type of publisher's
+    /// [ViewabilityPartner][google.ads.admanager.v1.ViewabilityPartnerEnum.ViewabilityPartner].
+    /// This field default is
+    /// [NONE][google.ads.admanager.v1.ViewabilityPartnerEnum.ViewabilityPartner.NONE].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -328,8 +332,10 @@ namespace Google.Ads.AdManager.V1 {
 
     private global::Google.Ads.AdManager.V1.BrandLiftPartnerEnum.Types.BrandLiftPartner brandLiftPartner_;
     /// <summary>
-    /// Optional. A field to determine the type of BrandLiftPartner. This field
-    /// default is NONE.
+    /// Optional. A field to determine the type of
+    /// [BrandLiftPartner][google.ads.admanager.v1.BrandLiftPartnerEnum.BrandLiftPartner].
+    /// This field default is
+    /// [NONE][google.ads.admanager.v1.BrandLiftPartnerEnum.BrandLiftPartner.NONE].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -418,8 +424,9 @@ namespace Google.Ads.AdManager.V1 {
 
     private global::Google.Ads.AdManager.V1.ReachPartnerEnum.Types.ReachPartner reachPartner_;
     /// <summary>
-    /// Optional. A field to determine the type of advertiser's ReachPartner. This
-    /// field default is UNKNOWN.
+    /// Optional. A field to determine the type of advertiser's
+    /// [ReachPartner][google.ads.admanager.v1.ReachPartnerEnum.ReachPartner]. This
+    /// field default is [UNKNOWN][ReachPartnerEnum.ReachPartner.UNKNOWN].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -509,8 +516,9 @@ namespace Google.Ads.AdManager.V1 {
 
     private global::Google.Ads.AdManager.V1.ReachPartnerEnum.Types.ReachPartner publisherReachPartner_;
     /// <summary>
-    /// Optional. A field to determine the type of publisher's ReachPartner. This
-    /// field default is UNKNOWN.
+    /// Optional. A field to determine the type of publisher's
+    /// [ReachPartner][google.ads.admanager.v1.ReachPartnerEnum.ReachPartner]. This
+    /// field default is [UNKNOWN][ReachPartnerEnum.ReachPartner.UNKNOWN].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

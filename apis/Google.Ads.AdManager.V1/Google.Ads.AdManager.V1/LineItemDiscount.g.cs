@@ -47,7 +47,7 @@ namespace Google.Ads.AdManager.V1 {
   }
   #region Messages
   /// <summary>
-  /// Discount information for a LineItem.
+  /// Discount information for a [LineItem][google.ads.admanager.v1.LineItem].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LineItemDiscount : pb::IMessage<LineItemDiscount>
@@ -103,9 +103,10 @@ namespace Google.Ads.AdManager.V1 {
 
     private global::Google.Ads.AdManager.V1.DiscountTypeEnum.Types.DiscountType discountType_;
     /// <summary>
-    /// Optional. The type of discount being applied to a LineItem, either
-    /// percentage based or absolute. This attribute is optional and defaults to
-    /// PERCENTAGE.
+    /// Optional. The type of discount being applied to a
+    /// [LineItem][google.ads.admanager.v1.LineItem], either percentage based or
+    /// absolute. This attribute is optional and defaults to
+    /// [PERCENTAGE][google.ads.admanager.v1.DiscountTypeEnum.DiscountType.PERCENTAGE].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,8 +137,12 @@ namespace Google.Ads.AdManager.V1 {
     private double discount_;
     /// <summary>
     /// Optional. The number here is either a percentage or an absolute value
-    /// depending on the DiscountType. If the DiscountType is PERCENTAGE, then only
-    /// non-fractional values are supported.
+    /// depending on the
+    /// [DiscountType][google.ads.admanager.v1.DiscountTypeEnum.DiscountType]. If
+    /// the [DiscountType][google.ads.admanager.v1.DiscountTypeEnum.DiscountType]
+    /// is
+    /// [PERCENTAGE][google.ads.admanager.v1.DiscountTypeEnum.DiscountType.PERCENTAGE],
+    /// then only non-fractional values are supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

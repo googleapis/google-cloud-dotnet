@@ -72,9 +72,13 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListNativeStylesResponse> __Marshaller_google_ads_admanager_v1_ListNativeStylesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListNativeStylesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.CreateNativeStyleRequest> __Marshaller_google_ads_admanager_v1_CreateNativeStyleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.CreateNativeStyleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreateNativeStylesRequest> __Marshaller_google_ads_admanager_v1_BatchCreateNativeStylesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreateNativeStylesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreateNativeStylesResponse> __Marshaller_google_ads_admanager_v1_BatchCreateNativeStylesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreateNativeStylesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.UpdateNativeStyleRequest> __Marshaller_google_ads_admanager_v1_UpdateNativeStyleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.UpdateNativeStyleRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateNativeStylesRequest> __Marshaller_google_ads_admanager_v1_BatchUpdateNativeStylesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateNativeStylesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -109,12 +113,28 @@ namespace Google.Ads.AdManager.V1 {
         __Marshaller_google_ads_admanager_v1_ListNativeStylesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.CreateNativeStyleRequest, global::Google.Ads.AdManager.V1.NativeStyle> __Method_CreateNativeStyle = new grpc::Method<global::Google.Ads.AdManager.V1.CreateNativeStyleRequest, global::Google.Ads.AdManager.V1.NativeStyle>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateNativeStyle",
+        __Marshaller_google_ads_admanager_v1_CreateNativeStyleRequest,
+        __Marshaller_google_ads_admanager_v1_NativeStyle);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchCreateNativeStylesRequest, global::Google.Ads.AdManager.V1.BatchCreateNativeStylesResponse> __Method_BatchCreateNativeStyles = new grpc::Method<global::Google.Ads.AdManager.V1.BatchCreateNativeStylesRequest, global::Google.Ads.AdManager.V1.BatchCreateNativeStylesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "BatchCreateNativeStyles",
         __Marshaller_google_ads_admanager_v1_BatchCreateNativeStylesRequest,
         __Marshaller_google_ads_admanager_v1_BatchCreateNativeStylesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.UpdateNativeStyleRequest, global::Google.Ads.AdManager.V1.NativeStyle> __Method_UpdateNativeStyle = new grpc::Method<global::Google.Ads.AdManager.V1.UpdateNativeStyleRequest, global::Google.Ads.AdManager.V1.NativeStyle>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateNativeStyle",
+        __Marshaller_google_ads_admanager_v1_UpdateNativeStyleRequest,
+        __Marshaller_google_ads_admanager_v1_NativeStyle);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateNativeStylesRequest, global::Google.Ads.AdManager.V1.BatchUpdateNativeStylesResponse> __Method_BatchUpdateNativeStyles = new grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateNativeStylesRequest, global::Google.Ads.AdManager.V1.BatchUpdateNativeStylesResponse>(
@@ -183,6 +203,18 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
+      /// Creates a `NativeStyle` object.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.NativeStyle> CreateNativeStyle(global::Google.Ads.AdManager.V1.CreateNativeStyleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Creates `NativeStyle` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -190,6 +222,18 @@ namespace Google.Ads.AdManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchCreateNativeStylesResponse> BatchCreateNativeStyles(global::Google.Ads.AdManager.V1.BatchCreateNativeStylesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a `NativeStyle` object.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.NativeStyle> UpdateNativeStyle(global::Google.Ads.AdManager.V1.UpdateNativeStyleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -369,6 +413,54 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListNativeStyles, null, options, request);
       }
       /// <summary>
+      /// Creates a `NativeStyle` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.NativeStyle CreateNativeStyle(global::Google.Ads.AdManager.V1.CreateNativeStyleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateNativeStyle(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a `NativeStyle` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.NativeStyle CreateNativeStyle(global::Google.Ads.AdManager.V1.CreateNativeStyleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateNativeStyle, null, options, request);
+      }
+      /// <summary>
+      /// Creates a `NativeStyle` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.NativeStyle> CreateNativeStyleAsync(global::Google.Ads.AdManager.V1.CreateNativeStyleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateNativeStyleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a `NativeStyle` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.NativeStyle> CreateNativeStyleAsync(global::Google.Ads.AdManager.V1.CreateNativeStyleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateNativeStyle, null, options, request);
+      }
+      /// <summary>
       /// Creates `NativeStyle` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -415,6 +507,54 @@ namespace Google.Ads.AdManager.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchCreateNativeStylesResponse> BatchCreateNativeStylesAsync(global::Google.Ads.AdManager.V1.BatchCreateNativeStylesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchCreateNativeStyles, null, options, request);
+      }
+      /// <summary>
+      /// Updates a `NativeStyle` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.NativeStyle UpdateNativeStyle(global::Google.Ads.AdManager.V1.UpdateNativeStyleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateNativeStyle(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a `NativeStyle` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.NativeStyle UpdateNativeStyle(global::Google.Ads.AdManager.V1.UpdateNativeStyleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateNativeStyle, null, options, request);
+      }
+      /// <summary>
+      /// Updates a `NativeStyle` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.NativeStyle> UpdateNativeStyleAsync(global::Google.Ads.AdManager.V1.UpdateNativeStyleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateNativeStyleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a `NativeStyle` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.NativeStyle> UpdateNativeStyleAsync(global::Google.Ads.AdManager.V1.UpdateNativeStyleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateNativeStyle, null, options, request);
       }
       /// <summary>
       /// Batch updates `NativeStyle` objects.
@@ -628,7 +768,9 @@ namespace Google.Ads.AdManager.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetNativeStyle, serviceImpl.GetNativeStyle)
           .AddMethod(__Method_ListNativeStyles, serviceImpl.ListNativeStyles)
+          .AddMethod(__Method_CreateNativeStyle, serviceImpl.CreateNativeStyle)
           .AddMethod(__Method_BatchCreateNativeStyles, serviceImpl.BatchCreateNativeStyles)
+          .AddMethod(__Method_UpdateNativeStyle, serviceImpl.UpdateNativeStyle)
           .AddMethod(__Method_BatchUpdateNativeStyles, serviceImpl.BatchUpdateNativeStyles)
           .AddMethod(__Method_BatchActivateNativeStyles, serviceImpl.BatchActivateNativeStyles)
           .AddMethod(__Method_BatchDeactivateNativeStyles, serviceImpl.BatchDeactivateNativeStyles)
@@ -644,7 +786,9 @@ namespace Google.Ads.AdManager.V1 {
     {
       serviceBinder.AddMethod(__Method_GetNativeStyle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.GetNativeStyleRequest, global::Google.Ads.AdManager.V1.NativeStyle>(serviceImpl.GetNativeStyle));
       serviceBinder.AddMethod(__Method_ListNativeStyles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.ListNativeStylesRequest, global::Google.Ads.AdManager.V1.ListNativeStylesResponse>(serviceImpl.ListNativeStyles));
+      serviceBinder.AddMethod(__Method_CreateNativeStyle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.CreateNativeStyleRequest, global::Google.Ads.AdManager.V1.NativeStyle>(serviceImpl.CreateNativeStyle));
       serviceBinder.AddMethod(__Method_BatchCreateNativeStyles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchCreateNativeStylesRequest, global::Google.Ads.AdManager.V1.BatchCreateNativeStylesResponse>(serviceImpl.BatchCreateNativeStyles));
+      serviceBinder.AddMethod(__Method_UpdateNativeStyle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.UpdateNativeStyleRequest, global::Google.Ads.AdManager.V1.NativeStyle>(serviceImpl.UpdateNativeStyle));
       serviceBinder.AddMethod(__Method_BatchUpdateNativeStyles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchUpdateNativeStylesRequest, global::Google.Ads.AdManager.V1.BatchUpdateNativeStylesResponse>(serviceImpl.BatchUpdateNativeStyles));
       serviceBinder.AddMethod(__Method_BatchActivateNativeStyles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchActivateNativeStylesRequest, global::Google.Ads.AdManager.V1.BatchActivateNativeStylesResponse>(serviceImpl.BatchActivateNativeStyles));
       serviceBinder.AddMethod(__Method_BatchDeactivateNativeStyles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchDeactivateNativeStylesRequest, global::Google.Ads.AdManager.V1.BatchDeactivateNativeStylesResponse>(serviceImpl.BatchDeactivateNativeStyles));

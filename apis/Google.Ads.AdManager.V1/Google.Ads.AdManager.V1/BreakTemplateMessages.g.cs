@@ -262,7 +262,8 @@ namespace Google.Ads.AdManager.V1 {
     private global::Google.Ads.AdManager.V1.AdBreakOptimizationTypeEnum.Types.AdBreakOptimizationType adBreakOptimizationType_;
     /// <summary>
     /// Optional. The optimization type of the pod. This field is optional and
-    /// defaults to [AdBreakOptimizationType.REVENUE][].
+    /// defaults to
+    /// [AdBreakOptimizationTypeEnum.AdBreakOptimizationType.REVENUE][google.ads.admanager.v1.AdBreakOptimizationTypeEnum.AdBreakOptimizationType.REVENUE].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -293,8 +294,10 @@ namespace Google.Ads.AdManager.V1 {
     private global::Google.Ads.AdManager.V1.AdRuleFillOrderDirectionEnum.Types.AdRuleFillOrderDirection fillOrderDirectionType_;
     /// <summary>
     /// Optional. The fill order direction of the pod. This value is required if
-    /// `adBreakOptimizationType` is equal to
-    /// [AdBreakOptimizationType.POSITION][] and should otherwise be unset.
+    /// [adBreakOptimizationType][google.ads.admanager.v1.BreakTemplate.ad_break_optimization_type]
+    /// is equal to
+    /// [AdBreakOptimizationTypeEnum.AdBreakOptimizationType.POSITION][google.ads.admanager.v1.AdBreakOptimizationTypeEnum.AdBreakOptimizationType.POSITION]
+    /// and should otherwise be unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

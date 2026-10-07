@@ -215,8 +215,11 @@ namespace Google.Ads.AdManager.V1 {
       /// <summary>
       /// Represents the options for targetable bumper positions, surrounding an ad
       /// pod, within a video stream. This includes before and after the supported ad
-      /// pod positions, `VideoPositionType.PREROLL`, `VideoPositionType.MIDROLL`,
-      /// and `VideoPositionType.POSTROLL`.
+      /// pod positions,
+      /// [VideoPositionEnum.VideoPosition.PREROLL][google.ads.admanager.v1.VideoPositionEnum.VideoPosition.PREROLL],
+      /// [VideoPositionEnum.VideoPosition.MIDROLL][google.ads.admanager.v1.VideoPositionEnum.VideoPosition.MIDROLL],
+      /// and
+      /// [VideoPositionEnum.VideoPosition.POSTROLL][google.ads.admanager.v1.VideoPositionEnum.VideoPosition.POSTROLL].
       /// </summary>
       public enum TargetedVideoBumperType {
         /// <summary>

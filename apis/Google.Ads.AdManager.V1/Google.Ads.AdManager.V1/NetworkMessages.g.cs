@@ -809,9 +809,10 @@ namespace Google.Ads.AdManager.V1 {
     public const int ThirdPartyDataDeclarationFieldNumber = 2;
     private global::Google.Ads.AdManager.V1.ThirdPartyDataDeclaration thirdPartyDataDeclaration_;
     /// <summary>
-    /// Optional. Returns the default [ThirdPartyDataDeclaration] for this network.
-    /// If this setting has never been updated on your network, then this API
-    /// response will be unset.
+    /// Optional. Returns the default
+    /// [ThirdPartyDataDeclaration][google.ads.admanager.v1.ThirdPartyDataDeclaration]
+    /// for this network. If this setting has never been updated on your network,
+    /// then this API response will be unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
