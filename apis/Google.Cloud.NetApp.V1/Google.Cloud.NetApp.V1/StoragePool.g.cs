@@ -2580,8 +2580,8 @@ namespace Google.Cloud.NetApp.V1 {
     private global::Google.Cloud.NetApp.V1.Mode mode_;
     /// <summary>
     /// Optional. Mode of the storage pool. This field is used to control whether
-    /// the user can perform the ONTAP operations on the storage pool using the
-    /// GCNV ONTAP Mode APIs. If not specified during creation, it defaults to
+    /// the user can perform ONTAP operations on the storage pool using the GCNV
+    /// ONTAP Mode APIs. If not specified during creation, it defaults to
     /// `DEFAULT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

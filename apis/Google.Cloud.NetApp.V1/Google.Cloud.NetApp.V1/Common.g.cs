@@ -26,38 +26,42 @@ namespace Google.Cloud.NetApp.V1 {
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvbmV0YXBwL3YxL2NvbW1vbi5wcm90bxIWZ29vZ2xl",
             "LmNsb3VkLm5ldGFwcC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
-            "cm90byLlAQoQTG9jYXRpb25NZXRhZGF0YRJLChhzdXBwb3J0ZWRfc2Vydmlj",
+            "cm90byKSAwoQTG9jYXRpb25NZXRhZGF0YRJLChhzdXBwb3J0ZWRfc2Vydmlj",
             "ZV9sZXZlbHMYASADKA4yJC5nb29nbGUuY2xvdWQubmV0YXBwLnYxLlNlcnZp",
             "Y2VMZXZlbEID4EEDElAKGnN1cHBvcnRlZF9mbGV4X3BlcmZvcm1hbmNlGAIg",
             "AygOMicuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5GbGV4UGVyZm9ybWFuY2VC",
             "A+BBAxIUCgdoYXNfdmNwGAMgASgIQgPgQQMSHAoPaGFzX29udGFwX3Byb3h5",
-            "GAQgASgIQgPgQQMiJQoMVXNlckNvbW1hbmRzEhUKCGNvbW1hbmRzGAEgAygJ",
-            "QgPgQQMqXwoMU2VydmljZUxldmVsEh0KGVNFUlZJQ0VfTEVWRUxfVU5TUEVD",
-            "SUZJRUQQABILCgdQUkVNSVVNEAESCwoHRVhUUkVNRRACEgwKCFNUQU5EQVJE",
-            "EAMSCAoERkxFWBAEKm4KD0ZsZXhQZXJmb3JtYW5jZRIgChxGTEVYX1BFUkZP",
-            "Uk1BTkNFX1VOU1BFQ0lGSUVEEAASHAoYRkxFWF9QRVJGT1JNQU5DRV9ERUZB",
-            "VUxUEAESGwoXRkxFWF9QRVJGT1JNQU5DRV9DVVNUT00QAipVCg5FbmNyeXB0",
-            "aW9uVHlwZRIfChtFTkNSWVBUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABITCg9T",
-            "RVJWSUNFX01BTkFHRUQQARINCglDTE9VRF9LTVMQAipUChREaXJlY3RvcnlT",
-            "ZXJ2aWNlVHlwZRImCiJESVJFQ1RPUllfU0VSVklDRV9UWVBFX1VOU1BFQ0lG",
-            "SUVEEAASFAoQQUNUSVZFX0RJUkVDVE9SWRABKksKD1N0b3JhZ2VQb29sVHlw",
-            "ZRIhCh1TVE9SQUdFX1BPT0xfVFlQRV9VTlNQRUNJRklFRBAAEggKBEZJTEUQ",
-            "ARILCgdVTklGSUVEEAIqWAoJU2NhbGVUeXBlEhoKFlNDQUxFX1RZUEVfVU5T",
-            "UEVDSUZJRUQQABIWChJTQ0FMRV9UWVBFX0RFRkFVTFQQARIXChNTQ0FMRV9U",
-            "WVBFX1NDQUxFT1VUEAIqdQoZSHlicmlkUmVwbGljYXRpb25TY2hlZHVsZRIr",
-            "CidIWUJSSURfUkVQTElDQVRJT05fU0NIRURVTEVfVU5TUEVDSUZJRUQQABIU",
-            "ChBFVkVSWV8xMF9NSU5VVEVTEAESCgoGSE9VUkxZEAISCQoFREFJTFkQAyo5",
-            "CgdRb3NUeXBlEhgKFFFPU19UWVBFX1VOU1BFQ0lGSUVEEAASCAoEQVVUTxAB",
-            "EgoKBk1BTlVBTBACKkMKBk9zVHlwZRIXChNPU19UWVBFX1VOU1BFQ0lGSUVE",
-            "EAASCQoFTElOVVgQARILCgdXSU5ET1dTEAISCAoERVNYSRADQq0BChpjb20u",
-            "Z29vZ2xlLmNsb3VkLm5ldGFwcC52MUILQ29tbW9uUHJvdG9QAVoyY2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9uZXRhcHAvYXBpdjEvbmV0YXBwcGI7bmV0YXBwcGKq",
-            "AhZHb29nbGUuQ2xvdWQuTmV0QXBwLlYxygIWR29vZ2xlXENsb3VkXE5ldEFw",
-            "cFxWMeoCGUdvb2dsZTo6Q2xvdWQ6Ok5ldEFwcDo6VjFiBnByb3RvMw=="));
+            "GAQgASgIQgPgQQMSYAoVZmxleF9wZXJmb3JtYW5jZV90aWVyGAUgASgOMjwu",
+            "Z29vZ2xlLmNsb3VkLm5ldGFwcC52MS5Mb2NhdGlvbk1ldGFkYXRhLkZsZXhQ",
+            "ZXJmb3JtYW5jZVRpZXJCA+BBAyJJChNGbGV4UGVyZm9ybWFuY2VUaWVyEiUK",
+            "IUZMRVhfUEVSRk9STUFOQ0VfVElFUl9VTlNQRUNJRklFRBAAEgsKB0xJTUlU",
+            "RUQQASIlCgxVc2VyQ29tbWFuZHMSFQoIY29tbWFuZHMYASADKAlCA+BBAypf",
+            "CgxTZXJ2aWNlTGV2ZWwSHQoZU0VSVklDRV9MRVZFTF9VTlNQRUNJRklFRBAA",
+            "EgsKB1BSRU1JVU0QARILCgdFWFRSRU1FEAISDAoIU1RBTkRBUkQQAxIICgRG",
+            "TEVYEAQqbgoPRmxleFBlcmZvcm1hbmNlEiAKHEZMRVhfUEVSRk9STUFOQ0Vf",
+            "VU5TUEVDSUZJRUQQABIcChhGTEVYX1BFUkZPUk1BTkNFX0RFRkFVTFQQARIb",
+            "ChdGTEVYX1BFUkZPUk1BTkNFX0NVU1RPTRACKlUKDkVuY3J5cHRpb25UeXBl",
+            "Eh8KG0VOQ1JZUFRJT05fVFlQRV9VTlNQRUNJRklFRBAAEhMKD1NFUlZJQ0Vf",
+            "TUFOQUdFRBABEg0KCUNMT1VEX0tNUxACKlQKFERpcmVjdG9yeVNlcnZpY2VU",
+            "eXBlEiYKIkRJUkVDVE9SWV9TRVJWSUNFX1RZUEVfVU5TUEVDSUZJRUQQABIU",
+            "ChBBQ1RJVkVfRElSRUNUT1JZEAEqSwoPU3RvcmFnZVBvb2xUeXBlEiEKHVNU",
+            "T1JBR0VfUE9PTF9UWVBFX1VOU1BFQ0lGSUVEEAASCAoERklMRRABEgsKB1VO",
+            "SUZJRUQQAipYCglTY2FsZVR5cGUSGgoWU0NBTEVfVFlQRV9VTlNQRUNJRklF",
+            "RBAAEhYKElNDQUxFX1RZUEVfREVGQVVMVBABEhcKE1NDQUxFX1RZUEVfU0NB",
+            "TEVPVVQQAip1ChlIeWJyaWRSZXBsaWNhdGlvblNjaGVkdWxlEisKJ0hZQlJJ",
+            "RF9SRVBMSUNBVElPTl9TQ0hFRFVMRV9VTlNQRUNJRklFRBAAEhQKEEVWRVJZ",
+            "XzEwX01JTlVURVMQARIKCgZIT1VSTFkQAhIJCgVEQUlMWRADKjkKB1Fvc1R5",
+            "cGUSGAoUUU9TX1RZUEVfVU5TUEVDSUZJRUQQABIICgRBVVRPEAESCgoGTUFO",
+            "VUFMEAIqQwoGT3NUeXBlEhcKE09TX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVM",
+            "SU5VWBABEgsKB1dJTkRPV1MQAhIICgRFU1hJEANCrQEKGmNvbS5nb29nbGUu",
+            "Y2xvdWQubmV0YXBwLnYxQgtDb21tb25Qcm90b1ABWjJjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL25ldGFwcC9hcGl2MS9uZXRhcHBwYjtuZXRhcHBwYqoCFkdvb2ds",
+            "ZS5DbG91ZC5OZXRBcHAuVjHKAhZHb29nbGVcQ2xvdWRcTmV0QXBwXFYx6gIZ",
+            "R29vZ2xlOjpDbG91ZDo6TmV0QXBwOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetApp.V1.ServiceLevel), typeof(global::Google.Cloud.NetApp.V1.FlexPerformance), typeof(global::Google.Cloud.NetApp.V1.EncryptionType), typeof(global::Google.Cloud.NetApp.V1.DirectoryServiceType), typeof(global::Google.Cloud.NetApp.V1.StoragePoolType), typeof(global::Google.Cloud.NetApp.V1.ScaleType), typeof(global::Google.Cloud.NetApp.V1.HybridReplicationSchedule), typeof(global::Google.Cloud.NetApp.V1.QosType), typeof(global::Google.Cloud.NetApp.V1.OsType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.LocationMetadata), global::Google.Cloud.NetApp.V1.LocationMetadata.Parser, new[]{ "SupportedServiceLevels", "SupportedFlexPerformance", "HasVcp", "HasOntapProxy" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.LocationMetadata), global::Google.Cloud.NetApp.V1.LocationMetadata.Parser, new[]{ "SupportedServiceLevels", "SupportedFlexPerformance", "HasVcp", "HasOntapProxy", "FlexPerformanceTier" }, null, new[]{ typeof(global::Google.Cloud.NetApp.V1.LocationMetadata.Types.FlexPerformanceTier) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.UserCommands), global::Google.Cloud.NetApp.V1.UserCommands.Parser, new[]{ "Commands" }, null, null, null, null)
           }));
     }
@@ -289,6 +293,7 @@ namespace Google.Cloud.NetApp.V1 {
       supportedFlexPerformance_ = other.supportedFlexPerformance_.Clone();
       hasVcp_ = other.hasVcp_;
       hasOntapProxy_ = other.hasOntapProxy_;
+      flexPerformanceTier_ = other.flexPerformanceTier_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -356,6 +361,21 @@ namespace Google.Cloud.NetApp.V1 {
       }
     }
 
+    /// <summary>Field number for the "flex_performance_tier" field.</summary>
+    public const int FlexPerformanceTierFieldNumber = 5;
+    private global::Google.Cloud.NetApp.V1.LocationMetadata.Types.FlexPerformanceTier flexPerformanceTier_ = global::Google.Cloud.NetApp.V1.LocationMetadata.Types.FlexPerformanceTier.Unspecified;
+    /// <summary>
+    /// Output only. Indicates the flex performance tier of this location.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetApp.V1.LocationMetadata.Types.FlexPerformanceTier FlexPerformanceTier {
+      get { return flexPerformanceTier_; }
+      set {
+        flexPerformanceTier_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -375,6 +395,7 @@ namespace Google.Cloud.NetApp.V1 {
       if(!supportedFlexPerformance_.Equals(other.supportedFlexPerformance_)) return false;
       if (HasVcp != other.HasVcp) return false;
       if (HasOntapProxy != other.HasOntapProxy) return false;
+      if (FlexPerformanceTier != other.FlexPerformanceTier) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -386,6 +407,7 @@ namespace Google.Cloud.NetApp.V1 {
       hash ^= supportedFlexPerformance_.GetHashCode();
       if (HasVcp != false) hash ^= HasVcp.GetHashCode();
       if (HasOntapProxy != false) hash ^= HasOntapProxy.GetHashCode();
+      if (FlexPerformanceTier != global::Google.Cloud.NetApp.V1.LocationMetadata.Types.FlexPerformanceTier.Unspecified) hash ^= FlexPerformanceTier.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -414,6 +436,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(32);
         output.WriteBool(HasOntapProxy);
       }
+      if (FlexPerformanceTier != global::Google.Cloud.NetApp.V1.LocationMetadata.Types.FlexPerformanceTier.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) FlexPerformanceTier);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -434,6 +460,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(32);
         output.WriteBool(HasOntapProxy);
       }
+      if (FlexPerformanceTier != global::Google.Cloud.NetApp.V1.LocationMetadata.Types.FlexPerformanceTier.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) FlexPerformanceTier);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -451,6 +481,9 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (HasOntapProxy != false) {
         size += 1 + 1;
+      }
+      if (FlexPerformanceTier != global::Google.Cloud.NetApp.V1.LocationMetadata.Types.FlexPerformanceTier.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FlexPerformanceTier);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -471,6 +504,9 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (other.HasOntapProxy != false) {
         HasOntapProxy = other.HasOntapProxy;
+      }
+      if (other.FlexPerformanceTier != global::Google.Cloud.NetApp.V1.LocationMetadata.Types.FlexPerformanceTier.Unspecified) {
+        FlexPerformanceTier = other.FlexPerformanceTier;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -507,6 +543,10 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 32: {
             HasOntapProxy = input.ReadBool();
+            break;
+          }
+          case 40: {
+            FlexPerformanceTier = (global::Google.Cloud.NetApp.V1.LocationMetadata.Types.FlexPerformanceTier) input.ReadEnum();
             break;
           }
         }
@@ -546,10 +586,36 @@ namespace Google.Cloud.NetApp.V1 {
             HasOntapProxy = input.ReadBool();
             break;
           }
+          case 40: {
+            FlexPerformanceTier = (global::Google.Cloud.NetApp.V1.LocationMetadata.Types.FlexPerformanceTier) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the LocationMetadata message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The flex performance tier of this location.
+      /// </summary>
+      public enum FlexPerformanceTier {
+        /// <summary>
+        /// Unspecified flex performance tier.
+        /// </summary>
+        [pbr::OriginalName("FLEX_PERFORMANCE_TIER_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Flex performance tier is limited.
+        /// </summary>
+        [pbr::OriginalName("LIMITED")] Limited = 1,
+      }
+
+    }
+    #endregion
 
   }
 

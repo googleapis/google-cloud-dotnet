@@ -238,6 +238,12 @@
                 "GetSnapshotAsync"
               ]
             },
+            "GetSplitStatus": {
+              "methods": [
+                "GetSplitStatus",
+                "GetSplitStatusAsync"
+              ]
+            },
             "GetStoragePool": {
               "methods": [
                 "GetStoragePool",
@@ -254,6 +260,12 @@
               "methods": [
                 "ListActiveDirectories",
                 "ListActiveDirectoriesAsync"
+              ]
+            },
+            "ListBackupConfigs": {
+              "methods": [
+                "ListBackupConfigs",
+                "ListBackupConfigsAsync"
               ]
             },
             "ListBackupPolicies": {
@@ -322,6 +334,12 @@
                 "RestoreBackupFilesAsync"
               ]
             },
+            "RestoreVolume": {
+              "methods": [
+                "RestoreVolume",
+                "RestoreVolumeAsync"
+              ]
+            },
             "ResumeReplication": {
               "methods": [
                 "ResumeReplication",
@@ -338,6 +356,12 @@
               "methods": [
                 "RevertVolume",
                 "RevertVolumeAsync"
+              ]
+            },
+            "StartSplit": {
+              "methods": [
+                "StartSplit",
+                "StartSplitAsync"
               ]
             },
             "StopReplication": {
@@ -368,6 +392,12 @@
               "methods": [
                 "UpdateBackup",
                 "UpdateBackupAsync"
+              ]
+            },
+            "UpdateBackupConfig": {
+              "methods": [
+                "UpdateBackupConfig",
+                "UpdateBackupConfigAsync"
               ]
             },
             "UpdateBackupPolicy": {

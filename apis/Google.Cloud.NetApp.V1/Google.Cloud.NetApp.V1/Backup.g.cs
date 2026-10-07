@@ -28,7 +28,7 @@ namespace Google.Cloud.NetApp.V1 {
             "LmNsb3VkLm5ldGFwcC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
             "cm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxogZ29vZ2xlL3Byb3Rv",
             "YnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
-            "bXAucHJvdG8i1AgKBkJhY2t1cBIRCgRuYW1lGAEgASgJQgPgQQgSOAoFc3Rh",
+            "bXAucHJvdG8ilAkKBkJhY2t1cBIRCgRuYW1lGAEgASgJQgPgQQgSOAoFc3Rh",
             "dGUYAiABKA4yJC5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkJhY2t1cC5TdGF0",
             "ZUID4EEDEhMKC2Rlc2NyaXB0aW9uGAMgASgJEh8KEnZvbHVtZV91c2FnZV9i",
             "eXRlcxgEIAEoA0ID4EEDEj0KC2JhY2t1cF90eXBlGAUgASgOMiMuZ29vZ2xl",
@@ -44,45 +44,51 @@ namespace Google.Cloud.NetApp.V1 {
             "Z29vZ2xlYXBpcy5jb20vTG9jYXRpb24SQAoNYmFja3VwX3JlZ2lvbhgOIAEo",
             "CUIp4EED+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24S",
             "RAobZW5mb3JjZWRfcmV0ZW50aW9uX2VuZF90aW1lGA8gASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEibQoFU3RhdGUSFQoRU1RBVEVf",
-            "VU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEg0KCVVQTE9BRElORxACEgkK",
-            "BVJFQURZEAMSDAoIREVMRVRJTkcQBBIJCgVFUlJPUhAFEgwKCFVQREFUSU5H",
-            "EAYiNwoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCgoGTUFOVUFMEAES",
-            "DQoJU0NIRURVTEVEEAI6iQHqQYUBChxuZXRhcHAuZ29vZ2xlYXBpcy5jb20v",
-            "QmFja3VwElRwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vYmFja3VwVmF1bHRzL3tiYWNrdXBfdmF1bHR9L2JhY2t1cHMve2JhY2t1",
-            "cH0qB2JhY2t1cHMyBmJhY2t1cEISChBfc291cmNlX3NuYXBzaG90IpMBChJM",
-            "aXN0QmFja3Vwc1JlcXVlc3QSNAoGcGFyZW50GAEgASgJQiTgQQL6QR4SHG5l",
-            "dGFwcC5nb29nbGVhcGlzLmNvbS9CYWNrdXASEQoJcGFnZV9zaXplGAIgASgF",
-            "EhIKCnBhZ2VfdG9rZW4YAyABKAkSEAoIb3JkZXJfYnkYBCABKAkSDgoGZmls",
-            "dGVyGAUgASgJInQKE0xpc3RCYWNrdXBzUmVzcG9uc2USLwoHYmFja3VwcxgB",
-            "IAMoCzIeLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuQmFja3VwEhcKD25leHRf",
-            "cGFnZV90b2tlbhgCIAEoCRITCgt1bnJlYWNoYWJsZRgDIAMoCSJGChBHZXRC",
-            "YWNrdXBSZXF1ZXN0EjIKBG5hbWUYASABKAlCJOBBAvpBHgocbmV0YXBwLmdv",
-            "b2dsZWFwaXMuY29tL0JhY2t1cCKYAQoTQ3JlYXRlQmFja3VwUmVxdWVzdBI0",
-            "CgZwYXJlbnQYASABKAlCJOBBAvpBHhIcbmV0YXBwLmdvb2dsZWFwaXMuY29t",
-            "L0JhY2t1cBIWCgliYWNrdXBfaWQYAiABKAlCA+BBAhIzCgZiYWNrdXAYAyAB",
-            "KAsyHi5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkJhY2t1cEID4EECIkkKE0Rl",
-            "bGV0ZUJhY2t1cFJlcXVlc3QSMgoEbmFtZRgBIAEoCUIk4EEC+kEeChxuZXRh",
-            "cHAuZ29vZ2xlYXBpcy5jb20vQmFja3VwIoABChNVcGRhdGVCYWNrdXBSZXF1",
-            "ZXN0EjQKC3VwZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZp",
-            "ZWxkTWFza0ID4EECEjMKBmJhY2t1cBgCIAEoCzIeLmdvb2dsZS5jbG91ZC5u",
-            "ZXRhcHAudjEuQmFja3VwQgPgQQJCrQEKGmNvbS5nb29nbGUuY2xvdWQubmV0",
-            "YXBwLnYxQgtCYWNrdXBQcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL25l",
-            "dGFwcC9hcGl2MS9uZXRhcHBwYjtuZXRhcHBwYqoCFkdvb2dsZS5DbG91ZC5O",
-            "ZXRBcHAuVjHKAhZHb29nbGVcQ2xvdWRcTmV0QXBwXFYx6gIZR29vZ2xlOjpD",
-            "bG91ZDo6TmV0QXBwOjpWMWIGcHJvdG8z"));
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEj4KDG9udGFwX3NvdXJjZRgQIAEo",
+            "CzIjLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuT250YXBTb3VyY2VCA+BBARot",
+            "CgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
+            "Im0KBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQ",
+            "ARINCglVUExPQURJTkcQAhIJCgVSRUFEWRADEgwKCERFTEVUSU5HEAQSCQoF",
+            "RVJST1IQBRIMCghVUERBVElORxAGIjcKBFR5cGUSFAoQVFlQRV9VTlNQRUNJ",
+            "RklFRBAAEgoKBk1BTlVBTBABEg0KCVNDSEVEVUxFRBACOokB6kGFAQocbmV0",
+            "YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cBJUcHJvamVjdHMve3Byb2plY3R9",
+            "L2xvY2F0aW9ucy97bG9jYXRpb259L2JhY2t1cFZhdWx0cy97YmFja3VwX3Zh",
+            "dWx0fS9iYWNrdXBzL3tiYWNrdXB9KgdiYWNrdXBzMgZiYWNrdXBCEgoQX3Nv",
+            "dXJjZV9zbmFwc2hvdCKTAQoSTGlzdEJhY2t1cHNSZXF1ZXN0EjQKBnBhcmVu",
+            "dBgBIAEoCUIk4EEC+kEeEhxuZXRhcHAuZ29vZ2xlYXBpcy5jb20vQmFja3Vw",
+            "EhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEhAKCG9y",
+            "ZGVyX2J5GAQgASgJEg4KBmZpbHRlchgFIAEoCSJ0ChNMaXN0QmFja3Vwc1Jl",
+            "c3BvbnNlEi8KB2JhY2t1cHMYASADKAsyHi5nb29nbGUuY2xvdWQubmV0YXBw",
+            "LnYxLkJhY2t1cBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEwoLdW5yZWFj",
+            "aGFibGUYAyADKAkiRgoQR2V0QmFja3VwUmVxdWVzdBIyCgRuYW1lGAEgASgJ",
+            "QiTgQQL6QR4KHG5ldGFwcC5nb29nbGVhcGlzLmNvbS9CYWNrdXAimAEKE0Ny",
+            "ZWF0ZUJhY2t1cFJlcXVlc3QSNAoGcGFyZW50GAEgASgJQiTgQQL6QR4SHG5l",
+            "dGFwcC5nb29nbGVhcGlzLmNvbS9CYWNrdXASFgoJYmFja3VwX2lkGAIgASgJ",
+            "QgPgQQISMwoGYmFja3VwGAMgASgLMh4uZ29vZ2xlLmNsb3VkLm5ldGFwcC52",
+            "MS5CYWNrdXBCA+BBAiJJChNEZWxldGVCYWNrdXBSZXF1ZXN0EjIKBG5hbWUY",
+            "ASABKAlCJOBBAvpBHgocbmV0YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cCKA",
+            "AQoTVXBkYXRlQmFja3VwUmVxdWVzdBI0Cgt1cGRhdGVfbWFzaxgBIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAhIzCgZiYWNrdXAYAiAB",
+            "KAsyHi5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkJhY2t1cEID4EECIpoBCgtP",
+            "bnRhcFNvdXJjZRJECgxzdG9yYWdlX3Bvb2wYASABKAlCKeBBAvpBIwohbmV0",
+            "YXBwLmdvb2dsZWFwaXMuY29tL1N0b3JhZ2VQb29sSACIAQESGAoLdm9sdW1l",
+            "X3V1aWQYAiABKAlCA+BBAhIaCg1zbmFwc2hvdF91dWlkGAMgASgJQgPgQQFC",
+            "DwoNX3N0b3JhZ2VfcG9vbEKtAQoaY29tLmdvb2dsZS5jbG91ZC5uZXRhcHAu",
+            "djFCC0JhY2t1cFByb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vbmV0YXBw",
+            "L2FwaXYxL25ldGFwcHBiO25ldGFwcHBiqgIWR29vZ2xlLkNsb3VkLk5ldEFw",
+            "cC5WMcoCFkdvb2dsZVxDbG91ZFxOZXRBcHBcVjHqAhlHb29nbGU6OkNsb3Vk",
+            "OjpOZXRBcHA6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.Backup), global::Google.Cloud.NetApp.V1.Backup.Parser, new[]{ "Name", "State", "Description", "VolumeUsageBytes", "BackupType", "SourceVolume", "SourceSnapshot", "CreateTime", "Labels", "ChainStorageBytes", "SatisfiesPzs", "SatisfiesPzi", "VolumeRegion", "BackupRegion", "EnforcedRetentionEndTime" }, new[]{ "SourceSnapshot" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.Backup.Types.State), typeof(global::Google.Cloud.NetApp.V1.Backup.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.Backup), global::Google.Cloud.NetApp.V1.Backup.Parser, new[]{ "Name", "State", "Description", "VolumeUsageBytes", "BackupType", "SourceVolume", "SourceSnapshot", "CreateTime", "Labels", "ChainStorageBytes", "SatisfiesPzs", "SatisfiesPzi", "VolumeRegion", "BackupRegion", "EnforcedRetentionEndTime", "OntapSource" }, new[]{ "SourceSnapshot" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.Backup.Types.State), typeof(global::Google.Cloud.NetApp.V1.Backup.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ListBackupsRequest), global::Google.Cloud.NetApp.V1.ListBackupsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "OrderBy", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ListBackupsResponse), global::Google.Cloud.NetApp.V1.ListBackupsResponse.Parser, new[]{ "Backups", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.GetBackupRequest), global::Google.Cloud.NetApp.V1.GetBackupRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.CreateBackupRequest), global::Google.Cloud.NetApp.V1.CreateBackupRequest.Parser, new[]{ "Parent", "BackupId", "Backup" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.DeleteBackupRequest), global::Google.Cloud.NetApp.V1.DeleteBackupRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.UpdateBackupRequest), global::Google.Cloud.NetApp.V1.UpdateBackupRequest.Parser, new[]{ "UpdateMask", "Backup" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.UpdateBackupRequest), global::Google.Cloud.NetApp.V1.UpdateBackupRequest.Parser, new[]{ "UpdateMask", "Backup" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.OntapSource), global::Google.Cloud.NetApp.V1.OntapSource.Parser, new[]{ "StoragePool", "VolumeUuid", "SnapshotUuid" }, new[]{ "StoragePool" }, null, null, null)
           }));
     }
     #endregion
@@ -142,6 +148,7 @@ namespace Google.Cloud.NetApp.V1 {
       volumeRegion_ = other.volumeRegion_;
       backupRegion_ = other.backupRegion_;
       enforcedRetentionEndTime_ = other.enforcedRetentionEndTime_ != null ? other.enforcedRetentionEndTime_.Clone() : null;
+      ontapSource_ = other.ontapSource_ != null ? other.ontapSource_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -236,10 +243,9 @@ namespace Google.Cloud.NetApp.V1 {
     public const int SourceVolumeFieldNumber = 6;
     private string sourceVolume_ = "";
     /// <summary>
-    /// Volume full name of this backup belongs to.
-    /// Either source_volume or ontap_source should be provided.
-    /// Format:
-    /// `projects/{projects_id}/locations/{location}/volumes/{volume_id}`
+    /// The resource name of the volume that this backup belongs to. You must
+    /// provide either `source_volume` or `ontap_source`. Format:
+    /// `projects/{project_id}/locations/{location}/volumes/{volume_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -404,6 +410,22 @@ namespace Google.Cloud.NetApp.V1 {
       }
     }
 
+    /// <summary>Field number for the "ontap_source" field.</summary>
+    public const int OntapSourceFieldNumber = 16;
+    private global::Google.Cloud.NetApp.V1.OntapSource ontapSource_;
+    /// <summary>
+    /// Optional. Represents source details for ONTAP backups.
+    /// Either source_volume or ontap_source should be provided.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetApp.V1.OntapSource OntapSource {
+      get { return ontapSource_; }
+      set {
+        ontapSource_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -434,6 +456,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (VolumeRegion != other.VolumeRegion) return false;
       if (BackupRegion != other.BackupRegion) return false;
       if (!object.Equals(EnforcedRetentionEndTime, other.EnforcedRetentionEndTime)) return false;
+      if (!object.Equals(OntapSource, other.OntapSource)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -456,6 +479,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (VolumeRegion.Length != 0) hash ^= VolumeRegion.GetHashCode();
       if (BackupRegion.Length != 0) hash ^= BackupRegion.GetHashCode();
       if (enforcedRetentionEndTime_ != null) hash ^= EnforcedRetentionEndTime.GetHashCode();
+      if (ontapSource_ != null) hash ^= OntapSource.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -531,6 +555,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(122);
         output.WriteMessage(EnforcedRetentionEndTime);
       }
+      if (ontapSource_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(OntapSource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -598,6 +626,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(122);
         output.WriteMessage(EnforcedRetentionEndTime);
       }
+      if (ontapSource_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(OntapSource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -650,6 +682,9 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (enforcedRetentionEndTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EnforcedRetentionEndTime);
+      }
+      if (ontapSource_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(OntapSource);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -711,6 +746,12 @@ namespace Google.Cloud.NetApp.V1 {
           EnforcedRetentionEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EnforcedRetentionEndTime.MergeFrom(other.EnforcedRetentionEndTime);
+      }
+      if (other.ontapSource_ != null) {
+        if (ontapSource_ == null) {
+          OntapSource = new global::Google.Cloud.NetApp.V1.OntapSource();
+        }
+        OntapSource.MergeFrom(other.OntapSource);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -797,6 +838,13 @@ namespace Google.Cloud.NetApp.V1 {
             input.ReadMessage(EnforcedRetentionEndTime);
             break;
           }
+          case 130: {
+            if (ontapSource_ == null) {
+              OntapSource = new global::Google.Cloud.NetApp.V1.OntapSource();
+            }
+            input.ReadMessage(OntapSource);
+            break;
+          }
         }
       }
     #endif
@@ -880,6 +928,13 @@ namespace Google.Cloud.NetApp.V1 {
               EnforcedRetentionEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(EnforcedRetentionEndTime);
+            break;
+          }
+          case 130: {
+            if (ontapSource_ == null) {
+              OntapSource = new global::Google.Cloud.NetApp.V1.OntapSource();
+            }
+            input.ReadMessage(OntapSource);
             break;
           }
         }
@@ -2559,6 +2614,306 @@ namespace Google.Cloud.NetApp.V1 {
               Backup = new global::Google.Cloud.NetApp.V1.Backup();
             }
             input.ReadMessage(Backup);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Represents ONTAP source details.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class OntapSource : pb::IMessage<OntapSource>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<OntapSource> _parser = new pb::MessageParser<OntapSource>(() => new OntapSource());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<OntapSource> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.NetApp.V1.BackupReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OntapSource() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OntapSource(OntapSource other) : this() {
+      storagePool_ = other.storagePool_;
+      volumeUuid_ = other.volumeUuid_;
+      snapshotUuid_ = other.snapshotUuid_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OntapSource Clone() {
+      return new OntapSource(this);
+    }
+
+    /// <summary>Field number for the "storage_pool" field.</summary>
+    public const int StoragePoolFieldNumber = 1;
+    private readonly static string StoragePoolDefaultValue = "";
+
+    private string storagePool_;
+    /// <summary>
+    /// Required. Name of the storage pool. This must be specified for creating
+    /// backups for ONTAP mode volumes. Format:
+    /// `projects/{projects_id}/locations/{location}/storagePools/{storage_pool_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string StoragePool {
+      get { return storagePool_ ?? StoragePoolDefaultValue; }
+      set {
+        storagePool_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "storage_pool" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStoragePool {
+      get { return storagePool_ != null; }
+    }
+    /// <summary>Clears the value of the "storage_pool" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStoragePool() {
+      storagePool_ = null;
+    }
+
+    /// <summary>Field number for the "volume_uuid" field.</summary>
+    public const int VolumeUuidFieldNumber = 2;
+    private string volumeUuid_ = "";
+    /// <summary>
+    /// Required. The UUID of the ONTAP source volume.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VolumeUuid {
+      get { return volumeUuid_; }
+      set {
+        volumeUuid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "snapshot_uuid" field.</summary>
+    public const int SnapshotUuidFieldNumber = 3;
+    private string snapshotUuid_ = "";
+    /// <summary>
+    /// Optional. The UUID of the ONTAP source snapshot.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SnapshotUuid {
+      get { return snapshotUuid_; }
+      set {
+        snapshotUuid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as OntapSource);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(OntapSource other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (StoragePool != other.StoragePool) return false;
+      if (VolumeUuid != other.VolumeUuid) return false;
+      if (SnapshotUuid != other.SnapshotUuid) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasStoragePool) hash ^= StoragePool.GetHashCode();
+      if (VolumeUuid.Length != 0) hash ^= VolumeUuid.GetHashCode();
+      if (SnapshotUuid.Length != 0) hash ^= SnapshotUuid.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasStoragePool) {
+        output.WriteRawTag(10);
+        output.WriteString(StoragePool);
+      }
+      if (VolumeUuid.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(VolumeUuid);
+      }
+      if (SnapshotUuid.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(SnapshotUuid);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasStoragePool) {
+        output.WriteRawTag(10);
+        output.WriteString(StoragePool);
+      }
+      if (VolumeUuid.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(VolumeUuid);
+      }
+      if (SnapshotUuid.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(SnapshotUuid);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasStoragePool) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StoragePool);
+      }
+      if (VolumeUuid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VolumeUuid);
+      }
+      if (SnapshotUuid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SnapshotUuid);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(OntapSource other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasStoragePool) {
+        StoragePool = other.StoragePool;
+      }
+      if (other.VolumeUuid.Length != 0) {
+        VolumeUuid = other.VolumeUuid;
+      }
+      if (other.SnapshotUuid.Length != 0) {
+        SnapshotUuid = other.SnapshotUuid;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            StoragePool = input.ReadString();
+            break;
+          }
+          case 18: {
+            VolumeUuid = input.ReadString();
+            break;
+          }
+          case 26: {
+            SnapshotUuid = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            StoragePool = input.ReadString();
+            break;
+          }
+          case 18: {
+            VolumeUuid = input.ReadString();
+            break;
+          }
+          case 26: {
+            SnapshotUuid = input.ReadString();
             break;
           }
         }

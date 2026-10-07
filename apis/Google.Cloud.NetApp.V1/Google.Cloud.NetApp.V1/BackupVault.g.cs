@@ -36,7 +36,7 @@ namespace Google.Cloud.NetApp.V1 {
             "LnYxLkJhY2t1cFZhdWx0LkxhYmVsc0VudHJ5ElMKEWJhY2t1cF92YXVsdF90",
             "eXBlGAYgASgOMjMuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5CYWNrdXBWYXVs",
             "dC5CYWNrdXBWYXVsdFR5cGVCA+BBARJACg1zb3VyY2VfcmVnaW9uGAcgASgJ",
-            "QingQQP6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhJA",
+            "QingQQH6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhJA",
             "Cg1iYWNrdXBfcmVnaW9uGAggASgJQingQQH6QSMKIWxvY2F0aW9ucy5nb29n",
             "bGVhcGlzLmNvbS9Mb2NhdGlvbhJGChNzb3VyY2VfYmFja3VwX3ZhdWx0GAkg",
             "ASgJQingQQP6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9CYWNrdXBWYXVs",
@@ -262,7 +262,7 @@ namespace Google.Cloud.NetApp.V1 {
     public const int SourceRegionFieldNumber = 7;
     private string sourceRegion_ = "";
     /// <summary>
-    /// Output only. Region in which the backup vault is created.
+    /// Optional. Region in which the backup vault is created.
     /// Format: `projects/{project_id}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

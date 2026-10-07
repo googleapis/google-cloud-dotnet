@@ -1974,6 +1974,276 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for StartSplit</summary>
+        public void StartSplitRequestObject()
+        {
+            // Snippet: StartSplit(StartSplitRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            StartSplitRequest request = new StartSplitRequest
+            {
+                VolumeName = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]"),
+            };
+            // Make the request
+            Operation<Volume, OperationMetadata> response = netAppClient.StartSplit(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Volume, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Volume result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Volume, OperationMetadata> retrievedResponse = netAppClient.PollOnceStartSplit(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Volume retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartSplitAsync</summary>
+        public async Task StartSplitRequestObjectAsync()
+        {
+            // Snippet: StartSplitAsync(StartSplitRequest, CallSettings)
+            // Additional: StartSplitAsync(StartSplitRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            StartSplitRequest request = new StartSplitRequest
+            {
+                VolumeName = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]"),
+            };
+            // Make the request
+            Operation<Volume, OperationMetadata> response = await netAppClient.StartSplitAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Volume, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Volume result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Volume, OperationMetadata> retrievedResponse = await netAppClient.PollOnceStartSplitAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Volume retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartSplit</summary>
+        public void StartSplit()
+        {
+            // Snippet: StartSplit(string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]";
+            // Make the request
+            Operation<Volume, OperationMetadata> response = netAppClient.StartSplit(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Volume, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Volume result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Volume, OperationMetadata> retrievedResponse = netAppClient.PollOnceStartSplit(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Volume retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartSplitAsync</summary>
+        public async Task StartSplitAsync()
+        {
+            // Snippet: StartSplitAsync(string, CallSettings)
+            // Additional: StartSplitAsync(string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]";
+            // Make the request
+            Operation<Volume, OperationMetadata> response = await netAppClient.StartSplitAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Volume, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Volume result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Volume, OperationMetadata> retrievedResponse = await netAppClient.PollOnceStartSplitAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Volume retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartSplit</summary>
+        public void StartSplitResourceNames()
+        {
+            // Snippet: StartSplit(VolumeName, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            VolumeName name = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]");
+            // Make the request
+            Operation<Volume, OperationMetadata> response = netAppClient.StartSplit(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Volume, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Volume result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Volume, OperationMetadata> retrievedResponse = netAppClient.PollOnceStartSplit(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Volume retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartSplitAsync</summary>
+        public async Task StartSplitResourceNamesAsync()
+        {
+            // Snippet: StartSplitAsync(VolumeName, CallSettings)
+            // Additional: StartSplitAsync(VolumeName, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            VolumeName name = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]");
+            // Make the request
+            Operation<Volume, OperationMetadata> response = await netAppClient.StartSplitAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Volume, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Volume result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Volume, OperationMetadata> retrievedResponse = await netAppClient.PollOnceStartSplitAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Volume retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSplitStatus</summary>
+        public void GetSplitStatusRequestObject()
+        {
+            // Snippet: GetSplitStatus(GetSplitStatusRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            GetSplitStatusRequest request = new GetSplitStatusRequest
+            {
+                VolumeName = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]"),
+            };
+            // Make the request
+            SplitStatus response = netAppClient.GetSplitStatus(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSplitStatusAsync</summary>
+        public async Task GetSplitStatusRequestObjectAsync()
+        {
+            // Snippet: GetSplitStatusAsync(GetSplitStatusRequest, CallSettings)
+            // Additional: GetSplitStatusAsync(GetSplitStatusRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSplitStatusRequest request = new GetSplitStatusRequest
+            {
+                VolumeName = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]"),
+            };
+            // Make the request
+            SplitStatus response = await netAppClient.GetSplitStatusAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSplitStatus</summary>
+        public void GetSplitStatus()
+        {
+            // Snippet: GetSplitStatus(string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]";
+            // Make the request
+            SplitStatus response = netAppClient.GetSplitStatus(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSplitStatusAsync</summary>
+        public async Task GetSplitStatusAsync()
+        {
+            // Snippet: GetSplitStatusAsync(string, CallSettings)
+            // Additional: GetSplitStatusAsync(string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]";
+            // Make the request
+            SplitStatus response = await netAppClient.GetSplitStatusAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSplitStatus</summary>
+        public void GetSplitStatusResourceNames()
+        {
+            // Snippet: GetSplitStatus(VolumeName, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            VolumeName name = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]");
+            // Make the request
+            SplitStatus response = netAppClient.GetSplitStatus(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSplitStatusAsync</summary>
+        public async Task GetSplitStatusResourceNamesAsync()
+        {
+            // Snippet: GetSplitStatusAsync(VolumeName, CallSettings)
+            // Additional: GetSplitStatusAsync(VolumeName, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            VolumeName name = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]");
+            // Make the request
+            SplitStatus response = await netAppClient.GetSplitStatusAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for EstablishVolumePeering</summary>
         public void EstablishVolumePeeringRequestObject()
         {
@@ -10529,6 +10799,682 @@ namespace GoogleCSharpSnippets
             };
             // Make the request
             ExecuteOntapPatchResponse response = await netAppClient.ExecuteOntapPatchAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreVolume</summary>
+        public void RestoreVolumeRequestObject()
+        {
+            // Snippet: RestoreVolume(RestoreVolumeRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            RestoreVolumeRequest request = new RestoreVolumeRequest
+            {
+                StoragePoolName = StoragePoolName.FromProjectLocationStoragePool("[PROJECT]", "[LOCATION]", "[STORAGE_POOL]"),
+                BackupSource = new BackupSource(),
+                OntapVolumeTarget = new OntapVolumeTarget(),
+            };
+            // Make the request
+            Operation<RestoreVolumeResponse, OperationMetadata> response = netAppClient.RestoreVolume(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreVolumeResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreVolumeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreVolumeResponse, OperationMetadata> retrievedResponse = netAppClient.PollOnceRestoreVolume(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreVolumeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreVolumeAsync</summary>
+        public async Task RestoreVolumeRequestObjectAsync()
+        {
+            // Snippet: RestoreVolumeAsync(RestoreVolumeRequest, CallSettings)
+            // Additional: RestoreVolumeAsync(RestoreVolumeRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreVolumeRequest request = new RestoreVolumeRequest
+            {
+                StoragePoolName = StoragePoolName.FromProjectLocationStoragePool("[PROJECT]", "[LOCATION]", "[STORAGE_POOL]"),
+                BackupSource = new BackupSource(),
+                OntapVolumeTarget = new OntapVolumeTarget(),
+            };
+            // Make the request
+            Operation<RestoreVolumeResponse, OperationMetadata> response = await netAppClient.RestoreVolumeAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreVolumeResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreVolumeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreVolumeResponse, OperationMetadata> retrievedResponse = await netAppClient.PollOnceRestoreVolumeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreVolumeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreVolume</summary>
+        public void RestoreVolume()
+        {
+            // Snippet: RestoreVolume(string, BackupSource, OntapVolumeTarget, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/storagePools/[STORAGE_POOL]";
+            BackupSource backupSource = new BackupSource();
+            OntapVolumeTarget ontapVolumeTarget = new OntapVolumeTarget();
+            // Make the request
+            Operation<RestoreVolumeResponse, OperationMetadata> response = netAppClient.RestoreVolume(name, backupSource, ontapVolumeTarget);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreVolumeResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreVolumeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreVolumeResponse, OperationMetadata> retrievedResponse = netAppClient.PollOnceRestoreVolume(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreVolumeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreVolumeAsync</summary>
+        public async Task RestoreVolumeAsync()
+        {
+            // Snippet: RestoreVolumeAsync(string, BackupSource, OntapVolumeTarget, CallSettings)
+            // Additional: RestoreVolumeAsync(string, BackupSource, OntapVolumeTarget, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/storagePools/[STORAGE_POOL]";
+            BackupSource backupSource = new BackupSource();
+            OntapVolumeTarget ontapVolumeTarget = new OntapVolumeTarget();
+            // Make the request
+            Operation<RestoreVolumeResponse, OperationMetadata> response = await netAppClient.RestoreVolumeAsync(name, backupSource, ontapVolumeTarget);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreVolumeResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreVolumeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreVolumeResponse, OperationMetadata> retrievedResponse = await netAppClient.PollOnceRestoreVolumeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreVolumeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreVolume</summary>
+        public void RestoreVolumeResourceNames()
+        {
+            // Snippet: RestoreVolume(StoragePoolName, BackupSource, OntapVolumeTarget, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            StoragePoolName name = StoragePoolName.FromProjectLocationStoragePool("[PROJECT]", "[LOCATION]", "[STORAGE_POOL]");
+            BackupSource backupSource = new BackupSource();
+            OntapVolumeTarget ontapVolumeTarget = new OntapVolumeTarget();
+            // Make the request
+            Operation<RestoreVolumeResponse, OperationMetadata> response = netAppClient.RestoreVolume(name, backupSource, ontapVolumeTarget);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreVolumeResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreVolumeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreVolumeResponse, OperationMetadata> retrievedResponse = netAppClient.PollOnceRestoreVolume(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreVolumeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreVolumeAsync</summary>
+        public async Task RestoreVolumeResourceNamesAsync()
+        {
+            // Snippet: RestoreVolumeAsync(StoragePoolName, BackupSource, OntapVolumeTarget, CallSettings)
+            // Additional: RestoreVolumeAsync(StoragePoolName, BackupSource, OntapVolumeTarget, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            StoragePoolName name = StoragePoolName.FromProjectLocationStoragePool("[PROJECT]", "[LOCATION]", "[STORAGE_POOL]");
+            BackupSource backupSource = new BackupSource();
+            OntapVolumeTarget ontapVolumeTarget = new OntapVolumeTarget();
+            // Make the request
+            Operation<RestoreVolumeResponse, OperationMetadata> response = await netAppClient.RestoreVolumeAsync(name, backupSource, ontapVolumeTarget);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreVolumeResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreVolumeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreVolumeResponse, OperationMetadata> retrievedResponse = await netAppClient.PollOnceRestoreVolumeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreVolumeResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupConfigs</summary>
+        public void ListBackupConfigsRequestObject()
+        {
+            // Snippet: ListBackupConfigs(ListBackupConfigsRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            ListBackupConfigsRequest request = new ListBackupConfigsRequest
+            {
+                ParentAsStoragePoolName = StoragePoolName.FromProjectLocationStoragePool("[PROJECT]", "[LOCATION]", "[STORAGE_POOL]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListBackupConfigsResponse, VolumeBackupConfig> response = netAppClient.ListBackupConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (VolumeBackupConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VolumeBackupConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VolumeBackupConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VolumeBackupConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupConfigsAsync</summary>
+        public async Task ListBackupConfigsRequestObjectAsync()
+        {
+            // Snippet: ListBackupConfigsAsync(ListBackupConfigsRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            ListBackupConfigsRequest request = new ListBackupConfigsRequest
+            {
+                ParentAsStoragePoolName = StoragePoolName.FromProjectLocationStoragePool("[PROJECT]", "[LOCATION]", "[STORAGE_POOL]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListBackupConfigsResponse, VolumeBackupConfig> response = netAppClient.ListBackupConfigsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (VolumeBackupConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBackupConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VolumeBackupConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VolumeBackupConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VolumeBackupConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupConfigs</summary>
+        public void ListBackupConfigs()
+        {
+            // Snippet: ListBackupConfigs(string, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/storagePools/[STORAGE_POOL]";
+            // Make the request
+            PagedEnumerable<ListBackupConfigsResponse, VolumeBackupConfig> response = netAppClient.ListBackupConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (VolumeBackupConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VolumeBackupConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VolumeBackupConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VolumeBackupConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupConfigsAsync</summary>
+        public async Task ListBackupConfigsAsync()
+        {
+            // Snippet: ListBackupConfigsAsync(string, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/storagePools/[STORAGE_POOL]";
+            // Make the request
+            PagedAsyncEnumerable<ListBackupConfigsResponse, VolumeBackupConfig> response = netAppClient.ListBackupConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (VolumeBackupConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBackupConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VolumeBackupConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VolumeBackupConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VolumeBackupConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupConfigs</summary>
+        public void ListBackupConfigsResourceNames()
+        {
+            // Snippet: ListBackupConfigs(StoragePoolName, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            StoragePoolName parent = StoragePoolName.FromProjectLocationStoragePool("[PROJECT]", "[LOCATION]", "[STORAGE_POOL]");
+            // Make the request
+            PagedEnumerable<ListBackupConfigsResponse, VolumeBackupConfig> response = netAppClient.ListBackupConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (VolumeBackupConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VolumeBackupConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VolumeBackupConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VolumeBackupConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupConfigsAsync</summary>
+        public async Task ListBackupConfigsResourceNamesAsync()
+        {
+            // Snippet: ListBackupConfigsAsync(StoragePoolName, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            StoragePoolName parent = StoragePoolName.FromProjectLocationStoragePool("[PROJECT]", "[LOCATION]", "[STORAGE_POOL]");
+            // Make the request
+            PagedAsyncEnumerable<ListBackupConfigsResponse, VolumeBackupConfig> response = netAppClient.ListBackupConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (VolumeBackupConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBackupConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VolumeBackupConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VolumeBackupConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VolumeBackupConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupConfig</summary>
+        public void UpdateBackupConfigRequestObject()
+        {
+            // Snippet: UpdateBackupConfig(UpdateBackupConfigRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            UpdateBackupConfigRequest request = new UpdateBackupConfigRequest
+            {
+                StoragePoolName = StoragePoolName.FromProjectLocationStoragePool("[PROJECT]", "[LOCATION]", "[STORAGE_POOL]"),
+                VolumeUuid = "",
+                BackupConfig = new BackupConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<UpdateBackupConfigResponse, OperationMetadata> response = netAppClient.UpdateBackupConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpdateBackupConfigResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            UpdateBackupConfigResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpdateBackupConfigResponse, OperationMetadata> retrievedResponse = netAppClient.PollOnceUpdateBackupConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpdateBackupConfigResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupConfigAsync</summary>
+        public async Task UpdateBackupConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateBackupConfigAsync(UpdateBackupConfigRequest, CallSettings)
+            // Additional: UpdateBackupConfigAsync(UpdateBackupConfigRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateBackupConfigRequest request = new UpdateBackupConfigRequest
+            {
+                StoragePoolName = StoragePoolName.FromProjectLocationStoragePool("[PROJECT]", "[LOCATION]", "[STORAGE_POOL]"),
+                VolumeUuid = "",
+                BackupConfig = new BackupConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<UpdateBackupConfigResponse, OperationMetadata> response = await netAppClient.UpdateBackupConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpdateBackupConfigResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            UpdateBackupConfigResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpdateBackupConfigResponse, OperationMetadata> retrievedResponse = await netAppClient.PollOnceUpdateBackupConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpdateBackupConfigResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupConfig</summary>
+        public void UpdateBackupConfig()
+        {
+            // Snippet: UpdateBackupConfig(string, string, BackupConfig, FieldMask, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/storagePools/[STORAGE_POOL]";
+            string volumeUuid = "";
+            BackupConfig backupConfig = new BackupConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<UpdateBackupConfigResponse, OperationMetadata> response = netAppClient.UpdateBackupConfig(name, volumeUuid, backupConfig, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpdateBackupConfigResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            UpdateBackupConfigResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpdateBackupConfigResponse, OperationMetadata> retrievedResponse = netAppClient.PollOnceUpdateBackupConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpdateBackupConfigResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupConfigAsync</summary>
+        public async Task UpdateBackupConfigAsync()
+        {
+            // Snippet: UpdateBackupConfigAsync(string, string, BackupConfig, FieldMask, CallSettings)
+            // Additional: UpdateBackupConfigAsync(string, string, BackupConfig, FieldMask, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/storagePools/[STORAGE_POOL]";
+            string volumeUuid = "";
+            BackupConfig backupConfig = new BackupConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<UpdateBackupConfigResponse, OperationMetadata> response = await netAppClient.UpdateBackupConfigAsync(name, volumeUuid, backupConfig, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpdateBackupConfigResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            UpdateBackupConfigResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpdateBackupConfigResponse, OperationMetadata> retrievedResponse = await netAppClient.PollOnceUpdateBackupConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpdateBackupConfigResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupConfig</summary>
+        public void UpdateBackupConfigResourceNames()
+        {
+            // Snippet: UpdateBackupConfig(StoragePoolName, string, BackupConfig, FieldMask, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            StoragePoolName name = StoragePoolName.FromProjectLocationStoragePool("[PROJECT]", "[LOCATION]", "[STORAGE_POOL]");
+            string volumeUuid = "";
+            BackupConfig backupConfig = new BackupConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<UpdateBackupConfigResponse, OperationMetadata> response = netAppClient.UpdateBackupConfig(name, volumeUuid, backupConfig, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpdateBackupConfigResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            UpdateBackupConfigResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpdateBackupConfigResponse, OperationMetadata> retrievedResponse = netAppClient.PollOnceUpdateBackupConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpdateBackupConfigResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupConfigAsync</summary>
+        public async Task UpdateBackupConfigResourceNamesAsync()
+        {
+            // Snippet: UpdateBackupConfigAsync(StoragePoolName, string, BackupConfig, FieldMask, CallSettings)
+            // Additional: UpdateBackupConfigAsync(StoragePoolName, string, BackupConfig, FieldMask, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            StoragePoolName name = StoragePoolName.FromProjectLocationStoragePool("[PROJECT]", "[LOCATION]", "[STORAGE_POOL]");
+            string volumeUuid = "";
+            BackupConfig backupConfig = new BackupConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<UpdateBackupConfigResponse, OperationMetadata> response = await netAppClient.UpdateBackupConfigAsync(name, volumeUuid, backupConfig, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpdateBackupConfigResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            UpdateBackupConfigResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpdateBackupConfigResponse, OperationMetadata> retrievedResponse = await netAppClient.PollOnceUpdateBackupConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpdateBackupConfigResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

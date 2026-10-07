@@ -139,7 +139,7 @@ namespace Google.Cloud.NetApp.V1 {
     public const int OntapPathFieldNumber = 3;
     private string ontapPath_ = "";
     /// <summary>
-    /// Required. The resource path of the ONTAP resource.
+    /// Required. The path of the ONTAP resource.
     /// Format:
     /// `projects/{project_number}/locations/{location_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`.
     /// For example:

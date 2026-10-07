@@ -71,6 +71,9 @@ namespace Google.Cloud.NetApp.V1
             DeleteVolumeOperationsSettings = existing.DeleteVolumeOperationsSettings.Clone();
             RevertVolumeSettings = existing.RevertVolumeSettings;
             RevertVolumeOperationsSettings = existing.RevertVolumeOperationsSettings.Clone();
+            StartSplitSettings = existing.StartSplitSettings;
+            StartSplitOperationsSettings = existing.StartSplitOperationsSettings.Clone();
+            GetSplitStatusSettings = existing.GetSplitStatusSettings;
             EstablishVolumePeeringSettings = existing.EstablishVolumePeeringSettings;
             EstablishVolumePeeringOperationsSettings = existing.EstablishVolumePeeringOperationsSettings.Clone();
             ListSnapshotsSettings = existing.ListSnapshotsSettings;
@@ -164,6 +167,11 @@ namespace Google.Cloud.NetApp.V1
             ExecuteOntapGetSettings = existing.ExecuteOntapGetSettings;
             ExecuteOntapDeleteSettings = existing.ExecuteOntapDeleteSettings;
             ExecuteOntapPatchSettings = existing.ExecuteOntapPatchSettings;
+            RestoreVolumeSettings = existing.RestoreVolumeSettings;
+            RestoreVolumeOperationsSettings = existing.RestoreVolumeOperationsSettings.Clone();
+            ListBackupConfigsSettings = existing.ListBackupConfigsSettings;
+            UpdateBackupConfigSettings = existing.UpdateBackupConfigSettings;
+            UpdateBackupConfigOperationsSettings = existing.UpdateBackupConfigOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -511,6 +519,48 @@ namespace Google.Cloud.NetApp.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>NetAppClient.StartSplit</c>
+        /// and <c>NetAppClient.StartSplitAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StartSplitSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.StartSplit</c> and
+        /// <c>NetAppClient.StartSplitAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings StartSplitOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>NetAppClient.GetSplitStatus</c>
+        ///  and <c>NetAppClient.GetSplitStatusAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSplitStatusSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1921,6 +1971,78 @@ namespace Google.Cloud.NetApp.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ExecuteOntapPatchSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>NetAppClient.RestoreVolume</c>
+        ///  and <c>NetAppClient.RestoreVolumeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RestoreVolumeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.RestoreVolume</c> and
+        /// <c>NetAppClient.RestoreVolumeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RestoreVolumeOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.ListBackupConfigs</c> and <c>NetAppClient.ListBackupConfigsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBackupConfigsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.UpdateBackupConfig</c> and <c>NetAppClient.UpdateBackupConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateBackupConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.UpdateBackupConfig</c> and
+        /// <c>NetAppClient.UpdateBackupConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateBackupConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -3632,6 +3754,299 @@ namespace Google.Cloud.NetApp.V1
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<Volume, OperationMetadata>> PollOnceRevertVolumeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<Volume, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RevertVolumeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Splits a clone volume from its source volume.
+        /// This operation will only work for volumes which have clone_details
+        /// set(clones).
+        /// For volumes that are not clones, this operation will return an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Volume, OperationMetadata> StartSplit(StartSplitRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Splits a clone volume from its source volume.
+        /// This operation will only work for volumes which have clone_details
+        /// set(clones).
+        /// For volumes that are not clones, this operation will return an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Volume, OperationMetadata>> StartSplitAsync(StartSplitRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Splits a clone volume from its source volume.
+        /// This operation will only work for volumes which have clone_details
+        /// set(clones).
+        /// For volumes that are not clones, this operation will return an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Volume, OperationMetadata>> StartSplitAsync(StartSplitRequest request, st::CancellationToken cancellationToken) =>
+            StartSplitAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>StartSplit</c>.</summary>
+        public virtual lro::OperationsClient StartSplitOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>StartSplit</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Volume, OperationMetadata> PollOnceStartSplit(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Volume, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartSplitOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StartSplit</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Volume, OperationMetadata>> PollOnceStartSplitAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Volume, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartSplitOperationsClient, callSettings);
+
+        /// <summary>
+        /// Splits a clone volume from its source volume.
+        /// This operation will only work for volumes which have clone_details
+        /// set(clones).
+        /// For volumes that are not clones, this operation will return an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full name of the clone volume to be split from its source.
+        /// Format: projects/{project_number}/locations/{location}/volumes/{volume_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Volume, OperationMetadata> StartSplit(string name, gaxgrpc::CallSettings callSettings = null) =>
+            StartSplit(new StartSplitRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Splits a clone volume from its source volume.
+        /// This operation will only work for volumes which have clone_details
+        /// set(clones).
+        /// For volumes that are not clones, this operation will return an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full name of the clone volume to be split from its source.
+        /// Format: projects/{project_number}/locations/{location}/volumes/{volume_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Volume, OperationMetadata>> StartSplitAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            StartSplitAsync(new StartSplitRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Splits a clone volume from its source volume.
+        /// This operation will only work for volumes which have clone_details
+        /// set(clones).
+        /// For volumes that are not clones, this operation will return an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full name of the clone volume to be split from its source.
+        /// Format: projects/{project_number}/locations/{location}/volumes/{volume_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Volume, OperationMetadata>> StartSplitAsync(string name, st::CancellationToken cancellationToken) =>
+            StartSplitAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Splits a clone volume from its source volume.
+        /// This operation will only work for volumes which have clone_details
+        /// set(clones).
+        /// For volumes that are not clones, this operation will return an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full name of the clone volume to be split from its source.
+        /// Format: projects/{project_number}/locations/{location}/volumes/{volume_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Volume, OperationMetadata> StartSplit(VolumeName name, gaxgrpc::CallSettings callSettings = null) =>
+            StartSplit(new StartSplitRequest
+            {
+                VolumeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Splits a clone volume from its source volume.
+        /// This operation will only work for volumes which have clone_details
+        /// set(clones).
+        /// For volumes that are not clones, this operation will return an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full name of the clone volume to be split from its source.
+        /// Format: projects/{project_number}/locations/{location}/volumes/{volume_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Volume, OperationMetadata>> StartSplitAsync(VolumeName name, gaxgrpc::CallSettings callSettings = null) =>
+            StartSplitAsync(new StartSplitRequest
+            {
+                VolumeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Splits a clone volume from its source volume.
+        /// This operation will only work for volumes which have clone_details
+        /// set(clones).
+        /// For volumes that are not clones, this operation will return an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full name of the clone volume to be split from its source.
+        /// Format: projects/{project_number}/locations/{location}/volumes/{volume_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Volume, OperationMetadata>> StartSplitAsync(VolumeName name, st::CancellationToken cancellationToken) =>
+            StartSplitAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the current state, progress, and details of a split operation for
+        /// a volume. This method is relevant when the volume is a clone. For volumes
+        /// that are not clones, this method will return an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SplitStatus GetSplitStatus(GetSplitStatusRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the current state, progress, and details of a split operation for
+        /// a volume. This method is relevant when the volume is a clone. For volumes
+        /// that are not clones, this method will return an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SplitStatus> GetSplitStatusAsync(GetSplitStatusRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the current state, progress, and details of a split operation for
+        /// a volume. This method is relevant when the volume is a clone. For volumes
+        /// that are not clones, this method will return an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SplitStatus> GetSplitStatusAsync(GetSplitStatusRequest request, st::CancellationToken cancellationToken) =>
+            GetSplitStatusAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the current state, progress, and details of a split operation for
+        /// a volume. This method is relevant when the volume is a clone. For volumes
+        /// that are not clones, this method will return an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full name of the volume.
+        /// Format: projects/{project_number}/locations/{location}/volumes/{volume_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SplitStatus GetSplitStatus(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSplitStatus(new GetSplitStatusRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the current state, progress, and details of a split operation for
+        /// a volume. This method is relevant when the volume is a clone. For volumes
+        /// that are not clones, this method will return an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full name of the volume.
+        /// Format: projects/{project_number}/locations/{location}/volumes/{volume_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SplitStatus> GetSplitStatusAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSplitStatusAsync(new GetSplitStatusRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the current state, progress, and details of a split operation for
+        /// a volume. This method is relevant when the volume is a clone. For volumes
+        /// that are not clones, this method will return an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full name of the volume.
+        /// Format: projects/{project_number}/locations/{location}/volumes/{volume_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SplitStatus> GetSplitStatusAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSplitStatusAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the current state, progress, and details of a split operation for
+        /// a volume. This method is relevant when the volume is a clone. For volumes
+        /// that are not clones, this method will return an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full name of the volume.
+        /// Format: projects/{project_number}/locations/{location}/volumes/{volume_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SplitStatus GetSplitStatus(VolumeName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSplitStatus(new GetSplitStatusRequest
+            {
+                VolumeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the current state, progress, and details of a split operation for
+        /// a volume. This method is relevant when the volume is a clone. For volumes
+        /// that are not clones, this method will return an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full name of the volume.
+        /// Format: projects/{project_number}/locations/{location}/volumes/{volume_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SplitStatus> GetSplitStatusAsync(VolumeName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSplitStatusAsync(new GetSplitStatusRequest
+            {
+                VolumeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the current state, progress, and details of a split operation for
+        /// a volume. This method is relevant when the volume is a clone. For volumes
+        /// that are not clones, this method will return an error.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full name of the volume.
+        /// Format: projects/{project_number}/locations/{location}/volumes/{volume_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SplitStatus> GetSplitStatusAsync(VolumeName name, st::CancellationToken cancellationToken) =>
+            GetSplitStatusAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Establish volume peering. This is used to establish cluster and svm
@@ -10568,7 +10983,7 @@ namespace Google.Cloud.NetApp.V1
             DeleteHostGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// `ExecuteOntapPost` dispatches the ONTAP `POST` request to the
+        /// `ExecuteOntapPost` sends the ONTAP `POST` request to the
         /// `StoragePool` cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -10578,7 +10993,7 @@ namespace Google.Cloud.NetApp.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// `ExecuteOntapPost` dispatches the ONTAP `POST` request to the
+        /// `ExecuteOntapPost` sends the ONTAP `POST` request to the
         /// `StoragePool` cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -10588,7 +11003,7 @@ namespace Google.Cloud.NetApp.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// `ExecuteOntapPost` dispatches the ONTAP `POST` request to the
+        /// `ExecuteOntapPost` sends the ONTAP `POST` request to the
         /// `StoragePool` cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -10598,7 +11013,7 @@ namespace Google.Cloud.NetApp.V1
             ExecuteOntapPostAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// `ExecuteOntapGet` dispatches the ONTAP `GET` request to the
+        /// `ExecuteOntapGet` sends the ONTAP `GET` request to the
         /// `StoragePool` cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -10608,7 +11023,7 @@ namespace Google.Cloud.NetApp.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// `ExecuteOntapGet` dispatches the ONTAP `GET` request to the
+        /// `ExecuteOntapGet` sends the ONTAP `GET` request to the
         /// `StoragePool` cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -10618,7 +11033,7 @@ namespace Google.Cloud.NetApp.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// `ExecuteOntapGet` dispatches the ONTAP `GET` request to the
+        /// `ExecuteOntapGet` sends the ONTAP `GET` request to the
         /// `StoragePool` cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -10628,7 +11043,7 @@ namespace Google.Cloud.NetApp.V1
             ExecuteOntapGetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
+        /// `ExecuteOntapDelete` sends the ONTAP `DELETE` request to the
         /// `StoragePool` cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -10638,7 +11053,7 @@ namespace Google.Cloud.NetApp.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
+        /// `ExecuteOntapDelete` sends the ONTAP `DELETE` request to the
         /// `StoragePool` cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -10648,7 +11063,7 @@ namespace Google.Cloud.NetApp.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
+        /// `ExecuteOntapDelete` sends the ONTAP `DELETE` request to the
         /// `StoragePool` cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -10658,7 +11073,7 @@ namespace Google.Cloud.NetApp.V1
             ExecuteOntapDeleteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the
+        /// `ExecuteOntapPatch` sends the ONTAP `PATCH` request to the
         /// `StoragePool` cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -10668,7 +11083,7 @@ namespace Google.Cloud.NetApp.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the
+        /// `ExecuteOntapPatch` sends the ONTAP `PATCH` request to the
         /// `StoragePool` cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -10678,7 +11093,7 @@ namespace Google.Cloud.NetApp.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the
+        /// `ExecuteOntapPatch` sends the ONTAP `PATCH` request to the
         /// `StoragePool` cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -10686,6 +11101,567 @@ namespace Google.Cloud.NetApp.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ExecuteOntapPatchResponse> ExecuteOntapPatchAsync(ExecuteOntapPatchRequest request, st::CancellationToken cancellationToken) =>
             ExecuteOntapPatchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Restores a backup to an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreVolumeResponse, OperationMetadata> RestoreVolume(RestoreVolumeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Restores a backup to an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVolumeResponse, OperationMetadata>> RestoreVolumeAsync(RestoreVolumeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Restores a backup to an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVolumeResponse, OperationMetadata>> RestoreVolumeAsync(RestoreVolumeRequest request, st::CancellationToken cancellationToken) =>
+            RestoreVolumeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RestoreVolume</c>.</summary>
+        public virtual lro::OperationsClient RestoreVolumeOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RestoreVolume</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<RestoreVolumeResponse, OperationMetadata> PollOnceRestoreVolume(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RestoreVolumeResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RestoreVolumeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RestoreVolume</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVolumeResponse, OperationMetadata>> PollOnceRestoreVolumeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RestoreVolumeResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RestoreVolumeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Restores a backup to an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ONTAP mode storage pool, in the format
+        /// of `projects/{project}/locations/{location}/storagePools/{storage_pool}`
+        /// </param>
+        /// <param name="backupSource">
+        /// The backup source of the restore operation.
+        /// </param>
+        /// <param name="ontapVolumeTarget">
+        /// The ONTAP volume target of the restore operation.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreVolumeResponse, OperationMetadata> RestoreVolume(string name, BackupSource backupSource, OntapVolumeTarget ontapVolumeTarget, gaxgrpc::CallSettings callSettings = null) =>
+            RestoreVolume(new RestoreVolumeRequest
+            {
+                BackupSource = backupSource,
+                OntapVolumeTarget = ontapVolumeTarget,
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restores a backup to an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ONTAP mode storage pool, in the format
+        /// of `projects/{project}/locations/{location}/storagePools/{storage_pool}`
+        /// </param>
+        /// <param name="backupSource">
+        /// The backup source of the restore operation.
+        /// </param>
+        /// <param name="ontapVolumeTarget">
+        /// The ONTAP volume target of the restore operation.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVolumeResponse, OperationMetadata>> RestoreVolumeAsync(string name, BackupSource backupSource, OntapVolumeTarget ontapVolumeTarget, gaxgrpc::CallSettings callSettings = null) =>
+            RestoreVolumeAsync(new RestoreVolumeRequest
+            {
+                BackupSource = backupSource,
+                OntapVolumeTarget = ontapVolumeTarget,
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restores a backup to an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ONTAP mode storage pool, in the format
+        /// of `projects/{project}/locations/{location}/storagePools/{storage_pool}`
+        /// </param>
+        /// <param name="backupSource">
+        /// The backup source of the restore operation.
+        /// </param>
+        /// <param name="ontapVolumeTarget">
+        /// The ONTAP volume target of the restore operation.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVolumeResponse, OperationMetadata>> RestoreVolumeAsync(string name, BackupSource backupSource, OntapVolumeTarget ontapVolumeTarget, st::CancellationToken cancellationToken) =>
+            RestoreVolumeAsync(name, backupSource, ontapVolumeTarget, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Restores a backup to an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ONTAP mode storage pool, in the format
+        /// of `projects/{project}/locations/{location}/storagePools/{storage_pool}`
+        /// </param>
+        /// <param name="backupSource">
+        /// The backup source of the restore operation.
+        /// </param>
+        /// <param name="ontapVolumeTarget">
+        /// The ONTAP volume target of the restore operation.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreVolumeResponse, OperationMetadata> RestoreVolume(StoragePoolName name, BackupSource backupSource, OntapVolumeTarget ontapVolumeTarget, gaxgrpc::CallSettings callSettings = null) =>
+            RestoreVolume(new RestoreVolumeRequest
+            {
+                BackupSource = backupSource,
+                OntapVolumeTarget = ontapVolumeTarget,
+                StoragePoolName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restores a backup to an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ONTAP mode storage pool, in the format
+        /// of `projects/{project}/locations/{location}/storagePools/{storage_pool}`
+        /// </param>
+        /// <param name="backupSource">
+        /// The backup source of the restore operation.
+        /// </param>
+        /// <param name="ontapVolumeTarget">
+        /// The ONTAP volume target of the restore operation.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVolumeResponse, OperationMetadata>> RestoreVolumeAsync(StoragePoolName name, BackupSource backupSource, OntapVolumeTarget ontapVolumeTarget, gaxgrpc::CallSettings callSettings = null) =>
+            RestoreVolumeAsync(new RestoreVolumeRequest
+            {
+                BackupSource = backupSource,
+                OntapVolumeTarget = ontapVolumeTarget,
+                StoragePoolName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restores a backup to an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ONTAP mode storage pool, in the format
+        /// of `projects/{project}/locations/{location}/storagePools/{storage_pool}`
+        /// </param>
+        /// <param name="backupSource">
+        /// The backup source of the restore operation.
+        /// </param>
+        /// <param name="ontapVolumeTarget">
+        /// The ONTAP volume target of the restore operation.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVolumeResponse, OperationMetadata>> RestoreVolumeAsync(StoragePoolName name, BackupSource backupSource, OntapVolumeTarget ontapVolumeTarget, st::CancellationToken cancellationToken) =>
+            RestoreVolumeAsync(name, backupSource, ontapVolumeTarget, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists backup configurations for all volumes in an ONTAP-mode Storage Pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="VolumeBackupConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupConfigsResponse, VolumeBackupConfig> ListBackupConfigs(ListBackupConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists backup configurations for all volumes in an ONTAP-mode Storage Pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="VolumeBackupConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupConfigsResponse, VolumeBackupConfig> ListBackupConfigsAsync(ListBackupConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists backup configurations for all volumes in an ONTAP-mode Storage Pool.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The ONTAP StoragePool for which to retrieve backup configuration
+        /// information, in the format
+        /// `projects/{project}/locations/{location}/storagePools/{storage_pool}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="VolumeBackupConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupConfigsResponse, VolumeBackupConfig> ListBackupConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupConfigsRequest request = new ListBackupConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupConfigs(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists backup configurations for all volumes in an ONTAP-mode Storage Pool.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The ONTAP StoragePool for which to retrieve backup configuration
+        /// information, in the format
+        /// `projects/{project}/locations/{location}/storagePools/{storage_pool}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="VolumeBackupConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupConfigsResponse, VolumeBackupConfig> ListBackupConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupConfigsRequest request = new ListBackupConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupConfigsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists backup configurations for all volumes in an ONTAP-mode Storage Pool.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The ONTAP StoragePool for which to retrieve backup configuration
+        /// information, in the format
+        /// `projects/{project}/locations/{location}/storagePools/{storage_pool}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="VolumeBackupConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupConfigsResponse, VolumeBackupConfig> ListBackupConfigs(StoragePoolName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupConfigsRequest request = new ListBackupConfigsRequest
+            {
+                ParentAsStoragePoolName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupConfigs(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists backup configurations for all volumes in an ONTAP-mode Storage Pool.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The ONTAP StoragePool for which to retrieve backup configuration
+        /// information, in the format
+        /// `projects/{project}/locations/{location}/storagePools/{storage_pool}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="VolumeBackupConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupConfigsResponse, VolumeBackupConfig> ListBackupConfigsAsync(StoragePoolName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupConfigsRequest request = new ListBackupConfigsRequest
+            {
+                ParentAsStoragePoolName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupConfigsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the backup configuration for an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<UpdateBackupConfigResponse, OperationMetadata> UpdateBackupConfig(UpdateBackupConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the backup configuration for an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UpdateBackupConfigResponse, OperationMetadata>> UpdateBackupConfigAsync(UpdateBackupConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the backup configuration for an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UpdateBackupConfigResponse, OperationMetadata>> UpdateBackupConfigAsync(UpdateBackupConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateBackupConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateBackupConfig</c>.</summary>
+        public virtual lro::OperationsClient UpdateBackupConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateBackupConfig</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<UpdateBackupConfigResponse, OperationMetadata> PollOnceUpdateBackupConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<UpdateBackupConfigResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBackupConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateBackupConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<UpdateBackupConfigResponse, OperationMetadata>> PollOnceUpdateBackupConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<UpdateBackupConfigResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBackupConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the backup configuration for an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the StoragePool, in the format:
+        /// projects/{projectNumber}/locations/{locationId}/storagePools/{poolId}
+        /// </param>
+        /// <param name="volumeUuid">
+        /// Required. The UUID of the ONTAP-mode volume.
+        /// </param>
+        /// <param name="backupConfig">
+        /// Required. Backup configuration to apply.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// BackupConfig for the Volume.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<UpdateBackupConfigResponse, OperationMetadata> UpdateBackupConfig(string name, string volumeUuid, BackupConfig backupConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupConfig(new UpdateBackupConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                VolumeUuid = gax::GaxPreconditions.CheckNotNullOrEmpty(volumeUuid, nameof(volumeUuid)),
+                BackupConfig = gax::GaxPreconditions.CheckNotNull(backupConfig, nameof(backupConfig)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the backup configuration for an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the StoragePool, in the format:
+        /// projects/{projectNumber}/locations/{locationId}/storagePools/{poolId}
+        /// </param>
+        /// <param name="volumeUuid">
+        /// Required. The UUID of the ONTAP-mode volume.
+        /// </param>
+        /// <param name="backupConfig">
+        /// Required. Backup configuration to apply.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// BackupConfig for the Volume.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UpdateBackupConfigResponse, OperationMetadata>> UpdateBackupConfigAsync(string name, string volumeUuid, BackupConfig backupConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupConfigAsync(new UpdateBackupConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                VolumeUuid = gax::GaxPreconditions.CheckNotNullOrEmpty(volumeUuid, nameof(volumeUuid)),
+                BackupConfig = gax::GaxPreconditions.CheckNotNull(backupConfig, nameof(backupConfig)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the backup configuration for an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the StoragePool, in the format:
+        /// projects/{projectNumber}/locations/{locationId}/storagePools/{poolId}
+        /// </param>
+        /// <param name="volumeUuid">
+        /// Required. The UUID of the ONTAP-mode volume.
+        /// </param>
+        /// <param name="backupConfig">
+        /// Required. Backup configuration to apply.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// BackupConfig for the Volume.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UpdateBackupConfigResponse, OperationMetadata>> UpdateBackupConfigAsync(string name, string volumeUuid, BackupConfig backupConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateBackupConfigAsync(name, volumeUuid, backupConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the backup configuration for an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the StoragePool, in the format:
+        /// projects/{projectNumber}/locations/{locationId}/storagePools/{poolId}
+        /// </param>
+        /// <param name="volumeUuid">
+        /// Required. The UUID of the ONTAP-mode volume.
+        /// </param>
+        /// <param name="backupConfig">
+        /// Required. Backup configuration to apply.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// BackupConfig for the Volume.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<UpdateBackupConfigResponse, OperationMetadata> UpdateBackupConfig(StoragePoolName name, string volumeUuid, BackupConfig backupConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupConfig(new UpdateBackupConfigRequest
+            {
+                StoragePoolName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                VolumeUuid = gax::GaxPreconditions.CheckNotNullOrEmpty(volumeUuid, nameof(volumeUuid)),
+                BackupConfig = gax::GaxPreconditions.CheckNotNull(backupConfig, nameof(backupConfig)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the backup configuration for an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the StoragePool, in the format:
+        /// projects/{projectNumber}/locations/{locationId}/storagePools/{poolId}
+        /// </param>
+        /// <param name="volumeUuid">
+        /// Required. The UUID of the ONTAP-mode volume.
+        /// </param>
+        /// <param name="backupConfig">
+        /// Required. Backup configuration to apply.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// BackupConfig for the Volume.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UpdateBackupConfigResponse, OperationMetadata>> UpdateBackupConfigAsync(StoragePoolName name, string volumeUuid, BackupConfig backupConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupConfigAsync(new UpdateBackupConfigRequest
+            {
+                StoragePoolName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                VolumeUuid = gax::GaxPreconditions.CheckNotNullOrEmpty(volumeUuid, nameof(volumeUuid)),
+                BackupConfig = gax::GaxPreconditions.CheckNotNull(backupConfig, nameof(backupConfig)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the backup configuration for an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the StoragePool, in the format:
+        /// projects/{projectNumber}/locations/{locationId}/storagePools/{poolId}
+        /// </param>
+        /// <param name="volumeUuid">
+        /// Required. The UUID of the ONTAP-mode volume.
+        /// </param>
+        /// <param name="backupConfig">
+        /// Required. Backup configuration to apply.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// BackupConfig for the Volume.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UpdateBackupConfigResponse, OperationMetadata>> UpdateBackupConfigAsync(StoragePoolName name, string volumeUuid, BackupConfig backupConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateBackupConfigAsync(name, volumeUuid, backupConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>NetApp client wrapper implementation, for convenient use.</summary>
@@ -10719,6 +11695,10 @@ namespace Google.Cloud.NetApp.V1
         private readonly gaxgrpc::ApiCall<DeleteVolumeRequest, lro::Operation> _callDeleteVolume;
 
         private readonly gaxgrpc::ApiCall<RevertVolumeRequest, lro::Operation> _callRevertVolume;
+
+        private readonly gaxgrpc::ApiCall<StartSplitRequest, lro::Operation> _callStartSplit;
+
+        private readonly gaxgrpc::ApiCall<GetSplitStatusRequest, SplitStatus> _callGetSplitStatus;
 
         private readonly gaxgrpc::ApiCall<EstablishVolumePeeringRequest, lro::Operation> _callEstablishVolumePeering;
 
@@ -10836,6 +11816,12 @@ namespace Google.Cloud.NetApp.V1
 
         private readonly gaxgrpc::ApiCall<ExecuteOntapPatchRequest, ExecuteOntapPatchResponse> _callExecuteOntapPatch;
 
+        private readonly gaxgrpc::ApiCall<RestoreVolumeRequest, lro::Operation> _callRestoreVolume;
+
+        private readonly gaxgrpc::ApiCall<ListBackupConfigsRequest, ListBackupConfigsResponse> _callListBackupConfigs;
+
+        private readonly gaxgrpc::ApiCall<UpdateBackupConfigRequest, lro::Operation> _callUpdateBackupConfig;
+
         /// <summary>
         /// Constructs a client wrapper for the NetApp service, with the specified gRPC client and settings.
         /// </summary>
@@ -10860,6 +11846,7 @@ namespace Google.Cloud.NetApp.V1
             UpdateVolumeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateVolumeOperationsSettings, logger);
             DeleteVolumeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteVolumeOperationsSettings, logger);
             RevertVolumeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RevertVolumeOperationsSettings, logger);
+            StartSplitOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartSplitOperationsSettings, logger);
             EstablishVolumePeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.EstablishVolumePeeringOperationsSettings, logger);
             CreateSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSnapshotOperationsSettings, logger);
             DeleteSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSnapshotOperationsSettings, logger);
@@ -10895,6 +11882,8 @@ namespace Google.Cloud.NetApp.V1
             CreateHostGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateHostGroupOperationsSettings, logger);
             UpdateHostGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateHostGroupOperationsSettings, logger);
             DeleteHostGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteHostGroupOperationsSettings, logger);
+            RestoreVolumeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreVolumeOperationsSettings, logger);
+            UpdateBackupConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupConfigOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListStoragePools = clientHelper.BuildApiCall<ListStoragePoolsRequest, ListStoragePoolsResponse>("ListStoragePools", grpcClient.ListStoragePoolsAsync, grpcClient.ListStoragePools, effectiveSettings.ListStoragePoolsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListStoragePools);
@@ -10935,6 +11924,12 @@ namespace Google.Cloud.NetApp.V1
             _callRevertVolume = clientHelper.BuildApiCall<RevertVolumeRequest, lro::Operation>("RevertVolume", grpcClient.RevertVolumeAsync, grpcClient.RevertVolume, effectiveSettings.RevertVolumeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRevertVolume);
             Modify_RevertVolumeApiCall(ref _callRevertVolume);
+            _callStartSplit = clientHelper.BuildApiCall<StartSplitRequest, lro::Operation>("StartSplit", grpcClient.StartSplitAsync, grpcClient.StartSplit, effectiveSettings.StartSplitSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callStartSplit);
+            Modify_StartSplitApiCall(ref _callStartSplit);
+            _callGetSplitStatus = clientHelper.BuildApiCall<GetSplitStatusRequest, SplitStatus>("GetSplitStatus", grpcClient.GetSplitStatusAsync, grpcClient.GetSplitStatus, effectiveSettings.GetSplitStatusSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSplitStatus);
+            Modify_GetSplitStatusApiCall(ref _callGetSplitStatus);
             _callEstablishVolumePeering = clientHelper.BuildApiCall<EstablishVolumePeeringRequest, lro::Operation>("EstablishVolumePeering", grpcClient.EstablishVolumePeeringAsync, grpcClient.EstablishVolumePeering, effectiveSettings.EstablishVolumePeeringSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callEstablishVolumePeering);
             Modify_EstablishVolumePeeringApiCall(ref _callEstablishVolumePeering);
@@ -11109,6 +12104,15 @@ namespace Google.Cloud.NetApp.V1
             _callExecuteOntapPatch = clientHelper.BuildApiCall<ExecuteOntapPatchRequest, ExecuteOntapPatchResponse>("ExecuteOntapPatch", grpcClient.ExecuteOntapPatchAsync, grpcClient.ExecuteOntapPatch, effectiveSettings.ExecuteOntapPatchSettings).WithGoogleRequestParam("ontap_path", request => request.OntapPath);
             Modify_ApiCall(ref _callExecuteOntapPatch);
             Modify_ExecuteOntapPatchApiCall(ref _callExecuteOntapPatch);
+            _callRestoreVolume = clientHelper.BuildApiCall<RestoreVolumeRequest, lro::Operation>("RestoreVolume", grpcClient.RestoreVolumeAsync, grpcClient.RestoreVolume, effectiveSettings.RestoreVolumeSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRestoreVolume);
+            Modify_RestoreVolumeApiCall(ref _callRestoreVolume);
+            _callListBackupConfigs = clientHelper.BuildApiCall<ListBackupConfigsRequest, ListBackupConfigsResponse>("ListBackupConfigs", grpcClient.ListBackupConfigsAsync, grpcClient.ListBackupConfigs, effectiveSettings.ListBackupConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBackupConfigs);
+            Modify_ListBackupConfigsApiCall(ref _callListBackupConfigs);
+            _callUpdateBackupConfig = clientHelper.BuildApiCall<UpdateBackupConfigRequest, lro::Operation>("UpdateBackupConfig", grpcClient.UpdateBackupConfigAsync, grpcClient.UpdateBackupConfig, effectiveSettings.UpdateBackupConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUpdateBackupConfig);
+            Modify_UpdateBackupConfigApiCall(ref _callUpdateBackupConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -11139,6 +12143,10 @@ namespace Google.Cloud.NetApp.V1
         partial void Modify_DeleteVolumeApiCall(ref gaxgrpc::ApiCall<DeleteVolumeRequest, lro::Operation> call);
 
         partial void Modify_RevertVolumeApiCall(ref gaxgrpc::ApiCall<RevertVolumeRequest, lro::Operation> call);
+
+        partial void Modify_StartSplitApiCall(ref gaxgrpc::ApiCall<StartSplitRequest, lro::Operation> call);
+
+        partial void Modify_GetSplitStatusApiCall(ref gaxgrpc::ApiCall<GetSplitStatusRequest, SplitStatus> call);
 
         partial void Modify_EstablishVolumePeeringApiCall(ref gaxgrpc::ApiCall<EstablishVolumePeeringRequest, lro::Operation> call);
 
@@ -11256,6 +12264,12 @@ namespace Google.Cloud.NetApp.V1
 
         partial void Modify_ExecuteOntapPatchApiCall(ref gaxgrpc::ApiCall<ExecuteOntapPatchRequest, ExecuteOntapPatchResponse> call);
 
+        partial void Modify_RestoreVolumeApiCall(ref gaxgrpc::ApiCall<RestoreVolumeRequest, lro::Operation> call);
+
+        partial void Modify_ListBackupConfigsApiCall(ref gaxgrpc::ApiCall<ListBackupConfigsRequest, ListBackupConfigsResponse> call);
+
+        partial void Modify_UpdateBackupConfigApiCall(ref gaxgrpc::ApiCall<UpdateBackupConfigRequest, lro::Operation> call);
+
         partial void OnConstruction(NetApp.NetAppClient grpcClient, NetAppSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC NetApp client</summary>
@@ -11289,6 +12303,10 @@ namespace Google.Cloud.NetApp.V1
         partial void Modify_DeleteVolumeRequest(ref DeleteVolumeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RevertVolumeRequest(ref RevertVolumeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StartSplitRequest(ref StartSplitRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetSplitStatusRequest(ref GetSplitStatusRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_EstablishVolumePeeringRequest(ref EstablishVolumePeeringRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -11405,6 +12423,12 @@ namespace Google.Cloud.NetApp.V1
         partial void Modify_ExecuteOntapDeleteRequest(ref ExecuteOntapDeleteRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ExecuteOntapPatchRequest(ref ExecuteOntapPatchRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RestoreVolumeRequest(ref RestoreVolumeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBackupConfigsRequest(ref ListBackupConfigsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateBackupConfigRequest(ref UpdateBackupConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Returns descriptions of all storage pools owned by the caller.
@@ -11751,6 +12775,67 @@ namespace Google.Cloud.NetApp.V1
         {
             Modify_RevertVolumeRequest(ref request, ref callSettings);
             return new lro::Operation<Volume, OperationMetadata>(await _callRevertVolume.Async(request, callSettings).ConfigureAwait(false), RevertVolumeOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>StartSplit</c>.</summary>
+        public override lro::OperationsClient StartSplitOperationsClient { get; }
+
+        /// <summary>
+        /// Splits a clone volume from its source volume.
+        /// This operation will only work for volumes which have clone_details
+        /// set(clones).
+        /// For volumes that are not clones, this operation will return an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Volume, OperationMetadata> StartSplit(StartSplitRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StartSplitRequest(ref request, ref callSettings);
+            return new lro::Operation<Volume, OperationMetadata>(_callStartSplit.Sync(request, callSettings), StartSplitOperationsClient);
+        }
+
+        /// <summary>
+        /// Splits a clone volume from its source volume.
+        /// This operation will only work for volumes which have clone_details
+        /// set(clones).
+        /// For volumes that are not clones, this operation will return an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Volume, OperationMetadata>> StartSplitAsync(StartSplitRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StartSplitRequest(ref request, ref callSettings);
+            return new lro::Operation<Volume, OperationMetadata>(await _callStartSplit.Async(request, callSettings).ConfigureAwait(false), StartSplitOperationsClient);
+        }
+
+        /// <summary>
+        /// Retrieves the current state, progress, and details of a split operation for
+        /// a volume. This method is relevant when the volume is a clone. For volumes
+        /// that are not clones, this method will return an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SplitStatus GetSplitStatus(GetSplitStatusRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSplitStatusRequest(ref request, ref callSettings);
+            return _callGetSplitStatus.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves the current state, progress, and details of a split operation for
+        /// a volume. This method is relevant when the volume is a clone. For volumes
+        /// that are not clones, this method will return an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SplitStatus> GetSplitStatusAsync(GetSplitStatusRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSplitStatusRequest(ref request, ref callSettings);
+            return _callGetSplitStatus.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>EstablishVolumePeering</c>.</summary>
@@ -13173,7 +14258,7 @@ namespace Google.Cloud.NetApp.V1
         }
 
         /// <summary>
-        /// `ExecuteOntapPost` dispatches the ONTAP `POST` request to the
+        /// `ExecuteOntapPost` sends the ONTAP `POST` request to the
         /// `StoragePool` cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13186,7 +14271,7 @@ namespace Google.Cloud.NetApp.V1
         }
 
         /// <summary>
-        /// `ExecuteOntapPost` dispatches the ONTAP `POST` request to the
+        /// `ExecuteOntapPost` sends the ONTAP `POST` request to the
         /// `StoragePool` cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13199,7 +14284,7 @@ namespace Google.Cloud.NetApp.V1
         }
 
         /// <summary>
-        /// `ExecuteOntapGet` dispatches the ONTAP `GET` request to the
+        /// `ExecuteOntapGet` sends the ONTAP `GET` request to the
         /// `StoragePool` cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13212,7 +14297,7 @@ namespace Google.Cloud.NetApp.V1
         }
 
         /// <summary>
-        /// `ExecuteOntapGet` dispatches the ONTAP `GET` request to the
+        /// `ExecuteOntapGet` sends the ONTAP `GET` request to the
         /// `StoragePool` cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13225,7 +14310,7 @@ namespace Google.Cloud.NetApp.V1
         }
 
         /// <summary>
-        /// `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
+        /// `ExecuteOntapDelete` sends the ONTAP `DELETE` request to the
         /// `StoragePool` cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13238,7 +14323,7 @@ namespace Google.Cloud.NetApp.V1
         }
 
         /// <summary>
-        /// `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
+        /// `ExecuteOntapDelete` sends the ONTAP `DELETE` request to the
         /// `StoragePool` cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13251,7 +14336,7 @@ namespace Google.Cloud.NetApp.V1
         }
 
         /// <summary>
-        /// `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the
+        /// `ExecuteOntapPatch` sends the ONTAP `PATCH` request to the
         /// `StoragePool` cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13264,7 +14349,7 @@ namespace Google.Cloud.NetApp.V1
         }
 
         /// <summary>
-        /// `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the
+        /// `ExecuteOntapPatch` sends the ONTAP `PATCH` request to the
         /// `StoragePool` cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13274,6 +14359,84 @@ namespace Google.Cloud.NetApp.V1
         {
             Modify_ExecuteOntapPatchRequest(ref request, ref callSettings);
             return _callExecuteOntapPatch.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>RestoreVolume</c>.</summary>
+        public override lro::OperationsClient RestoreVolumeOperationsClient { get; }
+
+        /// <summary>
+        /// Restores a backup to an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<RestoreVolumeResponse, OperationMetadata> RestoreVolume(RestoreVolumeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RestoreVolumeRequest(ref request, ref callSettings);
+            return new lro::Operation<RestoreVolumeResponse, OperationMetadata>(_callRestoreVolume.Sync(request, callSettings), RestoreVolumeOperationsClient);
+        }
+
+        /// <summary>
+        /// Restores a backup to an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<RestoreVolumeResponse, OperationMetadata>> RestoreVolumeAsync(RestoreVolumeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RestoreVolumeRequest(ref request, ref callSettings);
+            return new lro::Operation<RestoreVolumeResponse, OperationMetadata>(await _callRestoreVolume.Async(request, callSettings).ConfigureAwait(false), RestoreVolumeOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists backup configurations for all volumes in an ONTAP-mode Storage Pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="VolumeBackupConfig"/> resources.</returns>
+        public override gax::PagedEnumerable<ListBackupConfigsResponse, VolumeBackupConfig> ListBackupConfigs(ListBackupConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBackupConfigsRequest, ListBackupConfigsResponse, VolumeBackupConfig>(_callListBackupConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists backup configurations for all volumes in an ONTAP-mode Storage Pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="VolumeBackupConfig"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListBackupConfigsResponse, VolumeBackupConfig> ListBackupConfigsAsync(ListBackupConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackupConfigsRequest, ListBackupConfigsResponse, VolumeBackupConfig>(_callListBackupConfigs, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateBackupConfig</c>.</summary>
+        public override lro::OperationsClient UpdateBackupConfigOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the backup configuration for an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<UpdateBackupConfigResponse, OperationMetadata> UpdateBackupConfig(UpdateBackupConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBackupConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<UpdateBackupConfigResponse, OperationMetadata>(_callUpdateBackupConfig.Sync(request, callSettings), UpdateBackupConfigOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the backup configuration for an ONTAP-mode volume.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<UpdateBackupConfigResponse, OperationMetadata>> UpdateBackupConfigAsync(UpdateBackupConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBackupConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<UpdateBackupConfigResponse, OperationMetadata>(await _callUpdateBackupConfig.Async(request, callSettings).ConfigureAwait(false), UpdateBackupConfigOperationsClient);
         }
     }
 
@@ -13318,6 +14481,10 @@ namespace Google.Cloud.NetApp.V1
     }
 
     public partial class ListHostGroupsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListBackupConfigsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -13405,6 +14572,14 @@ namespace Google.Cloud.NetApp.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<HostGroup> GetEnumerator() => HostGroups.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListBackupConfigsResponse : gaxgrpc::IPageResponse<VolumeBackupConfig>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<VolumeBackupConfig> GetEnumerator() => VolumeBackupConfigs.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
