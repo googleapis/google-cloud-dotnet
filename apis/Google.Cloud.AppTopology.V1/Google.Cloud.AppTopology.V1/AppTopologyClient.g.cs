@@ -49,6 +49,7 @@ namespace Google.Cloud.AppTopology.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GenerateDiscoveredResourcesTopologySettings = existing.GenerateDiscoveredResourcesTopologySettings;
             GetSchemaSettings = existing.GetSchemaSettings;
+            ExploreSchemaSettings = existing.ExploreSchemaSettings;
             GetDomainSettings = existing.GetDomainSettings;
             ListDomainsSettings = existing.ListDomainsSettings;
             LocationsSettings = existing.LocationsSettings;
@@ -87,6 +88,24 @@ namespace Google.Cloud.AppTopology.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetSchemaSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AppTopologyClient.ExploreSchema</c> and <c>AppTopologyClient.ExploreSchemaAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExploreSchemaSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>AppTopologyClient.GetDomain</c>
@@ -620,6 +639,166 @@ namespace Google.Cloud.AppTopology.V1
             GetSchemaAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Explores the topology schema starting from given node types or label names
+        /// up to a specified hop depth.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NodeType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ExploreSchemaResponse, NodeType> ExploreSchema(ExploreSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Explores the topology schema starting from given node types or label names
+        /// up to a specified hop depth.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NodeType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ExploreSchemaResponse, NodeType> ExploreSchemaAsync(ExploreSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Explores the topology schema starting from given node types or label names
+        /// up to a specified hop depth.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the singleton domain schema resource.
+        /// Format: `projects/{project}/locations/{location}/domains/{domain}/schema`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NodeType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ExploreSchemaResponse, NodeType> ExploreSchema(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ExploreSchemaRequest request = new ExploreSchemaRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ExploreSchema(request, callSettings);
+        }
+
+        /// <summary>
+        /// Explores the topology schema starting from given node types or label names
+        /// up to a specified hop depth.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the singleton domain schema resource.
+        /// Format: `projects/{project}/locations/{location}/domains/{domain}/schema`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NodeType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ExploreSchemaResponse, NodeType> ExploreSchemaAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ExploreSchemaRequest request = new ExploreSchemaRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ExploreSchemaAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Explores the topology schema starting from given node types or label names
+        /// up to a specified hop depth.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the singleton domain schema resource.
+        /// Format: `projects/{project}/locations/{location}/domains/{domain}/schema`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NodeType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ExploreSchemaResponse, NodeType> ExploreSchema(SchemaName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ExploreSchemaRequest request = new ExploreSchemaRequest
+            {
+                SchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ExploreSchema(request, callSettings);
+        }
+
+        /// <summary>
+        /// Explores the topology schema starting from given node types or label names
+        /// up to a specified hop depth.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the singleton domain schema resource.
+        /// Format: `projects/{project}/locations/{location}/domains/{domain}/schema`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NodeType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ExploreSchemaResponse, NodeType> ExploreSchemaAsync(SchemaName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ExploreSchemaRequest request = new ExploreSchemaRequest
+            {
+                SchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ExploreSchemaAsync(request, callSettings);
+        }
+
+        /// <summary>
         /// Retrieves the specified topology domain.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -905,6 +1084,8 @@ namespace Google.Cloud.AppTopology.V1
 
         private readonly gaxgrpc::ApiCall<GetSchemaRequest, Schema> _callGetSchema;
 
+        private readonly gaxgrpc::ApiCall<ExploreSchemaRequest, ExploreSchemaResponse> _callExploreSchema;
+
         private readonly gaxgrpc::ApiCall<GetDomainRequest, Domain> _callGetDomain;
 
         private readonly gaxgrpc::ApiCall<ListDomainsRequest, ListDomainsResponse> _callListDomains;
@@ -931,6 +1112,9 @@ namespace Google.Cloud.AppTopology.V1
             _callGetSchema = clientHelper.BuildApiCall<GetSchemaRequest, Schema>("GetSchema", grpcClient.GetSchemaAsync, grpcClient.GetSchema, effectiveSettings.GetSchemaSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSchema);
             Modify_GetSchemaApiCall(ref _callGetSchema);
+            _callExploreSchema = clientHelper.BuildApiCall<ExploreSchemaRequest, ExploreSchemaResponse>("ExploreSchema", grpcClient.ExploreSchemaAsync, grpcClient.ExploreSchema, effectiveSettings.ExploreSchemaSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callExploreSchema);
+            Modify_ExploreSchemaApiCall(ref _callExploreSchema);
             _callGetDomain = clientHelper.BuildApiCall<GetDomainRequest, Domain>("GetDomain", grpcClient.GetDomainAsync, grpcClient.GetDomain, effectiveSettings.GetDomainSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDomain);
             Modify_GetDomainApiCall(ref _callGetDomain);
@@ -945,6 +1129,8 @@ namespace Google.Cloud.AppTopology.V1
         partial void Modify_GenerateDiscoveredResourcesTopologyApiCall(ref gaxgrpc::ApiCall<GenerateDiscoveredResourcesTopologyRequest, GenerateDiscoveredResourcesTopologyResponse> call);
 
         partial void Modify_GetSchemaApiCall(ref gaxgrpc::ApiCall<GetSchemaRequest, Schema> call);
+
+        partial void Modify_ExploreSchemaApiCall(ref gaxgrpc::ApiCall<ExploreSchemaRequest, ExploreSchemaResponse> call);
 
         partial void Modify_GetDomainApiCall(ref gaxgrpc::ApiCall<GetDomainRequest, Domain> call);
 
@@ -961,6 +1147,8 @@ namespace Google.Cloud.AppTopology.V1
         partial void Modify_GenerateDiscoveredResourcesTopologyRequest(ref GenerateDiscoveredResourcesTopologyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetSchemaRequest(ref GetSchemaRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExploreSchemaRequest(ref ExploreSchemaRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetDomainRequest(ref GetDomainRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1029,6 +1217,32 @@ namespace Google.Cloud.AppTopology.V1
         }
 
         /// <summary>
+        /// Explores the topology schema starting from given node types or label names
+        /// up to a specified hop depth.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NodeType"/> resources.</returns>
+        public override gax::PagedEnumerable<ExploreSchemaResponse, NodeType> ExploreSchema(ExploreSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExploreSchemaRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ExploreSchemaRequest, ExploreSchemaResponse, NodeType>(_callExploreSchema, request, callSettings);
+        }
+
+        /// <summary>
+        /// Explores the topology schema starting from given node types or label names
+        /// up to a specified hop depth.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NodeType"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ExploreSchemaResponse, NodeType> ExploreSchemaAsync(ExploreSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExploreSchemaRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ExploreSchemaRequest, ExploreSchemaResponse, NodeType>(_callExploreSchema, request, callSettings);
+        }
+
+        /// <summary>
         /// Retrieves the specified topology domain.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1079,8 +1293,20 @@ namespace Google.Cloud.AppTopology.V1
         }
     }
 
+    public partial class ExploreSchemaRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListDomainsRequest : gaxgrpc::IPageRequest
     {
+    }
+
+    public partial class ExploreSchemaResponse : gaxgrpc::IPageResponse<NodeType>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<NodeType> GetEnumerator() => NodeTypes.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public partial class ListDomainsResponse : gaxgrpc::IPageResponse<Domain>

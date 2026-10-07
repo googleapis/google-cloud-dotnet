@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "AppTopologyClient",
           "rpcs": {
+            "ExploreSchema": {
+              "methods": [
+                "ExploreSchema",
+                "ExploreSchemaAsync"
+              ]
+            },
             "GenerateDiscoveredResourcesTopology": {
               "methods": [
                 "GenerateDiscoveredResourcesTopology",

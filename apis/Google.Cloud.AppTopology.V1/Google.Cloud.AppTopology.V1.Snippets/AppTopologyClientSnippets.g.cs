@@ -226,6 +226,286 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ExploreSchema</summary>
+        public void ExploreSchemaRequestObject()
+        {
+            // Snippet: ExploreSchema(ExploreSchemaRequest, CallSettings)
+            // Create client
+            AppTopologyClient appTopologyClient = AppTopologyClient.Create();
+            // Initialize request argument(s)
+            ExploreSchemaRequest request = new ExploreSchemaRequest
+            {
+                SchemaName = SchemaName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                StartLabels = { "", },
+                Depth = 0,
+            };
+            // Make the request
+            PagedEnumerable<ExploreSchemaResponse, NodeType> response = appTopologyClient.ExploreSchema(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NodeType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ExploreSchemaResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NodeType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NodeType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NodeType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExploreSchemaAsync</summary>
+        public async Task ExploreSchemaRequestObjectAsync()
+        {
+            // Snippet: ExploreSchemaAsync(ExploreSchemaRequest, CallSettings)
+            // Create client
+            AppTopologyClient appTopologyClient = await AppTopologyClient.CreateAsync();
+            // Initialize request argument(s)
+            ExploreSchemaRequest request = new ExploreSchemaRequest
+            {
+                SchemaName = SchemaName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]"),
+                StartLabels = { "", },
+                Depth = 0,
+            };
+            // Make the request
+            PagedAsyncEnumerable<ExploreSchemaResponse, NodeType> response = appTopologyClient.ExploreSchemaAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (NodeType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ExploreSchemaResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NodeType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NodeType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NodeType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExploreSchema</summary>
+        public void ExploreSchema()
+        {
+            // Snippet: ExploreSchema(string, string, int?, CallSettings)
+            // Create client
+            AppTopologyClient appTopologyClient = AppTopologyClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/domains/[DOMAIN]/schema";
+            // Make the request
+            PagedEnumerable<ExploreSchemaResponse, NodeType> response = appTopologyClient.ExploreSchema(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NodeType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ExploreSchemaResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NodeType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NodeType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NodeType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExploreSchemaAsync</summary>
+        public async Task ExploreSchemaAsync()
+        {
+            // Snippet: ExploreSchemaAsync(string, string, int?, CallSettings)
+            // Create client
+            AppTopologyClient appTopologyClient = await AppTopologyClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/domains/[DOMAIN]/schema";
+            // Make the request
+            PagedAsyncEnumerable<ExploreSchemaResponse, NodeType> response = appTopologyClient.ExploreSchemaAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (NodeType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ExploreSchemaResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NodeType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NodeType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NodeType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExploreSchema</summary>
+        public void ExploreSchemaResourceNames()
+        {
+            // Snippet: ExploreSchema(SchemaName, string, int?, CallSettings)
+            // Create client
+            AppTopologyClient appTopologyClient = AppTopologyClient.Create();
+            // Initialize request argument(s)
+            SchemaName name = SchemaName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]");
+            // Make the request
+            PagedEnumerable<ExploreSchemaResponse, NodeType> response = appTopologyClient.ExploreSchema(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NodeType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ExploreSchemaResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NodeType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NodeType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NodeType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExploreSchemaAsync</summary>
+        public async Task ExploreSchemaResourceNamesAsync()
+        {
+            // Snippet: ExploreSchemaAsync(SchemaName, string, int?, CallSettings)
+            // Create client
+            AppTopologyClient appTopologyClient = await AppTopologyClient.CreateAsync();
+            // Initialize request argument(s)
+            SchemaName name = SchemaName.FromProjectLocationDomain("[PROJECT]", "[LOCATION]", "[DOMAIN]");
+            // Make the request
+            PagedAsyncEnumerable<ExploreSchemaResponse, NodeType> response = appTopologyClient.ExploreSchemaAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (NodeType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ExploreSchemaResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NodeType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NodeType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NodeType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for GetDomain</summary>
         public void GetDomainRequestObject()
         {
