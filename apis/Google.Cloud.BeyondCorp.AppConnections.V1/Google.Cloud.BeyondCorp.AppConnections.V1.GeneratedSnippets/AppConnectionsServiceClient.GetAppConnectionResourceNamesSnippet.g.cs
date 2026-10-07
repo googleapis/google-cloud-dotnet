@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START beyondcorp_v1_generated_AppConnectionsService_GetAppConnection_sync_flattened_resourceNames]
     using Google.Cloud.BeyondCorp.AppConnections.V1;
+    using System;
 
     public sealed partial class GeneratedAppConnectionsServiceClientSnippets
     {
@@ -29,6 +30,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void GetAppConnectionResourceNames()
         {
             // Create client
@@ -36,7 +38,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AppConnectionName name = AppConnectionName.FromProjectLocationAppConnection("[PROJECT]", "[LOCATION]", "[APP_CONNECTION]");
             // Make the request
+#pragma warning disable CS0612
             AppConnection response = appConnectionsServiceClient.GetAppConnection(name);
+#pragma warning restore CS0612
         }
     }
     // [END beyondcorp_v1_generated_AppConnectionsService_GetAppConnection_sync_flattened_resourceNames]
