@@ -25,6 +25,7 @@ namespace GoogleCSharpSnippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
+    [ObsoleteAttribute]
     public sealed class AllGeneratedAppGatewaysServiceClientSnippets
     {
         /// <summary>Snippet for ListAppGateways</summary>
@@ -41,7 +42,9 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
             };
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAppGatewaysResponse, AppGateway> response = appGatewaysServiceClient.ListAppGateways(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (AppGateway item in response)
@@ -91,7 +94,9 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
             };
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAppGatewaysResponse, AppGateway> response = appGatewaysServiceClient.ListAppGatewaysAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await foreach (AppGateway item in response)
@@ -136,7 +141,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAppGatewaysResponse, AppGateway> response = appGatewaysServiceClient.ListAppGateways(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (AppGateway item in response)
@@ -181,7 +188,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAppGatewaysResponse, AppGateway> response = appGatewaysServiceClient.ListAppGatewaysAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await foreach (AppGateway item in response)
@@ -226,7 +235,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAppGatewaysResponse, AppGateway> response = appGatewaysServiceClient.ListAppGateways(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (AppGateway item in response)
@@ -271,7 +282,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAppGatewaysResponse, AppGateway> response = appGatewaysServiceClient.ListAppGatewaysAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await foreach (AppGateway item in response)
@@ -319,7 +332,9 @@ namespace GoogleCSharpSnippets
                 AppGatewayName = AppGatewayName.FromProjectLocationAppGateway("[PROJECT]", "[LOCATION]", "[APP_GATEWAY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             AppGateway response = appGatewaysServiceClient.GetAppGateway(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -336,7 +351,9 @@ namespace GoogleCSharpSnippets
                 AppGatewayName = AppGatewayName.FromProjectLocationAppGateway("[PROJECT]", "[LOCATION]", "[APP_GATEWAY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             AppGateway response = await appGatewaysServiceClient.GetAppGatewayAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -349,7 +366,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/appGateways/[APP_GATEWAY]";
             // Make the request
+#pragma warning disable CS0612
             AppGateway response = appGatewaysServiceClient.GetAppGateway(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -363,7 +382,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/appGateways/[APP_GATEWAY]";
             // Make the request
+#pragma warning disable CS0612
             AppGateway response = await appGatewaysServiceClient.GetAppGatewayAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -376,7 +397,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AppGatewayName name = AppGatewayName.FromProjectLocationAppGateway("[PROJECT]", "[LOCATION]", "[APP_GATEWAY]");
             // Make the request
+#pragma warning disable CS0612
             AppGateway response = appGatewaysServiceClient.GetAppGateway(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -390,7 +413,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AppGatewayName name = AppGatewayName.FromProjectLocationAppGateway("[PROJECT]", "[LOCATION]", "[APP_GATEWAY]");
             // Make the request
+#pragma warning disable CS0612
             AppGateway response = await appGatewaysServiceClient.GetAppGatewayAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -410,7 +435,9 @@ namespace GoogleCSharpSnippets
                 ValidateOnly = false,
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<AppGateway, AppGatewayOperationMetadata> response = appGatewaysServiceClient.CreateAppGateway(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppGateway, AppGatewayOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -420,7 +447,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppGateway, AppGatewayOperationMetadata> retrievedResponse = appGatewaysServiceClient.PollOnceCreateAppGateway(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -447,7 +476,9 @@ namespace GoogleCSharpSnippets
                 ValidateOnly = false,
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<AppGateway, AppGatewayOperationMetadata> response = await appGatewaysServiceClient.CreateAppGatewayAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppGateway, AppGatewayOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -457,7 +488,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppGateway, AppGatewayOperationMetadata> retrievedResponse = await appGatewaysServiceClient.PollOnceCreateAppGatewayAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -478,7 +511,9 @@ namespace GoogleCSharpSnippets
             AppGateway appGateway = new AppGateway();
             string appGatewayId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AppGateway, AppGatewayOperationMetadata> response = appGatewaysServiceClient.CreateAppGateway(parent, appGateway, appGatewayId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppGateway, AppGatewayOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -488,7 +523,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppGateway, AppGatewayOperationMetadata> retrievedResponse = appGatewaysServiceClient.PollOnceCreateAppGateway(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -510,7 +547,9 @@ namespace GoogleCSharpSnippets
             AppGateway appGateway = new AppGateway();
             string appGatewayId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AppGateway, AppGatewayOperationMetadata> response = await appGatewaysServiceClient.CreateAppGatewayAsync(parent, appGateway, appGatewayId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppGateway, AppGatewayOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -520,7 +559,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppGateway, AppGatewayOperationMetadata> retrievedResponse = await appGatewaysServiceClient.PollOnceCreateAppGatewayAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -541,7 +582,9 @@ namespace GoogleCSharpSnippets
             AppGateway appGateway = new AppGateway();
             string appGatewayId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AppGateway, AppGatewayOperationMetadata> response = appGatewaysServiceClient.CreateAppGateway(parent, appGateway, appGatewayId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppGateway, AppGatewayOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -551,7 +594,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppGateway, AppGatewayOperationMetadata> retrievedResponse = appGatewaysServiceClient.PollOnceCreateAppGateway(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -573,7 +618,9 @@ namespace GoogleCSharpSnippets
             AppGateway appGateway = new AppGateway();
             string appGatewayId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AppGateway, AppGatewayOperationMetadata> response = await appGatewaysServiceClient.CreateAppGatewayAsync(parent, appGateway, appGatewayId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppGateway, AppGatewayOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -583,7 +630,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppGateway, AppGatewayOperationMetadata> retrievedResponse = await appGatewaysServiceClient.PollOnceCreateAppGatewayAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -607,7 +656,9 @@ namespace GoogleCSharpSnippets
                 ValidateOnly = false,
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, AppGatewayOperationMetadata> response = appGatewaysServiceClient.DeleteAppGateway(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, AppGatewayOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -617,7 +668,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, AppGatewayOperationMetadata> retrievedResponse = appGatewaysServiceClient.PollOnceDeleteAppGateway(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -642,7 +695,9 @@ namespace GoogleCSharpSnippets
                 ValidateOnly = false,
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, AppGatewayOperationMetadata> response = await appGatewaysServiceClient.DeleteAppGatewayAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, AppGatewayOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -652,7 +707,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, AppGatewayOperationMetadata> retrievedResponse = await appGatewaysServiceClient.PollOnceDeleteAppGatewayAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -671,7 +728,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/appGateways/[APP_GATEWAY]";
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, AppGatewayOperationMetadata> response = appGatewaysServiceClient.DeleteAppGateway(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, AppGatewayOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -681,7 +740,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, AppGatewayOperationMetadata> retrievedResponse = appGatewaysServiceClient.PollOnceDeleteAppGateway(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -701,7 +762,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/appGateways/[APP_GATEWAY]";
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, AppGatewayOperationMetadata> response = await appGatewaysServiceClient.DeleteAppGatewayAsync(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, AppGatewayOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -711,7 +774,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, AppGatewayOperationMetadata> retrievedResponse = await appGatewaysServiceClient.PollOnceDeleteAppGatewayAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -730,7 +795,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AppGatewayName name = AppGatewayName.FromProjectLocationAppGateway("[PROJECT]", "[LOCATION]", "[APP_GATEWAY]");
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, AppGatewayOperationMetadata> response = appGatewaysServiceClient.DeleteAppGateway(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, AppGatewayOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -740,7 +807,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, AppGatewayOperationMetadata> retrievedResponse = appGatewaysServiceClient.PollOnceDeleteAppGateway(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -760,7 +829,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AppGatewayName name = AppGatewayName.FromProjectLocationAppGateway("[PROJECT]", "[LOCATION]", "[APP_GATEWAY]");
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, AppGatewayOperationMetadata> response = await appGatewaysServiceClient.DeleteAppGatewayAsync(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, AppGatewayOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -770,7 +841,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, AppGatewayOperationMetadata> retrievedResponse = await appGatewaysServiceClient.PollOnceDeleteAppGatewayAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

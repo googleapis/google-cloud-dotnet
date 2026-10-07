@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START beyondcorp_v1_generated_AppGatewaysService_GetAppGateway_async]
     using Google.Cloud.BeyondCorp.AppGateways.V1;
+    using System;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedAppGatewaysServiceClientSnippets
@@ -30,6 +31,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public async Task GetAppGatewayRequestObjectAsync()
         {
             // Create client
@@ -40,7 +42,9 @@ namespace GoogleCSharpSnippets
                 AppGatewayName = AppGatewayName.FromProjectLocationAppGateway("[PROJECT]", "[LOCATION]", "[APP_GATEWAY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             AppGateway response = await appGatewaysServiceClient.GetAppGatewayAsync(request);
+#pragma warning restore CS0612
         }
     }
     // [END beyondcorp_v1_generated_AppGatewaysService_GetAppGateway_async]

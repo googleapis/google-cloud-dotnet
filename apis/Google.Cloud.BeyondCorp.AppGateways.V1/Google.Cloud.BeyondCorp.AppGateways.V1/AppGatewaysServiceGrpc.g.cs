@@ -3,7 +3,7 @@
 //     source: google/cloud/beyondcorp/appgateways/v1/app_gateways_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -38,7 +38,11 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
   ///
   /// The AppGatewaysService service provides methods to manage
   /// (create/read/update/delete) BeyondCorp AppGateways.
+  ///
+  /// Deprecated: App Connector is deprecated and creation of new App Connector
+  /// resources is no longer permitted. Use Security Gateway instead.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public static partial class AppGatewaysService
   {
     static readonly string __ServiceName = "google.cloud.beyondcorp.appgateways.v1.AppGatewaysService";
@@ -130,6 +134,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
     }
 
     /// <summary>Base class for server-side implementations of AppGatewaysService</summary>
+    [global::System.ObsoleteAttribute]
     [grpc::BindServiceMethod(typeof(AppGatewaysService), "BindService")]
     public abstract partial class AppGatewaysServiceBase
     {
@@ -139,6 +144,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BeyondCorp.AppGateways.V1.ListAppGatewaysResponse> ListAppGateways(global::Google.Cloud.BeyondCorp.AppGateways.V1.ListAppGatewaysRequest request, grpc::ServerCallContext context)
       {
@@ -151,6 +157,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BeyondCorp.AppGateways.V1.AppGateway> GetAppGateway(global::Google.Cloud.BeyondCorp.AppGateways.V1.GetAppGatewayRequest request, grpc::ServerCallContext context)
       {
@@ -163,6 +170,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateAppGateway(global::Google.Cloud.BeyondCorp.AppGateways.V1.CreateAppGatewayRequest request, grpc::ServerCallContext context)
       {
@@ -175,6 +183,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteAppGateway(global::Google.Cloud.BeyondCorp.AppGateways.V1.DeleteAppGatewayRequest request, grpc::ServerCallContext context)
       {
@@ -184,6 +193,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
     }
 
     /// <summary>Client for AppGatewaysService</summary>
+    [global::System.ObsoleteAttribute]
     public partial class AppGatewaysServiceClient : grpc::ClientBase<AppGatewaysServiceClient>
     {
       /// <summary>Creates a new client for AppGatewaysService</summary>
@@ -218,6 +228,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BeyondCorp.AppGateways.V1.ListAppGatewaysResponse ListAppGateways(global::Google.Cloud.BeyondCorp.AppGateways.V1.ListAppGatewaysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -229,6 +240,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BeyondCorp.AppGateways.V1.ListAppGatewaysResponse ListAppGateways(global::Google.Cloud.BeyondCorp.AppGateways.V1.ListAppGatewaysRequest request, grpc::CallOptions options)
       {
@@ -242,6 +254,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BeyondCorp.AppGateways.V1.ListAppGatewaysResponse> ListAppGatewaysAsync(global::Google.Cloud.BeyondCorp.AppGateways.V1.ListAppGatewaysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -253,6 +266,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BeyondCorp.AppGateways.V1.ListAppGatewaysResponse> ListAppGatewaysAsync(global::Google.Cloud.BeyondCorp.AppGateways.V1.ListAppGatewaysRequest request, grpc::CallOptions options)
       {
@@ -266,6 +280,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BeyondCorp.AppGateways.V1.AppGateway GetAppGateway(global::Google.Cloud.BeyondCorp.AppGateways.V1.GetAppGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -277,6 +292,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BeyondCorp.AppGateways.V1.AppGateway GetAppGateway(global::Google.Cloud.BeyondCorp.AppGateways.V1.GetAppGatewayRequest request, grpc::CallOptions options)
       {
@@ -290,6 +306,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BeyondCorp.AppGateways.V1.AppGateway> GetAppGatewayAsync(global::Google.Cloud.BeyondCorp.AppGateways.V1.GetAppGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -301,6 +318,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BeyondCorp.AppGateways.V1.AppGateway> GetAppGatewayAsync(global::Google.Cloud.BeyondCorp.AppGateways.V1.GetAppGatewayRequest request, grpc::CallOptions options)
       {
@@ -314,6 +332,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateAppGateway(global::Google.Cloud.BeyondCorp.AppGateways.V1.CreateAppGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -325,6 +344,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateAppGateway(global::Google.Cloud.BeyondCorp.AppGateways.V1.CreateAppGatewayRequest request, grpc::CallOptions options)
       {
@@ -338,6 +358,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAppGatewayAsync(global::Google.Cloud.BeyondCorp.AppGateways.V1.CreateAppGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -349,6 +370,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAppGatewayAsync(global::Google.Cloud.BeyondCorp.AppGateways.V1.CreateAppGatewayRequest request, grpc::CallOptions options)
       {
@@ -362,6 +384,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteAppGateway(global::Google.Cloud.BeyondCorp.AppGateways.V1.DeleteAppGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -373,6 +396,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteAppGateway(global::Google.Cloud.BeyondCorp.AppGateways.V1.DeleteAppGatewayRequest request, grpc::CallOptions options)
       {
@@ -386,6 +410,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAppGatewayAsync(global::Google.Cloud.BeyondCorp.AppGateways.V1.DeleteAppGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -397,6 +422,7 @@ namespace Google.Cloud.BeyondCorp.AppGateways.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAppGatewayAsync(global::Google.Cloud.BeyondCorp.AppGateways.V1.DeleteAppGatewayRequest request, grpc::CallOptions options)
       {
