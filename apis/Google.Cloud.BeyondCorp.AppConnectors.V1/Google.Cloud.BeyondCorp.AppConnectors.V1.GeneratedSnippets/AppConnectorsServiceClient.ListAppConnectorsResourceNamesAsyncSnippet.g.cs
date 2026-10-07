@@ -33,6 +33,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public async Task ListAppConnectorsResourceNamesAsync()
         {
             // Create client
@@ -40,7 +41,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAppConnectorsResponse, AppConnector> response = appConnectorsServiceClient.ListAppConnectorsAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await foreach (AppConnector item in response)

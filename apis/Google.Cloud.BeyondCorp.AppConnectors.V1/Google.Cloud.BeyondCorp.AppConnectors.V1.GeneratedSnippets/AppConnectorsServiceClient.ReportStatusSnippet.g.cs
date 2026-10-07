@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START beyondcorp_v1_generated_AppConnectorsService_ReportStatus_sync_flattened]
     using Google.Cloud.BeyondCorp.AppConnectors.V1;
     using Google.LongRunning;
+    using System;
 
     public sealed partial class GeneratedAppConnectorsServiceClientSnippets
     {
@@ -30,6 +31,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void ReportStatus()
         {
             // Create client
@@ -38,7 +40,9 @@ namespace GoogleCSharpSnippets
             string appConnector = "projects/[PROJECT]/locations/[LOCATION]/appConnectors/[APP_CONNECTOR]";
             ResourceInfo resourceInfo = new ResourceInfo();
             // Make the request
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> response = appConnectorsServiceClient.ReportStatus(appConnector, resourceInfo);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppConnector, AppConnectorOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -48,7 +52,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppConnector, AppConnectorOperationMetadata> retrievedResponse = appConnectorsServiceClient.PollOnceReportStatus(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

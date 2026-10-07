@@ -36,6 +36,7 @@ using wkt = Google.Protobuf.WellKnownTypes;
 namespace Google.Cloud.BeyondCorp.AppConnectors.V1
 {
     /// <summary>Settings for <see cref="AppConnectorsServiceClient"/> instances.</summary>
+    [sys::ObsoleteAttribute]
     public sealed partial class AppConnectorsServiceSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>Get a new instance of the default <see cref="AppConnectorsServiceSettings"/>.</summary>
@@ -58,6 +59,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
             UpdateAppConnectorOperationsSettings = existing.UpdateAppConnectorOperationsSettings.Clone();
             DeleteAppConnectorSettings = existing.DeleteAppConnectorSettings;
             DeleteAppConnectorOperationsSettings = existing.DeleteAppConnectorOperationsSettings.Clone();
+            ResolveInstanceConfigSettings = existing.ResolveInstanceConfigSettings;
             ReportStatusSettings = existing.ReportStatusSettings;
             ReportStatusOperationsSettings = existing.ReportStatusOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
@@ -188,6 +190,19 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AppConnectorsServiceClient.ResolveInstanceConfig</c> and
+        /// <c>AppConnectorsServiceClient.ResolveInstanceConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ResolveInstanceConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AppConnectorsServiceClient.ReportStatus</c> and <c>AppConnectorsServiceClient.ReportStatusAsync</c>.
         /// </summary>
         /// <remarks>
@@ -235,6 +250,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
     /// Builder class for <see cref="AppConnectorsServiceClient"/> to provide simple configuration of credentials,
     /// endpoint etc.
     /// </summary>
+    [sys::ObsoleteAttribute]
     public sealed partial class AppConnectorsServiceClientBuilder : gaxgrpc::ClientBuilderBase<AppConnectorsServiceClient>
     {
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
@@ -299,7 +315,12 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
     /// 
     /// The AppConnectorsService provides methods to manage
     /// (create/read/update/delete) BeyondCorp AppConnectors.
+    /// 
+    /// 
+    /// Deprecated: App Connector is deprecated and creation of new App Connector
+    /// resources is no longer permitted. Use Security Gateway instead.
     /// </remarks>
+    [sys::ObsoleteAttribute]
     public abstract partial class AppConnectorsServiceClient
     {
         /// <summary>
@@ -395,6 +416,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AppConnector"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListAppConnectorsResponse, AppConnector> ListAppConnectors(ListAppConnectorsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -404,6 +426,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AppConnector"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListAppConnectorsResponse, AppConnector> ListAppConnectorsAsync(ListAppConnectorsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -424,6 +447,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AppConnector"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListAppConnectorsResponse, AppConnector> ListAppConnectors(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListAppConnectorsRequest request = new ListAppConnectorsRequest
@@ -458,6 +482,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AppConnector"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListAppConnectorsResponse, AppConnector> ListAppConnectorsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListAppConnectorsRequest request = new ListAppConnectorsRequest
@@ -492,6 +517,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AppConnector"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListAppConnectorsResponse, AppConnector> ListAppConnectors(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListAppConnectorsRequest request = new ListAppConnectorsRequest
@@ -526,6 +552,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AppConnector"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListAppConnectorsResponse, AppConnector> ListAppConnectorsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListAppConnectorsRequest request = new ListAppConnectorsRequest
@@ -549,6 +576,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual AppConnector GetAppConnector(GetAppConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -558,6 +586,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<AppConnector> GetAppConnectorAsync(GetAppConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -567,6 +596,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<AppConnector> GetAppConnectorAsync(GetAppConnectorRequest request, st::CancellationToken cancellationToken) =>
             GetAppConnectorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -579,6 +609,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual AppConnector GetAppConnector(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetAppConnector(new GetAppConnectorRequest
             {
@@ -594,6 +625,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<AppConnector> GetAppConnectorAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetAppConnectorAsync(new GetAppConnectorRequest
             {
@@ -609,6 +641,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<AppConnector> GetAppConnectorAsync(string name, st::CancellationToken cancellationToken) =>
             GetAppConnectorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -621,6 +654,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual AppConnector GetAppConnector(AppConnectorName name, gaxgrpc::CallSettings callSettings = null) =>
             GetAppConnector(new GetAppConnectorRequest
             {
@@ -636,6 +670,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<AppConnector> GetAppConnectorAsync(AppConnectorName name, gaxgrpc::CallSettings callSettings = null) =>
             GetAppConnectorAsync(new GetAppConnectorRequest
             {
@@ -651,6 +686,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<AppConnector> GetAppConnectorAsync(AppConnectorName name, st::CancellationToken cancellationToken) =>
             GetAppConnectorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -660,6 +696,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<AppConnector, AppConnectorOperationMetadata> CreateAppConnector(CreateAppConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -669,6 +706,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> CreateAppConnectorAsync(CreateAppConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -678,6 +716,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> CreateAppConnectorAsync(CreateAppConnectorRequest request, st::CancellationToken cancellationToken) =>
             CreateAppConnectorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -693,6 +732,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<AppConnector, AppConnectorOperationMetadata> PollOnceCreateAppConnector(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<AppConnector, AppConnectorOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAppConnectorOperationsClient, callSettings);
 
@@ -705,6 +745,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> PollOnceCreateAppConnectorAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<AppConnector, AppConnectorOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAppConnectorOperationsClient, callSettings);
 
@@ -727,6 +768,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<AppConnector, AppConnectorOperationMetadata> CreateAppConnector(string parent, AppConnector appConnector, string appConnectorId, gaxgrpc::CallSettings callSettings = null) =>
             CreateAppConnector(new CreateAppConnectorRequest
             {
@@ -754,6 +796,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> CreateAppConnectorAsync(string parent, AppConnector appConnector, string appConnectorId, gaxgrpc::CallSettings callSettings = null) =>
             CreateAppConnectorAsync(new CreateAppConnectorRequest
             {
@@ -781,6 +824,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> CreateAppConnectorAsync(string parent, AppConnector appConnector, string appConnectorId, st::CancellationToken cancellationToken) =>
             CreateAppConnectorAsync(parent, appConnector, appConnectorId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -803,6 +847,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<AppConnector, AppConnectorOperationMetadata> CreateAppConnector(gagr::LocationName parent, AppConnector appConnector, string appConnectorId, gaxgrpc::CallSettings callSettings = null) =>
             CreateAppConnector(new CreateAppConnectorRequest
             {
@@ -830,6 +875,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> CreateAppConnectorAsync(gagr::LocationName parent, AppConnector appConnector, string appConnectorId, gaxgrpc::CallSettings callSettings = null) =>
             CreateAppConnectorAsync(new CreateAppConnectorRequest
             {
@@ -857,6 +903,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> CreateAppConnectorAsync(gagr::LocationName parent, AppConnector appConnector, string appConnectorId, st::CancellationToken cancellationToken) =>
             CreateAppConnectorAsync(parent, appConnector, appConnectorId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -866,6 +913,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<AppConnector, AppConnectorOperationMetadata> UpdateAppConnector(UpdateAppConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -875,6 +923,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> UpdateAppConnectorAsync(UpdateAppConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -884,6 +933,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> UpdateAppConnectorAsync(UpdateAppConnectorRequest request, st::CancellationToken cancellationToken) =>
             UpdateAppConnectorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -899,6 +949,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<AppConnector, AppConnectorOperationMetadata> PollOnceUpdateAppConnector(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<AppConnector, AppConnectorOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAppConnectorOperationsClient, callSettings);
 
@@ -911,6 +962,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> PollOnceUpdateAppConnectorAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<AppConnector, AppConnectorOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAppConnectorOperationsClient, callSettings);
 
@@ -930,6 +982,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<AppConnector, AppConnectorOperationMetadata> UpdateAppConnector(AppConnector appConnector, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateAppConnector(new UpdateAppConnectorRequest
             {
@@ -953,6 +1006,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> UpdateAppConnectorAsync(AppConnector appConnector, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateAppConnectorAsync(new UpdateAppConnectorRequest
             {
@@ -976,6 +1030,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> UpdateAppConnectorAsync(AppConnector appConnector, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateAppConnectorAsync(appConnector, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -985,6 +1040,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, AppConnectorOperationMetadata> DeleteAppConnector(DeleteAppConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -994,6 +1050,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, AppConnectorOperationMetadata>> DeleteAppConnectorAsync(DeleteAppConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -1003,6 +1060,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, AppConnectorOperationMetadata>> DeleteAppConnectorAsync(DeleteAppConnectorRequest request, st::CancellationToken cancellationToken) =>
             DeleteAppConnectorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1018,6 +1076,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, AppConnectorOperationMetadata> PollOnceDeleteAppConnector(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<wkt::Empty, AppConnectorOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAppConnectorOperationsClient, callSettings);
 
@@ -1030,6 +1089,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, AppConnectorOperationMetadata>> PollOnceDeleteAppConnectorAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<wkt::Empty, AppConnectorOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAppConnectorOperationsClient, callSettings);
 
@@ -1042,6 +1102,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, AppConnectorOperationMetadata> DeleteAppConnector(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteAppConnector(new DeleteAppConnectorRequest
             {
@@ -1057,6 +1118,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, AppConnectorOperationMetadata>> DeleteAppConnectorAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteAppConnectorAsync(new DeleteAppConnectorRequest
             {
@@ -1072,6 +1134,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, AppConnectorOperationMetadata>> DeleteAppConnectorAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteAppConnectorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1084,6 +1147,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, AppConnectorOperationMetadata> DeleteAppConnector(AppConnectorName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteAppConnector(new DeleteAppConnectorRequest
             {
@@ -1099,6 +1163,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, AppConnectorOperationMetadata>> DeleteAppConnectorAsync(AppConnectorName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteAppConnectorAsync(new DeleteAppConnectorRequest
             {
@@ -1114,8 +1179,138 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, AppConnectorOperationMetadata>> DeleteAppConnectorAsync(AppConnectorName name, st::CancellationToken cancellationToken) =>
             DeleteAppConnectorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets instance configuration for a given AppConnector.
+        /// An internal method called by a AppConnector to get its container config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+        public virtual ResolveInstanceConfigResponse ResolveInstanceConfig(ResolveInstanceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets instance configuration for a given AppConnector.
+        /// An internal method called by a AppConnector to get its container config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+        public virtual stt::Task<ResolveInstanceConfigResponse> ResolveInstanceConfigAsync(ResolveInstanceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets instance configuration for a given AppConnector.
+        /// An internal method called by a AppConnector to get its container config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+        public virtual stt::Task<ResolveInstanceConfigResponse> ResolveInstanceConfigAsync(ResolveInstanceConfigRequest request, st::CancellationToken cancellationToken) =>
+            ResolveInstanceConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets instance configuration for a given AppConnector.
+        /// An internal method called by a AppConnector to get its container config.
+        /// </summary>
+        /// <param name="appConnector">
+        /// Required. BeyondCorp AppConnector name using the form:
+        /// `projects/{project_id}/locations/{location_id}/appConnectors/{app_connector}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+        public virtual ResolveInstanceConfigResponse ResolveInstanceConfig(string appConnector, gaxgrpc::CallSettings callSettings = null) =>
+            ResolveInstanceConfig(new ResolveInstanceConfigRequest
+            {
+                AppConnector = gax::GaxPreconditions.CheckNotNullOrEmpty(appConnector, nameof(appConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets instance configuration for a given AppConnector.
+        /// An internal method called by a AppConnector to get its container config.
+        /// </summary>
+        /// <param name="appConnector">
+        /// Required. BeyondCorp AppConnector name using the form:
+        /// `projects/{project_id}/locations/{location_id}/appConnectors/{app_connector}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+        public virtual stt::Task<ResolveInstanceConfigResponse> ResolveInstanceConfigAsync(string appConnector, gaxgrpc::CallSettings callSettings = null) =>
+            ResolveInstanceConfigAsync(new ResolveInstanceConfigRequest
+            {
+                AppConnector = gax::GaxPreconditions.CheckNotNullOrEmpty(appConnector, nameof(appConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets instance configuration for a given AppConnector.
+        /// An internal method called by a AppConnector to get its container config.
+        /// </summary>
+        /// <param name="appConnector">
+        /// Required. BeyondCorp AppConnector name using the form:
+        /// `projects/{project_id}/locations/{location_id}/appConnectors/{app_connector}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+        public virtual stt::Task<ResolveInstanceConfigResponse> ResolveInstanceConfigAsync(string appConnector, st::CancellationToken cancellationToken) =>
+            ResolveInstanceConfigAsync(appConnector, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets instance configuration for a given AppConnector.
+        /// An internal method called by a AppConnector to get its container config.
+        /// </summary>
+        /// <param name="appConnector">
+        /// Required. BeyondCorp AppConnector name using the form:
+        /// `projects/{project_id}/locations/{location_id}/appConnectors/{app_connector}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+        public virtual ResolveInstanceConfigResponse ResolveInstanceConfig(AppConnectorName appConnector, gaxgrpc::CallSettings callSettings = null) =>
+            ResolveInstanceConfig(new ResolveInstanceConfigRequest
+            {
+                AppConnectorAsAppConnectorName = gax::GaxPreconditions.CheckNotNull(appConnector, nameof(appConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets instance configuration for a given AppConnector.
+        /// An internal method called by a AppConnector to get its container config.
+        /// </summary>
+        /// <param name="appConnector">
+        /// Required. BeyondCorp AppConnector name using the form:
+        /// `projects/{project_id}/locations/{location_id}/appConnectors/{app_connector}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+        public virtual stt::Task<ResolveInstanceConfigResponse> ResolveInstanceConfigAsync(AppConnectorName appConnector, gaxgrpc::CallSettings callSettings = null) =>
+            ResolveInstanceConfigAsync(new ResolveInstanceConfigRequest
+            {
+                AppConnectorAsAppConnectorName = gax::GaxPreconditions.CheckNotNull(appConnector, nameof(appConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets instance configuration for a given AppConnector.
+        /// An internal method called by a AppConnector to get its container config.
+        /// </summary>
+        /// <param name="appConnector">
+        /// Required. BeyondCorp AppConnector name using the form:
+        /// `projects/{project_id}/locations/{location_id}/appConnectors/{app_connector}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+        public virtual stt::Task<ResolveInstanceConfigResponse> ResolveInstanceConfigAsync(AppConnectorName appConnector, st::CancellationToken cancellationToken) =>
+            ResolveInstanceConfigAsync(appConnector, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Report status for a given connector.
@@ -1123,6 +1318,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<AppConnector, AppConnectorOperationMetadata> ReportStatus(ReportStatusRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -1132,6 +1328,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> ReportStatusAsync(ReportStatusRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -1141,6 +1338,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> ReportStatusAsync(ReportStatusRequest request, st::CancellationToken cancellationToken) =>
             ReportStatusAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1155,6 +1353,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<AppConnector, AppConnectorOperationMetadata> PollOnceReportStatus(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<AppConnector, AppConnectorOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ReportStatusOperationsClient, callSettings);
 
@@ -1167,6 +1366,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> PollOnceReportStatusAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<AppConnector, AppConnectorOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ReportStatusOperationsClient, callSettings);
 
@@ -1182,6 +1382,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<AppConnector, AppConnectorOperationMetadata> ReportStatus(string appConnector, ResourceInfo resourceInfo, gaxgrpc::CallSettings callSettings = null) =>
             ReportStatus(new ReportStatusRequest
             {
@@ -1201,6 +1402,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> ReportStatusAsync(string appConnector, ResourceInfo resourceInfo, gaxgrpc::CallSettings callSettings = null) =>
             ReportStatusAsync(new ReportStatusRequest
             {
@@ -1220,6 +1422,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> ReportStatusAsync(string appConnector, ResourceInfo resourceInfo, st::CancellationToken cancellationToken) =>
             ReportStatusAsync(appConnector, resourceInfo, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1235,6 +1438,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<AppConnector, AppConnectorOperationMetadata> ReportStatus(AppConnectorName appConnector, ResourceInfo resourceInfo, gaxgrpc::CallSettings callSettings = null) =>
             ReportStatus(new ReportStatusRequest
             {
@@ -1254,6 +1458,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> ReportStatusAsync(AppConnectorName appConnector, ResourceInfo resourceInfo, gaxgrpc::CallSettings callSettings = null) =>
             ReportStatusAsync(new ReportStatusRequest
             {
@@ -1273,6 +1478,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> ReportStatusAsync(AppConnectorName appConnector, ResourceInfo resourceInfo, st::CancellationToken cancellationToken) =>
             ReportStatusAsync(appConnector, resourceInfo, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
@@ -1293,7 +1499,12 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
     /// 
     /// The AppConnectorsService provides methods to manage
     /// (create/read/update/delete) BeyondCorp AppConnectors.
+    /// 
+    /// 
+    /// Deprecated: App Connector is deprecated and creation of new App Connector
+    /// resources is no longer permitted. Use Security Gateway instead.
     /// </remarks>
+    [sys::ObsoleteAttribute]
     public sealed partial class AppConnectorsServiceClientImpl : AppConnectorsServiceClient
     {
         private readonly gaxgrpc::ApiCall<ListAppConnectorsRequest, ListAppConnectorsResponse> _callListAppConnectors;
@@ -1305,6 +1516,8 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         private readonly gaxgrpc::ApiCall<UpdateAppConnectorRequest, lro::Operation> _callUpdateAppConnector;
 
         private readonly gaxgrpc::ApiCall<DeleteAppConnectorRequest, lro::Operation> _callDeleteAppConnector;
+
+        private readonly gaxgrpc::ApiCall<ResolveInstanceConfigRequest, ResolveInstanceConfigResponse> _callResolveInstanceConfig;
 
         private readonly gaxgrpc::ApiCall<ReportStatusRequest, lro::Operation> _callReportStatus;
 
@@ -1330,22 +1543,39 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
             ReportStatusOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReportStatusOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
+#pragma warning disable CS0612
             _callListAppConnectors = clientHelper.BuildApiCall<ListAppConnectorsRequest, ListAppConnectorsResponse>("ListAppConnectors", grpcClient.ListAppConnectorsAsync, grpcClient.ListAppConnectors, effectiveSettings.ListAppConnectorsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callListAppConnectors);
             Modify_ListAppConnectorsApiCall(ref _callListAppConnectors);
+#pragma warning disable CS0612
             _callGetAppConnector = clientHelper.BuildApiCall<GetAppConnectorRequest, AppConnector>("GetAppConnector", grpcClient.GetAppConnectorAsync, grpcClient.GetAppConnector, effectiveSettings.GetAppConnectorSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGetAppConnector);
             Modify_GetAppConnectorApiCall(ref _callGetAppConnector);
+#pragma warning disable CS0612
             _callCreateAppConnector = clientHelper.BuildApiCall<CreateAppConnectorRequest, lro::Operation>("CreateAppConnector", grpcClient.CreateAppConnectorAsync, grpcClient.CreateAppConnector, effectiveSettings.CreateAppConnectorSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callCreateAppConnector);
             Modify_CreateAppConnectorApiCall(ref _callCreateAppConnector);
+#pragma warning disable CS0612
             _callUpdateAppConnector = clientHelper.BuildApiCall<UpdateAppConnectorRequest, lro::Operation>("UpdateAppConnector", grpcClient.UpdateAppConnectorAsync, grpcClient.UpdateAppConnector, effectiveSettings.UpdateAppConnectorSettings).WithGoogleRequestParam("app_connector.name", request => request.AppConnector?.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callUpdateAppConnector);
             Modify_UpdateAppConnectorApiCall(ref _callUpdateAppConnector);
+#pragma warning disable CS0612
             _callDeleteAppConnector = clientHelper.BuildApiCall<DeleteAppConnectorRequest, lro::Operation>("DeleteAppConnector", grpcClient.DeleteAppConnectorAsync, grpcClient.DeleteAppConnector, effectiveSettings.DeleteAppConnectorSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callDeleteAppConnector);
             Modify_DeleteAppConnectorApiCall(ref _callDeleteAppConnector);
+#pragma warning disable CS0612
+            _callResolveInstanceConfig = clientHelper.BuildApiCall<ResolveInstanceConfigRequest, ResolveInstanceConfigResponse>("ResolveInstanceConfig", grpcClient.ResolveInstanceConfigAsync, grpcClient.ResolveInstanceConfig, effectiveSettings.ResolveInstanceConfigSettings).WithGoogleRequestParam("app_connector", request => request.AppConnector);
+#pragma warning restore CS0612
+            Modify_ApiCall(ref _callResolveInstanceConfig);
+            Modify_ResolveInstanceConfigApiCall(ref _callResolveInstanceConfig);
+#pragma warning disable CS0612
             _callReportStatus = clientHelper.BuildApiCall<ReportStatusRequest, lro::Operation>("ReportStatus", grpcClient.ReportStatusAsync, grpcClient.ReportStatus, effectiveSettings.ReportStatusSettings).WithGoogleRequestParam("app_connector", request => request.AppConnector);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callReportStatus);
             Modify_ReportStatusApiCall(ref _callReportStatus);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -1362,6 +1592,8 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         partial void Modify_UpdateAppConnectorApiCall(ref gaxgrpc::ApiCall<UpdateAppConnectorRequest, lro::Operation> call);
 
         partial void Modify_DeleteAppConnectorApiCall(ref gaxgrpc::ApiCall<DeleteAppConnectorRequest, lro::Operation> call);
+
+        partial void Modify_ResolveInstanceConfigApiCall(ref gaxgrpc::ApiCall<ResolveInstanceConfigRequest, ResolveInstanceConfigResponse> call);
 
         partial void Modify_ReportStatusApiCall(ref gaxgrpc::ApiCall<ReportStatusRequest, lro::Operation> call);
 
@@ -1386,6 +1618,8 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
 
         partial void Modify_DeleteAppConnectorRequest(ref DeleteAppConnectorRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ResolveInstanceConfigRequest(ref ResolveInstanceConfigRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ReportStatusRequest(ref ReportStatusRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
@@ -1394,6 +1628,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AppConnector"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedEnumerable<ListAppConnectorsResponse, AppConnector> ListAppConnectors(ListAppConnectorsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListAppConnectorsRequest(ref request, ref callSettings);
@@ -1406,6 +1641,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AppConnector"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedAsyncEnumerable<ListAppConnectorsResponse, AppConnector> ListAppConnectorsAsync(ListAppConnectorsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListAppConnectorsRequest(ref request, ref callSettings);
@@ -1418,6 +1654,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override AppConnector GetAppConnector(GetAppConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetAppConnectorRequest(ref request, ref callSettings);
@@ -1430,6 +1667,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<AppConnector> GetAppConnectorAsync(GetAppConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetAppConnectorRequest(ref request, ref callSettings);
@@ -1445,6 +1683,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override lro::Operation<AppConnector, AppConnectorOperationMetadata> CreateAppConnector(CreateAppConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateAppConnectorRequest(ref request, ref callSettings);
@@ -1457,6 +1696,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override async stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> CreateAppConnectorAsync(CreateAppConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateAppConnectorRequest(ref request, ref callSettings);
@@ -1472,6 +1712,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override lro::Operation<AppConnector, AppConnectorOperationMetadata> UpdateAppConnector(UpdateAppConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateAppConnectorRequest(ref request, ref callSettings);
@@ -1484,6 +1725,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override async stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> UpdateAppConnectorAsync(UpdateAppConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateAppConnectorRequest(ref request, ref callSettings);
@@ -1499,6 +1741,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override lro::Operation<wkt::Empty, AppConnectorOperationMetadata> DeleteAppConnector(DeleteAppConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteAppConnectorRequest(ref request, ref callSettings);
@@ -1511,10 +1754,39 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override async stt::Task<lro::Operation<wkt::Empty, AppConnectorOperationMetadata>> DeleteAppConnectorAsync(DeleteAppConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteAppConnectorRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, AppConnectorOperationMetadata>(await _callDeleteAppConnector.Async(request, callSettings).ConfigureAwait(false), DeleteAppConnectorOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets instance configuration for a given AppConnector.
+        /// An internal method called by a AppConnector to get its container config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+        public override ResolveInstanceConfigResponse ResolveInstanceConfig(ResolveInstanceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ResolveInstanceConfigRequest(ref request, ref callSettings);
+            return _callResolveInstanceConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets instance configuration for a given AppConnector.
+        /// An internal method called by a AppConnector to get its container config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+        public override stt::Task<ResolveInstanceConfigResponse> ResolveInstanceConfigAsync(ResolveInstanceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ResolveInstanceConfigRequest(ref request, ref callSettings);
+            return _callResolveInstanceConfig.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>ReportStatus</c>.</summary>
@@ -1526,6 +1798,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override lro::Operation<AppConnector, AppConnectorOperationMetadata> ReportStatus(ReportStatusRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ReportStatusRequest(ref request, ref callSettings);
@@ -1538,6 +1811,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override async stt::Task<lro::Operation<AppConnector, AppConnectorOperationMetadata>> ReportStatusAsync(ReportStatusRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ReportStatusRequest(ref request, ref callSettings);

@@ -3,7 +3,7 @@
 //     source: google/cloud/beyondcorp/appconnectors/v1/app_connectors_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -38,7 +38,11 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
   ///
   /// The AppConnectorsService provides methods to manage
   /// (create/read/update/delete) BeyondCorp AppConnectors.
+  ///
+  /// Deprecated: App Connector is deprecated and creation of new App Connector
+  /// resources is no longer permitted. Use Security Gateway instead.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public static partial class AppConnectorsService
   {
     static readonly string __ServiceName = "google.cloud.beyondcorp.appconnectors.v1.AppConnectorsService";
@@ -93,6 +97,10 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BeyondCorp.AppConnectors.V1.DeleteAppConnectorRequest> __Marshaller_google_cloud_beyondcorp_appconnectors_v1_DeleteAppConnectorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BeyondCorp.AppConnectors.V1.DeleteAppConnectorRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResolveInstanceConfigRequest> __Marshaller_google_cloud_beyondcorp_appconnectors_v1_ResolveInstanceConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResolveInstanceConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResolveInstanceConfigResponse> __Marshaller_google_cloud_beyondcorp_appconnectors_v1_ResolveInstanceConfigResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResolveInstanceConfigResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BeyondCorp.AppConnectors.V1.ReportStatusRequest> __Marshaller_google_cloud_beyondcorp_appconnectors_v1_ReportStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BeyondCorp.AppConnectors.V1.ReportStatusRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -136,6 +144,14 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResolveInstanceConfigRequest, global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResolveInstanceConfigResponse> __Method_ResolveInstanceConfig = new grpc::Method<global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResolveInstanceConfigRequest, global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResolveInstanceConfigResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ResolveInstanceConfig",
+        __Marshaller_google_cloud_beyondcorp_appconnectors_v1_ResolveInstanceConfigRequest,
+        __Marshaller_google_cloud_beyondcorp_appconnectors_v1_ResolveInstanceConfigResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BeyondCorp.AppConnectors.V1.ReportStatusRequest, global::Google.LongRunning.Operation> __Method_ReportStatus = new grpc::Method<global::Google.Cloud.BeyondCorp.AppConnectors.V1.ReportStatusRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -150,6 +166,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
     }
 
     /// <summary>Base class for server-side implementations of AppConnectorsService</summary>
+    [global::System.ObsoleteAttribute]
     [grpc::BindServiceMethod(typeof(AppConnectorsService), "BindService")]
     public abstract partial class AppConnectorsServiceBase
     {
@@ -159,6 +176,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BeyondCorp.AppConnectors.V1.ListAppConnectorsResponse> ListAppConnectors(global::Google.Cloud.BeyondCorp.AppConnectors.V1.ListAppConnectorsRequest request, grpc::ServerCallContext context)
       {
@@ -171,6 +189,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BeyondCorp.AppConnectors.V1.AppConnector> GetAppConnector(global::Google.Cloud.BeyondCorp.AppConnectors.V1.GetAppConnectorRequest request, grpc::ServerCallContext context)
       {
@@ -183,6 +202,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateAppConnector(global::Google.Cloud.BeyondCorp.AppConnectors.V1.CreateAppConnectorRequest request, grpc::ServerCallContext context)
       {
@@ -195,6 +215,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateAppConnector(global::Google.Cloud.BeyondCorp.AppConnectors.V1.UpdateAppConnectorRequest request, grpc::ServerCallContext context)
       {
@@ -207,8 +228,23 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteAppConnector(global::Google.Cloud.BeyondCorp.AppConnectors.V1.DeleteAppConnectorRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets instance configuration for a given AppConnector.
+      /// An internal method called by a AppConnector to get its container config.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResolveInstanceConfigResponse> ResolveInstanceConfig(global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResolveInstanceConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -219,6 +255,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ReportStatus(global::Google.Cloud.BeyondCorp.AppConnectors.V1.ReportStatusRequest request, grpc::ServerCallContext context)
       {
@@ -228,6 +265,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
     }
 
     /// <summary>Client for AppConnectorsService</summary>
+    [global::System.ObsoleteAttribute]
     public partial class AppConnectorsServiceClient : grpc::ClientBase<AppConnectorsServiceClient>
     {
       /// <summary>Creates a new client for AppConnectorsService</summary>
@@ -262,6 +300,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BeyondCorp.AppConnectors.V1.ListAppConnectorsResponse ListAppConnectors(global::Google.Cloud.BeyondCorp.AppConnectors.V1.ListAppConnectorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -273,6 +312,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BeyondCorp.AppConnectors.V1.ListAppConnectorsResponse ListAppConnectors(global::Google.Cloud.BeyondCorp.AppConnectors.V1.ListAppConnectorsRequest request, grpc::CallOptions options)
       {
@@ -286,6 +326,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BeyondCorp.AppConnectors.V1.ListAppConnectorsResponse> ListAppConnectorsAsync(global::Google.Cloud.BeyondCorp.AppConnectors.V1.ListAppConnectorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -297,6 +338,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BeyondCorp.AppConnectors.V1.ListAppConnectorsResponse> ListAppConnectorsAsync(global::Google.Cloud.BeyondCorp.AppConnectors.V1.ListAppConnectorsRequest request, grpc::CallOptions options)
       {
@@ -310,6 +352,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BeyondCorp.AppConnectors.V1.AppConnector GetAppConnector(global::Google.Cloud.BeyondCorp.AppConnectors.V1.GetAppConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -321,6 +364,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BeyondCorp.AppConnectors.V1.AppConnector GetAppConnector(global::Google.Cloud.BeyondCorp.AppConnectors.V1.GetAppConnectorRequest request, grpc::CallOptions options)
       {
@@ -334,6 +378,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BeyondCorp.AppConnectors.V1.AppConnector> GetAppConnectorAsync(global::Google.Cloud.BeyondCorp.AppConnectors.V1.GetAppConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -345,6 +390,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BeyondCorp.AppConnectors.V1.AppConnector> GetAppConnectorAsync(global::Google.Cloud.BeyondCorp.AppConnectors.V1.GetAppConnectorRequest request, grpc::CallOptions options)
       {
@@ -358,6 +404,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateAppConnector(global::Google.Cloud.BeyondCorp.AppConnectors.V1.CreateAppConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -369,6 +416,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateAppConnector(global::Google.Cloud.BeyondCorp.AppConnectors.V1.CreateAppConnectorRequest request, grpc::CallOptions options)
       {
@@ -382,6 +430,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAppConnectorAsync(global::Google.Cloud.BeyondCorp.AppConnectors.V1.CreateAppConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -393,6 +442,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAppConnectorAsync(global::Google.Cloud.BeyondCorp.AppConnectors.V1.CreateAppConnectorRequest request, grpc::CallOptions options)
       {
@@ -406,6 +456,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateAppConnector(global::Google.Cloud.BeyondCorp.AppConnectors.V1.UpdateAppConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -417,6 +468,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateAppConnector(global::Google.Cloud.BeyondCorp.AppConnectors.V1.UpdateAppConnectorRequest request, grpc::CallOptions options)
       {
@@ -430,6 +482,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAppConnectorAsync(global::Google.Cloud.BeyondCorp.AppConnectors.V1.UpdateAppConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -441,6 +494,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAppConnectorAsync(global::Google.Cloud.BeyondCorp.AppConnectors.V1.UpdateAppConnectorRequest request, grpc::CallOptions options)
       {
@@ -454,6 +508,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteAppConnector(global::Google.Cloud.BeyondCorp.AppConnectors.V1.DeleteAppConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -465,6 +520,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteAppConnector(global::Google.Cloud.BeyondCorp.AppConnectors.V1.DeleteAppConnectorRequest request, grpc::CallOptions options)
       {
@@ -478,6 +534,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAppConnectorAsync(global::Google.Cloud.BeyondCorp.AppConnectors.V1.DeleteAppConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -489,10 +546,67 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAppConnectorAsync(global::Google.Cloud.BeyondCorp.AppConnectors.V1.DeleteAppConnectorRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAppConnector, null, options, request);
+      }
+      /// <summary>
+      /// Gets instance configuration for a given AppConnector.
+      /// An internal method called by a AppConnector to get its container config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResolveInstanceConfigResponse ResolveInstanceConfig(global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResolveInstanceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ResolveInstanceConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets instance configuration for a given AppConnector.
+      /// An internal method called by a AppConnector to get its container config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResolveInstanceConfigResponse ResolveInstanceConfig(global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResolveInstanceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ResolveInstanceConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets instance configuration for a given AppConnector.
+      /// An internal method called by a AppConnector to get its container config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResolveInstanceConfigResponse> ResolveInstanceConfigAsync(global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResolveInstanceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ResolveInstanceConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets instance configuration for a given AppConnector.
+      /// An internal method called by a AppConnector to get its container config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResolveInstanceConfigResponse> ResolveInstanceConfigAsync(global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResolveInstanceConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ResolveInstanceConfig, null, options, request);
       }
       /// <summary>
       /// Report status for a given connector.
@@ -502,6 +616,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ReportStatus(global::Google.Cloud.BeyondCorp.AppConnectors.V1.ReportStatusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -513,6 +628,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ReportStatus(global::Google.Cloud.BeyondCorp.AppConnectors.V1.ReportStatusRequest request, grpc::CallOptions options)
       {
@@ -526,6 +642,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ReportStatusAsync(global::Google.Cloud.BeyondCorp.AppConnectors.V1.ReportStatusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -537,6 +654,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ReportStatusAsync(global::Google.Cloud.BeyondCorp.AppConnectors.V1.ReportStatusRequest request, grpc::CallOptions options)
       {
@@ -561,6 +679,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
           .AddMethod(__Method_CreateAppConnector, serviceImpl.CreateAppConnector)
           .AddMethod(__Method_UpdateAppConnector, serviceImpl.UpdateAppConnector)
           .AddMethod(__Method_DeleteAppConnector, serviceImpl.DeleteAppConnector)
+          .AddMethod(__Method_ResolveInstanceConfig, serviceImpl.ResolveInstanceConfig)
           .AddMethod(__Method_ReportStatus, serviceImpl.ReportStatus).Build();
     }
 
@@ -576,6 +695,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       serviceBinder.AddMethod(__Method_CreateAppConnector, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BeyondCorp.AppConnectors.V1.CreateAppConnectorRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateAppConnector));
       serviceBinder.AddMethod(__Method_UpdateAppConnector, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BeyondCorp.AppConnectors.V1.UpdateAppConnectorRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateAppConnector));
       serviceBinder.AddMethod(__Method_DeleteAppConnector, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BeyondCorp.AppConnectors.V1.DeleteAppConnectorRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteAppConnector));
+      serviceBinder.AddMethod(__Method_ResolveInstanceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResolveInstanceConfigRequest, global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResolveInstanceConfigResponse>(serviceImpl.ResolveInstanceConfig));
       serviceBinder.AddMethod(__Method_ReportStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BeyondCorp.AppConnectors.V1.ReportStatusRequest, global::Google.LongRunning.Operation>(serviceImpl.ReportStatus));
     }
 

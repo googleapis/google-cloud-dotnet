@@ -928,7 +928,8 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
     private string targetImage_ = "";
     /// <summary>
     /// The initial image the remote agent will attempt to run for the control
-    /// plane.
+    /// plane. Format would be a gcr image path, e.g.:
+    /// gcr.io/PROJECT-ID/my-image:tag1
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -944,7 +945,8 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
     private string stableImage_ = "";
     /// <summary>
     /// The stable image that the remote agent will fallback to if the target image
-    /// fails.
+    /// fails. Format would be a gcr image path, e.g.:
+    /// gcr.io/PROJECT-ID/my-image:tag1
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
