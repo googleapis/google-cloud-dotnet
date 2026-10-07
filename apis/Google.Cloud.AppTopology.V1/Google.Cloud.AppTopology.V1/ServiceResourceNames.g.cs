@@ -313,6 +313,18 @@ namespace Google.Cloud.AppTopology.V1
         }
     }
 
+    public partial class ExploreSchemaRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::SchemaName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::SchemaName SchemaName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::SchemaName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetDomainRequest
     {
         /// <summary>

@@ -72,6 +72,10 @@ namespace Google.Cloud.AppTopology.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppTopology.V1.Schema> __Marshaller_google_cloud_apptopology_v1_Schema = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppTopology.V1.Schema.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AppTopology.V1.ExploreSchemaRequest> __Marshaller_google_cloud_apptopology_v1_ExploreSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppTopology.V1.ExploreSchemaRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AppTopology.V1.ExploreSchemaResponse> __Marshaller_google_cloud_apptopology_v1_ExploreSchemaResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppTopology.V1.ExploreSchemaResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppTopology.V1.GetDomainRequest> __Marshaller_google_cloud_apptopology_v1_GetDomainRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppTopology.V1.GetDomainRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppTopology.V1.Domain> __Marshaller_google_cloud_apptopology_v1_Domain = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppTopology.V1.Domain.Parser));
@@ -95,6 +99,14 @@ namespace Google.Cloud.AppTopology.V1 {
         "GetSchema",
         __Marshaller_google_cloud_apptopology_v1_GetSchemaRequest,
         __Marshaller_google_cloud_apptopology_v1_Schema);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AppTopology.V1.ExploreSchemaRequest, global::Google.Cloud.AppTopology.V1.ExploreSchemaResponse> __Method_ExploreSchema = new grpc::Method<global::Google.Cloud.AppTopology.V1.ExploreSchemaRequest, global::Google.Cloud.AppTopology.V1.ExploreSchemaResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExploreSchema",
+        __Marshaller_google_cloud_apptopology_v1_ExploreSchemaRequest,
+        __Marshaller_google_cloud_apptopology_v1_ExploreSchemaResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppTopology.V1.GetDomainRequest, global::Google.Cloud.AppTopology.V1.Domain> __Method_GetDomain = new grpc::Method<global::Google.Cloud.AppTopology.V1.GetDomainRequest, global::Google.Cloud.AppTopology.V1.Domain>(
@@ -149,6 +161,19 @@ namespace Google.Cloud.AppTopology.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppTopology.V1.Schema> GetSchema(global::Google.Cloud.AppTopology.V1.GetSchemaRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Explores the topology schema starting from given node types or label names
+      /// up to a specified hop depth.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppTopology.V1.ExploreSchemaResponse> ExploreSchema(global::Google.Cloud.AppTopology.V1.ExploreSchemaRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -332,6 +357,58 @@ namespace Google.Cloud.AppTopology.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetSchema, null, options, request);
       }
       /// <summary>
+      /// Explores the topology schema starting from given node types or label names
+      /// up to a specified hop depth.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AppTopology.V1.ExploreSchemaResponse ExploreSchema(global::Google.Cloud.AppTopology.V1.ExploreSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExploreSchema(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Explores the topology schema starting from given node types or label names
+      /// up to a specified hop depth.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AppTopology.V1.ExploreSchemaResponse ExploreSchema(global::Google.Cloud.AppTopology.V1.ExploreSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExploreSchema, null, options, request);
+      }
+      /// <summary>
+      /// Explores the topology schema starting from given node types or label names
+      /// up to a specified hop depth.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppTopology.V1.ExploreSchemaResponse> ExploreSchemaAsync(global::Google.Cloud.AppTopology.V1.ExploreSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExploreSchemaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Explores the topology schema starting from given node types or label names
+      /// up to a specified hop depth.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppTopology.V1.ExploreSchemaResponse> ExploreSchemaAsync(global::Google.Cloud.AppTopology.V1.ExploreSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExploreSchema, null, options, request);
+      }
+      /// <summary>
       /// Retrieves the specified topology domain.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -447,6 +524,7 @@ namespace Google.Cloud.AppTopology.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GenerateDiscoveredResourcesTopology, serviceImpl.GenerateDiscoveredResourcesTopology)
           .AddMethod(__Method_GetSchema, serviceImpl.GetSchema)
+          .AddMethod(__Method_ExploreSchema, serviceImpl.ExploreSchema)
           .AddMethod(__Method_GetDomain, serviceImpl.GetDomain)
           .AddMethod(__Method_ListDomains, serviceImpl.ListDomains).Build();
     }
@@ -460,6 +538,7 @@ namespace Google.Cloud.AppTopology.V1 {
     {
       serviceBinder.AddMethod(__Method_GenerateDiscoveredResourcesTopology, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AppTopology.V1.GenerateDiscoveredResourcesTopologyRequest, global::Google.Cloud.AppTopology.V1.GenerateDiscoveredResourcesTopologyResponse>(serviceImpl.GenerateDiscoveredResourcesTopology));
       serviceBinder.AddMethod(__Method_GetSchema, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AppTopology.V1.GetSchemaRequest, global::Google.Cloud.AppTopology.V1.Schema>(serviceImpl.GetSchema));
+      serviceBinder.AddMethod(__Method_ExploreSchema, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AppTopology.V1.ExploreSchemaRequest, global::Google.Cloud.AppTopology.V1.ExploreSchemaResponse>(serviceImpl.ExploreSchema));
       serviceBinder.AddMethod(__Method_GetDomain, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AppTopology.V1.GetDomainRequest, global::Google.Cloud.AppTopology.V1.Domain>(serviceImpl.GetDomain));
       serviceBinder.AddMethod(__Method_ListDomains, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AppTopology.V1.ListDomainsRequest, global::Google.Cloud.AppTopology.V1.ListDomainsResponse>(serviceImpl.ListDomains));
     }
