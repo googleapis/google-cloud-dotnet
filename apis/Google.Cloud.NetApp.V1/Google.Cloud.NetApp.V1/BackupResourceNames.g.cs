@@ -385,4 +385,16 @@ namespace Google.Cloud.NetApp.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class OntapSource
+    {
+        /// <summary>
+        /// <see cref="StoragePoolName"/>-typed view over the <see cref="StoragePool"/> resource name property.
+        /// </summary>
+        public StoragePoolName StoragePoolAsStoragePoolName
+        {
+            get => string.IsNullOrEmpty(StoragePool) ? null : StoragePoolName.Parse(StoragePool, allowUnparsed: true);
+            set => StoragePool = value?.ToString() ?? "";
+        }
+    }
 }

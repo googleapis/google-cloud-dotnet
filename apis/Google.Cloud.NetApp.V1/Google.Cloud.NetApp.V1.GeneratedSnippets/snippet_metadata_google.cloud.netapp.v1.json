@@ -3126,6 +3126,580 @@
       ]
     },
     {
+      "regionTag": "netapp_v1_generated_NetApp_StartSplit_sync",
+      "title": "StartSplitRequestObject",
+      "description": "Snippet for StartSplit",
+      "file": "NetAppClient.StartSplitRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartSplit",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.StartSplit",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.StartSplitRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Volume, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "StartSplit",
+          "fullName": "google.cloud.netapp.v1.NetApp.StartSplit",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_StartSplit_async",
+      "title": "StartSplitRequestObjectAsync",
+      "description": "Snippet for StartSplitAsync",
+      "file": "NetAppClient.StartSplitRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartSplitAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.StartSplitAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.StartSplitRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Volume, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "StartSplit",
+          "fullName": "google.cloud.netapp.v1.NetApp.StartSplit",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_StartSplit_sync_flattened",
+      "title": "StartSplit",
+      "description": "Snippet for StartSplit",
+      "file": "NetAppClient.StartSplitSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartSplit",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.StartSplit",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Volume, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "StartSplit",
+          "fullName": "google.cloud.netapp.v1.NetApp.StartSplit",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_StartSplit_async_flattened",
+      "title": "StartSplitAsync",
+      "description": "Snippet for StartSplitAsync",
+      "file": "NetAppClient.StartSplitAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartSplitAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.StartSplitAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Volume, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "StartSplit",
+          "fullName": "google.cloud.netapp.v1.NetApp.StartSplit",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_StartSplit_sync_flattened_resourceNames",
+      "title": "StartSplitResourceNames",
+      "description": "Snippet for StartSplit",
+      "file": "NetAppClient.StartSplitResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartSplit",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.StartSplit",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.VolumeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Volume, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "StartSplit",
+          "fullName": "google.cloud.netapp.v1.NetApp.StartSplit",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_StartSplit_async_flattened_resourceNames",
+      "title": "StartSplitResourceNamesAsync",
+      "description": "Snippet for StartSplitAsync",
+      "file": "NetAppClient.StartSplitResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartSplitAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.StartSplitAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.VolumeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.Volume, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "StartSplit",
+          "fullName": "google.cloud.netapp.v1.NetApp.StartSplit",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetSplitStatus_sync",
+      "title": "GetSplitStatusRequestObject",
+      "description": "Snippet for GetSplitStatus",
+      "file": "NetAppClient.GetSplitStatusRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSplitStatus",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetSplitStatus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.GetSplitStatusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.SplitStatus",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetSplitStatus",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetSplitStatus",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetSplitStatus_async",
+      "title": "GetSplitStatusRequestObjectAsync",
+      "description": "Snippet for GetSplitStatusAsync",
+      "file": "NetAppClient.GetSplitStatusRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSplitStatusAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetSplitStatusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.GetSplitStatusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.SplitStatus>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetSplitStatus",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetSplitStatus",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetSplitStatus_sync_flattened",
+      "title": "GetSplitStatus",
+      "description": "Snippet for GetSplitStatus",
+      "file": "NetAppClient.GetSplitStatusSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSplitStatus",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetSplitStatus",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.SplitStatus",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetSplitStatus",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetSplitStatus",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetSplitStatus_async_flattened",
+      "title": "GetSplitStatusAsync",
+      "description": "Snippet for GetSplitStatusAsync",
+      "file": "NetAppClient.GetSplitStatusAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSplitStatusAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetSplitStatusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.SplitStatus>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetSplitStatus",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetSplitStatus",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetSplitStatus_sync_flattened_resourceNames",
+      "title": "GetSplitStatusResourceNames",
+      "description": "Snippet for GetSplitStatus",
+      "file": "NetAppClient.GetSplitStatusResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSplitStatus",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetSplitStatus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.VolumeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.SplitStatus",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetSplitStatus",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetSplitStatus",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetSplitStatus_async_flattened_resourceNames",
+      "title": "GetSplitStatusResourceNamesAsync",
+      "description": "Snippet for GetSplitStatusAsync",
+      "file": "NetAppClient.GetSplitStatusResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSplitStatusAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetSplitStatusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.VolumeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.SplitStatus>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetSplitStatus",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetSplitStatus",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "netapp_v1_generated_NetApp_EstablishVolumePeering_sync",
       "title": "EstablishVolumePeeringRequestObject",
       "description": "Snippet for EstablishVolumePeering",
@@ -17090,6 +17664,979 @@
         {
           "start": 36,
           "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_RestoreVolume_sync",
+      "title": "RestoreVolumeRequestObject",
+      "description": "Snippet for RestoreVolume",
+      "file": "NetAppClient.RestoreVolumeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestoreVolume",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.RestoreVolume",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.RestoreVolumeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.RestoreVolumeResponse, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "RestoreVolume",
+          "fullName": "google.cloud.netapp.v1.NetApp.RestoreVolume",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_RestoreVolume_async",
+      "title": "RestoreVolumeRequestObjectAsync",
+      "description": "Snippet for RestoreVolumeAsync",
+      "file": "NetAppClient.RestoreVolumeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestoreVolumeAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.RestoreVolumeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.RestoreVolumeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.RestoreVolumeResponse, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "RestoreVolume",
+          "fullName": "google.cloud.netapp.v1.NetApp.RestoreVolume",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_RestoreVolume_sync_flattened",
+      "title": "RestoreVolume",
+      "description": "Snippet for RestoreVolume",
+      "file": "NetAppClient.RestoreVolumeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestoreVolume",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.RestoreVolume",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupSource",
+            "name": "backupSource"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.OntapVolumeTarget",
+            "name": "ontapVolumeTarget"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.RestoreVolumeResponse, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "RestoreVolume",
+          "fullName": "google.cloud.netapp.v1.NetApp.RestoreVolume",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_RestoreVolume_async_flattened",
+      "title": "RestoreVolumeAsync",
+      "description": "Snippet for RestoreVolumeAsync",
+      "file": "NetAppClient.RestoreVolumeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestoreVolumeAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.RestoreVolumeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupSource",
+            "name": "backupSource"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.OntapVolumeTarget",
+            "name": "ontapVolumeTarget"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.RestoreVolumeResponse, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "RestoreVolume",
+          "fullName": "google.cloud.netapp.v1.NetApp.RestoreVolume",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_RestoreVolume_sync_flattened_resourceNames",
+      "title": "RestoreVolumeResourceNames",
+      "description": "Snippet for RestoreVolume",
+      "file": "NetAppClient.RestoreVolumeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestoreVolume",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.RestoreVolume",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.StoragePoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupSource",
+            "name": "backupSource"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.OntapVolumeTarget",
+            "name": "ontapVolumeTarget"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.RestoreVolumeResponse, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "RestoreVolume",
+          "fullName": "google.cloud.netapp.v1.NetApp.RestoreVolume",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_RestoreVolume_async_flattened_resourceNames",
+      "title": "RestoreVolumeResourceNamesAsync",
+      "description": "Snippet for RestoreVolumeAsync",
+      "file": "NetAppClient.RestoreVolumeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestoreVolumeAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.RestoreVolumeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.StoragePoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupSource",
+            "name": "backupSource"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.OntapVolumeTarget",
+            "name": "ontapVolumeTarget"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.RestoreVolumeResponse, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "RestoreVolume",
+          "fullName": "google.cloud.netapp.v1.NetApp.RestoreVolume",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackupConfigs_sync",
+      "title": "ListBackupConfigsRequestObject",
+      "description": "Snippet for ListBackupConfigs",
+      "file": "NetAppClient.ListBackupConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupConfigs",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ListBackupConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetApp.V1.ListBackupConfigsResponse, Google.Cloud.NetApp.V1.VolumeBackupConfig>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackupConfigs",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackupConfigs",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackupConfigs_async",
+      "title": "ListBackupConfigsRequestObjectAsync",
+      "description": "Snippet for ListBackupConfigsAsync",
+      "file": "NetAppClient.ListBackupConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupConfigsAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ListBackupConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetApp.V1.ListBackupConfigsResponse, Google.Cloud.NetApp.V1.VolumeBackupConfig>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackupConfigs",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackupConfigs",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackupConfigs_sync_flattened",
+      "title": "ListBackupConfigs",
+      "description": "Snippet for ListBackupConfigs",
+      "file": "NetAppClient.ListBackupConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupConfigs",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetApp.V1.ListBackupConfigsResponse, Google.Cloud.NetApp.V1.VolumeBackupConfig>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackupConfigs",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackupConfigs",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackupConfigs_async_flattened",
+      "title": "ListBackupConfigsAsync",
+      "description": "Snippet for ListBackupConfigsAsync",
+      "file": "NetAppClient.ListBackupConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupConfigsAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetApp.V1.ListBackupConfigsResponse, Google.Cloud.NetApp.V1.VolumeBackupConfig>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackupConfigs",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackupConfigs",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackupConfigs_sync_flattened_resourceNames",
+      "title": "ListBackupConfigsResourceNames",
+      "description": "Snippet for ListBackupConfigs",
+      "file": "NetAppClient.ListBackupConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupConfigs",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.StoragePoolName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetApp.V1.ListBackupConfigsResponse, Google.Cloud.NetApp.V1.VolumeBackupConfig>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackupConfigs",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackupConfigs",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListBackupConfigs_async_flattened_resourceNames",
+      "title": "ListBackupConfigsResourceNamesAsync",
+      "description": "Snippet for ListBackupConfigsAsync",
+      "file": "NetAppClient.ListBackupConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBackupConfigsAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListBackupConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.StoragePoolName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetApp.V1.ListBackupConfigsResponse, Google.Cloud.NetApp.V1.VolumeBackupConfig>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListBackupConfigs",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListBackupConfigs",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateBackupConfig_sync",
+      "title": "UpdateBackupConfigRequestObject",
+      "description": "Snippet for UpdateBackupConfig",
+      "file": "NetAppClient.UpdateBackupConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupConfig",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateBackupConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.UpdateBackupConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.UpdateBackupConfigResponse, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupConfig",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateBackupConfig",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateBackupConfig_async",
+      "title": "UpdateBackupConfigRequestObjectAsync",
+      "description": "Snippet for UpdateBackupConfigAsync",
+      "file": "NetAppClient.UpdateBackupConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupConfigAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateBackupConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.UpdateBackupConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.UpdateBackupConfigResponse, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupConfig",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateBackupConfig",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateBackupConfig_sync_flattened",
+      "title": "UpdateBackupConfig",
+      "description": "Snippet for UpdateBackupConfig",
+      "file": "NetAppClient.UpdateBackupConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupConfig",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateBackupConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "volumeUuid"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupConfig",
+            "name": "backupConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.UpdateBackupConfigResponse, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupConfig",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateBackupConfig",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateBackupConfig_async_flattened",
+      "title": "UpdateBackupConfigAsync",
+      "description": "Snippet for UpdateBackupConfigAsync",
+      "file": "NetAppClient.UpdateBackupConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupConfigAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateBackupConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "volumeUuid"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupConfig",
+            "name": "backupConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.UpdateBackupConfigResponse, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupConfig",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateBackupConfig",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateBackupConfig_sync_flattened_resourceNames",
+      "title": "UpdateBackupConfigResourceNames",
+      "description": "Snippet for UpdateBackupConfig",
+      "file": "NetAppClient.UpdateBackupConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupConfig",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateBackupConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.StoragePoolName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "volumeUuid"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupConfig",
+            "name": "backupConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.UpdateBackupConfigResponse, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupConfig",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateBackupConfig",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateBackupConfig_async_flattened_resourceNames",
+      "title": "UpdateBackupConfigResourceNamesAsync",
+      "description": "Snippet for UpdateBackupConfigAsync",
+      "file": "NetAppClient.UpdateBackupConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBackupConfigAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateBackupConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.StoragePoolName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "volumeUuid"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.BackupConfig",
+            "name": "backupConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.UpdateBackupConfigResponse, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateBackupConfig",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateBackupConfig",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
           "type": "SHORT"
         }
       ]

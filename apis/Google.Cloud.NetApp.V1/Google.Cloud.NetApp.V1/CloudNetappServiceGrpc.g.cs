@@ -100,6 +100,12 @@ namespace Google.Cloud.NetApp.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.RevertVolumeRequest> __Marshaller_google_cloud_netapp_v1_RevertVolumeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.RevertVolumeRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.StartSplitRequest> __Marshaller_google_cloud_netapp_v1_StartSplitRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.StartSplitRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.GetSplitStatusRequest> __Marshaller_google_cloud_netapp_v1_GetSplitStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.GetSplitStatusRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.SplitStatus> __Marshaller_google_cloud_netapp_v1_SplitStatus = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.SplitStatus.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.EstablishVolumePeeringRequest> __Marshaller_google_cloud_netapp_v1_EstablishVolumePeeringRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.EstablishVolumePeeringRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ListSnapshotsRequest> __Marshaller_google_cloud_netapp_v1_ListSnapshotsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ListSnapshotsRequest.Parser));
@@ -261,6 +267,14 @@ namespace Google.Cloud.NetApp.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ExecuteOntapPatchRequest> __Marshaller_google_cloud_netapp_v1_ExecuteOntapPatchRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ExecuteOntapPatchRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ExecuteOntapPatchResponse> __Marshaller_google_cloud_netapp_v1_ExecuteOntapPatchResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ExecuteOntapPatchResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.RestoreVolumeRequest> __Marshaller_google_cloud_netapp_v1_RestoreVolumeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.RestoreVolumeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ListBackupConfigsRequest> __Marshaller_google_cloud_netapp_v1_ListBackupConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ListBackupConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ListBackupConfigsResponse> __Marshaller_google_cloud_netapp_v1_ListBackupConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ListBackupConfigsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.UpdateBackupConfigRequest> __Marshaller_google_cloud_netapp_v1_UpdateBackupConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.UpdateBackupConfigRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetApp.V1.ListStoragePoolsRequest, global::Google.Cloud.NetApp.V1.ListStoragePoolsResponse> __Method_ListStoragePools = new grpc::Method<global::Google.Cloud.NetApp.V1.ListStoragePoolsRequest, global::Google.Cloud.NetApp.V1.ListStoragePoolsResponse>(
@@ -365,6 +379,22 @@ namespace Google.Cloud.NetApp.V1 {
         "RevertVolume",
         __Marshaller_google_cloud_netapp_v1_RevertVolumeRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.StartSplitRequest, global::Google.LongRunning.Operation> __Method_StartSplit = new grpc::Method<global::Google.Cloud.NetApp.V1.StartSplitRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "StartSplit",
+        __Marshaller_google_cloud_netapp_v1_StartSplitRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.GetSplitStatusRequest, global::Google.Cloud.NetApp.V1.SplitStatus> __Method_GetSplitStatus = new grpc::Method<global::Google.Cloud.NetApp.V1.GetSplitStatusRequest, global::Google.Cloud.NetApp.V1.SplitStatus>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSplitStatus",
+        __Marshaller_google_cloud_netapp_v1_GetSplitStatusRequest,
+        __Marshaller_google_cloud_netapp_v1_SplitStatus);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetApp.V1.EstablishVolumePeeringRequest, global::Google.LongRunning.Operation> __Method_EstablishVolumePeering = new grpc::Method<global::Google.Cloud.NetApp.V1.EstablishVolumePeeringRequest, global::Google.LongRunning.Operation>(
@@ -830,6 +860,30 @@ namespace Google.Cloud.NetApp.V1 {
         __Marshaller_google_cloud_netapp_v1_ExecuteOntapPatchRequest,
         __Marshaller_google_cloud_netapp_v1_ExecuteOntapPatchResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.RestoreVolumeRequest, global::Google.LongRunning.Operation> __Method_RestoreVolume = new grpc::Method<global::Google.Cloud.NetApp.V1.RestoreVolumeRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RestoreVolume",
+        __Marshaller_google_cloud_netapp_v1_RestoreVolumeRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.ListBackupConfigsRequest, global::Google.Cloud.NetApp.V1.ListBackupConfigsResponse> __Method_ListBackupConfigs = new grpc::Method<global::Google.Cloud.NetApp.V1.ListBackupConfigsRequest, global::Google.Cloud.NetApp.V1.ListBackupConfigsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBackupConfigs",
+        __Marshaller_google_cloud_netapp_v1_ListBackupConfigsRequest,
+        __Marshaller_google_cloud_netapp_v1_ListBackupConfigsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.UpdateBackupConfigRequest, global::Google.LongRunning.Operation> __Method_UpdateBackupConfig = new grpc::Method<global::Google.Cloud.NetApp.V1.UpdateBackupConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateBackupConfig",
+        __Marshaller_google_cloud_netapp_v1_UpdateBackupConfigRequest,
+        __Marshaller_google_longrunning_Operation);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -996,6 +1050,35 @@ namespace Google.Cloud.NetApp.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RevertVolume(global::Google.Cloud.NetApp.V1.RevertVolumeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Splits a clone volume from its source volume.
+      /// This operation will only work for volumes which have clone_details
+      /// set(clones).
+      /// For volumes that are not clones, this operation will return an error.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> StartSplit(global::Google.Cloud.NetApp.V1.StartSplitRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves the current state, progress, and details of a split operation for
+      /// a volume. This method is relevant when the volume is a clone. For volumes
+      /// that are not clones, this method will return an error.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetApp.V1.SplitStatus> GetSplitStatus(global::Google.Cloud.NetApp.V1.GetSplitStatusRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1658,7 +1741,7 @@ namespace Google.Cloud.NetApp.V1 {
       }
 
       /// <summary>
-      /// `ExecuteOntapPost` dispatches the ONTAP `POST` request to the
+      /// `ExecuteOntapPost` sends the ONTAP `POST` request to the
       /// `StoragePool` cluster.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1671,7 +1754,7 @@ namespace Google.Cloud.NetApp.V1 {
       }
 
       /// <summary>
-      /// `ExecuteOntapGet` dispatches the ONTAP `GET` request to the
+      /// `ExecuteOntapGet` sends the ONTAP `GET` request to the
       /// `StoragePool` cluster.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1684,7 +1767,7 @@ namespace Google.Cloud.NetApp.V1 {
       }
 
       /// <summary>
-      /// `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
+      /// `ExecuteOntapDelete` sends the ONTAP `DELETE` request to the
       /// `StoragePool` cluster.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1697,7 +1780,7 @@ namespace Google.Cloud.NetApp.V1 {
       }
 
       /// <summary>
-      /// `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the
+      /// `ExecuteOntapPatch` sends the ONTAP `PATCH` request to the
       /// `StoragePool` cluster.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1705,6 +1788,42 @@ namespace Google.Cloud.NetApp.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetApp.V1.ExecuteOntapPatchResponse> ExecuteOntapPatch(global::Google.Cloud.NetApp.V1.ExecuteOntapPatchRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Restores a backup to an ONTAP-mode volume.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RestoreVolume(global::Google.Cloud.NetApp.V1.RestoreVolumeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists backup configurations for all volumes in an ONTAP-mode Storage Pool.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetApp.V1.ListBackupConfigsResponse> ListBackupConfigs(global::Google.Cloud.NetApp.V1.ListBackupConfigsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the backup configuration for an ONTAP-mode volume.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateBackupConfig(global::Google.Cloud.NetApp.V1.UpdateBackupConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2377,6 +2496,122 @@ namespace Google.Cloud.NetApp.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RevertVolumeAsync(global::Google.Cloud.NetApp.V1.RevertVolumeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RevertVolume, null, options, request);
+      }
+      /// <summary>
+      /// Splits a clone volume from its source volume.
+      /// This operation will only work for volumes which have clone_details
+      /// set(clones).
+      /// For volumes that are not clones, this operation will return an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation StartSplit(global::Google.Cloud.NetApp.V1.StartSplitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StartSplit(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Splits a clone volume from its source volume.
+      /// This operation will only work for volumes which have clone_details
+      /// set(clones).
+      /// For volumes that are not clones, this operation will return an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation StartSplit(global::Google.Cloud.NetApp.V1.StartSplitRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_StartSplit, null, options, request);
+      }
+      /// <summary>
+      /// Splits a clone volume from its source volume.
+      /// This operation will only work for volumes which have clone_details
+      /// set(clones).
+      /// For volumes that are not clones, this operation will return an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StartSplitAsync(global::Google.Cloud.NetApp.V1.StartSplitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StartSplitAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Splits a clone volume from its source volume.
+      /// This operation will only work for volumes which have clone_details
+      /// set(clones).
+      /// For volumes that are not clones, this operation will return an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StartSplitAsync(global::Google.Cloud.NetApp.V1.StartSplitRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_StartSplit, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves the current state, progress, and details of a split operation for
+      /// a volume. This method is relevant when the volume is a clone. For volumes
+      /// that are not clones, this method will return an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.SplitStatus GetSplitStatus(global::Google.Cloud.NetApp.V1.GetSplitStatusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSplitStatus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the current state, progress, and details of a split operation for
+      /// a volume. This method is relevant when the volume is a clone. For volumes
+      /// that are not clones, this method will return an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.SplitStatus GetSplitStatus(global::Google.Cloud.NetApp.V1.GetSplitStatusRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSplitStatus, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves the current state, progress, and details of a split operation for
+      /// a volume. This method is relevant when the volume is a clone. For volumes
+      /// that are not clones, this method will return an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.SplitStatus> GetSplitStatusAsync(global::Google.Cloud.NetApp.V1.GetSplitStatusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSplitStatusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the current state, progress, and details of a split operation for
+      /// a volume. This method is relevant when the volume is a clone. For volumes
+      /// that are not clones, this method will return an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.SplitStatus> GetSplitStatusAsync(global::Google.Cloud.NetApp.V1.GetSplitStatusRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSplitStatus, null, options, request);
       }
       /// <summary>
       /// Establish volume peering. This is used to establish cluster and svm
@@ -5007,7 +5242,7 @@ namespace Google.Cloud.NetApp.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteHostGroup, null, options, request);
       }
       /// <summary>
-      /// `ExecuteOntapPost` dispatches the ONTAP `POST` request to the
+      /// `ExecuteOntapPost` sends the ONTAP `POST` request to the
       /// `StoragePool` cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -5021,7 +5256,7 @@ namespace Google.Cloud.NetApp.V1 {
         return ExecuteOntapPost(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// `ExecuteOntapPost` dispatches the ONTAP `POST` request to the
+      /// `ExecuteOntapPost` sends the ONTAP `POST` request to the
       /// `StoragePool` cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -5033,7 +5268,7 @@ namespace Google.Cloud.NetApp.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ExecuteOntapPost, null, options, request);
       }
       /// <summary>
-      /// `ExecuteOntapPost` dispatches the ONTAP `POST` request to the
+      /// `ExecuteOntapPost` sends the ONTAP `POST` request to the
       /// `StoragePool` cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -5047,7 +5282,7 @@ namespace Google.Cloud.NetApp.V1 {
         return ExecuteOntapPostAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// `ExecuteOntapPost` dispatches the ONTAP `POST` request to the
+      /// `ExecuteOntapPost` sends the ONTAP `POST` request to the
       /// `StoragePool` cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -5059,7 +5294,7 @@ namespace Google.Cloud.NetApp.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ExecuteOntapPost, null, options, request);
       }
       /// <summary>
-      /// `ExecuteOntapGet` dispatches the ONTAP `GET` request to the
+      /// `ExecuteOntapGet` sends the ONTAP `GET` request to the
       /// `StoragePool` cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -5073,7 +5308,7 @@ namespace Google.Cloud.NetApp.V1 {
         return ExecuteOntapGet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// `ExecuteOntapGet` dispatches the ONTAP `GET` request to the
+      /// `ExecuteOntapGet` sends the ONTAP `GET` request to the
       /// `StoragePool` cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -5085,7 +5320,7 @@ namespace Google.Cloud.NetApp.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ExecuteOntapGet, null, options, request);
       }
       /// <summary>
-      /// `ExecuteOntapGet` dispatches the ONTAP `GET` request to the
+      /// `ExecuteOntapGet` sends the ONTAP `GET` request to the
       /// `StoragePool` cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -5099,7 +5334,7 @@ namespace Google.Cloud.NetApp.V1 {
         return ExecuteOntapGetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// `ExecuteOntapGet` dispatches the ONTAP `GET` request to the
+      /// `ExecuteOntapGet` sends the ONTAP `GET` request to the
       /// `StoragePool` cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -5111,7 +5346,7 @@ namespace Google.Cloud.NetApp.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ExecuteOntapGet, null, options, request);
       }
       /// <summary>
-      /// `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
+      /// `ExecuteOntapDelete` sends the ONTAP `DELETE` request to the
       /// `StoragePool` cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -5125,7 +5360,7 @@ namespace Google.Cloud.NetApp.V1 {
         return ExecuteOntapDelete(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
+      /// `ExecuteOntapDelete` sends the ONTAP `DELETE` request to the
       /// `StoragePool` cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -5137,7 +5372,7 @@ namespace Google.Cloud.NetApp.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ExecuteOntapDelete, null, options, request);
       }
       /// <summary>
-      /// `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
+      /// `ExecuteOntapDelete` sends the ONTAP `DELETE` request to the
       /// `StoragePool` cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -5151,7 +5386,7 @@ namespace Google.Cloud.NetApp.V1 {
         return ExecuteOntapDeleteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the
+      /// `ExecuteOntapDelete` sends the ONTAP `DELETE` request to the
       /// `StoragePool` cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -5163,7 +5398,7 @@ namespace Google.Cloud.NetApp.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ExecuteOntapDelete, null, options, request);
       }
       /// <summary>
-      /// `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the
+      /// `ExecuteOntapPatch` sends the ONTAP `PATCH` request to the
       /// `StoragePool` cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -5177,7 +5412,7 @@ namespace Google.Cloud.NetApp.V1 {
         return ExecuteOntapPatch(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the
+      /// `ExecuteOntapPatch` sends the ONTAP `PATCH` request to the
       /// `StoragePool` cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -5189,7 +5424,7 @@ namespace Google.Cloud.NetApp.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ExecuteOntapPatch, null, options, request);
       }
       /// <summary>
-      /// `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the
+      /// `ExecuteOntapPatch` sends the ONTAP `PATCH` request to the
       /// `StoragePool` cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -5203,7 +5438,7 @@ namespace Google.Cloud.NetApp.V1 {
         return ExecuteOntapPatchAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the
+      /// `ExecuteOntapPatch` sends the ONTAP `PATCH` request to the
       /// `StoragePool` cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -5213,6 +5448,150 @@ namespace Google.Cloud.NetApp.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ExecuteOntapPatchResponse> ExecuteOntapPatchAsync(global::Google.Cloud.NetApp.V1.ExecuteOntapPatchRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ExecuteOntapPatch, null, options, request);
+      }
+      /// <summary>
+      /// Restores a backup to an ONTAP-mode volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RestoreVolume(global::Google.Cloud.NetApp.V1.RestoreVolumeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RestoreVolume(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Restores a backup to an ONTAP-mode volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RestoreVolume(global::Google.Cloud.NetApp.V1.RestoreVolumeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RestoreVolume, null, options, request);
+      }
+      /// <summary>
+      /// Restores a backup to an ONTAP-mode volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreVolumeAsync(global::Google.Cloud.NetApp.V1.RestoreVolumeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RestoreVolumeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Restores a backup to an ONTAP-mode volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreVolumeAsync(global::Google.Cloud.NetApp.V1.RestoreVolumeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RestoreVolume, null, options, request);
+      }
+      /// <summary>
+      /// Lists backup configurations for all volumes in an ONTAP-mode Storage Pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.ListBackupConfigsResponse ListBackupConfigs(global::Google.Cloud.NetApp.V1.ListBackupConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists backup configurations for all volumes in an ONTAP-mode Storage Pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.ListBackupConfigsResponse ListBackupConfigs(global::Google.Cloud.NetApp.V1.ListBackupConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBackupConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Lists backup configurations for all volumes in an ONTAP-mode Storage Pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ListBackupConfigsResponse> ListBackupConfigsAsync(global::Google.Cloud.NetApp.V1.ListBackupConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists backup configurations for all volumes in an ONTAP-mode Storage Pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ListBackupConfigsResponse> ListBackupConfigsAsync(global::Google.Cloud.NetApp.V1.ListBackupConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBackupConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Updates the backup configuration for an ONTAP-mode volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateBackupConfig(global::Google.Cloud.NetApp.V1.UpdateBackupConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackupConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the backup configuration for an ONTAP-mode volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateBackupConfig(global::Google.Cloud.NetApp.V1.UpdateBackupConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateBackupConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates the backup configuration for an ONTAP-mode volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateBackupConfigAsync(global::Google.Cloud.NetApp.V1.UpdateBackupConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackupConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the backup configuration for an ONTAP-mode volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateBackupConfigAsync(global::Google.Cloud.NetApp.V1.UpdateBackupConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateBackupConfig, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -5241,6 +5620,8 @@ namespace Google.Cloud.NetApp.V1 {
           .AddMethod(__Method_UpdateVolume, serviceImpl.UpdateVolume)
           .AddMethod(__Method_DeleteVolume, serviceImpl.DeleteVolume)
           .AddMethod(__Method_RevertVolume, serviceImpl.RevertVolume)
+          .AddMethod(__Method_StartSplit, serviceImpl.StartSplit)
+          .AddMethod(__Method_GetSplitStatus, serviceImpl.GetSplitStatus)
           .AddMethod(__Method_EstablishVolumePeering, serviceImpl.EstablishVolumePeering)
           .AddMethod(__Method_ListSnapshots, serviceImpl.ListSnapshots)
           .AddMethod(__Method_GetSnapshot, serviceImpl.GetSnapshot)
@@ -5298,7 +5679,10 @@ namespace Google.Cloud.NetApp.V1 {
           .AddMethod(__Method_ExecuteOntapPost, serviceImpl.ExecuteOntapPost)
           .AddMethod(__Method_ExecuteOntapGet, serviceImpl.ExecuteOntapGet)
           .AddMethod(__Method_ExecuteOntapDelete, serviceImpl.ExecuteOntapDelete)
-          .AddMethod(__Method_ExecuteOntapPatch, serviceImpl.ExecuteOntapPatch).Build();
+          .AddMethod(__Method_ExecuteOntapPatch, serviceImpl.ExecuteOntapPatch)
+          .AddMethod(__Method_RestoreVolume, serviceImpl.RestoreVolume)
+          .AddMethod(__Method_ListBackupConfigs, serviceImpl.ListBackupConfigs)
+          .AddMethod(__Method_UpdateBackupConfig, serviceImpl.UpdateBackupConfig).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -5321,6 +5705,8 @@ namespace Google.Cloud.NetApp.V1 {
       serviceBinder.AddMethod(__Method_UpdateVolume, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.UpdateVolumeRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateVolume));
       serviceBinder.AddMethod(__Method_DeleteVolume, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.DeleteVolumeRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteVolume));
       serviceBinder.AddMethod(__Method_RevertVolume, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.RevertVolumeRequest, global::Google.LongRunning.Operation>(serviceImpl.RevertVolume));
+      serviceBinder.AddMethod(__Method_StartSplit, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.StartSplitRequest, global::Google.LongRunning.Operation>(serviceImpl.StartSplit));
+      serviceBinder.AddMethod(__Method_GetSplitStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.GetSplitStatusRequest, global::Google.Cloud.NetApp.V1.SplitStatus>(serviceImpl.GetSplitStatus));
       serviceBinder.AddMethod(__Method_EstablishVolumePeering, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.EstablishVolumePeeringRequest, global::Google.LongRunning.Operation>(serviceImpl.EstablishVolumePeering));
       serviceBinder.AddMethod(__Method_ListSnapshots, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ListSnapshotsRequest, global::Google.Cloud.NetApp.V1.ListSnapshotsResponse>(serviceImpl.ListSnapshots));
       serviceBinder.AddMethod(__Method_GetSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.GetSnapshotRequest, global::Google.Cloud.NetApp.V1.Snapshot>(serviceImpl.GetSnapshot));
@@ -5379,6 +5765,9 @@ namespace Google.Cloud.NetApp.V1 {
       serviceBinder.AddMethod(__Method_ExecuteOntapGet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ExecuteOntapGetRequest, global::Google.Cloud.NetApp.V1.ExecuteOntapGetResponse>(serviceImpl.ExecuteOntapGet));
       serviceBinder.AddMethod(__Method_ExecuteOntapDelete, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteRequest, global::Google.Cloud.NetApp.V1.ExecuteOntapDeleteResponse>(serviceImpl.ExecuteOntapDelete));
       serviceBinder.AddMethod(__Method_ExecuteOntapPatch, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ExecuteOntapPatchRequest, global::Google.Cloud.NetApp.V1.ExecuteOntapPatchResponse>(serviceImpl.ExecuteOntapPatch));
+      serviceBinder.AddMethod(__Method_RestoreVolume, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.RestoreVolumeRequest, global::Google.LongRunning.Operation>(serviceImpl.RestoreVolume));
+      serviceBinder.AddMethod(__Method_ListBackupConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ListBackupConfigsRequest, global::Google.Cloud.NetApp.V1.ListBackupConfigsResponse>(serviceImpl.ListBackupConfigs));
+      serviceBinder.AddMethod(__Method_UpdateBackupConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.UpdateBackupConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateBackupConfig));
     }
 
   }

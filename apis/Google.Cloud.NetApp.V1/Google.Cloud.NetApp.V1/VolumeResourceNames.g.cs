@@ -275,6 +275,18 @@ namespace Google.Cloud.NetApp.V1
         }
     }
 
+    public partial class ListBackupConfigsRequest
+    {
+        /// <summary>
+        /// <see cref="StoragePoolName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public StoragePoolName ParentAsStoragePoolName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : StoragePoolName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetVolumeRequest
     {
         /// <summary>
@@ -312,6 +324,30 @@ namespace Google.Cloud.NetApp.V1
     }
 
     public partial class RevertVolumeRequest
+    {
+        /// <summary>
+        /// <see cref="gcnv::VolumeName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcnv::VolumeName VolumeName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::VolumeName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class StartSplitRequest
+    {
+        /// <summary>
+        /// <see cref="gcnv::VolumeName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcnv::VolumeName VolumeName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::VolumeName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetSplitStatusRequest
     {
         /// <summary>
         /// <see cref="gcnv::VolumeName"/>-typed view over the <see cref="Name"/> resource name property.
@@ -470,6 +506,28 @@ namespace Google.Cloud.NetApp.V1
         }
     }
 
+    public partial class RestoreVolumeRequest
+    {
+        /// <summary>
+        /// <see cref="gcnv::StoragePoolName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcnv::StoragePoolName StoragePoolName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::StoragePoolName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BackupSource
+    {
+        /// <summary><see cref="BackupName"/>-typed view over the <see cref="Backup"/> resource name property.</summary>
+        public BackupName BackupAsBackupName
+        {
+            get => string.IsNullOrEmpty(Backup) ? null : BackupName.Parse(Backup, allowUnparsed: true);
+            set => Backup = value?.ToString() ?? "";
+        }
+    }
+
     public partial class EstablishVolumePeeringRequest
     {
         /// <summary>
@@ -478,6 +536,18 @@ namespace Google.Cloud.NetApp.V1
         public gcnv::VolumeName VolumeName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcnv::VolumeName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class UpdateBackupConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcnv::StoragePoolName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcnv::StoragePoolName StoragePoolName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::StoragePoolName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
