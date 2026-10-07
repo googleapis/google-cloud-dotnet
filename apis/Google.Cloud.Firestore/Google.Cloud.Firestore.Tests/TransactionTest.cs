@@ -12,14 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
 using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
+using static Google.Cloud.Firestore.V1.FirestoreClient;
 
 namespace Google.Cloud.Firestore.Tests
 {
@@ -180,6 +183,74 @@ namespace Google.Cloud.Firestore.Tests
             };
             Assert.Empty(client.CommitRequests);
             Assert.Equal(new[] { expectedRequest }, client.RollbackRequests);
+        }
+
+        [Theory]
+        [MemberData(nameof(SnapshotActions))]
+        public async Task SnapshotMethods_InFlightCancellation_CancelsPendingRead(Func<Transaction, CancellationToken, Task> executeRead)
+        {
+            // Set up a transaction with a pending read operation.
+            using var callerCts = new CancellationTokenSource();
+            var db = FirestoreDb.Create("proj", "db", new PendingReadClient());
+            var transaction = await Transaction.BeginAsync(db, null, default);
+            var readTask = executeRead(transaction, callerCts.Token);
+
+            // Cancel the caller token while the read is in flight.
+            callerCts.Cancel();
+
+            // Verify the pending read observes cancellation and throws.
+            // Timeout guards against hanging if cancellation fails to propagate.
+            await Assert.ThrowsAnyAsync<OperationCanceledException>(() => readTask.WaitAsync(TimeSpan.FromSeconds(5)));
+        }
+
+        public static TheoryData<Func<Transaction, CancellationToken, Task>> SnapshotActions => new()
+        {
+            (tx, token) => tx.GetSnapshotAsync(tx.Database.Document("col/doc"), token),
+            (tx, token) => tx.GetAllSnapshotsAsync(new[] { tx.Database.Document("col/doc") }, null, token),
+            (tx, token) => tx.GetSnapshotAsync(tx.Database.Collection("col"), token),
+            (tx, token) => tx.GetSnapshotAsync(tx.Database.Collection("col").Count(), token),
+        };
+
+        /// <summary>
+        /// A testing client that keeps read operations in flight until cancelled via CallSettings.
+        /// </summary>
+        private class PendingReadClient : TransactionTestingClient
+        {
+            // Override read RPCs to return streams that remain pending until cancelled.
+            public override BatchGetDocumentsStream BatchGetDocuments(BatchGetDocumentsRequest req, CallSettings s = null) => new DocStream(s);
+            public override RunQueryStream RunQuery(RunQueryRequest req, CallSettings s = null) => new QueryStream(s);
+            public override RunAggregationQueryStream RunAggregationQuery(RunAggregationQueryRequest req, CallSettings s = null) => new AggStream(s);
+
+            private class DocStream(CallSettings s) : BatchGetDocumentsStream
+            {
+                public override AsyncServerStreamingCall<BatchGetDocumentsResponse> GrpcCall { get; } = CreateCall<BatchGetDocumentsResponse>(s);
+            }
+
+            private class QueryStream(CallSettings s) : RunQueryStream
+            {
+                public override AsyncServerStreamingCall<RunQueryResponse> GrpcCall { get; } = CreateCall<RunQueryResponse>(s);
+            }
+
+            private class AggStream(CallSettings s) : RunAggregationQueryStream
+            {
+                public override AsyncServerStreamingCall<RunAggregationQueryResponse> GrpcCall { get; } = CreateCall<RunAggregationQueryResponse>(s);
+            }
+
+            // Creates a stream that stays pending until the CallSettings cancellation token is cancelled.
+            private static AsyncServerStreamingCall<T> CreateCall<T>(CallSettings s)
+            {
+                var token = s?.CancellationToken ?? default;
+                var tcs = new TaskCompletionSource<bool>();
+                token.Register(() => tcs.TrySetCanceled(token));
+                return new(new PendingReader<T>(tcs.Task), null, null, null, () => { });
+            }
+
+            // Stream reader whose MoveNext hangs on the uncompleted task until cancellation occurs.
+            private class PendingReader<T>(Task<bool> task) : IAsyncStreamReader<T>
+            {
+                public T Current => default;
+                public Task<bool> MoveNext(CancellationToken cancellationToken) => task;
+            }
         }
 
         private FirestoreDb CreateFirestoreDbExpectingNoCommits() =>
