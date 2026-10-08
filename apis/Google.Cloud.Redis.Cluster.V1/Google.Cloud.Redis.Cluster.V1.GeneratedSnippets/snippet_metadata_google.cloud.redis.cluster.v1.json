@@ -330,6 +330,325 @@
       ]
     },
     {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListAclPolicies_sync",
+      "title": "ListAclPoliciesRequestObject",
+      "description": "Snippet for ListAclPolicies",
+      "file": "CloudRedisClusterClient.ListAclPoliciesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPolicies",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListAclPolicies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.ListAclPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Redis.Cluster.V1.ListAclPoliciesResponse, Google.Cloud.Redis.Cluster.V1.AclPolicy>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicies",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListAclPolicies",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListAclPolicies_async",
+      "title": "ListAclPoliciesRequestObjectAsync",
+      "description": "Snippet for ListAclPoliciesAsync",
+      "file": "CloudRedisClusterClient.ListAclPoliciesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPoliciesAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListAclPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.ListAclPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Redis.Cluster.V1.ListAclPoliciesResponse, Google.Cloud.Redis.Cluster.V1.AclPolicy>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicies",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListAclPolicies",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListAclPolicies_sync_flattened",
+      "title": "ListAclPolicies",
+      "description": "Snippet for ListAclPolicies",
+      "file": "CloudRedisClusterClient.ListAclPoliciesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPolicies",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListAclPolicies",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Redis.Cluster.V1.ListAclPoliciesResponse, Google.Cloud.Redis.Cluster.V1.AclPolicy>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicies",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListAclPolicies",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListAclPolicies_async_flattened",
+      "title": "ListAclPoliciesAsync",
+      "description": "Snippet for ListAclPoliciesAsync",
+      "file": "CloudRedisClusterClient.ListAclPoliciesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPoliciesAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListAclPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Redis.Cluster.V1.ListAclPoliciesResponse, Google.Cloud.Redis.Cluster.V1.AclPolicy>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicies",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListAclPolicies",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListAclPolicies_sync_flattened_resourceNames",
+      "title": "ListAclPoliciesResourceNames",
+      "description": "Snippet for ListAclPolicies",
+      "file": "CloudRedisClusterClient.ListAclPoliciesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPolicies",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListAclPolicies",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Redis.Cluster.V1.ListAclPoliciesResponse, Google.Cloud.Redis.Cluster.V1.AclPolicy>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicies",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListAclPolicies",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListAclPolicies_async_flattened_resourceNames",
+      "title": "ListAclPoliciesResourceNamesAsync",
+      "description": "Snippet for ListAclPoliciesAsync",
+      "file": "CloudRedisClusterClient.ListAclPoliciesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPoliciesAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListAclPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Redis.Cluster.V1.ListAclPoliciesResponse, Google.Cloud.Redis.Cluster.V1.AclPolicy>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicies",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListAclPolicies",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "redis_v1_generated_CloudRedisCluster_GetCluster_sync",
       "title": "GetClusterRequestObject",
       "description": "Snippet for GetCluster",
@@ -617,6 +936,293 @@
       ]
     },
     {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetAclPolicy_sync",
+      "title": "GetAclPolicyRequestObject",
+      "description": "Snippet for GetAclPolicy",
+      "file": "CloudRedisClusterClient.GetAclPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicy",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetAclPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.GetAclPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.AclPolicy",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetAclPolicy_async",
+      "title": "GetAclPolicyRequestObjectAsync",
+      "description": "Snippet for GetAclPolicyAsync",
+      "file": "CloudRedisClusterClient.GetAclPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicyAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.GetAclPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.AclPolicy>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetAclPolicy_sync_flattened",
+      "title": "GetAclPolicy",
+      "description": "Snippet for GetAclPolicy",
+      "file": "CloudRedisClusterClient.GetAclPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicy",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetAclPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.AclPolicy",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetAclPolicy_async_flattened",
+      "title": "GetAclPolicyAsync",
+      "description": "Snippet for GetAclPolicyAsync",
+      "file": "CloudRedisClusterClient.GetAclPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicyAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.AclPolicy>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetAclPolicy_sync_flattened_resourceNames",
+      "title": "GetAclPolicyResourceNames",
+      "description": "Snippet for GetAclPolicy",
+      "file": "CloudRedisClusterClient.GetAclPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicy",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetAclPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AclPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.AclPolicy",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetAclPolicy_async_flattened_resourceNames",
+      "title": "GetAclPolicyResourceNamesAsync",
+      "description": "Snippet for GetAclPolicyAsync",
+      "file": "CloudRedisClusterClient.GetAclPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicyAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AclPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.AclPolicy>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "redis_v1_generated_CloudRedisCluster_UpdateCluster_sync",
       "title": "UpdateClusterRequestObject",
       "description": "Snippet for UpdateCluster",
@@ -796,6 +1402,206 @@
         "method": {
           "shortName": "UpdateCluster",
           "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.UpdateCluster",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_UpdateAclPolicy_sync",
+      "title": "UpdateAclPolicyRequestObject",
+      "description": "Snippet for UpdateAclPolicy",
+      "file": "CloudRedisClusterClient.UpdateAclPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAclPolicy",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.UpdateAclPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.UpdateAclPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.Cluster.V1.AclPolicy, Google.Cloud.Redis.Cluster.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "UpdateAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.UpdateAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_UpdateAclPolicy_async",
+      "title": "UpdateAclPolicyRequestObjectAsync",
+      "description": "Snippet for UpdateAclPolicyAsync",
+      "file": "CloudRedisClusterClient.UpdateAclPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAclPolicyAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.UpdateAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.UpdateAclPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.Cluster.V1.AclPolicy, Google.Cloud.Redis.Cluster.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "UpdateAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.UpdateAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_UpdateAclPolicy_sync_flattened",
+      "title": "UpdateAclPolicy",
+      "description": "Snippet for UpdateAclPolicy",
+      "file": "CloudRedisClusterClient.UpdateAclPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAclPolicy",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.UpdateAclPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AclPolicy",
+            "name": "aclPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.Cluster.V1.AclPolicy, Google.Cloud.Redis.Cluster.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "UpdateAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.UpdateAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_UpdateAclPolicy_async_flattened",
+      "title": "UpdateAclPolicyAsync",
+      "description": "Snippet for UpdateAclPolicyAsync",
+      "file": "CloudRedisClusterClient.UpdateAclPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAclPolicyAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.UpdateAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AclPolicy",
+            "name": "aclPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.Cluster.V1.AclPolicy, Google.Cloud.Redis.Cluster.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "UpdateAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.UpdateAclPolicy",
           "service": {
             "shortName": "CloudRedisCluster",
             "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
@@ -1099,6 +1905,899 @@
         {
           "start": 37,
           "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_DeleteAclPolicy_sync",
+      "title": "DeleteAclPolicyRequestObject",
+      "description": "Snippet for DeleteAclPolicy",
+      "file": "CloudRedisClusterClient.DeleteAclPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAclPolicy",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.DeleteAclPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.DeleteAclPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Redis.Cluster.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.DeleteAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_DeleteAclPolicy_async",
+      "title": "DeleteAclPolicyRequestObjectAsync",
+      "description": "Snippet for DeleteAclPolicyAsync",
+      "file": "CloudRedisClusterClient.DeleteAclPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAclPolicyAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.DeleteAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.DeleteAclPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Redis.Cluster.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.DeleteAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_DeleteAclPolicy_sync_flattened",
+      "title": "DeleteAclPolicy",
+      "description": "Snippet for DeleteAclPolicy",
+      "file": "CloudRedisClusterClient.DeleteAclPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAclPolicy",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.DeleteAclPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Redis.Cluster.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.DeleteAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_DeleteAclPolicy_async_flattened",
+      "title": "DeleteAclPolicyAsync",
+      "description": "Snippet for DeleteAclPolicyAsync",
+      "file": "CloudRedisClusterClient.DeleteAclPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAclPolicyAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.DeleteAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Redis.Cluster.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.DeleteAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_DeleteAclPolicy_sync_flattened_resourceNames",
+      "title": "DeleteAclPolicyResourceNames",
+      "description": "Snippet for DeleteAclPolicy",
+      "file": "CloudRedisClusterClient.DeleteAclPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAclPolicy",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.DeleteAclPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AclPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Redis.Cluster.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.DeleteAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_DeleteAclPolicy_async_flattened_resourceNames",
+      "title": "DeleteAclPolicyResourceNamesAsync",
+      "description": "Snippet for DeleteAclPolicyAsync",
+      "file": "CloudRedisClusterClient.DeleteAclPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAclPolicyAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.DeleteAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AclPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Redis.Cluster.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.DeleteAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetAclPolicyRevision_sync",
+      "title": "GetAclPolicyRevisionRequestObject",
+      "description": "Snippet for GetAclPolicyRevision",
+      "file": "CloudRedisClusterClient.GetAclPolicyRevisionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicyRevision",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetAclPolicyRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.GetAclPolicyRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.AclPolicyRevision",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicyRevision",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetAclPolicyRevision",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetAclPolicyRevision_async",
+      "title": "GetAclPolicyRevisionRequestObjectAsync",
+      "description": "Snippet for GetAclPolicyRevisionAsync",
+      "file": "CloudRedisClusterClient.GetAclPolicyRevisionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicyRevisionAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetAclPolicyRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.GetAclPolicyRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.AclPolicyRevision>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicyRevision",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetAclPolicyRevision",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetAclPolicyRevision_sync_flattened",
+      "title": "GetAclPolicyRevision",
+      "description": "Snippet for GetAclPolicyRevision",
+      "file": "CloudRedisClusterClient.GetAclPolicyRevisionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicyRevision",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetAclPolicyRevision",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.AclPolicyRevision",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicyRevision",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetAclPolicyRevision",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetAclPolicyRevision_async_flattened",
+      "title": "GetAclPolicyRevisionAsync",
+      "description": "Snippet for GetAclPolicyRevisionAsync",
+      "file": "CloudRedisClusterClient.GetAclPolicyRevisionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicyRevisionAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetAclPolicyRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.AclPolicyRevision>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicyRevision",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetAclPolicyRevision",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetAclPolicyRevision_sync_flattened_resourceNames",
+      "title": "GetAclPolicyRevisionResourceNames",
+      "description": "Snippet for GetAclPolicyRevision",
+      "file": "CloudRedisClusterClient.GetAclPolicyRevisionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicyRevision",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetAclPolicyRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AclPolicyRevisionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.AclPolicyRevision",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicyRevision",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetAclPolicyRevision",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetAclPolicyRevision_async_flattened_resourceNames",
+      "title": "GetAclPolicyRevisionResourceNamesAsync",
+      "description": "Snippet for GetAclPolicyRevisionAsync",
+      "file": "CloudRedisClusterClient.GetAclPolicyRevisionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicyRevisionAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetAclPolicyRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AclPolicyRevisionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.AclPolicyRevision>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicyRevision",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetAclPolicyRevision",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListAclPolicyRevisions_sync",
+      "title": "ListAclPolicyRevisionsRequestObject",
+      "description": "Snippet for ListAclPolicyRevisions",
+      "file": "CloudRedisClusterClient.ListAclPolicyRevisionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPolicyRevisions",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListAclPolicyRevisions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsResponse, Google.Cloud.Redis.Cluster.V1.AclPolicyRevision>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicyRevisions",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListAclPolicyRevisions",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListAclPolicyRevisions_async",
+      "title": "ListAclPolicyRevisionsRequestObjectAsync",
+      "description": "Snippet for ListAclPolicyRevisionsAsync",
+      "file": "CloudRedisClusterClient.ListAclPolicyRevisionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPolicyRevisionsAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListAclPolicyRevisionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsResponse, Google.Cloud.Redis.Cluster.V1.AclPolicyRevision>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicyRevisions",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListAclPolicyRevisions",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListAclPolicyRevisions_sync_flattened",
+      "title": "ListAclPolicyRevisions",
+      "description": "Snippet for ListAclPolicyRevisions",
+      "file": "CloudRedisClusterClient.ListAclPolicyRevisionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPolicyRevisions",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListAclPolicyRevisions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsResponse, Google.Cloud.Redis.Cluster.V1.AclPolicyRevision>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicyRevisions",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListAclPolicyRevisions",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListAclPolicyRevisions_async_flattened",
+      "title": "ListAclPolicyRevisionsAsync",
+      "description": "Snippet for ListAclPolicyRevisionsAsync",
+      "file": "CloudRedisClusterClient.ListAclPolicyRevisionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPolicyRevisionsAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListAclPolicyRevisionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsResponse, Google.Cloud.Redis.Cluster.V1.AclPolicyRevision>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicyRevisions",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListAclPolicyRevisions",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListAclPolicyRevisions_sync_flattened_resourceNames",
+      "title": "ListAclPolicyRevisionsResourceNames",
+      "description": "Snippet for ListAclPolicyRevisions",
+      "file": "CloudRedisClusterClient.ListAclPolicyRevisionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPolicyRevisions",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListAclPolicyRevisions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AclPolicyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsResponse, Google.Cloud.Redis.Cluster.V1.AclPolicyRevision>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicyRevisions",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListAclPolicyRevisions",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListAclPolicyRevisions_async_flattened_resourceNames",
+      "title": "ListAclPolicyRevisionsResourceNamesAsync",
+      "description": "Snippet for ListAclPolicyRevisionsAsync",
+      "file": "CloudRedisClusterClient.ListAclPolicyRevisionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPolicyRevisionsAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListAclPolicyRevisionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AclPolicyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsResponse, Google.Cloud.Redis.Cluster.V1.AclPolicyRevision>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicyRevisions",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListAclPolicyRevisions",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
           "type": "SHORT"
         }
       ]
@@ -1418,6 +3117,325 @@
         {
           "start": 38,
           "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_CreateAclPolicy_sync",
+      "title": "CreateAclPolicyRequestObject",
+      "description": "Snippet for CreateAclPolicy",
+      "file": "CloudRedisClusterClient.CreateAclPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAclPolicy",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.CreateAclPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.CreateAclPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.AclPolicy",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "CreateAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.CreateAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_CreateAclPolicy_async",
+      "title": "CreateAclPolicyRequestObjectAsync",
+      "description": "Snippet for CreateAclPolicyAsync",
+      "file": "CloudRedisClusterClient.CreateAclPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAclPolicyAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.CreateAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.CreateAclPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.AclPolicy>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "CreateAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.CreateAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_CreateAclPolicy_sync_flattened",
+      "title": "CreateAclPolicy",
+      "description": "Snippet for CreateAclPolicy",
+      "file": "CloudRedisClusterClient.CreateAclPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAclPolicy",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.CreateAclPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AclPolicy",
+            "name": "aclPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "aclPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.AclPolicy",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "CreateAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.CreateAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_CreateAclPolicy_async_flattened",
+      "title": "CreateAclPolicyAsync",
+      "description": "Snippet for CreateAclPolicyAsync",
+      "file": "CloudRedisClusterClient.CreateAclPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAclPolicyAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.CreateAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AclPolicy",
+            "name": "aclPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "aclPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.AclPolicy>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "CreateAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.CreateAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_CreateAclPolicy_sync_flattened_resourceNames",
+      "title": "CreateAclPolicyResourceNames",
+      "description": "Snippet for CreateAclPolicy",
+      "file": "CloudRedisClusterClient.CreateAclPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAclPolicy",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.CreateAclPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AclPolicy",
+            "name": "aclPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "aclPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.AclPolicy",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "CreateAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.CreateAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_CreateAclPolicy_async_flattened_resourceNames",
+      "title": "CreateAclPolicyResourceNamesAsync",
+      "description": "Snippet for CreateAclPolicyAsync",
+      "file": "CloudRedisClusterClient.CreateAclPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAclPolicyAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.CreateAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AclPolicy",
+            "name": "aclPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "aclPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.AclPolicy>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "CreateAclPolicy",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.CreateAclPolicy",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
           "type": "SHORT"
         }
       ]

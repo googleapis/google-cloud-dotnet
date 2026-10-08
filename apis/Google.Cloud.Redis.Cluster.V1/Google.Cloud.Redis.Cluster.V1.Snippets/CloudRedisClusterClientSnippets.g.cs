@@ -303,6 +303,282 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListAclPolicies</summary>
+        public void ListAclPoliciesRequestObject()
+        {
+            // Snippet: ListAclPolicies(ListAclPoliciesRequest, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            ListAclPoliciesRequest request = new ListAclPoliciesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListAclPoliciesResponse, AclPolicy> response = cloudRedisClusterClient.ListAclPolicies(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AclPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAclPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPoliciesAsync</summary>
+        public async Task ListAclPoliciesRequestObjectAsync()
+        {
+            // Snippet: ListAclPoliciesAsync(ListAclPoliciesRequest, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAclPoliciesRequest request = new ListAclPoliciesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAclPoliciesResponse, AclPolicy> response = cloudRedisClusterClient.ListAclPoliciesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AclPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAclPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPolicies</summary>
+        public void ListAclPolicies()
+        {
+            // Snippet: ListAclPolicies(string, string, int?, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListAclPoliciesResponse, AclPolicy> response = cloudRedisClusterClient.ListAclPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AclPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAclPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPoliciesAsync</summary>
+        public async Task ListAclPoliciesAsync()
+        {
+            // Snippet: ListAclPoliciesAsync(string, string, int?, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListAclPoliciesResponse, AclPolicy> response = cloudRedisClusterClient.ListAclPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AclPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAclPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPolicies</summary>
+        public void ListAclPoliciesResourceNames()
+        {
+            // Snippet: ListAclPolicies(LocationName, string, int?, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListAclPoliciesResponse, AclPolicy> response = cloudRedisClusterClient.ListAclPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AclPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAclPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPoliciesAsync</summary>
+        public async Task ListAclPoliciesResourceNamesAsync()
+        {
+            // Snippet: ListAclPoliciesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListAclPoliciesResponse, AclPolicy> response = cloudRedisClusterClient.ListAclPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AclPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAclPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for GetCluster</summary>
         public void GetClusterRequestObject()
         {
@@ -387,6 +663,93 @@ namespace GoogleCSharpSnippets
             ClusterName name = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
             // Make the request
             Cluster response = await cloudRedisClusterClient.GetClusterAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicy</summary>
+        public void GetAclPolicyRequestObject()
+        {
+            // Snippet: GetAclPolicy(GetAclPolicyRequest, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            GetAclPolicyRequest request = new GetAclPolicyRequest
+            {
+                AclPolicyName = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]"),
+            };
+            // Make the request
+            AclPolicy response = cloudRedisClusterClient.GetAclPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicyAsync</summary>
+        public async Task GetAclPolicyRequestObjectAsync()
+        {
+            // Snippet: GetAclPolicyAsync(GetAclPolicyRequest, CallSettings)
+            // Additional: GetAclPolicyAsync(GetAclPolicyRequest, CancellationToken)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAclPolicyRequest request = new GetAclPolicyRequest
+            {
+                AclPolicyName = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]"),
+            };
+            // Make the request
+            AclPolicy response = await cloudRedisClusterClient.GetAclPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicy</summary>
+        public void GetAclPolicy()
+        {
+            // Snippet: GetAclPolicy(string, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/aclPolicies/[ACL_POLICY]";
+            // Make the request
+            AclPolicy response = cloudRedisClusterClient.GetAclPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicyAsync</summary>
+        public async Task GetAclPolicyAsync()
+        {
+            // Snippet: GetAclPolicyAsync(string, CallSettings)
+            // Additional: GetAclPolicyAsync(string, CancellationToken)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/aclPolicies/[ACL_POLICY]";
+            // Make the request
+            AclPolicy response = await cloudRedisClusterClient.GetAclPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicy</summary>
+        public void GetAclPolicyResourceNames()
+        {
+            // Snippet: GetAclPolicy(AclPolicyName, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            AclPolicyName name = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]");
+            // Make the request
+            AclPolicy response = cloudRedisClusterClient.GetAclPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicyAsync</summary>
+        public async Task GetAclPolicyResourceNamesAsync()
+        {
+            // Snippet: GetAclPolicyAsync(AclPolicyName, CallSettings)
+            // Additional: GetAclPolicyAsync(AclPolicyName, CancellationToken)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            AclPolicyName name = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]");
+            // Make the request
+            AclPolicy response = await cloudRedisClusterClient.GetAclPolicyAsync(name);
             // End snippet
         }
 
@@ -516,6 +879,136 @@ namespace GoogleCSharpSnippets
             {
                 // If it has completed, then access the result
                 Cluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAclPolicy</summary>
+        public void UpdateAclPolicyRequestObject()
+        {
+            // Snippet: UpdateAclPolicy(UpdateAclPolicyRequest, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            UpdateAclPolicyRequest request = new UpdateAclPolicyRequest
+            {
+                AclPolicy = new AclPolicy(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<AclPolicy, OperationMetadata> response = cloudRedisClusterClient.UpdateAclPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AclPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AclPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AclPolicy, OperationMetadata> retrievedResponse = cloudRedisClusterClient.PollOnceUpdateAclPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AclPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAclPolicyAsync</summary>
+        public async Task UpdateAclPolicyRequestObjectAsync()
+        {
+            // Snippet: UpdateAclPolicyAsync(UpdateAclPolicyRequest, CallSettings)
+            // Additional: UpdateAclPolicyAsync(UpdateAclPolicyRequest, CancellationToken)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAclPolicyRequest request = new UpdateAclPolicyRequest
+            {
+                AclPolicy = new AclPolicy(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<AclPolicy, OperationMetadata> response = await cloudRedisClusterClient.UpdateAclPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AclPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AclPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AclPolicy, OperationMetadata> retrievedResponse = await cloudRedisClusterClient.PollOnceUpdateAclPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AclPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAclPolicy</summary>
+        public void UpdateAclPolicy()
+        {
+            // Snippet: UpdateAclPolicy(AclPolicy, FieldMask, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            AclPolicy aclPolicy = new AclPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<AclPolicy, OperationMetadata> response = cloudRedisClusterClient.UpdateAclPolicy(aclPolicy, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AclPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AclPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AclPolicy, OperationMetadata> retrievedResponse = cloudRedisClusterClient.PollOnceUpdateAclPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AclPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAclPolicyAsync</summary>
+        public async Task UpdateAclPolicyAsync()
+        {
+            // Snippet: UpdateAclPolicyAsync(AclPolicy, FieldMask, CallSettings)
+            // Additional: UpdateAclPolicyAsync(AclPolicy, FieldMask, CancellationToken)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            AclPolicy aclPolicy = new AclPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<AclPolicy, OperationMetadata> response = await cloudRedisClusterClient.UpdateAclPolicyAsync(aclPolicy, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AclPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AclPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AclPolicy, OperationMetadata> retrievedResponse = await cloudRedisClusterClient.PollOnceUpdateAclPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AclPolicy retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -702,6 +1195,556 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAclPolicy</summary>
+        public void DeleteAclPolicyRequestObject()
+        {
+            // Snippet: DeleteAclPolicy(DeleteAclPolicyRequest, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            DeleteAclPolicyRequest request = new DeleteAclPolicyRequest
+            {
+                AclPolicyName = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]"),
+                RequestId = "",
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = cloudRedisClusterClient.DeleteAclPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = cloudRedisClusterClient.PollOnceDeleteAclPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAclPolicyAsync</summary>
+        public async Task DeleteAclPolicyRequestObjectAsync()
+        {
+            // Snippet: DeleteAclPolicyAsync(DeleteAclPolicyRequest, CallSettings)
+            // Additional: DeleteAclPolicyAsync(DeleteAclPolicyRequest, CancellationToken)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteAclPolicyRequest request = new DeleteAclPolicyRequest
+            {
+                AclPolicyName = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]"),
+                RequestId = "",
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await cloudRedisClusterClient.DeleteAclPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await cloudRedisClusterClient.PollOnceDeleteAclPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAclPolicy</summary>
+        public void DeleteAclPolicy()
+        {
+            // Snippet: DeleteAclPolicy(string, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/aclPolicies/[ACL_POLICY]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = cloudRedisClusterClient.DeleteAclPolicy(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = cloudRedisClusterClient.PollOnceDeleteAclPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAclPolicyAsync</summary>
+        public async Task DeleteAclPolicyAsync()
+        {
+            // Snippet: DeleteAclPolicyAsync(string, CallSettings)
+            // Additional: DeleteAclPolicyAsync(string, CancellationToken)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/aclPolicies/[ACL_POLICY]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await cloudRedisClusterClient.DeleteAclPolicyAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await cloudRedisClusterClient.PollOnceDeleteAclPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAclPolicy</summary>
+        public void DeleteAclPolicyResourceNames()
+        {
+            // Snippet: DeleteAclPolicy(AclPolicyName, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            AclPolicyName name = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = cloudRedisClusterClient.DeleteAclPolicy(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = cloudRedisClusterClient.PollOnceDeleteAclPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAclPolicyAsync</summary>
+        public async Task DeleteAclPolicyResourceNamesAsync()
+        {
+            // Snippet: DeleteAclPolicyAsync(AclPolicyName, CallSettings)
+            // Additional: DeleteAclPolicyAsync(AclPolicyName, CancellationToken)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            AclPolicyName name = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await cloudRedisClusterClient.DeleteAclPolicyAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await cloudRedisClusterClient.PollOnceDeleteAclPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicyRevision</summary>
+        public void GetAclPolicyRevisionRequestObject()
+        {
+            // Snippet: GetAclPolicyRevision(GetAclPolicyRevisionRequest, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            GetAclPolicyRevisionRequest request = new GetAclPolicyRevisionRequest
+            {
+                AclPolicyRevisionName = AclPolicyRevisionName.FromProjectLocationAclPolicyRevision("[PROJECT]", "[LOCATION]", "[ACL_POLICY]", "[REVISION]"),
+            };
+            // Make the request
+            AclPolicyRevision response = cloudRedisClusterClient.GetAclPolicyRevision(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicyRevisionAsync</summary>
+        public async Task GetAclPolicyRevisionRequestObjectAsync()
+        {
+            // Snippet: GetAclPolicyRevisionAsync(GetAclPolicyRevisionRequest, CallSettings)
+            // Additional: GetAclPolicyRevisionAsync(GetAclPolicyRevisionRequest, CancellationToken)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAclPolicyRevisionRequest request = new GetAclPolicyRevisionRequest
+            {
+                AclPolicyRevisionName = AclPolicyRevisionName.FromProjectLocationAclPolicyRevision("[PROJECT]", "[LOCATION]", "[ACL_POLICY]", "[REVISION]"),
+            };
+            // Make the request
+            AclPolicyRevision response = await cloudRedisClusterClient.GetAclPolicyRevisionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicyRevision</summary>
+        public void GetAclPolicyRevision()
+        {
+            // Snippet: GetAclPolicyRevision(string, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/aclPolicies/[ACL_POLICY]/revisions/[REVISION]";
+            // Make the request
+            AclPolicyRevision response = cloudRedisClusterClient.GetAclPolicyRevision(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicyRevisionAsync</summary>
+        public async Task GetAclPolicyRevisionAsync()
+        {
+            // Snippet: GetAclPolicyRevisionAsync(string, CallSettings)
+            // Additional: GetAclPolicyRevisionAsync(string, CancellationToken)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/aclPolicies/[ACL_POLICY]/revisions/[REVISION]";
+            // Make the request
+            AclPolicyRevision response = await cloudRedisClusterClient.GetAclPolicyRevisionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicyRevision</summary>
+        public void GetAclPolicyRevisionResourceNames()
+        {
+            // Snippet: GetAclPolicyRevision(AclPolicyRevisionName, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            AclPolicyRevisionName name = AclPolicyRevisionName.FromProjectLocationAclPolicyRevision("[PROJECT]", "[LOCATION]", "[ACL_POLICY]", "[REVISION]");
+            // Make the request
+            AclPolicyRevision response = cloudRedisClusterClient.GetAclPolicyRevision(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicyRevisionAsync</summary>
+        public async Task GetAclPolicyRevisionResourceNamesAsync()
+        {
+            // Snippet: GetAclPolicyRevisionAsync(AclPolicyRevisionName, CallSettings)
+            // Additional: GetAclPolicyRevisionAsync(AclPolicyRevisionName, CancellationToken)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            AclPolicyRevisionName name = AclPolicyRevisionName.FromProjectLocationAclPolicyRevision("[PROJECT]", "[LOCATION]", "[ACL_POLICY]", "[REVISION]");
+            // Make the request
+            AclPolicyRevision response = await cloudRedisClusterClient.GetAclPolicyRevisionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPolicyRevisions</summary>
+        public void ListAclPolicyRevisionsRequestObject()
+        {
+            // Snippet: ListAclPolicyRevisions(ListAclPolicyRevisionsRequest, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            ListAclPolicyRevisionsRequest request = new ListAclPolicyRevisionsRequest
+            {
+                ParentAsAclPolicyName = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> response = cloudRedisClusterClient.ListAclPolicyRevisions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AclPolicyRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAclPolicyRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicyRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicyRevision> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicyRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPolicyRevisionsAsync</summary>
+        public async Task ListAclPolicyRevisionsRequestObjectAsync()
+        {
+            // Snippet: ListAclPolicyRevisionsAsync(ListAclPolicyRevisionsRequest, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAclPolicyRevisionsRequest request = new ListAclPolicyRevisionsRequest
+            {
+                ParentAsAclPolicyName = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> response = cloudRedisClusterClient.ListAclPolicyRevisionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AclPolicyRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAclPolicyRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicyRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicyRevision> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicyRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPolicyRevisions</summary>
+        public void ListAclPolicyRevisions()
+        {
+            // Snippet: ListAclPolicyRevisions(string, string, int?, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/aclPolicies/[ACL_POLICY]";
+            // Make the request
+            PagedEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> response = cloudRedisClusterClient.ListAclPolicyRevisions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AclPolicyRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAclPolicyRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicyRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicyRevision> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicyRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPolicyRevisionsAsync</summary>
+        public async Task ListAclPolicyRevisionsAsync()
+        {
+            // Snippet: ListAclPolicyRevisionsAsync(string, string, int?, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/aclPolicies/[ACL_POLICY]";
+            // Make the request
+            PagedAsyncEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> response = cloudRedisClusterClient.ListAclPolicyRevisionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AclPolicyRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAclPolicyRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicyRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicyRevision> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicyRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPolicyRevisions</summary>
+        public void ListAclPolicyRevisionsResourceNames()
+        {
+            // Snippet: ListAclPolicyRevisions(AclPolicyName, string, int?, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            AclPolicyName parent = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]");
+            // Make the request
+            PagedEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> response = cloudRedisClusterClient.ListAclPolicyRevisions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AclPolicyRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAclPolicyRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicyRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicyRevision> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicyRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPolicyRevisionsAsync</summary>
+        public async Task ListAclPolicyRevisionsResourceNamesAsync()
+        {
+            // Snippet: ListAclPolicyRevisionsAsync(AclPolicyName, string, int?, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            AclPolicyName parent = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]");
+            // Make the request
+            PagedAsyncEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> response = cloudRedisClusterClient.ListAclPolicyRevisionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AclPolicyRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAclPolicyRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicyRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicyRevision> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicyRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -899,6 +1942,107 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Cluster retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAclPolicy</summary>
+        public void CreateAclPolicyRequestObject()
+        {
+            // Snippet: CreateAclPolicy(CreateAclPolicyRequest, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            CreateAclPolicyRequest request = new CreateAclPolicyRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AclPolicyId = "",
+                AclPolicy = new AclPolicy(),
+                RequestId = "",
+            };
+            // Make the request
+            AclPolicy response = cloudRedisClusterClient.CreateAclPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAclPolicyAsync</summary>
+        public async Task CreateAclPolicyRequestObjectAsync()
+        {
+            // Snippet: CreateAclPolicyAsync(CreateAclPolicyRequest, CallSettings)
+            // Additional: CreateAclPolicyAsync(CreateAclPolicyRequest, CancellationToken)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAclPolicyRequest request = new CreateAclPolicyRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AclPolicyId = "",
+                AclPolicy = new AclPolicy(),
+                RequestId = "",
+            };
+            // Make the request
+            AclPolicy response = await cloudRedisClusterClient.CreateAclPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAclPolicy</summary>
+        public void CreateAclPolicy()
+        {
+            // Snippet: CreateAclPolicy(string, AclPolicy, string, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            AclPolicy aclPolicy = new AclPolicy();
+            string aclPolicyId = "";
+            // Make the request
+            AclPolicy response = cloudRedisClusterClient.CreateAclPolicy(parent, aclPolicy, aclPolicyId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAclPolicyAsync</summary>
+        public async Task CreateAclPolicyAsync()
+        {
+            // Snippet: CreateAclPolicyAsync(string, AclPolicy, string, CallSettings)
+            // Additional: CreateAclPolicyAsync(string, AclPolicy, string, CancellationToken)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            AclPolicy aclPolicy = new AclPolicy();
+            string aclPolicyId = "";
+            // Make the request
+            AclPolicy response = await cloudRedisClusterClient.CreateAclPolicyAsync(parent, aclPolicy, aclPolicyId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAclPolicy</summary>
+        public void CreateAclPolicyResourceNames()
+        {
+            // Snippet: CreateAclPolicy(LocationName, AclPolicy, string, CallSettings)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = CloudRedisClusterClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            AclPolicy aclPolicy = new AclPolicy();
+            string aclPolicyId = "";
+            // Make the request
+            AclPolicy response = cloudRedisClusterClient.CreateAclPolicy(parent, aclPolicy, aclPolicyId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAclPolicyAsync</summary>
+        public async Task CreateAclPolicyResourceNamesAsync()
+        {
+            // Snippet: CreateAclPolicyAsync(LocationName, AclPolicy, string, CallSettings)
+            // Additional: CreateAclPolicyAsync(LocationName, AclPolicy, string, CancellationToken)
+            // Create client
+            CloudRedisClusterClient cloudRedisClusterClient = await CloudRedisClusterClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            AclPolicy aclPolicy = new AclPolicy();
+            string aclPolicyId = "";
+            // Make the request
+            AclPolicy response = await cloudRedisClusterClient.CreateAclPolicyAsync(parent, aclPolicy, aclPolicyId);
             // End snippet
         }
 

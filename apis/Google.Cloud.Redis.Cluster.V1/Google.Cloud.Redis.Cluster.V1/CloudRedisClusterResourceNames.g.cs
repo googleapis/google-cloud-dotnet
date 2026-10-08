@@ -263,6 +263,528 @@ namespace Google.Cloud.Redis.Cluster.V1
         public static bool operator !=(ClusterName a, ClusterName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>AclPolicy</c> resource.</summary>
+    public sealed partial class AclPolicyName : gax::IResourceName, sys::IEquatable<AclPolicyName>
+    {
+        /// <summary>The possible contents of <see cref="AclPolicyName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}</c>.
+            /// </summary>
+            ProjectLocationAclPolicy = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationAclPolicy = new gax::PathTemplate("projects/{project}/locations/{location}/aclPolicies/{acl_policy}");
+
+        /// <summary>Creates a <see cref="AclPolicyName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="AclPolicyName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static AclPolicyName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new AclPolicyName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="AclPolicyName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="aclPolicyId">The <c>AclPolicy</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AclPolicyName"/> constructed from the provided ids.</returns>
+        public static AclPolicyName FromProjectLocationAclPolicy(string projectId, string locationId, string aclPolicyId) =>
+            new AclPolicyName(ResourceNameType.ProjectLocationAclPolicy, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), aclPolicyId: gax::GaxPreconditions.CheckNotNullOrEmpty(aclPolicyId, nameof(aclPolicyId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AclPolicyName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="aclPolicyId">The <c>AclPolicy</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AclPolicyName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string aclPolicyId) =>
+            FormatProjectLocationAclPolicy(projectId, locationId, aclPolicyId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AclPolicyName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="aclPolicyId">The <c>AclPolicy</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AclPolicyName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}</c>.
+        /// </returns>
+        public static string FormatProjectLocationAclPolicy(string projectId, string locationId, string aclPolicyId) =>
+            s_projectLocationAclPolicy.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(aclPolicyId, nameof(aclPolicyId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="AclPolicyName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="aclPolicyName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="AclPolicyName"/> if successful.</returns>
+        public static AclPolicyName Parse(string aclPolicyName) => Parse(aclPolicyName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AclPolicyName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="aclPolicyName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="AclPolicyName"/> if successful.</returns>
+        public static AclPolicyName Parse(string aclPolicyName, bool allowUnparsed) =>
+            TryParse(aclPolicyName, allowUnparsed, out AclPolicyName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AclPolicyName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="aclPolicyName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AclPolicyName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string aclPolicyName, out AclPolicyName result) => TryParse(aclPolicyName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AclPolicyName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="aclPolicyName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AclPolicyName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string aclPolicyName, bool allowUnparsed, out AclPolicyName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(aclPolicyName, nameof(aclPolicyName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationAclPolicy.TryParseName(aclPolicyName, out resourceName))
+            {
+                result = FromProjectLocationAclPolicy(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(aclPolicyName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private AclPolicyName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string aclPolicyId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            AclPolicyId = aclPolicyId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="AclPolicyName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="aclPolicyId">The <c>AclPolicy</c> ID. Must not be <c>null</c> or empty.</param>
+        public AclPolicyName(string projectId, string locationId, string aclPolicyId) : this(ResourceNameType.ProjectLocationAclPolicy, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), aclPolicyId: gax::GaxPreconditions.CheckNotNullOrEmpty(aclPolicyId, nameof(aclPolicyId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>AclPolicy</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string AclPolicyId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationAclPolicy: return s_projectLocationAclPolicy.Expand(ProjectId, LocationId, AclPolicyId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as AclPolicyName);
+
+        /// <inheritdoc/>
+        public bool Equals(AclPolicyName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(AclPolicyName a, AclPolicyName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(AclPolicyName a, AclPolicyName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>AclPolicyRevision</c> resource.</summary>
+    public sealed partial class AclPolicyRevisionName : gax::IResourceName, sys::IEquatable<AclPolicyRevisionName>
+    {
+        /// <summary>The possible contents of <see cref="AclPolicyRevisionName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}/revisions/{revision}</c>.
+            /// </summary>
+            ProjectLocationAclPolicyRevision = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationAclPolicyRevision = new gax::PathTemplate("projects/{project}/locations/{location}/aclPolicies/{acl_policy}/revisions/{revision}");
+
+        /// <summary>Creates a <see cref="AclPolicyRevisionName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="AclPolicyRevisionName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static AclPolicyRevisionName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new AclPolicyRevisionName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="AclPolicyRevisionName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}/revisions/{revision}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="aclPolicyId">The <c>AclPolicy</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="revisionId">The <c>Revision</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AclPolicyRevisionName"/> constructed from the provided ids.</returns>
+        public static AclPolicyRevisionName FromProjectLocationAclPolicyRevision(string projectId, string locationId, string aclPolicyId, string revisionId) =>
+            new AclPolicyRevisionName(ResourceNameType.ProjectLocationAclPolicyRevision, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), aclPolicyId: gax::GaxPreconditions.CheckNotNullOrEmpty(aclPolicyId, nameof(aclPolicyId)), revisionId: gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AclPolicyRevisionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}/revisions/{revision}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="aclPolicyId">The <c>AclPolicy</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="revisionId">The <c>Revision</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AclPolicyRevisionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}/revisions/{revision}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string aclPolicyId, string revisionId) =>
+            FormatProjectLocationAclPolicyRevision(projectId, locationId, aclPolicyId, revisionId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AclPolicyRevisionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}/revisions/{revision}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="aclPolicyId">The <c>AclPolicy</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="revisionId">The <c>Revision</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AclPolicyRevisionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}/revisions/{revision}</c>.
+        /// </returns>
+        public static string FormatProjectLocationAclPolicyRevision(string projectId, string locationId, string aclPolicyId, string revisionId) =>
+            s_projectLocationAclPolicyRevision.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(aclPolicyId, nameof(aclPolicyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AclPolicyRevisionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}/revisions/{revision}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="aclPolicyRevisionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="AclPolicyRevisionName"/> if successful.</returns>
+        public static AclPolicyRevisionName Parse(string aclPolicyRevisionName) => Parse(aclPolicyRevisionName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AclPolicyRevisionName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}/revisions/{revision}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="aclPolicyRevisionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="AclPolicyRevisionName"/> if successful.</returns>
+        public static AclPolicyRevisionName Parse(string aclPolicyRevisionName, bool allowUnparsed) =>
+            TryParse(aclPolicyRevisionName, allowUnparsed, out AclPolicyRevisionName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AclPolicyRevisionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}/revisions/{revision}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="aclPolicyRevisionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AclPolicyRevisionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string aclPolicyRevisionName, out AclPolicyRevisionName result) =>
+            TryParse(aclPolicyRevisionName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AclPolicyRevisionName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}/revisions/{revision}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="aclPolicyRevisionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AclPolicyRevisionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string aclPolicyRevisionName, bool allowUnparsed, out AclPolicyRevisionName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(aclPolicyRevisionName, nameof(aclPolicyRevisionName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationAclPolicyRevision.TryParseName(aclPolicyRevisionName, out resourceName))
+            {
+                result = FromProjectLocationAclPolicyRevision(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(aclPolicyRevisionName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private AclPolicyRevisionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string aclPolicyId = null, string locationId = null, string projectId = null, string revisionId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            AclPolicyId = aclPolicyId;
+            LocationId = locationId;
+            ProjectId = projectId;
+            RevisionId = revisionId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="AclPolicyRevisionName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/aclPolicies/{acl_policy}/revisions/{revision}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="aclPolicyId">The <c>AclPolicy</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="revisionId">The <c>Revision</c> ID. Must not be <c>null</c> or empty.</param>
+        public AclPolicyRevisionName(string projectId, string locationId, string aclPolicyId, string revisionId) : this(ResourceNameType.ProjectLocationAclPolicyRevision, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), aclPolicyId: gax::GaxPreconditions.CheckNotNullOrEmpty(aclPolicyId, nameof(aclPolicyId)), revisionId: gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>AclPolicy</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string AclPolicyId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>Revision</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string RevisionId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationAclPolicyRevision: return s_projectLocationAclPolicyRevision.Expand(ProjectId, LocationId, AclPolicyId, RevisionId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as AclPolicyRevisionName);
+
+        /// <inheritdoc/>
+        public bool Equals(AclPolicyRevisionName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(AclPolicyRevisionName a, AclPolicyRevisionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(AclPolicyRevisionName a, AclPolicyRevisionName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>BackupCollection</c> resource.</summary>
     public sealed partial class BackupCollectionName : gax::IResourceName, sys::IEquatable<BackupCollectionName>
     {
@@ -2898,6 +3420,18 @@ namespace Google.Cloud.Redis.Cluster.V1
         }
     }
 
+    public partial class CreateAclPolicyRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListClustersRequest
     {
         /// <summary>
@@ -2906,6 +3440,30 @@ namespace Google.Cloud.Redis.Cluster.V1
         public gagr::LocationName ParentAsLocationName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListAclPoliciesRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListAclPolicyRevisionsRequest
+    {
+        /// <summary>
+        /// <see cref="AclPolicyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public AclPolicyName ParentAsAclPolicyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AclPolicyName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -2922,6 +3480,30 @@ namespace Google.Cloud.Redis.Cluster.V1
         }
     }
 
+    public partial class GetAclPolicyRequest
+    {
+        /// <summary>
+        /// <see cref="gcrcv::AclPolicyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrcv::AclPolicyName AclPolicyName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrcv::AclPolicyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetAclPolicyRevisionRequest
+    {
+        /// <summary>
+        /// <see cref="gcrcv::AclPolicyRevisionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrcv::AclPolicyRevisionName AclPolicyRevisionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrcv::AclPolicyRevisionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DeleteClusterRequest
     {
         /// <summary>
@@ -2930,6 +3512,18 @@ namespace Google.Cloud.Redis.Cluster.V1
         public gcrcv::ClusterName ClusterName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcrcv::ClusterName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteAclPolicyRequest
+    {
+        /// <summary>
+        /// <see cref="gcrcv::AclPolicyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrcv::AclPolicyName AclPolicyName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrcv::AclPolicyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -3067,6 +3661,94 @@ namespace Google.Cloud.Redis.Cluster.V1
         {
             get => string.IsNullOrEmpty(ServerCaPool) ? null : CaPoolName.Parse(ServerCaPool, allowUnparsed: true);
             set => ServerCaPool = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="AclPolicyName"/>-typed view over the <see cref="AclPolicy"/> resource name property.
+        /// </summary>
+        public AclPolicyName AclPolicyAsAclPolicyName
+        {
+            get => string.IsNullOrEmpty(AclPolicy) ? null : AclPolicyName.Parse(AclPolicy, allowUnparsed: true);
+            set => AclPolicy = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AclPolicyInfo
+    {
+        /// <summary>
+        /// <see cref="AclPolicyName"/>-typed view over the <see cref="AppliedAclPolicy"/> resource name property.
+        /// </summary>
+        public AclPolicyName AppliedAclPolicyAsAclPolicyName
+        {
+            get => string.IsNullOrEmpty(AppliedAclPolicy) ? null : AclPolicyName.Parse(AppliedAclPolicy, allowUnparsed: true);
+            set => AppliedAclPolicy = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="AclPolicyRevisionName"/>-typed view over the <see cref="AppliedAclPolicyRevision"/> resource name
+        /// property.
+        /// </summary>
+        public AclPolicyRevisionName AppliedAclPolicyRevisionAsAclPolicyRevisionName
+        {
+            get => string.IsNullOrEmpty(AppliedAclPolicyRevision) ? null : AclPolicyRevisionName.Parse(AppliedAclPolicyRevision, allowUnparsed: true);
+            set => AppliedAclPolicyRevision = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AclPolicy
+    {
+        /// <summary>
+        /// <see cref="gcrcv::AclPolicyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrcv::AclPolicyName AclPolicyName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrcv::AclPolicyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AclPolicyRevisionStatus
+    {
+        /// <summary>
+        /// <see cref="AclPolicyRevisionName"/>-typed view over the <see cref="AclPolicyRevision"/> resource name
+        /// property.
+        /// </summary>
+        public AclPolicyRevisionName AclPolicyRevisionAsAclPolicyRevisionName
+        {
+            get => string.IsNullOrEmpty(AclPolicyRevision) ? null : AclPolicyRevisionName.Parse(AclPolicyRevision, allowUnparsed: true);
+            set => AclPolicyRevision = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ClusterAclPolicyAttachment
+    {
+        /// <summary>
+        /// <see cref="ClusterName"/>-typed view over the <see cref="Cluster"/> resource name property.
+        /// </summary>
+        public ClusterName ClusterAsClusterName
+        {
+            get => string.IsNullOrEmpty(Cluster) ? null : ClusterName.Parse(Cluster, allowUnparsed: true);
+            set => Cluster = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AclPolicyRevision
+    {
+        /// <summary>
+        /// <see cref="gcrcv::AclPolicyRevisionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrcv::AclPolicyRevisionName AclPolicyRevisionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrcv::AclPolicyRevisionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="ClusterName"/>-typed view over the <see cref="AttachedClusters"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<ClusterName> AttachedClustersAsClusterNames
+        {
+            get => new gax::ResourceNameList<ClusterName>(AttachedClusters, s => string.IsNullOrEmpty(s) ? null : ClusterName.Parse(s, allowUnparsed: true));
         }
     }
 

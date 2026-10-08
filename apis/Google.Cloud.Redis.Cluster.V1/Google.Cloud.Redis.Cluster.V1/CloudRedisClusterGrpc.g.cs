@@ -82,17 +82,39 @@ namespace Google.Cloud.Redis.Cluster.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.ListClustersResponse> __Marshaller_google_cloud_redis_cluster_v1_ListClustersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.ListClustersResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.ListAclPoliciesRequest> __Marshaller_google_cloud_redis_cluster_v1_ListAclPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.ListAclPoliciesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.ListAclPoliciesResponse> __Marshaller_google_cloud_redis_cluster_v1_ListAclPoliciesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.ListAclPoliciesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.GetClusterRequest> __Marshaller_google_cloud_redis_cluster_v1_GetClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.GetClusterRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.Cluster> __Marshaller_google_cloud_redis_cluster_v1_Cluster = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.Cluster.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.GetAclPolicyRequest> __Marshaller_google_cloud_redis_cluster_v1_GetAclPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.GetAclPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.AclPolicy> __Marshaller_google_cloud_redis_cluster_v1_AclPolicy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.AclPolicy.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.UpdateClusterRequest> __Marshaller_google_cloud_redis_cluster_v1_UpdateClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.UpdateClusterRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.UpdateAclPolicyRequest> __Marshaller_google_cloud_redis_cluster_v1_UpdateAclPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.UpdateAclPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.DeleteClusterRequest> __Marshaller_google_cloud_redis_cluster_v1_DeleteClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.DeleteClusterRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.DeleteAclPolicyRequest> __Marshaller_google_cloud_redis_cluster_v1_DeleteAclPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.DeleteAclPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.GetAclPolicyRevisionRequest> __Marshaller_google_cloud_redis_cluster_v1_GetAclPolicyRevisionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.GetAclPolicyRevisionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.AclPolicyRevision> __Marshaller_google_cloud_redis_cluster_v1_AclPolicyRevision = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.AclPolicyRevision.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsRequest> __Marshaller_google_cloud_redis_cluster_v1_ListAclPolicyRevisionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsResponse> __Marshaller_google_cloud_redis_cluster_v1_ListAclPolicyRevisionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.CreateClusterRequest> __Marshaller_google_cloud_redis_cluster_v1_CreateClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.CreateClusterRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.CreateAclPolicyRequest> __Marshaller_google_cloud_redis_cluster_v1_CreateAclPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.CreateAclPolicyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.Cluster.V1.GetClusterCertificateAuthorityRequest> __Marshaller_google_cloud_redis_cluster_v1_GetClusterCertificateAuthorityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.Cluster.V1.GetClusterCertificateAuthorityRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -135,6 +157,14 @@ namespace Google.Cloud.Redis.Cluster.V1 {
         __Marshaller_google_cloud_redis_cluster_v1_ListClustersResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Redis.Cluster.V1.ListAclPoliciesRequest, global::Google.Cloud.Redis.Cluster.V1.ListAclPoliciesResponse> __Method_ListAclPolicies = new grpc::Method<global::Google.Cloud.Redis.Cluster.V1.ListAclPoliciesRequest, global::Google.Cloud.Redis.Cluster.V1.ListAclPoliciesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAclPolicies",
+        __Marshaller_google_cloud_redis_cluster_v1_ListAclPoliciesRequest,
+        __Marshaller_google_cloud_redis_cluster_v1_ListAclPoliciesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Redis.Cluster.V1.GetClusterRequest, global::Google.Cloud.Redis.Cluster.V1.Cluster> __Method_GetCluster = new grpc::Method<global::Google.Cloud.Redis.Cluster.V1.GetClusterRequest, global::Google.Cloud.Redis.Cluster.V1.Cluster>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -143,11 +173,27 @@ namespace Google.Cloud.Redis.Cluster.V1 {
         __Marshaller_google_cloud_redis_cluster_v1_Cluster);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Redis.Cluster.V1.GetAclPolicyRequest, global::Google.Cloud.Redis.Cluster.V1.AclPolicy> __Method_GetAclPolicy = new grpc::Method<global::Google.Cloud.Redis.Cluster.V1.GetAclPolicyRequest, global::Google.Cloud.Redis.Cluster.V1.AclPolicy>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAclPolicy",
+        __Marshaller_google_cloud_redis_cluster_v1_GetAclPolicyRequest,
+        __Marshaller_google_cloud_redis_cluster_v1_AclPolicy);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Redis.Cluster.V1.UpdateClusterRequest, global::Google.LongRunning.Operation> __Method_UpdateCluster = new grpc::Method<global::Google.Cloud.Redis.Cluster.V1.UpdateClusterRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateCluster",
         __Marshaller_google_cloud_redis_cluster_v1_UpdateClusterRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Redis.Cluster.V1.UpdateAclPolicyRequest, global::Google.LongRunning.Operation> __Method_UpdateAclPolicy = new grpc::Method<global::Google.Cloud.Redis.Cluster.V1.UpdateAclPolicyRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAclPolicy",
+        __Marshaller_google_cloud_redis_cluster_v1_UpdateAclPolicyRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -159,12 +205,44 @@ namespace Google.Cloud.Redis.Cluster.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Redis.Cluster.V1.DeleteAclPolicyRequest, global::Google.LongRunning.Operation> __Method_DeleteAclPolicy = new grpc::Method<global::Google.Cloud.Redis.Cluster.V1.DeleteAclPolicyRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAclPolicy",
+        __Marshaller_google_cloud_redis_cluster_v1_DeleteAclPolicyRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Redis.Cluster.V1.GetAclPolicyRevisionRequest, global::Google.Cloud.Redis.Cluster.V1.AclPolicyRevision> __Method_GetAclPolicyRevision = new grpc::Method<global::Google.Cloud.Redis.Cluster.V1.GetAclPolicyRevisionRequest, global::Google.Cloud.Redis.Cluster.V1.AclPolicyRevision>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAclPolicyRevision",
+        __Marshaller_google_cloud_redis_cluster_v1_GetAclPolicyRevisionRequest,
+        __Marshaller_google_cloud_redis_cluster_v1_AclPolicyRevision);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsRequest, global::Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsResponse> __Method_ListAclPolicyRevisions = new grpc::Method<global::Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsRequest, global::Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAclPolicyRevisions",
+        __Marshaller_google_cloud_redis_cluster_v1_ListAclPolicyRevisionsRequest,
+        __Marshaller_google_cloud_redis_cluster_v1_ListAclPolicyRevisionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Redis.Cluster.V1.CreateClusterRequest, global::Google.LongRunning.Operation> __Method_CreateCluster = new grpc::Method<global::Google.Cloud.Redis.Cluster.V1.CreateClusterRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateCluster",
         __Marshaller_google_cloud_redis_cluster_v1_CreateClusterRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Redis.Cluster.V1.CreateAclPolicyRequest, global::Google.Cloud.Redis.Cluster.V1.AclPolicy> __Method_CreateAclPolicy = new grpc::Method<global::Google.Cloud.Redis.Cluster.V1.CreateAclPolicyRequest, global::Google.Cloud.Redis.Cluster.V1.AclPolicy>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAclPolicy",
+        __Marshaller_google_cloud_redis_cluster_v1_CreateAclPolicyRequest,
+        __Marshaller_google_cloud_redis_cluster_v1_AclPolicy);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Redis.Cluster.V1.GetClusterCertificateAuthorityRequest, global::Google.Cloud.Redis.Cluster.V1.CertificateAuthority> __Method_GetClusterCertificateAuthority = new grpc::Method<global::Google.Cloud.Redis.Cluster.V1.GetClusterCertificateAuthorityRequest, global::Google.Cloud.Redis.Cluster.V1.CertificateAuthority>(
@@ -277,6 +355,26 @@ namespace Google.Cloud.Redis.Cluster.V1 {
       }
 
       /// <summary>
+      /// Lists all ACL policies owned by a project in either the specified
+      /// location (region) or all locations.
+      ///
+      /// The location should have the following format:
+      ///
+      /// * `projects/{project_id}/locations/{location_id}`
+      ///
+      /// If `location_id` is specified as `-` (wildcard), then all regions
+      /// available to the project are queried, and the results are aggregated.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Redis.Cluster.V1.ListAclPoliciesResponse> ListAclPolicies(global::Google.Cloud.Redis.Cluster.V1.ListAclPoliciesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Gets the details of a specific Redis cluster.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -284,6 +382,18 @@ namespace Google.Cloud.Redis.Cluster.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Redis.Cluster.V1.Cluster> GetCluster(global::Google.Cloud.Redis.Cluster.V1.GetClusterRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the details of a specific Redis Cluster ACL policy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Redis.Cluster.V1.AclPolicy> GetAclPolicy(global::Google.Cloud.Redis.Cluster.V1.GetAclPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -305,6 +415,27 @@ namespace Google.Cloud.Redis.Cluster.V1 {
       }
 
       /// <summary>
+      /// Updates the ACL policy.
+      ///
+      /// The operation applies the updated ACL policy to all of the linked clusters.
+      /// If Memorystore can apply the policy to all clusters, then the operation
+      /// returns a SUCCESS status. If Memorystore can't apply the policy to all
+      /// clusters, then to ensure eventual consistency, Memorystore uses
+      /// reconciliation to apply the policy to the failed clusters.
+      ///
+      /// Completed longrunning.Operation will contain the new ACL policy object in
+      /// the response field.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateAclPolicy(global::Google.Cloud.Redis.Cluster.V1.UpdateAclPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Deletes a specific Redis cluster. Cluster stops serving and data is
       /// deleted.
       /// </summary>
@@ -313,6 +444,44 @@ namespace Google.Cloud.Redis.Cluster.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteCluster(global::Google.Cloud.Redis.Cluster.V1.DeleteClusterRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a specific ACL policy. This action will delete the ACL policy and
+      /// all the rules associated with it. An ACL policy cannot be deleted if it is
+      /// attached to a cluster.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteAclPolicy(global::Google.Cloud.Redis.Cluster.V1.DeleteAclPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a specific ACL policy revision.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Redis.Cluster.V1.AclPolicyRevision> GetAclPolicyRevision(global::Google.Cloud.Redis.Cluster.V1.GetAclPolicyRevisionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all ACL policy revisions in a given ACL policy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsResponse> ListAclPolicyRevisions(global::Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -332,6 +501,20 @@ namespace Google.Cloud.Redis.Cluster.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateCluster(global::Google.Cloud.Redis.Cluster.V1.CreateClusterRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates an ACL policy.
+      /// The creation is executed synchronously and the policy is available for use
+      /// immediately after the RPC returns.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Redis.Cluster.V1.AclPolicy> CreateAclPolicy(global::Google.Cloud.Redis.Cluster.V1.CreateAclPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -582,6 +765,86 @@ namespace Google.Cloud.Redis.Cluster.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListClusters, null, options, request);
       }
       /// <summary>
+      /// Lists all ACL policies owned by a project in either the specified
+      /// location (region) or all locations.
+      ///
+      /// The location should have the following format:
+      ///
+      /// * `projects/{project_id}/locations/{location_id}`
+      ///
+      /// If `location_id` is specified as `-` (wildcard), then all regions
+      /// available to the project are queried, and the results are aggregated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Redis.Cluster.V1.ListAclPoliciesResponse ListAclPolicies(global::Google.Cloud.Redis.Cluster.V1.ListAclPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAclPolicies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all ACL policies owned by a project in either the specified
+      /// location (region) or all locations.
+      ///
+      /// The location should have the following format:
+      ///
+      /// * `projects/{project_id}/locations/{location_id}`
+      ///
+      /// If `location_id` is specified as `-` (wildcard), then all regions
+      /// available to the project are queried, and the results are aggregated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Redis.Cluster.V1.ListAclPoliciesResponse ListAclPolicies(global::Google.Cloud.Redis.Cluster.V1.ListAclPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAclPolicies, null, options, request);
+      }
+      /// <summary>
+      /// Lists all ACL policies owned by a project in either the specified
+      /// location (region) or all locations.
+      ///
+      /// The location should have the following format:
+      ///
+      /// * `projects/{project_id}/locations/{location_id}`
+      ///
+      /// If `location_id` is specified as `-` (wildcard), then all regions
+      /// available to the project are queried, and the results are aggregated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Redis.Cluster.V1.ListAclPoliciesResponse> ListAclPoliciesAsync(global::Google.Cloud.Redis.Cluster.V1.ListAclPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAclPoliciesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all ACL policies owned by a project in either the specified
+      /// location (region) or all locations.
+      ///
+      /// The location should have the following format:
+      ///
+      /// * `projects/{project_id}/locations/{location_id}`
+      ///
+      /// If `location_id` is specified as `-` (wildcard), then all regions
+      /// available to the project are queried, and the results are aggregated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Redis.Cluster.V1.ListAclPoliciesResponse> ListAclPoliciesAsync(global::Google.Cloud.Redis.Cluster.V1.ListAclPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAclPolicies, null, options, request);
+      }
+      /// <summary>
       /// Gets the details of a specific Redis cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -628,6 +891,54 @@ namespace Google.Cloud.Redis.Cluster.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Redis.Cluster.V1.Cluster> GetClusterAsync(global::Google.Cloud.Redis.Cluster.V1.GetClusterRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCluster, null, options, request);
+      }
+      /// <summary>
+      /// Gets the details of a specific Redis Cluster ACL policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Redis.Cluster.V1.AclPolicy GetAclPolicy(global::Google.Cloud.Redis.Cluster.V1.GetAclPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAclPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the details of a specific Redis Cluster ACL policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Redis.Cluster.V1.AclPolicy GetAclPolicy(global::Google.Cloud.Redis.Cluster.V1.GetAclPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAclPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Gets the details of a specific Redis Cluster ACL policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Redis.Cluster.V1.AclPolicy> GetAclPolicyAsync(global::Google.Cloud.Redis.Cluster.V1.GetAclPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAclPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the details of a specific Redis Cluster ACL policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Redis.Cluster.V1.AclPolicy> GetAclPolicyAsync(global::Google.Cloud.Redis.Cluster.V1.GetAclPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAclPolicy, null, options, request);
       }
       /// <summary>
       /// Updates the metadata and configuration of a specific Redis cluster.
@@ -694,6 +1005,90 @@ namespace Google.Cloud.Redis.Cluster.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCluster, null, options, request);
       }
       /// <summary>
+      /// Updates the ACL policy.
+      ///
+      /// The operation applies the updated ACL policy to all of the linked clusters.
+      /// If Memorystore can apply the policy to all clusters, then the operation
+      /// returns a SUCCESS status. If Memorystore can't apply the policy to all
+      /// clusters, then to ensure eventual consistency, Memorystore uses
+      /// reconciliation to apply the policy to the failed clusters.
+      ///
+      /// Completed longrunning.Operation will contain the new ACL policy object in
+      /// the response field.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateAclPolicy(global::Google.Cloud.Redis.Cluster.V1.UpdateAclPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAclPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the ACL policy.
+      ///
+      /// The operation applies the updated ACL policy to all of the linked clusters.
+      /// If Memorystore can apply the policy to all clusters, then the operation
+      /// returns a SUCCESS status. If Memorystore can't apply the policy to all
+      /// clusters, then to ensure eventual consistency, Memorystore uses
+      /// reconciliation to apply the policy to the failed clusters.
+      ///
+      /// Completed longrunning.Operation will contain the new ACL policy object in
+      /// the response field.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateAclPolicy(global::Google.Cloud.Redis.Cluster.V1.UpdateAclPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAclPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Updates the ACL policy.
+      ///
+      /// The operation applies the updated ACL policy to all of the linked clusters.
+      /// If Memorystore can apply the policy to all clusters, then the operation
+      /// returns a SUCCESS status. If Memorystore can't apply the policy to all
+      /// clusters, then to ensure eventual consistency, Memorystore uses
+      /// reconciliation to apply the policy to the failed clusters.
+      ///
+      /// Completed longrunning.Operation will contain the new ACL policy object in
+      /// the response field.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAclPolicyAsync(global::Google.Cloud.Redis.Cluster.V1.UpdateAclPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAclPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the ACL policy.
+      ///
+      /// The operation applies the updated ACL policy to all of the linked clusters.
+      /// If Memorystore can apply the policy to all clusters, then the operation
+      /// returns a SUCCESS status. If Memorystore can't apply the policy to all
+      /// clusters, then to ensure eventual consistency, Memorystore uses
+      /// reconciliation to apply the policy to the failed clusters.
+      ///
+      /// Completed longrunning.Operation will contain the new ACL policy object in
+      /// the response field.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAclPolicyAsync(global::Google.Cloud.Redis.Cluster.V1.UpdateAclPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAclPolicy, null, options, request);
+      }
+      /// <summary>
       /// Deletes a specific Redis cluster. Cluster stops serving and data is
       /// deleted.
       /// </summary>
@@ -744,6 +1139,158 @@ namespace Google.Cloud.Redis.Cluster.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteClusterAsync(global::Google.Cloud.Redis.Cluster.V1.DeleteClusterRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteCluster, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a specific ACL policy. This action will delete the ACL policy and
+      /// all the rules associated with it. An ACL policy cannot be deleted if it is
+      /// attached to a cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteAclPolicy(global::Google.Cloud.Redis.Cluster.V1.DeleteAclPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAclPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a specific ACL policy. This action will delete the ACL policy and
+      /// all the rules associated with it. An ACL policy cannot be deleted if it is
+      /// attached to a cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteAclPolicy(global::Google.Cloud.Redis.Cluster.V1.DeleteAclPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAclPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a specific ACL policy. This action will delete the ACL policy and
+      /// all the rules associated with it. An ACL policy cannot be deleted if it is
+      /// attached to a cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAclPolicyAsync(global::Google.Cloud.Redis.Cluster.V1.DeleteAclPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAclPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a specific ACL policy. This action will delete the ACL policy and
+      /// all the rules associated with it. An ACL policy cannot be deleted if it is
+      /// attached to a cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAclPolicyAsync(global::Google.Cloud.Redis.Cluster.V1.DeleteAclPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAclPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a specific ACL policy revision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Redis.Cluster.V1.AclPolicyRevision GetAclPolicyRevision(global::Google.Cloud.Redis.Cluster.V1.GetAclPolicyRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAclPolicyRevision(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a specific ACL policy revision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Redis.Cluster.V1.AclPolicyRevision GetAclPolicyRevision(global::Google.Cloud.Redis.Cluster.V1.GetAclPolicyRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAclPolicyRevision, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a specific ACL policy revision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Redis.Cluster.V1.AclPolicyRevision> GetAclPolicyRevisionAsync(global::Google.Cloud.Redis.Cluster.V1.GetAclPolicyRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAclPolicyRevisionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a specific ACL policy revision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Redis.Cluster.V1.AclPolicyRevision> GetAclPolicyRevisionAsync(global::Google.Cloud.Redis.Cluster.V1.GetAclPolicyRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAclPolicyRevision, null, options, request);
+      }
+      /// <summary>
+      /// Lists all ACL policy revisions in a given ACL policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsResponse ListAclPolicyRevisions(global::Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAclPolicyRevisions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all ACL policy revisions in a given ACL policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsResponse ListAclPolicyRevisions(global::Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAclPolicyRevisions, null, options, request);
+      }
+      /// <summary>
+      /// Lists all ACL policy revisions in a given ACL policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsResponse> ListAclPolicyRevisionsAsync(global::Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAclPolicyRevisionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all ACL policy revisions in a given ACL policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsResponse> ListAclPolicyRevisionsAsync(global::Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAclPolicyRevisions, null, options, request);
       }
       /// <summary>
       /// Creates a Redis cluster based on the specified properties.
@@ -820,6 +1367,62 @@ namespace Google.Cloud.Redis.Cluster.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateClusterAsync(global::Google.Cloud.Redis.Cluster.V1.CreateClusterRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCluster, null, options, request);
+      }
+      /// <summary>
+      /// Creates an ACL policy.
+      /// The creation is executed synchronously and the policy is available for use
+      /// immediately after the RPC returns.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Redis.Cluster.V1.AclPolicy CreateAclPolicy(global::Google.Cloud.Redis.Cluster.V1.CreateAclPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAclPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an ACL policy.
+      /// The creation is executed synchronously and the policy is available for use
+      /// immediately after the RPC returns.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Redis.Cluster.V1.AclPolicy CreateAclPolicy(global::Google.Cloud.Redis.Cluster.V1.CreateAclPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAclPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Creates an ACL policy.
+      /// The creation is executed synchronously and the policy is available for use
+      /// immediately after the RPC returns.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Redis.Cluster.V1.AclPolicy> CreateAclPolicyAsync(global::Google.Cloud.Redis.Cluster.V1.CreateAclPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAclPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an ACL policy.
+      /// The creation is executed synchronously and the policy is available for use
+      /// immediately after the RPC returns.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Redis.Cluster.V1.AclPolicy> CreateAclPolicyAsync(global::Google.Cloud.Redis.Cluster.V1.CreateAclPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAclPolicy, null, options, request);
       }
       /// <summary>
       /// Gets the details of certificate authority information for Redis cluster.
@@ -1380,10 +1983,17 @@ namespace Google.Cloud.Redis.Cluster.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListClusters, serviceImpl.ListClusters)
+          .AddMethod(__Method_ListAclPolicies, serviceImpl.ListAclPolicies)
           .AddMethod(__Method_GetCluster, serviceImpl.GetCluster)
+          .AddMethod(__Method_GetAclPolicy, serviceImpl.GetAclPolicy)
           .AddMethod(__Method_UpdateCluster, serviceImpl.UpdateCluster)
+          .AddMethod(__Method_UpdateAclPolicy, serviceImpl.UpdateAclPolicy)
           .AddMethod(__Method_DeleteCluster, serviceImpl.DeleteCluster)
+          .AddMethod(__Method_DeleteAclPolicy, serviceImpl.DeleteAclPolicy)
+          .AddMethod(__Method_GetAclPolicyRevision, serviceImpl.GetAclPolicyRevision)
+          .AddMethod(__Method_ListAclPolicyRevisions, serviceImpl.ListAclPolicyRevisions)
           .AddMethod(__Method_CreateCluster, serviceImpl.CreateCluster)
+          .AddMethod(__Method_CreateAclPolicy, serviceImpl.CreateAclPolicy)
           .AddMethod(__Method_GetClusterCertificateAuthority, serviceImpl.GetClusterCertificateAuthority)
           .AddMethod(__Method_GetSharedRegionalCertificateAuthority, serviceImpl.GetSharedRegionalCertificateAuthority)
           .AddMethod(__Method_RescheduleClusterMaintenance, serviceImpl.RescheduleClusterMaintenance)
@@ -1404,10 +2014,17 @@ namespace Google.Cloud.Redis.Cluster.V1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, CloudRedisClusterBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListClusters, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.Cluster.V1.ListClustersRequest, global::Google.Cloud.Redis.Cluster.V1.ListClustersResponse>(serviceImpl.ListClusters));
+      serviceBinder.AddMethod(__Method_ListAclPolicies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.Cluster.V1.ListAclPoliciesRequest, global::Google.Cloud.Redis.Cluster.V1.ListAclPoliciesResponse>(serviceImpl.ListAclPolicies));
       serviceBinder.AddMethod(__Method_GetCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.Cluster.V1.GetClusterRequest, global::Google.Cloud.Redis.Cluster.V1.Cluster>(serviceImpl.GetCluster));
+      serviceBinder.AddMethod(__Method_GetAclPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.Cluster.V1.GetAclPolicyRequest, global::Google.Cloud.Redis.Cluster.V1.AclPolicy>(serviceImpl.GetAclPolicy));
       serviceBinder.AddMethod(__Method_UpdateCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.Cluster.V1.UpdateClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateCluster));
+      serviceBinder.AddMethod(__Method_UpdateAclPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.Cluster.V1.UpdateAclPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateAclPolicy));
       serviceBinder.AddMethod(__Method_DeleteCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.Cluster.V1.DeleteClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteCluster));
+      serviceBinder.AddMethod(__Method_DeleteAclPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.Cluster.V1.DeleteAclPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteAclPolicy));
+      serviceBinder.AddMethod(__Method_GetAclPolicyRevision, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.Cluster.V1.GetAclPolicyRevisionRequest, global::Google.Cloud.Redis.Cluster.V1.AclPolicyRevision>(serviceImpl.GetAclPolicyRevision));
+      serviceBinder.AddMethod(__Method_ListAclPolicyRevisions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsRequest, global::Google.Cloud.Redis.Cluster.V1.ListAclPolicyRevisionsResponse>(serviceImpl.ListAclPolicyRevisions));
       serviceBinder.AddMethod(__Method_CreateCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.Cluster.V1.CreateClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateCluster));
+      serviceBinder.AddMethod(__Method_CreateAclPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.Cluster.V1.CreateAclPolicyRequest, global::Google.Cloud.Redis.Cluster.V1.AclPolicy>(serviceImpl.CreateAclPolicy));
       serviceBinder.AddMethod(__Method_GetClusterCertificateAuthority, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.Cluster.V1.GetClusterCertificateAuthorityRequest, global::Google.Cloud.Redis.Cluster.V1.CertificateAuthority>(serviceImpl.GetClusterCertificateAuthority));
       serviceBinder.AddMethod(__Method_GetSharedRegionalCertificateAuthority, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.Cluster.V1.GetSharedRegionalCertificateAuthorityRequest, global::Google.Cloud.Redis.Cluster.V1.SharedRegionalCertificateAuthority>(serviceImpl.GetSharedRegionalCertificateAuthority));
       serviceBinder.AddMethod(__Method_RescheduleClusterMaintenance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.Cluster.V1.RescheduleClusterMaintenanceRequest, global::Google.LongRunning.Operation>(serviceImpl.RescheduleClusterMaintenance));

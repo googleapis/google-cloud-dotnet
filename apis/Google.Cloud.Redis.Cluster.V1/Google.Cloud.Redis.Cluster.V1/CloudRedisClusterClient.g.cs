@@ -50,13 +50,22 @@ namespace Google.Cloud.Redis.Cluster.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListClustersSettings = existing.ListClustersSettings;
+            ListAclPoliciesSettings = existing.ListAclPoliciesSettings;
             GetClusterSettings = existing.GetClusterSettings;
+            GetAclPolicySettings = existing.GetAclPolicySettings;
             UpdateClusterSettings = existing.UpdateClusterSettings;
             UpdateClusterOperationsSettings = existing.UpdateClusterOperationsSettings.Clone();
+            UpdateAclPolicySettings = existing.UpdateAclPolicySettings;
+            UpdateAclPolicyOperationsSettings = existing.UpdateAclPolicyOperationsSettings.Clone();
             DeleteClusterSettings = existing.DeleteClusterSettings;
             DeleteClusterOperationsSettings = existing.DeleteClusterOperationsSettings.Clone();
+            DeleteAclPolicySettings = existing.DeleteAclPolicySettings;
+            DeleteAclPolicyOperationsSettings = existing.DeleteAclPolicyOperationsSettings.Clone();
+            GetAclPolicyRevisionSettings = existing.GetAclPolicyRevisionSettings;
+            ListAclPolicyRevisionsSettings = existing.ListAclPolicyRevisionsSettings;
             CreateClusterSettings = existing.CreateClusterSettings;
             CreateClusterOperationsSettings = existing.CreateClusterOperationsSettings.Clone();
+            CreateAclPolicySettings = existing.CreateAclPolicySettings;
             GetClusterCertificateAuthoritySettings = existing.GetClusterCertificateAuthoritySettings;
             GetSharedRegionalCertificateAuthoritySettings = existing.GetSharedRegionalCertificateAuthoritySettings;
             RescheduleClusterMaintenanceSettings = existing.RescheduleClusterMaintenanceSettings;
@@ -91,6 +100,18 @@ namespace Google.Cloud.Redis.Cluster.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClusterClient.ListAclPolicies</c> and <c>CloudRedisClusterClient.ListAclPoliciesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAclPoliciesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>CloudRedisClusterClient.GetCluster</c> and <c>CloudRedisClusterClient.GetClusterAsync</c>.
         /// </summary>
         /// <remarks>
@@ -100,6 +121,18 @@ namespace Google.Cloud.Redis.Cluster.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClusterClient.GetAclPolicy</c> and <c>CloudRedisClusterClient.GetAclPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAclPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -127,6 +160,36 @@ namespace Google.Cloud.Redis.Cluster.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateClusterOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClusterClient.UpdateAclPolicy</c> and <c>CloudRedisClusterClient.UpdateAclPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAclPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudRedisClusterClient.UpdateAclPolicy</c> and
+        /// <c>CloudRedisClusterClient.UpdateAclPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateAclPolicyOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -163,6 +226,62 @@ namespace Google.Cloud.Redis.Cluster.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClusterClient.DeleteAclPolicy</c> and <c>CloudRedisClusterClient.DeleteAclPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAclPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudRedisClusterClient.DeleteAclPolicy</c> and
+        /// <c>CloudRedisClusterClient.DeleteAclPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteAclPolicyOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClusterClient.GetAclPolicyRevision</c> and <c>CloudRedisClusterClient.GetAclPolicyRevisionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAclPolicyRevisionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClusterClient.ListAclPolicyRevisions</c> and
+        /// <c>CloudRedisClusterClient.ListAclPolicyRevisionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAclPolicyRevisionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>CloudRedisClusterClient.CreateCluster</c> and <c>CloudRedisClusterClient.CreateClusterAsync</c>.
         /// </summary>
         /// <remarks>
@@ -190,6 +309,18 @@ namespace Google.Cloud.Redis.Cluster.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClusterClient.CreateAclPolicy</c> and <c>CloudRedisClusterClient.CreateAclPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAclPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -758,6 +889,212 @@ namespace Google.Cloud.Redis.Cluster.V1
         }
 
         /// <summary>
+        /// Lists all ACL policies owned by a project in either the specified
+        /// location (region) or all locations.
+        /// 
+        /// The location should have the following format:
+        /// 
+        /// * `projects/{project_id}/locations/{location_id}`
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AclPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAclPoliciesResponse, AclPolicy> ListAclPolicies(ListAclPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all ACL policies owned by a project in either the specified
+        /// location (region) or all locations.
+        /// 
+        /// The location should have the following format:
+        /// 
+        /// * `projects/{project_id}/locations/{location_id}`
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AclPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAclPoliciesResponse, AclPolicy> ListAclPoliciesAsync(ListAclPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all ACL policies owned by a project in either the specified
+        /// location (region) or all locations.
+        /// 
+        /// The location should have the following format:
+        /// 
+        /// * `projects/{project_id}/locations/{location_id}`
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ACL policy location using the form:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AclPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAclPoliciesResponse, AclPolicy> ListAclPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAclPoliciesRequest request = new ListAclPoliciesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAclPolicies(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ACL policies owned by a project in either the specified
+        /// location (region) or all locations.
+        /// 
+        /// The location should have the following format:
+        /// 
+        /// * `projects/{project_id}/locations/{location_id}`
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ACL policy location using the form:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AclPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAclPoliciesResponse, AclPolicy> ListAclPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAclPoliciesRequest request = new ListAclPoliciesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAclPoliciesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ACL policies owned by a project in either the specified
+        /// location (region) or all locations.
+        /// 
+        /// The location should have the following format:
+        /// 
+        /// * `projects/{project_id}/locations/{location_id}`
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ACL policy location using the form:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AclPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAclPoliciesResponse, AclPolicy> ListAclPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAclPoliciesRequest request = new ListAclPoliciesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAclPolicies(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ACL policies owned by a project in either the specified
+        /// location (region) or all locations.
+        /// 
+        /// The location should have the following format:
+        /// 
+        /// * `projects/{project_id}/locations/{location_id}`
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ACL policy location using the form:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AclPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAclPoliciesResponse, AclPolicy> ListAclPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAclPoliciesRequest request = new ListAclPoliciesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAclPoliciesAsync(request, callSettings);
+        }
+
+        /// <summary>
         /// Gets the details of a specific Redis cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -873,6 +1210,123 @@ namespace Google.Cloud.Redis.Cluster.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Cluster> GetClusterAsync(ClusterName name, st::CancellationToken cancellationToken) =>
             GetClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a specific Redis Cluster ACL policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AclPolicy GetAclPolicy(GetAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the details of a specific Redis Cluster ACL policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> GetAclPolicyAsync(GetAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the details of a specific Redis Cluster ACL policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> GetAclPolicyAsync(GetAclPolicyRequest request, st::CancellationToken cancellationToken) =>
+            GetAclPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a specific Redis Cluster ACL policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis ACL policy resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AclPolicy GetAclPolicy(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAclPolicy(new GetAclPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific Redis Cluster ACL policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis ACL policy resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> GetAclPolicyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAclPolicyAsync(new GetAclPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific Redis Cluster ACL policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis ACL policy resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> GetAclPolicyAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAclPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a specific Redis Cluster ACL policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis ACL policy resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AclPolicy GetAclPolicy(AclPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAclPolicy(new GetAclPolicyRequest
+            {
+                AclPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific Redis Cluster ACL policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis ACL policy resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> GetAclPolicyAsync(AclPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAclPolicyAsync(new GetAclPolicyRequest
+            {
+                AclPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific Redis Cluster ACL policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis ACL policy resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> GetAclPolicyAsync(AclPolicyName name, st::CancellationToken cancellationToken) =>
+            GetAclPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates the metadata and configuration of a specific Redis cluster.
@@ -1018,6 +1472,175 @@ namespace Google.Cloud.Redis.Cluster.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Cluster, wkt::Any>> UpdateClusterAsync(Cluster cluster, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateClusterAsync(cluster, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the ACL policy.
+        /// 
+        /// The operation applies the updated ACL policy to all of the linked clusters.
+        /// If Memorystore can apply the policy to all clusters, then the operation
+        /// returns a SUCCESS status. If Memorystore can't apply the policy to all
+        /// clusters, then to ensure eventual consistency, Memorystore uses
+        /// reconciliation to apply the policy to the failed clusters.
+        /// 
+        /// Completed longrunning.Operation will contain the new ACL policy object in
+        /// the response field.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AclPolicy, OperationMetadata> UpdateAclPolicy(UpdateAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the ACL policy.
+        /// 
+        /// The operation applies the updated ACL policy to all of the linked clusters.
+        /// If Memorystore can apply the policy to all clusters, then the operation
+        /// returns a SUCCESS status. If Memorystore can't apply the policy to all
+        /// clusters, then to ensure eventual consistency, Memorystore uses
+        /// reconciliation to apply the policy to the failed clusters.
+        /// 
+        /// Completed longrunning.Operation will contain the new ACL policy object in
+        /// the response field.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AclPolicy, OperationMetadata>> UpdateAclPolicyAsync(UpdateAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the ACL policy.
+        /// 
+        /// The operation applies the updated ACL policy to all of the linked clusters.
+        /// If Memorystore can apply the policy to all clusters, then the operation
+        /// returns a SUCCESS status. If Memorystore can't apply the policy to all
+        /// clusters, then to ensure eventual consistency, Memorystore uses
+        /// reconciliation to apply the policy to the failed clusters.
+        /// 
+        /// Completed longrunning.Operation will contain the new ACL policy object in
+        /// the response field.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AclPolicy, OperationMetadata>> UpdateAclPolicyAsync(UpdateAclPolicyRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAclPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateAclPolicy</c>.</summary>
+        public virtual lro::OperationsClient UpdateAclPolicyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateAclPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AclPolicy, OperationMetadata> PollOnceUpdateAclPolicy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AclPolicy, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAclPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateAclPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AclPolicy, OperationMetadata>> PollOnceUpdateAclPolicyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AclPolicy, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAclPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the ACL policy.
+        /// 
+        /// The operation applies the updated ACL policy to all of the linked clusters.
+        /// If Memorystore can apply the policy to all clusters, then the operation
+        /// returns a SUCCESS status. If Memorystore can't apply the policy to all
+        /// clusters, then to ensure eventual consistency, Memorystore uses
+        /// reconciliation to apply the policy to the failed clusters.
+        /// 
+        /// Completed longrunning.Operation will contain the new ACL policy object in
+        /// the response field.
+        /// </summary>
+        /// <param name="aclPolicy">
+        /// Required. The ACL policy to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Mask of fields to be updated. At least one path must be supplied
+        /// in this field. The elements of the repeated paths field may only include
+        /// these fields from `AclPolicy`:
+        /// 
+        /// *   `rules`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AclPolicy, OperationMetadata> UpdateAclPolicy(AclPolicy aclPolicy, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAclPolicy(new UpdateAclPolicyRequest
+            {
+                AclPolicy = gax::GaxPreconditions.CheckNotNull(aclPolicy, nameof(aclPolicy)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the ACL policy.
+        /// 
+        /// The operation applies the updated ACL policy to all of the linked clusters.
+        /// If Memorystore can apply the policy to all clusters, then the operation
+        /// returns a SUCCESS status. If Memorystore can't apply the policy to all
+        /// clusters, then to ensure eventual consistency, Memorystore uses
+        /// reconciliation to apply the policy to the failed clusters.
+        /// 
+        /// Completed longrunning.Operation will contain the new ACL policy object in
+        /// the response field.
+        /// </summary>
+        /// <param name="aclPolicy">
+        /// Required. The ACL policy to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Mask of fields to be updated. At least one path must be supplied
+        /// in this field. The elements of the repeated paths field may only include
+        /// these fields from `AclPolicy`:
+        /// 
+        /// *   `rules`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AclPolicy, OperationMetadata>> UpdateAclPolicyAsync(AclPolicy aclPolicy, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAclPolicyAsync(new UpdateAclPolicyRequest
+            {
+                AclPolicy = gax::GaxPreconditions.CheckNotNull(aclPolicy, nameof(aclPolicy)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the ACL policy.
+        /// 
+        /// The operation applies the updated ACL policy to all of the linked clusters.
+        /// If Memorystore can apply the policy to all clusters, then the operation
+        /// returns a SUCCESS status. If Memorystore can't apply the policy to all
+        /// clusters, then to ensure eventual consistency, Memorystore uses
+        /// reconciliation to apply the policy to the failed clusters.
+        /// 
+        /// Completed longrunning.Operation will contain the new ACL policy object in
+        /// the response field.
+        /// </summary>
+        /// <param name="aclPolicy">
+        /// Required. The ACL policy to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Mask of fields to be updated. At least one path must be supplied
+        /// in this field. The elements of the repeated paths field may only include
+        /// these fields from `AclPolicy`:
+        /// 
+        /// *   `rules`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AclPolicy, OperationMetadata>> UpdateAclPolicyAsync(AclPolicy aclPolicy, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAclPolicyAsync(aclPolicy, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a specific Redis cluster. Cluster stops serving and data is
@@ -1170,6 +1793,442 @@ namespace Google.Cloud.Redis.Cluster.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, wkt::Any>> DeleteClusterAsync(ClusterName name, st::CancellationToken cancellationToken) =>
             DeleteClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to a cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAclPolicy(DeleteAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to a cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAclPolicyAsync(DeleteAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to a cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAclPolicyAsync(DeleteAclPolicyRequest request, st::CancellationToken cancellationToken) =>
+            DeleteAclPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteAclPolicy</c>.</summary>
+        public virtual lro::OperationsClient DeleteAclPolicyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteAclPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteAclPolicy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAclPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteAclPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteAclPolicyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAclPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to a cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis ACL policy resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAclPolicy(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAclPolicy(new DeleteAclPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to a cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis ACL policy resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAclPolicyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAclPolicyAsync(new DeleteAclPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to a cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis ACL policy resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAclPolicyAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAclPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to a cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis ACL policy resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAclPolicy(AclPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAclPolicy(new DeleteAclPolicyRequest
+            {
+                AclPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to a cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis ACL policy resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAclPolicyAsync(AclPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAclPolicyAsync(new DeleteAclPolicyRequest
+            {
+                AclPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to a cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis ACL policy resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAclPolicyAsync(AclPolicyName name, st::CancellationToken cancellationToken) =>
+            DeleteAclPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AclPolicyRevision GetAclPolicyRevision(GetAclPolicyRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicyRevision> GetAclPolicyRevisionAsync(GetAclPolicyRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicyRevision> GetAclPolicyRevisionAsync(GetAclPolicyRevisionRequest request, st::CancellationToken cancellationToken) =>
+            GetAclPolicyRevisionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis ACL policy revision resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}/revisions/{revision_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AclPolicyRevision GetAclPolicyRevision(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAclPolicyRevision(new GetAclPolicyRevisionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis ACL policy revision resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}/revisions/{revision_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicyRevision> GetAclPolicyRevisionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAclPolicyRevisionAsync(new GetAclPolicyRevisionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis ACL policy revision resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}/revisions/{revision_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicyRevision> GetAclPolicyRevisionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAclPolicyRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis ACL policy revision resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}/revisions/{revision_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AclPolicyRevision GetAclPolicyRevision(AclPolicyRevisionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAclPolicyRevision(new GetAclPolicyRevisionRequest
+            {
+                AclPolicyRevisionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis ACL policy revision resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}/revisions/{revision_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicyRevision> GetAclPolicyRevisionAsync(AclPolicyRevisionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAclPolicyRevisionAsync(new GetAclPolicyRevisionRequest
+            {
+                AclPolicyRevisionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis ACL policy revision resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}/revisions/{revision_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicyRevision> GetAclPolicyRevisionAsync(AclPolicyRevisionName name, st::CancellationToken cancellationToken) =>
+            GetAclPolicyRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all ACL policy revisions in a given ACL policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AclPolicyRevision"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> ListAclPolicyRevisions(ListAclPolicyRevisionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all ACL policy revisions in a given ACL policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AclPolicyRevision"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> ListAclPolicyRevisionsAsync(ListAclPolicyRevisionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all ACL policy revisions in a given ACL policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the ACL policy to list revisions for.
+        /// Format:
+        /// "projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AclPolicyRevision"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> ListAclPolicyRevisions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAclPolicyRevisionsRequest request = new ListAclPolicyRevisionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAclPolicyRevisions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ACL policy revisions in a given ACL policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the ACL policy to list revisions for.
+        /// Format:
+        /// "projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AclPolicyRevision"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> ListAclPolicyRevisionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAclPolicyRevisionsRequest request = new ListAclPolicyRevisionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAclPolicyRevisionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ACL policy revisions in a given ACL policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the ACL policy to list revisions for.
+        /// Format:
+        /// "projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AclPolicyRevision"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> ListAclPolicyRevisions(AclPolicyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAclPolicyRevisionsRequest request = new ListAclPolicyRevisionsRequest
+            {
+                ParentAsAclPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAclPolicyRevisions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ACL policy revisions in a given ACL policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the ACL policy to list revisions for.
+        /// Format:
+        /// "projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AclPolicyRevision"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> ListAclPolicyRevisionsAsync(AclPolicyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAclPolicyRevisionsRequest request = new ListAclPolicyRevisionsRequest
+            {
+                ParentAsAclPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAclPolicyRevisionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a Redis cluster based on the specified properties.
@@ -1462,6 +2521,227 @@ namespace Google.Cloud.Redis.Cluster.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Cluster, wkt::Any>> CreateClusterAsync(gagr::LocationName parent, Cluster cluster, string clusterId, st::CancellationToken cancellationToken) =>
             CreateClusterAsync(parent, cluster, clusterId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AclPolicy CreateAclPolicy(CreateAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> CreateAclPolicyAsync(CreateAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> CreateAclPolicyAsync(CreateAclPolicyRequest request, st::CancellationToken cancellationToken) =>
+            CreateAclPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the cluster location using the form:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="aclPolicy">
+        /// Required. The ACL policy that is to be created.
+        /// </param>
+        /// <param name="aclPolicyId">
+        /// Required. The logical name of the ACL policy in the customer project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the customer project / location
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AclPolicy CreateAclPolicy(string parent, AclPolicy aclPolicy, string aclPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAclPolicy(new CreateAclPolicyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AclPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(aclPolicyId, nameof(aclPolicyId)),
+                AclPolicy = gax::GaxPreconditions.CheckNotNull(aclPolicy, nameof(aclPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the cluster location using the form:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="aclPolicy">
+        /// Required. The ACL policy that is to be created.
+        /// </param>
+        /// <param name="aclPolicyId">
+        /// Required. The logical name of the ACL policy in the customer project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the customer project / location
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> CreateAclPolicyAsync(string parent, AclPolicy aclPolicy, string aclPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAclPolicyAsync(new CreateAclPolicyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AclPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(aclPolicyId, nameof(aclPolicyId)),
+                AclPolicy = gax::GaxPreconditions.CheckNotNull(aclPolicy, nameof(aclPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the cluster location using the form:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="aclPolicy">
+        /// Required. The ACL policy that is to be created.
+        /// </param>
+        /// <param name="aclPolicyId">
+        /// Required. The logical name of the ACL policy in the customer project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the customer project / location
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> CreateAclPolicyAsync(string parent, AclPolicy aclPolicy, string aclPolicyId, st::CancellationToken cancellationToken) =>
+            CreateAclPolicyAsync(parent, aclPolicy, aclPolicyId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the cluster location using the form:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="aclPolicy">
+        /// Required. The ACL policy that is to be created.
+        /// </param>
+        /// <param name="aclPolicyId">
+        /// Required. The logical name of the ACL policy in the customer project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the customer project / location
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AclPolicy CreateAclPolicy(gagr::LocationName parent, AclPolicy aclPolicy, string aclPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAclPolicy(new CreateAclPolicyRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AclPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(aclPolicyId, nameof(aclPolicyId)),
+                AclPolicy = gax::GaxPreconditions.CheckNotNull(aclPolicy, nameof(aclPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the cluster location using the form:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="aclPolicy">
+        /// Required. The ACL policy that is to be created.
+        /// </param>
+        /// <param name="aclPolicyId">
+        /// Required. The logical name of the ACL policy in the customer project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the customer project / location
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> CreateAclPolicyAsync(gagr::LocationName parent, AclPolicy aclPolicy, string aclPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAclPolicyAsync(new CreateAclPolicyRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AclPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(aclPolicyId, nameof(aclPolicyId)),
+                AclPolicy = gax::GaxPreconditions.CheckNotNull(aclPolicy, nameof(aclPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the cluster location using the form:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="aclPolicy">
+        /// Required. The ACL policy that is to be created.
+        /// </param>
+        /// <param name="aclPolicyId">
+        /// Required. The logical name of the ACL policy in the customer project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the customer project / location
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> CreateAclPolicyAsync(gagr::LocationName parent, AclPolicy aclPolicy, string aclPolicyId, st::CancellationToken cancellationToken) =>
+            CreateAclPolicyAsync(parent, aclPolicy, aclPolicyId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the details of certificate authority information for Redis cluster.
@@ -2935,13 +4215,27 @@ namespace Google.Cloud.Redis.Cluster.V1
     {
         private readonly gaxgrpc::ApiCall<ListClustersRequest, ListClustersResponse> _callListClusters;
 
+        private readonly gaxgrpc::ApiCall<ListAclPoliciesRequest, ListAclPoliciesResponse> _callListAclPolicies;
+
         private readonly gaxgrpc::ApiCall<GetClusterRequest, Cluster> _callGetCluster;
+
+        private readonly gaxgrpc::ApiCall<GetAclPolicyRequest, AclPolicy> _callGetAclPolicy;
 
         private readonly gaxgrpc::ApiCall<UpdateClusterRequest, lro::Operation> _callUpdateCluster;
 
+        private readonly gaxgrpc::ApiCall<UpdateAclPolicyRequest, lro::Operation> _callUpdateAclPolicy;
+
         private readonly gaxgrpc::ApiCall<DeleteClusterRequest, lro::Operation> _callDeleteCluster;
 
+        private readonly gaxgrpc::ApiCall<DeleteAclPolicyRequest, lro::Operation> _callDeleteAclPolicy;
+
+        private readonly gaxgrpc::ApiCall<GetAclPolicyRevisionRequest, AclPolicyRevision> _callGetAclPolicyRevision;
+
+        private readonly gaxgrpc::ApiCall<ListAclPolicyRevisionsRequest, ListAclPolicyRevisionsResponse> _callListAclPolicyRevisions;
+
         private readonly gaxgrpc::ApiCall<CreateClusterRequest, lro::Operation> _callCreateCluster;
+
+        private readonly gaxgrpc::ApiCall<CreateAclPolicyRequest, AclPolicy> _callCreateAclPolicy;
 
         private readonly gaxgrpc::ApiCall<GetClusterCertificateAuthorityRequest, CertificateAuthority> _callGetClusterCertificateAuthority;
 
@@ -2979,7 +4273,9 @@ namespace Google.Cloud.Redis.Cluster.V1
                 Logger = logger,
             });
             UpdateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateClusterOperationsSettings, logger);
+            UpdateAclPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAclPolicyOperationsSettings, logger);
             DeleteClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteClusterOperationsSettings, logger);
+            DeleteAclPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAclPolicyOperationsSettings, logger);
             CreateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateClusterOperationsSettings, logger);
             RescheduleClusterMaintenanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RescheduleClusterMaintenanceOperationsSettings, logger);
             DeleteBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupOperationsSettings, logger);
@@ -2989,18 +4285,39 @@ namespace Google.Cloud.Redis.Cluster.V1
             _callListClusters = clientHelper.BuildApiCall<ListClustersRequest, ListClustersResponse>("ListClusters", grpcClient.ListClustersAsync, grpcClient.ListClusters, effectiveSettings.ListClustersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListClusters);
             Modify_ListClustersApiCall(ref _callListClusters);
+            _callListAclPolicies = clientHelper.BuildApiCall<ListAclPoliciesRequest, ListAclPoliciesResponse>("ListAclPolicies", grpcClient.ListAclPoliciesAsync, grpcClient.ListAclPolicies, effectiveSettings.ListAclPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAclPolicies);
+            Modify_ListAclPoliciesApiCall(ref _callListAclPolicies);
             _callGetCluster = clientHelper.BuildApiCall<GetClusterRequest, Cluster>("GetCluster", grpcClient.GetClusterAsync, grpcClient.GetCluster, effectiveSettings.GetClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCluster);
             Modify_GetClusterApiCall(ref _callGetCluster);
+            _callGetAclPolicy = clientHelper.BuildApiCall<GetAclPolicyRequest, AclPolicy>("GetAclPolicy", grpcClient.GetAclPolicyAsync, grpcClient.GetAclPolicy, effectiveSettings.GetAclPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAclPolicy);
+            Modify_GetAclPolicyApiCall(ref _callGetAclPolicy);
             _callUpdateCluster = clientHelper.BuildApiCall<UpdateClusterRequest, lro::Operation>("UpdateCluster", grpcClient.UpdateClusterAsync, grpcClient.UpdateCluster, effectiveSettings.UpdateClusterSettings).WithGoogleRequestParam("cluster.name", request => request.Cluster?.Name);
             Modify_ApiCall(ref _callUpdateCluster);
             Modify_UpdateClusterApiCall(ref _callUpdateCluster);
+            _callUpdateAclPolicy = clientHelper.BuildApiCall<UpdateAclPolicyRequest, lro::Operation>("UpdateAclPolicy", grpcClient.UpdateAclPolicyAsync, grpcClient.UpdateAclPolicy, effectiveSettings.UpdateAclPolicySettings).WithGoogleRequestParam("acl_policy.name", request => request.AclPolicy?.Name);
+            Modify_ApiCall(ref _callUpdateAclPolicy);
+            Modify_UpdateAclPolicyApiCall(ref _callUpdateAclPolicy);
             _callDeleteCluster = clientHelper.BuildApiCall<DeleteClusterRequest, lro::Operation>("DeleteCluster", grpcClient.DeleteClusterAsync, grpcClient.DeleteCluster, effectiveSettings.DeleteClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCluster);
             Modify_DeleteClusterApiCall(ref _callDeleteCluster);
+            _callDeleteAclPolicy = clientHelper.BuildApiCall<DeleteAclPolicyRequest, lro::Operation>("DeleteAclPolicy", grpcClient.DeleteAclPolicyAsync, grpcClient.DeleteAclPolicy, effectiveSettings.DeleteAclPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteAclPolicy);
+            Modify_DeleteAclPolicyApiCall(ref _callDeleteAclPolicy);
+            _callGetAclPolicyRevision = clientHelper.BuildApiCall<GetAclPolicyRevisionRequest, AclPolicyRevision>("GetAclPolicyRevision", grpcClient.GetAclPolicyRevisionAsync, grpcClient.GetAclPolicyRevision, effectiveSettings.GetAclPolicyRevisionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAclPolicyRevision);
+            Modify_GetAclPolicyRevisionApiCall(ref _callGetAclPolicyRevision);
+            _callListAclPolicyRevisions = clientHelper.BuildApiCall<ListAclPolicyRevisionsRequest, ListAclPolicyRevisionsResponse>("ListAclPolicyRevisions", grpcClient.ListAclPolicyRevisionsAsync, grpcClient.ListAclPolicyRevisions, effectiveSettings.ListAclPolicyRevisionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAclPolicyRevisions);
+            Modify_ListAclPolicyRevisionsApiCall(ref _callListAclPolicyRevisions);
             _callCreateCluster = clientHelper.BuildApiCall<CreateClusterRequest, lro::Operation>("CreateCluster", grpcClient.CreateClusterAsync, grpcClient.CreateCluster, effectiveSettings.CreateClusterSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCluster);
             Modify_CreateClusterApiCall(ref _callCreateCluster);
+            _callCreateAclPolicy = clientHelper.BuildApiCall<CreateAclPolicyRequest, AclPolicy>("CreateAclPolicy", grpcClient.CreateAclPolicyAsync, grpcClient.CreateAclPolicy, effectiveSettings.CreateAclPolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAclPolicy);
+            Modify_CreateAclPolicyApiCall(ref _callCreateAclPolicy);
             _callGetClusterCertificateAuthority = clientHelper.BuildApiCall<GetClusterCertificateAuthorityRequest, CertificateAuthority>("GetClusterCertificateAuthority", grpcClient.GetClusterCertificateAuthorityAsync, grpcClient.GetClusterCertificateAuthority, effectiveSettings.GetClusterCertificateAuthoritySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetClusterCertificateAuthority);
             Modify_GetClusterCertificateAuthorityApiCall(ref _callGetClusterCertificateAuthority);
@@ -3038,13 +4355,27 @@ namespace Google.Cloud.Redis.Cluster.V1
 
         partial void Modify_ListClustersApiCall(ref gaxgrpc::ApiCall<ListClustersRequest, ListClustersResponse> call);
 
+        partial void Modify_ListAclPoliciesApiCall(ref gaxgrpc::ApiCall<ListAclPoliciesRequest, ListAclPoliciesResponse> call);
+
         partial void Modify_GetClusterApiCall(ref gaxgrpc::ApiCall<GetClusterRequest, Cluster> call);
+
+        partial void Modify_GetAclPolicyApiCall(ref gaxgrpc::ApiCall<GetAclPolicyRequest, AclPolicy> call);
 
         partial void Modify_UpdateClusterApiCall(ref gaxgrpc::ApiCall<UpdateClusterRequest, lro::Operation> call);
 
+        partial void Modify_UpdateAclPolicyApiCall(ref gaxgrpc::ApiCall<UpdateAclPolicyRequest, lro::Operation> call);
+
         partial void Modify_DeleteClusterApiCall(ref gaxgrpc::ApiCall<DeleteClusterRequest, lro::Operation> call);
 
+        partial void Modify_DeleteAclPolicyApiCall(ref gaxgrpc::ApiCall<DeleteAclPolicyRequest, lro::Operation> call);
+
+        partial void Modify_GetAclPolicyRevisionApiCall(ref gaxgrpc::ApiCall<GetAclPolicyRevisionRequest, AclPolicyRevision> call);
+
+        partial void Modify_ListAclPolicyRevisionsApiCall(ref gaxgrpc::ApiCall<ListAclPolicyRevisionsRequest, ListAclPolicyRevisionsResponse> call);
+
         partial void Modify_CreateClusterApiCall(ref gaxgrpc::ApiCall<CreateClusterRequest, lro::Operation> call);
+
+        partial void Modify_CreateAclPolicyApiCall(ref gaxgrpc::ApiCall<CreateAclPolicyRequest, AclPolicy> call);
 
         partial void Modify_GetClusterCertificateAuthorityApiCall(ref gaxgrpc::ApiCall<GetClusterCertificateAuthorityRequest, CertificateAuthority> call);
 
@@ -3076,13 +4407,27 @@ namespace Google.Cloud.Redis.Cluster.V1
 
         partial void Modify_ListClustersRequest(ref ListClustersRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ListAclPoliciesRequest(ref ListAclPoliciesRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetClusterRequest(ref GetClusterRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAclPolicyRequest(ref GetAclPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateClusterRequest(ref UpdateClusterRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_UpdateAclPolicyRequest(ref UpdateAclPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteClusterRequest(ref DeleteClusterRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_DeleteAclPolicyRequest(ref DeleteAclPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAclPolicyRevisionRequest(ref GetAclPolicyRevisionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAclPolicyRevisionsRequest(ref ListAclPolicyRevisionsRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_CreateClusterRequest(ref CreateClusterRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateAclPolicyRequest(ref CreateAclPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetClusterCertificateAuthorityRequest(ref GetClusterCertificateAuthorityRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3145,6 +4490,46 @@ namespace Google.Cloud.Redis.Cluster.V1
         }
 
         /// <summary>
+        /// Lists all ACL policies owned by a project in either the specified
+        /// location (region) or all locations.
+        /// 
+        /// The location should have the following format:
+        /// 
+        /// * `projects/{project_id}/locations/{location_id}`
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AclPolicy"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAclPoliciesResponse, AclPolicy> ListAclPolicies(ListAclPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAclPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAclPoliciesRequest, ListAclPoliciesResponse, AclPolicy>(_callListAclPolicies, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ACL policies owned by a project in either the specified
+        /// location (region) or all locations.
+        /// 
+        /// The location should have the following format:
+        /// 
+        /// * `projects/{project_id}/locations/{location_id}`
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AclPolicy"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAclPoliciesResponse, AclPolicy> ListAclPoliciesAsync(ListAclPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAclPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAclPoliciesRequest, ListAclPoliciesResponse, AclPolicy>(_callListAclPolicies, request, callSettings);
+        }
+
+        /// <summary>
         /// Gets the details of a specific Redis cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3166,6 +4551,30 @@ namespace Google.Cloud.Redis.Cluster.V1
         {
             Modify_GetClusterRequest(ref request, ref callSettings);
             return _callGetCluster.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the details of a specific Redis Cluster ACL policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AclPolicy GetAclPolicy(GetAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAclPolicyRequest(ref request, ref callSettings);
+            return _callGetAclPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the details of a specific Redis Cluster ACL policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AclPolicy> GetAclPolicyAsync(GetAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAclPolicyRequest(ref request, ref callSettings);
+            return _callGetAclPolicy.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>UpdateCluster</c>.</summary>
@@ -3203,6 +4612,51 @@ namespace Google.Cloud.Redis.Cluster.V1
             return new lro::Operation<Cluster, wkt::Any>(await _callUpdateCluster.Async(request, callSettings).ConfigureAwait(false), UpdateClusterOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>UpdateAclPolicy</c>.</summary>
+        public override lro::OperationsClient UpdateAclPolicyOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the ACL policy.
+        /// 
+        /// The operation applies the updated ACL policy to all of the linked clusters.
+        /// If Memorystore can apply the policy to all clusters, then the operation
+        /// returns a SUCCESS status. If Memorystore can't apply the policy to all
+        /// clusters, then to ensure eventual consistency, Memorystore uses
+        /// reconciliation to apply the policy to the failed clusters.
+        /// 
+        /// Completed longrunning.Operation will contain the new ACL policy object in
+        /// the response field.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AclPolicy, OperationMetadata> UpdateAclPolicy(UpdateAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAclPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<AclPolicy, OperationMetadata>(_callUpdateAclPolicy.Sync(request, callSettings), UpdateAclPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the ACL policy.
+        /// 
+        /// The operation applies the updated ACL policy to all of the linked clusters.
+        /// If Memorystore can apply the policy to all clusters, then the operation
+        /// returns a SUCCESS status. If Memorystore can't apply the policy to all
+        /// clusters, then to ensure eventual consistency, Memorystore uses
+        /// reconciliation to apply the policy to the failed clusters.
+        /// 
+        /// Completed longrunning.Operation will contain the new ACL policy object in
+        /// the response field.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AclPolicy, OperationMetadata>> UpdateAclPolicyAsync(UpdateAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAclPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<AclPolicy, OperationMetadata>(await _callUpdateAclPolicy.Async(request, callSettings).ConfigureAwait(false), UpdateAclPolicyOperationsClient);
+        }
+
         /// <summary>The long-running operations client for <c>DeleteCluster</c>.</summary>
         public override lro::OperationsClient DeleteClusterOperationsClient { get; }
 
@@ -3230,6 +4684,85 @@ namespace Google.Cloud.Redis.Cluster.V1
         {
             Modify_DeleteClusterRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, wkt::Any>(await _callDeleteCluster.Async(request, callSettings).ConfigureAwait(false), DeleteClusterOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteAclPolicy</c>.</summary>
+        public override lro::OperationsClient DeleteAclPolicyOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to a cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteAclPolicy(DeleteAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAclPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteAclPolicy.Sync(request, callSettings), DeleteAclPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to a cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAclPolicyAsync(DeleteAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAclPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteAclPolicy.Async(request, callSettings).ConfigureAwait(false), DeleteAclPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AclPolicyRevision GetAclPolicyRevision(GetAclPolicyRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAclPolicyRevisionRequest(ref request, ref callSettings);
+            return _callGetAclPolicyRevision.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AclPolicyRevision> GetAclPolicyRevisionAsync(GetAclPolicyRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAclPolicyRevisionRequest(ref request, ref callSettings);
+            return _callGetAclPolicyRevision.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ACL policy revisions in a given ACL policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AclPolicyRevision"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> ListAclPolicyRevisions(ListAclPolicyRevisionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAclPolicyRevisionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAclPolicyRevisionsRequest, ListAclPolicyRevisionsResponse, AclPolicyRevision>(_callListAclPolicyRevisions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ACL policy revisions in a given ACL policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AclPolicyRevision"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> ListAclPolicyRevisionsAsync(ListAclPolicyRevisionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAclPolicyRevisionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAclPolicyRevisionsRequest, ListAclPolicyRevisionsResponse, AclPolicyRevision>(_callListAclPolicyRevisions, request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>CreateCluster</c>.</summary>
@@ -3271,6 +4804,34 @@ namespace Google.Cloud.Redis.Cluster.V1
         {
             Modify_CreateClusterRequest(ref request, ref callSettings);
             return new lro::Operation<Cluster, wkt::Any>(await _callCreateCluster.Async(request, callSettings).ConfigureAwait(false), CreateClusterOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AclPolicy CreateAclPolicy(CreateAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAclPolicyRequest(ref request, ref callSettings);
+            return _callCreateAclPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AclPolicy> CreateAclPolicyAsync(CreateAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAclPolicyRequest(ref request, ref callSettings);
+            return _callCreateAclPolicy.Async(request, callSettings);
         }
 
         /// <summary>
@@ -3562,6 +5123,14 @@ namespace Google.Cloud.Redis.Cluster.V1
     {
     }
 
+    public partial class ListAclPoliciesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAclPolicyRevisionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListBackupCollectionsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -3574,6 +5143,22 @@ namespace Google.Cloud.Redis.Cluster.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Cluster> GetEnumerator() => Clusters.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAclPoliciesResponse : gaxgrpc::IPageResponse<AclPolicy>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AclPolicy> GetEnumerator() => AclPolicies.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAclPolicyRevisionsResponse : gaxgrpc::IPageResponse<AclPolicyRevision>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AclPolicyRevision> GetEnumerator() => AclPolicyRevisions.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

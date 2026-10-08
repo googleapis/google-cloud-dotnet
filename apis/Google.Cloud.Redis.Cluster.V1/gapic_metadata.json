@@ -16,10 +16,22 @@
                 "BackupClusterAsync"
               ]
             },
+            "CreateAclPolicy": {
+              "methods": [
+                "CreateAclPolicy",
+                "CreateAclPolicyAsync"
+              ]
+            },
             "CreateCluster": {
               "methods": [
                 "CreateCluster",
                 "CreateClusterAsync"
+              ]
+            },
+            "DeleteAclPolicy": {
+              "methods": [
+                "DeleteAclPolicy",
+                "DeleteAclPolicyAsync"
               ]
             },
             "DeleteBackup": {
@@ -38,6 +50,18 @@
               "methods": [
                 "ExportBackup",
                 "ExportBackupAsync"
+              ]
+            },
+            "GetAclPolicy": {
+              "methods": [
+                "GetAclPolicy",
+                "GetAclPolicyAsync"
+              ]
+            },
+            "GetAclPolicyRevision": {
+              "methods": [
+                "GetAclPolicyRevision",
+                "GetAclPolicyRevisionAsync"
               ]
             },
             "GetBackup": {
@@ -70,6 +94,18 @@
                 "GetSharedRegionalCertificateAuthorityAsync"
               ]
             },
+            "ListAclPolicies": {
+              "methods": [
+                "ListAclPolicies",
+                "ListAclPoliciesAsync"
+              ]
+            },
+            "ListAclPolicyRevisions": {
+              "methods": [
+                "ListAclPolicyRevisions",
+                "ListAclPolicyRevisionsAsync"
+              ]
+            },
             "ListBackupCollections": {
               "methods": [
                 "ListBackupCollections",
@@ -92,6 +128,12 @@
               "methods": [
                 "RescheduleClusterMaintenance",
                 "RescheduleClusterMaintenanceAsync"
+              ]
+            },
+            "UpdateAclPolicy": {
+              "methods": [
+                "UpdateAclPolicy",
+                "UpdateAclPolicyAsync"
               ]
             },
             "UpdateCluster": {
