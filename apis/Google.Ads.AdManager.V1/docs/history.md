@@ -1,5 +1,50 @@
 # Version history
 
+## Version 1.0.0-beta13, released 2026-10-08
+
+### New features
+
+- Added new PUBLIC metric: ADVERTISER_COST_PER_ATTRIBUTED_ITEM_PURCHASED
+- Added new PUBLIC metric: ATTRIBUTED_ITEMS_PURCHASED
+- Added new PUBLIC metric: ATTRIBUTED_ITEMS_PURCHASED_ROAS
+- Added new PUBLIC metric: REVENUE_ON_ATTRIBUTED_ITEMS_PURCHASED
+- Added update methods to `AudienceSegmentService`
+- Added `OFF_PROPERTY_VIDEO` report metrics
+- Exposes BUDDER_ID dimension
+- Added `CreateNativeStyle` and `UpdateNativeStyle` to `NativeStyleService`
+- Added LineItemTemplateService
+- Make `ad_badging_enabled` optionally mutable
+- Add UserService.ListUsers
+- Add UserService.CreateUser
+- Add UserService.BatchCreateUsers
+- Add UserService.UpdateUser
+- Add UserService.BatchUpdateUsers
+- Add UserService.BatchActivateUsers
+- Add UserService.BatchDeactivateUsers
+- Added GET and LIST operations for `LineItemCreativeAssociation`
+- Added RunAvailabilityForecast to ForecastService
+- A new message `TemplateCreativeDetails` is added
+- Added new AdReviewCenterAd fields and methods
+- Expose `LineItemService` write and batch action methods in v1.
+- Added new PUBLIC dimension: NON_GUARANTEED_DEAL_PRIORITY_TIER_NAME
+- Added new API dimension: NON_GUARANTEED_DEAL_PRIORITY_TIER
+- Added GET and LIST operations for Creative
+- Added create and update methods for `LineItems`
+- Added ForecastService
+- Added `draftReportDefinition` to Reports.
+- New REQUIRED field `advertiser` in message `.google.ads.admanager.v1.Creative`
+- New REQUIRED field `size` in message `.google.ads.admanager.v1.Creative`
+
+### Documentation improvements
+
+- Make `CreativeAsset.size` optionally mutable
+- A comment for field `creative_targetings` in message `.google.ads.admanager.v1.LineItem` is changed
+- Clarified manualReviewStatus vs. status filter usage based on Manual Creative Review (MCR) settings in adReviewCenterAds:search.
+- Added deprecation notices for deprecated report dimensions
+- Updated Ad Review Center docs
+- Fixed documentation cross-references
+- Updated link in DAI session docs
+
 ## Version 1.0.0-beta12, released 2026-09-17
 
 ### New features
