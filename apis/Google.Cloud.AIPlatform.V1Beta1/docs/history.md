@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta87, released 2026-10-08
+
+### New features
+
+- Add ARCHIVED state to ReasoningEngineRuntimeRevision
+
+### Bug fixes
+
+- An existing value `DEPRECATED` is removed from enum `State`
+
 ## Version 1.0.0-beta86, released 2026-10-05
 
 ### New features
