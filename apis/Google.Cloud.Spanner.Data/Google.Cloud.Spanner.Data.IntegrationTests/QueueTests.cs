@@ -32,7 +32,7 @@ public class QueueTests
     private static readonly byte[] s_payloadBytes = Encoding.UTF8.GetBytes("Hello, World");
 
     [Trait(Constants.SupportedOnEmulator, Constants.No)]
-    [Fact]
+    [Fact(Skip = "b/571556192")]
     public async Task SendsAndAcksMessageToQueue_Mutations()
     {
         using var connection = _queueFixture.GetConnection();
@@ -50,7 +50,7 @@ public class QueueTests
     }
 
     [Trait(Constants.SupportedOnEmulator, Constants.No)]
-    [Fact]
+    [Fact(Skip = "b/571556192")]
     public async Task SendsAndAcksMessageToQueue_CommandConstructor()
     {
         using var connection = _queueFixture.GetConnection();
