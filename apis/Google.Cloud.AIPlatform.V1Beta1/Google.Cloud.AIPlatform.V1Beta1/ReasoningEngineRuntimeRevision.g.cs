@@ -29,26 +29,26 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "cGxhdGZvcm0udjFiZXRhMRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
             "cm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxo2Z29vZ2xlL2Nsb3Vk",
             "L2FpcGxhdGZvcm0vdjFiZXRhMS9yZWFzb25pbmdfZW5naW5lLnByb3RvGh9n",
-            "b29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIrwECh5SZWFzb25pbmdF",
+            "b29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIroECh5SZWFzb25pbmdF",
             "bmdpbmVSdW50aW1lUmV2aXNpb24SEQoEbmFtZRgBIAEoCUID4EEIEkcKBHNw",
             "ZWMYAyABKAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJl",
             "YXNvbmluZ0VuZ2luZVNwZWNCA+BBBRI0CgtjcmVhdGVfdGltZRgEIAEoCzIa",
             "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJZCgVzdGF0ZRgFIAEo",
             "DjJFLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmVhc29uaW5n",
-            "RW5naW5lUnVudGltZVJldmlzaW9uLlN0YXRlQgPgQQMiOgoFU3RhdGUSFQoR",
-            "U1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIOCgpERVBSRUNBVEVE",
-            "EAI68AHqQewBCjhhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1JlYXNvbmlu",
-            "Z0VuZ2luZVJ1bnRpbWVSZXZpc2lvbhJvcHJvamVjdHMve3Byb2plY3R9L2xv",
-            "Y2F0aW9ucy97bG9jYXRpb259L3JlYXNvbmluZ0VuZ2luZXMve3JlYXNvbmlu",
-            "Z19lbmdpbmV9L3J1bnRpbWVSZXZpc2lvbnMve3J1bnRpbWVfcmV2aXNpb259",
-            "Kh9yZWFzb25pbmdFbmdpbmVSdW50aW1lUmV2aXNpb25zMh5yZWFzb25pbmdF",
-            "bmdpbmVSdW50aW1lUmV2aXNpb25C+gEKI2NvbS5nb29nbGUuY2xvdWQuYWlw",
-            "bGF0Zm9ybS52MWJldGExQiNSZWFzb25pbmdFbmdpbmVSdW50aW1lUmV2aXNp",
-            "b25Qcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBp",
-            "djFiZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xlLkNs",
-            "b3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBsYXRm",
-            "b3JtXFYxYmV0YTHqAiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWJl",
-            "dGExYgZwcm90bzM="));
+            "RW5naW5lUnVudGltZVJldmlzaW9uLlN0YXRlQgPgQQMiOAoFU3RhdGUSFQoR",
+            "U1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIMCghBUkNISVZFRBAD",
+            "OvAB6kHsAQo4YWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9SZWFzb25pbmdF",
+            "bmdpbmVSdW50aW1lUmV2aXNpb24Sb3Byb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9yZWFzb25pbmdFbmdpbmVzL3tyZWFzb25pbmdf",
+            "ZW5naW5lfS9ydW50aW1lUmV2aXNpb25zL3tydW50aW1lX3JldmlzaW9ufSof",
+            "cmVhc29uaW5nRW5naW5lUnVudGltZVJldmlzaW9uczIecmVhc29uaW5nRW5n",
+            "aW5lUnVudGltZVJldmlzaW9uQvoBCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjFiZXRhMUIjUmVhc29uaW5nRW5naW5lUnVudGltZVJldmlzaW9u",
+            "UHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYx",
+            "YmV0YTEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2dsZS5DbG91",
+            "ZC5BSVBsYXRmb3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQbGF0Zm9y",
+            "bVxWMWJldGEx6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiZXRh",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -422,10 +422,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         /// </summary>
         [pbr::OriginalName("ACTIVE")] Active = 1,
         /// <summary>
-        /// Is deprecated, may not be used, only preserved for historical
-        /// purposes.
+        /// Is archived and can no longer receive traffic, only preserved for
+        /// historical purposes.
         /// </summary>
-        [pbr::OriginalName("DEPRECATED")] Deprecated = 2,
+        [pbr::OriginalName("ARCHIVED")] Archived = 3,
       }
 
     }
