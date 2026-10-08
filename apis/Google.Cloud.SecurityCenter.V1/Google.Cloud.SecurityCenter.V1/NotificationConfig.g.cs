@@ -27,12 +27,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "Cjhnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvbm90aWZpY2F0aW9u",
             "X2NvbmZpZy5wcm90bxIeZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYx",
             "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBp",
-            "L3Jlc291cmNlLnByb3RvIsUEChJOb3RpZmljYXRpb25Db25maWcSDAoEbmFt",
+            "L3Jlc291cmNlLnByb3RvIvIEChJOb3RpZmljYXRpb25Db25maWcSDAoEbmFt",
             "ZRgBIAEoCRITCgtkZXNjcmlwdGlvbhgCIAEoCRI2CgxwdWJzdWJfdG9waWMY",
             "AyABKAlCIPpBHQobcHVic3ViLmdvb2dsZWFwaXMuY29tL1RvcGljEhwKD3Nl",
             "cnZpY2VfYWNjb3VudBgEIAEoCUID4EEDEl4KEHN0cmVhbWluZ19jb25maWcY",
             "BSABKAsyQi5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuTm90aWZp",
-            "Y2F0aW9uQ29uZmlnLlN0cmVhbWluZ0NvbmZpZ0gAGiEKD1N0cmVhbWluZ0Nv",
+            "Y2F0aW9uQ29uZmlnLlN0cmVhbWluZ0NvbmZpZ0gAEisKHmRlbGV0aW9uX25v",
+            "dGlmaWNhdGlvbnNfZW5hYmxlZBgHIAEoCEID4EEBGiEKD1N0cmVhbWluZ0Nv",
             "bmZpZxIOCgZmaWx0ZXIYASABKAk6oQLqQZ0CCjBzZWN1cml0eWNlbnRlci5n",
             "b29nbGVhcGlzLmNvbS9Ob3RpZmljYXRpb25Db25maWcSRm9yZ2FuaXphdGlv",
             "bnMve29yZ2FuaXphdGlvbn0vbm90aWZpY2F0aW9uQ29uZmlncy97bm90aWZp",
@@ -51,7 +52,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.NotificationConfig), global::Google.Cloud.SecurityCenter.V1.NotificationConfig.Parser, new[]{ "Name", "Description", "PubsubTopic", "ServiceAccount", "StreamingConfig" }, new[]{ "NotifyConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.NotificationConfig.Types.StreamingConfig), global::Google.Cloud.SecurityCenter.V1.NotificationConfig.Types.StreamingConfig.Parser, new[]{ "Filter" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.NotificationConfig), global::Google.Cloud.SecurityCenter.V1.NotificationConfig.Parser, new[]{ "Name", "Description", "PubsubTopic", "ServiceAccount", "StreamingConfig", "DeletionNotificationsEnabled" }, new[]{ "NotifyConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.NotificationConfig.Types.StreamingConfig), global::Google.Cloud.SecurityCenter.V1.NotificationConfig.Types.StreamingConfig.Parser, new[]{ "Filter" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -103,6 +104,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       description_ = other.description_;
       pubsubTopic_ = other.pubsubTopic_;
       serviceAccount_ = other.serviceAccount_;
+      deletionNotificationsEnabled_ = other.deletionNotificationsEnabled_;
       switch (other.NotifyConfigCase) {
         case NotifyConfigOneofCase.StreamingConfig:
           StreamingConfig = other.StreamingConfig.Clone();
@@ -200,6 +202,23 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
     }
 
+    /// <summary>Field number for the "deletion_notifications_enabled" field.</summary>
+    public const int DeletionNotificationsEnabledFieldNumber = 7;
+    private bool deletionNotificationsEnabled_;
+    /// <summary>
+    /// Optional. Indicates whether the notifications will be sent for deleted
+    /// findings. When enabled, the filter defined in the streaming config is still
+    /// respected when sending deletion notifications.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DeletionNotificationsEnabled {
+      get { return deletionNotificationsEnabled_; }
+      set {
+        deletionNotificationsEnabled_ = value;
+      }
+    }
+
     private object notifyConfig_;
     /// <summary>Enum of possible cases for the "notify_config" oneof.</summary>
     public enum NotifyConfigOneofCase {
@@ -240,6 +259,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (PubsubTopic != other.PubsubTopic) return false;
       if (ServiceAccount != other.ServiceAccount) return false;
       if (!object.Equals(StreamingConfig, other.StreamingConfig)) return false;
+      if (DeletionNotificationsEnabled != other.DeletionNotificationsEnabled) return false;
       if (NotifyConfigCase != other.NotifyConfigCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -253,6 +273,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (PubsubTopic.Length != 0) hash ^= PubsubTopic.GetHashCode();
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
       if (notifyConfigCase_ == NotifyConfigOneofCase.StreamingConfig) hash ^= StreamingConfig.GetHashCode();
+      if (DeletionNotificationsEnabled != false) hash ^= DeletionNotificationsEnabled.GetHashCode();
       hash ^= (int) notifyConfigCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -292,6 +313,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(StreamingConfig);
       }
+      if (DeletionNotificationsEnabled != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(DeletionNotificationsEnabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -322,6 +347,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(StreamingConfig);
       }
+      if (DeletionNotificationsEnabled != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(DeletionNotificationsEnabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -347,6 +376,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (notifyConfigCase_ == NotifyConfigOneofCase.StreamingConfig) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StreamingConfig);
       }
+      if (DeletionNotificationsEnabled != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -370,6 +402,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (other.ServiceAccount.Length != 0) {
         ServiceAccount = other.ServiceAccount;
+      }
+      if (other.DeletionNotificationsEnabled != false) {
+        DeletionNotificationsEnabled = other.DeletionNotificationsEnabled;
       }
       switch (other.NotifyConfigCase) {
         case NotifyConfigOneofCase.StreamingConfig:
@@ -424,6 +459,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
             StreamingConfig = subBuilder;
             break;
           }
+          case 56: {
+            DeletionNotificationsEnabled = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -466,6 +505,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
             }
             input.ReadMessage(subBuilder);
             StreamingConfig = subBuilder;
+            break;
+          }
+          case 56: {
+            DeletionNotificationsEnabled = input.ReadBool();
             break;
           }
         }

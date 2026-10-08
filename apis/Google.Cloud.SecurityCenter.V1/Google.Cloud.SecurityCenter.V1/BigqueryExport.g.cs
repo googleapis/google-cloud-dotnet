@@ -28,12 +28,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "b3J0LnByb3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEaH2dv",
             "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVz",
             "b3VyY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i",
-            "3gMKDkJpZ1F1ZXJ5RXhwb3J0EgwKBG5hbWUYASABKAkSEwoLZGVzY3JpcHRp",
+            "iwQKDkJpZ1F1ZXJ5RXhwb3J0EgwKBG5hbWUYASABKAkSEwoLZGVzY3JpcHRp",
             "b24YAiABKAkSDgoGZmlsdGVyGAMgASgJEg8KB2RhdGFzZXQYBCABKAkSNAoL",
             "Y3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
             "QgPgQQMSNAoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYu",
             "VGltZXN0YW1wQgPgQQMSHwoSbW9zdF9yZWNlbnRfZWRpdG9yGAcgASgJQgPg",
-            "QQMSFgoJcHJpbmNpcGFsGAggASgJQgPgQQM64gHqQd4BCixzZWN1cml0eWNl",
+            "QQMSFgoJcHJpbmNpcGFsGAggASgJQgPgQQMSKwoeZGVsZXRpb25fbm90aWZp",
+            "Y2F0aW9uc19lbmFibGVkGAkgASgIQgPgQQE64gHqQd4BCixzZWN1cml0eWNl",
             "bnRlci5nb29nbGVhcGlzLmNvbS9CaWdRdWVyeUV4cG9ydBI1b3JnYW5pemF0",
             "aW9ucy97b3JnYW5pemF0aW9ufS9iaWdRdWVyeUV4cG9ydHMve2V4cG9ydH0S",
             "KWZvbGRlcnMve2ZvbGRlcn0vYmlnUXVlcnlFeHBvcnRzL3tleHBvcnR9Eitw",
@@ -48,7 +49,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.BigQueryExport), global::Google.Cloud.SecurityCenter.V1.BigQueryExport.Parser, new[]{ "Name", "Description", "Filter", "Dataset", "CreateTime", "UpdateTime", "MostRecentEditor", "Principal" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.BigQueryExport), global::Google.Cloud.SecurityCenter.V1.BigQueryExport.Parser, new[]{ "Name", "Description", "Filter", "Dataset", "CreateTime", "UpdateTime", "MostRecentEditor", "Principal", "DeletionNotificationsEnabled" }, null, null, null, null)
           }));
     }
     #endregion
@@ -101,6 +102,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       mostRecentEditor_ = other.mostRecentEditor_;
       principal_ = other.principal_;
+      deletionNotificationsEnabled_ = other.deletionNotificationsEnabled_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -266,6 +268,23 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
     }
 
+    /// <summary>Field number for the "deletion_notifications_enabled" field.</summary>
+    public const int DeletionNotificationsEnabledFieldNumber = 9;
+    private bool deletionNotificationsEnabled_;
+    /// <summary>
+    /// Optional. Indicates whether the notifications will be sent for deleted
+    /// findings. When enabled, the filter is still respected when sending deletion
+    /// notifications.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DeletionNotificationsEnabled {
+      get { return deletionNotificationsEnabled_; }
+      set {
+        deletionNotificationsEnabled_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -289,6 +308,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (MostRecentEditor != other.MostRecentEditor) return false;
       if (Principal != other.Principal) return false;
+      if (DeletionNotificationsEnabled != other.DeletionNotificationsEnabled) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -304,6 +324,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (MostRecentEditor.Length != 0) hash ^= MostRecentEditor.GetHashCode();
       if (Principal.Length != 0) hash ^= Principal.GetHashCode();
+      if (DeletionNotificationsEnabled != false) hash ^= DeletionNotificationsEnabled.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -354,6 +375,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(66);
         output.WriteString(Principal);
       }
+      if (DeletionNotificationsEnabled != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(DeletionNotificationsEnabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -396,6 +421,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(66);
         output.WriteString(Principal);
       }
+      if (DeletionNotificationsEnabled != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(DeletionNotificationsEnabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -429,6 +458,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (Principal.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Principal);
+      }
+      if (DeletionNotificationsEnabled != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -471,6 +503,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (other.Principal.Length != 0) {
         Principal = other.Principal;
+      }
+      if (other.DeletionNotificationsEnabled != false) {
+        DeletionNotificationsEnabled = other.DeletionNotificationsEnabled;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -529,6 +564,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
             Principal = input.ReadString();
             break;
           }
+          case 72: {
+            DeletionNotificationsEnabled = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -584,6 +623,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 66: {
             Principal = input.ReadString();
+            break;
+          }
+          case 72: {
+            DeletionNotificationsEnabled = input.ReadBool();
             break;
           }
         }
