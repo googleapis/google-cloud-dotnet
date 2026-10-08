@@ -365,7 +365,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<CrossSiteNetworkList, CrossSiteNetwork> response = crossSiteNetworksClient.List(request);
@@ -416,7 +415,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<CrossSiteNetworkList, CrossSiteNetwork> response = crossSiteNetworksClient.ListAsync(request);

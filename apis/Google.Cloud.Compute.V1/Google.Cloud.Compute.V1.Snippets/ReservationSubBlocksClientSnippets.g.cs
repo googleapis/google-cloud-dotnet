@@ -331,7 +331,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 ParentName = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ReservationSubBlocksListResponse, ReservationSubBlock> response = reservationSubBlocksClient.List(request);
@@ -384,7 +383,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 ParentName = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ReservationSubBlocksListResponse, ReservationSubBlock> response = reservationSubBlocksClient.ListAsync(request);

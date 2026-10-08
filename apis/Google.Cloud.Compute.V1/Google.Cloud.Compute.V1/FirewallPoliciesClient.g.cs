@@ -586,7 +586,9 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => FirewallPoliciesClient.ChannelPool;
     }
 
-    /// <summary>FirewallPolicies client wrapper, for convenient use.</summary>
+    /// <summary>
+    /// FirewallPolicies client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// </summary>
     /// <remarks>
     /// The FirewallPolicies API.
     /// </remarks>
@@ -1392,60 +1394,43 @@ namespace Google.Cloud.Compute.V1
         /// Creates a new policy in the specified project using the data included in
         /// the request.
         /// </summary>
-        /// <param name="parentId">
-        /// Parent ID for this request. The ID can be either be "folders/[FOLDER_ID]"
-        /// if the parent is a folder or "organizations/[ORGANIZATION_ID]" if the
-        /// parent is an organization.
-        /// </param>
         /// <param name="firewallPolicyResource">
         /// The body resource for this request
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<Operation, Operation> Insert(string parentId, FirewallPolicy firewallPolicyResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Insert(FirewallPolicy firewallPolicyResource, gaxgrpc::CallSettings callSettings = null) =>
             Insert(new InsertFirewallPolicyRequest
             {
                 FirewallPolicyResource = gax::GaxPreconditions.CheckNotNull(firewallPolicyResource, nameof(firewallPolicyResource)),
-                ParentId = gax::GaxPreconditions.CheckNotNullOrEmpty(parentId, nameof(parentId)),
             }, callSettings);
 
         /// <summary>
         /// Creates a new policy in the specified project using the data included in
         /// the request.
         /// </summary>
-        /// <param name="parentId">
-        /// Parent ID for this request. The ID can be either be "folders/[FOLDER_ID]"
-        /// if the parent is a folder or "organizations/[ORGANIZATION_ID]" if the
-        /// parent is an organization.
-        /// </param>
         /// <param name="firewallPolicyResource">
         /// The body resource for this request
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(string parentId, FirewallPolicy firewallPolicyResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(FirewallPolicy firewallPolicyResource, gaxgrpc::CallSettings callSettings = null) =>
             InsertAsync(new InsertFirewallPolicyRequest
             {
                 FirewallPolicyResource = gax::GaxPreconditions.CheckNotNull(firewallPolicyResource, nameof(firewallPolicyResource)),
-                ParentId = gax::GaxPreconditions.CheckNotNullOrEmpty(parentId, nameof(parentId)),
             }, callSettings);
 
         /// <summary>
         /// Creates a new policy in the specified project using the data included in
         /// the request.
         /// </summary>
-        /// <param name="parentId">
-        /// Parent ID for this request. The ID can be either be "folders/[FOLDER_ID]"
-        /// if the parent is a folder or "organizations/[ORGANIZATION_ID]" if the
-        /// parent is an organization.
-        /// </param>
         /// <param name="firewallPolicyResource">
         /// The body resource for this request
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(string parentId, FirewallPolicy firewallPolicyResource, st::CancellationToken cancellationToken) =>
-            InsertAsync(parentId, firewallPolicyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(FirewallPolicy firewallPolicyResource, st::CancellationToken cancellationToken) =>
+            InsertAsync(firewallPolicyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists all the policies that have been configured for the specified
@@ -1633,18 +1618,12 @@ namespace Google.Cloud.Compute.V1
         /// <param name="firewallPolicy">
         /// Name of the firewall policy to update.
         /// </param>
-        /// <param name="parentId">
-        /// The new parent of the firewall policy. The ID can be either be
-        /// "folders/[FOLDER_ID]" if the parent is a folder or
-        /// "organizations/[ORGANIZATION_ID]" if the parent is an organization.
-        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<Operation, Operation> Move(string firewallPolicy, string parentId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Move(string firewallPolicy, gaxgrpc::CallSettings callSettings = null) =>
             Move(new MoveFirewallPolicyRequest
             {
                 FirewallPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(firewallPolicy, nameof(firewallPolicy)),
-                ParentId = gax::GaxPreconditions.CheckNotNullOrEmpty(parentId, nameof(parentId)),
             }, callSettings);
 
         /// <summary>
@@ -1652,19 +1631,13 @@ namespace Google.Cloud.Compute.V1
         /// </summary>
         /// <param name="firewallPolicy">
         /// Name of the firewall policy to update.
-        /// </param>
-        /// <param name="parentId">
-        /// The new parent of the firewall policy. The ID can be either be
-        /// "folders/[FOLDER_ID]" if the parent is a folder or
-        /// "organizations/[ORGANIZATION_ID]" if the parent is an organization.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Operation, Operation>> MoveAsync(string firewallPolicy, string parentId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> MoveAsync(string firewallPolicy, gaxgrpc::CallSettings callSettings = null) =>
             MoveAsync(new MoveFirewallPolicyRequest
             {
                 FirewallPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(firewallPolicy, nameof(firewallPolicy)),
-                ParentId = gax::GaxPreconditions.CheckNotNullOrEmpty(parentId, nameof(parentId)),
             }, callSettings);
 
         /// <summary>
@@ -1673,15 +1646,10 @@ namespace Google.Cloud.Compute.V1
         /// <param name="firewallPolicy">
         /// Name of the firewall policy to update.
         /// </param>
-        /// <param name="parentId">
-        /// The new parent of the firewall policy. The ID can be either be
-        /// "folders/[FOLDER_ID]" if the parent is a folder or
-        /// "organizations/[ORGANIZATION_ID]" if the parent is an organization.
-        /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Operation, Operation>> MoveAsync(string firewallPolicy, string parentId, st::CancellationToken cancellationToken) =>
-            MoveAsync(firewallPolicy, parentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        public virtual stt::Task<lro::Operation<Operation, Operation>> MoveAsync(string firewallPolicy, st::CancellationToken cancellationToken) =>
+            MoveAsync(firewallPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Patches the specified policy with the data included in the request.
@@ -2291,6 +2259,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             AddAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOrganizationOperations(), effectiveSettings.AddAssociationOperationsSettings, logger);
             AddRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOrganizationOperations(), effectiveSettings.AddRuleOperationsSettings, logger);

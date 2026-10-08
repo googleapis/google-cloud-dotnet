@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 ReplaceExistingAssociation = false,
                 Project = "",
+                AssociatedPolicyToBeReplaced = "",
                 FirewallPolicyAssociationResource = new FirewallPolicyAssociation(),
                 FirewallPolicy = "",
             };

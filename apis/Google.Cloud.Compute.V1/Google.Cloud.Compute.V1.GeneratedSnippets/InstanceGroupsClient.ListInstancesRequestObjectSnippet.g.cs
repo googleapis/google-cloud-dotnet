@@ -44,7 +44,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 InstanceGroupsListInstancesRequestResource = new InstanceGroupsListInstancesRequest(),
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<InstanceGroupsListInstances, InstanceWithNamedPorts> response = instanceGroupsClient.ListInstances(request);

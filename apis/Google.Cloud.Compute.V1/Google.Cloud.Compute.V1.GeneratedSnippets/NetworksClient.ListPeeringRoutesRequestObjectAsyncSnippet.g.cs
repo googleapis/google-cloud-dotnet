@@ -46,7 +46,6 @@ namespace GoogleCSharpSnippets
                 Network = "",
                 PeeringName = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ExchangedPeeringRoutesList, ExchangedPeeringRoute> response = networksClient.ListPeeringRoutesAsync(request);

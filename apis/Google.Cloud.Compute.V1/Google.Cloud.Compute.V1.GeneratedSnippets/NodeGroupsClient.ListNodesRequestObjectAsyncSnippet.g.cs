@@ -44,7 +44,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 NodeGroup = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<NodeGroupsListNodes, NodeGroupNode> response = nodeGroupsClient.ListNodesAsync(request);

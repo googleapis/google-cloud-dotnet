@@ -393,7 +393,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 ParentName = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ReservationSlotsListResponse, ReservationSlot> response = reservationSlotsClient.List(request);
@@ -446,7 +445,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 ParentName = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ReservationSlotsListResponse, ReservationSlot> response = reservationSlotsClient.ListAsync(request);

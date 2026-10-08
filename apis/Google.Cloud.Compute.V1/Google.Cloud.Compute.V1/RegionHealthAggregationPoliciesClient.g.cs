@@ -291,7 +291,10 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => RegionHealthAggregationPoliciesClient.ChannelPool;
     }
 
-    /// <summary>RegionHealthAggregationPolicies client wrapper, for convenient use.</summary>
+    /// <summary>
+    /// RegionHealthAggregationPolicies client wrapper, for convenient use. This client implements API version
+    /// 2026-09-01.
+    /// </summary>
     /// <remarks>
     /// The RegionHealthAggregationPolicies API.
     /// </remarks>
@@ -1182,6 +1185,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings, logger);

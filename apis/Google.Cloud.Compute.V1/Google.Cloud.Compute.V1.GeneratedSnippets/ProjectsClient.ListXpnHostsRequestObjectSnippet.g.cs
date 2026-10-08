@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 ProjectsListXpnHostsRequestResource = new ProjectsListXpnHostsRequest(),
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<XpnHostList, Project> response = projectsClient.ListXpnHosts(request);

@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InterconnectRemoteLocationList, InterconnectRemoteLocation> response = interconnectRemoteLocationsClient.ListAsync(request);

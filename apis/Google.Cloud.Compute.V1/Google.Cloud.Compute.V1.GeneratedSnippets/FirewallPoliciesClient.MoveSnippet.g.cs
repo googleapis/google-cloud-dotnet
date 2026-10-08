@@ -38,9 +38,8 @@ namespace GoogleCSharpSnippets
             FirewallPoliciesClient firewallPoliciesClient = FirewallPoliciesClient.Create();
             // Initialize request argument(s)
             string firewallPolicy = "";
-            string parentId = "";
             // Make the request
-            lro::Operation<Operation, Operation> response = firewallPoliciesClient.Move(firewallPolicy, parentId);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.Move(firewallPolicy);
 
             // Poll until the returned long-running operation is complete
             lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();

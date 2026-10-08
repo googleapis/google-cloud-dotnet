@@ -586,7 +586,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<SecurityPolicyList, SecurityPolicy> response = regionSecurityPoliciesClient.List(request);
@@ -638,7 +637,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<SecurityPolicyList, SecurityPolicy> response = regionSecurityPoliciesClient.ListAsync(request);

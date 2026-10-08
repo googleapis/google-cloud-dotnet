@@ -100,7 +100,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<InterconnectLocationList, InterconnectLocation> response = interconnectLocationsClient.List(request);
@@ -151,7 +150,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InterconnectLocationList, InterconnectLocation> response = interconnectLocationsClient.ListAsync(request);

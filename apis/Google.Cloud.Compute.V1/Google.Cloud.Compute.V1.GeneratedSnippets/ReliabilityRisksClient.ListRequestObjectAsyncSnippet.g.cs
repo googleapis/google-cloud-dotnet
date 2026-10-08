@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ReliabilityRisksListResponse, ReliabilityRisk> response = reliabilityRisksClient.ListAsync(request);

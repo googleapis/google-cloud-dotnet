@@ -189,7 +189,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ReservationBlocksListResponse, ReservationBlock> response = reservationBlocksClient.List(request);
@@ -242,7 +241,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ReservationBlocksListResponse, ReservationBlock> response = reservationBlocksClient.ListAsync(request);

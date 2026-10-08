@@ -1066,7 +1066,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<RegionInstanceGroupManagerList, InstanceGroupManager> response = regionInstanceGroupManagersClient.List(request);
@@ -1118,7 +1117,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<RegionInstanceGroupManagerList, InstanceGroupManager> response = regionInstanceGroupManagersClient.ListAsync(request);
@@ -1263,7 +1261,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 InstanceGroupManager = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<RegionInstanceGroupManagersListErrorsResponse, InstanceManagedByIgmError> response = regionInstanceGroupManagersClient.ListErrors(request);
@@ -1316,7 +1313,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 InstanceGroupManager = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<RegionInstanceGroupManagersListErrorsResponse, InstanceManagedByIgmError> response = regionInstanceGroupManagersClient.ListErrorsAsync(request);
@@ -1463,7 +1459,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 InstanceGroupManager = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<RegionInstanceGroupManagersListInstancesResponse, ManagedInstance> response = regionInstanceGroupManagersClient.ListManagedInstances(request);
@@ -1516,7 +1511,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 InstanceGroupManager = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<RegionInstanceGroupManagersListInstancesResponse, ManagedInstance> response = regionInstanceGroupManagersClient.ListManagedInstancesAsync(request);
@@ -1663,7 +1657,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 InstanceGroupManager = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<RegionInstanceGroupManagersListInstanceConfigsResp, PerInstanceConfig> response = regionInstanceGroupManagersClient.ListPerInstanceConfigs(request);
@@ -1716,7 +1709,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 InstanceGroupManager = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<RegionInstanceGroupManagersListInstanceConfigsResp, PerInstanceConfig> response = regionInstanceGroupManagersClient.ListPerInstanceConfigsAsync(request);

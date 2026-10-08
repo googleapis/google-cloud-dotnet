@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<CompositeHealthCheckList, CompositeHealthCheck> response = regionCompositeHealthChecksClient.List(request);

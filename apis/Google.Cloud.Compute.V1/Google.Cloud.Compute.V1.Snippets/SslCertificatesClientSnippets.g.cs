@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<SslCertificateAggregatedList, KeyValuePair<string, SslCertificatesScopedList>> response = sslCertificatesClient.AggregatedList(request);
@@ -95,7 +94,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<SslCertificateAggregatedList, KeyValuePair<string, SslCertificatesScopedList>> response = sslCertificatesClient.AggregatedListAsync(request);
@@ -560,7 +558,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<SslCertificateList, SslCertificate> response = sslCertificatesClient.List(request);
@@ -611,7 +608,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<SslCertificateList, SslCertificate> response = sslCertificatesClient.ListAsync(request);

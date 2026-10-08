@@ -365,7 +365,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ForwardingRuleList, ForwardingRule> response = globalForwardingRulesClient.List(request);
@@ -416,7 +415,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ForwardingRuleList, ForwardingRule> response = globalForwardingRulesClient.ListAsync(request);

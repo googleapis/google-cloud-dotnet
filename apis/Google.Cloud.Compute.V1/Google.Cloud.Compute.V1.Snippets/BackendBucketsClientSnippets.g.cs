@@ -176,7 +176,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<BackendBucketAggregatedList, KeyValuePair<string, BackendBucketsScopedList>> response = backendBucketsClient.AggregatedList(request);
@@ -229,7 +228,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<BackendBucketAggregatedList, KeyValuePair<string, BackendBucketsScopedList>> response = backendBucketsClient.AggregatedListAsync(request);
@@ -894,7 +892,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<BackendBucketList, BackendBucket> response = backendBucketsClient.List(request);
@@ -945,7 +942,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<BackendBucketList, BackendBucket> response = backendBucketsClient.ListAsync(request);
@@ -1086,7 +1082,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<BackendBucketListUsable, BackendBucket> response = backendBucketsClient.ListUsable(request);
@@ -1137,7 +1132,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<BackendBucketListUsable, BackendBucket> response = backendBucketsClient.ListUsableAsync(request);

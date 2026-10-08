@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ServiceAttachmentAggregatedList, KeyValuePair<string, ServiceAttachmentsScopedList>> response = serviceAttachmentsClient.AggregatedList(request);
@@ -95,7 +94,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ServiceAttachmentAggregatedList, KeyValuePair<string, ServiceAttachmentsScopedList>> response = serviceAttachmentsClient.AggregatedListAsync(request);
@@ -645,7 +643,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ServiceAttachmentList, ServiceAttachment> response = serviceAttachmentsClient.List(request);
@@ -697,7 +694,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ServiceAttachmentList, ServiceAttachment> response = serviceAttachmentsClient.ListAsync(request);

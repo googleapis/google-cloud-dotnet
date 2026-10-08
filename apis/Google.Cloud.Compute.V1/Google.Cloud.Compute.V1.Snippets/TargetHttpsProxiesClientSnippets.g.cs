@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<TargetHttpsProxyAggregatedList, KeyValuePair<string, TargetHttpsProxiesScopedList>> response = targetHttpsProxiesClient.AggregatedList(request);
@@ -95,7 +94,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<TargetHttpsProxyAggregatedList, KeyValuePair<string, TargetHttpsProxiesScopedList>> response = targetHttpsProxiesClient.AggregatedListAsync(request);
@@ -560,7 +558,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<TargetHttpsProxyList, TargetHttpsProxy> response = targetHttpsProxiesClient.List(request);
@@ -611,7 +608,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<TargetHttpsProxyList, TargetHttpsProxy> response = targetHttpsProxiesClient.ListAsync(request);

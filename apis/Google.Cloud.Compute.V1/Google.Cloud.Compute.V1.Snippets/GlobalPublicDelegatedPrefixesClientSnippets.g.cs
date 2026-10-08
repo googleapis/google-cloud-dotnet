@@ -363,7 +363,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<PublicDelegatedPrefixList, PublicDelegatedPrefix> response = globalPublicDelegatedPrefixesClient.List(request);
@@ -414,7 +413,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<PublicDelegatedPrefixList, PublicDelegatedPrefix> response = globalPublicDelegatedPrefixesClient.ListAsync(request);

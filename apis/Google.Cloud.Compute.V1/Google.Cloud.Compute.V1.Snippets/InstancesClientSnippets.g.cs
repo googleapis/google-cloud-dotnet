@@ -460,7 +460,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<InstanceAggregatedList, KeyValuePair<string, InstancesScopedList>> response = instancesClient.AggregatedList(request);
@@ -513,7 +512,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InstanceAggregatedList, KeyValuePair<string, InstancesScopedList>> response = instancesClient.AggregatedListAsync(request);
@@ -2111,7 +2109,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<InstanceList, Instance> response = instancesClient.List(request);
@@ -2163,7 +2160,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InstanceList, Instance> response = instancesClient.ListAsync(request);
@@ -2308,7 +2304,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<InstanceListReferrers, Reference> response = instancesClient.ListReferrers(request);
@@ -2361,7 +2356,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InstanceListReferrers, Reference> response = instancesClient.ListReferrersAsync(request);

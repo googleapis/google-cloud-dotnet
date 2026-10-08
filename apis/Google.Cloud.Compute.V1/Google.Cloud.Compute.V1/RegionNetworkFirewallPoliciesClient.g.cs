@@ -65,6 +65,8 @@ namespace Google.Cloud.Compute.V1
             ListSettings = existing.ListSettings;
             PatchSettings = existing.PatchSettings;
             PatchOperationsSettings = existing.PatchOperationsSettings.Clone();
+            PatchAssociationSettings = existing.PatchAssociationSettings;
+            PatchAssociationOperationsSettings = existing.PatchAssociationOperationsSettings.Clone();
             PatchRuleSettings = existing.PatchRuleSettings;
             PatchRuleOperationsSettings = existing.PatchRuleOperationsSettings.Clone();
             RemoveAssociationSettings = existing.RemoveAssociationSettings;
@@ -395,6 +397,37 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RegionNetworkFirewallPoliciesClient.PatchAssociation</c> and
+        /// <c>RegionNetworkFirewallPoliciesClient.PatchAssociationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PatchAssociationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RegionNetworkFirewallPoliciesClient.PatchAssociation</c> and
+        /// <c>RegionNetworkFirewallPoliciesClient.PatchAssociationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings PatchAssociationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>RegionNetworkFirewallPoliciesClient.PatchRule</c> and
         /// <c>RegionNetworkFirewallPoliciesClient.PatchRuleAsync</c>.
         /// </summary>
@@ -569,7 +602,9 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => RegionNetworkFirewallPoliciesClient.ChannelPool;
     }
 
-    /// <summary>RegionNetworkFirewallPolicies client wrapper, for convenient use.</summary>
+    /// <summary>
+    /// RegionNetworkFirewallPolicies client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// </summary>
     /// <remarks>
     /// The RegionNetworkFirewallPolicies API.
     /// </remarks>
@@ -1919,6 +1954,131 @@ namespace Google.Cloud.Compute.V1
             PatchAsync(project, region, firewallPolicy, firewallPolicyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates an association for the specified network firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> PatchAssociation(PatchAssociationRegionNetworkFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an association for the specified network firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchAssociationAsync(PatchAssociationRegionNetworkFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an association for the specified network firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchAssociationAsync(PatchAssociationRegionNetworkFirewallPolicyRequest request, st::CancellationToken cancellationToken) =>
+            PatchAssociationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>PatchAssociation</c>.</summary>
+        public virtual lro::OperationsClient PatchAssociationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>PatchAssociation</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOncePatchAssociation(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchAssociationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>PatchAssociation</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOncePatchAssociationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchAssociationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates an association for the specified network firewall policy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Name of the firewall policy to update.
+        /// </param>
+        /// <param name="firewallPolicyAssociationResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> PatchAssociation(string project, string region, string firewallPolicy, FirewallPolicyAssociation firewallPolicyAssociationResource, gaxgrpc::CallSettings callSettings = null) =>
+            PatchAssociation(new PatchAssociationRegionNetworkFirewallPolicyRequest
+            {
+                FirewallPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(firewallPolicy, nameof(firewallPolicy)),
+                FirewallPolicyAssociationResource = gax::GaxPreconditions.CheckNotNull(firewallPolicyAssociationResource, nameof(firewallPolicyAssociationResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an association for the specified network firewall policy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Name of the firewall policy to update.
+        /// </param>
+        /// <param name="firewallPolicyAssociationResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchAssociationAsync(string project, string region, string firewallPolicy, FirewallPolicyAssociation firewallPolicyAssociationResource, gaxgrpc::CallSettings callSettings = null) =>
+            PatchAssociationAsync(new PatchAssociationRegionNetworkFirewallPolicyRequest
+            {
+                FirewallPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(firewallPolicy, nameof(firewallPolicy)),
+                FirewallPolicyAssociationResource = gax::GaxPreconditions.CheckNotNull(firewallPolicyAssociationResource, nameof(firewallPolicyAssociationResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an association for the specified network firewall policy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Name of the firewall policy to update.
+        /// </param>
+        /// <param name="firewallPolicyAssociationResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchAssociationAsync(string project, string region, string firewallPolicy, FirewallPolicyAssociation firewallPolicyAssociationResource, st::CancellationToken cancellationToken) =>
+            PatchAssociationAsync(project, region, firewallPolicy, firewallPolicyAssociationResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Patches a rule of the specified priority.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2507,6 +2667,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<PatchRegionNetworkFirewallPolicyRequest, Operation> _callPatch;
 
+        private readonly gaxgrpc::ApiCall<PatchAssociationRegionNetworkFirewallPolicyRequest, Operation> _callPatchAssociation;
+
         private readonly gaxgrpc::ApiCall<PatchRuleRegionNetworkFirewallPolicyRequest, Operation> _callPatchRule;
 
         private readonly gaxgrpc::ApiCall<RemoveAssociationRegionNetworkFirewallPolicyRequest, Operation> _callRemoveAssociation;
@@ -2534,6 +2696,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             AddAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.AddAssociationOperationsSettings, logger);
             AddRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.AddRuleOperationsSettings, logger);
@@ -2541,6 +2704,7 @@ namespace Google.Cloud.Compute.V1
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings, logger);
             PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            PatchAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchAssociationOperationsSettings, logger);
             PatchRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchRuleOperationsSettings, logger);
             RemoveAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.RemoveAssociationOperationsSettings, logger);
             RemoveRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.RemoveRuleOperationsSettings, logger);
@@ -2580,6 +2744,9 @@ namespace Google.Cloud.Compute.V1
             _callPatch = clientHelper.BuildApiCall<PatchRegionNetworkFirewallPolicyRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
+            _callPatchAssociation = clientHelper.BuildApiCall<PatchAssociationRegionNetworkFirewallPolicyRequest, Operation>("PatchAssociation", grpcClient.PatchAssociationAsync, grpcClient.PatchAssociation, effectiveSettings.PatchAssociationSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
+            Modify_ApiCall(ref _callPatchAssociation);
+            Modify_PatchAssociationApiCall(ref _callPatchAssociation);
             _callPatchRule = clientHelper.BuildApiCall<PatchRuleRegionNetworkFirewallPolicyRequest, Operation>("PatchRule", grpcClient.PatchRuleAsync, grpcClient.PatchRule, effectiveSettings.PatchRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callPatchRule);
             Modify_PatchRuleApiCall(ref _callPatchRule);
@@ -2624,6 +2791,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_PatchApiCall(ref gaxgrpc::ApiCall<PatchRegionNetworkFirewallPolicyRequest, Operation> call);
 
+        partial void Modify_PatchAssociationApiCall(ref gaxgrpc::ApiCall<PatchAssociationRegionNetworkFirewallPolicyRequest, Operation> call);
+
         partial void Modify_PatchRuleApiCall(ref gaxgrpc::ApiCall<PatchRuleRegionNetworkFirewallPolicyRequest, Operation> call);
 
         partial void Modify_RemoveAssociationApiCall(ref gaxgrpc::ApiCall<RemoveAssociationRegionNetworkFirewallPolicyRequest, Operation> call);
@@ -2662,6 +2831,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_ListRegionNetworkFirewallPoliciesRequest(ref ListRegionNetworkFirewallPoliciesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PatchRegionNetworkFirewallPolicyRequest(ref PatchRegionNetworkFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PatchAssociationRegionNetworkFirewallPolicyRequest(ref PatchAssociationRegionNetworkFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PatchRuleRegionNetworkFirewallPolicyRequest(ref PatchRuleRegionNetworkFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3017,6 +3188,39 @@ namespace Google.Cloud.Compute.V1
             GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>PatchAssociation</c>.</summary>
+        public override lro::OperationsClient PatchAssociationOperationsClient { get; }
+
+        /// <summary>
+        /// Updates an association for the specified network firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> PatchAssociation(PatchAssociationRegionNetworkFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PatchAssociationRegionNetworkFirewallPolicyRequest(ref request, ref callSettings);
+            Operation response = _callPatchAssociation.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchAssociationOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates an association for the specified network firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> PatchAssociationAsync(PatchAssociationRegionNetworkFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PatchAssociationRegionNetworkFirewallPolicyRequest(ref request, ref callSettings);
+            Operation response = await _callPatchAssociation.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchAssociationOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>PatchRule</c>.</summary>

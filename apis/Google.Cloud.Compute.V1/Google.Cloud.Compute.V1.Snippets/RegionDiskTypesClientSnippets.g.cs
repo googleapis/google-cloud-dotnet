@@ -105,7 +105,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<RegionDiskTypeList, DiskType> response = regionDiskTypesClient.List(request);
@@ -157,7 +156,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<RegionDiskTypeList, DiskType> response = regionDiskTypesClient.ListAsync(request);

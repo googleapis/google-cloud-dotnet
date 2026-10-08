@@ -404,7 +404,9 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => SubnetworksClient.ChannelPool;
     }
 
-    /// <summary>Subnetworks client wrapper, for convenient use.</summary>
+    /// <summary>
+    /// Subnetworks client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// </summary>
     /// <remarks>
     /// The Subnetworks API.
     /// </remarks>
@@ -1842,6 +1844,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             ExpandIpCidrRangeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.ExpandIpCidrRangeOperationsSettings, logger);

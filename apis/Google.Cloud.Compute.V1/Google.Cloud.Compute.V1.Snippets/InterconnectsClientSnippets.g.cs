@@ -491,7 +491,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<InterconnectList, Interconnect> response = interconnectsClient.List(request);
@@ -542,7 +541,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InterconnectList, Interconnect> response = interconnectsClient.ListAsync(request);
@@ -928,6 +926,140 @@ namespace GoogleCSharpSnippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             lro::Operation<Operation, Operation> retrievedResponse = await interconnectsClient.PollOnceSetLabelsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetName</summary>
+        public void SetNameRequestObject()
+        {
+            // Snippet: SetName(SetNameInterconnectRequest, CallSettings)
+            // Create client
+            InterconnectsClient interconnectsClient = InterconnectsClient.Create();
+            // Initialize request argument(s)
+            SetNameInterconnectRequest request = new SetNameInterconnectRequest
+            {
+                RequestId = "",
+                Interconnect = "",
+                Project = "",
+                InterconnectsSetNameRequestResource = new InterconnectsSetNameRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = interconnectsClient.SetName(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = interconnectsClient.PollOnceSetName(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetNameAsync</summary>
+        public async Task SetNameRequestObjectAsync()
+        {
+            // Snippet: SetNameAsync(SetNameInterconnectRequest, CallSettings)
+            // Additional: SetNameAsync(SetNameInterconnectRequest, CancellationToken)
+            // Create client
+            InterconnectsClient interconnectsClient = await InterconnectsClient.CreateAsync();
+            // Initialize request argument(s)
+            SetNameInterconnectRequest request = new SetNameInterconnectRequest
+            {
+                RequestId = "",
+                Interconnect = "",
+                Project = "",
+                InterconnectsSetNameRequestResource = new InterconnectsSetNameRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await interconnectsClient.SetNameAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await interconnectsClient.PollOnceSetNameAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetName</summary>
+        public void SetName()
+        {
+            // Snippet: SetName(string, string, InterconnectsSetNameRequest, CallSettings)
+            // Create client
+            InterconnectsClient interconnectsClient = InterconnectsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string interconnect = "";
+            InterconnectsSetNameRequest interconnectsSetNameRequestResource = new InterconnectsSetNameRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = interconnectsClient.SetName(project, interconnect, interconnectsSetNameRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = interconnectsClient.PollOnceSetName(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetNameAsync</summary>
+        public async Task SetNameAsync()
+        {
+            // Snippet: SetNameAsync(string, string, InterconnectsSetNameRequest, CallSettings)
+            // Additional: SetNameAsync(string, string, InterconnectsSetNameRequest, CancellationToken)
+            // Create client
+            InterconnectsClient interconnectsClient = await InterconnectsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string interconnect = "";
+            InterconnectsSetNameRequest interconnectsSetNameRequestResource = new InterconnectsSetNameRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await interconnectsClient.SetNameAsync(project, interconnect, interconnectsSetNameRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await interconnectsClient.PollOnceSetNameAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

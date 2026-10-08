@@ -44,7 +44,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<SecurityPoliciesAggregatedList, KeyValuePair<string, SecurityPoliciesScopedList>> response = securityPoliciesClient.AggregatedList(request);

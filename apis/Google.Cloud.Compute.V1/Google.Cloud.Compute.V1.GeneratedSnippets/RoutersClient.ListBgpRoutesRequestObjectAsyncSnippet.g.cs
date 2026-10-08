@@ -49,7 +49,6 @@ namespace GoogleCSharpSnippets
                 Filter = "",
                 RouteType = "",
                 PolicyApplied = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<RoutersListBgpRoutes, BgpRoute> response = routersClient.ListBgpRoutesAsync(request);

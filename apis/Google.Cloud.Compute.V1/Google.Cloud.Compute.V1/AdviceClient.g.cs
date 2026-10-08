@@ -45,6 +45,8 @@ namespace Google.Cloud.Compute.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CalendarModeSettings = existing.CalendarModeSettings;
+            CapacitySettings = existing.CapacitySettings;
+            CapacityHistorySettings = existing.CapacityHistorySettings;
             OnCopy(existing);
         }
 
@@ -61,6 +63,30 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CalendarModeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>AdviceClient.Capacity</c>
+        /// and <c>AdviceClient.CapacityAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CapacitySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AdviceClient.CapacityHistory</c> and <c>AdviceClient.CapacityHistoryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CapacityHistorySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AdviceSettings"/> object.</returns>
@@ -118,7 +144,7 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => AdviceClient.ChannelPool;
     }
 
-    /// <summary>Advice client wrapper, for convenient use.</summary>
+    /// <summary>Advice client wrapper, for convenient use. This client implements API version 2026-09-01.</summary>
     /// <remarks>
     /// The Advice API.
     /// </remarks>
@@ -308,6 +334,194 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<CalendarModeAdviceResponse> CalendarModeAsync(string project, string region, CalendarModeAdviceRequest calendarModeAdviceRequestResource, st::CancellationToken cancellationToken) =>
             CalendarModeAsync(project, region, calendarModeAdviceRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Advice on making real-time decisions (such as choosing zone or
+        /// machine types) during deployment to maximize your chances of obtaining
+        /// capacity.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CapacityAdviceResponse Capacity(CapacityAdviceRpcRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Advice on making real-time decisions (such as choosing zone or
+        /// machine types) during deployment to maximize your chances of obtaining
+        /// capacity.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CapacityAdviceResponse> CapacityAsync(CapacityAdviceRpcRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Advice on making real-time decisions (such as choosing zone or
+        /// machine types) during deployment to maximize your chances of obtaining
+        /// capacity.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CapacityAdviceResponse> CapacityAsync(CapacityAdviceRpcRequest request, st::CancellationToken cancellationToken) =>
+            CapacityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Advice on making real-time decisions (such as choosing zone or
+        /// machine types) during deployment to maximize your chances of obtaining
+        /// capacity.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="capacityAdviceRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CapacityAdviceResponse Capacity(string project, string region, CapacityAdviceRequest capacityAdviceRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            Capacity(new CapacityAdviceRpcRequest
+            {
+                CapacityAdviceRequestResource = gax::GaxPreconditions.CheckNotNull(capacityAdviceRequestResource, nameof(capacityAdviceRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+            }, callSettings);
+
+        /// <summary>
+        /// Advice on making real-time decisions (such as choosing zone or
+        /// machine types) during deployment to maximize your chances of obtaining
+        /// capacity.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="capacityAdviceRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CapacityAdviceResponse> CapacityAsync(string project, string region, CapacityAdviceRequest capacityAdviceRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            CapacityAsync(new CapacityAdviceRpcRequest
+            {
+                CapacityAdviceRequestResource = gax::GaxPreconditions.CheckNotNull(capacityAdviceRequestResource, nameof(capacityAdviceRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+            }, callSettings);
+
+        /// <summary>
+        /// Advice on making real-time decisions (such as choosing zone or
+        /// machine types) during deployment to maximize your chances of obtaining
+        /// capacity.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="capacityAdviceRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CapacityAdviceResponse> CapacityAsync(string project, string region, CapacityAdviceRequest capacityAdviceRequestResource, st::CancellationToken cancellationToken) =>
+            CapacityAsync(project, region, capacityAdviceRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the capacity history.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CapacityHistoryResponse CapacityHistory(CapacityHistoryAdviceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the capacity history.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CapacityHistoryResponse> CapacityHistoryAsync(CapacityHistoryAdviceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the capacity history.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CapacityHistoryResponse> CapacityHistoryAsync(CapacityHistoryAdviceRequest request, st::CancellationToken cancellationToken) =>
+            CapacityHistoryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the capacity history.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="capacityHistoryRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CapacityHistoryResponse CapacityHistory(string project, string region, CapacityHistoryRequest capacityHistoryRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            CapacityHistory(new CapacityHistoryAdviceRequest
+            {
+                CapacityHistoryRequestResource = gax::GaxPreconditions.CheckNotNull(capacityHistoryRequestResource, nameof(capacityHistoryRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the capacity history.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="capacityHistoryRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CapacityHistoryResponse> CapacityHistoryAsync(string project, string region, CapacityHistoryRequest capacityHistoryRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            CapacityHistoryAsync(new CapacityHistoryAdviceRequest
+            {
+                CapacityHistoryRequestResource = gax::GaxPreconditions.CheckNotNull(capacityHistoryRequestResource, nameof(capacityHistoryRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the capacity history.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="capacityHistoryRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CapacityHistoryResponse> CapacityHistoryAsync(string project, string region, CapacityHistoryRequest capacityHistoryRequestResource, st::CancellationToken cancellationToken) =>
+            CapacityHistoryAsync(project, region, capacityHistoryRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Advice client wrapper implementation, for convenient use.</summary>
@@ -317,6 +531,10 @@ namespace Google.Cloud.Compute.V1
     public sealed partial class AdviceClientImpl : AdviceClient
     {
         private readonly gaxgrpc::ApiCall<CalendarModeAdviceRpcRequest, CalendarModeAdviceResponse> _callCalendarMode;
+
+        private readonly gaxgrpc::ApiCall<CapacityAdviceRpcRequest, CapacityAdviceResponse> _callCapacity;
+
+        private readonly gaxgrpc::ApiCall<CapacityHistoryAdviceRequest, CapacityHistoryResponse> _callCapacityHistory;
 
         /// <summary>
         /// Constructs a client wrapper for the Advice service, with the specified gRPC client and settings.
@@ -332,10 +550,17 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             _callCalendarMode = clientHelper.BuildApiCall<CalendarModeAdviceRpcRequest, CalendarModeAdviceResponse>("CalendarMode", grpcClient.CalendarModeAsync, grpcClient.CalendarMode, effectiveSettings.CalendarModeSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callCalendarMode);
             Modify_CalendarModeApiCall(ref _callCalendarMode);
+            _callCapacity = clientHelper.BuildApiCall<CapacityAdviceRpcRequest, CapacityAdviceResponse>("Capacity", grpcClient.CapacityAsync, grpcClient.Capacity, effectiveSettings.CapacitySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
+            Modify_ApiCall(ref _callCapacity);
+            Modify_CapacityApiCall(ref _callCapacity);
+            _callCapacityHistory = clientHelper.BuildApiCall<CapacityHistoryAdviceRequest, CapacityHistoryResponse>("CapacityHistory", grpcClient.CapacityHistoryAsync, grpcClient.CapacityHistory, effectiveSettings.CapacityHistorySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
+            Modify_ApiCall(ref _callCapacityHistory);
+            Modify_CapacityHistoryApiCall(ref _callCapacityHistory);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -343,12 +568,20 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_CalendarModeApiCall(ref gaxgrpc::ApiCall<CalendarModeAdviceRpcRequest, CalendarModeAdviceResponse> call);
 
+        partial void Modify_CapacityApiCall(ref gaxgrpc::ApiCall<CapacityAdviceRpcRequest, CapacityAdviceResponse> call);
+
+        partial void Modify_CapacityHistoryApiCall(ref gaxgrpc::ApiCall<CapacityHistoryAdviceRequest, CapacityHistoryResponse> call);
+
         partial void OnConstruction(Advice.AdviceClient grpcClient, AdviceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Advice client</summary>
         public override Advice.AdviceClient GrpcClient { get; }
 
         partial void Modify_CalendarModeAdviceRpcRequest(ref CalendarModeAdviceRpcRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CapacityAdviceRpcRequest(ref CapacityAdviceRpcRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CapacityHistoryAdviceRequest(ref CapacityHistoryAdviceRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Advise how, where and when to create the requested amount of instances
@@ -378,6 +611,58 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_CalendarModeAdviceRpcRequest(ref request, ref callSettings);
             return _callCalendarMode.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Advice on making real-time decisions (such as choosing zone or
+        /// machine types) during deployment to maximize your chances of obtaining
+        /// capacity.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CapacityAdviceResponse Capacity(CapacityAdviceRpcRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CapacityAdviceRpcRequest(ref request, ref callSettings);
+            return _callCapacity.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Advice on making real-time decisions (such as choosing zone or
+        /// machine types) during deployment to maximize your chances of obtaining
+        /// capacity.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CapacityAdviceResponse> CapacityAsync(CapacityAdviceRpcRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CapacityAdviceRpcRequest(ref request, ref callSettings);
+            return _callCapacity.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the capacity history.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CapacityHistoryResponse CapacityHistory(CapacityHistoryAdviceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CapacityHistoryAdviceRequest(ref request, ref callSettings);
+            return _callCapacityHistory.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the capacity history.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CapacityHistoryResponse> CapacityHistoryAsync(CapacityHistoryAdviceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CapacityHistoryAdviceRequest(ref request, ref callSettings);
+            return _callCapacityHistory.Async(request, callSettings);
         }
     }
 }

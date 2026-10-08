@@ -153,7 +153,9 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => InterconnectRemoteLocationsClient.ChannelPool;
     }
 
-    /// <summary>InterconnectRemoteLocations client wrapper, for convenient use.</summary>
+    /// <summary>
+    /// InterconnectRemoteLocations client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// </summary>
     /// <remarks>
     /// The InterconnectRemoteLocations API.
     /// </remarks>
@@ -443,6 +445,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             _callGet = clientHelper.BuildApiCall<GetInterconnectRemoteLocationRequest, InterconnectRemoteLocation>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("interconnect_remote_location", request => request.InterconnectRemoteLocation);
             Modify_ApiCall(ref _callGet);

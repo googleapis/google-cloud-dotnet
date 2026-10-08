@@ -265,7 +265,10 @@ namespace Google.Cloud.Compute.V1
             RegionInstanceGroupManagerResizeRequestsClient.ChannelPool;
     }
 
-    /// <summary>RegionInstanceGroupManagerResizeRequests client wrapper, for convenient use.</summary>
+    /// <summary>
+    /// RegionInstanceGroupManagerResizeRequests client wrapper, for convenient use. This client implements API version
+    /// 2026-09-01.
+    /// </summary>
     /// <remarks>
     /// The RegionInstanceGroupManagerResizeRequests API.
     /// </remarks>
@@ -1044,6 +1047,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             CancelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.CancelOperationsSettings, logger);
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings, logger);

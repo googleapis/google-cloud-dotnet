@@ -363,7 +363,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ExternalVpnGatewayList, ExternalVpnGateway> response = externalVpnGatewaysClient.List(request);
@@ -414,7 +413,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ExternalVpnGatewayList, ExternalVpnGateway> response = externalVpnGatewaysClient.ListAsync(request);

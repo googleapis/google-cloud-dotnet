@@ -39,9 +39,8 @@ namespace GoogleCSharpSnippets
             FirewallPoliciesClient firewallPoliciesClient = await FirewallPoliciesClient.CreateAsync();
             // Initialize request argument(s)
             string firewallPolicy = "";
-            string parentId = "";
             // Make the request
-            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.MoveAsync(firewallPolicy, parentId);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.MoveAsync(firewallPolicy);
 
             // Poll until the returned long-running operation is complete
             lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();

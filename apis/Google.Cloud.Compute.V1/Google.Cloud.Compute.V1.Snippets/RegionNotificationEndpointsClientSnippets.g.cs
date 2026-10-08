@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<NotificationEndpointAggregatedList, KeyValuePair<string, NotificationEndpointsScopedList>> response = regionNotificationEndpointsClient.AggregatedList(request);
@@ -95,7 +94,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<NotificationEndpointAggregatedList, KeyValuePair<string, NotificationEndpointsScopedList>> response = regionNotificationEndpointsClient.AggregatedListAsync(request);
@@ -573,7 +571,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<NotificationEndpointList, NotificationEndpoint> response = regionNotificationEndpointsClient.List(request);
@@ -625,7 +622,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<NotificationEndpointList, NotificationEndpoint> response = regionNotificationEndpointsClient.ListAsync(request);

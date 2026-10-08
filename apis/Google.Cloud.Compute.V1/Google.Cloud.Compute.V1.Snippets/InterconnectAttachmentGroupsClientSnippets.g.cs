@@ -493,7 +493,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<InterconnectAttachmentGroupsListResponse, InterconnectAttachmentGroup> response = interconnectAttachmentGroupsClient.List(request);
@@ -544,7 +543,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InterconnectAttachmentGroupsListResponse, InterconnectAttachmentGroup> response = interconnectAttachmentGroupsClient.ListAsync(request);

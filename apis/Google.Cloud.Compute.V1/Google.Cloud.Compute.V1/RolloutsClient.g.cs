@@ -311,7 +311,7 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => RolloutsClient.ChannelPool;
     }
 
-    /// <summary>Rollouts client wrapper, for convenient use.</summary>
+    /// <summary>Rollouts client wrapper, for convenient use. This client implements API version 2026-09-01.</summary>
     /// <remarks>
     /// The Rollouts API.
     /// </remarks>
@@ -1108,6 +1108,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             AdvanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AdvanceOperationsSettings, logger);
             CancelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.CancelOperationsSettings, logger);

@@ -44,7 +44,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<SubnetworkList, Subnetwork> response = subnetworksClient.ListAsync(request);

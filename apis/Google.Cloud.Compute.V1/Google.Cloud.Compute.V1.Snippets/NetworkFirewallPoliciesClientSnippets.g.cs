@@ -454,7 +454,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<NetworkFirewallPolicyAggregatedList, KeyValuePair<string, FirewallPoliciesScopedList>> response = networkFirewallPoliciesClient.AggregatedList(request);
@@ -507,7 +506,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<NetworkFirewallPolicyAggregatedList, KeyValuePair<string, FirewallPoliciesScopedList>> response = networkFirewallPoliciesClient.AggregatedListAsync(request);
@@ -1368,7 +1366,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<FirewallPolicyList, FirewallPolicy> response = networkFirewallPoliciesClient.List(request);
@@ -1419,7 +1416,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<FirewallPolicyList, FirewallPolicy> response = networkFirewallPoliciesClient.ListAsync(request);

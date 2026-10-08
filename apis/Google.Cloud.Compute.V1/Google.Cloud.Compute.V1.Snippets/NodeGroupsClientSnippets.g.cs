@@ -180,7 +180,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<NodeGroupAggregatedList, KeyValuePair<string, NodeGroupsScopedList>> response = nodeGroupsClient.AggregatedList(request);
@@ -233,7 +232,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<NodeGroupAggregatedList, KeyValuePair<string, NodeGroupsScopedList>> response = nodeGroupsClient.AggregatedListAsync(request);
@@ -923,7 +921,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<NodeGroupList, NodeGroup> response = nodeGroupsClient.List(request);
@@ -975,7 +972,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<NodeGroupList, NodeGroup> response = nodeGroupsClient.ListAsync(request);
@@ -1120,7 +1116,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 NodeGroup = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<NodeGroupsListNodes, NodeGroupNode> response = nodeGroupsClient.ListNodes(request);
@@ -1173,7 +1168,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 NodeGroup = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<NodeGroupsListNodes, NodeGroupNode> response = nodeGroupsClient.ListNodesAsync(request);

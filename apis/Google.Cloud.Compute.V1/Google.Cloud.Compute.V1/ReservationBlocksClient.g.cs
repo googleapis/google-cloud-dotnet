@@ -234,7 +234,9 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => ReservationBlocksClient.ChannelPool;
     }
 
-    /// <summary>ReservationBlocks client wrapper, for convenient use.</summary>
+    /// <summary>
+    /// ReservationBlocks client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// </summary>
     /// <remarks>
     /// The ReservationBlocks API.
     /// </remarks>
@@ -1034,6 +1036,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             PerformMaintenanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.PerformMaintenanceOperationsSettings, logger);
             _callGet = clientHelper.BuildApiCall<GetReservationBlockRequest, ReservationBlocksGetResponse>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("reservation", request => request.Reservation).WithGoogleRequestParam("reservation_block", request => request.ReservationBlock);

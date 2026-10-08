@@ -248,7 +248,9 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => ReservationSlotsClient.ChannelPool;
     }
 
-    /// <summary>ReservationSlots client wrapper, for convenient use.</summary>
+    /// <summary>
+    /// ReservationSlots client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// </summary>
     /// <remarks>
     /// The ReservationSlots API.
     /// </remarks>
@@ -984,6 +986,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             GetHealthOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.GetHealthOperationsSettings, logger);
             GetVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.GetVersionOperationsSettings, logger);

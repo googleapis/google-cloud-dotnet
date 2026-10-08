@@ -39,7 +39,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<StoragePoolTypeAggregatedList, KeyValuePair<string, StoragePoolTypesScopedList>> response = storagePoolTypesClient.AggregatedList(request);
@@ -92,7 +91,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<StoragePoolTypeAggregatedList, KeyValuePair<string, StoragePoolTypesScopedList>> response = storagePoolTypesClient.AggregatedListAsync(request);
@@ -302,7 +300,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<StoragePoolTypeList, StoragePoolType> response = storagePoolTypesClient.List(request);
@@ -354,7 +351,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<StoragePoolTypeList, StoragePoolType> response = storagePoolTypesClient.ListAsync(request);

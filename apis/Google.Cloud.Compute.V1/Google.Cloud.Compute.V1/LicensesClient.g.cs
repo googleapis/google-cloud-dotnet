@@ -295,7 +295,7 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => LicensesClient.ChannelPool;
     }
 
-    /// <summary>Licenses client wrapper, for convenient use.</summary>
+    /// <summary>Licenses client wrapper, for convenient use. This client implements API version 2026-09-01.</summary>
     /// <remarks>
     /// The Licenses API.
     /// </remarks>
@@ -1322,6 +1322,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);

@@ -108,7 +108,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<RegionInstanceGroupList, InstanceGroup> response = regionInstanceGroupsClient.List(request);
@@ -160,7 +159,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<RegionInstanceGroupList, InstanceGroup> response = regionInstanceGroupsClient.ListAsync(request);
@@ -306,7 +304,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<RegionInstanceGroupsListInstances, InstanceWithNamedPorts> response = regionInstanceGroupsClient.ListInstances(request);
@@ -360,7 +357,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<RegionInstanceGroupsListInstances, InstanceWithNamedPorts> response = regionInstanceGroupsClient.ListInstancesAsync(request);

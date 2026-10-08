@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<AutoscalerAggregatedList, KeyValuePair<string, AutoscalersScopedList>> response = autoscalersClient.AggregatedList(request);
@@ -95,7 +94,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<AutoscalerAggregatedList, KeyValuePair<string, AutoscalersScopedList>> response = autoscalersClient.AggregatedListAsync(request);
@@ -573,7 +571,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<AutoscalerList, Autoscaler> response = autoscalersClient.List(request);
@@ -625,7 +622,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<AutoscalerList, Autoscaler> response = autoscalersClient.ListAsync(request);

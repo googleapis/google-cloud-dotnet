@@ -43,7 +43,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<RegionInstanceGroupManagerList, InstanceGroupManager> response = regionInstanceGroupManagersClient.ListAsync(request);

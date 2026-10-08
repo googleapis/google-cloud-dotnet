@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 ReplaceExistingAssociation = false,
                 Project = "",
+                AssociatedPolicyToBeReplaced = "",
                 FirewallPolicyAssociationResource = new FirewallPolicyAssociation(),
                 FirewallPolicy = "",
             };
@@ -78,6 +79,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 ReplaceExistingAssociation = false,
                 Project = "",
+                AssociatedPolicyToBeReplaced = "",
                 FirewallPolicyAssociationResource = new FirewallPolicyAssociation(),
                 FirewallPolicy = "",
             };
@@ -1072,7 +1074,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<FirewallPolicyList, FirewallPolicy> response = regionNetworkFirewallPoliciesClient.List(request);
@@ -1124,7 +1125,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<FirewallPolicyList, FirewallPolicy> response = regionNetworkFirewallPoliciesClient.ListAsync(request);
@@ -1384,6 +1384,144 @@ namespace GoogleCSharpSnippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             lro::Operation<Operation, Operation> retrievedResponse = await regionNetworkFirewallPoliciesClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchAssociation</summary>
+        public void PatchAssociationRequestObject()
+        {
+            // Snippet: PatchAssociation(PatchAssociationRegionNetworkFirewallPolicyRequest, CallSettings)
+            // Create client
+            RegionNetworkFirewallPoliciesClient regionNetworkFirewallPoliciesClient = RegionNetworkFirewallPoliciesClient.Create();
+            // Initialize request argument(s)
+            PatchAssociationRegionNetworkFirewallPolicyRequest request = new PatchAssociationRegionNetworkFirewallPolicyRequest
+            {
+                RequestId = "",
+                Region = "",
+                Project = "",
+                FirewallPolicyAssociationResource = new FirewallPolicyAssociation(),
+                FirewallPolicy = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionNetworkFirewallPoliciesClient.PatchAssociation(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionNetworkFirewallPoliciesClient.PollOncePatchAssociation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchAssociationAsync</summary>
+        public async Task PatchAssociationRequestObjectAsync()
+        {
+            // Snippet: PatchAssociationAsync(PatchAssociationRegionNetworkFirewallPolicyRequest, CallSettings)
+            // Additional: PatchAssociationAsync(PatchAssociationRegionNetworkFirewallPolicyRequest, CancellationToken)
+            // Create client
+            RegionNetworkFirewallPoliciesClient regionNetworkFirewallPoliciesClient = await RegionNetworkFirewallPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            PatchAssociationRegionNetworkFirewallPolicyRequest request = new PatchAssociationRegionNetworkFirewallPolicyRequest
+            {
+                RequestId = "",
+                Region = "",
+                Project = "",
+                FirewallPolicyAssociationResource = new FirewallPolicyAssociation(),
+                FirewallPolicy = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionNetworkFirewallPoliciesClient.PatchAssociationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionNetworkFirewallPoliciesClient.PollOncePatchAssociationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchAssociation</summary>
+        public void PatchAssociation()
+        {
+            // Snippet: PatchAssociation(string, string, string, FirewallPolicyAssociation, CallSettings)
+            // Create client
+            RegionNetworkFirewallPoliciesClient regionNetworkFirewallPoliciesClient = RegionNetworkFirewallPoliciesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string firewallPolicy = "";
+            FirewallPolicyAssociation firewallPolicyAssociationResource = new FirewallPolicyAssociation();
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionNetworkFirewallPoliciesClient.PatchAssociation(project, region, firewallPolicy, firewallPolicyAssociationResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionNetworkFirewallPoliciesClient.PollOncePatchAssociation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchAssociationAsync</summary>
+        public async Task PatchAssociationAsync()
+        {
+            // Snippet: PatchAssociationAsync(string, string, string, FirewallPolicyAssociation, CallSettings)
+            // Additional: PatchAssociationAsync(string, string, string, FirewallPolicyAssociation, CancellationToken)
+            // Create client
+            RegionNetworkFirewallPoliciesClient regionNetworkFirewallPoliciesClient = await RegionNetworkFirewallPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string firewallPolicy = "";
+            FirewallPolicyAssociation firewallPolicyAssociationResource = new FirewallPolicyAssociation();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionNetworkFirewallPoliciesClient.PatchAssociationAsync(project, region, firewallPolicy, firewallPolicyAssociationResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionNetworkFirewallPoliciesClient.PollOncePatchAssociationAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

@@ -48,12 +48,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -97,12 +97,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -464,12 +464,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -513,12 +513,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -680,12 +680,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -729,12 +729,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -1512,12 +1512,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -1561,12 +1561,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -2547,6 +2547,422 @@
       ]
     },
     {
+      "regionTag": "compute_v1_generated_Advice_Capacity_sync",
+      "title": "CapacityRequestObject",
+      "description": "Snippet for Capacity",
+      "file": "AdviceClient.CapacityRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Capacity",
+        "fullName": "Google.Cloud.Compute.V1.AdviceClient.Capacity",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.CapacityAdviceRpcRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.CapacityAdviceResponse",
+        "client": {
+          "shortName": "AdviceClient",
+          "fullName": "Google.Cloud.Compute.V1.AdviceClient"
+        },
+        "method": {
+          "shortName": "Capacity",
+          "fullName": "google.cloud.compute.v1.Advice.Capacity",
+          "service": {
+            "shortName": "Advice",
+            "fullName": "google.cloud.compute.v1.Advice"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Advice_Capacity_async",
+      "title": "CapacityRequestObjectAsync",
+      "description": "Snippet for CapacityAsync",
+      "file": "AdviceClient.CapacityRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CapacityAsync",
+        "fullName": "Google.Cloud.Compute.V1.AdviceClient.CapacityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.CapacityAdviceRpcRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.CapacityAdviceResponse>",
+        "client": {
+          "shortName": "AdviceClient",
+          "fullName": "Google.Cloud.Compute.V1.AdviceClient"
+        },
+        "method": {
+          "shortName": "Capacity",
+          "fullName": "google.cloud.compute.v1.Advice.Capacity",
+          "service": {
+            "shortName": "Advice",
+            "fullName": "google.cloud.compute.v1.Advice"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Advice_Capacity_sync_flattened",
+      "title": "Capacity",
+      "description": "Snippet for Capacity",
+      "file": "AdviceClient.CapacitySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Capacity",
+        "fullName": "Google.Cloud.Compute.V1.AdviceClient.Capacity",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "region"
+          },
+          {
+            "type": "Google.Cloud.Compute.V1.CapacityAdviceRequest",
+            "name": "capacityAdviceRequestResource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.CapacityAdviceResponse",
+        "client": {
+          "shortName": "AdviceClient",
+          "fullName": "Google.Cloud.Compute.V1.AdviceClient"
+        },
+        "method": {
+          "shortName": "Capacity",
+          "fullName": "google.cloud.compute.v1.Advice.Capacity",
+          "service": {
+            "shortName": "Advice",
+            "fullName": "google.cloud.compute.v1.Advice"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Advice_Capacity_async_flattened",
+      "title": "CapacityAsync",
+      "description": "Snippet for CapacityAsync",
+      "file": "AdviceClient.CapacityAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CapacityAsync",
+        "fullName": "Google.Cloud.Compute.V1.AdviceClient.CapacityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "region"
+          },
+          {
+            "type": "Google.Cloud.Compute.V1.CapacityAdviceRequest",
+            "name": "capacityAdviceRequestResource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.CapacityAdviceResponse>",
+        "client": {
+          "shortName": "AdviceClient",
+          "fullName": "Google.Cloud.Compute.V1.AdviceClient"
+        },
+        "method": {
+          "shortName": "Capacity",
+          "fullName": "google.cloud.compute.v1.Advice.Capacity",
+          "service": {
+            "shortName": "Advice",
+            "fullName": "google.cloud.compute.v1.Advice"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Advice_CapacityHistory_sync",
+      "title": "CapacityHistoryRequestObject",
+      "description": "Snippet for CapacityHistory",
+      "file": "AdviceClient.CapacityHistoryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CapacityHistory",
+        "fullName": "Google.Cloud.Compute.V1.AdviceClient.CapacityHistory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.CapacityHistoryAdviceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.CapacityHistoryResponse",
+        "client": {
+          "shortName": "AdviceClient",
+          "fullName": "Google.Cloud.Compute.V1.AdviceClient"
+        },
+        "method": {
+          "shortName": "CapacityHistory",
+          "fullName": "google.cloud.compute.v1.Advice.CapacityHistory",
+          "service": {
+            "shortName": "Advice",
+            "fullName": "google.cloud.compute.v1.Advice"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Advice_CapacityHistory_async",
+      "title": "CapacityHistoryRequestObjectAsync",
+      "description": "Snippet for CapacityHistoryAsync",
+      "file": "AdviceClient.CapacityHistoryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CapacityHistoryAsync",
+        "fullName": "Google.Cloud.Compute.V1.AdviceClient.CapacityHistoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.CapacityHistoryAdviceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.CapacityHistoryResponse>",
+        "client": {
+          "shortName": "AdviceClient",
+          "fullName": "Google.Cloud.Compute.V1.AdviceClient"
+        },
+        "method": {
+          "shortName": "CapacityHistory",
+          "fullName": "google.cloud.compute.v1.Advice.CapacityHistory",
+          "service": {
+            "shortName": "Advice",
+            "fullName": "google.cloud.compute.v1.Advice"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Advice_CapacityHistory_sync_flattened",
+      "title": "CapacityHistory",
+      "description": "Snippet for CapacityHistory",
+      "file": "AdviceClient.CapacityHistorySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CapacityHistory",
+        "fullName": "Google.Cloud.Compute.V1.AdviceClient.CapacityHistory",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "region"
+          },
+          {
+            "type": "Google.Cloud.Compute.V1.CapacityHistoryRequest",
+            "name": "capacityHistoryRequestResource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.CapacityHistoryResponse",
+        "client": {
+          "shortName": "AdviceClient",
+          "fullName": "Google.Cloud.Compute.V1.AdviceClient"
+        },
+        "method": {
+          "shortName": "CapacityHistory",
+          "fullName": "google.cloud.compute.v1.Advice.CapacityHistory",
+          "service": {
+            "shortName": "Advice",
+            "fullName": "google.cloud.compute.v1.Advice"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Advice_CapacityHistory_async_flattened",
+      "title": "CapacityHistoryAsync",
+      "description": "Snippet for CapacityHistoryAsync",
+      "file": "AdviceClient.CapacityHistoryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CapacityHistoryAsync",
+        "fullName": "Google.Cloud.Compute.V1.AdviceClient.CapacityHistoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "region"
+          },
+          {
+            "type": "Google.Cloud.Compute.V1.CapacityHistoryRequest",
+            "name": "capacityHistoryRequestResource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.CapacityHistoryResponse>",
+        "client": {
+          "shortName": "AdviceClient",
+          "fullName": "Google.Cloud.Compute.V1.AdviceClient"
+        },
+        "method": {
+          "shortName": "CapacityHistory",
+          "fullName": "google.cloud.compute.v1.Advice.CapacityHistory",
+          "service": {
+            "shortName": "Advice",
+            "fullName": "google.cloud.compute.v1.Advice"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "compute_v1_generated_Autoscalers_AggregatedList_sync",
       "title": "AggregatedListRequestObject",
       "description": "Snippet for AggregatedList",
@@ -2584,12 +3000,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -2633,12 +3049,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -3416,12 +3832,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -3465,12 +3881,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -4472,12 +4888,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -4521,12 +4937,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -5688,12 +6104,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -5737,12 +6153,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -5896,12 +6312,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -5945,12 +6361,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -7352,12 +7768,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -7401,12 +7817,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -8976,12 +9392,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -9025,12 +9441,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -9184,12 +9600,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -9233,12 +9649,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -11240,12 +11656,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -11289,12 +11705,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -11656,12 +12072,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -11705,12 +12121,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -12072,12 +12488,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -12121,12 +12537,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -12504,12 +12920,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -12553,12 +12969,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -14176,12 +14592,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -14225,12 +14641,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -17136,12 +17552,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -17185,12 +17601,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -19382,10 +19798,6 @@
         "fullName": "Google.Cloud.Compute.V1.FirewallPoliciesClient.Insert",
         "parameters": [
           {
-            "type": "System.String",
-            "name": "parentId"
-          },
-          {
             "type": "Google.Cloud.Compute.V1.FirewallPolicy",
             "name": "firewallPolicyResource"
           },
@@ -19412,12 +19824,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 61,
+          "end": 60,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 59,
+          "end": 58,
           "type": "SHORT"
         }
       ]
@@ -19433,10 +19845,6 @@
         "fullName": "Google.Cloud.Compute.V1.FirewallPoliciesClient.InsertAsync",
         "async": true,
         "parameters": [
-          {
-            "type": "System.String",
-            "name": "parentId"
-          },
           {
             "type": "Google.Cloud.Compute.V1.FirewallPolicy",
             "name": "firewallPolicyResource"
@@ -19464,12 +19872,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 62,
+          "end": 61,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 60,
+          "end": 59,
           "type": "SHORT"
         }
       ]
@@ -19512,12 +19920,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -19561,12 +19969,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -19970,10 +20378,6 @@
             "name": "firewallPolicy"
           },
           {
-            "type": "System.String",
-            "name": "parentId"
-          },
-          {
             "type": "Google.Api.Gax.Grpc.CallSettings",
             "name": "callSettings"
           }
@@ -19996,12 +20400,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 61,
+          "end": 60,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 59,
+          "end": 58,
           "type": "SHORT"
         }
       ]
@@ -20020,10 +20424,6 @@
           {
             "type": "System.String",
             "name": "firewallPolicy"
-          },
-          {
-            "type": "System.String",
-            "name": "parentId"
           },
           {
             "type": "Google.Api.Gax.Grpc.CallSettings",
@@ -20048,12 +20448,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 62,
+          "end": 61,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 60,
+          "end": 59,
           "type": "SHORT"
         }
       ]
@@ -21880,12 +22280,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -21929,12 +22329,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -22712,12 +23112,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -22761,12 +23161,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -23544,12 +23944,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -23593,12 +23993,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -24408,12 +24808,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -24457,12 +24857,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -25448,12 +25848,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -25497,12 +25897,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -26480,12 +26880,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -26529,12 +26929,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -27912,12 +28312,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -27961,12 +28361,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -28702,6 +29102,398 @@
         {
           "start": 38,
           "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_GlobalFrontendSettingsService_Get_sync",
+      "title": "GetRequestObject",
+      "description": "Snippet for Get",
+      "file": "GlobalFrontendSettingsServiceClient.GetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Get",
+        "fullName": "Google.Cloud.Compute.V1.GlobalFrontendSettingsServiceClient.Get",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.GetGlobalFrontendSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.GlobalFrontendSettings",
+        "client": {
+          "shortName": "GlobalFrontendSettingsServiceClient",
+          "fullName": "Google.Cloud.Compute.V1.GlobalFrontendSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.GlobalFrontendSettingsService.Get",
+          "service": {
+            "shortName": "GlobalFrontendSettingsService",
+            "fullName": "google.cloud.compute.v1.GlobalFrontendSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_GlobalFrontendSettingsService_Get_async",
+      "title": "GetRequestObjectAsync",
+      "description": "Snippet for GetAsync",
+      "file": "GlobalFrontendSettingsServiceClient.GetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsync",
+        "fullName": "Google.Cloud.Compute.V1.GlobalFrontendSettingsServiceClient.GetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.GetGlobalFrontendSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.GlobalFrontendSettings>",
+        "client": {
+          "shortName": "GlobalFrontendSettingsServiceClient",
+          "fullName": "Google.Cloud.Compute.V1.GlobalFrontendSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.GlobalFrontendSettingsService.Get",
+          "service": {
+            "shortName": "GlobalFrontendSettingsService",
+            "fullName": "google.cloud.compute.v1.GlobalFrontendSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_GlobalFrontendSettingsService_Get_sync_flattened",
+      "title": "Get",
+      "description": "Snippet for Get",
+      "file": "GlobalFrontendSettingsServiceClient.GetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Get",
+        "fullName": "Google.Cloud.Compute.V1.GlobalFrontendSettingsServiceClient.Get",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.GlobalFrontendSettings",
+        "client": {
+          "shortName": "GlobalFrontendSettingsServiceClient",
+          "fullName": "Google.Cloud.Compute.V1.GlobalFrontendSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.GlobalFrontendSettingsService.Get",
+          "service": {
+            "shortName": "GlobalFrontendSettingsService",
+            "fullName": "google.cloud.compute.v1.GlobalFrontendSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_GlobalFrontendSettingsService_Get_async_flattened",
+      "title": "GetAsync",
+      "description": "Snippet for GetAsync",
+      "file": "GlobalFrontendSettingsServiceClient.GetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsync",
+        "fullName": "Google.Cloud.Compute.V1.GlobalFrontendSettingsServiceClient.GetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.GlobalFrontendSettings>",
+        "client": {
+          "shortName": "GlobalFrontendSettingsServiceClient",
+          "fullName": "Google.Cloud.Compute.V1.GlobalFrontendSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.GlobalFrontendSettingsService.Get",
+          "service": {
+            "shortName": "GlobalFrontendSettingsService",
+            "fullName": "google.cloud.compute.v1.GlobalFrontendSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_GlobalFrontendSettingsService_Patch_sync",
+      "title": "PatchRequestObject",
+      "description": "Snippet for Patch",
+      "file": "GlobalFrontendSettingsServiceClient.PatchRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Patch",
+        "fullName": "Google.Cloud.Compute.V1.GlobalFrontendSettingsServiceClient.Patch",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.PatchGlobalFrontendSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.GlobalFrontendSettingsPatchResponse",
+        "client": {
+          "shortName": "GlobalFrontendSettingsServiceClient",
+          "fullName": "Google.Cloud.Compute.V1.GlobalFrontendSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "Patch",
+          "fullName": "google.cloud.compute.v1.GlobalFrontendSettingsService.Patch",
+          "service": {
+            "shortName": "GlobalFrontendSettingsService",
+            "fullName": "google.cloud.compute.v1.GlobalFrontendSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_GlobalFrontendSettingsService_Patch_async",
+      "title": "PatchRequestObjectAsync",
+      "description": "Snippet for PatchAsync",
+      "file": "GlobalFrontendSettingsServiceClient.PatchRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PatchAsync",
+        "fullName": "Google.Cloud.Compute.V1.GlobalFrontendSettingsServiceClient.PatchAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.PatchGlobalFrontendSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.GlobalFrontendSettingsPatchResponse>",
+        "client": {
+          "shortName": "GlobalFrontendSettingsServiceClient",
+          "fullName": "Google.Cloud.Compute.V1.GlobalFrontendSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "Patch",
+          "fullName": "google.cloud.compute.v1.GlobalFrontendSettingsService.Patch",
+          "service": {
+            "shortName": "GlobalFrontendSettingsService",
+            "fullName": "google.cloud.compute.v1.GlobalFrontendSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_GlobalFrontendSettingsService_Patch_sync_flattened",
+      "title": "Patch",
+      "description": "Snippet for Patch",
+      "file": "GlobalFrontendSettingsServiceClient.PatchSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Patch",
+        "fullName": "Google.Cloud.Compute.V1.GlobalFrontendSettingsServiceClient.Patch",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "Google.Cloud.Compute.V1.GlobalFrontendSettings",
+            "name": "globalFrontendSettingsResource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.GlobalFrontendSettingsPatchResponse",
+        "client": {
+          "shortName": "GlobalFrontendSettingsServiceClient",
+          "fullName": "Google.Cloud.Compute.V1.GlobalFrontendSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "Patch",
+          "fullName": "google.cloud.compute.v1.GlobalFrontendSettingsService.Patch",
+          "service": {
+            "shortName": "GlobalFrontendSettingsService",
+            "fullName": "google.cloud.compute.v1.GlobalFrontendSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_GlobalFrontendSettingsService_Patch_async_flattened",
+      "title": "PatchAsync",
+      "description": "Snippet for PatchAsync",
+      "file": "GlobalFrontendSettingsServiceClient.PatchAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PatchAsync",
+        "fullName": "Google.Cloud.Compute.V1.GlobalFrontendSettingsServiceClient.PatchAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "Google.Cloud.Compute.V1.GlobalFrontendSettings",
+            "name": "globalFrontendSettingsResource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.GlobalFrontendSettingsPatchResponse>",
+        "client": {
+          "shortName": "GlobalFrontendSettingsServiceClient",
+          "fullName": "Google.Cloud.Compute.V1.GlobalFrontendSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "Patch",
+          "fullName": "google.cloud.compute.v1.GlobalFrontendSettingsService.Patch",
+          "service": {
+            "shortName": "GlobalFrontendSettingsService",
+            "fullName": "google.cloud.compute.v1.GlobalFrontendSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
           "type": "SHORT"
         }
       ]
@@ -29760,12 +30552,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -29809,12 +30601,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -29968,12 +30760,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -30017,12 +30809,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -30184,12 +30976,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -30233,12 +31025,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -30792,12 +31584,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -30841,12 +31633,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -31584,12 +32376,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -31633,12 +32425,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -32384,12 +33176,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -32433,12 +33225,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -32800,12 +33592,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -32849,12 +33641,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -33616,12 +34408,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -33665,12 +34457,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -34032,12 +34824,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -34081,12 +34873,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -34840,12 +35632,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -34889,12 +35681,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -36112,12 +36904,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -36161,12 +36953,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -36502,6 +37294,430 @@
         {
           "start": 35,
           "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ImageViews_Get_sync",
+      "title": "GetRequestObject",
+      "description": "Snippet for Get",
+      "file": "ImageViewsClient.GetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Get",
+        "fullName": "Google.Cloud.Compute.V1.ImageViewsClient.Get",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.GetImageViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.ImageView",
+        "client": {
+          "shortName": "ImageViewsClient",
+          "fullName": "Google.Cloud.Compute.V1.ImageViewsClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.ImageViews.Get",
+          "service": {
+            "shortName": "ImageViews",
+            "fullName": "google.cloud.compute.v1.ImageViews"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ImageViews_Get_async",
+      "title": "GetRequestObjectAsync",
+      "description": "Snippet for GetAsync",
+      "file": "ImageViewsClient.GetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsync",
+        "fullName": "Google.Cloud.Compute.V1.ImageViewsClient.GetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.GetImageViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.ImageView>",
+        "client": {
+          "shortName": "ImageViewsClient",
+          "fullName": "Google.Cloud.Compute.V1.ImageViewsClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.ImageViews.Get",
+          "service": {
+            "shortName": "ImageViews",
+            "fullName": "google.cloud.compute.v1.ImageViews"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ImageViews_Get_sync_flattened",
+      "title": "Get",
+      "description": "Snippet for Get",
+      "file": "ImageViewsClient.GetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Get",
+        "fullName": "Google.Cloud.Compute.V1.ImageViewsClient.Get",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "region"
+          },
+          {
+            "type": "System.String",
+            "name": "resourceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.ImageView",
+        "client": {
+          "shortName": "ImageViewsClient",
+          "fullName": "Google.Cloud.Compute.V1.ImageViewsClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.ImageViews.Get",
+          "service": {
+            "shortName": "ImageViews",
+            "fullName": "google.cloud.compute.v1.ImageViews"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ImageViews_Get_async_flattened",
+      "title": "GetAsync",
+      "description": "Snippet for GetAsync",
+      "file": "ImageViewsClient.GetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsync",
+        "fullName": "Google.Cloud.Compute.V1.ImageViewsClient.GetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "region"
+          },
+          {
+            "type": "System.String",
+            "name": "resourceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.ImageView>",
+        "client": {
+          "shortName": "ImageViewsClient",
+          "fullName": "Google.Cloud.Compute.V1.ImageViewsClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.ImageViews.Get",
+          "service": {
+            "shortName": "ImageViews",
+            "fullName": "google.cloud.compute.v1.ImageViews"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ImageViews_List_sync",
+      "title": "ListRequestObject",
+      "description": "Snippet for List",
+      "file": "ImageViewsClient.ListRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "List",
+        "fullName": "Google.Cloud.Compute.V1.ImageViewsClient.List",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.ListImageViewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Compute.V1.ImageViewsListResponse, Google.Cloud.Compute.V1.ImageView>",
+        "client": {
+          "shortName": "ImageViewsClient",
+          "fullName": "Google.Cloud.Compute.V1.ImageViewsClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.ImageViews.List",
+          "service": {
+            "shortName": "ImageViews",
+            "fullName": "google.cloud.compute.v1.ImageViews"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ImageViews_List_async",
+      "title": "ListRequestObjectAsync",
+      "description": "Snippet for ListAsync",
+      "file": "ImageViewsClient.ListRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAsync",
+        "fullName": "Google.Cloud.Compute.V1.ImageViewsClient.ListAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.ListImageViewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Compute.V1.ImageViewsListResponse, Google.Cloud.Compute.V1.ImageView>",
+        "client": {
+          "shortName": "ImageViewsClient",
+          "fullName": "Google.Cloud.Compute.V1.ImageViewsClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.ImageViews.List",
+          "service": {
+            "shortName": "ImageViews",
+            "fullName": "google.cloud.compute.v1.ImageViews"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ImageViews_List_sync_flattened",
+      "title": "List",
+      "description": "Snippet for List",
+      "file": "ImageViewsClient.ListSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "List",
+        "fullName": "Google.Cloud.Compute.V1.ImageViewsClient.List",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "region"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Compute.V1.ImageViewsListResponse, Google.Cloud.Compute.V1.ImageView>",
+        "client": {
+          "shortName": "ImageViewsClient",
+          "fullName": "Google.Cloud.Compute.V1.ImageViewsClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.ImageViews.List",
+          "service": {
+            "shortName": "ImageViews",
+            "fullName": "google.cloud.compute.v1.ImageViews"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ImageViews_List_async_flattened",
+      "title": "ListAsync",
+      "description": "Snippet for ListAsync",
+      "file": "ImageViewsClient.ListAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAsync",
+        "fullName": "Google.Cloud.Compute.V1.ImageViewsClient.ListAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "region"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Compute.V1.ImageViewsListResponse, Google.Cloud.Compute.V1.ImageView>",
+        "client": {
+          "shortName": "ImageViewsClient",
+          "fullName": "Google.Cloud.Compute.V1.ImageViewsClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.ImageViews.List",
+          "service": {
+            "shortName": "ImageViews",
+            "fullName": "google.cloud.compute.v1.ImageViews"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 75,
           "type": "SHORT"
         }
       ]
@@ -37752,12 +38968,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -37801,12 +39017,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -39656,12 +40872,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -39705,12 +40921,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -40096,12 +41312,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -40145,12 +41361,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -41792,12 +43008,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -41841,12 +43057,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -42008,12 +43224,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -42057,12 +43273,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -42232,12 +43448,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -42281,12 +43497,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -42456,12 +43672,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -42505,12 +43721,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -45272,12 +46488,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -45321,12 +46537,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -46104,12 +47320,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -46153,12 +47369,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -46320,12 +47536,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -46369,12 +47585,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -47608,12 +48824,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -47657,12 +48873,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -48616,12 +49832,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -48665,12 +49881,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -49896,12 +51112,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -49945,12 +51161,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -53064,12 +54280,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -53113,12 +54329,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -53280,12 +54496,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -53329,12 +54545,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -60984,12 +62200,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -61033,12 +62249,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -61632,12 +62848,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -61681,12 +62897,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -62672,12 +63888,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -62721,12 +63937,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -64536,12 +65752,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -64585,12 +65801,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -65368,12 +66584,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -65417,12 +66633,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -66200,12 +67416,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -66249,12 +67465,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -68056,12 +69272,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -68105,12 +69321,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -69088,12 +70304,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -69137,12 +70353,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -69496,12 +70712,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -69545,12 +70761,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -70704,12 +71920,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -70753,12 +71969,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -71270,6 +72486,214 @@
         "method": {
           "shortName": "SetLabels",
           "fullName": "google.cloud.compute.v1.Interconnects.SetLabels",
+          "service": {
+            "shortName": "Interconnects",
+            "fullName": "google.cloud.compute.v1.Interconnects"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Interconnects_SetName_sync",
+      "title": "SetNameRequestObject",
+      "description": "Snippet for SetName",
+      "file": "InterconnectsClient.SetNameRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetName",
+        "fullName": "Google.Cloud.Compute.V1.InterconnectsClient.SetName",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.SetNameInterconnectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "InterconnectsClient",
+          "fullName": "Google.Cloud.Compute.V1.InterconnectsClient"
+        },
+        "method": {
+          "shortName": "SetName",
+          "fullName": "google.cloud.compute.v1.Interconnects.SetName",
+          "service": {
+            "shortName": "Interconnects",
+            "fullName": "google.cloud.compute.v1.Interconnects"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Interconnects_SetName_async",
+      "title": "SetNameRequestObjectAsync",
+      "description": "Snippet for SetNameAsync",
+      "file": "InterconnectsClient.SetNameRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetNameAsync",
+        "fullName": "Google.Cloud.Compute.V1.InterconnectsClient.SetNameAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.SetNameInterconnectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "InterconnectsClient",
+          "fullName": "Google.Cloud.Compute.V1.InterconnectsClient"
+        },
+        "method": {
+          "shortName": "SetName",
+          "fullName": "google.cloud.compute.v1.Interconnects.SetName",
+          "service": {
+            "shortName": "Interconnects",
+            "fullName": "google.cloud.compute.v1.Interconnects"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Interconnects_SetName_sync_flattened",
+      "title": "SetName",
+      "description": "Snippet for SetName",
+      "file": "InterconnectsClient.SetNameSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetName",
+        "fullName": "Google.Cloud.Compute.V1.InterconnectsClient.SetName",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "interconnect"
+          },
+          {
+            "type": "Google.Cloud.Compute.V1.InterconnectsSetNameRequest",
+            "name": "interconnectsSetNameRequestResource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "InterconnectsClient",
+          "fullName": "Google.Cloud.Compute.V1.InterconnectsClient"
+        },
+        "method": {
+          "shortName": "SetName",
+          "fullName": "google.cloud.compute.v1.Interconnects.SetName",
+          "service": {
+            "shortName": "Interconnects",
+            "fullName": "google.cloud.compute.v1.Interconnects"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Interconnects_SetName_async_flattened",
+      "title": "SetNameAsync",
+      "description": "Snippet for SetNameAsync",
+      "file": "InterconnectsClient.SetNameAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetNameAsync",
+        "fullName": "Google.Cloud.Compute.V1.InterconnectsClient.SetNameAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "interconnect"
+          },
+          {
+            "type": "Google.Cloud.Compute.V1.InterconnectsSetNameRequest",
+            "name": "interconnectsSetNameRequestResource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "InterconnectsClient",
+          "fullName": "Google.Cloud.Compute.V1.InterconnectsClient"
+        },
+        "method": {
+          "shortName": "SetName",
+          "fullName": "google.cloud.compute.v1.Interconnects.SetName",
           "service": {
             "shortName": "Interconnects",
             "fullName": "google.cloud.compute.v1.Interconnects"
@@ -72944,12 +74368,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -72993,12 +74417,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -74576,12 +76000,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -74625,12 +76049,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -75408,12 +76832,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -75457,12 +76881,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -75824,12 +77248,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -75873,12 +77297,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -76003,6 +77427,414 @@
       ]
     },
     {
+      "regionTag": "compute_v1_generated_ManagedRulesets_Get_sync",
+      "title": "GetRequestObject",
+      "description": "Snippet for Get",
+      "file": "ManagedRulesetsClient.GetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Get",
+        "fullName": "Google.Cloud.Compute.V1.ManagedRulesetsClient.Get",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.GetManagedRulesetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.ManagedRuleset",
+        "client": {
+          "shortName": "ManagedRulesetsClient",
+          "fullName": "Google.Cloud.Compute.V1.ManagedRulesetsClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.ManagedRulesets.Get",
+          "service": {
+            "shortName": "ManagedRulesets",
+            "fullName": "google.cloud.compute.v1.ManagedRulesets"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ManagedRulesets_Get_async",
+      "title": "GetRequestObjectAsync",
+      "description": "Snippet for GetAsync",
+      "file": "ManagedRulesetsClient.GetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsync",
+        "fullName": "Google.Cloud.Compute.V1.ManagedRulesetsClient.GetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.GetManagedRulesetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.ManagedRuleset>",
+        "client": {
+          "shortName": "ManagedRulesetsClient",
+          "fullName": "Google.Cloud.Compute.V1.ManagedRulesetsClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.ManagedRulesets.Get",
+          "service": {
+            "shortName": "ManagedRulesets",
+            "fullName": "google.cloud.compute.v1.ManagedRulesets"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ManagedRulesets_Get_sync_flattened",
+      "title": "Get",
+      "description": "Snippet for Get",
+      "file": "ManagedRulesetsClient.GetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Get",
+        "fullName": "Google.Cloud.Compute.V1.ManagedRulesetsClient.Get",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "managedRuleset"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.ManagedRuleset",
+        "client": {
+          "shortName": "ManagedRulesetsClient",
+          "fullName": "Google.Cloud.Compute.V1.ManagedRulesetsClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.ManagedRulesets.Get",
+          "service": {
+            "shortName": "ManagedRulesets",
+            "fullName": "google.cloud.compute.v1.ManagedRulesets"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ManagedRulesets_Get_async_flattened",
+      "title": "GetAsync",
+      "description": "Snippet for GetAsync",
+      "file": "ManagedRulesetsClient.GetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsync",
+        "fullName": "Google.Cloud.Compute.V1.ManagedRulesetsClient.GetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "managedRuleset"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.ManagedRuleset>",
+        "client": {
+          "shortName": "ManagedRulesetsClient",
+          "fullName": "Google.Cloud.Compute.V1.ManagedRulesetsClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.ManagedRulesets.Get",
+          "service": {
+            "shortName": "ManagedRulesets",
+            "fullName": "google.cloud.compute.v1.ManagedRulesets"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ManagedRulesets_List_sync",
+      "title": "ListRequestObject",
+      "description": "Snippet for List",
+      "file": "ManagedRulesetsClient.ListRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "List",
+        "fullName": "Google.Cloud.Compute.V1.ManagedRulesetsClient.List",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.ListManagedRulesetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Compute.V1.ManagedRulesetList, Google.Cloud.Compute.V1.ManagedRuleset>",
+        "client": {
+          "shortName": "ManagedRulesetsClient",
+          "fullName": "Google.Cloud.Compute.V1.ManagedRulesetsClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.ManagedRulesets.List",
+          "service": {
+            "shortName": "ManagedRulesets",
+            "fullName": "google.cloud.compute.v1.ManagedRulesets"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ManagedRulesets_List_async",
+      "title": "ListRequestObjectAsync",
+      "description": "Snippet for ListAsync",
+      "file": "ManagedRulesetsClient.ListRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAsync",
+        "fullName": "Google.Cloud.Compute.V1.ManagedRulesetsClient.ListAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.ListManagedRulesetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Compute.V1.ManagedRulesetList, Google.Cloud.Compute.V1.ManagedRuleset>",
+        "client": {
+          "shortName": "ManagedRulesetsClient",
+          "fullName": "Google.Cloud.Compute.V1.ManagedRulesetsClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.ManagedRulesets.List",
+          "service": {
+            "shortName": "ManagedRulesets",
+            "fullName": "google.cloud.compute.v1.ManagedRulesets"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ManagedRulesets_List_sync_flattened",
+      "title": "List",
+      "description": "Snippet for List",
+      "file": "ManagedRulesetsClient.ListSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "List",
+        "fullName": "Google.Cloud.Compute.V1.ManagedRulesetsClient.List",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Compute.V1.ManagedRulesetList, Google.Cloud.Compute.V1.ManagedRuleset>",
+        "client": {
+          "shortName": "ManagedRulesetsClient",
+          "fullName": "Google.Cloud.Compute.V1.ManagedRulesetsClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.ManagedRulesets.List",
+          "service": {
+            "shortName": "ManagedRulesets",
+            "fullName": "google.cloud.compute.v1.ManagedRulesets"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ManagedRulesets_List_async_flattened",
+      "title": "ListAsync",
+      "description": "Snippet for ListAsync",
+      "file": "ManagedRulesetsClient.ListAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAsync",
+        "fullName": "Google.Cloud.Compute.V1.ManagedRulesetsClient.ListAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Compute.V1.ManagedRulesetList, Google.Cloud.Compute.V1.ManagedRuleset>",
+        "client": {
+          "shortName": "ManagedRulesetsClient",
+          "fullName": "Google.Cloud.Compute.V1.ManagedRulesetsClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.ManagedRulesets.List",
+          "service": {
+            "shortName": "ManagedRulesets",
+            "fullName": "google.cloud.compute.v1.ManagedRulesets"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "compute_v1_generated_NetworkAttachments_AggregatedList_sync",
       "title": "AggregatedListRequestObject",
       "description": "Snippet for AggregatedList",
@@ -76040,12 +77872,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -76089,12 +77921,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -77080,12 +78912,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -77129,12 +78961,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -77944,12 +79776,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -77993,12 +79825,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -78992,12 +80824,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -79041,12 +80873,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -80256,12 +82088,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -80305,12 +82137,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -80472,12 +82304,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -80521,12 +82353,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -81544,12 +83376,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -81593,12 +83425,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -83352,12 +85184,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -83401,12 +85233,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -85400,12 +87232,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -85449,12 +87281,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -86824,12 +88656,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -86873,12 +88705,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -87032,12 +88864,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -87081,12 +88913,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 86,
+          "end": 85,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 84,
+          "end": 83,
           "type": "SHORT"
         }
       ]
@@ -88496,12 +90328,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -88545,12 +90377,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -89760,12 +91592,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -89809,12 +91641,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -89976,12 +91808,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -90025,12 +91857,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -91496,12 +93328,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -91545,12 +93377,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -92536,12 +94368,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -92585,12 +94417,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -93184,12 +95016,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -93233,12 +95065,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -93600,12 +95432,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -93649,12 +95481,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -95368,12 +97200,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -95417,12 +97249,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -95752,12 +97584,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 49,
+          "end": 48,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 47,
+          "end": 46,
           "type": "SHORT"
         }
       ]
@@ -95801,12 +97633,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 50,
+          "end": 49,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 48,
+          "end": 47,
           "type": "SHORT"
         }
       ]
@@ -96912,12 +98744,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -96961,12 +98793,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -97744,12 +99576,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -97793,12 +99625,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -98592,12 +100424,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -98641,12 +100473,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -98966,6 +100798,206 @@
         {
           "start": 38,
           "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ProjectViews_Get_sync",
+      "title": "GetRequestObject",
+      "description": "Snippet for Get",
+      "file": "ProjectViewsClient.GetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Get",
+        "fullName": "Google.Cloud.Compute.V1.ProjectViewsClient.Get",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.GetProjectViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.ProjectView",
+        "client": {
+          "shortName": "ProjectViewsClient",
+          "fullName": "Google.Cloud.Compute.V1.ProjectViewsClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.ProjectViews.Get",
+          "service": {
+            "shortName": "ProjectViews",
+            "fullName": "google.cloud.compute.v1.ProjectViews"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ProjectViews_Get_async",
+      "title": "GetRequestObjectAsync",
+      "description": "Snippet for GetAsync",
+      "file": "ProjectViewsClient.GetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsync",
+        "fullName": "Google.Cloud.Compute.V1.ProjectViewsClient.GetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.GetProjectViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.ProjectView>",
+        "client": {
+          "shortName": "ProjectViewsClient",
+          "fullName": "Google.Cloud.Compute.V1.ProjectViewsClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.ProjectViews.Get",
+          "service": {
+            "shortName": "ProjectViews",
+            "fullName": "google.cloud.compute.v1.ProjectViews"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ProjectViews_Get_sync_flattened",
+      "title": "Get",
+      "description": "Snippet for Get",
+      "file": "ProjectViewsClient.GetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Get",
+        "fullName": "Google.Cloud.Compute.V1.ProjectViewsClient.Get",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "region"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.ProjectView",
+        "client": {
+          "shortName": "ProjectViewsClient",
+          "fullName": "Google.Cloud.Compute.V1.ProjectViewsClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.ProjectViews.Get",
+          "service": {
+            "shortName": "ProjectViews",
+            "fullName": "google.cloud.compute.v1.ProjectViews"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ProjectViews_Get_async_flattened",
+      "title": "GetAsync",
+      "description": "Snippet for GetAsync",
+      "file": "ProjectViewsClient.GetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsync",
+        "fullName": "Google.Cloud.Compute.V1.ProjectViewsClient.GetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "region"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.ProjectView>",
+        "client": {
+          "shortName": "ProjectViewsClient",
+          "fullName": "Google.Cloud.Compute.V1.ProjectViewsClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.ProjectViews.Get",
+          "service": {
+            "shortName": "ProjectViews",
+            "fullName": "google.cloud.compute.v1.ProjectViews"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
           "type": "SHORT"
         }
       ]
@@ -100176,12 +102208,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -100225,12 +102257,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -100384,12 +102416,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -100433,12 +102465,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -102600,12 +104632,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -102649,12 +104681,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -103216,12 +105248,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -103265,12 +105297,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -104256,12 +106288,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -104305,12 +106337,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -105520,12 +107552,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -105569,12 +107601,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -107200,12 +109232,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -107249,12 +109281,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -107416,12 +109448,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -107465,12 +109497,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -109328,12 +111360,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -109377,12 +111409,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -109544,12 +111576,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -109593,12 +111625,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -110840,12 +112872,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -110889,12 +112921,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -111464,12 +113496,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -111513,12 +113545,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -111896,12 +113928,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -111945,12 +113977,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -112936,12 +114968,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -112985,12 +115017,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -113792,12 +115824,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -113841,12 +115873,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -115480,12 +117512,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -115529,12 +117561,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -117840,12 +119872,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -117889,12 +119921,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -118672,12 +120704,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -118721,12 +120753,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -119320,12 +121352,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -119369,12 +121401,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -120152,12 +122184,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -120201,12 +122233,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -121424,12 +123456,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -121473,12 +123505,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -122288,12 +124320,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -122337,12 +124369,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -123328,12 +125360,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -123377,12 +125409,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -124840,12 +126872,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -124889,12 +126921,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -126768,12 +128800,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -126817,12 +128849,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -126984,12 +129016,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -127033,12 +129065,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -127208,12 +129240,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -127257,12 +129289,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -127432,12 +129464,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -127481,12 +129513,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -130240,12 +132272,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -130289,12 +132321,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -130456,12 +132488,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -130505,12 +132537,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -131744,12 +133776,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -131793,12 +133825,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -133000,12 +135032,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -133049,12 +135081,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -134480,12 +136512,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -134529,12 +136561,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -136400,12 +138432,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -136449,12 +138481,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -136616,12 +138648,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -136665,12 +138697,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -136840,12 +138872,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 68,
+          "end": 69,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 66,
+          "end": 67,
           "type": "SHORT"
         }
       ]
@@ -136889,12 +138921,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 69,
+          "end": 70,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 67,
+          "end": 68,
           "type": "SHORT"
         }
       ]
@@ -138936,12 +140968,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -138985,12 +141017,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -139310,6 +141342,222 @@
         "method": {
           "shortName": "Patch",
           "fullName": "google.cloud.compute.v1.RegionNetworkFirewallPolicies.Patch",
+          "service": {
+            "shortName": "RegionNetworkFirewallPolicies",
+            "fullName": "google.cloud.compute.v1.RegionNetworkFirewallPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionNetworkFirewallPolicies_PatchAssociation_sync",
+      "title": "PatchAssociationRequestObject",
+      "description": "Snippet for PatchAssociation",
+      "file": "RegionNetworkFirewallPoliciesClient.PatchAssociationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PatchAssociation",
+        "fullName": "Google.Cloud.Compute.V1.RegionNetworkFirewallPoliciesClient.PatchAssociation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.PatchAssociationRegionNetworkFirewallPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "RegionNetworkFirewallPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionNetworkFirewallPoliciesClient"
+        },
+        "method": {
+          "shortName": "PatchAssociation",
+          "fullName": "google.cloud.compute.v1.RegionNetworkFirewallPolicies.PatchAssociation",
+          "service": {
+            "shortName": "RegionNetworkFirewallPolicies",
+            "fullName": "google.cloud.compute.v1.RegionNetworkFirewallPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionNetworkFirewallPolicies_PatchAssociation_async",
+      "title": "PatchAssociationRequestObjectAsync",
+      "description": "Snippet for PatchAssociationAsync",
+      "file": "RegionNetworkFirewallPoliciesClient.PatchAssociationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PatchAssociationAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionNetworkFirewallPoliciesClient.PatchAssociationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.PatchAssociationRegionNetworkFirewallPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "RegionNetworkFirewallPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionNetworkFirewallPoliciesClient"
+        },
+        "method": {
+          "shortName": "PatchAssociation",
+          "fullName": "google.cloud.compute.v1.RegionNetworkFirewallPolicies.PatchAssociation",
+          "service": {
+            "shortName": "RegionNetworkFirewallPolicies",
+            "fullName": "google.cloud.compute.v1.RegionNetworkFirewallPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 68,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 66,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionNetworkFirewallPolicies_PatchAssociation_sync_flattened",
+      "title": "PatchAssociation",
+      "description": "Snippet for PatchAssociation",
+      "file": "RegionNetworkFirewallPoliciesClient.PatchAssociationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PatchAssociation",
+        "fullName": "Google.Cloud.Compute.V1.RegionNetworkFirewallPoliciesClient.PatchAssociation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "region"
+          },
+          {
+            "type": "System.String",
+            "name": "firewallPolicy"
+          },
+          {
+            "type": "Google.Cloud.Compute.V1.FirewallPolicyAssociation",
+            "name": "firewallPolicyAssociationResource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "RegionNetworkFirewallPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionNetworkFirewallPoliciesClient"
+        },
+        "method": {
+          "shortName": "PatchAssociation",
+          "fullName": "google.cloud.compute.v1.RegionNetworkFirewallPolicies.PatchAssociation",
+          "service": {
+            "shortName": "RegionNetworkFirewallPolicies",
+            "fullName": "google.cloud.compute.v1.RegionNetworkFirewallPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionNetworkFirewallPolicies_PatchAssociation_async_flattened",
+      "title": "PatchAssociationAsync",
+      "description": "Snippet for PatchAssociationAsync",
+      "file": "RegionNetworkFirewallPoliciesClient.PatchAssociationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PatchAssociationAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionNetworkFirewallPoliciesClient.PatchAssociationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "region"
+          },
+          {
+            "type": "System.String",
+            "name": "firewallPolicy"
+          },
+          {
+            "type": "Google.Cloud.Compute.V1.FirewallPolicyAssociation",
+            "name": "firewallPolicyAssociationResource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "RegionNetworkFirewallPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionNetworkFirewallPoliciesClient"
+        },
+        "method": {
+          "shortName": "PatchAssociation",
+          "fullName": "google.cloud.compute.v1.RegionNetworkFirewallPolicies.PatchAssociation",
           "service": {
             "shortName": "RegionNetworkFirewallPolicies",
             "fullName": "google.cloud.compute.v1.RegionNetworkFirewallPolicies"
@@ -140432,12 +142680,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -140481,12 +142729,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -141264,12 +143512,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -141313,12 +143561,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -142112,12 +144360,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -142161,12 +144409,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -143584,12 +145832,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -143633,12 +145881,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -145896,12 +148144,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -145945,12 +148193,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -147600,12 +149848,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -147649,12 +149897,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -148440,12 +150688,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -148489,12 +150737,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -148656,12 +150904,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 50,
+          "end": 49,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 48,
+          "end": 47,
           "type": "SHORT"
         }
       ]
@@ -148705,12 +150953,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 51,
+          "end": 50,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 49,
+          "end": 48,
           "type": "SHORT"
         }
       ]
@@ -149696,12 +151944,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -149745,12 +151993,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -150752,12 +153000,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -150801,12 +153049,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -152240,12 +154488,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -152289,12 +154537,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -153080,12 +155328,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -153129,12 +155377,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -153944,12 +156192,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -153993,12 +156241,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -154360,12 +156608,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -154409,12 +156657,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -154768,12 +157016,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -154817,12 +157065,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -155408,12 +157656,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -155457,12 +157705,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -156960,12 +159208,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -157009,12 +159257,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -158064,12 +160312,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -158113,12 +160361,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -159176,12 +161424,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -159225,12 +161473,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -160216,12 +162464,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -160265,12 +162513,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -161512,12 +163760,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -161561,12 +163809,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -162552,12 +164800,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -162601,12 +164849,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -164016,12 +166264,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -164065,12 +166313,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -165024,12 +167272,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -165073,12 +167321,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -165632,12 +167880,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -165681,12 +167929,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -167088,12 +169336,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -167137,12 +169385,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -167936,12 +170184,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -167985,12 +170233,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -168152,12 +170400,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 88,
+          "end": 87,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 86,
+          "end": 85,
           "type": "SHORT"
         }
       ]
@@ -168201,12 +170449,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 89,
+          "end": 88,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 87,
+          "end": 86,
           "type": "SHORT"
         }
       ]
@@ -168376,12 +170624,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -168425,12 +170673,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -168600,12 +170848,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -168649,12 +170897,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -170936,12 +173184,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -170985,12 +173233,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -171560,12 +173808,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -171609,12 +173857,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -172568,12 +174816,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -172617,12 +174865,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -172776,12 +175024,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 49,
+          "end": 48,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 47,
+          "end": 46,
           "type": "SHORT"
         }
       ]
@@ -172825,12 +175073,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 50,
+          "end": 49,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 48,
+          "end": 47,
           "type": "SHORT"
         }
       ]
@@ -173792,12 +176040,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -173841,12 +176089,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -174832,12 +177080,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -174881,12 +177129,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -176888,12 +179136,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -176937,12 +179185,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -177928,12 +180176,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -177977,12 +180225,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -178736,12 +180984,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -178785,12 +181033,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -178944,12 +181192,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -178993,12 +181241,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -179752,12 +182000,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -179801,12 +182049,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -179960,12 +182208,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 49,
+          "end": 48,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 47,
+          "end": 46,
           "type": "SHORT"
         }
       ]
@@ -180009,12 +182257,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 50,
+          "end": 49,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 48,
+          "end": 47,
           "type": "SHORT"
         }
       ]
@@ -180360,12 +182608,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -180409,12 +182657,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -180776,12 +183024,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -180825,12 +183073,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -180992,12 +183240,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -181041,12 +183289,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -182032,12 +184280,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -182081,12 +184329,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -182248,12 +184496,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -182297,12 +184545,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -183120,12 +185368,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -183169,12 +185417,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 86,
+          "end": 85,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 84,
+          "end": 83,
           "type": "SHORT"
         }
       ]
@@ -184376,12 +186624,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -184425,12 +186673,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -184592,12 +186840,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -184641,12 +186889,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -186264,12 +188512,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -186313,12 +188561,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -186680,12 +188928,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -186729,12 +188977,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -187488,12 +189736,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -187537,12 +189785,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -188112,12 +190360,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -188161,12 +190409,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -188920,12 +191168,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -188969,12 +191217,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -190376,12 +192624,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -190425,12 +192673,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -191208,12 +193456,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -191257,12 +193505,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -192288,12 +194536,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -192337,12 +194585,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -193336,12 +195584,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -193385,12 +195633,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -195232,12 +197480,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -195281,12 +197529,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -196688,12 +198936,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -196737,12 +198985,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -197496,12 +199744,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -197545,12 +199793,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -198328,12 +200576,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -198377,12 +200625,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -199160,12 +201408,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -199209,12 +201457,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -199592,12 +201840,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -199641,12 +201889,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -200608,12 +202856,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -200657,12 +202905,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -201648,12 +203896,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -201697,12 +203945,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -202688,12 +204936,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -202737,12 +204985,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -203336,12 +205584,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 82,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -203385,12 +205633,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 85,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 83,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -204168,12 +206416,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -204217,12 +206465,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -205224,12 +207472,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -205273,12 +207521,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -206072,12 +208320,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -206121,12 +208369,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -207120,12 +209368,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -207169,12 +209417,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 81,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -207752,12 +210000,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -207801,12 +210049,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 79,
           "type": "SHORT"
         }
       ]

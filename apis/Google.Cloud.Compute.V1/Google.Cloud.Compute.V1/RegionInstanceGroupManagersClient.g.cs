@@ -795,7 +795,9 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => RegionInstanceGroupManagersClient.ChannelPool;
     }
 
-    /// <summary>RegionInstanceGroupManagers client wrapper, for convenient use.</summary>
+    /// <summary>
+    /// RegionInstanceGroupManagers client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// </summary>
     /// <remarks>
     /// The RegionInstanceGroupManagers API.
     /// </remarks>
@@ -4716,6 +4718,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             AbandonInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.AbandonInstancesOperationsSettings, logger);
             ApplyUpdatesToInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.ApplyUpdatesToInstancesOperationsSettings, logger);

@@ -43,7 +43,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 ParentName = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ReservationSlotsListResponse, ReservationSlot> response = reservationSlotsClient.List(request);

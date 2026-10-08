@@ -44,7 +44,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 InstanceGroupManager = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<RegionInstanceGroupManagersListInstanceConfigsResp, PerInstanceConfig> response = regionInstanceGroupManagersClient.ListPerInstanceConfigsAsync(request);

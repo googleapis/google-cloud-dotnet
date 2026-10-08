@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<HealthSourceAggregatedList, KeyValuePair<string, HealthSourcesScopedList>> response = regionHealthSourcesClient.AggregatedList(request);
@@ -95,7 +94,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<HealthSourceAggregatedList, KeyValuePair<string, HealthSourcesScopedList>> response = regionHealthSourcesClient.AggregatedListAsync(request);
@@ -641,7 +639,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<HealthSourceList, HealthSource> response = regionHealthSourcesClient.List(request);
@@ -693,7 +690,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<HealthSourceList, HealthSource> response = regionHealthSourcesClient.ListAsync(request);

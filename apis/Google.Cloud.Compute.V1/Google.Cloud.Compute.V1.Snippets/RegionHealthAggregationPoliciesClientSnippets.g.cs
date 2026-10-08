@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<HealthAggregationPolicyAggregatedList, KeyValuePair<string, HealthAggregationPoliciesScopedList>> response = regionHealthAggregationPoliciesClient.AggregatedList(request);
@@ -95,7 +94,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<HealthAggregationPolicyAggregatedList, KeyValuePair<string, HealthAggregationPoliciesScopedList>> response = regionHealthAggregationPoliciesClient.AggregatedListAsync(request);
@@ -573,7 +571,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<HealthAggregationPolicyList, HealthAggregationPolicy> response = regionHealthAggregationPoliciesClient.List(request);
@@ -625,7 +622,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<HealthAggregationPolicyList, HealthAggregationPolicy> response = regionHealthAggregationPoliciesClient.ListAsync(request);

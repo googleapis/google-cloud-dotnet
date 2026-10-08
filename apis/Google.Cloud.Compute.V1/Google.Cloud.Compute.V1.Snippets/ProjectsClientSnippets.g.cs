@@ -659,7 +659,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ProjectsGetXpnResources, XpnResourceId> response = projectsClient.GetXpnResources(request);
@@ -710,7 +709,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ProjectsGetXpnResources, XpnResourceId> response = projectsClient.GetXpnResourcesAsync(request);
@@ -852,7 +850,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 ProjectsListXpnHostsRequestResource = new ProjectsListXpnHostsRequest(),
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<XpnHostList, Project> response = projectsClient.ListXpnHosts(request);
@@ -904,7 +901,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 ProjectsListXpnHostsRequestResource = new ProjectsListXpnHostsRequest(),
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<XpnHostList, Project> response = projectsClient.ListXpnHostsAsync(request);

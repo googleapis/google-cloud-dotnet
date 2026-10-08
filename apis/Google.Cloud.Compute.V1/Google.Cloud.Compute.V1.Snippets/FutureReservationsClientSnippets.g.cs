@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<FutureReservationsAggregatedListResponse, KeyValuePair<string, FutureReservationsScopedList>> response = futureReservationsClient.AggregatedList(request);
@@ -95,7 +94,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<FutureReservationsAggregatedListResponse, KeyValuePair<string, FutureReservationsScopedList>> response = futureReservationsClient.AggregatedListAsync(request);
@@ -707,7 +705,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<FutureReservationsListResponse, FutureReservation> response = futureReservationsClient.List(request);
@@ -759,7 +756,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<FutureReservationsListResponse, FutureReservation> response = futureReservationsClient.ListAsync(request);

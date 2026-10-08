@@ -43,7 +43,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 Association = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<HostsListResponse, Host> response = hostsClient.List(request);

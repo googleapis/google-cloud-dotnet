@@ -177,7 +177,9 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => ZoneOperationsClient.ChannelPool;
     }
 
-    /// <summary>ZoneOperations client wrapper, for convenient use.</summary>
+    /// <summary>
+    /// ZoneOperations client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// </summary>
     /// <remarks>
     /// The ZoneOperations API.
     /// </remarks>
@@ -745,6 +747,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             _callDelete = clientHelper.BuildApiCall<DeleteZoneOperationRequest, DeleteZoneOperationResponse>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("operation", request => request.Operation);
             Modify_ApiCall(ref _callDelete);
