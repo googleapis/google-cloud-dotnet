@@ -1044,7 +1044,7 @@
         {
             "id": "Google.Cloud.Compute.V1",
             "currentVersion": "3.32.0",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-09-11T18:33:15.653177226Z",
             "lastGeneratedCommit": "31daafc7af507fab68f0317a5b15a382ba2c3fda",
