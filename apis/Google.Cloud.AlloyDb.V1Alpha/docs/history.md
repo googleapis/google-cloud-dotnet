@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-alpha19, released 2026-10-08
+
+### New features
+
+- Add output only fields for Observability and Query Insights instance information
+
 ## Version 1.0.0-alpha18, released 2026-09-11
 
 ### New features
