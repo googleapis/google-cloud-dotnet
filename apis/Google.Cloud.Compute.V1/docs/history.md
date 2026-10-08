@@ -1,5 +1,24 @@
 # Version history
 
+## Version 4.0.0, released 2026-10-08
+
+### New features
+
+- Update Compute Engine v1 API artifacts to revision 20260908
+- Update Compute Engine v1 API to version 2026-09-01
+- Update Compute Engine v1 API artifacts to revision 20260922
+- Remove all return_partial_success fields
+- All AggregatedList RPCs return_partial_success by default
+- Add GlobalFrontendSettingsService service and methods
+- Add ImageViews service and methods
+- Add ManagedRulesets service and methods
+- Add SetName RPC to Interconnects service
+- Add PatchAssociation RPC to RegionNetworkFirewallPolicies service
+
+### Documentation improvements
+
+- Update documentation in proto definitions
+
 ## Version 3.32.0, released 2026-09-11
 
 ### New features
