@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.17.0, released 2026-10-08
+
+### New features
+
+- Add ontap_source field and OntapSource message for ONTAP-mode volume backups
+- Add RestoreVolume method, BackupSource, and OntapVolumeTarget messages for volume restoration
+- Add ListBackupConfigs and UpdateBackupConfig methods and messages for storage pool backup configurations
+- Add StartSplit and GetSplitStatus methods, SplitState enum, and SplitStatus message for volume clone splitting
+- Add FlexPerformanceTier enum and flex_performance_tier field to LocationMetadata
+- Add NVME protocol to Protocols enum
+- Add resource_reference for CryptoKey to crypto_key_name in KmsConfig
+
+### Documentation improvements
+
+- Update documentation comments for backup, volume peering, storage pool mode, and ONTAP execution methods
+
 ## Version 1.16.0, released 2026-05-04
 
 ### New features
