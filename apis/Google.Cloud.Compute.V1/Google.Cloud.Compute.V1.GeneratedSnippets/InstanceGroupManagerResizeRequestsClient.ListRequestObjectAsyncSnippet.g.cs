@@ -44,7 +44,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 InstanceGroupManager = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InstanceGroupManagerResizeRequestsListResponse, InstanceGroupManagerResizeRequest> response = instanceGroupManagerResizeRequestsClient.ListAsync(request);

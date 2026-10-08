@@ -176,7 +176,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<SecurityPoliciesAggregatedList, KeyValuePair<string, SecurityPoliciesScopedList>> response = securityPoliciesClient.AggregatedList(request);
@@ -229,7 +228,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<SecurityPoliciesAggregatedList, KeyValuePair<string, SecurityPoliciesScopedList>> response = securityPoliciesClient.AggregatedListAsync(request);
@@ -762,7 +760,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<SecurityPolicyList, SecurityPolicy> response = securityPoliciesClient.List(request);
@@ -813,7 +810,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<SecurityPolicyList, SecurityPolicy> response = securityPoliciesClient.ListAsync(request);
@@ -956,7 +952,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             SecurityPoliciesListPreconfiguredExpressionSetsResponse response = securityPoliciesClient.ListPreconfiguredExpressionSets(request);
@@ -978,7 +973,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             SecurityPoliciesListPreconfiguredExpressionSetsResponse response = await securityPoliciesClient.ListPreconfiguredExpressionSetsAsync(request);

@@ -44,7 +44,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<RoutersListRoutePolicies, RoutePolicy> response = routersClient.ListRoutePoliciesAsync(request);

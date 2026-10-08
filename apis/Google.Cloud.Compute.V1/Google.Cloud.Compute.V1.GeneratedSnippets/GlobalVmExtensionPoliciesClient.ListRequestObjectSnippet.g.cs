@@ -41,7 +41,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<GlobalVmExtensionPolicyList, GlobalVmExtensionPolicy> response = globalVmExtensionPoliciesClient.List(request);

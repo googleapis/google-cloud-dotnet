@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<RouteList, Route> response = routesClient.ListAsync(request);

@@ -43,7 +43,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 NodeGroup = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<NodeGroupsListNodes, NodeGroupNode> response = nodeGroupsClient.ListNodes(request);

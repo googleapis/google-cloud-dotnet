@@ -448,7 +448,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ListInstantSnapshotGroups, InstantSnapshotGroup> response = regionInstantSnapshotGroupsClient.List(request);
@@ -500,7 +499,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListInstantSnapshotGroups, InstantSnapshotGroup> response = regionInstantSnapshotGroupsClient.ListAsync(request);

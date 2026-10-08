@@ -173,7 +173,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<OperationList, Operation> response = zoneOperationsClient.List(request);
@@ -225,7 +224,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<OperationList, Operation> response = zoneOperationsClient.ListAsync(request);

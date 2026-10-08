@@ -41,7 +41,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<SnapshotList, Snapshot> response = snapshotsClient.List(request);

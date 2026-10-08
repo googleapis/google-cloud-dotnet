@@ -103,7 +103,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<PreviewFeatureList, PreviewFeature> response = previewFeaturesClient.List(request);
@@ -154,7 +153,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<PreviewFeatureList, PreviewFeature> response = previewFeaturesClient.ListAsync(request);

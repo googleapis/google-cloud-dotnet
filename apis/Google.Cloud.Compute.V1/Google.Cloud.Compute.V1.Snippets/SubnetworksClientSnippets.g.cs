@@ -43,7 +43,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<SubnetworkAggregatedList, KeyValuePair<string, SubnetworksScopedList>> response = subnetworksClient.AggregatedList(request);
@@ -97,7 +96,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<SubnetworkAggregatedList, KeyValuePair<string, SubnetworksScopedList>> response = subnetworksClient.AggregatedListAsync(request);
@@ -786,7 +784,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<SubnetworkList, Subnetwork> response = subnetworksClient.List(request);
@@ -839,7 +836,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<SubnetworkList, Subnetwork> response = subnetworksClient.ListAsync(request);
@@ -982,7 +978,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
                 ServiceProject = "",
             };
             // Make the request
@@ -1034,7 +1029,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
                 ServiceProject = "",
             };
             // Make the request

@@ -43,7 +43,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InterconnectAttachmentList, InterconnectAttachment> response = interconnectAttachmentsClient.ListAsync(request);

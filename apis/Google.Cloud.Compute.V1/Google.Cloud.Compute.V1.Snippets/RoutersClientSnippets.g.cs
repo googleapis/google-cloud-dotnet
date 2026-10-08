@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<RouterAggregatedList, KeyValuePair<string, RoutersScopedList>> response = routersClient.AggregatedList(request);
@@ -95,7 +94,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<RouterAggregatedList, KeyValuePair<string, RoutersScopedList>> response = routersClient.AggregatedListAsync(request);
@@ -853,7 +851,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 NatName = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<VmEndpointNatMappingsList, VmEndpointNatMappings> response = routersClient.GetNatMappingInfo(request);
@@ -907,7 +904,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 NatName = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<VmEndpointNatMappingsList, VmEndpointNatMappings> response = routersClient.GetNatMappingInfoAsync(request);
@@ -1325,7 +1321,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<RouterList, Router> response = routersClient.List(request);
@@ -1377,7 +1372,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<RouterList, Router> response = routersClient.ListAsync(request);
@@ -1527,7 +1521,6 @@ namespace GoogleCSharpSnippets
                 Filter = "",
                 RouteType = "",
                 PolicyApplied = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<RoutersListBgpRoutes, BgpRoute> response = routersClient.ListBgpRoutes(request);
@@ -1585,7 +1578,6 @@ namespace GoogleCSharpSnippets
                 Filter = "",
                 RouteType = "",
                 PolicyApplied = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<RoutersListBgpRoutes, BgpRoute> response = routersClient.ListBgpRoutesAsync(request);
@@ -1732,7 +1724,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<RoutersListNamedSets, NamedSet> response = routersClient.ListNamedSets(request);
@@ -1785,7 +1776,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<RoutersListNamedSets, NamedSet> response = routersClient.ListNamedSetsAsync(request);
@@ -1932,7 +1922,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<RoutersListRoutePolicies, RoutePolicy> response = routersClient.ListRoutePolicies(request);
@@ -1985,7 +1974,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<RoutersListRoutePolicies, RoutePolicy> response = routersClient.ListRoutePoliciesAsync(request);

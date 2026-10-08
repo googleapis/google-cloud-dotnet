@@ -363,7 +363,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<RolloutPlansListResponse, RolloutPlan> response = rolloutPlansClient.List(request);
@@ -414,7 +413,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<RolloutPlansListResponse, RolloutPlan> response = rolloutPlansClient.ListAsync(request);

@@ -45,7 +45,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<NetworkFirewallPolicyAggregatedList, KeyValuePair<string, FirewallPoliciesScopedList>> response = networkFirewallPoliciesClient.AggregatedListAsync(request);

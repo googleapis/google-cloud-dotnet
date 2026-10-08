@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             SslPoliciesListAvailableFeaturesResponse response = await sslPoliciesClient.ListAvailableFeaturesAsync(request);

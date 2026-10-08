@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<TargetInstanceList, TargetInstance> response = targetInstancesClient.List(request);

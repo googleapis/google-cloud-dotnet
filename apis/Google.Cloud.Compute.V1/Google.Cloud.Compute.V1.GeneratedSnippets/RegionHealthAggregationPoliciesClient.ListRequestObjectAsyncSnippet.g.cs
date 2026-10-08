@@ -43,7 +43,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<HealthAggregationPolicyList, HealthAggregationPolicy> response = regionHealthAggregationPoliciesClient.ListAsync(request);

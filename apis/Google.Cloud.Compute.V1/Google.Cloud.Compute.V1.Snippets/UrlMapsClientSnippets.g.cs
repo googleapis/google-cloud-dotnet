@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<UrlMapsAggregatedList, KeyValuePair<string, UrlMapsScopedList>> response = urlMapsClient.AggregatedList(request);
@@ -95,7 +94,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<UrlMapsAggregatedList, KeyValuePair<string, UrlMapsScopedList>> response = urlMapsClient.AggregatedListAsync(request);
@@ -694,7 +692,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<UrlMapList, UrlMap> response = urlMapsClient.List(request);
@@ -745,7 +742,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<UrlMapList, UrlMap> response = urlMapsClient.ListAsync(request);

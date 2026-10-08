@@ -44,7 +44,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 NetworkEndpointGroup = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<NetworkEndpointGroupsListNetworkEndpoints, NetworkEndpointWithHealthStatus> response = regionNetworkEndpointGroupsClient.ListNetworkEndpointsAsync(request);

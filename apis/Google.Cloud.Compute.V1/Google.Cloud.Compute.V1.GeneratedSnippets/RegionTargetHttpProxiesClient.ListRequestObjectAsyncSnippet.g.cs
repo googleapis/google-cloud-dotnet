@@ -43,7 +43,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<TargetHttpProxyList, TargetHttpProxy> response = regionTargetHttpProxiesClient.ListAsync(request);

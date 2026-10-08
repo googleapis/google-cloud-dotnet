@@ -166,7 +166,9 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => GlobalOrganizationOperationsClient.ChannelPool;
     }
 
-    /// <summary>GlobalOrganizationOperations client wrapper, for convenient use.</summary>
+    /// <summary>
+    /// GlobalOrganizationOperations client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// </summary>
     /// <remarks>
     /// The GlobalOrganizationOperations API.
     /// </remarks>
@@ -505,6 +507,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             _callDelete = clientHelper.BuildApiCall<DeleteGlobalOrganizationOperationRequest, DeleteGlobalOrganizationOperationResponse>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("operation", request => request.Operation);
             Modify_ApiCall(ref _callDelete);

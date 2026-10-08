@@ -43,7 +43,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InstantSnapshotList, InstantSnapshot> response = instantSnapshotsClient.ListAsync(request);

@@ -183,7 +183,7 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => HostsClient.ChannelPool;
     }
 
-    /// <summary>Hosts client wrapper, for convenient use.</summary>
+    /// <summary>Hosts client wrapper, for convenient use. This client implements API version 2026-09-01.</summary>
     /// <remarks>
     /// The Hosts API.
     /// </remarks>
@@ -662,6 +662,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             GetVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.GetVersionOperationsSettings, logger);
             _callGet = clientHelper.BuildApiCall<GetHostRequest, Host>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("association", request => request.Association).WithGoogleRequestParam("host", request => request.Host);

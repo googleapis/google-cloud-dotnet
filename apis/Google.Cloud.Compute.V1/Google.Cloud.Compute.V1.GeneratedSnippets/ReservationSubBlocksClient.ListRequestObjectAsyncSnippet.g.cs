@@ -44,7 +44,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 ParentName = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ReservationSubBlocksListResponse, ReservationSubBlock> response = reservationSubBlocksClient.ListAsync(request);

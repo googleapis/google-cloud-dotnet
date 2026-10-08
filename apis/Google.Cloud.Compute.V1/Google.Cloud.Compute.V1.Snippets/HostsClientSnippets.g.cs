@@ -255,7 +255,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 Association = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<HostsListResponse, Host> response = hostsClient.List(request);
@@ -308,7 +307,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 Association = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<HostsListResponse, Host> response = hostsClient.ListAsync(request);

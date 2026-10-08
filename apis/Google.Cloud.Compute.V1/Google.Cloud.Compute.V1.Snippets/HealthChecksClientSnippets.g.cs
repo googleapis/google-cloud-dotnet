@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<HealthChecksAggregatedList, KeyValuePair<string, HealthChecksScopedList>> response = healthChecksClient.AggregatedList(request);
@@ -95,7 +94,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<HealthChecksAggregatedList, KeyValuePair<string, HealthChecksScopedList>> response = healthChecksClient.AggregatedListAsync(request);
@@ -560,7 +558,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<HealthCheckList, HealthCheck> response = healthChecksClient.List(request);
@@ -611,7 +608,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<HealthCheckList, HealthCheck> response = healthChecksClient.ListAsync(request);

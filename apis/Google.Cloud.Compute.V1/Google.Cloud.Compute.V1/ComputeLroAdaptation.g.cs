@@ -1372,6 +1372,11 @@ namespace Google.Cloud.Compute.V1
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
     }
 
+    public partial class SetNameInterconnectRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
     public partial class DeleteLicenseRequest
     {
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
@@ -2646,6 +2651,15 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class PatchRegionNetworkFirewallPolicyRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class PatchAssociationRegionNetworkFirewallPolicyRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
         {

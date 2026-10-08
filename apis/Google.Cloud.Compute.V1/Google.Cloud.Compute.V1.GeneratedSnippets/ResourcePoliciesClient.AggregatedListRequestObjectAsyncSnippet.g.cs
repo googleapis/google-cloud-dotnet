@@ -45,7 +45,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ResourcePolicyAggregatedList, KeyValuePair<string, ResourcePoliciesScopedList>> response = resourcePoliciesClient.AggregatedListAsync(request);

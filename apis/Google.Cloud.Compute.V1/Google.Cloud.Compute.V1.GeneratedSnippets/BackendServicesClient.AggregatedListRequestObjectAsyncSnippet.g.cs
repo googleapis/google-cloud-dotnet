@@ -45,7 +45,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<BackendServiceAggregatedList, KeyValuePair<string, BackendServicesScopedList>> response = backendServicesClient.AggregatedListAsync(request);

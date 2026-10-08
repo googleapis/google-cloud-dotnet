@@ -43,7 +43,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 ProjectsListXpnHostsRequestResource = new ProjectsListXpnHostsRequest(),
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<XpnHostList, Project> response = projectsClient.ListXpnHostsAsync(request);

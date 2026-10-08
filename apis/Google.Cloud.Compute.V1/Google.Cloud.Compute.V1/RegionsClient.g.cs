@@ -150,7 +150,7 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => RegionsClient.ChannelPool;
     }
 
-    /// <summary>Regions client wrapper, for convenient use.</summary>
+    /// <summary>Regions client wrapper, for convenient use. This client implements API version 2026-09-01.</summary>
     /// <remarks>
     /// The Regions API.
     /// </remarks>
@@ -597,6 +597,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             _callGet = clientHelper.BuildApiCall<GetRegionRequest, Region>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callGet);

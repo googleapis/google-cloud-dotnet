@@ -238,7 +238,9 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => RegionCommitmentsClient.ChannelPool;
     }
 
-    /// <summary>RegionCommitments client wrapper, for convenient use.</summary>
+    /// <summary>
+    /// RegionCommitments client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// </summary>
     /// <remarks>
     /// The RegionCommitments API.
     /// </remarks>
@@ -896,6 +898,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings, logger);
             UpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.UpdateOperationsSettings, logger);

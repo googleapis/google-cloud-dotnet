@@ -376,7 +376,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<InstanceTemplateList, InstanceTemplate> response = regionInstanceTemplatesClient.List(request);
@@ -428,7 +427,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InstanceTemplateList, InstanceTemplate> response = regionInstanceTemplatesClient.ListAsync(request);

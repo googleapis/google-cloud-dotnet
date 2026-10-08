@@ -100,7 +100,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<NetworkProfilesListResponse, NetworkProfile> response = networkProfilesClient.List(request);
@@ -151,7 +150,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<NetworkProfilesListResponse, NetworkProfile> response = networkProfilesClient.ListAsync(request);

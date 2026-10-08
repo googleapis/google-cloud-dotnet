@@ -537,7 +537,9 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => BackendServicesClient.ChannelPool;
     }
 
-    /// <summary>BackendServices client wrapper, for convenient use.</summary>
+    /// <summary>
+    /// BackendServices client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// </summary>
     /// <remarks>
     /// The BackendServices API.
     /// </remarks>
@@ -2489,6 +2491,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             AddSignedUrlKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddSignedUrlKeyOperationsSettings, logger);
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);

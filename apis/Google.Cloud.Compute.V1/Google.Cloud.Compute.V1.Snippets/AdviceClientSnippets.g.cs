@@ -89,5 +89,141 @@ namespace GoogleCSharpSnippets
             CalendarModeAdviceResponse response = await adviceClient.CalendarModeAsync(project, region, calendarModeAdviceRequestResource);
             // End snippet
         }
+
+        /// <summary>Snippet for Capacity</summary>
+        public void CapacityRequestObject()
+        {
+            // Snippet: Capacity(CapacityAdviceRpcRequest, CallSettings)
+            // Create client
+            AdviceClient adviceClient = AdviceClient.Create();
+            // Initialize request argument(s)
+            CapacityAdviceRpcRequest request = new CapacityAdviceRpcRequest
+            {
+                Region = "",
+                CapacityAdviceRequestResource = new CapacityAdviceRequest(),
+                Project = "",
+            };
+            // Make the request
+            CapacityAdviceResponse response = adviceClient.Capacity(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CapacityAsync</summary>
+        public async Task CapacityRequestObjectAsync()
+        {
+            // Snippet: CapacityAsync(CapacityAdviceRpcRequest, CallSettings)
+            // Additional: CapacityAsync(CapacityAdviceRpcRequest, CancellationToken)
+            // Create client
+            AdviceClient adviceClient = await AdviceClient.CreateAsync();
+            // Initialize request argument(s)
+            CapacityAdviceRpcRequest request = new CapacityAdviceRpcRequest
+            {
+                Region = "",
+                CapacityAdviceRequestResource = new CapacityAdviceRequest(),
+                Project = "",
+            };
+            // Make the request
+            CapacityAdviceResponse response = await adviceClient.CapacityAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for Capacity</summary>
+        public void Capacity()
+        {
+            // Snippet: Capacity(string, string, CapacityAdviceRequest, CallSettings)
+            // Create client
+            AdviceClient adviceClient = AdviceClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            CapacityAdviceRequest capacityAdviceRequestResource = new CapacityAdviceRequest();
+            // Make the request
+            CapacityAdviceResponse response = adviceClient.Capacity(project, region, capacityAdviceRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CapacityAsync</summary>
+        public async Task CapacityAsync()
+        {
+            // Snippet: CapacityAsync(string, string, CapacityAdviceRequest, CallSettings)
+            // Additional: CapacityAsync(string, string, CapacityAdviceRequest, CancellationToken)
+            // Create client
+            AdviceClient adviceClient = await AdviceClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            CapacityAdviceRequest capacityAdviceRequestResource = new CapacityAdviceRequest();
+            // Make the request
+            CapacityAdviceResponse response = await adviceClient.CapacityAsync(project, region, capacityAdviceRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CapacityHistory</summary>
+        public void CapacityHistoryRequestObject()
+        {
+            // Snippet: CapacityHistory(CapacityHistoryAdviceRequest, CallSettings)
+            // Create client
+            AdviceClient adviceClient = AdviceClient.Create();
+            // Initialize request argument(s)
+            CapacityHistoryAdviceRequest request = new CapacityHistoryAdviceRequest
+            {
+                Region = "",
+                CapacityHistoryRequestResource = new CapacityHistoryRequest(),
+                Project = "",
+            };
+            // Make the request
+            CapacityHistoryResponse response = adviceClient.CapacityHistory(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CapacityHistoryAsync</summary>
+        public async Task CapacityHistoryRequestObjectAsync()
+        {
+            // Snippet: CapacityHistoryAsync(CapacityHistoryAdviceRequest, CallSettings)
+            // Additional: CapacityHistoryAsync(CapacityHistoryAdviceRequest, CancellationToken)
+            // Create client
+            AdviceClient adviceClient = await AdviceClient.CreateAsync();
+            // Initialize request argument(s)
+            CapacityHistoryAdviceRequest request = new CapacityHistoryAdviceRequest
+            {
+                Region = "",
+                CapacityHistoryRequestResource = new CapacityHistoryRequest(),
+                Project = "",
+            };
+            // Make the request
+            CapacityHistoryResponse response = await adviceClient.CapacityHistoryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CapacityHistory</summary>
+        public void CapacityHistory()
+        {
+            // Snippet: CapacityHistory(string, string, CapacityHistoryRequest, CallSettings)
+            // Create client
+            AdviceClient adviceClient = AdviceClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            CapacityHistoryRequest capacityHistoryRequestResource = new CapacityHistoryRequest();
+            // Make the request
+            CapacityHistoryResponse response = adviceClient.CapacityHistory(project, region, capacityHistoryRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CapacityHistoryAsync</summary>
+        public async Task CapacityHistoryAsync()
+        {
+            // Snippet: CapacityHistoryAsync(string, string, CapacityHistoryRequest, CallSettings)
+            // Additional: CapacityHistoryAsync(string, string, CapacityHistoryRequest, CancellationToken)
+            // Create client
+            AdviceClient adviceClient = await AdviceClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            CapacityHistoryRequest capacityHistoryRequestResource = new CapacityHistoryRequest();
+            // Make the request
+            CapacityHistoryResponse response = await adviceClient.CapacityHistoryAsync(project, region, capacityHistoryRequestResource);
+            // End snippet
+        }
     }
 }

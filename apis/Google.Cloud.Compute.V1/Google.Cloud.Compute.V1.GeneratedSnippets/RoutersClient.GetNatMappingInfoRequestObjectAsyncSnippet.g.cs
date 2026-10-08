@@ -45,7 +45,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 NatName = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<VmEndpointNatMappingsList, VmEndpointNatMappings> response = routersClient.GetNatMappingInfoAsync(request);

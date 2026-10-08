@@ -41,7 +41,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<BackendBucketList, BackendBucket> response = backendBucketsClient.List(request);

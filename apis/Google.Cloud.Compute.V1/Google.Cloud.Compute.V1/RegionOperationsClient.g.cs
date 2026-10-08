@@ -177,7 +177,9 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => RegionOperationsClient.ChannelPool;
     }
 
-    /// <summary>RegionOperations client wrapper, for convenient use.</summary>
+    /// <summary>
+    /// RegionOperations client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// </summary>
     /// <remarks>
     /// The RegionOperations API.
     /// </remarks>
@@ -751,6 +753,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             _callDelete = clientHelper.BuildApiCall<DeleteRegionOperationRequest, DeleteRegionOperationResponse>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("operation", request => request.Operation);
             Modify_ApiCall(ref _callDelete);

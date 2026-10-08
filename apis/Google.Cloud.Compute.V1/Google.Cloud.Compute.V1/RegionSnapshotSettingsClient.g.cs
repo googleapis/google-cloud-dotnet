@@ -163,7 +163,9 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => RegionSnapshotSettingsClient.ChannelPool;
     }
 
-    /// <summary>RegionSnapshotSettings client wrapper, for convenient use.</summary>
+    /// <summary>
+    /// RegionSnapshotSettings client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// </summary>
     /// <remarks>
     /// The RegionSnapshotSettings API.
     /// </remarks>
@@ -471,6 +473,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchOperationsSettings, logger);
             _callGet = clientHelper.BuildApiCall<GetRegionSnapshotSettingRequest, SnapshotSettings>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);

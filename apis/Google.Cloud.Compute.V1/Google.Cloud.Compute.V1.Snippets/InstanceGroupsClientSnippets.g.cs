@@ -180,7 +180,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<InstanceGroupAggregatedList, KeyValuePair<string, InstanceGroupsScopedList>> response = instanceGroupsClient.AggregatedList(request);
@@ -233,7 +232,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InstanceGroupAggregatedList, KeyValuePair<string, InstanceGroupsScopedList>> response = instanceGroupsClient.AggregatedListAsync(request);
@@ -711,7 +709,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<InstanceGroupList, InstanceGroup> response = instanceGroupsClient.List(request);
@@ -763,7 +760,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InstanceGroupList, InstanceGroup> response = instanceGroupsClient.ListAsync(request);
@@ -909,7 +905,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 InstanceGroupsListInstancesRequestResource = new InstanceGroupsListInstancesRequest(),
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<InstanceGroupsListInstances, InstanceWithNamedPorts> response = instanceGroupsClient.ListInstances(request);
@@ -963,7 +958,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 InstanceGroupsListInstancesRequestResource = new InstanceGroupsListInstancesRequest(),
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InstanceGroupsListInstances, InstanceWithNamedPorts> response = instanceGroupsClient.ListInstancesAsync(request);

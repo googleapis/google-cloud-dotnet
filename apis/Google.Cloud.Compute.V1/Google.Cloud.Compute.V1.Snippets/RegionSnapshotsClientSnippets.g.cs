@@ -446,7 +446,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<SnapshotList, Snapshot> response = regionSnapshotsClient.List(request);
@@ -498,7 +497,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<SnapshotList, Snapshot> response = regionSnapshotsClient.ListAsync(request);

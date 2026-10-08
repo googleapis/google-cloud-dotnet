@@ -572,7 +572,9 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => OrganizationSecurityPoliciesClient.ChannelPool;
     }
 
-    /// <summary>OrganizationSecurityPolicies client wrapper, for convenient use.</summary>
+    /// <summary>
+    /// OrganizationSecurityPolicies client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// </summary>
     /// <remarks>
     /// The OrganizationSecurityPolicies API.
     /// </remarks>
@@ -2488,6 +2490,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             AddAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOrganizationOperations(), effectiveSettings.AddAssociationOperationsSettings, logger);
             AddRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOrganizationOperations(), effectiveSettings.AddRuleOperationsSettings, logger);

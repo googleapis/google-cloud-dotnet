@@ -39,7 +39,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<DiskTypeAggregatedList, KeyValuePair<string, DiskTypesScopedList>> response = diskTypesClient.AggregatedList(request);
@@ -92,7 +91,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<DiskTypeAggregatedList, KeyValuePair<string, DiskTypesScopedList>> response = diskTypesClient.AggregatedListAsync(request);
@@ -302,7 +300,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<DiskTypeList, DiskType> response = diskTypesClient.List(request);
@@ -354,7 +351,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<DiskTypeList, DiskType> response = diskTypesClient.ListAsync(request);

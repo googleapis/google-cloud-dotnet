@@ -378,7 +378,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<WireGroupList, WireGroup> response = wireGroupsClient.List(request);
@@ -430,7 +429,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<WireGroupList, WireGroup> response = wireGroupsClient.ListAsync(request);

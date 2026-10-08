@@ -44,7 +44,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 StoragePool = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<StoragePoolListDisks, StoragePoolDisk> response = storagePoolsClient.ListDisksAsync(request);

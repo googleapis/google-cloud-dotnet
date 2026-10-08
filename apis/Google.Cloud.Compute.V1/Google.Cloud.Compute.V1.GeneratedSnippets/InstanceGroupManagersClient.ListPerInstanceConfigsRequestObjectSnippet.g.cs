@@ -43,7 +43,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 InstanceGroupManager = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<InstanceGroupManagersListPerInstanceConfigsResp, PerInstanceConfig> response = instanceGroupManagersClient.ListPerInstanceConfigs(request);

@@ -576,6 +576,42 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gccv::GlobalFrontendSettingsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddGlobalFrontendSettingsServiceClient(this IServiceCollection services, sys::Action<gccv::GlobalFrontendSettingsServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::GlobalFrontendSettingsServiceClientBuilder builder = new gccv::GlobalFrontendSettingsServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::GlobalFrontendSettingsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddGlobalFrontendSettingsServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::GlobalFrontendSettingsServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::GlobalFrontendSettingsServiceClientBuilder builder = new gccv::GlobalFrontendSettingsServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gccv::GlobalNetworkEndpointGroupsClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -851,6 +887,38 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gccv::ImageFamilyViewsClientBuilder builder = new gccv::ImageFamilyViewsClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gccv::ImageViewsClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddImageViewsClient(this IServiceCollection services, sys::Action<gccv::ImageViewsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::ImageViewsClientBuilder builder = new gccv::ImageViewsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gccv::ImageViewsClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddImageViewsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::ImageViewsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::ImageViewsClientBuilder builder = new gccv::ImageViewsClientBuilder();
                 action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
@@ -1510,6 +1578,42 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gccv::ManagedRulesetsClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddManagedRulesetsClient(this IServiceCollection services, sys::Action<gccv::ManagedRulesetsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::ManagedRulesetsClientBuilder builder = new gccv::ManagedRulesetsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::ManagedRulesetsClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddManagedRulesetsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::ManagedRulesetsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::ManagedRulesetsClientBuilder builder = new gccv::ManagedRulesetsClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gccv::NetworkAttachmentsClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -1921,6 +2025,38 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gccv::PreviewFeaturesClientBuilder builder = new gccv::PreviewFeaturesClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gccv::ProjectViewsClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddProjectViewsClient(this IServiceCollection services, sys::Action<gccv::ProjectViewsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::ProjectViewsClientBuilder builder = new gccv::ProjectViewsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gccv::ProjectViewsClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddProjectViewsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::ProjectViewsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::ProjectViewsClientBuilder builder = new gccv::ProjectViewsClientBuilder();
                 action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });

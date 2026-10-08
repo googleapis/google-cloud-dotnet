@@ -376,7 +376,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<RegionAutoscalerList, Autoscaler> response = regionAutoscalersClient.List(request);
@@ -428,7 +427,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<RegionAutoscalerList, Autoscaler> response = regionAutoscalersClient.ListAsync(request);

@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<NetworkEndpointGroupList, NetworkEndpointGroup> response = globalNetworkEndpointGroupsClient.ListAsync(request);

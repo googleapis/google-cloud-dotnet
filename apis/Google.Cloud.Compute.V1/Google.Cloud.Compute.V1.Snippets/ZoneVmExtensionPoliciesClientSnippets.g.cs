@@ -376,7 +376,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<VmExtensionPolicyList, VmExtensionPolicy> response = zoneVmExtensionPoliciesClient.List(request);
@@ -428,7 +427,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<VmExtensionPolicyList, VmExtensionPolicy> response = zoneVmExtensionPoliciesClient.ListAsync(request);

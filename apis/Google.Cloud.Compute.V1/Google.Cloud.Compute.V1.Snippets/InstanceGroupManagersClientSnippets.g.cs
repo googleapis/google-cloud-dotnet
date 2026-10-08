@@ -180,7 +180,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<InstanceGroupManagerAggregatedList, KeyValuePair<string, InstanceGroupManagersScopedList>> response = instanceGroupManagersClient.AggregatedList(request);
@@ -233,7 +232,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InstanceGroupManagerAggregatedList, KeyValuePair<string, InstanceGroupManagersScopedList>> response = instanceGroupManagersClient.AggregatedListAsync(request);
@@ -1263,7 +1261,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<InstanceGroupManagerList, InstanceGroupManager> response = instanceGroupManagersClient.List(request);
@@ -1315,7 +1312,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InstanceGroupManagerList, InstanceGroupManager> response = instanceGroupManagersClient.ListAsync(request);
@@ -1460,7 +1456,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 InstanceGroupManager = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<InstanceGroupManagersListErrorsResponse, InstanceManagedByIgmError> response = instanceGroupManagersClient.ListErrors(request);
@@ -1513,7 +1508,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 InstanceGroupManager = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InstanceGroupManagersListErrorsResponse, InstanceManagedByIgmError> response = instanceGroupManagersClient.ListErrorsAsync(request);
@@ -1660,7 +1654,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 InstanceGroupManager = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<InstanceGroupManagersListManagedInstancesResponse, ManagedInstance> response = instanceGroupManagersClient.ListManagedInstances(request);
@@ -1713,7 +1706,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 InstanceGroupManager = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InstanceGroupManagersListManagedInstancesResponse, ManagedInstance> response = instanceGroupManagersClient.ListManagedInstancesAsync(request);
@@ -1860,7 +1852,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 InstanceGroupManager = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<InstanceGroupManagersListPerInstanceConfigsResp, PerInstanceConfig> response = instanceGroupManagersClient.ListPerInstanceConfigs(request);
@@ -1913,7 +1904,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 InstanceGroupManager = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InstanceGroupManagersListPerInstanceConfigsResp, PerInstanceConfig> response = instanceGroupManagersClient.ListPerInstanceConfigsAsync(request);

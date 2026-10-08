@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<StoragePoolAggregatedList, KeyValuePair<string, StoragePoolsScopedList>> response = storagePoolsClient.AggregatedList(request);
@@ -95,7 +94,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<StoragePoolAggregatedList, KeyValuePair<string, StoragePoolsScopedList>> response = storagePoolsClient.AggregatedListAsync(request);
@@ -643,7 +641,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<StoragePoolList, StoragePool> response = storagePoolsClient.List(request);
@@ -695,7 +692,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<StoragePoolList, StoragePool> response = storagePoolsClient.ListAsync(request);
@@ -840,7 +836,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 StoragePool = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<StoragePoolListDisks, StoragePoolDisk> response = storagePoolsClient.ListDisks(request);
@@ -893,7 +888,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 StoragePool = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<StoragePoolListDisks, StoragePoolDisk> response = storagePoolsClient.ListDisksAsync(request);

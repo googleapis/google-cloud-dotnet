@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<InterconnectAttachmentAggregatedList, KeyValuePair<string, InterconnectAttachmentsScopedList>> response = interconnectAttachmentsClient.AggregatedList(request);
@@ -95,7 +94,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InterconnectAttachmentAggregatedList, KeyValuePair<string, InterconnectAttachmentsScopedList>> response = interconnectAttachmentsClient.AggregatedListAsync(request);
@@ -575,7 +573,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<InterconnectAttachmentList, InterconnectAttachment> response = interconnectAttachmentsClient.List(request);
@@ -627,7 +624,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<InterconnectAttachmentList, InterconnectAttachment> response = interconnectAttachmentsClient.ListAsync(request);

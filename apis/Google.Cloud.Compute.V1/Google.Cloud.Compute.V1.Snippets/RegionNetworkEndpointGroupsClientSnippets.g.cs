@@ -652,7 +652,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<NetworkEndpointGroupList, NetworkEndpointGroup> response = regionNetworkEndpointGroupsClient.List(request);
@@ -704,7 +703,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<NetworkEndpointGroupList, NetworkEndpointGroup> response = regionNetworkEndpointGroupsClient.ListAsync(request);
@@ -849,7 +847,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 NetworkEndpointGroup = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<NetworkEndpointGroupsListNetworkEndpoints, NetworkEndpointWithHealthStatus> response = regionNetworkEndpointGroupsClient.ListNetworkEndpoints(request);
@@ -902,7 +899,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 NetworkEndpointGroup = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<NetworkEndpointGroupsListNetworkEndpoints, NetworkEndpointWithHealthStatus> response = regionNetworkEndpointGroupsClient.ListNetworkEndpointsAsync(request);

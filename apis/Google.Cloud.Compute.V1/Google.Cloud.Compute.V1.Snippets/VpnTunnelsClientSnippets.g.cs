@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<VpnTunnelAggregatedList, KeyValuePair<string, VpnTunnelsScopedList>> response = vpnTunnelsClient.AggregatedList(request);
@@ -95,7 +94,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<VpnTunnelAggregatedList, KeyValuePair<string, VpnTunnelsScopedList>> response = vpnTunnelsClient.AggregatedListAsync(request);
@@ -573,7 +571,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<VpnTunnelList, VpnTunnel> response = vpnTunnelsClient.List(request);
@@ -625,7 +622,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<VpnTunnelList, VpnTunnel> response = vpnTunnelsClient.ListAsync(request);

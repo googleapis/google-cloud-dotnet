@@ -695,7 +695,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<NetworkList, Network> response = networksClient.List(request);
@@ -746,7 +745,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<NetworkList, Network> response = networksClient.ListAsync(request);
@@ -891,7 +889,6 @@ namespace GoogleCSharpSnippets
                 Network = "",
                 PeeringName = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ExchangedPeeringRoutesList, ExchangedPeeringRoute> response = networksClient.ListPeeringRoutes(request);
@@ -946,7 +943,6 @@ namespace GoogleCSharpSnippets
                 Network = "",
                 PeeringName = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ExchangedPeeringRoutesList, ExchangedPeeringRoute> response = networksClient.ListPeeringRoutesAsync(request);

@@ -518,7 +518,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<BackendServiceList, BackendService> response = regionBackendServicesClient.List(request);
@@ -570,7 +569,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<BackendServiceList, BackendService> response = regionBackendServicesClient.ListAsync(request);
@@ -714,7 +712,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<BackendServiceListUsable, BackendService> response = regionBackendServicesClient.ListUsable(request);
@@ -766,7 +763,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<BackendServiceListUsable, BackendService> response = regionBackendServicesClient.ListUsableAsync(request);

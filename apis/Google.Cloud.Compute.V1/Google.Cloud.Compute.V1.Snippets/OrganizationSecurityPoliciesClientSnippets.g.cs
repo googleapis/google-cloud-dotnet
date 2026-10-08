@@ -861,7 +861,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Filter = "",
                 ParentId = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<SecurityPolicyList, SecurityPolicy> response = organizationSecurityPoliciesClient.List(request);
@@ -912,7 +911,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Filter = "",
                 ParentId = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<SecurityPolicyList, SecurityPolicy> response = organizationSecurityPoliciesClient.ListAsync(request);
@@ -1101,7 +1099,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Filter = "",
                 ParentId = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             SecurityPoliciesListPreconfiguredExpressionSetsResponse response = organizationSecurityPoliciesClient.ListPreconfiguredExpressionSets(request);
@@ -1123,7 +1120,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Filter = "",
                 ParentId = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             SecurityPoliciesListPreconfiguredExpressionSetsResponse response = await organizationSecurityPoliciesClient.ListPreconfiguredExpressionSetsAsync(request);

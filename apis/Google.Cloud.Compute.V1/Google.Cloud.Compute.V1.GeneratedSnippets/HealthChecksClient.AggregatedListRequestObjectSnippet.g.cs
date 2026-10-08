@@ -44,7 +44,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<HealthChecksAggregatedList, KeyValuePair<string, HealthChecksScopedList>> response = healthChecksClient.AggregatedList(request);

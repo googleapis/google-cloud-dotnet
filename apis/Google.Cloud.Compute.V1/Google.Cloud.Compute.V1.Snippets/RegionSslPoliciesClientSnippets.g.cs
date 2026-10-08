@@ -376,7 +376,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<SslPoliciesList, SslPolicy> response = regionSslPoliciesClient.List(request);
@@ -428,7 +427,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<SslPoliciesList, SslPolicy> response = regionSslPoliciesClient.ListAsync(request);
@@ -574,7 +572,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             SslPoliciesListAvailableFeaturesResponse response = regionSslPoliciesClient.ListAvailableFeatures(request);
@@ -597,7 +594,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             SslPoliciesListAvailableFeaturesResponse response = await regionSslPoliciesClient.ListAvailableFeaturesAsync(request);

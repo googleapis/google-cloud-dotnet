@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<HealthAggregationPolicyList, HealthAggregationPolicy> response = regionHealthAggregationPoliciesClient.List(request);

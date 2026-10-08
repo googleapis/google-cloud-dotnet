@@ -44,7 +44,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<TargetHttpProxyAggregatedList, KeyValuePair<string, TargetHttpProxiesScopedList>> response = targetHttpProxiesClient.AggregatedList(request);

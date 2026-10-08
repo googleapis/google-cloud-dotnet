@@ -431,7 +431,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<MachineImageList, MachineImage> response = machineImagesClient.List(request);
@@ -482,7 +481,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<MachineImageList, MachineImage> response = machineImagesClient.ListAsync(request);

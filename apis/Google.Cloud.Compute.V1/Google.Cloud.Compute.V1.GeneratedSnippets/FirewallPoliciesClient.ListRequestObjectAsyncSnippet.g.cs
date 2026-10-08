@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Filter = "",
                 ParentId = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<FirewallPolicyList, FirewallPolicy> response = firewallPoliciesClient.ListAsync(request);

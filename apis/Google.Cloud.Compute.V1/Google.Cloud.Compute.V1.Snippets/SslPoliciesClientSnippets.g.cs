@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<SslPoliciesAggregatedList, KeyValuePair<string, SslPoliciesScopedList>> response = sslPoliciesClient.AggregatedList(request);
@@ -95,7 +94,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<SslPoliciesAggregatedList, KeyValuePair<string, SslPoliciesScopedList>> response = sslPoliciesClient.AggregatedListAsync(request);
@@ -560,7 +558,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<SslPoliciesList, SslPolicy> response = sslPoliciesClient.List(request);
@@ -611,7 +608,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<SslPoliciesList, SslPolicy> response = sslPoliciesClient.ListAsync(request);
@@ -754,7 +750,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             SslPoliciesListAvailableFeaturesResponse response = sslPoliciesClient.ListAvailableFeatures(request);
@@ -776,7 +771,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             SslPoliciesListAvailableFeaturesResponse response = await sslPoliciesClient.ListAvailableFeaturesAsync(request);

@@ -376,7 +376,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<SslCertificateList, SslCertificate> response = regionSslCertificatesClient.List(request);
@@ -428,7 +427,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<SslCertificateList, SslCertificate> response = regionSslCertificatesClient.ListAsync(request);

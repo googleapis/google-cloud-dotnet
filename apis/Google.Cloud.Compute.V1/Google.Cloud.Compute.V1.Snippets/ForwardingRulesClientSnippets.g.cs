@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ForwardingRuleAggregatedList, KeyValuePair<string, ForwardingRulesScopedList>> response = forwardingRulesClient.AggregatedList(request);
@@ -95,7 +94,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ForwardingRuleAggregatedList, KeyValuePair<string, ForwardingRulesScopedList>> response = forwardingRulesClient.AggregatedListAsync(request);
@@ -575,7 +573,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ForwardingRuleList, ForwardingRule> response = forwardingRulesClient.List(request);
@@ -627,7 +624,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ForwardingRuleList, ForwardingRule> response = forwardingRulesClient.ListAsync(request);

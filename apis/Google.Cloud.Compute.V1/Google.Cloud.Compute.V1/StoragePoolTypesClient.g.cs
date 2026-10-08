@@ -173,7 +173,9 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => StoragePoolTypesClient.ChannelPool;
     }
 
-    /// <summary>StoragePoolTypes client wrapper, for convenient use.</summary>
+    /// <summary>
+    /// StoragePoolTypes client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// </summary>
     /// <remarks>
     /// The StoragePoolTypes API.
     /// </remarks>
@@ -572,6 +574,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             _callAggregatedList = clientHelper.BuildApiCall<AggregatedListStoragePoolTypesRequest, StoragePoolTypeAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);

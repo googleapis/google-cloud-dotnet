@@ -160,7 +160,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Filter = "",
                 ParentId = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<OperationList, Operation> response = globalOrganizationOperationsClient.List(request);
@@ -211,7 +210,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Filter = "",
                 ParentId = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<OperationList, Operation> response = globalOrganizationOperationsClient.ListAsync(request);

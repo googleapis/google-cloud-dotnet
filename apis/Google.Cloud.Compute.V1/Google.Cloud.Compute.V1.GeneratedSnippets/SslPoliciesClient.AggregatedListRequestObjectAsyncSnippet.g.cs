@@ -45,7 +45,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<SslPoliciesAggregatedList, KeyValuePair<string, SslPoliciesScopedList>> response = sslPoliciesClient.AggregatedListAsync(request);

@@ -176,7 +176,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<BackendServiceAggregatedList, KeyValuePair<string, BackendServicesScopedList>> response = backendServicesClient.AggregatedList(request);
@@ -229,7 +228,6 @@ namespace GoogleCSharpSnippets
                 ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<BackendServiceAggregatedList, KeyValuePair<string, BackendServicesScopedList>> response = backendServicesClient.AggregatedListAsync(request);
@@ -1026,7 +1024,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<BackendServiceList, BackendService> response = backendServicesClient.List(request);
@@ -1077,7 +1074,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<BackendServiceList, BackendService> response = backendServicesClient.ListAsync(request);
@@ -1218,7 +1214,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<BackendServiceListUsable, BackendService> response = backendServicesClient.ListUsable(request);
@@ -1269,7 +1264,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<BackendServiceListUsable, BackendService> response = backendServicesClient.ListUsableAsync(request);

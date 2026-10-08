@@ -527,7 +527,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 InstanceGroupManager = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<RegionInstanceGroupManagerResizeRequestsListResponse, InstanceGroupManagerResizeRequest> response = regionInstanceGroupManagerResizeRequestsClient.List(request);
@@ -580,7 +579,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 InstanceGroupManager = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<RegionInstanceGroupManagerResizeRequestsListResponse, InstanceGroupManagerResizeRequest> response = regionInstanceGroupManagerResizeRequestsClient.ListAsync(request);

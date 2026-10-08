@@ -163,7 +163,9 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => InstanceSettingsServiceClient.ChannelPool;
     }
 
-    /// <summary>InstanceSettingsService client wrapper, for convenient use.</summary>
+    /// <summary>
+    /// InstanceSettingsService client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// </summary>
     /// <remarks>
     /// The InstanceSettings API.
     /// </remarks>
@@ -471,6 +473,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.PatchOperationsSettings, logger);
             _callGet = clientHelper.BuildApiCall<GetInstanceSettingRequest, InstanceSettings>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone);

@@ -58,6 +58,8 @@ namespace Google.Cloud.Compute.V1
             PatchOperationsSettings = existing.PatchOperationsSettings.Clone();
             SetLabelsSettings = existing.SetLabelsSettings;
             SetLabelsOperationsSettings = existing.SetLabelsOperationsSettings.Clone();
+            SetNameSettings = existing.SetNameSettings;
+            SetNameOperationsSettings = existing.SetNameOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -267,6 +269,36 @@ namespace Google.Cloud.Compute.V1
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>InterconnectsClient.SetName</c>
+        ///  and <c>InterconnectsClient.SetNameAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetNameSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InterconnectsClient.SetName</c> and
+        /// <c>InterconnectsClient.SetNameAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetNameOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="InterconnectsSettings"/> object.</returns>
         public InterconnectsSettings Clone() => new InterconnectsSettings(this);
@@ -324,7 +356,9 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => InterconnectsClient.ChannelPool;
     }
 
-    /// <summary>Interconnects client wrapper, for convenient use.</summary>
+    /// <summary>
+    /// Interconnects client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// </summary>
     /// <remarks>
     /// The Interconnects API.
     /// </remarks>
@@ -1260,6 +1294,120 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> SetLabelsAsync(string project, string resource, GlobalSetLabelsRequest globalSetLabelsRequestResource, st::CancellationToken cancellationToken) =>
             SetLabelsAsync(project, resource, globalSetLabelsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets name of an interconnect.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> SetName(SetNameInterconnectRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets name of an interconnect.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetNameAsync(SetNameInterconnectRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets name of an interconnect.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetNameAsync(SetNameInterconnectRequest request, st::CancellationToken cancellationToken) =>
+            SetNameAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetName</c>.</summary>
+        public virtual lro::OperationsClient SetNameOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SetName</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSetName(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetNameOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetName</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSetNameAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetNameOperationsClient, callSettings);
+
+        /// <summary>
+        /// Sets name of an interconnect.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="interconnect">
+        /// Name of the interconnect to update.
+        /// </param>
+        /// <param name="interconnectsSetNameRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> SetName(string project, string interconnect, InterconnectsSetNameRequest interconnectsSetNameRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetName(new SetNameInterconnectRequest
+            {
+                Interconnect = gax::GaxPreconditions.CheckNotNullOrEmpty(interconnect, nameof(interconnect)),
+                InterconnectsSetNameRequestResource = gax::GaxPreconditions.CheckNotNull(interconnectsSetNameRequestResource, nameof(interconnectsSetNameRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets name of an interconnect.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="interconnect">
+        /// Name of the interconnect to update.
+        /// </param>
+        /// <param name="interconnectsSetNameRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetNameAsync(string project, string interconnect, InterconnectsSetNameRequest interconnectsSetNameRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetNameAsync(new SetNameInterconnectRequest
+            {
+                Interconnect = gax::GaxPreconditions.CheckNotNullOrEmpty(interconnect, nameof(interconnect)),
+                InterconnectsSetNameRequestResource = gax::GaxPreconditions.CheckNotNull(interconnectsSetNameRequestResource, nameof(interconnectsSetNameRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets name of an interconnect.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="interconnect">
+        /// Name of the interconnect to update.
+        /// </param>
+        /// <param name="interconnectsSetNameRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetNameAsync(string project, string interconnect, InterconnectsSetNameRequest interconnectsSetNameRequestResource, st::CancellationToken cancellationToken) =>
+            SetNameAsync(project, interconnect, interconnectsSetNameRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Interconnects client wrapper implementation, for convenient use.</summary>
@@ -1284,6 +1432,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<SetLabelsInterconnectRequest, Operation> _callSetLabels;
 
+        private readonly gaxgrpc::ApiCall<SetNameInterconnectRequest, Operation> _callSetName;
+
         /// <summary>
         /// Constructs a client wrapper for the Interconnects service, with the specified gRPC client and settings.
         /// </summary>
@@ -1298,11 +1448,13 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
+                ApiVersion = "2026-09-01",
             });
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);
             PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings, logger);
             SetLabelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetLabelsOperationsSettings, logger);
+            SetNameOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetNameOperationsSettings, logger);
             _callDelete = clientHelper.BuildApiCall<DeleteInterconnectRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("interconnect", request => request.Interconnect);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
@@ -1327,6 +1479,9 @@ namespace Google.Cloud.Compute.V1
             _callSetLabels = clientHelper.BuildApiCall<SetLabelsInterconnectRequest, Operation>("SetLabels", grpcClient.SetLabelsAsync, grpcClient.SetLabels, effectiveSettings.SetLabelsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetLabels);
             Modify_SetLabelsApiCall(ref _callSetLabels);
+            _callSetName = clientHelper.BuildApiCall<SetNameInterconnectRequest, Operation>("SetName", grpcClient.SetNameAsync, grpcClient.SetName, effectiveSettings.SetNameSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("interconnect", request => request.Interconnect);
+            Modify_ApiCall(ref _callSetName);
+            Modify_SetNameApiCall(ref _callSetName);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1348,6 +1503,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_SetLabelsApiCall(ref gaxgrpc::ApiCall<SetLabelsInterconnectRequest, Operation> call);
 
+        partial void Modify_SetNameApiCall(ref gaxgrpc::ApiCall<SetNameInterconnectRequest, Operation> call);
+
         partial void OnConstruction(Interconnects.InterconnectsClient grpcClient, InterconnectsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Interconnects client</summary>
@@ -1368,6 +1525,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_PatchInterconnectRequest(ref PatchInterconnectRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetLabelsInterconnectRequest(ref SetLabelsInterconnectRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetNameInterconnectRequest(ref SetNameInterconnectRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>Delete</c>.</summary>
         public override lro::OperationsClient DeleteOperationsClient { get; }
@@ -1629,6 +1788,39 @@ namespace Google.Cloud.Compute.V1
             GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetLabelsOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>SetName</c>.</summary>
+        public override lro::OperationsClient SetNameOperationsClient { get; }
+
+        /// <summary>
+        /// Sets name of an interconnect.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> SetName(SetNameInterconnectRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetNameInterconnectRequest(ref request, ref callSettings);
+            Operation response = _callSetName.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetNameOperationsClient);
+        }
+
+        /// <summary>
+        /// Sets name of an interconnect.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> SetNameAsync(SetNameInterconnectRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetNameInterconnectRequest(ref request, ref callSettings);
+            Operation response = await _callSetName.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetNameOperationsClient);
         }
     }
 

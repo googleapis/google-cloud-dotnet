@@ -363,7 +363,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<TargetSslProxyList, TargetSslProxy> response = targetSslProxiesClient.List(request);
@@ -414,7 +413,6 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<TargetSslProxyList, TargetSslProxy> response = targetSslProxiesClient.ListAsync(request);

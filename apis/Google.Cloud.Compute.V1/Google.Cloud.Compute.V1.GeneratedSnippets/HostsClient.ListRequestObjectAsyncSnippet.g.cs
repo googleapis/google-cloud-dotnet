@@ -44,7 +44,6 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 Filter = "",
                 Association = "",
-                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<HostsListResponse, Host> response = hostsClient.ListAsync(request);
