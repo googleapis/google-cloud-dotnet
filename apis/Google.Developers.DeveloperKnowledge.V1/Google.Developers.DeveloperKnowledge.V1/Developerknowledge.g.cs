@@ -248,7 +248,7 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
     private string uri_ = "";
     /// <summary>
     /// Output only. Provides the URI of the content, such as
-    /// `docs.cloud.google.com/storage/docs/creating-buckets`.
+    /// `https://docs.cloud.google.com/storage/docs/creating-buckets`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
