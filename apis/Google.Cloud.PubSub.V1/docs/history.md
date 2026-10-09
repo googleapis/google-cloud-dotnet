@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.39.0, released 2026-10-08
+
+### New features
+
+- Add `BigtableConfig::ColumnFamilyMapping` type
+
+### Documentation improvements
+
+- A comment for message `BigtableConfig` is changed
+
 ## Version 3.38.0, released 2026-09-11
 
 ### New features
