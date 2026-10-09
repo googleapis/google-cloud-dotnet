@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.28.0, released 2026-10-09
+
+### New features
+
+- Add deletion_notifications_enabled to BigQueryExport and NotificationConfig and deleted_finding to NotificationMessage
+
 ## Version 3.27.0, released 2026-07-14
 
 ### New features
