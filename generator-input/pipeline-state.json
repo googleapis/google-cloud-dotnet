@@ -5172,12 +5172,12 @@
         },
         {
             "id": "Google.Cloud.AppTopology.V1",
-            "currentVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta02",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-08-31T19:55:40.663258546Z",
+            "releaseTimestamp": "2026-10-09T00:43:26.637631060Z",
             "lastGeneratedCommit": "462426382d347da63e69da7b02d908df2c26ecbe",
-            "lastReleasedCommit": "4bdc50ed4dbf1c95a5baffeeb88038f5377143a5",
+            "lastReleasedCommit": "462426382d347da63e69da7b02d908df2c26ecbe",
             "apiPaths": [
                 "google/cloud/apptopology/v1"
             ],
