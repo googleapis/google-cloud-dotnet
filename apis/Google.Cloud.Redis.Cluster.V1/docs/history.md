@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.9.0, released 2026-10-09
+
+### New features
+
+- [Memorystore for Redis Cluster] Add support for ACL policies
+
 ## Version 1.8.0, released 2026-07-20
 
 ### New features
