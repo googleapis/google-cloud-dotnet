@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.5.0, released 2026-10-09
+
+### Bug fixes
+
+- Await transaction snapshot reads to preserve linked cancellation tokens
+
 ## Version 4.4.0, released 2026-08-07
 
 ### New features
