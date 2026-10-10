@@ -15,6 +15,7 @@
 using Google.Cloud.Tools.VersionCompat.CecilUtils;
 using Mono.Cecil;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
@@ -173,12 +174,32 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
         private IEnumerable<Diff> MethodsCtors(TypeType typeType, bool isCtor, Func<TypeDefinition, IEnumerable<MethodDefinition>> methodSelector)
         {
             var prefixType = isCtor ? "constructor" : "method";
-            var oMethods = methodSelector(_o).ToImmutableHashSet(SameMethodComparer.Instance);
-            var nMethods = methodSelector(_n).ToImmutableHashSet(SameMethodComparer.Instance);
-            foreach (var method in oMethods.Union(nMethods).OrderBy(x => x.FullName).ThenBy(MethodSigOrder))
+
+            // Methods in a class will only be checked for changes if the method definition itself is "breakable", meaning that changes here
+            // could result in major or minor changes. These are original methods (so not overrides), or are sealed virtual methods.
+            var oMethods = methodSelector(_o).ToHashSet(SameMethodComparer.Instance);
+            var oBreakableMethods = oMethods.Where(m => m.IsBreakableDefintion()).ToImmutableHashSet(SameMethodComparer.Instance);
+
+            var nMethods = methodSelector(_n).ToHashSet(SameMethodComparer.Instance);
+            var nBreakableMethods = nMethods.Where(m => m.IsBreakableDefintion()).ToImmutableHashSet(SameMethodComparer.Instance);
+
+            foreach (var method in oBreakableMethods.Union(nBreakableMethods).OrderBy(x => x.FullName).ThenBy(MethodSigOrder))
             {
                 var inO = oMethods.TryGetValue(method, out var o);
                 var inN = nMethods.TryGetValue(method, out var n);
+
+                // If the method was not found in one of the old or new types, try to get it from their ancestry.
+                // This works because a descendent class might have it's implementation from an ancestor class,
+                // which is a perfectly valid use case that we don't want to mark as a change if the method itself is unchanged.
+                if (!inN)
+                {
+                    inN = _n.TryGetMethodFromAncestor(method, out n);
+                }
+                else if (!inO)
+                {
+                    inO = _o.TryGetMethodFromAncestor(method, out o);
+                }
+
                 FormattableString prefix = $"{_o.TypeType()} '{_o}'; {prefixType} '{o}'";
                 if (inO && inN && o.IsExported() && n.IsExported())
                 {
@@ -266,12 +287,32 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
 
         public IEnumerable<Diff> Properties(TypeType typeType)
         {
-            var oProps = _o.Properties.ToImmutableHashSet(SamePropertyComparer.Instance);
-            var nProps = _n.Properties.ToImmutableHashSet(SamePropertyComparer.Instance);
-            foreach (var prop in oProps.Union(nProps).OrderBy(x => x.FullName))
+            // Properties in a class will only be checked for changes if the property definition itself is "breakable", meaning that changes here
+            // could result in major or minor changes. These are original properties (so not overrides), or are sealed virtual properties.
+            var oProps = _o.Properties.ToHashSet(SamePropertyComparer.Instance);
+            var oBreakableProperties = oProps.Where(p => p.IsBreakableDefinition()).ToImmutableHashSet(SamePropertyComparer.Instance);
+
+            var nProps = _n.Properties.ToHashSet(SamePropertyComparer.Instance);
+            var nBreakableProperties = nProps.Where(p => p.IsBreakableDefinition()).ToImmutableHashSet(SamePropertyComparer.Instance);
+            foreach (var prop in oBreakableProperties.Union(nBreakableProperties).OrderBy(x => x.FullName))
             {
                 var inO = oProps.TryGetValue(prop, out var o);
+                var oGetMethod = o?.GetMethod;
+                var oSetMethod = o?.SetMethod;
+
                 var inN = nProps.TryGetValue(prop, out var n);
+                var nGetMethod = n?.GetMethod;
+                var nSetMethod = n?.SetMethod;
+
+                // If the property or one of the accessors was not found in one of the old or new types, try to get it from their ancestry.
+                // This works because a descendent class might have it's implementation from an ancestor class,
+                // which is a perfectly valid use case that we don't want to mark as a change if the property itself is unchanged.
+                if (PropertiesLackAccessorParity(o, n))
+                {
+                    inO = _o.TryGetAccessorsFromAncestry(prop, out oGetMethod, out oSetMethod);
+                    inN = _n.TryGetAccessorsFromAncestry(prop, out nGetMethod, out nSetMethod);
+                }
+
                 FormattableString prefix = $"{_o.TypeType()} '{_o}'; property '{o}'";
                 if (inO && inN && o.IsExported() && n.IsExported())
                 {
@@ -288,9 +329,9 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                         }
                         else
                         {
-                            var diffs = MethodModifiers(o.GetMethod ?? o.SetMethod, n.GetMethod ?? n.SetMethod, Cause.PropertyModifierChanged, prefix)
-                                .Concat(MethodAccessModifiers(o.GetMethod, n.GetMethod, Cause.PropertyAccessModifierChanged, $"{prefix} getter"))
-                                .Concat(MethodAccessModifiers(o.SetMethod, n.SetMethod, Cause.PropertyAccessModifierChanged, $"{prefix} setter"));
+                            var diffs = MethodModifiers(oGetMethod ?? oSetMethod, n.GetMethod ?? n.SetMethod, Cause.PropertyModifierChanged, prefix)
+                                .Concat(MethodAccessModifiers(oGetMethod, nGetMethod, Cause.PropertyAccessModifierChanged, $"{prefix} getter"))
+                                .Concat(MethodAccessModifiers(oSetMethod, nSetMethod, Cause.PropertyAccessModifierChanged, $"{prefix} setter"));
                             foreach (var diff in diffs)
                             {
                                 yield return diff;
@@ -324,6 +365,27 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                             diff(Cause.PropertyAdded, $"{prefix} added.");
                     }
                 }
+            }
+
+            static bool PropertiesLackAccessorParity(PropertyDefinition p1,  PropertyDefinition p2)
+            {
+                if (p1 == null && p2 == null)
+                {
+                    return true;
+                }
+                if (p1 == null ||  p2 == null)
+                {
+                    return false;
+                }
+                if ((p1.GetMethod is null) != (p2.GetMethod is null))
+                {
+                    return true;
+                }
+                if ((p1.SetMethod is null) != (p2.SetMethod is null))
+                {
+                    return true;
+                }
+                return false;
             }
         }
 
