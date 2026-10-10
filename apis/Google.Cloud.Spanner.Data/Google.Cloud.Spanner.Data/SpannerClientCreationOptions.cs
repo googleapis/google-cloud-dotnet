@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax.Grpc.Gcp;
+using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.Admin.Database.V1;
 using Google.Cloud.Spanner.V1;
 using System;
@@ -32,6 +33,10 @@ namespace Google.Cloud.Spanner.Data
 
         internal bool UsesEmulator { get; }
 
+        private readonly string _credentialFile;
+        private readonly string _credentialType;
+        private readonly Lazy<GoogleCredential> _effectiveGoogleCredential;
+
         internal SpannerClientCreationOptions(SpannerConnectionStringBuilder builder)
         {
             var clientBuilder = new SpannerClientBuilder
@@ -39,9 +44,6 @@ namespace Google.Cloud.Spanner.Data
                 EmulatorDetection = builder.EmulatorDetection,
                 EnvironmentVariableProvider = builder.EnvironmentVariableProvider,
                 Endpoint = builder.ContainsKey(nameof(builder.Host)) || builder.ContainsKey(nameof(builder.Port)) ? builder.EndPoint : null,
-#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods. See b/453009677 for more details.
-                CredentialsPath = builder.CredentialFile == "" ? null: builder.CredentialFile,
-#pragma warning restore CS0618
                 ChannelCredentials = builder.CredentialOverride,
                 GoogleCredential = builder.GoogleCredential,
                 AffinityChannelPoolConfiguration = new ChannelPoolConfig
@@ -59,6 +61,11 @@ namespace Google.Cloud.Spanner.Data
 
             UsesEmulator = emulatorBuilder is not null;
             ClientBuilder = emulatorBuilder ?? clientBuilder;
+            _credentialFile = builder.CredentialFile;
+            _credentialType = builder.CredentialType;
+            // Use Lazy to avoid throwing in the constructor if the credential file is missing.
+            _effectiveGoogleCredential = new Lazy<GoogleCredential>(() =>
+                ClientBuilder.GoogleCredential ?? (string.IsNullOrEmpty(_credentialFile) ? null : CredentialFactory.FromFile(_credentialFile, _credentialType)));
         }
 
         internal Task<SpannerClient> CreateSpannerClientAsync(SpannerSettings settings) =>
@@ -68,11 +75,8 @@ namespace Google.Cloud.Spanner.Data
                 // Note we don't copy emulator detection properties because we already took care
                 // of emulator detection on the constructor.
                 Endpoint = ClientBuilder.Endpoint,
-#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods. See b/453009677 for more details.
-                CredentialsPath = ClientBuilder.CredentialsPath,
-#pragma warning disable CS0618
                 ChannelCredentials = ClientBuilder.ChannelCredentials,
-                GoogleCredential = ClientBuilder.GoogleCredential,
+                GoogleCredential = _effectiveGoogleCredential.Value,
                 AffinityChannelPoolConfiguration = ClientBuilder.AffinityChannelPoolConfiguration,
                 LeaderRoutingEnabled = ClientBuilder.LeaderRoutingEnabled,
                 DirectedReadOptions = ClientBuilder.DirectedReadOptions,
@@ -88,11 +92,8 @@ namespace Google.Cloud.Spanner.Data
                 // Note we don't copy emulator detection properties because we already took care
                 // of emulator detection on the constructor.
                 Endpoint = ClientBuilder.Endpoint,
-#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods. See b/453009677 for more details.
-                CredentialsPath = ClientBuilder.CredentialsPath,
-#pragma warning restore CS0618
                 ChannelCredentials = ClientBuilder.ChannelCredentials,
-                GoogleCredential = ClientBuilder.GoogleCredential,
+                GoogleCredential = _effectiveGoogleCredential.Value,
                 // If we ever have settings of our own, we need to merge those with these.
                 Settings = CreateDatabaseAdminSettings(),
                 UniverseDomain = ClientBuilder.UniverseDomain,
@@ -113,11 +114,10 @@ namespace Google.Cloud.Spanner.Data
             UsesEmulator == other.UsesEmulator &&
             // TODO: Consider overriding ClientBuilderBase and SpannerClientBuilder Equals, etc.
             Equals(ClientBuilder.Endpoint, other.ClientBuilder.Endpoint) &&
-#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods. See b/453009677 for more details.
-            Equals(ClientBuilder.CredentialsPath, other.ClientBuilder.CredentialsPath) &&
-#pragma warning restore CS0618
             Equals(ClientBuilder.ChannelCredentials, other.ClientBuilder.ChannelCredentials) &&
             Equals(ClientBuilder.GoogleCredential, other.ClientBuilder.GoogleCredential) &&
+            _credentialFile == other._credentialFile &&
+            _credentialType == other._credentialType &&
             Equals(ClientBuilder.AffinityChannelPoolConfiguration, other.ClientBuilder.AffinityChannelPoolConfiguration) &&
             ClientBuilder.LeaderRoutingEnabled == other.ClientBuilder.LeaderRoutingEnabled &&
             Equals(ClientBuilder.DirectedReadOptions, other.ClientBuilder.DirectedReadOptions) &&
@@ -129,11 +129,10 @@ namespace Google.Cloud.Spanner.Data
             {
                 int hash = 31;
                 hash = hash * 23 + (ClientBuilder.Endpoint?.GetHashCode() ?? 0);
-#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods. See b/453009677 for more details.
-                hash = hash * 23 + (ClientBuilder.CredentialsPath?.GetHashCode() ?? 0);
-#pragma warning restore CS0618
                 hash = hash * 23 + (ClientBuilder.ChannelCredentials?.GetHashCode() ?? 0);
                 hash = hash * 23 + (ClientBuilder.GoogleCredential?.GetHashCode() ?? 0);
+                hash = hash * 23 + (_credentialFile?.GetHashCode() ?? 0);
+                hash = hash * 23 + (_credentialType?.GetHashCode() ?? 0);
                 hash = hash * 23 + UsesEmulator.GetHashCode();
                 hash = hash * 23 + (ClientBuilder.AffinityChannelPoolConfiguration?.GetHashCode() ?? 0);
                 hash = hash * 23 + (ClientBuilder.LeaderRoutingEnabled.GetHashCode());
@@ -150,12 +149,14 @@ namespace Google.Cloud.Spanner.Data
         public override string ToString()
         {
             var builder = new StringBuilder($"EndPoint: {ClientBuilder.Endpoint ?? "Default"}");
-#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods. See b/453009677 for more details.
-            if (!string.IsNullOrEmpty(ClientBuilder.CredentialsPath))
+            if (!string.IsNullOrEmpty(_credentialFile))
             {
-                builder.Append($"; CredentialsFile: {ClientBuilder.CredentialsPath}");
+                builder.Append($"; CredentialsFile: {_credentialFile}");
             }
-#pragma warning restore CS0618
+            if (!string.IsNullOrEmpty(_credentialType))
+            {
+                builder.Append($"; CredentialType: {_credentialType}");
+            }
             if (ClientBuilder.ChannelCredentials is not null)
             {
                 builder.Append($"; CredentialsOverride: True");
