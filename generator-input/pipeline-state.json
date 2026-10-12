@@ -2107,7 +2107,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-07-20T19:18:46.291193989Z",
-            "lastGeneratedCommit": "669938a4e2d8d460b32e8cb81ab56725a0b400ed",
+            "lastGeneratedCommit": "34bb7a118468a6ec56deb31842525971e41be2ac",
             "lastReleasedCommit": "669938a4e2d8d460b32e8cb81ab56725a0b400ed",
             "apiPaths": [
                 "google/cloud/memorystore/v1beta"
