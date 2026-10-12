@@ -2103,12 +2103,12 @@
         },
         {
             "id": "Google.Cloud.Memorystore.V1Beta",
-            "currentVersion": "1.0.0-beta06",
+            "currentVersion": "1.0.0-beta07",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-07-20T19:18:46.291193989Z",
+            "releaseTimestamp": "2026-10-12T19:10:23.262642908Z",
             "lastGeneratedCommit": "34bb7a118468a6ec56deb31842525971e41be2ac",
-            "lastReleasedCommit": "669938a4e2d8d460b32e8cb81ab56725a0b400ed",
+            "lastReleasedCommit": "34bb7a118468a6ec56deb31842525971e41be2ac",
             "apiPaths": [
                 "google/cloud/memorystore/v1beta"
             ],
