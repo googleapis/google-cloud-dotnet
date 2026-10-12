@@ -11,6 +11,325 @@
   },
   "snippets": [
     {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_ListAclPolicies_sync",
+      "title": "ListAclPoliciesRequestObject",
+      "description": "Snippet for ListAclPolicies",
+      "file": "MemorystoreClient.ListAclPoliciesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPolicies",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.ListAclPolicies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.ListAclPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memorystore.V1Beta.ListAclPoliciesResponse, Google.Cloud.Memorystore.V1Beta.AclPolicy>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicies",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.ListAclPolicies",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_ListAclPolicies_async",
+      "title": "ListAclPoliciesRequestObjectAsync",
+      "description": "Snippet for ListAclPoliciesAsync",
+      "file": "MemorystoreClient.ListAclPoliciesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPoliciesAsync",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.ListAclPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.ListAclPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memorystore.V1Beta.ListAclPoliciesResponse, Google.Cloud.Memorystore.V1Beta.AclPolicy>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicies",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.ListAclPolicies",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_ListAclPolicies_sync_flattened",
+      "title": "ListAclPolicies",
+      "description": "Snippet for ListAclPolicies",
+      "file": "MemorystoreClient.ListAclPoliciesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPolicies",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.ListAclPolicies",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memorystore.V1Beta.ListAclPoliciesResponse, Google.Cloud.Memorystore.V1Beta.AclPolicy>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicies",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.ListAclPolicies",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_ListAclPolicies_async_flattened",
+      "title": "ListAclPoliciesAsync",
+      "description": "Snippet for ListAclPoliciesAsync",
+      "file": "MemorystoreClient.ListAclPoliciesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPoliciesAsync",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.ListAclPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memorystore.V1Beta.ListAclPoliciesResponse, Google.Cloud.Memorystore.V1Beta.AclPolicy>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicies",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.ListAclPolicies",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_ListAclPolicies_sync_flattened_resourceNames",
+      "title": "ListAclPoliciesResourceNames",
+      "description": "Snippet for ListAclPolicies",
+      "file": "MemorystoreClient.ListAclPoliciesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPolicies",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.ListAclPolicies",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memorystore.V1Beta.ListAclPoliciesResponse, Google.Cloud.Memorystore.V1Beta.AclPolicy>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicies",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.ListAclPolicies",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_ListAclPolicies_async_flattened_resourceNames",
+      "title": "ListAclPoliciesResourceNamesAsync",
+      "description": "Snippet for ListAclPoliciesAsync",
+      "file": "MemorystoreClient.ListAclPoliciesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPoliciesAsync",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.ListAclPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memorystore.V1Beta.ListAclPoliciesResponse, Google.Cloud.Memorystore.V1Beta.AclPolicy>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicies",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.ListAclPolicies",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "memorystore_v1beta_generated_Memorystore_ListInstances_sync",
       "title": "ListInstancesRequestObject",
       "description": "Snippet for ListInstances",
@@ -330,6 +649,293 @@
       ]
     },
     {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_GetAclPolicy_sync",
+      "title": "GetAclPolicyRequestObject",
+      "description": "Snippet for GetAclPolicy",
+      "file": "MemorystoreClient.GetAclPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicy",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.GetAclPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.GetAclPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1Beta.AclPolicy",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.GetAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_GetAclPolicy_async",
+      "title": "GetAclPolicyRequestObjectAsync",
+      "description": "Snippet for GetAclPolicyAsync",
+      "file": "MemorystoreClient.GetAclPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicyAsync",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.GetAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.GetAclPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1Beta.AclPolicy>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.GetAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_GetAclPolicy_sync_flattened",
+      "title": "GetAclPolicy",
+      "description": "Snippet for GetAclPolicy",
+      "file": "MemorystoreClient.GetAclPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicy",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.GetAclPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1Beta.AclPolicy",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.GetAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_GetAclPolicy_async_flattened",
+      "title": "GetAclPolicyAsync",
+      "description": "Snippet for GetAclPolicyAsync",
+      "file": "MemorystoreClient.GetAclPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicyAsync",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.GetAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1Beta.AclPolicy>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.GetAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_GetAclPolicy_sync_flattened_resourceNames",
+      "title": "GetAclPolicyResourceNames",
+      "description": "Snippet for GetAclPolicy",
+      "file": "MemorystoreClient.GetAclPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicy",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.GetAclPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.AclPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1Beta.AclPolicy",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.GetAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_GetAclPolicy_async_flattened_resourceNames",
+      "title": "GetAclPolicyResourceNamesAsync",
+      "description": "Snippet for GetAclPolicyAsync",
+      "file": "MemorystoreClient.GetAclPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicyAsync",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.GetAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.AclPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1Beta.AclPolicy>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.GetAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "memorystore_v1beta_generated_Memorystore_GetInstance_sync",
       "title": "GetInstanceRequestObject",
       "description": "Snippet for GetInstance",
@@ -612,6 +1218,325 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_CreateAclPolicy_sync",
+      "title": "CreateAclPolicyRequestObject",
+      "description": "Snippet for CreateAclPolicy",
+      "file": "MemorystoreClient.CreateAclPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAclPolicy",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.CreateAclPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.CreateAclPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1Beta.AclPolicy",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "CreateAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.CreateAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_CreateAclPolicy_async",
+      "title": "CreateAclPolicyRequestObjectAsync",
+      "description": "Snippet for CreateAclPolicyAsync",
+      "file": "MemorystoreClient.CreateAclPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAclPolicyAsync",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.CreateAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.CreateAclPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1Beta.AclPolicy>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "CreateAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.CreateAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_CreateAclPolicy_sync_flattened",
+      "title": "CreateAclPolicy",
+      "description": "Snippet for CreateAclPolicy",
+      "file": "MemorystoreClient.CreateAclPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAclPolicy",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.CreateAclPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.AclPolicy",
+            "name": "aclPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "aclPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1Beta.AclPolicy",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "CreateAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.CreateAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_CreateAclPolicy_async_flattened",
+      "title": "CreateAclPolicyAsync",
+      "description": "Snippet for CreateAclPolicyAsync",
+      "file": "MemorystoreClient.CreateAclPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAclPolicyAsync",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.CreateAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.AclPolicy",
+            "name": "aclPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "aclPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1Beta.AclPolicy>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "CreateAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.CreateAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_CreateAclPolicy_sync_flattened_resourceNames",
+      "title": "CreateAclPolicyResourceNames",
+      "description": "Snippet for CreateAclPolicy",
+      "file": "MemorystoreClient.CreateAclPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAclPolicy",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.CreateAclPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.AclPolicy",
+            "name": "aclPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "aclPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1Beta.AclPolicy",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "CreateAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.CreateAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_CreateAclPolicy_async_flattened_resourceNames",
+      "title": "CreateAclPolicyResourceNamesAsync",
+      "description": "Snippet for CreateAclPolicyAsync",
+      "file": "MemorystoreClient.CreateAclPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAclPolicyAsync",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.CreateAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.AclPolicy",
+            "name": "aclPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "aclPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1Beta.AclPolicy>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "CreateAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.CreateAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
           "type": "SHORT"
         }
       ]
@@ -936,6 +1861,206 @@
       ]
     },
     {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_UpdateAclPolicy_sync",
+      "title": "UpdateAclPolicyRequestObject",
+      "description": "Snippet for UpdateAclPolicy",
+      "file": "MemorystoreClient.UpdateAclPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAclPolicy",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.UpdateAclPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.UpdateAclPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memorystore.V1Beta.AclPolicy, Google.Cloud.Memorystore.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "UpdateAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.UpdateAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_UpdateAclPolicy_async",
+      "title": "UpdateAclPolicyRequestObjectAsync",
+      "description": "Snippet for UpdateAclPolicyAsync",
+      "file": "MemorystoreClient.UpdateAclPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAclPolicyAsync",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.UpdateAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.UpdateAclPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memorystore.V1Beta.AclPolicy, Google.Cloud.Memorystore.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "UpdateAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.UpdateAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_UpdateAclPolicy_sync_flattened",
+      "title": "UpdateAclPolicy",
+      "description": "Snippet for UpdateAclPolicy",
+      "file": "MemorystoreClient.UpdateAclPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAclPolicy",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.UpdateAclPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.AclPolicy",
+            "name": "aclPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memorystore.V1Beta.AclPolicy, Google.Cloud.Memorystore.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "UpdateAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.UpdateAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_UpdateAclPolicy_async_flattened",
+      "title": "UpdateAclPolicyAsync",
+      "description": "Snippet for UpdateAclPolicyAsync",
+      "file": "MemorystoreClient.UpdateAclPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAclPolicyAsync",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.UpdateAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.AclPolicy",
+            "name": "aclPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memorystore.V1Beta.AclPolicy, Google.Cloud.Memorystore.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "UpdateAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.UpdateAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "memorystore_v1beta_generated_Memorystore_UpdateInstance_sync",
       "title": "UpdateInstanceRequestObject",
       "description": "Snippet for UpdateInstance",
@@ -1131,6 +2256,899 @@
         {
           "start": 37,
           "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_DeleteAclPolicy_sync",
+      "title": "DeleteAclPolicyRequestObject",
+      "description": "Snippet for DeleteAclPolicy",
+      "file": "MemorystoreClient.DeleteAclPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAclPolicy",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.DeleteAclPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.DeleteAclPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.DeleteAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_DeleteAclPolicy_async",
+      "title": "DeleteAclPolicyRequestObjectAsync",
+      "description": "Snippet for DeleteAclPolicyAsync",
+      "file": "MemorystoreClient.DeleteAclPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAclPolicyAsync",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.DeleteAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.DeleteAclPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.DeleteAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_DeleteAclPolicy_sync_flattened",
+      "title": "DeleteAclPolicy",
+      "description": "Snippet for DeleteAclPolicy",
+      "file": "MemorystoreClient.DeleteAclPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAclPolicy",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.DeleteAclPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.DeleteAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_DeleteAclPolicy_async_flattened",
+      "title": "DeleteAclPolicyAsync",
+      "description": "Snippet for DeleteAclPolicyAsync",
+      "file": "MemorystoreClient.DeleteAclPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAclPolicyAsync",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.DeleteAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.DeleteAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_DeleteAclPolicy_sync_flattened_resourceNames",
+      "title": "DeleteAclPolicyResourceNames",
+      "description": "Snippet for DeleteAclPolicy",
+      "file": "MemorystoreClient.DeleteAclPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAclPolicy",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.DeleteAclPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.AclPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.DeleteAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_DeleteAclPolicy_async_flattened_resourceNames",
+      "title": "DeleteAclPolicyResourceNamesAsync",
+      "description": "Snippet for DeleteAclPolicyAsync",
+      "file": "MemorystoreClient.DeleteAclPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAclPolicyAsync",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.DeleteAclPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.AclPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteAclPolicy",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.DeleteAclPolicy",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_GetAclPolicyRevision_sync",
+      "title": "GetAclPolicyRevisionRequestObject",
+      "description": "Snippet for GetAclPolicyRevision",
+      "file": "MemorystoreClient.GetAclPolicyRevisionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicyRevision",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.GetAclPolicyRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.GetAclPolicyRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1Beta.AclPolicyRevision",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicyRevision",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.GetAclPolicyRevision",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_GetAclPolicyRevision_async",
+      "title": "GetAclPolicyRevisionRequestObjectAsync",
+      "description": "Snippet for GetAclPolicyRevisionAsync",
+      "file": "MemorystoreClient.GetAclPolicyRevisionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicyRevisionAsync",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.GetAclPolicyRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.GetAclPolicyRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1Beta.AclPolicyRevision>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicyRevision",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.GetAclPolicyRevision",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_GetAclPolicyRevision_sync_flattened",
+      "title": "GetAclPolicyRevision",
+      "description": "Snippet for GetAclPolicyRevision",
+      "file": "MemorystoreClient.GetAclPolicyRevisionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicyRevision",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.GetAclPolicyRevision",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1Beta.AclPolicyRevision",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicyRevision",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.GetAclPolicyRevision",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_GetAclPolicyRevision_async_flattened",
+      "title": "GetAclPolicyRevisionAsync",
+      "description": "Snippet for GetAclPolicyRevisionAsync",
+      "file": "MemorystoreClient.GetAclPolicyRevisionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicyRevisionAsync",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.GetAclPolicyRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1Beta.AclPolicyRevision>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicyRevision",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.GetAclPolicyRevision",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_GetAclPolicyRevision_sync_flattened_resourceNames",
+      "title": "GetAclPolicyRevisionResourceNames",
+      "description": "Snippet for GetAclPolicyRevision",
+      "file": "MemorystoreClient.GetAclPolicyRevisionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicyRevision",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.GetAclPolicyRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.AclPolicyRevisionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1Beta.AclPolicyRevision",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicyRevision",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.GetAclPolicyRevision",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_GetAclPolicyRevision_async_flattened_resourceNames",
+      "title": "GetAclPolicyRevisionResourceNamesAsync",
+      "description": "Snippet for GetAclPolicyRevisionAsync",
+      "file": "MemorystoreClient.GetAclPolicyRevisionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAclPolicyRevisionAsync",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.GetAclPolicyRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.AclPolicyRevisionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1Beta.AclPolicyRevision>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetAclPolicyRevision",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.GetAclPolicyRevision",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_ListAclPolicyRevisions_sync",
+      "title": "ListAclPolicyRevisionsRequestObject",
+      "description": "Snippet for ListAclPolicyRevisions",
+      "file": "MemorystoreClient.ListAclPolicyRevisionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPolicyRevisions",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.ListAclPolicyRevisions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.ListAclPolicyRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memorystore.V1Beta.ListAclPolicyRevisionsResponse, Google.Cloud.Memorystore.V1Beta.AclPolicyRevision>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicyRevisions",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.ListAclPolicyRevisions",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_ListAclPolicyRevisions_async",
+      "title": "ListAclPolicyRevisionsRequestObjectAsync",
+      "description": "Snippet for ListAclPolicyRevisionsAsync",
+      "file": "MemorystoreClient.ListAclPolicyRevisionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPolicyRevisionsAsync",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.ListAclPolicyRevisionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.ListAclPolicyRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memorystore.V1Beta.ListAclPolicyRevisionsResponse, Google.Cloud.Memorystore.V1Beta.AclPolicyRevision>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicyRevisions",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.ListAclPolicyRevisions",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_ListAclPolicyRevisions_sync_flattened",
+      "title": "ListAclPolicyRevisions",
+      "description": "Snippet for ListAclPolicyRevisions",
+      "file": "MemorystoreClient.ListAclPolicyRevisionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPolicyRevisions",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.ListAclPolicyRevisions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memorystore.V1Beta.ListAclPolicyRevisionsResponse, Google.Cloud.Memorystore.V1Beta.AclPolicyRevision>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicyRevisions",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.ListAclPolicyRevisions",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_ListAclPolicyRevisions_async_flattened",
+      "title": "ListAclPolicyRevisionsAsync",
+      "description": "Snippet for ListAclPolicyRevisionsAsync",
+      "file": "MemorystoreClient.ListAclPolicyRevisionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPolicyRevisionsAsync",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.ListAclPolicyRevisionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memorystore.V1Beta.ListAclPolicyRevisionsResponse, Google.Cloud.Memorystore.V1Beta.AclPolicyRevision>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicyRevisions",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.ListAclPolicyRevisions",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_ListAclPolicyRevisions_sync_flattened_resourceNames",
+      "title": "ListAclPolicyRevisionsResourceNames",
+      "description": "Snippet for ListAclPolicyRevisions",
+      "file": "MemorystoreClient.ListAclPolicyRevisionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPolicyRevisions",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.ListAclPolicyRevisions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.AclPolicyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memorystore.V1Beta.ListAclPolicyRevisionsResponse, Google.Cloud.Memorystore.V1Beta.AclPolicyRevision>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicyRevisions",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.ListAclPolicyRevisions",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1beta_generated_Memorystore_ListAclPolicyRevisions_async_flattened_resourceNames",
+      "title": "ListAclPolicyRevisionsResourceNamesAsync",
+      "description": "Snippet for ListAclPolicyRevisionsAsync",
+      "file": "MemorystoreClient.ListAclPolicyRevisionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAclPolicyRevisionsAsync",
+        "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient.ListAclPolicyRevisionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1Beta.AclPolicyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memorystore.V1Beta.ListAclPolicyRevisionsResponse, Google.Cloud.Memorystore.V1Beta.AclPolicyRevision>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1Beta.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListAclPolicyRevisions",
+          "fullName": "google.cloud.memorystore.v1beta.Memorystore.ListAclPolicyRevisions",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1beta.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
           "type": "SHORT"
         }
       ]

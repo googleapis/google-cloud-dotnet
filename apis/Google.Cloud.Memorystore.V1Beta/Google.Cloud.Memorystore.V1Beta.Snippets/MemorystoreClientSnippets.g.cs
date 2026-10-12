@@ -27,6 +27,282 @@ namespace GoogleCSharpSnippets
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedMemorystoreClientSnippets
     {
+        /// <summary>Snippet for ListAclPolicies</summary>
+        public void ListAclPoliciesRequestObject()
+        {
+            // Snippet: ListAclPolicies(ListAclPoliciesRequest, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            ListAclPoliciesRequest request = new ListAclPoliciesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListAclPoliciesResponse, AclPolicy> response = memorystoreClient.ListAclPolicies(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AclPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAclPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPoliciesAsync</summary>
+        public async Task ListAclPoliciesRequestObjectAsync()
+        {
+            // Snippet: ListAclPoliciesAsync(ListAclPoliciesRequest, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAclPoliciesRequest request = new ListAclPoliciesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAclPoliciesResponse, AclPolicy> response = memorystoreClient.ListAclPoliciesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AclPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAclPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPolicies</summary>
+        public void ListAclPolicies()
+        {
+            // Snippet: ListAclPolicies(string, string, int?, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListAclPoliciesResponse, AclPolicy> response = memorystoreClient.ListAclPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AclPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAclPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPoliciesAsync</summary>
+        public async Task ListAclPoliciesAsync()
+        {
+            // Snippet: ListAclPoliciesAsync(string, string, int?, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListAclPoliciesResponse, AclPolicy> response = memorystoreClient.ListAclPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AclPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAclPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPolicies</summary>
+        public void ListAclPoliciesResourceNames()
+        {
+            // Snippet: ListAclPolicies(LocationName, string, int?, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListAclPoliciesResponse, AclPolicy> response = memorystoreClient.ListAclPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AclPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAclPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPoliciesAsync</summary>
+        public async Task ListAclPoliciesResourceNamesAsync()
+        {
+            // Snippet: ListAclPoliciesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListAclPoliciesResponse, AclPolicy> response = memorystoreClient.ListAclPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AclPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAclPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for ListInstances</summary>
         public void ListInstancesRequestObject()
         {
@@ -307,6 +583,93 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetAclPolicy</summary>
+        public void GetAclPolicyRequestObject()
+        {
+            // Snippet: GetAclPolicy(GetAclPolicyRequest, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            GetAclPolicyRequest request = new GetAclPolicyRequest
+            {
+                AclPolicyName = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]"),
+            };
+            // Make the request
+            AclPolicy response = memorystoreClient.GetAclPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicyAsync</summary>
+        public async Task GetAclPolicyRequestObjectAsync()
+        {
+            // Snippet: GetAclPolicyAsync(GetAclPolicyRequest, CallSettings)
+            // Additional: GetAclPolicyAsync(GetAclPolicyRequest, CancellationToken)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAclPolicyRequest request = new GetAclPolicyRequest
+            {
+                AclPolicyName = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]"),
+            };
+            // Make the request
+            AclPolicy response = await memorystoreClient.GetAclPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicy</summary>
+        public void GetAclPolicy()
+        {
+            // Snippet: GetAclPolicy(string, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/aclPolicies/[ACL_POLICY]";
+            // Make the request
+            AclPolicy response = memorystoreClient.GetAclPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicyAsync</summary>
+        public async Task GetAclPolicyAsync()
+        {
+            // Snippet: GetAclPolicyAsync(string, CallSettings)
+            // Additional: GetAclPolicyAsync(string, CancellationToken)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/aclPolicies/[ACL_POLICY]";
+            // Make the request
+            AclPolicy response = await memorystoreClient.GetAclPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicy</summary>
+        public void GetAclPolicyResourceNames()
+        {
+            // Snippet: GetAclPolicy(AclPolicyName, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            AclPolicyName name = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]");
+            // Make the request
+            AclPolicy response = memorystoreClient.GetAclPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicyAsync</summary>
+        public async Task GetAclPolicyResourceNamesAsync()
+        {
+            // Snippet: GetAclPolicyAsync(AclPolicyName, CallSettings)
+            // Additional: GetAclPolicyAsync(AclPolicyName, CancellationToken)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            AclPolicyName name = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]");
+            // Make the request
+            AclPolicy response = await memorystoreClient.GetAclPolicyAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetInstance</summary>
         public void GetInstanceRequestObject()
         {
@@ -391,6 +754,107 @@ namespace GoogleCSharpSnippets
             InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
             // Make the request
             Instance response = await memorystoreClient.GetInstanceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAclPolicy</summary>
+        public void CreateAclPolicyRequestObject()
+        {
+            // Snippet: CreateAclPolicy(CreateAclPolicyRequest, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            CreateAclPolicyRequest request = new CreateAclPolicyRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AclPolicyId = "",
+                AclPolicy = new AclPolicy(),
+                RequestId = "",
+            };
+            // Make the request
+            AclPolicy response = memorystoreClient.CreateAclPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAclPolicyAsync</summary>
+        public async Task CreateAclPolicyRequestObjectAsync()
+        {
+            // Snippet: CreateAclPolicyAsync(CreateAclPolicyRequest, CallSettings)
+            // Additional: CreateAclPolicyAsync(CreateAclPolicyRequest, CancellationToken)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAclPolicyRequest request = new CreateAclPolicyRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AclPolicyId = "",
+                AclPolicy = new AclPolicy(),
+                RequestId = "",
+            };
+            // Make the request
+            AclPolicy response = await memorystoreClient.CreateAclPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAclPolicy</summary>
+        public void CreateAclPolicy()
+        {
+            // Snippet: CreateAclPolicy(string, AclPolicy, string, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            AclPolicy aclPolicy = new AclPolicy();
+            string aclPolicyId = "";
+            // Make the request
+            AclPolicy response = memorystoreClient.CreateAclPolicy(parent, aclPolicy, aclPolicyId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAclPolicyAsync</summary>
+        public async Task CreateAclPolicyAsync()
+        {
+            // Snippet: CreateAclPolicyAsync(string, AclPolicy, string, CallSettings)
+            // Additional: CreateAclPolicyAsync(string, AclPolicy, string, CancellationToken)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            AclPolicy aclPolicy = new AclPolicy();
+            string aclPolicyId = "";
+            // Make the request
+            AclPolicy response = await memorystoreClient.CreateAclPolicyAsync(parent, aclPolicy, aclPolicyId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAclPolicy</summary>
+        public void CreateAclPolicyResourceNames()
+        {
+            // Snippet: CreateAclPolicy(LocationName, AclPolicy, string, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            AclPolicy aclPolicy = new AclPolicy();
+            string aclPolicyId = "";
+            // Make the request
+            AclPolicy response = memorystoreClient.CreateAclPolicy(parent, aclPolicy, aclPolicyId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAclPolicyAsync</summary>
+        public async Task CreateAclPolicyResourceNamesAsync()
+        {
+            // Snippet: CreateAclPolicyAsync(LocationName, AclPolicy, string, CallSettings)
+            // Additional: CreateAclPolicyAsync(LocationName, AclPolicy, string, CancellationToken)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            AclPolicy aclPolicy = new AclPolicy();
+            string aclPolicyId = "";
+            // Make the request
+            AclPolicy response = await memorystoreClient.CreateAclPolicyAsync(parent, aclPolicy, aclPolicyId);
             // End snippet
         }
 
@@ -591,6 +1055,136 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateAclPolicy</summary>
+        public void UpdateAclPolicyRequestObject()
+        {
+            // Snippet: UpdateAclPolicy(UpdateAclPolicyRequest, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            UpdateAclPolicyRequest request = new UpdateAclPolicyRequest
+            {
+                AclPolicy = new AclPolicy(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<AclPolicy, OperationMetadata> response = memorystoreClient.UpdateAclPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AclPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AclPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AclPolicy, OperationMetadata> retrievedResponse = memorystoreClient.PollOnceUpdateAclPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AclPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAclPolicyAsync</summary>
+        public async Task UpdateAclPolicyRequestObjectAsync()
+        {
+            // Snippet: UpdateAclPolicyAsync(UpdateAclPolicyRequest, CallSettings)
+            // Additional: UpdateAclPolicyAsync(UpdateAclPolicyRequest, CancellationToken)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAclPolicyRequest request = new UpdateAclPolicyRequest
+            {
+                AclPolicy = new AclPolicy(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<AclPolicy, OperationMetadata> response = await memorystoreClient.UpdateAclPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AclPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AclPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AclPolicy, OperationMetadata> retrievedResponse = await memorystoreClient.PollOnceUpdateAclPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AclPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAclPolicy</summary>
+        public void UpdateAclPolicy()
+        {
+            // Snippet: UpdateAclPolicy(AclPolicy, FieldMask, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            AclPolicy aclPolicy = new AclPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<AclPolicy, OperationMetadata> response = memorystoreClient.UpdateAclPolicy(aclPolicy, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AclPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AclPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AclPolicy, OperationMetadata> retrievedResponse = memorystoreClient.PollOnceUpdateAclPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AclPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAclPolicyAsync</summary>
+        public async Task UpdateAclPolicyAsync()
+        {
+            // Snippet: UpdateAclPolicyAsync(AclPolicy, FieldMask, CallSettings)
+            // Additional: UpdateAclPolicyAsync(AclPolicy, FieldMask, CancellationToken)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            AclPolicy aclPolicy = new AclPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<AclPolicy, OperationMetadata> response = await memorystoreClient.UpdateAclPolicyAsync(aclPolicy, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AclPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AclPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AclPolicy, OperationMetadata> retrievedResponse = await memorystoreClient.PollOnceUpdateAclPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AclPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for UpdateInstance</summary>
         public void UpdateInstanceRequestObject()
         {
@@ -718,6 +1312,556 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Instance retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAclPolicy</summary>
+        public void DeleteAclPolicyRequestObject()
+        {
+            // Snippet: DeleteAclPolicy(DeleteAclPolicyRequest, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            DeleteAclPolicyRequest request = new DeleteAclPolicyRequest
+            {
+                AclPolicyName = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]"),
+                RequestId = "",
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = memorystoreClient.DeleteAclPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = memorystoreClient.PollOnceDeleteAclPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAclPolicyAsync</summary>
+        public async Task DeleteAclPolicyRequestObjectAsync()
+        {
+            // Snippet: DeleteAclPolicyAsync(DeleteAclPolicyRequest, CallSettings)
+            // Additional: DeleteAclPolicyAsync(DeleteAclPolicyRequest, CancellationToken)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteAclPolicyRequest request = new DeleteAclPolicyRequest
+            {
+                AclPolicyName = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]"),
+                RequestId = "",
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await memorystoreClient.DeleteAclPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await memorystoreClient.PollOnceDeleteAclPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAclPolicy</summary>
+        public void DeleteAclPolicy()
+        {
+            // Snippet: DeleteAclPolicy(string, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/aclPolicies/[ACL_POLICY]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = memorystoreClient.DeleteAclPolicy(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = memorystoreClient.PollOnceDeleteAclPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAclPolicyAsync</summary>
+        public async Task DeleteAclPolicyAsync()
+        {
+            // Snippet: DeleteAclPolicyAsync(string, CallSettings)
+            // Additional: DeleteAclPolicyAsync(string, CancellationToken)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/aclPolicies/[ACL_POLICY]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await memorystoreClient.DeleteAclPolicyAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await memorystoreClient.PollOnceDeleteAclPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAclPolicy</summary>
+        public void DeleteAclPolicyResourceNames()
+        {
+            // Snippet: DeleteAclPolicy(AclPolicyName, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            AclPolicyName name = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = memorystoreClient.DeleteAclPolicy(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = memorystoreClient.PollOnceDeleteAclPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAclPolicyAsync</summary>
+        public async Task DeleteAclPolicyResourceNamesAsync()
+        {
+            // Snippet: DeleteAclPolicyAsync(AclPolicyName, CallSettings)
+            // Additional: DeleteAclPolicyAsync(AclPolicyName, CancellationToken)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            AclPolicyName name = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await memorystoreClient.DeleteAclPolicyAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await memorystoreClient.PollOnceDeleteAclPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicyRevision</summary>
+        public void GetAclPolicyRevisionRequestObject()
+        {
+            // Snippet: GetAclPolicyRevision(GetAclPolicyRevisionRequest, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            GetAclPolicyRevisionRequest request = new GetAclPolicyRevisionRequest
+            {
+                AclPolicyRevisionName = AclPolicyRevisionName.FromProjectLocationAclPolicyRevision("[PROJECT]", "[LOCATION]", "[ACL_POLICY]", "[REVISION]"),
+            };
+            // Make the request
+            AclPolicyRevision response = memorystoreClient.GetAclPolicyRevision(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicyRevisionAsync</summary>
+        public async Task GetAclPolicyRevisionRequestObjectAsync()
+        {
+            // Snippet: GetAclPolicyRevisionAsync(GetAclPolicyRevisionRequest, CallSettings)
+            // Additional: GetAclPolicyRevisionAsync(GetAclPolicyRevisionRequest, CancellationToken)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAclPolicyRevisionRequest request = new GetAclPolicyRevisionRequest
+            {
+                AclPolicyRevisionName = AclPolicyRevisionName.FromProjectLocationAclPolicyRevision("[PROJECT]", "[LOCATION]", "[ACL_POLICY]", "[REVISION]"),
+            };
+            // Make the request
+            AclPolicyRevision response = await memorystoreClient.GetAclPolicyRevisionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicyRevision</summary>
+        public void GetAclPolicyRevision()
+        {
+            // Snippet: GetAclPolicyRevision(string, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/aclPolicies/[ACL_POLICY]/revisions/[REVISION]";
+            // Make the request
+            AclPolicyRevision response = memorystoreClient.GetAclPolicyRevision(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicyRevisionAsync</summary>
+        public async Task GetAclPolicyRevisionAsync()
+        {
+            // Snippet: GetAclPolicyRevisionAsync(string, CallSettings)
+            // Additional: GetAclPolicyRevisionAsync(string, CancellationToken)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/aclPolicies/[ACL_POLICY]/revisions/[REVISION]";
+            // Make the request
+            AclPolicyRevision response = await memorystoreClient.GetAclPolicyRevisionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicyRevision</summary>
+        public void GetAclPolicyRevisionResourceNames()
+        {
+            // Snippet: GetAclPolicyRevision(AclPolicyRevisionName, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            AclPolicyRevisionName name = AclPolicyRevisionName.FromProjectLocationAclPolicyRevision("[PROJECT]", "[LOCATION]", "[ACL_POLICY]", "[REVISION]");
+            // Make the request
+            AclPolicyRevision response = memorystoreClient.GetAclPolicyRevision(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclPolicyRevisionAsync</summary>
+        public async Task GetAclPolicyRevisionResourceNamesAsync()
+        {
+            // Snippet: GetAclPolicyRevisionAsync(AclPolicyRevisionName, CallSettings)
+            // Additional: GetAclPolicyRevisionAsync(AclPolicyRevisionName, CancellationToken)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            AclPolicyRevisionName name = AclPolicyRevisionName.FromProjectLocationAclPolicyRevision("[PROJECT]", "[LOCATION]", "[ACL_POLICY]", "[REVISION]");
+            // Make the request
+            AclPolicyRevision response = await memorystoreClient.GetAclPolicyRevisionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPolicyRevisions</summary>
+        public void ListAclPolicyRevisionsRequestObject()
+        {
+            // Snippet: ListAclPolicyRevisions(ListAclPolicyRevisionsRequest, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            ListAclPolicyRevisionsRequest request = new ListAclPolicyRevisionsRequest
+            {
+                ParentAsAclPolicyName = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> response = memorystoreClient.ListAclPolicyRevisions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AclPolicyRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAclPolicyRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicyRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicyRevision> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicyRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPolicyRevisionsAsync</summary>
+        public async Task ListAclPolicyRevisionsRequestObjectAsync()
+        {
+            // Snippet: ListAclPolicyRevisionsAsync(ListAclPolicyRevisionsRequest, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAclPolicyRevisionsRequest request = new ListAclPolicyRevisionsRequest
+            {
+                ParentAsAclPolicyName = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> response = memorystoreClient.ListAclPolicyRevisionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AclPolicyRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAclPolicyRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicyRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicyRevision> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicyRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPolicyRevisions</summary>
+        public void ListAclPolicyRevisions()
+        {
+            // Snippet: ListAclPolicyRevisions(string, string, int?, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/aclPolicies/[ACL_POLICY]";
+            // Make the request
+            PagedEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> response = memorystoreClient.ListAclPolicyRevisions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AclPolicyRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAclPolicyRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicyRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicyRevision> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicyRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPolicyRevisionsAsync</summary>
+        public async Task ListAclPolicyRevisionsAsync()
+        {
+            // Snippet: ListAclPolicyRevisionsAsync(string, string, int?, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/aclPolicies/[ACL_POLICY]";
+            // Make the request
+            PagedAsyncEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> response = memorystoreClient.ListAclPolicyRevisionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AclPolicyRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAclPolicyRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicyRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicyRevision> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicyRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPolicyRevisions</summary>
+        public void ListAclPolicyRevisionsResourceNames()
+        {
+            // Snippet: ListAclPolicyRevisions(AclPolicyName, string, int?, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            AclPolicyName parent = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]");
+            // Make the request
+            PagedEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> response = memorystoreClient.ListAclPolicyRevisions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AclPolicyRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAclPolicyRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicyRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicyRevision> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicyRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclPolicyRevisionsAsync</summary>
+        public async Task ListAclPolicyRevisionsResourceNamesAsync()
+        {
+            // Snippet: ListAclPolicyRevisionsAsync(AclPolicyName, string, int?, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            AclPolicyName parent = AclPolicyName.FromProjectLocationAclPolicy("[PROJECT]", "[LOCATION]", "[ACL_POLICY]");
+            // Make the request
+            PagedAsyncEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> response = memorystoreClient.ListAclPolicyRevisionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AclPolicyRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAclPolicyRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AclPolicyRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AclPolicyRevision> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AclPolicyRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
