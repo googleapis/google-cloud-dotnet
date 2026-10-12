@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.21.0, released 2026-10-12
+
+### New features
+
+- Add option to configure the worker_release of a Build
+
 ## Version 2.20.0, released 2026-08-17
 
 ### New features
