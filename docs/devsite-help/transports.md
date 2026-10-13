@@ -134,3 +134,9 @@ Each of the Google Cloud Libraries for .NET has a *conditional* dependency on Gr
 depends on Grpc.Core, but the `netstandard2.1` target does not. The intention of this is to allow *most*
 applications to work out of the box with a simple dependency on the required client library package, but without
 additional unnecessary dependencies.
+
+## Post-Quantum Cryptography (PQC)
+
+Both `GrpcNetClientAdapter` and `RestGrpcAdapter` rely on modern .NET `HttpClient` / `SocketsHttpHandler` and support PQC out of the box with zero application code changes. The legacy `GrpcCoreAdapter` does not support PQC.
+
+For detailed concepts, platform compatibility, and fallback behavior, see [Post-quantum cryptography (PQC) support](post-quantum-cryptography.md).

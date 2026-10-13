@@ -10,6 +10,8 @@
     href: client-lifecycle.md
   - name: Transport selection
     href: transports.md
+  - name: Post-quantum cryptography (PQC) support
+    href: post-quantum-cryptography.md
   - name: Troubleshooting
     href: troubleshooting.md
   - name: Emulator support
