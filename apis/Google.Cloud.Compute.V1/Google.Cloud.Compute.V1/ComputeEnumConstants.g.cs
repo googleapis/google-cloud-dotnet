@@ -3123,6 +3123,12 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>
                 /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.ComputeOptimizedH4D3Tb"/>.
+                /// </summary>
+                public const string ComputeOptimizedH4D3Tb = "COMPUTE_OPTIMIZED_H4D_3TB";
+
+                /// <summary>
+                /// Wire representation of
                 /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.GeneralPurpose"/>.
                 /// </summary>
                 public const string GeneralPurpose = "GENERAL_PURPOSE";
