@@ -2317,6 +2317,7 @@ namespace GoogleCSharpSnippets
             StartBackfillJobRequest request = new StartBackfillJobRequest
             {
                 ObjectAsStreamObjectName = StreamObjectName.FromProjectLocationStreamObject("[PROJECT]", "[LOCATION]", "[STREAM]", "[OBJECT]"),
+                EventFilter = new EventFilter(),
             };
             // Make the request
             StartBackfillJobResponse response = datastreamClient.StartBackfillJob(request);
@@ -2334,6 +2335,7 @@ namespace GoogleCSharpSnippets
             StartBackfillJobRequest request = new StartBackfillJobRequest
             {
                 ObjectAsStreamObjectName = StreamObjectName.FromProjectLocationStreamObject("[PROJECT]", "[LOCATION]", "[STREAM]", "[OBJECT]"),
+                EventFilter = new EventFilter(),
             };
             // Make the request
             StartBackfillJobResponse response = await datastreamClient.StartBackfillJobAsync(request);
