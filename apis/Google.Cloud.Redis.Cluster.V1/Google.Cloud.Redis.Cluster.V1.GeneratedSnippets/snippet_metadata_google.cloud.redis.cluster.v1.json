@@ -6215,6 +6215,2398 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListTokenAuthUsers_sync",
+      "title": "ListTokenAuthUsersRequestObject",
+      "description": "Snippet for ListTokenAuthUsers",
+      "file": "CloudRedisClusterClient.ListTokenAuthUsersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTokenAuthUsers",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListTokenAuthUsers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.ListTokenAuthUsersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Redis.Cluster.V1.ListTokenAuthUsersResponse, Google.Cloud.Redis.Cluster.V1.TokenAuthUser>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListTokenAuthUsers",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListTokenAuthUsers",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListTokenAuthUsers_async",
+      "title": "ListTokenAuthUsersRequestObjectAsync",
+      "description": "Snippet for ListTokenAuthUsersAsync",
+      "file": "CloudRedisClusterClient.ListTokenAuthUsersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTokenAuthUsersAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListTokenAuthUsersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.ListTokenAuthUsersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Redis.Cluster.V1.ListTokenAuthUsersResponse, Google.Cloud.Redis.Cluster.V1.TokenAuthUser>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListTokenAuthUsers",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListTokenAuthUsers",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListTokenAuthUsers_sync_flattened",
+      "title": "ListTokenAuthUsers",
+      "description": "Snippet for ListTokenAuthUsers",
+      "file": "CloudRedisClusterClient.ListTokenAuthUsersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTokenAuthUsers",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListTokenAuthUsers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Redis.Cluster.V1.ListTokenAuthUsersResponse, Google.Cloud.Redis.Cluster.V1.TokenAuthUser>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListTokenAuthUsers",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListTokenAuthUsers",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListTokenAuthUsers_async_flattened",
+      "title": "ListTokenAuthUsersAsync",
+      "description": "Snippet for ListTokenAuthUsersAsync",
+      "file": "CloudRedisClusterClient.ListTokenAuthUsersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTokenAuthUsersAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListTokenAuthUsersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Redis.Cluster.V1.ListTokenAuthUsersResponse, Google.Cloud.Redis.Cluster.V1.TokenAuthUser>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListTokenAuthUsers",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListTokenAuthUsers",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListTokenAuthUsers_sync_flattened_resourceNames",
+      "title": "ListTokenAuthUsersResourceNames",
+      "description": "Snippet for ListTokenAuthUsers",
+      "file": "CloudRedisClusterClient.ListTokenAuthUsersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTokenAuthUsers",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListTokenAuthUsers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Redis.Cluster.V1.ListTokenAuthUsersResponse, Google.Cloud.Redis.Cluster.V1.TokenAuthUser>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListTokenAuthUsers",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListTokenAuthUsers",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListTokenAuthUsers_async_flattened_resourceNames",
+      "title": "ListTokenAuthUsersResourceNamesAsync",
+      "description": "Snippet for ListTokenAuthUsersAsync",
+      "file": "CloudRedisClusterClient.ListTokenAuthUsersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTokenAuthUsersAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListTokenAuthUsersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Redis.Cluster.V1.ListTokenAuthUsersResponse, Google.Cloud.Redis.Cluster.V1.TokenAuthUser>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListTokenAuthUsers",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListTokenAuthUsers",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetTokenAuthUser_sync",
+      "title": "GetTokenAuthUserRequestObject",
+      "description": "Snippet for GetTokenAuthUser",
+      "file": "CloudRedisClusterClient.GetTokenAuthUserRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTokenAuthUser",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetTokenAuthUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.GetTokenAuthUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.TokenAuthUser",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetTokenAuthUser",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetTokenAuthUser",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetTokenAuthUser_async",
+      "title": "GetTokenAuthUserRequestObjectAsync",
+      "description": "Snippet for GetTokenAuthUserAsync",
+      "file": "CloudRedisClusterClient.GetTokenAuthUserRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTokenAuthUserAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetTokenAuthUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.GetTokenAuthUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.TokenAuthUser>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetTokenAuthUser",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetTokenAuthUser",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetTokenAuthUser_sync_flattened",
+      "title": "GetTokenAuthUser",
+      "description": "Snippet for GetTokenAuthUser",
+      "file": "CloudRedisClusterClient.GetTokenAuthUserSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTokenAuthUser",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetTokenAuthUser",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.TokenAuthUser",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetTokenAuthUser",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetTokenAuthUser",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetTokenAuthUser_async_flattened",
+      "title": "GetTokenAuthUserAsync",
+      "description": "Snippet for GetTokenAuthUserAsync",
+      "file": "CloudRedisClusterClient.GetTokenAuthUserAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTokenAuthUserAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetTokenAuthUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.TokenAuthUser>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetTokenAuthUser",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetTokenAuthUser",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetTokenAuthUser_sync_flattened_resourceNames",
+      "title": "GetTokenAuthUserResourceNames",
+      "description": "Snippet for GetTokenAuthUser",
+      "file": "CloudRedisClusterClient.GetTokenAuthUserResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTokenAuthUser",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetTokenAuthUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.TokenAuthUserName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.TokenAuthUser",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetTokenAuthUser",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetTokenAuthUser",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetTokenAuthUser_async_flattened_resourceNames",
+      "title": "GetTokenAuthUserResourceNamesAsync",
+      "description": "Snippet for GetTokenAuthUserAsync",
+      "file": "CloudRedisClusterClient.GetTokenAuthUserResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTokenAuthUserAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetTokenAuthUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.TokenAuthUserName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.TokenAuthUser>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetTokenAuthUser",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetTokenAuthUser",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListAuthTokens_sync",
+      "title": "ListAuthTokensRequestObject",
+      "description": "Snippet for ListAuthTokens",
+      "file": "CloudRedisClusterClient.ListAuthTokensRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthTokens",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListAuthTokens",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.ListAuthTokensRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Redis.Cluster.V1.ListAuthTokensResponse, Google.Cloud.Redis.Cluster.V1.AuthToken>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListAuthTokens",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListAuthTokens",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListAuthTokens_async",
+      "title": "ListAuthTokensRequestObjectAsync",
+      "description": "Snippet for ListAuthTokensAsync",
+      "file": "CloudRedisClusterClient.ListAuthTokensRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthTokensAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListAuthTokensAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.ListAuthTokensRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Redis.Cluster.V1.ListAuthTokensResponse, Google.Cloud.Redis.Cluster.V1.AuthToken>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListAuthTokens",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListAuthTokens",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListAuthTokens_sync_flattened",
+      "title": "ListAuthTokens",
+      "description": "Snippet for ListAuthTokens",
+      "file": "CloudRedisClusterClient.ListAuthTokensSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthTokens",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListAuthTokens",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Redis.Cluster.V1.ListAuthTokensResponse, Google.Cloud.Redis.Cluster.V1.AuthToken>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListAuthTokens",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListAuthTokens",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListAuthTokens_async_flattened",
+      "title": "ListAuthTokensAsync",
+      "description": "Snippet for ListAuthTokensAsync",
+      "file": "CloudRedisClusterClient.ListAuthTokensAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthTokensAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListAuthTokensAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Redis.Cluster.V1.ListAuthTokensResponse, Google.Cloud.Redis.Cluster.V1.AuthToken>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListAuthTokens",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListAuthTokens",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListAuthTokens_sync_flattened_resourceNames",
+      "title": "ListAuthTokensResourceNames",
+      "description": "Snippet for ListAuthTokens",
+      "file": "CloudRedisClusterClient.ListAuthTokensResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthTokens",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListAuthTokens",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.TokenAuthUserName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Redis.Cluster.V1.ListAuthTokensResponse, Google.Cloud.Redis.Cluster.V1.AuthToken>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListAuthTokens",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListAuthTokens",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_ListAuthTokens_async_flattened_resourceNames",
+      "title": "ListAuthTokensResourceNamesAsync",
+      "description": "Snippet for ListAuthTokensAsync",
+      "file": "CloudRedisClusterClient.ListAuthTokensResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthTokensAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.ListAuthTokensAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.TokenAuthUserName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Redis.Cluster.V1.ListAuthTokensResponse, Google.Cloud.Redis.Cluster.V1.AuthToken>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "ListAuthTokens",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.ListAuthTokens",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetAuthToken_sync",
+      "title": "GetAuthTokenRequestObject",
+      "description": "Snippet for GetAuthToken",
+      "file": "CloudRedisClusterClient.GetAuthTokenRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthToken",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetAuthToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.GetAuthTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.AuthToken",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetAuthToken",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetAuthToken",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetAuthToken_async",
+      "title": "GetAuthTokenRequestObjectAsync",
+      "description": "Snippet for GetAuthTokenAsync",
+      "file": "CloudRedisClusterClient.GetAuthTokenRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthTokenAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetAuthTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.GetAuthTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.AuthToken>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetAuthToken",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetAuthToken",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetAuthToken_sync_flattened",
+      "title": "GetAuthToken",
+      "description": "Snippet for GetAuthToken",
+      "file": "CloudRedisClusterClient.GetAuthTokenSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthToken",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetAuthToken",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.AuthToken",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetAuthToken",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetAuthToken",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetAuthToken_async_flattened",
+      "title": "GetAuthTokenAsync",
+      "description": "Snippet for GetAuthTokenAsync",
+      "file": "CloudRedisClusterClient.GetAuthTokenAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthTokenAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetAuthTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.AuthToken>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetAuthToken",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetAuthToken",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetAuthToken_sync_flattened_resourceNames",
+      "title": "GetAuthTokenResourceNames",
+      "description": "Snippet for GetAuthToken",
+      "file": "CloudRedisClusterClient.GetAuthTokenResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthToken",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetAuthToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AuthTokenName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.Cluster.V1.AuthToken",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetAuthToken",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetAuthToken",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_GetAuthToken_async_flattened_resourceNames",
+      "title": "GetAuthTokenResourceNamesAsync",
+      "description": "Snippet for GetAuthTokenAsync",
+      "file": "CloudRedisClusterClient.GetAuthTokenResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthTokenAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.GetAuthTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AuthTokenName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.Cluster.V1.AuthToken>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "GetAuthToken",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.GetAuthToken",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_AddTokenAuthUser_sync",
+      "title": "AddTokenAuthUserRequestObject",
+      "description": "Snippet for AddTokenAuthUser",
+      "file": "CloudRedisClusterClient.AddTokenAuthUserRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddTokenAuthUser",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.AddTokenAuthUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AddTokenAuthUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.Cluster.V1.Cluster, Google.Cloud.Redis.Cluster.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "AddTokenAuthUser",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.AddTokenAuthUser",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_AddTokenAuthUser_async",
+      "title": "AddTokenAuthUserRequestObjectAsync",
+      "description": "Snippet for AddTokenAuthUserAsync",
+      "file": "CloudRedisClusterClient.AddTokenAuthUserRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddTokenAuthUserAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.AddTokenAuthUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AddTokenAuthUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.Cluster.V1.Cluster, Google.Cloud.Redis.Cluster.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "AddTokenAuthUser",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.AddTokenAuthUser",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_AddTokenAuthUser_sync_flattened",
+      "title": "AddTokenAuthUser",
+      "description": "Snippet for AddTokenAuthUser",
+      "file": "CloudRedisClusterClient.AddTokenAuthUserSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddTokenAuthUser",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.AddTokenAuthUser",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "cluster"
+          },
+          {
+            "type": "System.String",
+            "name": "tokenAuthUser"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.Cluster.V1.Cluster, Google.Cloud.Redis.Cluster.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "AddTokenAuthUser",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.AddTokenAuthUser",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_AddTokenAuthUser_async_flattened",
+      "title": "AddTokenAuthUserAsync",
+      "description": "Snippet for AddTokenAuthUserAsync",
+      "file": "CloudRedisClusterClient.AddTokenAuthUserAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddTokenAuthUserAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.AddTokenAuthUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "cluster"
+          },
+          {
+            "type": "System.String",
+            "name": "tokenAuthUser"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.Cluster.V1.Cluster, Google.Cloud.Redis.Cluster.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "AddTokenAuthUser",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.AddTokenAuthUser",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_AddTokenAuthUser_sync_flattened_resourceNames",
+      "title": "AddTokenAuthUserResourceNames",
+      "description": "Snippet for AddTokenAuthUser",
+      "file": "CloudRedisClusterClient.AddTokenAuthUserResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddTokenAuthUser",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.AddTokenAuthUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.ClusterName",
+            "name": "cluster"
+          },
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.TokenAuthUserName",
+            "name": "tokenAuthUser"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.Cluster.V1.Cluster, Google.Cloud.Redis.Cluster.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "AddTokenAuthUser",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.AddTokenAuthUser",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_AddTokenAuthUser_async_flattened_resourceNames",
+      "title": "AddTokenAuthUserResourceNamesAsync",
+      "description": "Snippet for AddTokenAuthUserAsync",
+      "file": "CloudRedisClusterClient.AddTokenAuthUserResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddTokenAuthUserAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.AddTokenAuthUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.ClusterName",
+            "name": "cluster"
+          },
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.TokenAuthUserName",
+            "name": "tokenAuthUser"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.Cluster.V1.Cluster, Google.Cloud.Redis.Cluster.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "AddTokenAuthUser",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.AddTokenAuthUser",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_DeleteTokenAuthUser_sync",
+      "title": "DeleteTokenAuthUserRequestObject",
+      "description": "Snippet for DeleteTokenAuthUser",
+      "file": "CloudRedisClusterClient.DeleteTokenAuthUserRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTokenAuthUser",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.DeleteTokenAuthUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.DeleteTokenAuthUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Redis.Cluster.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteTokenAuthUser",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.DeleteTokenAuthUser",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_DeleteTokenAuthUser_async",
+      "title": "DeleteTokenAuthUserRequestObjectAsync",
+      "description": "Snippet for DeleteTokenAuthUserAsync",
+      "file": "CloudRedisClusterClient.DeleteTokenAuthUserRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTokenAuthUserAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.DeleteTokenAuthUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.DeleteTokenAuthUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Redis.Cluster.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteTokenAuthUser",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.DeleteTokenAuthUser",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_DeleteTokenAuthUser_sync_flattened",
+      "title": "DeleteTokenAuthUser",
+      "description": "Snippet for DeleteTokenAuthUser",
+      "file": "CloudRedisClusterClient.DeleteTokenAuthUserSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTokenAuthUser",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.DeleteTokenAuthUser",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Redis.Cluster.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteTokenAuthUser",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.DeleteTokenAuthUser",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_DeleteTokenAuthUser_async_flattened",
+      "title": "DeleteTokenAuthUserAsync",
+      "description": "Snippet for DeleteTokenAuthUserAsync",
+      "file": "CloudRedisClusterClient.DeleteTokenAuthUserAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTokenAuthUserAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.DeleteTokenAuthUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Redis.Cluster.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteTokenAuthUser",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.DeleteTokenAuthUser",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_DeleteTokenAuthUser_sync_flattened_resourceNames",
+      "title": "DeleteTokenAuthUserResourceNames",
+      "description": "Snippet for DeleteTokenAuthUser",
+      "file": "CloudRedisClusterClient.DeleteTokenAuthUserResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTokenAuthUser",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.DeleteTokenAuthUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.TokenAuthUserName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Redis.Cluster.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteTokenAuthUser",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.DeleteTokenAuthUser",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_DeleteTokenAuthUser_async_flattened_resourceNames",
+      "title": "DeleteTokenAuthUserResourceNamesAsync",
+      "description": "Snippet for DeleteTokenAuthUserAsync",
+      "file": "CloudRedisClusterClient.DeleteTokenAuthUserResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTokenAuthUserAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.DeleteTokenAuthUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.TokenAuthUserName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Redis.Cluster.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteTokenAuthUser",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.DeleteTokenAuthUser",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_AddAuthToken_sync",
+      "title": "AddAuthTokenRequestObject",
+      "description": "Snippet for AddAuthToken",
+      "file": "CloudRedisClusterClient.AddAuthTokenRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddAuthToken",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.AddAuthToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AddAuthTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.Cluster.V1.TokenAuthUser, Google.Cloud.Redis.Cluster.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "AddAuthToken",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.AddAuthToken",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_AddAuthToken_async",
+      "title": "AddAuthTokenRequestObjectAsync",
+      "description": "Snippet for AddAuthTokenAsync",
+      "file": "CloudRedisClusterClient.AddAuthTokenRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddAuthTokenAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.AddAuthTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AddAuthTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.Cluster.V1.TokenAuthUser, Google.Cloud.Redis.Cluster.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "AddAuthToken",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.AddAuthToken",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_AddAuthToken_sync_flattened",
+      "title": "AddAuthToken",
+      "description": "Snippet for AddAuthToken",
+      "file": "CloudRedisClusterClient.AddAuthTokenSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddAuthToken",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.AddAuthToken",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tokenAuthUser"
+          },
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AuthToken",
+            "name": "authToken"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.Cluster.V1.TokenAuthUser, Google.Cloud.Redis.Cluster.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "AddAuthToken",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.AddAuthToken",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_AddAuthToken_async_flattened",
+      "title": "AddAuthTokenAsync",
+      "description": "Snippet for AddAuthTokenAsync",
+      "file": "CloudRedisClusterClient.AddAuthTokenAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddAuthTokenAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.AddAuthTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tokenAuthUser"
+          },
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AuthToken",
+            "name": "authToken"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.Cluster.V1.TokenAuthUser, Google.Cloud.Redis.Cluster.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "AddAuthToken",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.AddAuthToken",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_AddAuthToken_sync_flattened_resourceNames",
+      "title": "AddAuthTokenResourceNames",
+      "description": "Snippet for AddAuthToken",
+      "file": "CloudRedisClusterClient.AddAuthTokenResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddAuthToken",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.AddAuthToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.TokenAuthUserName",
+            "name": "tokenAuthUser"
+          },
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AuthToken",
+            "name": "authToken"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.Cluster.V1.TokenAuthUser, Google.Cloud.Redis.Cluster.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "AddAuthToken",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.AddAuthToken",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_AddAuthToken_async_flattened_resourceNames",
+      "title": "AddAuthTokenResourceNamesAsync",
+      "description": "Snippet for AddAuthTokenAsync",
+      "file": "CloudRedisClusterClient.AddAuthTokenResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddAuthTokenAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.AddAuthTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.TokenAuthUserName",
+            "name": "tokenAuthUser"
+          },
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AuthToken",
+            "name": "authToken"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.Cluster.V1.TokenAuthUser, Google.Cloud.Redis.Cluster.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "AddAuthToken",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.AddAuthToken",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_DeleteAuthToken_sync",
+      "title": "DeleteAuthTokenRequestObject",
+      "description": "Snippet for DeleteAuthToken",
+      "file": "CloudRedisClusterClient.DeleteAuthTokenRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthToken",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.DeleteAuthToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.DeleteAuthTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Redis.Cluster.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthToken",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.DeleteAuthToken",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_DeleteAuthToken_async",
+      "title": "DeleteAuthTokenRequestObjectAsync",
+      "description": "Snippet for DeleteAuthTokenAsync",
+      "file": "CloudRedisClusterClient.DeleteAuthTokenRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthTokenAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.DeleteAuthTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.DeleteAuthTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Redis.Cluster.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthToken",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.DeleteAuthToken",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_DeleteAuthToken_sync_flattened",
+      "title": "DeleteAuthToken",
+      "description": "Snippet for DeleteAuthToken",
+      "file": "CloudRedisClusterClient.DeleteAuthTokenSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthToken",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.DeleteAuthToken",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Redis.Cluster.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthToken",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.DeleteAuthToken",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_DeleteAuthToken_async_flattened",
+      "title": "DeleteAuthTokenAsync",
+      "description": "Snippet for DeleteAuthTokenAsync",
+      "file": "CloudRedisClusterClient.DeleteAuthTokenAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthTokenAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.DeleteAuthTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Redis.Cluster.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthToken",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.DeleteAuthToken",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_DeleteAuthToken_sync_flattened_resourceNames",
+      "title": "DeleteAuthTokenResourceNames",
+      "description": "Snippet for DeleteAuthToken",
+      "file": "CloudRedisClusterClient.DeleteAuthTokenResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthToken",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.DeleteAuthToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AuthTokenName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Redis.Cluster.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthToken",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.DeleteAuthToken",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1_generated_CloudRedisCluster_DeleteAuthToken_async_flattened_resourceNames",
+      "title": "DeleteAuthTokenResourceNamesAsync",
+      "description": "Snippet for DeleteAuthTokenAsync",
+      "file": "CloudRedisClusterClient.DeleteAuthTokenResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthTokenAsync",
+        "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient.DeleteAuthTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.Cluster.V1.AuthTokenName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Redis.Cluster.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudRedisClusterClient",
+          "fullName": "Google.Cloud.Redis.Cluster.V1.CloudRedisClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthToken",
+          "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster.DeleteAuthToken",
+          "service": {
+            "shortName": "CloudRedisCluster",
+            "fullName": "google.cloud.redis.cluster.v1.CloudRedisCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
