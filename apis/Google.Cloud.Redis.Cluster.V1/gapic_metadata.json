@@ -10,6 +10,18 @@
         "grpc": {
           "libraryClient": "CloudRedisClusterClient",
           "rpcs": {
+            "AddAuthToken": {
+              "methods": [
+                "AddAuthToken",
+                "AddAuthTokenAsync"
+              ]
+            },
+            "AddTokenAuthUser": {
+              "methods": [
+                "AddTokenAuthUser",
+                "AddTokenAuthUserAsync"
+              ]
+            },
             "BackupCluster": {
               "methods": [
                 "BackupCluster",
@@ -34,6 +46,12 @@
                 "DeleteAclPolicyAsync"
               ]
             },
+            "DeleteAuthToken": {
+              "methods": [
+                "DeleteAuthToken",
+                "DeleteAuthTokenAsync"
+              ]
+            },
             "DeleteBackup": {
               "methods": [
                 "DeleteBackup",
@@ -44,6 +62,12 @@
               "methods": [
                 "DeleteCluster",
                 "DeleteClusterAsync"
+              ]
+            },
+            "DeleteTokenAuthUser": {
+              "methods": [
+                "DeleteTokenAuthUser",
+                "DeleteTokenAuthUserAsync"
               ]
             },
             "ExportBackup": {
@@ -62,6 +86,12 @@
               "methods": [
                 "GetAclPolicyRevision",
                 "GetAclPolicyRevisionAsync"
+              ]
+            },
+            "GetAuthToken": {
+              "methods": [
+                "GetAuthToken",
+                "GetAuthTokenAsync"
               ]
             },
             "GetBackup": {
@@ -94,6 +124,12 @@
                 "GetSharedRegionalCertificateAuthorityAsync"
               ]
             },
+            "GetTokenAuthUser": {
+              "methods": [
+                "GetTokenAuthUser",
+                "GetTokenAuthUserAsync"
+              ]
+            },
             "ListAclPolicies": {
               "methods": [
                 "ListAclPolicies",
@@ -104,6 +140,12 @@
               "methods": [
                 "ListAclPolicyRevisions",
                 "ListAclPolicyRevisionsAsync"
+              ]
+            },
+            "ListAuthTokens": {
+              "methods": [
+                "ListAuthTokens",
+                "ListAuthTokensAsync"
               ]
             },
             "ListBackupCollections": {
@@ -122,6 +164,12 @@
               "methods": [
                 "ListClusters",
                 "ListClustersAsync"
+              ]
+            },
+            "ListTokenAuthUsers": {
+              "methods": [
+                "ListTokenAuthUsers",
+                "ListTokenAuthUsersAsync"
               ]
             },
             "RescheduleClusterMaintenance": {
