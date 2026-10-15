@@ -1,5 +1,12 @@
 # Version history
 
+## Version 5.29.0, released 2026-10-15
+
+### New features
+
+- Add `FlexibleInstanceGroupConfig` and `master_flexible_config`, `worker_flexible_config`, `secondary_worker_flexible_config` fields to `ClusterConfig` to support Dataproc High Obtainability (HO) mode
+- Add `MultiZoneConfig` and `multi_zone_config` field to `GceClusterConfig` to support multi-zonal clusters
+
 ## Version 5.28.0, released 2026-07-06
 
 ### New features
