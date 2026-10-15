@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.13.0, released 2026-10-15
+
+### New features
+
+- Add Spanner, Dataverse, Salesforce Marketing Cloud, ServiceNow, and Workday source configs
+- Add BigQuery partitioning and clustering customization rules to Stream
+- Add EventFilter for partial backfills and SQL Server SSL/DDL configs
+
+### Documentation improvements
+
+- Update field and message documentation across Datastream v1 resources
+
 ## Version 2.12.0, released 2025-11-05
 
 ### New features
