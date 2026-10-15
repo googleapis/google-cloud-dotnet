@@ -108,6 +108,45 @@ internal static partial class SpannerBuiltInMetrics
     }
 
     /// <summary>
+    /// Records operation count and latency metrics.
+    /// </summary>
+    /// <param name="latencyMs">The elapsed duration of the operation in milliseconds.</param>
+    /// <param name="methodName">The name of the gRPC method invoked.</param>
+    /// <param name="dbNameProvider">The provider holding database context details.</param>
+    /// <param name="status">The resolved status of the operation.</param>
+    /// <param name="clientIdentity">The identity context for the client executing the operation.</param>
+    internal static void RecordOperationMetrics(double latencyMs, string methodName, IDatabaseNameProvider dbNameProvider, StatusCode status, ClientIdentity clientIdentity)
+    {
+        try
+        {
+            var labels = Labeler.GetLabels(methodName, dbNameProvider, status, clientIdentity);
+            RecordOperationMetrics(latencyMs, labels);
+        }
+        catch
+        {
+            // Silently swallow exceptions.
+        }
+    }
+
+    /// <summary>
+    /// Records operation count and latency metrics.
+    /// </summary>
+    /// <param name="latencyMs">The elapsed duration of the operation in milliseconds.</param>
+    /// <param name="labels">The metric labels to apply to the measurement.</param>
+    internal static void RecordOperationMetrics(double latencyMs, KeyValuePair<string, object>[] labels)
+    {
+        try
+        {
+            s_operationCounter.Add(1, labels);
+            s_operationLatency.Record(latencyMs, labels);
+        }
+        catch
+        {
+            // Silently swallow exceptions.
+        }
+    }
+
+    /// <summary>
     /// Records server-timing metrics asynchronously when the response headers task resolves.
     /// </summary>
     internal static async Task RecordServerTimingMetricsAsync(Task<Metadata> headersTask, KeyValuePair<string, object>[] labels)
@@ -284,45 +323,6 @@ internal static partial class SpannerBuiltInMetrics
         // DirectPath is not supported by the .NET Cloud SDK.
         private static readonly KeyValuePair<string, object> s_directPathEnabledLabel = new(DirectPathEnabledLabelName, "false");
         private static readonly KeyValuePair<string, object> s_directPathUsedLabel = new(DirectPathUsedLabelName, "false");
-
-        /// <summary>
-        /// Records operation count and latency metrics.
-        /// </summary>
-        /// <param name="latencyMs">The elapsed duration of the operation in milliseconds.</param>
-        /// <param name="methodName">The name of the gRPC method invoked.</param>
-        /// <param name="dbNameProvider">The provider holding database context details.</param>
-        /// <param name="status">The resolved status of the operation.</param>
-        /// <param name="clientIdentity">The identity context for the client executing the operation.</param>
-        internal static void RecordOperationMetrics(double latencyMs, string methodName, IDatabaseNameProvider dbNameProvider, StatusCode status, ClientIdentity clientIdentity)
-        {
-            try
-            {
-                var labels = Labeler.GetLabels(methodName, dbNameProvider, status, clientIdentity);
-                RecordOperationMetrics(latencyMs, labels);
-            }
-            catch
-            {
-                // Silently swallow exceptions.
-            }
-        }
-
-        /// <summary>
-        /// Records operation count and latency metrics.
-        /// </summary>
-        /// <param name="latencyMs">The elapsed duration of the operation in milliseconds.</param>
-        /// <param name="labels">The metric labels to apply to the measurement.</param>
-        internal static void RecordOperationMetrics(double latencyMs, KeyValuePair<string, object>[] labels)
-        {
-            try
-            {
-                s_operationCounter.Add(1, labels);
-                s_operationLatency.Record(latencyMs, labels);
-            }
-            catch
-            {
-                // Silently swallow exceptions.
-            }
-        }
 
         /// <summary>
         /// Generates the standard set of labels for a metric measurement.
