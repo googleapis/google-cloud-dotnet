@@ -32,6 +32,11 @@ namespace Google.Cloud.Spanner.V1
     {
         private readonly IAsyncStreamReader<PartialResultSet> _resultStream;
         private readonly Logger _logger;
+        private readonly SpannerBuiltInMetrics.IStopwatch _stopwatch;
+        private readonly string _methodName;
+        private readonly IDatabaseNameProvider _dbNameProvider;
+        private readonly SpannerBuiltInMetrics.ClientIdentity? _clientIdentity;
+        private int _metricsEmitted;
 
         private bool _initialized = false;
         private PartialResultSet _currentResultSet;
@@ -47,6 +52,21 @@ namespace Google.Cloud.Spanner.V1
         {
             _resultStream = GaxPreconditions.CheckNotNull(resultStream, nameof(resultStream));
             _logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
+        }
+
+        internal ReliableStreamReader(
+            IAsyncStreamReader<PartialResultSet> resultStream,
+            Logger logger,
+            SpannerBuiltInMetrics.IStopwatch stopwatch,
+            string methodName,
+            IDatabaseNameProvider dbNameProvider,
+            SpannerBuiltInMetrics.ClientIdentity clientIdentity)
+            : this(resultStream, logger)
+        {
+            _stopwatch = GaxPreconditions.CheckNotNull(stopwatch, nameof(stopwatch));
+            _methodName = GaxPreconditions.CheckNotNull(methodName, nameof(methodName));
+            _dbNameProvider = GaxPreconditions.CheckNotNull(dbNameProvider, nameof(dbNameProvider));
+            _clientIdentity = clientIdentity;
         }
 
         /// <summary>
@@ -83,6 +103,7 @@ namespace Google.Cloud.Spanner.V1
             }
 
             IsClosed = true;
+            EmitMetrics();
             StreamClosed?.Invoke(this, new StreamClosedEventArgs());
         }
 
@@ -192,12 +213,25 @@ namespace Google.Cloud.Spanner.V1
 
         private async Task MoveNextAsync(CancellationToken cancellationToken)
         {
-            bool result = await _resultStream.MoveNext(cancellationToken).ConfigureAwait(false);
-            _currentResultSet = result ? _resultStream.Current : null;
-            _nextIndex = 0;
-            if (Stats == null)
+            try
             {
-                Stats = _currentResultSet?.Stats;
+                bool hasResult = await _resultStream.MoveNext(cancellationToken).ConfigureAwait(false);
+                _currentResultSet = hasResult ? _resultStream.Current : null;
+                _nextIndex = 0;
+                if (Stats == null)
+                {
+                    Stats = _currentResultSet?.Stats;
+                }
+                if (!hasResult)
+                {
+                    // Server closed the stream and all responses have been received, we consider this OK.
+                    EmitMetrics(StatusCode.OK);
+                }
+            }
+            catch (Exception ex)
+            {
+                EmitMetrics(SpannerBuiltInMetrics.GetStatus(ex));
+                throw;
             }
         }
 
@@ -264,6 +298,20 @@ namespace Google.Cloud.Spanner.V1
                         return false;
                 }
             }
+        }
+
+        private void EmitMetrics(StatusCode status = StatusCode.Unknown)
+        {
+            if (_clientIdentity == null || Interlocked.CompareExchange(ref _metricsEmitted, 1, 0) != 0)
+            {
+                // No metrics are emitted if previously emitted or no clientIdentity was passed if this was
+                // constructucted from an uninstrimented client.
+                return;
+            }
+
+            _stopwatch.Stop();
+            SpannerBuiltInMetrics.RecordOperationMetrics(
+                _stopwatch.ElapsedMilliseconds, _methodName, _dbNameProvider, status, _clientIdentity.Value);
         }
     }
 
