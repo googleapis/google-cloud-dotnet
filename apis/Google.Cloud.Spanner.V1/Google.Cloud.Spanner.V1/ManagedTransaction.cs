@@ -721,7 +721,24 @@ public sealed class ManagedTransaction : IAsyncDisposable
         MaybeApplyDirectedReadOptions(request.UnderlyingRequest);
 
         ResultStream stream = new ResultStream(_client, request, this, callSettings);
-        return new ReliableStreamReader(stream, _client.Settings.Logger);
+        // Only record operation metrics if the client was constructed with built-in metrics enabled.
+        if (_client is not SpannerBuiltInMetrics.BuiltInMetricsWrapper metricsWrapper)
+        {
+            return new ReliableStreamReader(stream, _client.Settings.Logger);
+        }
+
+        var stopwatch = SpannerBuiltInMetrics.DefaultStopwatchProvider.Instance.StartNew();
+        string methodName = request.IsQuery
+            ? nameof(SpannerClient.ExecuteStreamingSql)
+            : nameof(SpannerClient.StreamingRead);
+
+        return new ReliableStreamReader(
+            stream,
+            _client.Settings.Logger,
+            stopwatch,
+            methodName,
+            request,
+            metricsWrapper._clientIdentity);
     }
 
     /// <summary>
