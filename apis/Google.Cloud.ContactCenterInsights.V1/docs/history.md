@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.21.0, released 2026-10-15
+
+### New features
+
+- Add deployment, version, and subagent metadata fields to AgentInfo
+
+### Documentation improvements
+
+- Mark AgentInfo.team as deprecated in favor of teams
+
 ## Version 2.20.0, released 2025-11-05
 
 ### New features
