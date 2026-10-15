@@ -1,5 +1,12 @@
 # Version history
 
+## Version 4.1.0, released 2026-10-15
+
+### New features
+
+- Update Compute Engine v1 API artifacts to revision 20261007
+- Add COMPUTE_OPTIMIZED_H4D_3TB to Commitment.Type enum
+
 ## Version 4.0.0, released 2026-10-08
 
 ### New features
