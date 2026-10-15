@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.10.0, released 2026-10-15
+
+### New features
+
+- Add support for Basic Auth feature to Memorystore for Redis Cluster
+
 ## Version 1.9.0, released 2026-10-09
 
 ### New features
