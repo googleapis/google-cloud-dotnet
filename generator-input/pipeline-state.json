@@ -4035,10 +4035,10 @@
         },
         {
             "id": "Google.Cloud.Spanner",
-            "currentVersion": "5.13.0-beta11",
+            "currentVersion": "5.13.0-beta12",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-09-14T19:12:03.839589604Z",
+            "releaseTimestamp": "2026-10-15T21:20:29.472387312Z",
             "lastGeneratedCommit": "68f8f68867b0cfd4e6eacaced05494b85afbfcf0",
             "lastReleasedCommit": "68f8f68867b0cfd4e6eacaced05494b85afbfcf0",
             "apiPaths": [

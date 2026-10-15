@@ -1,5 +1,12 @@
 # Version history
 
+## Version 5.13.0-beta12, released 2026-10-15
+
+### New features
+
+- Instrument unary operations for BuiltInMetrics.
+- Add support for Cloud Queues
+
 ## Version 5.13.0-beta11, released 2026-09-14
 
 ### New features
