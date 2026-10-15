@@ -187,7 +187,7 @@ internal static partial class SpannerBuiltInMetrics
         private void RecordMetrics(string method, object request, StatusCode status, double latencyMs)
         {
             var provider = request as IDatabaseNameProvider;
-            Labeler.RecordOperationMetrics(latencyMs, method, provider, status, _clientIdentity);
+            RecordOperationMetrics(latencyMs, method, provider, status, _clientIdentity);
         }
     }
 }
