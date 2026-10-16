@@ -42,7 +42,6 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
                 IfMetagenerationMatch = 0L,
                 IfMetagenerationNotMatch = 0L,
-                RequestId = "",
             };
             // Make the request
             ManagedFolder response = await storageControlClient.UpdateManagedFolderAsync(request);

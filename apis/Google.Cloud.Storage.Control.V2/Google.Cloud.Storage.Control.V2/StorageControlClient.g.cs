@@ -7188,6 +7188,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>A pageable sequence of <see cref="Folder"/> resources.</returns>
         public override gax::PagedEnumerable<ListFoldersResponse, Folder> ListFolders(ListFoldersRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_ListFoldersRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedEnumerable<ListFoldersRequest, ListFoldersResponse, Folder>(_callListFolders, request, callSettings);
         }
@@ -7201,6 +7206,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>A pageable asynchronous sequence of <see cref="Folder"/> resources.</returns>
         public override gax::PagedAsyncEnumerable<ListFoldersResponse, Folder> ListFoldersAsync(ListFoldersRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_ListFoldersRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListFoldersRequest, ListFoldersResponse, Folder>(_callListFolders, request, callSettings);
         }
@@ -7466,6 +7476,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>The RPC response.</returns>
         public override ManagedFolder UpdateManagedFolder(UpdateManagedFolderRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_UpdateManagedFolderRequest(ref request, ref callSettings);
             return _callUpdateManagedFolder.Sync(request, callSettings);
         }
@@ -7479,6 +7494,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>A Task containing the RPC response.</returns>
         public override stt::Task<ManagedFolder> UpdateManagedFolderAsync(UpdateManagedFolderRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_UpdateManagedFolderRequest(ref request, ref callSettings);
             return _callUpdateManagedFolder.Async(request, callSettings);
         }
@@ -7746,6 +7766,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>The RPC response.</returns>
         public override lro::Operation<RapidCache, CreateRapidCacheMetadata> CreateRapidCache(CreateRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_CreateRapidCacheRequest(ref request, ref callSettings);
             return new lro::Operation<RapidCache, CreateRapidCacheMetadata>(_callCreateRapidCache.Sync(request, callSettings), CreateRapidCacheOperationsClient);
         }
@@ -7758,6 +7783,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>A Task containing the RPC response.</returns>
         public override async stt::Task<lro::Operation<RapidCache, CreateRapidCacheMetadata>> CreateRapidCacheAsync(CreateRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_CreateRapidCacheRequest(ref request, ref callSettings);
             return new lro::Operation<RapidCache, CreateRapidCacheMetadata>(await _callCreateRapidCache.Async(request, callSettings).ConfigureAwait(false), CreateRapidCacheOperationsClient);
         }
@@ -7773,6 +7803,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>The RPC response.</returns>
         public override lro::Operation<RapidCache, UpdateRapidCacheMetadata> UpdateRapidCache(UpdateRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_UpdateRapidCacheRequest(ref request, ref callSettings);
             return new lro::Operation<RapidCache, UpdateRapidCacheMetadata>(_callUpdateRapidCache.Sync(request, callSettings), UpdateRapidCacheOperationsClient);
         }
@@ -7785,6 +7820,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>A Task containing the RPC response.</returns>
         public override async stt::Task<lro::Operation<RapidCache, UpdateRapidCacheMetadata>> UpdateRapidCacheAsync(UpdateRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_UpdateRapidCacheRequest(ref request, ref callSettings);
             return new lro::Operation<RapidCache, UpdateRapidCacheMetadata>(await _callUpdateRapidCache.Async(request, callSettings).ConfigureAwait(false), UpdateRapidCacheOperationsClient);
         }
@@ -7800,6 +7840,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>The RPC response.</returns>
         public override lro::Operation<RapidCache, DisableRapidCacheMetadata> DisableRapidCache(DisableRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_DisableRapidCacheRequest(ref request, ref callSettings);
             return new lro::Operation<RapidCache, DisableRapidCacheMetadata>(_callDisableRapidCache.Sync(request, callSettings), DisableRapidCacheOperationsClient);
         }
@@ -7812,6 +7857,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>A Task containing the RPC response.</returns>
         public override async stt::Task<lro::Operation<RapidCache, DisableRapidCacheMetadata>> DisableRapidCacheAsync(DisableRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_DisableRapidCacheRequest(ref request, ref callSettings);
             return new lro::Operation<RapidCache, DisableRapidCacheMetadata>(await _callDisableRapidCache.Async(request, callSettings).ConfigureAwait(false), DisableRapidCacheOperationsClient);
         }
@@ -7824,6 +7874,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>The RPC response.</returns>
         public override RapidCache GetRapidCache(GetRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_GetRapidCacheRequest(ref request, ref callSettings);
             return _callGetRapidCache.Sync(request, callSettings);
         }
@@ -7836,6 +7891,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>A Task containing the RPC response.</returns>
         public override stt::Task<RapidCache> GetRapidCacheAsync(GetRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_GetRapidCacheRequest(ref request, ref callSettings);
             return _callGetRapidCache.Async(request, callSettings);
         }
@@ -7848,6 +7908,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>A pageable sequence of <see cref="RapidCache"/> resources.</returns>
         public override gax::PagedEnumerable<ListRapidCachesResponse, RapidCache> ListRapidCaches(ListRapidCachesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_ListRapidCachesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedEnumerable<ListRapidCachesRequest, ListRapidCachesResponse, RapidCache>(_callListRapidCaches, request, callSettings);
         }
@@ -7860,6 +7925,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>A pageable asynchronous sequence of <see cref="RapidCache"/> resources.</returns>
         public override gax::PagedAsyncEnumerable<ListRapidCachesResponse, RapidCache> ListRapidCachesAsync(ListRapidCachesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_ListRapidCachesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRapidCachesRequest, ListRapidCachesResponse, RapidCache>(_callListRapidCaches, request, callSettings);
         }
@@ -7896,6 +7966,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>The RPC response.</returns>
         public override IntelligenceConfig UpdateProjectIntelligenceConfig(UpdateProjectIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_UpdateProjectIntelligenceConfigRequest(ref request, ref callSettings);
             return _callUpdateProjectIntelligenceConfig.Sync(request, callSettings);
         }
@@ -7908,6 +7983,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>A Task containing the RPC response.</returns>
         public override stt::Task<IntelligenceConfig> UpdateProjectIntelligenceConfigAsync(UpdateProjectIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_UpdateProjectIntelligenceConfigRequest(ref request, ref callSettings);
             return _callUpdateProjectIntelligenceConfig.Async(request, callSettings);
         }
@@ -7944,6 +8024,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>The RPC response.</returns>
         public override IntelligenceConfig UpdateFolderIntelligenceConfig(UpdateFolderIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_UpdateFolderIntelligenceConfigRequest(ref request, ref callSettings);
             return _callUpdateFolderIntelligenceConfig.Sync(request, callSettings);
         }
@@ -7956,6 +8041,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>A Task containing the RPC response.</returns>
         public override stt::Task<IntelligenceConfig> UpdateFolderIntelligenceConfigAsync(UpdateFolderIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_UpdateFolderIntelligenceConfigRequest(ref request, ref callSettings);
             return _callUpdateFolderIntelligenceConfig.Async(request, callSettings);
         }
@@ -7992,6 +8082,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>The RPC response.</returns>
         public override IntelligenceConfig UpdateOrganizationIntelligenceConfig(UpdateOrganizationIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_UpdateOrganizationIntelligenceConfigRequest(ref request, ref callSettings);
             return _callUpdateOrganizationIntelligenceConfig.Sync(request, callSettings);
         }
@@ -8004,6 +8099,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>A Task containing the RPC response.</returns>
         public override stt::Task<IntelligenceConfig> UpdateOrganizationIntelligenceConfigAsync(UpdateOrganizationIntelligenceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_UpdateOrganizationIntelligenceConfigRequest(ref request, ref callSettings);
             return _callUpdateOrganizationIntelligenceConfig.Async(request, callSettings);
         }

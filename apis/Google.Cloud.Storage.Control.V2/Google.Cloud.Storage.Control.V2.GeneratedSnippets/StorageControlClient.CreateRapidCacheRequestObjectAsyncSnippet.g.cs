@@ -40,7 +40,6 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
                 RapidCache = new RapidCache(),
-                RequestId = "",
             };
             // Make the request
             Operation<RapidCache, CreateRapidCacheMetadata> response = await storageControlClient.CreateRapidCacheAsync(request);

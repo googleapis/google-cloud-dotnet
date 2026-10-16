@@ -41,7 +41,6 @@ namespace GoogleCSharpSnippets
             {
                 RapidCache = new RapidCache(),
                 UpdateMask = new FieldMask(),
-                RequestId = "",
             };
             // Make the request
             Operation<RapidCache, UpdateRapidCacheMetadata> response = await storageControlClient.UpdateRapidCacheAsync(request);

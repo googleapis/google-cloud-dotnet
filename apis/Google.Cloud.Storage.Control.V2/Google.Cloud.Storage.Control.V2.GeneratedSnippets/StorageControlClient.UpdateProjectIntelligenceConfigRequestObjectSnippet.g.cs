@@ -39,7 +39,6 @@ namespace GoogleCSharpSnippets
             {
                 IntelligenceConfig = new IntelligenceConfig(),
                 UpdateMask = new FieldMask(),
-                RequestId = "",
             };
             // Make the request
             IntelligenceConfig response = storageControlClient.UpdateProjectIntelligenceConfig(request);
