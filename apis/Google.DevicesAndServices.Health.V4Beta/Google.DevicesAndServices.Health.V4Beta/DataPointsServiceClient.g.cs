@@ -497,6 +497,17 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// 
         /// Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
         /// 
+        /// ## Examples:
+        /// 
+        /// ##
+        /// `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+        /// 
+        /// `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
+        /// 
         /// See
         /// [DataPoint.name][google.devicesandservices.health.v4beta.DataPoint.name]
         /// for examples and possible values.
@@ -516,6 +527,17 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// Required. The name of the data point to retrieve.
         /// 
         /// Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
+        /// 
+        /// ## Examples:
+        /// 
+        /// ##
+        /// `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+        /// 
+        /// `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// 
         /// See
         /// [DataPoint.name][google.devicesandservices.health.v4beta.DataPoint.name]
@@ -537,6 +559,17 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// 
         /// Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
         /// 
+        /// ## Examples:
+        /// 
+        /// ##
+        /// `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+        /// 
+        /// `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
+        /// 
         /// See
         /// [DataPoint.name][google.devicesandservices.health.v4beta.DataPoint.name]
         /// for examples and possible values.
@@ -553,6 +586,17 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// Required. The name of the data point to retrieve.
         /// 
         /// Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
+        /// 
+        /// ## Examples:
+        /// 
+        /// ##
+        /// `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+        /// 
+        /// `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// 
         /// See
         /// [DataPoint.name][google.devicesandservices.health.v4beta.DataPoint.name]
@@ -574,6 +618,17 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// 
         /// Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
         /// 
+        /// ## Examples:
+        /// 
+        /// ##
+        /// `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+        /// 
+        /// `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
+        /// 
         /// See
         /// [DataPoint.name][google.devicesandservices.health.v4beta.DataPoint.name]
         /// for examples and possible values.
@@ -593,6 +648,17 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// Required. The name of the data point to retrieve.
         /// 
         /// Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
+        /// 
+        /// ## Examples:
+        /// 
+        /// ##
+        /// `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+        /// 
+        /// `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// 
         /// See
         /// [DataPoint.name][google.devicesandservices.health.v4beta.DataPoint.name]
@@ -627,10 +693,16 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// <param name="parent">
         /// Required. Parent data type of the Data Point collection.
         /// 
-        /// Format: `users/me/dataTypes/{data_type}`, e.g.:
+        /// Format: `users/{user}/dataTypes/{data_type}`, e.g.:
         /// 
         /// - `users/me/dataTypes/steps`
+        /// - `users/1234567890/dataTypes/steps`
         /// - `users/me/dataTypes/weight`
+        /// - `users/1234567890/dataTypes/weight`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// 
         /// For a list of the supported data types see the [DataPoint
         /// data][google.devicesandservices.health.v4beta.DataPoint] union
@@ -669,10 +741,16 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// <param name="parent">
         /// Required. Parent data type of the Data Point collection.
         /// 
-        /// Format: `users/me/dataTypes/{data_type}`, e.g.:
+        /// Format: `users/{user}/dataTypes/{data_type}`, e.g.:
         /// 
         /// - `users/me/dataTypes/steps`
+        /// - `users/1234567890/dataTypes/steps`
         /// - `users/me/dataTypes/weight`
+        /// - `users/1234567890/dataTypes/weight`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// 
         /// For a list of the supported data types see the [DataPoint
         /// data][google.devicesandservices.health.v4beta.DataPoint] union
@@ -711,10 +789,16 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// <param name="parent">
         /// Required. Parent data type of the Data Point collection.
         /// 
-        /// Format: `users/me/dataTypes/{data_type}`, e.g.:
+        /// Format: `users/{user}/dataTypes/{data_type}`, e.g.:
         /// 
         /// - `users/me/dataTypes/steps`
+        /// - `users/1234567890/dataTypes/steps`
         /// - `users/me/dataTypes/weight`
+        /// - `users/1234567890/dataTypes/weight`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// 
         /// For a list of the supported data types see the [DataPoint
         /// data][google.devicesandservices.health.v4beta.DataPoint] union
@@ -753,10 +837,16 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// <param name="parent">
         /// Required. Parent data type of the Data Point collection.
         /// 
-        /// Format: `users/me/dataTypes/{data_type}`, e.g.:
+        /// Format: `users/{user}/dataTypes/{data_type}`, e.g.:
         /// 
         /// - `users/me/dataTypes/steps`
+        /// - `users/1234567890/dataTypes/steps`
         /// - `users/me/dataTypes/weight`
+        /// - `users/1234567890/dataTypes/weight`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// 
         /// For a list of the supported data types see the [DataPoint
         /// data][google.devicesandservices.health.v4beta.DataPoint] union
@@ -847,7 +937,15 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name where the data point will be created.
-        /// Format: `users/{user}/dataTypes/{data_type}`
+        /// 
+        /// Format: `users/{user}/dataTypes/{data_type}`, e.g.:
+        /// 
+        /// - `users/me/dataTypes/steps`
+        /// - `users/1234567890/dataTypes/steps`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// </param>
         /// <param name="dataPoint">
         /// Required. The data point to create.
@@ -866,7 +964,15 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name where the data point will be created.
-        /// Format: `users/{user}/dataTypes/{data_type}`
+        /// 
+        /// Format: `users/{user}/dataTypes/{data_type}`, e.g.:
+        /// 
+        /// - `users/me/dataTypes/steps`
+        /// - `users/1234567890/dataTypes/steps`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// </param>
         /// <param name="dataPoint">
         /// Required. The data point to create.
@@ -885,7 +991,15 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name where the data point will be created.
-        /// Format: `users/{user}/dataTypes/{data_type}`
+        /// 
+        /// Format: `users/{user}/dataTypes/{data_type}`, e.g.:
+        /// 
+        /// - `users/me/dataTypes/steps`
+        /// - `users/1234567890/dataTypes/steps`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// </param>
         /// <param name="dataPoint">
         /// Required. The data point to create.
@@ -900,7 +1014,15 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name where the data point will be created.
-        /// Format: `users/{user}/dataTypes/{data_type}`
+        /// 
+        /// Format: `users/{user}/dataTypes/{data_type}`, e.g.:
+        /// 
+        /// - `users/me/dataTypes/steps`
+        /// - `users/1234567890/dataTypes/steps`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// </param>
         /// <param name="dataPoint">
         /// Required. The data point to create.
@@ -919,7 +1041,15 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name where the data point will be created.
-        /// Format: `users/{user}/dataTypes/{data_type}`
+        /// 
+        /// Format: `users/{user}/dataTypes/{data_type}`, e.g.:
+        /// 
+        /// - `users/me/dataTypes/steps`
+        /// - `users/1234567890/dataTypes/steps`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// </param>
         /// <param name="dataPoint">
         /// Required. The data point to create.
@@ -938,7 +1068,15 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name where the data point will be created.
-        /// Format: `users/{user}/dataTypes/{data_type}`
+        /// 
+        /// Format: `users/{user}/dataTypes/{data_type}`, e.g.:
+        /// 
+        /// - `users/me/dataTypes/steps`
+        /// - `users/1234567890/dataTypes/steps`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// </param>
         /// <param name="dataPoint">
         /// Required. The data point to create.
@@ -1014,6 +1152,17 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// The data point's `name` field is used to identify the data point to update.
         /// 
         /// Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
+        /// 
+        /// ## Examples:
+        /// 
+        /// ##
+        /// `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+        /// 
+        /// `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1033,6 +1182,17 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// The data point's `name` field is used to identify the data point to update.
         /// 
         /// Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
+        /// 
+        /// ## Examples:
+        /// 
+        /// ##
+        /// `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+        /// 
+        /// `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1052,6 +1212,17 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// The data point's `name` field is used to identify the data point to update.
         /// 
         /// Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
+        /// 
+        /// ## Examples:
+        /// 
+        /// ##
+        /// `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+        /// 
+        /// `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1153,8 +1324,8 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual DailyRollUpDataPointsResponse DailyRollUpDataPoints(DailyRollUpDataPointsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="DailyRollupDataPoint"/> resources.</returns>
+        public virtual gax::PagedEnumerable<DailyRollUpDataPointsResponse, DailyRollupDataPoint> DailyRollUpDataPoints(DailyRollUpDataPointsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1162,18 +1333,9 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<DailyRollUpDataPointsResponse> DailyRollUpDataPointsAsync(DailyRollUpDataPointsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="DailyRollupDataPoint"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<DailyRollUpDataPointsResponse, DailyRollupDataPoint> DailyRollUpDataPointsAsync(DailyRollUpDataPointsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Roll up data points over civil time intervals for supported data types.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<DailyRollUpDataPointsResponse> DailyRollUpDataPointsAsync(DailyRollUpDataPointsRequest request, st::CancellationToken cancellationToken) =>
-            DailyRollUpDataPointsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Exports exercise data in TCX format.
@@ -1181,8 +1343,12 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// **IMPORTANT:** HTTP clients must append `?alt=media` to the
         /// request URL to download the raw TCX file.
         /// 
-        /// Example:
+        /// ## Examples:
+        /// 
+        /// ##
         /// `https://health.googleapis.com/v4/users/me/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
+        /// 
+        /// `https://health.googleapis.com/v4/users/1234567890/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
         /// 
         /// Without `alt=media`, the server returns a JSON response
         /// (`ExportExerciseTcxResponse`)
@@ -1206,8 +1372,12 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// **IMPORTANT:** HTTP clients must append `?alt=media` to the
         /// request URL to download the raw TCX file.
         /// 
-        /// Example:
+        /// ## Examples:
+        /// 
+        /// ##
         /// `https://health.googleapis.com/v4/users/me/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
+        /// 
+        /// `https://health.googleapis.com/v4/users/1234567890/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
         /// 
         /// Without `alt=media`, the server returns a JSON response
         /// (`ExportExerciseTcxResponse`)
@@ -1231,8 +1401,12 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// **IMPORTANT:** HTTP clients must append `?alt=media` to the
         /// request URL to download the raw TCX file.
         /// 
-        /// Example:
+        /// ## Examples:
+        /// 
+        /// ##
         /// `https://health.googleapis.com/v4/users/me/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
+        /// 
+        /// `https://health.googleapis.com/v4/users/1234567890/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
         /// 
         /// Without `alt=media`, the server returns a JSON response
         /// (`ExportExerciseTcxResponse`)
@@ -1256,8 +1430,12 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// **IMPORTANT:** HTTP clients must append `?alt=media` to the
         /// request URL to download the raw TCX file.
         /// 
-        /// Example:
+        /// ## Examples:
+        /// 
+        /// ##
         /// `https://health.googleapis.com/v4/users/me/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
+        /// 
+        /// `https://health.googleapis.com/v4/users/1234567890/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
         /// 
         /// Without `alt=media`, the server returns a JSON response
         /// (`ExportExerciseTcxResponse`)
@@ -1273,10 +1451,14 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// Required. The resource name of the exercise data point to export.
         /// 
         /// Format: `users/{user}/dataTypes/exercise/dataPoints/{data_point}`
-        /// Example: `users/me/dataTypes/exercise/dataPoints/2026443605080188808`
         /// 
-        /// The `{user}` is the alias `"me"` currently. Future versions may support
-        /// user IDs.
+        /// Examples:
+        /// - `users/me/dataTypes/exercise/dataPoints/2026443605080188808`
+        /// - `users/1234567890/dataTypes/exercise/dataPoints/2026443605080188808`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// The `{data_point}` ID maps to the exercise ID, which is a long integer.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1293,8 +1475,12 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// **IMPORTANT:** HTTP clients must append `?alt=media` to the
         /// request URL to download the raw TCX file.
         /// 
-        /// Example:
+        /// ## Examples:
+        /// 
+        /// ##
         /// `https://health.googleapis.com/v4/users/me/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
+        /// 
+        /// `https://health.googleapis.com/v4/users/1234567890/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
         /// 
         /// Without `alt=media`, the server returns a JSON response
         /// (`ExportExerciseTcxResponse`)
@@ -1310,10 +1496,14 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// Required. The resource name of the exercise data point to export.
         /// 
         /// Format: `users/{user}/dataTypes/exercise/dataPoints/{data_point}`
-        /// Example: `users/me/dataTypes/exercise/dataPoints/2026443605080188808`
         /// 
-        /// The `{user}` is the alias `"me"` currently. Future versions may support
-        /// user IDs.
+        /// Examples:
+        /// - `users/me/dataTypes/exercise/dataPoints/2026443605080188808`
+        /// - `users/1234567890/dataTypes/exercise/dataPoints/2026443605080188808`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// The `{data_point}` ID maps to the exercise ID, which is a long integer.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1330,8 +1520,12 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// **IMPORTANT:** HTTP clients must append `?alt=media` to the
         /// request URL to download the raw TCX file.
         /// 
-        /// Example:
+        /// ## Examples:
+        /// 
+        /// ##
         /// `https://health.googleapis.com/v4/users/me/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
+        /// 
+        /// `https://health.googleapis.com/v4/users/1234567890/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
         /// 
         /// Without `alt=media`, the server returns a JSON response
         /// (`ExportExerciseTcxResponse`)
@@ -1347,10 +1541,14 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// Required. The resource name of the exercise data point to export.
         /// 
         /// Format: `users/{user}/dataTypes/exercise/dataPoints/{data_point}`
-        /// Example: `users/me/dataTypes/exercise/dataPoints/2026443605080188808`
         /// 
-        /// The `{user}` is the alias `"me"` currently. Future versions may support
-        /// user IDs.
+        /// Examples:
+        /// - `users/me/dataTypes/exercise/dataPoints/2026443605080188808`
+        /// - `users/1234567890/dataTypes/exercise/dataPoints/2026443605080188808`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// The `{data_point}` ID maps to the exercise ID, which is a long integer.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1364,8 +1562,12 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// **IMPORTANT:** HTTP clients must append `?alt=media` to the
         /// request URL to download the raw TCX file.
         /// 
-        /// Example:
+        /// ## Examples:
+        /// 
+        /// ##
         /// `https://health.googleapis.com/v4/users/me/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
+        /// 
+        /// `https://health.googleapis.com/v4/users/1234567890/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
         /// 
         /// Without `alt=media`, the server returns a JSON response
         /// (`ExportExerciseTcxResponse`)
@@ -1381,10 +1583,14 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// Required. The resource name of the exercise data point to export.
         /// 
         /// Format: `users/{user}/dataTypes/exercise/dataPoints/{data_point}`
-        /// Example: `users/me/dataTypes/exercise/dataPoints/2026443605080188808`
         /// 
-        /// The `{user}` is the alias `"me"` currently. Future versions may support
-        /// user IDs.
+        /// Examples:
+        /// - `users/me/dataTypes/exercise/dataPoints/2026443605080188808`
+        /// - `users/1234567890/dataTypes/exercise/dataPoints/2026443605080188808`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// The `{data_point}` ID maps to the exercise ID, which is a long integer.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1401,8 +1607,12 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// **IMPORTANT:** HTTP clients must append `?alt=media` to the
         /// request URL to download the raw TCX file.
         /// 
-        /// Example:
+        /// ## Examples:
+        /// 
+        /// ##
         /// `https://health.googleapis.com/v4/users/me/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
+        /// 
+        /// `https://health.googleapis.com/v4/users/1234567890/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
         /// 
         /// Without `alt=media`, the server returns a JSON response
         /// (`ExportExerciseTcxResponse`)
@@ -1418,10 +1628,14 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// Required. The resource name of the exercise data point to export.
         /// 
         /// Format: `users/{user}/dataTypes/exercise/dataPoints/{data_point}`
-        /// Example: `users/me/dataTypes/exercise/dataPoints/2026443605080188808`
         /// 
-        /// The `{user}` is the alias `"me"` currently. Future versions may support
-        /// user IDs.
+        /// Examples:
+        /// - `users/me/dataTypes/exercise/dataPoints/2026443605080188808`
+        /// - `users/1234567890/dataTypes/exercise/dataPoints/2026443605080188808`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// The `{data_point}` ID maps to the exercise ID, which is a long integer.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1438,8 +1652,12 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// **IMPORTANT:** HTTP clients must append `?alt=media` to the
         /// request URL to download the raw TCX file.
         /// 
-        /// Example:
+        /// ## Examples:
+        /// 
+        /// ##
         /// `https://health.googleapis.com/v4/users/me/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
+        /// 
+        /// `https://health.googleapis.com/v4/users/1234567890/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
         /// 
         /// Without `alt=media`, the server returns a JSON response
         /// (`ExportExerciseTcxResponse`)
@@ -1455,10 +1673,14 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// Required. The resource name of the exercise data point to export.
         /// 
         /// Format: `users/{user}/dataTypes/exercise/dataPoints/{data_point}`
-        /// Example: `users/me/dataTypes/exercise/dataPoints/2026443605080188808`
         /// 
-        /// The `{user}` is the alias `"me"` currently. Future versions may support
-        /// user IDs.
+        /// Examples:
+        /// - `users/me/dataTypes/exercise/dataPoints/2026443605080188808`
+        /// - `users/1234567890/dataTypes/exercise/dataPoints/2026443605080188808`
+        /// 
+        /// The `{user}` can be either the alias `me` or the authenticated user's
+        /// numeric Health User ID (retrieved via
+        /// [GetIdentity][google.devicesandservices.health.v4beta.HealthProfileService.GetIdentity]).
         /// The `{data_point}` ID maps to the exercise ID, which is a long integer.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1767,11 +1989,11 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override DailyRollUpDataPointsResponse DailyRollUpDataPoints(DailyRollUpDataPointsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="DailyRollupDataPoint"/> resources.</returns>
+        public override gax::PagedEnumerable<DailyRollUpDataPointsResponse, DailyRollupDataPoint> DailyRollUpDataPoints(DailyRollUpDataPointsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DailyRollUpDataPointsRequest(ref request, ref callSettings);
-            return _callDailyRollUpDataPoints.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<DailyRollUpDataPointsRequest, DailyRollUpDataPointsResponse, DailyRollupDataPoint>(_callDailyRollUpDataPoints, request, callSettings);
         }
 
         /// <summary>
@@ -1779,11 +2001,11 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<DailyRollUpDataPointsResponse> DailyRollUpDataPointsAsync(DailyRollUpDataPointsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="DailyRollupDataPoint"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<DailyRollUpDataPointsResponse, DailyRollupDataPoint> DailyRollUpDataPointsAsync(DailyRollUpDataPointsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DailyRollUpDataPointsRequest(ref request, ref callSettings);
-            return _callDailyRollUpDataPoints.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<DailyRollUpDataPointsRequest, DailyRollUpDataPointsResponse, DailyRollupDataPoint>(_callDailyRollUpDataPoints, request, callSettings);
         }
 
         /// <summary>
@@ -1792,8 +2014,12 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// **IMPORTANT:** HTTP clients must append `?alt=media` to the
         /// request URL to download the raw TCX file.
         /// 
-        /// Example:
+        /// ## Examples:
+        /// 
+        /// ##
         /// `https://health.googleapis.com/v4/users/me/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
+        /// 
+        /// `https://health.googleapis.com/v4/users/1234567890/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
         /// 
         /// Without `alt=media`, the server returns a JSON response
         /// (`ExportExerciseTcxResponse`)
@@ -1820,8 +2046,12 @@ namespace Google.DevicesAndServices.Health.V4Beta
         /// **IMPORTANT:** HTTP clients must append `?alt=media` to the
         /// request URL to download the raw TCX file.
         /// 
-        /// Example:
+        /// ## Examples:
+        /// 
+        /// ##
         /// `https://health.googleapis.com/v4/users/me/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
+        /// 
+        /// `https://health.googleapis.com/v4/users/1234567890/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media`
         /// 
         /// Without `alt=media`, the server returns a JSON response
         /// (`ExportExerciseTcxResponse`)
@@ -1855,6 +2085,10 @@ namespace Google.DevicesAndServices.Health.V4Beta
     {
     }
 
+    public partial class DailyRollUpDataPointsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListDataPointsResponse : gaxgrpc::IPageResponse<DataPoint>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
@@ -1875,6 +2109,14 @@ namespace Google.DevicesAndServices.Health.V4Beta
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<RollupDataPoint> GetEnumerator() => RollupDataPoints.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class DailyRollUpDataPointsResponse : gaxgrpc::IPageResponse<DailyRollupDataPoint>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DailyRollupDataPoint> GetEnumerator() => RollupDataPoints.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

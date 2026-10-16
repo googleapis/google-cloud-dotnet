@@ -1421,7 +1421,7 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "Google.DevicesAndServices.Health.V4Beta.DailyRollUpDataPointsResponse",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.DevicesAndServices.Health.V4Beta.DailyRollUpDataPointsResponse, Google.DevicesAndServices.Health.V4Beta.DailyRollupDataPoint>",
         "client": {
           "shortName": "DataPointsServiceClient",
           "fullName": "Google.DevicesAndServices.Health.V4Beta.DataPointsServiceClient"
@@ -1440,12 +1440,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 49,
+          "end": 81,
           "type": "FULL"
         },
         {
-          "start": 34,
-          "end": 47,
+          "start": 36,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -1470,7 +1470,7 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "System.Threading.Tasks.Task<Google.DevicesAndServices.Health.V4Beta.DailyRollUpDataPointsResponse>",
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.DevicesAndServices.Health.V4Beta.DailyRollUpDataPointsResponse, Google.DevicesAndServices.Health.V4Beta.DailyRollupDataPoint>",
         "client": {
           "shortName": "DataPointsServiceClient",
           "fullName": "Google.DevicesAndServices.Health.V4Beta.DataPointsServiceClient"
@@ -1489,12 +1489,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 50,
+          "end": 82,
           "type": "FULL"
         },
         {
-          "start": 35,
-          "end": 48,
+          "start": 37,
+          "end": 80,
           "type": "SHORT"
         }
       ]
