@@ -17,7 +17,9 @@
 namespace GoogleCSharpSnippets
 {
     // [START health_v4beta_generated_DataPointsService_DailyRollUpDataPoints_async]
+    using Google.Api.Gax;
     using Google.DevicesAndServices.Health.V4Beta;
+    using System;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedDataPointsServiceClientSnippets
@@ -40,12 +42,42 @@ namespace GoogleCSharpSnippets
                 ParentAsDataTypeName = DataTypeName.FromUserDataType("[USER]", "[DATA_TYPE]"),
                 Range = new CivilTimeInterval(),
                 WindowSizeDays = 0,
-                PageSize = 0,
-                PageToken = "",
                 DataSourceFamily = "",
             };
             // Make the request
-            DailyRollUpDataPointsResponse response = await dataPointsServiceClient.DailyRollUpDataPointsAsync(request);
+            PagedAsyncEnumerable<DailyRollUpDataPointsResponse, DailyRollupDataPoint> response = dataPointsServiceClient.DailyRollUpDataPointsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DailyRollupDataPoint item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (DailyRollUpDataPointsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DailyRollupDataPoint item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DailyRollupDataPoint> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DailyRollupDataPoint item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
         }
     }
     // [END health_v4beta_generated_DataPointsService_DailyRollUpDataPoints_async]
