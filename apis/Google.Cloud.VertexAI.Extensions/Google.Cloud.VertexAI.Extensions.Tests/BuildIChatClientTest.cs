@@ -1836,6 +1836,67 @@ public class BuildIChatClientTest
     }
 
     [Fact]
+    public async Task IChatClient_GetResponseAsync_WithMultipleCitations()
+    {
+        DelegateCallInvoker invoker = new()
+        {
+            OnGenerateContentRequest = request =>
+            {
+                GenerateContentResponse response = CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "This is cited content from two sources." } } });
+                response.Candidates[0].CitationMetadata = new()
+                {
+                    Citations =
+                    {
+                        new Citation
+                        {
+                            Title = "First Source",
+                            Uri = "https://example.com/first",
+                            StartIndex = 0,
+                            EndIndex = 10
+                        },
+                        new Citation
+                        {
+                            Title = "Second Source",
+                            Uri = "https://example.com/second",
+                            StartIndex = 11,
+                            EndIndex = 20
+                        }
+                    }
+                };
+
+                return response;
+            }
+        };
+
+        IChatClient chatClient = CreateClientBuilder(invoker).BuildIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        ChatMessage[] messages = [new(ChatRole.User, "Cite your sources")];
+
+        ChatResponse result = await chatClient.GetResponseAsync(messages);
+
+        TextContent textContent = Assert.IsType<TextContent>(result.Messages[0].Contents[0]);
+        Assert.NotNull(textContent.Annotations);
+        Assert.Equal(2, textContent.Annotations.Count);
+
+        CitationAnnotation first = Assert.IsType<CitationAnnotation>(textContent.Annotations[0]);
+        Assert.Equal("First Source", first.Title);
+        Assert.Equal("https://example.com/first", first.Url?.ToString());
+        Assert.NotNull(first.AnnotatedRegions);
+        Assert.Single(first.AnnotatedRegions);
+        TextSpanAnnotatedRegion firstRegion = Assert.IsType<TextSpanAnnotatedRegion>(first.AnnotatedRegions[0]);
+        Assert.Equal(0, firstRegion.StartIndex);
+        Assert.Equal(10, firstRegion.EndIndex);
+
+        CitationAnnotation second = Assert.IsType<CitationAnnotation>(textContent.Annotations[1]);
+        Assert.Equal("Second Source", second.Title);
+        Assert.Equal("https://example.com/second", second.Url?.ToString());
+        Assert.NotNull(second.AnnotatedRegions);
+        Assert.Single(second.AnnotatedRegions);
+        TextSpanAnnotatedRegion secondRegion = Assert.IsType<TextSpanAnnotatedRegion>(second.AnnotatedRegions[0]);
+        Assert.Equal(11, secondRegion.StartIndex);
+        Assert.Equal(20, secondRegion.EndIndex);
+    }
+
+    [Fact]
     public async Task IChatClient_GetResponseAsync_WithErrorContent()
     {
         DelegateCallInvoker invoker = new()
