@@ -28,72 +28,84 @@ namespace Google.Cloud.CertificateManager.V1 {
             "YXRlX2lzc3VhbmNlX2NvbmZpZy5wcm90bxIiZ29vZ2xlLmNsb3VkLmNlcnRp",
             "ZmljYXRlbWFuYWdlci52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
             "cm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoeZ29vZ2xlL3Byb3Rv",
-            "YnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvIqsBCiVMaXN0Q2VydGlmaWNhdGVJc3N1YW5jZUNvbmZpZ3NSZXF1",
-            "ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xl",
-            "YXBpcy5jb20vTG9jYXRpb24SEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2Vf",
-            "dG9rZW4YAyABKAkSDgoGZmlsdGVyGAQgASgJEhAKCG9yZGVyX2J5GAUgASgJ",
-            "IrsBCiZMaXN0Q2VydGlmaWNhdGVJc3N1YW5jZUNvbmZpZ3NSZXNwb25zZRJj",
-            "ChxjZXJ0aWZpY2F0ZV9pc3N1YW5jZV9jb25maWdzGAEgAygLMj0uZ29vZ2xl",
-            "LmNsb3VkLmNlcnRpZmljYXRlbWFuYWdlci52MS5DZXJ0aWZpY2F0ZUlzc3Vh",
-            "bmNlQ29uZmlnEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJlYWNo",
-            "YWJsZRgDIAMoCSJ4CiNHZXRDZXJ0aWZpY2F0ZUlzc3VhbmNlQ29uZmlnUmVx",
-            "dWVzdBJRCgRuYW1lGAEgASgJQkPgQQL6QT0KO2NlcnRpZmljYXRlbWFuYWdl",
-            "ci5nb29nbGVhcGlzLmNvbS9DZXJ0aWZpY2F0ZUlzc3VhbmNlQ29uZmlnIvkB",
-            "CiZDcmVhdGVDZXJ0aWZpY2F0ZUlzc3VhbmNlQ29uZmlnUmVxdWVzdBI5CgZw",
-            "YXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29t",
-            "L0xvY2F0aW9uEisKHmNlcnRpZmljYXRlX2lzc3VhbmNlX2NvbmZpZ19pZBgC",
-            "IAEoCUID4EECEmcKG2NlcnRpZmljYXRlX2lzc3VhbmNlX2NvbmZpZxgDIAEo",
-            "CzI9Lmdvb2dsZS5jbG91ZC5jZXJ0aWZpY2F0ZW1hbmFnZXIudjEuQ2VydGlm",
-            "aWNhdGVJc3N1YW5jZUNvbmZpZ0ID4EECInsKJkRlbGV0ZUNlcnRpZmljYXRl",
-            "SXNzdWFuY2VDb25maWdSZXF1ZXN0ElEKBG5hbWUYASABKAlCQ+BBAvpBPQo7",
-            "Y2VydGlmaWNhdGVtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0NlcnRpZmljYXRl",
-            "SXNzdWFuY2VDb25maWciowkKGUNlcnRpZmljYXRlSXNzdWFuY2VDb25maWcS",
-            "DAoEbmFtZRgBIAEoCRI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgDIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJZCgZsYWJlbHMYBCAD",
-            "KAsySS5nb29nbGUuY2xvdWQuY2VydGlmaWNhdGVtYW5hZ2VyLnYxLkNlcnRp",
-            "ZmljYXRlSXNzdWFuY2VDb25maWcuTGFiZWxzRW50cnkSEwoLZGVzY3JpcHRp",
-            "b24YBSABKAkSgwEKHGNlcnRpZmljYXRlX2F1dGhvcml0eV9jb25maWcYBiAB",
-            "KAsyWC5nb29nbGUuY2xvdWQuY2VydGlmaWNhdGVtYW5hZ2VyLnYxLkNlcnRp",
-            "ZmljYXRlSXNzdWFuY2VDb25maWcuQ2VydGlmaWNhdGVBdXRob3JpdHlDb25m",
-            "aWdCA+BBAhIwCghsaWZldGltZRgHIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5E",
-            "dXJhdGlvbkID4EECEicKGnJvdGF0aW9uX3dpbmRvd19wZXJjZW50YWdlGAgg",
-            "ASgFQgPgQQISZgoNa2V5X2FsZ29yaXRobRgJIAEoDjJKLmdvb2dsZS5jbG91",
-            "ZC5jZXJ0aWZpY2F0ZW1hbmFnZXIudjEuQ2VydGlmaWNhdGVJc3N1YW5jZUNv",
-            "bmZpZy5LZXlBbGdvcml0aG1CA+BBAhqwAgoaQ2VydGlmaWNhdGVBdXRob3Jp",
-            "dHlDb25maWcSqgEKJGNlcnRpZmljYXRlX2F1dGhvcml0eV9zZXJ2aWNlX2Nv",
-            "bmZpZxgBIAEoCzJ6Lmdvb2dsZS5jbG91ZC5jZXJ0aWZpY2F0ZW1hbmFnZXIu",
-            "djEuQ2VydGlmaWNhdGVJc3N1YW5jZUNvbmZpZy5DZXJ0aWZpY2F0ZUF1dGhv",
-            "cml0eUNvbmZpZy5DZXJ0aWZpY2F0ZUF1dGhvcml0eVNlcnZpY2VDb25maWdI",
-            "ABpdCiFDZXJ0aWZpY2F0ZUF1dGhvcml0eVNlcnZpY2VDb25maWcSOAoHY2Ff",
-            "cG9vbBgBIAEoCUIn4EEC+kEhCh9wcml2YXRlY2EuZ29vZ2xlYXBpcy5jb20v",
-            "Q2FQb29sQgYKBGtpbmQaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
-            "BXZhbHVlGAIgASgJOgI4ASJLCgxLZXlBbGdvcml0aG0SHQoZS0VZX0FMR09S",
-            "SVRITV9VTlNQRUNJRklFRBAAEgwKCFJTQV8yMDQ4EAESDgoKRUNEU0FfUDI1",
-            "NhAEOqMB6kGfAQo7Y2VydGlmaWNhdGVtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
-            "L0NlcnRpZmljYXRlSXNzdWFuY2VDb25maWcSYHByb2plY3RzL3twcm9qZWN0",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jZXJ0aWZpY2F0ZUlzc3VhbmNlQ29u",
-            "Zmlncy97Y2VydGlmaWNhdGVfaXNzdWFuY2VfY29uZmlnfULzAgomY29tLmdv",
-            "b2dsZS5jbG91ZC5jZXJ0aWZpY2F0ZW1hbmFnZXIudjFCHkNlcnRpZmljYXRl",
-            "SXNzdWFuY2VDb25maWdQcm90b1ABWlZjbG91ZC5nb29nbGUuY29tL2dvL2Nl",
-            "cnRpZmljYXRlbWFuYWdlci9hcGl2MS9jZXJ0aWZpY2F0ZW1hbmFnZXJwYjtj",
-            "ZXJ0aWZpY2F0ZW1hbmFnZXJwYqoCIkdvb2dsZS5DbG91ZC5DZXJ0aWZpY2F0",
-            "ZU1hbmFnZXIuVjHKAiJHb29nbGVcQ2xvdWRcQ2VydGlmaWNhdGVNYW5hZ2Vy",
-            "XFYx6gIlR29vZ2xlOjpDbG91ZDo6Q2VydGlmaWNhdGVNYW5hZ2VyOjpWMepB",
-            "XAofcHJpdmF0ZWNhLmdvb2dsZWFwaXMuY29tL0NhUG9vbBI5cHJvamVjdHMv",
-            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NhUG9vbHMve2NhX3Bv",
-            "b2x9YgZwcm90bzM="));
+            "YnVmL2R1cmF0aW9uLnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFz",
+            "ay5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLEAQol",
+            "TGlzdENlcnRpZmljYXRlSXNzdWFuY2VDb25maWdzUmVxdWVzdBI6CgZwYXJl",
+            "bnQYASABKAlCKuJBAQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9M",
+            "b2NhdGlvbhIXCglwYWdlX3NpemUYAiABKAVCBOJBAQESGAoKcGFnZV90b2tl",
+            "bhgDIAEoCUIE4kEBARIUCgZmaWx0ZXIYBCABKAlCBOJBAQESFgoIb3JkZXJf",
+            "YnkYBSABKAlCBOJBAQEiuwEKJkxpc3RDZXJ0aWZpY2F0ZUlzc3VhbmNlQ29u",
+            "Zmlnc1Jlc3BvbnNlEmMKHGNlcnRpZmljYXRlX2lzc3VhbmNlX2NvbmZpZ3MY",
+            "ASADKAsyPS5nb29nbGUuY2xvdWQuY2VydGlmaWNhdGVtYW5hZ2VyLnYxLkNl",
+            "cnRpZmljYXRlSXNzdWFuY2VDb25maWcSFwoPbmV4dF9wYWdlX3Rva2VuGAIg",
+            "ASgJEhMKC3VucmVhY2hhYmxlGAMgAygJInkKI0dldENlcnRpZmljYXRlSXNz",
+            "dWFuY2VDb25maWdSZXF1ZXN0ElIKBG5hbWUYASABKAlCROJBAQL6QT0KO2Nl",
+            "cnRpZmljYXRlbWFuYWdlci5nb29nbGVhcGlzLmNvbS9DZXJ0aWZpY2F0ZUlz",
+            "c3VhbmNlQ29uZmlnIvwBCiZDcmVhdGVDZXJ0aWZpY2F0ZUlzc3VhbmNlQ29u",
+            "ZmlnUmVxdWVzdBI6CgZwYXJlbnQYASABKAlCKuJBAQL6QSMKIWxvY2F0aW9u",
+            "cy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhIsCh5jZXJ0aWZpY2F0ZV9pc3N1",
+            "YW5jZV9jb25maWdfaWQYAiABKAlCBOJBAQISaAobY2VydGlmaWNhdGVfaXNz",
+            "dWFuY2VfY29uZmlnGAMgASgLMj0uZ29vZ2xlLmNsb3VkLmNlcnRpZmljYXRl",
+            "bWFuYWdlci52MS5DZXJ0aWZpY2F0ZUlzc3VhbmNlQ29uZmlnQgTiQQECIskB",
+            "CiZVcGRhdGVDZXJ0aWZpY2F0ZUlzc3VhbmNlQ29uZmlnUmVxdWVzdBJoChtj",
+            "ZXJ0aWZpY2F0ZV9pc3N1YW5jZV9jb25maWcYASABKAsyPS5nb29nbGUuY2xv",
+            "dWQuY2VydGlmaWNhdGVtYW5hZ2VyLnYxLkNlcnRpZmljYXRlSXNzdWFuY2VD",
+            "b25maWdCBOJBAQISNQoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuRmllbGRNYXNrQgTiQQECInwKJkRlbGV0ZUNlcnRpZmljYXRlSXNz",
+            "dWFuY2VDb25maWdSZXF1ZXN0ElIKBG5hbWUYASABKAlCROJBAQL6QT0KO2Nl",
+            "cnRpZmljYXRlbWFuYWdlci5nb29nbGVhcGlzLmNvbS9DZXJ0aWZpY2F0ZUlz",
+            "c3VhbmNlQ29uZmlnIv8KChlDZXJ0aWZpY2F0ZUlzc3VhbmNlQ29uZmlnEhIK",
+            "BG5hbWUYASABKAlCBOJBAQgSNQoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEjUKC3VwZGF0ZV90aW1lGAMg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxJfCgZsYWJl",
+            "bHMYBCADKAsySS5nb29nbGUuY2xvdWQuY2VydGlmaWNhdGVtYW5hZ2VyLnYx",
+            "LkNlcnRpZmljYXRlSXNzdWFuY2VDb25maWcuTGFiZWxzRW50cnlCBOJBAQES",
+            "GQoLZGVzY3JpcHRpb24YBSABKAlCBOJBAQEShAEKHGNlcnRpZmljYXRlX2F1",
+            "dGhvcml0eV9jb25maWcYBiABKAsyWC5nb29nbGUuY2xvdWQuY2VydGlmaWNh",
+            "dGVtYW5hZ2VyLnYxLkNlcnRpZmljYXRlSXNzdWFuY2VDb25maWcuQ2VydGlm",
+            "aWNhdGVBdXRob3JpdHlDb25maWdCBOJBAQISMQoIbGlmZXRpbWUYByABKAsy",
+            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CBOJBAQISKAoacm90YXRpb25f",
+            "d2luZG93X3BlcmNlbnRhZ2UYCCABKAVCBOJBAQISZwoNa2V5X2FsZ29yaXRo",
+            "bRgJIAEoDjJKLmdvb2dsZS5jbG91ZC5jZXJ0aWZpY2F0ZW1hbmFnZXIudjEu",
+            "Q2VydGlmaWNhdGVJc3N1YW5jZUNvbmZpZy5LZXlBbGdvcml0aG1CBOJBAQIS",
+            "XQoEdGFncxgKIAMoCzJHLmdvb2dsZS5jbG91ZC5jZXJ0aWZpY2F0ZW1hbmFn",
+            "ZXIudjEuQ2VydGlmaWNhdGVJc3N1YW5jZUNvbmZpZy5UYWdzRW50cnlCBuJB",
+            "AwQFARqxAgoaQ2VydGlmaWNhdGVBdXRob3JpdHlDb25maWcSqgEKJGNlcnRp",
+            "ZmljYXRlX2F1dGhvcml0eV9zZXJ2aWNlX2NvbmZpZxgBIAEoCzJ6Lmdvb2ds",
+            "ZS5jbG91ZC5jZXJ0aWZpY2F0ZW1hbmFnZXIudjEuQ2VydGlmaWNhdGVJc3N1",
+            "YW5jZUNvbmZpZy5DZXJ0aWZpY2F0ZUF1dGhvcml0eUNvbmZpZy5DZXJ0aWZp",
+            "Y2F0ZUF1dGhvcml0eVNlcnZpY2VDb25maWdIABpeCiFDZXJ0aWZpY2F0ZUF1",
+            "dGhvcml0eVNlcnZpY2VDb25maWcSOQoHY2FfcG9vbBgBIAEoCUIo4kEBAvpB",
+            "IQofcHJpdmF0ZWNhLmdvb2dsZWFwaXMuY29tL0NhUG9vbEIGCgRraW5kGi0K",
+            "C0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEa",
+            "KwoJVGFnc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi",
+            "SwoMS2V5QWxnb3JpdGhtEh0KGUtFWV9BTEdPUklUSE1fVU5TUEVDSUZJRUQQ",
+            "ABIMCghSU0FfMjA0OBABEg4KCkVDRFNBX1AyNTYQBDraAepB1gEKO2NlcnRp",
+            "ZmljYXRlbWFuYWdlci5nb29nbGVhcGlzLmNvbS9DZXJ0aWZpY2F0ZUlzc3Vh",
+            "bmNlQ29uZmlnEmBwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
+            "dGlvbn0vY2VydGlmaWNhdGVJc3N1YW5jZUNvbmZpZ3Mve2NlcnRpZmljYXRl",
+            "X2lzc3VhbmNlX2NvbmZpZ30qGmNlcnRpZmljYXRlSXNzdWFuY2VDb25maWdz",
+            "MhljZXJ0aWZpY2F0ZUlzc3VhbmNlQ29uZmlnQvMCCiZjb20uZ29vZ2xlLmNs",
+            "b3VkLmNlcnRpZmljYXRlbWFuYWdlci52MUIeQ2VydGlmaWNhdGVJc3N1YW5j",
+            "ZUNvbmZpZ1Byb3RvUAFaVmNsb3VkLmdvb2dsZS5jb20vZ28vY2VydGlmaWNh",
+            "dGVtYW5hZ2VyL2FwaXYxL2NlcnRpZmljYXRlbWFuYWdlcnBiO2NlcnRpZmlj",
+            "YXRlbWFuYWdlcnBiqgIiR29vZ2xlLkNsb3VkLkNlcnRpZmljYXRlTWFuYWdl",
+            "ci5WMcoCIkdvb2dsZVxDbG91ZFxDZXJ0aWZpY2F0ZU1hbmFnZXJcVjHqAiVH",
+            "b29nbGU6OkNsb3VkOjpDZXJ0aWZpY2F0ZU1hbmFnZXI6OlYx6kFcCh9wcml2",
+            "YXRlY2EuZ29vZ2xlYXBpcy5jb20vQ2FQb29sEjlwcm9qZWN0cy97cHJvamVj",
+            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2FQb29scy97Y2FfcG9vbH1iBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsRequest), global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse), global::Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse.Parser, new[]{ "CertificateIssuanceConfigs", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.GetCertificateIssuanceConfigRequest), global::Google.Cloud.CertificateManager.V1.GetCertificateIssuanceConfigRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.CreateCertificateIssuanceConfigRequest), global::Google.Cloud.CertificateManager.V1.CreateCertificateIssuanceConfigRequest.Parser, new[]{ "Parent", "CertificateIssuanceConfigId", "CertificateIssuanceConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.UpdateCertificateIssuanceConfigRequest), global::Google.Cloud.CertificateManager.V1.UpdateCertificateIssuanceConfigRequest.Parser, new[]{ "CertificateIssuanceConfig", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.DeleteCertificateIssuanceConfigRequest), global::Google.Cloud.CertificateManager.V1.DeleteCertificateIssuanceConfigRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig), global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "CertificateAuthorityConfig", "Lifetime", "RotationWindowPercentage", "KeyAlgorithm" }, null, new[]{ typeof(global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig.Types.KeyAlgorithm) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig.Types.CertificateAuthorityConfig), global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig.Types.CertificateAuthorityConfig.Parser, new[]{ "CertificateAuthorityServiceConfig" }, new[]{ "Kind" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig.Types.CertificateAuthorityConfig.Types.CertificateAuthorityServiceConfig), global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig.Types.CertificateAuthorityConfig.Types.CertificateAuthorityServiceConfig.Parser, new[]{ "CaPool" }, null, null, null, null)}),
-            null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig), global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "CertificateAuthorityConfig", "Lifetime", "RotationWindowPercentage", "KeyAlgorithm", "Tags" }, null, new[]{ typeof(global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig.Types.KeyAlgorithm) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig.Types.CertificateAuthorityConfig), global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig.Types.CertificateAuthorityConfig.Parser, new[]{ "CertificateAuthorityServiceConfig" }, new[]{ "Kind" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig.Types.CertificateAuthorityConfig.Types.CertificateAuthorityServiceConfig), global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig.Types.CertificateAuthorityConfig.Types.CertificateAuthorityServiceConfig.Parser, new[]{ "CaPool" }, null, null, null, null)}),
+            null, null, })
           }));
     }
     #endregion
@@ -172,7 +184,7 @@ namespace Google.Cloud.CertificateManager.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Maximum number of certificate configs to return per call.
+    /// Optional. Maximum number of certificate configs to return per call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,10 +199,10 @@ namespace Google.Cloud.CertificateManager.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// The value returned by the last `ListCertificateIssuanceConfigsResponse`.
-    /// Indicates that this is a continuation of a prior
-    /// `ListCertificateIssuanceConfigs` call, and that the system should return
-    /// the next page of data.
+    /// Optional. The value returned by the last
+    /// `ListCertificateIssuanceConfigsResponse`. Indicates that this is a
+    /// continuation of a prior `ListCertificateIssuanceConfigs` call, and that the
+    /// system should return the next page of data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -205,7 +217,7 @@ namespace Google.Cloud.CertificateManager.V1 {
     public const int FilterFieldNumber = 4;
     private string filter_ = "";
     /// <summary>
-    /// Filter expression to restrict the Certificates Configs returned.
+    /// Optional. Filter expression to restrict the Certificates Configs returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -220,9 +232,9 @@ namespace Google.Cloud.CertificateManager.V1 {
     public const int OrderByFieldNumber = 5;
     private string orderBy_ = "";
     /// <summary>
-    /// A list of Certificate Config field names used to specify the order of the
-    /// returned results. The default sorting order is ascending. To specify
-    /// descending order for a field, add a suffix `" desc"`.
+    /// Optional. A list of Certificate Config field names used to specify the
+    /// order of the returned results. The default sorting order is ascending. To
+    /// specify descending order for a field, add a suffix `" desc"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1234,6 +1246,270 @@ namespace Google.Cloud.CertificateManager.V1 {
   }
 
   /// <summary>
+  /// Request for the `UpdateCertificateIssuanceConfig` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateCertificateIssuanceConfigRequest : pb::IMessage<UpdateCertificateIssuanceConfigRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateCertificateIssuanceConfigRequest> _parser = new pb::MessageParser<UpdateCertificateIssuanceConfigRequest>(() => new UpdateCertificateIssuanceConfigRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateCertificateIssuanceConfigRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfigReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateCertificateIssuanceConfigRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateCertificateIssuanceConfigRequest(UpdateCertificateIssuanceConfigRequest other) : this() {
+      certificateIssuanceConfig_ = other.certificateIssuanceConfig_ != null ? other.certificateIssuanceConfig_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateCertificateIssuanceConfigRequest Clone() {
+      return new UpdateCertificateIssuanceConfigRequest(this);
+    }
+
+    /// <summary>Field number for the "certificate_issuance_config" field.</summary>
+    public const int CertificateIssuanceConfigFieldNumber = 1;
+    private global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig certificateIssuanceConfig_;
+    /// <summary>
+    /// Required. A definition of the certificate issuance config to update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig CertificateIssuanceConfig {
+      get { return certificateIssuanceConfig_; }
+      set {
+        certificateIssuanceConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Required. The update mask applies to the resource. For the `FieldMask`
+    /// definition, see
+    /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateCertificateIssuanceConfigRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateCertificateIssuanceConfigRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(CertificateIssuanceConfig, other.CertificateIssuanceConfig)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (certificateIssuanceConfig_ != null) hash ^= CertificateIssuanceConfig.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (certificateIssuanceConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CertificateIssuanceConfig);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (certificateIssuanceConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CertificateIssuanceConfig);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (certificateIssuanceConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CertificateIssuanceConfig);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateCertificateIssuanceConfigRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.certificateIssuanceConfig_ != null) {
+        if (certificateIssuanceConfig_ == null) {
+          CertificateIssuanceConfig = new global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig();
+        }
+        CertificateIssuanceConfig.MergeFrom(other.CertificateIssuanceConfig);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (certificateIssuanceConfig_ == null) {
+              CertificateIssuanceConfig = new global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig();
+            }
+            input.ReadMessage(CertificateIssuanceConfig);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (certificateIssuanceConfig_ == null) {
+              CertificateIssuanceConfig = new global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig();
+            }
+            input.ReadMessage(CertificateIssuanceConfig);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request for the `DeleteCertificateIssuanceConfig` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1251,7 +1527,7 @@ namespace Google.Cloud.CertificateManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfigReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfigReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1456,7 +1732,7 @@ namespace Google.Cloud.CertificateManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfigReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfigReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1485,6 +1761,7 @@ namespace Google.Cloud.CertificateManager.V1 {
       lifetime_ = other.lifetime_ != null ? other.lifetime_.Clone() : null;
       rotationWindowPercentage_ = other.rotationWindowPercentage_;
       keyAlgorithm_ = other.keyAlgorithm_;
+      tags_ = other.tags_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1498,7 +1775,7 @@ namespace Google.Cloud.CertificateManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// A user-defined name of the certificate issuance config.
+    /// Identifier. A user-defined name of the certificate issuance config.
     /// CertificateIssuanceConfig names must be unique globally and match pattern
     /// `projects/*/locations/*/certificateIssuanceConfigs/*`.
     /// </summary>
@@ -1547,7 +1824,7 @@ namespace Google.Cloud.CertificateManager.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Set of labels associated with a CertificateIssuanceConfig.
+    /// Optional. Set of labels associated with a CertificateIssuanceConfig.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1559,7 +1836,8 @@ namespace Google.Cloud.CertificateManager.V1 {
     public const int DescriptionFieldNumber = 5;
     private string description_ = "";
     /// <summary>
-    /// One or more paragraphs of text description of a CertificateIssuanceConfig.
+    /// Optional. One or more paragraphs of text description of a
+    /// CertificateIssuanceConfig.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1633,6 +1911,23 @@ namespace Google.Cloud.CertificateManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "tags" field.</summary>
+    public const int TagsFieldNumber = 10;
+    private static readonly pbc::MapField<string, string>.Codec _map_tags_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 82);
+    private readonly pbc::MapField<string, string> tags_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. Input only. Immutable. Tag keys/values directly bound to this
+    /// resource. For example:
+    ///   "123/environment": "production",
+    ///   "123/costCenter": "marketing"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Tags {
+      get { return tags_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1657,6 +1952,7 @@ namespace Google.Cloud.CertificateManager.V1 {
       if (!object.Equals(Lifetime, other.Lifetime)) return false;
       if (RotationWindowPercentage != other.RotationWindowPercentage) return false;
       if (KeyAlgorithm != other.KeyAlgorithm) return false;
+      if (!Tags.Equals(other.Tags)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1673,6 +1969,7 @@ namespace Google.Cloud.CertificateManager.V1 {
       if (lifetime_ != null) hash ^= Lifetime.GetHashCode();
       if (RotationWindowPercentage != 0) hash ^= RotationWindowPercentage.GetHashCode();
       if (KeyAlgorithm != global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig.Types.KeyAlgorithm.Unspecified) hash ^= KeyAlgorithm.GetHashCode();
+      hash ^= Tags.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1724,6 +2021,7 @@ namespace Google.Cloud.CertificateManager.V1 {
         output.WriteRawTag(72);
         output.WriteEnum((int) KeyAlgorithm);
       }
+      tags_.WriteTo(output, _map_tags_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1767,6 +2065,7 @@ namespace Google.Cloud.CertificateManager.V1 {
         output.WriteRawTag(72);
         output.WriteEnum((int) KeyAlgorithm);
       }
+      tags_.WriteTo(ref output, _map_tags_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1802,6 +2101,7 @@ namespace Google.Cloud.CertificateManager.V1 {
       if (KeyAlgorithm != global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig.Types.KeyAlgorithm.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) KeyAlgorithm);
       }
+      size += tags_.CalculateSize(_map_tags_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1851,6 +2151,7 @@ namespace Google.Cloud.CertificateManager.V1 {
       if (other.KeyAlgorithm != global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig.Types.KeyAlgorithm.Unspecified) {
         KeyAlgorithm = other.KeyAlgorithm;
       }
+      tags_.MergeFrom(other.tags_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1918,6 +2219,10 @@ namespace Google.Cloud.CertificateManager.V1 {
             KeyAlgorithm = (global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig.Types.KeyAlgorithm) input.ReadEnum();
             break;
           }
+          case 82: {
+            tags_.AddEntriesFrom(input, _map_tags_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1983,6 +2288,10 @@ namespace Google.Cloud.CertificateManager.V1 {
           }
           case 72: {
             KeyAlgorithm = (global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig.Types.KeyAlgorithm) input.ReadEnum();
+            break;
+          }
+          case 82: {
+            tags_.AddEntriesFrom(ref input, _map_tags_codec);
             break;
           }
         }

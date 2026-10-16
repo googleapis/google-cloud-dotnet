@@ -85,6 +85,8 @@ namespace Google.Cloud.CertificateManager.V1
             GetCertificateIssuanceConfigSettings = existing.GetCertificateIssuanceConfigSettings;
             CreateCertificateIssuanceConfigSettings = existing.CreateCertificateIssuanceConfigSettings;
             CreateCertificateIssuanceConfigOperationsSettings = existing.CreateCertificateIssuanceConfigOperationsSettings.Clone();
+            UpdateCertificateIssuanceConfigSettings = existing.UpdateCertificateIssuanceConfigSettings;
+            UpdateCertificateIssuanceConfigOperationsSettings = existing.UpdateCertificateIssuanceConfigOperationsSettings.Clone();
             DeleteCertificateIssuanceConfigSettings = existing.DeleteCertificateIssuanceConfigSettings;
             DeleteCertificateIssuanceConfigOperationsSettings = existing.DeleteCertificateIssuanceConfigOperationsSettings.Clone();
             ListTrustConfigsSettings = existing.ListTrustConfigsSettings;
@@ -766,6 +768,37 @@ namespace Google.Cloud.CertificateManager.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings CreateCertificateIssuanceConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CertificateManagerClient.UpdateCertificateIssuanceConfig</c> and
+        /// <c>CertificateManagerClient.UpdateCertificateIssuanceConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateCertificateIssuanceConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CertificateManagerClient.UpdateCertificateIssuanceConfig</c>
+        /// and <c>CertificateManagerClient.UpdateCertificateIssuanceConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateCertificateIssuanceConfigOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -4351,6 +4384,116 @@ namespace Google.Cloud.CertificateManager.V1
             CreateCertificateIssuanceConfigAsync(parent, certificateIssuanceConfig, certificateIssuanceConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates a CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CertificateIssuanceConfig, OperationMetadata> UpdateCertificateIssuanceConfig(UpdateCertificateIssuanceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CertificateIssuanceConfig, OperationMetadata>> UpdateCertificateIssuanceConfigAsync(UpdateCertificateIssuanceConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CertificateIssuanceConfig, OperationMetadata>> UpdateCertificateIssuanceConfigAsync(UpdateCertificateIssuanceConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateCertificateIssuanceConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateCertificateIssuanceConfig</c>.</summary>
+        public virtual lro::OperationsClient UpdateCertificateIssuanceConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateCertificateIssuanceConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<CertificateIssuanceConfig, OperationMetadata> PollOnceUpdateCertificateIssuanceConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CertificateIssuanceConfig, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateCertificateIssuanceConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateCertificateIssuanceConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<CertificateIssuanceConfig, OperationMetadata>> PollOnceUpdateCertificateIssuanceConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CertificateIssuanceConfig, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateCertificateIssuanceConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="certificateIssuanceConfig">
+        /// Required. A definition of the certificate issuance config to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CertificateIssuanceConfig, OperationMetadata> UpdateCertificateIssuanceConfig(CertificateIssuanceConfig certificateIssuanceConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCertificateIssuanceConfig(new UpdateCertificateIssuanceConfigRequest
+            {
+                CertificateIssuanceConfig = gax::GaxPreconditions.CheckNotNull(certificateIssuanceConfig, nameof(certificateIssuanceConfig)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="certificateIssuanceConfig">
+        /// Required. A definition of the certificate issuance config to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CertificateIssuanceConfig, OperationMetadata>> UpdateCertificateIssuanceConfigAsync(CertificateIssuanceConfig certificateIssuanceConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCertificateIssuanceConfigAsync(new UpdateCertificateIssuanceConfigRequest
+            {
+                CertificateIssuanceConfig = gax::GaxPreconditions.CheckNotNull(certificateIssuanceConfig, nameof(certificateIssuanceConfig)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="certificateIssuanceConfig">
+        /// Required. A definition of the certificate issuance config to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CertificateIssuanceConfig, OperationMetadata>> UpdateCertificateIssuanceConfigAsync(CertificateIssuanceConfig certificateIssuanceConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateCertificateIssuanceConfigAsync(certificateIssuanceConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes a single CertificateIssuanceConfig.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5267,6 +5410,8 @@ namespace Google.Cloud.CertificateManager.V1
 
         private readonly gaxgrpc::ApiCall<CreateCertificateIssuanceConfigRequest, lro::Operation> _callCreateCertificateIssuanceConfig;
 
+        private readonly gaxgrpc::ApiCall<UpdateCertificateIssuanceConfigRequest, lro::Operation> _callUpdateCertificateIssuanceConfig;
+
         private readonly gaxgrpc::ApiCall<DeleteCertificateIssuanceConfigRequest, lro::Operation> _callDeleteCertificateIssuanceConfig;
 
         private readonly gaxgrpc::ApiCall<ListTrustConfigsRequest, ListTrustConfigsResponse> _callListTrustConfigs;
@@ -5307,6 +5452,7 @@ namespace Google.Cloud.CertificateManager.V1
             UpdateDnsAuthorizationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDnsAuthorizationOperationsSettings, logger);
             DeleteDnsAuthorizationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDnsAuthorizationOperationsSettings, logger);
             CreateCertificateIssuanceConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCertificateIssuanceConfigOperationsSettings, logger);
+            UpdateCertificateIssuanceConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateCertificateIssuanceConfigOperationsSettings, logger);
             DeleteCertificateIssuanceConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCertificateIssuanceConfigOperationsSettings, logger);
             CreateTrustConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTrustConfigOperationsSettings, logger);
             UpdateTrustConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTrustConfigOperationsSettings, logger);
@@ -5381,6 +5527,9 @@ namespace Google.Cloud.CertificateManager.V1
             _callCreateCertificateIssuanceConfig = clientHelper.BuildApiCall<CreateCertificateIssuanceConfigRequest, lro::Operation>("CreateCertificateIssuanceConfig", grpcClient.CreateCertificateIssuanceConfigAsync, grpcClient.CreateCertificateIssuanceConfig, effectiveSettings.CreateCertificateIssuanceConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCertificateIssuanceConfig);
             Modify_CreateCertificateIssuanceConfigApiCall(ref _callCreateCertificateIssuanceConfig);
+            _callUpdateCertificateIssuanceConfig = clientHelper.BuildApiCall<UpdateCertificateIssuanceConfigRequest, lro::Operation>("UpdateCertificateIssuanceConfig", grpcClient.UpdateCertificateIssuanceConfigAsync, grpcClient.UpdateCertificateIssuanceConfig, effectiveSettings.UpdateCertificateIssuanceConfigSettings).WithGoogleRequestParam("certificate_issuance_config.name", request => request.CertificateIssuanceConfig?.Name);
+            Modify_ApiCall(ref _callUpdateCertificateIssuanceConfig);
+            Modify_UpdateCertificateIssuanceConfigApiCall(ref _callUpdateCertificateIssuanceConfig);
             _callDeleteCertificateIssuanceConfig = clientHelper.BuildApiCall<DeleteCertificateIssuanceConfigRequest, lro::Operation>("DeleteCertificateIssuanceConfig", grpcClient.DeleteCertificateIssuanceConfigAsync, grpcClient.DeleteCertificateIssuanceConfig, effectiveSettings.DeleteCertificateIssuanceConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCertificateIssuanceConfig);
             Modify_DeleteCertificateIssuanceConfigApiCall(ref _callDeleteCertificateIssuanceConfig);
@@ -5450,6 +5599,8 @@ namespace Google.Cloud.CertificateManager.V1
 
         partial void Modify_CreateCertificateIssuanceConfigApiCall(ref gaxgrpc::ApiCall<CreateCertificateIssuanceConfigRequest, lro::Operation> call);
 
+        partial void Modify_UpdateCertificateIssuanceConfigApiCall(ref gaxgrpc::ApiCall<UpdateCertificateIssuanceConfigRequest, lro::Operation> call);
+
         partial void Modify_DeleteCertificateIssuanceConfigApiCall(ref gaxgrpc::ApiCall<DeleteCertificateIssuanceConfigRequest, lro::Operation> call);
 
         partial void Modify_ListTrustConfigsApiCall(ref gaxgrpc::ApiCall<ListTrustConfigsRequest, ListTrustConfigsResponse> call);
@@ -5515,6 +5666,8 @@ namespace Google.Cloud.CertificateManager.V1
         partial void Modify_GetCertificateIssuanceConfigRequest(ref GetCertificateIssuanceConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateCertificateIssuanceConfigRequest(ref CreateCertificateIssuanceConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateCertificateIssuanceConfigRequest(ref UpdateCertificateIssuanceConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteCertificateIssuanceConfigRequest(ref DeleteCertificateIssuanceConfigRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6121,6 +6274,33 @@ namespace Google.Cloud.CertificateManager.V1
         {
             Modify_CreateCertificateIssuanceConfigRequest(ref request, ref callSettings);
             return new lro::Operation<CertificateIssuanceConfig, OperationMetadata>(await _callCreateCertificateIssuanceConfig.Async(request, callSettings).ConfigureAwait(false), CreateCertificateIssuanceConfigOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateCertificateIssuanceConfig</c>.</summary>
+        public override lro::OperationsClient UpdateCertificateIssuanceConfigOperationsClient { get; }
+
+        /// <summary>
+        /// Updates a CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<CertificateIssuanceConfig, OperationMetadata> UpdateCertificateIssuanceConfig(UpdateCertificateIssuanceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCertificateIssuanceConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<CertificateIssuanceConfig, OperationMetadata>(_callUpdateCertificateIssuanceConfig.Sync(request, callSettings), UpdateCertificateIssuanceConfigOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a CertificateIssuanceConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<CertificateIssuanceConfig, OperationMetadata>> UpdateCertificateIssuanceConfigAsync(UpdateCertificateIssuanceConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCertificateIssuanceConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<CertificateIssuanceConfig, OperationMetadata>(await _callUpdateCertificateIssuanceConfig.Async(request, callSettings).ConfigureAwait(false), UpdateCertificateIssuanceConfigOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeleteCertificateIssuanceConfig</c>.</summary>
