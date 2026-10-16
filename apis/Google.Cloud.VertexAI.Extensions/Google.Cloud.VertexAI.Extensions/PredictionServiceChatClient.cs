@@ -671,22 +671,19 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
             {
                 foreach (var citation in citations)
                 {
-                    textContent.Annotations =
-                    [
-                        new CitationAnnotation()
-                        {
-                            Title = citation.Title,
-                            Url = Uri.TryCreate(citation.Uri, UriKind.Absolute, out Uri uri) ? uri : null,
-                            AnnotatedRegions =
-                            [
-                                new TextSpanAnnotatedRegion()
-                                {
-                                    StartIndex = citation.StartIndex,
-                                    EndIndex = citation.EndIndex,
-                                }
-                            ],
-                        }
-                    ];
+                    (textContent.Annotations ??= []).Add(new CitationAnnotation()
+                    {
+                        Title = citation.Title,
+                        Url = Uri.TryCreate(citation.Uri, UriKind.Absolute, out Uri uri) ? uri : null,
+                        AnnotatedRegions =
+                        [
+                            new TextSpanAnnotatedRegion()
+                            {
+                                StartIndex = citation.StartIndex,
+                                EndIndex = citation.EndIndex,
+                            }
+                        ],
+                    });
                 }
             }
 
