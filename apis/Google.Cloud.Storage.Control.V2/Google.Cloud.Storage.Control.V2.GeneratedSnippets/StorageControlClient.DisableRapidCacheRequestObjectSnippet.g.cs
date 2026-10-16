@@ -38,7 +38,6 @@ namespace GoogleCSharpSnippets
             DisableRapidCacheRequest request = new DisableRapidCacheRequest
             {
                 RapidCacheName = RapidCacheName.FromProjectBucketRapidCache("[PROJECT]", "[BUCKET]", "[RAPID_CACHE]"),
-                RequestId = "",
             };
             // Make the request
             Operation<RapidCache, DisableRapidCacheMetadata> response = storageControlClient.DisableRapidCache(request);

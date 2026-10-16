@@ -37,7 +37,6 @@ namespace GoogleCSharpSnippets
             GetRapidCacheRequest request = new GetRapidCacheRequest
             {
                 RapidCacheName = RapidCacheName.FromProjectBucketRapidCache("[PROJECT]", "[BUCKET]", "[RAPID_CACHE]"),
-                RequestId = "",
             };
             // Make the request
             RapidCache response = storageControlClient.GetRapidCache(request);

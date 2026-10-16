@@ -44,7 +44,6 @@ namespace GoogleCSharpSnippets
                 LexicographicStart = "",
                 LexicographicEnd = "",
                 Delimiter = "",
-                RequestId = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListFoldersResponse, Folder> response = storageControlClient.ListFoldersAsync(request);

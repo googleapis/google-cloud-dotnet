@@ -328,7 +328,6 @@ namespace GoogleCSharpSnippets
                 LexicographicStart = "",
                 LexicographicEnd = "",
                 Delimiter = "",
-                RequestId = "",
             };
             // Make the request
             PagedEnumerable<gcscv::ListFoldersResponse, gcscv::Folder> response = storageControlClient.ListFolders(request);
@@ -381,7 +380,6 @@ namespace GoogleCSharpSnippets
                 LexicographicStart = "",
                 LexicographicEnd = "",
                 Delimiter = "",
-                RequestId = "",
             };
             // Make the request
             PagedAsyncEnumerable<gcscv::ListFoldersResponse, gcscv::Folder> response = storageControlClient.ListFoldersAsync(request);
@@ -1643,7 +1641,6 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
                 IfMetagenerationMatch = 0L,
                 IfMetagenerationNotMatch = 0L,
-                RequestId = "",
             };
             // Make the request
             gcscv::ManagedFolder response = storageControlClient.UpdateManagedFolder(request);
@@ -1664,7 +1661,6 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
                 IfMetagenerationMatch = 0L,
                 IfMetagenerationNotMatch = 0L,
-                RequestId = "",
             };
             // Make the request
             gcscv::ManagedFolder response = await storageControlClient.UpdateManagedFolderAsync(request);
@@ -2652,7 +2648,6 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsBucketName = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
                 RapidCache = new gcscv::RapidCache(),
-                RequestId = "",
             };
             // Make the request
             Operation<gcscv::RapidCache, gcscv::CreateRapidCacheMetadata> response = storageControlClient.CreateRapidCache(request);
@@ -2687,7 +2682,6 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsBucketName = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
                 RapidCache = new gcscv::RapidCache(),
-                RequestId = "",
             };
             // Make the request
             Operation<gcscv::RapidCache, gcscv::CreateRapidCacheMetadata> response = await storageControlClient.CreateRapidCacheAsync(request);
@@ -2843,7 +2837,6 @@ namespace GoogleCSharpSnippets
             {
                 RapidCache = new gcscv::RapidCache(),
                 UpdateMask = new FieldMask(),
-                RequestId = "",
             };
             // Make the request
             Operation<gcscv::RapidCache, gcscv::UpdateRapidCacheMetadata> response = storageControlClient.UpdateRapidCache(request);
@@ -2878,7 +2871,6 @@ namespace GoogleCSharpSnippets
             {
                 RapidCache = new gcscv::RapidCache(),
                 UpdateMask = new FieldMask(),
-                RequestId = "",
             };
             // Make the request
             Operation<gcscv::RapidCache, gcscv::UpdateRapidCacheMetadata> response = await storageControlClient.UpdateRapidCacheAsync(request);
@@ -2972,7 +2964,6 @@ namespace GoogleCSharpSnippets
             gcscv::DisableRapidCacheRequest request = new gcscv::DisableRapidCacheRequest
             {
                 RapidCacheName = gcscv::RapidCacheName.FromProjectBucketRapidCache("[PROJECT]", "[BUCKET]", "[RAPID_CACHE]"),
-                RequestId = "",
             };
             // Make the request
             Operation<gcscv::RapidCache, gcscv::DisableRapidCacheMetadata> response = storageControlClient.DisableRapidCache(request);
@@ -3006,7 +2997,6 @@ namespace GoogleCSharpSnippets
             gcscv::DisableRapidCacheRequest request = new gcscv::DisableRapidCacheRequest
             {
                 RapidCacheName = gcscv::RapidCacheName.FromProjectBucketRapidCache("[PROJECT]", "[BUCKET]", "[RAPID_CACHE]"),
-                RequestId = "",
             };
             // Make the request
             Operation<gcscv::RapidCache, gcscv::DisableRapidCacheMetadata> response = await storageControlClient.DisableRapidCacheAsync(request);
@@ -3157,7 +3147,6 @@ namespace GoogleCSharpSnippets
             gcscv::GetRapidCacheRequest request = new gcscv::GetRapidCacheRequest
             {
                 RapidCacheName = gcscv::RapidCacheName.FromProjectBucketRapidCache("[PROJECT]", "[BUCKET]", "[RAPID_CACHE]"),
-                RequestId = "",
             };
             // Make the request
             gcscv::RapidCache response = storageControlClient.GetRapidCache(request);
@@ -3175,7 +3164,6 @@ namespace GoogleCSharpSnippets
             gcscv::GetRapidCacheRequest request = new gcscv::GetRapidCacheRequest
             {
                 RapidCacheName = gcscv::RapidCacheName.FromProjectBucketRapidCache("[PROJECT]", "[BUCKET]", "[RAPID_CACHE]"),
-                RequestId = "",
             };
             // Make the request
             gcscv::RapidCache response = await storageControlClient.GetRapidCacheAsync(request);
@@ -3246,7 +3234,6 @@ namespace GoogleCSharpSnippets
             gcscv::ListRapidCachesRequest request = new gcscv::ListRapidCachesRequest
             {
                 ParentAsBucketName = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
-                RequestId = "",
             };
             // Make the request
             PagedEnumerable<gcscv::ListRapidCachesResponse, gcscv::RapidCache> response = storageControlClient.ListRapidCaches(request);
@@ -3295,7 +3282,6 @@ namespace GoogleCSharpSnippets
             gcscv::ListRapidCachesRequest request = new gcscv::ListRapidCachesRequest
             {
                 ParentAsBucketName = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
-                RequestId = "",
             };
             // Make the request
             PagedAsyncEnumerable<gcscv::ListRapidCachesResponse, gcscv::RapidCache> response = storageControlClient.ListRapidCachesAsync(request);
@@ -3612,7 +3598,6 @@ namespace GoogleCSharpSnippets
             {
                 IntelligenceConfig = new gcscv::IntelligenceConfig(),
                 UpdateMask = new FieldMask(),
-                RequestId = "",
             };
             // Make the request
             gcscv::IntelligenceConfig response = storageControlClient.UpdateProjectIntelligenceConfig(request);
@@ -3631,7 +3616,6 @@ namespace GoogleCSharpSnippets
             {
                 IntelligenceConfig = new gcscv::IntelligenceConfig(),
                 UpdateMask = new FieldMask(),
-                RequestId = "",
             };
             // Make the request
             gcscv::IntelligenceConfig response = await storageControlClient.UpdateProjectIntelligenceConfigAsync(request);
@@ -3765,7 +3749,6 @@ namespace GoogleCSharpSnippets
             {
                 IntelligenceConfig = new gcscv::IntelligenceConfig(),
                 UpdateMask = new FieldMask(),
-                RequestId = "",
             };
             // Make the request
             gcscv::IntelligenceConfig response = storageControlClient.UpdateFolderIntelligenceConfig(request);
@@ -3784,7 +3767,6 @@ namespace GoogleCSharpSnippets
             {
                 IntelligenceConfig = new gcscv::IntelligenceConfig(),
                 UpdateMask = new FieldMask(),
-                RequestId = "",
             };
             // Make the request
             gcscv::IntelligenceConfig response = await storageControlClient.UpdateFolderIntelligenceConfigAsync(request);
@@ -3918,7 +3900,6 @@ namespace GoogleCSharpSnippets
             {
                 IntelligenceConfig = new gcscv::IntelligenceConfig(),
                 UpdateMask = new FieldMask(),
-                RequestId = "",
             };
             // Make the request
             gcscv::IntelligenceConfig response = storageControlClient.UpdateOrganizationIntelligenceConfig(request);
@@ -3937,7 +3918,6 @@ namespace GoogleCSharpSnippets
             {
                 IntelligenceConfig = new gcscv::IntelligenceConfig(),
                 UpdateMask = new FieldMask(),
-                RequestId = "",
             };
             // Make the request
             gcscv::IntelligenceConfig response = await storageControlClient.UpdateOrganizationIntelligenceConfigAsync(request);

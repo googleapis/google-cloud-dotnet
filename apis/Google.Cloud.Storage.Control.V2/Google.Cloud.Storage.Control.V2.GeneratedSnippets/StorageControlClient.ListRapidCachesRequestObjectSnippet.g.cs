@@ -39,7 +39,6 @@ namespace GoogleCSharpSnippets
             ListRapidCachesRequest request = new ListRapidCachesRequest
             {
                 ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
-                RequestId = "",
             };
             // Make the request
             PagedEnumerable<ListRapidCachesResponse, RapidCache> response = storageControlClient.ListRapidCaches(request);
