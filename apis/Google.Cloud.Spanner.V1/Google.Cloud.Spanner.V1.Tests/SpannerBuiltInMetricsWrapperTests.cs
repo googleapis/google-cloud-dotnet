@@ -454,7 +454,7 @@ public class SpannerBuiltInMetricsWrapperTests
     private static List<Measurement> FilterMeasurements(IEnumerable<Measurement> measurements, string clientUid) =>
         measurements.Where(m => m.GetTag("client_uid") == clientUid).ToList();
 
-    private static void AssertRecordedData(IEnumerable<Measurement> measurements, string clientUid, string expectedMethod, string expectedStatus)
+    internal static void AssertRecordedData(IEnumerable<Measurement> measurements, string clientUid, string expectedMethod, string expectedStatus)
     {
         var scoped = FilterMeasurements(measurements, clientUid);
         Assert.Single(scoped, m => m.Name == "operation_count");
