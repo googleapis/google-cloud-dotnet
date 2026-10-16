@@ -4081,6 +4081,134 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateCertificateIssuanceConfig</summary>
+        public void UpdateCertificateIssuanceConfigRequestObject()
+        {
+            // Snippet: UpdateCertificateIssuanceConfig(UpdateCertificateIssuanceConfigRequest, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            UpdateCertificateIssuanceConfigRequest request = new UpdateCertificateIssuanceConfigRequest
+            {
+                CertificateIssuanceConfig = new CertificateIssuanceConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<CertificateIssuanceConfig, OperationMetadata> response = certificateManagerClient.UpdateCertificateIssuanceConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CertificateIssuanceConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CertificateIssuanceConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CertificateIssuanceConfig, OperationMetadata> retrievedResponse = certificateManagerClient.PollOnceUpdateCertificateIssuanceConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CertificateIssuanceConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCertificateIssuanceConfigAsync</summary>
+        public async Task UpdateCertificateIssuanceConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateCertificateIssuanceConfigAsync(UpdateCertificateIssuanceConfigRequest, CallSettings)
+            // Additional: UpdateCertificateIssuanceConfigAsync(UpdateCertificateIssuanceConfigRequest, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateCertificateIssuanceConfigRequest request = new UpdateCertificateIssuanceConfigRequest
+            {
+                CertificateIssuanceConfig = new CertificateIssuanceConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<CertificateIssuanceConfig, OperationMetadata> response = await certificateManagerClient.UpdateCertificateIssuanceConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CertificateIssuanceConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CertificateIssuanceConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CertificateIssuanceConfig, OperationMetadata> retrievedResponse = await certificateManagerClient.PollOnceUpdateCertificateIssuanceConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CertificateIssuanceConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCertificateIssuanceConfig</summary>
+        public void UpdateCertificateIssuanceConfig()
+        {
+            // Snippet: UpdateCertificateIssuanceConfig(CertificateIssuanceConfig, FieldMask, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            CertificateIssuanceConfig certificateIssuanceConfig = new CertificateIssuanceConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<CertificateIssuanceConfig, OperationMetadata> response = certificateManagerClient.UpdateCertificateIssuanceConfig(certificateIssuanceConfig, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CertificateIssuanceConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CertificateIssuanceConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CertificateIssuanceConfig, OperationMetadata> retrievedResponse = certificateManagerClient.PollOnceUpdateCertificateIssuanceConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CertificateIssuanceConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCertificateIssuanceConfigAsync</summary>
+        public async Task UpdateCertificateIssuanceConfigAsync()
+        {
+            // Snippet: UpdateCertificateIssuanceConfigAsync(CertificateIssuanceConfig, FieldMask, CallSettings)
+            // Additional: UpdateCertificateIssuanceConfigAsync(CertificateIssuanceConfig, FieldMask, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            CertificateIssuanceConfig certificateIssuanceConfig = new CertificateIssuanceConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<CertificateIssuanceConfig, OperationMetadata> response = await certificateManagerClient.UpdateCertificateIssuanceConfigAsync(certificateIssuanceConfig, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CertificateIssuanceConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CertificateIssuanceConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CertificateIssuanceConfig, OperationMetadata> retrievedResponse = await certificateManagerClient.PollOnceUpdateCertificateIssuanceConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CertificateIssuanceConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteCertificateIssuanceConfig</summary>
         public void DeleteCertificateIssuanceConfigRequestObject()
         {

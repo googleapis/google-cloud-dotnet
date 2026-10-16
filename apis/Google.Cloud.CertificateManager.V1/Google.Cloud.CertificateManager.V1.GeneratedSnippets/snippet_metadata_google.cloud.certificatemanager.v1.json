@@ -6584,6 +6584,206 @@
       ]
     },
     {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_UpdateCertificateIssuanceConfig_sync",
+      "title": "UpdateCertificateIssuanceConfigRequestObject",
+      "description": "Snippet for UpdateCertificateIssuanceConfig",
+      "file": "CertificateManagerClient.UpdateCertificateIssuanceConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCertificateIssuanceConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateCertificateIssuanceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.UpdateCertificateIssuanceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.UpdateCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_UpdateCertificateIssuanceConfig_async",
+      "title": "UpdateCertificateIssuanceConfigRequestObjectAsync",
+      "description": "Snippet for UpdateCertificateIssuanceConfigAsync",
+      "file": "CertificateManagerClient.UpdateCertificateIssuanceConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCertificateIssuanceConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateCertificateIssuanceConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.UpdateCertificateIssuanceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.UpdateCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_UpdateCertificateIssuanceConfig_sync_flattened",
+      "title": "UpdateCertificateIssuanceConfig",
+      "description": "Snippet for UpdateCertificateIssuanceConfig",
+      "file": "CertificateManagerClient.UpdateCertificateIssuanceConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCertificateIssuanceConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateCertificateIssuanceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig",
+            "name": "certificateIssuanceConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.UpdateCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_UpdateCertificateIssuanceConfig_async_flattened",
+      "title": "UpdateCertificateIssuanceConfigAsync",
+      "description": "Snippet for UpdateCertificateIssuanceConfigAsync",
+      "file": "CertificateManagerClient.UpdateCertificateIssuanceConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCertificateIssuanceConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateCertificateIssuanceConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig",
+            "name": "certificateIssuanceConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateCertificateIssuanceConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.UpdateCertificateIssuanceConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "certificatemanager_v1_generated_CertificateManager_DeleteCertificateIssuanceConfig_sync",
       "title": "DeleteCertificateIssuanceConfigRequestObject",
       "description": "Snippet for DeleteCertificateIssuanceConfig",

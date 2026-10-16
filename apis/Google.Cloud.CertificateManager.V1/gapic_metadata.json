@@ -160,6 +160,12 @@
                 "UpdateCertificateAsync"
               ]
             },
+            "UpdateCertificateIssuanceConfig": {
+              "methods": [
+                "UpdateCertificateIssuanceConfig",
+                "UpdateCertificateIssuanceConfigAsync"
+              ]
+            },
             "UpdateCertificateMap": {
               "methods": [
                 "UpdateCertificateMap",

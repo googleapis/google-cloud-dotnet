@@ -28,50 +28,64 @@ namespace Google.Cloud.CertificateManager.V1 {
             "bmZpZy5wcm90bxIiZ29vZ2xlLmNsb3VkLmNlcnRpZmljYXRlbWFuYWdlci52",
             "MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2Fw",
             "aS9yZXNvdXJjZS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2su",
-            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8inQEKF0xp",
-            "c3RUcnVzdENvbmZpZ3NSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEj",
-            "CiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SEQoJcGFnZV9z",
-            "aXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVyGAQgASgJ",
-            "EhAKCG9yZGVyX2J5GAUgASgJIpABChhMaXN0VHJ1c3RDb25maWdzUmVzcG9u",
-            "c2USRgoNdHJ1c3RfY29uZmlncxgBIAMoCzIvLmdvb2dsZS5jbG91ZC5jZXJ0",
-            "aWZpY2F0ZW1hbmFnZXIudjEuVHJ1c3RDb25maWcSFwoPbmV4dF9wYWdlX3Rv",
-            "a2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMgAygJIlwKFUdldFRydXN0Q29u",
-            "ZmlnUmVxdWVzdBJDCgRuYW1lGAEgASgJQjXgQQL6QS8KLWNlcnRpZmljYXRl",
-            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9UcnVzdENvbmZpZyK/AQoYQ3JlYXRl",
-            "VHJ1c3RDb25maWdSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFs",
-            "b2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SHAoPdHJ1c3RfY29u",
-            "ZmlnX2lkGAIgASgJQgPgQQISSgoMdHJ1c3RfY29uZmlnGAMgASgLMi8uZ29v",
-            "Z2xlLmNsb3VkLmNlcnRpZmljYXRlbWFuYWdlci52MS5UcnVzdENvbmZpZ0ID",
-            "4EECIpwBChhVcGRhdGVUcnVzdENvbmZpZ1JlcXVlc3QSSgoMdHJ1c3RfY29u",
-            "ZmlnGAEgASgLMi8uZ29vZ2xlLmNsb3VkLmNlcnRpZmljYXRlbWFuYWdlci52",
-            "MS5UcnVzdENvbmZpZ0ID4EECEjQKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECIm0KGERlbGV0ZVRydXN0Q29u",
-            "ZmlnUmVxdWVzdBJDCgRuYW1lGAEgASgJQjXgQQL6QS8KLWNlcnRpZmljYXRl",
-            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9UcnVzdENvbmZpZxIMCgRldGFnGAIg",
-            "ASgJIpUGCgtUcnVzdENvbmZpZxIMCgRuYW1lGAEgASgJEjQKC2NyZWF0ZV90",
-            "aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQK",
+            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8itgEKF0xp",
+            "c3RUcnVzdENvbmZpZ3NSZXF1ZXN0EjoKBnBhcmVudBgBIAEoCUIq4kEBAvpB",
+            "IwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEhcKCXBhZ2Vf",
+            "c2l6ZRgCIAEoBUIE4kEBARIYCgpwYWdlX3Rva2VuGAMgASgJQgTiQQEBEhQK",
+            "BmZpbHRlchgEIAEoCUIE4kEBARIWCghvcmRlcl9ieRgFIAEoCUIE4kEBASKQ",
+            "AQoYTGlzdFRydXN0Q29uZmlnc1Jlc3BvbnNlEkYKDXRydXN0X2NvbmZpZ3MY",
+            "ASADKAsyLy5nb29nbGUuY2xvdWQuY2VydGlmaWNhdGVtYW5hZ2VyLnYxLlRy",
+            "dXN0Q29uZmlnEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJlYWNo",
+            "YWJsZRgDIAMoCSJdChVHZXRUcnVzdENvbmZpZ1JlcXVlc3QSRAoEbmFtZRgB",
+            "IAEoCUI24kEBAvpBLwotY2VydGlmaWNhdGVtYW5hZ2VyLmdvb2dsZWFwaXMu",
+            "Y29tL1RydXN0Q29uZmlnIsIBChhDcmVhdGVUcnVzdENvbmZpZ1JlcXVlc3QS",
+            "OgoGcGFyZW50GAEgASgJQiriQQEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBp",
+            "cy5jb20vTG9jYXRpb24SHQoPdHJ1c3RfY29uZmlnX2lkGAIgASgJQgTiQQEC",
+            "EksKDHRydXN0X2NvbmZpZxgDIAEoCzIvLmdvb2dsZS5jbG91ZC5jZXJ0aWZp",
+            "Y2F0ZW1hbmFnZXIudjEuVHJ1c3RDb25maWdCBOJBAQIingEKGFVwZGF0ZVRy",
+            "dXN0Q29uZmlnUmVxdWVzdBJLCgx0cnVzdF9jb25maWcYASABKAsyLy5nb29n",
+            "bGUuY2xvdWQuY2VydGlmaWNhdGVtYW5hZ2VyLnYxLlRydXN0Q29uZmlnQgTi",
+            "QQECEjUKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZp",
+            "ZWxkTWFza0IE4kEBAiJ0ChhEZWxldGVUcnVzdENvbmZpZ1JlcXVlc3QSRAoE",
+            "bmFtZRgBIAEoCUI24kEBAvpBLwotY2VydGlmaWNhdGVtYW5hZ2VyLmdvb2ds",
+            "ZWFwaXMuY29tL1RydXN0Q29uZmlnEhIKBGV0YWcYAiABKAlCBOJBAQEi4AoK",
+            "C1RydXN0Q29uZmlnEhIKBG5hbWUYASABKAlCBOJBAQgSNQoLY3JlYXRlX3Rp",
+            "bWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEjUK",
             "C3VwZGF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEID4EEDEksKBmxhYmVscxgEIAMoCzI7Lmdvb2dsZS5jbG91ZC5jZXJ0aWZp",
-            "Y2F0ZW1hbmFnZXIudjEuVHJ1c3RDb25maWcuTGFiZWxzRW50cnkSEwoLZGVz",
-            "Y3JpcHRpb24YBSABKAkSDAoEZXRhZxgGIAEoCRJQCgx0cnVzdF9zdG9yZXMY",
-            "CCADKAsyOi5nb29nbGUuY2xvdWQuY2VydGlmaWNhdGVtYW5hZ2VyLnYxLlRy",
-            "dXN0Q29uZmlnLlRydXN0U3RvcmUaMAoLVHJ1c3RBbmNob3ISGQoPcGVtX2Nl",
-            "cnRpZmljYXRlGAEgASgJSABCBgoEa2luZBozCg5JbnRlcm1lZGlhdGVDQRIZ",
-            "Cg9wZW1fY2VydGlmaWNhdGUYASABKAlIAEIGCgRraW5kGroBCgpUcnVzdFN0",
-            "b3JlElIKDXRydXN0X2FuY2hvcnMYASADKAsyOy5nb29nbGUuY2xvdWQuY2Vy",
-            "dGlmaWNhdGVtYW5hZ2VyLnYxLlRydXN0Q29uZmlnLlRydXN0QW5jaG9yElgK",
-            "EGludGVybWVkaWF0ZV9jYXMYAiADKAsyPi5nb29nbGUuY2xvdWQuY2VydGlm",
-            "aWNhdGVtYW5hZ2VyLnYxLlRydXN0Q29uZmlnLkludGVybWVkaWF0ZUNBGi0K",
-            "C0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6",
-            "d+pBdAotY2VydGlmaWNhdGVtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1RydXN0",
-            "Q29uZmlnEkNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vdHJ1c3RDb25maWdzL3t0cnVzdF9jb25maWd9QoYCCiZjb20uZ29vZ2xl",
-            "LmNsb3VkLmNlcnRpZmljYXRlbWFuYWdlci52MUIQVHJ1c3RDb25pZmdQcm90",
-            "b1ABWlZjbG91ZC5nb29nbGUuY29tL2dvL2NlcnRpZmljYXRlbWFuYWdlci9h",
-            "cGl2MS9jZXJ0aWZpY2F0ZW1hbmFnZXJwYjtjZXJ0aWZpY2F0ZW1hbmFnZXJw",
-            "YqoCIkdvb2dsZS5DbG91ZC5DZXJ0aWZpY2F0ZU1hbmFnZXIuVjHKAiJHb29n",
-            "bGVcQ2xvdWRcQ2VydGlmaWNhdGVNYW5hZ2VyXFYx6gIlR29vZ2xlOjpDbG91",
-            "ZDo6Q2VydGlmaWNhdGVNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "cEIE4kEBAxJRCgZsYWJlbHMYBCADKAsyOy5nb29nbGUuY2xvdWQuY2VydGlm",
+            "aWNhdGVtYW5hZ2VyLnYxLlRydXN0Q29uZmlnLkxhYmVsc0VudHJ5QgTiQQEB",
+            "EhkKC2Rlc2NyaXB0aW9uGAUgASgJQgTiQQEBEgwKBGV0YWcYBiABKAkSaQoT",
+            "c3BpZmZlX3RydXN0X3N0b3JlcxgHIAMoCzJGLmdvb2dsZS5jbG91ZC5jZXJ0",
+            "aWZpY2F0ZW1hbmFnZXIudjEuVHJ1c3RDb25maWcuU3BpZmZlVHJ1c3RTdG9y",
+            "ZXNFbnRyeUIE4kEBARJWCgx0cnVzdF9zdG9yZXMYCCADKAsyOi5nb29nbGUu",
+            "Y2xvdWQuY2VydGlmaWNhdGVtYW5hZ2VyLnYxLlRydXN0Q29uZmlnLlRydXN0",
+            "U3RvcmVCBOJBAQESbgoYYWxsb3dsaXN0ZWRfY2VydGlmaWNhdGVzGAkgAygL",
+            "MkYuZ29vZ2xlLmNsb3VkLmNlcnRpZmljYXRlbWFuYWdlci52MS5UcnVzdENv",
+            "bmZpZy5BbGxvd2xpc3RlZENlcnRpZmljYXRlQgTiQQEBEk8KBHRhZ3MYCiAD",
+            "KAsyOS5nb29nbGUuY2xvdWQuY2VydGlmaWNhdGVtYW5hZ2VyLnYxLlRydXN0",
+            "Q29uZmlnLlRhZ3NFbnRyeUIG4kEDBAUBGjAKC1RydXN0QW5jaG9yEhkKD3Bl",
+            "bV9jZXJ0aWZpY2F0ZRgBIAEoCUgAQgYKBGtpbmQaMwoOSW50ZXJtZWRpYXRl",
+            "Q0ESGQoPcGVtX2NlcnRpZmljYXRlGAEgASgJSABCBgoEa2luZBrGAQoKVHJ1",
+            "c3RTdG9yZRJYCg10cnVzdF9hbmNob3JzGAEgAygLMjsuZ29vZ2xlLmNsb3Vk",
+            "LmNlcnRpZmljYXRlbWFuYWdlci52MS5UcnVzdENvbmZpZy5UcnVzdEFuY2hv",
+            "ckIE4kEBARJeChBpbnRlcm1lZGlhdGVfY2FzGAIgAygLMj4uZ29vZ2xlLmNs",
+            "b3VkLmNlcnRpZmljYXRlbWFuYWdlci52MS5UcnVzdENvbmZpZy5JbnRlcm1l",
+            "ZGlhdGVDQUIE4kEBARo3ChZBbGxvd2xpc3RlZENlcnRpZmljYXRlEh0KD3Bl",
+            "bV9jZXJ0aWZpY2F0ZRgBIAEoCUIE4kEBAhotCgtMYWJlbHNFbnRyeRILCgNr",
+            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGnQKFlNwaWZmZVRydXN0U3Rv",
+            "cmVzRW50cnkSCwoDa2V5GAEgASgJEkkKBXZhbHVlGAIgASgLMjouZ29vZ2xl",
+            "LmNsb3VkLmNlcnRpZmljYXRlbWFuYWdlci52MS5UcnVzdENvbmZpZy5UcnVz",
+            "dFN0b3JlOgI4ARorCglUYWdzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
+            "GAIgASgJOgI4ATqTAepBjwEKLWNlcnRpZmljYXRlbWFuYWdlci5nb29nbGVh",
+            "cGlzLmNvbS9UcnVzdENvbmZpZxJDcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L3RydXN0Q29uZmlncy97dHJ1c3RfY29uZmlnfSoM",
+            "dHJ1c3RDb25maWdzMgt0cnVzdENvbmZpZ0KGAgomY29tLmdvb2dsZS5jbG91",
+            "ZC5jZXJ0aWZpY2F0ZW1hbmFnZXIudjFCEFRydXN0Q29uaWZnUHJvdG9QAVpW",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9jZXJ0aWZpY2F0ZW1hbmFnZXIvYXBpdjEv",
+            "Y2VydGlmaWNhdGVtYW5hZ2VycGI7Y2VydGlmaWNhdGVtYW5hZ2VycGKqAiJH",
+            "b29nbGUuQ2xvdWQuQ2VydGlmaWNhdGVNYW5hZ2VyLlYxygIiR29vZ2xlXENs",
+            "b3VkXENlcnRpZmljYXRlTWFuYWdlclxWMeoCJUdvb2dsZTo6Q2xvdWQ6OkNl",
+            "cnRpZmljYXRlTWFuYWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -81,10 +95,11 @@ namespace Google.Cloud.CertificateManager.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.CreateTrustConfigRequest), global::Google.Cloud.CertificateManager.V1.CreateTrustConfigRequest.Parser, new[]{ "Parent", "TrustConfigId", "TrustConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.UpdateTrustConfigRequest), global::Google.Cloud.CertificateManager.V1.UpdateTrustConfigRequest.Parser, new[]{ "TrustConfig", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.DeleteTrustConfigRequest), global::Google.Cloud.CertificateManager.V1.DeleteTrustConfigRequest.Parser, new[]{ "Name", "Etag" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.TrustConfig), global::Google.Cloud.CertificateManager.V1.TrustConfig.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "Etag", "TrustStores" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.TrustAnchor), global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.TrustAnchor.Parser, new[]{ "PemCertificate" }, new[]{ "Kind" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.TrustConfig), global::Google.Cloud.CertificateManager.V1.TrustConfig.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "Etag", "SpiffeTrustStores", "TrustStores", "AllowlistedCertificates", "Tags" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.TrustAnchor), global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.TrustAnchor.Parser, new[]{ "PemCertificate" }, new[]{ "Kind" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.IntermediateCA), global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.IntermediateCA.Parser, new[]{ "PemCertificate" }, new[]{ "Kind" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.TrustStore), global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.TrustStore.Parser, new[]{ "TrustAnchors", "IntermediateCas" }, null, null, null, null),
-            null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.AllowlistedCertificate), global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.AllowlistedCertificate.Parser, new[]{ "PemCertificate" }, null, null, null, null),
+            null, null, null, })
           }));
     }
     #endregion
@@ -163,7 +178,7 @@ namespace Google.Cloud.CertificateManager.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Maximum number of TrustConfigs to return per call.
+    /// Optional. Maximum number of TrustConfigs to return per call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -178,9 +193,9 @@ namespace Google.Cloud.CertificateManager.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// The value returned by the last `ListTrustConfigsResponse`. Indicates
-    /// that this is a continuation of a prior `ListTrustConfigs` call, and that
-    /// the system should return the next page of data.
+    /// Optional. The value returned by the last `ListTrustConfigsResponse`.
+    /// Indicates that this is a continuation of a prior `ListTrustConfigs` call,
+    /// and that the system should return the next page of data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -195,7 +210,7 @@ namespace Google.Cloud.CertificateManager.V1 {
     public const int FilterFieldNumber = 4;
     private string filter_ = "";
     /// <summary>
-    /// Filter expression to restrict the TrustConfigs returned.
+    /// Optional. Filter expression to restrict the TrustConfigs returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -210,8 +225,8 @@ namespace Google.Cloud.CertificateManager.V1 {
     public const int OrderByFieldNumber = 5;
     private string orderBy_ = "";
     /// <summary>
-    /// A list of TrustConfig field names used to specify the order of the
-    /// returned results. The default sorting order is ascending. To specify
+    /// Optional. A list of TrustConfig field names used to specify the order of
+    /// the returned results. The default sorting order is ascending. To specify
     /// descending order for a field, add a suffix `" desc"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1557,7 +1572,7 @@ namespace Google.Cloud.CertificateManager.V1 {
     public const int EtagFieldNumber = 2;
     private string etag_ = "";
     /// <summary>
-    /// The current etag of the TrustConfig.
+    /// Optional. The current etag of the TrustConfig.
     /// If an etag is provided and does not match the current etag of the resource,
     /// deletion will be blocked and an ABORTED error will be returned.
     /// </summary>
@@ -1779,7 +1794,10 @@ namespace Google.Cloud.CertificateManager.V1 {
       labels_ = other.labels_.Clone();
       description_ = other.description_;
       etag_ = other.etag_;
+      spiffeTrustStores_ = other.spiffeTrustStores_.Clone();
       trustStores_ = other.trustStores_.Clone();
+      allowlistedCertificates_ = other.allowlistedCertificates_.Clone();
+      tags_ = other.tags_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1793,8 +1811,8 @@ namespace Google.Cloud.CertificateManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// A user-defined name of the trust config. TrustConfig names must be
-    /// unique globally and match pattern
+    /// Identifier. A user-defined name of the trust config. TrustConfig names must
+    /// be unique globally and match pattern
     /// `projects/*/locations/*/trustConfigs/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1842,7 +1860,7 @@ namespace Google.Cloud.CertificateManager.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Set of labels associated with a TrustConfig.
+    /// Optional. Set of labels associated with a TrustConfig.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1854,7 +1872,7 @@ namespace Google.Cloud.CertificateManager.V1 {
     public const int DescriptionFieldNumber = 5;
     private string description_ = "";
     /// <summary>
-    /// One or more paragraphs of text description of a TrustConfig.
+    /// Optional. One or more paragraphs of text description of a TrustConfig.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1882,13 +1900,28 @@ namespace Google.Cloud.CertificateManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "spiffe_trust_stores" field.</summary>
+    public const int SpiffeTrustStoresFieldNumber = 7;
+    private static readonly pbc::MapField<string, global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.TrustStore>.Codec _map_spiffeTrustStores_codec
+        = new pbc::MapField<string, global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.TrustStore>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.TrustStore.Parser), 58);
+    private readonly pbc::MapField<string, global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.TrustStore> spiffeTrustStores_ = new pbc::MapField<string, global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.TrustStore>();
+    /// <summary>
+    /// Optional. Defines a mapping from a trust domain to a TrustStore. This is
+    /// used for SPIFFE certificate validation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.TrustStore> SpiffeTrustStores {
+      get { return spiffeTrustStores_; }
+    }
+
     /// <summary>Field number for the "trust_stores" field.</summary>
     public const int TrustStoresFieldNumber = 8;
     private static readonly pb::FieldCodec<global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.TrustStore> _repeated_trustStores_codec
         = pb::FieldCodec.ForMessage(66, global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.TrustStore.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.TrustStore> trustStores_ = new pbc::RepeatedField<global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.TrustStore>();
     /// <summary>
-    /// Set of trust stores to perform validation against.
+    /// Optional. Set of trust stores to perform validation against.
     ///
     /// This field is supported when TrustConfig is configured with Load Balancers,
     /// currently not supported for SPIFFE certificate validation.
@@ -1899,6 +1932,40 @@ namespace Google.Cloud.CertificateManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.TrustStore> TrustStores {
       get { return trustStores_; }
+    }
+
+    /// <summary>Field number for the "allowlisted_certificates" field.</summary>
+    public const int AllowlistedCertificatesFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.AllowlistedCertificate> _repeated_allowlistedCertificates_codec
+        = pb::FieldCodec.ForMessage(74, global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.AllowlistedCertificate.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.AllowlistedCertificate> allowlistedCertificates_ = new pbc::RepeatedField<global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.AllowlistedCertificate>();
+    /// <summary>
+    /// Optional. A certificate matching an allowlisted certificate is always
+    /// considered valid as long as the certificate is parseable, proof of private
+    /// key possession is established, and constraints on the certificate's SAN
+    /// field are met.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.AllowlistedCertificate> AllowlistedCertificates {
+      get { return allowlistedCertificates_; }
+    }
+
+    /// <summary>Field number for the "tags" field.</summary>
+    public const int TagsFieldNumber = 10;
+    private static readonly pbc::MapField<string, string>.Codec _map_tags_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 82);
+    private readonly pbc::MapField<string, string> tags_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. Input only. Immutable. Tag keys/values directly bound to this
+    /// resource. For example:
+    ///   "123/environment": "production",
+    ///   "123/costCenter": "marketing"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Tags {
+      get { return tags_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1922,7 +1989,10 @@ namespace Google.Cloud.CertificateManager.V1 {
       if (!Labels.Equals(other.Labels)) return false;
       if (Description != other.Description) return false;
       if (Etag != other.Etag) return false;
+      if (!SpiffeTrustStores.Equals(other.SpiffeTrustStores)) return false;
       if(!trustStores_.Equals(other.trustStores_)) return false;
+      if(!allowlistedCertificates_.Equals(other.allowlistedCertificates_)) return false;
+      if (!Tags.Equals(other.Tags)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1936,7 +2006,10 @@ namespace Google.Cloud.CertificateManager.V1 {
       hash ^= Labels.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      hash ^= SpiffeTrustStores.GetHashCode();
       hash ^= trustStores_.GetHashCode();
+      hash ^= allowlistedCertificates_.GetHashCode();
+      hash ^= Tags.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1976,7 +2049,10 @@ namespace Google.Cloud.CertificateManager.V1 {
         output.WriteRawTag(50);
         output.WriteString(Etag);
       }
+      spiffeTrustStores_.WriteTo(output, _map_spiffeTrustStores_codec);
       trustStores_.WriteTo(output, _repeated_trustStores_codec);
+      allowlistedCertificates_.WriteTo(output, _repeated_allowlistedCertificates_codec);
+      tags_.WriteTo(output, _map_tags_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2008,7 +2084,10 @@ namespace Google.Cloud.CertificateManager.V1 {
         output.WriteRawTag(50);
         output.WriteString(Etag);
       }
+      spiffeTrustStores_.WriteTo(ref output, _map_spiffeTrustStores_codec);
       trustStores_.WriteTo(ref output, _repeated_trustStores_codec);
+      allowlistedCertificates_.WriteTo(ref output, _repeated_allowlistedCertificates_codec);
+      tags_.WriteTo(ref output, _map_tags_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2035,7 +2114,10 @@ namespace Google.Cloud.CertificateManager.V1 {
       if (Etag.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
+      size += spiffeTrustStores_.CalculateSize(_map_spiffeTrustStores_codec);
       size += trustStores_.CalculateSize(_repeated_trustStores_codec);
+      size += allowlistedCertificates_.CalculateSize(_repeated_allowlistedCertificates_codec);
+      size += tags_.CalculateSize(_map_tags_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2070,7 +2152,10 @@ namespace Google.Cloud.CertificateManager.V1 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
+      spiffeTrustStores_.MergeFrom(other.spiffeTrustStores_);
       trustStores_.Add(other.trustStores_);
+      allowlistedCertificates_.Add(other.allowlistedCertificates_);
+      tags_.MergeFrom(other.tags_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2120,8 +2205,20 @@ namespace Google.Cloud.CertificateManager.V1 {
             Etag = input.ReadString();
             break;
           }
+          case 58: {
+            spiffeTrustStores_.AddEntriesFrom(input, _map_spiffeTrustStores_codec);
+            break;
+          }
           case 66: {
             trustStores_.AddEntriesFrom(input, _repeated_trustStores_codec);
+            break;
+          }
+          case 74: {
+            allowlistedCertificates_.AddEntriesFrom(input, _repeated_allowlistedCertificates_codec);
+            break;
+          }
+          case 82: {
+            tags_.AddEntriesFrom(input, _map_tags_codec);
             break;
           }
         }
@@ -2173,8 +2270,20 @@ namespace Google.Cloud.CertificateManager.V1 {
             Etag = input.ReadString();
             break;
           }
+          case 58: {
+            spiffeTrustStores_.AddEntriesFrom(ref input, _map_spiffeTrustStores_codec);
+            break;
+          }
           case 66: {
             trustStores_.AddEntriesFrom(ref input, _repeated_trustStores_codec);
+            break;
+          }
+          case 74: {
+            allowlistedCertificates_.AddEntriesFrom(ref input, _repeated_allowlistedCertificates_codec);
+            break;
+          }
+          case 82: {
+            tags_.AddEntriesFrom(ref input, _map_tags_codec);
             break;
           }
         }
@@ -2743,7 +2852,7 @@ namespace Google.Cloud.CertificateManager.V1 {
             = pb::FieldCodec.ForMessage(10, global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.TrustAnchor.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.TrustAnchor> trustAnchors_ = new pbc::RepeatedField<global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.TrustAnchor>();
         /// <summary>
-        /// List of Trust Anchors to be used while performing validation
+        /// Optional. List of Trust Anchors to be used while performing validation
         /// against a given TrustStore.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2758,7 +2867,7 @@ namespace Google.Cloud.CertificateManager.V1 {
             = pb::FieldCodec.ForMessage(18, global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.IntermediateCA.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.IntermediateCA> intermediateCas_ = new pbc::RepeatedField<global::Google.Cloud.CertificateManager.V1.TrustConfig.Types.IntermediateCA>();
         /// <summary>
-        /// Set of intermediate CA certificates used for the path building
+        /// Optional. Set of intermediate CA certificates used for the path building
         /// phase of chain validation.
         ///
         /// The field is currently not supported if TrustConfig is used for the
@@ -2906,6 +3015,211 @@ namespace Google.Cloud.CertificateManager.V1 {
               }
               case 18: {
                 intermediateCas_.AddEntriesFrom(ref input, _repeated_intermediateCas_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Defines an allowlisted certificate.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class AllowlistedCertificate : pb::IMessage<AllowlistedCertificate>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AllowlistedCertificate> _parser = new pb::MessageParser<AllowlistedCertificate>(() => new AllowlistedCertificate());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AllowlistedCertificate> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.CertificateManager.V1.TrustConfig.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AllowlistedCertificate() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AllowlistedCertificate(AllowlistedCertificate other) : this() {
+          pemCertificate_ = other.pemCertificate_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AllowlistedCertificate Clone() {
+          return new AllowlistedCertificate(this);
+        }
+
+        /// <summary>Field number for the "pem_certificate" field.</summary>
+        public const int PemCertificateFieldNumber = 1;
+        private string pemCertificate_ = "";
+        /// <summary>
+        /// Required. PEM certificate that is allowlisted. The certificate can be up
+        /// to 5k bytes, and must be a parseable X.509 certificate.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string PemCertificate {
+          get { return pemCertificate_; }
+          set {
+            pemCertificate_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AllowlistedCertificate);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AllowlistedCertificate other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (PemCertificate != other.PemCertificate) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (PemCertificate.Length != 0) hash ^= PemCertificate.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (PemCertificate.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(PemCertificate);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (PemCertificate.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(PemCertificate);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (PemCertificate.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PemCertificate);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AllowlistedCertificate other) {
+          if (other == null) {
+            return;
+          }
+          if (other.PemCertificate.Length != 0) {
+            PemCertificate = other.PemCertificate;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                PemCertificate = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                PemCertificate = input.ReadString();
                 break;
               }
             }
