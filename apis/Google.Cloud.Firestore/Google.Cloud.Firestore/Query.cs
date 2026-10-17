@@ -794,7 +794,7 @@ namespace Google.Cloud.Firestore
             {
                 request.Transaction = transactionId;
             }
-            var settings = CallSettings.FromCancellationToken(cancellationToken);
+            var settings = FirestoreDb.CreateCallSettings(cancellationToken, transactionId);
             using var response = Database.Client.RunQuery(request, settings);
             IAsyncEnumerable<RunQueryResponse> stream = response.GetResponseStream();
             await foreach (var result in stream.ConfigureAwait(false))

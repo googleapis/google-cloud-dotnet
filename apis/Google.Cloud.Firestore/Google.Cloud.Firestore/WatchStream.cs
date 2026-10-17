@@ -76,7 +76,8 @@ namespace Google.Cloud.Firestore
 
 #pragma warning disable CS0618 // Type or member is obsolete
             // TODO(b/320595510): Use x-goog-request-params (which will be easier after a new GAX release)
-            _listenCallSettings = CallSettings.FromHeader(FirestoreClientImpl.ResourcePrefixHeader, db.RootPath);
+            _listenCallSettings = CallSettings.FromHeader(FirestoreClientImpl.ResourcePrefixHeader, db.RootPath)
+                .WithHeader(FirestoreDb.TransactionHeader, "false");
 #pragma warning restore CS0618 // Type or member is obsolete
 
             // TODO: Make these configurable?
