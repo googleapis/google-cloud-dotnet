@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -23,6 +23,19 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.ClassMethod
 
     namespace MethodRemoved.A { public class C { public void A() { } } }
     namespace MethodRemoved.B { public class C { } }
+
+    namespace MethodRemovedFromAncestor.AParent { public class C { public void A() { } } }
+    namespace MethodRemovedFromAncestor.A { public class C : AParent.C { } }
+    namespace MethodRemovedFromAncestor.BParent { public class C { } }
+    namespace MethodRemovedFromAncestor.B { public class C : BParent.C { } }
+
+    namespace MethodRemovedWithAncestorImplementation.Virtual { public class C { public virtual void A() { } } }
+    namespace MethodRemovedWithAncestorImplementation.A { public class C : Virtual.C { public override void A() { } } }
+    namespace MethodRemovedWithAncestorImplementation.B { public class C : Virtual.C { } }
+
+    namespace MethodMovedToParent.Parent { public class C { public virtual void A() => _ = 0; } }
+    namespace MethodMovedToParent.A { public class C { public virtual void A() => _ = 0; } }
+    namespace MethodMovedToParent.B { public class C : Parent.C { } }
 
     namespace MethodMadeExported.A { public class C { private void A() { } } }
     namespace MethodMadeExported.B { public class C { protected internal void A() { } } }
@@ -119,6 +132,9 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.ClassMethod
     {
         [Fact] public void MethodAdded() => TestMinor(Cause.MethodAdded);
         [Fact] public void MethodRemoved() => TestMajor(Cause.MethodRemoved);
+        [Fact] public void MethodRemovedFromAncestor() => TestMajor(Cause.ClassBaseClassChanged);
+        [Fact] public void MethodRemovedWithAncestorImplementation() => TestNone();
+        [Fact] public void MethodMovedToParent() => TestMinor(Cause.ClassBaseClassChanged);
         [Fact] public void MethodMadeExported() => TestMinor(Cause.MethodMadeExported);
         [Fact] public void MethodMadeNotExported() => TestMajor(Cause.MethodMadeNotExported);
         [Fact] public void ReturnTypeChanged1() => TestMajor(Cause.MethodReturnTypeChanged);
