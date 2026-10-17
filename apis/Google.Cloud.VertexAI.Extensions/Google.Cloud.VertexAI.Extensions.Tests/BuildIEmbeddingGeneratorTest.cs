@@ -17,6 +17,7 @@ using Grpc.Core;
 using Microsoft.Extensions.AI;
 using System;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 using Value = Google.Protobuf.WellKnownTypes.Value;
@@ -102,6 +103,26 @@ public class BuildIEmbeddingGeneratorTest
         Assert.NotNull(result);
         Assert.Single(result);
         Assert.Equal([0.1f, 0.2f, 0.3f], result[0].Vector.ToArray());
+    }
+
+    [Fact]
+    public async Task IEmbeddingGenerator_GenerateAsync_PassesCancellationToken()
+    {
+        DelegateCallInvoker invoker = new()
+        {
+            OnPredictRequest = request =>
+            {
+                PredictResponse response = new();
+                response.Predictions.Add(CreateEmbeddingPrediction([0.1f, 0.2f, 0.3f]));
+                return response;
+            }
+        };
+
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClientBuilder(invoker).BuildIEmbeddingGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+
+        using CancellationTokenSource cts = new();
+        await embeddingGenerator.GenerateAsync(["Hello"], cancellationToken: cts.Token);
+        Assert.Equal(cts.Token, invoker.LastCallOptions.CancellationToken);
     }
 
     [Fact]
@@ -661,8 +682,12 @@ public class BuildIEmbeddingGeneratorTest
     {
         public Func<PredictRequest, PredictResponse>? OnPredictRequest { get; set; }
 
+        public CallOptions LastCallOptions { get; private set; }
+
         public override AsyncUnaryCall<TResponse> AsyncUnaryCall<TRequest, TResponse>(Method<TRequest, TResponse> method, string? host, CallOptions options, TRequest request)
         {
+            LastCallOptions = options;
+
             if (OnPredictRequest is null)
             {
                 throw new NotSupportedException($"{nameof(AsyncUnaryCall)} was invoked but no {nameof(OnPredictRequest)} was provided.");

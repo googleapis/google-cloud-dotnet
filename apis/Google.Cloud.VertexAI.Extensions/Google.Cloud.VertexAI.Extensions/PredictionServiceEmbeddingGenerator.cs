@@ -77,7 +77,7 @@ internal sealed class PredictionServiceEmbeddingGenerator(PredictionServiceClien
         }
 
         // Make the request.
-        PredictResponse response = await _client.PredictAsync(request).ConfigureAwait(false);
+        PredictResponse response = await _client.PredictAsync(request, cancellationToken).ConfigureAwait(false);
 
         // Parse the response into a GeneratedEmbeddings instance.
         GeneratedEmbeddings<Embedding<float>> result = [];

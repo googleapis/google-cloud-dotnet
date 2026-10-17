@@ -100,7 +100,7 @@ internal sealed class PredictionServiceImageGenerator(PredictionServiceClient cl
         // Make the request.
         predictRequest.Instances.Add(new Value { StructValue = instances });
         predictRequest.Parameters = new() { StructValue = parameters };
-        PredictResponse response = await _client.PredictAsync(predictRequest).ConfigureAwait(false);
+        PredictResponse response = await _client.PredictAsync(predictRequest, cancellationToken).ConfigureAwait(false);
 
         // Parse the response into a ImageGenerationResponse instance.
         ImageGenerationResponse result = new()
