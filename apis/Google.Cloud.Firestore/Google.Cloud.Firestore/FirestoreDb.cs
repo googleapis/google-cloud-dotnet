@@ -40,6 +40,14 @@ namespace Google.Cloud.Firestore
 
         private const string DefaultDatabaseId = "(default)";
 
+        internal const string TransactionHeader = "x-goog-is-transaction";
+
+        internal static CallSettings CreateCallSettings(CancellationToken cancellationToken, bool isTransaction) =>
+            CallSettings.FromCancellationToken(cancellationToken).WithHeader(TransactionHeader, isTransaction ? "true" : "false");
+
+        internal static CallSettings CreateCallSettings(CancellationToken cancellationToken, ByteString transactionId) =>
+            CreateCallSettings(cancellationToken, transactionId is not null && !transactionId.IsEmpty);
+
         /// <summary>
         /// The underlying client used to make service requests.
         /// </summary>
@@ -294,7 +302,9 @@ namespace Google.Cloud.Firestore
 
             var clock = Client.Settings.Clock ?? SystemClock.Instance;
             var scheduler = Client.Settings.Scheduler ?? SystemScheduler.Instance;
-            var callSettings = Client.Settings.BatchGetDocumentsSettings.WithCancellationToken(cancellationToken);
+            var callSettings = Client.Settings.BatchGetDocumentsSettings
+                .WithCancellationToken(cancellationToken)
+                .WithHeader(TransactionHeader, transactionId is not null && !transactionId.IsEmpty ? "true" : "false");
 
             // This is the function that we'll retry. We can't use the built-in retry functionality, because it's not a unary gRPC call.
             // (We could potentially simulate a unary call, but it would be a little odd to do so.)
@@ -348,7 +358,7 @@ namespace Google.Cloud.Firestore
         public IAsyncEnumerable<CollectionReference> ListRootCollectionsAsync() => ListCollectionsAsync(null);
 
         internal IAsyncEnumerable<CollectionReference> ListCollectionsAsync(DocumentReference parent) =>
-            Client.ListCollectionIdsAsync(parent?.Path ?? DocumentsPath)
+            Client.ListCollectionIdsAsync(parent?.Path ?? DocumentsPath, callSettings: CreateCallSettings(default, isTransaction: false))
                 .Select(id => new CollectionReference(this, parent, id));
 
         // TODO: Is it appropriate to use ConfigureAwait(false) here? Should the caller be able to specify the context for executing their callback?

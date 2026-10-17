@@ -223,7 +223,7 @@ namespace Google.Cloud.Firestore
         internal async Task<IList<WriteResult>> CommitAsync(ByteString transactionId, CancellationToken cancellationToken)
         {
             var request = new CommitRequest { Database = _db.RootPath, Writes = { Writes }, Transaction = transactionId };
-            var response = await _db.Client.CommitAsync(request, CallSettings.FromCancellationToken(cancellationToken)).ConfigureAwait(false);
+            var response = await _db.Client.CommitAsync(request, FirestoreDb.CreateCallSettings(cancellationToken, transactionId)).ConfigureAwait(false);
             return response.WriteResults
                 .Select(wr => WriteResult.FromProto(wr, response.CommitTime))
                 .ToList();

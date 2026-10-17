@@ -94,6 +94,7 @@ public class AggregateQueryTest
         Assert.Equal(Timestamp.FromProto(sampleReadTime), snapshot.ReadTime);
         // We didn't provide a count in the response.
         Assert.Null(snapshot.Count);
+        mock.Received(1).RunAggregationQuery(request, Arg.Is<CallSettings>(cs => TransactionTestingClient.HasTransactionHeader(cs, false)));
     }
 
     [Fact]
@@ -146,6 +147,7 @@ public class AggregateQueryTest
         Assert.Equal(5, snapshot.GetValue<int>("Count"));
         Assert.Equal(20, snapshot.GetValue<int>("Sum_Score"));
         Assert.Equal(2.5, snapshot.GetValue<double>("AverageLevel"));
+        mock.Received(1).RunAggregationQuery(request, Arg.Is<CallSettings>(cs => TransactionTestingClient.HasTransactionHeader(cs, false)));
     }
 
     [Fact]

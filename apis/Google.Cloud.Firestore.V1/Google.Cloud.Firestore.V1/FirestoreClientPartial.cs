@@ -55,41 +55,100 @@ namespace Google.Cloud.Firestore.V1
             "This constant will be removed in a future version")]
         public const string ResourcePrefixHeader = "google-cloud-resource-prefix";
 
-        partial void Modify_BatchGetDocumentsRequest(ref BatchGetDocumentsRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeader(ref settings, request.Database);
+        internal const string TransactionHeader = "x-goog-is-transaction";
 
-        partial void Modify_BeginTransactionRequest(ref BeginTransactionRequest request, ref CallSettings settings) =>
+        partial void Modify_BatchGetDocumentsRequest(ref BatchGetDocumentsRequest request, ref CallSettings settings)
+        {
             ApplyResourcePrefixHeader(ref settings, request.Database);
+            ApplyTransactionHeader(ref settings, !request.Transaction.IsEmpty || request.NewTransaction != null);
+        }
 
-        partial void Modify_CommitRequest(ref CommitRequest request, ref CallSettings settings) =>
+        partial void Modify_BeginTransactionRequest(ref BeginTransactionRequest request, ref CallSettings settings)
+        {
             ApplyResourcePrefixHeader(ref settings, request.Database);
+            ApplyTransactionHeader(ref settings, true);
+        }
 
-        partial void Modify_CreateDocumentRequest(ref CreateDocumentRequest request, ref CallSettings settings) =>
+        partial void Modify_CommitRequest(ref CommitRequest request, ref CallSettings settings)
+        {
+            ApplyResourcePrefixHeader(ref settings, request.Database);
+            ApplyTransactionHeader(ref settings, !request.Transaction.IsEmpty);
+        }
+
+        partial void Modify_CreateDocumentRequest(ref CreateDocumentRequest request, ref CallSettings settings)
+        {
             ApplyResourcePrefixHeader(ref settings, request.Parent);
+            ApplyTransactionHeader(ref settings, false);
+        }
 
-        partial void Modify_DeleteDocumentRequest(ref DeleteDocumentRequest request, ref CallSettings settings) =>
+        partial void Modify_DeleteDocumentRequest(ref DeleteDocumentRequest request, ref CallSettings settings)
+        {
             ApplyResourcePrefixHeader(ref settings, request.Name);
+            ApplyTransactionHeader(ref settings, false);
+        }
 
-        partial void Modify_GetDocumentRequest(ref GetDocumentRequest request, ref CallSettings settings) =>
+        partial void Modify_GetDocumentRequest(ref GetDocumentRequest request, ref CallSettings settings)
+        {
             ApplyResourcePrefixHeader(ref settings, request.Name);
+            ApplyTransactionHeader(ref settings, !request.Transaction.IsEmpty);
+        }
 
-        partial void Modify_ListCollectionIdsRequest(ref ListCollectionIdsRequest request, ref CallSettings settings) =>
+        partial void Modify_ListCollectionIdsRequest(ref ListCollectionIdsRequest request, ref CallSettings settings)
+        {
             ApplyResourcePrefixHeader(ref settings, request.Parent);
+            ApplyTransactionHeader(ref settings, false);
+        }
 
-        partial void Modify_ListDocumentsRequest(ref ListDocumentsRequest request, ref CallSettings settings) =>
+        partial void Modify_ListDocumentsRequest(ref ListDocumentsRequest request, ref CallSettings settings)
+        {
             ApplyResourcePrefixHeader(ref settings, request.Parent);
+            ApplyTransactionHeader(ref settings, !request.Transaction.IsEmpty);
+        }
 
-        partial void Modify_RollbackRequest(ref RollbackRequest request, ref CallSettings settings) =>
+        partial void Modify_RollbackRequest(ref RollbackRequest request, ref CallSettings settings)
+        {
             ApplyResourcePrefixHeader(ref settings, request.Database);
+            ApplyTransactionHeader(ref settings, true);
+        }
 
-        partial void Modify_RunQueryRequest(ref RunQueryRequest request, ref CallSettings settings) =>
+        partial void Modify_RunQueryRequest(ref RunQueryRequest request, ref CallSettings settings)
+        {
             ApplyResourcePrefixHeader(ref settings, request.Parent);
+            ApplyTransactionHeader(ref settings, !request.Transaction.IsEmpty || request.NewTransaction != null);
+        }
 
-        partial void Modify_RunAggregationQueryRequest(ref RunAggregationQueryRequest request, ref CallSettings settings) =>
+        partial void Modify_RunAggregationQueryRequest(ref RunAggregationQueryRequest request, ref CallSettings settings)
+        {
             ApplyResourcePrefixHeader(ref settings, request.Parent);
+            ApplyTransactionHeader(ref settings, !request.Transaction.IsEmpty || request.NewTransaction != null);
+        }
 
-        partial void Modify_UpdateDocumentRequest(ref UpdateDocumentRequest request, ref CallSettings settings) =>
+        partial void Modify_UpdateDocumentRequest(ref UpdateDocumentRequest request, ref CallSettings settings)
+        {
             ApplyResourcePrefixHeader(ref settings, request.Document?.Name);
+            ApplyTransactionHeader(ref settings, false);
+        }
+
+        partial void Modify_ExecutePipelineRequest(ref ExecutePipelineRequest request, ref CallSettings settings) =>
+            ApplyTransactionHeader(ref settings, !request.Transaction.IsEmpty || request.NewTransaction != null);
+
+        partial void Modify_PartitionQueryRequest(ref PartitionQueryRequest request, ref CallSettings settings) =>
+            ApplyTransactionHeader(ref settings, false);
+
+        partial void Modify_BatchWriteRequest(ref BatchWriteRequest request, ref CallSettings settings) =>
+            ApplyTransactionHeader(ref settings, false);
+
+        partial void Modify_WriteRequestCallSettings(ref CallSettings settings) =>
+            ApplyTransactionHeader(ref settings, false);
+
+        partial void Modify_ListenRequestCallSettings(ref CallSettings settings) =>
+            ApplyTransactionHeader(ref settings, false);
+
+        internal static void ApplyTransactionHeader(ref CallSettings settings, bool isTransaction)
+        {
+            string value = isTransaction ? "true" : "false";
+            settings = settings.WithHeader(TransactionHeader, value);
+        }
 
         private static void ApplyResourcePrefixHeader(ref CallSettings settings, string resource)
         {
