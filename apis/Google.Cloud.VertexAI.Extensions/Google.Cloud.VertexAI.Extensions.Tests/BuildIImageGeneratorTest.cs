@@ -18,6 +18,7 @@ using Grpc.Core;
 using Microsoft.Extensions.AI;
 using System;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 using Value = Google.Protobuf.WellKnownTypes.Value;
@@ -106,6 +107,28 @@ public class BuildIImageGeneratorTest
         DataContent dataContent = Assert.IsType<DataContent>(result.Contents[0]);
         Assert.Equal("image/png", dataContent.MediaType);
         Assert.Equal(imageData, dataContent.Data.ToArray());
+    }
+
+    [Fact]
+    public async Task IImageGenerator_GenerateAsync_PassesCancellationToken()
+    {
+        byte[] imageData = Convert.FromBase64String("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==");
+
+        DelegateCallInvoker invoker = new()
+        {
+            OnPredictRequest = request =>
+            {
+                PredictResponse response = new();
+                response.Predictions.Add(CreateImagePrediction(imageData, "image/png"));
+                return response;
+            }
+        };
+
+        IImageGenerator imageGenerator = CreateClientBuilder(invoker).BuildIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+
+        using CancellationTokenSource cts = new();
+        await imageGenerator.GenerateAsync(new ImageGenerationRequest { Prompt = "A beautiful sunset" }, cancellationToken: cts.Token);
+        Assert.Equal(cts.Token, invoker.LastCallOptions.CancellationToken);
     }
 
     [Fact]
@@ -756,8 +779,12 @@ public class BuildIImageGeneratorTest
     {
         public Func<PredictRequest, PredictResponse>? OnPredictRequest { get; set; }
 
+        public CallOptions LastCallOptions { get; private set; }
+
         public override AsyncUnaryCall<TResponse> AsyncUnaryCall<TRequest, TResponse>(Method<TRequest, TResponse> method, string? host, CallOptions options, TRequest request)
         {
+            LastCallOptions = options;
+
             if (OnPredictRequest is null)
             {
                 throw new NotSupportedException($"{nameof(AsyncUnaryCall)} was invoked but no {nameof(OnPredictRequest)} was provided.");
