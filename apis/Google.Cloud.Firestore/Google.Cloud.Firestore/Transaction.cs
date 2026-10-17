@@ -61,7 +61,7 @@ namespace Google.Cloud.Firestore
                 Database = db.RootPath,
                 Options = previousTransactionId == null ? null : new V1.TransactionOptions { ReadWrite = new ReadWrite { RetryTransaction = previousTransactionId } }
             };
-            var response = await db.Client.BeginTransactionAsync(request, CallSettings.FromCancellationToken(cancellationToken)).ConfigureAwait(false);
+            var response = await db.Client.BeginTransactionAsync(request, FirestoreDb.CreateCallSettings(cancellationToken, isTransaction: true)).ConfigureAwait(false);
             return new Transaction(db, response.Transaction, cancellationToken);
         }
 
@@ -230,7 +230,7 @@ namespace Google.Cloud.Firestore
         /// </summary>
         /// <returns>A task representing the asynchronous operation.</returns>
         internal Task RollbackAsync() =>
-            Database.Client.RollbackAsync(Database.RootPath, TransactionId, CancellationToken);
+            Database.Client.RollbackAsync(Database.RootPath, TransactionId, FirestoreDb.CreateCallSettings(CancellationToken, isTransaction: true));
 
         /// <summary>
         /// Selects the effective cancellation token to use for a read operation, creating a linked token source only if both

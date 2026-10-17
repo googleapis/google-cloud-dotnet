@@ -779,7 +779,7 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Same(query, snapshot.Query);
             Assert.Equal(new Timestamp(1, 2), snapshot.ReadTime);
 
-            mock.Received(1).RunQuery(request, Arg.Any<CallSettings>());
+            mock.Received(1).RunQuery(request, Arg.Is<CallSettings>(cs => TransactionTestingClient.HasTransactionHeader(cs, false)));
         }
 
         [Fact]
@@ -843,7 +843,7 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(new Timestamp(0, 3), doc2.CreateTime);
             Assert.Equal(new Timestamp(0, 4), doc2.UpdateTime);
             Assert.Equal("x", doc1.GetValue<string>("Name"));
-            mock.Received(1).RunQuery(request, Arg.Any<CallSettings>());
+            mock.Received(1).RunQuery(request, Arg.Is<CallSettings>(cs => TransactionTestingClient.HasTransactionHeader(cs, false)));
         }
 
         [Fact]
@@ -931,7 +931,7 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(new Timestamp(0, 3), doc2.CreateTime);
             Assert.Equal(new Timestamp(0, 4), doc2.UpdateTime);
             Assert.Equal("x", doc1.GetValue<string>("Name"));
-            mock.Received(1).RunQuery(request, Arg.Any<CallSettings>());
+            mock.Received(1).RunQuery(request, Arg.Is<CallSettings>(cs => TransactionTestingClient.HasTransactionHeader(cs, true)));
         }
 
         [Fact]

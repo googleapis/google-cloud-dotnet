@@ -15,11 +15,13 @@
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Xunit;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
 using WKT = Google.Protobuf.WellKnownTypes;
 
@@ -77,6 +79,7 @@ namespace Google.Cloud.Firestore.Tests
 
         public override RunQueryStream RunQuery(RunQueryRequest request, CallSettings callSettings = null)
         {
+            AssertTransactionHeader(callSettings, !request.Transaction.IsEmpty || request.NewTransaction != null);
             // Don't return any documents, but a response that lets us check the transaction was propagated.
             var response = new RunQueryResponse { ReadTime = GetNextTimestamp() };
             if (request.ConsistencySelectorCase == RunQueryRequest.ConsistencySelectorOneofCase.Transaction)
@@ -88,6 +91,7 @@ namespace Google.Cloud.Firestore.Tests
 
         public override RunAggregationQueryStream RunAggregationQuery(RunAggregationQueryRequest request, CallSettings callSettings = null)
         {
+            AssertTransactionHeader(callSettings, !request.Transaction.IsEmpty || request.NewTransaction != null);
             var response = new RunAggregationQueryResponse { ReadTime = GetNextTimestamp(), Result = new AggregationResult() };
             if (request.ConsistencySelectorCase == RunAggregationQueryRequest.ConsistencySelectorOneofCase.Transaction)
             {
@@ -98,6 +102,7 @@ namespace Google.Cloud.Firestore.Tests
 
         public override BatchGetDocumentsStream BatchGetDocuments(BatchGetDocumentsRequest request, CallSettings callSettings = null)
         {
+            AssertTransactionHeader(callSettings, !request.Transaction.IsEmpty || request.NewTransaction != null);
             string transaction = request.ConsistencySelectorCase == BatchGetDocumentsRequest.ConsistencySelectorOneofCase.Transaction ?
                 request.Transaction.ToStringUtf8() : "no transaction";
             // Fake documents that show which transaction was being used.
@@ -117,6 +122,7 @@ namespace Google.Cloud.Firestore.Tests
 
         public override BeginTransactionResponse BeginTransaction(BeginTransactionRequest request, CallSettings callSettings = null)
         {
+            AssertTransactionHeader(callSettings, true);
             int id = Interlocked.Increment(ref _transactions);
             string text = $"transaction {id}";
             ByteString retry = request.Options?.ReadWrite?.RetryTransaction;
@@ -131,6 +137,7 @@ namespace Google.Cloud.Firestore.Tests
 
         public override CommitResponse Commit(CommitRequest request, CallSettings callSettings = null)
         {
+            AssertTransactionHeader(callSettings, !request.Transaction.IsEmpty);
             lock (CommitRequests)
             {
                 CommitRequests.Add(request);
@@ -149,11 +156,27 @@ namespace Google.Cloud.Firestore.Tests
 
         public override void Rollback(RollbackRequest request, CallSettings callSettings = null)
         {
+            AssertTransactionHeader(callSettings, true);
             lock (RollbackRequests)
             {
                 RollbackRequests.Add(request);
             }
         }
+
+        internal static bool HasTransactionHeader(CallSettings callSettings, bool expectedIsTransaction)
+        {
+            if (callSettings is null)
+            {
+                return false;
+            }
+            var metadata = new Metadata();
+            callSettings.HeaderMutation?.Invoke(metadata);
+            var entries = metadata.Where(e => e.Key == FirestoreDb.TransactionHeader).ToList();
+            return entries.Count == 1 && entries[0].Value == (expectedIsTransaction ? "true" : "false");
+        }
+
+        internal static void AssertTransactionHeader(CallSettings callSettings, bool expectedIsTransaction) =>
+            Assert.True(HasTransactionHeader(callSettings, expectedIsTransaction));
 
         private WKT::Timestamp GetNextTimestamp() => CreateProtoTimestamp(0, Interlocked.Increment(ref _nanos));
     }
