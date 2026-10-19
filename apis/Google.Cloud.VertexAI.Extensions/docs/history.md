@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta09, released 2026-10-19
+
+### Bug fixes
+
+- Pass the cancellation token to Predict in the embedding and image generators
+- Keep all citations in PredictionServiceChatClient responses
+
 ## Version 1.0.0-beta08, released 2026-05-11
 
 ### New features
