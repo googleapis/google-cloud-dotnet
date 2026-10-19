@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Grpc.Core;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -62,15 +61,9 @@ namespace Google.Cloud.Firestore.IntegrationTests
                     new object[] { "a", "b" }
                 }
             };
-            var reference = await collection.AddAsync(objectWithNestedArray);
-
-            var snapshot = await reference.GetSnapshotAsync();
-            Assert.True(snapshot.Exists);
-            var dictionary = snapshot.ToDictionary();
-            Assert.Equal("Test nested array", dictionary["Name"]);
-            var array = Assert.IsType<List<object>>(dictionary["Array"]);
-            Assert.Equal(new object[] { 1L, 2L }, Assert.IsType<List<object>>(array[0]));
-            Assert.Equal(new object[] { "a", "b" }, Assert.IsType<List<object>>(array[1]));
+            // Even though we now permit nested arrays locally for convenience, the server still
+            // prohibits it.
+            await Assert.ThrowsAsync<RpcException>(() => collection.AddAsync(objectWithNestedArray));
         }
     }
 }
