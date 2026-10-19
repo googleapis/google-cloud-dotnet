@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.22.0, released 2026-10-19
+
+### New features
+
+- Expose approval_config on BuildTrigger in Cloud Build v1
+
 ## Version 2.21.0, released 2026-10-12
 
 ### New features
