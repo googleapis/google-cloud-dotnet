@@ -1,5 +1,21 @@
 # Version history
 
+## Version 2.10.0, released 2026-10-19
+
+### New features
+
+- Add Troubleshooting info to a Managed Certificate
+- Add UsedBy info to a Certificate
+- Add ManagedIdentityCertificate Certificate type
+- Add support for PER_PROJECT_RECORD DNS Authorizations
+- Add UpdateCertificateIssuanceConfig method
+- Add support for tags
+- Add support for AllowlistedCertificate in Trust Configs
+
+### Documentation improvements
+
+- Minor docs upates
+
 ## Version 2.9.0, released 2025-11-05
 
 ### New features
