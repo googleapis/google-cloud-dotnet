@@ -5256,6 +5256,18 @@
             "sourcePaths": [
                 "apis/Google.Shopping.Merchant.Reviews.V1/Google.Shopping.Merchant.Reviews.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.Observability.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/observability/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.Observability.V1/Google.Cloud.Observability.V1"
+            ]
         }
     ],
     "ignoredApiPaths": [

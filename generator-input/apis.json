@@ -4543,6 +4543,26 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.Observability.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Observability",
+      "productUrl": "https://cloud.google.com/stackdriver/docs/",
+      "description": "Provides functionality for configuring the observability scope, which controls the log, metric, and trace data that you can view.",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/observability/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "observability",
+      "serviceConfigFile": "observability_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Optimization.V1",
       "version": "2.7.0",
       "type": "grpc",
