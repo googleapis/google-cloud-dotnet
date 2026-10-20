@@ -533,7 +533,7 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
 
             if (part is not null)
             {
-                if (thoughtSignature is not null && part.ThoughtSignature.IsEmpty)
+                if (thoughtSignature is not null && (part.ThoughtSignature?.IsEmpty ?? true))
                 {
                     part.ThoughtSignature = ByteString.CopyFrom(thoughtSignature);
                 }
