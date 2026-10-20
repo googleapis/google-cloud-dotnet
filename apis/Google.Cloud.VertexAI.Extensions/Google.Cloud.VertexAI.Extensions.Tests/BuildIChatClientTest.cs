@@ -1043,6 +1043,40 @@ public class BuildIChatClientTest
     }
 
     [Fact]
+    public async Task IChatClient_GetResponseAsync_SendsThoughtSignatureOfTextContent()
+    {
+        string reasoningData = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes("signature"));
+
+        DelegateCallInvoker invoker = new()
+        {
+            OnGenerateContentRequest = request =>
+            {
+                Assert.Equal(2, request.Contents.Count);
+
+                // The signature that followed the text is sent with the text part.
+                Assert.Equal("model", request.Contents[1].Role);
+                Assert.Single(request.Contents[1].Parts);
+                Part textPart = request.Contents[1].Parts[0];
+                Assert.Equal("Answer", textPart.Text);
+                Assert.Equal(ByteString.FromBase64(reasoningData), textPart.ThoughtSignature);
+
+                return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "OK" } } });
+            }
+        };
+
+        IChatClient chatClient = CreateClientBuilder(invoker).BuildIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+
+        ChatMessage[] messages =
+        [
+            new(ChatRole.User, "Question"),
+            new(ChatRole.Assistant, [new TextContent("Answer"), new TextReasoningContent(null) { ProtectedData = reasoningData }])
+        ];
+
+        ChatResponse result = await chatClient.GetResponseAsync(messages);
+        Assert.NotNull(result);
+    }
+
+    [Fact]
     public async Task IChatClient_GetResponseAsync_SendsFunctionCallContent_WithoutThoughtSignature()
     {
         DelegateCallInvoker invoker = new()
