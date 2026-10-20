@@ -884,6 +884,16 @@ namespace Google.Cloud.Dialogflow.V2
         }
     }
 
+    public partial class AutomatedAgentReply
+    {
+        /// <summary><see cref="IntentName"/>-typed view over the <see cref="Intent"/> resource name property.</summary>
+        public IntentName IntentAsIntentName
+        {
+            get => string.IsNullOrEmpty(Intent) ? null : IntentName.Parse(Intent, allowUnparsed: true);
+            set => Intent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class SmartReplyAnswer
     {
         /// <summary>
