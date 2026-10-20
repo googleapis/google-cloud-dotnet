@@ -1,53 +1,5 @@
 [
   {
-    "method": "ListProcessors",
-    "client": "AppPlatformClient",
-    "skip": "b/575851186",
-    "arguments": {
-      "parent": "projects/${PROJECT_ID}/locations/us-central1"
-    }
-  },
-  {
-    "method": "ListPrebuiltProcessors",
-    "client": "AppPlatformClient",
-    "skip": "b/568491847",
-    "arguments": {
-      "parent": "projects/${PROJECT_ID}/locations/us-central1"
-    }
-  },
-  {
-    "method": "ListApplications",
-    "client": "AppPlatformClient",
-    "skip": "b/568491847",
-    "arguments": {
-      "parent": "projects/${PROJECT_ID}/locations/us-central1"
-    }
-  },
-  {
-    "method": "ListPublicOperators",
-    "client": "LiveVideoAnalyticsClient",
-    "skip": "b/568491847",
-    "arguments": {
-      "parent": "projects/${PROJECT_ID}/locations/us-central1"
-    }
-  },
-  {
-    "method": "ListOperators",
-    "client": "LiveVideoAnalyticsClient",
-    "skip": "b/568491847",
-    "arguments": {
-      "parent": "projects/${PROJECT_ID}/locations/us-central1"
-    }
-  },
-  {
-    "method": "ListClusters",
-    "client": "StreamsServiceClient",
-    "skip": "b/568491847",
-    "arguments": {
-      "parent": "projects/${PROJECT_ID}/locations/us-central1"
-    }
-  },
-  {
     "method": "ListIndexEndpoints",
     "client": "WarehouseClient",
     "skip": "b/362345975",
