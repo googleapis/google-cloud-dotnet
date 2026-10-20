@@ -1,0 +1,1001 @@
+{
+  "clientLibrary": {
+    "name": "Google.Shopping.Merchant.Reviews.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.shopping.merchant.reviews.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "merchantapi_v1_generated_ProductReviewsService_GetProductReview_sync",
+      "title": "GetProductReviewRequestObject",
+      "description": "Snippet for GetProductReview",
+      "file": "ProductReviewsServiceClient.GetProductReviewRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProductReview",
+        "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient.GetProductReview",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Reviews.V1.GetProductReviewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Reviews.V1.ProductReview",
+        "client": {
+          "shortName": "ProductReviewsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient"
+        },
+        "method": {
+          "shortName": "GetProductReview",
+          "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService.GetProductReview",
+          "service": {
+            "shortName": "ProductReviewsService",
+            "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_ProductReviewsService_GetProductReview_async",
+      "title": "GetProductReviewRequestObjectAsync",
+      "description": "Snippet for GetProductReviewAsync",
+      "file": "ProductReviewsServiceClient.GetProductReviewRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProductReviewAsync",
+        "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient.GetProductReviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Reviews.V1.GetProductReviewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Reviews.V1.ProductReview>",
+        "client": {
+          "shortName": "ProductReviewsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient"
+        },
+        "method": {
+          "shortName": "GetProductReview",
+          "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService.GetProductReview",
+          "service": {
+            "shortName": "ProductReviewsService",
+            "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_ProductReviewsService_GetProductReview_sync_flattened",
+      "title": "GetProductReview",
+      "description": "Snippet for GetProductReview",
+      "file": "ProductReviewsServiceClient.GetProductReviewSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProductReview",
+        "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient.GetProductReview",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Reviews.V1.ProductReview",
+        "client": {
+          "shortName": "ProductReviewsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient"
+        },
+        "method": {
+          "shortName": "GetProductReview",
+          "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService.GetProductReview",
+          "service": {
+            "shortName": "ProductReviewsService",
+            "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_ProductReviewsService_GetProductReview_async_flattened",
+      "title": "GetProductReviewAsync",
+      "description": "Snippet for GetProductReviewAsync",
+      "file": "ProductReviewsServiceClient.GetProductReviewAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProductReviewAsync",
+        "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient.GetProductReviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Reviews.V1.ProductReview>",
+        "client": {
+          "shortName": "ProductReviewsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient"
+        },
+        "method": {
+          "shortName": "GetProductReview",
+          "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService.GetProductReview",
+          "service": {
+            "shortName": "ProductReviewsService",
+            "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_ProductReviewsService_GetProductReview_sync_flattened_resourceNames",
+      "title": "GetProductReviewResourceNames",
+      "description": "Snippet for GetProductReview",
+      "file": "ProductReviewsServiceClient.GetProductReviewResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProductReview",
+        "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient.GetProductReview",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Reviews.V1.ProductReviewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Reviews.V1.ProductReview",
+        "client": {
+          "shortName": "ProductReviewsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient"
+        },
+        "method": {
+          "shortName": "GetProductReview",
+          "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService.GetProductReview",
+          "service": {
+            "shortName": "ProductReviewsService",
+            "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_ProductReviewsService_GetProductReview_async_flattened_resourceNames",
+      "title": "GetProductReviewResourceNamesAsync",
+      "description": "Snippet for GetProductReviewAsync",
+      "file": "ProductReviewsServiceClient.GetProductReviewResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProductReviewAsync",
+        "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient.GetProductReviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Reviews.V1.ProductReviewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Reviews.V1.ProductReview>",
+        "client": {
+          "shortName": "ProductReviewsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient"
+        },
+        "method": {
+          "shortName": "GetProductReview",
+          "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService.GetProductReview",
+          "service": {
+            "shortName": "ProductReviewsService",
+            "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_ProductReviewsService_ListProductReviews_sync",
+      "title": "ListProductReviewsRequestObject",
+      "description": "Snippet for ListProductReviews",
+      "file": "ProductReviewsServiceClient.ListProductReviewsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProductReviews",
+        "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient.ListProductReviews",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Reviews.V1.ListProductReviewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Reviews.V1.ListProductReviewsResponse, Google.Shopping.Merchant.Reviews.V1.ProductReview>",
+        "client": {
+          "shortName": "ProductReviewsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient"
+        },
+        "method": {
+          "shortName": "ListProductReviews",
+          "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService.ListProductReviews",
+          "service": {
+            "shortName": "ProductReviewsService",
+            "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_ProductReviewsService_ListProductReviews_async",
+      "title": "ListProductReviewsRequestObjectAsync",
+      "description": "Snippet for ListProductReviewsAsync",
+      "file": "ProductReviewsServiceClient.ListProductReviewsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProductReviewsAsync",
+        "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient.ListProductReviewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Reviews.V1.ListProductReviewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Reviews.V1.ListProductReviewsResponse, Google.Shopping.Merchant.Reviews.V1.ProductReview>",
+        "client": {
+          "shortName": "ProductReviewsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient"
+        },
+        "method": {
+          "shortName": "ListProductReviews",
+          "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService.ListProductReviews",
+          "service": {
+            "shortName": "ProductReviewsService",
+            "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_ProductReviewsService_ListProductReviews_sync_flattened",
+      "title": "ListProductReviews",
+      "description": "Snippet for ListProductReviews",
+      "file": "ProductReviewsServiceClient.ListProductReviewsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProductReviews",
+        "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient.ListProductReviews",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Reviews.V1.ListProductReviewsResponse, Google.Shopping.Merchant.Reviews.V1.ProductReview>",
+        "client": {
+          "shortName": "ProductReviewsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient"
+        },
+        "method": {
+          "shortName": "ListProductReviews",
+          "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService.ListProductReviews",
+          "service": {
+            "shortName": "ProductReviewsService",
+            "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_ProductReviewsService_ListProductReviews_async_flattened",
+      "title": "ListProductReviewsAsync",
+      "description": "Snippet for ListProductReviewsAsync",
+      "file": "ProductReviewsServiceClient.ListProductReviewsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProductReviewsAsync",
+        "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient.ListProductReviewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Reviews.V1.ListProductReviewsResponse, Google.Shopping.Merchant.Reviews.V1.ProductReview>",
+        "client": {
+          "shortName": "ProductReviewsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient"
+        },
+        "method": {
+          "shortName": "ListProductReviews",
+          "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService.ListProductReviews",
+          "service": {
+            "shortName": "ProductReviewsService",
+            "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_ProductReviewsService_ListProductReviews_sync_flattened_resourceNames",
+      "title": "ListProductReviewsResourceNames",
+      "description": "Snippet for ListProductReviews",
+      "file": "ProductReviewsServiceClient.ListProductReviewsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProductReviews",
+        "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient.ListProductReviews",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Reviews.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Reviews.V1.ListProductReviewsResponse, Google.Shopping.Merchant.Reviews.V1.ProductReview>",
+        "client": {
+          "shortName": "ProductReviewsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient"
+        },
+        "method": {
+          "shortName": "ListProductReviews",
+          "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService.ListProductReviews",
+          "service": {
+            "shortName": "ProductReviewsService",
+            "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_ProductReviewsService_ListProductReviews_async_flattened_resourceNames",
+      "title": "ListProductReviewsResourceNamesAsync",
+      "description": "Snippet for ListProductReviewsAsync",
+      "file": "ProductReviewsServiceClient.ListProductReviewsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProductReviewsAsync",
+        "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient.ListProductReviewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Reviews.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Reviews.V1.ListProductReviewsResponse, Google.Shopping.Merchant.Reviews.V1.ProductReview>",
+        "client": {
+          "shortName": "ProductReviewsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient"
+        },
+        "method": {
+          "shortName": "ListProductReviews",
+          "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService.ListProductReviews",
+          "service": {
+            "shortName": "ProductReviewsService",
+            "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_ProductReviewsService_InsertProductReview_sync",
+      "title": "InsertProductReviewRequestObject",
+      "description": "Snippet for InsertProductReview",
+      "file": "ProductReviewsServiceClient.InsertProductReviewRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertProductReview",
+        "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient.InsertProductReview",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Reviews.V1.InsertProductReviewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Reviews.V1.ProductReview",
+        "client": {
+          "shortName": "ProductReviewsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient"
+        },
+        "method": {
+          "shortName": "InsertProductReview",
+          "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService.InsertProductReview",
+          "service": {
+            "shortName": "ProductReviewsService",
+            "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_ProductReviewsService_InsertProductReview_async",
+      "title": "InsertProductReviewRequestObjectAsync",
+      "description": "Snippet for InsertProductReviewAsync",
+      "file": "ProductReviewsServiceClient.InsertProductReviewRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertProductReviewAsync",
+        "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient.InsertProductReviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Reviews.V1.InsertProductReviewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Reviews.V1.ProductReview>",
+        "client": {
+          "shortName": "ProductReviewsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient"
+        },
+        "method": {
+          "shortName": "InsertProductReview",
+          "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService.InsertProductReview",
+          "service": {
+            "shortName": "ProductReviewsService",
+            "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_ProductReviewsService_DeleteProductReview_sync",
+      "title": "DeleteProductReviewRequestObject",
+      "description": "Snippet for DeleteProductReview",
+      "file": "ProductReviewsServiceClient.DeleteProductReviewRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteProductReview",
+        "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient.DeleteProductReview",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Reviews.V1.DeleteProductReviewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ProductReviewsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteProductReview",
+          "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService.DeleteProductReview",
+          "service": {
+            "shortName": "ProductReviewsService",
+            "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_ProductReviewsService_DeleteProductReview_async",
+      "title": "DeleteProductReviewRequestObjectAsync",
+      "description": "Snippet for DeleteProductReviewAsync",
+      "file": "ProductReviewsServiceClient.DeleteProductReviewRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteProductReviewAsync",
+        "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient.DeleteProductReviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Reviews.V1.DeleteProductReviewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ProductReviewsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteProductReview",
+          "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService.DeleteProductReview",
+          "service": {
+            "shortName": "ProductReviewsService",
+            "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_ProductReviewsService_DeleteProductReview_sync_flattened",
+      "title": "DeleteProductReview",
+      "description": "Snippet for DeleteProductReview",
+      "file": "ProductReviewsServiceClient.DeleteProductReviewSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteProductReview",
+        "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient.DeleteProductReview",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ProductReviewsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteProductReview",
+          "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService.DeleteProductReview",
+          "service": {
+            "shortName": "ProductReviewsService",
+            "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_ProductReviewsService_DeleteProductReview_async_flattened",
+      "title": "DeleteProductReviewAsync",
+      "description": "Snippet for DeleteProductReviewAsync",
+      "file": "ProductReviewsServiceClient.DeleteProductReviewAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteProductReviewAsync",
+        "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient.DeleteProductReviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ProductReviewsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteProductReview",
+          "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService.DeleteProductReview",
+          "service": {
+            "shortName": "ProductReviewsService",
+            "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_ProductReviewsService_DeleteProductReview_sync_flattened_resourceNames",
+      "title": "DeleteProductReviewResourceNames",
+      "description": "Snippet for DeleteProductReview",
+      "file": "ProductReviewsServiceClient.DeleteProductReviewResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteProductReview",
+        "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient.DeleteProductReview",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Reviews.V1.ProductReviewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ProductReviewsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteProductReview",
+          "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService.DeleteProductReview",
+          "service": {
+            "shortName": "ProductReviewsService",
+            "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_ProductReviewsService_DeleteProductReview_async_flattened_resourceNames",
+      "title": "DeleteProductReviewResourceNamesAsync",
+      "description": "Snippet for DeleteProductReviewAsync",
+      "file": "ProductReviewsServiceClient.DeleteProductReviewResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteProductReviewAsync",
+        "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient.DeleteProductReviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Reviews.V1.ProductReviewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ProductReviewsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Reviews.V1.ProductReviewsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteProductReview",
+          "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService.DeleteProductReview",
+          "service": {
+            "shortName": "ProductReviewsService",
+            "fullName": "google.shopping.merchant.reviews.v1.ProductReviewsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
