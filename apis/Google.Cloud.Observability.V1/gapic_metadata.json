@@ -1,0 +1,150 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.observability.v1",
+  "libraryPackage": "Google.Cloud.Observability.V1",
+  "services": {
+    "Observability": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ObservabilityClient",
+          "rpcs": {
+            "CreateBucket": {
+              "methods": [
+                "CreateBucket",
+                "CreateBucketAsync"
+              ]
+            },
+            "CreateLink": {
+              "methods": [
+                "CreateLink",
+                "CreateLinkAsync"
+              ]
+            },
+            "CreateTraceScope": {
+              "methods": [
+                "CreateTraceScope",
+                "CreateTraceScopeAsync"
+              ]
+            },
+            "DeleteLink": {
+              "methods": [
+                "DeleteLink",
+                "DeleteLinkAsync"
+              ]
+            },
+            "DeleteTraceScope": {
+              "methods": [
+                "DeleteTraceScope",
+                "DeleteTraceScopeAsync"
+              ]
+            },
+            "GetBucket": {
+              "methods": [
+                "GetBucket",
+                "GetBucketAsync"
+              ]
+            },
+            "GetDataset": {
+              "methods": [
+                "GetDataset",
+                "GetDatasetAsync"
+              ]
+            },
+            "GetLink": {
+              "methods": [
+                "GetLink",
+                "GetLinkAsync"
+              ]
+            },
+            "GetScope": {
+              "methods": [
+                "GetScope",
+                "GetScopeAsync"
+              ]
+            },
+            "GetSettings": {
+              "methods": [
+                "GetSettings",
+                "GetSettingsAsync"
+              ]
+            },
+            "GetTraceScope": {
+              "methods": [
+                "GetTraceScope",
+                "GetTraceScopeAsync"
+              ]
+            },
+            "GetView": {
+              "methods": [
+                "GetView",
+                "GetViewAsync"
+              ]
+            },
+            "ListBuckets": {
+              "methods": [
+                "ListBuckets",
+                "ListBucketsAsync"
+              ]
+            },
+            "ListDatasets": {
+              "methods": [
+                "ListDatasets",
+                "ListDatasetsAsync"
+              ]
+            },
+            "ListLinks": {
+              "methods": [
+                "ListLinks",
+                "ListLinksAsync"
+              ]
+            },
+            "ListTraceScopes": {
+              "methods": [
+                "ListTraceScopes",
+                "ListTraceScopesAsync"
+              ]
+            },
+            "ListViews": {
+              "methods": [
+                "ListViews",
+                "ListViewsAsync"
+              ]
+            },
+            "UpdateBucket": {
+              "methods": [
+                "UpdateBucket",
+                "UpdateBucketAsync"
+              ]
+            },
+            "UpdateLink": {
+              "methods": [
+                "UpdateLink",
+                "UpdateLinkAsync"
+              ]
+            },
+            "UpdateScope": {
+              "methods": [
+                "UpdateScope",
+                "UpdateScopeAsync"
+              ]
+            },
+            "UpdateSettings": {
+              "methods": [
+                "UpdateSettings",
+                "UpdateSettingsAsync"
+              ]
+            },
+            "UpdateTraceScope": {
+              "methods": [
+                "UpdateTraceScope",
+                "UpdateTraceScopeAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
