@@ -1,5 +1,20 @@
 # Version history
 
+## Version 1.1.0, released 2026-10-21
+
+### New features
+
+- Expose data_residency_compliant field for Model Armor v1 templates
+- Introduce FilterVersionSelector and FilterVersionConfig to specify filter versions
+- Add McpServerFloorSetting for Google MCP Server integrations
+- Add file_label to ByteDataItem for file identification
+
+### Documentation improvements
+
+- Update comment for field filter_results in SanitizationResult
+- Clarify source_language usage in MultiLanguageDetectionMetadata
+- Expand description for ListLocations method
+
 ## Version 1.0.0, released 2026-08-10
 
 ### New features
