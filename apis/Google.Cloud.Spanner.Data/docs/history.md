@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.13.0-beta13, released 2026-10-21
+
+### New features
+
+- Expose allowed_processing_units in InstanceConfig
+
 ## Version 5.13.0-beta12, released 2026-10-15
 
 ### New features
