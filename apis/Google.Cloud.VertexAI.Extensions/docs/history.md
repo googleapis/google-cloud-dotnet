@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta10, released 2026-10-21
+
+### Bug fixes
+
+- Also handle a null ThoughtSignature
+- Send the thought signature of non-function parts in PredictionServiceChatClient
+
 ## Version 1.0.0-beta09, released 2026-10-19
 
 ### Bug fixes
