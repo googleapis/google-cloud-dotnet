@@ -1,5 +1,22 @@
 # Version history
 
+## Version 4.34.0, released 2026-10-21
+
+### New features
+
+- Expose ResponseMessage, AutomatedAgentReply.response_messages, and Message.response_messages in Dialogflow v2
+- Expose AutomatedAgentReply intent, event, match_confidence, parameters, and call_companion_auth_code in Dialogflow v2
+- Add disable_interim_input_transcripts to InputAudioConfig, SpeechToTextConfig, and VoiceSessionConfig in Dialogflow v2
+- Expose SentimentAnalysisResult.status in Dialogflow v2
+
+### Bug fixes
+
+- Remove model_id from SpeechToTextConfig.GeminiAsrConfig in Dialogflow v2
+
+### Documentation improvements
+
+- Clarify customer_satisfaction summarization section documentation
+
 ## Version 4.33.0, released 2026-10-05
 
 ### New features
