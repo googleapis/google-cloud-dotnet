@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.4.0, released 2026-10-21
+
+### New features
+
+- Deprecate Google.Cloud.RapidMigrationAssessment.V1
+
 ## Version 1.3.0, released 2025-11-06
 
 ### New features
