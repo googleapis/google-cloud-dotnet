@@ -12,9 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
 using Google.Cloud.ClientTesting;
+using Google.Protobuf;
+using NSubstitute;
+using NSubstitute.Extensions;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Datastore.V1.Tests
@@ -45,6 +51,54 @@ namespace Google.Cloud.Datastore.V1.Tests
                 return new Key();
             }
             return base.GetArgument(parameter);
+        }
+
+        [Fact]
+        public void Commit_ForwardsCallSettings()
+        {
+            var client = Substitute.For<DatastoreClient>();
+            var transactionId = ByteString.CopyFromUtf8("tx");
+            using var cts = new CancellationTokenSource();
+            var callSettings = CallSettings.FromCancellationToken(cts.Token);
+            var expectedRequest = new CommitRequest
+            {
+                ProjectId = "proj",
+                DatabaseId = DatastoreDb.DefaultDatabaseId,
+                Mode = CommitRequest.Types.Mode.Transactional,
+                Transaction = transactionId
+            };
+            var expectedResponse = new CommitResponse();
+            client.Configure().Commit(expectedRequest, callSettings).Returns(expectedResponse);
+
+            var transaction = new DatastoreTransactionImpl(client, "proj", "ns", transactionId);
+            var actualResponse = transaction.Commit(callSettings);
+
+            Assert.Same(expectedResponse, actualResponse);
+            client.Received(1).Commit(expectedRequest, callSettings);
+        }
+
+        [Fact]
+        public async Task CommitAsync_ForwardsCallSettings()
+        {
+            var client = Substitute.For<DatastoreClient>();
+            var transactionId = ByteString.CopyFromUtf8("tx");
+            using var cts = new CancellationTokenSource();
+            var callSettings = CallSettings.FromCancellationToken(cts.Token);
+            var expectedRequest = new CommitRequest
+            {
+                ProjectId = "proj",
+                DatabaseId = DatastoreDb.DefaultDatabaseId,
+                Mode = CommitRequest.Types.Mode.Transactional,
+                Transaction = transactionId
+            };
+            var expectedResponse = new CommitResponse();
+            client.Configure().CommitAsync(expectedRequest, callSettings).Returns(Task.FromResult(expectedResponse));
+
+            var transaction = new DatastoreTransactionImpl(client, "proj", "ns", transactionId);
+            var actualResponse = await transaction.CommitAsync(callSettings);
+
+            Assert.Same(expectedResponse, actualResponse);
+            await client.Received(1).CommitAsync(expectedRequest, callSettings);
         }
     }
 }

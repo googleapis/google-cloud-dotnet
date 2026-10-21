@@ -225,7 +225,7 @@ namespace Google.Cloud.Datastore.V1
                 Transaction = TransactionId,
                 Mutations = { _mutations }
             };
-            var response = _client.Commit(request);
+            var response = _client.Commit(request, callSettings);
             PropagateKeys(response);
             _active = false;
             return response;
