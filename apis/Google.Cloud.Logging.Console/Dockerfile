@@ -1,6 +1,6 @@
 # Use Microsoft's official build .NET image.
 # https://hub.docker.com/_/microsoft-dotnet-core-sdk/
-FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:f7e28a0a3f6f9235929ec19274fd0ddf8534e9159f99fac602ac73304f1ce99f AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:738f72aff955d5c5690e06b6fc8ecd1b90ead564099a257ac528ff720b8da85f AS build
 WORKDIR /app
 
 # Install production dependencies.
@@ -20,7 +20,7 @@ RUN dotnet publish -c Release -o /app/out SampleApp
 
 # Use Microsoft's official runtime .NET image.
 # https://hub.docker.com/_/microsoft-dotnet-core-aspnet/
-FROM mcr.microsoft.com/dotnet/aspnet:8.0@sha256:1601380775673021a23ea5985669f1daf03719faaa684f839da1752fb48cfc7f AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0@sha256:74a1d7c07211a7e8a2e35ff3c70ed8e4e1d6451a1ff7cf7bdf526f9eafa23023 AS runtime
 WORKDIR /app
 COPY --from=build /app/out ./
 
