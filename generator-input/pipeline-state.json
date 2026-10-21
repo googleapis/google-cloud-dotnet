@@ -2643,12 +2643,12 @@
         },
         {
             "id": "Google.Cloud.RapidMigrationAssessment.V1",
-            "currentVersion": "1.3.0",
+            "currentVersion": "1.4.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-06T09:24:13.695425456Z",
+            "releaseTimestamp": "2026-10-21T18:52:17.978683034Z",
             "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
-            "lastReleasedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
+            "lastReleasedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
             "apiPaths": [
                 "google/cloud/rapidmigrationassessment/v1"
             ],
