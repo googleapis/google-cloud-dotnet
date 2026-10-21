@@ -489,7 +489,6 @@ public sealed class PublisherClientImpl : PublisherClient
             {
                 _batchesInFlightCount -= 1;
                 _idleClients.Enqueue(client);
-                ShutdownIfCompleted();
                 state.SetState(OrderingKeyState.Normal);
                 var batches = state.Batches;
                 switch (publishTask.Status)
@@ -550,6 +549,7 @@ public sealed class PublisherClientImpl : PublisherClient
                 }
                 // Trigger a new send, if there is any more data ready to send.
                 TriggerSend();
+                ShutdownIfCompleted();
 
                 // For ordered messages we store the state on a dictionary by the ordering key.
                 // Ordering keys are usually short lived, so we remove states from the dictionary that have no pending messages,

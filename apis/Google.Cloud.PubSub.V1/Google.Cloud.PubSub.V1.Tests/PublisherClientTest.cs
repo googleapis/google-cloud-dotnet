@@ -410,5 +410,67 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Assert.Equal(expectedMessages, client.HandledMessages);
             });
         }
+
+        [Theory, CombinatorialData]
+        public void ShutdownWithQueuedOrderingKeyBatches(
+            [CombinatorialValues(false, true)] bool hardStop)
+        {
+            var topicName = new TopicName("FakeProject", "FakeTopic");
+            var scheduler = new TestScheduler();
+            TaskHelper taskHelper = scheduler.TaskHelper;
+            var client = new FakePublisherServiceApiClient(scheduler, taskHelper, delays: new[] { TimeSpan.FromSeconds(1) });
+            var settings = MakeSettings(scheduler, batchElementCountThreshold: 1, batchRequestByteThreshold: 1000, enableMessageOrdering: true);
+            int shutdownCount = 0;
+            var pub = new PublisherClientImpl(topicName, new[] { client }, settings, () =>
+            {
+                Interlocked.Increment(ref shutdownCount);
+                return Task.FromResult(0);
+            }, taskHelper);
+            scheduler.Run(async () =>
+            {
+                var pubTask1 = pub.PublishAsync("ordering-key", "1");
+                var pubTask2 = pub.PublishAsync("ordering-key", "2");
+                var isCancelled = await taskHelper.ConfigureAwaitHideCancellation(
+                    () => pub.ShutdownAsync(new CancellationToken(hardStop)));
+                Assert.Equal(hardStop, isCancelled);
+                Assert.Equal(hardStop ? new string[0] : new[] { "1", "2" }, client.HandledMessages);
+                Assert.Equal(1, shutdownCount);
+                var pubResult1 = await taskHelper.ConfigureAwaitHideCancellation(() => pubTask1, null);
+                var pubResult2 = await taskHelper.ConfigureAwaitHideCancellation(() => pubTask2, null);
+                Assert.Equal(hardStop, pubTask1.IsCanceled);
+                Assert.Equal(hardStop, pubTask2.IsCanceled);
+                Assert.Equal(hardStop ? null : "1", pubResult1);
+                Assert.Equal(hardStop ? null : "2", pubResult2);
+            });
+        }
+
+        [Fact]
+        public void ShutdownWaitsForOrderingKeyRecoverableRetry()
+        {
+            const string orderingKey = "error-recoverable";
+            var topicName = new TopicName("FakeProject", "FakeTopic");
+            var scheduler = new TestScheduler();
+            TaskHelper taskHelper = scheduler.TaskHelper;
+            var client = new FakePublisherServiceApiClient(scheduler, taskHelper,
+                delays: new[] { TimeSpan.FromSeconds(1) }, orderingKeyErrorRecoverable: orderingKey);
+            var settings = MakeSettings(scheduler, batchElementCountThreshold: 1, batchRequestByteThreshold: 1000, enableMessageOrdering: true);
+            int shutdownCount = 0;
+            var pub = new PublisherClientImpl(topicName, new[] { client }, settings, () =>
+            {
+                Interlocked.Increment(ref shutdownCount);
+                return Task.FromResult(0);
+            }, taskHelper);
+            scheduler.Run(async () =>
+            {
+                var pubTask = pub.PublishAsync(orderingKey, "1");
+                var isCancelled = await taskHelper.ConfigureAwaitHideCancellation(
+                    () => pub.ShutdownAsync(CancellationToken.None));
+                Assert.False(isCancelled);
+                Assert.Equal(new[] { "1" }, client.HandledMessages);
+                Assert.Equal(1, shutdownCount);
+                var pubResult = await taskHelper.ConfigureAwait(pubTask);
+                Assert.Equal("1", pubResult);
+            });
+        }
     }
 }
