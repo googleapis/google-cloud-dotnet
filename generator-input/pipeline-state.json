@@ -2642,21 +2642,6 @@
             ]
         },
         {
-            "id": "Google.Cloud.RapidMigrationAssessment.V1",
-            "currentVersion": "1.4.0",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-10-21T18:52:17.978683034Z",
-            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
-            "lastReleasedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
-            "apiPaths": [
-                "google/cloud/rapidmigrationassessment/v1"
-            ],
-            "sourcePaths": [
-                "apis/Google.Cloud.RapidMigrationAssessment.V1/Google.Cloud.RapidMigrationAssessment.V1"
-            ]
-        },
-        {
             "id": "Google.Cloud.RecaptchaEnterprise.V1",
             "currentVersion": "2.21.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
@@ -5278,6 +5263,7 @@
         "google/cloud/geminidataanalytics/v1alpha",
         "google/cloud/networksecurity/v1alpha1",
         "google/cloud/numberregistry/v1alpha",
+        "google/cloud/rapidmigrationassessment/v1",
         "google/cloud/redis/cluster/v1beta1",
         "google/cloud/securesourcemanager/v1",
         "google/cloud/securityposture/v1",
