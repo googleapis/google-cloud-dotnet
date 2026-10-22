@@ -108,8 +108,7 @@ namespace Google.Cloud.Firestore
                 ShowMissing = true,
                 Mask = new DocumentMask()
             };
-            return Database.Client.ListDocumentsAsync(request, FirestoreDb.CreateCallSettings(default, isTransaction: false))
-                .Select(doc => Database.GetDocumentReferenceFromResourceName(doc.Name));
+            return Database.Client.ListDocumentsAsync(request).Select(doc => Database.GetDocumentReferenceFromResourceName(doc.Name));
         }
 
         /// <inheritdoc />

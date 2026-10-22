@@ -134,7 +134,7 @@ public sealed class AggregateQuery : IEquatable<AggregateQuery>
         {
             request.Transaction = transactionId;
         }
-        var settings = FirestoreDb.CreateCallSettings(cancellationToken, transactionId);
+        var settings = CallSettings.FromCancellationToken(cancellationToken);
         using var response = _query.Database.Client.RunAggregationQuery(request, settings);
         IAsyncEnumerable<RunAggregationQueryResponse> stream = response.GetResponseStream();
         await foreach (var result in stream.ConfigureAwait(false))

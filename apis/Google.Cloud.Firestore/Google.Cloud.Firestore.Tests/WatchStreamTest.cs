@@ -483,9 +483,6 @@ namespace Google.Cloud.Firestore.Tests
 #pragma warning restore CS0618 // Type or member is obsolete
                 Assert.NotNull(resourcePrefixHeader);
                 Assert.Equal(_expectedResourceName, resourcePrefixHeader.Value);
-                var transactionHeader = metadata.FirstOrDefault(entry => entry.Key == FirestoreDb.TransactionHeader);
-                Assert.NotNull(transactionHeader);
-                Assert.Equal("false", transactionHeader.Value);
                 return _streams[_index++];
             }
 

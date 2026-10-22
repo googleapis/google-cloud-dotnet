@@ -273,7 +273,7 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(new Timestamp(1, 3), snapshot2.ReadTime);
             Assert.Equal(docRef2, snapshot2.Reference);
             Assert.Equal("Test", snapshot2.GetValue<string>("Name"));
-            mock.Received(1).BatchGetDocuments(request, Arg.Is<CallSettings>(cs => TransactionTestingClient.HasTransactionHeader(cs, false)));
+            mock.Received(1).BatchGetDocuments(request, Arg.Any<CallSettings>());
         }
 
         [Fact]
@@ -296,7 +296,7 @@ namespace Google.Cloud.Firestore.Tests
             mock.Configure().BatchGetDocuments(request, Arg.Any<CallSettings>()).Returns(new FakeDocumentStream(responses));
             var db = FirestoreDb.Create("proj", "db", mock);
             await db.GetDocumentSnapshotsAsync(new[] { db.Document("col1/doc1") }, transactionId, fieldMask: null, default);
-            mock.Received(1).BatchGetDocuments(request, Arg.Is<CallSettings>(cs => TransactionTestingClient.HasTransactionHeader(cs, true)));
+            mock.Received(1).BatchGetDocuments(request, Arg.Any<CallSettings>());
         }
 
         [Fact]
