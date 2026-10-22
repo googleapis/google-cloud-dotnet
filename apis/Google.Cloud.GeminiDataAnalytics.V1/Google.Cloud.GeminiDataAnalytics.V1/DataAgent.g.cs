@@ -30,34 +30,35 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
             "aS9yZXNvdXJjZS5wcm90bxo+Z29vZ2xlL2Nsb3VkL2dlbWluaWRhdGFhbmFs",
             "eXRpY3MvdjEvZGF0YV9hbmFseXRpY3NfYWdlbnQucHJvdG8aNGdvb2dsZS9j",
             "bG91ZC9nZW1pbmlkYXRhYW5hbHl0aWNzL3YxL2RhdGFzb3VyY2UucHJvdG8a",
-            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iqwcKCURhdGFBZ2Vu",
+            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8itAcKCURhdGFBZ2Vu",
             "dBJXChRkYXRhX2FuYWx5dGljc19hZ2VudBhlIAEoCzI3Lmdvb2dsZS5jbG91",
             "ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkRhdGFBbmFseXRpY3NBZ2VudEgA",
-            "EhQKBG5hbWUYASABKAlCBuBBAeBBCBIZCgxkaXNwbGF5X25hbWUYAyABKAlC",
-            "A+BBARIYCgtkZXNjcmlwdGlvbhgEIAEoCUID4EEBEk8KBmxhYmVscxgFIAMo",
-            "CzI6Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkRhdGFB",
-            "Z2VudC5MYWJlbHNFbnRyeUID4EEBEjQKC2NyZWF0ZV90aW1lGAcgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1l",
-            "GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC2Rl",
-            "bGV0ZV90aW1lGAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
-            "4EEDEjMKCnB1cmdlX3RpbWUYDSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMSPwoHa21zX2tleRgOIAEoCUIp4EEB+kEjCiFjbG91ZGtt",
-            "cy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXlIAYgBARIyCiBiaWdxdWVyeV9h",
-            "Z2VudF9hbmFseXRpY3NfZW5hYmxlZBgSIAEoCEID4EEBSAKIAQESaAoeYmln",
-            "cXVlcnlfYWdlbnRfYW5hbHl0aWNzX3RhYmxlGBMgASgLMjsuZ29vZ2xlLmNs",
-            "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuQmlnUXVlcnlUYWJsZVJlZmVy",
-            "ZW5jZUID4EEBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoCToCOAE6igHqQYYBCixnZW1pbmlkYXRhYW5hbHl0aWNzLmdvb2ds",
-            "ZWFwaXMuY29tL0RhdGFBZ2VudBI/cHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
-            "aW9ucy97bG9jYXRpb259L2RhdGFBZ2VudHMve2RhdGFfYWdlbnR9KgpkYXRh",
-            "QWdlbnRzMglkYXRhQWdlbnRCBgoEdHlwZUIKCghfa21zX2tleUIjCiFfYmln",
-            "cXVlcnlfYWdlbnRfYW5hbHl0aWNzX2VuYWJsZWRCiwIKJ2NvbS5nb29nbGUu",
-            "Y2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MUIORGF0YUFnZW50UHJvdG9Q",
-            "AVpZY2xvdWQuZ29vZ2xlLmNvbS9nby9nZW1pbmlkYXRhYW5hbHl0aWNzL2Fw",
-            "aXYxL2dlbWluaWRhdGFhbmFseXRpY3NwYjtnZW1pbmlkYXRhYW5hbHl0aWNz",
-            "cGKqAiNHb29nbGUuQ2xvdWQuR2VtaW5pRGF0YUFuYWx5dGljcy5WMcoCI0dv",
-            "b2dsZVxDbG91ZFxHZW1pbmlEYXRhQW5hbHl0aWNzXFYx6gImR29vZ2xlOjpD",
-            "bG91ZDo6R2VtaW5pRGF0YUFuYWx5dGljczo6VjFiBnByb3RvMw=="));
+            "EhMKBG5hbWUYASABKAlCBeJBAgEIEhoKDGRpc3BsYXlfbmFtZRgDIAEoCUIE",
+            "4kEBARIZCgtkZXNjcmlwdGlvbhgEIAEoCUIE4kEBARJQCgZsYWJlbHMYBSAD",
+            "KAsyOi5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MS5EYXRh",
+            "QWdlbnQuTGFiZWxzRW50cnlCBOJBAQESNQoLY3JlYXRlX3RpbWUYByABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEjUKC3VwZGF0ZV90",
+            "aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxI1",
+            "CgtkZWxldGVfdGltZRgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCBOJBAQMSNAoKcHVyZ2VfdGltZRgNIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCBOJBAQMSQAoHa21zX2tleRgOIAEoCUIq4kEBAfpBIwoh",
+            "Y2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5SAGIAQESMwogYmln",
+            "cXVlcnlfYWdlbnRfYW5hbHl0aWNzX2VuYWJsZWQYEiABKAhCBOJBAQFIAogB",
+            "ARJpCh5iaWdxdWVyeV9hZ2VudF9hbmFseXRpY3NfdGFibGUYEyABKAsyOy5n",
+            "b29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MS5CaWdRdWVyeVRh",
+            "YmxlUmVmZXJlbmNlQgTiQQEBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRINCgV2YWx1ZRgCIAEoCToCOAE6igHqQYYBCixnZW1pbmlkYXRhYW5hbHl0",
+            "aWNzLmdvb2dsZWFwaXMuY29tL0RhdGFBZ2VudBI/cHJvamVjdHMve3Byb2pl",
+            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2RhdGFBZ2VudHMve2RhdGFfYWdl",
+            "bnR9KgpkYXRhQWdlbnRzMglkYXRhQWdlbnRCBgoEdHlwZUIKCghfa21zX2tl",
+            "eUIjCiFfYmlncXVlcnlfYWdlbnRfYW5hbHl0aWNzX2VuYWJsZWRCiwIKJ2Nv",
+            "bS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MUIORGF0YUFn",
+            "ZW50UHJvdG9QAVpZY2xvdWQuZ29vZ2xlLmNvbS9nby9nZW1pbmlkYXRhYW5h",
+            "bHl0aWNzL2FwaXYxL2dlbWluaWRhdGFhbmFseXRpY3NwYjtnZW1pbmlkYXRh",
+            "YW5hbHl0aWNzcGKqAiNHb29nbGUuQ2xvdWQuR2VtaW5pRGF0YUFuYWx5dGlj",
+            "cy5WMcoCI0dvb2dsZVxDbG91ZFxHZW1pbmlEYXRhQW5hbHl0aWNzXFYx6gIm",
+            "R29vZ2xlOjpDbG91ZDo6R2VtaW5pRGF0YUFuYWx5dGljczo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GeminiDataAnalytics.V1.DataAnalyticsAgentReflection.Descriptor, global::Google.Cloud.GeminiDataAnalytics.V1.DatasourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -345,7 +346,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     /// `bigquery_agent_analytics_table` is set. On a BigQuery agent, enabling
     /// this without a table has no effect: no table is created for the agent
     /// and no rows are written. On an agent whose datasource is not BigQuery,
-    /// `CreateDataAgent` rejects either field with `INVALID_ARGUMENT`.
+    /// `CreateDataAgent` and `UpdateDataAgent` reject setting this field to
+    /// `true` or setting `bigquery_agent_analytics_table` with
+    /// `INVALID_ARGUMENT`. See `bigquery_agent_analytics_table` for when this
+    /// is checked.
     ///
     /// This setting is independent of the project-level BigQuery Agent Analytics
     /// setting configured through `SetAgentOpsObservability`. An agent does not
@@ -382,17 +386,26 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     /// `true`. The Preview enrollment described on that field applies here too.
     ///
     /// The trace table is validated when it is set on `CreateDataAgent`, or when
-    /// it is included in the `update_mask` of an `UpdateDataAgent` call. The
+    /// an `UpdateDataAgent` call writes a table to it. An `UpdateDataAgent` call
+    /// writes a field if the field is in `update_mask` or, when `update_mask` is
+    /// omitted, if the field is present in the request, even if its value is
+    /// unchanged. An update that only clears this field is not validated. The
     /// following are rejected with `INVALID_ARGUMENT`:
     ///
     /// * The table must belong to the same project as the agent.
     /// * The agent's datasource must be BigQuery. BigQuery Agent Analytics is not
     ///   supported for Looker, Looker Studio or AlloyDB agents.
     ///
-    /// These are validated against the agent as sent in the request. An agent
-    /// that carries no datasource is not validated, and an agent switched to a
-    /// non-BigQuery datasource is not re-validated; in the latter case no trace
-    /// rows are written.
+    /// On `CreateDataAgent`, the datasource is validated against the agent in
+    /// the request. On `UpdateDataAgent`, it is validated against the stored
+    /// agent after applying the update whenever the call writes a table to this
+    /// field or writes `true` to `bigquery_agent_analytics_enabled`. For example,
+    /// an `UpdateDataAgent` call without `update_mask` that carries an unchanged
+    /// `bigquery_agent_analytics_enabled = true` is rejected on an agent whose
+    /// datasource is not BigQuery. An agent that carries no datasource is not
+    /// validated, and an agent switched to a non-BigQuery datasource by an update
+    /// that does neither is not re-validated; in the latter case no trace rows
+    /// are written.
     ///
     /// The destination dataset must already exist and must grant write access to
     /// the project's Gemini Data Analytics service agent, whose address is
