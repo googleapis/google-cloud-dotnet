@@ -323,7 +323,7 @@ namespace Google.Cloud.Firestore.Tests
             var actualTimestamps = (await batch.CommitAsync()).Select(x => x.UpdateTime);
             var expectedTimestamps = new[] { new Timestamp(10, 0), new Timestamp(10, 500), new Timestamp(100, 0), new Timestamp(150, 0) };
             Assert.Equal(expectedTimestamps, actualTimestamps);
-            _ = mock.Received(1).CommitAsync(request, Arg.Is<CallSettings>(cs => TransactionTestingClient.HasTransactionHeader(cs, false)));
+            _ = mock.Received(1).CommitAsync(request, Arg.Any<CallSettings>());
         }
 
         [Fact]

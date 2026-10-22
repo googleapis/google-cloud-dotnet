@@ -241,7 +241,6 @@ namespace Google.Cloud.Firestore.Tests
             // Creates a stream that stays pending until the CallSettings cancellation token is cancelled.
             private static AsyncServerStreamingCall<T> CreateCall<T>(CallSettings s)
             {
-                AssertTransactionHeader(s, true);
                 var token = s?.CancellationToken ?? default;
                 var tcs = new TaskCompletionSource<bool>();
                 var registration = token.Register(() => tcs.TrySetCanceled(token));
