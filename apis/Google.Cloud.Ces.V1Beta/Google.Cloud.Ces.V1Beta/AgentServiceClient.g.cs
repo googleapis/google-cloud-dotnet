@@ -100,6 +100,7 @@ namespace Google.Cloud.Ces.V1Beta
             ListAppVersionsSettings = existing.ListAppVersionsSettings;
             GetAppVersionSettings = existing.GetAppVersionSettings;
             CreateAppVersionSettings = existing.CreateAppVersionSettings;
+            UpdateAppVersionSettings = existing.UpdateAppVersionSettings;
             DeleteAppVersionSettings = existing.DeleteAppVersionSettings;
             RestoreAppVersionSettings = existing.RestoreAppVersionSettings;
             RestoreAppVersionOperationsSettings = existing.RestoreAppVersionOperationsSettings.Clone();
@@ -1169,6 +1170,27 @@ namespace Google.Cloud.Ces.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CreateAppVersionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AgentServiceClient.UpdateAppVersion</c> and <c>AgentServiceClient.UpdateAppVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAppVersionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -8064,6 +8086,86 @@ namespace Google.Cloud.Ces.V1Beta
             CreateAppVersionAsync(parent, appVersion, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates the specified app version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AppVersion UpdateAppVersion(UpdateAppVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the specified app version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AppVersion> UpdateAppVersionAsync(UpdateAppVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the specified app version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AppVersion> UpdateAppVersionAsync(UpdateAppVersionRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAppVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the specified app version.
+        /// </summary>
+        /// <param name="appVersion">
+        /// Required. The app version to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// If empty, fields `display_name` and `description` will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AppVersion UpdateAppVersion(AppVersion appVersion, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAppVersion(new UpdateAppVersionRequest
+            {
+                AppVersion = gax::GaxPreconditions.CheckNotNull(appVersion, nameof(appVersion)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the specified app version.
+        /// </summary>
+        /// <param name="appVersion">
+        /// Required. The app version to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// If empty, fields `display_name` and `description` will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AppVersion> UpdateAppVersionAsync(AppVersion appVersion, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAppVersionAsync(new UpdateAppVersionRequest
+            {
+                AppVersion = gax::GaxPreconditions.CheckNotNull(appVersion, nameof(appVersion)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the specified app version.
+        /// </summary>
+        /// <param name="appVersion">
+        /// Required. The app version to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// If empty, fields `display_name` and `description` will be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AppVersion> UpdateAppVersionAsync(AppVersion appVersion, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAppVersionAsync(appVersion, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes the specified app version.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -8805,6 +8907,8 @@ namespace Google.Cloud.Ces.V1Beta
 
         private readonly gaxgrpc::ApiCall<CreateAppVersionRequest, AppVersion> _callCreateAppVersion;
 
+        private readonly gaxgrpc::ApiCall<UpdateAppVersionRequest, AppVersion> _callUpdateAppVersion;
+
         private readonly gaxgrpc::ApiCall<DeleteAppVersionRequest, wkt::Empty> _callDeleteAppVersion;
 
         private readonly gaxgrpc::ApiCall<RestoreAppVersionRequest, lro::Operation> _callRestoreAppVersion;
@@ -8976,6 +9080,9 @@ namespace Google.Cloud.Ces.V1Beta
             _callCreateAppVersion = clientHelper.BuildApiCall<CreateAppVersionRequest, AppVersion>("CreateAppVersion", grpcClient.CreateAppVersionAsync, grpcClient.CreateAppVersion, effectiveSettings.CreateAppVersionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAppVersion);
             Modify_CreateAppVersionApiCall(ref _callCreateAppVersion);
+            _callUpdateAppVersion = clientHelper.BuildApiCall<UpdateAppVersionRequest, AppVersion>("UpdateAppVersion", grpcClient.UpdateAppVersionAsync, grpcClient.UpdateAppVersion, effectiveSettings.UpdateAppVersionSettings).WithGoogleRequestParam("app_version.name", request => request.AppVersion?.Name);
+            Modify_ApiCall(ref _callUpdateAppVersion);
+            Modify_UpdateAppVersionApiCall(ref _callUpdateAppVersion);
             _callDeleteAppVersion = clientHelper.BuildApiCall<DeleteAppVersionRequest, wkt::Empty>("DeleteAppVersion", grpcClient.DeleteAppVersionAsync, grpcClient.DeleteAppVersion, effectiveSettings.DeleteAppVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAppVersion);
             Modify_DeleteAppVersionApiCall(ref _callDeleteAppVersion);
@@ -9088,6 +9195,8 @@ namespace Google.Cloud.Ces.V1Beta
 
         partial void Modify_CreateAppVersionApiCall(ref gaxgrpc::ApiCall<CreateAppVersionRequest, AppVersion> call);
 
+        partial void Modify_UpdateAppVersionApiCall(ref gaxgrpc::ApiCall<UpdateAppVersionRequest, AppVersion> call);
+
         partial void Modify_DeleteAppVersionApiCall(ref gaxgrpc::ApiCall<DeleteAppVersionRequest, wkt::Empty> call);
 
         partial void Modify_RestoreAppVersionApiCall(ref gaxgrpc::ApiCall<RestoreAppVersionRequest, lro::Operation> call);
@@ -9197,6 +9306,8 @@ namespace Google.Cloud.Ces.V1Beta
         partial void Modify_GetAppVersionRequest(ref GetAppVersionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateAppVersionRequest(ref CreateAppVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAppVersionRequest(ref UpdateAppVersionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteAppVersionRequest(ref DeleteAppVersionRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -10325,6 +10436,30 @@ namespace Google.Cloud.Ces.V1Beta
         {
             Modify_CreateAppVersionRequest(ref request, ref callSettings);
             return _callCreateAppVersion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the specified app version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AppVersion UpdateAppVersion(UpdateAppVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAppVersionRequest(ref request, ref callSettings);
+            return _callUpdateAppVersion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the specified app version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AppVersion> UpdateAppVersionAsync(UpdateAppVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAppVersionRequest(ref request, ref callSettings);
+            return _callUpdateAppVersion.Async(request, callSettings);
         }
 
         /// <summary>

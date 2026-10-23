@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
+using gccv = Google.Cloud.Ces.V1Beta;
 using sys = System;
 
 namespace Google.Cloud.Ces.V1Beta
@@ -298,6 +299,30 @@ namespace Google.Cloud.Ces.V1Beta
         {
             get => string.IsNullOrEmpty(EntryAgent) ? null : AgentName.Parse(EntryAgent, allowUnparsed: true);
             set => EntryAgent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class StreamChatAiAssistantRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::AssistantSessionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::AssistantSessionName AssistantSessionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::AssistantSessionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GenerateOnboardingSuggestionsRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::AppName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::AppName AppName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::AppName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }

@@ -49,6 +49,9 @@ namespace Google.Cloud.Ces.V1Beta
             StreamRunSessionSettings = existing.StreamRunSessionSettings;
             BidiRunSessionSettings = existing.BidiRunSessionSettings;
             BidiRunSessionStreamingSettings = existing.BidiRunSessionStreamingSettings;
+            StreamChatAiAssistantSettings = existing.StreamChatAiAssistantSettings;
+            CancelAssistantTurnSettings = existing.CancelAssistantTurnSettings;
+            GenerateOnboardingSuggestionsSettings = existing.GenerateOnboardingSuggestionsSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -91,6 +94,57 @@ namespace Google.Cloud.Ces.V1Beta
         /// </summary>
         /// <remarks>The default local send queue size is 100.</remarks>
         public gaxgrpc::BidirectionalStreamingSettings BidiRunSessionStreamingSettings { get; set; } = new gaxgrpc::BidirectionalStreamingSettings(100);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SessionServiceClient.StreamChatAiAssistant</c> and <c>SessionServiceClient.StreamChatAiAssistantAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>Timeout: 3600 seconds.</remarks>
+        public gaxgrpc::CallSettings StreamChatAiAssistantSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SessionServiceClient.CancelAssistantTurn</c> and <c>SessionServiceClient.CancelAssistantTurnAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CancelAssistantTurnSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SessionServiceClient.GenerateOnboardingSuggestions</c> and
+        /// <c>SessionServiceClient.GenerateOnboardingSuggestionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GenerateOnboardingSuggestionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -373,6 +427,99 @@ namespace Google.Cloud.Ces.V1Beta
         /// <returns>The client-server stream.</returns>
         public virtual BidiRunSessionStream BidiRunSession(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Server streaming methods for
+        /// <see cref="StreamChatAiAssistant(StreamChatAiAssistantRequest,gaxgrpc::CallSettings)"/>.
+        /// </summary>
+        public abstract partial class StreamChatAiAssistantStream : gaxgrpc::ServerStreamingBase<StreamChatAiAssistantResponse>
+        {
+        }
+
+        /// <summary>
+        /// Runs Arc, the AI assistant, for the specified assistant session in a
+        /// streaming fashion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual StreamChatAiAssistantStream StreamChatAiAssistant(StreamChatAiAssistantRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels the assistant session's in-flight turn, if any: the explicit user
+        /// stop for a turn running detached from any stream. A cancel landing on a
+        /// task that does not host the turn preempts it through the session turn
+        /// epoch instead, ending it within one lease renewal.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CancelAssistantTurnResponse CancelAssistantTurn(CancelAssistantTurnRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels the assistant session's in-flight turn, if any: the explicit user
+        /// stop for a turn running detached from any stream. A cancel landing on a
+        /// task that does not host the turn preempts it through the session turn
+        /// epoch instead, ending it within one lease renewal.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelAssistantTurnResponse> CancelAssistantTurnAsync(CancelAssistantTurnRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels the assistant session's in-flight turn, if any: the explicit user
+        /// stop for a turn running detached from any stream. A cancel landing on a
+        /// task that does not host the turn preempts it through the session turn
+        /// epoch instead, ending it within one lease renewal.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelAssistantTurnResponse> CancelAssistantTurnAsync(CancelAssistantTurnRequest request, st::CancellationToken cancellationToken) =>
+            CancelAssistantTurnAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Generates personalized onboarding suggestions for the Arc
+        /// zero state: classifies the requesting user (new / exploring / returning)
+        /// from their assistant-session history in the app and returns suggestion
+        /// chips (resume a session, continue work, or start something new) to render
+        /// before any message is sent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateOnboardingSuggestionsResponse GenerateOnboardingSuggestions(GenerateOnboardingSuggestionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates personalized onboarding suggestions for the Arc
+        /// zero state: classifies the requesting user (new / exploring / returning)
+        /// from their assistant-session history in the app and returns suggestion
+        /// chips (resume a session, continue work, or start something new) to render
+        /// before any message is sent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateOnboardingSuggestionsResponse> GenerateOnboardingSuggestionsAsync(GenerateOnboardingSuggestionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates personalized onboarding suggestions for the Arc
+        /// zero state: classifies the requesting user (new / exploring / returning)
+        /// from their assistant-session history in the app and returns suggestion
+        /// chips (resume a session, continue work, or start something new) to render
+        /// before any message is sent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateOnboardingSuggestionsResponse> GenerateOnboardingSuggestionsAsync(GenerateOnboardingSuggestionsRequest request, st::CancellationToken cancellationToken) =>
+            GenerateOnboardingSuggestionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>SessionService client wrapper implementation, for convenient use.</summary>
@@ -386,6 +533,12 @@ namespace Google.Cloud.Ces.V1Beta
         private readonly gaxgrpc::ApiServerStreamingCall<RunSessionRequest, RunSessionResponse> _callStreamRunSession;
 
         private readonly gaxgrpc::ApiBidirectionalStreamingCall<BidiSessionClientMessage, BidiSessionServerMessage> _callBidiRunSession;
+
+        private readonly gaxgrpc::ApiServerStreamingCall<StreamChatAiAssistantRequest, StreamChatAiAssistantResponse> _callStreamChatAiAssistant;
+
+        private readonly gaxgrpc::ApiCall<CancelAssistantTurnRequest, CancelAssistantTurnResponse> _callCancelAssistantTurn;
+
+        private readonly gaxgrpc::ApiCall<GenerateOnboardingSuggestionsRequest, GenerateOnboardingSuggestionsResponse> _callGenerateOnboardingSuggestions;
 
         /// <summary>
         /// Constructs a client wrapper for the SessionService service, with the specified gRPC client and settings.
@@ -412,6 +565,15 @@ namespace Google.Cloud.Ces.V1Beta
             _callBidiRunSession = clientHelper.BuildApiCall<BidiSessionClientMessage, BidiSessionServerMessage>("BidiRunSession", grpcClient.BidiRunSession, effectiveSettings.BidiRunSessionSettings, effectiveSettings.BidiRunSessionStreamingSettings);
             Modify_ApiCall(ref _callBidiRunSession);
             Modify_BidiRunSessionApiCall(ref _callBidiRunSession);
+            _callStreamChatAiAssistant = clientHelper.BuildApiCall<StreamChatAiAssistantRequest, StreamChatAiAssistantResponse>("StreamChatAiAssistant", grpcClient.StreamChatAiAssistant, effectiveSettings.StreamChatAiAssistantSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callStreamChatAiAssistant);
+            Modify_StreamChatAiAssistantApiCall(ref _callStreamChatAiAssistant);
+            _callCancelAssistantTurn = clientHelper.BuildApiCall<CancelAssistantTurnRequest, CancelAssistantTurnResponse>("CancelAssistantTurn", grpcClient.CancelAssistantTurnAsync, grpcClient.CancelAssistantTurn, effectiveSettings.CancelAssistantTurnSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCancelAssistantTurn);
+            Modify_CancelAssistantTurnApiCall(ref _callCancelAssistantTurn);
+            _callGenerateOnboardingSuggestions = clientHelper.BuildApiCall<GenerateOnboardingSuggestionsRequest, GenerateOnboardingSuggestionsResponse>("GenerateOnboardingSuggestions", grpcClient.GenerateOnboardingSuggestionsAsync, grpcClient.GenerateOnboardingSuggestions, effectiveSettings.GenerateOnboardingSuggestionsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGenerateOnboardingSuggestions);
+            Modify_GenerateOnboardingSuggestionsApiCall(ref _callGenerateOnboardingSuggestions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -427,6 +589,12 @@ namespace Google.Cloud.Ces.V1Beta
 
         partial void Modify_BidiRunSessionApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<BidiSessionClientMessage, BidiSessionServerMessage> call);
 
+        partial void Modify_StreamChatAiAssistantApiCall(ref gaxgrpc::ApiServerStreamingCall<StreamChatAiAssistantRequest, StreamChatAiAssistantResponse> call);
+
+        partial void Modify_CancelAssistantTurnApiCall(ref gaxgrpc::ApiCall<CancelAssistantTurnRequest, CancelAssistantTurnResponse> call);
+
+        partial void Modify_GenerateOnboardingSuggestionsApiCall(ref gaxgrpc::ApiCall<GenerateOnboardingSuggestionsRequest, GenerateOnboardingSuggestionsResponse> call);
+
         partial void OnConstruction(SessionService.SessionServiceClient grpcClient, SessionServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC SessionService client</summary>
@@ -440,6 +608,12 @@ namespace Google.Cloud.Ces.V1Beta
         partial void Modify_BidiSessionClientMessageCallSettings(ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BidiSessionClientMessageRequest(ref BidiSessionClientMessage request);
+
+        partial void Modify_StreamChatAiAssistantRequest(ref StreamChatAiAssistantRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CancelAssistantTurnRequest(ref CancelAssistantTurnRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GenerateOnboardingSuggestionsRequest(ref GenerateOnboardingSuggestionsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Initiates a single-turn interaction with the CES agent within a session.
@@ -615,6 +789,90 @@ namespace Google.Cloud.Ces.V1Beta
             grpccore::AsyncDuplexStreamingCall<BidiSessionClientMessage, BidiSessionServerMessage> call = _callBidiRunSession.Call(callSettings);
             gaxgrpc::BufferedClientStreamWriter<BidiSessionClientMessage> writeBuffer = new gaxgrpc::BufferedClientStreamWriter<BidiSessionClientMessage>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
             return new BidiRunSessionStreamImpl(this, call, writeBuffer);
+        }
+
+        internal sealed partial class StreamChatAiAssistantStreamImpl : StreamChatAiAssistantStream
+        {
+            /// <summary>Construct the server streaming method for <c>StreamChatAiAssistant</c>.</summary>
+            /// <param name="call">The underlying gRPC server streaming call.</param>
+            public StreamChatAiAssistantStreamImpl(grpccore::AsyncServerStreamingCall<StreamChatAiAssistantResponse> call) => GrpcCall = call;
+
+            public override grpccore::AsyncServerStreamingCall<StreamChatAiAssistantResponse> GrpcCall { get; }
+        }
+
+        /// <summary>
+        /// Runs Arc, the AI assistant, for the specified assistant session in a
+        /// streaming fashion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public override SessionServiceClient.StreamChatAiAssistantStream StreamChatAiAssistant(StreamChatAiAssistantRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StreamChatAiAssistantRequest(ref request, ref callSettings);
+            return new StreamChatAiAssistantStreamImpl(_callStreamChatAiAssistant.Call(request, callSettings));
+        }
+
+        /// <summary>
+        /// Cancels the assistant session's in-flight turn, if any: the explicit user
+        /// stop for a turn running detached from any stream. A cancel landing on a
+        /// task that does not host the turn preempts it through the session turn
+        /// epoch instead, ending it within one lease renewal.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CancelAssistantTurnResponse CancelAssistantTurn(CancelAssistantTurnRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelAssistantTurnRequest(ref request, ref callSettings);
+            return _callCancelAssistantTurn.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Cancels the assistant session's in-flight turn, if any: the explicit user
+        /// stop for a turn running detached from any stream. A cancel landing on a
+        /// task that does not host the turn preempts it through the session turn
+        /// epoch instead, ending it within one lease renewal.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CancelAssistantTurnResponse> CancelAssistantTurnAsync(CancelAssistantTurnRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelAssistantTurnRequest(ref request, ref callSettings);
+            return _callCancelAssistantTurn.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates personalized onboarding suggestions for the Arc
+        /// zero state: classifies the requesting user (new / exploring / returning)
+        /// from their assistant-session history in the app and returns suggestion
+        /// chips (resume a session, continue work, or start something new) to render
+        /// before any message is sent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GenerateOnboardingSuggestionsResponse GenerateOnboardingSuggestions(GenerateOnboardingSuggestionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateOnboardingSuggestionsRequest(ref request, ref callSettings);
+            return _callGenerateOnboardingSuggestions.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates personalized onboarding suggestions for the Arc
+        /// zero state: classifies the requesting user (new / exploring / returning)
+        /// from their assistant-session history in the app and returns suggestion
+        /// chips (resume a session, continue work, or start something new) to render
+        /// before any message is sent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GenerateOnboardingSuggestionsResponse> GenerateOnboardingSuggestionsAsync(GenerateOnboardingSuggestionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateOnboardingSuggestionsRequest(ref request, ref callSettings);
+            return _callGenerateOnboardingSuggestions.Async(request, callSettings);
         }
     }
 

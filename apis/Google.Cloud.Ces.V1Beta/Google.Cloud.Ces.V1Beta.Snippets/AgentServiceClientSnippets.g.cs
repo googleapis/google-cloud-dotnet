@@ -1164,6 +1164,7 @@ namespace GoogleCSharpSnippets
                 GcsUri = "",
                 ImportOptions = new ImportAppRequest.Types.ImportOptions(),
                 IgnoreAppLock = false,
+                JsonPatchContent = "",
             };
             // Make the request
             Operation<ImportAppResponse, OperationMetadata> response = agentServiceClient.ImportApp(request);
@@ -1202,6 +1203,7 @@ namespace GoogleCSharpSnippets
                 GcsUri = "",
                 ImportOptions = new ImportAppRequest.Types.ImportOptions(),
                 IgnoreAppLock = false,
+                JsonPatchContent = "",
             };
             // Make the request
             Operation<ImportAppResponse, OperationMetadata> response = await agentServiceClient.ImportAppAsync(request);
@@ -6743,6 +6745,70 @@ namespace GoogleCSharpSnippets
             AppVersion appVersion = new AppVersion();
             // Make the request
             AppVersion response = await agentServiceClient.CreateAppVersionAsync(parent, appVersion);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAppVersion</summary>
+        public void UpdateAppVersionRequestObject()
+        {
+            // Snippet: UpdateAppVersion(UpdateAppVersionRequest, CallSettings)
+            // Create client
+            AgentServiceClient agentServiceClient = AgentServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateAppVersionRequest request = new UpdateAppVersionRequest
+            {
+                AppVersion = new AppVersion(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            AppVersion response = agentServiceClient.UpdateAppVersion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAppVersionAsync</summary>
+        public async Task UpdateAppVersionRequestObjectAsync()
+        {
+            // Snippet: UpdateAppVersionAsync(UpdateAppVersionRequest, CallSettings)
+            // Additional: UpdateAppVersionAsync(UpdateAppVersionRequest, CancellationToken)
+            // Create client
+            AgentServiceClient agentServiceClient = await AgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAppVersionRequest request = new UpdateAppVersionRequest
+            {
+                AppVersion = new AppVersion(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            AppVersion response = await agentServiceClient.UpdateAppVersionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAppVersion</summary>
+        public void UpdateAppVersion()
+        {
+            // Snippet: UpdateAppVersion(AppVersion, FieldMask, CallSettings)
+            // Create client
+            AgentServiceClient agentServiceClient = AgentServiceClient.Create();
+            // Initialize request argument(s)
+            AppVersion appVersion = new AppVersion();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            AppVersion response = agentServiceClient.UpdateAppVersion(appVersion, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAppVersionAsync</summary>
+        public async Task UpdateAppVersionAsync()
+        {
+            // Snippet: UpdateAppVersionAsync(AppVersion, FieldMask, CallSettings)
+            // Additional: UpdateAppVersionAsync(AppVersion, FieldMask, CancellationToken)
+            // Create client
+            AgentServiceClient agentServiceClient = await AgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AppVersion appVersion = new AppVersion();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            AppVersion response = await agentServiceClient.UpdateAppVersionAsync(appVersion, updateMask);
             // End snippet
         }
 

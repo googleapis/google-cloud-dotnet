@@ -131,5 +131,104 @@ namespace GoogleCSharpSnippets
             await responseHandlerTask;
             // End snippet
         }
+
+        /// <summary>Snippet for StreamChatAiAssistant</summary>
+        public async Task StreamChatAiAssistantRequestObject()
+        {
+            // Snippet: StreamChatAiAssistant(StreamChatAiAssistantRequest, CallSettings)
+            // Create client
+            SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
+            // Initialize request argument(s)
+            StreamChatAiAssistantRequest request = new StreamChatAiAssistantRequest
+            {
+                AssistantSessionName = AssistantSessionName.FromProjectLocationAppAssistantSession("[PROJECT]", "[LOCATION]", "[APP]", "[ASSISTANT_SESSION]"),
+                Message = "",
+                AttachedGcsUris = { "", },
+                ContextToken = "",
+                ConfirmationResponse = new AssistantConfirmationResponse(),
+                ClientCapabilities =
+                {
+                    StreamChatAiAssistantRequest.Types.ClientCapability.Unspecified,
+                },
+                OperationCompletedEvent = new OperationCompletedEvent(),
+                ResumeFromSequenceNumber = 0L,
+                AttachOnly = false,
+            };
+            // Make the request, returning a streaming response
+            using SessionServiceClient.StreamChatAiAssistantStream response = sessionServiceClient.StreamChatAiAssistant(request);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<StreamChatAiAssistantResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                StreamChatAiAssistantResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelAssistantTurn</summary>
+        public void CancelAssistantTurnRequestObject()
+        {
+            // Snippet: CancelAssistantTurn(CancelAssistantTurnRequest, CallSettings)
+            // Create client
+            SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
+            // Initialize request argument(s)
+            CancelAssistantTurnRequest request = new CancelAssistantTurnRequest { Name = "", TurnId = "", };
+            // Make the request
+            CancelAssistantTurnResponse response = sessionServiceClient.CancelAssistantTurn(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelAssistantTurnAsync</summary>
+        public async Task CancelAssistantTurnRequestObjectAsync()
+        {
+            // Snippet: CancelAssistantTurnAsync(CancelAssistantTurnRequest, CallSettings)
+            // Additional: CancelAssistantTurnAsync(CancelAssistantTurnRequest, CancellationToken)
+            // Create client
+            SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CancelAssistantTurnRequest request = new CancelAssistantTurnRequest { Name = "", TurnId = "", };
+            // Make the request
+            CancelAssistantTurnResponse response = await sessionServiceClient.CancelAssistantTurnAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateOnboardingSuggestions</summary>
+        public void GenerateOnboardingSuggestionsRequestObject()
+        {
+            // Snippet: GenerateOnboardingSuggestions(GenerateOnboardingSuggestionsRequest, CallSettings)
+            // Create client
+            SessionServiceClient sessionServiceClient = SessionServiceClient.Create();
+            // Initialize request argument(s)
+            GenerateOnboardingSuggestionsRequest request = new GenerateOnboardingSuggestionsRequest
+            {
+                AppName = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]"),
+                MaxSuggestions = 0,
+            };
+            // Make the request
+            GenerateOnboardingSuggestionsResponse response = sessionServiceClient.GenerateOnboardingSuggestions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateOnboardingSuggestionsAsync</summary>
+        public async Task GenerateOnboardingSuggestionsRequestObjectAsync()
+        {
+            // Snippet: GenerateOnboardingSuggestionsAsync(GenerateOnboardingSuggestionsRequest, CallSettings)
+            // Additional: GenerateOnboardingSuggestionsAsync(GenerateOnboardingSuggestionsRequest, CancellationToken)
+            // Create client
+            SessionServiceClient sessionServiceClient = await SessionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GenerateOnboardingSuggestionsRequest request = new GenerateOnboardingSuggestionsRequest
+            {
+                AppName = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]"),
+                MaxSuggestions = 0,
+            };
+            // Make the request
+            GenerateOnboardingSuggestionsResponse response = await sessionServiceClient.GenerateOnboardingSuggestionsAsync(request);
+            // End snippet
+        }
     }
 }

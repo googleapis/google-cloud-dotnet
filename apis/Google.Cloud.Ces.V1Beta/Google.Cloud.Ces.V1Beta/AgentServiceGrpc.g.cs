@@ -199,6 +199,8 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.CreateAppVersionRequest> __Marshaller_google_cloud_ces_v1beta_CreateAppVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.CreateAppVersionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.UpdateAppVersionRequest> __Marshaller_google_cloud_ces_v1beta_UpdateAppVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.UpdateAppVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.DeleteAppVersionRequest> __Marshaller_google_cloud_ces_v1beta_DeleteAppVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.DeleteAppVersionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.RestoreAppVersionRequest> __Marshaller_google_cloud_ces_v1beta_RestoreAppVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.RestoreAppVersionRequest.Parser));
@@ -579,6 +581,14 @@ namespace Google.Cloud.Ces.V1Beta {
         __ServiceName,
         "CreateAppVersion",
         __Marshaller_google_cloud_ces_v1beta_CreateAppVersionRequest,
+        __Marshaller_google_cloud_ces_v1beta_AppVersion);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Ces.V1Beta.UpdateAppVersionRequest, global::Google.Cloud.Ces.V1Beta.AppVersion> __Method_UpdateAppVersion = new grpc::Method<global::Google.Cloud.Ces.V1Beta.UpdateAppVersionRequest, global::Google.Cloud.Ces.V1Beta.AppVersion>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAppVersion",
+        __Marshaller_google_cloud_ces_v1beta_UpdateAppVersionRequest,
         __Marshaller_google_cloud_ces_v1beta_AppVersion);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -1179,6 +1189,18 @@ namespace Google.Cloud.Ces.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Ces.V1Beta.AppVersion> CreateAppVersion(global::Google.Cloud.Ces.V1Beta.CreateAppVersionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the specified app version.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Ces.V1Beta.AppVersion> UpdateAppVersion(global::Google.Cloud.Ces.V1Beta.UpdateAppVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -3483,6 +3505,54 @@ namespace Google.Cloud.Ces.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_CreateAppVersion, null, options, request);
       }
       /// <summary>
+      /// Updates the specified app version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Ces.V1Beta.AppVersion UpdateAppVersion(global::Google.Cloud.Ces.V1Beta.UpdateAppVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAppVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the specified app version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Ces.V1Beta.AppVersion UpdateAppVersion(global::Google.Cloud.Ces.V1Beta.UpdateAppVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAppVersion, null, options, request);
+      }
+      /// <summary>
+      /// Updates the specified app version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Ces.V1Beta.AppVersion> UpdateAppVersionAsync(global::Google.Cloud.Ces.V1Beta.UpdateAppVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAppVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the specified app version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Ces.V1Beta.AppVersion> UpdateAppVersionAsync(global::Google.Cloud.Ces.V1Beta.UpdateAppVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAppVersion, null, options, request);
+      }
+      /// <summary>
       /// Deletes the specified app version.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -3790,6 +3860,7 @@ namespace Google.Cloud.Ces.V1Beta {
           .AddMethod(__Method_ListAppVersions, serviceImpl.ListAppVersions)
           .AddMethod(__Method_GetAppVersion, serviceImpl.GetAppVersion)
           .AddMethod(__Method_CreateAppVersion, serviceImpl.CreateAppVersion)
+          .AddMethod(__Method_UpdateAppVersion, serviceImpl.UpdateAppVersion)
           .AddMethod(__Method_DeleteAppVersion, serviceImpl.DeleteAppVersion)
           .AddMethod(__Method_RestoreAppVersion, serviceImpl.RestoreAppVersion)
           .AddMethod(__Method_GenerateAppResource, serviceImpl.GenerateAppResource)
@@ -3850,6 +3921,7 @@ namespace Google.Cloud.Ces.V1Beta {
       serviceBinder.AddMethod(__Method_ListAppVersions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.ListAppVersionsRequest, global::Google.Cloud.Ces.V1Beta.ListAppVersionsResponse>(serviceImpl.ListAppVersions));
       serviceBinder.AddMethod(__Method_GetAppVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.GetAppVersionRequest, global::Google.Cloud.Ces.V1Beta.AppVersion>(serviceImpl.GetAppVersion));
       serviceBinder.AddMethod(__Method_CreateAppVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.CreateAppVersionRequest, global::Google.Cloud.Ces.V1Beta.AppVersion>(serviceImpl.CreateAppVersion));
+      serviceBinder.AddMethod(__Method_UpdateAppVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.UpdateAppVersionRequest, global::Google.Cloud.Ces.V1Beta.AppVersion>(serviceImpl.UpdateAppVersion));
       serviceBinder.AddMethod(__Method_DeleteAppVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.DeleteAppVersionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAppVersion));
       serviceBinder.AddMethod(__Method_RestoreAppVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.RestoreAppVersionRequest, global::Google.LongRunning.Operation>(serviceImpl.RestoreAppVersion));
       serviceBinder.AddMethod(__Method_GenerateAppResource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.GenerateAppResourceRequest, global::Google.LongRunning.Operation>(serviceImpl.GenerateAppResource));

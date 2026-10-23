@@ -32,30 +32,32 @@ namespace Google.Cloud.Ces.V1Beta {
             "L2V4YW1wbGUucHJvdG8aJ2dvb2dsZS9jbG91ZC9jZXMvdjFiZXRhL2d1YXJk",
             "cmFpbC5wcm90bxoiZ29vZ2xlL2Nsb3VkL2Nlcy92MWJldGEvdG9vbC5wcm90",
             "bxolZ29vZ2xlL2Nsb3VkL2Nlcy92MWJldGEvdG9vbHNldC5wcm90bxofZ29v",
-            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLUAgoLQXBwU25hcHNob3QS",
-            "LgoDYXBwGAEgASgLMhwuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuQXBwQgPg",
-            "QQESMwoGYWdlbnRzGAIgAygLMh4uZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEu",
-            "QWdlbnRCA+BBARIxCgV0b29scxgDIAMoCzIdLmdvb2dsZS5jbG91ZC5jZXMu",
-            "djFiZXRhLlRvb2xCA+BBARI3CghleGFtcGxlcxgEIAMoCzIgLmdvb2dsZS5j",
-            "bG91ZC5jZXMudjFiZXRhLkV4YW1wbGVCA+BBARI7CgpndWFyZHJhaWxzGAUg",
-            "AygLMiIuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuR3VhcmRyYWlsQgPgQQES",
-            "NwoIdG9vbHNldHMYBiADKAsyIC5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5U",
-            "b29sc2V0QgPgQQEi9QIKCkFwcFZlcnNpb24SEQoEbmFtZRgBIAEoCUID4EEI",
-            "EhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EEBEhgKC2Rlc2NyaXB0aW9uGAMg",
-            "ASgJQgPgQQESFAoHY3JlYXRvchgEIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1l",
-            "GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjsKCHNu",
-            "YXBzaG90GAggASgLMiQuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuQXBwU25h",
-            "cHNob3RCA+BBAxIRCgRldGFnGAcgASgJQgPgQQM6ggHqQX8KHWNlcy5nb29n",
-            "bGVhcGlzLmNvbS9BcHBWZXJzaW9uEkVwcm9qZWN0cy97cHJvamVjdH0vbG9j",
-            "YXRpb25zL3tsb2NhdGlvbn0vYXBwcy97YXBwfS92ZXJzaW9ucy97dmVyc2lv",
-            "bn0qC2FwcFZlcnNpb25zMgphcHBWZXJzaW9uQl8KG2NvbS5nb29nbGUuY2xv",
-            "dWQuY2VzLnYxYmV0YUIPQXBwVmVyc2lvblByb3RvUAFaLWNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vY2VzL2FwaXYxYmV0YS9jZXNwYjtjZXNwYmIGcHJvdG8z"));
+            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLaAgoLQXBwU25hcHNob3QS",
+            "LwoDYXBwGAEgASgLMhwuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuQXBwQgTi",
+            "QQEBEjQKBmFnZW50cxgCIAMoCzIeLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRh",
+            "LkFnZW50QgTiQQEBEjIKBXRvb2xzGAMgAygLMh0uZ29vZ2xlLmNsb3VkLmNl",
+            "cy52MWJldGEuVG9vbEIE4kEBARI4CghleGFtcGxlcxgEIAMoCzIgLmdvb2ds",
+            "ZS5jbG91ZC5jZXMudjFiZXRhLkV4YW1wbGVCBOJBAQESPAoKZ3VhcmRyYWls",
+            "cxgFIAMoCzIiLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLkd1YXJkcmFpbEIE",
+            "4kEBARI4Cgh0b29sc2V0cxgGIAMoCzIgLmdvb2dsZS5jbG91ZC5jZXMudjFi",
+            "ZXRhLlRvb2xzZXRCBOJBAQEiswMKCkFwcFZlcnNpb24SEgoEbmFtZRgBIAEo",
+            "CUIE4kEBCBIaCgxkaXNwbGF5X25hbWUYAiABKAlCBOJBAQESGQoLZGVzY3Jp",
+            "cHRpb24YAyABKAlCBOJBAQESFQoHY3JlYXRvchgEIAEoCUIE4kEBAxI1Cgtj",
+            "cmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "BOJBAQMSNQoLdXBkYXRlX3RpbWUYCSABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgTiQQEDEjwKCHNuYXBzaG90GAggASgLMiQuZ29vZ2xlLmNs",
+            "b3VkLmNlcy52MWJldGEuQXBwU25hcHNob3RCBOJBAQMSEgoEZXRhZxgHIAEo",
+            "CUIE4kEBAzqCAepBfwodY2VzLmdvb2dsZWFwaXMuY29tL0FwcFZlcnNpb24S",
+            "RXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9hcHBz",
+            "L3thcHB9L3ZlcnNpb25zL3t2ZXJzaW9ufSoLYXBwVmVyc2lvbnMyCmFwcFZl",
+            "cnNpb25CXwobY29tLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhQg9BcHBWZXJz",
+            "aW9uUHJvdG9QAVotY2xvdWQuZ29vZ2xlLmNvbS9nby9jZXMvYXBpdjFiZXRh",
+            "L2Nlc3BiO2Nlc3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.AgentReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.AppReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.ExampleReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.GuardrailReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.ToolReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.ToolsetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.AppSnapshot), global::Google.Cloud.Ces.V1Beta.AppSnapshot.Parser, new[]{ "App", "Agents", "Tools", "Examples", "Guardrails", "Toolsets" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.AppVersion), global::Google.Cloud.Ces.V1Beta.AppVersion.Parser, new[]{ "Name", "DisplayName", "Description", "Creator", "CreateTime", "Snapshot", "Etag" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.AppVersion), global::Google.Cloud.Ces.V1Beta.AppVersion.Parser, new[]{ "Name", "DisplayName", "Description", "Creator", "CreateTime", "UpdateTime", "Snapshot", "Etag" }, null, null, null, null)
           }));
     }
     #endregion
@@ -465,6 +467,7 @@ namespace Google.Cloud.Ces.V1Beta {
       description_ = other.description_;
       creator_ = other.creator_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       snapshot_ = other.snapshot_ != null ? other.snapshot_.Clone() : null;
       etag_ = other.etag_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -553,6 +556,21 @@ namespace Google.Cloud.Ces.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 9;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. Timestamp when the app version was last updated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
     /// <summary>Field number for the "snapshot" field.</summary>
     public const int SnapshotFieldNumber = 8;
     private global::Google.Cloud.Ces.V1Beta.AppSnapshot snapshot_;
@@ -605,6 +623,7 @@ namespace Google.Cloud.Ces.V1Beta {
       if (Description != other.Description) return false;
       if (Creator != other.Creator) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (!object.Equals(Snapshot, other.Snapshot)) return false;
       if (Etag != other.Etag) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -619,6 +638,7 @@ namespace Google.Cloud.Ces.V1Beta {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (Creator.Length != 0) hash ^= Creator.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (snapshot_ != null) hash ^= Snapshot.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (_unknownFields != null) {
@@ -667,6 +687,10 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteRawTag(66);
         output.WriteMessage(Snapshot);
       }
+      if (updateTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(UpdateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -705,6 +729,10 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteRawTag(66);
         output.WriteMessage(Snapshot);
       }
+      if (updateTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(UpdateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -729,6 +757,9 @@ namespace Google.Cloud.Ces.V1Beta {
       }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
       if (snapshot_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Snapshot);
@@ -765,6 +796,12 @@ namespace Google.Cloud.Ces.V1Beta {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
       }
       if (other.snapshot_ != null) {
         if (snapshot_ == null) {
@@ -828,6 +865,13 @@ namespace Google.Cloud.Ces.V1Beta {
             input.ReadMessage(Snapshot);
             break;
           }
+          case 74: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
         }
       }
     #endif
@@ -879,6 +923,13 @@ namespace Google.Cloud.Ces.V1Beta {
               Snapshot = new global::Google.Cloud.Ces.V1Beta.AppSnapshot();
             }
             input.ReadMessage(Snapshot);
+            break;
+          }
+          case 74: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
             break;
           }
         }

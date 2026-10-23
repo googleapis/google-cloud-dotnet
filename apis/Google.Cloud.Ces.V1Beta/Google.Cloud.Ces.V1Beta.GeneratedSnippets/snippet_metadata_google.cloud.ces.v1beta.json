@@ -1953,12 +1953,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 67,
+          "end": 68,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 65,
+          "end": 66,
           "type": "SHORT"
         }
       ]
@@ -2002,12 +2002,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 68,
+          "end": 69,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 66,
+          "end": 67,
           "type": "SHORT"
         }
       ]
@@ -14720,6 +14720,206 @@
       ]
     },
     {
+      "regionTag": "ces_v1beta_generated_AgentService_UpdateAppVersion_sync",
+      "title": "UpdateAppVersionRequestObject",
+      "description": "Snippet for UpdateAppVersion",
+      "file": "AgentServiceClient.UpdateAppVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAppVersion",
+        "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient.UpdateAppVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.UpdateAppVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ces.V1Beta.AppVersion",
+        "client": {
+          "shortName": "AgentServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAppVersion",
+          "fullName": "google.cloud.ces.v1beta.AgentService.UpdateAppVersion",
+          "service": {
+            "shortName": "AgentService",
+            "fullName": "google.cloud.ces.v1beta.AgentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AgentService_UpdateAppVersion_async",
+      "title": "UpdateAppVersionRequestObjectAsync",
+      "description": "Snippet for UpdateAppVersionAsync",
+      "file": "AgentServiceClient.UpdateAppVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAppVersionAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient.UpdateAppVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.UpdateAppVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ces.V1Beta.AppVersion>",
+        "client": {
+          "shortName": "AgentServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAppVersion",
+          "fullName": "google.cloud.ces.v1beta.AgentService.UpdateAppVersion",
+          "service": {
+            "shortName": "AgentService",
+            "fullName": "google.cloud.ces.v1beta.AgentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AgentService_UpdateAppVersion_sync_flattened",
+      "title": "UpdateAppVersion",
+      "description": "Snippet for UpdateAppVersion",
+      "file": "AgentServiceClient.UpdateAppVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAppVersion",
+        "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient.UpdateAppVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.AppVersion",
+            "name": "appVersion"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ces.V1Beta.AppVersion",
+        "client": {
+          "shortName": "AgentServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAppVersion",
+          "fullName": "google.cloud.ces.v1beta.AgentService.UpdateAppVersion",
+          "service": {
+            "shortName": "AgentService",
+            "fullName": "google.cloud.ces.v1beta.AgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AgentService_UpdateAppVersion_async_flattened",
+      "title": "UpdateAppVersionAsync",
+      "description": "Snippet for UpdateAppVersionAsync",
+      "file": "AgentServiceClient.UpdateAppVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAppVersionAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient.UpdateAppVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.AppVersion",
+            "name": "appVersion"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ces.V1Beta.AppVersion>",
+        "client": {
+          "shortName": "AgentServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AgentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAppVersion",
+          "fullName": "google.cloud.ces.v1beta.AgentService.UpdateAppVersion",
+          "service": {
+            "shortName": "AgentService",
+            "fullName": "google.cloud.ces.v1beta.AgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "ces_v1beta_generated_AgentService_DeleteAppVersion_sync",
       "title": "DeleteAppVersionRequestObject",
       "description": "Snippet for DeleteAppVersion",
@@ -16179,6 +16379,1393 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_ListAssistantSessions_sync",
+      "title": "ListAssistantSessionsRequestObject",
+      "description": "Snippet for ListAssistantSessions",
+      "file": "AssistantServiceClient.ListAssistantSessionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAssistantSessions",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.ListAssistantSessions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.ListAssistantSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Ces.V1Beta.ListAssistantSessionsResponse, Google.Cloud.Ces.V1Beta.AssistantSession>",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "ListAssistantSessions",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.ListAssistantSessions",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_ListAssistantSessions_async",
+      "title": "ListAssistantSessionsRequestObjectAsync",
+      "description": "Snippet for ListAssistantSessionsAsync",
+      "file": "AssistantServiceClient.ListAssistantSessionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAssistantSessionsAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.ListAssistantSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.ListAssistantSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Ces.V1Beta.ListAssistantSessionsResponse, Google.Cloud.Ces.V1Beta.AssistantSession>",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "ListAssistantSessions",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.ListAssistantSessions",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_ListAssistantSessions_sync_flattened",
+      "title": "ListAssistantSessions",
+      "description": "Snippet for ListAssistantSessions",
+      "file": "AssistantServiceClient.ListAssistantSessionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAssistantSessions",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.ListAssistantSessions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Ces.V1Beta.ListAssistantSessionsResponse, Google.Cloud.Ces.V1Beta.AssistantSession>",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "ListAssistantSessions",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.ListAssistantSessions",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_ListAssistantSessions_async_flattened",
+      "title": "ListAssistantSessionsAsync",
+      "description": "Snippet for ListAssistantSessionsAsync",
+      "file": "AssistantServiceClient.ListAssistantSessionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAssistantSessionsAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.ListAssistantSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Ces.V1Beta.ListAssistantSessionsResponse, Google.Cloud.Ces.V1Beta.AssistantSession>",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "ListAssistantSessions",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.ListAssistantSessions",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_ListAssistantSessions_sync_flattened_resourceNames",
+      "title": "ListAssistantSessionsResourceNames",
+      "description": "Snippet for ListAssistantSessions",
+      "file": "AssistantServiceClient.ListAssistantSessionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAssistantSessions",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.ListAssistantSessions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.AppName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Ces.V1Beta.ListAssistantSessionsResponse, Google.Cloud.Ces.V1Beta.AssistantSession>",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "ListAssistantSessions",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.ListAssistantSessions",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_ListAssistantSessions_async_flattened_resourceNames",
+      "title": "ListAssistantSessionsResourceNamesAsync",
+      "description": "Snippet for ListAssistantSessionsAsync",
+      "file": "AssistantServiceClient.ListAssistantSessionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAssistantSessionsAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.ListAssistantSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.AppName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Ces.V1Beta.ListAssistantSessionsResponse, Google.Cloud.Ces.V1Beta.AssistantSession>",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "ListAssistantSessions",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.ListAssistantSessions",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_GetAssistantSession_sync",
+      "title": "GetAssistantSessionRequestObject",
+      "description": "Snippet for GetAssistantSession",
+      "file": "AssistantServiceClient.GetAssistantSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAssistantSession",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.GetAssistantSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.GetAssistantSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ces.V1Beta.AssistantSession",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "GetAssistantSession",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.GetAssistantSession",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_GetAssistantSession_async",
+      "title": "GetAssistantSessionRequestObjectAsync",
+      "description": "Snippet for GetAssistantSessionAsync",
+      "file": "AssistantServiceClient.GetAssistantSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAssistantSessionAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.GetAssistantSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.GetAssistantSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ces.V1Beta.AssistantSession>",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "GetAssistantSession",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.GetAssistantSession",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_GetAssistantSession_sync_flattened",
+      "title": "GetAssistantSession",
+      "description": "Snippet for GetAssistantSession",
+      "file": "AssistantServiceClient.GetAssistantSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAssistantSession",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.GetAssistantSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ces.V1Beta.AssistantSession",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "GetAssistantSession",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.GetAssistantSession",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_GetAssistantSession_async_flattened",
+      "title": "GetAssistantSessionAsync",
+      "description": "Snippet for GetAssistantSessionAsync",
+      "file": "AssistantServiceClient.GetAssistantSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAssistantSessionAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.GetAssistantSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ces.V1Beta.AssistantSession>",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "GetAssistantSession",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.GetAssistantSession",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_GetAssistantSession_sync_flattened_resourceNames",
+      "title": "GetAssistantSessionResourceNames",
+      "description": "Snippet for GetAssistantSession",
+      "file": "AssistantServiceClient.GetAssistantSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAssistantSession",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.GetAssistantSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.AssistantSessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ces.V1Beta.AssistantSession",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "GetAssistantSession",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.GetAssistantSession",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_GetAssistantSession_async_flattened_resourceNames",
+      "title": "GetAssistantSessionResourceNamesAsync",
+      "description": "Snippet for GetAssistantSessionAsync",
+      "file": "AssistantServiceClient.GetAssistantSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAssistantSessionAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.GetAssistantSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.AssistantSessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ces.V1Beta.AssistantSession>",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "GetAssistantSession",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.GetAssistantSession",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_CreateAssistantSession_sync",
+      "title": "CreateAssistantSessionRequestObject",
+      "description": "Snippet for CreateAssistantSession",
+      "file": "AssistantServiceClient.CreateAssistantSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAssistantSession",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.CreateAssistantSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.CreateAssistantSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ces.V1Beta.AssistantSession",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAssistantSession",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.CreateAssistantSession",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_CreateAssistantSession_async",
+      "title": "CreateAssistantSessionRequestObjectAsync",
+      "description": "Snippet for CreateAssistantSessionAsync",
+      "file": "AssistantServiceClient.CreateAssistantSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAssistantSessionAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.CreateAssistantSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.CreateAssistantSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ces.V1Beta.AssistantSession>",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAssistantSession",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.CreateAssistantSession",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_CreateAssistantSession_sync_flattened",
+      "title": "CreateAssistantSession",
+      "description": "Snippet for CreateAssistantSession",
+      "file": "AssistantServiceClient.CreateAssistantSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAssistantSession",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.CreateAssistantSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "assistantSessionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ces.V1Beta.AssistantSession",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAssistantSession",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.CreateAssistantSession",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_CreateAssistantSession_async_flattened",
+      "title": "CreateAssistantSessionAsync",
+      "description": "Snippet for CreateAssistantSessionAsync",
+      "file": "AssistantServiceClient.CreateAssistantSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAssistantSessionAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.CreateAssistantSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "assistantSessionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ces.V1Beta.AssistantSession>",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAssistantSession",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.CreateAssistantSession",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_CreateAssistantSession_sync_flattened_resourceNames",
+      "title": "CreateAssistantSessionResourceNames",
+      "description": "Snippet for CreateAssistantSession",
+      "file": "AssistantServiceClient.CreateAssistantSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAssistantSession",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.CreateAssistantSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.AppName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "assistantSessionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ces.V1Beta.AssistantSession",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAssistantSession",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.CreateAssistantSession",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_CreateAssistantSession_async_flattened_resourceNames",
+      "title": "CreateAssistantSessionResourceNamesAsync",
+      "description": "Snippet for CreateAssistantSessionAsync",
+      "file": "AssistantServiceClient.CreateAssistantSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAssistantSessionAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.CreateAssistantSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.AppName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "assistantSessionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ces.V1Beta.AssistantSession>",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAssistantSession",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.CreateAssistantSession",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_DeleteAssistantSession_sync",
+      "title": "DeleteAssistantSessionRequestObject",
+      "description": "Snippet for DeleteAssistantSession",
+      "file": "AssistantServiceClient.DeleteAssistantSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAssistantSession",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.DeleteAssistantSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.DeleteAssistantSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAssistantSession",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.DeleteAssistantSession",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_DeleteAssistantSession_async",
+      "title": "DeleteAssistantSessionRequestObjectAsync",
+      "description": "Snippet for DeleteAssistantSessionAsync",
+      "file": "AssistantServiceClient.DeleteAssistantSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAssistantSessionAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.DeleteAssistantSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.DeleteAssistantSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAssistantSession",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.DeleteAssistantSession",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_DeleteAssistantSession_sync_flattened",
+      "title": "DeleteAssistantSession",
+      "description": "Snippet for DeleteAssistantSession",
+      "file": "AssistantServiceClient.DeleteAssistantSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAssistantSession",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.DeleteAssistantSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAssistantSession",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.DeleteAssistantSession",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_DeleteAssistantSession_async_flattened",
+      "title": "DeleteAssistantSessionAsync",
+      "description": "Snippet for DeleteAssistantSessionAsync",
+      "file": "AssistantServiceClient.DeleteAssistantSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAssistantSessionAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.DeleteAssistantSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAssistantSession",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.DeleteAssistantSession",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_DeleteAssistantSession_sync_flattened_resourceNames",
+      "title": "DeleteAssistantSessionResourceNames",
+      "description": "Snippet for DeleteAssistantSession",
+      "file": "AssistantServiceClient.DeleteAssistantSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAssistantSession",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.DeleteAssistantSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.AssistantSessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAssistantSession",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.DeleteAssistantSession",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_DeleteAssistantSession_async_flattened_resourceNames",
+      "title": "DeleteAssistantSessionResourceNamesAsync",
+      "description": "Snippet for DeleteAssistantSessionAsync",
+      "file": "AssistantServiceClient.DeleteAssistantSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAssistantSessionAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.DeleteAssistantSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.AssistantSessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAssistantSession",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.DeleteAssistantSession",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_RunAssistant_sync",
+      "title": "RunAssistantRequestObject",
+      "description": "Snippet for RunAssistant",
+      "file": "AssistantServiceClient.RunAssistantRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunAssistant",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.RunAssistant",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.RunAssistantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ces.V1Beta.RunAssistantResponse",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "RunAssistant",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.RunAssistant",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_RunAssistant_async",
+      "title": "RunAssistantRequestObjectAsync",
+      "description": "Snippet for RunAssistantAsync",
+      "file": "AssistantServiceClient.RunAssistantRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunAssistantAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.RunAssistantAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.RunAssistantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ces.V1Beta.RunAssistantResponse>",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "RunAssistant",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.RunAssistant",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_ChatAiAssistant_sync",
+      "title": "ChatAiAssistantRequestObject",
+      "description": "Snippet for ChatAiAssistant",
+      "file": "AssistantServiceClient.ChatAiAssistantRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ChatAiAssistant",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.ChatAiAssistant",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.ChatAiAssistantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ces.V1Beta.ChatAiAssistantResponse",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "ChatAiAssistant",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.ChatAiAssistant",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_AssistantService_ChatAiAssistant_async",
+      "title": "ChatAiAssistantRequestObjectAsync",
+      "description": "Snippet for ChatAiAssistantAsync",
+      "file": "AssistantServiceClient.ChatAiAssistantRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ChatAiAssistantAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient.ChatAiAssistantAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.ChatAiAssistantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ces.V1Beta.ChatAiAssistantResponse>",
+        "client": {
+          "shortName": "AssistantServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.AssistantServiceClient"
+        },
+        "method": {
+          "shortName": "ChatAiAssistant",
+          "fullName": "google.cloud.ces.v1beta.AssistantService.ChatAiAssistant",
+          "service": {
+            "shortName": "AssistantService",
+            "fullName": "google.cloud.ces.v1beta.AssistantService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
           "type": "SHORT"
         }
       ]
@@ -27246,6 +28833,248 @@
         {
           "start": 36,
           "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_SessionService_StreamChatAiAssistant_sync",
+      "title": "StreamChatAiAssistantRequestObject",
+      "description": "Snippet for StreamChatAiAssistant",
+      "file": "SessionServiceClient.StreamChatAiAssistantRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StreamChatAiAssistant",
+        "fullName": "Google.Cloud.Ces.V1Beta.SessionServiceClient.StreamChatAiAssistant",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.StreamChatAiAssistantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ces.V1Beta.SessionServiceClient+StreamChatAiAssistantStream",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "StreamChatAiAssistant",
+          "fullName": "google.cloud.ces.v1beta.SessionService.StreamChatAiAssistant",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.ces.v1beta.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_SessionService_CancelAssistantTurn_sync",
+      "title": "CancelAssistantTurnRequestObject",
+      "description": "Snippet for CancelAssistantTurn",
+      "file": "SessionServiceClient.CancelAssistantTurnRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelAssistantTurn",
+        "fullName": "Google.Cloud.Ces.V1Beta.SessionServiceClient.CancelAssistantTurn",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.CancelAssistantTurnRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ces.V1Beta.CancelAssistantTurnResponse",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "CancelAssistantTurn",
+          "fullName": "google.cloud.ces.v1beta.SessionService.CancelAssistantTurn",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.ces.v1beta.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_SessionService_CancelAssistantTurn_async",
+      "title": "CancelAssistantTurnRequestObjectAsync",
+      "description": "Snippet for CancelAssistantTurnAsync",
+      "file": "SessionServiceClient.CancelAssistantTurnRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelAssistantTurnAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.SessionServiceClient.CancelAssistantTurnAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.CancelAssistantTurnRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ces.V1Beta.CancelAssistantTurnResponse>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "CancelAssistantTurn",
+          "fullName": "google.cloud.ces.v1beta.SessionService.CancelAssistantTurn",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.ces.v1beta.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_SessionService_GenerateOnboardingSuggestions_sync",
+      "title": "GenerateOnboardingSuggestionsRequestObject",
+      "description": "Snippet for GenerateOnboardingSuggestions",
+      "file": "SessionServiceClient.GenerateOnboardingSuggestionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateOnboardingSuggestions",
+        "fullName": "Google.Cloud.Ces.V1Beta.SessionServiceClient.GenerateOnboardingSuggestions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsResponse",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateOnboardingSuggestions",
+          "fullName": "google.cloud.ces.v1beta.SessionService.GenerateOnboardingSuggestions",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.ces.v1beta.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_SessionService_GenerateOnboardingSuggestions_async",
+      "title": "GenerateOnboardingSuggestionsRequestObjectAsync",
+      "description": "Snippet for GenerateOnboardingSuggestionsAsync",
+      "file": "SessionServiceClient.GenerateOnboardingSuggestionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateOnboardingSuggestionsAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.SessionServiceClient.GenerateOnboardingSuggestionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsResponse>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateOnboardingSuggestions",
+          "fullName": "google.cloud.ces.v1beta.SessionService.GenerateOnboardingSuggestions",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.ces.v1beta.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
           "type": "SHORT"
         }
       ]

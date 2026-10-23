@@ -26,65 +26,72 @@ namespace Google.Cloud.Ces.V1Beta {
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvY2VzL3YxYmV0YS9hZ2VudC5wcm90bxIXZ29vZ2xl",
             "LmNsb3VkLmNlcy52MWJldGEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
-            "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aLWdvb2dsZS9jbG91",
-            "ZC9jZXMvdjFiZXRhL2FnZW50X3RyYW5zZmVycy5wcm90bxokZ29vZ2xlL2Ns",
-            "b3VkL2Nlcy92MWJldGEvY29tbW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYv",
-            "dGltZXN0YW1wLnByb3RvIpUQCgVBZ2VudBJBCglsbG1fYWdlbnQYGiABKAsy",
-            "Jy5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5BZ2VudC5MbG1BZ2VudEID4EEB",
-            "SAASXAoXcmVtb3RlX2RpYWxvZ2Zsb3dfYWdlbnQYGyABKAsyNC5nb29nbGUu",
-            "Y2xvdWQuY2VzLnYxYmV0YS5BZ2VudC5SZW1vdGVEaWFsb2dmbG93QWdlbnRC",
-            "A+BBAUgAEhEKBG5hbWUYASABKAlCA+BBCBIZCgxkaXNwbGF5X25hbWUYAiAB",
-            "KAlCA+BBAhIYCgtkZXNjcmlwdGlvbhgDIAEoCUID4EEBEkMKDm1vZGVsX3Nl",
-            "dHRpbmdzGAQgASgLMiYuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuTW9kZWxT",
-            "ZXR0aW5nc0ID4EEBEhgKC2luc3RydWN0aW9uGAYgASgJQgPgQQESLgoFdG9v",
-            "bHMYByADKAlCH+BBAfpBGQoXY2VzLmdvb2dsZWFwaXMuY29tL1Rvb2wSNgoM",
-            "Y2hpbGRfYWdlbnRzGAggAygJQiDgQQH6QRoKGGNlcy5nb29nbGVhcGlzLmNv",
-            "bS9BZ2VudBJGChZiZWZvcmVfYWdlbnRfY2FsbGJhY2tzGBIgAygLMiEuZ29v",
-            "Z2xlLmNsb3VkLmNlcy52MWJldGEuQ2FsbGJhY2tCA+BBARJFChVhZnRlcl9h",
-            "Z2VudF9jYWxsYmFja3MYEyADKAsyIS5nb29nbGUuY2xvdWQuY2VzLnYxYmV0",
-            "YS5DYWxsYmFja0ID4EEBEkYKFmJlZm9yZV9tb2RlbF9jYWxsYmFja3MYFCAD",
-            "KAsyIS5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5DYWxsYmFja0ID4EEBEkUK",
+            "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aKGdvb2dsZS9jbG91",
+            "ZC9jZXMvdjFiZXRhL2FnZW50X2NhcmQucHJvdG8aLWdvb2dsZS9jbG91ZC9j",
+            "ZXMvdjFiZXRhL2FnZW50X3RyYW5zZmVycy5wcm90bxokZ29vZ2xlL2Nsb3Vk",
+            "L2Nlcy92MWJldGEvY29tbW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGlt",
+            "ZXN0YW1wLnByb3RvItsRCgVBZ2VudBJCCglsbG1fYWdlbnQYGiABKAsyJy5n",
+            "b29nbGUuY2xvdWQuY2VzLnYxYmV0YS5BZ2VudC5MbG1BZ2VudEIE4kEBAUgA",
+            "El0KF3JlbW90ZV9kaWFsb2dmbG93X2FnZW50GBsgASgLMjQuZ29vZ2xlLmNs",
+            "b3VkLmNlcy52MWJldGEuQWdlbnQuUmVtb3RlRGlhbG9nZmxvd0FnZW50QgTi",
+            "QQEBSAASTwoQcmVtb3RlX2EyYV9hZ2VudBgpIAEoCzItLmdvb2dsZS5jbG91",
+            "ZC5jZXMudjFiZXRhLkFnZW50LlJlbW90ZUEyYUFnZW50QgTiQQEBSAASEgoE",
+            "bmFtZRgBIAEoCUIE4kEBCBIaCgxkaXNwbGF5X25hbWUYAiABKAlCBOJBAQIS",
+            "GQoLZGVzY3JpcHRpb24YAyABKAlCBOJBAQESRAoObW9kZWxfc2V0dGluZ3MY",
+            "BCABKAsyJi5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5Nb2RlbFNldHRpbmdz",
+            "QgTiQQEBEhkKC2luc3RydWN0aW9uGAYgASgJQgTiQQEBEi8KBXRvb2xzGAcg",
+            "AygJQiDiQQEB+kEZChdjZXMuZ29vZ2xlYXBpcy5jb20vVG9vbBI3CgxjaGls",
+            "ZF9hZ2VudHMYCCADKAlCIeJBAQH6QRoKGGNlcy5nb29nbGVhcGlzLmNvbS9B",
+            "Z2VudBJHChZiZWZvcmVfYWdlbnRfY2FsbGJhY2tzGBIgAygLMiEuZ29vZ2xl",
+            "LmNsb3VkLmNlcy52MWJldGEuQ2FsbGJhY2tCBOJBAQESRgoVYWZ0ZXJfYWdl",
+            "bnRfY2FsbGJhY2tzGBMgAygLMiEuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEu",
+            "Q2FsbGJhY2tCBOJBAQESRwoWYmVmb3JlX21vZGVsX2NhbGxiYWNrcxgUIAMo",
+            "CzIhLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLkNhbGxiYWNrQgTiQQEBEkYK",
             "FWFmdGVyX21vZGVsX2NhbGxiYWNrcxgVIAMoCzIhLmdvb2dsZS5jbG91ZC5j",
-            "ZXMudjFiZXRhLkNhbGxiYWNrQgPgQQESRQoVYmVmb3JlX3Rvb2xfY2FsbGJh",
-            "Y2tzGBYgAygLMiEuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuQ2FsbGJhY2tC",
-            "A+BBARJEChRhZnRlcl90b29sX2NhbGxiYWNrcxgXIAMoCzIhLmdvb2dsZS5j",
-            "bG91ZC5jZXMudjFiZXRhLkNhbGxiYWNrQgPgQQESNAoLY3JlYXRlX3RpbWUY",
-            "DyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBk",
-            "YXRlX3RpbWUYECABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
-            "QQMSOAoKZ3VhcmRyYWlscxgRIAMoCUIk4EEB+kEeChxjZXMuZ29vZ2xlYXBp",
-            "cy5jb20vR3VhcmRyYWlsEgwKBGV0YWcYGCABKAkSQgoIdG9vbHNldHMYHCAD",
-            "KAsyKy5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5BZ2VudC5BZ2VudFRvb2xz",
-            "ZXRCA+BBARIeChFnZW5lcmF0ZWRfc3VtbWFyeRgdIAEoCUID4EEDEkIKDnRy",
-            "YW5zZmVyX3J1bGVzGB4gAygLMiUuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEu",
-            "VHJhbnNmZXJSdWxlQgPgQQESHgoRdmFsaWRhdGlvbl9lcnJvcnMYICADKAlC",
-            "A+BBAxoKCghMbG1BZ2VudBrNBAoVUmVtb3RlRGlhbG9nZmxvd0FnZW50EkAK",
-            "BWFnZW50GAEgASgJQjHgQQL6QSsKKWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5j",
-            "b20vRGlhbG9nZmxvd0FnZW50EhQKB2Zsb3dfaWQYAiABKAlCA+BBARIbCg5l",
-            "bnZpcm9ubWVudF9pZBgDIAEoCUID4EEBEnMKFmlucHV0X3ZhcmlhYmxlX21h",
-            "cHBpbmcYBCADKAsyTi5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5BZ2VudC5S",
-            "ZW1vdGVEaWFsb2dmbG93QWdlbnQuSW5wdXRWYXJpYWJsZU1hcHBpbmdFbnRy",
-            "eUID4EEBEnUKF291dHB1dF92YXJpYWJsZV9tYXBwaW5nGAUgAygLMk8uZ29v",
-            "Z2xlLmNsb3VkLmNlcy52MWJldGEuQWdlbnQuUmVtb3RlRGlhbG9nZmxvd0Fn",
-            "ZW50Lk91dHB1dFZhcmlhYmxlTWFwcGluZ0VudHJ5QgPgQQESMwomcmVzcGVj",
-            "dF9yZXNwb25zZV9pbnRlcnJ1cHRpb25fc2V0dGluZ3MYBiABKAhCA+BBARIj",
-            "ChZsYW5ndWFnZV9jb2RlX3ZhcmlhYmxlGAcgASgJQgPgQQEaOwoZSW5wdXRW",
-            "YXJpYWJsZU1hcHBpbmdFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
-            "KAk6AjgBGjwKGk91dHB1dFZhcmlhYmxlTWFwcGluZ0VudHJ5EgsKA2tleRgB",
-            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaWgoMQWdlbnRUb29sc2V0EjMKB3Rv",
-            "b2xzZXQYASABKAlCIuBBAvpBHAoaY2VzLmdvb2dsZWFwaXMuY29tL1Rvb2xz",
-            "ZXQSFQoIdG9vbF9pZHMYBCADKAlCA+BBATpv6kFsChhjZXMuZ29vZ2xlYXBp",
-            "cy5jb20vQWdlbnQSQXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9hcHBzL3thcHB9L2FnZW50cy97YWdlbnR9KgZhZ2VudHMyBWFn",
-            "ZW50QgwKCmFnZW50X3R5cGVCwAEKG2NvbS5nb29nbGUuY2xvdWQuY2VzLnYx",
-            "YmV0YUIKQWdlbnRQcm90b1ABWi1jbG91ZC5nb29nbGUuY29tL2dvL2Nlcy9h",
-            "cGl2MWJldGEvY2VzcGI7Y2VzcGLqQWMKKWRpYWxvZ2Zsb3cuZ29vZ2xlYXBp",
-            "cy5jb20vRGlhbG9nZmxvd0FnZW50EjZwcm9qZWN0cy97cHJvamVjdH0vbG9j",
-            "YXRpb25zL3tsb2NhdGlvbn0vYWdlbnRzL3thZ2VudH1iBnByb3RvMw=="));
+            "ZXMudjFiZXRhLkNhbGxiYWNrQgTiQQEBEkYKFWJlZm9yZV90b29sX2NhbGxi",
+            "YWNrcxgWIAMoCzIhLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLkNhbGxiYWNr",
+            "QgTiQQEBEkUKFGFmdGVyX3Rvb2xfY2FsbGJhY2tzGBcgAygLMiEuZ29vZ2xl",
+            "LmNsb3VkLmNlcy52MWJldGEuQ2FsbGJhY2tCBOJBAQESNQoLY3JlYXRlX3Rp",
+            "bWUYDyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEjUK",
+            "C3VwZGF0ZV90aW1lGBAgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEIE4kEBAxI5CgpndWFyZHJhaWxzGBEgAygJQiXiQQEB+kEeChxjZXMuZ29v",
+            "Z2xlYXBpcy5jb20vR3VhcmRyYWlsEgwKBGV0YWcYGCABKAkSQwoIdG9vbHNl",
+            "dHMYHCADKAsyKy5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5BZ2VudC5BZ2Vu",
+            "dFRvb2xzZXRCBOJBAQESHwoRZ2VuZXJhdGVkX3N1bW1hcnkYHSABKAlCBOJB",
+            "AQMSQwoOdHJhbnNmZXJfcnVsZXMYHiADKAsyJS5nb29nbGUuY2xvdWQuY2Vz",
+            "LnYxYmV0YS5UcmFuc2ZlclJ1bGVCBOJBAQESHwoRdmFsaWRhdGlvbl9lcnJv",
+            "cnMYICADKAlCBOJBAQMaCgoITGxtQWdlbnQa1AQKFVJlbW90ZURpYWxvZ2Zs",
+            "b3dBZ2VudBJBCgVhZ2VudBgBIAEoCUIy4kEBAvpBKwopZGlhbG9nZmxvdy5n",
+            "b29nbGVhcGlzLmNvbS9EaWFsb2dmbG93QWdlbnQSFQoHZmxvd19pZBgCIAEo",
+            "CUIE4kEBARIcCg5lbnZpcm9ubWVudF9pZBgDIAEoCUIE4kEBARJ0ChZpbnB1",
+            "dF92YXJpYWJsZV9tYXBwaW5nGAQgAygLMk4uZ29vZ2xlLmNsb3VkLmNlcy52",
+            "MWJldGEuQWdlbnQuUmVtb3RlRGlhbG9nZmxvd0FnZW50LklucHV0VmFyaWFi",
+            "bGVNYXBwaW5nRW50cnlCBOJBAQESdgoXb3V0cHV0X3ZhcmlhYmxlX21hcHBp",
+            "bmcYBSADKAsyTy5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5BZ2VudC5SZW1v",
+            "dGVEaWFsb2dmbG93QWdlbnQuT3V0cHV0VmFyaWFibGVNYXBwaW5nRW50cnlC",
+            "BOJBAQESNAomcmVzcGVjdF9yZXNwb25zZV9pbnRlcnJ1cHRpb25fc2V0dGlu",
+            "Z3MYBiABKAhCBOJBAQESJAoWbGFuZ3VhZ2VfY29kZV92YXJpYWJsZRgHIAEo",
+            "CUIE4kEBARo7ChlJbnB1dFZhcmlhYmxlTWFwcGluZ0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaPAoaT3V0cHV0VmFyaWFibGVNYXBw",
+            "aW5nRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARpUCg5S",
+            "ZW1vdGVBMmFBZ2VudBJCCgphMmFfY29uZmlnGAEgASgLMiguZ29vZ2xlLmNs",
+            "b3VkLmNlcy52MWJldGEuUmVtb3RlQTJhQ29uZmlnQgTiQQECGlwKDEFnZW50",
+            "VG9vbHNldBI0Cgd0b29sc2V0GAEgASgJQiPiQQEC+kEcChpjZXMuZ29vZ2xl",
+            "YXBpcy5jb20vVG9vbHNldBIWCgh0b29sX2lkcxgEIAMoCUIE4kEBATpv6kFs",
+            "ChhjZXMuZ29vZ2xlYXBpcy5jb20vQWdlbnQSQXByb2plY3RzL3twcm9qZWN0",
+            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9hcHBzL3thcHB9L2FnZW50cy97YWdl",
+            "bnR9KgZhZ2VudHMyBWFnZW50QgwKCmFnZW50X3R5cGVCwAEKG2NvbS5nb29n",
+            "bGUuY2xvdWQuY2VzLnYxYmV0YUIKQWdlbnRQcm90b1ABWi1jbG91ZC5nb29n",
+            "bGUuY29tL2dvL2Nlcy9hcGl2MWJldGEvY2VzcGI7Y2VzcGLqQWMKKWRpYWxv",
+            "Z2Zsb3cuZ29vZ2xlYXBpcy5jb20vRGlhbG9nZmxvd0FnZW50EjZwcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYWdlbnRzL3thZ2Vu",
+            "dH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.AgentTransfersReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.AgentCardReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.AgentTransfersReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.Agent), global::Google.Cloud.Ces.V1Beta.Agent.Parser, new[]{ "LlmAgent", "RemoteDialogflowAgent", "Name", "DisplayName", "Description", "ModelSettings", "Instruction", "Tools", "ChildAgents", "BeforeAgentCallbacks", "AfterAgentCallbacks", "BeforeModelCallbacks", "AfterModelCallbacks", "BeforeToolCallbacks", "AfterToolCallbacks", "CreateTime", "UpdateTime", "Guardrails", "Etag", "Toolsets", "GeneratedSummary", "TransferRules", "ValidationErrors" }, new[]{ "AgentType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.Agent.Types.LlmAgent), global::Google.Cloud.Ces.V1Beta.Agent.Types.LlmAgent.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.Agent), global::Google.Cloud.Ces.V1Beta.Agent.Parser, new[]{ "LlmAgent", "RemoteDialogflowAgent", "RemoteA2AAgent", "Name", "DisplayName", "Description", "ModelSettings", "Instruction", "Tools", "ChildAgents", "BeforeAgentCallbacks", "AfterAgentCallbacks", "BeforeModelCallbacks", "AfterModelCallbacks", "BeforeToolCallbacks", "AfterToolCallbacks", "CreateTime", "UpdateTime", "Guardrails", "Etag", "Toolsets", "GeneratedSummary", "TransferRules", "ValidationErrors" }, new[]{ "AgentType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.Agent.Types.LlmAgent), global::Google.Cloud.Ces.V1Beta.Agent.Types.LlmAgent.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.Agent.Types.RemoteDialogflowAgent), global::Google.Cloud.Ces.V1Beta.Agent.Types.RemoteDialogflowAgent.Parser, new[]{ "Agent", "FlowId", "EnvironmentId", "InputVariableMapping", "OutputVariableMapping", "RespectResponseInterruptionSettings", "LanguageCodeVariable" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.Agent.Types.RemoteA2aAgent), global::Google.Cloud.Ces.V1Beta.Agent.Types.RemoteA2aAgent.Parser, new[]{ "A2AConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.Agent.Types.AgentToolset), global::Google.Cloud.Ces.V1Beta.Agent.Types.AgentToolset.Parser, new[]{ "Toolset", "ToolIds" }, null, null, null, null)})
           }));
     }
@@ -159,6 +166,9 @@ namespace Google.Cloud.Ces.V1Beta {
         case AgentTypeOneofCase.RemoteDialogflowAgent:
           RemoteDialogflowAgent = other.RemoteDialogflowAgent.Clone();
           break;
+        case AgentTypeOneofCase.RemoteA2AAgent:
+          RemoteA2AAgent = other.RemoteA2AAgent.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -204,6 +214,22 @@ namespace Google.Cloud.Ces.V1Beta {
       set {
         agentType_ = value;
         agentTypeCase_ = value == null ? AgentTypeOneofCase.None : AgentTypeOneofCase.RemoteDialogflowAgent;
+      }
+    }
+
+    /// <summary>Field number for the "remote_a2a_agent" field.</summary>
+    public const int RemoteA2AAgentFieldNumber = 41;
+    /// <summary>
+    /// Optional. The remote [A2A](https://github.com/a2aproject/A2A) agent to be
+    /// used for the agent execution.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1Beta.Agent.Types.RemoteA2aAgent RemoteA2AAgent {
+      get { return agentTypeCase_ == AgentTypeOneofCase.RemoteA2AAgent ? (global::Google.Cloud.Ces.V1Beta.Agent.Types.RemoteA2aAgent) agentType_ : null; }
+      set {
+        agentType_ = value;
+        agentTypeCase_ = value == null ? AgentTypeOneofCase.None : AgentTypeOneofCase.RemoteA2AAgent;
       }
     }
 
@@ -548,6 +574,7 @@ namespace Google.Cloud.Ces.V1Beta {
       None = 0,
       LlmAgent = 26,
       RemoteDialogflowAgent = 27,
+      RemoteA2AAgent = 41,
     }
     private AgentTypeOneofCase agentTypeCase_ = AgentTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -580,6 +607,7 @@ namespace Google.Cloud.Ces.V1Beta {
       }
       if (!object.Equals(LlmAgent, other.LlmAgent)) return false;
       if (!object.Equals(RemoteDialogflowAgent, other.RemoteDialogflowAgent)) return false;
+      if (!object.Equals(RemoteA2AAgent, other.RemoteA2AAgent)) return false;
       if (Name != other.Name) return false;
       if (DisplayName != other.DisplayName) return false;
       if (Description != other.Description) return false;
@@ -611,6 +639,7 @@ namespace Google.Cloud.Ces.V1Beta {
       int hash = 1;
       if (agentTypeCase_ == AgentTypeOneofCase.LlmAgent) hash ^= LlmAgent.GetHashCode();
       if (agentTypeCase_ == AgentTypeOneofCase.RemoteDialogflowAgent) hash ^= RemoteDialogflowAgent.GetHashCode();
+      if (agentTypeCase_ == AgentTypeOneofCase.RemoteA2AAgent) hash ^= RemoteA2AAgent.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
@@ -707,6 +736,10 @@ namespace Google.Cloud.Ces.V1Beta {
       }
       transferRules_.WriteTo(output, _repeated_transferRules_codec);
       validationErrors_.WriteTo(output, _repeated_validationErrors_codec);
+      if (agentTypeCase_ == AgentTypeOneofCase.RemoteA2AAgent) {
+        output.WriteRawTag(202, 2);
+        output.WriteMessage(RemoteA2AAgent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -773,6 +806,10 @@ namespace Google.Cloud.Ces.V1Beta {
       }
       transferRules_.WriteTo(ref output, _repeated_transferRules_codec);
       validationErrors_.WriteTo(ref output, _repeated_validationErrors_codec);
+      if (agentTypeCase_ == AgentTypeOneofCase.RemoteA2AAgent) {
+        output.WriteRawTag(202, 2);
+        output.WriteMessage(RemoteA2AAgent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -788,6 +825,9 @@ namespace Google.Cloud.Ces.V1Beta {
       }
       if (agentTypeCase_ == AgentTypeOneofCase.RemoteDialogflowAgent) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(RemoteDialogflowAgent);
+      }
+      if (agentTypeCase_ == AgentTypeOneofCase.RemoteA2AAgent) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(RemoteA2AAgent);
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
@@ -900,6 +940,12 @@ namespace Google.Cloud.Ces.V1Beta {
             RemoteDialogflowAgent = new global::Google.Cloud.Ces.V1Beta.Agent.Types.RemoteDialogflowAgent();
           }
           RemoteDialogflowAgent.MergeFrom(other.RemoteDialogflowAgent);
+          break;
+        case AgentTypeOneofCase.RemoteA2AAgent:
+          if (RemoteA2AAgent == null) {
+            RemoteA2AAgent = new global::Google.Cloud.Ces.V1Beta.Agent.Types.RemoteA2aAgent();
+          }
+          RemoteA2AAgent.MergeFrom(other.RemoteA2AAgent);
           break;
       }
 
@@ -1033,6 +1079,15 @@ namespace Google.Cloud.Ces.V1Beta {
             validationErrors_.AddEntriesFrom(input, _repeated_validationErrors_codec);
             break;
           }
+          case 330: {
+            global::Google.Cloud.Ces.V1Beta.Agent.Types.RemoteA2aAgent subBuilder = new global::Google.Cloud.Ces.V1Beta.Agent.Types.RemoteA2aAgent();
+            if (agentTypeCase_ == AgentTypeOneofCase.RemoteA2AAgent) {
+              subBuilder.MergeFrom(RemoteA2AAgent);
+            }
+            input.ReadMessage(subBuilder);
+            RemoteA2AAgent = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1161,6 +1216,15 @@ namespace Google.Cloud.Ces.V1Beta {
           }
           case 258: {
             validationErrors_.AddEntriesFrom(ref input, _repeated_validationErrors_codec);
+            break;
+          }
+          case 330: {
+            global::Google.Cloud.Ces.V1Beta.Agent.Types.RemoteA2aAgent subBuilder = new global::Google.Cloud.Ces.V1Beta.Agent.Types.RemoteA2aAgent();
+            if (agentTypeCase_ == AgentTypeOneofCase.RemoteA2AAgent) {
+              subBuilder.MergeFrom(RemoteA2AAgent);
+            }
+            input.ReadMessage(subBuilder);
+            RemoteA2AAgent = subBuilder;
             break;
           }
         }
@@ -1783,6 +1847,220 @@ namespace Google.Cloud.Ces.V1Beta {
       }
 
       /// <summary>
+      /// The agent which will transfer execution to a remote
+      /// [A2A](https://github.com/a2aproject/A2A) agent.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class RemoteA2aAgent : pb::IMessage<RemoteA2aAgent>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<RemoteA2aAgent> _parser = new pb::MessageParser<RemoteA2aAgent>(() => new RemoteA2aAgent());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<RemoteA2aAgent> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Ces.V1Beta.Agent.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RemoteA2aAgent() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RemoteA2aAgent(RemoteA2aAgent other) : this() {
+          a2AConfig_ = other.a2AConfig_ != null ? other.a2AConfig_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RemoteA2aAgent Clone() {
+          return new RemoteA2aAgent(this);
+        }
+
+        /// <summary>Field number for the "a2a_config" field.</summary>
+        public const int A2AConfigFieldNumber = 1;
+        private global::Google.Cloud.Ces.V1Beta.RemoteA2aConfig a2AConfig_;
+        /// <summary>
+        /// Required. The A2A connection configuration.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Ces.V1Beta.RemoteA2aConfig A2AConfig {
+          get { return a2AConfig_; }
+          set {
+            a2AConfig_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as RemoteA2aAgent);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(RemoteA2aAgent other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(A2AConfig, other.A2AConfig)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (a2AConfig_ != null) hash ^= A2AConfig.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (a2AConfig_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(A2AConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (a2AConfig_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(A2AConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (a2AConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(A2AConfig);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(RemoteA2aAgent other) {
+          if (other == null) {
+            return;
+          }
+          if (other.a2AConfig_ != null) {
+            if (a2AConfig_ == null) {
+              A2AConfig = new global::Google.Cloud.Ces.V1Beta.RemoteA2aConfig();
+            }
+            A2AConfig.MergeFrom(other.A2AConfig);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (a2AConfig_ == null) {
+                  A2AConfig = new global::Google.Cloud.Ces.V1Beta.RemoteA2aConfig();
+                }
+                input.ReadMessage(A2AConfig);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (a2AConfig_ == null) {
+                  A2AConfig = new global::Google.Cloud.Ces.V1Beta.RemoteA2aConfig();
+                }
+                input.ReadMessage(A2AConfig);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// A toolset with a selection of its tools.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1800,7 +2078,7 @@ namespace Google.Cloud.Ces.V1Beta {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Ces.V1Beta.Agent.Descriptor.NestedTypes[2]; }
+          get { return global::Google.Cloud.Ces.V1Beta.Agent.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
