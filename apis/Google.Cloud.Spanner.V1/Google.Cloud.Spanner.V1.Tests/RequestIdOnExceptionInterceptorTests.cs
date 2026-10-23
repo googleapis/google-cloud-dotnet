@@ -40,11 +40,6 @@ public class RequestIdOnExceptionInterceptorTests
     private static readonly Exception s_exception = new();
 
     [Fact]
-    public void BlockingUnaryCall_ContinuationThrows_ExceptionEnriched() =>
-        AssertThrowsEnrichedException(() =>
-            s_interceptor.BlockingUnaryCall(_fakeRequest, _unaryContext, (req, ctx) => throw s_exception));
-
-    [Fact]
     public void AsyncUnaryCall_ContinuationThrows_ExceptionEnriched() =>
         AssertThrowsEnrichedException(() =>
             s_interceptor.AsyncUnaryCall(_fakeRequest, _unaryContext, (req, ctx) => throw s_exception));

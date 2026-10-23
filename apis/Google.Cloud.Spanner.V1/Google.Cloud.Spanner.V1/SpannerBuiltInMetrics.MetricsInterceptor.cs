@@ -70,7 +70,6 @@ internal static partial class SpannerBuiltInMetrics
 
             async Task<TResponse> InstrumentCallAsync()
             {
-                double elapsedMs = 0;
                 try
                 {
                     return await call.ResponseAsync.ConfigureAwait(false);
@@ -78,7 +77,7 @@ internal static partial class SpannerBuiltInMetrics
                 finally
                 {
                     stopwatch.Stop();
-                    elapsedMs = stopwatch.ElapsedMilliseconds;
+                    double elapsedMs = stopwatch.ElapsedMilliseconds;
                     var labels = Labeler.GetLabels(context.Method.Name, dbNameProvider, call.GetStatus().StatusCode, _clientIdentity);
                     var recordTimingTask = RecordServerTimingMetricsAsync(call.ResponseHeadersAsync, labels).ConfigureAwait(false);
                     RecordAttemptMetrics(elapsedMs, labels);

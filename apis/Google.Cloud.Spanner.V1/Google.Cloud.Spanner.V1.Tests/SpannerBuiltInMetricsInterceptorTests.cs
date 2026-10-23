@@ -134,8 +134,6 @@ public class SpannerBuiltInMetricsInterceptorTests
         ValidateEmittedMetrics(measurements, expectedStatus, methodName: expectedMethod);
     }
 
-
-
     /// <summary>
     /// Verifies that built in metrics were recorded.
     /// </summary>

@@ -130,14 +130,20 @@ public class SpannerBuiltInMetricsTests
 
     [Theory]
     [MemberData(nameof(ServerTimingTestCases))]
-    public void RecordServerTimingMetrics_HeaderString_ExtractsExpectedDuration(string serverTimingHeader, double? expectedDuration)
+    public async Task RecordServerTimingMetricsAsync_HeaderString_ExtractsExpectedDuration(string serverTimingHeader, double? expectedDuration)
     {
-        double? recordedDuration = null;
-        SpannerBuiltInMetrics.RecordServerTimingMetrics(
-            serverTimingHeader,
-            "gfet4t7",
-            duration => recordedDuration = duration);
+        var identity = SpannerBuiltInMetrics.Labeler.GenerateIdentity();
+        var labels = SpannerBuiltInMetrics.Labeler.GetLabels("MethodName", null, StatusCode.OK, identity);
+        var headers = new Metadata { { "server-timing", serverTimingHeader } };
 
+        var measurements = await MetricsCapture.RunWithMeterListenerAsync(() =>
+            SpannerBuiltInMetrics.RecordServerTimingMetricsAsync(Task.FromResult(headers), labels));
+
+        // Scope to this test's client identity, since the meter is shared with concurrently running tests.
+        var recordedDuration = measurements
+            .Where(m => m.Name == "gfe_latencies" && m.GetTag("client_uid") == identity.Id)
+            .Select(m => (double?) m.Value)
+            .SingleOrDefault();
         Assert.Equal(expectedDuration, recordedDuration);
     }
 }

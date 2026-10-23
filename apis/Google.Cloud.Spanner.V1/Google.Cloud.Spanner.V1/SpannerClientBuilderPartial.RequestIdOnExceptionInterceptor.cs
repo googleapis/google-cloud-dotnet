@@ -37,12 +37,8 @@ public partial class SpannerClientBuilder
         {
         }
 
-        /// <inheritdoc/>
-        public override TResponse BlockingUnaryCall<TRequest, TResponse>(
-            TRequest request,
-            ClientInterceptorContext<TRequest, TResponse> context,
-            BlockingUnaryCallContinuation<TRequest, TResponse> continuation) =>
-            WrapException(() => continuation(request, context), context.Options);
+        // NOTE: We do not need to intercept blocking unary calls. All such calls resolve through the async
+        // pipeline because each call has a response metadata handler. See SpannerClientImpl.EnableAsyncInterception.
 
         /// <inheritdoc/>
         public override AsyncUnaryCall<TResponse> AsyncUnaryCall<TRequest, TResponse>(
