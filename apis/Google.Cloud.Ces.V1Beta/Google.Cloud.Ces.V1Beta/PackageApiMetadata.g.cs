@@ -73,6 +73,7 @@ namespace Google.Cloud.Ces.V1Beta
             yield return AgentTransfersReflection.Descriptor;
             yield return AppReflection.Descriptor;
             yield return AppVersionReflection.Descriptor;
+            yield return AssistantServiceReflection.Descriptor;
             yield return AuthReflection.Descriptor;
             yield return BigqueryExportReflection.Descriptor;
             yield return ChangelogReflection.Descriptor;

@@ -280,6 +280,12 @@
                 "UpdateAppAsync"
               ]
             },
+            "UpdateAppVersion": {
+              "methods": [
+                "UpdateAppVersion",
+                "UpdateAppVersionAsync"
+              ]
+            },
             "UpdateDeployment": {
               "methods": [
                 "UpdateDeployment",
@@ -314,6 +320,51 @@
               "methods": [
                 "UpdateToolset",
                 "UpdateToolsetAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "AssistantService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AssistantServiceClient",
+          "rpcs": {
+            "ChatAiAssistant": {
+              "methods": [
+                "ChatAiAssistant",
+                "ChatAiAssistantAsync"
+              ]
+            },
+            "CreateAssistantSession": {
+              "methods": [
+                "CreateAssistantSession",
+                "CreateAssistantSessionAsync"
+              ]
+            },
+            "DeleteAssistantSession": {
+              "methods": [
+                "DeleteAssistantSession",
+                "DeleteAssistantSessionAsync"
+              ]
+            },
+            "GetAssistantSession": {
+              "methods": [
+                "GetAssistantSession",
+                "GetAssistantSessionAsync"
+              ]
+            },
+            "ListAssistantSessions": {
+              "methods": [
+                "ListAssistantSessions",
+                "ListAssistantSessionsAsync"
+              ]
+            },
+            "RunAssistant": {
+              "methods": [
+                "RunAssistant",
+                "RunAssistantAsync"
               ]
             }
           }
@@ -550,10 +601,28 @@
                 "BidiRunSessionAsync"
               ]
             },
+            "CancelAssistantTurn": {
+              "methods": [
+                "CancelAssistantTurn",
+                "CancelAssistantTurnAsync"
+              ]
+            },
+            "GenerateOnboardingSuggestions": {
+              "methods": [
+                "GenerateOnboardingSuggestions",
+                "GenerateOnboardingSuggestionsAsync"
+              ]
+            },
             "RunSession": {
               "methods": [
                 "RunSession",
                 "RunSessionAsync"
+              ]
+            },
+            "StreamChatAiAssistant": {
+              "methods": [
+                "StreamChatAiAssistant",
+                "StreamChatAiAssistantAsync"
               ]
             },
             "StreamRunSession": {

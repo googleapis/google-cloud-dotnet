@@ -26,30 +26,55 @@ namespace Google.Cloud.Ces.V1Beta {
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvY2VzL3YxYmV0YS9hZ2VudF9jYXJkLnByb3RvEhdn",
             "b29nbGUuY2xvdWQuY2VzLnYxYmV0YRofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
-            "dmlvci5wcm90byLUAQoJQWdlbnRDYXJkEhEKBG5hbWUYASABKAlCA+BBAhIY",
-            "CgtkZXNjcmlwdGlvbhgCIAEoCUID4EECEkoKFHN1cHBvcnRlZF9pbnRlcmZh",
-            "Y2VzGAMgAygLMicuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuQWdlbnRJbnRl",
-            "cmZhY2VCA+BBAhIUCgd2ZXJzaW9uGAUgASgJQgPgQQISOAoGc2tpbGxzGAYg",
-            "AygLMiMuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuQWdlbnRTa2lsbEID4EEC",
-            "InAKDkFnZW50SW50ZXJmYWNlEhAKA3VybBgBIAEoCUID4EECEh0KEHByb3Rv",
-            "Y29sX2JpbmRpbmcYAiABKAlCA+BBAhIOCgZ0ZW5hbnQYAyABKAkSHQoQcHJv",
-            "dG9jb2xfdmVyc2lvbhgEIAEoCUID4EECIpoBCgpBZ2VudFNraWxsEg8KAmlk",
-            "GAEgASgJQgPgQQISEQoEbmFtZRgCIAEoCUID4EECEhgKC2Rlc2NyaXB0aW9u",
-            "GAMgASgJQgPgQQISEQoEdGFncxgEIAMoCUID4EECEhAKCGV4YW1wbGVzGAUg",
-            "AygJEhMKC2lucHV0X21vZGVzGAYgAygJEhQKDG91dHB1dF9tb2RlcxgHIAMo",
-            "CSJ7Cg9SZW1vdGVBZ2VudFRvb2wSEQoEbmFtZRgBIAEoCUID4EECEhgKC2Rl",
-            "c2NyaXB0aW9uGAIgASgJQgPgQQISOwoKYWdlbnRfY2FyZBgDIAEoCzIiLmdv",
-            "b2dsZS5jbG91ZC5jZXMudjFiZXRhLkFnZW50Q2FyZEID4EECQl4KG2NvbS5n",
-            "b29nbGUuY2xvdWQuY2VzLnYxYmV0YUIOQWdlbnRDYXJkUHJvdG9QAVotY2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9jZXMvYXBpdjFiZXRhL2Nlc3BiO2Nlc3BiYgZw",
-            "cm90bzM="));
+            "dmlvci5wcm90bxoiZ29vZ2xlL2Nsb3VkL2Nlcy92MWJldGEvYXV0aC5wcm90",
+            "byLZAQoJQWdlbnRDYXJkEhIKBG5hbWUYASABKAlCBOJBAQISGQoLZGVzY3Jp",
+            "cHRpb24YAiABKAlCBOJBAQISSwoUc3VwcG9ydGVkX2ludGVyZmFjZXMYAyAD",
+            "KAsyJy5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5BZ2VudEludGVyZmFjZUIE",
+            "4kEBAhIVCgd2ZXJzaW9uGAUgASgJQgTiQQECEjkKBnNraWxscxgGIAMoCzIj",
+            "Lmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLkFnZW50U2tpbGxCBOJBAQIicwoO",
+            "QWdlbnRJbnRlcmZhY2USEQoDdXJsGAEgASgJQgTiQQECEh4KEHByb3RvY29s",
+            "X2JpbmRpbmcYAiABKAlCBOJBAQISDgoGdGVuYW50GAMgASgJEh4KEHByb3Rv",
+            "Y29sX3ZlcnNpb24YBCABKAlCBOJBAQIingEKCkFnZW50U2tpbGwSEAoCaWQY",
+            "ASABKAlCBOJBAQISEgoEbmFtZRgCIAEoCUIE4kEBAhIZCgtkZXNjcmlwdGlv",
+            "bhgDIAEoCUIE4kEBAhISCgR0YWdzGAQgAygJQgTiQQECEhAKCGV4YW1wbGVz",
+            "GAUgAygJEhMKC2lucHV0X21vZGVzGAYgAygJEhQKDG91dHB1dF9tb2RlcxgH",
+            "IAMoCSLZBAoPUmVtb3RlQTJhQ29uZmlnEj4KCmFnZW50X2NhcmQYASABKAsy",
+            "Ii5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5BZ2VudENhcmRCBOJBAQFIABIe",
+            "Cg5hZ2VudF9yZWdpc3RyeRgCIAEoCUIE4kEBAUgAEkwKEmFwaV9hdXRoZW50",
+            "aWNhdGlvbhgDIAEoCzIqLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLkFwaUF1",
+            "dGhlbnRpY2F0aW9uQgTiQQEBEmgKFmlucHV0X3ZhcmlhYmxlX21hcHBpbmcY",
+            "BCADKAsyQi5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5SZW1vdGVBMmFDb25m",
+            "aWcuSW5wdXRWYXJpYWJsZU1hcHBpbmdFbnRyeUIE4kEBARJqChdvdXRwdXRf",
+            "dmFyaWFibGVfbWFwcGluZxgFIAMoCzJDLmdvb2dsZS5jbG91ZC5jZXMudjFi",
+            "ZXRhLlJlbW90ZUEyYUNvbmZpZy5PdXRwdXRWYXJpYWJsZU1hcHBpbmdFbnRy",
+            "eUIE4kEBARIfChFzdHJlYW1pbmdfZW5hYmxlZBgGIAEoCEIE4kEBARIYCgpj",
+            "b250ZXh0X2lkGAcgASgJQgTiQQEBGjsKGUlucHV0VmFyaWFibGVNYXBwaW5n",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARo8ChpPdXRw",
+            "dXRWYXJpYWJsZU1hcHBpbmdFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBQgwKCmFnZW50X3NwZWMiuwQKD1JlbW90ZUFnZW50VG9vbBIS",
+            "CgRuYW1lGAEgASgJQgTiQQECEhkKC2Rlc2NyaXB0aW9uGAIgASgJQgTiQQEC",
+            "EjwKCmFnZW50X2NhcmQYAyABKAsyIi5nb29nbGUuY2xvdWQuY2VzLnYxYmV0",
+            "YS5BZ2VudENhcmRCBOJBAQISTAoSYXBpX2F1dGhlbnRpY2F0aW9uGAQgASgL",
+            "MiouZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuQXBpQXV0aGVudGljYXRpb25C",
+            "BOJBAQESHAoOc3RhdGVmdWxfYWdlbnQYBSABKAhCBOJBAQESaAoWaW5wdXRf",
+            "dmFyaWFibGVfbWFwcGluZxgGIAMoCzJCLmdvb2dsZS5jbG91ZC5jZXMudjFi",
+            "ZXRhLlJlbW90ZUFnZW50VG9vbC5JbnB1dFZhcmlhYmxlTWFwcGluZ0VudHJ5",
+            "QgTiQQEBEmoKF291dHB1dF92YXJpYWJsZV9tYXBwaW5nGAcgAygLMkMuZ29v",
+            "Z2xlLmNsb3VkLmNlcy52MWJldGEuUmVtb3RlQWdlbnRUb29sLk91dHB1dFZh",
+            "cmlhYmxlTWFwcGluZ0VudHJ5QgTiQQEBGjsKGUlucHV0VmFyaWFibGVNYXBw",
+            "aW5nRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARo8ChpP",
+            "dXRwdXRWYXJpYWJsZU1hcHBpbmdFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
+            "dWUYAiABKAk6AjgBQl4KG2NvbS5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YUIO",
+            "QWdlbnRDYXJkUHJvdG9QAVotY2xvdWQuZ29vZ2xlLmNvbS9nby9jZXMvYXBp",
+            "djFiZXRhL2Nlc3BiO2Nlc3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.AuthReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.AgentCard), global::Google.Cloud.Ces.V1Beta.AgentCard.Parser, new[]{ "Name", "Description", "SupportedInterfaces", "Version", "Skills" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.AgentInterface), global::Google.Cloud.Ces.V1Beta.AgentInterface.Parser, new[]{ "Url", "ProtocolBinding", "Tenant", "ProtocolVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.AgentSkill), global::Google.Cloud.Ces.V1Beta.AgentSkill.Parser, new[]{ "Id", "Name", "Description", "Tags", "Examples", "InputModes", "OutputModes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.RemoteAgentTool), global::Google.Cloud.Ces.V1Beta.RemoteAgentTool.Parser, new[]{ "Name", "Description", "AgentCard" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.RemoteA2aConfig), global::Google.Cloud.Ces.V1Beta.RemoteA2aConfig.Parser, new[]{ "AgentCard", "AgentRegistry", "ApiAuthentication", "InputVariableMapping", "OutputVariableMapping", "StreamingEnabled", "ContextId" }, new[]{ "AgentSpec" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.RemoteAgentTool), global::Google.Cloud.Ces.V1Beta.RemoteAgentTool.Parser, new[]{ "Name", "Description", "AgentCard", "ApiAuthentication", "StatefulAgent", "InputVariableMapping", "OutputVariableMapping" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -1138,6 +1163,504 @@ namespace Google.Cloud.Ces.V1Beta {
   }
 
   /// <summary>
+  /// Shared configuration for connecting to a remote
+  /// [A2A](https://github.com/a2aproject/A2A) agent.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RemoteA2aConfig : pb::IMessage<RemoteA2aConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RemoteA2aConfig> _parser = new pb::MessageParser<RemoteA2aConfig>(() => new RemoteA2aConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RemoteA2aConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Ces.V1Beta.AgentCardReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoteA2aConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoteA2aConfig(RemoteA2aConfig other) : this() {
+      apiAuthentication_ = other.apiAuthentication_ != null ? other.apiAuthentication_.Clone() : null;
+      inputVariableMapping_ = other.inputVariableMapping_.Clone();
+      outputVariableMapping_ = other.outputVariableMapping_.Clone();
+      streamingEnabled_ = other.streamingEnabled_;
+      contextId_ = other.contextId_;
+      switch (other.AgentSpecCase) {
+        case AgentSpecOneofCase.AgentCard:
+          AgentCard = other.AgentCard.Clone();
+          break;
+        case AgentSpecOneofCase.AgentRegistry:
+          AgentRegistry = other.AgentRegistry;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoteA2aConfig Clone() {
+      return new RemoteA2aConfig(this);
+    }
+
+    /// <summary>Field number for the "agent_card" field.</summary>
+    public const int AgentCardFieldNumber = 1;
+    /// <summary>
+    /// Optional. The full agent card defined inline.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1Beta.AgentCard AgentCard {
+      get { return agentSpecCase_ == AgentSpecOneofCase.AgentCard ? (global::Google.Cloud.Ces.V1Beta.AgentCard) agentSpec_ : null; }
+      set {
+        agentSpec_ = value;
+        agentSpecCase_ = value == null ? AgentSpecOneofCase.None : AgentSpecOneofCase.AgentCard;
+      }
+    }
+
+    /// <summary>Field number for the "agent_registry" field.</summary>
+    public const int AgentRegistryFieldNumber = 2;
+    /// <summary>
+    /// Optional. Reference to the agent in the Agent Registry.
+    /// Format: `projects/{project}/locations/{location}/agents/{agent}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AgentRegistry {
+      get { return HasAgentRegistry ? (string) agentSpec_ : ""; }
+      set {
+        agentSpec_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        agentSpecCase_ = AgentSpecOneofCase.AgentRegistry;
+      }
+    }
+    /// <summary>Gets whether the "agent_registry" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAgentRegistry {
+      get { return agentSpecCase_ == AgentSpecOneofCase.AgentRegistry; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "agent_registry" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAgentRegistry() {
+      if (HasAgentRegistry) {
+        ClearAgentSpec();
+      }
+    }
+
+    /// <summary>Field number for the "api_authentication" field.</summary>
+    public const int ApiAuthenticationFieldNumber = 3;
+    private global::Google.Cloud.Ces.V1Beta.ApiAuthentication apiAuthentication_;
+    /// <summary>
+    /// Optional. Authentication configuration for calling the remote agent.
+    /// Optional if the registry reference already handles authentication.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1Beta.ApiAuthentication ApiAuthentication {
+      get { return apiAuthentication_; }
+      set {
+        apiAuthentication_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "input_variable_mapping" field.</summary>
+    public const int InputVariableMappingFieldNumber = 4;
+    private static readonly pbc::MapField<string, string>.Codec _map_inputVariableMapping_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
+    private readonly pbc::MapField<string, string> inputVariableMapping_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. Mapping of input variable names of remote agent to GECX variable
+    /// names.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> InputVariableMapping {
+      get { return inputVariableMapping_; }
+    }
+
+    /// <summary>Field number for the "output_variable_mapping" field.</summary>
+    public const int OutputVariableMappingFieldNumber = 5;
+    private static readonly pbc::MapField<string, string>.Codec _map_outputVariableMapping_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
+    private readonly pbc::MapField<string, string> outputVariableMapping_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. Mapping of output variable names of remote agent to GECX variable
+    /// names.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> OutputVariableMapping {
+      get { return outputVariableMapping_; }
+    }
+
+    /// <summary>Field number for the "streaming_enabled" field.</summary>
+    public const int StreamingEnabledFieldNumber = 6;
+    private bool streamingEnabled_;
+    /// <summary>
+    /// Optional. Whether streaming is enabled for the remote agent.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool StreamingEnabled {
+      get { return streamingEnabled_; }
+      set {
+        streamingEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "context_id" field.</summary>
+    public const int ContextIdFieldNumber = 7;
+    private string contextId_ = "";
+    /// <summary>
+    /// Optional. If not empty, interactions with the remote A2A agent will use
+    /// this context ID. This context_id field can refer to a session variable like
+    /// `$context.variables.order_agent_session_id`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ContextId {
+      get { return contextId_; }
+      set {
+        contextId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private object agentSpec_;
+    /// <summary>Enum of possible cases for the "agent_spec" oneof.</summary>
+    public enum AgentSpecOneofCase {
+      None = 0,
+      AgentCard = 1,
+      AgentRegistry = 2,
+    }
+    private AgentSpecOneofCase agentSpecCase_ = AgentSpecOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AgentSpecOneofCase AgentSpecCase {
+      get { return agentSpecCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAgentSpec() {
+      agentSpecCase_ = AgentSpecOneofCase.None;
+      agentSpec_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RemoteA2aConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RemoteA2aConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(AgentCard, other.AgentCard)) return false;
+      if (AgentRegistry != other.AgentRegistry) return false;
+      if (!object.Equals(ApiAuthentication, other.ApiAuthentication)) return false;
+      if (!InputVariableMapping.Equals(other.InputVariableMapping)) return false;
+      if (!OutputVariableMapping.Equals(other.OutputVariableMapping)) return false;
+      if (StreamingEnabled != other.StreamingEnabled) return false;
+      if (ContextId != other.ContextId) return false;
+      if (AgentSpecCase != other.AgentSpecCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (agentSpecCase_ == AgentSpecOneofCase.AgentCard) hash ^= AgentCard.GetHashCode();
+      if (HasAgentRegistry) hash ^= AgentRegistry.GetHashCode();
+      if (apiAuthentication_ != null) hash ^= ApiAuthentication.GetHashCode();
+      hash ^= InputVariableMapping.GetHashCode();
+      hash ^= OutputVariableMapping.GetHashCode();
+      if (StreamingEnabled != false) hash ^= StreamingEnabled.GetHashCode();
+      if (ContextId.Length != 0) hash ^= ContextId.GetHashCode();
+      hash ^= (int) agentSpecCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (agentSpecCase_ == AgentSpecOneofCase.AgentCard) {
+        output.WriteRawTag(10);
+        output.WriteMessage(AgentCard);
+      }
+      if (HasAgentRegistry) {
+        output.WriteRawTag(18);
+        output.WriteString(AgentRegistry);
+      }
+      if (apiAuthentication_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ApiAuthentication);
+      }
+      inputVariableMapping_.WriteTo(output, _map_inputVariableMapping_codec);
+      outputVariableMapping_.WriteTo(output, _map_outputVariableMapping_codec);
+      if (StreamingEnabled != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(StreamingEnabled);
+      }
+      if (ContextId.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ContextId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (agentSpecCase_ == AgentSpecOneofCase.AgentCard) {
+        output.WriteRawTag(10);
+        output.WriteMessage(AgentCard);
+      }
+      if (HasAgentRegistry) {
+        output.WriteRawTag(18);
+        output.WriteString(AgentRegistry);
+      }
+      if (apiAuthentication_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ApiAuthentication);
+      }
+      inputVariableMapping_.WriteTo(ref output, _map_inputVariableMapping_codec);
+      outputVariableMapping_.WriteTo(ref output, _map_outputVariableMapping_codec);
+      if (StreamingEnabled != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(StreamingEnabled);
+      }
+      if (ContextId.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ContextId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (agentSpecCase_ == AgentSpecOneofCase.AgentCard) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AgentCard);
+      }
+      if (HasAgentRegistry) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AgentRegistry);
+      }
+      if (apiAuthentication_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ApiAuthentication);
+      }
+      size += inputVariableMapping_.CalculateSize(_map_inputVariableMapping_codec);
+      size += outputVariableMapping_.CalculateSize(_map_outputVariableMapping_codec);
+      if (StreamingEnabled != false) {
+        size += 1 + 1;
+      }
+      if (ContextId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ContextId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RemoteA2aConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.apiAuthentication_ != null) {
+        if (apiAuthentication_ == null) {
+          ApiAuthentication = new global::Google.Cloud.Ces.V1Beta.ApiAuthentication();
+        }
+        ApiAuthentication.MergeFrom(other.ApiAuthentication);
+      }
+      inputVariableMapping_.MergeFrom(other.inputVariableMapping_);
+      outputVariableMapping_.MergeFrom(other.outputVariableMapping_);
+      if (other.StreamingEnabled != false) {
+        StreamingEnabled = other.StreamingEnabled;
+      }
+      if (other.ContextId.Length != 0) {
+        ContextId = other.ContextId;
+      }
+      switch (other.AgentSpecCase) {
+        case AgentSpecOneofCase.AgentCard:
+          if (AgentCard == null) {
+            AgentCard = new global::Google.Cloud.Ces.V1Beta.AgentCard();
+          }
+          AgentCard.MergeFrom(other.AgentCard);
+          break;
+        case AgentSpecOneofCase.AgentRegistry:
+          AgentRegistry = other.AgentRegistry;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.Ces.V1Beta.AgentCard subBuilder = new global::Google.Cloud.Ces.V1Beta.AgentCard();
+            if (agentSpecCase_ == AgentSpecOneofCase.AgentCard) {
+              subBuilder.MergeFrom(AgentCard);
+            }
+            input.ReadMessage(subBuilder);
+            AgentCard = subBuilder;
+            break;
+          }
+          case 18: {
+            AgentRegistry = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (apiAuthentication_ == null) {
+              ApiAuthentication = new global::Google.Cloud.Ces.V1Beta.ApiAuthentication();
+            }
+            input.ReadMessage(ApiAuthentication);
+            break;
+          }
+          case 34: {
+            inputVariableMapping_.AddEntriesFrom(input, _map_inputVariableMapping_codec);
+            break;
+          }
+          case 42: {
+            outputVariableMapping_.AddEntriesFrom(input, _map_outputVariableMapping_codec);
+            break;
+          }
+          case 48: {
+            StreamingEnabled = input.ReadBool();
+            break;
+          }
+          case 58: {
+            ContextId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Ces.V1Beta.AgentCard subBuilder = new global::Google.Cloud.Ces.V1Beta.AgentCard();
+            if (agentSpecCase_ == AgentSpecOneofCase.AgentCard) {
+              subBuilder.MergeFrom(AgentCard);
+            }
+            input.ReadMessage(subBuilder);
+            AgentCard = subBuilder;
+            break;
+          }
+          case 18: {
+            AgentRegistry = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (apiAuthentication_ == null) {
+              ApiAuthentication = new global::Google.Cloud.Ces.V1Beta.ApiAuthentication();
+            }
+            input.ReadMessage(ApiAuthentication);
+            break;
+          }
+          case 34: {
+            inputVariableMapping_.AddEntriesFrom(ref input, _map_inputVariableMapping_codec);
+            break;
+          }
+          case 42: {
+            outputVariableMapping_.AddEntriesFrom(ref input, _map_outputVariableMapping_codec);
+            break;
+          }
+          case 48: {
+            StreamingEnabled = input.ReadBool();
+            break;
+          }
+          case 58: {
+            ContextId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Represents a tool that allows the agent to call another remote agent.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1155,7 +1678,7 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Ces.V1Beta.AgentCardReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Ces.V1Beta.AgentCardReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1178,6 +1701,10 @@ namespace Google.Cloud.Ces.V1Beta {
       name_ = other.name_;
       description_ = other.description_;
       agentCard_ = other.agentCard_ != null ? other.agentCard_.Clone() : null;
+      apiAuthentication_ = other.apiAuthentication_ != null ? other.apiAuthentication_.Clone() : null;
+      statefulAgent_ = other.statefulAgent_;
+      inputVariableMapping_ = other.inputVariableMapping_.Clone();
+      outputVariableMapping_ = other.outputVariableMapping_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1232,6 +1759,69 @@ namespace Google.Cloud.Ces.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "api_authentication" field.</summary>
+    public const int ApiAuthenticationFieldNumber = 4;
+    private global::Google.Cloud.Ces.V1Beta.ApiAuthentication apiAuthentication_;
+    /// <summary>
+    /// Optional. Authentication configuration for calling the remote agent.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1Beta.ApiAuthentication ApiAuthentication {
+      get { return apiAuthentication_; }
+      set {
+        apiAuthentication_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "stateful_agent" field.</summary>
+    public const int StatefulAgentFieldNumber = 5;
+    private bool statefulAgent_;
+    /// <summary>
+    /// Optional. When enabled, the interaction between the CXAS app and the remote
+    /// agent will share the same context. If the remote agent returns a
+    /// context_id, it will be persisted for the entirety of the session for this
+    /// remote agent tool.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool StatefulAgent {
+      get { return statefulAgent_; }
+      set {
+        statefulAgent_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "input_variable_mapping" field.</summary>
+    public const int InputVariableMappingFieldNumber = 6;
+    private static readonly pbc::MapField<string, string>.Codec _map_inputVariableMapping_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
+    private readonly pbc::MapField<string, string> inputVariableMapping_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. Mapping of input variable names of remote agent to GECX variable
+    /// names.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> InputVariableMapping {
+      get { return inputVariableMapping_; }
+    }
+
+    /// <summary>Field number for the "output_variable_mapping" field.</summary>
+    public const int OutputVariableMappingFieldNumber = 7;
+    private static readonly pbc::MapField<string, string>.Codec _map_outputVariableMapping_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 58);
+    private readonly pbc::MapField<string, string> outputVariableMapping_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. Mapping of output variable names of remote agent to GECX variable
+    /// names.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> OutputVariableMapping {
+      get { return outputVariableMapping_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1250,6 +1840,10 @@ namespace Google.Cloud.Ces.V1Beta {
       if (Name != other.Name) return false;
       if (Description != other.Description) return false;
       if (!object.Equals(AgentCard, other.AgentCard)) return false;
+      if (!object.Equals(ApiAuthentication, other.ApiAuthentication)) return false;
+      if (StatefulAgent != other.StatefulAgent) return false;
+      if (!InputVariableMapping.Equals(other.InputVariableMapping)) return false;
+      if (!OutputVariableMapping.Equals(other.OutputVariableMapping)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1260,6 +1854,10 @@ namespace Google.Cloud.Ces.V1Beta {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (agentCard_ != null) hash ^= AgentCard.GetHashCode();
+      if (apiAuthentication_ != null) hash ^= ApiAuthentication.GetHashCode();
+      if (StatefulAgent != false) hash ^= StatefulAgent.GetHashCode();
+      hash ^= InputVariableMapping.GetHashCode();
+      hash ^= OutputVariableMapping.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1290,6 +1888,16 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteRawTag(26);
         output.WriteMessage(AgentCard);
       }
+      if (apiAuthentication_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ApiAuthentication);
+      }
+      if (StatefulAgent != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(StatefulAgent);
+      }
+      inputVariableMapping_.WriteTo(output, _map_inputVariableMapping_codec);
+      outputVariableMapping_.WriteTo(output, _map_outputVariableMapping_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1312,6 +1920,16 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteRawTag(26);
         output.WriteMessage(AgentCard);
       }
+      if (apiAuthentication_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ApiAuthentication);
+      }
+      if (StatefulAgent != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(StatefulAgent);
+      }
+      inputVariableMapping_.WriteTo(ref output, _map_inputVariableMapping_codec);
+      outputVariableMapping_.WriteTo(ref output, _map_outputVariableMapping_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1331,6 +1949,14 @@ namespace Google.Cloud.Ces.V1Beta {
       if (agentCard_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AgentCard);
       }
+      if (apiAuthentication_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ApiAuthentication);
+      }
+      if (StatefulAgent != false) {
+        size += 1 + 1;
+      }
+      size += inputVariableMapping_.CalculateSize(_map_inputVariableMapping_codec);
+      size += outputVariableMapping_.CalculateSize(_map_outputVariableMapping_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1355,6 +1981,17 @@ namespace Google.Cloud.Ces.V1Beta {
         }
         AgentCard.MergeFrom(other.AgentCard);
       }
+      if (other.apiAuthentication_ != null) {
+        if (apiAuthentication_ == null) {
+          ApiAuthentication = new global::Google.Cloud.Ces.V1Beta.ApiAuthentication();
+        }
+        ApiAuthentication.MergeFrom(other.ApiAuthentication);
+      }
+      if (other.StatefulAgent != false) {
+        StatefulAgent = other.StatefulAgent;
+      }
+      inputVariableMapping_.MergeFrom(other.inputVariableMapping_);
+      outputVariableMapping_.MergeFrom(other.outputVariableMapping_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1389,6 +2026,25 @@ namespace Google.Cloud.Ces.V1Beta {
             input.ReadMessage(AgentCard);
             break;
           }
+          case 34: {
+            if (apiAuthentication_ == null) {
+              ApiAuthentication = new global::Google.Cloud.Ces.V1Beta.ApiAuthentication();
+            }
+            input.ReadMessage(ApiAuthentication);
+            break;
+          }
+          case 40: {
+            StatefulAgent = input.ReadBool();
+            break;
+          }
+          case 50: {
+            inputVariableMapping_.AddEntriesFrom(input, _map_inputVariableMapping_codec);
+            break;
+          }
+          case 58: {
+            outputVariableMapping_.AddEntriesFrom(input, _map_outputVariableMapping_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1421,6 +2077,25 @@ namespace Google.Cloud.Ces.V1Beta {
               AgentCard = new global::Google.Cloud.Ces.V1Beta.AgentCard();
             }
             input.ReadMessage(AgentCard);
+            break;
+          }
+          case 34: {
+            if (apiAuthentication_ == null) {
+              ApiAuthentication = new global::Google.Cloud.Ces.V1Beta.ApiAuthentication();
+            }
+            input.ReadMessage(ApiAuthentication);
+            break;
+          }
+          case 40: {
+            StatefulAgent = input.ReadBool();
+            break;
+          }
+          case 50: {
+            inputVariableMapping_.AddEntriesFrom(ref input, _map_inputVariableMapping_codec);
+            break;
+          }
+          case 58: {
+            outputVariableMapping_.AddEntriesFrom(ref input, _map_outputVariableMapping_codec);
             break;
           }
         }

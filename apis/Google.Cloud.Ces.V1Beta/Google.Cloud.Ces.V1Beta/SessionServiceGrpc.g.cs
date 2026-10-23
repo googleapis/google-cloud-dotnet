@@ -71,6 +71,18 @@ namespace Google.Cloud.Ces.V1Beta {
     static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.BidiSessionClientMessage> __Marshaller_google_cloud_ces_v1beta_BidiSessionClientMessage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.BidiSessionClientMessage.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.BidiSessionServerMessage> __Marshaller_google_cloud_ces_v1beta_BidiSessionServerMessage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.BidiSessionServerMessage.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.StreamChatAiAssistantRequest> __Marshaller_google_cloud_ces_v1beta_StreamChatAiAssistantRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.StreamChatAiAssistantRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.StreamChatAiAssistantResponse> __Marshaller_google_cloud_ces_v1beta_StreamChatAiAssistantResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.StreamChatAiAssistantResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.CancelAssistantTurnRequest> __Marshaller_google_cloud_ces_v1beta_CancelAssistantTurnRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.CancelAssistantTurnRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.CancelAssistantTurnResponse> __Marshaller_google_cloud_ces_v1beta_CancelAssistantTurnResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.CancelAssistantTurnResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsRequest> __Marshaller_google_cloud_ces_v1beta_GenerateOnboardingSuggestionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsResponse> __Marshaller_google_cloud_ces_v1beta_GenerateOnboardingSuggestionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Ces.V1Beta.RunSessionRequest, global::Google.Cloud.Ces.V1Beta.RunSessionResponse> __Method_RunSession = new grpc::Method<global::Google.Cloud.Ces.V1Beta.RunSessionRequest, global::Google.Cloud.Ces.V1Beta.RunSessionResponse>(
@@ -95,6 +107,30 @@ namespace Google.Cloud.Ces.V1Beta {
         "BidiRunSession",
         __Marshaller_google_cloud_ces_v1beta_BidiSessionClientMessage,
         __Marshaller_google_cloud_ces_v1beta_BidiSessionServerMessage);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Ces.V1Beta.StreamChatAiAssistantRequest, global::Google.Cloud.Ces.V1Beta.StreamChatAiAssistantResponse> __Method_StreamChatAiAssistant = new grpc::Method<global::Google.Cloud.Ces.V1Beta.StreamChatAiAssistantRequest, global::Google.Cloud.Ces.V1Beta.StreamChatAiAssistantResponse>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "StreamChatAiAssistant",
+        __Marshaller_google_cloud_ces_v1beta_StreamChatAiAssistantRequest,
+        __Marshaller_google_cloud_ces_v1beta_StreamChatAiAssistantResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Ces.V1Beta.CancelAssistantTurnRequest, global::Google.Cloud.Ces.V1Beta.CancelAssistantTurnResponse> __Method_CancelAssistantTurn = new grpc::Method<global::Google.Cloud.Ces.V1Beta.CancelAssistantTurnRequest, global::Google.Cloud.Ces.V1Beta.CancelAssistantTurnResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CancelAssistantTurn",
+        __Marshaller_google_cloud_ces_v1beta_CancelAssistantTurnRequest,
+        __Marshaller_google_cloud_ces_v1beta_CancelAssistantTurnResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsRequest, global::Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsResponse> __Method_GenerateOnboardingSuggestions = new grpc::Method<global::Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsRequest, global::Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GenerateOnboardingSuggestions",
+        __Marshaller_google_cloud_ces_v1beta_GenerateOnboardingSuggestionsRequest,
+        __Marshaller_google_cloud_ces_v1beta_GenerateOnboardingSuggestionsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -211,6 +247,51 @@ namespace Google.Cloud.Ces.V1Beta {
       /// <returns>A task indicating completion of the handler.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task BidiRunSession(grpc::IAsyncStreamReader<global::Google.Cloud.Ces.V1Beta.BidiSessionClientMessage> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.Ces.V1Beta.BidiSessionServerMessage> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Runs Arc, the AI assistant, for the specified assistant session in a
+      /// streaming fashion.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task StreamChatAiAssistant(global::Google.Cloud.Ces.V1Beta.StreamChatAiAssistantRequest request, grpc::IServerStreamWriter<global::Google.Cloud.Ces.V1Beta.StreamChatAiAssistantResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Cancels the assistant session's in-flight turn, if any: the explicit user
+      /// stop for a turn running detached from any stream. A cancel landing on a
+      /// task that does not host the turn preempts it through the session turn
+      /// epoch instead, ending it within one lease renewal.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Ces.V1Beta.CancelAssistantTurnResponse> CancelAssistantTurn(global::Google.Cloud.Ces.V1Beta.CancelAssistantTurnRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Generates personalized onboarding suggestions for the Arc
+      /// zero state: classifies the requesting user (new / exploring / returning)
+      /// from their assistant-session history in the app and returns suggestion
+      /// chips (resume a session, continue work, or start something new) to render
+      /// before any message is sent.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsResponse> GenerateOnboardingSuggestions(global::Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -480,6 +561,156 @@ namespace Google.Cloud.Ces.V1Beta {
       {
         return CallInvoker.AsyncDuplexStreamingCall(__Method_BidiRunSession, null, options);
       }
+      /// <summary>
+      /// Runs Arc, the AI assistant, for the specified assistant session in a
+      /// streaming fashion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Ces.V1Beta.StreamChatAiAssistantResponse> StreamChatAiAssistant(global::Google.Cloud.Ces.V1Beta.StreamChatAiAssistantRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StreamChatAiAssistant(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Runs Arc, the AI assistant, for the specified assistant session in a
+      /// streaming fashion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Ces.V1Beta.StreamChatAiAssistantResponse> StreamChatAiAssistant(global::Google.Cloud.Ces.V1Beta.StreamChatAiAssistantRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_StreamChatAiAssistant, null, options, request);
+      }
+      /// <summary>
+      /// Cancels the assistant session's in-flight turn, if any: the explicit user
+      /// stop for a turn running detached from any stream. A cancel landing on a
+      /// task that does not host the turn preempts it through the session turn
+      /// epoch instead, ending it within one lease renewal.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Ces.V1Beta.CancelAssistantTurnResponse CancelAssistantTurn(global::Google.Cloud.Ces.V1Beta.CancelAssistantTurnRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelAssistantTurn(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancels the assistant session's in-flight turn, if any: the explicit user
+      /// stop for a turn running detached from any stream. A cancel landing on a
+      /// task that does not host the turn preempts it through the session turn
+      /// epoch instead, ending it within one lease renewal.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Ces.V1Beta.CancelAssistantTurnResponse CancelAssistantTurn(global::Google.Cloud.Ces.V1Beta.CancelAssistantTurnRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CancelAssistantTurn, null, options, request);
+      }
+      /// <summary>
+      /// Cancels the assistant session's in-flight turn, if any: the explicit user
+      /// stop for a turn running detached from any stream. A cancel landing on a
+      /// task that does not host the turn preempts it through the session turn
+      /// epoch instead, ending it within one lease renewal.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Ces.V1Beta.CancelAssistantTurnResponse> CancelAssistantTurnAsync(global::Google.Cloud.Ces.V1Beta.CancelAssistantTurnRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelAssistantTurnAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancels the assistant session's in-flight turn, if any: the explicit user
+      /// stop for a turn running detached from any stream. A cancel landing on a
+      /// task that does not host the turn preempts it through the session turn
+      /// epoch instead, ending it within one lease renewal.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Ces.V1Beta.CancelAssistantTurnResponse> CancelAssistantTurnAsync(global::Google.Cloud.Ces.V1Beta.CancelAssistantTurnRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CancelAssistantTurn, null, options, request);
+      }
+      /// <summary>
+      /// Generates personalized onboarding suggestions for the Arc
+      /// zero state: classifies the requesting user (new / exploring / returning)
+      /// from their assistant-session history in the app and returns suggestion
+      /// chips (resume a session, continue work, or start something new) to render
+      /// before any message is sent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsResponse GenerateOnboardingSuggestions(global::Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateOnboardingSuggestions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates personalized onboarding suggestions for the Arc
+      /// zero state: classifies the requesting user (new / exploring / returning)
+      /// from their assistant-session history in the app and returns suggestion
+      /// chips (resume a session, continue work, or start something new) to render
+      /// before any message is sent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsResponse GenerateOnboardingSuggestions(global::Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GenerateOnboardingSuggestions, null, options, request);
+      }
+      /// <summary>
+      /// Generates personalized onboarding suggestions for the Arc
+      /// zero state: classifies the requesting user (new / exploring / returning)
+      /// from their assistant-session history in the app and returns suggestion
+      /// chips (resume a session, continue work, or start something new) to render
+      /// before any message is sent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsResponse> GenerateOnboardingSuggestionsAsync(global::Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateOnboardingSuggestionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates personalized onboarding suggestions for the Arc
+      /// zero state: classifies the requesting user (new / exploring / returning)
+      /// from their assistant-session history in the app and returns suggestion
+      /// chips (resume a session, continue work, or start something new) to render
+      /// before any message is sent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsResponse> GenerateOnboardingSuggestionsAsync(global::Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GenerateOnboardingSuggestions, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SessionServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -496,7 +727,10 @@ namespace Google.Cloud.Ces.V1Beta {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_RunSession, serviceImpl.RunSession)
           .AddMethod(__Method_StreamRunSession, serviceImpl.StreamRunSession)
-          .AddMethod(__Method_BidiRunSession, serviceImpl.BidiRunSession).Build();
+          .AddMethod(__Method_BidiRunSession, serviceImpl.BidiRunSession)
+          .AddMethod(__Method_StreamChatAiAssistant, serviceImpl.StreamChatAiAssistant)
+          .AddMethod(__Method_CancelAssistantTurn, serviceImpl.CancelAssistantTurn)
+          .AddMethod(__Method_GenerateOnboardingSuggestions, serviceImpl.GenerateOnboardingSuggestions).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -509,6 +743,9 @@ namespace Google.Cloud.Ces.V1Beta {
       serviceBinder.AddMethod(__Method_RunSession, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.RunSessionRequest, global::Google.Cloud.Ces.V1Beta.RunSessionResponse>(serviceImpl.RunSession));
       serviceBinder.AddMethod(__Method_StreamRunSession, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Ces.V1Beta.RunSessionRequest, global::Google.Cloud.Ces.V1Beta.RunSessionResponse>(serviceImpl.StreamRunSession));
       serviceBinder.AddMethod(__Method_BidiRunSession, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.Ces.V1Beta.BidiSessionClientMessage, global::Google.Cloud.Ces.V1Beta.BidiSessionServerMessage>(serviceImpl.BidiRunSession));
+      serviceBinder.AddMethod(__Method_StreamChatAiAssistant, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Ces.V1Beta.StreamChatAiAssistantRequest, global::Google.Cloud.Ces.V1Beta.StreamChatAiAssistantResponse>(serviceImpl.StreamChatAiAssistant));
+      serviceBinder.AddMethod(__Method_CancelAssistantTurn, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.CancelAssistantTurnRequest, global::Google.Cloud.Ces.V1Beta.CancelAssistantTurnResponse>(serviceImpl.CancelAssistantTurn));
+      serviceBinder.AddMethod(__Method_GenerateOnboardingSuggestions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsRequest, global::Google.Cloud.Ces.V1Beta.GenerateOnboardingSuggestionsResponse>(serviceImpl.GenerateOnboardingSuggestions));
     }
 
   }

@@ -26,12 +26,12 @@ namespace Google.Cloud.Ces.V1Beta {
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvY2VzL3YxYmV0YS9hZ2VudF90b29sLnByb3RvEhdn",
             "b29nbGUuY2xvdWQuY2VzLnYxYmV0YRofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
-            "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byJpCglBZ2Vu",
-            "dFRvb2wSEQoEbmFtZRgBIAEoCUID4EECEhgKC2Rlc2NyaXB0aW9uGAIgASgJ",
-            "QgPgQQESLwoFYWdlbnQYBCABKAlCIOBBAfpBGgoYY2VzLmdvb2dsZWFwaXMu",
-            "Y29tL0FnZW50Ql4KG2NvbS5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YUIOQWdl",
-            "bnRUb29sUHJvdG9QAVotY2xvdWQuZ29vZ2xlLmNvbS9nby9jZXMvYXBpdjFi",
-            "ZXRhL2Nlc3BiO2Nlc3BiYgZwcm90bzM="));
+            "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byJsCglBZ2Vu",
+            "dFRvb2wSEgoEbmFtZRgBIAEoCUIE4kEBAhIZCgtkZXNjcmlwdGlvbhgCIAEo",
+            "CUIE4kEBARIwCgVhZ2VudBgEIAEoCUIh4kEBAfpBGgoYY2VzLmdvb2dsZWFw",
+            "aXMuY29tL0FnZW50Ql4KG2NvbS5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YUIO",
+            "QWdlbnRUb29sUHJvdG9QAVotY2xvdWQuZ29vZ2xlLmNvbS9nby9jZXMvYXBp",
+            "djFiZXRhL2Nlc3BiO2Nlc3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

@@ -28,48 +28,61 @@ namespace Google.Cloud.Ces.V1Beta {
             "b29nbGUuY2xvdWQuY2VzLnYxYmV0YRofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
             "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxokZ29vZ2xl",
             "L2Nsb3VkL2Nlcy92MWJldGEvY29tbW9uLnByb3RvGh9nb29nbGUvcHJvdG9i",
-            "dWYvdGltZXN0YW1wLnByb3RvIoUEChBFeHBlcmltZW50Q29uZmlnElYKD3Zl",
+            "dWYvdGltZXN0YW1wLnByb3RvIosEChBFeHBlcmltZW50Q29uZmlnElcKD3Zl",
             "cnNpb25fcmVsZWFzZRgBIAEoCzI4Lmdvb2dsZS5jbG91ZC5jZXMudjFiZXRh",
-            "LkV4cGVyaW1lbnRDb25maWcuVmVyc2lvblJlbGVhc2VCA+BBARrHAgoOVmVy",
-            "c2lvblJlbGVhc2USQwoFc3RhdGUYASABKA4yLy5nb29nbGUuY2xvdWQuY2Vz",
-            "LnYxYmV0YS5FeHBlcmltZW50Q29uZmlnLlN0YXRlQgPgQQESbAoTdHJhZmZp",
-            "Y19hbGxvY2F0aW9ucxgCIAMoCzJKLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRh",
-            "LkV4cGVyaW1lbnRDb25maWcuVmVyc2lvblJlbGVhc2UuVHJhZmZpY0FsbG9j",
-            "YXRpb25CA+BBARqBAQoRVHJhZmZpY0FsbG9jYXRpb24SDwoCaWQYASABKAlC",
-            "A+BBARIfChJ0cmFmZmljX3BlcmNlbnRhZ2UYAiABKAVCA+BBARI6CgthcHBf",
-            "dmVyc2lvbhgDIAEoCUIl4EEB+kEfCh1jZXMuZ29vZ2xlYXBpcy5jb20vQXBw",
-            "VmVyc2lvbiJPCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1BF",
-            "TkRJTkcQARILCgdSVU5OSU5HEAISCAoERE9ORRADEgsKB0VYUElSRUQQBCK9",
-            "BQoKRGVwbG95bWVudBIRCgRuYW1lGAEgASgJQgPgQQgSGQoMZGlzcGxheV9u",
-            "YW1lGAggASgJQgPgQQISOgoLYXBwX3ZlcnNpb24YAiABKAlCJeBBAfpBHwod",
-            "Y2VzLmdvb2dsZWFwaXMuY29tL0FwcFZlcnNpb24SRQoPY2hhbm5lbF9wcm9m",
-            "aWxlGAMgASgLMicuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuQ2hhbm5lbFBy",
-            "b2ZpbGVCA+BBAhI0CgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgFIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIRCgRldGFnGAcgASgJQgPg",
-            "QQMSSQoRZXhwZXJpbWVudF9jb25maWcYCSABKAsyKS5nb29nbGUuY2xvdWQu",
-            "Y2VzLnYxYmV0YS5FeHBlcmltZW50Q29uZmlnQgPgQQESUgoUd2hhdHNhcHBf",
-            "Y3JlZGVudGlhbHMYCiABKAsyLC5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5X",
-            "aGF0c0FwcENyZWRlbnRpYWxzQgbgQQHgQQQSVAoVaW5zdGFncmFtX2NyZWRl",
-            "bnRpYWxzGAsgASgLMi0uZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuSW5zdGFn",
-            "cmFtQ3JlZGVudGlhbHNCBuBBAeBBBDqJAepBhQEKHWNlcy5nb29nbGVhcGlz",
-            "LmNvbS9EZXBsb3ltZW50Ektwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
-            "L3tsb2NhdGlvbn0vYXBwcy97YXBwfS9kZXBsb3ltZW50cy97ZGVwbG95bWVu",
-            "dH0qC2RlcGxveW1lbnRzMgpkZXBsb3ltZW50IrgBChNXaGF0c0FwcENyZWRl",
-            "bnRpYWxzEhYKCWF1dGhfY29kZRgBIAEoCUID4EECEhAKA3BpbhgCIAEoCUID",
-            "4EECEhkKDHBob25lX251bWJlchgDIAEoCUID4EECEiAKE2J1c2luZXNzX2Fj",
-            "Y291bnRfaWQYBCABKAlCA+BBAhIUCgd3YWJhX2lkGAUgASgJQgPgQQISJAoX",
-            "Y29udmVyc2F0aW9uX3Byb2ZpbGVfaWQYBiABKAlCA+BBAiJUChRJbnN0YWdy",
-            "YW1DcmVkZW50aWFscxIWCglhdXRoX2NvZGUYASABKAlCA+BBAhIkChdjb252",
-            "ZXJzYXRpb25fcHJvZmlsZV9pZBgCIAEoCUID4EECQmMKG2NvbS5nb29nbGUu",
-            "Y2xvdWQuY2VzLnYxYmV0YUITQ2hhbm5lbFByb2ZpbGVQcm90b1ABWi1jbG91",
-            "ZC5nb29nbGUuY29tL2dvL2Nlcy9hcGl2MWJldGEvY2VzcGI7Y2VzcGJiBnBy",
-            "b3RvMw=="));
+            "LkV4cGVyaW1lbnRDb25maWcuVmVyc2lvblJlbGVhc2VCBOJBAQEazAIKDlZl",
+            "cnNpb25SZWxlYXNlEkQKBXN0YXRlGAEgASgOMi8uZ29vZ2xlLmNsb3VkLmNl",
+            "cy52MWJldGEuRXhwZXJpbWVudENvbmZpZy5TdGF0ZUIE4kEBARJtChN0cmFm",
+            "ZmljX2FsbG9jYXRpb25zGAIgAygLMkouZ29vZ2xlLmNsb3VkLmNlcy52MWJl",
+            "dGEuRXhwZXJpbWVudENvbmZpZy5WZXJzaW9uUmVsZWFzZS5UcmFmZmljQWxs",
+            "b2NhdGlvbkIE4kEBARqEAQoRVHJhZmZpY0FsbG9jYXRpb24SEAoCaWQYASAB",
+            "KAlCBOJBAQESIAoSdHJhZmZpY19wZXJjZW50YWdlGAIgASgFQgTiQQEBEjsK",
+            "C2FwcF92ZXJzaW9uGAMgASgJQibiQQEB+kEfCh1jZXMuZ29vZ2xlYXBpcy5j",
+            "b20vQXBwVmVyc2lvbiJPCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAA",
+            "EgsKB1BFTkRJTkcQARILCgdSVU5OSU5HEAISCAoERE9ORRADEgsKB0VYUElS",
+            "RUQQBCKLCAoKRGVwbG95bWVudBISCgRuYW1lGAEgASgJQgTiQQEIEhoKDGRp",
+            "c3BsYXlfbmFtZRgIIAEoCUIE4kEBAhI7CgthcHBfdmVyc2lvbhgCIAEoCUIm",
+            "4kEBAfpBHwodY2VzLmdvb2dsZWFwaXMuY29tL0FwcFZlcnNpb24SRgoPY2hh",
+            "bm5lbF9wcm9maWxlGAMgASgLMicuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEu",
+            "Q2hhbm5lbFByb2ZpbGVCBOJBAQISNQoLY3JlYXRlX3RpbWUYBCABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEjUKC3VwZGF0ZV90aW1l",
+            "GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxISCgRl",
+            "dGFnGAcgASgJQgTiQQEDEkoKEWV4cGVyaW1lbnRfY29uZmlnGAkgASgLMiku",
+            "Z29vZ2xlLmNsb3VkLmNlcy52MWJldGEuRXhwZXJpbWVudENvbmZpZ0IE4kEB",
+            "ARJRChR3aGF0c2FwcF9jcmVkZW50aWFscxgKIAEoCzIsLmdvb2dsZS5jbG91",
+            "ZC5jZXMudjFiZXRhLldoYXRzQXBwQ3JlZGVudGlhbHNCBeJBAgEEElMKFWlu",
+            "c3RhZ3JhbV9jcmVkZW50aWFscxgLIAEoCzItLmdvb2dsZS5jbG91ZC5jZXMu",
+            "djFiZXRhLkluc3RhZ3JhbUNyZWRlbnRpYWxzQgXiQQIBBBJECg5tb2RlbF9z",
+            "ZXR0aW5ncxgMIAEoCzImLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLk1vZGVs",
+            "U2V0dGluZ3NCBOJBAQESRAoIbW9kYWxpdHkYDSABKA4yLC5nb29nbGUuY2xv",
+            "dWQuY2VzLnYxYmV0YS5EZXBsb3ltZW50Lk1vZGFsaXR5QgTiQQEBElkKGWFn",
+            "ZW50X3JlZ2lzdHJ5X2RlcGxveW1lbnQYDiABKAsyMC5nb29nbGUuY2xvdWQu",
+            "Y2VzLnYxYmV0YS5BZ2VudFJlZ2lzdHJ5RGVwbG95bWVudEIE4kEBASJfCghN",
+            "b2RhbGl0eRIYChRNT0RBTElUWV9VTlNQRUNJRklFRBAAEhEKDU1PREFMSVRZ",
+            "X1RFWFQQARISCg5NT0RBTElUWV9WT0lDRRACEhIKDk1PREFMSVRZX1ZJREVP",
+            "EAM6iQHqQYUBCh1jZXMuZ29vZ2xlYXBpcy5jb20vRGVwbG95bWVudBJLcHJv",
+            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2FwcHMve2Fw",
+            "cH0vZGVwbG95bWVudHMve2RlcGxveW1lbnR9KgtkZXBsb3ltZW50czIKZGVw",
+            "bG95bWVudCJuChdBZ2VudFJlZ2lzdHJ5RGVwbG95bWVudBJTChthZ2VudF9y",
+            "ZWdpc3RyeV9zZXJ2aWNlX25hbWUYASABKAlCLuJBAgED+kEmCiRhZ2VudHJl",
+            "Z2lzdHJ5Lmdvb2dsZWFwaXMuY29tL1NlcnZpY2UivgEKE1doYXRzQXBwQ3Jl",
+            "ZGVudGlhbHMSFwoJYXV0aF9jb2RlGAEgASgJQgTiQQECEhEKA3BpbhgCIAEo",
+            "CUIE4kEBAhIaCgxwaG9uZV9udW1iZXIYAyABKAlCBOJBAQISIQoTYnVzaW5l",
+            "c3NfYWNjb3VudF9pZBgEIAEoCUIE4kEBAhIVCgd3YWJhX2lkGAUgASgJQgTi",
+            "QQECEiUKF2NvbnZlcnNhdGlvbl9wcm9maWxlX2lkGAYgASgJQgTiQQEBIlYK",
+            "FEluc3RhZ3JhbUNyZWRlbnRpYWxzEhcKCWF1dGhfY29kZRgBIAEoCUIE4kEB",
+            "AhIlChdjb252ZXJzYXRpb25fcHJvZmlsZV9pZBgCIAEoCUIE4kEBAULIAQob",
+            "Y29tLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhQhNDaGFubmVsUHJvZmlsZVBy",
+            "b3RvUAFaLWNsb3VkLmdvb2dsZS5jb20vZ28vY2VzL2FwaXYxYmV0YS9jZXNw",
+            "YjtjZXNwYupBYgokYWdlbnRyZWdpc3RyeS5nb29nbGVhcGlzLmNvbS9TZXJ2",
+            "aWNlEjpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "c2VydmljZXMve3NlcnZpY2V9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.ExperimentConfig), global::Google.Cloud.Ces.V1Beta.ExperimentConfig.Parser, new[]{ "VersionRelease" }, null, new[]{ typeof(global::Google.Cloud.Ces.V1Beta.ExperimentConfig.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.ExperimentConfig.Types.VersionRelease), global::Google.Cloud.Ces.V1Beta.ExperimentConfig.Types.VersionRelease.Parser, new[]{ "State", "TrafficAllocations" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.ExperimentConfig.Types.VersionRelease.Types.TrafficAllocation), global::Google.Cloud.Ces.V1Beta.ExperimentConfig.Types.VersionRelease.Types.TrafficAllocation.Parser, new[]{ "Id", "TrafficPercentage", "AppVersion" }, null, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.Deployment), global::Google.Cloud.Ces.V1Beta.Deployment.Parser, new[]{ "Name", "DisplayName", "AppVersion", "ChannelProfile", "CreateTime", "UpdateTime", "Etag", "ExperimentConfig", "WhatsappCredentials", "InstagramCredentials" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.Deployment), global::Google.Cloud.Ces.V1Beta.Deployment.Parser, new[]{ "Name", "DisplayName", "AppVersion", "ChannelProfile", "CreateTime", "UpdateTime", "Etag", "ExperimentConfig", "WhatsappCredentials", "InstagramCredentials", "ModelSettings", "Modality", "AgentRegistryDeployment" }, null, new[]{ typeof(global::Google.Cloud.Ces.V1Beta.Deployment.Types.Modality) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.AgentRegistryDeployment), global::Google.Cloud.Ces.V1Beta.AgentRegistryDeployment.Parser, new[]{ "AgentRegistryServiceName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.WhatsAppCredentials), global::Google.Cloud.Ces.V1Beta.WhatsAppCredentials.Parser, new[]{ "AuthCode", "Pin", "PhoneNumber", "BusinessAccountId", "WabaId", "ConversationProfileId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.InstagramCredentials), global::Google.Cloud.Ces.V1Beta.InstagramCredentials.Parser, new[]{ "AuthCode", "ConversationProfileId" }, null, null, null, null)
           }));
@@ -903,6 +916,9 @@ namespace Google.Cloud.Ces.V1Beta {
       experimentConfig_ = other.experimentConfig_ != null ? other.experimentConfig_.Clone() : null;
       whatsappCredentials_ = other.whatsappCredentials_ != null ? other.whatsappCredentials_.Clone() : null;
       instagramCredentials_ = other.instagramCredentials_ != null ? other.instagramCredentials_.Clone() : null;
+      modelSettings_ = other.modelSettings_ != null ? other.modelSettings_.Clone() : null;
+      modality_ = other.modality_;
+      agentRegistryDeployment_ = other.agentRegistryDeployment_ != null ? other.agentRegistryDeployment_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1072,6 +1088,57 @@ namespace Google.Cloud.Ces.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "model_settings" field.</summary>
+    public const int ModelSettingsFieldNumber = 12;
+    private global::Google.Cloud.Ces.V1Beta.ModelSettings modelSettings_;
+    /// <summary>
+    /// Optional. Model settings for the deployment.
+    /// Overrides model settings configured at the app/agent levels.
+    /// Note: Deployment-level model settings override is gated behind an
+    /// allowlist. Contact the CXAS team to enable this field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1Beta.ModelSettings ModelSettings {
+      get { return modelSettings_; }
+      set {
+        modelSettings_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "modality" field.</summary>
+    public const int ModalityFieldNumber = 13;
+    private global::Google.Cloud.Ces.V1Beta.Deployment.Types.Modality modality_ = global::Google.Cloud.Ces.V1Beta.Deployment.Types.Modality.Unspecified;
+    /// <summary>
+    /// Optional. The modality of the deployment.
+    /// Note: Deployment-level modality override is gated behind an allowlist.
+    /// Contact the CXAS team to enable this field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1Beta.Deployment.Types.Modality Modality {
+      get { return modality_; }
+      set {
+        modality_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "agent_registry_deployment" field.</summary>
+    public const int AgentRegistryDeploymentFieldNumber = 14;
+    private global::Google.Cloud.Ces.V1Beta.AgentRegistryDeployment agentRegistryDeployment_;
+    /// <summary>
+    /// Optional. Configuration for deploying this deployment to Agent Registry.
+    /// If present, this deployment will be published to Agent Registry.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1Beta.AgentRegistryDeployment AgentRegistryDeployment {
+      get { return agentRegistryDeployment_; }
+      set {
+        agentRegistryDeployment_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1097,6 +1164,9 @@ namespace Google.Cloud.Ces.V1Beta {
       if (!object.Equals(ExperimentConfig, other.ExperimentConfig)) return false;
       if (!object.Equals(WhatsappCredentials, other.WhatsappCredentials)) return false;
       if (!object.Equals(InstagramCredentials, other.InstagramCredentials)) return false;
+      if (!object.Equals(ModelSettings, other.ModelSettings)) return false;
+      if (Modality != other.Modality) return false;
+      if (!object.Equals(AgentRegistryDeployment, other.AgentRegistryDeployment)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1114,6 +1184,9 @@ namespace Google.Cloud.Ces.V1Beta {
       if (experimentConfig_ != null) hash ^= ExperimentConfig.GetHashCode();
       if (whatsappCredentials_ != null) hash ^= WhatsappCredentials.GetHashCode();
       if (instagramCredentials_ != null) hash ^= InstagramCredentials.GetHashCode();
+      if (modelSettings_ != null) hash ^= ModelSettings.GetHashCode();
+      if (Modality != global::Google.Cloud.Ces.V1Beta.Deployment.Types.Modality.Unspecified) hash ^= Modality.GetHashCode();
+      if (agentRegistryDeployment_ != null) hash ^= AgentRegistryDeployment.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1172,6 +1245,18 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteRawTag(90);
         output.WriteMessage(InstagramCredentials);
       }
+      if (modelSettings_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(ModelSettings);
+      }
+      if (Modality != global::Google.Cloud.Ces.V1Beta.Deployment.Types.Modality.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) Modality);
+      }
+      if (agentRegistryDeployment_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(AgentRegistryDeployment);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1222,6 +1307,18 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteRawTag(90);
         output.WriteMessage(InstagramCredentials);
       }
+      if (modelSettings_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(ModelSettings);
+      }
+      if (Modality != global::Google.Cloud.Ces.V1Beta.Deployment.Types.Modality.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) Modality);
+      }
+      if (agentRegistryDeployment_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(AgentRegistryDeployment);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1261,6 +1358,15 @@ namespace Google.Cloud.Ces.V1Beta {
       }
       if (instagramCredentials_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstagramCredentials);
+      }
+      if (modelSettings_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModelSettings);
+      }
+      if (Modality != global::Google.Cloud.Ces.V1Beta.Deployment.Types.Modality.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Modality);
+      }
+      if (agentRegistryDeployment_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AgentRegistryDeployment);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1321,6 +1427,21 @@ namespace Google.Cloud.Ces.V1Beta {
           InstagramCredentials = new global::Google.Cloud.Ces.V1Beta.InstagramCredentials();
         }
         InstagramCredentials.MergeFrom(other.InstagramCredentials);
+      }
+      if (other.modelSettings_ != null) {
+        if (modelSettings_ == null) {
+          ModelSettings = new global::Google.Cloud.Ces.V1Beta.ModelSettings();
+        }
+        ModelSettings.MergeFrom(other.ModelSettings);
+      }
+      if (other.Modality != global::Google.Cloud.Ces.V1Beta.Deployment.Types.Modality.Unspecified) {
+        Modality = other.Modality;
+      }
+      if (other.agentRegistryDeployment_ != null) {
+        if (agentRegistryDeployment_ == null) {
+          AgentRegistryDeployment = new global::Google.Cloud.Ces.V1Beta.AgentRegistryDeployment();
+        }
+        AgentRegistryDeployment.MergeFrom(other.AgentRegistryDeployment);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1397,6 +1518,24 @@ namespace Google.Cloud.Ces.V1Beta {
               InstagramCredentials = new global::Google.Cloud.Ces.V1Beta.InstagramCredentials();
             }
             input.ReadMessage(InstagramCredentials);
+            break;
+          }
+          case 98: {
+            if (modelSettings_ == null) {
+              ModelSettings = new global::Google.Cloud.Ces.V1Beta.ModelSettings();
+            }
+            input.ReadMessage(ModelSettings);
+            break;
+          }
+          case 104: {
+            Modality = (global::Google.Cloud.Ces.V1Beta.Deployment.Types.Modality) input.ReadEnum();
+            break;
+          }
+          case 114: {
+            if (agentRegistryDeployment_ == null) {
+              AgentRegistryDeployment = new global::Google.Cloud.Ces.V1Beta.AgentRegistryDeployment();
+            }
+            input.ReadMessage(AgentRegistryDeployment);
             break;
           }
         }
@@ -1476,6 +1615,260 @@ namespace Google.Cloud.Ces.V1Beta {
             input.ReadMessage(InstagramCredentials);
             break;
           }
+          case 98: {
+            if (modelSettings_ == null) {
+              ModelSettings = new global::Google.Cloud.Ces.V1Beta.ModelSettings();
+            }
+            input.ReadMessage(ModelSettings);
+            break;
+          }
+          case 104: {
+            Modality = (global::Google.Cloud.Ces.V1Beta.Deployment.Types.Modality) input.ReadEnum();
+            break;
+          }
+          case 114: {
+            if (agentRegistryDeployment_ == null) {
+              AgentRegistryDeployment = new global::Google.Cloud.Ces.V1Beta.AgentRegistryDeployment();
+            }
+            input.ReadMessage(AgentRegistryDeployment);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Deployment message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The modality of the deployment.
+      /// </summary>
+      public enum Modality {
+        /// <summary>
+        /// Unknown modality.
+        /// </summary>
+        [pbr::OriginalName("MODALITY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Text modality.
+        /// </summary>
+        [pbr::OriginalName("MODALITY_TEXT")] Text = 1,
+        /// <summary>
+        /// Voice modality.
+        /// </summary>
+        [pbr::OriginalName("MODALITY_VOICE")] Voice = 2,
+        /// <summary>
+        /// Video modality.
+        /// </summary>
+        [pbr::OriginalName("MODALITY_VIDEO")] Video = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Configuration and status for Agent Registry deployment.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AgentRegistryDeployment : pb::IMessage<AgentRegistryDeployment>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AgentRegistryDeployment> _parser = new pb::MessageParser<AgentRegistryDeployment>(() => new AgentRegistryDeployment());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AgentRegistryDeployment> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Ces.V1Beta.DeploymentReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AgentRegistryDeployment() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AgentRegistryDeployment(AgentRegistryDeployment other) : this() {
+      agentRegistryServiceName_ = other.agentRegistryServiceName_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AgentRegistryDeployment Clone() {
+      return new AgentRegistryDeployment(this);
+    }
+
+    /// <summary>Field number for the "agent_registry_service_name" field.</summary>
+    public const int AgentRegistryServiceNameFieldNumber = 1;
+    private string agentRegistryServiceName_ = "";
+    /// <summary>
+    /// Optional. Output only. The resource name of the deployed Agent Registry
+    /// service. Format:
+    /// `projects/{project}/locations/{location}/services/{service}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AgentRegistryServiceName {
+      get { return agentRegistryServiceName_; }
+      set {
+        agentRegistryServiceName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AgentRegistryDeployment);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AgentRegistryDeployment other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AgentRegistryServiceName != other.AgentRegistryServiceName) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AgentRegistryServiceName.Length != 0) hash ^= AgentRegistryServiceName.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (AgentRegistryServiceName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AgentRegistryServiceName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AgentRegistryServiceName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AgentRegistryServiceName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (AgentRegistryServiceName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AgentRegistryServiceName);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AgentRegistryDeployment other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AgentRegistryServiceName.Length != 0) {
+        AgentRegistryServiceName = other.AgentRegistryServiceName;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            AgentRegistryServiceName = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            AgentRegistryServiceName = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1501,7 +1894,7 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Ces.V1Beta.DeploymentReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Ces.V1Beta.DeploymentReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1615,7 +2008,7 @@ namespace Google.Cloud.Ces.V1Beta {
     public const int ConversationProfileIdFieldNumber = 6;
     private string conversationProfileId_ = "";
     /// <summary>
-    /// Required. The Conversation Profile ID to use for the deployment.
+    /// Optional. The Conversation Profile ID to use for the deployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1905,7 +2298,7 @@ namespace Google.Cloud.Ces.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Ces.V1Beta.DeploymentReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Ces.V1Beta.DeploymentReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1955,7 +2348,7 @@ namespace Google.Cloud.Ces.V1Beta {
     public const int ConversationProfileIdFieldNumber = 2;
     private string conversationProfileId_ = "";
     /// <summary>
-    /// Required. The Conversation Profile ID to use for the deployment.
+    /// Optional. The Conversation Profile ID to use for the deployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

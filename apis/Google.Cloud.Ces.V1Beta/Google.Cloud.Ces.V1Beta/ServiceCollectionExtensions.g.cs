@@ -62,6 +62,42 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gccv::AssistantServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAssistantServiceClient(this IServiceCollection services, sys::Action<gccv::AssistantServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::AssistantServiceClientBuilder builder = new gccv::AssistantServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::AssistantServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAssistantServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::AssistantServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::AssistantServiceClientBuilder builder = new gccv::AssistantServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gccv::EvaluationServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">

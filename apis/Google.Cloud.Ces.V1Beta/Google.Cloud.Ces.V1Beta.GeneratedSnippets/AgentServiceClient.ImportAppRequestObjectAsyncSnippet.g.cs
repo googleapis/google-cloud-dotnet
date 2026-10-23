@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                 GcsUri = "",
                 ImportOptions = new ImportAppRequest.Types.ImportOptions(),
                 IgnoreAppLock = false,
+                JsonPatchContent = "",
             };
             // Make the request
             Operation<ImportAppResponse, OperationMetadata> response = await agentServiceClient.ImportAppAsync(request);
