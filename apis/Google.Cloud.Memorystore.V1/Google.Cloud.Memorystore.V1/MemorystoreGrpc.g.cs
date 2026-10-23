@@ -64,19 +64,41 @@ namespace Google.Cloud.Memorystore.V1 {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.ListAclPoliciesRequest> __Marshaller_google_cloud_memorystore_v1_ListAclPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.ListAclPoliciesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.ListAclPoliciesResponse> __Marshaller_google_cloud_memorystore_v1_ListAclPoliciesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.ListAclPoliciesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.ListInstancesRequest> __Marshaller_google_cloud_memorystore_v1_ListInstancesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.ListInstancesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.ListInstancesResponse> __Marshaller_google_cloud_memorystore_v1_ListInstancesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.ListInstancesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.GetAclPolicyRequest> __Marshaller_google_cloud_memorystore_v1_GetAclPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.GetAclPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.AclPolicy> __Marshaller_google_cloud_memorystore_v1_AclPolicy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.AclPolicy.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.GetInstanceRequest> __Marshaller_google_cloud_memorystore_v1_GetInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.GetInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.Instance> __Marshaller_google_cloud_memorystore_v1_Instance = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.Instance.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.CreateAclPolicyRequest> __Marshaller_google_cloud_memorystore_v1_CreateAclPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.CreateAclPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.CreateInstanceRequest> __Marshaller_google_cloud_memorystore_v1_CreateInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.CreateInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.UpdateAclPolicyRequest> __Marshaller_google_cloud_memorystore_v1_UpdateAclPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.UpdateAclPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.UpdateInstanceRequest> __Marshaller_google_cloud_memorystore_v1_UpdateInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.UpdateInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.DeleteAclPolicyRequest> __Marshaller_google_cloud_memorystore_v1_DeleteAclPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.DeleteAclPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.GetAclPolicyRevisionRequest> __Marshaller_google_cloud_memorystore_v1_GetAclPolicyRevisionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.GetAclPolicyRevisionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.AclPolicyRevision> __Marshaller_google_cloud_memorystore_v1_AclPolicyRevision = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.AclPolicyRevision.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.ListAclPolicyRevisionsRequest> __Marshaller_google_cloud_memorystore_v1_ListAclPolicyRevisionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.ListAclPolicyRevisionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.ListAclPolicyRevisionsResponse> __Marshaller_google_cloud_memorystore_v1_ListAclPolicyRevisionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.ListAclPolicyRevisionsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.DeleteInstanceRequest> __Marshaller_google_cloud_memorystore_v1_DeleteInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.DeleteInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -141,12 +163,28 @@ namespace Google.Cloud.Memorystore.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.DeleteAuthTokenRequest> __Marshaller_google_cloud_memorystore_v1_DeleteAuthTokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.DeleteAuthTokenRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.ListAclPoliciesRequest, global::Google.Cloud.Memorystore.V1.ListAclPoliciesResponse> __Method_ListAclPolicies = new grpc::Method<global::Google.Cloud.Memorystore.V1.ListAclPoliciesRequest, global::Google.Cloud.Memorystore.V1.ListAclPoliciesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAclPolicies",
+        __Marshaller_google_cloud_memorystore_v1_ListAclPoliciesRequest,
+        __Marshaller_google_cloud_memorystore_v1_ListAclPoliciesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.ListInstancesRequest, global::Google.Cloud.Memorystore.V1.ListInstancesResponse> __Method_ListInstances = new grpc::Method<global::Google.Cloud.Memorystore.V1.ListInstancesRequest, global::Google.Cloud.Memorystore.V1.ListInstancesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ListInstances",
         __Marshaller_google_cloud_memorystore_v1_ListInstancesRequest,
         __Marshaller_google_cloud_memorystore_v1_ListInstancesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.GetAclPolicyRequest, global::Google.Cloud.Memorystore.V1.AclPolicy> __Method_GetAclPolicy = new grpc::Method<global::Google.Cloud.Memorystore.V1.GetAclPolicyRequest, global::Google.Cloud.Memorystore.V1.AclPolicy>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAclPolicy",
+        __Marshaller_google_cloud_memorystore_v1_GetAclPolicyRequest,
+        __Marshaller_google_cloud_memorystore_v1_AclPolicy);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.GetInstanceRequest, global::Google.Cloud.Memorystore.V1.Instance> __Method_GetInstance = new grpc::Method<global::Google.Cloud.Memorystore.V1.GetInstanceRequest, global::Google.Cloud.Memorystore.V1.Instance>(
@@ -157,11 +195,27 @@ namespace Google.Cloud.Memorystore.V1 {
         __Marshaller_google_cloud_memorystore_v1_Instance);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.CreateAclPolicyRequest, global::Google.Cloud.Memorystore.V1.AclPolicy> __Method_CreateAclPolicy = new grpc::Method<global::Google.Cloud.Memorystore.V1.CreateAclPolicyRequest, global::Google.Cloud.Memorystore.V1.AclPolicy>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAclPolicy",
+        __Marshaller_google_cloud_memorystore_v1_CreateAclPolicyRequest,
+        __Marshaller_google_cloud_memorystore_v1_AclPolicy);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.CreateInstanceRequest, global::Google.LongRunning.Operation> __Method_CreateInstance = new grpc::Method<global::Google.Cloud.Memorystore.V1.CreateInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateInstance",
         __Marshaller_google_cloud_memorystore_v1_CreateInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.UpdateAclPolicyRequest, global::Google.LongRunning.Operation> __Method_UpdateAclPolicy = new grpc::Method<global::Google.Cloud.Memorystore.V1.UpdateAclPolicyRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAclPolicy",
+        __Marshaller_google_cloud_memorystore_v1_UpdateAclPolicyRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -171,6 +225,30 @@ namespace Google.Cloud.Memorystore.V1 {
         "UpdateInstance",
         __Marshaller_google_cloud_memorystore_v1_UpdateInstanceRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.DeleteAclPolicyRequest, global::Google.LongRunning.Operation> __Method_DeleteAclPolicy = new grpc::Method<global::Google.Cloud.Memorystore.V1.DeleteAclPolicyRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAclPolicy",
+        __Marshaller_google_cloud_memorystore_v1_DeleteAclPolicyRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.GetAclPolicyRevisionRequest, global::Google.Cloud.Memorystore.V1.AclPolicyRevision> __Method_GetAclPolicyRevision = new grpc::Method<global::Google.Cloud.Memorystore.V1.GetAclPolicyRevisionRequest, global::Google.Cloud.Memorystore.V1.AclPolicyRevision>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAclPolicyRevision",
+        __Marshaller_google_cloud_memorystore_v1_GetAclPolicyRevisionRequest,
+        __Marshaller_google_cloud_memorystore_v1_AclPolicyRevision);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.ListAclPolicyRevisionsRequest, global::Google.Cloud.Memorystore.V1.ListAclPolicyRevisionsResponse> __Method_ListAclPolicyRevisions = new grpc::Method<global::Google.Cloud.Memorystore.V1.ListAclPolicyRevisionsRequest, global::Google.Cloud.Memorystore.V1.ListAclPolicyRevisionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAclPolicyRevisions",
+        __Marshaller_google_cloud_memorystore_v1_ListAclPolicyRevisionsRequest,
+        __Marshaller_google_cloud_memorystore_v1_ListAclPolicyRevisionsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.DeleteInstanceRequest, global::Google.LongRunning.Operation> __Method_DeleteInstance = new grpc::Method<global::Google.Cloud.Memorystore.V1.DeleteInstanceRequest, global::Google.LongRunning.Operation>(
@@ -351,6 +429,26 @@ namespace Google.Cloud.Memorystore.V1 {
     public abstract partial class MemorystoreBase
     {
       /// <summary>
+      /// Lists all ACL policies owned by a project in either the specified
+      /// location (region) or all locations.
+      ///
+      /// The location should have the following format:
+      ///
+      /// * `projects/{project_id}/locations/{location_id}`
+      ///
+      /// If `location_id` is specified as `-` (wildcard), then all regions
+      /// available to the project are queried, and the results are aggregated.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Memorystore.V1.ListAclPoliciesResponse> ListAclPolicies(global::Google.Cloud.Memorystore.V1.ListAclPoliciesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Lists Instances in a given project and location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -358,6 +456,18 @@ namespace Google.Cloud.Memorystore.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Memorystore.V1.ListInstancesResponse> ListInstances(global::Google.Cloud.Memorystore.V1.ListInstancesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the details of a specific Memorystore ACL policy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Memorystore.V1.AclPolicy> GetAclPolicy(global::Google.Cloud.Memorystore.V1.GetAclPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -375,6 +485,20 @@ namespace Google.Cloud.Memorystore.V1 {
       }
 
       /// <summary>
+      /// Creates an ACL policy.
+      /// The creation is executed synchronously and the policy is available for use
+      /// immediately after the RPC returns.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Memorystore.V1.AclPolicy> CreateAclPolicy(global::Google.Cloud.Memorystore.V1.CreateAclPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Creates a new Instance in a given project and location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -387,6 +511,27 @@ namespace Google.Cloud.Memorystore.V1 {
       }
 
       /// <summary>
+      /// Updates the ACL policy.
+      ///
+      /// The operation will apply the updated ACL policy to all the linked
+      /// instances. The operation will return success if it successfully applied the
+      /// policy to all the instances. If the operation completed with a failure, the
+      /// service will continue to apply the policy via reconciliation for the failed
+      /// instances even after operation completion to ensure eventual consistency.
+      ///
+      /// Completed longrunning.Operation will contain the new ACL policy object
+      /// in the response field.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateAclPolicy(global::Google.Cloud.Memorystore.V1.UpdateAclPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Updates the parameters of a single Instance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -394,6 +539,44 @@ namespace Google.Cloud.Memorystore.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateInstance(global::Google.Cloud.Memorystore.V1.UpdateInstanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a specific ACL policy. This action will delete the ACL policy and
+      /// all the rules associated with it. An ACL policy cannot be deleted if it is
+      /// attached to an instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteAclPolicy(global::Google.Cloud.Memorystore.V1.DeleteAclPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a specific ACL policy revision.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Memorystore.V1.AclPolicyRevision> GetAclPolicyRevision(global::Google.Cloud.Memorystore.V1.GetAclPolicyRevisionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all ACL policy revisions in a given ACL policy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Memorystore.V1.ListAclPolicyRevisionsResponse> ListAclPolicyRevisions(global::Google.Cloud.Memorystore.V1.ListAclPolicyRevisionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -708,6 +891,86 @@ namespace Google.Cloud.Memorystore.V1 {
       }
 
       /// <summary>
+      /// Lists all ACL policies owned by a project in either the specified
+      /// location (region) or all locations.
+      ///
+      /// The location should have the following format:
+      ///
+      /// * `projects/{project_id}/locations/{location_id}`
+      ///
+      /// If `location_id` is specified as `-` (wildcard), then all regions
+      /// available to the project are queried, and the results are aggregated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Memorystore.V1.ListAclPoliciesResponse ListAclPolicies(global::Google.Cloud.Memorystore.V1.ListAclPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAclPolicies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all ACL policies owned by a project in either the specified
+      /// location (region) or all locations.
+      ///
+      /// The location should have the following format:
+      ///
+      /// * `projects/{project_id}/locations/{location_id}`
+      ///
+      /// If `location_id` is specified as `-` (wildcard), then all regions
+      /// available to the project are queried, and the results are aggregated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Memorystore.V1.ListAclPoliciesResponse ListAclPolicies(global::Google.Cloud.Memorystore.V1.ListAclPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAclPolicies, null, options, request);
+      }
+      /// <summary>
+      /// Lists all ACL policies owned by a project in either the specified
+      /// location (region) or all locations.
+      ///
+      /// The location should have the following format:
+      ///
+      /// * `projects/{project_id}/locations/{location_id}`
+      ///
+      /// If `location_id` is specified as `-` (wildcard), then all regions
+      /// available to the project are queried, and the results are aggregated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.ListAclPoliciesResponse> ListAclPoliciesAsync(global::Google.Cloud.Memorystore.V1.ListAclPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAclPoliciesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all ACL policies owned by a project in either the specified
+      /// location (region) or all locations.
+      ///
+      /// The location should have the following format:
+      ///
+      /// * `projects/{project_id}/locations/{location_id}`
+      ///
+      /// If `location_id` is specified as `-` (wildcard), then all regions
+      /// available to the project are queried, and the results are aggregated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.ListAclPoliciesResponse> ListAclPoliciesAsync(global::Google.Cloud.Memorystore.V1.ListAclPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAclPolicies, null, options, request);
+      }
+      /// <summary>
       /// Lists Instances in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -754,6 +1017,54 @@ namespace Google.Cloud.Memorystore.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.ListInstancesResponse> ListInstancesAsync(global::Google.Cloud.Memorystore.V1.ListInstancesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListInstances, null, options, request);
+      }
+      /// <summary>
+      /// Gets the details of a specific Memorystore ACL policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Memorystore.V1.AclPolicy GetAclPolicy(global::Google.Cloud.Memorystore.V1.GetAclPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAclPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the details of a specific Memorystore ACL policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Memorystore.V1.AclPolicy GetAclPolicy(global::Google.Cloud.Memorystore.V1.GetAclPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAclPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Gets the details of a specific Memorystore ACL policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.AclPolicy> GetAclPolicyAsync(global::Google.Cloud.Memorystore.V1.GetAclPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAclPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the details of a specific Memorystore ACL policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.AclPolicy> GetAclPolicyAsync(global::Google.Cloud.Memorystore.V1.GetAclPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAclPolicy, null, options, request);
       }
       /// <summary>
       /// Gets details of a single Instance.
@@ -804,6 +1115,62 @@ namespace Google.Cloud.Memorystore.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetInstance, null, options, request);
       }
       /// <summary>
+      /// Creates an ACL policy.
+      /// The creation is executed synchronously and the policy is available for use
+      /// immediately after the RPC returns.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Memorystore.V1.AclPolicy CreateAclPolicy(global::Google.Cloud.Memorystore.V1.CreateAclPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAclPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an ACL policy.
+      /// The creation is executed synchronously and the policy is available for use
+      /// immediately after the RPC returns.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Memorystore.V1.AclPolicy CreateAclPolicy(global::Google.Cloud.Memorystore.V1.CreateAclPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAclPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Creates an ACL policy.
+      /// The creation is executed synchronously and the policy is available for use
+      /// immediately after the RPC returns.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.AclPolicy> CreateAclPolicyAsync(global::Google.Cloud.Memorystore.V1.CreateAclPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAclPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an ACL policy.
+      /// The creation is executed synchronously and the policy is available for use
+      /// immediately after the RPC returns.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.AclPolicy> CreateAclPolicyAsync(global::Google.Cloud.Memorystore.V1.CreateAclPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAclPolicy, null, options, request);
+      }
+      /// <summary>
       /// Creates a new Instance in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -852,6 +1219,90 @@ namespace Google.Cloud.Memorystore.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateInstance, null, options, request);
       }
       /// <summary>
+      /// Updates the ACL policy.
+      ///
+      /// The operation will apply the updated ACL policy to all the linked
+      /// instances. The operation will return success if it successfully applied the
+      /// policy to all the instances. If the operation completed with a failure, the
+      /// service will continue to apply the policy via reconciliation for the failed
+      /// instances even after operation completion to ensure eventual consistency.
+      ///
+      /// Completed longrunning.Operation will contain the new ACL policy object
+      /// in the response field.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateAclPolicy(global::Google.Cloud.Memorystore.V1.UpdateAclPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAclPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the ACL policy.
+      ///
+      /// The operation will apply the updated ACL policy to all the linked
+      /// instances. The operation will return success if it successfully applied the
+      /// policy to all the instances. If the operation completed with a failure, the
+      /// service will continue to apply the policy via reconciliation for the failed
+      /// instances even after operation completion to ensure eventual consistency.
+      ///
+      /// Completed longrunning.Operation will contain the new ACL policy object
+      /// in the response field.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateAclPolicy(global::Google.Cloud.Memorystore.V1.UpdateAclPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAclPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Updates the ACL policy.
+      ///
+      /// The operation will apply the updated ACL policy to all the linked
+      /// instances. The operation will return success if it successfully applied the
+      /// policy to all the instances. If the operation completed with a failure, the
+      /// service will continue to apply the policy via reconciliation for the failed
+      /// instances even after operation completion to ensure eventual consistency.
+      ///
+      /// Completed longrunning.Operation will contain the new ACL policy object
+      /// in the response field.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAclPolicyAsync(global::Google.Cloud.Memorystore.V1.UpdateAclPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAclPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the ACL policy.
+      ///
+      /// The operation will apply the updated ACL policy to all the linked
+      /// instances. The operation will return success if it successfully applied the
+      /// policy to all the instances. If the operation completed with a failure, the
+      /// service will continue to apply the policy via reconciliation for the failed
+      /// instances even after operation completion to ensure eventual consistency.
+      ///
+      /// Completed longrunning.Operation will contain the new ACL policy object
+      /// in the response field.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAclPolicyAsync(global::Google.Cloud.Memorystore.V1.UpdateAclPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAclPolicy, null, options, request);
+      }
+      /// <summary>
       /// Updates the parameters of a single Instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -898,6 +1349,158 @@ namespace Google.Cloud.Memorystore.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateInstanceAsync(global::Google.Cloud.Memorystore.V1.UpdateInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateInstance, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a specific ACL policy. This action will delete the ACL policy and
+      /// all the rules associated with it. An ACL policy cannot be deleted if it is
+      /// attached to an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteAclPolicy(global::Google.Cloud.Memorystore.V1.DeleteAclPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAclPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a specific ACL policy. This action will delete the ACL policy and
+      /// all the rules associated with it. An ACL policy cannot be deleted if it is
+      /// attached to an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteAclPolicy(global::Google.Cloud.Memorystore.V1.DeleteAclPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAclPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a specific ACL policy. This action will delete the ACL policy and
+      /// all the rules associated with it. An ACL policy cannot be deleted if it is
+      /// attached to an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAclPolicyAsync(global::Google.Cloud.Memorystore.V1.DeleteAclPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAclPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a specific ACL policy. This action will delete the ACL policy and
+      /// all the rules associated with it. An ACL policy cannot be deleted if it is
+      /// attached to an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAclPolicyAsync(global::Google.Cloud.Memorystore.V1.DeleteAclPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAclPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a specific ACL policy revision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Memorystore.V1.AclPolicyRevision GetAclPolicyRevision(global::Google.Cloud.Memorystore.V1.GetAclPolicyRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAclPolicyRevision(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a specific ACL policy revision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Memorystore.V1.AclPolicyRevision GetAclPolicyRevision(global::Google.Cloud.Memorystore.V1.GetAclPolicyRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAclPolicyRevision, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a specific ACL policy revision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.AclPolicyRevision> GetAclPolicyRevisionAsync(global::Google.Cloud.Memorystore.V1.GetAclPolicyRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAclPolicyRevisionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a specific ACL policy revision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.AclPolicyRevision> GetAclPolicyRevisionAsync(global::Google.Cloud.Memorystore.V1.GetAclPolicyRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAclPolicyRevision, null, options, request);
+      }
+      /// <summary>
+      /// Lists all ACL policy revisions in a given ACL policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Memorystore.V1.ListAclPolicyRevisionsResponse ListAclPolicyRevisions(global::Google.Cloud.Memorystore.V1.ListAclPolicyRevisionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAclPolicyRevisions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all ACL policy revisions in a given ACL policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Memorystore.V1.ListAclPolicyRevisionsResponse ListAclPolicyRevisions(global::Google.Cloud.Memorystore.V1.ListAclPolicyRevisionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAclPolicyRevisions, null, options, request);
+      }
+      /// <summary>
+      /// Lists all ACL policy revisions in a given ACL policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.ListAclPolicyRevisionsResponse> ListAclPolicyRevisionsAsync(global::Google.Cloud.Memorystore.V1.ListAclPolicyRevisionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAclPolicyRevisionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all ACL policy revisions in a given ACL policy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.ListAclPolicyRevisionsResponse> ListAclPolicyRevisionsAsync(global::Google.Cloud.Memorystore.V1.ListAclPolicyRevisionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAclPolicyRevisions, null, options, request);
       }
       /// <summary>
       /// Deletes a single Instance.
@@ -2033,10 +2636,17 @@ namespace Google.Cloud.Memorystore.V1 {
     public static grpc::ServerServiceDefinition BindService(MemorystoreBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
+          .AddMethod(__Method_ListAclPolicies, serviceImpl.ListAclPolicies)
           .AddMethod(__Method_ListInstances, serviceImpl.ListInstances)
+          .AddMethod(__Method_GetAclPolicy, serviceImpl.GetAclPolicy)
           .AddMethod(__Method_GetInstance, serviceImpl.GetInstance)
+          .AddMethod(__Method_CreateAclPolicy, serviceImpl.CreateAclPolicy)
           .AddMethod(__Method_CreateInstance, serviceImpl.CreateInstance)
+          .AddMethod(__Method_UpdateAclPolicy, serviceImpl.UpdateAclPolicy)
           .AddMethod(__Method_UpdateInstance, serviceImpl.UpdateInstance)
+          .AddMethod(__Method_DeleteAclPolicy, serviceImpl.DeleteAclPolicy)
+          .AddMethod(__Method_GetAclPolicyRevision, serviceImpl.GetAclPolicyRevision)
+          .AddMethod(__Method_ListAclPolicyRevisions, serviceImpl.ListAclPolicyRevisions)
           .AddMethod(__Method_DeleteInstance, serviceImpl.DeleteInstance)
           .AddMethod(__Method_GetCertificateAuthority, serviceImpl.GetCertificateAuthority)
           .AddMethod(__Method_GetSharedRegionalCertificateAuthority, serviceImpl.GetSharedRegionalCertificateAuthority)
@@ -2067,10 +2677,17 @@ namespace Google.Cloud.Memorystore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, MemorystoreBase serviceImpl)
     {
+      serviceBinder.AddMethod(__Method_ListAclPolicies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.ListAclPoliciesRequest, global::Google.Cloud.Memorystore.V1.ListAclPoliciesResponse>(serviceImpl.ListAclPolicies));
       serviceBinder.AddMethod(__Method_ListInstances, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.ListInstancesRequest, global::Google.Cloud.Memorystore.V1.ListInstancesResponse>(serviceImpl.ListInstances));
+      serviceBinder.AddMethod(__Method_GetAclPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.GetAclPolicyRequest, global::Google.Cloud.Memorystore.V1.AclPolicy>(serviceImpl.GetAclPolicy));
       serviceBinder.AddMethod(__Method_GetInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.GetInstanceRequest, global::Google.Cloud.Memorystore.V1.Instance>(serviceImpl.GetInstance));
+      serviceBinder.AddMethod(__Method_CreateAclPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.CreateAclPolicyRequest, global::Google.Cloud.Memorystore.V1.AclPolicy>(serviceImpl.CreateAclPolicy));
       serviceBinder.AddMethod(__Method_CreateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.CreateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateInstance));
+      serviceBinder.AddMethod(__Method_UpdateAclPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.UpdateAclPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateAclPolicy));
       serviceBinder.AddMethod(__Method_UpdateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.UpdateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateInstance));
+      serviceBinder.AddMethod(__Method_DeleteAclPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.DeleteAclPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteAclPolicy));
+      serviceBinder.AddMethod(__Method_GetAclPolicyRevision, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.GetAclPolicyRevisionRequest, global::Google.Cloud.Memorystore.V1.AclPolicyRevision>(serviceImpl.GetAclPolicyRevision));
+      serviceBinder.AddMethod(__Method_ListAclPolicyRevisions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.ListAclPolicyRevisionsRequest, global::Google.Cloud.Memorystore.V1.ListAclPolicyRevisionsResponse>(serviceImpl.ListAclPolicyRevisions));
       serviceBinder.AddMethod(__Method_DeleteInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.DeleteInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteInstance));
       serviceBinder.AddMethod(__Method_GetCertificateAuthority, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.GetCertificateAuthorityRequest, global::Google.Cloud.Memorystore.V1.CertificateAuthority>(serviceImpl.GetCertificateAuthority));
       serviceBinder.AddMethod(__Method_GetSharedRegionalCertificateAuthority, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.GetSharedRegionalCertificateAuthorityRequest, global::Google.Cloud.Memorystore.V1.SharedRegionalCertificateAuthority>(serviceImpl.GetSharedRegionalCertificateAuthority));
