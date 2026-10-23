@@ -12,13 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.Common.V1;
 using Grpc.Core;
 using Grpc.Core.Interceptors;
 using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -28,17 +27,17 @@ namespace Google.Cloud.Spanner.V1.Tests;
 
 public class SpannerBuiltInMetricsInterceptorTests
 {
-    private const string TestProjectId = "test-project";
-    private const string TestInstanceId = "test-instance";
-    private const string TestDatabaseId = "test-database";
+    internal const string TestProjectId = "test-project";
+    internal const string TestInstanceId = "test-instance";
+    internal const string TestDatabaseId = "test-database";
 
-    private static readonly SpannerBuiltInMetrics.ClientIdentity s_clientIdentity = SpannerBuiltInMetrics.Labeler.GenerateIdentity();
-    private static readonly FakeStopwatchProvider s_stopwatchProvider = new();
+    internal static readonly SpannerBuiltInMetrics.ClientIdentity s_clientIdentity = SpannerBuiltInMetrics.Labeler.GenerateIdentity();
+    internal static readonly FakeStopwatchProvider s_stopwatchProvider = new();
     private static readonly SpannerBuiltInMetrics.MetricsInterceptor s_interceptor = new(s_clientIdentity, s_stopwatchProvider);
 
-    private static readonly Metadata s_serverTimingMetadata = new Metadata { { "server-timing", "gfet4t7; dur=12.5" } };
+    internal static readonly Metadata s_serverTimingMetadata = new Metadata { { "server-timing", "gfet4t7; dur=12.5" } };
     private static readonly DatabaseName s_dbName = new(TestProjectId, TestInstanceId, TestDatabaseId);
-    private static readonly SessionName s_sessionName = SessionName.FromProjectInstanceDatabaseSession(TestProjectId, TestInstanceId, TestDatabaseId, "test-session");
+    internal static readonly SessionName s_sessionName = SessionName.FromProjectInstanceDatabaseSession(TestProjectId, TestInstanceId, TestDatabaseId, "test-session");
 
     private static SpannerClient CreateClient(FakeCallInvoker invoker) =>
         new SpannerClientBuilder
@@ -134,23 +133,87 @@ public class SpannerBuiltInMetricsInterceptorTests
         ValidateEmittedMetrics(measurements, expectedStatus, methodName: expectedMethod);
     }
 
+    public static TheoryData<Func<SpannerClient, Task>, string> SpannerClientStreamingSuccessCases => new()
+    {
+        { client => ConsumeStreamAsync(client.ExecuteStreamingSql(new ExecuteSqlRequest { SessionAsSessionName = s_sessionName })), "ExecuteStreamingSql" },
+        { client => ConsumeStreamAsync(client.StreamingRead(new ReadRequest { SessionAsSessionName = s_sessionName })), "StreamingRead" },
+        { client => ConsumeStreamAsync(client.BatchWrite(new BatchWriteRequest { SessionAsSessionName = s_sessionName })), "BatchWrite" },
+    };
 
+    [Theory]
+    [MemberData(nameof(SpannerClientStreamingSuccessCases))]
+    public async Task SpannerClient_RecordsMetrics_Streaming_Success(
+        Func<SpannerClient, Task> callStreaming,
+        string expectedMethod)
+    {
+        var client = CreateClient(new FakeCallInvoker(s_serverTimingMetadata));
+        var measurements = await RunWithMeterListenerAsync(() => callStreaming(client));
+        ValidateEmittedMetrics(measurements, StatusCode.OK, methodName: expectedMethod);
+    }
+
+    public static TheoryData<Func<SpannerClient, Task>, StatusCode, string> SpannerClientStreamingFailureCases => new()
+    {
+        { client => ConsumeStreamAsync(client.ExecuteStreamingSql(new ExecuteSqlRequest { SessionAsSessionName = s_sessionName })), StatusCode.Unknown, "ExecuteStreamingSql" },
+        { client => ConsumeStreamAsync(client.ExecuteStreamingSql(new ExecuteSqlRequest { SessionAsSessionName = s_sessionName })), StatusCode.DeadlineExceeded, "ExecuteStreamingSql" },
+        { client => ConsumeStreamAsync(client.StreamingRead(new ReadRequest { SessionAsSessionName = s_sessionName })), StatusCode.Unknown, "StreamingRead" },
+        { client => ConsumeStreamAsync(client.StreamingRead(new ReadRequest { SessionAsSessionName = s_sessionName })), StatusCode.DeadlineExceeded, "StreamingRead" },
+        { client => ConsumeStreamAsync(client.BatchWrite(new BatchWriteRequest { SessionAsSessionName = s_sessionName })), StatusCode.Unknown, "BatchWrite" },
+        { client => ConsumeStreamAsync(client.BatchWrite(new BatchWriteRequest { SessionAsSessionName = s_sessionName })), StatusCode.DeadlineExceeded, "BatchWrite" },
+    };
+
+    [Theory]
+    [MemberData(nameof(SpannerClientStreamingFailureCases))]
+    public async Task SpannerClient_RecordsMetrics_Streaming_Failure(
+        Func<SpannerClient, Task> callStreaming,
+        StatusCode expectedStatus,
+        string expectedMethod)
+    {
+        var client = CreateClient(new FakeCallInvoker(s_serverTimingMetadata, expectedStatus));
+        var measurements = await RunWithMeterListenerAsync(() => Assert.ThrowsAnyAsync<RpcException>(() => callStreaming(client)));
+        ValidateEmittedMetrics(measurements, expectedStatus, methodName: expectedMethod);
+    }
+
+    [Fact]
+    public async Task SpannerClient_RecordsMetrics_Streaming_DisposedBeforeConsumed()
+    {
+        var client = CreateClient(new FakeCallInvoker(s_serverTimingMetadata));
+        var measurements = await RunWithMeterListenerAsync(() =>
+        {
+            var stream = client.ExecuteStreamingSql(new ExecuteSqlRequest { SessionAsSessionName = s_sessionName });
+            stream.GrpcCall.Dispose();
+        });
+
+        ValidateEmittedMetrics(measurements, StatusCode.Unknown, methodName: "ExecuteStreamingSql");
+    }
+
+    /// <summary>
+    /// Consumes all responses from a <see cref="ServerStreamingBase{T}"/> call.
+    /// </summary>
+    private static Task ConsumeStreamAsync<T>(ServerStreamingBase<T> stream) =>
+        SpannerBuiltInMetricsInstrumentedAsyncStreamReaderTests.ConsumeReaderAsync(stream.GrpcCall.ResponseStream);
 
     /// <summary>
     /// Verifies that built in metrics were recorded.
     /// </summary>
-    private static void ValidateEmittedMetrics(
+    /// <remarks>
+    /// Measurements are filtered by method and client identity because the meter listener also observes
+    /// metrics emitted by tests running in parallel. Test classes that emit metrics for the same method must
+    /// use their own <paramref name="clientIdentity"/>.
+    /// </remarks>
+    internal static void ValidateEmittedMetrics(
         IEnumerable<Measurement> measurements,
         StatusCode expectedStatus,
-        string methodName = "CreateSession")
+        string methodName = "CreateSession",
+        SpannerBuiltInMetrics.ClientIdentity? clientIdentity = null)
     {
+        var identity = clientIdentity ?? s_clientIdentity;
         var scoped = FilterMeasurements(measurements, methodName);
         ValidateMetricValue(scoped);
         ValidateMetricLabels(scoped);
 
         List<Measurement> FilterMeasurements(IEnumerable<Measurement> measurements, string methodName) =>
             measurements
-                .Where(m => m.GetTag("method") == methodName && m.GetTag("client_uid") == s_clientIdentity.Id)
+                .Where(m => m.GetTag("method") == methodName && m.GetTag("client_uid") == identity.Id)
                 .ToList();
 
         void ValidateMetricValue(List<Measurement> scopedMeasurements)
@@ -170,8 +233,8 @@ public class SpannerBuiltInMetricsInterceptorTests
                 Assert.Equal(TestDatabaseId, m.GetTag("database"));
                 Assert.Equal(methodName, m.GetTag("method"));
                 Assert.Equal(expectedStatus.ToString(), m.GetTag("status"));
-                Assert.Equal(s_clientIdentity.Hash, m.GetTag("client_hash"));
-                Assert.Equal(s_clientIdentity.Id, m.GetTag("client_uid"));
+                Assert.Equal(identity.Hash, m.GetTag("client_hash"));
+                Assert.Equal(identity.Id, m.GetTag("client_uid"));
                 Assert.False(string.IsNullOrEmpty(m.GetTag("client_name")));
                 Assert.False(string.IsNullOrEmpty(m.GetTag("location")));
                 Assert.Equal("unknown", m.GetTag("instance_config"));
