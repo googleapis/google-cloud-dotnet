@@ -68,106 +68,97 @@ namespace Google.Cloud.Firestore.V1.Tests
             Assert.Equal(expectedHeaderValue, entry.Value);
         }
 
-        [Fact]
-        public void TransactionHeader_AlwaysTransactionalRpcs()
+        [Theory]
+        [MemberData(nameof(AlwaysTransactionalTestData))]
+        public void TransactionHeader_AlwaysTransactionalRpcs(Action<FirestoreClientImpl> rpcAction)
         {
             var invoker = new HeaderCapturingCallInvoker();
             var client = new FirestoreClientImpl(new Firestore.FirestoreClient(invoker), null, null);
 
-            client.BeginTransaction(new BeginTransactionRequest { Database = SampleDatabase });
-            invoker.AssertTransactionHeader("true");
+            rpcAction(client);
 
-            client.Rollback(new RollbackRequest { Database = SampleDatabase, Transaction = s_sampleTransaction });
             invoker.AssertTransactionHeader("true");
         }
 
-        [Fact]
-        public void TransactionHeader_ConditionallyTransactionalRpcs()
+        public static TheoryData<Action<FirestoreClientImpl>> AlwaysTransactionalTestData =>
+            new TheoryData<Action<FirestoreClientImpl>>
+            {
+                client => client.BeginTransaction(new BeginTransactionRequest { Database = SampleDatabase }),
+                client => client.Rollback(new RollbackRequest { Database = SampleDatabase, Transaction = s_sampleTransaction }),
+            };
+
+        [Theory]
+        [MemberData(nameof(ConditionallyTransactionalTestData))]
+        public void TransactionHeader_ConditionallyTransactionalRpcs(Action<FirestoreClientImpl> rpcAction, string expectedHeader)
         {
             var invoker = new HeaderCapturingCallInvoker();
             var client = new FirestoreClientImpl(new Firestore.FirestoreClient(invoker), null, null);
 
-            // Commit
-            client.Commit(new CommitRequest { Database = SampleDatabase });
-            invoker.AssertTransactionHeader("false");
-            client.Commit(new CommitRequest { Database = SampleDatabase, Transaction = s_sampleTransaction });
-            invoker.AssertTransactionHeader("true");
+            rpcAction(client);
 
-            // BatchGetDocuments
-            client.BatchGetDocuments(new BatchGetDocumentsRequest { Database = SampleDatabase });
-            invoker.AssertTransactionHeader("false");
-            client.BatchGetDocuments(new BatchGetDocumentsRequest { Database = SampleDatabase, Transaction = s_sampleTransaction });
-            invoker.AssertTransactionHeader("true");
-            client.BatchGetDocuments(new BatchGetDocumentsRequest { Database = SampleDatabase, NewTransaction = new TransactionOptions() });
-            invoker.AssertTransactionHeader("true");
-
-            // RunQuery
-            client.RunQuery(new RunQueryRequest { Parent = SampleDocuments });
-            invoker.AssertTransactionHeader("false");
-            client.RunQuery(new RunQueryRequest { Parent = SampleDocuments, Transaction = s_sampleTransaction });
-            invoker.AssertTransactionHeader("true");
-            client.RunQuery(new RunQueryRequest { Parent = SampleDocuments, NewTransaction = new TransactionOptions() });
-            invoker.AssertTransactionHeader("true");
-
-            // RunAggregationQuery
-            client.RunAggregationQuery(new RunAggregationQueryRequest { Parent = SampleDocuments });
-            invoker.AssertTransactionHeader("false");
-            client.RunAggregationQuery(new RunAggregationQueryRequest { Parent = SampleDocuments, Transaction = s_sampleTransaction });
-            invoker.AssertTransactionHeader("true");
-            client.RunAggregationQuery(new RunAggregationQueryRequest { Parent = SampleDocuments, NewTransaction = new TransactionOptions() });
-            invoker.AssertTransactionHeader("true");
-
-            // ExecutePipeline
-            client.ExecutePipeline(new ExecutePipelineRequest { Database = SampleDatabase });
-            invoker.AssertTransactionHeader("false");
-            client.ExecutePipeline(new ExecutePipelineRequest { Database = SampleDatabase, Transaction = s_sampleTransaction });
-            invoker.AssertTransactionHeader("true");
-            client.ExecutePipeline(new ExecutePipelineRequest { Database = SampleDatabase, NewTransaction = new TransactionOptions() });
-            invoker.AssertTransactionHeader("true");
-
-            // GetDocument
-            client.GetDocument(new GetDocumentRequest { Name = SampleDocument });
-            invoker.AssertTransactionHeader("false");
-            client.GetDocument(new GetDocumentRequest { Name = SampleDocument, Transaction = s_sampleTransaction });
-            invoker.AssertTransactionHeader("true");
-
-            // ListDocuments
-            client.ListDocuments(new ListDocumentsRequest { Parent = SampleDocuments, CollectionId = "col1" }).ReadPage(10);
-            invoker.AssertTransactionHeader("false");
-            client.ListDocuments(new ListDocumentsRequest { Parent = SampleDocuments, CollectionId = "col1", Transaction = s_sampleTransaction }).ReadPage(10);
-            invoker.AssertTransactionHeader("true");
+            invoker.AssertTransactionHeader(expectedHeader);
         }
 
-        [Fact]
-        public void TransactionHeader_NonTransactionalRpcs()
+        public static TheoryData<Action<FirestoreClientImpl>, string> ConditionallyTransactionalTestData =>
+            new TheoryData<Action<FirestoreClientImpl>, string>
+            {
+                // Commit
+                { client => client.Commit(new CommitRequest { Database = SampleDatabase }), "false" },
+                { client => client.Commit(new CommitRequest { Database = SampleDatabase, Transaction = s_sampleTransaction }), "true" },
+
+                // BatchGetDocuments
+                { client => client.BatchGetDocuments(new BatchGetDocumentsRequest { Database = SampleDatabase }), "false" },
+                { client => client.BatchGetDocuments(new BatchGetDocumentsRequest { Database = SampleDatabase, Transaction = s_sampleTransaction }), "true" },
+                { client => client.BatchGetDocuments(new BatchGetDocumentsRequest { Database = SampleDatabase, NewTransaction = new TransactionOptions() }), "true" },
+
+                // RunQuery
+                { client => client.RunQuery(new RunQueryRequest { Parent = SampleDocuments }), "false" },
+                { client => client.RunQuery(new RunQueryRequest { Parent = SampleDocuments, Transaction = s_sampleTransaction }), "true" },
+                { client => client.RunQuery(new RunQueryRequest { Parent = SampleDocuments, NewTransaction = new TransactionOptions() }), "true" },
+
+                // RunAggregationQuery
+                { client => client.RunAggregationQuery(new RunAggregationQueryRequest { Parent = SampleDocuments }), "false" },
+                { client => client.RunAggregationQuery(new RunAggregationQueryRequest { Parent = SampleDocuments, Transaction = s_sampleTransaction }), "true" },
+                { client => client.RunAggregationQuery(new RunAggregationQueryRequest { Parent = SampleDocuments, NewTransaction = new TransactionOptions() }), "true" },
+
+                // ExecutePipeline
+                { client => client.ExecutePipeline(new ExecutePipelineRequest { Database = SampleDatabase }), "false" },
+                { client => client.ExecutePipeline(new ExecutePipelineRequest { Database = SampleDatabase, Transaction = s_sampleTransaction }), "true" },
+                { client => client.ExecutePipeline(new ExecutePipelineRequest { Database = SampleDatabase, NewTransaction = new TransactionOptions() }), "true" },
+
+                // GetDocument
+                { client => client.GetDocument(new GetDocumentRequest { Name = SampleDocument }), "false" },
+                { client => client.GetDocument(new GetDocumentRequest { Name = SampleDocument, Transaction = s_sampleTransaction }), "true" },
+
+                // ListDocuments
+                { client => client.ListDocuments(new ListDocumentsRequest { Parent = SampleDocuments, CollectionId = "col1" }).ReadPage(10), "false" },
+                { client => client.ListDocuments(new ListDocumentsRequest { Parent = SampleDocuments, CollectionId = "col1", Transaction = s_sampleTransaction }).ReadPage(10), "true" },
+            };
+
+        [Theory]
+        [MemberData(nameof(NonTransactionalTestData))]
+        public void TransactionHeader_NonTransactionalRpcs(Action<FirestoreClientImpl> rpcAction)
         {
             var invoker = new HeaderCapturingCallInvoker();
             var client = new FirestoreClientImpl(new Firestore.FirestoreClient(invoker), null, null);
 
-            client.CreateDocument(new CreateDocumentRequest { Parent = SampleDocuments, CollectionId = "col1" });
-            invoker.AssertTransactionHeader("false");
+            rpcAction(client);
 
-            client.UpdateDocument(new UpdateDocumentRequest { Document = new Document { Name = SampleDocument } });
-            invoker.AssertTransactionHeader("false");
-
-            client.DeleteDocument(new DeleteDocumentRequest { Name = SampleDocument });
-            invoker.AssertTransactionHeader("false");
-
-            client.ListCollectionIds(new ListCollectionIdsRequest { Parent = SampleDocuments }).ReadPage(10);
-            invoker.AssertTransactionHeader("false");
-
-            client.PartitionQuery(new PartitionQueryRequest { Parent = SampleDocuments }).ReadPage(10);
-            invoker.AssertTransactionHeader("false");
-
-            client.BatchWrite(new BatchWriteRequest { Database = SampleDatabase });
-            invoker.AssertTransactionHeader("false");
-
-            client.Write();
-            invoker.AssertTransactionHeader("false");
-
-            client.Listen();
             invoker.AssertTransactionHeader("false");
         }
+
+        public static TheoryData<Action<FirestoreClientImpl>> NonTransactionalTestData =>
+            new TheoryData<Action<FirestoreClientImpl>>
+            {
+                client => client.CreateDocument(new CreateDocumentRequest { Parent = SampleDocuments, CollectionId = "col1" }),
+                client => client.UpdateDocument(new UpdateDocumentRequest { Document = new Document { Name = SampleDocument } }),
+                client => client.DeleteDocument(new DeleteDocumentRequest { Name = SampleDocument }),
+                client => client.ListCollectionIds(new ListCollectionIdsRequest { Parent = SampleDocuments }).ReadPage(10),
+                client => client.PartitionQuery(new PartitionQueryRequest { Parent = SampleDocuments }).ReadPage(10),
+                client => client.BatchWrite(new BatchWriteRequest { Database = SampleDatabase }),
+                client => client.Write(),
+                client => client.Listen(),
+            };
 
         private class HeaderCapturingCallInvoker : CallInvoker
         {
@@ -184,13 +175,13 @@ namespace Google.Cloud.Firestore.V1.Tests
             public override AsyncClientStreamingCall<TRequest, TResponse> AsyncClientStreamingCall<TRequest, TResponse>(Method<TRequest, TResponse> method, string host, CallOptions options)
             {
                 LastHeaders = options.Headers;
-                return new AsyncClientStreamingCall<TRequest, TResponse>(null, null, null, null, null, () => { });
+                return new AsyncClientStreamingCall<TRequest, TResponse>(new FakeClientStreamWriter<TRequest>(), null, null, null, null, () => { });
             }
 
             public override AsyncDuplexStreamingCall<TRequest, TResponse> AsyncDuplexStreamingCall<TRequest, TResponse>(Method<TRequest, TResponse> method, string host, CallOptions options)
             {
                 LastHeaders = options.Headers;
-                return new AsyncDuplexStreamingCall<TRequest, TResponse>(null, null, null, null, null, () => { });
+                return new AsyncDuplexStreamingCall<TRequest, TResponse>(new FakeClientStreamWriter<TRequest>(), null, null, null, null, () => { });
             }
 
             public override AsyncServerStreamingCall<TResponse> AsyncServerStreamingCall<TRequest, TResponse>(Method<TRequest, TResponse> method, string host, CallOptions options, TRequest request)
@@ -209,6 +200,13 @@ namespace Google.Cloud.Firestore.V1.Tests
             {
                 LastHeaders = options.Headers;
                 return Activator.CreateInstance<TResponse>();
+            }
+
+            private class FakeClientStreamWriter<T> : IClientStreamWriter<T>
+            {
+                public WriteOptions WriteOptions { get; set; }
+                public Task CompleteAsync() => Task.CompletedTask;
+                public Task WriteAsync(T message) => Task.CompletedTask;
             }
         }
     }
