@@ -223,6 +223,21 @@ namespace Google.Cloud.Storage.V1.Tests
                 client => client.DeleteObject("bucket", "objectName", new DeleteObjectOptions { Generation = 70 }), "check");
 
         [Fact]
+        public void DeleteObject_Object_NoRetry() => NoRetryHelper(
+            service => service.Objects.Delete("bucket", "objectName"),
+            client => client.DeleteObject(new Object { Bucket = "bucket", Name = "objectName" }));
+
+        [Fact]
+        public void DeleteObject_Object_RetryOnce() => RetryOnce(
+            service => new ObjectsResource.DeleteRequest(service, "bucket", "objectName") { Generation = 70 },
+            client => client.DeleteObject(new Object { Bucket = "bucket", Name = "objectName" }, new DeleteObjectOptions { Generation = 70 }), "check");
+
+        [Fact]
+        public void DeleteObject_Object_RetryThenFail() =>
+            RetryThenFail(service => new ObjectsResource.DeleteRequest(service, "bucket", "objectName") { Generation = 70 },
+                client => client.DeleteObject(new Object { Bucket = "bucket", Name = "objectName" }, new DeleteObjectOptions { Generation = 70 }), "check");
+
+        [Fact]
         public void UpdateObject_WithMetageneration_RetryOnce() => RetryOnceHelper(
             service => new ObjectsResource.UpdateRequest(service, new Object { Bucket = "bucket", Name = "object" }, "bucket", "object") { IfMetagenerationMatch = 70 },
             client => client.UpdateObject(new Object { Bucket = "bucket", Name = "object" }, new UpdateObjectOptions { IfMetagenerationMatch = 70 }));
