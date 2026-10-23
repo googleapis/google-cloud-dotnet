@@ -49,12 +49,21 @@ namespace Google.Cloud.Memorystore.V1
         private MemorystoreSettings(MemorystoreSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            ListAclPoliciesSettings = existing.ListAclPoliciesSettings;
             ListInstancesSettings = existing.ListInstancesSettings;
+            GetAclPolicySettings = existing.GetAclPolicySettings;
             GetInstanceSettings = existing.GetInstanceSettings;
+            CreateAclPolicySettings = existing.CreateAclPolicySettings;
             CreateInstanceSettings = existing.CreateInstanceSettings;
             CreateInstanceOperationsSettings = existing.CreateInstanceOperationsSettings.Clone();
+            UpdateAclPolicySettings = existing.UpdateAclPolicySettings;
+            UpdateAclPolicyOperationsSettings = existing.UpdateAclPolicyOperationsSettings.Clone();
             UpdateInstanceSettings = existing.UpdateInstanceSettings;
             UpdateInstanceOperationsSettings = existing.UpdateInstanceOperationsSettings.Clone();
+            DeleteAclPolicySettings = existing.DeleteAclPolicySettings;
+            DeleteAclPolicyOperationsSettings = existing.DeleteAclPolicyOperationsSettings.Clone();
+            GetAclPolicyRevisionSettings = existing.GetAclPolicyRevisionSettings;
+            ListAclPolicyRevisionsSettings = existing.ListAclPolicyRevisionsSettings;
             DeleteInstanceSettings = existing.DeleteInstanceSettings;
             DeleteInstanceOperationsSettings = existing.DeleteInstanceOperationsSettings.Clone();
             GetCertificateAuthoritySettings = existing.GetCertificateAuthoritySettings;
@@ -95,6 +104,24 @@ namespace Google.Cloud.Memorystore.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.ListAclPolicies</c> and <c>MemorystoreClient.ListAclPoliciesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAclPoliciesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>MemorystoreClient.ListInstances</c> and <c>MemorystoreClient.ListInstancesAsync</c>.
         /// </summary>
         /// <remarks>
@@ -113,6 +140,24 @@ namespace Google.Cloud.Memorystore.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.GetAclPolicy</c> and <c>MemorystoreClient.GetAclPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAclPolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>MemorystoreClient.GetInstance</c> and <c>MemorystoreClient.GetInstanceAsync</c>.
         /// </summary>
         /// <remarks>
@@ -128,6 +173,18 @@ namespace Google.Cloud.Memorystore.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetInstanceSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.CreateAclPolicy</c> and <c>MemorystoreClient.CreateAclPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAclPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -161,6 +218,36 @@ namespace Google.Cloud.Memorystore.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.UpdateAclPolicy</c> and <c>MemorystoreClient.UpdateAclPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAclPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>MemorystoreClient.UpdateAclPolicy</c> and
+        /// <c>MemorystoreClient.UpdateAclPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateAclPolicyOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>MemorystoreClient.UpdateInstance</c> and <c>MemorystoreClient.UpdateInstanceAsync</c>.
         /// </summary>
         /// <remarks>
@@ -188,6 +275,72 @@ namespace Google.Cloud.Memorystore.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.DeleteAclPolicy</c> and <c>MemorystoreClient.DeleteAclPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAclPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>MemorystoreClient.DeleteAclPolicy</c> and
+        /// <c>MemorystoreClient.DeleteAclPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteAclPolicyOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.GetAclPolicyRevision</c> and <c>MemorystoreClient.GetAclPolicyRevisionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAclPolicyRevisionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.ListAclPolicyRevisions</c> and <c>MemorystoreClient.ListAclPolicyRevisionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAclPolicyRevisionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -799,6 +952,212 @@ namespace Google.Cloud.Memorystore.V1
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Lists all ACL policies owned by a project in either the specified
+        /// location (region) or all locations.
+        /// 
+        /// The location should have the following format:
+        /// 
+        /// * `projects/{project_id}/locations/{location_id}`
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AclPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAclPoliciesResponse, AclPolicy> ListAclPolicies(ListAclPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all ACL policies owned by a project in either the specified
+        /// location (region) or all locations.
+        /// 
+        /// The location should have the following format:
+        /// 
+        /// * `projects/{project_id}/locations/{location_id}`
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AclPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAclPoliciesResponse, AclPolicy> ListAclPoliciesAsync(ListAclPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all ACL policies owned by a project in either the specified
+        /// location (region) or all locations.
+        /// 
+        /// The location should have the following format:
+        /// 
+        /// * `projects/{project_id}/locations/{location_id}`
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ACL policy location using the form:
+        /// `projects/{project}/locations/{location}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AclPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAclPoliciesResponse, AclPolicy> ListAclPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAclPoliciesRequest request = new ListAclPoliciesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAclPolicies(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ACL policies owned by a project in either the specified
+        /// location (region) or all locations.
+        /// 
+        /// The location should have the following format:
+        /// 
+        /// * `projects/{project_id}/locations/{location_id}`
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ACL policy location using the form:
+        /// `projects/{project}/locations/{location}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AclPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAclPoliciesResponse, AclPolicy> ListAclPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAclPoliciesRequest request = new ListAclPoliciesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAclPoliciesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ACL policies owned by a project in either the specified
+        /// location (region) or all locations.
+        /// 
+        /// The location should have the following format:
+        /// 
+        /// * `projects/{project_id}/locations/{location_id}`
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ACL policy location using the form:
+        /// `projects/{project}/locations/{location}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AclPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAclPoliciesResponse, AclPolicy> ListAclPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAclPoliciesRequest request = new ListAclPoliciesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAclPolicies(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ACL policies owned by a project in either the specified
+        /// location (region) or all locations.
+        /// 
+        /// The location should have the following format:
+        /// 
+        /// * `projects/{project_id}/locations/{location_id}`
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ACL policy location using the form:
+        /// `projects/{project}/locations/{location}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AclPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAclPoliciesResponse, AclPolicy> ListAclPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAclPoliciesRequest request = new ListAclPoliciesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAclPoliciesAsync(request, callSettings);
+        }
+
+        /// <summary>
         /// Lists Instances in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -953,6 +1312,123 @@ namespace Google.Cloud.Memorystore.V1
         }
 
         /// <summary>
+        /// Gets the details of a specific Memorystore ACL policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AclPolicy GetAclPolicy(GetAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the details of a specific Memorystore ACL policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> GetAclPolicyAsync(GetAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the details of a specific Memorystore ACL policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> GetAclPolicyAsync(GetAclPolicyRequest request, st::CancellationToken cancellationToken) =>
+            GetAclPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a specific Memorystore ACL policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memorystore ACL policy resource name using the form:
+        /// `projects/{project}/locations/{location}/aclPolicies/{acl_policy}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AclPolicy GetAclPolicy(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAclPolicy(new GetAclPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific Memorystore ACL policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memorystore ACL policy resource name using the form:
+        /// `projects/{project}/locations/{location}/aclPolicies/{acl_policy}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> GetAclPolicyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAclPolicyAsync(new GetAclPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific Memorystore ACL policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memorystore ACL policy resource name using the form:
+        /// `projects/{project}/locations/{location}/aclPolicies/{acl_policy}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> GetAclPolicyAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAclPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a specific Memorystore ACL policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memorystore ACL policy resource name using the form:
+        /// `projects/{project}/locations/{location}/aclPolicies/{acl_policy}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AclPolicy GetAclPolicy(AclPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAclPolicy(new GetAclPolicyRequest
+            {
+                AclPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific Memorystore ACL policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memorystore ACL policy resource name using the form:
+        /// `projects/{project}/locations/{location}/aclPolicies/{acl_policy}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> GetAclPolicyAsync(AclPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAclPolicyAsync(new GetAclPolicyRequest
+            {
+                AclPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific Memorystore ACL policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memorystore ACL policy resource name using the form:
+        /// `projects/{project}/locations/{location}/aclPolicies/{acl_policy}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> GetAclPolicyAsync(AclPolicyName name, st::CancellationToken cancellationToken) =>
+            GetAclPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets details of a single Instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1062,6 +1538,227 @@ namespace Google.Cloud.Memorystore.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Instance> GetInstanceAsync(InstanceName name, st::CancellationToken cancellationToken) =>
             GetInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AclPolicy CreateAclPolicy(CreateAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> CreateAclPolicyAsync(CreateAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> CreateAclPolicyAsync(CreateAclPolicyRequest request, st::CancellationToken cancellationToken) =>
+            CreateAclPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ACL policy location using the form:
+        /// `projects/{project}/locations/{location}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="aclPolicy">
+        /// Required. The ACL policy that is to be created.
+        /// </param>
+        /// <param name="aclPolicyId">
+        /// Required. The logical name of the ACL policy in the customer project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the customer project / location
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AclPolicy CreateAclPolicy(string parent, AclPolicy aclPolicy, string aclPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAclPolicy(new CreateAclPolicyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AclPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(aclPolicyId, nameof(aclPolicyId)),
+                AclPolicy = gax::GaxPreconditions.CheckNotNull(aclPolicy, nameof(aclPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ACL policy location using the form:
+        /// `projects/{project}/locations/{location}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="aclPolicy">
+        /// Required. The ACL policy that is to be created.
+        /// </param>
+        /// <param name="aclPolicyId">
+        /// Required. The logical name of the ACL policy in the customer project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the customer project / location
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> CreateAclPolicyAsync(string parent, AclPolicy aclPolicy, string aclPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAclPolicyAsync(new CreateAclPolicyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AclPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(aclPolicyId, nameof(aclPolicyId)),
+                AclPolicy = gax::GaxPreconditions.CheckNotNull(aclPolicy, nameof(aclPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ACL policy location using the form:
+        /// `projects/{project}/locations/{location}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="aclPolicy">
+        /// Required. The ACL policy that is to be created.
+        /// </param>
+        /// <param name="aclPolicyId">
+        /// Required. The logical name of the ACL policy in the customer project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the customer project / location
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> CreateAclPolicyAsync(string parent, AclPolicy aclPolicy, string aclPolicyId, st::CancellationToken cancellationToken) =>
+            CreateAclPolicyAsync(parent, aclPolicy, aclPolicyId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ACL policy location using the form:
+        /// `projects/{project}/locations/{location}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="aclPolicy">
+        /// Required. The ACL policy that is to be created.
+        /// </param>
+        /// <param name="aclPolicyId">
+        /// Required. The logical name of the ACL policy in the customer project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the customer project / location
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AclPolicy CreateAclPolicy(gagr::LocationName parent, AclPolicy aclPolicy, string aclPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAclPolicy(new CreateAclPolicyRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AclPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(aclPolicyId, nameof(aclPolicyId)),
+                AclPolicy = gax::GaxPreconditions.CheckNotNull(aclPolicy, nameof(aclPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ACL policy location using the form:
+        /// `projects/{project}/locations/{location}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="aclPolicy">
+        /// Required. The ACL policy that is to be created.
+        /// </param>
+        /// <param name="aclPolicyId">
+        /// Required. The logical name of the ACL policy in the customer project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the customer project / location
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> CreateAclPolicyAsync(gagr::LocationName parent, AclPolicy aclPolicy, string aclPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAclPolicyAsync(new CreateAclPolicyRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AclPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(aclPolicyId, nameof(aclPolicyId)),
+                AclPolicy = gax::GaxPreconditions.CheckNotNull(aclPolicy, nameof(aclPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ACL policy location using the form:
+        /// `projects/{project}/locations/{location}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="aclPolicy">
+        /// Required. The ACL policy that is to be created.
+        /// </param>
+        /// <param name="aclPolicyId">
+        /// Required. The logical name of the ACL policy in the customer project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the customer project / location
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicy> CreateAclPolicyAsync(gagr::LocationName parent, AclPolicy aclPolicy, string aclPolicyId, st::CancellationToken cancellationToken) =>
+            CreateAclPolicyAsync(parent, aclPolicy, aclPolicyId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new Instance in a given project and location.
@@ -1299,6 +1996,175 @@ namespace Google.Cloud.Memorystore.V1
             CreateInstanceAsync(parent, instance, instanceId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates the ACL policy.
+        /// 
+        /// The operation will apply the updated ACL policy to all the linked
+        /// instances. The operation will return success if it successfully applied the
+        /// policy to all the instances. If the operation completed with a failure, the
+        /// service will continue to apply the policy via reconciliation for the failed
+        /// instances even after operation completion to ensure eventual consistency.
+        /// 
+        /// Completed longrunning.Operation will contain the new ACL policy object
+        /// in the response field.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AclPolicy, OperationMetadata> UpdateAclPolicy(UpdateAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the ACL policy.
+        /// 
+        /// The operation will apply the updated ACL policy to all the linked
+        /// instances. The operation will return success if it successfully applied the
+        /// policy to all the instances. If the operation completed with a failure, the
+        /// service will continue to apply the policy via reconciliation for the failed
+        /// instances even after operation completion to ensure eventual consistency.
+        /// 
+        /// Completed longrunning.Operation will contain the new ACL policy object
+        /// in the response field.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AclPolicy, OperationMetadata>> UpdateAclPolicyAsync(UpdateAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the ACL policy.
+        /// 
+        /// The operation will apply the updated ACL policy to all the linked
+        /// instances. The operation will return success if it successfully applied the
+        /// policy to all the instances. If the operation completed with a failure, the
+        /// service will continue to apply the policy via reconciliation for the failed
+        /// instances even after operation completion to ensure eventual consistency.
+        /// 
+        /// Completed longrunning.Operation will contain the new ACL policy object
+        /// in the response field.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AclPolicy, OperationMetadata>> UpdateAclPolicyAsync(UpdateAclPolicyRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAclPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateAclPolicy</c>.</summary>
+        public virtual lro::OperationsClient UpdateAclPolicyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateAclPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AclPolicy, OperationMetadata> PollOnceUpdateAclPolicy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AclPolicy, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAclPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateAclPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AclPolicy, OperationMetadata>> PollOnceUpdateAclPolicyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AclPolicy, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAclPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the ACL policy.
+        /// 
+        /// The operation will apply the updated ACL policy to all the linked
+        /// instances. The operation will return success if it successfully applied the
+        /// policy to all the instances. If the operation completed with a failure, the
+        /// service will continue to apply the policy via reconciliation for the failed
+        /// instances even after operation completion to ensure eventual consistency.
+        /// 
+        /// Completed longrunning.Operation will contain the new ACL policy object
+        /// in the response field.
+        /// </summary>
+        /// <param name="aclPolicy">
+        /// Required. The ACL policy to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Mask of fields to be updated. At least one path must be supplied
+        /// in this field. The elements of the repeated paths field may only include
+        /// these fields from `AclPolicy`:
+        /// 
+        /// *   `rules`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AclPolicy, OperationMetadata> UpdateAclPolicy(AclPolicy aclPolicy, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAclPolicy(new UpdateAclPolicyRequest
+            {
+                AclPolicy = gax::GaxPreconditions.CheckNotNull(aclPolicy, nameof(aclPolicy)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the ACL policy.
+        /// 
+        /// The operation will apply the updated ACL policy to all the linked
+        /// instances. The operation will return success if it successfully applied the
+        /// policy to all the instances. If the operation completed with a failure, the
+        /// service will continue to apply the policy via reconciliation for the failed
+        /// instances even after operation completion to ensure eventual consistency.
+        /// 
+        /// Completed longrunning.Operation will contain the new ACL policy object
+        /// in the response field.
+        /// </summary>
+        /// <param name="aclPolicy">
+        /// Required. The ACL policy to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Mask of fields to be updated. At least one path must be supplied
+        /// in this field. The elements of the repeated paths field may only include
+        /// these fields from `AclPolicy`:
+        /// 
+        /// *   `rules`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AclPolicy, OperationMetadata>> UpdateAclPolicyAsync(AclPolicy aclPolicy, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAclPolicyAsync(new UpdateAclPolicyRequest
+            {
+                AclPolicy = gax::GaxPreconditions.CheckNotNull(aclPolicy, nameof(aclPolicy)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the ACL policy.
+        /// 
+        /// The operation will apply the updated ACL policy to all the linked
+        /// instances. The operation will return success if it successfully applied the
+        /// policy to all the instances. If the operation completed with a failure, the
+        /// service will continue to apply the policy via reconciliation for the failed
+        /// instances even after operation completion to ensure eventual consistency.
+        /// 
+        /// Completed longrunning.Operation will contain the new ACL policy object
+        /// in the response field.
+        /// </summary>
+        /// <param name="aclPolicy">
+        /// Required. The ACL policy to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Mask of fields to be updated. At least one path must be supplied
+        /// in this field. The elements of the repeated paths field may only include
+        /// these fields from `AclPolicy`:
+        /// 
+        /// *   `rules`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AclPolicy, OperationMetadata>> UpdateAclPolicyAsync(AclPolicy aclPolicy, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAclPolicyAsync(aclPolicy, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Updates the parameters of a single Instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1403,6 +2269,438 @@ namespace Google.Cloud.Memorystore.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> UpdateInstanceAsync(Instance instance, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateInstanceAsync(instance, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAclPolicy(DeleteAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAclPolicyAsync(DeleteAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAclPolicyAsync(DeleteAclPolicyRequest request, st::CancellationToken cancellationToken) =>
+            DeleteAclPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteAclPolicy</c>.</summary>
+        public virtual lro::OperationsClient DeleteAclPolicyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteAclPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteAclPolicy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAclPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteAclPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteAclPolicyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAclPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memorystore ACL policy resource name using the form:
+        /// `projects/{project}/locations/{location}/aclPolicies/{acl_policy_id}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAclPolicy(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAclPolicy(new DeleteAclPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memorystore ACL policy resource name using the form:
+        /// `projects/{project}/locations/{location}/aclPolicies/{acl_policy_id}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAclPolicyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAclPolicyAsync(new DeleteAclPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memorystore ACL policy resource name using the form:
+        /// `projects/{project}/locations/{location}/aclPolicies/{acl_policy_id}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAclPolicyAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAclPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memorystore ACL policy resource name using the form:
+        /// `projects/{project}/locations/{location}/aclPolicies/{acl_policy_id}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAclPolicy(AclPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAclPolicy(new DeleteAclPolicyRequest
+            {
+                AclPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memorystore ACL policy resource name using the form:
+        /// `projects/{project}/locations/{location}/aclPolicies/{acl_policy_id}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAclPolicyAsync(AclPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAclPolicyAsync(new DeleteAclPolicyRequest
+            {
+                AclPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memorystore ACL policy resource name using the form:
+        /// `projects/{project}/locations/{location}/aclPolicies/{acl_policy_id}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAclPolicyAsync(AclPolicyName name, st::CancellationToken cancellationToken) =>
+            DeleteAclPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AclPolicyRevision GetAclPolicyRevision(GetAclPolicyRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicyRevision> GetAclPolicyRevisionAsync(GetAclPolicyRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicyRevision> GetAclPolicyRevisionAsync(GetAclPolicyRevisionRequest request, st::CancellationToken cancellationToken) =>
+            GetAclPolicyRevisionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memorystore ACL policy revision resource name using the form:
+        /// `projects/{project}/locations/{location}/aclPolicies/{acl_policy}/revisions/{revision}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AclPolicyRevision GetAclPolicyRevision(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAclPolicyRevision(new GetAclPolicyRevisionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memorystore ACL policy revision resource name using the form:
+        /// `projects/{project}/locations/{location}/aclPolicies/{acl_policy}/revisions/{revision}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicyRevision> GetAclPolicyRevisionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAclPolicyRevisionAsync(new GetAclPolicyRevisionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memorystore ACL policy revision resource name using the form:
+        /// `projects/{project}/locations/{location}/aclPolicies/{acl_policy}/revisions/{revision}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicyRevision> GetAclPolicyRevisionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAclPolicyRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memorystore ACL policy revision resource name using the form:
+        /// `projects/{project}/locations/{location}/aclPolicies/{acl_policy}/revisions/{revision}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AclPolicyRevision GetAclPolicyRevision(AclPolicyRevisionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAclPolicyRevision(new GetAclPolicyRevisionRequest
+            {
+                AclPolicyRevisionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memorystore ACL policy revision resource name using the form:
+        /// `projects/{project}/locations/{location}/aclPolicies/{acl_policy}/revisions/{revision}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicyRevision> GetAclPolicyRevisionAsync(AclPolicyRevisionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAclPolicyRevisionAsync(new GetAclPolicyRevisionRequest
+            {
+                AclPolicyRevisionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memorystore ACL policy revision resource name using the form:
+        /// `projects/{project}/locations/{location}/aclPolicies/{acl_policy}/revisions/{revision}`
+        /// where `location` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AclPolicyRevision> GetAclPolicyRevisionAsync(AclPolicyRevisionName name, st::CancellationToken cancellationToken) =>
+            GetAclPolicyRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all ACL policy revisions in a given ACL policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AclPolicyRevision"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> ListAclPolicyRevisions(ListAclPolicyRevisionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all ACL policy revisions in a given ACL policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AclPolicyRevision"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> ListAclPolicyRevisionsAsync(ListAclPolicyRevisionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all ACL policy revisions in a given ACL policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ACL policy to list revisions for.
+        /// Format: "projects/{project}/locations/{location}/aclPolicies/{acl_policy}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AclPolicyRevision"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> ListAclPolicyRevisions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAclPolicyRevisionsRequest request = new ListAclPolicyRevisionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAclPolicyRevisions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ACL policy revisions in a given ACL policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ACL policy to list revisions for.
+        /// Format: "projects/{project}/locations/{location}/aclPolicies/{acl_policy}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AclPolicyRevision"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> ListAclPolicyRevisionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAclPolicyRevisionsRequest request = new ListAclPolicyRevisionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAclPolicyRevisionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ACL policy revisions in a given ACL policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ACL policy to list revisions for.
+        /// Format: "projects/{project}/locations/{location}/aclPolicies/{acl_policy}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AclPolicyRevision"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> ListAclPolicyRevisions(AclPolicyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAclPolicyRevisionsRequest request = new ListAclPolicyRevisionsRequest
+            {
+                ParentAsAclPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAclPolicyRevisions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ACL policy revisions in a given ACL policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the ACL policy to list revisions for.
+        /// Format: "projects/{project}/locations/{location}/aclPolicies/{acl_policy}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AclPolicyRevision"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> ListAclPolicyRevisionsAsync(AclPolicyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAclPolicyRevisionsRequest request = new ListAclPolicyRevisionsRequest
+            {
+                ParentAsAclPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAclPolicyRevisionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a single Instance.
@@ -4426,13 +5724,27 @@ namespace Google.Cloud.Memorystore.V1
     /// </remarks>
     public sealed partial class MemorystoreClientImpl : MemorystoreClient
     {
+        private readonly gaxgrpc::ApiCall<ListAclPoliciesRequest, ListAclPoliciesResponse> _callListAclPolicies;
+
         private readonly gaxgrpc::ApiCall<ListInstancesRequest, ListInstancesResponse> _callListInstances;
+
+        private readonly gaxgrpc::ApiCall<GetAclPolicyRequest, AclPolicy> _callGetAclPolicy;
 
         private readonly gaxgrpc::ApiCall<GetInstanceRequest, Instance> _callGetInstance;
 
+        private readonly gaxgrpc::ApiCall<CreateAclPolicyRequest, AclPolicy> _callCreateAclPolicy;
+
         private readonly gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> _callCreateInstance;
 
+        private readonly gaxgrpc::ApiCall<UpdateAclPolicyRequest, lro::Operation> _callUpdateAclPolicy;
+
         private readonly gaxgrpc::ApiCall<UpdateInstanceRequest, lro::Operation> _callUpdateInstance;
+
+        private readonly gaxgrpc::ApiCall<DeleteAclPolicyRequest, lro::Operation> _callDeleteAclPolicy;
+
+        private readonly gaxgrpc::ApiCall<GetAclPolicyRevisionRequest, AclPolicyRevision> _callGetAclPolicyRevision;
+
+        private readonly gaxgrpc::ApiCall<ListAclPolicyRevisionsRequest, ListAclPolicyRevisionsResponse> _callListAclPolicyRevisions;
 
         private readonly gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> _callDeleteInstance;
 
@@ -4492,7 +5804,9 @@ namespace Google.Cloud.Memorystore.V1
                 Logger = logger,
             });
             CreateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstanceOperationsSettings, logger);
+            UpdateAclPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAclPolicyOperationsSettings, logger);
             UpdateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInstanceOperationsSettings, logger);
+            DeleteAclPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAclPolicyOperationsSettings, logger);
             DeleteInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInstanceOperationsSettings, logger);
             RescheduleMaintenanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RescheduleMaintenanceOperationsSettings, logger);
             DeleteBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupOperationsSettings, logger);
@@ -4505,18 +5819,39 @@ namespace Google.Cloud.Memorystore.V1
             AddAuthTokenOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddAuthTokenOperationsSettings, logger);
             DeleteAuthTokenOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAuthTokenOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            _callListAclPolicies = clientHelper.BuildApiCall<ListAclPoliciesRequest, ListAclPoliciesResponse>("ListAclPolicies", grpcClient.ListAclPoliciesAsync, grpcClient.ListAclPolicies, effectiveSettings.ListAclPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAclPolicies);
+            Modify_ListAclPoliciesApiCall(ref _callListAclPolicies);
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>("ListInstances", grpcClient.ListInstancesAsync, grpcClient.ListInstances, effectiveSettings.ListInstancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInstances);
             Modify_ListInstancesApiCall(ref _callListInstances);
+            _callGetAclPolicy = clientHelper.BuildApiCall<GetAclPolicyRequest, AclPolicy>("GetAclPolicy", grpcClient.GetAclPolicyAsync, grpcClient.GetAclPolicy, effectiveSettings.GetAclPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAclPolicy);
+            Modify_GetAclPolicyApiCall(ref _callGetAclPolicy);
             _callGetInstance = clientHelper.BuildApiCall<GetInstanceRequest, Instance>("GetInstance", grpcClient.GetInstanceAsync, grpcClient.GetInstance, effectiveSettings.GetInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetInstance);
             Modify_GetInstanceApiCall(ref _callGetInstance);
+            _callCreateAclPolicy = clientHelper.BuildApiCall<CreateAclPolicyRequest, AclPolicy>("CreateAclPolicy", grpcClient.CreateAclPolicyAsync, grpcClient.CreateAclPolicy, effectiveSettings.CreateAclPolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAclPolicy);
+            Modify_CreateAclPolicyApiCall(ref _callCreateAclPolicy);
             _callCreateInstance = clientHelper.BuildApiCall<CreateInstanceRequest, lro::Operation>("CreateInstance", grpcClient.CreateInstanceAsync, grpcClient.CreateInstance, effectiveSettings.CreateInstanceSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateInstance);
             Modify_CreateInstanceApiCall(ref _callCreateInstance);
+            _callUpdateAclPolicy = clientHelper.BuildApiCall<UpdateAclPolicyRequest, lro::Operation>("UpdateAclPolicy", grpcClient.UpdateAclPolicyAsync, grpcClient.UpdateAclPolicy, effectiveSettings.UpdateAclPolicySettings).WithGoogleRequestParam("acl_policy.name", request => request.AclPolicy?.Name);
+            Modify_ApiCall(ref _callUpdateAclPolicy);
+            Modify_UpdateAclPolicyApiCall(ref _callUpdateAclPolicy);
             _callUpdateInstance = clientHelper.BuildApiCall<UpdateInstanceRequest, lro::Operation>("UpdateInstance", grpcClient.UpdateInstanceAsync, grpcClient.UpdateInstance, effectiveSettings.UpdateInstanceSettings).WithGoogleRequestParam("instance.name", request => request.Instance?.Name);
             Modify_ApiCall(ref _callUpdateInstance);
             Modify_UpdateInstanceApiCall(ref _callUpdateInstance);
+            _callDeleteAclPolicy = clientHelper.BuildApiCall<DeleteAclPolicyRequest, lro::Operation>("DeleteAclPolicy", grpcClient.DeleteAclPolicyAsync, grpcClient.DeleteAclPolicy, effectiveSettings.DeleteAclPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteAclPolicy);
+            Modify_DeleteAclPolicyApiCall(ref _callDeleteAclPolicy);
+            _callGetAclPolicyRevision = clientHelper.BuildApiCall<GetAclPolicyRevisionRequest, AclPolicyRevision>("GetAclPolicyRevision", grpcClient.GetAclPolicyRevisionAsync, grpcClient.GetAclPolicyRevision, effectiveSettings.GetAclPolicyRevisionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAclPolicyRevision);
+            Modify_GetAclPolicyRevisionApiCall(ref _callGetAclPolicyRevision);
+            _callListAclPolicyRevisions = clientHelper.BuildApiCall<ListAclPolicyRevisionsRequest, ListAclPolicyRevisionsResponse>("ListAclPolicyRevisions", grpcClient.ListAclPolicyRevisionsAsync, grpcClient.ListAclPolicyRevisions, effectiveSettings.ListAclPolicyRevisionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAclPolicyRevisions);
+            Modify_ListAclPolicyRevisionsApiCall(ref _callListAclPolicyRevisions);
             _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, lro::Operation>("DeleteInstance", grpcClient.DeleteInstanceAsync, grpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteInstance);
             Modify_DeleteInstanceApiCall(ref _callDeleteInstance);
@@ -4585,13 +5920,27 @@ namespace Google.Cloud.Memorystore.V1
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_ListAclPoliciesApiCall(ref gaxgrpc::ApiCall<ListAclPoliciesRequest, ListAclPoliciesResponse> call);
+
         partial void Modify_ListInstancesApiCall(ref gaxgrpc::ApiCall<ListInstancesRequest, ListInstancesResponse> call);
+
+        partial void Modify_GetAclPolicyApiCall(ref gaxgrpc::ApiCall<GetAclPolicyRequest, AclPolicy> call);
 
         partial void Modify_GetInstanceApiCall(ref gaxgrpc::ApiCall<GetInstanceRequest, Instance> call);
 
+        partial void Modify_CreateAclPolicyApiCall(ref gaxgrpc::ApiCall<CreateAclPolicyRequest, AclPolicy> call);
+
         partial void Modify_CreateInstanceApiCall(ref gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> call);
 
+        partial void Modify_UpdateAclPolicyApiCall(ref gaxgrpc::ApiCall<UpdateAclPolicyRequest, lro::Operation> call);
+
         partial void Modify_UpdateInstanceApiCall(ref gaxgrpc::ApiCall<UpdateInstanceRequest, lro::Operation> call);
+
+        partial void Modify_DeleteAclPolicyApiCall(ref gaxgrpc::ApiCall<DeleteAclPolicyRequest, lro::Operation> call);
+
+        partial void Modify_GetAclPolicyRevisionApiCall(ref gaxgrpc::ApiCall<GetAclPolicyRevisionRequest, AclPolicyRevision> call);
+
+        partial void Modify_ListAclPolicyRevisionsApiCall(ref gaxgrpc::ApiCall<ListAclPolicyRevisionsRequest, ListAclPolicyRevisionsResponse> call);
 
         partial void Modify_DeleteInstanceApiCall(ref gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> call);
 
@@ -4643,13 +5992,27 @@ namespace Google.Cloud.Memorystore.V1
         /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
         public override gcl::LocationsClient LocationsClient { get; }
 
+        partial void Modify_ListAclPoliciesRequest(ref ListAclPoliciesRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAclPolicyRequest(ref GetAclPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetInstanceRequest(ref GetInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateAclPolicyRequest(ref CreateAclPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_CreateInstanceRequest(ref CreateInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_UpdateAclPolicyRequest(ref UpdateAclPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_UpdateInstanceRequest(ref UpdateInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteAclPolicyRequest(ref DeleteAclPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAclPolicyRevisionRequest(ref GetAclPolicyRevisionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAclPolicyRevisionsRequest(ref ListAclPolicyRevisionsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteInstanceRequest(ref DeleteInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4694,6 +6057,46 @@ namespace Google.Cloud.Memorystore.V1
         partial void Modify_DeleteAuthTokenRequest(ref DeleteAuthTokenRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
+        /// Lists all ACL policies owned by a project in either the specified
+        /// location (region) or all locations.
+        /// 
+        /// The location should have the following format:
+        /// 
+        /// * `projects/{project_id}/locations/{location_id}`
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AclPolicy"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAclPoliciesResponse, AclPolicy> ListAclPolicies(ListAclPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAclPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAclPoliciesRequest, ListAclPoliciesResponse, AclPolicy>(_callListAclPolicies, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ACL policies owned by a project in either the specified
+        /// location (region) or all locations.
+        /// 
+        /// The location should have the following format:
+        /// 
+        /// * `projects/{project_id}/locations/{location_id}`
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AclPolicy"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAclPoliciesResponse, AclPolicy> ListAclPoliciesAsync(ListAclPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAclPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAclPoliciesRequest, ListAclPoliciesResponse, AclPolicy>(_callListAclPolicies, request, callSettings);
+        }
+
+        /// <summary>
         /// Lists Instances in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4718,6 +6121,30 @@ namespace Google.Cloud.Memorystore.V1
         }
 
         /// <summary>
+        /// Gets the details of a specific Memorystore ACL policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AclPolicy GetAclPolicy(GetAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAclPolicyRequest(ref request, ref callSettings);
+            return _callGetAclPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the details of a specific Memorystore ACL policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AclPolicy> GetAclPolicyAsync(GetAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAclPolicyRequest(ref request, ref callSettings);
+            return _callGetAclPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Gets details of a single Instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4739,6 +6166,34 @@ namespace Google.Cloud.Memorystore.V1
         {
             Modify_GetInstanceRequest(ref request, ref callSettings);
             return _callGetInstance.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AclPolicy CreateAclPolicy(CreateAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAclPolicyRequest(ref request, ref callSettings);
+            return _callCreateAclPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates an ACL policy.
+        /// The creation is executed synchronously and the policy is available for use
+        /// immediately after the RPC returns.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AclPolicy> CreateAclPolicyAsync(CreateAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAclPolicyRequest(ref request, ref callSettings);
+            return _callCreateAclPolicy.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>CreateInstance</c>.</summary>
@@ -4768,6 +6223,51 @@ namespace Google.Cloud.Memorystore.V1
             return new lro::Operation<Instance, OperationMetadata>(await _callCreateInstance.Async(request, callSettings).ConfigureAwait(false), CreateInstanceOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>UpdateAclPolicy</c>.</summary>
+        public override lro::OperationsClient UpdateAclPolicyOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the ACL policy.
+        /// 
+        /// The operation will apply the updated ACL policy to all the linked
+        /// instances. The operation will return success if it successfully applied the
+        /// policy to all the instances. If the operation completed with a failure, the
+        /// service will continue to apply the policy via reconciliation for the failed
+        /// instances even after operation completion to ensure eventual consistency.
+        /// 
+        /// Completed longrunning.Operation will contain the new ACL policy object
+        /// in the response field.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AclPolicy, OperationMetadata> UpdateAclPolicy(UpdateAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAclPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<AclPolicy, OperationMetadata>(_callUpdateAclPolicy.Sync(request, callSettings), UpdateAclPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the ACL policy.
+        /// 
+        /// The operation will apply the updated ACL policy to all the linked
+        /// instances. The operation will return success if it successfully applied the
+        /// policy to all the instances. If the operation completed with a failure, the
+        /// service will continue to apply the policy via reconciliation for the failed
+        /// instances even after operation completion to ensure eventual consistency.
+        /// 
+        /// Completed longrunning.Operation will contain the new ACL policy object
+        /// in the response field.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AclPolicy, OperationMetadata>> UpdateAclPolicyAsync(UpdateAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAclPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<AclPolicy, OperationMetadata>(await _callUpdateAclPolicy.Async(request, callSettings).ConfigureAwait(false), UpdateAclPolicyOperationsClient);
+        }
+
         /// <summary>The long-running operations client for <c>UpdateInstance</c>.</summary>
         public override lro::OperationsClient UpdateInstanceOperationsClient { get; }
 
@@ -4793,6 +6293,85 @@ namespace Google.Cloud.Memorystore.V1
         {
             Modify_UpdateInstanceRequest(ref request, ref callSettings);
             return new lro::Operation<Instance, OperationMetadata>(await _callUpdateInstance.Async(request, callSettings).ConfigureAwait(false), UpdateInstanceOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteAclPolicy</c>.</summary>
+        public override lro::OperationsClient DeleteAclPolicyOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteAclPolicy(DeleteAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAclPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteAclPolicy.Sync(request, callSettings), DeleteAclPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a specific ACL policy. This action will delete the ACL policy and
+        /// all the rules associated with it. An ACL policy cannot be deleted if it is
+        /// attached to an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAclPolicyAsync(DeleteAclPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAclPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteAclPolicy.Async(request, callSettings).ConfigureAwait(false), DeleteAclPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AclPolicyRevision GetAclPolicyRevision(GetAclPolicyRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAclPolicyRevisionRequest(ref request, ref callSettings);
+            return _callGetAclPolicyRevision.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a specific ACL policy revision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AclPolicyRevision> GetAclPolicyRevisionAsync(GetAclPolicyRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAclPolicyRevisionRequest(ref request, ref callSettings);
+            return _callGetAclPolicyRevision.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ACL policy revisions in a given ACL policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AclPolicyRevision"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> ListAclPolicyRevisions(ListAclPolicyRevisionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAclPolicyRevisionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAclPolicyRevisionsRequest, ListAclPolicyRevisionsResponse, AclPolicyRevision>(_callListAclPolicyRevisions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ACL policy revisions in a given ACL policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AclPolicyRevision"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAclPolicyRevisionsResponse, AclPolicyRevision> ListAclPolicyRevisionsAsync(ListAclPolicyRevisionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAclPolicyRevisionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAclPolicyRevisionsRequest, ListAclPolicyRevisionsResponse, AclPolicyRevision>(_callListAclPolicyRevisions, request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>DeleteInstance</c>.</summary>
@@ -5389,7 +6968,15 @@ namespace Google.Cloud.Memorystore.V1
         }
     }
 
+    public partial class ListAclPoliciesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListInstancesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAclPolicyRevisionsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -5409,10 +6996,26 @@ namespace Google.Cloud.Memorystore.V1
     {
     }
 
+    public partial class ListAclPoliciesResponse : gaxgrpc::IPageResponse<AclPolicy>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AclPolicy> GetEnumerator() => AclPolicies.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
     public partial class ListInstancesResponse : gaxgrpc::IPageResponse<Instance>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Instance> GetEnumerator() => Instances.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAclPolicyRevisionsResponse : gaxgrpc::IPageResponse<AclPolicyRevision>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AclPolicyRevision> GetEnumerator() => AclPolicyRevisions.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

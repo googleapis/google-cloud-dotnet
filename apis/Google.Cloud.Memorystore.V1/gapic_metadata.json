@@ -28,10 +28,22 @@
                 "BackupInstanceAsync"
               ]
             },
+            "CreateAclPolicy": {
+              "methods": [
+                "CreateAclPolicy",
+                "CreateAclPolicyAsync"
+              ]
+            },
             "CreateInstance": {
               "methods": [
                 "CreateInstance",
                 "CreateInstanceAsync"
+              ]
+            },
+            "DeleteAclPolicy": {
+              "methods": [
+                "DeleteAclPolicy",
+                "DeleteAclPolicyAsync"
               ]
             },
             "DeleteAuthToken": {
@@ -68,6 +80,18 @@
               "methods": [
                 "FinishMigration",
                 "FinishMigrationAsync"
+              ]
+            },
+            "GetAclPolicy": {
+              "methods": [
+                "GetAclPolicy",
+                "GetAclPolicyAsync"
+              ]
+            },
+            "GetAclPolicyRevision": {
+              "methods": [
+                "GetAclPolicyRevision",
+                "GetAclPolicyRevisionAsync"
               ]
             },
             "GetAuthToken": {
@@ -112,6 +136,18 @@
                 "GetTokenAuthUserAsync"
               ]
             },
+            "ListAclPolicies": {
+              "methods": [
+                "ListAclPolicies",
+                "ListAclPoliciesAsync"
+              ]
+            },
+            "ListAclPolicyRevisions": {
+              "methods": [
+                "ListAclPolicyRevisions",
+                "ListAclPolicyRevisionsAsync"
+              ]
+            },
             "ListAuthTokens": {
               "methods": [
                 "ListAuthTokens",
@@ -152,6 +188,12 @@
               "methods": [
                 "StartMigration",
                 "StartMigrationAsync"
+              ]
+            },
+            "UpdateAclPolicy": {
+              "methods": [
+                "UpdateAclPolicy",
+                "UpdateAclPolicyAsync"
               ]
             },
             "UpdateInstance": {
