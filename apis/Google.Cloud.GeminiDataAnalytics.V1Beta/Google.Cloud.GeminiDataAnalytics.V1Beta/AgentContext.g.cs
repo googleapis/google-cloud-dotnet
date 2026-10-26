@@ -27,14 +27,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             "Cjtnb29nbGUvY2xvdWQvZ2VtaW5pZGF0YWFuYWx5dGljcy92MWJldGEvYWdl",
             "bnRfY29udGV4dC5wcm90bxInZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFs",
             "eXRpY3MudjFiZXRhGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
-            "IjQKFUFnZW50Q29udGV4dFJlZmVyZW5jZRIbCg5jb250ZXh0X3NldF9pZBgB",
-            "IAEoCUID4EECQqICCitjb20uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFs",
-            "eXRpY3MudjFiZXRhQhFBZ2VudENvbnRleHRQcm90b1ABWl1jbG91ZC5nb29n",
-            "bGUuY29tL2dvL2dlbWluaWRhdGFhbmFseXRpY3MvYXBpdjFiZXRhL2dlbWlu",
-            "aWRhdGFhbmFseXRpY3NwYjtnZW1pbmlkYXRhYW5hbHl0aWNzcGKqAidHb29n",
-            "bGUuQ2xvdWQuR2VtaW5pRGF0YUFuYWx5dGljcy5WMUJldGHKAidHb29nbGVc",
-            "Q2xvdWRcR2VtaW5pRGF0YUFuYWx5dGljc1xWMWJldGHqAipHb29nbGU6OkNs",
-            "b3VkOjpHZW1pbmlEYXRhQW5hbHl0aWNzOjpWMWJldGFiBnByb3RvMw=="));
+            "IjUKFUFnZW50Q29udGV4dFJlZmVyZW5jZRIcCg5jb250ZXh0X3NldF9pZBgB",
+            "IAEoCUIE4kEBAkKiAgorY29tLmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5h",
+            "bHl0aWNzLnYxYmV0YUIRQWdlbnRDb250ZXh0UHJvdG9QAVpdY2xvdWQuZ29v",
+            "Z2xlLmNvbS9nby9nZW1pbmlkYXRhYW5hbHl0aWNzL2FwaXYxYmV0YS9nZW1p",
+            "bmlkYXRhYW5hbHl0aWNzcGI7Z2VtaW5pZGF0YWFuYWx5dGljc3BiqgInR29v",
+            "Z2xlLkNsb3VkLkdlbWluaURhdGFBbmFseXRpY3MuVjFCZXRhygInR29vZ2xl",
+            "XENsb3VkXEdlbWluaURhdGFBbmFseXRpY3NcVjFiZXRh6gIqR29vZ2xlOjpD",
+            "bG91ZDo6R2VtaW5pRGF0YUFuYWx5dGljczo6VjFiZXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

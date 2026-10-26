@@ -70,7 +70,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             yield return ContextReflection.Descriptor;
             yield return ConversationReflection.Descriptor;
             yield return CredentialsReflection.Descriptor;
-            yield return DataA2AServiceReflection.Descriptor;
             yield return DataAgentReflection.Descriptor;
             yield return DataAgentServiceReflection.Descriptor;
             yield return DataAnalyticsAgentReflection.Descriptor;
