@@ -4547,12 +4547,12 @@
         },
         {
             "id": "Google.Shopping.Merchant.Quota.V1",
-            "currentVersion": "1.2.0",
+            "currentVersion": "1.3.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-17T14:39:37.333397772Z",
+            "releaseTimestamp": "2026-10-26T20:02:20.829427972Z",
             "lastGeneratedCommit": "aaaa06bdd9ee05814038c23a12508c0285d2034a",
-            "lastReleasedCommit": "3568ce2d811cc5062b3992f19b8bcc5846573659",
+            "lastReleasedCommit": "aaaa06bdd9ee05814038c23a12508c0285d2034a",
             "apiPaths": [
                 "google/shopping/merchant/quota/v1"
             ],
