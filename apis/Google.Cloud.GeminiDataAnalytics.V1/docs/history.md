@@ -1,16 +1,5 @@
 # Version history
 
-## Version 2.1.0, released 2026-10-26
-
-### New features
-
-- Add SearchScope, BigQueryDatasetReference, and BigQueryTableReferences.search_scope for discovering relevant BigQuery tables in standalone conversations
-
-### Documentation improvements
-
-- Clarify BigQuery Agent Analytics trace table validation on CreateDataAgent and UpdateDataAgent
-- Clarify the default ChatRequest.ThinkingMode behavior and simplify the SetAgentOpsObservability description
-
 ## Version 2.0.0, released 2026-09-28
 
 ### New features

@@ -1,11 +1,5 @@
 # Version history
 
-## Version 4.6.0, released 2026-10-26
-
-### New features
-
-- Add x-goog-is-transaction routing header for Firestore RPCs
-
 ## Version 4.5.0, released 2026-10-09
 
 ### Bug fixes

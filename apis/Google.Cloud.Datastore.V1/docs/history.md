@@ -1,11 +1,5 @@
 # Version history
 
-## Version 5.3.0, released 2026-10-26
-
-### Bug fixes
-
-- Forward CallSettings in DatastoreTransactionImpl.Commit
-
 ## Version 5.2.0, released 2026-06-29
 
 ### New features

@@ -1,31 +1,5 @@
 # Version history
 
-## Version 1.0.0-beta10, released 2026-10-26
-
-### New features
-
-- Add `AssistantService` for managing assistant sessions (`ListAssistantSessions`, `GetAssistantSession`, `CreateAssistantSession`, `DeleteAssistantSession`, `RunAssistant`, `ChatAiAssistant`)
-- Add `StreamChatAiAssistant`, `CancelAssistantTurn`, and `GenerateOnboardingSuggestions` RPCs and streaming event types to `SessionService`
-- Add `UpdateAppVersion` RPC and `DeployChannelResponse` message to `AgentService`, and `validate_only` / `json_patch` options to `ImportAppRequest`
-- Add `RemoteA2aAgent` to `Agent` and `RemoteA2aConfig` to `agent_card.proto`
-- Add `DashboardSettings`, `CustomVoiceSample`, and `required_recording_consent` to `app.proto`, and `update_time` to `AppVersion`
-- Add `ThinkingLevel`, `UiEvent`, and `SessionCheckpoint` to `common.proto`
-- Add `user_intended_text` to `Conversation.Input`, `SnippetsConfig` to `DataStoreTool`, and `Modality` / `model_settings` / `AgentRegistryDeployment` to `Deployment`
-- Add `root_span` and `OutcomeMetadata` to `EvaluationResult`, `alt_text` / `parent_tool_call_id` / `agent_name` to `example.proto`, and `SENSITIVE_WORDS` / `Supervisor` to `Guardrail`
-- Add `include_llm_thought_summary`, `exclude_diagnostic_info`, `include_progress_update`, `InlineCitation`, `RecordingControl`, and `image` / `progress` outputs to `session_service.proto`, and `read_only` to `Tool`
-
-### Documentation improvements
-
-- A comment for field `enable_multilingual_support` in message `.google.cloud.ces.v1beta.LanguageSettings` is changed
-- A comment for field `enable_redaction` in message `.google.cloud.ces.v1beta.RedactionConfig` is changed
-- A comment for field `conversation_profile_id` in message `.google.cloud.ces.v1beta.WhatsAppCredentials` is changed
-- A comment for field `conversation_profile_id` in message `.google.cloud.ces.v1beta.InstagramCredentials` is changed
-- A comment for field `score` in message `.google.cloud.ces.v1beta.EvaluationResult` is changed
-- A comment for field `label` in message `.google.cloud.ces.v1beta.EvaluationResult` is changed
-- A comment for field `app_version` in message `.google.cloud.ces.v1beta.RunEvaluationRequest` is changed
-- A comment for field `prompt` in message `.google.cloud.ces.v1beta.Guardrail` is changed
-- A comment for field `enable_text_streaming` in message `.google.cloud.ces.v1beta.SessionConfig` is changed
-
 ## Version 1.0.0-beta09, released 2026-07-13
 
 ### New features

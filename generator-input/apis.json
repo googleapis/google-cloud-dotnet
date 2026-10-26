@@ -1550,7 +1550,7 @@
     },
     {
       "id": "Google.Cloud.Ces.V1Beta",
-      "version": "1.0.0-beta10",
+      "version": "1.0.0-beta09",
       "type": "grpc",
       "productName": "Gemini Enterprise for Customer Experience",
       "productUrl": "https://docs.cloud.google.com/customer-engagement-ai/conversational-agents/ps",
@@ -2291,7 +2291,7 @@
       "protoPath": "google/datastore/v1",
       "productName": "Google Cloud Datastore",
       "productUrl": "https://cloud.google.com/datastore/docs/concepts/overview",
-      "version": "5.3.0",
+      "version": "5.2.0",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Datastore API, which accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.",
@@ -3004,7 +3004,7 @@
       "productName": "Firestore",
       "productUrl": "https://firebase.google.com/docs/firestore/",
       "listingDescription": "Firestore high-level library",
-      "version": "4.6.0",
+      "version": "4.5.0",
       "type": "other",
       "metadataType": "GAPIC_MANUAL",
       "description": "Recommended Google client library to access the Firestore API.",
@@ -3043,7 +3043,7 @@
       "productName": "Firestore",
       "productUrl": "https://firebase.google.com",
       "listingDescription": "Firestore low-level API access",
-      "version": "4.6.0",
+      "version": "4.5.0",
       "type": "grpc",
       "description": "Low-level Google client library to access the Firestore API. Users are recommended to use the Google.Cloud.Firestore package instead.",
       "tags": [
@@ -3201,7 +3201,7 @@
     },
     {
       "id": "Google.Cloud.GeminiDataAnalytics.V1",
-      "version": "2.1.0",
+      "version": "2.0.0",
       "type": "grpc",
       "productName": "Data Analytics API with Gemini",
       "productUrl": "https://cloud.google.com/gemini/docs/conversational-analytics-api/overview",
@@ -3222,7 +3222,7 @@
     },
     {
       "id": "Google.Cloud.GeminiDataAnalytics.V1Beta",
-      "version": "1.0.0-beta13",
+      "version": "1.0.0-beta12",
       "type": "grpc",
       "productName": "Data Analytics API with Gemini",
       "productUrl": "https://cloud.google.com/gemini/docs/conversational-analytics-api/overview",
@@ -4080,7 +4080,7 @@
     },
     {
       "id": "Google.Cloud.Memorystore.V1",
-      "version": "1.1.0",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Memorystore",
       "productUrl": "https://cloud.google.com/memorystore/docs/valkey",
@@ -4217,7 +4217,7 @@
     },
     {
       "id": "Google.Cloud.ModelArmor.V1",
-      "version": "1.2.0",
+      "version": "1.1.0",
       "type": "grpc",
       "productName": "Model Armor",
       "productUrl": "https://cloud.google.com/security-command-center/docs/model-armor-overview",
@@ -7776,7 +7776,7 @@
     },
     {
       "id": "Google.Shopping.Merchant.Quota.V1",
-      "version": "1.3.0",
+      "version": "1.2.0",
       "type": "grpc",
       "productName": "Merchant",
       "productUrl": "https://developers.google.com/merchant/api",

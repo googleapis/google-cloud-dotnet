@@ -1,11 +1,5 @@
 # Version history
 
-## Version 1.1.0, released 2026-10-26
-
-### New features
-
-- [Memorystore] Add support for ACL policies
-
 ## Version 1.0.0, released 2026-08-10
 
 ### New features

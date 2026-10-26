@@ -1268,10 +1268,10 @@
         },
         {
             "id": "Google.Cloud.Datastore.V1",
-            "currentVersion": "5.3.0",
+            "currentVersion": "5.2.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-10-26T19:07:12.800112520Z",
+            "releaseTimestamp": "2026-06-29T21:26:58.419292670Z",
             "lastGeneratedCommit": "fdd6a6e4ef12853400539139d014d96e34253166",
             "lastReleasedCommit": "fdd6a6e4ef12853400539139d014d96e34253166",
             "apiPaths": [
@@ -2088,12 +2088,12 @@
         },
         {
             "id": "Google.Cloud.Memorystore.V1",
-            "currentVersion": "1.1.0",
+            "currentVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-10-26T19:28:41.949277337Z",
+            "releaseTimestamp": "2026-08-10T22:46:46.775701272Z",
             "lastGeneratedCommit": "4792db7b61d0d1430f5bc33463bbe90254f3d5f6",
-            "lastReleasedCommit": "4792db7b61d0d1430f5bc33463bbe90254f3d5f6",
+            "lastReleasedCommit": "69d78666e1c3b7c3b4f9d229550754c148638f98",
             "apiPaths": [
                 "google/cloud/memorystore/v1"
             ],
@@ -4069,10 +4069,10 @@
         },
         {
             "id": "Google.Cloud.Firestore",
-            "currentVersion": "4.6.0",
+            "currentVersion": "4.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-10-26T19:32:19.145693496Z",
+            "releaseTimestamp": "2026-10-09T00:15:04.319945609Z",
             "lastGeneratedCommit": "954a825e3e4ceb076329a61ca6042f1fd6bc20b0",
             "lastReleasedCommit": "954a825e3e4ceb076329a61ca6042f1fd6bc20b0",
             "apiPaths": [
@@ -4235,12 +4235,12 @@
         },
         {
             "id": "Google.Cloud.ModelArmor.V1",
-            "currentVersion": "1.2.0",
+            "currentVersion": "1.1.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-10-26T19:59:59.135581640Z",
+            "releaseTimestamp": "2026-10-21T19:22:46.419176356Z",
             "lastGeneratedCommit": "dff1cd0c7ff8c26ff4c9f7a87cbe175fb5124d4e",
-            "lastReleasedCommit": "dff1cd0c7ff8c26ff4c9f7a87cbe175fb5124d4e",
+            "lastReleasedCommit": "14a161a98ef045be80c12ab69d924504a756f109",
             "apiPaths": [
                 "google/cloud/modelarmor/v1"
             ],
@@ -4367,12 +4367,12 @@
         },
         {
             "id": "Google.Cloud.GeminiDataAnalytics.V1Beta",
-            "currentVersion": "1.0.0-beta13",
+            "currentVersion": "1.0.0-beta12",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-10-26T20:00:28.259910342Z",
+            "releaseTimestamp": "2026-09-28T20:16:57.644419328Z",
             "lastGeneratedCommit": "cfc42c251e2148d608fb2fe67b2348129e640f7c",
-            "lastReleasedCommit": "cfc42c251e2148d608fb2fe67b2348129e640f7c",
+            "lastReleasedCommit": "7dcc863d5a76c79852721fd071fa5cc3e14e402b",
             "apiPaths": [
                 "google/cloud/geminidataanalytics/v1beta"
             ],
@@ -4547,12 +4547,12 @@
         },
         {
             "id": "Google.Shopping.Merchant.Quota.V1",
-            "currentVersion": "1.3.0",
+            "currentVersion": "1.2.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-10-26T20:02:20.829427972Z",
+            "releaseTimestamp": "2025-11-17T14:39:37.333397772Z",
             "lastGeneratedCommit": "aaaa06bdd9ee05814038c23a12508c0285d2034a",
-            "lastReleasedCommit": "aaaa06bdd9ee05814038c23a12508c0285d2034a",
+            "lastReleasedCommit": "3568ce2d811cc5062b3992f19b8bcc5846573659",
             "apiPaths": [
                 "google/shopping/merchant/quota/v1"
             ],
@@ -4887,12 +4887,12 @@
         },
         {
             "id": "Google.Cloud.Ces.V1Beta",
-            "currentVersion": "1.0.0-beta10",
+            "currentVersion": "1.0.0-beta09",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-10-26T20:02:48.290013937Z",
+            "releaseTimestamp": "2026-07-13T19:25:02.578359951Z",
             "lastGeneratedCommit": "7ea340f0592f6599647ec19e26e67acda028fc1d",
-            "lastReleasedCommit": "7ea340f0592f6599647ec19e26e67acda028fc1d",
+            "lastReleasedCommit": "c39209b11027c8da8f4d959e35cc03ca4d655a8d",
             "apiPaths": [
                 "google/cloud/ces/v1beta"
             ],
@@ -5007,12 +5007,12 @@
         },
         {
             "id": "Google.Cloud.GeminiDataAnalytics.V1",
-            "currentVersion": "2.1.0",
+            "currentVersion": "2.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-10-26T20:03:16.648522835Z",
+            "releaseTimestamp": "2026-09-28T20:21:36.572488309Z",
             "lastGeneratedCommit": "c675a43b248badca4708863d14d7322a12c8e12d",
-            "lastReleasedCommit": "c675a43b248badca4708863d14d7322a12c8e12d",
+            "lastReleasedCommit": "e9ad9bb00924294aa44c0c5126577c976cfbcbfb",
             "apiPaths": [
                 "google/cloud/geminidataanalytics/v1"
             ],

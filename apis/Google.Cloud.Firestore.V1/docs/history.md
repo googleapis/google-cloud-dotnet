@@ -4,12 +4,6 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
-## Version 4.6.0, released 2026-10-26
-
-### New features
-
-- Add x-goog-is-transaction routing header for Firestore RPCs
-
 ## Version 4.5.0, released 2026-10-09
 
 ### Bug fixes

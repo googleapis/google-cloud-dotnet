@@ -1,21 +1,5 @@
 # Version history
 
-## Version 1.0.0-beta13, released 2026-10-26
-
-### New features
-
-- Add SearchScope, BigQueryDatasetReference, and BigQueryTableReferences.search_scope for discovering relevant BigQuery tables in standalone conversations
-- Add SpannerDatabaseReference.graph_ids
-
-### Bug fixes
-
-- Remove unreleased DataA2AService proto and service config
-
-### Documentation improvements
-
-- Clarify BigQuery Agent Analytics trace table validation on CreateDataAgent and UpdateDataAgent
-- Clarify the default ChatRequest.ThinkingMode behavior and simplify the SetAgentOpsObservability description
-
 ## Version 1.0.0-beta12, released 2026-09-28
 
 ### New features

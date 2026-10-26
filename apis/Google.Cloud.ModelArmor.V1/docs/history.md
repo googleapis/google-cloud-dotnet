@@ -1,15 +1,5 @@
 # Version history
 
-## Version 1.2.0, released 2026-10-26
-
-### New features
-
-- Add FilterRuleSettings, FilterRuleSet, FilterRule, ExclusionRule, Dictionary, WordList, Regex, MatchingScope, and RuleFilterType for custom exclusion rules
-
-### Documentation improvements
-
-- Update Modality, RaiFilterResult, and FilterVersionAlias documentation comments
-
 ## Version 1.1.0, released 2026-10-21
 
 ### New features
