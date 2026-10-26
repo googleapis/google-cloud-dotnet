@@ -87,7 +87,6 @@ namespace Google.Cloud.Datastore.V1
         {
             GaxPreconditions.CheckNotNull(parameters, nameof(parameters));
             GaxPreconditions.CheckNotNull(parameterName, nameof(parameterName));
-            GaxPreconditions.CheckNotNull(value, nameof(value));
             parameters.Add(parameterName, new GqlQueryParameter { Value = value ?? Value.ForNull() });
         }
 
@@ -100,7 +99,6 @@ namespace Google.Cloud.Datastore.V1
         public static void Add(this RepeatedField<GqlQueryParameter> parameters, Value value)
         {
             GaxPreconditions.CheckNotNull(parameters, nameof(parameters));
-            GaxPreconditions.CheckNotNull(value, nameof(value));
             parameters.Add(new GqlQueryParameter { Value = value ?? Value.ForNull() });
         }
     }
