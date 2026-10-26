@@ -2393,6 +2393,29 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.DesignCenter.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Design Center",
+      "productUrl": "https://cloud.google.com/application-design-center/docs",
+      "description": "Design and share deployable application architectures.",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.AppHub.V1": "1.3.0",
+        "Google.Cloud.Config.V1": "1.13.0",
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/designcenter/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "designcenter",
+      "serviceConfigFile": "designcenter_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.DevTools.Common",
       "version": "3.3.0",
       "type": "other",
