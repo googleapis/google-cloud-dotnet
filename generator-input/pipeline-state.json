@@ -5255,6 +5255,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.Observability.V1/Google.Cloud.Observability.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.DesignCenter.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/designcenter/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.DesignCenter.V1/Google.Cloud.DesignCenter.V1"
+            ]
         }
     ],
     "ignoredApiPaths": [
