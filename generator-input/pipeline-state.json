@@ -167,21 +167,6 @@
             ]
         },
         {
-            "id": "Google.Area120.Tables.V1Alpha1",
-            "currentVersion": "2.0.0-alpha20",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-10-27T17:38:30.437992451Z",
-            "lastGeneratedCommit": "61f2993fa1c33ec2b46d0db3d10f4eed677f1632",
-            "lastReleasedCommit": "61f2993fa1c33ec2b46d0db3d10f4eed677f1632",
-            "apiPaths": [
-                "google/area120/tables/v1alpha1"
-            ],
-            "sourcePaths": [
-                "apis/Google.Area120.Tables.V1Alpha1/Google.Area120.Tables.V1Alpha1"
-            ]
-        },
-        {
             "id": "Google.Cloud.AccessApproval.V1",
             "currentVersion": "2.6.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
