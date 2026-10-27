@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-alpha20, released 2026-10-27
+
+### New features
+
+- Deprecate Google.Area120.Tables.V1Alpha1
+
 ## Version 2.0.0-alpha19, released 2025-11-03
 
 ### New features
