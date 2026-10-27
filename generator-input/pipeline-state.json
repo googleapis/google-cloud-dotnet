@@ -5247,10 +5247,12 @@
         },
         {
             "id": "Google.Cloud.Observability.V1",
-            "nextVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2026-10-27T17:48:29.964165640Z",
             "lastGeneratedCommit": "9f84face29bd2b2333f1927a24512b9ff2d195bc",
+            "lastReleasedCommit": "9f84face29bd2b2333f1927a24512b9ff2d195bc",
             "apiPaths": [
                 "google/cloud/observability/v1"
             ],
