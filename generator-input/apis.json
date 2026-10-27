@@ -254,24 +254,6 @@
       "protoPath": "google/apps/script/type"
     },
     {
-      "id": "Google.Area120.Tables.V1Alpha1",
-      "version": "2.0.0-alpha20",
-      "type": "grpc",
-      "productName": "Google Area 120 Tables",
-      "description": "Recommended Google client library to access the Area 120 Tables API",
-      "tags": [
-        "tables"
-      ],
-      "dependencies": {},
-      "generator": "micro",
-      "protoPath": "google/area120/tables/v1alpha1",
-      "shortName": "area120tables",
-      "serviceConfigFile": "area120tables_v1alpha1.yaml",
-      "restNumericEnums": true,
-      "transport": "grpc+rest",
-      "includeCommonResourcesProto": true
-    },
-    {
       "id": "Google.Backstory",
       "version": "1.0.0-beta02",
       "type": "other",
