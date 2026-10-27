@@ -350,5 +350,14 @@ namespace Google.Cloud.OracleDatabase.V1
             get => string.IsNullOrEmpty(ExascaleDbStorageVault) ? null : ExascaleDbStorageVaultName.Parse(ExascaleDbStorageVault, allowUnparsed: true);
             set => ExascaleDbStorageVault = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="OdbDnsZoneName"/>-typed view over the <see cref="OdbDnsZone"/> resource name property.
+        /// </summary>
+        public OdbDnsZoneName OdbDnsZoneAsOdbDnsZoneName
+        {
+            get => string.IsNullOrEmpty(OdbDnsZone) ? null : OdbDnsZoneName.Parse(OdbDnsZone, allowUnparsed: true);
+            set => OdbDnsZone = value?.ToString() ?? "";
+        }
     }
 }

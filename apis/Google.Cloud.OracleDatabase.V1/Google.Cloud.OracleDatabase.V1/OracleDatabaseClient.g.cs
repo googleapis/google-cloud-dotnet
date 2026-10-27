@@ -108,6 +108,12 @@ namespace Google.Cloud.OracleDatabase.V1
             CreateOdbSubnetOperationsSettings = existing.CreateOdbSubnetOperationsSettings.Clone();
             DeleteOdbSubnetSettings = existing.DeleteOdbSubnetSettings;
             DeleteOdbSubnetOperationsSettings = existing.DeleteOdbSubnetOperationsSettings.Clone();
+            ListOdbDnsZonesSettings = existing.ListOdbDnsZonesSettings;
+            GetOdbDnsZoneSettings = existing.GetOdbDnsZoneSettings;
+            CreateOdbDnsZoneSettings = existing.CreateOdbDnsZoneSettings;
+            CreateOdbDnsZoneOperationsSettings = existing.CreateOdbDnsZoneOperationsSettings.Clone();
+            DeleteOdbDnsZoneSettings = existing.DeleteOdbDnsZoneSettings;
+            DeleteOdbDnsZoneOperationsSettings = existing.DeleteOdbDnsZoneOperationsSettings.Clone();
             ListExadbVmClustersSettings = existing.ListExadbVmClustersSettings;
             GetExadbVmClusterSettings = existing.GetExadbVmClusterSettings;
             CreateExadbVmClusterSettings = existing.CreateExadbVmClusterSettings;
@@ -1182,6 +1188,108 @@ namespace Google.Cloud.OracleDatabase.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteOdbSubnetOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.ListOdbDnsZones</c> and <c>OracleDatabaseClient.ListOdbDnsZonesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListOdbDnsZonesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.GetOdbDnsZone</c> and <c>OracleDatabaseClient.GetOdbDnsZoneAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetOdbDnsZoneSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.CreateOdbDnsZone</c> and <c>OracleDatabaseClient.CreateOdbDnsZoneAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateOdbDnsZoneSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.CreateOdbDnsZone</c> and
+        /// <c>OracleDatabaseClient.CreateOdbDnsZoneAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateOdbDnsZoneOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.DeleteOdbDnsZone</c> and <c>OracleDatabaseClient.DeleteOdbDnsZoneAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteOdbDnsZoneSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.DeleteOdbDnsZone</c> and
+        /// <c>OracleDatabaseClient.DeleteOdbDnsZoneAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteOdbDnsZoneOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -8543,6 +8651,607 @@ namespace Google.Cloud.OracleDatabase.V1
             DeleteOdbSubnetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Lists all the ODB DNS Zones in a given ODB Network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="OdbDnsZone"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListOdbDnsZonesResponse, OdbDnsZone> ListOdbDnsZones(ListOdbDnsZonesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the ODB DNS Zones in a given ODB Network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="OdbDnsZone"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListOdbDnsZonesResponse, OdbDnsZone> ListOdbDnsZonesAsync(ListOdbDnsZonesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the ODB DNS Zones in a given ODB Network.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the OdbDnsZone in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="OdbDnsZone"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListOdbDnsZonesResponse, OdbDnsZone> ListOdbDnsZones(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOdbDnsZonesRequest request = new ListOdbDnsZonesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOdbDnsZones(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the ODB DNS Zones in a given ODB Network.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the OdbDnsZone in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="OdbDnsZone"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListOdbDnsZonesResponse, OdbDnsZone> ListOdbDnsZonesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOdbDnsZonesRequest request = new ListOdbDnsZonesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOdbDnsZonesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the ODB DNS Zones in a given ODB Network.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the OdbDnsZone in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="OdbDnsZone"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListOdbDnsZonesResponse, OdbDnsZone> ListOdbDnsZones(OdbNetworkName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOdbDnsZonesRequest request = new ListOdbDnsZonesRequest
+            {
+                ParentAsOdbNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOdbDnsZones(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the ODB DNS Zones in a given ODB Network.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the OdbDnsZone in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="OdbDnsZone"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListOdbDnsZonesResponse, OdbDnsZone> ListOdbDnsZonesAsync(OdbNetworkName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOdbDnsZonesRequest request = new ListOdbDnsZonesRequest
+            {
+                ParentAsOdbNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOdbDnsZonesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual OdbDnsZone GetOdbDnsZone(GetOdbDnsZoneRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OdbDnsZone> GetOdbDnsZoneAsync(GetOdbDnsZoneRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OdbDnsZone> GetOdbDnsZoneAsync(GetOdbDnsZoneRequest request, st::CancellationToken cancellationToken) =>
+            GetOdbDnsZoneAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the OdbDnsZone in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual OdbDnsZone GetOdbDnsZone(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetOdbDnsZone(new GetOdbDnsZoneRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the OdbDnsZone in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OdbDnsZone> GetOdbDnsZoneAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetOdbDnsZoneAsync(new GetOdbDnsZoneRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the OdbDnsZone in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OdbDnsZone> GetOdbDnsZoneAsync(string name, st::CancellationToken cancellationToken) =>
+            GetOdbDnsZoneAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the OdbDnsZone in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual OdbDnsZone GetOdbDnsZone(OdbDnsZoneName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetOdbDnsZone(new GetOdbDnsZoneRequest
+            {
+                OdbDnsZoneName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the OdbDnsZone in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OdbDnsZone> GetOdbDnsZoneAsync(OdbDnsZoneName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetOdbDnsZoneAsync(new GetOdbDnsZoneRequest
+            {
+                OdbDnsZoneName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the OdbDnsZone in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OdbDnsZone> GetOdbDnsZoneAsync(OdbDnsZoneName name, st::CancellationToken cancellationToken) =>
+            GetOdbDnsZoneAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new ODB DNS Zone in a given ODB Network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<OdbDnsZone, OperationMetadata> CreateOdbDnsZone(CreateOdbDnsZoneRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new ODB DNS Zone in a given ODB Network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OdbDnsZone, OperationMetadata>> CreateOdbDnsZoneAsync(CreateOdbDnsZoneRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new ODB DNS Zone in a given ODB Network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OdbDnsZone, OperationMetadata>> CreateOdbDnsZoneAsync(CreateOdbDnsZoneRequest request, st::CancellationToken cancellationToken) =>
+            CreateOdbDnsZoneAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateOdbDnsZone</c>.</summary>
+        public virtual lro::OperationsClient CreateOdbDnsZoneOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateOdbDnsZone</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<OdbDnsZone, OperationMetadata> PollOnceCreateOdbDnsZone(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<OdbDnsZone, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateOdbDnsZoneOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateOdbDnsZone</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<OdbDnsZone, OperationMetadata>> PollOnceCreateOdbDnsZoneAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<OdbDnsZone, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateOdbDnsZoneOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new ODB DNS Zone in a given ODB Network.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the OdbDnsZone in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}.
+        /// </param>
+        /// <param name="odbDnsZone">
+        /// Required. Details of the OdbDnsZone instance to create.
+        /// </param>
+        /// <param name="odbDnsZoneId">
+        /// Required. The ID of the OdbDnsZone to create. This value is restricted
+        /// to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of 63
+        /// characters in length. The value must start with a letter and end with
+        /// a letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<OdbDnsZone, OperationMetadata> CreateOdbDnsZone(string parent, OdbDnsZone odbDnsZone, string odbDnsZoneId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateOdbDnsZone(new CreateOdbDnsZoneRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                OdbDnsZoneId = gax::GaxPreconditions.CheckNotNullOrEmpty(odbDnsZoneId, nameof(odbDnsZoneId)),
+                OdbDnsZone = gax::GaxPreconditions.CheckNotNull(odbDnsZone, nameof(odbDnsZone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new ODB DNS Zone in a given ODB Network.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the OdbDnsZone in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}.
+        /// </param>
+        /// <param name="odbDnsZone">
+        /// Required. Details of the OdbDnsZone instance to create.
+        /// </param>
+        /// <param name="odbDnsZoneId">
+        /// Required. The ID of the OdbDnsZone to create. This value is restricted
+        /// to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of 63
+        /// characters in length. The value must start with a letter and end with
+        /// a letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OdbDnsZone, OperationMetadata>> CreateOdbDnsZoneAsync(string parent, OdbDnsZone odbDnsZone, string odbDnsZoneId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateOdbDnsZoneAsync(new CreateOdbDnsZoneRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                OdbDnsZoneId = gax::GaxPreconditions.CheckNotNullOrEmpty(odbDnsZoneId, nameof(odbDnsZoneId)),
+                OdbDnsZone = gax::GaxPreconditions.CheckNotNull(odbDnsZone, nameof(odbDnsZone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new ODB DNS Zone in a given ODB Network.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the OdbDnsZone in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}.
+        /// </param>
+        /// <param name="odbDnsZone">
+        /// Required. Details of the OdbDnsZone instance to create.
+        /// </param>
+        /// <param name="odbDnsZoneId">
+        /// Required. The ID of the OdbDnsZone to create. This value is restricted
+        /// to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of 63
+        /// characters in length. The value must start with a letter and end with
+        /// a letter or a number.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OdbDnsZone, OperationMetadata>> CreateOdbDnsZoneAsync(string parent, OdbDnsZone odbDnsZone, string odbDnsZoneId, st::CancellationToken cancellationToken) =>
+            CreateOdbDnsZoneAsync(parent, odbDnsZone, odbDnsZoneId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new ODB DNS Zone in a given ODB Network.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the OdbDnsZone in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}.
+        /// </param>
+        /// <param name="odbDnsZone">
+        /// Required. Details of the OdbDnsZone instance to create.
+        /// </param>
+        /// <param name="odbDnsZoneId">
+        /// Required. The ID of the OdbDnsZone to create. This value is restricted
+        /// to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of 63
+        /// characters in length. The value must start with a letter and end with
+        /// a letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<OdbDnsZone, OperationMetadata> CreateOdbDnsZone(OdbNetworkName parent, OdbDnsZone odbDnsZone, string odbDnsZoneId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateOdbDnsZone(new CreateOdbDnsZoneRequest
+            {
+                ParentAsOdbNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                OdbDnsZoneId = gax::GaxPreconditions.CheckNotNullOrEmpty(odbDnsZoneId, nameof(odbDnsZoneId)),
+                OdbDnsZone = gax::GaxPreconditions.CheckNotNull(odbDnsZone, nameof(odbDnsZone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new ODB DNS Zone in a given ODB Network.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the OdbDnsZone in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}.
+        /// </param>
+        /// <param name="odbDnsZone">
+        /// Required. Details of the OdbDnsZone instance to create.
+        /// </param>
+        /// <param name="odbDnsZoneId">
+        /// Required. The ID of the OdbDnsZone to create. This value is restricted
+        /// to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of 63
+        /// characters in length. The value must start with a letter and end with
+        /// a letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OdbDnsZone, OperationMetadata>> CreateOdbDnsZoneAsync(OdbNetworkName parent, OdbDnsZone odbDnsZone, string odbDnsZoneId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateOdbDnsZoneAsync(new CreateOdbDnsZoneRequest
+            {
+                ParentAsOdbNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                OdbDnsZoneId = gax::GaxPreconditions.CheckNotNullOrEmpty(odbDnsZoneId, nameof(odbDnsZoneId)),
+                OdbDnsZone = gax::GaxPreconditions.CheckNotNull(odbDnsZone, nameof(odbDnsZone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new ODB DNS Zone in a given ODB Network.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the OdbDnsZone in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}.
+        /// </param>
+        /// <param name="odbDnsZone">
+        /// Required. Details of the OdbDnsZone instance to create.
+        /// </param>
+        /// <param name="odbDnsZoneId">
+        /// Required. The ID of the OdbDnsZone to create. This value is restricted
+        /// to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of 63
+        /// characters in length. The value must start with a letter and end with
+        /// a letter or a number.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OdbDnsZone, OperationMetadata>> CreateOdbDnsZoneAsync(OdbNetworkName parent, OdbDnsZone odbDnsZone, string odbDnsZoneId, st::CancellationToken cancellationToken) =>
+            CreateOdbDnsZoneAsync(parent, odbDnsZone, odbDnsZoneId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteOdbDnsZone(DeleteOdbDnsZoneRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteOdbDnsZoneAsync(DeleteOdbDnsZoneRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteOdbDnsZoneAsync(DeleteOdbDnsZoneRequest request, st::CancellationToken cancellationToken) =>
+            DeleteOdbDnsZoneAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteOdbDnsZone</c>.</summary>
+        public virtual lro::OperationsClient DeleteOdbDnsZoneOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteOdbDnsZone</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteOdbDnsZone(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOdbDnsZoneOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteOdbDnsZone</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteOdbDnsZoneAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOdbDnsZoneOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteOdbDnsZone(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteOdbDnsZone(new DeleteOdbDnsZoneRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteOdbDnsZoneAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteOdbDnsZoneAsync(new DeleteOdbDnsZoneRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteOdbDnsZoneAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteOdbDnsZoneAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteOdbDnsZone(OdbDnsZoneName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteOdbDnsZone(new DeleteOdbDnsZoneRequest
+            {
+                OdbDnsZoneName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteOdbDnsZoneAsync(OdbDnsZoneName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteOdbDnsZoneAsync(new DeleteOdbDnsZoneRequest
+            {
+                OdbDnsZoneName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource in the following format:
+        /// projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteOdbDnsZoneAsync(OdbDnsZoneName name, st::CancellationToken cancellationToken) =>
+            DeleteOdbDnsZoneAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists all the Exadb (Exascale) VM Clusters for the given project and
         /// location.
         /// </summary>
@@ -14583,6 +15292,14 @@ namespace Google.Cloud.OracleDatabase.V1
 
         private readonly gaxgrpc::ApiCall<DeleteOdbSubnetRequest, lro::Operation> _callDeleteOdbSubnet;
 
+        private readonly gaxgrpc::ApiCall<ListOdbDnsZonesRequest, ListOdbDnsZonesResponse> _callListOdbDnsZones;
+
+        private readonly gaxgrpc::ApiCall<GetOdbDnsZoneRequest, OdbDnsZone> _callGetOdbDnsZone;
+
+        private readonly gaxgrpc::ApiCall<CreateOdbDnsZoneRequest, lro::Operation> _callCreateOdbDnsZone;
+
+        private readonly gaxgrpc::ApiCall<DeleteOdbDnsZoneRequest, lro::Operation> _callDeleteOdbDnsZone;
+
         private readonly gaxgrpc::ApiCall<ListExadbVmClustersRequest, ListExadbVmClustersResponse> _callListExadbVmClusters;
 
         private readonly gaxgrpc::ApiCall<GetExadbVmClusterRequest, ExadbVmCluster> _callGetExadbVmCluster;
@@ -14697,6 +15414,8 @@ namespace Google.Cloud.OracleDatabase.V1
             DeleteOdbNetworkOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOdbNetworkOperationsSettings, logger);
             CreateOdbSubnetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateOdbSubnetOperationsSettings, logger);
             DeleteOdbSubnetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOdbSubnetOperationsSettings, logger);
+            CreateOdbDnsZoneOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateOdbDnsZoneOperationsSettings, logger);
+            DeleteOdbDnsZoneOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOdbDnsZoneOperationsSettings, logger);
             CreateExadbVmClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateExadbVmClusterOperationsSettings, logger);
             DeleteExadbVmClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteExadbVmClusterOperationsSettings, logger);
             UpdateExadbVmClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateExadbVmClusterOperationsSettings, logger);
@@ -14834,6 +15553,18 @@ namespace Google.Cloud.OracleDatabase.V1
             _callDeleteOdbSubnet = clientHelper.BuildApiCall<DeleteOdbSubnetRequest, lro::Operation>("DeleteOdbSubnet", grpcClient.DeleteOdbSubnetAsync, grpcClient.DeleteOdbSubnet, effectiveSettings.DeleteOdbSubnetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteOdbSubnet);
             Modify_DeleteOdbSubnetApiCall(ref _callDeleteOdbSubnet);
+            _callListOdbDnsZones = clientHelper.BuildApiCall<ListOdbDnsZonesRequest, ListOdbDnsZonesResponse>("ListOdbDnsZones", grpcClient.ListOdbDnsZonesAsync, grpcClient.ListOdbDnsZones, effectiveSettings.ListOdbDnsZonesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListOdbDnsZones);
+            Modify_ListOdbDnsZonesApiCall(ref _callListOdbDnsZones);
+            _callGetOdbDnsZone = clientHelper.BuildApiCall<GetOdbDnsZoneRequest, OdbDnsZone>("GetOdbDnsZone", grpcClient.GetOdbDnsZoneAsync, grpcClient.GetOdbDnsZone, effectiveSettings.GetOdbDnsZoneSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetOdbDnsZone);
+            Modify_GetOdbDnsZoneApiCall(ref _callGetOdbDnsZone);
+            _callCreateOdbDnsZone = clientHelper.BuildApiCall<CreateOdbDnsZoneRequest, lro::Operation>("CreateOdbDnsZone", grpcClient.CreateOdbDnsZoneAsync, grpcClient.CreateOdbDnsZone, effectiveSettings.CreateOdbDnsZoneSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateOdbDnsZone);
+            Modify_CreateOdbDnsZoneApiCall(ref _callCreateOdbDnsZone);
+            _callDeleteOdbDnsZone = clientHelper.BuildApiCall<DeleteOdbDnsZoneRequest, lro::Operation>("DeleteOdbDnsZone", grpcClient.DeleteOdbDnsZoneAsync, grpcClient.DeleteOdbDnsZone, effectiveSettings.DeleteOdbDnsZoneSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteOdbDnsZone);
+            Modify_DeleteOdbDnsZoneApiCall(ref _callDeleteOdbDnsZone);
             _callListExadbVmClusters = clientHelper.BuildApiCall<ListExadbVmClustersRequest, ListExadbVmClustersResponse>("ListExadbVmClusters", grpcClient.ListExadbVmClustersAsync, grpcClient.ListExadbVmClusters, effectiveSettings.ListExadbVmClustersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListExadbVmClusters);
             Modify_ListExadbVmClustersApiCall(ref _callListExadbVmClusters);
@@ -15039,6 +15770,14 @@ namespace Google.Cloud.OracleDatabase.V1
 
         partial void Modify_DeleteOdbSubnetApiCall(ref gaxgrpc::ApiCall<DeleteOdbSubnetRequest, lro::Operation> call);
 
+        partial void Modify_ListOdbDnsZonesApiCall(ref gaxgrpc::ApiCall<ListOdbDnsZonesRequest, ListOdbDnsZonesResponse> call);
+
+        partial void Modify_GetOdbDnsZoneApiCall(ref gaxgrpc::ApiCall<GetOdbDnsZoneRequest, OdbDnsZone> call);
+
+        partial void Modify_CreateOdbDnsZoneApiCall(ref gaxgrpc::ApiCall<CreateOdbDnsZoneRequest, lro::Operation> call);
+
+        partial void Modify_DeleteOdbDnsZoneApiCall(ref gaxgrpc::ApiCall<DeleteOdbDnsZoneRequest, lro::Operation> call);
+
         partial void Modify_ListExadbVmClustersApiCall(ref gaxgrpc::ApiCall<ListExadbVmClustersRequest, ListExadbVmClustersResponse> call);
 
         partial void Modify_GetExadbVmClusterApiCall(ref gaxgrpc::ApiCall<GetExadbVmClusterRequest, ExadbVmCluster> call);
@@ -15206,6 +15945,14 @@ namespace Google.Cloud.OracleDatabase.V1
         partial void Modify_CreateOdbSubnetRequest(ref CreateOdbSubnetRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteOdbSubnetRequest(ref DeleteOdbSubnetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListOdbDnsZonesRequest(ref ListOdbDnsZonesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetOdbDnsZoneRequest(ref GetOdbDnsZoneRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateOdbDnsZoneRequest(ref CreateOdbDnsZoneRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteOdbDnsZoneRequest(ref DeleteOdbDnsZoneRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListExadbVmClustersRequest(ref ListExadbVmClustersRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -16319,6 +17066,108 @@ namespace Google.Cloud.OracleDatabase.V1
         }
 
         /// <summary>
+        /// Lists all the ODB DNS Zones in a given ODB Network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="OdbDnsZone"/> resources.</returns>
+        public override gax::PagedEnumerable<ListOdbDnsZonesResponse, OdbDnsZone> ListOdbDnsZones(ListOdbDnsZonesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListOdbDnsZonesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListOdbDnsZonesRequest, ListOdbDnsZonesResponse, OdbDnsZone>(_callListOdbDnsZones, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the ODB DNS Zones in a given ODB Network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="OdbDnsZone"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListOdbDnsZonesResponse, OdbDnsZone> ListOdbDnsZonesAsync(ListOdbDnsZonesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListOdbDnsZonesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListOdbDnsZonesRequest, ListOdbDnsZonesResponse, OdbDnsZone>(_callListOdbDnsZones, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override OdbDnsZone GetOdbDnsZone(GetOdbDnsZoneRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetOdbDnsZoneRequest(ref request, ref callSettings);
+            return _callGetOdbDnsZone.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<OdbDnsZone> GetOdbDnsZoneAsync(GetOdbDnsZoneRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetOdbDnsZoneRequest(ref request, ref callSettings);
+            return _callGetOdbDnsZone.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateOdbDnsZone</c>.</summary>
+        public override lro::OperationsClient CreateOdbDnsZoneOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new ODB DNS Zone in a given ODB Network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<OdbDnsZone, OperationMetadata> CreateOdbDnsZone(CreateOdbDnsZoneRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateOdbDnsZoneRequest(ref request, ref callSettings);
+            return new lro::Operation<OdbDnsZone, OperationMetadata>(_callCreateOdbDnsZone.Sync(request, callSettings), CreateOdbDnsZoneOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new ODB DNS Zone in a given ODB Network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<OdbDnsZone, OperationMetadata>> CreateOdbDnsZoneAsync(CreateOdbDnsZoneRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateOdbDnsZoneRequest(ref request, ref callSettings);
+            return new lro::Operation<OdbDnsZone, OperationMetadata>(await _callCreateOdbDnsZone.Async(request, callSettings).ConfigureAwait(false), CreateOdbDnsZoneOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteOdbDnsZone</c>.</summary>
+        public override lro::OperationsClient DeleteOdbDnsZoneOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteOdbDnsZone(DeleteOdbDnsZoneRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteOdbDnsZoneRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteOdbDnsZone.Sync(request, callSettings), DeleteOdbDnsZoneOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single ODB DNS Zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteOdbDnsZoneAsync(DeleteOdbDnsZoneRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteOdbDnsZoneRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteOdbDnsZone.Async(request, callSettings).ConfigureAwait(false), DeleteOdbDnsZoneOperationsClient);
+        }
+
+        /// <summary>
         /// Lists all the Exadb (Exascale) VM Clusters for the given project and
         /// location.
         /// </summary>
@@ -17399,6 +18248,10 @@ namespace Google.Cloud.OracleDatabase.V1
     {
     }
 
+    public partial class ListOdbDnsZonesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListExadbVmClustersRequest : gaxgrpc::IPageRequest
     {
     }
@@ -17568,6 +18421,14 @@ namespace Google.Cloud.OracleDatabase.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<OdbSubnet> GetEnumerator() => OdbSubnets.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListOdbDnsZonesResponse : gaxgrpc::IPageResponse<OdbDnsZone>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<OdbDnsZone> GetEnumerator() => OdbDnsZones.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

@@ -188,6 +188,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.DeleteOdbSubnetRequest> __Marshaller_google_cloud_oracledatabase_v1_DeleteOdbSubnetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.DeleteOdbSubnetRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesRequest> __Marshaller_google_cloud_oracledatabase_v1_ListOdbDnsZonesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesResponse> __Marshaller_google_cloud_oracledatabase_v1_ListOdbDnsZonesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.GetOdbDnsZoneRequest> __Marshaller_google_cloud_oracledatabase_v1_GetOdbDnsZoneRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.GetOdbDnsZoneRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.OdbDnsZone> __Marshaller_google_cloud_oracledatabase_v1_OdbDnsZone = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.OdbDnsZone.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.CreateOdbDnsZoneRequest> __Marshaller_google_cloud_oracledatabase_v1_CreateOdbDnsZoneRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.CreateOdbDnsZoneRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.DeleteOdbDnsZoneRequest> __Marshaller_google_cloud_oracledatabase_v1_DeleteOdbDnsZoneRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.DeleteOdbDnsZoneRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ListExadbVmClustersRequest> __Marshaller_google_cloud_oracledatabase_v1_ListExadbVmClustersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ListExadbVmClustersRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ListExadbVmClustersResponse> __Marshaller_google_cloud_oracledatabase_v1_ListExadbVmClustersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ListExadbVmClustersResponse.Parser));
@@ -634,6 +646,38 @@ namespace Google.Cloud.OracleDatabase.V1 {
         __ServiceName,
         "DeleteOdbSubnet",
         __Marshaller_google_cloud_oracledatabase_v1_DeleteOdbSubnetRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesRequest, global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesResponse> __Method_ListOdbDnsZones = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesRequest, global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListOdbDnsZones",
+        __Marshaller_google_cloud_oracledatabase_v1_ListOdbDnsZonesRequest,
+        __Marshaller_google_cloud_oracledatabase_v1_ListOdbDnsZonesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.GetOdbDnsZoneRequest, global::Google.Cloud.OracleDatabase.V1.OdbDnsZone> __Method_GetOdbDnsZone = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.GetOdbDnsZoneRequest, global::Google.Cloud.OracleDatabase.V1.OdbDnsZone>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetOdbDnsZone",
+        __Marshaller_google_cloud_oracledatabase_v1_GetOdbDnsZoneRequest,
+        __Marshaller_google_cloud_oracledatabase_v1_OdbDnsZone);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.CreateOdbDnsZoneRequest, global::Google.LongRunning.Operation> __Method_CreateOdbDnsZone = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.CreateOdbDnsZoneRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateOdbDnsZone",
+        __Marshaller_google_cloud_oracledatabase_v1_CreateOdbDnsZoneRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.DeleteOdbDnsZoneRequest, global::Google.LongRunning.Operation> __Method_DeleteOdbDnsZone = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.DeleteOdbDnsZoneRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteOdbDnsZone",
+        __Marshaller_google_cloud_oracledatabase_v1_DeleteOdbDnsZoneRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -1447,6 +1491,54 @@ namespace Google.Cloud.OracleDatabase.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteOdbSubnet(global::Google.Cloud.OracleDatabase.V1.DeleteOdbSubnetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all the ODB DNS Zones in a given ODB Network.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesResponse> ListOdbDnsZones(global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single ODB DNS Zone.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OracleDatabase.V1.OdbDnsZone> GetOdbDnsZone(global::Google.Cloud.OracleDatabase.V1.GetOdbDnsZoneRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new ODB DNS Zone in a given ODB Network.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateOdbDnsZone(global::Google.Cloud.OracleDatabase.V1.CreateOdbDnsZoneRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single ODB DNS Zone.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteOdbDnsZone(global::Google.Cloud.OracleDatabase.V1.DeleteOdbDnsZoneRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -3907,6 +3999,198 @@ namespace Google.Cloud.OracleDatabase.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteOdbSubnet, null, options, request);
       }
       /// <summary>
+      /// Lists all the ODB DNS Zones in a given ODB Network.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesResponse ListOdbDnsZones(global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListOdbDnsZones(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the ODB DNS Zones in a given ODB Network.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesResponse ListOdbDnsZones(global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListOdbDnsZones, null, options, request);
+      }
+      /// <summary>
+      /// Lists all the ODB DNS Zones in a given ODB Network.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesResponse> ListOdbDnsZonesAsync(global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListOdbDnsZonesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the ODB DNS Zones in a given ODB Network.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesResponse> ListOdbDnsZonesAsync(global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListOdbDnsZones, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single ODB DNS Zone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OracleDatabase.V1.OdbDnsZone GetOdbDnsZone(global::Google.Cloud.OracleDatabase.V1.GetOdbDnsZoneRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetOdbDnsZone(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single ODB DNS Zone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OracleDatabase.V1.OdbDnsZone GetOdbDnsZone(global::Google.Cloud.OracleDatabase.V1.GetOdbDnsZoneRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetOdbDnsZone, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single ODB DNS Zone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OracleDatabase.V1.OdbDnsZone> GetOdbDnsZoneAsync(global::Google.Cloud.OracleDatabase.V1.GetOdbDnsZoneRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetOdbDnsZoneAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single ODB DNS Zone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OracleDatabase.V1.OdbDnsZone> GetOdbDnsZoneAsync(global::Google.Cloud.OracleDatabase.V1.GetOdbDnsZoneRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetOdbDnsZone, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new ODB DNS Zone in a given ODB Network.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateOdbDnsZone(global::Google.Cloud.OracleDatabase.V1.CreateOdbDnsZoneRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateOdbDnsZone(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new ODB DNS Zone in a given ODB Network.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateOdbDnsZone(global::Google.Cloud.OracleDatabase.V1.CreateOdbDnsZoneRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateOdbDnsZone, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new ODB DNS Zone in a given ODB Network.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateOdbDnsZoneAsync(global::Google.Cloud.OracleDatabase.V1.CreateOdbDnsZoneRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateOdbDnsZoneAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new ODB DNS Zone in a given ODB Network.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateOdbDnsZoneAsync(global::Google.Cloud.OracleDatabase.V1.CreateOdbDnsZoneRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateOdbDnsZone, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single ODB DNS Zone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteOdbDnsZone(global::Google.Cloud.OracleDatabase.V1.DeleteOdbDnsZoneRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteOdbDnsZone(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single ODB DNS Zone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteOdbDnsZone(global::Google.Cloud.OracleDatabase.V1.DeleteOdbDnsZoneRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteOdbDnsZone, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single ODB DNS Zone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteOdbDnsZoneAsync(global::Google.Cloud.OracleDatabase.V1.DeleteOdbDnsZoneRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteOdbDnsZoneAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single ODB DNS Zone.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteOdbDnsZoneAsync(global::Google.Cloud.OracleDatabase.V1.DeleteOdbDnsZoneRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteOdbDnsZone, null, options, request);
+      }
+      /// <summary>
       /// Lists all the Exadb (Exascale) VM Clusters for the given project and
       /// location.
       /// </summary>
@@ -5904,6 +6188,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
           .AddMethod(__Method_GetOdbSubnet, serviceImpl.GetOdbSubnet)
           .AddMethod(__Method_CreateOdbSubnet, serviceImpl.CreateOdbSubnet)
           .AddMethod(__Method_DeleteOdbSubnet, serviceImpl.DeleteOdbSubnet)
+          .AddMethod(__Method_ListOdbDnsZones, serviceImpl.ListOdbDnsZones)
+          .AddMethod(__Method_GetOdbDnsZone, serviceImpl.GetOdbDnsZone)
+          .AddMethod(__Method_CreateOdbDnsZone, serviceImpl.CreateOdbDnsZone)
+          .AddMethod(__Method_DeleteOdbDnsZone, serviceImpl.DeleteOdbDnsZone)
           .AddMethod(__Method_ListExadbVmClusters, serviceImpl.ListExadbVmClusters)
           .AddMethod(__Method_GetExadbVmCluster, serviceImpl.GetExadbVmCluster)
           .AddMethod(__Method_CreateExadbVmCluster, serviceImpl.CreateExadbVmCluster)
@@ -5993,6 +6281,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
       serviceBinder.AddMethod(__Method_GetOdbSubnet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.GetOdbSubnetRequest, global::Google.Cloud.OracleDatabase.V1.OdbSubnet>(serviceImpl.GetOdbSubnet));
       serviceBinder.AddMethod(__Method_CreateOdbSubnet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.CreateOdbSubnetRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateOdbSubnet));
       serviceBinder.AddMethod(__Method_DeleteOdbSubnet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.DeleteOdbSubnetRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteOdbSubnet));
+      serviceBinder.AddMethod(__Method_ListOdbDnsZones, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesRequest, global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesResponse>(serviceImpl.ListOdbDnsZones));
+      serviceBinder.AddMethod(__Method_GetOdbDnsZone, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.GetOdbDnsZoneRequest, global::Google.Cloud.OracleDatabase.V1.OdbDnsZone>(serviceImpl.GetOdbDnsZone));
+      serviceBinder.AddMethod(__Method_CreateOdbDnsZone, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.CreateOdbDnsZoneRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateOdbDnsZone));
+      serviceBinder.AddMethod(__Method_DeleteOdbDnsZone, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.DeleteOdbDnsZoneRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteOdbDnsZone));
       serviceBinder.AddMethod(__Method_ListExadbVmClusters, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListExadbVmClustersRequest, global::Google.Cloud.OracleDatabase.V1.ListExadbVmClustersResponse>(serviceImpl.ListExadbVmClusters));
       serviceBinder.AddMethod(__Method_GetExadbVmCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.GetExadbVmClusterRequest, global::Google.Cloud.OracleDatabase.V1.ExadbVmCluster>(serviceImpl.GetExadbVmCluster));
       serviceBinder.AddMethod(__Method_CreateExadbVmCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.CreateExadbVmClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateExadbVmCluster));

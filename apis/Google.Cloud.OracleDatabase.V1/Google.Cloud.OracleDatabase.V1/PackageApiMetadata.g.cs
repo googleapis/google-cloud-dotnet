@@ -94,6 +94,7 @@ namespace Google.Cloud.OracleDatabase.V1
             yield return GoldengateDeploymentVersionReflection.Descriptor;
             yield return LocationMetadataReflection.Descriptor;
             yield return MinorVersionReflection.Descriptor;
+            yield return OdbDnsZoneReflection.Descriptor;
             yield return OdbNetworkReflection.Descriptor;
             yield return OdbSubnetReflection.Descriptor;
             yield return OracledatabaseReflection.Descriptor;

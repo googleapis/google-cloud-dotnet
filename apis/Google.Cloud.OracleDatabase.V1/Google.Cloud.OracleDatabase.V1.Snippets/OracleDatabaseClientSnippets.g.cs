@@ -8179,6 +8179,755 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListOdbDnsZones</summary>
+        public void ListOdbDnsZonesRequestObject()
+        {
+            // Snippet: ListOdbDnsZones(ListOdbDnsZonesRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            ListOdbDnsZonesRequest request = new ListOdbDnsZonesRequest
+            {
+                ParentAsOdbNetworkName = OdbNetworkName.FromProjectLocationOdbNetwork("[PROJECT]", "[LOCATION]", "[ODB_NETWORK]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListOdbDnsZonesResponse, OdbDnsZone> response = oracleDatabaseClient.ListOdbDnsZones(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (OdbDnsZone item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListOdbDnsZonesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (OdbDnsZone item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<OdbDnsZone> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (OdbDnsZone item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOdbDnsZonesAsync</summary>
+        public async Task ListOdbDnsZonesRequestObjectAsync()
+        {
+            // Snippet: ListOdbDnsZonesAsync(ListOdbDnsZonesRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            ListOdbDnsZonesRequest request = new ListOdbDnsZonesRequest
+            {
+                ParentAsOdbNetworkName = OdbNetworkName.FromProjectLocationOdbNetwork("[PROJECT]", "[LOCATION]", "[ODB_NETWORK]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListOdbDnsZonesResponse, OdbDnsZone> response = oracleDatabaseClient.ListOdbDnsZonesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (OdbDnsZone item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListOdbDnsZonesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (OdbDnsZone item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<OdbDnsZone> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (OdbDnsZone item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOdbDnsZones</summary>
+        public void ListOdbDnsZones()
+        {
+            // Snippet: ListOdbDnsZones(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/odbNetworks/[ODB_NETWORK]";
+            // Make the request
+            PagedEnumerable<ListOdbDnsZonesResponse, OdbDnsZone> response = oracleDatabaseClient.ListOdbDnsZones(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (OdbDnsZone item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListOdbDnsZonesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (OdbDnsZone item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<OdbDnsZone> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (OdbDnsZone item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOdbDnsZonesAsync</summary>
+        public async Task ListOdbDnsZonesAsync()
+        {
+            // Snippet: ListOdbDnsZonesAsync(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/odbNetworks/[ODB_NETWORK]";
+            // Make the request
+            PagedAsyncEnumerable<ListOdbDnsZonesResponse, OdbDnsZone> response = oracleDatabaseClient.ListOdbDnsZonesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (OdbDnsZone item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListOdbDnsZonesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (OdbDnsZone item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<OdbDnsZone> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (OdbDnsZone item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOdbDnsZones</summary>
+        public void ListOdbDnsZonesResourceNames()
+        {
+            // Snippet: ListOdbDnsZones(OdbNetworkName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            OdbNetworkName parent = OdbNetworkName.FromProjectLocationOdbNetwork("[PROJECT]", "[LOCATION]", "[ODB_NETWORK]");
+            // Make the request
+            PagedEnumerable<ListOdbDnsZonesResponse, OdbDnsZone> response = oracleDatabaseClient.ListOdbDnsZones(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (OdbDnsZone item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListOdbDnsZonesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (OdbDnsZone item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<OdbDnsZone> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (OdbDnsZone item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOdbDnsZonesAsync</summary>
+        public async Task ListOdbDnsZonesResourceNamesAsync()
+        {
+            // Snippet: ListOdbDnsZonesAsync(OdbNetworkName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            OdbNetworkName parent = OdbNetworkName.FromProjectLocationOdbNetwork("[PROJECT]", "[LOCATION]", "[ODB_NETWORK]");
+            // Make the request
+            PagedAsyncEnumerable<ListOdbDnsZonesResponse, OdbDnsZone> response = oracleDatabaseClient.ListOdbDnsZonesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (OdbDnsZone item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListOdbDnsZonesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (OdbDnsZone item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<OdbDnsZone> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (OdbDnsZone item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOdbDnsZone</summary>
+        public void GetOdbDnsZoneRequestObject()
+        {
+            // Snippet: GetOdbDnsZone(GetOdbDnsZoneRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GetOdbDnsZoneRequest request = new GetOdbDnsZoneRequest
+            {
+                OdbDnsZoneName = OdbDnsZoneName.FromProjectLocationOdbNetworkOdbDnsZone("[PROJECT]", "[LOCATION]", "[ODB_NETWORK]", "[ODB_DNS_ZONE]"),
+            };
+            // Make the request
+            OdbDnsZone response = oracleDatabaseClient.GetOdbDnsZone(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOdbDnsZoneAsync</summary>
+        public async Task GetOdbDnsZoneRequestObjectAsync()
+        {
+            // Snippet: GetOdbDnsZoneAsync(GetOdbDnsZoneRequest, CallSettings)
+            // Additional: GetOdbDnsZoneAsync(GetOdbDnsZoneRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GetOdbDnsZoneRequest request = new GetOdbDnsZoneRequest
+            {
+                OdbDnsZoneName = OdbDnsZoneName.FromProjectLocationOdbNetworkOdbDnsZone("[PROJECT]", "[LOCATION]", "[ODB_NETWORK]", "[ODB_DNS_ZONE]"),
+            };
+            // Make the request
+            OdbDnsZone response = await oracleDatabaseClient.GetOdbDnsZoneAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOdbDnsZone</summary>
+        public void GetOdbDnsZone()
+        {
+            // Snippet: GetOdbDnsZone(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/odbNetworks/[ODB_NETWORK]/odbDnsZones/[ODB_DNS_ZONE]";
+            // Make the request
+            OdbDnsZone response = oracleDatabaseClient.GetOdbDnsZone(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOdbDnsZoneAsync</summary>
+        public async Task GetOdbDnsZoneAsync()
+        {
+            // Snippet: GetOdbDnsZoneAsync(string, CallSettings)
+            // Additional: GetOdbDnsZoneAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/odbNetworks/[ODB_NETWORK]/odbDnsZones/[ODB_DNS_ZONE]";
+            // Make the request
+            OdbDnsZone response = await oracleDatabaseClient.GetOdbDnsZoneAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOdbDnsZone</summary>
+        public void GetOdbDnsZoneResourceNames()
+        {
+            // Snippet: GetOdbDnsZone(OdbDnsZoneName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            OdbDnsZoneName name = OdbDnsZoneName.FromProjectLocationOdbNetworkOdbDnsZone("[PROJECT]", "[LOCATION]", "[ODB_NETWORK]", "[ODB_DNS_ZONE]");
+            // Make the request
+            OdbDnsZone response = oracleDatabaseClient.GetOdbDnsZone(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOdbDnsZoneAsync</summary>
+        public async Task GetOdbDnsZoneResourceNamesAsync()
+        {
+            // Snippet: GetOdbDnsZoneAsync(OdbDnsZoneName, CallSettings)
+            // Additional: GetOdbDnsZoneAsync(OdbDnsZoneName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            OdbDnsZoneName name = OdbDnsZoneName.FromProjectLocationOdbNetworkOdbDnsZone("[PROJECT]", "[LOCATION]", "[ODB_NETWORK]", "[ODB_DNS_ZONE]");
+            // Make the request
+            OdbDnsZone response = await oracleDatabaseClient.GetOdbDnsZoneAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateOdbDnsZone</summary>
+        public void CreateOdbDnsZoneRequestObject()
+        {
+            // Snippet: CreateOdbDnsZone(CreateOdbDnsZoneRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            CreateOdbDnsZoneRequest request = new CreateOdbDnsZoneRequest
+            {
+                ParentAsOdbNetworkName = OdbNetworkName.FromProjectLocationOdbNetwork("[PROJECT]", "[LOCATION]", "[ODB_NETWORK]"),
+                OdbDnsZoneId = "",
+                OdbDnsZone = new OdbDnsZone(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<OdbDnsZone, OperationMetadata> response = oracleDatabaseClient.CreateOdbDnsZone(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OdbDnsZone, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            OdbDnsZone result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OdbDnsZone, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceCreateOdbDnsZone(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OdbDnsZone retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateOdbDnsZoneAsync</summary>
+        public async Task CreateOdbDnsZoneRequestObjectAsync()
+        {
+            // Snippet: CreateOdbDnsZoneAsync(CreateOdbDnsZoneRequest, CallSettings)
+            // Additional: CreateOdbDnsZoneAsync(CreateOdbDnsZoneRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateOdbDnsZoneRequest request = new CreateOdbDnsZoneRequest
+            {
+                ParentAsOdbNetworkName = OdbNetworkName.FromProjectLocationOdbNetwork("[PROJECT]", "[LOCATION]", "[ODB_NETWORK]"),
+                OdbDnsZoneId = "",
+                OdbDnsZone = new OdbDnsZone(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<OdbDnsZone, OperationMetadata> response = await oracleDatabaseClient.CreateOdbDnsZoneAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OdbDnsZone, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            OdbDnsZone result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OdbDnsZone, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceCreateOdbDnsZoneAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OdbDnsZone retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateOdbDnsZone</summary>
+        public void CreateOdbDnsZone()
+        {
+            // Snippet: CreateOdbDnsZone(string, OdbDnsZone, string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/odbNetworks/[ODB_NETWORK]";
+            OdbDnsZone odbDnsZone = new OdbDnsZone();
+            string odbDnsZoneId = "";
+            // Make the request
+            Operation<OdbDnsZone, OperationMetadata> response = oracleDatabaseClient.CreateOdbDnsZone(parent, odbDnsZone, odbDnsZoneId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OdbDnsZone, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            OdbDnsZone result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OdbDnsZone, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceCreateOdbDnsZone(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OdbDnsZone retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateOdbDnsZoneAsync</summary>
+        public async Task CreateOdbDnsZoneAsync()
+        {
+            // Snippet: CreateOdbDnsZoneAsync(string, OdbDnsZone, string, CallSettings)
+            // Additional: CreateOdbDnsZoneAsync(string, OdbDnsZone, string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/odbNetworks/[ODB_NETWORK]";
+            OdbDnsZone odbDnsZone = new OdbDnsZone();
+            string odbDnsZoneId = "";
+            // Make the request
+            Operation<OdbDnsZone, OperationMetadata> response = await oracleDatabaseClient.CreateOdbDnsZoneAsync(parent, odbDnsZone, odbDnsZoneId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OdbDnsZone, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            OdbDnsZone result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OdbDnsZone, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceCreateOdbDnsZoneAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OdbDnsZone retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateOdbDnsZone</summary>
+        public void CreateOdbDnsZoneResourceNames()
+        {
+            // Snippet: CreateOdbDnsZone(OdbNetworkName, OdbDnsZone, string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            OdbNetworkName parent = OdbNetworkName.FromProjectLocationOdbNetwork("[PROJECT]", "[LOCATION]", "[ODB_NETWORK]");
+            OdbDnsZone odbDnsZone = new OdbDnsZone();
+            string odbDnsZoneId = "";
+            // Make the request
+            Operation<OdbDnsZone, OperationMetadata> response = oracleDatabaseClient.CreateOdbDnsZone(parent, odbDnsZone, odbDnsZoneId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OdbDnsZone, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            OdbDnsZone result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OdbDnsZone, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceCreateOdbDnsZone(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OdbDnsZone retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateOdbDnsZoneAsync</summary>
+        public async Task CreateOdbDnsZoneResourceNamesAsync()
+        {
+            // Snippet: CreateOdbDnsZoneAsync(OdbNetworkName, OdbDnsZone, string, CallSettings)
+            // Additional: CreateOdbDnsZoneAsync(OdbNetworkName, OdbDnsZone, string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            OdbNetworkName parent = OdbNetworkName.FromProjectLocationOdbNetwork("[PROJECT]", "[LOCATION]", "[ODB_NETWORK]");
+            OdbDnsZone odbDnsZone = new OdbDnsZone();
+            string odbDnsZoneId = "";
+            // Make the request
+            Operation<OdbDnsZone, OperationMetadata> response = await oracleDatabaseClient.CreateOdbDnsZoneAsync(parent, odbDnsZone, odbDnsZoneId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OdbDnsZone, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            OdbDnsZone result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OdbDnsZone, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceCreateOdbDnsZoneAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OdbDnsZone retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteOdbDnsZone</summary>
+        public void DeleteOdbDnsZoneRequestObject()
+        {
+            // Snippet: DeleteOdbDnsZone(DeleteOdbDnsZoneRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            DeleteOdbDnsZoneRequest request = new DeleteOdbDnsZoneRequest
+            {
+                OdbDnsZoneName = OdbDnsZoneName.FromProjectLocationOdbNetworkOdbDnsZone("[PROJECT]", "[LOCATION]", "[ODB_NETWORK]", "[ODB_DNS_ZONE]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = oracleDatabaseClient.DeleteOdbDnsZone(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDeleteOdbDnsZone(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteOdbDnsZoneAsync</summary>
+        public async Task DeleteOdbDnsZoneRequestObjectAsync()
+        {
+            // Snippet: DeleteOdbDnsZoneAsync(DeleteOdbDnsZoneRequest, CallSettings)
+            // Additional: DeleteOdbDnsZoneAsync(DeleteOdbDnsZoneRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteOdbDnsZoneRequest request = new DeleteOdbDnsZoneRequest
+            {
+                OdbDnsZoneName = OdbDnsZoneName.FromProjectLocationOdbNetworkOdbDnsZone("[PROJECT]", "[LOCATION]", "[ODB_NETWORK]", "[ODB_DNS_ZONE]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await oracleDatabaseClient.DeleteOdbDnsZoneAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDeleteOdbDnsZoneAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteOdbDnsZone</summary>
+        public void DeleteOdbDnsZone()
+        {
+            // Snippet: DeleteOdbDnsZone(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/odbNetworks/[ODB_NETWORK]/odbDnsZones/[ODB_DNS_ZONE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = oracleDatabaseClient.DeleteOdbDnsZone(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDeleteOdbDnsZone(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteOdbDnsZoneAsync</summary>
+        public async Task DeleteOdbDnsZoneAsync()
+        {
+            // Snippet: DeleteOdbDnsZoneAsync(string, CallSettings)
+            // Additional: DeleteOdbDnsZoneAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/odbNetworks/[ODB_NETWORK]/odbDnsZones/[ODB_DNS_ZONE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await oracleDatabaseClient.DeleteOdbDnsZoneAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDeleteOdbDnsZoneAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteOdbDnsZone</summary>
+        public void DeleteOdbDnsZoneResourceNames()
+        {
+            // Snippet: DeleteOdbDnsZone(OdbDnsZoneName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            OdbDnsZoneName name = OdbDnsZoneName.FromProjectLocationOdbNetworkOdbDnsZone("[PROJECT]", "[LOCATION]", "[ODB_NETWORK]", "[ODB_DNS_ZONE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = oracleDatabaseClient.DeleteOdbDnsZone(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDeleteOdbDnsZone(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteOdbDnsZoneAsync</summary>
+        public async Task DeleteOdbDnsZoneResourceNamesAsync()
+        {
+            // Snippet: DeleteOdbDnsZoneAsync(OdbDnsZoneName, CallSettings)
+            // Additional: DeleteOdbDnsZoneAsync(OdbDnsZoneName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            OdbDnsZoneName name = OdbDnsZoneName.FromProjectLocationOdbNetworkOdbDnsZone("[PROJECT]", "[LOCATION]", "[ODB_NETWORK]", "[ODB_DNS_ZONE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await oracleDatabaseClient.DeleteOdbDnsZoneAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDeleteOdbDnsZoneAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ListExadbVmClusters</summary>
         public void ListExadbVmClustersRequestObject()
         {
