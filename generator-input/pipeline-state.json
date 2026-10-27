@@ -5261,6 +5261,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "1e9cfa78c60620af3c66aba343d99a75a9f79057",
             "apiPaths": [
                 "google/cloud/designcenter/v1"
             ],
