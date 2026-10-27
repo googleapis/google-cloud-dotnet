@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.9.0, released 2026-10-27
+
+### New features
+
+- Add OdbDnsZone and CloudVmCluster `odb_dns_zone` for custom DNS domains
+
 ## Version 1.8.0, released 2026-08-17
 
 ### New features
