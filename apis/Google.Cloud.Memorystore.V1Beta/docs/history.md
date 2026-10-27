@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta08, released 2026-10-27
+
+### New features
+
+- Add support to specify the zones of a multi-zone instance where Memorystore allocates resources
+- Add support to list the zones where the Memorystore instance currently has active VMs.
+
 ## Version 1.0.0-beta07, released 2026-10-12
 
 ### New features
