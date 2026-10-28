@@ -115,6 +115,15 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.ClassMethod
     namespace MethodAccessModifierChanged2.A { public class C { protected void A() { } } }
     namespace MethodAccessModifierChanged2.B { public class C { public void A() { } } }
 
+    public abstract class GenericBase { public abstract T A<T>(T t); }
+    public class GenericBaseImplementation : GenericBase { public override T A<T>(T t) => t; }
+
+    namespace OverrideRemovedWithParentImplementation.A { public class C : GenericBaseImplementation { public override T A<T>(T t) => default; } }
+    namespace OverrideRemovedWithParentImplementation.B { public class C : GenericBaseImplementation { } }
+
+    namespace OverrideRemovedWithAbstractParent.A { public abstract class C : Base { public override int A() => 0; } }
+    namespace OverrideRemovedWithAbstractParent.B { public abstract class C : Base { } }
+
     public class ClassMethodTest : TestBase
     {
         [Fact] public void MethodAdded() => TestMinor(Cause.MethodAdded);
@@ -153,5 +162,7 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.ClassMethod
         [Fact] public void MethodModiferChanged6() => TestMinor(Cause.MethodModifierChanged);
         [Fact] public void MethodAccessModifierChanged1() => TestMajor(Cause.MethodAccessModifierChanged);
         [Fact] public void MethodAccessModifierChanged2() => TestMinor(Cause.MethodAccessModifierChanged);
+        [Fact] public void OverrideRemovedWithParentImplementation() => TestNone();
+        [Fact] public void OverrideRemovedWithAbstractParent() => TestMajor(Cause.MethodRemoved);
     }
 }

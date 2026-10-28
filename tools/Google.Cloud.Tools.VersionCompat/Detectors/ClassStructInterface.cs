@@ -14,6 +14,7 @@
 
 using Google.Cloud.Tools.VersionCompat.CecilUtils;
 using Mono.Cecil;
+using Mono.Cecil.Rocks;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -242,6 +243,12 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     // Presence/visibility changes.
                     if (inO && o.IsExported())
                     {
+                        if (!isCtor && !inN && InheritsNonAbstractBaseMethod(_n, o))
+                        {
+                            // An override has been removed, but the type still inherits a non-abstract implementation
+                            // of the method from a base class, so callers are unaffected.
+                            continue;
+                        }
                         yield return inN ?
                             Diff.Major(C(Cause.MethodMadeNotExported, Cause.CtorMadeNotExported), $"{prefix} made non-public.") :
                             Diff.Major(C(Cause.MethodRemoved, Cause.CtorRemoved), $"{prefix} removed.");
@@ -257,6 +264,55 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             }
 
             Cause C(Cause methodCause, Cause ctorCause) => isCtor ? ctorCause : methodCause;
+        }
+
+        /// <summary>
+        /// Checks whether <paramref name="type"/> inherits a non-abstract implementation of <paramref name="method"/>
+        /// from one of its base classes.
+        /// </summary>
+        /// <remarks>
+        /// This works by temporarily adding a faux override of <paramref name="method"/> to <paramref name="type"/>,
+        /// and using Cecil's <see cref="MethodDefinitionRocks.GetBaseMethod(MethodDefinition)"/> to find the nearest
+        /// base class method that it overrides.
+        /// </remarks>
+        private static bool InheritsNonAbstractBaseMethod(TypeDefinition type, MethodDefinition method)
+        {
+            // Prepare the faux method to match the method argument
+            var faux = new MethodDefinition(method.Name, MethodAttributes.Virtual, method.ReturnType);
+            foreach (var genericParameter in method.GenericParameters)
+            {
+                faux.GenericParameters.Add(new GenericParameter(genericParameter.Name, faux));
+            }
+            foreach (var parameter in method.Parameters)
+            {
+                faux.Parameters.Add(new ParameterDefinition(parameter.Name, parameter.Attributes, parameter.ParameterType));
+            }
+
+            type.Methods.Add(faux);
+            try
+            {
+                // GetBaseMethod returns the faux method itself if no base method is found,
+                // so check for that too.
+                var baseMethod = faux.GetBaseMethod();
+                return baseMethod != faux
+                    && !baseMethod.IsAbstract
+                    && AreSameExportedVisibility(method, baseMethod);
+            }
+            catch (AssemblyResolutionException)
+            {
+                // Base class is in another assembly which we don't care about,
+                // so we would've found any implementation at this point if it existed.
+                return false;
+            }
+            finally
+            {
+                type.Methods.Remove(faux);
+            }
+
+            static bool AreSameExportedVisibility(MethodDefinition left, MethodDefinition right)
+                => left.IsPublic && right.IsPublic
+                    || left.IsFamily && right.IsFamily
+                    || left.IsFamilyOrAssembly && right.IsFamilyOrAssembly;
         }
 
         public IEnumerable<Diff> Ctors(TypeType typeType) => MethodsCtors(typeType, isCtor: true, t => t.InstanceCtors());
