@@ -90,27 +90,6 @@ internal static partial class SpannerBuiltInMetrics
     /// Records operation count and latency metrics.
     /// </summary>
     /// <param name="latencyMs">The elapsed duration of the operation in milliseconds.</param>
-    /// <param name="methodName">The name of the gRPC method invoked.</param>
-    /// <param name="dbNameProvider">The provider holding database context details.</param>
-    /// <param name="status">The resolved status of the operation.</param>
-    /// <param name="clientIdentity">The identity context for the client executing the operation.</param>
-    internal static void RecordOperationMetrics(double latencyMs, string methodName, IDatabaseNameProvider dbNameProvider, StatusCode status, ClientIdentity clientIdentity)
-    {
-        try
-        {
-            var labels = Labeler.GetLabels(methodName, dbNameProvider, status, clientIdentity);
-            RecordOperationMetrics(latencyMs, labels);
-        }
-        catch
-        {
-            // Silently swallow exceptions.
-        }
-    }
-
-    /// <summary>
-    /// Records operation count and latency metrics.
-    /// </summary>
-    /// <param name="latencyMs">The elapsed duration of the operation in milliseconds.</param>
     /// <param name="labels">The metric labels to apply to the measurement.</param>
     internal static void RecordOperationMetrics(double latencyMs, KeyValuePair<string, object>[] labels)
     {
