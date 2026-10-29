@@ -147,7 +147,7 @@ namespace Google.Cloud.Spanner.Data
                     parameters: "length", size: 2621440, stringType: true);
                 AddType(table, "text", typeof(string), stringType: true, bestMatch: false);
                 AddType(table, "bytea", typeof(byte[]));
-                AddType(table, "date", typeof(DateTime), fixedLength: true, size: 10);
+                AddType(table, "date", typeof(DateTime), fixedLength: true, size: 10, bestMatch: false);
                 AddType(table, "timestamp with time zone", typeof(DateTime), fixedLength: true);
                 AddType(table, "jsonb", typeof(string), bestMatch: false);
                 AddType(table, "uuid", typeof(Guid), fixedLength: true, size: 36);
@@ -164,7 +164,7 @@ namespace Google.Cloud.Spanner.Data
                 AddType(table, "STRING", typeof(string), format: "STRING({0})", parameters: "length",
                     stringType: true);
                 AddType(table, "BYTES", typeof(byte[]), format: "BYTES({0})", parameters: "length");
-                AddType(table, "DATE", typeof(DateTime), fixedLength: true, size: 10);
+                AddType(table, "DATE", typeof(DateTime), fixedLength: true, size: 10, bestMatch: false);
                 AddType(table, "TIMESTAMP", typeof(DateTime), fixedLength: true);
                 AddType(table, "JSON", typeof(string), bestMatch: false);
                 AddType(table, "UUID", typeof(Guid), fixedLength: true, size: 36);
@@ -218,28 +218,26 @@ namespace Google.Cloud.Spanner.Data
 
         // https://cloud.google.com/spanner/docs/reference/standard-sql/lexical
         private const string GoogleSqlReservedWords =
-            "ALL AND ANY ARRAY AS ASC ASSERT_ROWS_MODIFIED AT BETWEEN BY CASE CAST COLLATE " +
-            "CONTAINS CREATE CROSS CUBE CURRENT DEFAULT DEFINE DESC DISTINCT ELSE END ENUM " +
-            "ESCAPE EXCEPT EXCLUDE EXISTS EXTRACT FALSE FETCH FOLLOWING FOR FROM FULL " +
-            "GRAPH_TABLE GROUP GROUPING GROUPS HASH HAVING IF IGNORE IN INNER INTERSECT " +
-            "INTERVAL INTO IS JOIN LATERAL LEFT LIKE LIMIT LOOKUP MERGE NATURAL NEW NO " +
-            "NOT NULL NULLS OF ON OR ORDER OUTER OVER PARTITION PRECEDING PROTO QUALIFY " +
-            "RANGE RECURSIVE RESPECT RIGHT ROLLUP ROWS SELECT SET SOME STRUCT TABLESAMPLE " +
-            "THEN TO TREAT TRUE UNBOUNDED UNION UNNEST USING WHEN WHERE WINDOW WITH WITHIN";
+            "ALL AND ANY ARRAY AS ASC ASSERT_ROWS_MODIFIED AT BETWEEN BY CASE CAST COLLATE" +
+            "CONTAINS CREATE CROSS CUBE CURRENT DEFAULT DEFINE DESC DISTINCT ELSE END ENUM" +
+            "ESCAPE EXCEPT EXCLUDE EXISTS EXTRACT FALSE FETCH FOLLOWING FOR FROM FULL" +
+            "GRAPH_TABLE GROUP GROUPING GROUPS HASH HAVING IF IGNORE IN INNER INTERSECT" +
+            "INTERVAL INTO IS JOIN LATERAL LEFT LIKE LIMIT LOOKUP MERGE NATURAL NEW NO NOT" +
+            "NULL NULLS OF ON OR ORDER OUTER OVER PARTITION PRECEDING PROTO QUALIFY RANGE" +
+            "RECURSIVE RESPECT RIGHT ROLLUP ROWS SELECT SET SOME STRUCT TABLESAMPLE THEN" +
+            "TO TREAT TRUE UNBOUNDED UNION UNNEST USING WHEN WHERE WINDOW WITH WITHIN";
 
-        // PostgreSQL 15 reserved words; exact behavior must be tested with Spanner.
-        // https://www.postgresql.org/docs/15/sql-keywords-appendix.html
+        // PostgreSQL 15 parser's RESERVED_KEYWORD entries, not unreserved keywords.
+        // https://github.com/postgres/postgres/blob/REL_15_STABLE/src/include/parser/kwlist.h
         private const string PostgreSqlReservedWords =
-            "ALL ANALYSE ANALYZE AND ANY ARRAY AS ASC ASYMMETRIC BOTH CASE CAST CHECK " +
-            "COLLATE COLUMN CONCURRENTLY CONSTRAINT CREATE CROSS CURRENT_CATALOG " +
-            "CURRENT_DATE CURRENT_ROLE CURRENT_SCHEMA CURRENT_TIME CURRENT_TIMESTAMP " +
-            "CURRENT_USER DEFAULT DEFERRABLE DESC DISTINCT DO ELSE END EXCEPT FALSE FETCH " +
-            "FOR FOREIGN FREEZE FROM FULL GRANT GROUP HAVING ILIKE IN INITIALLY INNER " +
-            "INTERSECT INTO IS ISNULL JOIN LATERAL LEADING LEFT LIKE LIMIT LOCALTIME " +
-            "LOCALTIMESTAMP NATURAL NOT NOTNULL NULL OFFSET ON ONLY OR ORDER OUTER " +
-            "OVERLAPS PLACING PRIMARY REFERENCES RETURNING RIGHT SELECT SESSION_USER " +
-            "SIMILAR SOME SYMMETRIC TABLE TABLESAMPLE THEN TO TRAILING TRUE UNION UNIQUE " +
-            "USER USING VARIADIC VERBOSE WHEN WHERE WINDOW WITH";
+            "ALL ANALYSE ANALYZE AND ANY ARRAY AS ASC ASYMMETRIC BOTH CASE CAST CHECK" +
+            "COLLATE COLUMN CONSTRAINT CREATE CURRENT_CATALOG CURRENT_DATE CURRENT_ROLE" +
+            "CURRENT_TIME CURRENT_TIMESTAMP CURRENT_USER DEFAULT DEFERRABLE DESC DISTINCT" +
+            "DO ELSE END EXCEPT FALSE FETCH FOR FOREIGN FROM GRANT GROUP HAVING IN" +
+            "INITIALLY INTERSECT INTO LATERAL LEADING LIMIT LOCALTIME LOCALTIMESTAMP NOT" +
+            "NULL OFFSET ON ONLY OR ORDER PLACING PRIMARY REFERENCES RETURNING SELECT" +
+            "SESSION_USER SOME SYMMETRIC TABLE THEN TO TRAILING TRUE UNION UNIQUE USER" +
+            "USING VARIADIC WHEN WHERE WINDOW WITH";
 
         private static DataTable Table(string name, params (string column, Type type)[] columns)
         {
