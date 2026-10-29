@@ -64,6 +64,7 @@ namespace Google.Cloud.Spanner.Data
         private readonly bool _isRetriable = false;
         private int _disposed = 0;
         private int _commited = 0;
+        private int _completed = 0;
 
         // Flag indicating whether the transaction has executed at least one statement.
         // The TransactionTag may no longer be set once the transaction has executed one
@@ -153,7 +154,7 @@ namespace Google.Cloud.Spanner.Data
         public TimestampBound TimestampBound => _creationOptions.TimestampBound ?? _creationOptions.TransactionId?.TimestampBound;
 
         /// <inheritdoc />
-        protected override DbConnection DbConnection => SpannerConnection;
+        protected override DbConnection DbConnection => _disposed == 0 && _completed == 0 ? SpannerConnection : null;
 
         /// <summary>
         /// <see cref="SpannerConnection"/> associated with this transaction.
@@ -448,6 +449,7 @@ namespace Google.Cloud.Spanner.Data
                     settings => settings.CommitSettings, TransactionOptions.EffectiveCommitTimeout(SpannerConnection), cancellationToken);
                 var response = await _session.CommitAsync(request, callSettings).ConfigureAwait(false);
                 Interlocked.Exchange(ref _commited, 1);
+                Interlocked.Exchange(ref _completed, 1);
                 // We dispose of the SpannerTransaction to inmediately release the session to the pool when possible.
                 Dispose();
                 if (response.CommitTimestamp == null)
@@ -503,6 +505,7 @@ namespace Google.Cloud.Spanner.Data
             await  ExecuteHelper.WithErrorTranslationAndProfiling(
                 () => _session.RollbackAsync(new RollbackRequest(), callSettings),
                 "SpannerTransaction.Rollback", SpannerConnection.Logger).ConfigureAwait(false);
+            Interlocked.Exchange(ref _completed, 1);
             Dispose();
         }
 
