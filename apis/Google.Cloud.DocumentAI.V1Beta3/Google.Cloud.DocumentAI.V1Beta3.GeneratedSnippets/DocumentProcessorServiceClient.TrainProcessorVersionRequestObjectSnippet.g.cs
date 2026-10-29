@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 CustomDocumentExtractionOptions = new TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions(),
                 BaseProcessorVersion = "",
                 DocumentSchema = new DocumentSchema(),
+                ProcessorVersionOverrides = new ProcessorVersionOverrides(),
             };
             // Make the request
             Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> response = documentProcessorServiceClient.TrainProcessorVersion(request);
