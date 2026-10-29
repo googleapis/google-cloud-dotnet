@@ -115,6 +115,10 @@ namespace Google.Cloud.Spanner.Data
             {
                 row["IdentifierPattern"] = @"^[A-Za-z_][A-Za-z0-9_]*$";
                 row["OrderByColumnsInSelect"] = false;
+                row["GroupByBehavior"] = (int)GroupByBehavior.MustContainAll;
+                row["SupportedJoinOperators"] = (int)(SupportedJoinOperators.Inner |
+                    SupportedJoinOperators.LeftOuter | SupportedJoinOperators.RightOuter |
+                    SupportedJoinOperators.FullOuter);
                 row["QuotedIdentifierPattern"] = postgreSql.Value
                     ? "\"([^\"]|\"\")*\"" : @"\x60([^\x60]|\x60\x60)*\x60";
             }
@@ -190,11 +194,16 @@ namespace Google.Cloud.Spanner.Data
             row["IsFixedLength"] = fixedLength;
             row["IsNullable"] = true;
             row["IsConcurrencyType"] = false;
+            row["IsLong"] = stringType || clr == typeof(byte[]);
+            row["IsAutoincrementable"] = false;
+            row["IsFixedPrecisionScale"] = scale.HasValue;
             row["IsUnsigned"] = false;
             row["IsSearchable"] = true;
+            if (!stringType) row["IsSearchableWithLike"] = false;
             if (stringType)
             {
                 row["IsSearchableWithLike"] = true;
+                row["IsLiteralSupported"] = true;
                 row["LiteralPrefix"] = "'";
                 row["LiteralSuffix"] = "'";
             }
