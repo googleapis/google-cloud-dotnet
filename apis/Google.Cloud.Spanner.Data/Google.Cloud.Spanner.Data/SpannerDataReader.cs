@@ -200,8 +200,7 @@ namespace Google.Cloud.Spanner.Data
             }
 
             GaxPreconditions.CheckArgumentRange(bufferOffset, nameof(bufferOffset), 0, buffer.Length);
-            GaxPreconditions.CheckArgumentRange(length, nameof(length), 0, buffer.Length);
-            GaxPreconditions.CheckArgumentRange(bufferOffset + length, nameof(length), 0, buffer.Length);
+            GaxPreconditions.CheckArgumentRange(length, nameof(length), 0, buffer.Length - bufferOffset);
             if (fieldOffset < 0 || fieldOffset > value.Length)
             {
                 throw new ArgumentOutOfRangeException(nameof(fieldOffset), "Field offset exceeds the length of the field data");
