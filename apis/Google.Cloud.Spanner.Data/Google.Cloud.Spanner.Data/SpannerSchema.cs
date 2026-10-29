@@ -104,9 +104,8 @@ namespace Google.Cloud.Spanner.Data
                 ("SupportedJoinOperators", typeof(int)));
             var row = table.NewRow();
             row["DataSourceProductName"] = "Google Cloud Spanner";
-            // The provider currently reports "0.0", not the real engine version.
-            row["DataSourceProductVersion"] = connection.ServerVersion;
-            row["DataSourceProductVersionNormalized"] = connection.ServerVersion;
+            // The provider's ServerVersion is a placeholder ("0.0"), not a real
+            // server version. ADO.NET permits DBNull for unknown schema values.
             row["CompositeIdentifierSeparatorPattern"] = @"\.";
             row["ParameterMarkerFormat"] = "@{0}";
             row["ParameterNamePattern"] = @"^[A-Za-z_][A-Za-z0-9_]*$";
