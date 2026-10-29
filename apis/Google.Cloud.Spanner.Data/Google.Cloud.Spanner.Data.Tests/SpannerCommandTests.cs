@@ -62,10 +62,18 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public void PrepareNoop()
+        public void PrepareThrowsWhenConnectionUnset()
         {
             var command = new SpannerCommand();
-            command.Prepare();
+            Assert.Throws<InvalidOperationException>(() => command.Prepare());
+        }
+
+        [Fact]
+        public void PrepareThrowsWhenConnectionClosed()
+        {
+            using var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+            using var command = connection.CreateCommand();
+            Assert.Throws<InvalidOperationException>(() => command.Prepare());
         }
 
         [Fact]
