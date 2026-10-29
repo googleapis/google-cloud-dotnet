@@ -22,6 +22,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Data;
+using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -85,36 +86,72 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Theory]
-        [InlineData(false, "INT64", "STRING", "JSON")]
-        [InlineData(true, "bigint", "character varying", "jsonb")]
-        public void GetSchema_DataTypes_UsesCorrectSqlDialect(bool postgreSql, string numeric,
-            string text, string json)
+        [InlineData(false, IdentifierCase.Insensitive, "\\x60(?:[^\\\\\\x60]|\\\\.)+\\x60")]
+        [InlineData(true, IdentifierCase.Insensitive, "\"([^\"]|\"\")+\"")]
+        public void GetSchema_DataSourceInformation_ReportsDialectCapabilities(bool postgreSql,
+            IdentifierCase identifierCase, string quotedIdentifierPattern)
         {
-            var table = SpannerSchema.GetDataTypes(postgreSql);
-            Assert.True(table.Rows.Count >= 12);
-            Assert.Contains(table.Rows.Cast<System.Data.DataRow>(), row => (string)row["TypeName"] == numeric);
-            Assert.Contains(table.Rows.Cast<System.Data.DataRow>(), row => (string)row["TypeName"] == text);
-            Assert.Contains(table.Rows.Cast<System.Data.DataRow>(), row => (string)row["TypeName"] == json);
-            Assert.All(table.Rows.Cast<System.Data.DataRow>(), row =>
+            using var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+            var row = SpannerSchema.GetDataSourceInformation(connection, postgreSql).Rows[0];
+
+            Assert.Equal((int)identifierCase, row["IdentifierCase"]);
+            Assert.Equal((int)IdentifierCase.Sensitive, row["QuotedIdentifierCase"]);
+            Assert.Equal(quotedIdentifierPattern, row["QuotedIdentifierPattern"]);
+            Assert.True((bool)row["OrderByColumnsInSelect"]);
+            Assert.Equal((int)GroupByBehavior.MustContainAll, row["GroupByBehavior"]);
+            Assert.Equal((int)(SupportedJoinOperators.Inner | SupportedJoinOperators.LeftOuter |
+                SupportedJoinOperators.RightOuter | SupportedJoinOperators.FullOuter), row["SupportedJoinOperators"]);
+        }
+
+        [Theory]
+        [InlineData(false, "INT64", "ARRAY<INT64>", "CUSTOM_TYPE")]
+        [InlineData(true, "bigint", "bigint[]", "custom_type")]
+        public void GetSchema_DataTypes_ReportsStandardAndObservedTypes(bool postgreSql, string integer,
+            string array, string custom)
+        {
+            var table = SpannerSchema.CreateDataTypesTable();
+            var names = new System.Collections.Generic.HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            SpannerSchema.AddStandardDataTypes(table, names, postgreSql);
+            foreach (string name in new[] { integer, array, custom })
             {
-                Assert.NotEqual(DBNull.Value, row["DataType"]);
-                Assert.NotEqual(DBNull.Value, row["CreateFormat"]);
-                // No numeric enum is exposed for SpannerDbType; never substitute DbType.
-                Assert.Equal(DBNull.Value, row["ProviderDbType"]);
-            });
+                if (names.Add(name)) SpannerSchema.AddObservedType(table, name, postgreSql);
+            }
+
+            Assert.True(table.Rows.Count > 10);
+            Assert.Contains(table.Rows.Cast<System.Data.DataRow>(), row => (string)row["TypeName"] == integer);
+            Assert.Contains(table.Rows.Cast<System.Data.DataRow>(), row => (string)row["TypeName"] == array);
+            var integerType = Assert.Single(table.Rows.Cast<System.Data.DataRow>(), row => (string)row["TypeName"] == integer);
+            Assert.NotEqual(DBNull.Value, integerType["DataType"]);
+            var arrayType = Assert.Single(table.Rows.Cast<System.Data.DataRow>(), row => (string)row["TypeName"] == array);
+            Assert.NotEqual(DBNull.Value, arrayType["DataType"]);
+            var customType = Assert.Single(table.Rows.Cast<System.Data.DataRow>(), row => (string)row["TypeName"] == custom);
+            Assert.Equal(DBNull.Value, customType["DataType"]);
+            Assert.Equal(DBNull.Value, customType["IsNullable"]);
+            Assert.All(table.Rows.Cast<System.Data.DataRow>(), row =>
+                Assert.Equal(DBNull.Value, row["ProviderDbType"]));
         }
 
         [Theory]
         [InlineData(false, "ASSERT_ROWS_MODIFIED")]
-        [InlineData(true, "CONCURRENTLY")]
-        public void GetSchema_ReservedWords_UsesCorrectSqlDialect(bool postgreSql, string keyword)
+        [InlineData(false, "COLLATE")]
+        [InlineData(false, "CONTAINS")]
+        [InlineData(false, "ENUM")]
+        [InlineData(false, "ESCAPE")]
+        [InlineData(true, "CURRENT_TIMESTAMP")]
+        [InlineData(true, "CURRENT_USER")]
+        [InlineData(true, "CONSTRAINT")]
+        [InlineData(true, "REFERENCES")]
+        [InlineData(true, "RETURNING")]
+        public void GetSchema_ReservedWords_ReportsDialectKeywords(bool postgreSql, string keyword)
         {
             var table = SpannerSchema.GetReservedWords(postgreSql);
-            Assert.True(table.Rows.Count > 75);
-            Assert.Contains(table.Rows.Cast<System.Data.DataRow>(), row =>
-                (string)row["ReservedWord"] == keyword);
-            Assert.DoesNotContain(table.Rows.Cast<System.Data.DataRow>(), row =>
-                (string)row["ReservedWord"] == "NOT_A_KEYWORD");
+            var words = table.Rows.Cast<System.Data.DataRow>()
+                .Select(row => (string)row["ReservedWord"]).ToHashSet(StringComparer.OrdinalIgnoreCase);
+
+            Assert.True(table.Rows.Count > 50);
+            Assert.Contains(keyword, words);
+            Assert.DoesNotContain("COLLATECONTAINS", words);
+            Assert.DoesNotContain("ENUMESCAPE", words);
         }
 
         [Fact]

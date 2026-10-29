@@ -17,6 +17,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Globalization;
+using Google.Cloud.Spanner.V1;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -47,7 +48,7 @@ namespace Google.Cloud.Spanner.Data
                 case "DATASOURCEINFORMATION":
                     return GetDataSourceInformation(connection,
                         connection.State == ConnectionState.Open ? (bool?)IsPostgreSql(connection) : null);
-                case "DATATYPES": return GetDataTypes(IsPostgreSql(connection));
+                case "DATATYPES": return GetDataTypes(connection, IsPostgreSql(connection));
                 case "RESERVEDWORDS": return GetReservedWords(IsPostgreSql(connection));
                 default:
                     throw new ArgumentException($"The schema collection '{collectionName}' is not supported.",
@@ -83,7 +84,7 @@ namespace Google.Cloud.Spanner.Data
             return table;
         }
 
-        private static DataTable GetDataSourceInformation(SpannerConnection connection, bool? postgreSql)
+        internal static DataTable GetDataSourceInformation(SpannerConnection connection, bool? postgreSql)
         {
             var table = Table("DataSourceInformation",
                 ("CompositeIdentifierSeparatorPattern", typeof(string)),
@@ -108,26 +109,57 @@ namespace Google.Cloud.Spanner.Data
             // server version. ADO.NET permits DBNull for unknown schema values.
             row["CompositeIdentifierSeparatorPattern"] = @"\.";
             row["ParameterMarkerFormat"] = "@{0}";
-            row["ParameterNamePattern"] = @"^[A-Za-z_][A-Za-z0-9_]*$";
             row["StatementSeparatorPattern"] = ";";
             if (postgreSql.HasValue)
             {
-                row["IdentifierPattern"] = @"^[A-Za-z_][A-Za-z0-9_]*$";
-                row["OrderByColumnsInSelect"] = false;
+                // Spanner folds unquoted identifiers to lowercase for both
+                // dialects; quoted identifiers preserve case.
+                row["IdentifierPattern"] = @"^[\p{L}_][\p{L}\p{N}_]*$";
+                row["ParameterNamePattern"] = @"^[\p{L}_][\p{L}\p{N}_]*$";
+                row["IdentifierCase"] = (int)IdentifierCase.Insensitive;
+                row["QuotedIdentifierCase"] = (int)IdentifierCase.Sensitive;
+                // Spanner does not impose PostgreSQL's usual 63-byte identifier
+                // limit on all object names; the limit varies by identifier kind.
+                row["OrderByColumnsInSelect"] = true;
                 row["GroupByBehavior"] = (int)GroupByBehavior.MustContainAll;
                 row["SupportedJoinOperators"] = (int)(SupportedJoinOperators.Inner |
                     SupportedJoinOperators.LeftOuter | SupportedJoinOperators.RightOuter |
                     SupportedJoinOperators.FullOuter);
                 row["QuotedIdentifierPattern"] = postgreSql.Value
-                    ? "\"([^\"]|\"\")*\"" : @"\x60([^\x60]|\x60\x60)*\x60";
+                    ? "\"([^\"]|\"\")+\"" : @"\x60(?:[^\\\x60]|\\.)+\x60";
             }
             table.Rows.Add(row);
             return table;
         }
 
-        internal static DataTable GetDataTypes(bool postgreSql)
+        // Start with the types defined by each Spanner dialect, then merge types
+        // found in INFORMATION_SCHEMA.COLUMNS. The information schema is the
+        // server-owned source for user-defined types and types added by newer
+        // server releases. Unknown ADO.NET properties remain DBNull.
+        internal static DataTable GetDataTypes(SpannerConnection connection, bool postgreSql)
         {
-            var table = Table("DataTypes",
+            var table = CreateDataTypesTable();
+            var names = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            AddStandardDataTypes(table, names, postgreSql);
+            using (var command = connection.CreateSelectCommand(
+                "SELECT DISTINCT spanner_type FROM information_schema.columns ORDER BY spanner_type"))
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    if (reader.IsDBNull(0))
+                    {
+                        continue;
+                    }
+                    string typeName = reader.GetString(0);
+                    typeName = CanonicalTypeName(typeName);
+                    if (names.Add(typeName)) AddObservedType(table, typeName, postgreSql);
+                }
+            }
+            return table;
+        }
+
+        internal static DataTable CreateDataTypesTable() => Table("DataTypes",
                 ("TypeName", typeof(string)), ("ProviderDbType", typeof(int)),
                 ("ColumnSize", typeof(long)), ("CreateFormat", typeof(string)),
                 ("CreateParameters", typeof(string)), ("DataType", typeof(string)),
@@ -139,117 +171,252 @@ namespace Google.Cloud.Spanner.Data
                 ("MaximumScale", typeof(short)), ("MinimumScale", typeof(short)),
                 ("IsConcurrencyType", typeof(bool)), ("IsLiteralSupported", typeof(bool)),
                 ("LiteralPrefix", typeof(string)), ("LiteralSuffix", typeof(string)));
+
+        internal static void AddObservedType(DataTable table, string typeName, bool postgreSql)
+        {
+            var row = table.NewRow();
+            row["TypeName"] = typeName;
+            // Only the type name and CLR mapping are knowable from the Spanner
+            // information schema. Leave the remaining ADO.NET descriptors DBNull
+            // instead of guessing size, literal, or capability values.
+            var clrType = GetClrType(typeName, postgreSql);
+            if (clrType != null) row["DataType"] = clrType.FullName;
+            table.Rows.Add(row);
+        }
+
+        internal static void AddStandardDataTypes(DataTable table, HashSet<string> names, bool postgreSql)
+        {
             if (postgreSql)
             {
-                AddType(table, "boolean", typeof(bool), fixedLength: true);
-                AddType(table, "bigint", typeof(long), fixedLength: true, size: 19);
-                AddType(table, "real", typeof(float), fixedLength: true);
-                AddType(table, "double precision", typeof(double), fixedLength: true);
-                AddType(table, "numeric", typeof(PgNumeric));
-                AddType(table, "character varying", typeof(string), format: "character varying({0})",
-                    parameters: "length", size: 2621440, stringType: true);
-                AddType(table, "text", typeof(string), stringType: true, bestMatch: false);
-                AddType(table, "bytea", typeof(byte[]));
-                AddType(table, "date", typeof(DateTime), fixedLength: true, size: 10, bestMatch: false);
-                AddType(table, "timestamp with time zone", typeof(DateTime), fixedLength: true);
-                AddType(table, "jsonb", typeof(string), bestMatch: false);
-                AddType(table, "uuid", typeof(Guid), fixedLength: true, size: 36);
-                AddType(table, "interval", typeof(Interval));
-                AddType(table, "bigint[]", typeof(List<long>));
+                AddType(table, names, "boolean", typeof(bool));
+                AddType(table, names, "bigint", typeof(long), size: 19);
+                AddType(table, names, "int8", typeof(long), size: 19,
+                    bestMatch: false);
+                AddType(table, names, "int", typeof(long), size: 19,
+                    bestMatch: false);
+                AddType(table, names, "real", typeof(float));
+                AddType(table, names, "float4", typeof(float), bestMatch: false);
+                AddType(table, names, "double precision", typeof(double));
+                AddType(table, names, "float8", typeof(double), bestMatch: false);
+                AddType(table, names, "numeric", typeof(PgNumeric));
+                AddType(table, names, "decimal", typeof(PgNumeric), bestMatch: false);
+                AddType(table, names, "character varying", typeof(string), format: "character varying({0})",
+                    parameters: "length", stringType: true, longType: true);
+                AddType(table, names, "varchar", typeof(string), format: "varchar({0})",
+                    parameters: "length", stringType: true, longType: true, bestMatch: false);
+                AddType(table, names, "text", typeof(string), stringType: true, longType: true, bestMatch: false);
+                AddType(table, names, "bytea", typeof(byte[]), longType: true);
+                AddType(table, names, "date", typeof(DateTime), bestMatch: false);
+                AddType(table, names, "timestamp with time zone", typeof(DateTime));
+                AddType(table, names, "jsonb", typeof(string), bestMatch: false);
+                AddType(table, names, "uuid", typeof(Guid));
+                AddType(table, names, "interval", typeof(Interval));
+                AddType(table, names, "serial", typeof(long), bestMatch: false);
+                AddType(table, names, "smallserial", typeof(long), bestMatch: false);
+                AddType(table, names, "serial2", typeof(long), bestMatch: false);
+                AddType(table, names, "serial4", typeof(long), bestMatch: false);
+                AddType(table, names, "serial8", typeof(long), bestMatch: false);
+                AddType(table, names, "bigserial", typeof(long), bestMatch: false);
+                AddType(table, names, "spanner.commit_timestamp", typeof(DateTime), bestMatch: false);
+                foreach (var (arrayName, elementName) in new[]
+                {
+                    ("boolean[]", "boolean"), ("bigint[]", "bigint"), ("real[]", "real"),
+                    ("double precision[]", "double precision"), ("numeric[]", "numeric"),
+                    ("character varying[]", "character varying"), ("text[]", "text"),
+                    ("bytea[]", "bytea"), ("date[]", "date"),
+                    ("timestamp with time zone[]", "timestamp with time zone"),
+                    ("jsonb[]", "jsonb"), ("uuid[]", "uuid"), ("interval[]", "interval")
+                })
+                {
+                    AddArrayType(table, names, arrayName, elementName, postgreSql: true);
+                }
             }
             else
             {
-                AddType(table, "BOOL", typeof(bool), fixedLength: true);
-                AddType(table, "INT64", typeof(long), fixedLength: true, size: 19);
-                AddType(table, "FLOAT32", typeof(float), fixedLength: true);
-                AddType(table, "FLOAT64", typeof(double), fixedLength: true);
-                AddType(table, "NUMERIC", typeof(SpannerNumeric), fixedLength: true, size: 38, scale: 9);
-                AddType(table, "STRING", typeof(string), format: "STRING({0})", parameters: "length",
-                    stringType: true);
-                AddType(table, "BYTES", typeof(byte[]), format: "BYTES({0})", parameters: "length");
-                AddType(table, "DATE", typeof(DateTime), fixedLength: true, size: 10, bestMatch: false);
-                AddType(table, "TIMESTAMP", typeof(DateTime), fixedLength: true);
-                AddType(table, "JSON", typeof(string), bestMatch: false);
-                AddType(table, "UUID", typeof(Guid), fixedLength: true, size: 36);
-                AddType(table, "ARRAY<INT64>", typeof(List<long>));
+                AddType(table, names, "BOOL", typeof(bool));
+                AddType(table, names, "BOOLEAN", typeof(bool), bestMatch: false);
+                AddType(table, names, "INT64", typeof(long), size: 19);
+                AddType(table, names, "FLOAT32", typeof(float));
+                AddType(table, names, "FLOAT64", typeof(double));
+                AddType(table, names, "NUMERIC", typeof(SpannerNumeric),
+                    fixedPrecisionScale: true, precision: 38, scale: 9);
+                AddType(table, names, "STRING", typeof(string), format: "STRING({0})", parameters: "length",
+                    stringType: true, longType: true);
+                AddType(table, names, "BYTES", typeof(byte[]), format: "BYTES({0})", parameters: "length", longType: true);
+                AddType(table, names, "DATE", typeof(DateTime), bestMatch: false);
+                AddType(table, names, "TIMESTAMP", typeof(DateTime));
+                AddType(table, names, "JSON", typeof(string), bestMatch: false);
+                AddType(table, names, "UUID", typeof(Guid));
+                AddType(table, names, "INTERVAL", typeof(Interval));
+                foreach (var elementName in new[]
+                {
+                    "BOOL", "INT64", "FLOAT32", "FLOAT64", "NUMERIC", "STRING", "BYTES", "DATE",
+                    "TIMESTAMP", "JSON", "UUID"
+                })
+                {
+                    AddArrayType(table, names, $"ARRAY<{elementName}>", elementName, postgreSql: false);
+                }
             }
-            return table;
         }
 
-        private static void AddType(DataTable table, string type, Type clr, bool fixedLength = false,
-            long? size = null, string format = null, string parameters = null,
-            bool stringType = false, bool bestMatch = true, short? scale = null)
+        private static void AddArrayType(DataTable table, HashSet<string> names, string typeName,
+            string elementTypeName, bool postgreSql)
         {
+            var elementType = GetClrType(elementTypeName, postgreSql);
+            if (elementType == null) return;
+            AddType(table, names, typeName, typeof(List<>).MakeGenericType(elementType),
+                format: postgreSql ? "{0}[]" : "ARRAY<{0}>", parameters: "element type");
+        }
+
+        private static void AddType(DataTable table, HashSet<string> names, string typeName, System.Type clrType,
+            bool fixedLength = false, long? size = null, string format = null, string parameters = null,
+            bool stringType = false, bool longType = false, bool bestMatch = true,
+            bool autoincrementable = false, bool fixedPrecisionScale = false, short? precision = null, short? scale = null)
+        {
+            if (!names.Add(typeName)) return;
             var row = table.NewRow();
-            row["TypeName"] = type;
-            // SpannerDbType is an object, not a numeric provider-specific enum.
-            // In particular, (int)DbType is NOT a ProviderDbType value.
-            row["DataType"] = clr.FullName;
-            row["CreateFormat"] = format ?? type;
-            if (parameters != null) row["CreateParameters"] = parameters;
+            row["TypeName"] = typeName;
+            row["DataType"] = clrType.FullName;
+            row["CreateFormat"] = format ?? typeName;
             if (size.HasValue) row["ColumnSize"] = size.Value;
+            if (parameters != null) row["CreateParameters"] = parameters;
+            if (autoincrementable) row["IsAutoincrementable"] = true;
             row["IsBestMatch"] = bestMatch;
             row["IsCaseSensitive"] = stringType;
-            row["IsFixedLength"] = fixedLength;
-            row["IsNullable"] = true;
-            row["IsConcurrencyType"] = false;
-            row["IsLong"] = stringType || clr == typeof(byte[]);
-            // Integer keys can be generated using sequences/identity syntax.
-            // Do not claim universal non-autoincrementability for bigint/INT64.
-            if (clr != typeof(long)) row["IsAutoincrementable"] = false;
-            row["IsFixedPrecisionScale"] = scale.HasValue;
-            row["IsUnsigned"] = false;
-            row["IsSearchable"] = true;
-            if (!stringType) row["IsSearchableWithLike"] = false;
+            if (fixedLength) row["IsFixedLength"] = true;
+            row["IsFixedPrecisionScale"] = fixedPrecisionScale;
+            if (longType) row["IsLong"] = true;
+            row["IsSearchableWithLike"] = stringType ? (object)true : DBNull.Value;
+            if (clrType == typeof(long) || clrType == typeof(float) || clrType == typeof(double) ||
+                clrType == typeof(PgNumeric) || clrType == typeof(SpannerNumeric)) row["IsUnsigned"] = false;
+            row["IsConcurrencyType"] = DBNull.Value;
+            row["IsLiteralSupported"] = DBNull.Value;
             if (stringType)
             {
-                row["IsSearchableWithLike"] = true;
-                row["IsLiteralSupported"] = true;
                 row["LiteralPrefix"] = "'";
                 row["LiteralSuffix"] = "'";
             }
-            if (scale.HasValue)
+            if (precision.HasValue)
             {
-                row["MinimumScale"] = scale.Value;
+                row["ColumnSize"] = precision.Value;
                 row["MaximumScale"] = scale.Value;
-                row["IsFixedPrecisionScale"] = true;
+                row["MinimumScale"] = (short)0;
             }
             table.Rows.Add(row);
+        }
+
+        private static string CanonicalTypeName(string typeName)
+        {
+            // Column SPANNER_TYPE values can carry a declared string/bytes length.
+            // The ADO.NET collection describes the type family, not one column's
+            // chosen limit. Keep array element declarations intact.
+            if (typeName.StartsWith("ARRAY<", StringComparison.OrdinalIgnoreCase))
+            {
+                return "ARRAY<" + CanonicalTypeName(typeName.Substring(6, typeName.Length - 7)) + ">";
+            }
+            if (typeName.EndsWith("[]", StringComparison.Ordinal))
+            {
+                return CanonicalTypeName(typeName.Substring(0, typeName.Length - 2)) + "[]";
+            }
+            int modifierStart = typeName.IndexOf('(');
+            return modifierStart < 0 ? typeName : typeName.Substring(0, modifierStart).TrimEnd();
+        }
+
+        private static System.Type GetClrType(string typeName, bool postgreSql)
+        {
+            if (typeName.StartsWith("ARRAY<", StringComparison.OrdinalIgnoreCase) && typeName.EndsWith(">", StringComparison.Ordinal))
+            {
+                var elementType = GetClrType(typeName.Substring(6, typeName.Length - 7), postgreSql);
+                return elementType == null ? null : typeof(System.Collections.Generic.List<>).MakeGenericType(elementType);
+            }
+            if (postgreSql && typeName.EndsWith("[]", StringComparison.Ordinal))
+            {
+                var elementType = GetClrType(typeName.Substring(0, typeName.Length - 2), true);
+                return elementType == null ? null : typeof(System.Collections.Generic.List<>).MakeGenericType(elementType);
+            }
+            // Information schema type names can include modifiers such as
+            // STRING(MAX) or character varying(100). The modifier affects the
+            // database type declaration, not its provider CLR type.
+            typeName = CanonicalTypeName(typeName);
+            if (!postgreSql)
+            {
+                switch (typeName.ToUpperInvariant())
+                {
+                    case "BOOL": return typeof(bool);
+                    case "INT64": return typeof(long);
+                    case "FLOAT32": return typeof(float);
+                    case "FLOAT64": return typeof(double);
+                    case "NUMERIC": return typeof(SpannerNumeric);
+                    case "STRING": return typeof(string);
+                    case "BYTES": return typeof(byte[]);
+                    case "DATE":
+                    case "TIMESTAMP": return typeof(DateTime);
+                    case "JSON": return typeof(string);
+                    case "UUID": return typeof(Guid);
+                    default: return null;
+                }
+            }
+            switch (typeName.ToLowerInvariant())
+            {
+                case "bool":
+                case "boolean": return typeof(bool);
+                case "int8":
+                case "bigint": return typeof(long);
+                case "float4":
+                case "real": return typeof(float);
+                case "float8":
+                case "double precision": return typeof(double);
+                case "numeric": return typeof(PgNumeric);
+                case "text":
+                case "varchar":
+                case "character varying": return typeof(string);
+                case "bytea": return typeof(byte[]);
+                case "date":
+                case "timestamptz":
+                case "timestamp with time zone": return typeof(DateTime);
+                case "jsonb": return typeof(string);
+                case "uuid": return typeof(Guid);
+                case "interval": return typeof(Interval);
+                default: return null;
+            }
         }
 
         internal static DataTable GetReservedWords(bool postgreSql)
         {
             var table = Table("ReservedWords", ("ReservedWord", typeof(string)));
-            foreach (var word in (postgreSql ? PostgreSqlReservedWords : GoogleSqlReservedWords)
+            // Spanner exposes dialect metadata through INFORMATION_SCHEMA, but
+            // currently has no SQL catalog for parser keywords. These lists follow
+            // the published language references; type/dialect selection is queried
+            // from the connected database.
+            foreach (string word in (postgreSql ? PostgreSqlReservedWords : GoogleSqlReservedWords)
                 .Split(new[] { ' ', '\r', '\n', '\t' }, StringSplitOptions.RemoveEmptyEntries))
+            {
                 table.Rows.Add(word);
+            }
             return table;
         }
 
-        // https://cloud.google.com/spanner/docs/reference/standard-sql/lexical
         private const string GoogleSqlReservedWords =
-            "ALL AND ANY ARRAY AS ASC ASSERT_ROWS_MODIFIED AT BETWEEN BY CASE CAST COLLATE" +
-            "CONTAINS CREATE CROSS CUBE CURRENT DEFAULT DEFINE DESC DISTINCT ELSE END ENUM" +
-            "ESCAPE EXCEPT EXCLUDE EXISTS EXTRACT FALSE FETCH FOLLOWING FOR FROM FULL" +
-            "GRAPH_TABLE GROUP GROUPING GROUPS HASH HAVING IF IGNORE IN INNER INTERSECT" +
-            "INTERVAL INTO IS JOIN LATERAL LEFT LIKE LIMIT LOOKUP MERGE NATURAL NEW NO NOT" +
-            "NULL NULLS OF ON OR ORDER OUTER OVER PARTITION PRECEDING PROTO QUALIFY RANGE" +
-            "RECURSIVE RESPECT RIGHT ROLLUP ROWS SELECT SET SOME STRUCT TABLESAMPLE THEN" +
+            "ALL AND ANY ARRAY AS ASC ASSERT_ROWS_MODIFIED AT BETWEEN BY CASE CAST COLLATE CONTAINS " +
+            "CREATE CROSS CUBE CURRENT DEFAULT DEFINE DESC DISTINCT ELSE END ENUM ESCAPE EXCEPT EXCLUDE " +
+            "EXISTS EXTRACT FALSE FETCH FOLLOWING FOR FROM FULL GRAPH_TABLE GROUP GROUPING GROUPS HASH " +
+            "HAVING IF IGNORE IN INNER INTERSECT INTERVAL INTO IS JOIN LATERAL LEFT LIKE LIMIT LOOKUP " +
+            "MERGE NATURAL NEW NO NOT NULL NULLS OF ON OR ORDER OUTER OVER PARTITION PRECEDING PROTO " +
+            "RANGE RECURSIVE RESPECT RIGHT ROLLUP ROWS SELECT SET SOME STRUCT TABLESAMPLE THEN " +
             "TO TREAT TRUE UNBOUNDED UNION UNNEST USING WHEN WHERE WINDOW WITH WITHIN";
 
-        // PostgreSQL 15 parser's RESERVED_KEYWORD entries, not unreserved keywords.
-        // https://github.com/postgres/postgres/blob/REL_15_STABLE/src/include/parser/kwlist.h
+        // PostgreSQL 15 RESERVED_KEYWORD tokens. Spanner does not expose a keyword
+        // catalog for its PostgreSQL parser; this is the documented language baseline.
         private const string PostgreSqlReservedWords =
-            "ALL ANALYSE ANALYZE AND ANY ARRAY AS ASC ASYMMETRIC BOTH CASE CAST CHECK" +
-            "COLLATE COLUMN CONSTRAINT CREATE CURRENT_CATALOG CURRENT_DATE CURRENT_ROLE" +
-            "CURRENT_TIME CURRENT_TIMESTAMP CURRENT_USER DEFAULT DEFERRABLE DESC DISTINCT" +
-            "DO ELSE END EXCEPT FALSE FETCH FOR FOREIGN FROM GRANT GROUP HAVING IN" +
-            "INITIALLY INTERSECT INTO LATERAL LEADING LIMIT LOCALTIME LOCALTIMESTAMP NOT" +
-            "NULL OFFSET ON ONLY OR ORDER PLACING PRIMARY REFERENCES RETURNING SELECT" +
-            "SESSION_USER SOME SYMMETRIC TABLE THEN TO TRAILING TRUE UNION UNIQUE USER" +
-            "USING VARIADIC WHEN WHERE WINDOW WITH";
+            "ALL ANALYSE ANALYZE AND ANY ARRAY AS ASC ASYMMETRIC BOTH CASE CAST CHECK COLLATE COLUMN " +
+            "CONSTRAINT CREATE CURRENT_CATALOG CURRENT_DATE CURRENT_ROLE CURRENT_TIME CURRENT_TIMESTAMP " +
+            "CURRENT_USER DEFAULT DEFERRABLE DESC DISTINCT DO ELSE END EXCEPT FALSE FETCH FOR FOREIGN " +
+            "FROM GRANT GROUP HAVING IN INITIALLY INTERSECT INTO LATERAL LEADING LIMIT LOCALTIME " +
+            "LOCALTIMESTAMP NOT NULL OFFSET ON ONLY OR ORDER PLACING PRIMARY REFERENCES RETURNING " +
+            "SESSION_USER SOME SYMMETRIC TABLE THEN TO TRAILING TRUE UNION UNIQUE USER USING VARIADIC " +
+            "WHEN WHERE WINDOW WITH";
 
-        private static DataTable Table(string name, params (string column, Type type)[] columns)
+        private static DataTable Table(string name, params (string column, System.Type type)[] columns)
         {
             var table = new DataTable(name);
             foreach (var (column, type) in columns) table.Columns.Add(column, type);
