@@ -20,6 +20,7 @@ using Grpc.Core;
 using Grpc.Auth;
 using System;
 using System.IO;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -36,14 +37,31 @@ namespace Google.Cloud.Spanner.Data.Tests
             var collections = connection.GetSchema();
             Assert.Equal("MetaDataCollections", collections.TableName);
             Assert.Equal(5, collections.Rows.Count);
+            foreach (var row in collections.Rows.Cast<System.Data.DataRow>())
+            {
+                Assert.Equal(0, row.Field<int>("NumberOfRestrictions"));
+                Assert.Equal(0, row.Field<int>("NumberOfIdentifierParts"));
+            }
 
-            foreach (var name in new[] { "MetaDataCollections", "DataSourceInformation", "DataTypes", "Restrictions", "ReservedWords" })
+            foreach (var name in new[] { "MetaDataCollections", "DataSourceInformation", "Restrictions" })
             {
                 Assert.Equal(name, connection.GetSchema(name).TableName);
                 Assert.Equal(name, connection.GetSchema(name.ToLowerInvariant()).TableName);
                 Assert.Equal(name, connection.GetSchema(name.ToUpperInvariant()).TableName);
                 Assert.Equal(name, connection.GetSchema(name, Array.Empty<string>()).TableName);
+            }
 
+            // Dialect-specific metadata requires an open database connection;
+            // a connection string alone does not disclose the database dialect.
+            foreach (var name in new[] { "DataTypes", "ReservedWords" })
+            {
+                Assert.Throws<InvalidOperationException>(() => connection.GetSchema(name));
+                Assert.Throws<InvalidOperationException>(() => connection.GetSchema(name.ToUpperInvariant()));
+            }
+
+            foreach (var name in new[] { "MetaDataCollections", "DataSourceInformation",
+                         "DataTypes", "Restrictions", "ReservedWords" })
+            {
                 var exception = Assert.Throws<ArgumentException>(
                     () => connection.GetSchema(name, new[] { "restriction" }));
                 Assert.Equal("restrictionValues", exception.ParamName);
@@ -61,6 +79,40 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Equal("Google Cloud Spanner", schema.Rows[0]["DataSourceProductName"]);
             Assert.Equal(connection.ServerVersion, schema.Rows[0]["DataSourceProductVersion"]);
             Assert.Equal("@{0}", schema.Rows[0]["ParameterMarkerFormat"]);
+            Assert.Equal(";", schema.Rows[0]["StatementSeparatorPattern"]);
+        }
+
+        [Theory]
+        [InlineData(false, "INT64", "STRING", "JSON")]
+        [InlineData(true, "bigint", "character varying", "jsonb")]
+        public void GetSchema_DataTypes_UsesCorrectSqlDialect(bool postgreSql, string numeric,
+            string text, string json)
+        {
+            var table = SpannerSchema.GetDataTypes(postgreSql);
+            Assert.True(table.Rows.Count >= 12);
+            Assert.Contains(table.Rows.Cast<System.Data.DataRow>(), row => (string)row["TypeName"] == numeric);
+            Assert.Contains(table.Rows.Cast<System.Data.DataRow>(), row => (string)row["TypeName"] == text);
+            Assert.Contains(table.Rows.Cast<System.Data.DataRow>(), row => (string)row["TypeName"] == json);
+            Assert.All(table.Rows.Cast<System.Data.DataRow>(), row =>
+            {
+                Assert.NotEqual(DBNull.Value, row["DataType"]);
+                Assert.NotEqual(DBNull.Value, row["CreateFormat"]);
+                // No numeric enum is exposed for SpannerDbType; never substitute DbType.
+                Assert.Equal(DBNull.Value, row["ProviderDbType"]);
+            });
+        }
+
+        [Theory]
+        [InlineData(false, "ASSERT_ROWS_MODIFIED")]
+        [InlineData(true, "CONCURRENTLY")]
+        public void GetSchema_ReservedWords_UsesCorrectSqlDialect(bool postgreSql, string keyword)
+        {
+            var table = SpannerSchema.GetReservedWords(postgreSql);
+            Assert.True(table.Rows.Count > 75);
+            Assert.Contains(table.Rows.Cast<System.Data.DataRow>(), row =>
+                (string)row["ReservedWord"] == keyword);
+            Assert.DoesNotContain(table.Rows.Cast<System.Data.DataRow>(), row =>
+                (string)row["ReservedWord"] == "NOT_A_KEYWORD");
         }
 
         [Fact]
