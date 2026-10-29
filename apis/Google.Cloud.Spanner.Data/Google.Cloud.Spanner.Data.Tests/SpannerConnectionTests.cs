@@ -37,7 +37,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             foreach (var name in new[] { "MetaDataCollections", "DataSourceInformation", "DataTypes", "Restrictions", "ReservedWords" })
             {
                 Assert.Equal(name, connection.GetSchema(name).TableName);
+                Assert.Equal(name, connection.GetSchema(name.ToUpperInvariant()).TableName);
             }
+            var exception = Assert.Throws<ArgumentException>(() => connection.GetSchema("DataTypes", new[] { "restriction" }));
+            Assert.Equal("restrictionValues", exception.ParamName);
+            Assert.Contains("Restrictions are not supported for the requested schema collection.", exception.Message);
         }
 
         [Fact]

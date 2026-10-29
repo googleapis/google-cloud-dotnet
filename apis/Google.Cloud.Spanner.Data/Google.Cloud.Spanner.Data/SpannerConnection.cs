@@ -109,10 +109,14 @@ namespace Google.Cloud.Spanner.Data
         public override DataTable GetSchema(string collectionName, string[] restrictionValues)
         {
             GaxPreconditions.CheckNotNullOrEmpty(collectionName, nameof(collectionName));
-            switch (collectionName)
+            if (restrictionValues != null && restrictionValues.Length != 0)
             {
-                case "MetaDataCollections":
-                    var collections = CreateSchemaTable(collectionName,
+                throw new ArgumentException("Restrictions are not supported for the requested schema collection.", nameof(restrictionValues));
+            }
+            switch (collectionName.ToUpperInvariant())
+            {
+                case "METADATACOLLECTIONS":
+                    var collections = CreateSchemaTable("MetaDataCollections",
                         ("CollectionName", typeof(string)),
                         ("NumberOfRestrictions", typeof(int)),
                         ("NumberOfIdentifierParts", typeof(int)));
@@ -121,8 +125,8 @@ namespace Google.Cloud.Spanner.Data
                         collections.Rows.Add(name, 0, 0);
                     }
                     return collections;
-                case "DataSourceInformation":
-                    return CreateSchemaTable(collectionName,
+                case "DATASOURCEINFORMATION":
+                    return CreateSchemaTable("DataSourceInformation",
                         ("CompositeIdentifierSeparatorPattern", typeof(string)),
                         ("DataSourceProductName", typeof(string)),
                         ("DataSourceProductVersion", typeof(string)),
@@ -139,8 +143,8 @@ namespace Google.Cloud.Spanner.Data
                         ("StatementSeparatorPattern", typeof(string)),
                         ("StringLiteralPattern", typeof(string)),
                         ("SupportedJoinOperators", typeof(int)));
-                case "DataTypes":
-                    return CreateSchemaTable(collectionName,
+                case "DATATYPES":
+                    return CreateSchemaTable("DataTypes",
                         ("TypeName", typeof(string)), ("ProviderDbType", typeof(int)), ("ColumnSize", typeof(long)),
                         ("CreateFormat", typeof(string)), ("CreateParameters", typeof(string)), ("DataType", typeof(string)),
                         ("IsAutoincrementable", typeof(bool)), ("IsBestMatch", typeof(bool)), ("IsCaseSensitive", typeof(bool)),
@@ -149,12 +153,12 @@ namespace Google.Cloud.Spanner.Data
                         ("IsUnsigned", typeof(bool)), ("MaximumScale", typeof(short)), ("MinimumScale", typeof(short)),
                         ("IsConcurrencyType", typeof(bool)), ("IsLiteralSupported", typeof(bool)),
                         ("LiteralPrefix", typeof(string)), ("LiteralSuffix", typeof(string)));
-                case "Restrictions":
-                    return CreateSchemaTable(collectionName,
+                case "RESTRICTIONS":
+                    return CreateSchemaTable("Restrictions",
                         ("CollectionName", typeof(string)), ("RestrictionName", typeof(string)),
                         ("RestrictionDefault", typeof(string)), ("RestrictionNumber", typeof(int)));
-                case "ReservedWords":
-                    return CreateSchemaTable(collectionName, ("ReservedWord", typeof(string)));
+                case "RESERVEDWORDS":
+                    return CreateSchemaTable("ReservedWords", ("ReservedWord", typeof(string)));
                 default:
                     throw new ArgumentException($"The schema collection '{collectionName}' is not supported.", nameof(collectionName));
             }
