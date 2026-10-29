@@ -277,10 +277,10 @@ namespace Google.Cloud.SecretManager.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings EnableManagedRotationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings EnableManagedRotationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -289,10 +289,10 @@ namespace Google.Cloud.SecretManager.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings RotateSecretSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings RotateSecretSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -2663,7 +2663,7 @@ namespace Google.Cloud.SecretManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual SecretVersion EnableManagedRotation(string parent, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual SecretVersion EnableManagedRotation(string parent, CloudSqlSingleUserCredentials cloudSqlSingleUserCredentials, gaxgrpc::CallSettings callSettings = null) =>
             EnableManagedRotation(new EnableManagedRotationRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
@@ -2688,7 +2688,7 @@ namespace Google.Cloud.SecretManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<SecretVersion> EnableManagedRotationAsync(string parent, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<SecretVersion> EnableManagedRotationAsync(string parent, CloudSqlSingleUserCredentials cloudSqlSingleUserCredentials, gaxgrpc::CallSettings callSettings = null) =>
             EnableManagedRotationAsync(new EnableManagedRotationRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
@@ -2713,7 +2713,7 @@ namespace Google.Cloud.SecretManager.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<SecretVersion> EnableManagedRotationAsync(string parent, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<SecretVersion> EnableManagedRotationAsync(string parent, CloudSqlSingleUserCredentials cloudSqlSingleUserCredentials, st::CancellationToken cancellationToken) =>
             EnableManagedRotationAsync(parent, cloudSqlSingleUserCredentials, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2734,7 +2734,7 @@ namespace Google.Cloud.SecretManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual SecretVersion EnableManagedRotation(SecretName parent, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual SecretVersion EnableManagedRotation(SecretName parent, CloudSqlSingleUserCredentials cloudSqlSingleUserCredentials, gaxgrpc::CallSettings callSettings = null) =>
             EnableManagedRotation(new EnableManagedRotationRequest
             {
                 ParentAsSecretName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -2759,7 +2759,7 @@ namespace Google.Cloud.SecretManager.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<SecretVersion> EnableManagedRotationAsync(SecretName parent, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<SecretVersion> EnableManagedRotationAsync(SecretName parent, CloudSqlSingleUserCredentials cloudSqlSingleUserCredentials, gaxgrpc::CallSettings callSettings = null) =>
             EnableManagedRotationAsync(new EnableManagedRotationRequest
             {
                 ParentAsSecretName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -2784,7 +2784,7 @@ namespace Google.Cloud.SecretManager.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<SecretVersion> EnableManagedRotationAsync(SecretName parent, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<SecretVersion> EnableManagedRotationAsync(SecretName parent, CloudSqlSingleUserCredentials cloudSqlSingleUserCredentials, st::CancellationToken cancellationToken) =>
             EnableManagedRotationAsync(parent, cloudSqlSingleUserCredentials, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>

@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/secrets/[SECRET]";
-            EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials = new EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials();
+            CloudSqlSingleUserCredentials cloudSqlSingleUserCredentials = new CloudSqlSingleUserCredentials();
             // Make the request
             SecretVersion response = await secretManagerServiceClient.EnableManagedRotationAsync(parent, cloudSqlSingleUserCredentials);
         }
