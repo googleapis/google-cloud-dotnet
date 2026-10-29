@@ -29,6 +29,30 @@ namespace Google.Cloud.Spanner.Data.Tests
     public partial class SpannerConnectionTests
     {
         [Fact]
+        public void Dispose_RaisesDisposedEvent()
+        {
+            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+            int disposedCount = 0;
+            connection.Disposed += (sender, args) => disposedCount++;
+
+            connection.Dispose();
+
+            Assert.Equal(1, disposedCount);
+        }
+
+        [Fact]
+        public async Task DisposeAsync_RaisesDisposedEvent()
+        {
+            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+            int disposedCount = 0;
+            connection.Disposed += (sender, args) => disposedCount++;
+
+            await connection.DisposeAsync();
+
+            Assert.Equal(1, disposedCount);
+        }
+
+        [Fact]
         public void OpenWithNoDatabase_InvalidCredentials()
         {
             var builder = new SpannerConnectionStringBuilder
