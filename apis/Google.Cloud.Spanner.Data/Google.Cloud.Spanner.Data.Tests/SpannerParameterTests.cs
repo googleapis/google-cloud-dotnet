@@ -29,7 +29,11 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void ParameterName_DefaultsToEmptyString()
         {
-            Assert.Equal(string.Empty, new SpannerParameter().ParameterName);
+            var parameter = new SpannerParameter();
+            Assert.Equal(string.Empty, parameter.ParameterName);
+
+            parameter.ParameterName = null;
+            Assert.Equal(string.Empty, parameter.ParameterName);
         }
 
         private static readonly Rectangle testRectangle = new Rectangle
