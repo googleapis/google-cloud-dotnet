@@ -126,23 +126,7 @@ namespace Google.Cloud.Spanner.Data
                     }
                     return collections;
                 case "DATASOURCEINFORMATION":
-                    return CreateSchemaTable("DataSourceInformation",
-                        ("CompositeIdentifierSeparatorPattern", typeof(string)),
-                        ("DataSourceProductName", typeof(string)),
-                        ("DataSourceProductVersion", typeof(string)),
-                        ("DataSourceProductVersionNormalized", typeof(string)),
-                        ("GroupByBehavior", typeof(int)),
-                        ("IdentifierPattern", typeof(string)),
-                        ("IdentifierCase", typeof(int)),
-                        ("OrderByColumnsInSelect", typeof(bool)),
-                        ("ParameterMarkerFormat", typeof(string)),
-                        ("ParameterNameMaxLength", typeof(int)),
-                        ("ParameterNamePattern", typeof(string)),
-                        ("QuotedIdentifierPattern", typeof(string)),
-                        ("QuotedIdentifierCase", typeof(int)),
-                        ("StatementSeparatorPattern", typeof(string)),
-                        ("StringLiteralPattern", typeof(string)),
-                        ("SupportedJoinOperators", typeof(int)));
+                    return CreateDataSourceInformationTable();
                 case "DATATYPES":
                     return CreateSchemaTable("DataTypes",
                         ("TypeName", typeof(string)), ("ProviderDbType", typeof(int)), ("ColumnSize", typeof(long)),
@@ -162,6 +146,40 @@ namespace Google.Cloud.Spanner.Data
                 default:
                     throw new ArgumentException($"The schema collection '{collectionName}' is not supported.", nameof(collectionName));
             }
+        }
+
+        // The database dialect (GoogleSQL or PostgreSQL) is not known here.
+        // Report only metadata valid for both; do not guess quoting rules,
+        // supported joins, identifier limits, or server-specific type details.
+        private DataTable CreateDataSourceInformationTable()
+        {
+                    var info = CreateSchemaTable("DataSourceInformation",
+                        ("CompositeIdentifierSeparatorPattern", typeof(string)),
+                        ("DataSourceProductName", typeof(string)),
+                        ("DataSourceProductVersion", typeof(string)),
+                        ("DataSourceProductVersionNormalized", typeof(string)),
+                        ("GroupByBehavior", typeof(int)),
+                        ("IdentifierPattern", typeof(string)),
+                        ("IdentifierCase", typeof(int)),
+                        ("OrderByColumnsInSelect", typeof(bool)),
+                        ("ParameterMarkerFormat", typeof(string)),
+                        ("ParameterNameMaxLength", typeof(int)),
+                        ("ParameterNamePattern", typeof(string)),
+                        ("QuotedIdentifierPattern", typeof(string)),
+                        ("QuotedIdentifierCase", typeof(int)),
+                        ("StatementSeparatorPattern", typeof(string)),
+                        ("StringLiteralPattern", typeof(string)),
+                        ("SupportedJoinOperators", typeof(int)));
+            var row = info.NewRow();
+            row["DataSourceProductName"] = "Google Cloud Spanner";
+            // SpannerConnection currently reports "0.0"; do not fabricate a version.
+            row["DataSourceProductVersion"] = ServerVersion;
+            row["DataSourceProductVersionNormalized"] = ServerVersion;
+            row["CompositeIdentifierSeparatorPattern"] = @"\.";
+            row["ParameterMarkerFormat"] = "@{0}";
+            row["StatementSeparatorPattern"] = ";";
+            info.Rows.Add(row);
+            return info;
         }
 
         private static DataTable CreateSchemaTable(string name, params (string column, System.Type type)[] columns)
