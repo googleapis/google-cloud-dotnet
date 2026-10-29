@@ -29,6 +29,18 @@ namespace Google.Cloud.Spanner.Data.Tests
     public partial class SpannerConnectionTests
     {
         [Fact]
+        public void GetSchema_ExposesCommonCollections()
+        {
+            using var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+
+            Assert.Equal("MetaDataCollections", connection.GetSchema().TableName);
+            foreach (var name in new[] { "MetaDataCollections", "DataSourceInformation", "DataTypes", "Restrictions", "ReservedWords" })
+            {
+                Assert.Equal(name, connection.GetSchema(name).TableName);
+            }
+        }
+
+        [Fact]
         public void OpenWithNoDatabase_InvalidCredentials()
         {
             var builder = new SpannerConnectionStringBuilder

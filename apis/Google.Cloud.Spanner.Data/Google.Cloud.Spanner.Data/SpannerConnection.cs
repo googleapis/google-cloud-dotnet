@@ -99,6 +99,77 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override string ServerVersion => "0.0";
 
+        /// <inheritdoc />
+        public override DataTable GetSchema() => GetSchema("MetaDataCollections");
+
+        /// <inheritdoc />
+        public override DataTable GetSchema(string collectionName) => GetSchema(collectionName, null);
+
+        /// <inheritdoc />
+        public override DataTable GetSchema(string collectionName, string[] restrictionValues)
+        {
+            GaxPreconditions.CheckNotNullOrEmpty(collectionName, nameof(collectionName));
+            switch (collectionName)
+            {
+                case "MetaDataCollections":
+                    var collections = CreateSchemaTable(collectionName,
+                        ("CollectionName", typeof(string)),
+                        ("NumberOfRestrictions", typeof(int)),
+                        ("NumberOfIdentifierParts", typeof(int)));
+                    foreach (var name in new[] { "MetaDataCollections", "DataSourceInformation", "DataTypes", "Restrictions", "ReservedWords" })
+                    {
+                        collections.Rows.Add(name, 0, 0);
+                    }
+                    return collections;
+                case "DataSourceInformation":
+                    return CreateSchemaTable(collectionName,
+                        ("CompositeIdentifierSeparatorPattern", typeof(string)),
+                        ("DataSourceProductName", typeof(string)),
+                        ("DataSourceProductVersion", typeof(string)),
+                        ("DataSourceProductVersionNormalized", typeof(string)),
+                        ("GroupByBehavior", typeof(int)),
+                        ("IdentifierPattern", typeof(string)),
+                        ("IdentifierCase", typeof(int)),
+                        ("OrderByColumnsInSelect", typeof(bool)),
+                        ("ParameterMarkerFormat", typeof(string)),
+                        ("ParameterNameMaxLength", typeof(int)),
+                        ("ParameterNamePattern", typeof(string)),
+                        ("QuotedIdentifierPattern", typeof(string)),
+                        ("QuotedIdentifierCase", typeof(int)),
+                        ("StatementSeparatorPattern", typeof(string)),
+                        ("StringLiteralPattern", typeof(string)),
+                        ("SupportedJoinOperators", typeof(int)));
+                case "DataTypes":
+                    return CreateSchemaTable(collectionName,
+                        ("TypeName", typeof(string)), ("ProviderDbType", typeof(int)), ("ColumnSize", typeof(long)),
+                        ("CreateFormat", typeof(string)), ("CreateParameters", typeof(string)), ("DataType", typeof(string)),
+                        ("IsAutoincrementable", typeof(bool)), ("IsBestMatch", typeof(bool)), ("IsCaseSensitive", typeof(bool)),
+                        ("IsFixedLength", typeof(bool)), ("IsFixedPrecisionScale", typeof(bool)), ("IsLong", typeof(bool)),
+                        ("IsNullable", typeof(bool)), ("IsSearchable", typeof(bool)), ("IsSearchableWithLike", typeof(bool)),
+                        ("IsUnsigned", typeof(bool)), ("MaximumScale", typeof(short)), ("MinimumScale", typeof(short)),
+                        ("IsConcurrencyType", typeof(bool)), ("IsLiteralSupported", typeof(bool)),
+                        ("LiteralPrefix", typeof(string)), ("LiteralSuffix", typeof(string)));
+                case "Restrictions":
+                    return CreateSchemaTable(collectionName,
+                        ("CollectionName", typeof(string)), ("RestrictionName", typeof(string)),
+                        ("RestrictionDefault", typeof(string)), ("RestrictionNumber", typeof(int)));
+                case "ReservedWords":
+                    return CreateSchemaTable(collectionName, ("ReservedWord", typeof(string)));
+                default:
+                    throw new ArgumentException($"The schema collection '{collectionName}' is not supported.", nameof(collectionName));
+            }
+        }
+
+        private static DataTable CreateSchemaTable(string name, params (string column, System.Type type)[] columns)
+        {
+            var table = new DataTable(name);
+            foreach (var (column, type) in columns)
+            {
+                table.Columns.Add(column, type);
+            }
+            return table;
+        }
+
         /// <summary>
         /// The Spanner instance name
         /// </summary>
