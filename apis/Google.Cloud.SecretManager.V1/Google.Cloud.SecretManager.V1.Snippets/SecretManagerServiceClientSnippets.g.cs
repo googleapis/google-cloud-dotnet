@@ -1694,7 +1694,7 @@ namespace GoogleCSharpSnippets
             EnableManagedRotationRequest request = new EnableManagedRotationRequest
             {
                 ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                CloudSqlSingleUserCredentials = new EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials(),
+                CloudSqlSingleUserCredentials = new CloudSqlSingleUserCredentials(),
             };
             // Make the request
             SecretVersion response = secretManagerServiceClient.EnableManagedRotation(request);
@@ -1712,7 +1712,7 @@ namespace GoogleCSharpSnippets
             EnableManagedRotationRequest request = new EnableManagedRotationRequest
             {
                 ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                CloudSqlSingleUserCredentials = new EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials(),
+                CloudSqlSingleUserCredentials = new CloudSqlSingleUserCredentials(),
             };
             // Make the request
             SecretVersion response = await secretManagerServiceClient.EnableManagedRotationAsync(request);
@@ -1722,12 +1722,12 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for EnableManagedRotation</summary>
         public void EnableManagedRotation()
         {
-            // Snippet: EnableManagedRotation(string, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials, CallSettings)
+            // Snippet: EnableManagedRotation(string, CloudSqlSingleUserCredentials, CallSettings)
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/secrets/[SECRET]";
-            EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials = new EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials();
+            CloudSqlSingleUserCredentials cloudSqlSingleUserCredentials = new CloudSqlSingleUserCredentials();
             // Make the request
             SecretVersion response = secretManagerServiceClient.EnableManagedRotation(parent, cloudSqlSingleUserCredentials);
             // End snippet
@@ -1736,13 +1736,13 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for EnableManagedRotationAsync</summary>
         public async Task EnableManagedRotationAsync()
         {
-            // Snippet: EnableManagedRotationAsync(string, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials, CallSettings)
-            // Additional: EnableManagedRotationAsync(string, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials, CancellationToken)
+            // Snippet: EnableManagedRotationAsync(string, CloudSqlSingleUserCredentials, CallSettings)
+            // Additional: EnableManagedRotationAsync(string, CloudSqlSingleUserCredentials, CancellationToken)
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/secrets/[SECRET]";
-            EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials = new EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials();
+            CloudSqlSingleUserCredentials cloudSqlSingleUserCredentials = new CloudSqlSingleUserCredentials();
             // Make the request
             SecretVersion response = await secretManagerServiceClient.EnableManagedRotationAsync(parent, cloudSqlSingleUserCredentials);
             // End snippet
@@ -1751,12 +1751,12 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for EnableManagedRotation</summary>
         public void EnableManagedRotationResourceNames()
         {
-            // Snippet: EnableManagedRotation(SecretName, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials, CallSettings)
+            // Snippet: EnableManagedRotation(SecretName, CloudSqlSingleUserCredentials, CallSettings)
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
             // Initialize request argument(s)
             SecretName parent = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]");
-            EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials = new EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials();
+            CloudSqlSingleUserCredentials cloudSqlSingleUserCredentials = new CloudSqlSingleUserCredentials();
             // Make the request
             SecretVersion response = secretManagerServiceClient.EnableManagedRotation(parent, cloudSqlSingleUserCredentials);
             // End snippet
@@ -1765,13 +1765,13 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for EnableManagedRotationAsync</summary>
         public async Task EnableManagedRotationResourceNamesAsync()
         {
-            // Snippet: EnableManagedRotationAsync(SecretName, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials, CallSettings)
-            // Additional: EnableManagedRotationAsync(SecretName, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials, CancellationToken)
+            // Snippet: EnableManagedRotationAsync(SecretName, CloudSqlSingleUserCredentials, CallSettings)
+            // Additional: EnableManagedRotationAsync(SecretName, CloudSqlSingleUserCredentials, CancellationToken)
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
             SecretName parent = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]");
-            EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials = new EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials();
+            CloudSqlSingleUserCredentials cloudSqlSingleUserCredentials = new CloudSqlSingleUserCredentials();
             // Make the request
             SecretVersion response = await secretManagerServiceClient.EnableManagedRotationAsync(parent, cloudSqlSingleUserCredentials);
             // End snippet

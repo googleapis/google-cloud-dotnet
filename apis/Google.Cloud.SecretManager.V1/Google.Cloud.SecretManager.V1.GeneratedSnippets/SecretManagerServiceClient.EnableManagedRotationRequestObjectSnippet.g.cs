@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             EnableManagedRotationRequest request = new EnableManagedRotationRequest
             {
                 ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                CloudSqlSingleUserCredentials = new EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials(),
+                CloudSqlSingleUserCredentials = new CloudSqlSingleUserCredentials(),
             };
             // Make the request
             SecretVersion response = secretManagerServiceClient.EnableManagedRotation(request);
