@@ -182,8 +182,35 @@ namespace Google.Cloud.Spanner.Data
         public override char GetChar(int i) => GetFieldValue<char>(i);
 
         /// <inheritdoc />
-        public override long GetChars(int i, long fieldoffset, char[] buffer, int bufferoffset, int length) => throw
-            new NotSupportedException("Spanner does not support conversion to char arrays.");
+        public override long GetChars(int ordinal, long fieldOffset, char[] buffer, int bufferOffset, int length)
+        {
+            if (GetSpannerFieldType(ordinal).TypeCode != TypeCode.String)
+            {
+                throw new InvalidCastException("GetChars can only be used with STRING columns.");
+            }
+            if (IsDBNull(ordinal))
+            {
+                throw new InvalidCastException("GetChars cannot read a NULL value.");
+            }
+
+            var value = GetString(ordinal);
+            if (buffer == null)
+            {
+                return value.Length;
+            }
+
+            GaxPreconditions.CheckArgumentRange(bufferOffset, nameof(bufferOffset), 0, buffer.Length);
+            GaxPreconditions.CheckArgumentRange(length, nameof(length), 0, buffer.Length);
+            GaxPreconditions.CheckArgumentRange(bufferOffset + length, nameof(length), 0, buffer.Length);
+            if (fieldOffset < 0 || fieldOffset > value.Length)
+            {
+                throw new ArgumentOutOfRangeException(nameof(fieldOffset), "Field offset exceeds the length of the field data");
+            }
+
+            var copyLength = (int) Math.Min(length, value.Length - fieldOffset);
+            value.CopyTo((int) fieldOffset, buffer, bufferOffset, copyLength);
+            return copyLength;
+        }
 
         /// <inheritdoc />
         public override string GetDataTypeName(int i) => GetSpannerFieldType(i).ToString();
