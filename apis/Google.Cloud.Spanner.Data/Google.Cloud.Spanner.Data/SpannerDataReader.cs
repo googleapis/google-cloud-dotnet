@@ -182,8 +182,35 @@ namespace Google.Cloud.Spanner.Data
         public override char GetChar(int i) => GetFieldValue<char>(i);
 
         /// <inheritdoc />
-        public override long GetChars(int i, long fieldoffset, char[] buffer, int bufferoffset, int length) => throw
-            new NotSupportedException("Spanner does not support conversion to char arrays.");
+        public override long GetChars(int ordinal, long fieldOffset, char[] buffer, int bufferOffset, int length)
+        {
+            GaxPreconditions.CheckArgument(GetSpannerFieldType(ordinal).TypeCode == TypeCode.String, nameof(ordinal), "Spanner only supports conversion to char arrays for columns of type STRING.");
+            GaxPreconditions.CheckArgumentRange(bufferOffset, nameof(bufferOffset), 0, buffer?.Length ?? 0);
+            GaxPreconditions.CheckArgumentRange(length, nameof(length), 0, buffer?.Length ?? int.MaxValue);
+            if (buffer != null)
+            {
+                GaxPreconditions.CheckArgumentRange(bufferOffset + length, nameof(length), 0, buffer.Length);
+            }
+
+            var value = IsDBNull(ordinal) ? null : GetString(ordinal);
+            if (buffer == null)
+            {
+                return value?.Length ?? 0;
+            }
+
+            int valueLength = value?.Length ?? 0;
+            if (fieldOffset < 0 || fieldOffset > valueLength)
+            {
+                throw new ArgumentOutOfRangeException(nameof(fieldOffset), "Field offset exceeds the length of the field data");
+            }
+            var copyLength = (int) Math.Min(length, valueLength - fieldOffset);
+
+            if (value != null)
+            {
+                value.CopyTo((int) fieldOffset, buffer, bufferOffset, copyLength);
+            }
+            return copyLength;
+        }
 
         /// <inheritdoc />
         public override string GetDataTypeName(int i) => GetSpannerFieldType(i).ToString();
@@ -285,7 +312,7 @@ namespace Google.Cloud.Spanner.Data
                 PopulateMetadata();
                 InitializeFieldIndexFromMetadata();
             }
-            return _fieldIndex[name];
+            return GetOrdinalFromFieldIndex(name);
         }
 
         /// <summary>
@@ -303,7 +330,25 @@ namespace Google.Cloud.Spanner.Data
                 await PopulateMetadataAsync(cancellationToken).ConfigureAwait(false);
                 InitializeFieldIndexFromMetadata();
             }
-            return _fieldIndex[name];
+            return GetOrdinalFromFieldIndex(name);
+        }
+
+        private int GetOrdinalFromFieldIndex(string name)
+        {
+            if (_fieldIndex.TryGetValue(name, out int ordinal))
+            {
+                return ordinal;
+            }
+
+            foreach (var field in _metadata.RowType.Fields)
+            {
+                if (string.Equals(field.Name, name, StringComparison.OrdinalIgnoreCase))
+                {
+                    return _fieldIndex[field.Name];
+                }
+            }
+
+            throw new IndexOutOfRangeException($"Column '{name}' was not found.");
         }
 
         /// <summary>

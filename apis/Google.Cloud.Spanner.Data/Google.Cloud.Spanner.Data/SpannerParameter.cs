@@ -65,7 +65,7 @@ namespace Google.Cloud.Spanner.Data
         public override bool IsNullable { get; set; } = true;
 
         /// <inheritdoc />
-        public override string ParameterName { get; set; }
+        public override string ParameterName { get; set; } = string.Empty;
 
         /// <inheritdoc />
         public override int Size
