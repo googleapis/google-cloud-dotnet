@@ -313,11 +313,12 @@ namespace Google.Cloud.Spanner.Data
                 return ordinal;
             }
 
-            foreach (var field in _metadata.RowType.Fields)
+            var fields = _metadata.RowType.Fields;
+            for (int i = 0; i < fields.Count; i++)
             {
-                if (string.Equals(field.Name, name, StringComparison.OrdinalIgnoreCase))
+                if (string.Equals(fields[i].Name, name, StringComparison.OrdinalIgnoreCase))
                 {
-                    return _fieldIndex[field.Name];
+                    return i;
                 }
             }
 
