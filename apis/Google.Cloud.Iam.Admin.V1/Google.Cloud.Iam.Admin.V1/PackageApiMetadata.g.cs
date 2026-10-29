@@ -32,6 +32,7 @@ namespace Google.Cloud.Iam.Admin.V1
         {
             yield return AuditDataReflection.Descriptor;
             yield return IamReflection.Descriptor;
+            yield return WorkforcePoolPlatformLogsReflection.Descriptor;
         }
     }
 }
