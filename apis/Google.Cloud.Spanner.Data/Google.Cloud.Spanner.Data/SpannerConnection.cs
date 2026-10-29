@@ -99,6 +99,16 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override string ServerVersion => "0.0";
 
+        /// <inheritdoc />
+        public override DataTable GetSchema() => GetSchema("MetaDataCollections");
+
+        /// <inheritdoc />
+        public override DataTable GetSchema(string collectionName) => GetSchema(collectionName, null);
+
+        /// <inheritdoc />
+        public override DataTable GetSchema(string collectionName, string[] restrictionValues) =>
+            SpannerSchema.GetSchema(this, collectionName, restrictionValues);
+
         /// <summary>
         /// The Spanner instance name
         /// </summary>
