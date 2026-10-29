@@ -78,7 +78,8 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             Assert.Single(schema.Rows);
             Assert.Equal("Google Cloud Spanner", schema.Rows[0]["DataSourceProductName"]);
-            Assert.Equal(connection.ServerVersion, schema.Rows[0]["DataSourceProductVersion"]);
+            Assert.Equal(DBNull.Value, schema.Rows[0]["DataSourceProductVersion"]);
+            Assert.Equal(DBNull.Value, schema.Rows[0]["DataSourceProductVersionNormalized"]);
             Assert.Equal("@{0}", schema.Rows[0]["ParameterMarkerFormat"]);
             Assert.Equal(";", schema.Rows[0]["StatementSeparatorPattern"]);
         }
