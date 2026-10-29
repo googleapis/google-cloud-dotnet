@@ -195,7 +195,9 @@ namespace Google.Cloud.Spanner.Data
             row["IsNullable"] = true;
             row["IsConcurrencyType"] = false;
             row["IsLong"] = stringType || clr == typeof(byte[]);
-            row["IsAutoincrementable"] = false;
+            // Integer keys can be generated using sequences/identity syntax.
+            // Do not claim universal non-autoincrementability for bigint/INT64.
+            if (clr != typeof(long)) row["IsAutoincrementable"] = false;
             row["IsFixedPrecisionScale"] = scale.HasValue;
             row["IsUnsigned"] = false;
             row["IsSearchable"] = true;
