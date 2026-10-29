@@ -130,6 +130,36 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Throws<ArgumentException>(() => reader.GetBytes(0, 0L, null, 0, 0));
         }
 
+        [Fact]
+        public void GetChars_ReadsStringDataInRanges()
+        {
+            var reader = CreateSpannerDataReader(
+                new[] { CreateResultSet(new[] { Value.ForString("spanner") }) },
+                CreateSingleFieldMetadata(TypeCode.String));
+            reader.Read();
+
+            Assert.Equal(7, reader.GetChars(0, 0, null, int.MaxValue, int.MaxValue));
+            var buffer = new char[5];
+            Assert.Equal(3, reader.GetChars(0, 1, buffer, 1, 3));
+            Assert.Equal(new[] { '\0', 'p', 'a', 'n', '\0' }, buffer);
+        }
+
+        [Fact]
+        public void GetChars_ThrowsInvalidCastForNullOrNonStringValues()
+        {
+            var nullReader = CreateSpannerDataReader(
+                new[] { CreateResultSet(new[] { Value.ForNull() }) },
+                CreateSingleFieldMetadata(TypeCode.String));
+            nullReader.Read();
+            Assert.Throws<InvalidCastException>(() => nullReader.GetChars(0, 0, null, 0, 0));
+
+            var nonStringReader = CreateSpannerDataReader(
+                new[] { CreateResultSet(new[] { Value.ForNumber(1) }) },
+                CreateSingleFieldMetadata(TypeCode.Int64));
+            nonStringReader.Read();
+            Assert.Throws<InvalidCastException>(() => nonStringReader.GetChars(0, 0, null, 0, 0));
+        }
+
         private static SpannerDataReader CreateTestReader(byte[] bytes)
         {
             var results = new []
