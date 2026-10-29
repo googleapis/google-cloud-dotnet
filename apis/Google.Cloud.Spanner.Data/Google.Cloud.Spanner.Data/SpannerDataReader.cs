@@ -285,7 +285,7 @@ namespace Google.Cloud.Spanner.Data
                 PopulateMetadata();
                 InitializeFieldIndexFromMetadata();
             }
-            return _fieldIndex[name];
+            return GetOrdinalFromFieldIndex(name);
         }
 
         /// <summary>
@@ -303,7 +303,25 @@ namespace Google.Cloud.Spanner.Data
                 await PopulateMetadataAsync(cancellationToken).ConfigureAwait(false);
                 InitializeFieldIndexFromMetadata();
             }
-            return _fieldIndex[name];
+            return GetOrdinalFromFieldIndex(name);
+        }
+
+        private int GetOrdinalFromFieldIndex(string name)
+        {
+            if (_fieldIndex.TryGetValue(name, out int ordinal))
+            {
+                return ordinal;
+            }
+
+            foreach (var field in _metadata.RowType.Fields)
+            {
+                if (string.Equals(field.Name, name, StringComparison.OrdinalIgnoreCase))
+                {
+                    return _fieldIndex[field.Name];
+                }
+            }
+
+            throw new IndexOutOfRangeException($"Column '{name}' was not found.");
         }
 
         /// <summary>
