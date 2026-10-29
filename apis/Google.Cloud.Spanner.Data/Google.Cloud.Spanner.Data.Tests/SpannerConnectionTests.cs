@@ -33,15 +33,34 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             using var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
 
-            Assert.Equal("MetaDataCollections", connection.GetSchema().TableName);
+            var collections = connection.GetSchema();
+            Assert.Equal("MetaDataCollections", collections.TableName);
+            Assert.Equal(5, collections.Rows.Count);
+
             foreach (var name in new[] { "MetaDataCollections", "DataSourceInformation", "DataTypes", "Restrictions", "ReservedWords" })
             {
                 Assert.Equal(name, connection.GetSchema(name).TableName);
+                Assert.Equal(name, connection.GetSchema(name.ToLowerInvariant()).TableName);
                 Assert.Equal(name, connection.GetSchema(name.ToUpperInvariant()).TableName);
+                Assert.Equal(name, connection.GetSchema(name, Array.Empty<string>()).TableName);
+
+                var exception = Assert.Throws<ArgumentException>(
+                    () => connection.GetSchema(name, new[] { "restriction" }));
+                Assert.Equal("restrictionValues", exception.ParamName);
+                Assert.Contains("Restrictions are not supported for the requested schema collection.", exception.Message);
             }
-            var exception = Assert.Throws<ArgumentException>(() => connection.GetSchema("DataTypes", new[] { "restriction" }));
-            Assert.Equal("restrictionValues", exception.ParamName);
-            Assert.Contains("Restrictions are not supported for the requested schema collection.", exception.Message);
+        }
+
+        [Fact]
+        public void GetSchema_DataSourceInformation_ReportsProduct()
+        {
+            using var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+            var schema = connection.GetSchema("DataSourceInformation");
+
+            Assert.Single(schema.Rows);
+            Assert.Equal("Google Cloud Spanner", schema.Rows[0]["DataSourceProductName"]);
+            Assert.Equal(connection.ServerVersion, schema.Rows[0]["DataSourceProductVersion"]);
+            Assert.Equal("@{0}", schema.Rows[0]["ParameterMarkerFormat"]);
         }
 
         [Fact]
