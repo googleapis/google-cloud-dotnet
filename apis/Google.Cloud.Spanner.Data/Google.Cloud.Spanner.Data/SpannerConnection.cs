@@ -109,7 +109,7 @@ namespace Google.Cloud.Spanner.Data
         public override DataTable GetSchema(string collectionName, string[] restrictionValues)
         {
             GaxPreconditions.CheckNotNullOrEmpty(collectionName, nameof(collectionName));
-            if (restrictionValues != null && restrictionValues.Length != 0)
+            if (restrictionValues != null && restrictionValues.Length > 0)
             {
                 throw new ArgumentException("Restrictions are not supported for the requested schema collection.", nameof(restrictionValues));
             }
@@ -153,7 +153,7 @@ namespace Google.Cloud.Spanner.Data
         // supported joins, identifier limits, or server-specific type details.
         private DataTable CreateDataSourceInformationTable()
         {
-                    var info = CreateSchemaTable("DataSourceInformation",
+            var info = CreateSchemaTable("DataSourceInformation",
                         ("CompositeIdentifierSeparatorPattern", typeof(string)),
                         ("DataSourceProductName", typeof(string)),
                         ("DataSourceProductVersion", typeof(string)),
