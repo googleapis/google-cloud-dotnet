@@ -26,6 +26,12 @@ namespace Google.Cloud.Spanner.Data.Tests
 {
     public class SpannerParameterTests
     {
+        [Fact]
+        public void ParameterName_DefaultsToEmptyString()
+        {
+            Assert.Equal(string.Empty, new SpannerParameter().ParameterName);
+        }
+
         private static readonly Rectangle testRectangle = new Rectangle
         {
             TopRight = new Point { X = 1, Y = 1 },
