@@ -2521,6 +2521,18 @@ namespace Google.Cloud.DeveloperConnect.V1
         }
     }
 
+    public partial class DiffGitRepositoryLinkCommitRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::GitRepositoryLinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::GitRepositoryLinkName GitRepositoryLinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::GitRepositoryLinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class StartOAuthRequest
     {
         /// <summary>
@@ -2633,6 +2645,18 @@ namespace Google.Cloud.DeveloperConnect.V1
         }
     }
 
+    public partial class OpenGitRepositoryLinkPullRequestRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::GitRepositoryLinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::GitRepositoryLinkName GitRepositoryLinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::GitRepositoryLinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class FetchLinkableGitRepositoriesRequest
     {
         /// <summary>
@@ -2667,6 +2691,102 @@ namespace Google.Cloud.DeveloperConnect.V1
         {
             get => string.IsNullOrEmpty(GitRepositoryLink) ? null : GitRepositoryLinkName.Parse(GitRepositoryLink, allowUnparsed: true);
             set => GitRepositoryLink = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class FetchGitRepositoryLinkCommitRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::GitRepositoryLinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::GitRepositoryLinkName GitRepositoryLinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::GitRepositoryLinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class FetchGitRepositoryLinkCommitListRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::GitRepositoryLinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::GitRepositoryLinkName GitRepositoryLinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::GitRepositoryLinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class FetchGitRepositoryLinkFileBlameRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::GitRepositoryLinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::GitRepositoryLinkName GitRepositoryLinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::GitRepositoryLinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class FetchGitRepositoryLinkPullRequestRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::GitRepositoryLinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::GitRepositoryLinkName GitRepositoryLinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::GitRepositoryLinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AddGitRepositoryLinkPullRequestCommentRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::GitRepositoryLinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::GitRepositoryLinkName GitRepositoryLinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::GitRepositoryLinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AddGitRepositoryLinkPullRequestReviewCommentRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::GitRepositoryLinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::GitRepositoryLinkName GitRepositoryLinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::GitRepositoryLinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ModifyGitRepositoryLinkPullRequestRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::GitRepositoryLinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::GitRepositoryLinkName GitRepositoryLinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::GitRepositoryLinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class FetchGitRepositoryLinkPullRequestListRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::GitRepositoryLinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::GitRepositoryLinkName GitRepositoryLinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::GitRepositoryLinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 
