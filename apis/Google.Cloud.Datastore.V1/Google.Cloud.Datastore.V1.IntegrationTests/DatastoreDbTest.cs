@@ -264,6 +264,47 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         }
 
         [Fact]
+        public async Task GqlQuery_NullBindings()
+        {
+            var db = _fixture.CreateDatastoreDb();
+            var keyFactory = db.CreateKeyFactory("gql_null_bindings");
+            using (var transaction = await db.BeginTransactionAsync())
+            {
+                var entities = new[]
+                {
+                    new Entity { Key = keyFactory.CreateKey("null_tag"), ["tag"] = Value.ForNull() },
+                    new Entity { Key = keyFactory.CreateKey("non_null_tag"), ["tag"] = "present" }
+                };
+                transaction.Insert(entities);
+                await transaction.CommitAsync();
+            }
+
+            var namedGql = new GqlQuery
+            {
+                QueryString = "SELECT * FROM gql_null_bindings WHERE tag = @tag",
+                NamedBindings = { { "tag", (string)null } }
+            };
+            var positionalGql = new GqlQuery
+            {
+                QueryString = "SELECT * FROM gql_null_bindings WHERE tag = @1",
+                PositionalBindings = { (Value)null }
+            };
+
+            await _fixture.RetryQueryAsync(async () =>
+            {
+                var namedResults = await db.RunQueryAsync(namedGql);
+                var namedEntity = Assert.Single(namedResults.Entities);
+                Assert.Equal("null_tag", namedEntity.Key.Path.Last().Name);
+                Assert.Null((string)namedEntity["tag"]);
+
+                var positionalResults = await db.RunQueryAsync(positionalGql);
+                var positionalEntity = Assert.Single(positionalResults.Entities);
+                Assert.Equal("null_tag", positionalEntity.Key.Path.Last().Name);
+                Assert.Null((string)positionalEntity["tag"]);
+            });
+        }
+
+        [Fact]
         public void BeginTransaction_ReadOnly()
         {
             var db = _fixture.CreateDatastoreDb();
