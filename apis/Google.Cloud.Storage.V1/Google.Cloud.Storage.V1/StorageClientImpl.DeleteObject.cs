@@ -53,9 +53,7 @@ namespace Google.Cloud.Storage.V1
         private ObjectsResource.DeleteRequest CreateDeleteObjectRequest(Object obj, DeleteObjectOptions options)
         {
             ValidateObject(obj, nameof(obj));
-            var request = Service.Objects.Delete(obj.Bucket, obj.Name);
-            options?.ModifyRequest(request);
-            return request;
+            return CreateDeleteObjectRequest(obj.Bucket, obj.Name, options);
         }
 
         private ObjectsResource.DeleteRequest CreateDeleteObjectRequest(string bucket, string name, DeleteObjectOptions options)
