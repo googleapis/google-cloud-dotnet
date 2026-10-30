@@ -1032,7 +1032,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-10-15T21:07:16.793796712Z",
-            "lastGeneratedCommit": "0b2e1ee90cdff7af83c75a34143edc626dac0f6e",
+            "lastGeneratedCommit": "050306aef573a025879712c39e396d4ae3a3d8a4",
             "lastReleasedCommit": "0b2e1ee90cdff7af83c75a34143edc626dac0f6e",
             "apiPaths": [
                 "google/cloud/compute/v1"

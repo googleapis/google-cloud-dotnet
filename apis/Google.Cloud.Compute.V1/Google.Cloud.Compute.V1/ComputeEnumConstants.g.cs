@@ -3231,6 +3231,18 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>
                 /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.MemoryOptimizedM4N"/>.
+                /// </summary>
+                public const string MemoryOptimizedM4N = "MEMORY_OPTIMIZED_M4N";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.MemoryOptimizedM4N6Tb"/>.
+                /// </summary>
+                public const string MemoryOptimizedM4N6Tb = "MEMORY_OPTIMIZED_M4N_6TB";
+
+                /// <summary>
+                /// Wire representation of
                 /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.MemoryOptimizedM46Tb"/>.
                 /// </summary>
                 public const string MemoryOptimizedM46Tb = "MEMORY_OPTIMIZED_M4_6TB";
