@@ -65,9 +65,19 @@ namespace Google.Cloud.DeveloperConnect.V1
             GetGitRepositoryLinkSettings = existing.GetGitRepositoryLinkSettings;
             FetchReadWriteTokenSettings = existing.FetchReadWriteTokenSettings;
             FetchReadTokenSettings = existing.FetchReadTokenSettings;
+            OpenGitRepositoryLinkPullRequestSettings = existing.OpenGitRepositoryLinkPullRequestSettings;
             FetchLinkableGitRepositoriesSettings = existing.FetchLinkableGitRepositoriesSettings;
             FetchGitHubInstallationsSettings = existing.FetchGitHubInstallationsSettings;
             FetchGitRefsSettings = existing.FetchGitRefsSettings;
+            DiffGitRepositoryLinkCommitSettings = existing.DiffGitRepositoryLinkCommitSettings;
+            FetchGitRepositoryLinkCommitSettings = existing.FetchGitRepositoryLinkCommitSettings;
+            FetchGitRepositoryLinkCommitListSettings = existing.FetchGitRepositoryLinkCommitListSettings;
+            FetchGitRepositoryLinkFileBlameSettings = existing.FetchGitRepositoryLinkFileBlameSettings;
+            FetchGitRepositoryLinkPullRequestSettings = existing.FetchGitRepositoryLinkPullRequestSettings;
+            AddGitRepositoryLinkPullRequestCommentSettings = existing.AddGitRepositoryLinkPullRequestCommentSettings;
+            AddGitRepositoryLinkPullRequestReviewCommentSettings = existing.AddGitRepositoryLinkPullRequestReviewCommentSettings;
+            ModifyGitRepositoryLinkPullRequestSettings = existing.ModifyGitRepositoryLinkPullRequestSettings;
+            FetchGitRepositoryLinkPullRequestListSettings = existing.FetchGitRepositoryLinkPullRequestListSettings;
             ListAccountConnectorsSettings = existing.ListAccountConnectorsSettings;
             GetAccountConnectorSettings = existing.GetAccountConnectorSettings;
             CreateAccountConnectorSettings = existing.CreateAccountConnectorSettings;
@@ -380,6 +390,19 @@ namespace Google.Cloud.DeveloperConnect.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.OpenGitRepositoryLinkPullRequest</c> and
+        /// <c>DeveloperConnectClient.OpenGitRepositoryLinkPullRequestAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings OpenGitRepositoryLinkPullRequestSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DeveloperConnectClient.FetchLinkableGitRepositories</c> and
         /// <c>DeveloperConnectClient.FetchLinkableGitRepositoriesAsync</c>.
         /// </summary>
@@ -427,6 +450,123 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings FetchGitRefsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.DiffGitRepositoryLinkCommit</c> and
+        /// <c>DeveloperConnectClient.DiffGitRepositoryLinkCommitAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DiffGitRepositoryLinkCommitSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.FetchGitRepositoryLinkCommit</c> and
+        /// <c>DeveloperConnectClient.FetchGitRepositoryLinkCommitAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchGitRepositoryLinkCommitSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.FetchGitRepositoryLinkCommitList</c> and
+        /// <c>DeveloperConnectClient.FetchGitRepositoryLinkCommitListAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchGitRepositoryLinkCommitListSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.FetchGitRepositoryLinkFileBlame</c> and
+        /// <c>DeveloperConnectClient.FetchGitRepositoryLinkFileBlameAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchGitRepositoryLinkFileBlameSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.FetchGitRepositoryLinkPullRequest</c> and
+        /// <c>DeveloperConnectClient.FetchGitRepositoryLinkPullRequestAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchGitRepositoryLinkPullRequestSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.AddGitRepositoryLinkPullRequestComment</c> and
+        /// <c>DeveloperConnectClient.AddGitRepositoryLinkPullRequestCommentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AddGitRepositoryLinkPullRequestCommentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.AddGitRepositoryLinkPullRequestReviewComment</c> and
+        /// <c>DeveloperConnectClient.AddGitRepositoryLinkPullRequestReviewCommentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AddGitRepositoryLinkPullRequestReviewCommentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.ModifyGitRepositoryLinkPullRequest</c> and
+        /// <c>DeveloperConnectClient.ModifyGitRepositoryLinkPullRequestAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ModifyGitRepositoryLinkPullRequestSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.FetchGitRepositoryLinkPullRequestList</c> and
+        /// <c>DeveloperConnectClient.FetchGitRepositoryLinkPullRequestListAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchGitRepositoryLinkPullRequestListSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -2353,6 +2493,154 @@ namespace Google.Cloud.DeveloperConnect.V1
             FetchReadTokenAsync(gitRepositoryLink, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Opens a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PullRequest OpenGitRepositoryLinkPullRequest(OpenGitRepositoryLinkPullRequestRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Opens a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequest> OpenGitRepositoryLinkPullRequestAsync(OpenGitRepositoryLinkPullRequestRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Opens a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequest> OpenGitRepositoryLinkPullRequestAsync(OpenGitRepositoryLinkPullRequestRequest request, st::CancellationToken cancellationToken) =>
+            OpenGitRepositoryLinkPullRequestAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Opens a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The GitRepositoryLink resource name in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequest">
+        /// Required. The Pull Request details to open.
+        /// Input fields used: title, body, head_ref, base_ref.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PullRequest OpenGitRepositoryLinkPullRequest(string name, PullRequest pullRequest, gaxgrpc::CallSettings callSettings = null) =>
+            OpenGitRepositoryLinkPullRequest(new OpenGitRepositoryLinkPullRequestRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                PullRequest = gax::GaxPreconditions.CheckNotNull(pullRequest, nameof(pullRequest)),
+            }, callSettings);
+
+        /// <summary>
+        /// Opens a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The GitRepositoryLink resource name in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequest">
+        /// Required. The Pull Request details to open.
+        /// Input fields used: title, body, head_ref, base_ref.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequest> OpenGitRepositoryLinkPullRequestAsync(string name, PullRequest pullRequest, gaxgrpc::CallSettings callSettings = null) =>
+            OpenGitRepositoryLinkPullRequestAsync(new OpenGitRepositoryLinkPullRequestRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                PullRequest = gax::GaxPreconditions.CheckNotNull(pullRequest, nameof(pullRequest)),
+            }, callSettings);
+
+        /// <summary>
+        /// Opens a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The GitRepositoryLink resource name in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequest">
+        /// Required. The Pull Request details to open.
+        /// Input fields used: title, body, head_ref, base_ref.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequest> OpenGitRepositoryLinkPullRequestAsync(string name, PullRequest pullRequest, st::CancellationToken cancellationToken) =>
+            OpenGitRepositoryLinkPullRequestAsync(name, pullRequest, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Opens a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The GitRepositoryLink resource name in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequest">
+        /// Required. The Pull Request details to open.
+        /// Input fields used: title, body, head_ref, base_ref.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PullRequest OpenGitRepositoryLinkPullRequest(GitRepositoryLinkName name, PullRequest pullRequest, gaxgrpc::CallSettings callSettings = null) =>
+            OpenGitRepositoryLinkPullRequest(new OpenGitRepositoryLinkPullRequestRequest
+            {
+                GitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PullRequest = gax::GaxPreconditions.CheckNotNull(pullRequest, nameof(pullRequest)),
+            }, callSettings);
+
+        /// <summary>
+        /// Opens a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The GitRepositoryLink resource name in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequest">
+        /// Required. The Pull Request details to open.
+        /// Input fields used: title, body, head_ref, base_ref.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequest> OpenGitRepositoryLinkPullRequestAsync(GitRepositoryLinkName name, PullRequest pullRequest, gaxgrpc::CallSettings callSettings = null) =>
+            OpenGitRepositoryLinkPullRequestAsync(new OpenGitRepositoryLinkPullRequestRequest
+            {
+                GitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PullRequest = gax::GaxPreconditions.CheckNotNull(pullRequest, nameof(pullRequest)),
+            }, callSettings);
+
+        /// <summary>
+        /// Opens a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The GitRepositoryLink resource name in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequest">
+        /// Required. The Pull Request details to open.
+        /// Input fields used: title, body, head_ref, base_ref.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequest> OpenGitRepositoryLinkPullRequestAsync(GitRepositoryLinkName name, PullRequest pullRequest, st::CancellationToken cancellationToken) =>
+            OpenGitRepositoryLinkPullRequestAsync(name, pullRequest, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// FetchLinkableGitRepositories returns a list of git repositories from an SCM
         /// that are available to be added to a Connection.
         /// </summary>
@@ -2818,6 +3106,1368 @@ namespace Google.Cloud.DeveloperConnect.V1
                 request.PageSize = pageSize.Value;
             }
             return FetchGitRefsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Diff commits for a GitRepositoryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DiffGitRepositoryLinkCommitResponse DiffGitRepositoryLinkCommit(DiffGitRepositoryLinkCommitRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Diff commits for a GitRepositoryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiffGitRepositoryLinkCommitResponse> DiffGitRepositoryLinkCommitAsync(DiffGitRepositoryLinkCommitRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Diff commits for a GitRepositoryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiffGitRepositoryLinkCommitResponse> DiffGitRepositoryLinkCommitAsync(DiffGitRepositoryLinkCommitRequest request, st::CancellationToken cancellationToken) =>
+            DiffGitRepositoryLinkCommitAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Diff commits for a GitRepositoryLink.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink.
+        /// </param>
+        /// <param name="baseSha">
+        /// Required. The base commit SHA or ref.
+        /// </param>
+        /// <param name="headSha">
+        /// Required. The head commit SHA or ref.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DiffGitRepositoryLinkCommitResponse DiffGitRepositoryLinkCommit(string name, string baseSha, string headSha, gaxgrpc::CallSettings callSettings = null) =>
+            DiffGitRepositoryLinkCommit(new DiffGitRepositoryLinkCommitRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                BaseSha = gax::GaxPreconditions.CheckNotNullOrEmpty(baseSha, nameof(baseSha)),
+                HeadSha = gax::GaxPreconditions.CheckNotNullOrEmpty(headSha, nameof(headSha)),
+            }, callSettings);
+
+        /// <summary>
+        /// Diff commits for a GitRepositoryLink.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink.
+        /// </param>
+        /// <param name="baseSha">
+        /// Required. The base commit SHA or ref.
+        /// </param>
+        /// <param name="headSha">
+        /// Required. The head commit SHA or ref.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiffGitRepositoryLinkCommitResponse> DiffGitRepositoryLinkCommitAsync(string name, string baseSha, string headSha, gaxgrpc::CallSettings callSettings = null) =>
+            DiffGitRepositoryLinkCommitAsync(new DiffGitRepositoryLinkCommitRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                BaseSha = gax::GaxPreconditions.CheckNotNullOrEmpty(baseSha, nameof(baseSha)),
+                HeadSha = gax::GaxPreconditions.CheckNotNullOrEmpty(headSha, nameof(headSha)),
+            }, callSettings);
+
+        /// <summary>
+        /// Diff commits for a GitRepositoryLink.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink.
+        /// </param>
+        /// <param name="baseSha">
+        /// Required. The base commit SHA or ref.
+        /// </param>
+        /// <param name="headSha">
+        /// Required. The head commit SHA or ref.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiffGitRepositoryLinkCommitResponse> DiffGitRepositoryLinkCommitAsync(string name, string baseSha, string headSha, st::CancellationToken cancellationToken) =>
+            DiffGitRepositoryLinkCommitAsync(name, baseSha, headSha, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Diff commits for a GitRepositoryLink.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink.
+        /// </param>
+        /// <param name="baseSha">
+        /// Required. The base commit SHA or ref.
+        /// </param>
+        /// <param name="headSha">
+        /// Required. The head commit SHA or ref.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DiffGitRepositoryLinkCommitResponse DiffGitRepositoryLinkCommit(GitRepositoryLinkName name, string baseSha, string headSha, gaxgrpc::CallSettings callSettings = null) =>
+            DiffGitRepositoryLinkCommit(new DiffGitRepositoryLinkCommitRequest
+            {
+                GitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                BaseSha = gax::GaxPreconditions.CheckNotNullOrEmpty(baseSha, nameof(baseSha)),
+                HeadSha = gax::GaxPreconditions.CheckNotNullOrEmpty(headSha, nameof(headSha)),
+            }, callSettings);
+
+        /// <summary>
+        /// Diff commits for a GitRepositoryLink.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink.
+        /// </param>
+        /// <param name="baseSha">
+        /// Required. The base commit SHA or ref.
+        /// </param>
+        /// <param name="headSha">
+        /// Required. The head commit SHA or ref.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiffGitRepositoryLinkCommitResponse> DiffGitRepositoryLinkCommitAsync(GitRepositoryLinkName name, string baseSha, string headSha, gaxgrpc::CallSettings callSettings = null) =>
+            DiffGitRepositoryLinkCommitAsync(new DiffGitRepositoryLinkCommitRequest
+            {
+                GitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                BaseSha = gax::GaxPreconditions.CheckNotNullOrEmpty(baseSha, nameof(baseSha)),
+                HeadSha = gax::GaxPreconditions.CheckNotNullOrEmpty(headSha, nameof(headSha)),
+            }, callSettings);
+
+        /// <summary>
+        /// Diff commits for a GitRepositoryLink.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink.
+        /// </param>
+        /// <param name="baseSha">
+        /// Required. The base commit SHA or ref.
+        /// </param>
+        /// <param name="headSha">
+        /// Required. The head commit SHA or ref.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiffGitRepositoryLinkCommitResponse> DiffGitRepositoryLinkCommitAsync(GitRepositoryLinkName name, string baseSha, string headSha, st::CancellationToken cancellationToken) =>
+            DiffGitRepositoryLinkCommitAsync(name, baseSha, headSha, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch Commit details from a Git repository link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchGitRepositoryLinkCommitResponse FetchGitRepositoryLinkCommit(FetchGitRepositoryLinkCommitRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch Commit details from a Git repository link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchGitRepositoryLinkCommitResponse> FetchGitRepositoryLinkCommitAsync(FetchGitRepositoryLinkCommitRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch Commit details from a Git repository link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchGitRepositoryLinkCommitResponse> FetchGitRepositoryLinkCommitAsync(FetchGitRepositoryLinkCommitRequest request, st::CancellationToken cancellationToken) =>
+            FetchGitRepositoryLinkCommitAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch Commit details from a Git repository link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="commitSha">
+        /// Required. The commit SHA, or symbolic revision (e.g., branch name, tag, or
+        /// Git reference).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchGitRepositoryLinkCommitResponse FetchGitRepositoryLinkCommit(string name, string commitSha, gaxgrpc::CallSettings callSettings = null) =>
+            FetchGitRepositoryLinkCommit(new FetchGitRepositoryLinkCommitRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                CommitSha = gax::GaxPreconditions.CheckNotNullOrEmpty(commitSha, nameof(commitSha)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch Commit details from a Git repository link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="commitSha">
+        /// Required. The commit SHA, or symbolic revision (e.g., branch name, tag, or
+        /// Git reference).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchGitRepositoryLinkCommitResponse> FetchGitRepositoryLinkCommitAsync(string name, string commitSha, gaxgrpc::CallSettings callSettings = null) =>
+            FetchGitRepositoryLinkCommitAsync(new FetchGitRepositoryLinkCommitRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                CommitSha = gax::GaxPreconditions.CheckNotNullOrEmpty(commitSha, nameof(commitSha)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch Commit details from a Git repository link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="commitSha">
+        /// Required. The commit SHA, or symbolic revision (e.g., branch name, tag, or
+        /// Git reference).
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchGitRepositoryLinkCommitResponse> FetchGitRepositoryLinkCommitAsync(string name, string commitSha, st::CancellationToken cancellationToken) =>
+            FetchGitRepositoryLinkCommitAsync(name, commitSha, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch Commit details from a Git repository link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="commitSha">
+        /// Required. The commit SHA, or symbolic revision (e.g., branch name, tag, or
+        /// Git reference).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchGitRepositoryLinkCommitResponse FetchGitRepositoryLinkCommit(GitRepositoryLinkName name, string commitSha, gaxgrpc::CallSettings callSettings = null) =>
+            FetchGitRepositoryLinkCommit(new FetchGitRepositoryLinkCommitRequest
+            {
+                GitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                CommitSha = gax::GaxPreconditions.CheckNotNullOrEmpty(commitSha, nameof(commitSha)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch Commit details from a Git repository link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="commitSha">
+        /// Required. The commit SHA, or symbolic revision (e.g., branch name, tag, or
+        /// Git reference).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchGitRepositoryLinkCommitResponse> FetchGitRepositoryLinkCommitAsync(GitRepositoryLinkName name, string commitSha, gaxgrpc::CallSettings callSettings = null) =>
+            FetchGitRepositoryLinkCommitAsync(new FetchGitRepositoryLinkCommitRequest
+            {
+                GitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                CommitSha = gax::GaxPreconditions.CheckNotNullOrEmpty(commitSha, nameof(commitSha)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch Commit details from a Git repository link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="commitSha">
+        /// Required. The commit SHA, or symbolic revision (e.g., branch name, tag, or
+        /// Git reference).
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchGitRepositoryLinkCommitResponse> FetchGitRepositoryLinkCommitAsync(GitRepositoryLinkName name, string commitSha, st::CancellationToken cancellationToken) =>
+            FetchGitRepositoryLinkCommitAsync(name, commitSha, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch a list of Commits from a Git repository link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SCMCommit"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchGitRepositoryLinkCommitListResponse, SCMCommit> FetchGitRepositoryLinkCommitList(FetchGitRepositoryLinkCommitListRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch a list of Commits from a Git repository link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SCMCommit"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchGitRepositoryLinkCommitListResponse, SCMCommit> FetchGitRepositoryLinkCommitListAsync(FetchGitRepositoryLinkCommitListRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch a list of Commits from a Git repository link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="ref">
+        /// Optional. The commit SHA, or symbolic revision (e.g., branch name, tag, or
+        /// Git reference) from which to start listing commits.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SCMCommit"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchGitRepositoryLinkCommitListResponse, SCMCommit> FetchGitRepositoryLinkCommitList(string name, string @ref, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchGitRepositoryLinkCommitListRequest request = new FetchGitRepositoryLinkCommitListRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Ref = @ref ?? "",
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchGitRepositoryLinkCommitList(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch a list of Commits from a Git repository link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="ref">
+        /// Optional. The commit SHA, or symbolic revision (e.g., branch name, tag, or
+        /// Git reference) from which to start listing commits.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SCMCommit"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchGitRepositoryLinkCommitListResponse, SCMCommit> FetchGitRepositoryLinkCommitListAsync(string name, string @ref, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchGitRepositoryLinkCommitListRequest request = new FetchGitRepositoryLinkCommitListRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Ref = @ref ?? "",
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchGitRepositoryLinkCommitListAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch a list of Commits from a Git repository link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="ref">
+        /// Optional. The commit SHA, or symbolic revision (e.g., branch name, tag, or
+        /// Git reference) from which to start listing commits.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SCMCommit"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchGitRepositoryLinkCommitListResponse, SCMCommit> FetchGitRepositoryLinkCommitList(GitRepositoryLinkName name, string @ref, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchGitRepositoryLinkCommitListRequest request = new FetchGitRepositoryLinkCommitListRequest
+            {
+                GitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Ref = @ref ?? "",
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchGitRepositoryLinkCommitList(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch a list of Commits from a Git repository link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="ref">
+        /// Optional. The commit SHA, or symbolic revision (e.g., branch name, tag, or
+        /// Git reference) from which to start listing commits.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SCMCommit"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchGitRepositoryLinkCommitListResponse, SCMCommit> FetchGitRepositoryLinkCommitListAsync(GitRepositoryLinkName name, string @ref, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchGitRepositoryLinkCommitListRequest request = new FetchGitRepositoryLinkCommitListRequest
+            {
+                GitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Ref = @ref ?? "",
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchGitRepositoryLinkCommitListAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches blame information for a file or line range in a file.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchGitRepositoryLinkFileBlameResponse FetchGitRepositoryLinkFileBlame(FetchGitRepositoryLinkFileBlameRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches blame information for a file or line range in a file.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchGitRepositoryLinkFileBlameResponse> FetchGitRepositoryLinkFileBlameAsync(FetchGitRepositoryLinkFileBlameRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches blame information for a file or line range in a file.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchGitRepositoryLinkFileBlameResponse> FetchGitRepositoryLinkFileBlameAsync(FetchGitRepositoryLinkFileBlameRequest request, st::CancellationToken cancellationToken) =>
+            FetchGitRepositoryLinkFileBlameAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches blame information for a file or line range in a file.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="ref">
+        /// Required. The SCM commit SHA, or symbolic revision (e.g., branch name, tag)
+        /// from which to fetch the blame.
+        /// </param>
+        /// <param name="path">
+        /// Required. The file path within the repository.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchGitRepositoryLinkFileBlameResponse FetchGitRepositoryLinkFileBlame(string name, string @ref, string path, gaxgrpc::CallSettings callSettings = null) =>
+            FetchGitRepositoryLinkFileBlame(new FetchGitRepositoryLinkFileBlameRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Ref = gax::GaxPreconditions.CheckNotNullOrEmpty(@ref, nameof(@ref)),
+                Path = gax::GaxPreconditions.CheckNotNullOrEmpty(path, nameof(path)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches blame information for a file or line range in a file.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="ref">
+        /// Required. The SCM commit SHA, or symbolic revision (e.g., branch name, tag)
+        /// from which to fetch the blame.
+        /// </param>
+        /// <param name="path">
+        /// Required. The file path within the repository.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchGitRepositoryLinkFileBlameResponse> FetchGitRepositoryLinkFileBlameAsync(string name, string @ref, string path, gaxgrpc::CallSettings callSettings = null) =>
+            FetchGitRepositoryLinkFileBlameAsync(new FetchGitRepositoryLinkFileBlameRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Ref = gax::GaxPreconditions.CheckNotNullOrEmpty(@ref, nameof(@ref)),
+                Path = gax::GaxPreconditions.CheckNotNullOrEmpty(path, nameof(path)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches blame information for a file or line range in a file.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="ref">
+        /// Required. The SCM commit SHA, or symbolic revision (e.g., branch name, tag)
+        /// from which to fetch the blame.
+        /// </param>
+        /// <param name="path">
+        /// Required. The file path within the repository.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchGitRepositoryLinkFileBlameResponse> FetchGitRepositoryLinkFileBlameAsync(string name, string @ref, string path, st::CancellationToken cancellationToken) =>
+            FetchGitRepositoryLinkFileBlameAsync(name, @ref, path, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches blame information for a file or line range in a file.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="ref">
+        /// Required. The SCM commit SHA, or symbolic revision (e.g., branch name, tag)
+        /// from which to fetch the blame.
+        /// </param>
+        /// <param name="path">
+        /// Required. The file path within the repository.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchGitRepositoryLinkFileBlameResponse FetchGitRepositoryLinkFileBlame(GitRepositoryLinkName name, string @ref, string path, gaxgrpc::CallSettings callSettings = null) =>
+            FetchGitRepositoryLinkFileBlame(new FetchGitRepositoryLinkFileBlameRequest
+            {
+                GitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Ref = gax::GaxPreconditions.CheckNotNullOrEmpty(@ref, nameof(@ref)),
+                Path = gax::GaxPreconditions.CheckNotNullOrEmpty(path, nameof(path)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches blame information for a file or line range in a file.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="ref">
+        /// Required. The SCM commit SHA, or symbolic revision (e.g., branch name, tag)
+        /// from which to fetch the blame.
+        /// </param>
+        /// <param name="path">
+        /// Required. The file path within the repository.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchGitRepositoryLinkFileBlameResponse> FetchGitRepositoryLinkFileBlameAsync(GitRepositoryLinkName name, string @ref, string path, gaxgrpc::CallSettings callSettings = null) =>
+            FetchGitRepositoryLinkFileBlameAsync(new FetchGitRepositoryLinkFileBlameRequest
+            {
+                GitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Ref = gax::GaxPreconditions.CheckNotNullOrEmpty(@ref, nameof(@ref)),
+                Path = gax::GaxPreconditions.CheckNotNullOrEmpty(path, nameof(path)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches blame information for a file or line range in a file.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="ref">
+        /// Required. The SCM commit SHA, or symbolic revision (e.g., branch name, tag)
+        /// from which to fetch the blame.
+        /// </param>
+        /// <param name="path">
+        /// Required. The file path within the repository.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchGitRepositoryLinkFileBlameResponse> FetchGitRepositoryLinkFileBlameAsync(GitRepositoryLinkName name, string @ref, string path, st::CancellationToken cancellationToken) =>
+            FetchGitRepositoryLinkFileBlameAsync(name, @ref, path, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch Pull Request details from a Git repository link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PullRequest FetchGitRepositoryLinkPullRequest(FetchGitRepositoryLinkPullRequestRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch Pull Request details from a Git repository link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequest> FetchGitRepositoryLinkPullRequestAsync(FetchGitRepositoryLinkPullRequestRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch Pull Request details from a Git repository link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequest> FetchGitRepositoryLinkPullRequestAsync(FetchGitRepositoryLinkPullRequestRequest request, st::CancellationToken cancellationToken) =>
+            FetchGitRepositoryLinkPullRequestAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch Pull Request details from a Git repository link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The ID of the Pull Request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PullRequest FetchGitRepositoryLinkPullRequest(string name, string pullRequestId, gaxgrpc::CallSettings callSettings = null) =>
+            FetchGitRepositoryLinkPullRequest(new FetchGitRepositoryLinkPullRequestRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                PullRequestId = gax::GaxPreconditions.CheckNotNullOrEmpty(pullRequestId, nameof(pullRequestId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch Pull Request details from a Git repository link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The ID of the Pull Request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequest> FetchGitRepositoryLinkPullRequestAsync(string name, string pullRequestId, gaxgrpc::CallSettings callSettings = null) =>
+            FetchGitRepositoryLinkPullRequestAsync(new FetchGitRepositoryLinkPullRequestRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                PullRequestId = gax::GaxPreconditions.CheckNotNullOrEmpty(pullRequestId, nameof(pullRequestId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch Pull Request details from a Git repository link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The ID of the Pull Request.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequest> FetchGitRepositoryLinkPullRequestAsync(string name, string pullRequestId, st::CancellationToken cancellationToken) =>
+            FetchGitRepositoryLinkPullRequestAsync(name, pullRequestId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch Pull Request details from a Git repository link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The ID of the Pull Request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PullRequest FetchGitRepositoryLinkPullRequest(GitRepositoryLinkName name, string pullRequestId, gaxgrpc::CallSettings callSettings = null) =>
+            FetchGitRepositoryLinkPullRequest(new FetchGitRepositoryLinkPullRequestRequest
+            {
+                GitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PullRequestId = gax::GaxPreconditions.CheckNotNullOrEmpty(pullRequestId, nameof(pullRequestId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch Pull Request details from a Git repository link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The ID of the Pull Request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequest> FetchGitRepositoryLinkPullRequestAsync(GitRepositoryLinkName name, string pullRequestId, gaxgrpc::CallSettings callSettings = null) =>
+            FetchGitRepositoryLinkPullRequestAsync(new FetchGitRepositoryLinkPullRequestRequest
+            {
+                GitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PullRequestId = gax::GaxPreconditions.CheckNotNullOrEmpty(pullRequestId, nameof(pullRequestId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch Pull Request details from a Git repository link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The ID of the Pull Request.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequest> FetchGitRepositoryLinkPullRequestAsync(GitRepositoryLinkName name, string pullRequestId, st::CancellationToken cancellationToken) =>
+            FetchGitRepositoryLinkPullRequestAsync(name, pullRequestId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Add a comment to a Pull Request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PullRequestComment AddGitRepositoryLinkPullRequestComment(AddGitRepositoryLinkPullRequestCommentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Add a comment to a Pull Request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequestComment> AddGitRepositoryLinkPullRequestCommentAsync(AddGitRepositoryLinkPullRequestCommentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Add a comment to a Pull Request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequestComment> AddGitRepositoryLinkPullRequestCommentAsync(AddGitRepositoryLinkPullRequestCommentRequest request, st::CancellationToken cancellationToken) =>
+            AddGitRepositoryLinkPullRequestCommentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Add a comment to a Pull Request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The ID of the Pull Request.
+        /// </param>
+        /// <param name="comment">
+        /// Required. The comment to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PullRequestComment AddGitRepositoryLinkPullRequestComment(string name, string pullRequestId, PullRequestComment comment, gaxgrpc::CallSettings callSettings = null) =>
+            AddGitRepositoryLinkPullRequestComment(new AddGitRepositoryLinkPullRequestCommentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                PullRequestId = gax::GaxPreconditions.CheckNotNullOrEmpty(pullRequestId, nameof(pullRequestId)),
+                Comment = gax::GaxPreconditions.CheckNotNull(comment, nameof(comment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Add a comment to a Pull Request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The ID of the Pull Request.
+        /// </param>
+        /// <param name="comment">
+        /// Required. The comment to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequestComment> AddGitRepositoryLinkPullRequestCommentAsync(string name, string pullRequestId, PullRequestComment comment, gaxgrpc::CallSettings callSettings = null) =>
+            AddGitRepositoryLinkPullRequestCommentAsync(new AddGitRepositoryLinkPullRequestCommentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                PullRequestId = gax::GaxPreconditions.CheckNotNullOrEmpty(pullRequestId, nameof(pullRequestId)),
+                Comment = gax::GaxPreconditions.CheckNotNull(comment, nameof(comment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Add a comment to a Pull Request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The ID of the Pull Request.
+        /// </param>
+        /// <param name="comment">
+        /// Required. The comment to add.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequestComment> AddGitRepositoryLinkPullRequestCommentAsync(string name, string pullRequestId, PullRequestComment comment, st::CancellationToken cancellationToken) =>
+            AddGitRepositoryLinkPullRequestCommentAsync(name, pullRequestId, comment, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Add a comment to a Pull Request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The ID of the Pull Request.
+        /// </param>
+        /// <param name="comment">
+        /// Required. The comment to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PullRequestComment AddGitRepositoryLinkPullRequestComment(GitRepositoryLinkName name, string pullRequestId, PullRequestComment comment, gaxgrpc::CallSettings callSettings = null) =>
+            AddGitRepositoryLinkPullRequestComment(new AddGitRepositoryLinkPullRequestCommentRequest
+            {
+                GitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PullRequestId = gax::GaxPreconditions.CheckNotNullOrEmpty(pullRequestId, nameof(pullRequestId)),
+                Comment = gax::GaxPreconditions.CheckNotNull(comment, nameof(comment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Add a comment to a Pull Request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The ID of the Pull Request.
+        /// </param>
+        /// <param name="comment">
+        /// Required. The comment to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequestComment> AddGitRepositoryLinkPullRequestCommentAsync(GitRepositoryLinkName name, string pullRequestId, PullRequestComment comment, gaxgrpc::CallSettings callSettings = null) =>
+            AddGitRepositoryLinkPullRequestCommentAsync(new AddGitRepositoryLinkPullRequestCommentRequest
+            {
+                GitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PullRequestId = gax::GaxPreconditions.CheckNotNullOrEmpty(pullRequestId, nameof(pullRequestId)),
+                Comment = gax::GaxPreconditions.CheckNotNull(comment, nameof(comment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Add a comment to a Pull Request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The ID of the Pull Request.
+        /// </param>
+        /// <param name="comment">
+        /// Required. The comment to add.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequestComment> AddGitRepositoryLinkPullRequestCommentAsync(GitRepositoryLinkName name, string pullRequestId, PullRequestComment comment, st::CancellationToken cancellationToken) =>
+            AddGitRepositoryLinkPullRequestCommentAsync(name, pullRequestId, comment, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Add a review comment (inline on diff) to a Pull Request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PullRequestReviewComment AddGitRepositoryLinkPullRequestReviewComment(AddGitRepositoryLinkPullRequestReviewCommentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Add a review comment (inline on diff) to a Pull Request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequestReviewComment> AddGitRepositoryLinkPullRequestReviewCommentAsync(AddGitRepositoryLinkPullRequestReviewCommentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Add a review comment (inline on diff) to a Pull Request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequestReviewComment> AddGitRepositoryLinkPullRequestReviewCommentAsync(AddGitRepositoryLinkPullRequestReviewCommentRequest request, st::CancellationToken cancellationToken) =>
+            AddGitRepositoryLinkPullRequestReviewCommentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Add a review comment (inline on diff) to a Pull Request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The ID of the Pull Request.
+        /// </param>
+        /// <param name="comment">
+        /// Required. The review comment to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PullRequestReviewComment AddGitRepositoryLinkPullRequestReviewComment(string name, string pullRequestId, PullRequestReviewComment comment, gaxgrpc::CallSettings callSettings = null) =>
+            AddGitRepositoryLinkPullRequestReviewComment(new AddGitRepositoryLinkPullRequestReviewCommentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                PullRequestId = gax::GaxPreconditions.CheckNotNullOrEmpty(pullRequestId, nameof(pullRequestId)),
+                Comment = gax::GaxPreconditions.CheckNotNull(comment, nameof(comment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Add a review comment (inline on diff) to a Pull Request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The ID of the Pull Request.
+        /// </param>
+        /// <param name="comment">
+        /// Required. The review comment to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequestReviewComment> AddGitRepositoryLinkPullRequestReviewCommentAsync(string name, string pullRequestId, PullRequestReviewComment comment, gaxgrpc::CallSettings callSettings = null) =>
+            AddGitRepositoryLinkPullRequestReviewCommentAsync(new AddGitRepositoryLinkPullRequestReviewCommentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                PullRequestId = gax::GaxPreconditions.CheckNotNullOrEmpty(pullRequestId, nameof(pullRequestId)),
+                Comment = gax::GaxPreconditions.CheckNotNull(comment, nameof(comment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Add a review comment (inline on diff) to a Pull Request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The ID of the Pull Request.
+        /// </param>
+        /// <param name="comment">
+        /// Required. The review comment to add.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequestReviewComment> AddGitRepositoryLinkPullRequestReviewCommentAsync(string name, string pullRequestId, PullRequestReviewComment comment, st::CancellationToken cancellationToken) =>
+            AddGitRepositoryLinkPullRequestReviewCommentAsync(name, pullRequestId, comment, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Add a review comment (inline on diff) to a Pull Request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The ID of the Pull Request.
+        /// </param>
+        /// <param name="comment">
+        /// Required. The review comment to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PullRequestReviewComment AddGitRepositoryLinkPullRequestReviewComment(GitRepositoryLinkName name, string pullRequestId, PullRequestReviewComment comment, gaxgrpc::CallSettings callSettings = null) =>
+            AddGitRepositoryLinkPullRequestReviewComment(new AddGitRepositoryLinkPullRequestReviewCommentRequest
+            {
+                GitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PullRequestId = gax::GaxPreconditions.CheckNotNullOrEmpty(pullRequestId, nameof(pullRequestId)),
+                Comment = gax::GaxPreconditions.CheckNotNull(comment, nameof(comment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Add a review comment (inline on diff) to a Pull Request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The ID of the Pull Request.
+        /// </param>
+        /// <param name="comment">
+        /// Required. The review comment to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequestReviewComment> AddGitRepositoryLinkPullRequestReviewCommentAsync(GitRepositoryLinkName name, string pullRequestId, PullRequestReviewComment comment, gaxgrpc::CallSettings callSettings = null) =>
+            AddGitRepositoryLinkPullRequestReviewCommentAsync(new AddGitRepositoryLinkPullRequestReviewCommentRequest
+            {
+                GitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PullRequestId = gax::GaxPreconditions.CheckNotNullOrEmpty(pullRequestId, nameof(pullRequestId)),
+                Comment = gax::GaxPreconditions.CheckNotNull(comment, nameof(comment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Add a review comment (inline on diff) to a Pull Request.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the GitRepositoryLink in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The ID of the Pull Request.
+        /// </param>
+        /// <param name="comment">
+        /// Required. The review comment to add.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequestReviewComment> AddGitRepositoryLinkPullRequestReviewCommentAsync(GitRepositoryLinkName name, string pullRequestId, PullRequestReviewComment comment, st::CancellationToken cancellationToken) =>
+            AddGitRepositoryLinkPullRequestReviewCommentAsync(name, pullRequestId, comment, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Modifies a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PullRequest ModifyGitRepositoryLinkPullRequest(ModifyGitRepositoryLinkPullRequestRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Modifies a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequest> ModifyGitRepositoryLinkPullRequestAsync(ModifyGitRepositoryLinkPullRequestRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Modifies a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequest> ModifyGitRepositoryLinkPullRequestAsync(ModifyGitRepositoryLinkPullRequestRequest request, st::CancellationToken cancellationToken) =>
+            ModifyGitRepositoryLinkPullRequestAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Modifies a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The GitRepositoryLink resource name in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The SCM-specific Pull Request identifier (e.g., "45").
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PullRequest ModifyGitRepositoryLinkPullRequest(string name, string pullRequestId, gaxgrpc::CallSettings callSettings = null) =>
+            ModifyGitRepositoryLinkPullRequest(new ModifyGitRepositoryLinkPullRequestRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                PullRequestId = gax::GaxPreconditions.CheckNotNullOrEmpty(pullRequestId, nameof(pullRequestId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Modifies a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The GitRepositoryLink resource name in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The SCM-specific Pull Request identifier (e.g., "45").
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequest> ModifyGitRepositoryLinkPullRequestAsync(string name, string pullRequestId, gaxgrpc::CallSettings callSettings = null) =>
+            ModifyGitRepositoryLinkPullRequestAsync(new ModifyGitRepositoryLinkPullRequestRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                PullRequestId = gax::GaxPreconditions.CheckNotNullOrEmpty(pullRequestId, nameof(pullRequestId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Modifies a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The GitRepositoryLink resource name in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The SCM-specific Pull Request identifier (e.g., "45").
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequest> ModifyGitRepositoryLinkPullRequestAsync(string name, string pullRequestId, st::CancellationToken cancellationToken) =>
+            ModifyGitRepositoryLinkPullRequestAsync(name, pullRequestId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Modifies a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The GitRepositoryLink resource name in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The SCM-specific Pull Request identifier (e.g., "45").
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PullRequest ModifyGitRepositoryLinkPullRequest(GitRepositoryLinkName name, string pullRequestId, gaxgrpc::CallSettings callSettings = null) =>
+            ModifyGitRepositoryLinkPullRequest(new ModifyGitRepositoryLinkPullRequestRequest
+            {
+                GitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PullRequestId = gax::GaxPreconditions.CheckNotNullOrEmpty(pullRequestId, nameof(pullRequestId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Modifies a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The GitRepositoryLink resource name in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The SCM-specific Pull Request identifier (e.g., "45").
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequest> ModifyGitRepositoryLinkPullRequestAsync(GitRepositoryLinkName name, string pullRequestId, gaxgrpc::CallSettings callSettings = null) =>
+            ModifyGitRepositoryLinkPullRequestAsync(new ModifyGitRepositoryLinkPullRequestRequest
+            {
+                GitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PullRequestId = gax::GaxPreconditions.CheckNotNullOrEmpty(pullRequestId, nameof(pullRequestId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Modifies a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The GitRepositoryLink resource name in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pullRequestId">
+        /// Required. The SCM-specific Pull Request identifier (e.g., "45").
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PullRequest> ModifyGitRepositoryLinkPullRequestAsync(GitRepositoryLinkName name, string pullRequestId, st::CancellationToken cancellationToken) =>
+            ModifyGitRepositoryLinkPullRequestAsync(name, pullRequestId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches a list of Pull Requests from the remote repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PullRequest"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchGitRepositoryLinkPullRequestListResponse, PullRequest> FetchGitRepositoryLinkPullRequestList(FetchGitRepositoryLinkPullRequestListRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches a list of Pull Requests from the remote repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PullRequest"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchGitRepositoryLinkPullRequestListResponse, PullRequest> FetchGitRepositoryLinkPullRequestListAsync(FetchGitRepositoryLinkPullRequestListRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches a list of Pull Requests from the remote repository.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The GitRepositoryLink resource name in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PullRequest"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchGitRepositoryLinkPullRequestListResponse, PullRequest> FetchGitRepositoryLinkPullRequestList(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchGitRepositoryLinkPullRequestListRequest request = new FetchGitRepositoryLinkPullRequestListRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchGitRepositoryLinkPullRequestList(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches a list of Pull Requests from the remote repository.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The GitRepositoryLink resource name in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PullRequest"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchGitRepositoryLinkPullRequestListResponse, PullRequest> FetchGitRepositoryLinkPullRequestListAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchGitRepositoryLinkPullRequestListRequest request = new FetchGitRepositoryLinkPullRequestListRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchGitRepositoryLinkPullRequestListAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches a list of Pull Requests from the remote repository.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The GitRepositoryLink resource name in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PullRequest"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchGitRepositoryLinkPullRequestListResponse, PullRequest> FetchGitRepositoryLinkPullRequestList(GitRepositoryLinkName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchGitRepositoryLinkPullRequestListRequest request = new FetchGitRepositoryLinkPullRequestListRequest
+            {
+                GitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchGitRepositoryLinkPullRequestList(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches a list of Pull Requests from the remote repository.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The GitRepositoryLink resource name in the format
+        /// `projects/*/locations/*/connections/*/gitRepositoryLinks/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PullRequest"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchGitRepositoryLinkPullRequestListResponse, PullRequest> FetchGitRepositoryLinkPullRequestListAsync(GitRepositoryLinkName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchGitRepositoryLinkPullRequestListRequest request = new FetchGitRepositoryLinkPullRequestListRequest
+            {
+                GitRepositoryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchGitRepositoryLinkPullRequestListAsync(request, callSettings);
         }
 
         /// <summary>
@@ -4384,11 +6034,31 @@ namespace Google.Cloud.DeveloperConnect.V1
 
         private readonly gaxgrpc::ApiCall<FetchReadTokenRequest, FetchReadTokenResponse> _callFetchReadToken;
 
+        private readonly gaxgrpc::ApiCall<OpenGitRepositoryLinkPullRequestRequest, PullRequest> _callOpenGitRepositoryLinkPullRequest;
+
         private readonly gaxgrpc::ApiCall<FetchLinkableGitRepositoriesRequest, FetchLinkableGitRepositoriesResponse> _callFetchLinkableGitRepositories;
 
         private readonly gaxgrpc::ApiCall<FetchGitHubInstallationsRequest, FetchGitHubInstallationsResponse> _callFetchGitHubInstallations;
 
         private readonly gaxgrpc::ApiCall<FetchGitRefsRequest, FetchGitRefsResponse> _callFetchGitRefs;
+
+        private readonly gaxgrpc::ApiCall<DiffGitRepositoryLinkCommitRequest, DiffGitRepositoryLinkCommitResponse> _callDiffGitRepositoryLinkCommit;
+
+        private readonly gaxgrpc::ApiCall<FetchGitRepositoryLinkCommitRequest, FetchGitRepositoryLinkCommitResponse> _callFetchGitRepositoryLinkCommit;
+
+        private readonly gaxgrpc::ApiCall<FetchGitRepositoryLinkCommitListRequest, FetchGitRepositoryLinkCommitListResponse> _callFetchGitRepositoryLinkCommitList;
+
+        private readonly gaxgrpc::ApiCall<FetchGitRepositoryLinkFileBlameRequest, FetchGitRepositoryLinkFileBlameResponse> _callFetchGitRepositoryLinkFileBlame;
+
+        private readonly gaxgrpc::ApiCall<FetchGitRepositoryLinkPullRequestRequest, PullRequest> _callFetchGitRepositoryLinkPullRequest;
+
+        private readonly gaxgrpc::ApiCall<AddGitRepositoryLinkPullRequestCommentRequest, PullRequestComment> _callAddGitRepositoryLinkPullRequestComment;
+
+        private readonly gaxgrpc::ApiCall<AddGitRepositoryLinkPullRequestReviewCommentRequest, PullRequestReviewComment> _callAddGitRepositoryLinkPullRequestReviewComment;
+
+        private readonly gaxgrpc::ApiCall<ModifyGitRepositoryLinkPullRequestRequest, PullRequest> _callModifyGitRepositoryLinkPullRequest;
+
+        private readonly gaxgrpc::ApiCall<FetchGitRepositoryLinkPullRequestListRequest, FetchGitRepositoryLinkPullRequestListResponse> _callFetchGitRepositoryLinkPullRequestList;
 
         private readonly gaxgrpc::ApiCall<ListAccountConnectorsRequest, ListAccountConnectorsResponse> _callListAccountConnectors;
 
@@ -4473,6 +6143,9 @@ namespace Google.Cloud.DeveloperConnect.V1
             _callFetchReadToken = clientHelper.BuildApiCall<FetchReadTokenRequest, FetchReadTokenResponse>("FetchReadToken", grpcClient.FetchReadTokenAsync, grpcClient.FetchReadToken, effectiveSettings.FetchReadTokenSettings).WithGoogleRequestParam("git_repository_link", request => request.GitRepositoryLink);
             Modify_ApiCall(ref _callFetchReadToken);
             Modify_FetchReadTokenApiCall(ref _callFetchReadToken);
+            _callOpenGitRepositoryLinkPullRequest = clientHelper.BuildApiCall<OpenGitRepositoryLinkPullRequestRequest, PullRequest>("OpenGitRepositoryLinkPullRequest", grpcClient.OpenGitRepositoryLinkPullRequestAsync, grpcClient.OpenGitRepositoryLinkPullRequest, effectiveSettings.OpenGitRepositoryLinkPullRequestSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callOpenGitRepositoryLinkPullRequest);
+            Modify_OpenGitRepositoryLinkPullRequestApiCall(ref _callOpenGitRepositoryLinkPullRequest);
             _callFetchLinkableGitRepositories = clientHelper.BuildApiCall<FetchLinkableGitRepositoriesRequest, FetchLinkableGitRepositoriesResponse>("FetchLinkableGitRepositories", grpcClient.FetchLinkableGitRepositoriesAsync, grpcClient.FetchLinkableGitRepositories, effectiveSettings.FetchLinkableGitRepositoriesSettings).WithGoogleRequestParam("connection", request => request.Connection);
             Modify_ApiCall(ref _callFetchLinkableGitRepositories);
             Modify_FetchLinkableGitRepositoriesApiCall(ref _callFetchLinkableGitRepositories);
@@ -4482,6 +6155,33 @@ namespace Google.Cloud.DeveloperConnect.V1
             _callFetchGitRefs = clientHelper.BuildApiCall<FetchGitRefsRequest, FetchGitRefsResponse>("FetchGitRefs", grpcClient.FetchGitRefsAsync, grpcClient.FetchGitRefs, effectiveSettings.FetchGitRefsSettings).WithGoogleRequestParam("git_repository_link", request => request.GitRepositoryLink);
             Modify_ApiCall(ref _callFetchGitRefs);
             Modify_FetchGitRefsApiCall(ref _callFetchGitRefs);
+            _callDiffGitRepositoryLinkCommit = clientHelper.BuildApiCall<DiffGitRepositoryLinkCommitRequest, DiffGitRepositoryLinkCommitResponse>("DiffGitRepositoryLinkCommit", grpcClient.DiffGitRepositoryLinkCommitAsync, grpcClient.DiffGitRepositoryLinkCommit, effectiveSettings.DiffGitRepositoryLinkCommitSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDiffGitRepositoryLinkCommit);
+            Modify_DiffGitRepositoryLinkCommitApiCall(ref _callDiffGitRepositoryLinkCommit);
+            _callFetchGitRepositoryLinkCommit = clientHelper.BuildApiCall<FetchGitRepositoryLinkCommitRequest, FetchGitRepositoryLinkCommitResponse>("FetchGitRepositoryLinkCommit", grpcClient.FetchGitRepositoryLinkCommitAsync, grpcClient.FetchGitRepositoryLinkCommit, effectiveSettings.FetchGitRepositoryLinkCommitSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callFetchGitRepositoryLinkCommit);
+            Modify_FetchGitRepositoryLinkCommitApiCall(ref _callFetchGitRepositoryLinkCommit);
+            _callFetchGitRepositoryLinkCommitList = clientHelper.BuildApiCall<FetchGitRepositoryLinkCommitListRequest, FetchGitRepositoryLinkCommitListResponse>("FetchGitRepositoryLinkCommitList", grpcClient.FetchGitRepositoryLinkCommitListAsync, grpcClient.FetchGitRepositoryLinkCommitList, effectiveSettings.FetchGitRepositoryLinkCommitListSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callFetchGitRepositoryLinkCommitList);
+            Modify_FetchGitRepositoryLinkCommitListApiCall(ref _callFetchGitRepositoryLinkCommitList);
+            _callFetchGitRepositoryLinkFileBlame = clientHelper.BuildApiCall<FetchGitRepositoryLinkFileBlameRequest, FetchGitRepositoryLinkFileBlameResponse>("FetchGitRepositoryLinkFileBlame", grpcClient.FetchGitRepositoryLinkFileBlameAsync, grpcClient.FetchGitRepositoryLinkFileBlame, effectiveSettings.FetchGitRepositoryLinkFileBlameSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callFetchGitRepositoryLinkFileBlame);
+            Modify_FetchGitRepositoryLinkFileBlameApiCall(ref _callFetchGitRepositoryLinkFileBlame);
+            _callFetchGitRepositoryLinkPullRequest = clientHelper.BuildApiCall<FetchGitRepositoryLinkPullRequestRequest, PullRequest>("FetchGitRepositoryLinkPullRequest", grpcClient.FetchGitRepositoryLinkPullRequestAsync, grpcClient.FetchGitRepositoryLinkPullRequest, effectiveSettings.FetchGitRepositoryLinkPullRequestSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callFetchGitRepositoryLinkPullRequest);
+            Modify_FetchGitRepositoryLinkPullRequestApiCall(ref _callFetchGitRepositoryLinkPullRequest);
+            _callAddGitRepositoryLinkPullRequestComment = clientHelper.BuildApiCall<AddGitRepositoryLinkPullRequestCommentRequest, PullRequestComment>("AddGitRepositoryLinkPullRequestComment", grpcClient.AddGitRepositoryLinkPullRequestCommentAsync, grpcClient.AddGitRepositoryLinkPullRequestComment, effectiveSettings.AddGitRepositoryLinkPullRequestCommentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callAddGitRepositoryLinkPullRequestComment);
+            Modify_AddGitRepositoryLinkPullRequestCommentApiCall(ref _callAddGitRepositoryLinkPullRequestComment);
+            _callAddGitRepositoryLinkPullRequestReviewComment = clientHelper.BuildApiCall<AddGitRepositoryLinkPullRequestReviewCommentRequest, PullRequestReviewComment>("AddGitRepositoryLinkPullRequestReviewComment", grpcClient.AddGitRepositoryLinkPullRequestReviewCommentAsync, grpcClient.AddGitRepositoryLinkPullRequestReviewComment, effectiveSettings.AddGitRepositoryLinkPullRequestReviewCommentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callAddGitRepositoryLinkPullRequestReviewComment);
+            Modify_AddGitRepositoryLinkPullRequestReviewCommentApiCall(ref _callAddGitRepositoryLinkPullRequestReviewComment);
+            _callModifyGitRepositoryLinkPullRequest = clientHelper.BuildApiCall<ModifyGitRepositoryLinkPullRequestRequest, PullRequest>("ModifyGitRepositoryLinkPullRequest", grpcClient.ModifyGitRepositoryLinkPullRequestAsync, grpcClient.ModifyGitRepositoryLinkPullRequest, effectiveSettings.ModifyGitRepositoryLinkPullRequestSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callModifyGitRepositoryLinkPullRequest);
+            Modify_ModifyGitRepositoryLinkPullRequestApiCall(ref _callModifyGitRepositoryLinkPullRequest);
+            _callFetchGitRepositoryLinkPullRequestList = clientHelper.BuildApiCall<FetchGitRepositoryLinkPullRequestListRequest, FetchGitRepositoryLinkPullRequestListResponse>("FetchGitRepositoryLinkPullRequestList", grpcClient.FetchGitRepositoryLinkPullRequestListAsync, grpcClient.FetchGitRepositoryLinkPullRequestList, effectiveSettings.FetchGitRepositoryLinkPullRequestListSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callFetchGitRepositoryLinkPullRequestList);
+            Modify_FetchGitRepositoryLinkPullRequestListApiCall(ref _callFetchGitRepositoryLinkPullRequestList);
             _callListAccountConnectors = clientHelper.BuildApiCall<ListAccountConnectorsRequest, ListAccountConnectorsResponse>("ListAccountConnectors", grpcClient.ListAccountConnectorsAsync, grpcClient.ListAccountConnectors, effectiveSettings.ListAccountConnectorsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAccountConnectors);
             Modify_ListAccountConnectorsApiCall(ref _callListAccountConnectors);
@@ -4545,11 +6245,31 @@ namespace Google.Cloud.DeveloperConnect.V1
 
         partial void Modify_FetchReadTokenApiCall(ref gaxgrpc::ApiCall<FetchReadTokenRequest, FetchReadTokenResponse> call);
 
+        partial void Modify_OpenGitRepositoryLinkPullRequestApiCall(ref gaxgrpc::ApiCall<OpenGitRepositoryLinkPullRequestRequest, PullRequest> call);
+
         partial void Modify_FetchLinkableGitRepositoriesApiCall(ref gaxgrpc::ApiCall<FetchLinkableGitRepositoriesRequest, FetchLinkableGitRepositoriesResponse> call);
 
         partial void Modify_FetchGitHubInstallationsApiCall(ref gaxgrpc::ApiCall<FetchGitHubInstallationsRequest, FetchGitHubInstallationsResponse> call);
 
         partial void Modify_FetchGitRefsApiCall(ref gaxgrpc::ApiCall<FetchGitRefsRequest, FetchGitRefsResponse> call);
+
+        partial void Modify_DiffGitRepositoryLinkCommitApiCall(ref gaxgrpc::ApiCall<DiffGitRepositoryLinkCommitRequest, DiffGitRepositoryLinkCommitResponse> call);
+
+        partial void Modify_FetchGitRepositoryLinkCommitApiCall(ref gaxgrpc::ApiCall<FetchGitRepositoryLinkCommitRequest, FetchGitRepositoryLinkCommitResponse> call);
+
+        partial void Modify_FetchGitRepositoryLinkCommitListApiCall(ref gaxgrpc::ApiCall<FetchGitRepositoryLinkCommitListRequest, FetchGitRepositoryLinkCommitListResponse> call);
+
+        partial void Modify_FetchGitRepositoryLinkFileBlameApiCall(ref gaxgrpc::ApiCall<FetchGitRepositoryLinkFileBlameRequest, FetchGitRepositoryLinkFileBlameResponse> call);
+
+        partial void Modify_FetchGitRepositoryLinkPullRequestApiCall(ref gaxgrpc::ApiCall<FetchGitRepositoryLinkPullRequestRequest, PullRequest> call);
+
+        partial void Modify_AddGitRepositoryLinkPullRequestCommentApiCall(ref gaxgrpc::ApiCall<AddGitRepositoryLinkPullRequestCommentRequest, PullRequestComment> call);
+
+        partial void Modify_AddGitRepositoryLinkPullRequestReviewCommentApiCall(ref gaxgrpc::ApiCall<AddGitRepositoryLinkPullRequestReviewCommentRequest, PullRequestReviewComment> call);
+
+        partial void Modify_ModifyGitRepositoryLinkPullRequestApiCall(ref gaxgrpc::ApiCall<ModifyGitRepositoryLinkPullRequestRequest, PullRequest> call);
+
+        partial void Modify_FetchGitRepositoryLinkPullRequestListApiCall(ref gaxgrpc::ApiCall<FetchGitRepositoryLinkPullRequestListRequest, FetchGitRepositoryLinkPullRequestListResponse> call);
 
         partial void Modify_ListAccountConnectorsApiCall(ref gaxgrpc::ApiCall<ListAccountConnectorsRequest, ListAccountConnectorsResponse> call);
 
@@ -4605,11 +6325,31 @@ namespace Google.Cloud.DeveloperConnect.V1
 
         partial void Modify_FetchReadTokenRequest(ref FetchReadTokenRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_OpenGitRepositoryLinkPullRequestRequest(ref OpenGitRepositoryLinkPullRequestRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_FetchLinkableGitRepositoriesRequest(ref FetchLinkableGitRepositoriesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_FetchGitHubInstallationsRequest(ref FetchGitHubInstallationsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_FetchGitRefsRequest(ref FetchGitRefsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DiffGitRepositoryLinkCommitRequest(ref DiffGitRepositoryLinkCommitRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchGitRepositoryLinkCommitRequest(ref FetchGitRepositoryLinkCommitRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchGitRepositoryLinkCommitListRequest(ref FetchGitRepositoryLinkCommitListRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchGitRepositoryLinkFileBlameRequest(ref FetchGitRepositoryLinkFileBlameRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchGitRepositoryLinkPullRequestRequest(ref FetchGitRepositoryLinkPullRequestRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AddGitRepositoryLinkPullRequestCommentRequest(ref AddGitRepositoryLinkPullRequestCommentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AddGitRepositoryLinkPullRequestReviewCommentRequest(ref AddGitRepositoryLinkPullRequestReviewCommentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ModifyGitRepositoryLinkPullRequestRequest(ref ModifyGitRepositoryLinkPullRequestRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchGitRepositoryLinkPullRequestListRequest(ref FetchGitRepositoryLinkPullRequestListRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListAccountConnectorsRequest(ref ListAccountConnectorsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4925,6 +6665,32 @@ namespace Google.Cloud.DeveloperConnect.V1
         }
 
         /// <summary>
+        /// Opens a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PullRequest OpenGitRepositoryLinkPullRequest(OpenGitRepositoryLinkPullRequestRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_OpenGitRepositoryLinkPullRequestRequest(ref request, ref callSettings);
+            return _callOpenGitRepositoryLinkPullRequest.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Opens a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PullRequest> OpenGitRepositoryLinkPullRequestAsync(OpenGitRepositoryLinkPullRequestRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_OpenGitRepositoryLinkPullRequestRequest(ref request, ref callSettings);
+            return _callOpenGitRepositoryLinkPullRequest.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// FetchLinkableGitRepositories returns a list of git repositories from an SCM
         /// that are available to be added to a Connection.
         /// </summary>
@@ -5002,6 +6768,224 @@ namespace Google.Cloud.DeveloperConnect.V1
         {
             Modify_FetchGitRefsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<FetchGitRefsRequest, FetchGitRefsResponse, string>(_callFetchGitRefs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Diff commits for a GitRepositoryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DiffGitRepositoryLinkCommitResponse DiffGitRepositoryLinkCommit(DiffGitRepositoryLinkCommitRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DiffGitRepositoryLinkCommitRequest(ref request, ref callSettings);
+            return _callDiffGitRepositoryLinkCommit.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Diff commits for a GitRepositoryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DiffGitRepositoryLinkCommitResponse> DiffGitRepositoryLinkCommitAsync(DiffGitRepositoryLinkCommitRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DiffGitRepositoryLinkCommitRequest(ref request, ref callSettings);
+            return _callDiffGitRepositoryLinkCommit.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch Commit details from a Git repository link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FetchGitRepositoryLinkCommitResponse FetchGitRepositoryLinkCommit(FetchGitRepositoryLinkCommitRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchGitRepositoryLinkCommitRequest(ref request, ref callSettings);
+            return _callFetchGitRepositoryLinkCommit.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch Commit details from a Git repository link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FetchGitRepositoryLinkCommitResponse> FetchGitRepositoryLinkCommitAsync(FetchGitRepositoryLinkCommitRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchGitRepositoryLinkCommitRequest(ref request, ref callSettings);
+            return _callFetchGitRepositoryLinkCommit.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch a list of Commits from a Git repository link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SCMCommit"/> resources.</returns>
+        public override gax::PagedEnumerable<FetchGitRepositoryLinkCommitListResponse, SCMCommit> FetchGitRepositoryLinkCommitList(FetchGitRepositoryLinkCommitListRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchGitRepositoryLinkCommitListRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<FetchGitRepositoryLinkCommitListRequest, FetchGitRepositoryLinkCommitListResponse, SCMCommit>(_callFetchGitRepositoryLinkCommitList, request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch a list of Commits from a Git repository link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SCMCommit"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<FetchGitRepositoryLinkCommitListResponse, SCMCommit> FetchGitRepositoryLinkCommitListAsync(FetchGitRepositoryLinkCommitListRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchGitRepositoryLinkCommitListRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<FetchGitRepositoryLinkCommitListRequest, FetchGitRepositoryLinkCommitListResponse, SCMCommit>(_callFetchGitRepositoryLinkCommitList, request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches blame information for a file or line range in a file.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FetchGitRepositoryLinkFileBlameResponse FetchGitRepositoryLinkFileBlame(FetchGitRepositoryLinkFileBlameRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchGitRepositoryLinkFileBlameRequest(ref request, ref callSettings);
+            return _callFetchGitRepositoryLinkFileBlame.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches blame information for a file or line range in a file.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FetchGitRepositoryLinkFileBlameResponse> FetchGitRepositoryLinkFileBlameAsync(FetchGitRepositoryLinkFileBlameRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchGitRepositoryLinkFileBlameRequest(ref request, ref callSettings);
+            return _callFetchGitRepositoryLinkFileBlame.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch Pull Request details from a Git repository link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PullRequest FetchGitRepositoryLinkPullRequest(FetchGitRepositoryLinkPullRequestRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchGitRepositoryLinkPullRequestRequest(ref request, ref callSettings);
+            return _callFetchGitRepositoryLinkPullRequest.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch Pull Request details from a Git repository link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PullRequest> FetchGitRepositoryLinkPullRequestAsync(FetchGitRepositoryLinkPullRequestRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchGitRepositoryLinkPullRequestRequest(ref request, ref callSettings);
+            return _callFetchGitRepositoryLinkPullRequest.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Add a comment to a Pull Request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PullRequestComment AddGitRepositoryLinkPullRequestComment(AddGitRepositoryLinkPullRequestCommentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddGitRepositoryLinkPullRequestCommentRequest(ref request, ref callSettings);
+            return _callAddGitRepositoryLinkPullRequestComment.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Add a comment to a Pull Request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PullRequestComment> AddGitRepositoryLinkPullRequestCommentAsync(AddGitRepositoryLinkPullRequestCommentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddGitRepositoryLinkPullRequestCommentRequest(ref request, ref callSettings);
+            return _callAddGitRepositoryLinkPullRequestComment.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Add a review comment (inline on diff) to a Pull Request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PullRequestReviewComment AddGitRepositoryLinkPullRequestReviewComment(AddGitRepositoryLinkPullRequestReviewCommentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddGitRepositoryLinkPullRequestReviewCommentRequest(ref request, ref callSettings);
+            return _callAddGitRepositoryLinkPullRequestReviewComment.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Add a review comment (inline on diff) to a Pull Request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PullRequestReviewComment> AddGitRepositoryLinkPullRequestReviewCommentAsync(AddGitRepositoryLinkPullRequestReviewCommentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddGitRepositoryLinkPullRequestReviewCommentRequest(ref request, ref callSettings);
+            return _callAddGitRepositoryLinkPullRequestReviewComment.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Modifies a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PullRequest ModifyGitRepositoryLinkPullRequest(ModifyGitRepositoryLinkPullRequestRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ModifyGitRepositoryLinkPullRequestRequest(ref request, ref callSettings);
+            return _callModifyGitRepositoryLinkPullRequest.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Modifies a Pull Request in the remote SCM repository associated with a
+        /// GitRepositoryLink.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PullRequest> ModifyGitRepositoryLinkPullRequestAsync(ModifyGitRepositoryLinkPullRequestRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ModifyGitRepositoryLinkPullRequestRequest(ref request, ref callSettings);
+            return _callModifyGitRepositoryLinkPullRequest.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches a list of Pull Requests from the remote repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PullRequest"/> resources.</returns>
+        public override gax::PagedEnumerable<FetchGitRepositoryLinkPullRequestListResponse, PullRequest> FetchGitRepositoryLinkPullRequestList(FetchGitRepositoryLinkPullRequestListRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchGitRepositoryLinkPullRequestListRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<FetchGitRepositoryLinkPullRequestListRequest, FetchGitRepositoryLinkPullRequestListResponse, PullRequest>(_callFetchGitRepositoryLinkPullRequestList, request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches a list of Pull Requests from the remote repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PullRequest"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<FetchGitRepositoryLinkPullRequestListResponse, PullRequest> FetchGitRepositoryLinkPullRequestListAsync(FetchGitRepositoryLinkPullRequestListRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchGitRepositoryLinkPullRequestListRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<FetchGitRepositoryLinkPullRequestListRequest, FetchGitRepositoryLinkPullRequestListResponse, PullRequest>(_callFetchGitRepositoryLinkPullRequestList, request, callSettings);
         }
 
         /// <summary>
@@ -5324,6 +7308,14 @@ namespace Google.Cloud.DeveloperConnect.V1
     {
     }
 
+    public partial class FetchGitRepositoryLinkCommitListRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class FetchGitRepositoryLinkPullRequestListRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListAccountConnectorsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -5360,6 +7352,22 @@ namespace Google.Cloud.DeveloperConnect.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<string> GetEnumerator() => RefNames.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class FetchGitRepositoryLinkCommitListResponse : gaxgrpc::IPageResponse<SCMCommit>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<SCMCommit> GetEnumerator() => Commits.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class FetchGitRepositoryLinkPullRequestListResponse : gaxgrpc::IPageResponse<PullRequest>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<PullRequest> GetEnumerator() => PullRequests.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

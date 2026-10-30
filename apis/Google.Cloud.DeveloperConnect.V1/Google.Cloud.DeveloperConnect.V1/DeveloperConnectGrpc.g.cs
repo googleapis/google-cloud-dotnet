@@ -100,6 +100,10 @@ namespace Google.Cloud.DeveloperConnect.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FetchReadTokenResponse> __Marshaller_google_cloud_developerconnect_v1_FetchReadTokenResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FetchReadTokenResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.OpenGitRepositoryLinkPullRequestRequest> __Marshaller_google_cloud_developerconnect_v1_OpenGitRepositoryLinkPullRequestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.OpenGitRepositoryLinkPullRequestRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.PullRequest> __Marshaller_google_cloud_developerconnect_v1_PullRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.PullRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FetchLinkableGitRepositoriesRequest> __Marshaller_google_cloud_developerconnect_v1_FetchLinkableGitRepositoriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FetchLinkableGitRepositoriesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FetchLinkableGitRepositoriesResponse> __Marshaller_google_cloud_developerconnect_v1_FetchLinkableGitRepositoriesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FetchLinkableGitRepositoriesResponse.Parser));
@@ -111,6 +115,38 @@ namespace Google.Cloud.DeveloperConnect.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FetchGitRefsRequest> __Marshaller_google_cloud_developerconnect_v1_FetchGitRefsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FetchGitRefsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FetchGitRefsResponse> __Marshaller_google_cloud_developerconnect_v1_FetchGitRefsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FetchGitRefsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.DiffGitRepositoryLinkCommitRequest> __Marshaller_google_cloud_developerconnect_v1_DiffGitRepositoryLinkCommitRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.DiffGitRepositoryLinkCommitRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.DiffGitRepositoryLinkCommitResponse> __Marshaller_google_cloud_developerconnect_v1_DiffGitRepositoryLinkCommitResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.DiffGitRepositoryLinkCommitResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitRequest> __Marshaller_google_cloud_developerconnect_v1_FetchGitRepositoryLinkCommitRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitResponse> __Marshaller_google_cloud_developerconnect_v1_FetchGitRepositoryLinkCommitResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitListRequest> __Marshaller_google_cloud_developerconnect_v1_FetchGitRepositoryLinkCommitListRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitListRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitListResponse> __Marshaller_google_cloud_developerconnect_v1_FetchGitRepositoryLinkCommitListResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitListResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkFileBlameRequest> __Marshaller_google_cloud_developerconnect_v1_FetchGitRepositoryLinkFileBlameRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkFileBlameRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkFileBlameResponse> __Marshaller_google_cloud_developerconnect_v1_FetchGitRepositoryLinkFileBlameResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkFileBlameResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestRequest> __Marshaller_google_cloud_developerconnect_v1_FetchGitRepositoryLinkPullRequestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.AddGitRepositoryLinkPullRequestCommentRequest> __Marshaller_google_cloud_developerconnect_v1_AddGitRepositoryLinkPullRequestCommentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.AddGitRepositoryLinkPullRequestCommentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.PullRequestComment> __Marshaller_google_cloud_developerconnect_v1_PullRequestComment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.PullRequestComment.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.AddGitRepositoryLinkPullRequestReviewCommentRequest> __Marshaller_google_cloud_developerconnect_v1_AddGitRepositoryLinkPullRequestReviewCommentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.AddGitRepositoryLinkPullRequestReviewCommentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.PullRequestReviewComment> __Marshaller_google_cloud_developerconnect_v1_PullRequestReviewComment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.PullRequestReviewComment.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.ModifyGitRepositoryLinkPullRequestRequest> __Marshaller_google_cloud_developerconnect_v1_ModifyGitRepositoryLinkPullRequestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.ModifyGitRepositoryLinkPullRequestRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestListRequest> __Marshaller_google_cloud_developerconnect_v1_FetchGitRepositoryLinkPullRequestListRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestListRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestListResponse> __Marshaller_google_cloud_developerconnect_v1_FetchGitRepositoryLinkPullRequestListResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestListResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsRequest> __Marshaller_google_cloud_developerconnect_v1_ListAccountConnectorsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -239,6 +275,14 @@ namespace Google.Cloud.DeveloperConnect.V1 {
         __Marshaller_google_cloud_developerconnect_v1_FetchReadTokenResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.OpenGitRepositoryLinkPullRequestRequest, global::Google.Cloud.DeveloperConnect.V1.PullRequest> __Method_OpenGitRepositoryLinkPullRequest = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.OpenGitRepositoryLinkPullRequestRequest, global::Google.Cloud.DeveloperConnect.V1.PullRequest>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "OpenGitRepositoryLinkPullRequest",
+        __Marshaller_google_cloud_developerconnect_v1_OpenGitRepositoryLinkPullRequestRequest,
+        __Marshaller_google_cloud_developerconnect_v1_PullRequest);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.FetchLinkableGitRepositoriesRequest, global::Google.Cloud.DeveloperConnect.V1.FetchLinkableGitRepositoriesResponse> __Method_FetchLinkableGitRepositories = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.FetchLinkableGitRepositoriesRequest, global::Google.Cloud.DeveloperConnect.V1.FetchLinkableGitRepositoriesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -261,6 +305,78 @@ namespace Google.Cloud.DeveloperConnect.V1 {
         "FetchGitRefs",
         __Marshaller_google_cloud_developerconnect_v1_FetchGitRefsRequest,
         __Marshaller_google_cloud_developerconnect_v1_FetchGitRefsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.DiffGitRepositoryLinkCommitRequest, global::Google.Cloud.DeveloperConnect.V1.DiffGitRepositoryLinkCommitResponse> __Method_DiffGitRepositoryLinkCommit = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.DiffGitRepositoryLinkCommitRequest, global::Google.Cloud.DeveloperConnect.V1.DiffGitRepositoryLinkCommitResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DiffGitRepositoryLinkCommit",
+        __Marshaller_google_cloud_developerconnect_v1_DiffGitRepositoryLinkCommitRequest,
+        __Marshaller_google_cloud_developerconnect_v1_DiffGitRepositoryLinkCommitResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitRequest, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitResponse> __Method_FetchGitRepositoryLinkCommit = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitRequest, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchGitRepositoryLinkCommit",
+        __Marshaller_google_cloud_developerconnect_v1_FetchGitRepositoryLinkCommitRequest,
+        __Marshaller_google_cloud_developerconnect_v1_FetchGitRepositoryLinkCommitResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitListRequest, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitListResponse> __Method_FetchGitRepositoryLinkCommitList = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitListRequest, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitListResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchGitRepositoryLinkCommitList",
+        __Marshaller_google_cloud_developerconnect_v1_FetchGitRepositoryLinkCommitListRequest,
+        __Marshaller_google_cloud_developerconnect_v1_FetchGitRepositoryLinkCommitListResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkFileBlameRequest, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkFileBlameResponse> __Method_FetchGitRepositoryLinkFileBlame = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkFileBlameRequest, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkFileBlameResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchGitRepositoryLinkFileBlame",
+        __Marshaller_google_cloud_developerconnect_v1_FetchGitRepositoryLinkFileBlameRequest,
+        __Marshaller_google_cloud_developerconnect_v1_FetchGitRepositoryLinkFileBlameResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestRequest, global::Google.Cloud.DeveloperConnect.V1.PullRequest> __Method_FetchGitRepositoryLinkPullRequest = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestRequest, global::Google.Cloud.DeveloperConnect.V1.PullRequest>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchGitRepositoryLinkPullRequest",
+        __Marshaller_google_cloud_developerconnect_v1_FetchGitRepositoryLinkPullRequestRequest,
+        __Marshaller_google_cloud_developerconnect_v1_PullRequest);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.AddGitRepositoryLinkPullRequestCommentRequest, global::Google.Cloud.DeveloperConnect.V1.PullRequestComment> __Method_AddGitRepositoryLinkPullRequestComment = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.AddGitRepositoryLinkPullRequestCommentRequest, global::Google.Cloud.DeveloperConnect.V1.PullRequestComment>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AddGitRepositoryLinkPullRequestComment",
+        __Marshaller_google_cloud_developerconnect_v1_AddGitRepositoryLinkPullRequestCommentRequest,
+        __Marshaller_google_cloud_developerconnect_v1_PullRequestComment);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.AddGitRepositoryLinkPullRequestReviewCommentRequest, global::Google.Cloud.DeveloperConnect.V1.PullRequestReviewComment> __Method_AddGitRepositoryLinkPullRequestReviewComment = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.AddGitRepositoryLinkPullRequestReviewCommentRequest, global::Google.Cloud.DeveloperConnect.V1.PullRequestReviewComment>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AddGitRepositoryLinkPullRequestReviewComment",
+        __Marshaller_google_cloud_developerconnect_v1_AddGitRepositoryLinkPullRequestReviewCommentRequest,
+        __Marshaller_google_cloud_developerconnect_v1_PullRequestReviewComment);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.ModifyGitRepositoryLinkPullRequestRequest, global::Google.Cloud.DeveloperConnect.V1.PullRequest> __Method_ModifyGitRepositoryLinkPullRequest = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.ModifyGitRepositoryLinkPullRequestRequest, global::Google.Cloud.DeveloperConnect.V1.PullRequest>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ModifyGitRepositoryLinkPullRequest",
+        __Marshaller_google_cloud_developerconnect_v1_ModifyGitRepositoryLinkPullRequestRequest,
+        __Marshaller_google_cloud_developerconnect_v1_PullRequest);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestListRequest, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestListResponse> __Method_FetchGitRepositoryLinkPullRequestList = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestListRequest, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestListResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchGitRepositoryLinkPullRequestList",
+        __Marshaller_google_cloud_developerconnect_v1_FetchGitRepositoryLinkPullRequestListRequest,
+        __Marshaller_google_cloud_developerconnect_v1_FetchGitRepositoryLinkPullRequestListResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsRequest, global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsResponse> __Method_ListAccountConnectors = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsRequest, global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsResponse>(
@@ -506,6 +622,19 @@ namespace Google.Cloud.DeveloperConnect.V1 {
       }
 
       /// <summary>
+      /// Opens a Pull Request in the remote SCM repository associated with a
+      /// GitRepositoryLink.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.PullRequest> OpenGitRepositoryLinkPullRequest(global::Google.Cloud.DeveloperConnect.V1.OpenGitRepositoryLinkPullRequestRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// FetchLinkableGitRepositories returns a list of git repositories from an SCM
       /// that are available to be added to a Connection.
       /// </summary>
@@ -541,6 +670,115 @@ namespace Google.Cloud.DeveloperConnect.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.FetchGitRefsResponse> FetchGitRefs(global::Google.Cloud.DeveloperConnect.V1.FetchGitRefsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Diff commits for a GitRepositoryLink.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.DiffGitRepositoryLinkCommitResponse> DiffGitRepositoryLinkCommit(global::Google.Cloud.DeveloperConnect.V1.DiffGitRepositoryLinkCommitRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetch Commit details from a Git repository link.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitResponse> FetchGitRepositoryLinkCommit(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetch a list of Commits from a Git repository link.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitListResponse> FetchGitRepositoryLinkCommitList(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitListRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetches blame information for a file or line range in a file.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkFileBlameResponse> FetchGitRepositoryLinkFileBlame(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkFileBlameRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetch Pull Request details from a Git repository link.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.PullRequest> FetchGitRepositoryLinkPullRequest(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Add a comment to a Pull Request.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.PullRequestComment> AddGitRepositoryLinkPullRequestComment(global::Google.Cloud.DeveloperConnect.V1.AddGitRepositoryLinkPullRequestCommentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Add a review comment (inline on diff) to a Pull Request.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.PullRequestReviewComment> AddGitRepositoryLinkPullRequestReviewComment(global::Google.Cloud.DeveloperConnect.V1.AddGitRepositoryLinkPullRequestReviewCommentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Modifies a Pull Request in the remote SCM repository associated with a
+      /// GitRepositoryLink.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.PullRequest> ModifyGitRepositoryLinkPullRequest(global::Google.Cloud.DeveloperConnect.V1.ModifyGitRepositoryLinkPullRequestRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetches a list of Pull Requests from the remote repository.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestListResponse> FetchGitRepositoryLinkPullRequestList(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestListRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1267,6 +1505,58 @@ namespace Google.Cloud.DeveloperConnect.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_FetchReadToken, null, options, request);
       }
       /// <summary>
+      /// Opens a Pull Request in the remote SCM repository associated with a
+      /// GitRepositoryLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.PullRequest OpenGitRepositoryLinkPullRequest(global::Google.Cloud.DeveloperConnect.V1.OpenGitRepositoryLinkPullRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return OpenGitRepositoryLinkPullRequest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Opens a Pull Request in the remote SCM repository associated with a
+      /// GitRepositoryLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.PullRequest OpenGitRepositoryLinkPullRequest(global::Google.Cloud.DeveloperConnect.V1.OpenGitRepositoryLinkPullRequestRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_OpenGitRepositoryLinkPullRequest, null, options, request);
+      }
+      /// <summary>
+      /// Opens a Pull Request in the remote SCM repository associated with a
+      /// GitRepositoryLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.PullRequest> OpenGitRepositoryLinkPullRequestAsync(global::Google.Cloud.DeveloperConnect.V1.OpenGitRepositoryLinkPullRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return OpenGitRepositoryLinkPullRequestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Opens a Pull Request in the remote SCM repository associated with a
+      /// GitRepositoryLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.PullRequest> OpenGitRepositoryLinkPullRequestAsync(global::Google.Cloud.DeveloperConnect.V1.OpenGitRepositoryLinkPullRequestRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_OpenGitRepositoryLinkPullRequest, null, options, request);
+      }
+      /// <summary>
       /// FetchLinkableGitRepositories returns a list of git repositories from an SCM
       /// that are available to be added to a Connection.
       /// </summary>
@@ -1425,6 +1715,442 @@ namespace Google.Cloud.DeveloperConnect.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.FetchGitRefsResponse> FetchGitRefsAsync(global::Google.Cloud.DeveloperConnect.V1.FetchGitRefsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_FetchGitRefs, null, options, request);
+      }
+      /// <summary>
+      /// Diff commits for a GitRepositoryLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.DiffGitRepositoryLinkCommitResponse DiffGitRepositoryLinkCommit(global::Google.Cloud.DeveloperConnect.V1.DiffGitRepositoryLinkCommitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DiffGitRepositoryLinkCommit(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Diff commits for a GitRepositoryLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.DiffGitRepositoryLinkCommitResponse DiffGitRepositoryLinkCommit(global::Google.Cloud.DeveloperConnect.V1.DiffGitRepositoryLinkCommitRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DiffGitRepositoryLinkCommit, null, options, request);
+      }
+      /// <summary>
+      /// Diff commits for a GitRepositoryLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.DiffGitRepositoryLinkCommitResponse> DiffGitRepositoryLinkCommitAsync(global::Google.Cloud.DeveloperConnect.V1.DiffGitRepositoryLinkCommitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DiffGitRepositoryLinkCommitAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Diff commits for a GitRepositoryLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.DiffGitRepositoryLinkCommitResponse> DiffGitRepositoryLinkCommitAsync(global::Google.Cloud.DeveloperConnect.V1.DiffGitRepositoryLinkCommitRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DiffGitRepositoryLinkCommit, null, options, request);
+      }
+      /// <summary>
+      /// Fetch Commit details from a Git repository link.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitResponse FetchGitRepositoryLinkCommit(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchGitRepositoryLinkCommit(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetch Commit details from a Git repository link.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitResponse FetchGitRepositoryLinkCommit(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchGitRepositoryLinkCommit, null, options, request);
+      }
+      /// <summary>
+      /// Fetch Commit details from a Git repository link.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitResponse> FetchGitRepositoryLinkCommitAsync(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchGitRepositoryLinkCommitAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetch Commit details from a Git repository link.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitResponse> FetchGitRepositoryLinkCommitAsync(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchGitRepositoryLinkCommit, null, options, request);
+      }
+      /// <summary>
+      /// Fetch a list of Commits from a Git repository link.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitListResponse FetchGitRepositoryLinkCommitList(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitListRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchGitRepositoryLinkCommitList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetch a list of Commits from a Git repository link.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitListResponse FetchGitRepositoryLinkCommitList(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitListRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchGitRepositoryLinkCommitList, null, options, request);
+      }
+      /// <summary>
+      /// Fetch a list of Commits from a Git repository link.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitListResponse> FetchGitRepositoryLinkCommitListAsync(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitListRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchGitRepositoryLinkCommitListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetch a list of Commits from a Git repository link.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitListResponse> FetchGitRepositoryLinkCommitListAsync(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitListRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchGitRepositoryLinkCommitList, null, options, request);
+      }
+      /// <summary>
+      /// Fetches blame information for a file or line range in a file.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkFileBlameResponse FetchGitRepositoryLinkFileBlame(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkFileBlameRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchGitRepositoryLinkFileBlame(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches blame information for a file or line range in a file.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkFileBlameResponse FetchGitRepositoryLinkFileBlame(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkFileBlameRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchGitRepositoryLinkFileBlame, null, options, request);
+      }
+      /// <summary>
+      /// Fetches blame information for a file or line range in a file.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkFileBlameResponse> FetchGitRepositoryLinkFileBlameAsync(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkFileBlameRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchGitRepositoryLinkFileBlameAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches blame information for a file or line range in a file.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkFileBlameResponse> FetchGitRepositoryLinkFileBlameAsync(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkFileBlameRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchGitRepositoryLinkFileBlame, null, options, request);
+      }
+      /// <summary>
+      /// Fetch Pull Request details from a Git repository link.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.PullRequest FetchGitRepositoryLinkPullRequest(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchGitRepositoryLinkPullRequest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetch Pull Request details from a Git repository link.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.PullRequest FetchGitRepositoryLinkPullRequest(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchGitRepositoryLinkPullRequest, null, options, request);
+      }
+      /// <summary>
+      /// Fetch Pull Request details from a Git repository link.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.PullRequest> FetchGitRepositoryLinkPullRequestAsync(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchGitRepositoryLinkPullRequestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetch Pull Request details from a Git repository link.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.PullRequest> FetchGitRepositoryLinkPullRequestAsync(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchGitRepositoryLinkPullRequest, null, options, request);
+      }
+      /// <summary>
+      /// Add a comment to a Pull Request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.PullRequestComment AddGitRepositoryLinkPullRequestComment(global::Google.Cloud.DeveloperConnect.V1.AddGitRepositoryLinkPullRequestCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddGitRepositoryLinkPullRequestComment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Add a comment to a Pull Request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.PullRequestComment AddGitRepositoryLinkPullRequestComment(global::Google.Cloud.DeveloperConnect.V1.AddGitRepositoryLinkPullRequestCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AddGitRepositoryLinkPullRequestComment, null, options, request);
+      }
+      /// <summary>
+      /// Add a comment to a Pull Request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.PullRequestComment> AddGitRepositoryLinkPullRequestCommentAsync(global::Google.Cloud.DeveloperConnect.V1.AddGitRepositoryLinkPullRequestCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddGitRepositoryLinkPullRequestCommentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Add a comment to a Pull Request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.PullRequestComment> AddGitRepositoryLinkPullRequestCommentAsync(global::Google.Cloud.DeveloperConnect.V1.AddGitRepositoryLinkPullRequestCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AddGitRepositoryLinkPullRequestComment, null, options, request);
+      }
+      /// <summary>
+      /// Add a review comment (inline on diff) to a Pull Request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.PullRequestReviewComment AddGitRepositoryLinkPullRequestReviewComment(global::Google.Cloud.DeveloperConnect.V1.AddGitRepositoryLinkPullRequestReviewCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddGitRepositoryLinkPullRequestReviewComment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Add a review comment (inline on diff) to a Pull Request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.PullRequestReviewComment AddGitRepositoryLinkPullRequestReviewComment(global::Google.Cloud.DeveloperConnect.V1.AddGitRepositoryLinkPullRequestReviewCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AddGitRepositoryLinkPullRequestReviewComment, null, options, request);
+      }
+      /// <summary>
+      /// Add a review comment (inline on diff) to a Pull Request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.PullRequestReviewComment> AddGitRepositoryLinkPullRequestReviewCommentAsync(global::Google.Cloud.DeveloperConnect.V1.AddGitRepositoryLinkPullRequestReviewCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddGitRepositoryLinkPullRequestReviewCommentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Add a review comment (inline on diff) to a Pull Request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.PullRequestReviewComment> AddGitRepositoryLinkPullRequestReviewCommentAsync(global::Google.Cloud.DeveloperConnect.V1.AddGitRepositoryLinkPullRequestReviewCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AddGitRepositoryLinkPullRequestReviewComment, null, options, request);
+      }
+      /// <summary>
+      /// Modifies a Pull Request in the remote SCM repository associated with a
+      /// GitRepositoryLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.PullRequest ModifyGitRepositoryLinkPullRequest(global::Google.Cloud.DeveloperConnect.V1.ModifyGitRepositoryLinkPullRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ModifyGitRepositoryLinkPullRequest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Modifies a Pull Request in the remote SCM repository associated with a
+      /// GitRepositoryLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.PullRequest ModifyGitRepositoryLinkPullRequest(global::Google.Cloud.DeveloperConnect.V1.ModifyGitRepositoryLinkPullRequestRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ModifyGitRepositoryLinkPullRequest, null, options, request);
+      }
+      /// <summary>
+      /// Modifies a Pull Request in the remote SCM repository associated with a
+      /// GitRepositoryLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.PullRequest> ModifyGitRepositoryLinkPullRequestAsync(global::Google.Cloud.DeveloperConnect.V1.ModifyGitRepositoryLinkPullRequestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ModifyGitRepositoryLinkPullRequestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Modifies a Pull Request in the remote SCM repository associated with a
+      /// GitRepositoryLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.PullRequest> ModifyGitRepositoryLinkPullRequestAsync(global::Google.Cloud.DeveloperConnect.V1.ModifyGitRepositoryLinkPullRequestRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ModifyGitRepositoryLinkPullRequest, null, options, request);
+      }
+      /// <summary>
+      /// Fetches a list of Pull Requests from the remote repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestListResponse FetchGitRepositoryLinkPullRequestList(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestListRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchGitRepositoryLinkPullRequestList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches a list of Pull Requests from the remote repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestListResponse FetchGitRepositoryLinkPullRequestList(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestListRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchGitRepositoryLinkPullRequestList, null, options, request);
+      }
+      /// <summary>
+      /// Fetches a list of Pull Requests from the remote repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestListResponse> FetchGitRepositoryLinkPullRequestListAsync(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestListRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchGitRepositoryLinkPullRequestListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches a list of Pull Requests from the remote repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestListResponse> FetchGitRepositoryLinkPullRequestListAsync(global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestListRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchGitRepositoryLinkPullRequestList, null, options, request);
       }
       /// <summary>
       /// Lists AccountConnectors in a given project and location.
@@ -2027,9 +2753,19 @@ namespace Google.Cloud.DeveloperConnect.V1 {
           .AddMethod(__Method_GetGitRepositoryLink, serviceImpl.GetGitRepositoryLink)
           .AddMethod(__Method_FetchReadWriteToken, serviceImpl.FetchReadWriteToken)
           .AddMethod(__Method_FetchReadToken, serviceImpl.FetchReadToken)
+          .AddMethod(__Method_OpenGitRepositoryLinkPullRequest, serviceImpl.OpenGitRepositoryLinkPullRequest)
           .AddMethod(__Method_FetchLinkableGitRepositories, serviceImpl.FetchLinkableGitRepositories)
           .AddMethod(__Method_FetchGitHubInstallations, serviceImpl.FetchGitHubInstallations)
           .AddMethod(__Method_FetchGitRefs, serviceImpl.FetchGitRefs)
+          .AddMethod(__Method_DiffGitRepositoryLinkCommit, serviceImpl.DiffGitRepositoryLinkCommit)
+          .AddMethod(__Method_FetchGitRepositoryLinkCommit, serviceImpl.FetchGitRepositoryLinkCommit)
+          .AddMethod(__Method_FetchGitRepositoryLinkCommitList, serviceImpl.FetchGitRepositoryLinkCommitList)
+          .AddMethod(__Method_FetchGitRepositoryLinkFileBlame, serviceImpl.FetchGitRepositoryLinkFileBlame)
+          .AddMethod(__Method_FetchGitRepositoryLinkPullRequest, serviceImpl.FetchGitRepositoryLinkPullRequest)
+          .AddMethod(__Method_AddGitRepositoryLinkPullRequestComment, serviceImpl.AddGitRepositoryLinkPullRequestComment)
+          .AddMethod(__Method_AddGitRepositoryLinkPullRequestReviewComment, serviceImpl.AddGitRepositoryLinkPullRequestReviewComment)
+          .AddMethod(__Method_ModifyGitRepositoryLinkPullRequest, serviceImpl.ModifyGitRepositoryLinkPullRequest)
+          .AddMethod(__Method_FetchGitRepositoryLinkPullRequestList, serviceImpl.FetchGitRepositoryLinkPullRequestList)
           .AddMethod(__Method_ListAccountConnectors, serviceImpl.ListAccountConnectors)
           .AddMethod(__Method_GetAccountConnector, serviceImpl.GetAccountConnector)
           .AddMethod(__Method_CreateAccountConnector, serviceImpl.CreateAccountConnector)
@@ -2062,9 +2798,19 @@ namespace Google.Cloud.DeveloperConnect.V1 {
       serviceBinder.AddMethod(__Method_GetGitRepositoryLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.GetGitRepositoryLinkRequest, global::Google.Cloud.DeveloperConnect.V1.GitRepositoryLink>(serviceImpl.GetGitRepositoryLink));
       serviceBinder.AddMethod(__Method_FetchReadWriteToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.FetchReadWriteTokenRequest, global::Google.Cloud.DeveloperConnect.V1.FetchReadWriteTokenResponse>(serviceImpl.FetchReadWriteToken));
       serviceBinder.AddMethod(__Method_FetchReadToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.FetchReadTokenRequest, global::Google.Cloud.DeveloperConnect.V1.FetchReadTokenResponse>(serviceImpl.FetchReadToken));
+      serviceBinder.AddMethod(__Method_OpenGitRepositoryLinkPullRequest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.OpenGitRepositoryLinkPullRequestRequest, global::Google.Cloud.DeveloperConnect.V1.PullRequest>(serviceImpl.OpenGitRepositoryLinkPullRequest));
       serviceBinder.AddMethod(__Method_FetchLinkableGitRepositories, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.FetchLinkableGitRepositoriesRequest, global::Google.Cloud.DeveloperConnect.V1.FetchLinkableGitRepositoriesResponse>(serviceImpl.FetchLinkableGitRepositories));
       serviceBinder.AddMethod(__Method_FetchGitHubInstallations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.FetchGitHubInstallationsRequest, global::Google.Cloud.DeveloperConnect.V1.FetchGitHubInstallationsResponse>(serviceImpl.FetchGitHubInstallations));
       serviceBinder.AddMethod(__Method_FetchGitRefs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.FetchGitRefsRequest, global::Google.Cloud.DeveloperConnect.V1.FetchGitRefsResponse>(serviceImpl.FetchGitRefs));
+      serviceBinder.AddMethod(__Method_DiffGitRepositoryLinkCommit, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.DiffGitRepositoryLinkCommitRequest, global::Google.Cloud.DeveloperConnect.V1.DiffGitRepositoryLinkCommitResponse>(serviceImpl.DiffGitRepositoryLinkCommit));
+      serviceBinder.AddMethod(__Method_FetchGitRepositoryLinkCommit, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitRequest, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitResponse>(serviceImpl.FetchGitRepositoryLinkCommit));
+      serviceBinder.AddMethod(__Method_FetchGitRepositoryLinkCommitList, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitListRequest, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkCommitListResponse>(serviceImpl.FetchGitRepositoryLinkCommitList));
+      serviceBinder.AddMethod(__Method_FetchGitRepositoryLinkFileBlame, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkFileBlameRequest, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkFileBlameResponse>(serviceImpl.FetchGitRepositoryLinkFileBlame));
+      serviceBinder.AddMethod(__Method_FetchGitRepositoryLinkPullRequest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestRequest, global::Google.Cloud.DeveloperConnect.V1.PullRequest>(serviceImpl.FetchGitRepositoryLinkPullRequest));
+      serviceBinder.AddMethod(__Method_AddGitRepositoryLinkPullRequestComment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.AddGitRepositoryLinkPullRequestCommentRequest, global::Google.Cloud.DeveloperConnect.V1.PullRequestComment>(serviceImpl.AddGitRepositoryLinkPullRequestComment));
+      serviceBinder.AddMethod(__Method_AddGitRepositoryLinkPullRequestReviewComment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.AddGitRepositoryLinkPullRequestReviewCommentRequest, global::Google.Cloud.DeveloperConnect.V1.PullRequestReviewComment>(serviceImpl.AddGitRepositoryLinkPullRequestReviewComment));
+      serviceBinder.AddMethod(__Method_ModifyGitRepositoryLinkPullRequest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.ModifyGitRepositoryLinkPullRequestRequest, global::Google.Cloud.DeveloperConnect.V1.PullRequest>(serviceImpl.ModifyGitRepositoryLinkPullRequest));
+      serviceBinder.AddMethod(__Method_FetchGitRepositoryLinkPullRequestList, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestListRequest, global::Google.Cloud.DeveloperConnect.V1.FetchGitRepositoryLinkPullRequestListResponse>(serviceImpl.FetchGitRepositoryLinkPullRequestList));
       serviceBinder.AddMethod(__Method_ListAccountConnectors, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsRequest, global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsResponse>(serviceImpl.ListAccountConnectors));
       serviceBinder.AddMethod(__Method_GetAccountConnector, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.GetAccountConnectorRequest, global::Google.Cloud.DeveloperConnect.V1.AccountConnector>(serviceImpl.GetAccountConnector));
       serviceBinder.AddMethod(__Method_CreateAccountConnector, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.CreateAccountConnectorRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateAccountConnector));

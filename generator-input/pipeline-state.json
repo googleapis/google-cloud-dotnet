@@ -1327,7 +1327,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-02-23T14:06:52.176725799Z",
-            "lastGeneratedCommit": "7ed997c15ea081c509db910b4ea06c9a79cf009e",
+            "lastGeneratedCommit": "4fabd6e4b356307d319b55a86a3f200e9c52b594",
             "lastReleasedCommit": "7ed997c15ea081c509db910b4ea06c9a79cf009e",
             "apiPaths": [
                 "google/cloud/developerconnect/v1"
