@@ -1,11 +1,5 @@
 # Version history
 
-## Version 1.0.0-beta88, released 2026-11-02
-
-### New features
-
-- Add git_source to Reasoning Engine public protos
-
 ## Version 1.0.0-beta87, released 2026-10-08
 
 ### New features
