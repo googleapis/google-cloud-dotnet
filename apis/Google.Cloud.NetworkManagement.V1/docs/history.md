@@ -1,11 +1,5 @@
 # Version history
 
-## Version 2.22.0, released 2026-11-02
-
-### New features
-
-- Add Datastream private connection
-
 ## Version 2.21.0, released 2026-06-29
 
 ### New features
