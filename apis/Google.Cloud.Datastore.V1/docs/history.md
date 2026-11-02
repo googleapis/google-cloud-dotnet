@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.4.0, released 2026-11-02
+
+### Bug fixes
+
+- Allow null values in GQL query parameter helpers
+
 ## Version 5.3.0, released 2026-10-26
 
 ### Bug fixes
