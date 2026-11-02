@@ -5260,6 +5260,30 @@
             "sourcePaths": [
                 "apis/Google.Cloud.DesignCenter.V1/Google.Cloud.DesignCenter.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.Sql.V1",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/sql/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.Sql.V1/Google.Cloud.Sql.V1"
+            ],
+            "nextVersion": "1.0.0-beta01"
+        },
+        {
+            "id": "Google.Cloud.Sql.V1Beta4",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/sql/v1beta4"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.Sql.V1Beta4/Google.Cloud.Sql.V1Beta4"
+            ],
+            "nextVersion": "1.0.0-beta01"
         }
     ],
     "ignoredApiPaths": [
@@ -5272,8 +5296,6 @@
         "google/cloud/redis/cluster/v1beta1",
         "google/cloud/securesourcemanager/v1",
         "google/cloud/securityposture/v1",
-        "google/cloud/sql/v1",
-        "google/cloud/sql/v1beta4",
         "google/cloud/telcoautomation/v1alpha1",
         "google/maps/weather/v1",
         "google/shopping/merchant/productstudio/v1alpha",
