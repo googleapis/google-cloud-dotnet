@@ -934,6 +934,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
                 Session = new Session(),
+                SessionId = "",
             };
             // Make the request
             Session response = conversationalSearchServiceClient.CreateSession(request);
@@ -952,6 +953,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
                 Session = new Session(),
+                SessionId = "",
             };
             // Make the request
             Session response = await conversationalSearchServiceClient.CreateSessionAsync(request);

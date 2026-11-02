@@ -27,84 +27,145 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "Cixnb29nbGUvY2xvdWQvZGlzY292ZXJ5ZW5naW5lL3YxL2VuZ2luZS5wcm90",
             "bxIfZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MRofZ29vZ2xlL2Fw",
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
-            "cm90bxosZ29vZ2xlL2Nsb3VkL2Rpc2NvdmVyeWVuZ2luZS92MS9jb21tb24u",
-            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i4RQKBkVu",
-            "Z2luZRJWChJjaGF0X2VuZ2luZV9jb25maWcYCyABKAsyOC5nb29nbGUuY2xv",
-            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxLkVuZ2luZS5DaGF0RW5naW5lQ29uZmln",
-            "SAASWgoUc2VhcmNoX2VuZ2luZV9jb25maWcYDSABKAsyOi5nb29nbGUuY2xv",
-            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxLkVuZ2luZS5TZWFyY2hFbmdpbmVDb25m",
-            "aWdIABJ1CiJtZWRpYV9yZWNvbW1lbmRhdGlvbl9lbmdpbmVfY29uZmlnGA4g",
-            "ASgLMkcuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5FbmdpbmUu",
-            "TWVkaWFSZWNvbW1lbmRhdGlvbkVuZ2luZUNvbmZpZ0gAEl8KFGNoYXRfZW5n",
-            "aW5lX21ldGFkYXRhGAwgASgLMjouZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVu",
-            "Z2luZS52MS5FbmdpbmUuQ2hhdEVuZ2luZU1ldGFkYXRhQgPgQQNIARIUCgRu",
-            "YW1lGAEgASgJQgbgQQXgQQgSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQIS",
-            "NAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMSGwoOZGF0YV9zdG9yZV9pZHMYBSADKAlCA+BB",
-            "ARJJCg1zb2x1dGlvbl90eXBlGAYgASgOMi0uZ29vZ2xlLmNsb3VkLmRpc2Nv",
-            "dmVyeWVuZ2luZS52MS5Tb2x1dGlvblR5cGVCA+BBAhJRChFpbmR1c3RyeV92",
-            "ZXJ0aWNhbBgQIAEoDjIxLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUu",
-            "djEuSW5kdXN0cnlWZXJ0aWNhbEID4EEBEksKDWNvbW1vbl9jb25maWcYDyAB",
-            "KAsyNC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkVuZ2luZS5D",
-            "b21tb25Db25maWcSHgoRZGlzYWJsZV9hbmFseXRpY3MYGiABKAhCA+BBARqc",
-            "AQoSU2VhcmNoRW5naW5lQ29uZmlnEkAKC3NlYXJjaF90aWVyGAEgASgOMisu",
-            "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hUaWVyEkQK",
-            "DnNlYXJjaF9hZGRfb25zGAIgAygOMiwuZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
-            "eWVuZ2luZS52MS5TZWFyY2hBZGRPbhq2CAofTWVkaWFSZWNvbW1lbmRhdGlv",
-            "bkVuZ2luZUNvbmZpZxIRCgR0eXBlGAEgASgJQgPgQQISHgoWb3B0aW1pemF0",
-            "aW9uX29iamVjdGl2ZRgCIAEoCRKKAQodb3B0aW1pemF0aW9uX29iamVjdGl2",
-            "ZV9jb25maWcYAyABKAsyYy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5l",
-            "LnYxLkVuZ2luZS5NZWRpYVJlY29tbWVuZGF0aW9uRW5naW5lQ29uZmlnLk9w",
-            "dGltaXphdGlvbk9iamVjdGl2ZUNvbmZpZxJtCg50cmFpbmluZ19zdGF0ZRgE",
-            "IAEoDjJVLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuRW5naW5l",
-            "Lk1lZGlhUmVjb21tZW5kYXRpb25FbmdpbmVDb25maWcuVHJhaW5pbmdTdGF0",
-            "ZRKBAQoWZW5naW5lX2ZlYXR1cmVzX2NvbmZpZxgFIAEoCzJcLmdvb2dsZS5j",
-            "bG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuRW5naW5lLk1lZGlhUmVjb21tZW5k",
-            "YXRpb25FbmdpbmVDb25maWcuRW5naW5lRmVhdHVyZXNDb25maWdCA+BBARpf",
-            "ChtPcHRpbWl6YXRpb25PYmplY3RpdmVDb25maWcSGQoMdGFyZ2V0X2ZpZWxk",
-            "GAEgASgJQgPgQQISJQoYdGFyZ2V0X2ZpZWxkX3ZhbHVlX2Zsb2F0GAIgASgC",
-            "QgPgQQIavwIKFEVuZ2luZUZlYXR1cmVzQ29uZmlnEowBChpyZWNvbW1lbmRl",
-            "ZF9mb3JfeW91X2NvbmZpZxgBIAEoCzJmLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
-            "cnllbmdpbmUudjEuRW5naW5lLk1lZGlhUmVjb21tZW5kYXRpb25FbmdpbmVD",
-            "b25maWcuUmVjb21tZW5kZWRGb3JZb3VGZWF0dXJlQ29uZmlnSAASfwoTbW9z",
-            "dF9wb3B1bGFyX2NvbmZpZxgCIAEoCzJgLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
-            "cnllbmdpbmUudjEuRW5naW5lLk1lZGlhUmVjb21tZW5kYXRpb25FbmdpbmVD",
-            "b25maWcuTW9zdFBvcHVsYXJGZWF0dXJlQ29uZmlnSABCFwoVdHlwZV9kZWRp",
-            "Y2F0ZWRfY29uZmlnGjwKHlJlY29tbWVuZGVkRm9yWW91RmVhdHVyZUNvbmZp",
-            "ZxIaChJjb250ZXh0X2V2ZW50X3R5cGUYASABKAkaNAoYTW9zdFBvcHVsYXJG",
-            "ZWF0dXJlQ29uZmlnEhgKEHRpbWVfd2luZG93X2RheXMYASABKAMiSQoNVHJh",
-            "aW5pbmdTdGF0ZRIeChpUUkFJTklOR19TVEFURV9VTlNQRUNJRklFRBAAEgoK",
-            "BlBBVVNFRBABEgwKCFRSQUlOSU5HEAIatAIKEENoYXRFbmdpbmVDb25maWcS",
-            "awoVYWdlbnRfY3JlYXRpb25fY29uZmlnGAEgASgLMkwuZ29vZ2xlLmNsb3Vk",
-            "LmRpc2NvdmVyeWVuZ2luZS52MS5FbmdpbmUuQ2hhdEVuZ2luZUNvbmZpZy5B",
-            "Z2VudENyZWF0aW9uQ29uZmlnEiAKGGRpYWxvZ2Zsb3dfYWdlbnRfdG9fbGlu",
-            "axgCIAEoCRIfChJhbGxvd19jcm9zc19yZWdpb24YAyABKAhCA+BBARpwChNB",
-            "Z2VudENyZWF0aW9uQ29uZmlnEhAKCGJ1c2luZXNzGAEgASgJEh0KFWRlZmF1",
-            "bHRfbGFuZ3VhZ2VfY29kZRgCIAEoCRIWCgl0aW1lX3pvbmUYAyABKAlCA+BB",
-            "AhIQCghsb2NhdGlvbhgEIAEoCRokCgxDb21tb25Db25maWcSFAoMY29tcGFu",
-            "eV9uYW1lGAEgASgJGi4KEkNoYXRFbmdpbmVNZXRhZGF0YRIYChBkaWFsb2dm",
-            "bG93X2FnZW50GAEgASgJOn3qQXoKJWRpc2NvdmVyeWVuZ2luZS5nb29nbGVh",
-            "cGlzLmNvbS9FbmdpbmUSUXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVjdGlvbn0vZW5naW5lcy97",
-            "ZW5naW5lfUIPCg1lbmdpbmVfY29uZmlnQhEKD2VuZ2luZV9tZXRhZGF0YUL+",
-            "AQojY29tLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFCC0VuZ2lu",
-            "ZVByb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5l",
-            "L2FwaXYxL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIP",
-            "RElTQ09WRVJZRU5HSU5FqgIfR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2lu",
-            "ZS5WMcoCH0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjHqAiJHb29n",
-            "bGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYgZwcm90bzM="));
+            "cm90bxo7Z29vZ2xlL2Nsb3VkL2Rpc2NvdmVyeWVuZ2luZS92MS9hZ2VudF9n",
+            "YXRld2F5X3NldHRpbmcucHJvdG8aOWdvb2dsZS9jbG91ZC9kaXNjb3Zlcnll",
+            "bmdpbmUvdjEvY21la19jb25maWdfc2VydmljZS5wcm90bxosZ29vZ2xlL2Ns",
+            "b3VkL2Rpc2NvdmVyeWVuZ2luZS92MS9jb21tb24ucHJvdG8aLWdvb2dsZS9j",
+            "bG91ZC9kaXNjb3ZlcnllbmdpbmUvdjEvbG9nZ2luZy5wcm90bxofZ29vZ2xl",
+            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKbKAoGRW5naW5lElYKEmNoYXRf",
+            "ZW5naW5lX2NvbmZpZxgLIAEoCzI4Lmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnll",
+            "bmdpbmUudjEuRW5naW5lLkNoYXRFbmdpbmVDb25maWdIABJaChRzZWFyY2hf",
+            "ZW5naW5lX2NvbmZpZxgNIAEoCzI6Lmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnll",
+            "bmdpbmUudjEuRW5naW5lLlNlYXJjaEVuZ2luZUNvbmZpZ0gAEnUKIm1lZGlh",
+            "X3JlY29tbWVuZGF0aW9uX2VuZ2luZV9jb25maWcYDiABKAsyRy5nb29nbGUu",
+            "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkVuZ2luZS5NZWRpYVJlY29tbWVu",
+            "ZGF0aW9uRW5naW5lQ29uZmlnSAASYAoUY2hhdF9lbmdpbmVfbWV0YWRhdGEY",
+            "DCABKAsyOi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkVuZ2lu",
+            "ZS5DaGF0RW5naW5lTWV0YWRhdGFCBOJBAQNIARITCgRuYW1lGAEgASgJQgXi",
+            "QQIFCBIaCgxkaXNwbGF5X25hbWUYAiABKAlCBOJBAQISNQoLY3JlYXRlX3Rp",
+            "bWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEjUK",
+            "C3VwZGF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEIE4kEBAxIcCg5kYXRhX3N0b3JlX2lkcxgFIAMoCUIE4kEBARJKCg1zb2x1",
+            "dGlvbl90eXBlGAYgASgOMi0uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2lu",
+            "ZS52MS5Tb2x1dGlvblR5cGVCBOJBAQISUgoRaW5kdXN0cnlfdmVydGljYWwY",
+            "ECABKA4yMS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkluZHVz",
+            "dHJ5VmVydGljYWxCBOJBAQESSwoNY29tbW9uX2NvbmZpZxgPIAEoCzI0Lmdv",
+            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuRW5naW5lLkNvbW1vbkNv",
+            "bmZpZxJiChZrbm93bGVkZ2VfZ3JhcGhfY29uZmlnGBcgASgLMjwuZ29vZ2xl",
+            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5FbmdpbmUuS25vd2xlZGdlR3Jh",
+            "cGhDb25maWdCBOJBAQESSAoIYXBwX3R5cGUYGCABKA4yLy5nb29nbGUuY2xv",
+            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxLkVuZ2luZS5BcHBUeXBlQgXiQQIBBRIf",
+            "ChFkaXNhYmxlX2FuYWx5dGljcxgaIAEoCEIE4kEBARJNCg5zZXNzaW9uX2Nv",
+            "bmZpZxgdIAEoCzIuLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEu",
+            "U2Vzc2lvbkNvbmZpZ0IF4kECAQcSTQoIZmVhdHVyZXMYHiADKAsyNS5nb29n",
+            "bGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkVuZ2luZS5GZWF0dXJlc0Vu",
+            "dHJ5QgTiQQEBEkYKC2NtZWtfY29uZmlnGCAgASgLMisuZ29vZ2xlLmNsb3Vk",
+            "LmRpc2NvdmVyeWVuZ2luZS52MS5DbWVrQ29uZmlnQgTiQQEDEnAKHWNvbmZp",
+            "Z3VyYWJsZV9iaWxsaW5nX2FwcHJvYWNoGCQgASgOMkMuZ29vZ2xlLmNsb3Vk",
+            "LmRpc2NvdmVyeWVuZ2luZS52MS5FbmdpbmUuQ29uZmlndXJhYmxlQmlsbGlu",
+            "Z0FwcHJvYWNoQgTiQQEBElYKDW1vZGVsX2NvbmZpZ3MYJSADKAsyOS5nb29n",
+            "bGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkVuZ2luZS5Nb2RlbENvbmZp",
+            "Z3NFbnRyeUIE4kEBARJYChRvYnNlcnZhYmlsaXR5X2NvbmZpZxgnIAEoCzI0",
+            "Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuT2JzZXJ2YWJpbGl0",
+            "eUNvbmZpZ0IE4kEBARJlChVjb25uZWN0b3JfdGVuYW50X2luZm8YKiADKAsy",
+            "QC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkVuZ2luZS5Db25u",
+            "ZWN0b3JUZW5hbnRJbmZvRW50cnlCBOJBAQESWQoVYWdlbnRfZ2F0ZXdheV9z",
+            "ZXR0aW5nGCsgASgLMjQuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
+            "MS5BZ2VudEdhdGV3YXlTZXR0aW5nQgTiQQEBEm4KHG1hcmtldHBsYWNlX2Fn",
+            "ZW50X3Zpc2liaWxpdHkYLCABKA4yQi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
+            "ZW5naW5lLnYxLkVuZ2luZS5NYXJrZXRwbGFjZUFnZW50VmlzaWJpbGl0eUIE",
+            "4kEBARIoChpwcm9jdXJlbWVudF9jb250YWN0X2VtYWlscxgtIAMoCUIE4kEB",
+            "ARInChlhc3NvY2lhdGVkX2FnZW50X3JlZ2lzdHJ5GDIgASgJQgTiQQEDGvkB",
+            "ChJTZWFyY2hFbmdpbmVDb25maWcSQAoLc2VhcmNoX3RpZXIYASABKA4yKy5n",
+            "b29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlNlYXJjaFRpZXISWwoa",
+            "cmVxdWlyZWRfc3Vic2NyaXB0aW9uX3RpZXIYAyABKA4yMS5nb29nbGUuY2xv",
+            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxLlN1YnNjcmlwdGlvblRpZXJCBOJBAQES",
+            "RAoOc2VhcmNoX2FkZF9vbnMYAiADKA4yLC5nb29nbGUuY2xvdWQuZGlzY292",
+            "ZXJ5ZW5naW5lLnYxLlNlYXJjaEFkZE9uGroICh9NZWRpYVJlY29tbWVuZGF0",
+            "aW9uRW5naW5lQ29uZmlnEhIKBHR5cGUYASABKAlCBOJBAQISHgoWb3B0aW1p",
+            "emF0aW9uX29iamVjdGl2ZRgCIAEoCRKKAQodb3B0aW1pemF0aW9uX29iamVj",
+            "dGl2ZV9jb25maWcYAyABKAsyYy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
+            "aW5lLnYxLkVuZ2luZS5NZWRpYVJlY29tbWVuZGF0aW9uRW5naW5lQ29uZmln",
+            "Lk9wdGltaXphdGlvbk9iamVjdGl2ZUNvbmZpZxJtCg50cmFpbmluZ19zdGF0",
+            "ZRgEIAEoDjJVLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuRW5n",
+            "aW5lLk1lZGlhUmVjb21tZW5kYXRpb25FbmdpbmVDb25maWcuVHJhaW5pbmdT",
+            "dGF0ZRKCAQoWZW5naW5lX2ZlYXR1cmVzX2NvbmZpZxgFIAEoCzJcLmdvb2ds",
+            "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuRW5naW5lLk1lZGlhUmVjb21t",
+            "ZW5kYXRpb25FbmdpbmVDb25maWcuRW5naW5lRmVhdHVyZXNDb25maWdCBOJB",
+            "AQEaYQobT3B0aW1pemF0aW9uT2JqZWN0aXZlQ29uZmlnEhoKDHRhcmdldF9m",
+            "aWVsZBgBIAEoCUIE4kEBAhImChh0YXJnZXRfZmllbGRfdmFsdWVfZmxvYXQY",
+            "AiABKAJCBOJBAQIavwIKFEVuZ2luZUZlYXR1cmVzQ29uZmlnEowBChpyZWNv",
+            "bW1lbmRlZF9mb3JfeW91X2NvbmZpZxgBIAEoCzJmLmdvb2dsZS5jbG91ZC5k",
+            "aXNjb3ZlcnllbmdpbmUudjEuRW5naW5lLk1lZGlhUmVjb21tZW5kYXRpb25F",
+            "bmdpbmVDb25maWcuUmVjb21tZW5kZWRGb3JZb3VGZWF0dXJlQ29uZmlnSAAS",
+            "fwoTbW9zdF9wb3B1bGFyX2NvbmZpZxgCIAEoCzJgLmdvb2dsZS5jbG91ZC5k",
+            "aXNjb3ZlcnllbmdpbmUudjEuRW5naW5lLk1lZGlhUmVjb21tZW5kYXRpb25F",
+            "bmdpbmVDb25maWcuTW9zdFBvcHVsYXJGZWF0dXJlQ29uZmlnSABCFwoVdHlw",
+            "ZV9kZWRpY2F0ZWRfY29uZmlnGjwKHlJlY29tbWVuZGVkRm9yWW91RmVhdHVy",
+            "ZUNvbmZpZxIaChJjb250ZXh0X2V2ZW50X3R5cGUYASABKAkaNAoYTW9zdFBv",
+            "cHVsYXJGZWF0dXJlQ29uZmlnEhgKEHRpbWVfd2luZG93X2RheXMYASABKAMi",
+            "SQoNVHJhaW5pbmdTdGF0ZRIeChpUUkFJTklOR19TVEFURV9VTlNQRUNJRklF",
+            "RBAAEgoKBlBBVVNFRBABEgwKCFRSQUlOSU5HEAIatgIKEENoYXRFbmdpbmVD",
+            "b25maWcSawoVYWdlbnRfY3JlYXRpb25fY29uZmlnGAEgASgLMkwuZ29vZ2xl",
+            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5FbmdpbmUuQ2hhdEVuZ2luZUNv",
+            "bmZpZy5BZ2VudENyZWF0aW9uQ29uZmlnEiAKGGRpYWxvZ2Zsb3dfYWdlbnRf",
+            "dG9fbGluaxgCIAEoCRIgChJhbGxvd19jcm9zc19yZWdpb24YAyABKAhCBOJB",
+            "AQEacQoTQWdlbnRDcmVhdGlvbkNvbmZpZxIQCghidXNpbmVzcxgBIAEoCRId",
+            "ChVkZWZhdWx0X2xhbmd1YWdlX2NvZGUYAiABKAkSFwoJdGltZV96b25lGAMg",
+            "ASgJQgTiQQECEhAKCGxvY2F0aW9uGAQgASgJGiQKDENvbW1vbkNvbmZpZxIU",
+            "Cgxjb21wYW55X25hbWUYASABKAka2AMKFEtub3dsZWRnZUdyYXBoQ29uZmln",
+            "EiQKHGVuYWJsZV9jbG91ZF9rbm93bGVkZ2VfZ3JhcGgYASABKAgSIwobY2xv",
+            "dWRfa25vd2xlZGdlX2dyYXBoX3R5cGVzGAIgAygJEiYKHmVuYWJsZV9wcml2",
+            "YXRlX2tub3dsZWRnZV9ncmFwaBgDIAEoCBIlCh1wcml2YXRlX2tub3dsZWRn",
+            "ZV9ncmFwaF90eXBlcxgEIAMoCRJoCg5mZWF0dXJlX2NvbmZpZxgFIAEoCzJK",
+            "Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuRW5naW5lLktub3ds",
+            "ZWRnZUdyYXBoQ29uZmlnLkZlYXR1cmVDb25maWdCBOJBAQEauwEKDUZlYXR1",
+            "cmVDb25maWcSLgomZGlzYWJsZV9wcml2YXRlX2tnX3F1ZXJ5X3VuZGVyc3Rh",
+            "bmRpbmcYASABKAgSJQodZGlzYWJsZV9wcml2YXRlX2tnX2VucmljaG1lbnQY",
+            "AiABKAgSKAogZGlzYWJsZV9wcml2YXRlX2tnX2F1dG9fY29tcGxldGUYAyAB",
+            "KAgSKQohZGlzYWJsZV9wcml2YXRlX2tnX3F1ZXJ5X3VpX2NoaXBzGAQgASgI",
+            "Gi4KEkNoYXRFbmdpbmVNZXRhZGF0YRIYChBkaWFsb2dmbG93X2FnZW50GAEg",
+            "ASgJGmUKDUZlYXR1cmVzRW50cnkSCwoDa2V5GAEgASgJEkMKBXZhbHVlGAIg",
+            "ASgOMjQuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5FbmdpbmUu",
+            "RmVhdHVyZVN0YXRlOgI4ARpnChFNb2RlbENvbmZpZ3NFbnRyeRILCgNrZXkY",
+            "ASABKAkSQQoFdmFsdWUYAiABKA4yMi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
+            "ZW5naW5lLnYxLkVuZ2luZS5Nb2RlbFN0YXRlOgI4ARo6ChhDb25uZWN0b3JU",
+            "ZW5hbnRJbmZvRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
+            "ASI6CgdBcHBUeXBlEhgKFEFQUF9UWVBFX1VOU1BFQ0lGSUVEEAASFQoRQVBQ",
+            "X1RZUEVfSU5UUkFORVQQASJaCgxGZWF0dXJlU3RhdGUSHQoZRkVBVFVSRV9T",
+            "VEFURV9VTlNQRUNJRklFRBAAEhQKEEZFQVRVUkVfU1RBVEVfT04QARIVChFG",
+            "RUFUVVJFX1NUQVRFX09GRhACIncKG0NvbmZpZ3VyYWJsZUJpbGxpbmdBcHBy",
+            "b2FjaBItCilDT05GSUdVUkFCTEVfQklMTElOR19BUFBST0FDSF9VTlNQRUNJ",
+            "RklFRBAAEikKJUNPTkZJR1VSQUJMRV9CSUxMSU5HX0FQUFJPQUNIX0VOQUJM",
+            "RUQQASJQCgpNb2RlbFN0YXRlEhsKF01PREVMX1NUQVRFX1VOU1BFQ0lGSUVE",
+            "EAASEQoNTU9ERUxfRU5BQkxFRBABEhIKDk1PREVMX0RJU0FCTEVEEAIixgEK",
+            "Gk1hcmtldHBsYWNlQWdlbnRWaXNpYmlsaXR5EiwKKE1BUktFVFBMQUNFX0FH",
+            "RU5UX1ZJU0lCSUxJVFlfVU5TUEVDSUZJRUQQABIeChpTSE9XX0FWQUlMQUJM",
+            "RV9BR0VOVFNfT05MWRABEiIKHlNIT1dfQUdFTlRTX0FMUkVBRFlfSU5URUdS",
+            "QVRFRBACEiEKHVNIT1dfQUdFTlRTX0FMUkVBRFlfUFVSQ0hBU0VEEAMSEwoP",
+            "U0hPV19BTExfQUdFTlRTEAQ6fepBegolZGlzY292ZXJ5ZW5naW5lLmdvb2ds",
+            "ZWFwaXMuY29tL0VuZ2luZRJRcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L2NvbGxlY3Rpb25zL3tjb2xsZWN0aW9ufS9lbmdpbmVz",
+            "L3tlbmdpbmV9Qg8KDWVuZ2luZV9jb25maWdCEQoPZW5naW5lX21ldGFkYXRh",
+            "Qv4BCiNjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MUILRW5n",
+            "aW5lUHJvdG9QAVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9kaXNjb3Zlcnllbmdp",
+            "bmUvYXBpdjEvZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKi",
+            "Ag9ESVNDT1ZFUllFTkdJTkWqAh9Hb29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5n",
+            "aW5lLlYxygIfR29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMeoCIkdv",
+            "b2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.AgentGatewaySettingReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.CommonReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.LoggingReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine), global::Google.Cloud.DiscoveryEngine.V1.Engine.Parser, new[]{ "ChatEngineConfig", "SearchEngineConfig", "MediaRecommendationEngineConfig", "ChatEngineMetadata", "Name", "DisplayName", "CreateTime", "UpdateTime", "DataStoreIds", "SolutionType", "IndustryVertical", "CommonConfig", "DisableAnalytics" }, new[]{ "EngineConfig", "EngineMetadata" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.SearchEngineConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.SearchEngineConfig.Parser, new[]{ "SearchTier", "SearchAddOns" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine), global::Google.Cloud.DiscoveryEngine.V1.Engine.Parser, new[]{ "ChatEngineConfig", "SearchEngineConfig", "MediaRecommendationEngineConfig", "ChatEngineMetadata", "Name", "DisplayName", "CreateTime", "UpdateTime", "DataStoreIds", "SolutionType", "IndustryVertical", "CommonConfig", "KnowledgeGraphConfig", "AppType", "DisableAnalytics", "SessionConfig", "Features", "CmekConfig", "ConfigurableBillingApproach", "ModelConfigs", "ObservabilityConfig", "ConnectorTenantInfo", "AgentGatewaySetting", "MarketplaceAgentVisibility", "ProcurementContactEmails", "AssociatedAgentRegistry" }, new[]{ "EngineConfig", "EngineMetadata" }, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.AppType), typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.FeatureState), typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ConfigurableBillingApproach), typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ModelState), typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MarketplaceAgentVisibility) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.SearchEngineConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.SearchEngineConfig.Parser, new[]{ "SearchTier", "RequiredSubscriptionTier", "SearchAddOns" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Parser, new[]{ "Type", "OptimizationObjective", "OptimizationObjectiveConfig", "TrainingState", "EngineFeaturesConfig" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.TrainingState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.OptimizationObjectiveConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.OptimizationObjectiveConfig.Parser, new[]{ "TargetField", "TargetFieldValueFloat" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.EngineFeaturesConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.EngineFeaturesConfig.Parser, new[]{ "RecommendedForYouConfig", "MostPopularConfig" }, new[]{ "TypeDedicatedConfig" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.RecommendedForYouFeatureConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.RecommendedForYouFeatureConfig.Parser, new[]{ "ContextEventType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.MostPopularFeatureConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.MostPopularFeatureConfig.Parser, new[]{ "TimeWindowDays" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineConfig.Parser, new[]{ "AgentCreationConfig", "DialogflowAgentToLink", "AllowCrossRegion" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineConfig.Types.AgentCreationConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineConfig.Types.AgentCreationConfig.Parser, new[]{ "Business", "DefaultLanguageCode", "TimeZone", "Location" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.CommonConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.CommonConfig.Parser, new[]{ "CompanyName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineMetadata), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineMetadata.Parser, new[]{ "DialogflowAgent" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.KnowledgeGraphConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.KnowledgeGraphConfig.Parser, new[]{ "EnableCloudKnowledgeGraph", "CloudKnowledgeGraphTypes", "EnablePrivateKnowledgeGraph", "PrivateKnowledgeGraphTypes", "FeatureConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.KnowledgeGraphConfig.Types.FeatureConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.KnowledgeGraphConfig.Types.FeatureConfig.Parser, new[]{ "DisablePrivateKgQueryUnderstanding", "DisablePrivateKgEnrichment", "DisablePrivateKgAutoComplete", "DisablePrivateKgQueryUiChips" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineMetadata), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineMetadata.Parser, new[]{ "DialogflowAgent" }, null, null, null, null),
+            null, null, null, })
           }));
     }
     #endregion
@@ -158,7 +219,20 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       solutionType_ = other.solutionType_;
       industryVertical_ = other.industryVertical_;
       commonConfig_ = other.commonConfig_ != null ? other.commonConfig_.Clone() : null;
+      knowledgeGraphConfig_ = other.knowledgeGraphConfig_ != null ? other.knowledgeGraphConfig_.Clone() : null;
+      appType_ = other.appType_;
       disableAnalytics_ = other.disableAnalytics_;
+      sessionConfig_ = other.sessionConfig_ != null ? other.sessionConfig_.Clone() : null;
+      features_ = other.features_.Clone();
+      cmekConfig_ = other.cmekConfig_ != null ? other.cmekConfig_.Clone() : null;
+      configurableBillingApproach_ = other.configurableBillingApproach_;
+      modelConfigs_ = other.modelConfigs_.Clone();
+      observabilityConfig_ = other.observabilityConfig_ != null ? other.observabilityConfig_.Clone() : null;
+      connectorTenantInfo_ = other.connectorTenantInfo_.Clone();
+      agentGatewaySetting_ = other.agentGatewaySetting_ != null ? other.agentGatewaySetting_.Clone() : null;
+      marketplaceAgentVisibility_ = other.marketplaceAgentVisibility_;
+      procurementContactEmails_ = other.procurementContactEmails_.Clone();
+      associatedAgentRegistry_ = other.associatedAgentRegistry_;
       switch (other.EngineConfigCase) {
         case EngineConfigOneofCase.ChatEngineConfig:
           ChatEngineConfig = other.ChatEngineConfig.Clone();
@@ -407,6 +481,40 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "knowledge_graph_config" field.</summary>
+    public const int KnowledgeGraphConfigFieldNumber = 23;
+    private global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.KnowledgeGraphConfig knowledgeGraphConfig_;
+    /// <summary>
+    /// Optional. Configurations for the Knowledge Graph. Only applicable if
+    /// [solution_type][google.cloud.discoveryengine.v1.Engine.solution_type] is
+    /// [SOLUTION_TYPE_SEARCH][google.cloud.discoveryengine.v1.SolutionType.SOLUTION_TYPE_SEARCH].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.KnowledgeGraphConfig KnowledgeGraphConfig {
+      get { return knowledgeGraphConfig_; }
+      set {
+        knowledgeGraphConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "app_type" field.</summary>
+    public const int AppTypeFieldNumber = 24;
+    private global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.AppType appType_ = global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.AppType.Unspecified;
+    /// <summary>
+    /// Optional. Immutable. This the application type which this engine resource
+    /// represents. NOTE: this is a new concept independ of existing industry
+    /// vertical or solution type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.AppType AppType {
+      get { return appType_; }
+      set {
+        appType_ = value;
+      }
+    }
+
     /// <summary>Field number for the "disable_analytics" field.</summary>
     public const int DisableAnalyticsFieldNumber = 26;
     private bool disableAnalytics_;
@@ -420,6 +528,218 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       get { return disableAnalytics_; }
       set {
         disableAnalytics_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "session_config" field.</summary>
+    public const int SessionConfigFieldNumber = 29;
+    private global::Google.Cloud.DiscoveryEngine.V1.SessionConfig sessionConfig_;
+    /// <summary>
+    /// Optional. Non-empty default. Session config for the engine.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1.SessionConfig SessionConfig {
+      get { return sessionConfig_; }
+      set {
+        sessionConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "features" field.</summary>
+    public const int FeaturesFieldNumber = 30;
+    private static readonly pbc::MapField<string, global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.FeatureState>.Codec _map_features_codec
+        = new pbc::MapField<string, global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.FeatureState>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForEnum(16, x => (int) x, x => (global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.FeatureState) x, global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.FeatureState.Unspecified), 242);
+    private readonly pbc::MapField<string, global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.FeatureState> features_ = new pbc::MapField<string, global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.FeatureState>();
+    /// <summary>
+    /// Optional. Feature config for the engine to opt in or opt out of features.
+    /// Supported keys:
+    ///
+    /// * `*`: all features, if it's present, all other feature state settings are
+    ///        ignored.
+    /// * `agent-gallery`
+    /// * `no-code-agent-builder`
+    /// * `prompt-gallery`
+    /// * `model-selector`
+    /// * `notebook-lm`
+    /// * `people-search`
+    /// * `people-search-org-chart`
+    /// * `bi-directional-audio`
+    /// * `speech-to-text`
+    /// * `feedback`
+    /// * `session-sharing`
+    /// * `personalization-memory`
+    /// * `personalization-suggested-highlights`
+    /// * `mobile-app-access`
+    /// * `disable-agent-sharing`
+    /// * `disable-image-generation`
+    /// * `disable-video-generation`
+    /// * `disable-onedrive-upload`
+    /// * `disable-talk-to-content`
+    /// * `disable-google-drive-upload`
+    /// * `disable-welcome-emails`
+    /// * `disable-canvas`
+    /// * `canvas-workspace`
+    /// * `canvas-app-builder`
+    /// * `skills`
+    /// * `skill-sharing`
+    /// * `skill-sharing-without-admin-approval`
+    /// * `disable-projects`
+    /// * `sobi`
+    /// * `enable-end-user-sharing-with-groups`
+    /// * `single-agent-orchestration`
+    /// * `multi-agent-orchestration`
+    /// * `cross-product-intelligence`
+    /// * `workflow-agents`
+    /// * `in-app-notifications`
+    /// * `code-extraction`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.FeatureState> Features {
+      get { return features_; }
+    }
+
+    /// <summary>Field number for the "cmek_config" field.</summary>
+    public const int CmekConfigFieldNumber = 32;
+    private global::Google.Cloud.DiscoveryEngine.V1.CmekConfig cmekConfig_;
+    /// <summary>
+    /// Output only. CMEK-related information for the Engine.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1.CmekConfig CmekConfig {
+      get { return cmekConfig_; }
+      set {
+        cmekConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "configurable_billing_approach" field.</summary>
+    public const int ConfigurableBillingApproachFieldNumber = 36;
+    private global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ConfigurableBillingApproach configurableBillingApproach_ = global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ConfigurableBillingApproach.Unspecified;
+    /// <summary>
+    /// Optional. Configuration for configurable billing approach.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ConfigurableBillingApproach ConfigurableBillingApproach {
+      get { return configurableBillingApproach_; }
+      set {
+        configurableBillingApproach_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "model_configs" field.</summary>
+    public const int ModelConfigsFieldNumber = 37;
+    private static readonly pbc::MapField<string, global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ModelState>.Codec _map_modelConfigs_codec
+        = new pbc::MapField<string, global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ModelState>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForEnum(16, x => (int) x, x => (global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ModelState) x, global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ModelState.Unspecified), 298);
+    private readonly pbc::MapField<string, global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ModelState> modelConfigs_ = new pbc::MapField<string, global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ModelState>();
+    /// <summary>
+    /// Optional. Maps a model name to its specific configuration for this engine.
+    /// This allows admin users to turn on/off individual models. This only stores
+    /// models whose states are overridden by the admin.
+    ///
+    /// When the state is unspecified, or model_configs is empty for this
+    /// model, the system will decide if this model should be available or not
+    /// based on the default configuration. For example, a preview model
+    /// should be disabled by default if the admin has not chosen to enable it.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ModelState> ModelConfigs {
+      get { return modelConfigs_; }
+    }
+
+    /// <summary>Field number for the "observability_config" field.</summary>
+    public const int ObservabilityConfigFieldNumber = 39;
+    private global::Google.Cloud.DiscoveryEngine.V1.ObservabilityConfig observabilityConfig_;
+    /// <summary>
+    /// Optional. Observability config for the engine.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1.ObservabilityConfig ObservabilityConfig {
+      get { return observabilityConfig_; }
+      set {
+        observabilityConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "connector_tenant_info" field.</summary>
+    public const int ConnectorTenantInfoFieldNumber = 42;
+    private static readonly pbc::MapField<string, string>.Codec _map_connectorTenantInfo_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 338);
+    private readonly pbc::MapField<string, string> connectorTenantInfo_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. Maps a connector ID (e.g., "hybrid-github", "shopify") to
+    /// tenant-specific information required for that connector. The structure of
+    /// the tenant information string is connector-dependent.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> ConnectorTenantInfo {
+      get { return connectorTenantInfo_; }
+    }
+
+    /// <summary>Field number for the "agent_gateway_setting" field.</summary>
+    public const int AgentGatewaySettingFieldNumber = 43;
+    private global::Google.Cloud.DiscoveryEngine.V1.AgentGatewaySetting agentGatewaySetting_;
+    /// <summary>
+    /// Optional. The agent gateway setting for the engine.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1.AgentGatewaySetting AgentGatewaySetting {
+      get { return agentGatewaySetting_; }
+      set {
+        agentGatewaySetting_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "marketplace_agent_visibility" field.</summary>
+    public const int MarketplaceAgentVisibilityFieldNumber = 44;
+    private global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MarketplaceAgentVisibility marketplaceAgentVisibility_ = global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MarketplaceAgentVisibility.Unspecified;
+    /// <summary>
+    /// Optional. The visibility of marketplace agents in the agent gallery.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MarketplaceAgentVisibility MarketplaceAgentVisibility {
+      get { return marketplaceAgentVisibility_; }
+      set {
+        marketplaceAgentVisibility_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "procurement_contact_emails" field.</summary>
+    public const int ProcurementContactEmailsFieldNumber = 45;
+    private static readonly pb::FieldCodec<string> _repeated_procurementContactEmails_codec
+        = pb::FieldCodec.ForString(362);
+    private readonly pbc::RepeatedField<string> procurementContactEmails_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The emails of the procurement contacts.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ProcurementContactEmails {
+      get { return procurementContactEmails_; }
+    }
+
+    /// <summary>Field number for the "associated_agent_registry" field.</summary>
+    public const int AssociatedAgentRegistryFieldNumber = 50;
+    private string associatedAgentRegistry_ = "";
+    /// <summary>
+    /// Output only. The Agent registry containing the agents, MCP servers and
+    /// tools associated with this engine. Derived server-side from the linked
+    /// Agent Gateway's registry.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AssociatedAgentRegistry {
+      get { return associatedAgentRegistry_; }
+      set {
+        associatedAgentRegistry_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -492,7 +812,20 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (SolutionType != other.SolutionType) return false;
       if (IndustryVertical != other.IndustryVertical) return false;
       if (!object.Equals(CommonConfig, other.CommonConfig)) return false;
+      if (!object.Equals(KnowledgeGraphConfig, other.KnowledgeGraphConfig)) return false;
+      if (AppType != other.AppType) return false;
       if (DisableAnalytics != other.DisableAnalytics) return false;
+      if (!object.Equals(SessionConfig, other.SessionConfig)) return false;
+      if (!Features.Equals(other.Features)) return false;
+      if (!object.Equals(CmekConfig, other.CmekConfig)) return false;
+      if (ConfigurableBillingApproach != other.ConfigurableBillingApproach) return false;
+      if (!ModelConfigs.Equals(other.ModelConfigs)) return false;
+      if (!object.Equals(ObservabilityConfig, other.ObservabilityConfig)) return false;
+      if (!ConnectorTenantInfo.Equals(other.ConnectorTenantInfo)) return false;
+      if (!object.Equals(AgentGatewaySetting, other.AgentGatewaySetting)) return false;
+      if (MarketplaceAgentVisibility != other.MarketplaceAgentVisibility) return false;
+      if(!procurementContactEmails_.Equals(other.procurementContactEmails_)) return false;
+      if (AssociatedAgentRegistry != other.AssociatedAgentRegistry) return false;
       if (EngineConfigCase != other.EngineConfigCase) return false;
       if (EngineMetadataCase != other.EngineMetadataCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -514,7 +847,20 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (SolutionType != global::Google.Cloud.DiscoveryEngine.V1.SolutionType.Unspecified) hash ^= SolutionType.GetHashCode();
       if (IndustryVertical != global::Google.Cloud.DiscoveryEngine.V1.IndustryVertical.Unspecified) hash ^= IndustryVertical.GetHashCode();
       if (commonConfig_ != null) hash ^= CommonConfig.GetHashCode();
+      if (knowledgeGraphConfig_ != null) hash ^= KnowledgeGraphConfig.GetHashCode();
+      if (AppType != global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.AppType.Unspecified) hash ^= AppType.GetHashCode();
       if (DisableAnalytics != false) hash ^= DisableAnalytics.GetHashCode();
+      if (sessionConfig_ != null) hash ^= SessionConfig.GetHashCode();
+      hash ^= Features.GetHashCode();
+      if (cmekConfig_ != null) hash ^= CmekConfig.GetHashCode();
+      if (ConfigurableBillingApproach != global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ConfigurableBillingApproach.Unspecified) hash ^= ConfigurableBillingApproach.GetHashCode();
+      hash ^= ModelConfigs.GetHashCode();
+      if (observabilityConfig_ != null) hash ^= ObservabilityConfig.GetHashCode();
+      hash ^= ConnectorTenantInfo.GetHashCode();
+      if (agentGatewaySetting_ != null) hash ^= AgentGatewaySetting.GetHashCode();
+      if (MarketplaceAgentVisibility != global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MarketplaceAgentVisibility.Unspecified) hash ^= MarketplaceAgentVisibility.GetHashCode();
+      hash ^= procurementContactEmails_.GetHashCode();
+      if (AssociatedAgentRegistry.Length != 0) hash ^= AssociatedAgentRegistry.GetHashCode();
       hash ^= (int) engineConfigCase_;
       hash ^= (int) engineMetadataCase_;
       if (_unknownFields != null) {
@@ -580,9 +926,49 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(128, 1);
         output.WriteEnum((int) IndustryVertical);
       }
+      if (knowledgeGraphConfig_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(KnowledgeGraphConfig);
+      }
+      if (AppType != global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.AppType.Unspecified) {
+        output.WriteRawTag(192, 1);
+        output.WriteEnum((int) AppType);
+      }
       if (DisableAnalytics != false) {
         output.WriteRawTag(208, 1);
         output.WriteBool(DisableAnalytics);
+      }
+      if (sessionConfig_ != null) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(SessionConfig);
+      }
+      features_.WriteTo(output, _map_features_codec);
+      if (cmekConfig_ != null) {
+        output.WriteRawTag(130, 2);
+        output.WriteMessage(CmekConfig);
+      }
+      if (ConfigurableBillingApproach != global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ConfigurableBillingApproach.Unspecified) {
+        output.WriteRawTag(160, 2);
+        output.WriteEnum((int) ConfigurableBillingApproach);
+      }
+      modelConfigs_.WriteTo(output, _map_modelConfigs_codec);
+      if (observabilityConfig_ != null) {
+        output.WriteRawTag(186, 2);
+        output.WriteMessage(ObservabilityConfig);
+      }
+      connectorTenantInfo_.WriteTo(output, _map_connectorTenantInfo_codec);
+      if (agentGatewaySetting_ != null) {
+        output.WriteRawTag(218, 2);
+        output.WriteMessage(AgentGatewaySetting);
+      }
+      if (MarketplaceAgentVisibility != global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MarketplaceAgentVisibility.Unspecified) {
+        output.WriteRawTag(224, 2);
+        output.WriteEnum((int) MarketplaceAgentVisibility);
+      }
+      procurementContactEmails_.WriteTo(output, _repeated_procurementContactEmails_codec);
+      if (AssociatedAgentRegistry.Length != 0) {
+        output.WriteRawTag(146, 3);
+        output.WriteString(AssociatedAgentRegistry);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -639,9 +1025,49 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(128, 1);
         output.WriteEnum((int) IndustryVertical);
       }
+      if (knowledgeGraphConfig_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(KnowledgeGraphConfig);
+      }
+      if (AppType != global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.AppType.Unspecified) {
+        output.WriteRawTag(192, 1);
+        output.WriteEnum((int) AppType);
+      }
       if (DisableAnalytics != false) {
         output.WriteRawTag(208, 1);
         output.WriteBool(DisableAnalytics);
+      }
+      if (sessionConfig_ != null) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(SessionConfig);
+      }
+      features_.WriteTo(ref output, _map_features_codec);
+      if (cmekConfig_ != null) {
+        output.WriteRawTag(130, 2);
+        output.WriteMessage(CmekConfig);
+      }
+      if (ConfigurableBillingApproach != global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ConfigurableBillingApproach.Unspecified) {
+        output.WriteRawTag(160, 2);
+        output.WriteEnum((int) ConfigurableBillingApproach);
+      }
+      modelConfigs_.WriteTo(ref output, _map_modelConfigs_codec);
+      if (observabilityConfig_ != null) {
+        output.WriteRawTag(186, 2);
+        output.WriteMessage(ObservabilityConfig);
+      }
+      connectorTenantInfo_.WriteTo(ref output, _map_connectorTenantInfo_codec);
+      if (agentGatewaySetting_ != null) {
+        output.WriteRawTag(218, 2);
+        output.WriteMessage(AgentGatewaySetting);
+      }
+      if (MarketplaceAgentVisibility != global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MarketplaceAgentVisibility.Unspecified) {
+        output.WriteRawTag(224, 2);
+        output.WriteEnum((int) MarketplaceAgentVisibility);
+      }
+      procurementContactEmails_.WriteTo(ref output, _repeated_procurementContactEmails_codec);
+      if (AssociatedAgentRegistry.Length != 0) {
+        output.WriteRawTag(146, 3);
+        output.WriteString(AssociatedAgentRegistry);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -687,8 +1113,39 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (commonConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CommonConfig);
       }
+      if (knowledgeGraphConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(KnowledgeGraphConfig);
+      }
+      if (AppType != global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.AppType.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) AppType);
+      }
       if (DisableAnalytics != false) {
         size += 2 + 1;
+      }
+      if (sessionConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SessionConfig);
+      }
+      size += features_.CalculateSize(_map_features_codec);
+      if (cmekConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CmekConfig);
+      }
+      if (ConfigurableBillingApproach != global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ConfigurableBillingApproach.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) ConfigurableBillingApproach);
+      }
+      size += modelConfigs_.CalculateSize(_map_modelConfigs_codec);
+      if (observabilityConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ObservabilityConfig);
+      }
+      size += connectorTenantInfo_.CalculateSize(_map_connectorTenantInfo_codec);
+      if (agentGatewaySetting_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AgentGatewaySetting);
+      }
+      if (MarketplaceAgentVisibility != global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MarketplaceAgentVisibility.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) MarketplaceAgentVisibility);
+      }
+      size += procurementContactEmails_.CalculateSize(_repeated_procurementContactEmails_codec);
+      if (AssociatedAgentRegistry.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(AssociatedAgentRegistry);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -733,8 +1190,54 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         }
         CommonConfig.MergeFrom(other.CommonConfig);
       }
+      if (other.knowledgeGraphConfig_ != null) {
+        if (knowledgeGraphConfig_ == null) {
+          KnowledgeGraphConfig = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.KnowledgeGraphConfig();
+        }
+        KnowledgeGraphConfig.MergeFrom(other.KnowledgeGraphConfig);
+      }
+      if (other.AppType != global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.AppType.Unspecified) {
+        AppType = other.AppType;
+      }
       if (other.DisableAnalytics != false) {
         DisableAnalytics = other.DisableAnalytics;
+      }
+      if (other.sessionConfig_ != null) {
+        if (sessionConfig_ == null) {
+          SessionConfig = new global::Google.Cloud.DiscoveryEngine.V1.SessionConfig();
+        }
+        SessionConfig.MergeFrom(other.SessionConfig);
+      }
+      features_.MergeFrom(other.features_);
+      if (other.cmekConfig_ != null) {
+        if (cmekConfig_ == null) {
+          CmekConfig = new global::Google.Cloud.DiscoveryEngine.V1.CmekConfig();
+        }
+        CmekConfig.MergeFrom(other.CmekConfig);
+      }
+      if (other.ConfigurableBillingApproach != global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ConfigurableBillingApproach.Unspecified) {
+        ConfigurableBillingApproach = other.ConfigurableBillingApproach;
+      }
+      modelConfigs_.MergeFrom(other.modelConfigs_);
+      if (other.observabilityConfig_ != null) {
+        if (observabilityConfig_ == null) {
+          ObservabilityConfig = new global::Google.Cloud.DiscoveryEngine.V1.ObservabilityConfig();
+        }
+        ObservabilityConfig.MergeFrom(other.ObservabilityConfig);
+      }
+      connectorTenantInfo_.MergeFrom(other.connectorTenantInfo_);
+      if (other.agentGatewaySetting_ != null) {
+        if (agentGatewaySetting_ == null) {
+          AgentGatewaySetting = new global::Google.Cloud.DiscoveryEngine.V1.AgentGatewaySetting();
+        }
+        AgentGatewaySetting.MergeFrom(other.AgentGatewaySetting);
+      }
+      if (other.MarketplaceAgentVisibility != global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MarketplaceAgentVisibility.Unspecified) {
+        MarketplaceAgentVisibility = other.MarketplaceAgentVisibility;
+      }
+      procurementContactEmails_.Add(other.procurementContactEmails_);
+      if (other.AssociatedAgentRegistry.Length != 0) {
+        AssociatedAgentRegistry = other.AssociatedAgentRegistry;
       }
       switch (other.EngineConfigCase) {
         case EngineConfigOneofCase.ChatEngineConfig:
@@ -862,8 +1365,75 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             IndustryVertical = (global::Google.Cloud.DiscoveryEngine.V1.IndustryVertical) input.ReadEnum();
             break;
           }
+          case 186: {
+            if (knowledgeGraphConfig_ == null) {
+              KnowledgeGraphConfig = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.KnowledgeGraphConfig();
+            }
+            input.ReadMessage(KnowledgeGraphConfig);
+            break;
+          }
+          case 192: {
+            AppType = (global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.AppType) input.ReadEnum();
+            break;
+          }
           case 208: {
             DisableAnalytics = input.ReadBool();
+            break;
+          }
+          case 234: {
+            if (sessionConfig_ == null) {
+              SessionConfig = new global::Google.Cloud.DiscoveryEngine.V1.SessionConfig();
+            }
+            input.ReadMessage(SessionConfig);
+            break;
+          }
+          case 242: {
+            features_.AddEntriesFrom(input, _map_features_codec);
+            break;
+          }
+          case 258: {
+            if (cmekConfig_ == null) {
+              CmekConfig = new global::Google.Cloud.DiscoveryEngine.V1.CmekConfig();
+            }
+            input.ReadMessage(CmekConfig);
+            break;
+          }
+          case 288: {
+            ConfigurableBillingApproach = (global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ConfigurableBillingApproach) input.ReadEnum();
+            break;
+          }
+          case 298: {
+            modelConfigs_.AddEntriesFrom(input, _map_modelConfigs_codec);
+            break;
+          }
+          case 314: {
+            if (observabilityConfig_ == null) {
+              ObservabilityConfig = new global::Google.Cloud.DiscoveryEngine.V1.ObservabilityConfig();
+            }
+            input.ReadMessage(ObservabilityConfig);
+            break;
+          }
+          case 338: {
+            connectorTenantInfo_.AddEntriesFrom(input, _map_connectorTenantInfo_codec);
+            break;
+          }
+          case 346: {
+            if (agentGatewaySetting_ == null) {
+              AgentGatewaySetting = new global::Google.Cloud.DiscoveryEngine.V1.AgentGatewaySetting();
+            }
+            input.ReadMessage(AgentGatewaySetting);
+            break;
+          }
+          case 352: {
+            MarketplaceAgentVisibility = (global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MarketplaceAgentVisibility) input.ReadEnum();
+            break;
+          }
+          case 362: {
+            procurementContactEmails_.AddEntriesFrom(input, _repeated_procurementContactEmails_codec);
+            break;
+          }
+          case 402: {
+            AssociatedAgentRegistry = input.ReadString();
             break;
           }
         }
@@ -962,8 +1532,75 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             IndustryVertical = (global::Google.Cloud.DiscoveryEngine.V1.IndustryVertical) input.ReadEnum();
             break;
           }
+          case 186: {
+            if (knowledgeGraphConfig_ == null) {
+              KnowledgeGraphConfig = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.KnowledgeGraphConfig();
+            }
+            input.ReadMessage(KnowledgeGraphConfig);
+            break;
+          }
+          case 192: {
+            AppType = (global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.AppType) input.ReadEnum();
+            break;
+          }
           case 208: {
             DisableAnalytics = input.ReadBool();
+            break;
+          }
+          case 234: {
+            if (sessionConfig_ == null) {
+              SessionConfig = new global::Google.Cloud.DiscoveryEngine.V1.SessionConfig();
+            }
+            input.ReadMessage(SessionConfig);
+            break;
+          }
+          case 242: {
+            features_.AddEntriesFrom(ref input, _map_features_codec);
+            break;
+          }
+          case 258: {
+            if (cmekConfig_ == null) {
+              CmekConfig = new global::Google.Cloud.DiscoveryEngine.V1.CmekConfig();
+            }
+            input.ReadMessage(CmekConfig);
+            break;
+          }
+          case 288: {
+            ConfigurableBillingApproach = (global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ConfigurableBillingApproach) input.ReadEnum();
+            break;
+          }
+          case 298: {
+            modelConfigs_.AddEntriesFrom(ref input, _map_modelConfigs_codec);
+            break;
+          }
+          case 314: {
+            if (observabilityConfig_ == null) {
+              ObservabilityConfig = new global::Google.Cloud.DiscoveryEngine.V1.ObservabilityConfig();
+            }
+            input.ReadMessage(ObservabilityConfig);
+            break;
+          }
+          case 338: {
+            connectorTenantInfo_.AddEntriesFrom(ref input, _map_connectorTenantInfo_codec);
+            break;
+          }
+          case 346: {
+            if (agentGatewaySetting_ == null) {
+              AgentGatewaySetting = new global::Google.Cloud.DiscoveryEngine.V1.AgentGatewaySetting();
+            }
+            input.ReadMessage(AgentGatewaySetting);
+            break;
+          }
+          case 352: {
+            MarketplaceAgentVisibility = (global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MarketplaceAgentVisibility) input.ReadEnum();
+            break;
+          }
+          case 362: {
+            procurementContactEmails_.AddEntriesFrom(ref input, _repeated_procurementContactEmails_codec);
+            break;
+          }
+          case 402: {
+            AssociatedAgentRegistry = input.ReadString();
             break;
           }
         }
@@ -976,6 +1613,104 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// The app of the engine.
+      /// </summary>
+      public enum AppType {
+        /// <summary>
+        /// All non specified apps.
+        /// </summary>
+        [pbr::OriginalName("APP_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// App type for intranet search and Agentspace.
+        /// </summary>
+        [pbr::OriginalName("APP_TYPE_INTRANET")] Intranet = 1,
+      }
+
+      /// <summary>
+      /// The state of the feature for the engine.
+      /// </summary>
+      public enum FeatureState {
+        /// <summary>
+        /// The feature state is unspecified.
+        /// </summary>
+        [pbr::OriginalName("FEATURE_STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The feature is turned on to be accessible.
+        /// </summary>
+        [pbr::OriginalName("FEATURE_STATE_ON")] On = 1,
+        /// <summary>
+        /// The feature is turned off to be inaccessible.
+        /// </summary>
+        [pbr::OriginalName("FEATURE_STATE_OFF")] Off = 2,
+      }
+
+      /// <summary>
+      /// Configuration for configurable billing approach.
+      /// </summary>
+      public enum ConfigurableBillingApproach {
+        /// <summary>
+        /// Default value. For Spark and non-Spark non-configurable billing approach.
+        /// General pricing model.
+        /// </summary>
+        [pbr::OriginalName("CONFIGURABLE_BILLING_APPROACH_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The billing approach follows configurations specified by customer.
+        /// </summary>
+        [pbr::OriginalName("CONFIGURABLE_BILLING_APPROACH_ENABLED")] Enabled = 1,
+      }
+
+      /// <summary>
+      /// The status of the model for the engine.
+      /// </summary>
+      public enum ModelState {
+        /// <summary>
+        /// The model state is unspecified.
+        /// </summary>
+        [pbr::OriginalName("MODEL_STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The model is enabled by admin.
+        /// </summary>
+        [pbr::OriginalName("MODEL_ENABLED")] ModelEnabled = 1,
+        /// <summary>
+        /// The model is disabled by admin.
+        /// </summary>
+        [pbr::OriginalName("MODEL_DISABLED")] ModelDisabled = 2,
+      }
+
+      /// <summary>
+      /// Represents which marketplace agents are visible to any users in agent
+      /// gallery.
+      /// </summary>
+      public enum MarketplaceAgentVisibility {
+        /// <summary>
+        /// Defaults to `MARKETPLACE_AGENT_VISIBILITY_UNSPECIFIED`.
+        /// </summary>
+        [pbr::OriginalName("MARKETPLACE_AGENT_VISIBILITY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Only agents that are currently available for use by the user are visible.
+        /// </summary>
+        [pbr::OriginalName("SHOW_AVAILABLE_AGENTS_ONLY")] ShowAvailableAgentsOnly = 1,
+        /// <summary>
+        /// Show marketplace agents that the user does not yet have access to but
+        /// are integrated into the engine. This level also includes all agents
+        /// visible with `SHOW_AVAILABLE_AGENTS_ONLY`.
+        /// </summary>
+        [pbr::OriginalName("SHOW_AGENTS_ALREADY_INTEGRATED")] ShowAgentsAlreadyIntegrated = 2,
+        /// <summary>
+        /// Show all agents visible with `SHOW_AGENTS_ALREADY_INTEGRATED`, plus
+        /// agents that have already been purchased by the project/organization, even
+        /// if they are not currently integrated into the engine.
+        /// </summary>
+        [pbr::OriginalName("SHOW_AGENTS_ALREADY_PURCHASED")] ShowAgentsAlreadyPurchased = 3,
+        /// <summary>
+        /// All agents in the marketplace are visible, regardless of access or
+        /// purchase status. This level encompasses all agents shown in the previous
+        /// levels.
+        /// </summary>
+        [pbr::OriginalName("SHOW_ALL_AGENTS")] ShowAllAgents = 4,
+      }
+
       /// <summary>
       /// Configurations for a Search Engine.
       /// </summary>
@@ -1015,6 +1750,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public SearchEngineConfig(SearchEngineConfig other) : this() {
           searchTier_ = other.searchTier_;
+          requiredSubscriptionTier_ = other.requiredSubscriptionTier_;
           searchAddOns_ = other.searchAddOns_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
@@ -1044,6 +1780,28 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           get { return searchTier_; }
           set {
             searchTier_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "required_subscription_tier" field.</summary>
+        public const int RequiredSubscriptionTierFieldNumber = 3;
+        private global::Google.Cloud.DiscoveryEngine.V1.SubscriptionTier requiredSubscriptionTier_ = global::Google.Cloud.DiscoveryEngine.V1.SubscriptionTier.Unspecified;
+        /// <summary>
+        /// Optional. The required subscription tier of this engine.
+        ///
+        /// If the required subscription tier is search, user with higher license
+        /// tier like assist can still access the standalone app associated with this
+        /// engine.
+        ///
+        /// Web grounding feature is only available on the app if it is set as
+        /// [SubscriptionTier.SUBSCRIPTION_TIER_SEARCH_AND_ASSISTANT][google.cloud.discoveryengine.v1.SubscriptionTier.SUBSCRIPTION_TIER_SEARCH_AND_ASSISTANT].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DiscoveryEngine.V1.SubscriptionTier RequiredSubscriptionTier {
+          get { return requiredSubscriptionTier_; }
+          set {
+            requiredSubscriptionTier_ = value;
           }
         }
 
@@ -1077,6 +1835,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             return true;
           }
           if (SearchTier != other.SearchTier) return false;
+          if (RequiredSubscriptionTier != other.RequiredSubscriptionTier) return false;
           if(!searchAddOns_.Equals(other.searchAddOns_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -1086,6 +1845,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (SearchTier != global::Google.Cloud.DiscoveryEngine.V1.SearchTier.Unspecified) hash ^= SearchTier.GetHashCode();
+          if (RequiredSubscriptionTier != global::Google.Cloud.DiscoveryEngine.V1.SubscriptionTier.Unspecified) hash ^= RequiredSubscriptionTier.GetHashCode();
           hash ^= searchAddOns_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1110,6 +1870,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteEnum((int) SearchTier);
           }
           searchAddOns_.WriteTo(output, _repeated_searchAddOns_codec);
+          if (RequiredSubscriptionTier != global::Google.Cloud.DiscoveryEngine.V1.SubscriptionTier.Unspecified) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) RequiredSubscriptionTier);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1125,6 +1889,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteEnum((int) SearchTier);
           }
           searchAddOns_.WriteTo(ref output, _repeated_searchAddOns_codec);
+          if (RequiredSubscriptionTier != global::Google.Cloud.DiscoveryEngine.V1.SubscriptionTier.Unspecified) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) RequiredSubscriptionTier);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1137,6 +1905,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           int size = 0;
           if (SearchTier != global::Google.Cloud.DiscoveryEngine.V1.SearchTier.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SearchTier);
+          }
+          if (RequiredSubscriptionTier != global::Google.Cloud.DiscoveryEngine.V1.SubscriptionTier.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RequiredSubscriptionTier);
           }
           size += searchAddOns_.CalculateSize(_repeated_searchAddOns_codec);
           if (_unknownFields != null) {
@@ -1153,6 +1924,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           if (other.SearchTier != global::Google.Cloud.DiscoveryEngine.V1.SearchTier.Unspecified) {
             SearchTier = other.SearchTier;
+          }
+          if (other.RequiredSubscriptionTier != global::Google.Cloud.DiscoveryEngine.V1.SubscriptionTier.Unspecified) {
+            RequiredSubscriptionTier = other.RequiredSubscriptionTier;
           }
           searchAddOns_.Add(other.searchAddOns_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1183,6 +1957,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 searchAddOns_.AddEntriesFrom(input, _repeated_searchAddOns_codec);
                 break;
               }
+              case 24: {
+                RequiredSubscriptionTier = (global::Google.Cloud.DiscoveryEngine.V1.SubscriptionTier) input.ReadEnum();
+                break;
+              }
             }
           }
         #endif
@@ -1209,6 +1987,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               case 18:
               case 16: {
                 searchAddOns_.AddEntriesFrom(ref input, _repeated_searchAddOns_codec);
+                break;
+              }
+              case 24: {
+                RequiredSubscriptionTier = (global::Google.Cloud.DiscoveryEngine.V1.SubscriptionTier) input.ReadEnum();
                 break;
               }
             }
@@ -3507,6 +4289,701 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
 
       /// <summary>
+      /// Configuration message for the Knowledge Graph.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class KnowledgeGraphConfig : pb::IMessage<KnowledgeGraphConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<KnowledgeGraphConfig> _parser = new pb::MessageParser<KnowledgeGraphConfig>(() => new KnowledgeGraphConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<KnowledgeGraphConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DiscoveryEngine.V1.Engine.Descriptor.NestedTypes[4]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public KnowledgeGraphConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public KnowledgeGraphConfig(KnowledgeGraphConfig other) : this() {
+          enableCloudKnowledgeGraph_ = other.enableCloudKnowledgeGraph_;
+          cloudKnowledgeGraphTypes_ = other.cloudKnowledgeGraphTypes_.Clone();
+          enablePrivateKnowledgeGraph_ = other.enablePrivateKnowledgeGraph_;
+          privateKnowledgeGraphTypes_ = other.privateKnowledgeGraphTypes_.Clone();
+          featureConfig_ = other.featureConfig_ != null ? other.featureConfig_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public KnowledgeGraphConfig Clone() {
+          return new KnowledgeGraphConfig(this);
+        }
+
+        /// <summary>Field number for the "enable_cloud_knowledge_graph" field.</summary>
+        public const int EnableCloudKnowledgeGraphFieldNumber = 1;
+        private bool enableCloudKnowledgeGraph_;
+        /// <summary>
+        /// Whether to enable the Cloud Knowledge Graph for the engine.
+        ///
+        /// Defaults to false if not specified.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool EnableCloudKnowledgeGraph {
+          get { return enableCloudKnowledgeGraph_; }
+          set {
+            enableCloudKnowledgeGraph_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "cloud_knowledge_graph_types" field.</summary>
+        public const int CloudKnowledgeGraphTypesFieldNumber = 2;
+        private static readonly pb::FieldCodec<string> _repeated_cloudKnowledgeGraphTypes_codec
+            = pb::FieldCodec.ForString(18);
+        private readonly pbc::RepeatedField<string> cloudKnowledgeGraphTypes_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Specify entity types to support.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> CloudKnowledgeGraphTypes {
+          get { return cloudKnowledgeGraphTypes_; }
+        }
+
+        /// <summary>Field number for the "enable_private_knowledge_graph" field.</summary>
+        public const int EnablePrivateKnowledgeGraphFieldNumber = 3;
+        private bool enablePrivateKnowledgeGraph_;
+        /// <summary>
+        /// Whether to enable the Private Knowledge Graph for the engine.
+        ///
+        /// Defaults to false if not specified.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool EnablePrivateKnowledgeGraph {
+          get { return enablePrivateKnowledgeGraph_; }
+          set {
+            enablePrivateKnowledgeGraph_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "private_knowledge_graph_types" field.</summary>
+        public const int PrivateKnowledgeGraphTypesFieldNumber = 4;
+        private static readonly pb::FieldCodec<string> _repeated_privateKnowledgeGraphTypes_codec
+            = pb::FieldCodec.ForString(34);
+        private readonly pbc::RepeatedField<string> privateKnowledgeGraphTypes_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Specify entity types to support.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> PrivateKnowledgeGraphTypes {
+          get { return privateKnowledgeGraphTypes_; }
+        }
+
+        /// <summary>Field number for the "feature_config" field.</summary>
+        public const int FeatureConfigFieldNumber = 5;
+        private global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.KnowledgeGraphConfig.Types.FeatureConfig featureConfig_;
+        /// <summary>
+        /// Optional. Feature config for the Knowledge Graph.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.KnowledgeGraphConfig.Types.FeatureConfig FeatureConfig {
+          get { return featureConfig_; }
+          set {
+            featureConfig_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as KnowledgeGraphConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(KnowledgeGraphConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (EnableCloudKnowledgeGraph != other.EnableCloudKnowledgeGraph) return false;
+          if(!cloudKnowledgeGraphTypes_.Equals(other.cloudKnowledgeGraphTypes_)) return false;
+          if (EnablePrivateKnowledgeGraph != other.EnablePrivateKnowledgeGraph) return false;
+          if(!privateKnowledgeGraphTypes_.Equals(other.privateKnowledgeGraphTypes_)) return false;
+          if (!object.Equals(FeatureConfig, other.FeatureConfig)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (EnableCloudKnowledgeGraph != false) hash ^= EnableCloudKnowledgeGraph.GetHashCode();
+          hash ^= cloudKnowledgeGraphTypes_.GetHashCode();
+          if (EnablePrivateKnowledgeGraph != false) hash ^= EnablePrivateKnowledgeGraph.GetHashCode();
+          hash ^= privateKnowledgeGraphTypes_.GetHashCode();
+          if (featureConfig_ != null) hash ^= FeatureConfig.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (EnableCloudKnowledgeGraph != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(EnableCloudKnowledgeGraph);
+          }
+          cloudKnowledgeGraphTypes_.WriteTo(output, _repeated_cloudKnowledgeGraphTypes_codec);
+          if (EnablePrivateKnowledgeGraph != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(EnablePrivateKnowledgeGraph);
+          }
+          privateKnowledgeGraphTypes_.WriteTo(output, _repeated_privateKnowledgeGraphTypes_codec);
+          if (featureConfig_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(FeatureConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (EnableCloudKnowledgeGraph != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(EnableCloudKnowledgeGraph);
+          }
+          cloudKnowledgeGraphTypes_.WriteTo(ref output, _repeated_cloudKnowledgeGraphTypes_codec);
+          if (EnablePrivateKnowledgeGraph != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(EnablePrivateKnowledgeGraph);
+          }
+          privateKnowledgeGraphTypes_.WriteTo(ref output, _repeated_privateKnowledgeGraphTypes_codec);
+          if (featureConfig_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(FeatureConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (EnableCloudKnowledgeGraph != false) {
+            size += 1 + 1;
+          }
+          size += cloudKnowledgeGraphTypes_.CalculateSize(_repeated_cloudKnowledgeGraphTypes_codec);
+          if (EnablePrivateKnowledgeGraph != false) {
+            size += 1 + 1;
+          }
+          size += privateKnowledgeGraphTypes_.CalculateSize(_repeated_privateKnowledgeGraphTypes_codec);
+          if (featureConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(FeatureConfig);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(KnowledgeGraphConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.EnableCloudKnowledgeGraph != false) {
+            EnableCloudKnowledgeGraph = other.EnableCloudKnowledgeGraph;
+          }
+          cloudKnowledgeGraphTypes_.Add(other.cloudKnowledgeGraphTypes_);
+          if (other.EnablePrivateKnowledgeGraph != false) {
+            EnablePrivateKnowledgeGraph = other.EnablePrivateKnowledgeGraph;
+          }
+          privateKnowledgeGraphTypes_.Add(other.privateKnowledgeGraphTypes_);
+          if (other.featureConfig_ != null) {
+            if (featureConfig_ == null) {
+              FeatureConfig = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.KnowledgeGraphConfig.Types.FeatureConfig();
+            }
+            FeatureConfig.MergeFrom(other.FeatureConfig);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                EnableCloudKnowledgeGraph = input.ReadBool();
+                break;
+              }
+              case 18: {
+                cloudKnowledgeGraphTypes_.AddEntriesFrom(input, _repeated_cloudKnowledgeGraphTypes_codec);
+                break;
+              }
+              case 24: {
+                EnablePrivateKnowledgeGraph = input.ReadBool();
+                break;
+              }
+              case 34: {
+                privateKnowledgeGraphTypes_.AddEntriesFrom(input, _repeated_privateKnowledgeGraphTypes_codec);
+                break;
+              }
+              case 42: {
+                if (featureConfig_ == null) {
+                  FeatureConfig = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.KnowledgeGraphConfig.Types.FeatureConfig();
+                }
+                input.ReadMessage(FeatureConfig);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                EnableCloudKnowledgeGraph = input.ReadBool();
+                break;
+              }
+              case 18: {
+                cloudKnowledgeGraphTypes_.AddEntriesFrom(ref input, _repeated_cloudKnowledgeGraphTypes_codec);
+                break;
+              }
+              case 24: {
+                EnablePrivateKnowledgeGraph = input.ReadBool();
+                break;
+              }
+              case 34: {
+                privateKnowledgeGraphTypes_.AddEntriesFrom(ref input, _repeated_privateKnowledgeGraphTypes_codec);
+                break;
+              }
+              case 42: {
+                if (featureConfig_ == null) {
+                  FeatureConfig = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.KnowledgeGraphConfig.Types.FeatureConfig();
+                }
+                input.ReadMessage(FeatureConfig);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the KnowledgeGraphConfig message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Feature config for the Knowledge Graph.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class FeatureConfig : pb::IMessage<FeatureConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<FeatureConfig> _parser = new pb::MessageParser<FeatureConfig>(() => new FeatureConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<FeatureConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.KnowledgeGraphConfig.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public FeatureConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public FeatureConfig(FeatureConfig other) : this() {
+              disablePrivateKgQueryUnderstanding_ = other.disablePrivateKgQueryUnderstanding_;
+              disablePrivateKgEnrichment_ = other.disablePrivateKgEnrichment_;
+              disablePrivateKgAutoComplete_ = other.disablePrivateKgAutoComplete_;
+              disablePrivateKgQueryUiChips_ = other.disablePrivateKgQueryUiChips_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public FeatureConfig Clone() {
+              return new FeatureConfig(this);
+            }
+
+            /// <summary>Field number for the "disable_private_kg_query_understanding" field.</summary>
+            public const int DisablePrivateKgQueryUnderstandingFieldNumber = 1;
+            private bool disablePrivateKgQueryUnderstanding_;
+            /// <summary>
+            /// Whether to disable the private KG query understanding for the engine.
+            ///
+            /// Defaults to false if not specified.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool DisablePrivateKgQueryUnderstanding {
+              get { return disablePrivateKgQueryUnderstanding_; }
+              set {
+                disablePrivateKgQueryUnderstanding_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "disable_private_kg_enrichment" field.</summary>
+            public const int DisablePrivateKgEnrichmentFieldNumber = 2;
+            private bool disablePrivateKgEnrichment_;
+            /// <summary>
+            /// Whether to disable the private KG enrichment for the engine.
+            ///
+            /// Defaults to false if not specified.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool DisablePrivateKgEnrichment {
+              get { return disablePrivateKgEnrichment_; }
+              set {
+                disablePrivateKgEnrichment_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "disable_private_kg_auto_complete" field.</summary>
+            public const int DisablePrivateKgAutoCompleteFieldNumber = 3;
+            private bool disablePrivateKgAutoComplete_;
+            /// <summary>
+            /// Whether to disable the private KG auto complete for the engine.
+            ///
+            /// Defaults to false if not specified.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool DisablePrivateKgAutoComplete {
+              get { return disablePrivateKgAutoComplete_; }
+              set {
+                disablePrivateKgAutoComplete_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "disable_private_kg_query_ui_chips" field.</summary>
+            public const int DisablePrivateKgQueryUiChipsFieldNumber = 4;
+            private bool disablePrivateKgQueryUiChips_;
+            /// <summary>
+            /// Whether to disable the private KG for query UI chips.
+            ///
+            /// Defaults to false if not specified.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool DisablePrivateKgQueryUiChips {
+              get { return disablePrivateKgQueryUiChips_; }
+              set {
+                disablePrivateKgQueryUiChips_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as FeatureConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(FeatureConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (DisablePrivateKgQueryUnderstanding != other.DisablePrivateKgQueryUnderstanding) return false;
+              if (DisablePrivateKgEnrichment != other.DisablePrivateKgEnrichment) return false;
+              if (DisablePrivateKgAutoComplete != other.DisablePrivateKgAutoComplete) return false;
+              if (DisablePrivateKgQueryUiChips != other.DisablePrivateKgQueryUiChips) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (DisablePrivateKgQueryUnderstanding != false) hash ^= DisablePrivateKgQueryUnderstanding.GetHashCode();
+              if (DisablePrivateKgEnrichment != false) hash ^= DisablePrivateKgEnrichment.GetHashCode();
+              if (DisablePrivateKgAutoComplete != false) hash ^= DisablePrivateKgAutoComplete.GetHashCode();
+              if (DisablePrivateKgQueryUiChips != false) hash ^= DisablePrivateKgQueryUiChips.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (DisablePrivateKgQueryUnderstanding != false) {
+                output.WriteRawTag(8);
+                output.WriteBool(DisablePrivateKgQueryUnderstanding);
+              }
+              if (DisablePrivateKgEnrichment != false) {
+                output.WriteRawTag(16);
+                output.WriteBool(DisablePrivateKgEnrichment);
+              }
+              if (DisablePrivateKgAutoComplete != false) {
+                output.WriteRawTag(24);
+                output.WriteBool(DisablePrivateKgAutoComplete);
+              }
+              if (DisablePrivateKgQueryUiChips != false) {
+                output.WriteRawTag(32);
+                output.WriteBool(DisablePrivateKgQueryUiChips);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (DisablePrivateKgQueryUnderstanding != false) {
+                output.WriteRawTag(8);
+                output.WriteBool(DisablePrivateKgQueryUnderstanding);
+              }
+              if (DisablePrivateKgEnrichment != false) {
+                output.WriteRawTag(16);
+                output.WriteBool(DisablePrivateKgEnrichment);
+              }
+              if (DisablePrivateKgAutoComplete != false) {
+                output.WriteRawTag(24);
+                output.WriteBool(DisablePrivateKgAutoComplete);
+              }
+              if (DisablePrivateKgQueryUiChips != false) {
+                output.WriteRawTag(32);
+                output.WriteBool(DisablePrivateKgQueryUiChips);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (DisablePrivateKgQueryUnderstanding != false) {
+                size += 1 + 1;
+              }
+              if (DisablePrivateKgEnrichment != false) {
+                size += 1 + 1;
+              }
+              if (DisablePrivateKgAutoComplete != false) {
+                size += 1 + 1;
+              }
+              if (DisablePrivateKgQueryUiChips != false) {
+                size += 1 + 1;
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(FeatureConfig other) {
+              if (other == null) {
+                return;
+              }
+              if (other.DisablePrivateKgQueryUnderstanding != false) {
+                DisablePrivateKgQueryUnderstanding = other.DisablePrivateKgQueryUnderstanding;
+              }
+              if (other.DisablePrivateKgEnrichment != false) {
+                DisablePrivateKgEnrichment = other.DisablePrivateKgEnrichment;
+              }
+              if (other.DisablePrivateKgAutoComplete != false) {
+                DisablePrivateKgAutoComplete = other.DisablePrivateKgAutoComplete;
+              }
+              if (other.DisablePrivateKgQueryUiChips != false) {
+                DisablePrivateKgQueryUiChips = other.DisablePrivateKgQueryUiChips;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    DisablePrivateKgQueryUnderstanding = input.ReadBool();
+                    break;
+                  }
+                  case 16: {
+                    DisablePrivateKgEnrichment = input.ReadBool();
+                    break;
+                  }
+                  case 24: {
+                    DisablePrivateKgAutoComplete = input.ReadBool();
+                    break;
+                  }
+                  case 32: {
+                    DisablePrivateKgQueryUiChips = input.ReadBool();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    DisablePrivateKgQueryUnderstanding = input.ReadBool();
+                    break;
+                  }
+                  case 16: {
+                    DisablePrivateKgEnrichment = input.ReadBool();
+                    break;
+                  }
+                  case 24: {
+                    DisablePrivateKgAutoComplete = input.ReadBool();
+                    break;
+                  }
+                  case 32: {
+                    DisablePrivateKgQueryUiChips = input.ReadBool();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
       /// Additional information of a Chat Engine.
       /// Fields in this message are output only.
       /// </summary>
@@ -3525,7 +5002,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.DiscoveryEngine.V1.Engine.Descriptor.NestedTypes[4]; }
+          get { return global::Google.Cloud.DiscoveryEngine.V1.Engine.Descriptor.NestedTypes[5]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

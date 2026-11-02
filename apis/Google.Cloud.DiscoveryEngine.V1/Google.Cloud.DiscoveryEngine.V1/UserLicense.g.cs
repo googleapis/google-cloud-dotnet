@@ -27,30 +27,34 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "CjJnb29nbGUvY2xvdWQvZGlzY292ZXJ5ZW5naW5lL3YxL3VzZXJfbGljZW5z",
             "ZS5wcm90bxIfZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MRofZ29v",
             "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNv",
-            "dXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byK7",
-            "BAoLVXNlckxpY2Vuc2USHgoOdXNlcl9wcmluY2lwYWwYASABKAlCBuBBBeBB",
-            "AhIZCgx1c2VyX3Byb2ZpbGUYAyABKAlCA+BBARJqChhsaWNlbnNlX2Fzc2ln",
+            "dXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLN",
+            "BAoLVXNlckxpY2Vuc2USHQoOdXNlcl9wcmluY2lwYWwYASABKAlCBeJBAgUC",
+            "EhoKDHVzZXJfcHJvZmlsZRgDIAEoCUIE4kEBARJrChhsaWNlbnNlX2Fzc2ln",
             "bm1lbnRfc3RhdGUYBCABKA4yQy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
-            "aW5lLnYxLlVzZXJMaWNlbnNlLkxpY2Vuc2VBc3NpZ25tZW50U3RhdGVCA+BB",
-            "AxJMCg5saWNlbnNlX2NvbmZpZxgFIAEoCUI04EEB+kEuCixkaXNjb3Zlcnll",
-            "bmdpbmUuZ29vZ2xlYXBpcy5jb20vTGljZW5zZUNvbmZpZxI0CgtjcmVhdGVf",
-            "dGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0",
-            "Cgt1cGRhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAxI4Cg9sYXN0X2xvZ2luX3RpbWUYCCABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMikAEKFkxpY2Vuc2VBc3NpZ25tZW50U3Rh",
-            "dGUSKAokTElDRU5TRV9BU1NJR05NRU5UX1NUQVRFX1VOU1BFQ0lGSUVEEAAS",
-            "DAoIQVNTSUdORUQQARIOCgpVTkFTU0lHTkVEEAISDgoKTk9fTElDRU5TRRAD",
-            "Eh4KGk5PX0xJQ0VOU0VfQVRURU1QVEVEX0xPR0lOEARCgwIKI2NvbS5nb29n",
-            "bGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxQhBVc2VyTGljZW5zZVByb3Rv",
-            "UAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYx",
-            "L2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09W",
-            "RVJZRU5HSU5FqgIfR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMcoC",
-            "H0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjHqAiJHb29nbGU6OkNs",
-            "b3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYgZwcm90bzM="));
+            "aW5lLnYxLlVzZXJMaWNlbnNlLkxpY2Vuc2VBc3NpZ25tZW50U3RhdGVCBOJB",
+            "AQMSTQoObGljZW5zZV9jb25maWcYBSABKAlCNeJBAQH6QS4KLGRpc2NvdmVy",
+            "eWVuZ2luZS5nb29nbGVhcGlzLmNvbS9MaWNlbnNlQ29uZmlnEjUKC2NyZWF0",
+            "ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEB",
+            "AxI1Cgt1cGRhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCBOJBAQMSOQoPbGFzdF9sb2dpbl90aW1lGAggASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAyKdAQoWTGljZW5zZUFzc2lnbm1l",
+            "bnRTdGF0ZRIoCiRMSUNFTlNFX0FTU0lHTk1FTlRfU1RBVEVfVU5TUEVDSUZJ",
+            "RUQQABIMCghBU1NJR05FRBABEg4KClVOQVNTSUdORUQQAhIOCgpOT19MSUNF",
+            "TlNFEAMSHgoaTk9fTElDRU5TRV9BVFRFTVBURURfTE9HSU4QBBILCgdCTE9D",
+            "S0VEEAUiWQoXTGljZW5zZUNvbmZpZ1VzYWdlU3RhdHMSHAoObGljZW5zZV9j",
+            "b25maWcYASABKAlCBOJBAQISIAoSdXNlZF9saWNlbnNlX2NvdW50GAIgASgD",
+            "QgTiQQECQoMCCiNjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
+            "MUIQVXNlckxpY2Vuc2VQcm90b1ABWk1jbG91ZC5nb29nbGUuY29tL2dvL2Rp",
+            "c2NvdmVyeWVuZ2luZS9hcGl2MS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3Zl",
+            "cnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoCH0dvb2dsZS5DbG91ZC5E",
+            "aXNjb3ZlcnlFbmdpbmUuVjHKAh9Hb29nbGVcQ2xvdWRcRGlzY292ZXJ5RW5n",
+            "aW5lXFYx6gIiR29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.UserLicense), global::Google.Cloud.DiscoveryEngine.V1.UserLicense.Parser, new[]{ "UserPrincipal", "UserProfile", "LicenseAssignmentState", "LicenseConfig", "CreateTime", "UpdateTime", "LastLoginTime" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.UserLicense.Types.LicenseAssignmentState) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.UserLicense), global::Google.Cloud.DiscoveryEngine.V1.UserLicense.Parser, new[]{ "UserPrincipal", "UserProfile", "LicenseAssignmentState", "LicenseConfig", "CreateTime", "UpdateTime", "LastLoginTime" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.UserLicense.Types.LicenseAssignmentState) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.LicenseConfigUsageStats), global::Google.Cloud.DiscoveryEngine.V1.LicenseConfigUsageStats.Parser, new[]{ "LicenseConfig", "UsedLicenseCount" }, null, null, null, null)
           }));
     }
     #endregion
@@ -149,7 +153,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     private global::Google.Cloud.DiscoveryEngine.V1.UserLicense.Types.LicenseAssignmentState licenseAssignmentState_ = global::Google.Cloud.DiscoveryEngine.V1.UserLicense.Types.LicenseAssignmentState.Unspecified;
     /// <summary>
     /// Output only. License assignment state of the user.
-    /// If the user is assigned with a license config, the user loggin will be
+    /// If the user is assigned with a license config, the user login will be
     /// assigned with the license;
     /// If the user's license assignment state is unassigned or unspecified, no
     /// license config will be associated to the user;
@@ -569,10 +573,258 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         /// NO_LICENSE state(License could be unassigned by admin).
         /// </summary>
         [pbr::OriginalName("NO_LICENSE_ATTEMPTED_LOGIN")] NoLicenseAttemptedLogin = 4,
+        /// <summary>
+        /// User is blocked from assigning a license.
+        /// </summary>
+        [pbr::OriginalName("BLOCKED")] Blocked = 5,
       }
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Stats about users' licenses.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class LicenseConfigUsageStats : pb::IMessage<LicenseConfigUsageStats>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<LicenseConfigUsageStats> _parser = new pb::MessageParser<LicenseConfigUsageStats>(() => new LicenseConfigUsageStats());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<LicenseConfigUsageStats> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DiscoveryEngine.V1.UserLicenseReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LicenseConfigUsageStats() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LicenseConfigUsageStats(LicenseConfigUsageStats other) : this() {
+      licenseConfig_ = other.licenseConfig_;
+      usedLicenseCount_ = other.usedLicenseCount_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LicenseConfigUsageStats Clone() {
+      return new LicenseConfigUsageStats(this);
+    }
+
+    /// <summary>Field number for the "license_config" field.</summary>
+    public const int LicenseConfigFieldNumber = 1;
+    private string licenseConfig_ = "";
+    /// <summary>
+    /// Required. The LicenseConfig name.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LicenseConfig {
+      get { return licenseConfig_; }
+      set {
+        licenseConfig_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "used_license_count" field.</summary>
+    public const int UsedLicenseCountFieldNumber = 2;
+    private long usedLicenseCount_;
+    /// <summary>
+    /// Required. The number of licenses used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long UsedLicenseCount {
+      get { return usedLicenseCount_; }
+      set {
+        usedLicenseCount_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as LicenseConfigUsageStats);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(LicenseConfigUsageStats other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (LicenseConfig != other.LicenseConfig) return false;
+      if (UsedLicenseCount != other.UsedLicenseCount) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (LicenseConfig.Length != 0) hash ^= LicenseConfig.GetHashCode();
+      if (UsedLicenseCount != 0L) hash ^= UsedLicenseCount.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (LicenseConfig.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(LicenseConfig);
+      }
+      if (UsedLicenseCount != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(UsedLicenseCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (LicenseConfig.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(LicenseConfig);
+      }
+      if (UsedLicenseCount != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(UsedLicenseCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (LicenseConfig.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LicenseConfig);
+      }
+      if (UsedLicenseCount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(UsedLicenseCount);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(LicenseConfigUsageStats other) {
+      if (other == null) {
+        return;
+      }
+      if (other.LicenseConfig.Length != 0) {
+        LicenseConfig = other.LicenseConfig;
+      }
+      if (other.UsedLicenseCount != 0L) {
+        UsedLicenseCount = other.UsedLicenseCount;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            LicenseConfig = input.ReadString();
+            break;
+          }
+          case 16: {
+            UsedLicenseCount = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            LicenseConfig = input.ReadString();
+            break;
+          }
+          case 16: {
+            UsedLicenseCount = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

@@ -30,29 +30,32 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "cHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2ds",
             "ZS9hcGkvcmVzb3VyY2UucHJvdG8iSgoNUmFua2luZ1JlY29yZBIKCgJpZBgB",
             "IAEoCRINCgV0aXRsZRgCIAEoCRIPCgdjb250ZW50GAMgASgJEg0KBXNjb3Jl",
-            "GAQgASgCIv8CCgtSYW5rUmVxdWVzdBJMCg5yYW5raW5nX2NvbmZpZxgBIAEo",
-            "CUI04EEC+kEuCixkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vUmFu",
-            "a2luZ0NvbmZpZxINCgVtb2RlbBgCIAEoCRINCgV0b3BfbhgDIAEoBRINCgVx",
-            "dWVyeRgEIAEoCRJECgdyZWNvcmRzGAUgAygLMi4uZ29vZ2xlLmNsb3VkLmRp",
-            "c2NvdmVyeWVuZ2luZS52MS5SYW5raW5nUmVjb3JkQgPgQQISKQohaWdub3Jl",
-            "X3JlY29yZF9kZXRhaWxzX2luX3Jlc3BvbnNlGAYgASgIElEKC3VzZXJfbGFi",
-            "ZWxzGAcgAygLMjwuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5S",
-            "YW5rUmVxdWVzdC5Vc2VyTGFiZWxzRW50cnkaMQoPVXNlckxhYmVsc0VudHJ5",
-            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiTwoMUmFua1Jlc3Bv",
-            "bnNlEj8KB3JlY29yZHMYBSADKAsyLi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
-            "ZW5naW5lLnYxLlJhbmtpbmdSZWNvcmQylQIKC1JhbmtTZXJ2aWNlErEBCgRS",
-            "YW5rEiwuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5SYW5rUmVx",
-            "dWVzdBotLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuUmFua1Jl",
-            "c3BvbnNlIkyC0+STAkYiQS92MS97cmFua2luZ19jb25maWc9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9yYW5raW5nQ29uZmlncy8qfTpyYW5rOgEqGlLKQR5k",
-            "aXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5n",
-            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQoMCCiNjb20uZ29v",
-            "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MUIQUmFua1NlcnZpY2VQcm90",
-            "b1ABWk1jbG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2",
-            "MS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NP",
-            "VkVSWUVOR0lORaoCH0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjHK",
-            "Ah9Hb29nbGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYx6gIiR29vZ2xlOjpD",
-            "bG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWIGcHJvdG8z"));
+            "GAQgASgCIoEDCgtSYW5rUmVxdWVzdBJNCg5yYW5raW5nX2NvbmZpZxgBIAEo",
+            "CUI14kEBAvpBLgosZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL1Jh",
+            "bmtpbmdDb25maWcSDQoFbW9kZWwYAiABKAkSDQoFdG9wX24YAyABKAUSDQoF",
+            "cXVlcnkYBCABKAkSRQoHcmVjb3JkcxgFIAMoCzIuLmdvb2dsZS5jbG91ZC5k",
+            "aXNjb3ZlcnllbmdpbmUudjEuUmFua2luZ1JlY29yZEIE4kEBAhIpCiFpZ25v",
+            "cmVfcmVjb3JkX2RldGFpbHNfaW5fcmVzcG9uc2UYBiABKAgSUQoLdXNlcl9s",
+            "YWJlbHMYByADKAsyPC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYx",
+            "LlJhbmtSZXF1ZXN0LlVzZXJMYWJlbHNFbnRyeRoxCg9Vc2VyTGFiZWxzRW50",
+            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJPCgxSYW5rUmVz",
+            "cG9uc2USPwoHcmVjb3JkcxgFIAMoCzIuLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
+            "cnllbmdpbmUudjEuUmFua2luZ1JlY29yZDKTAwoLUmFua1NlcnZpY2USsQEK",
+            "BFJhbmsSLC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlJhbmtS",
+            "ZXF1ZXN0Gi0uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5SYW5r",
+            "UmVzcG9uc2UiTILT5JMCRiJBL3YxL3tyYW5raW5nX2NvbmZpZz1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL3JhbmtpbmdDb25maWdzLyp9OnJhbms6ASoazwHK",
+            "QR5kaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb23SQaoBaHR0cHM6Ly93",
+            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczov",
+            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Rpc2NvdmVyeWVuZ2luZS5yZWFk",
+            "d3JpdGUsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaXNjb3Zl",
+            "cnllbmdpbmUuc2VydmluZy5yZWFkd3JpdGVCgwIKI2NvbS5nb29nbGUuY2xv",
+            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxQhBSYW5rU2VydmljZVByb3RvUAFaTWNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxL2Rpc2Nv",
+            "dmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5H",
+            "SU5FqgIfR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMcoCH0dvb2ds",
+            "ZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjHqAiJHb29nbGU6OkNsb3VkOjpE",
+            "aXNjb3ZlcnlFbmdpbmU6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -175,8 +178,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     private float score_;
     /// <summary>
     /// The score of this record based on the given query and selected model.
-    /// The score will be rounded to 2 decimal places. If the score is close to 0,
-    /// it will be rounded to 0.0001 to avoid returning unset.
+    /// The score will be rounded to 4 decimal places. If the score is close to 0,
+    /// it will be rounded to 0.00001 to avoid returning unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -528,7 +531,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         = pb::FieldCodec.ForMessage(42, global::Google.Cloud.DiscoveryEngine.V1.RankingRecord.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.RankingRecord> records_ = new pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.RankingRecord>();
     /// <summary>
-    /// Required. A list of records to rank. At most 200 records to rank.
+    /// Required. A list of records to rank.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsUserStoreName = UserStoreName.FromProjectLocationUserStore("[PROJECT]", "[LOCATION]", "[USER_STORE]"),
                 Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListUserLicensesResponse, UserLicense> response = userLicenseServiceClient.ListUserLicensesAsync(request);

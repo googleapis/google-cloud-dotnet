@@ -30,39 +30,39 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "LnByb3RvGixnb29nbGUvY2xvdWQvZGlzY292ZXJ5ZW5naW5lL3YxL2NvbW1v",
             "bi5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xl",
             "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMu",
-            "cHJvdG8irQkKCERvY3VtZW50Ei4KC3N0cnVjdF9kYXRhGAQgASgLMhcuZ29v",
-            "Z2xlLnByb3RvYnVmLlN0cnVjdEgAEhMKCWpzb25fZGF0YRgFIAEoCUgAEhEK",
-            "BG5hbWUYASABKAlCA+BBBRIPCgJpZBgCIAEoCUID4EEFEhEKCXNjaGVtYV9p",
-            "ZBgDIAEoCRJCCgdjb250ZW50GAogASgLMjEuZ29vZ2xlLmNsb3VkLmRpc2Nv",
-            "dmVyeWVuZ2luZS52MS5Eb2N1bWVudC5Db250ZW50EhoKEnBhcmVudF9kb2N1",
-            "bWVudF9pZBgHIAEoCRI5ChNkZXJpdmVkX3N0cnVjdF9kYXRhGAYgASgLMhcu",
-            "Z29vZ2xlLnByb3RvYnVmLlN0cnVjdEID4EEDEkMKCGFjbF9pbmZvGAsgASgL",
-            "MjEuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Eb2N1bWVudC5B",
-            "Y2xJbmZvEjMKCmluZGV4X3RpbWUYDSABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQMSUAoMaW5kZXhfc3RhdHVzGA8gASgLMjUuZ29vZ2xl",
-            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Eb2N1bWVudC5JbmRleFN0YXR1",
-            "c0ID4EEDGksKB0NvbnRlbnQSEwoJcmF3X2J5dGVzGAIgASgMSAASDQoDdXJp",
-            "GAMgASgJSAASEQoJbWltZV90eXBlGAEgASgJQgkKB2NvbnRlbnQaxgEKB0Fj",
-            "bEluZm8SVAoHcmVhZGVycxgBIAMoCzJDLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
-            "cnllbmdpbmUudjEuRG9jdW1lbnQuQWNsSW5mby5BY2Nlc3NSZXN0cmljdGlv",
-            "bhplChFBY2Nlc3NSZXN0cmljdGlvbhI+CgpwcmluY2lwYWxzGAEgAygLMiou",
-            "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5QcmluY2lwYWwSEAoI",
-            "aWRwX3dpZGUYAiABKAgahgEKC0luZGV4U3RhdHVzEi4KCmluZGV4X3RpbWUY",
-            "ASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEikKDWVycm9yX3Nh",
-            "bXBsZXMYAiADKAsyEi5nb29nbGUucnBjLlN0YXR1cxIcCg9wZW5kaW5nX21l",
-            "c3NhZ2UYAyABKAlCA+BBBTqWAupBkgIKJ2Rpc2NvdmVyeWVuZ2luZS5nb29n",
-            "bGVhcGlzLmNvbS9Eb2N1bWVudBJmcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
-            "aW9ucy97bG9jYXRpb259L2RhdGFTdG9yZXMve2RhdGFfc3RvcmV9L2JyYW5j",
-            "aGVzL3ticmFuY2h9L2RvY3VtZW50cy97ZG9jdW1lbnR9En9wcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY29sbGVjdGlvbnMve2Nv",
-            "bGxlY3Rpb259L2RhdGFTdG9yZXMve2RhdGFfc3RvcmV9L2JyYW5jaGVzL3ti",
-            "cmFuY2h9L2RvY3VtZW50cy97ZG9jdW1lbnR9QgYKBGRhdGFCgAIKI2NvbS5n",
-            "b29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxQg1Eb2N1bWVudFByb3Rv",
-            "UAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYx",
-            "L2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09W",
-            "RVJZRU5HSU5FqgIfR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMcoC",
-            "H0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjHqAiJHb29nbGU6OkNs",
-            "b3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYgZwcm90bzM="));
+            "cHJvdG8iswkKCERvY3VtZW50Ei4KC3N0cnVjdF9kYXRhGAQgASgLMhcuZ29v",
+            "Z2xlLnByb3RvYnVmLlN0cnVjdEgAEhMKCWpzb25fZGF0YRgFIAEoCUgAEhIK",
+            "BG5hbWUYASABKAlCBOJBAQUSEAoCaWQYAiABKAlCBOJBAQUSEQoJc2NoZW1h",
+            "X2lkGAMgASgJEkIKB2NvbnRlbnQYCiABKAsyMS5nb29nbGUuY2xvdWQuZGlz",
+            "Y292ZXJ5ZW5naW5lLnYxLkRvY3VtZW50LkNvbnRlbnQSGgoScGFyZW50X2Rv",
+            "Y3VtZW50X2lkGAcgASgJEjoKE2Rlcml2ZWRfc3RydWN0X2RhdGEYBiABKAsy",
+            "Fy5nb29nbGUucHJvdG9idWYuU3RydWN0QgTiQQEDEkMKCGFjbF9pbmZvGAsg",
+            "ASgLMjEuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Eb2N1bWVu",
+            "dC5BY2xJbmZvEjQKCmluZGV4X3RpbWUYDSABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgTiQQEDElEKDGluZGV4X3N0YXR1cxgPIAEoCzI1Lmdv",
+            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuRG9jdW1lbnQuSW5kZXhT",
+            "dGF0dXNCBOJBAQMaSwoHQ29udGVudBITCglyYXdfYnl0ZXMYAiABKAxIABIN",
+            "CgN1cmkYAyABKAlIABIRCgltaW1lX3R5cGUYASABKAlCCQoHY29udGVudBrG",
+            "AQoHQWNsSW5mbxJUCgdyZWFkZXJzGAEgAygLMkMuZ29vZ2xlLmNsb3VkLmRp",
+            "c2NvdmVyeWVuZ2luZS52MS5Eb2N1bWVudC5BY2xJbmZvLkFjY2Vzc1Jlc3Ry",
+            "aWN0aW9uGmUKEUFjY2Vzc1Jlc3RyaWN0aW9uEj4KCnByaW5jaXBhbHMYASAD",
+            "KAsyKi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlByaW5jaXBh",
+            "bBIQCghpZHBfd2lkZRgCIAEoCBqHAQoLSW5kZXhTdGF0dXMSLgoKaW5kZXhf",
+            "dGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKQoNZXJy",
+            "b3Jfc2FtcGxlcxgCIAMoCzISLmdvb2dsZS5ycGMuU3RhdHVzEh0KD3BlbmRp",
+            "bmdfbWVzc2FnZRgDIAEoCUIE4kEBBTqWAupBkgIKJ2Rpc2NvdmVyeWVuZ2lu",
+            "ZS5nb29nbGVhcGlzLmNvbS9Eb2N1bWVudBJmcHJvamVjdHMve3Byb2plY3R9",
+            "L2xvY2F0aW9ucy97bG9jYXRpb259L2RhdGFTdG9yZXMve2RhdGFfc3RvcmV9",
+            "L2JyYW5jaGVzL3ticmFuY2h9L2RvY3VtZW50cy97ZG9jdW1lbnR9En9wcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY29sbGVjdGlv",
+            "bnMve2NvbGxlY3Rpb259L2RhdGFTdG9yZXMve2RhdGFfc3RvcmV9L2JyYW5j",
+            "aGVzL3ticmFuY2h9L2RvY3VtZW50cy97ZG9jdW1lbnR9QgYKBGRhdGFCgAIK",
+            "I2NvbS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxQg1Eb2N1bWVu",
+            "dFByb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5l",
+            "L2FwaXYxL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIP",
+            "RElTQ09WRVJZRU5HSU5FqgIfR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2lu",
+            "ZS5WMcoCH0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjHqAiJHb29n",
+            "bGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -312,11 +312,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public const int IndexTimeFieldNumber = 13;
     private global::Google.Protobuf.WellKnownTypes.Timestamp indexTime_;
     /// <summary>
-    /// Output only. The last time the document was indexed. If this field is set,
-    /// the document could be returned in search results.
+    /// Output only. The time when the document was last indexed.
     ///
-    /// This field is OUTPUT_ONLY. If this field is not populated, it means the
-    /// document has never been indexed.
+    /// If this field is populated, it means the document has been indexed.
+    /// While documents typically become searchable within seconds of indexing,
+    /// it can sometimes take up to a few hours.
+    ///
+    /// If this field is not populated, it means the document has never been
+    /// indexed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1740,6 +1743,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         /// <summary>
         /// The time when the document was indexed.
         /// If this field is populated, it means the document has been indexed.
+        /// While documents typically become searchable within seconds of indexing,
+        /// it can sometimes take up to a few hours.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

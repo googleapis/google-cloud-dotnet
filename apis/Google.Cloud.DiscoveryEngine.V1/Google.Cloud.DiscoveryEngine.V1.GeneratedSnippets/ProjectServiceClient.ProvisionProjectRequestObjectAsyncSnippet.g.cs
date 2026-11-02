@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 ProjectName = ProjectName.FromProject("[PROJECT]"),
                 AcceptDataUseTerms = false,
                 DataUseTermsVersion = "",
+                SaasParams = new ProvisionProjectRequest.Types.SaasParams(),
             };
             // Make the request
             Operation<Project, ProvisionProjectMetadata> response = await projectServiceClient.ProvisionProjectAsync(request);

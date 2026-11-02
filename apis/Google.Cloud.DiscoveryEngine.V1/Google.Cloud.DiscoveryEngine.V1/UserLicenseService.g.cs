@@ -32,56 +32,73 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "c2NvdmVyeWVuZ2luZS92MS91c2VyX2xpY2Vuc2UucHJvdG8aI2dvb2dsZS9s",
             "b25ncnVubmluZy9vcGVyYXRpb25zLnByb3RvGiBnb29nbGUvcHJvdG9idWYv",
             "ZmllbGRfbWFzay5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5w",
-            "cm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8ioQEKF0xpc3RVc2VyTGlj",
-            "ZW5zZXNSZXF1ZXN0EkAKBnBhcmVudBgBIAEoCUIw4EEC+kEqCihkaXNjb3Zl",
-            "cnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vVXNlclN0b3JlEhYKCXBhZ2Vfc2l6",
-            "ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBARITCgZmaWx0",
-            "ZXIYBCABKAlCA+BBASJ4ChhMaXN0VXNlckxpY2Vuc2VzUmVzcG9uc2USQwoN",
-            "dXNlcl9saWNlbnNlcxgBIAMoCzIsLmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnll",
-            "bmdpbmUudjEuVXNlckxpY2Vuc2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJ",
-            "IpIDCh5CYXRjaFVwZGF0ZVVzZXJMaWNlbnNlc1JlcXVlc3QSZQoNaW5saW5l",
-            "X3NvdXJjZRgCIAEoCzJMLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUu",
-            "djEuQmF0Y2hVcGRhdGVVc2VyTGljZW5zZXNSZXF1ZXN0LklubGluZVNvdXJj",
-            "ZUgAEkAKBnBhcmVudBgBIAEoCUIw4EEC+kEqCihkaXNjb3ZlcnllbmdpbmUu",
-            "Z29vZ2xlYXBpcy5jb20vVXNlclN0b3JlEiwKH2RlbGV0ZV91bmFzc2lnbmVk",
-            "X3VzZXJfbGljZW5zZXMYBCABKAhCA+BBARqOAQoMSW5saW5lU291cmNlEkgK",
-            "DXVzZXJfbGljZW5zZXMYASADKAsyLC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
-            "ZW5naW5lLnYxLlVzZXJMaWNlbnNlQgPgQQISNAoLdXBkYXRlX21hc2sYAiAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQFCCAoGc291cmNl",
-            "IrEBCh9CYXRjaFVwZGF0ZVVzZXJMaWNlbnNlc01ldGFkYXRhEi8KC2NyZWF0",
-            "ZV90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgt1",
-            "cGRhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
-            "FQoNc3VjY2Vzc19jb3VudBgDIAEoAxIVCg1mYWlsdXJlX2NvdW50GAQgASgD",
-            "IpEBCh9CYXRjaFVwZGF0ZVVzZXJMaWNlbnNlc1Jlc3BvbnNlEkMKDXVzZXJf",
-            "bGljZW5zZXMYASADKAsyLC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5l",
-            "LnYxLlVzZXJMaWNlbnNlEikKDWVycm9yX3NhbXBsZXMYAiADKAsyEi5nb29n",
-            "bGUucnBjLlN0YXR1czKaBQoSVXNlckxpY2Vuc2VTZXJ2aWNlEtcBChBMaXN0",
-            "VXNlckxpY2Vuc2VzEjguZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
-            "MS5MaXN0VXNlckxpY2Vuc2VzUmVxdWVzdBo5Lmdvb2dsZS5jbG91ZC5kaXNj",
-            "b3ZlcnllbmdpbmUudjEuTGlzdFVzZXJMaWNlbnNlc1Jlc3BvbnNlIk7aQQZw",
-            "YXJlbnSC0+STAj8SPS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovdXNlclN0b3Jlcy8qfS91c2VyTGljZW5zZXMS1QIKF0JhdGNoVXBkYXRl",
-            "VXNlckxpY2Vuc2VzEj8uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
-            "MS5CYXRjaFVwZGF0ZVVzZXJMaWNlbnNlc1JlcXVlc3QaHS5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuT3BlcmF0aW9uItkBykGCAQo/Z29vZ2xlLmNsb3VkLmRpc2Nv",
-            "dmVyeWVuZ2luZS52MS5CYXRjaFVwZGF0ZVVzZXJMaWNlbnNlc1Jlc3BvbnNl",
-            "Ej9nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkJhdGNoVXBkYXRl",
-            "VXNlckxpY2Vuc2VzTWV0YWRhdGGC0+STAk0iSC92MS97cGFyZW50PXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovdXNlclN0b3Jlcy8qfTpiYXRjaFVwZGF0ZVVz",
-            "ZXJMaWNlbnNlczoBKhpSykEeZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMu",
-            "Y29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
-            "bGF0Zm9ybUKKAgojY29tLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUu",
-            "djFCF1VzZXJMaWNlbnNlU2VydmljZVByb3RvUAFaTWNsb3VkLmdvb2dsZS5j",
-            "b20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxL2Rpc2NvdmVyeWVuZ2luZXBi",
-            "O2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIfR29vZ2xl",
-            "LkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMcoCH0dvb2dsZVxDbG91ZFxEaXNj",
-            "b3ZlcnlFbmdpbmVcVjHqAiJHb29nbGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdp",
-            "bmU6OlYxYgZwcm90bzM="));
+            "cm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8ivQEKF0xpc3RVc2VyTGlj",
+            "ZW5zZXNSZXF1ZXN0EkEKBnBhcmVudBgBIAEoCUIx4kEBAvpBKgooZGlzY292",
+            "ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL1VzZXJTdG9yZRIXCglwYWdlX3Np",
+            "emUYAiABKAVCBOJBAQESGAoKcGFnZV90b2tlbhgDIAEoCUIE4kEBARIUCgZm",
+            "aWx0ZXIYBCABKAlCBOJBAQESFgoIb3JkZXJfYnkYBSABKAlCBOJBAQEieAoY",
+            "TGlzdFVzZXJMaWNlbnNlc1Jlc3BvbnNlEkMKDXVzZXJfbGljZW5zZXMYASAD",
+            "KAsyLC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlVzZXJMaWNl",
+            "bnNlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJoCiNMaXN0TGljZW5zZUNv",
+            "bmZpZ3NVc2FnZVN0YXRzUmVxdWVzdBJBCgZwYXJlbnQYASABKAlCMeJBAQL6",
+            "QSoKKGRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9Vc2VyU3RvcmUi",
+            "hAEKJExpc3RMaWNlbnNlQ29uZmlnc1VzYWdlU3RhdHNSZXNwb25zZRJcChps",
+            "aWNlbnNlX2NvbmZpZ191c2FnZV9zdGF0cxgBIAMoCzI4Lmdvb2dsZS5jbG91",
+            "ZC5kaXNjb3ZlcnllbmdpbmUudjEuTGljZW5zZUNvbmZpZ1VzYWdlU3RhdHMi",
+            "lgMKHkJhdGNoVXBkYXRlVXNlckxpY2Vuc2VzUmVxdWVzdBJlCg1pbmxpbmVf",
+            "c291cmNlGAIgASgLMkwuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
+            "MS5CYXRjaFVwZGF0ZVVzZXJMaWNlbnNlc1JlcXVlc3QuSW5saW5lU291cmNl",
+            "SAASQQoGcGFyZW50GAEgASgJQjHiQQEC+kEqCihkaXNjb3ZlcnllbmdpbmUu",
+            "Z29vZ2xlYXBpcy5jb20vVXNlclN0b3JlEi0KH2RlbGV0ZV91bmFzc2lnbmVk",
+            "X3VzZXJfbGljZW5zZXMYBCABKAhCBOJBAQEakAEKDElubGluZVNvdXJjZRJJ",
+            "Cg11c2VyX2xpY2Vuc2VzGAEgAygLMiwuZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
+            "eWVuZ2luZS52MS5Vc2VyTGljZW5zZUIE4kEBAhI1Cgt1cGRhdGVfbWFzaxgC",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCBOJBAQFCCAoGc291",
+            "cmNlIrEBCh9CYXRjaFVwZGF0ZVVzZXJMaWNlbnNlc01ldGFkYXRhEi8KC2Ny",
+            "ZWF0ZV90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIv",
+            "Cgt1cGRhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXASFQoNc3VjY2Vzc19jb3VudBgDIAEoAxIVCg1mYWlsdXJlX2NvdW50GAQg",
+            "ASgDIpEBCh9CYXRjaFVwZGF0ZVVzZXJMaWNlbnNlc1Jlc3BvbnNlEkMKDXVz",
+            "ZXJfbGljZW5zZXMYASADKAsyLC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
+            "aW5lLnYxLlVzZXJMaWNlbnNlEikKDWVycm9yX3NhbXBsZXMYAiADKAsyEi5n",
+            "b29nbGUucnBjLlN0YXR1czKiCAoSVXNlckxpY2Vuc2VTZXJ2aWNlEtcBChBM",
+            "aXN0VXNlckxpY2Vuc2VzEjguZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2lu",
+            "ZS52MS5MaXN0VXNlckxpY2Vuc2VzUmVxdWVzdBo5Lmdvb2dsZS5jbG91ZC5k",
+            "aXNjb3ZlcnllbmdpbmUudjEuTGlzdFVzZXJMaWNlbnNlc1Jlc3BvbnNlIk7a",
+            "QQZwYXJlbnSC0+STAj8SPS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovdXNlclN0b3Jlcy8qfS91c2VyTGljZW5zZXMShwIKHExpc3RMaWNl",
+            "bnNlQ29uZmlnc1VzYWdlU3RhdHMSRC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
+            "ZW5naW5lLnYxLkxpc3RMaWNlbnNlQ29uZmlnc1VzYWdlU3RhdHNSZXF1ZXN0",
+            "GkUuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5MaXN0TGljZW5z",
+            "ZUNvbmZpZ3NVc2FnZVN0YXRzUmVzcG9uc2UiWtpBBnBhcmVudILT5JMCSxJJ",
+            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi91c2VyU3RvcmVz",
+            "Lyp9L2xpY2Vuc2VDb25maWdzVXNhZ2VTdGF0cxLVAgoXQmF0Y2hVcGRhdGVV",
+            "c2VyTGljZW5zZXMSPy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYx",
+            "LkJhdGNoVXBkYXRlVXNlckxpY2Vuc2VzUmVxdWVzdBodLmdvb2dsZS5sb25n",
+            "cnVubmluZy5PcGVyYXRpb24i2QHKQYIBCj9nb29nbGUuY2xvdWQuZGlzY292",
+            "ZXJ5ZW5naW5lLnYxLkJhdGNoVXBkYXRlVXNlckxpY2Vuc2VzUmVzcG9uc2US",
+            "P2dvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuQmF0Y2hVcGRhdGVV",
+            "c2VyTGljZW5zZXNNZXRhZGF0YYLT5JMCTSJIL3YxL3twYXJlbnQ9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi91c2VyU3RvcmVzLyp9OmJhdGNoVXBkYXRlVXNl",
+            "ckxpY2Vuc2VzOgEqGs8BykEeZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMu",
+            "Y29t0kGqAWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
+            "cGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaXNj",
+            "b3ZlcnllbmdpbmUucmVhZHdyaXRlLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
+            "Y29tL2F1dGgvZGlzY292ZXJ5ZW5naW5lLnNlcnZpbmcucmVhZHdyaXRlQooC",
+            "CiNjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MUIXVXNlckxp",
+            "Y2Vuc2VTZXJ2aWNlUHJvdG9QAVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9kaXNj",
+            "b3ZlcnllbmdpbmUvYXBpdjEvZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5",
+            "ZW5naW5lcGKiAg9ESVNDT1ZFUllFTkdJTkWqAh9Hb29nbGUuQ2xvdWQuRGlz",
+            "Y292ZXJ5RW5naW5lLlYxygIfR29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2lu",
+            "ZVxWMeoCIkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.UserLicenseReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.ListUserLicensesRequest), global::Google.Cloud.DiscoveryEngine.V1.ListUserLicensesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.ListUserLicensesRequest), global::Google.Cloud.DiscoveryEngine.V1.ListUserLicensesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.ListUserLicensesResponse), global::Google.Cloud.DiscoveryEngine.V1.ListUserLicensesResponse.Parser, new[]{ "UserLicenses", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsRequest), global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsRequest.Parser, new[]{ "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsResponse), global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsResponse.Parser, new[]{ "LicenseConfigUsageStats" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.BatchUpdateUserLicensesRequest), global::Google.Cloud.DiscoveryEngine.V1.BatchUpdateUserLicensesRequest.Parser, new[]{ "InlineSource", "Parent", "DeleteUnassignedUserLicenses" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.BatchUpdateUserLicensesRequest.Types.InlineSource), global::Google.Cloud.DiscoveryEngine.V1.BatchUpdateUserLicensesRequest.Types.InlineSource.Parser, new[]{ "UserLicenses", "UpdateMask" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.BatchUpdateUserLicensesMetadata), global::Google.Cloud.DiscoveryEngine.V1.BatchUpdateUserLicensesMetadata.Parser, new[]{ "CreateTime", "UpdateTime", "SuccessCount", "FailureCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.BatchUpdateUserLicensesResponse), global::Google.Cloud.DiscoveryEngine.V1.BatchUpdateUserLicensesResponse.Parser, new[]{ "UserLicenses", "ErrorSamples" }, null, null, null, null)
@@ -134,6 +151,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
       filter_ = other.filter_;
+      orderBy_ = other.orderBy_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -147,7 +165,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent [UserStore][] resource name, format:
+    /// Required. The parent [UserStore][google.cloud.discoveryengine.v1.UserStore]
+    /// resource name, format:
     /// `projects/{project}/locations/{location}/userStores/{user_store_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -164,8 +183,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     private int pageSize_;
     /// <summary>
     /// Optional. Requested page size. Server may return fewer items than
-    /// requested. If unspecified, defaults to 10. The maximum value is 50; values
-    /// above 50 will be coerced to 50.
+    /// requested. If unspecified, defaults to 100. The maximum value is 1000;
+    /// values above 1000 will be coerced to 1000.
     ///
     /// If this field is negative, an INVALID_ARGUMENT error is returned.
     /// </summary>
@@ -206,7 +225,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// Supported fields:
     ///
     /// * `license_assignment_state`
-    ///
+    /// * `user_principal`
+    /// *
     /// Examples:
     ///
     /// * `license_assignment_state = ASSIGNED` to list assigned user licenses.
@@ -215,6 +235,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// who attempted login but no license assigned.
     /// * `license_assignment_state != NO_LICENSE_ATTEMPTED_LOGIN` to filter
     /// out users who attempted login but no license assigned.
+    /// * `user_principal = user1@example.com` to list user license for
+    /// `user1@example.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -222,6 +244,36 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       get { return filter_; }
       set {
         filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "order_by" field.</summary>
+    public const int OrderByFieldNumber = 5;
+    private string orderBy_ = "";
+    /// <summary>
+    /// Optional. The order in which the
+    /// [UserLicense][google.cloud.discoveryengine.v1.UserLicense]s are listed. The
+    /// value must be a comma-separated list of fields. Default sorting order is
+    /// ascending. To specify descending order for a field, append a " desc"
+    /// suffix. Redundant space characters in the syntax are insignificant.
+    ///
+    /// Supported fields (only `user_principal` is supported for now):
+    ///
+    /// * `user_principal`
+    ///
+    /// If not set, the default ordering is by `user_principal`.
+    ///
+    /// Examples:
+    ///
+    /// * `user_principal` to order by `user_principal` in ascending order.
+    /// * `user_principal desc` to order by `user_principal` in descending order.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OrderBy {
+      get { return orderBy_; }
+      set {
+        orderBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -244,6 +296,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
       if (Filter != other.Filter) return false;
+      if (OrderBy != other.OrderBy) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -255,6 +308,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -289,6 +343,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(34);
         output.WriteString(Filter);
       }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderBy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -315,6 +373,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(34);
         output.WriteString(Filter);
       }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderBy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -336,6 +398,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (Filter.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -360,6 +425,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (other.Filter.Length != 0) {
         Filter = other.Filter;
+      }
+      if (other.OrderBy.Length != 0) {
+        OrderBy = other.OrderBy;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -396,6 +464,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             Filter = input.ReadString();
             break;
           }
+          case 42: {
+            OrderBy = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -429,6 +501,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           case 34: {
             Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            OrderBy = input.ReadString();
             break;
           }
         }
@@ -676,6 +752,409 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
 
   /// <summary>
   /// Request message for
+  /// [UserLicenseService.ListLicenseConfigsUsageStats][google.cloud.discoveryengine.v1.UserLicenseService.ListLicenseConfigsUsageStats]
+  /// method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListLicenseConfigsUsageStatsRequest : pb::IMessage<ListLicenseConfigsUsageStatsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListLicenseConfigsUsageStatsRequest> _parser = new pb::MessageParser<ListLicenseConfigsUsageStatsRequest>(() => new ListLicenseConfigsUsageStatsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListLicenseConfigsUsageStatsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListLicenseConfigsUsageStatsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListLicenseConfigsUsageStatsRequest(ListLicenseConfigsUsageStatsRequest other) : this() {
+      parent_ = other.parent_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListLicenseConfigsUsageStatsRequest Clone() {
+      return new ListLicenseConfigsUsageStatsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent branch resource name, such as
+    /// `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListLicenseConfigsUsageStatsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListLicenseConfigsUsageStatsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListLicenseConfigsUsageStatsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response message for
+  /// [UserLicenseService.ListLicenseConfigsUsageStats][google.cloud.discoveryengine.v1.UserLicenseService.ListLicenseConfigsUsageStats]
+  /// method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListLicenseConfigsUsageStatsResponse : pb::IMessage<ListLicenseConfigsUsageStatsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListLicenseConfigsUsageStatsResponse> _parser = new pb::MessageParser<ListLicenseConfigsUsageStatsResponse>(() => new ListLicenseConfigsUsageStatsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListLicenseConfigsUsageStatsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListLicenseConfigsUsageStatsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListLicenseConfigsUsageStatsResponse(ListLicenseConfigsUsageStatsResponse other) : this() {
+      licenseConfigUsageStats_ = other.licenseConfigUsageStats_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListLicenseConfigsUsageStatsResponse Clone() {
+      return new ListLicenseConfigsUsageStatsResponse(this);
+    }
+
+    /// <summary>Field number for the "license_config_usage_stats" field.</summary>
+    public const int LicenseConfigUsageStatsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.DiscoveryEngine.V1.LicenseConfigUsageStats> _repeated_licenseConfigUsageStats_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DiscoveryEngine.V1.LicenseConfigUsageStats.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.LicenseConfigUsageStats> licenseConfigUsageStats_ = new pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.LicenseConfigUsageStats>();
+    /// <summary>
+    /// All the customer's
+    /// [LicenseConfigUsageStats][google.cloud.discoveryengine.v1.LicenseConfigUsageStats].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.LicenseConfigUsageStats> LicenseConfigUsageStats {
+      get { return licenseConfigUsageStats_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListLicenseConfigsUsageStatsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListLicenseConfigsUsageStatsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!licenseConfigUsageStats_.Equals(other.licenseConfigUsageStats_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= licenseConfigUsageStats_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      licenseConfigUsageStats_.WriteTo(output, _repeated_licenseConfigUsageStats_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      licenseConfigUsageStats_.WriteTo(ref output, _repeated_licenseConfigUsageStats_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += licenseConfigUsageStats_.CalculateSize(_repeated_licenseConfigUsageStats_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListLicenseConfigsUsageStatsResponse other) {
+      if (other == null) {
+        return;
+      }
+      licenseConfigUsageStats_.Add(other.licenseConfigUsageStats_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            licenseConfigUsageStats_.AddEntriesFrom(input, _repeated_licenseConfigUsageStats_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            licenseConfigUsageStats_.AddEntriesFrom(ref input, _repeated_licenseConfigUsageStats_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for
   /// [UserLicenseService.BatchUpdateUserLicenses][google.cloud.discoveryengine.v1.UserLicenseService.BatchUpdateUserLicenses]
   /// method.
   /// </summary>
@@ -694,7 +1173,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -734,7 +1213,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// <summary>Field number for the "inline_source" field.</summary>
     public const int InlineSourceFieldNumber = 2;
     /// <summary>
-    /// The inline source for the input content for document embeddings.
+    /// The inline source for the input content for license assignment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -750,7 +1229,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent [UserStore][] resource name, format:
+    /// Required. The parent [UserStore][google.cloud.discoveryengine.v1.UserStore]
+    /// resource name, format:
     /// `projects/{project}/locations/{location}/userStores/{user_store_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1280,7 +1760,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1625,7 +2105,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.DiscoveryEngine.V1.UserLicenseServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
