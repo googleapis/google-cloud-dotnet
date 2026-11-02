@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.2.0, released 2026-11-02
+
+### New features
+
+- Introduce v1 client library support for Chronicle SearchService
+
 ## Version 1.1.0, released 2026-09-11
 
 ### New features
