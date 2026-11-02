@@ -2715,7 +2715,7 @@
     },
     {
       "id": "Google.Cloud.DocumentAI.V1Beta3",
-      "version": "2.0.0-beta30",
+      "version": "2.0.0-beta31",
       "type": "grpc",
       "productName": "Cloud Document AI",
       "productUrl": "https://cloud.google.com/solutions/document-ai",
