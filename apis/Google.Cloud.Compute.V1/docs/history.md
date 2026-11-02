@@ -1,5 +1,16 @@
 # Version history
 
+## Version 4.2.0, released 2026-11-02
+
+### New features
+
+- Update Compute Engine v1 API artifacts to revision 20261016
+- Add MEMORY_OPTIMIZED_M4N and MEMORY_OPTIMIZED_M4N_6TB values to Commitment.Type enum
+
+### Documentation improvements
+
+- Update documentation in proto definitions
+
 ## Version 4.1.0, released 2026-10-15
 
 ### New features
