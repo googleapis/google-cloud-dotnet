@@ -1,12 +1,5 @@
 # Version history
 
-## Version 2.0.0-beta31, released 2026-11-02
-
-### New features
-
-- Add ProcessorVersion.grounding_settings and the GroundingSettings and ProcessorVersionOverrides messages
-- Add processor_version_overrides to TrainProcessorVersionRequest
-
 ## Version 2.0.0-beta30, released 2026-03-16
 
 ### New features
