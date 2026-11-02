@@ -3,7 +3,7 @@
 //     source: google/cloud/discoveryengine/v1/user_license_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -68,6 +68,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.ListUserLicensesResponse> __Marshaller_google_cloud_discoveryengine_v1_ListUserLicensesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.ListUserLicensesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsRequest> __Marshaller_google_cloud_discoveryengine_v1_ListLicenseConfigsUsageStatsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsResponse> __Marshaller_google_cloud_discoveryengine_v1_ListLicenseConfigsUsageStatsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.BatchUpdateUserLicensesRequest> __Marshaller_google_cloud_discoveryengine_v1_BatchUpdateUserLicensesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.BatchUpdateUserLicensesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
@@ -79,6 +83,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         "ListUserLicenses",
         __Marshaller_google_cloud_discoveryengine_v1_ListUserLicensesRequest,
         __Marshaller_google_cloud_discoveryengine_v1_ListUserLicensesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsRequest, global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsResponse> __Method_ListLicenseConfigsUsageStats = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsRequest, global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListLicenseConfigsUsageStats",
+        __Marshaller_google_cloud_discoveryengine_v1_ListLicenseConfigsUsageStatsRequest,
+        __Marshaller_google_cloud_discoveryengine_v1_ListLicenseConfigsUsageStatsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.BatchUpdateUserLicensesRequest, global::Google.LongRunning.Operation> __Method_BatchUpdateUserLicenses = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.BatchUpdateUserLicensesRequest, global::Google.LongRunning.Operation>(
@@ -106,6 +118,20 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.ListUserLicensesResponse> ListUserLicenses(global::Google.Cloud.DiscoveryEngine.V1.ListUserLicensesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all the
+      /// [LicenseConfigUsageStats][google.cloud.discoveryengine.v1.LicenseConfigUsageStats]s
+      /// associated with the project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsResponse> ListLicenseConfigsUsageStats(global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -201,6 +227,62 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListUserLicenses, null, options, request);
       }
       /// <summary>
+      /// Lists all the
+      /// [LicenseConfigUsageStats][google.cloud.discoveryengine.v1.LicenseConfigUsageStats]s
+      /// associated with the project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsResponse ListLicenseConfigsUsageStats(global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListLicenseConfigsUsageStats(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the
+      /// [LicenseConfigUsageStats][google.cloud.discoveryengine.v1.LicenseConfigUsageStats]s
+      /// associated with the project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsResponse ListLicenseConfigsUsageStats(global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListLicenseConfigsUsageStats, null, options, request);
+      }
+      /// <summary>
+      /// Lists all the
+      /// [LicenseConfigUsageStats][google.cloud.discoveryengine.v1.LicenseConfigUsageStats]s
+      /// associated with the project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsResponse> ListLicenseConfigsUsageStatsAsync(global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListLicenseConfigsUsageStatsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the
+      /// [LicenseConfigUsageStats][google.cloud.discoveryengine.v1.LicenseConfigUsageStats]s
+      /// associated with the project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsResponse> ListLicenseConfigsUsageStatsAsync(global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListLicenseConfigsUsageStats, null, options, request);
+      }
+      /// <summary>
       /// Updates the User License.
       /// This method is used for batch assign/unassign licenses to users.
       /// </summary>
@@ -267,6 +349,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListUserLicenses, serviceImpl.ListUserLicenses)
+          .AddMethod(__Method_ListLicenseConfigsUsageStats, serviceImpl.ListLicenseConfigsUsageStats)
           .AddMethod(__Method_BatchUpdateUserLicenses, serviceImpl.BatchUpdateUserLicenses).Build();
     }
 
@@ -278,6 +361,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, UserLicenseServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListUserLicenses, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.ListUserLicensesRequest, global::Google.Cloud.DiscoveryEngine.V1.ListUserLicensesResponse>(serviceImpl.ListUserLicenses));
+      serviceBinder.AddMethod(__Method_ListLicenseConfigsUsageStats, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsRequest, global::Google.Cloud.DiscoveryEngine.V1.ListLicenseConfigsUsageStatsResponse>(serviceImpl.ListLicenseConfigsUsageStats));
       serviceBinder.AddMethod(__Method_BatchUpdateUserLicenses, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.BatchUpdateUserLicensesRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchUpdateUserLicenses));
     }
 

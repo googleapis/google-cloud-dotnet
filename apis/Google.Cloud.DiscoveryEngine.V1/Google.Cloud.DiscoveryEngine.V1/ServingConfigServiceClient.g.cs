@@ -22,6 +22,7 @@ using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
 using proto = Google.Protobuf;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -46,12 +47,42 @@ namespace Google.Cloud.DiscoveryEngine.V1
         private ServingConfigServiceSettings(ServingConfigServiceSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            CreateServingConfigSettings = existing.CreateServingConfigSettings;
+            DeleteServingConfigSettings = existing.DeleteServingConfigSettings;
             UpdateServingConfigSettings = existing.UpdateServingConfigSettings;
+            GetServingConfigSettings = existing.GetServingConfigSettings;
+            ListServingConfigsSettings = existing.ListServingConfigsSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
         partial void OnCopy(ServingConfigServiceSettings existing);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ServingConfigServiceClient.CreateServingConfig</c> and
+        /// <c>ServingConfigServiceClient.CreateServingConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateServingConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ServingConfigServiceClient.DeleteServingConfig</c> and
+        /// <c>ServingConfigServiceClient.DeleteServingConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteServingConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -65,6 +96,32 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateServingConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ServingConfigServiceClient.GetServingConfig</c> and <c>ServingConfigServiceClient.GetServingConfigAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetServingConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ServingConfigServiceClient.ListServingConfigs</c> and
+        /// <c>ServingConfigServiceClient.ListServingConfigsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListServingConfigsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -146,11 +203,15 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// The default ServingConfigService scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/discoveryengine.readwrite</description></item>
+        /// <item><description>https://www.googleapis.com/auth/discoveryengine.serving.readwrite</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/discoveryengine.readwrite",
+            "https://www.googleapis.com/auth/discoveryengine.serving.readwrite",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -218,6 +279,486 @@ namespace Google.Cloud.DiscoveryEngine.V1
 
         /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a ServingConfig.
+        /// 
+        /// Note: The Google Cloud console works only with the default serving config.
+        /// Additional ServingConfigs can be created and managed only via the API.
+        /// 
+        /// A maximum of 100
+        /// [ServingConfig][google.cloud.discoveryengine.v1.ServingConfig]s are allowed
+        /// in an [Engine][google.cloud.discoveryengine.v1.Engine], otherwise a
+        /// RESOURCE_EXHAUSTED error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ServingConfig CreateServingConfig(CreateServingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a ServingConfig.
+        /// 
+        /// Note: The Google Cloud console works only with the default serving config.
+        /// Additional ServingConfigs can be created and managed only via the API.
+        /// 
+        /// A maximum of 100
+        /// [ServingConfig][google.cloud.discoveryengine.v1.ServingConfig]s are allowed
+        /// in an [Engine][google.cloud.discoveryengine.v1.Engine], otherwise a
+        /// RESOURCE_EXHAUSTED error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ServingConfig> CreateServingConfigAsync(CreateServingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a ServingConfig.
+        /// 
+        /// Note: The Google Cloud console works only with the default serving config.
+        /// Additional ServingConfigs can be created and managed only via the API.
+        /// 
+        /// A maximum of 100
+        /// [ServingConfig][google.cloud.discoveryengine.v1.ServingConfig]s are allowed
+        /// in an [Engine][google.cloud.discoveryengine.v1.Engine], otherwise a
+        /// RESOURCE_EXHAUSTED error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ServingConfig> CreateServingConfigAsync(CreateServingConfigRequest request, st::CancellationToken cancellationToken) =>
+            CreateServingConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a ServingConfig.
+        /// 
+        /// Note: The Google Cloud console works only with the default serving config.
+        /// Additional ServingConfigs can be created and managed only via the API.
+        /// 
+        /// A maximum of 100
+        /// [ServingConfig][google.cloud.discoveryengine.v1.ServingConfig]s are allowed
+        /// in an [Engine][google.cloud.discoveryengine.v1.Engine], otherwise a
+        /// RESOURCE_EXHAUSTED error is returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Full resource name of parent. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="servingConfig">
+        /// Required. The ServingConfig to create.
+        /// </param>
+        /// <param name="servingConfigId">
+        /// Required. The ID to use for the ServingConfig, which will become the final
+        /// component of the ServingConfig's resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-zA-Z0-9][a-zA-Z0-9_-]+/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ServingConfig CreateServingConfig(string parent, ServingConfig servingConfig, string servingConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateServingConfig(new CreateServingConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ServingConfig = gax::GaxPreconditions.CheckNotNull(servingConfig, nameof(servingConfig)),
+                ServingConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(servingConfigId, nameof(servingConfigId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ServingConfig.
+        /// 
+        /// Note: The Google Cloud console works only with the default serving config.
+        /// Additional ServingConfigs can be created and managed only via the API.
+        /// 
+        /// A maximum of 100
+        /// [ServingConfig][google.cloud.discoveryengine.v1.ServingConfig]s are allowed
+        /// in an [Engine][google.cloud.discoveryengine.v1.Engine], otherwise a
+        /// RESOURCE_EXHAUSTED error is returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Full resource name of parent. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="servingConfig">
+        /// Required. The ServingConfig to create.
+        /// </param>
+        /// <param name="servingConfigId">
+        /// Required. The ID to use for the ServingConfig, which will become the final
+        /// component of the ServingConfig's resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-zA-Z0-9][a-zA-Z0-9_-]+/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ServingConfig> CreateServingConfigAsync(string parent, ServingConfig servingConfig, string servingConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateServingConfigAsync(new CreateServingConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ServingConfig = gax::GaxPreconditions.CheckNotNull(servingConfig, nameof(servingConfig)),
+                ServingConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(servingConfigId, nameof(servingConfigId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ServingConfig.
+        /// 
+        /// Note: The Google Cloud console works only with the default serving config.
+        /// Additional ServingConfigs can be created and managed only via the API.
+        /// 
+        /// A maximum of 100
+        /// [ServingConfig][google.cloud.discoveryengine.v1.ServingConfig]s are allowed
+        /// in an [Engine][google.cloud.discoveryengine.v1.Engine], otherwise a
+        /// RESOURCE_EXHAUSTED error is returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Full resource name of parent. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="servingConfig">
+        /// Required. The ServingConfig to create.
+        /// </param>
+        /// <param name="servingConfigId">
+        /// Required. The ID to use for the ServingConfig, which will become the final
+        /// component of the ServingConfig's resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-zA-Z0-9][a-zA-Z0-9_-]+/.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ServingConfig> CreateServingConfigAsync(string parent, ServingConfig servingConfig, string servingConfigId, st::CancellationToken cancellationToken) =>
+            CreateServingConfigAsync(parent, servingConfig, servingConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a ServingConfig.
+        /// 
+        /// Note: The Google Cloud console works only with the default serving config.
+        /// Additional ServingConfigs can be created and managed only via the API.
+        /// 
+        /// A maximum of 100
+        /// [ServingConfig][google.cloud.discoveryengine.v1.ServingConfig]s are allowed
+        /// in an [Engine][google.cloud.discoveryengine.v1.Engine], otherwise a
+        /// RESOURCE_EXHAUSTED error is returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Full resource name of parent. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="servingConfig">
+        /// Required. The ServingConfig to create.
+        /// </param>
+        /// <param name="servingConfigId">
+        /// Required. The ID to use for the ServingConfig, which will become the final
+        /// component of the ServingConfig's resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-zA-Z0-9][a-zA-Z0-9_-]+/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ServingConfig CreateServingConfig(EngineName parent, ServingConfig servingConfig, string servingConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateServingConfig(new CreateServingConfigRequest
+            {
+                ParentAsEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ServingConfig = gax::GaxPreconditions.CheckNotNull(servingConfig, nameof(servingConfig)),
+                ServingConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(servingConfigId, nameof(servingConfigId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ServingConfig.
+        /// 
+        /// Note: The Google Cloud console works only with the default serving config.
+        /// Additional ServingConfigs can be created and managed only via the API.
+        /// 
+        /// A maximum of 100
+        /// [ServingConfig][google.cloud.discoveryengine.v1.ServingConfig]s are allowed
+        /// in an [Engine][google.cloud.discoveryengine.v1.Engine], otherwise a
+        /// RESOURCE_EXHAUSTED error is returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Full resource name of parent. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="servingConfig">
+        /// Required. The ServingConfig to create.
+        /// </param>
+        /// <param name="servingConfigId">
+        /// Required. The ID to use for the ServingConfig, which will become the final
+        /// component of the ServingConfig's resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-zA-Z0-9][a-zA-Z0-9_-]+/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ServingConfig> CreateServingConfigAsync(EngineName parent, ServingConfig servingConfig, string servingConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateServingConfigAsync(new CreateServingConfigRequest
+            {
+                ParentAsEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ServingConfig = gax::GaxPreconditions.CheckNotNull(servingConfig, nameof(servingConfig)),
+                ServingConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(servingConfigId, nameof(servingConfigId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ServingConfig.
+        /// 
+        /// Note: The Google Cloud console works only with the default serving config.
+        /// Additional ServingConfigs can be created and managed only via the API.
+        /// 
+        /// A maximum of 100
+        /// [ServingConfig][google.cloud.discoveryengine.v1.ServingConfig]s are allowed
+        /// in an [Engine][google.cloud.discoveryengine.v1.Engine], otherwise a
+        /// RESOURCE_EXHAUSTED error is returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Full resource name of parent. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="servingConfig">
+        /// Required. The ServingConfig to create.
+        /// </param>
+        /// <param name="servingConfigId">
+        /// Required. The ID to use for the ServingConfig, which will become the final
+        /// component of the ServingConfig's resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-zA-Z0-9][a-zA-Z0-9_-]+/.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ServingConfig> CreateServingConfigAsync(EngineName parent, ServingConfig servingConfig, string servingConfigId, st::CancellationToken cancellationToken) =>
+            CreateServingConfigAsync(parent, servingConfig, servingConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a ServingConfig.
+        /// 
+        /// Note: The Google Cloud console works only with the default serving config.
+        /// Additional ServingConfigs can be created and managed only via the API.
+        /// 
+        /// A maximum of 100
+        /// [ServingConfig][google.cloud.discoveryengine.v1.ServingConfig]s are allowed
+        /// in an [Engine][google.cloud.discoveryengine.v1.Engine], otherwise a
+        /// RESOURCE_EXHAUSTED error is returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Full resource name of parent. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="servingConfig">
+        /// Required. The ServingConfig to create.
+        /// </param>
+        /// <param name="servingConfigId">
+        /// Required. The ID to use for the ServingConfig, which will become the final
+        /// component of the ServingConfig's resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-zA-Z0-9][a-zA-Z0-9_-]+/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ServingConfig CreateServingConfig(DataStoreName parent, ServingConfig servingConfig, string servingConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateServingConfig(new CreateServingConfigRequest
+            {
+                ParentAsDataStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ServingConfig = gax::GaxPreconditions.CheckNotNull(servingConfig, nameof(servingConfig)),
+                ServingConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(servingConfigId, nameof(servingConfigId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ServingConfig.
+        /// 
+        /// Note: The Google Cloud console works only with the default serving config.
+        /// Additional ServingConfigs can be created and managed only via the API.
+        /// 
+        /// A maximum of 100
+        /// [ServingConfig][google.cloud.discoveryengine.v1.ServingConfig]s are allowed
+        /// in an [Engine][google.cloud.discoveryengine.v1.Engine], otherwise a
+        /// RESOURCE_EXHAUSTED error is returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Full resource name of parent. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="servingConfig">
+        /// Required. The ServingConfig to create.
+        /// </param>
+        /// <param name="servingConfigId">
+        /// Required. The ID to use for the ServingConfig, which will become the final
+        /// component of the ServingConfig's resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-zA-Z0-9][a-zA-Z0-9_-]+/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ServingConfig> CreateServingConfigAsync(DataStoreName parent, ServingConfig servingConfig, string servingConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateServingConfigAsync(new CreateServingConfigRequest
+            {
+                ParentAsDataStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ServingConfig = gax::GaxPreconditions.CheckNotNull(servingConfig, nameof(servingConfig)),
+                ServingConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(servingConfigId, nameof(servingConfigId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ServingConfig.
+        /// 
+        /// Note: The Google Cloud console works only with the default serving config.
+        /// Additional ServingConfigs can be created and managed only via the API.
+        /// 
+        /// A maximum of 100
+        /// [ServingConfig][google.cloud.discoveryengine.v1.ServingConfig]s are allowed
+        /// in an [Engine][google.cloud.discoveryengine.v1.Engine], otherwise a
+        /// RESOURCE_EXHAUSTED error is returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Full resource name of parent. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="servingConfig">
+        /// Required. The ServingConfig to create.
+        /// </param>
+        /// <param name="servingConfigId">
+        /// Required. The ID to use for the ServingConfig, which will become the final
+        /// component of the ServingConfig's resource name.
+        /// 
+        /// This value should be 4-63 characters, and valid characters
+        /// are /[a-zA-Z0-9][a-zA-Z0-9_-]+/.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ServingConfig> CreateServingConfigAsync(DataStoreName parent, ServingConfig servingConfig, string servingConfigId, st::CancellationToken cancellationToken) =>
+            CreateServingConfigAsync(parent, servingConfig, servingConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a ServingConfig.
+        /// 
+        /// Returns a NOT_FOUND error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteServingConfig(DeleteServingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a ServingConfig.
+        /// 
+        /// Returns a NOT_FOUND error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteServingConfigAsync(DeleteServingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a ServingConfig.
+        /// 
+        /// Returns a NOT_FOUND error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteServingConfigAsync(DeleteServingConfigRequest request, st::CancellationToken cancellationToken) =>
+            DeleteServingConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a ServingConfig.
+        /// 
+        /// Returns a NOT_FOUND error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ServingConfig to delete. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteServingConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteServingConfig(new DeleteServingConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a ServingConfig.
+        /// 
+        /// Returns a NOT_FOUND error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ServingConfig to delete. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteServingConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteServingConfigAsync(new DeleteServingConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a ServingConfig.
+        /// 
+        /// Returns a NOT_FOUND error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ServingConfig to delete. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteServingConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteServingConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a ServingConfig.
+        /// 
+        /// Returns a NOT_FOUND error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ServingConfig to delete. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteServingConfig(ServingConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteServingConfig(new DeleteServingConfigRequest
+            {
+                ServingConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a ServingConfig.
+        /// 
+        /// Returns a NOT_FOUND error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ServingConfig to delete. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteServingConfigAsync(ServingConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteServingConfigAsync(new DeleteServingConfigRequest
+            {
+                ServingConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a ServingConfig.
+        /// 
+        /// Returns a NOT_FOUND error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ServingConfig to delete. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteServingConfigAsync(ServingConfigName name, st::CancellationToken cancellationToken) =>
+            DeleteServingConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates a ServingConfig.
@@ -325,6 +866,357 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ServingConfig> UpdateServingConfigAsync(ServingConfig servingConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateServingConfigAsync(servingConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a ServingConfig.
+        /// 
+        /// Returns a NotFound error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ServingConfig GetServingConfig(GetServingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a ServingConfig.
+        /// 
+        /// Returns a NotFound error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ServingConfig> GetServingConfigAsync(GetServingConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a ServingConfig.
+        /// 
+        /// Returns a NotFound error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ServingConfig> GetServingConfigAsync(GetServingConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetServingConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a ServingConfig.
+        /// 
+        /// Returns a NotFound error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ServingConfig to get. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ServingConfig GetServingConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetServingConfig(new GetServingConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a ServingConfig.
+        /// 
+        /// Returns a NotFound error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ServingConfig to get. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ServingConfig> GetServingConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetServingConfigAsync(new GetServingConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a ServingConfig.
+        /// 
+        /// Returns a NotFound error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ServingConfig to get. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ServingConfig> GetServingConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetServingConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a ServingConfig.
+        /// 
+        /// Returns a NotFound error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ServingConfig to get. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ServingConfig GetServingConfig(ServingConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetServingConfig(new GetServingConfigRequest
+            {
+                ServingConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a ServingConfig.
+        /// 
+        /// Returns a NotFound error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ServingConfig to get. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ServingConfig> GetServingConfigAsync(ServingConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetServingConfigAsync(new GetServingConfigRequest
+            {
+                ServingConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a ServingConfig.
+        /// 
+        /// Returns a NotFound error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ServingConfig to get. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ServingConfig> GetServingConfigAsync(ServingConfigName name, st::CancellationToken cancellationToken) =>
+            GetServingConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all ServingConfigs linked to this dataStore.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ServingConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigs(ListServingConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all ServingConfigs linked to this dataStore.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ServingConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigsAsync(ListServingConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all ServingConfigs linked to this dataStore.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Full resource name of the parent resource. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ServingConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServingConfigsRequest request = new ListServingConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServingConfigs(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ServingConfigs linked to this dataStore.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Full resource name of the parent resource. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ServingConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServingConfigsRequest request = new ListServingConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServingConfigsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ServingConfigs linked to this dataStore.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Full resource name of the parent resource. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ServingConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigs(EngineName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServingConfigsRequest request = new ListServingConfigsRequest
+            {
+                ParentAsEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServingConfigs(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ServingConfigs linked to this dataStore.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Full resource name of the parent resource. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ServingConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigsAsync(EngineName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServingConfigsRequest request = new ListServingConfigsRequest
+            {
+                ParentAsEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServingConfigsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ServingConfigs linked to this dataStore.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Full resource name of the parent resource. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ServingConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigs(DataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServingConfigsRequest request = new ListServingConfigsRequest
+            {
+                ParentAsDataStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServingConfigs(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ServingConfigs linked to this dataStore.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Full resource name of the parent resource. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ServingConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigsAsync(DataStoreName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServingConfigsRequest request = new ListServingConfigsRequest
+            {
+                ParentAsDataStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServingConfigsAsync(request, callSettings);
+        }
     }
 
     /// <summary>ServingConfigService client wrapper implementation, for convenient use.</summary>
@@ -334,7 +1226,15 @@ namespace Google.Cloud.DiscoveryEngine.V1
     /// </remarks>
     public sealed partial class ServingConfigServiceClientImpl : ServingConfigServiceClient
     {
+        private readonly gaxgrpc::ApiCall<CreateServingConfigRequest, ServingConfig> _callCreateServingConfig;
+
+        private readonly gaxgrpc::ApiCall<DeleteServingConfigRequest, wkt::Empty> _callDeleteServingConfig;
+
         private readonly gaxgrpc::ApiCall<UpdateServingConfigRequest, ServingConfig> _callUpdateServingConfig;
+
+        private readonly gaxgrpc::ApiCall<GetServingConfigRequest, ServingConfig> _callGetServingConfig;
+
+        private readonly gaxgrpc::ApiCall<ListServingConfigsRequest, ListServingConfigsResponse> _callListServingConfigs;
 
         /// <summary>
         /// Constructs a client wrapper for the ServingConfigService service, with the specified gRPC client and
@@ -353,15 +1253,35 @@ namespace Google.Cloud.DiscoveryEngine.V1
                 Logger = logger,
             });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            _callCreateServingConfig = clientHelper.BuildApiCall<CreateServingConfigRequest, ServingConfig>("CreateServingConfig", grpcClient.CreateServingConfigAsync, grpcClient.CreateServingConfig, effectiveSettings.CreateServingConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateServingConfig);
+            Modify_CreateServingConfigApiCall(ref _callCreateServingConfig);
+            _callDeleteServingConfig = clientHelper.BuildApiCall<DeleteServingConfigRequest, wkt::Empty>("DeleteServingConfig", grpcClient.DeleteServingConfigAsync, grpcClient.DeleteServingConfig, effectiveSettings.DeleteServingConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteServingConfig);
+            Modify_DeleteServingConfigApiCall(ref _callDeleteServingConfig);
             _callUpdateServingConfig = clientHelper.BuildApiCall<UpdateServingConfigRequest, ServingConfig>("UpdateServingConfig", grpcClient.UpdateServingConfigAsync, grpcClient.UpdateServingConfig, effectiveSettings.UpdateServingConfigSettings).WithGoogleRequestParam("serving_config.name", request => request.ServingConfig?.Name);
             Modify_ApiCall(ref _callUpdateServingConfig);
             Modify_UpdateServingConfigApiCall(ref _callUpdateServingConfig);
+            _callGetServingConfig = clientHelper.BuildApiCall<GetServingConfigRequest, ServingConfig>("GetServingConfig", grpcClient.GetServingConfigAsync, grpcClient.GetServingConfig, effectiveSettings.GetServingConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetServingConfig);
+            Modify_GetServingConfigApiCall(ref _callGetServingConfig);
+            _callListServingConfigs = clientHelper.BuildApiCall<ListServingConfigsRequest, ListServingConfigsResponse>("ListServingConfigs", grpcClient.ListServingConfigsAsync, grpcClient.ListServingConfigs, effectiveSettings.ListServingConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListServingConfigs);
+            Modify_ListServingConfigsApiCall(ref _callListServingConfigs);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_CreateServingConfigApiCall(ref gaxgrpc::ApiCall<CreateServingConfigRequest, ServingConfig> call);
+
+        partial void Modify_DeleteServingConfigApiCall(ref gaxgrpc::ApiCall<DeleteServingConfigRequest, wkt::Empty> call);
+
         partial void Modify_UpdateServingConfigApiCall(ref gaxgrpc::ApiCall<UpdateServingConfigRequest, ServingConfig> call);
+
+        partial void Modify_GetServingConfigApiCall(ref gaxgrpc::ApiCall<GetServingConfigRequest, ServingConfig> call);
+
+        partial void Modify_ListServingConfigsApiCall(ref gaxgrpc::ApiCall<ListServingConfigsRequest, ListServingConfigsResponse> call);
 
         partial void OnConstruction(ServingConfigService.ServingConfigServiceClient grpcClient, ServingConfigServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -371,7 +1291,83 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
         public override gcl::LocationsClient LocationsClient { get; }
 
+        partial void Modify_CreateServingConfigRequest(ref CreateServingConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteServingConfigRequest(ref DeleteServingConfigRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_UpdateServingConfigRequest(ref UpdateServingConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetServingConfigRequest(ref GetServingConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListServingConfigsRequest(ref ListServingConfigsRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>
+        /// Creates a ServingConfig.
+        /// 
+        /// Note: The Google Cloud console works only with the default serving config.
+        /// Additional ServingConfigs can be created and managed only via the API.
+        /// 
+        /// A maximum of 100
+        /// [ServingConfig][google.cloud.discoveryengine.v1.ServingConfig]s are allowed
+        /// in an [Engine][google.cloud.discoveryengine.v1.Engine], otherwise a
+        /// RESOURCE_EXHAUSTED error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ServingConfig CreateServingConfig(CreateServingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateServingConfigRequest(ref request, ref callSettings);
+            return _callCreateServingConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a ServingConfig.
+        /// 
+        /// Note: The Google Cloud console works only with the default serving config.
+        /// Additional ServingConfigs can be created and managed only via the API.
+        /// 
+        /// A maximum of 100
+        /// [ServingConfig][google.cloud.discoveryengine.v1.ServingConfig]s are allowed
+        /// in an [Engine][google.cloud.discoveryengine.v1.Engine], otherwise a
+        /// RESOURCE_EXHAUSTED error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ServingConfig> CreateServingConfigAsync(CreateServingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateServingConfigRequest(ref request, ref callSettings);
+            return _callCreateServingConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a ServingConfig.
+        /// 
+        /// Returns a NOT_FOUND error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteServingConfig(DeleteServingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteServingConfigRequest(ref request, ref callSettings);
+            _callDeleteServingConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a ServingConfig.
+        /// 
+        /// Returns a NOT_FOUND error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteServingConfigAsync(DeleteServingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteServingConfigRequest(ref request, ref callSettings);
+            return _callDeleteServingConfig.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a ServingConfig.
@@ -400,6 +1396,70 @@ namespace Google.Cloud.DiscoveryEngine.V1
             Modify_UpdateServingConfigRequest(ref request, ref callSettings);
             return _callUpdateServingConfig.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Gets a ServingConfig.
+        /// 
+        /// Returns a NotFound error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ServingConfig GetServingConfig(GetServingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetServingConfigRequest(ref request, ref callSettings);
+            return _callGetServingConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a ServingConfig.
+        /// 
+        /// Returns a NotFound error if the ServingConfig does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ServingConfig> GetServingConfigAsync(GetServingConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetServingConfigRequest(ref request, ref callSettings);
+            return _callGetServingConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ServingConfigs linked to this dataStore.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ServingConfig"/> resources.</returns>
+        public override gax::PagedEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigs(ListServingConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListServingConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListServingConfigsRequest, ListServingConfigsResponse, ServingConfig>(_callListServingConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all ServingConfigs linked to this dataStore.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ServingConfig"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigsAsync(ListServingConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListServingConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListServingConfigsRequest, ListServingConfigsResponse, ServingConfig>(_callListServingConfigs, request, callSettings);
+        }
+    }
+
+    public partial class ListServingConfigsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListServingConfigsResponse : gaxgrpc::IPageResponse<ServingConfig>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ServingConfig> GetEnumerator() => ServingConfigs.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public static partial class ServingConfigService

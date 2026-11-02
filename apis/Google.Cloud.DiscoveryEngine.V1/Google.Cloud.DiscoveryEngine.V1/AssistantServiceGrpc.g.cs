@@ -3,7 +3,7 @@
 //     source: google/cloud/discoveryengine/v1/assistant_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -67,6 +67,22 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.StreamAssistRequest> __Marshaller_google_cloud_discoveryengine_v1_StreamAssistRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.StreamAssistRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.StreamAssistResponse> __Marshaller_google_cloud_discoveryengine_v1_StreamAssistResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.StreamAssistResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.CreateAssistantRequest> __Marshaller_google_cloud_discoveryengine_v1_CreateAssistantRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.CreateAssistantRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.Assistant> __Marshaller_google_cloud_discoveryengine_v1_Assistant = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.Assistant.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.DeleteAssistantRequest> __Marshaller_google_cloud_discoveryengine_v1_DeleteAssistantRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.DeleteAssistantRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.UpdateAssistantRequest> __Marshaller_google_cloud_discoveryengine_v1_UpdateAssistantRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.UpdateAssistantRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.GetAssistantRequest> __Marshaller_google_cloud_discoveryengine_v1_GetAssistantRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.GetAssistantRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.ListAssistantsRequest> __Marshaller_google_cloud_discoveryengine_v1_ListAssistantsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.ListAssistantsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.ListAssistantsResponse> __Marshaller_google_cloud_discoveryengine_v1_ListAssistantsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.ListAssistantsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.StreamAssistRequest, global::Google.Cloud.DiscoveryEngine.V1.StreamAssistResponse> __Method_StreamAssist = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.StreamAssistRequest, global::Google.Cloud.DiscoveryEngine.V1.StreamAssistResponse>(
@@ -75,6 +91,46 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         "StreamAssist",
         __Marshaller_google_cloud_discoveryengine_v1_StreamAssistRequest,
         __Marshaller_google_cloud_discoveryengine_v1_StreamAssistResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.CreateAssistantRequest, global::Google.Cloud.DiscoveryEngine.V1.Assistant> __Method_CreateAssistant = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.CreateAssistantRequest, global::Google.Cloud.DiscoveryEngine.V1.Assistant>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAssistant",
+        __Marshaller_google_cloud_discoveryengine_v1_CreateAssistantRequest,
+        __Marshaller_google_cloud_discoveryengine_v1_Assistant);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.DeleteAssistantRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAssistant = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.DeleteAssistantRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAssistant",
+        __Marshaller_google_cloud_discoveryengine_v1_DeleteAssistantRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.UpdateAssistantRequest, global::Google.Cloud.DiscoveryEngine.V1.Assistant> __Method_UpdateAssistant = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.UpdateAssistantRequest, global::Google.Cloud.DiscoveryEngine.V1.Assistant>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAssistant",
+        __Marshaller_google_cloud_discoveryengine_v1_UpdateAssistantRequest,
+        __Marshaller_google_cloud_discoveryengine_v1_Assistant);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.GetAssistantRequest, global::Google.Cloud.DiscoveryEngine.V1.Assistant> __Method_GetAssistant = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.GetAssistantRequest, global::Google.Cloud.DiscoveryEngine.V1.Assistant>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAssistant",
+        __Marshaller_google_cloud_discoveryengine_v1_GetAssistantRequest,
+        __Marshaller_google_cloud_discoveryengine_v1_Assistant);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.ListAssistantsRequest, global::Google.Cloud.DiscoveryEngine.V1.ListAssistantsResponse> __Method_ListAssistants = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.ListAssistantsRequest, global::Google.Cloud.DiscoveryEngine.V1.ListAssistantsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAssistants",
+        __Marshaller_google_cloud_discoveryengine_v1_ListAssistantsRequest,
+        __Marshaller_google_cloud_discoveryengine_v1_ListAssistantsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -95,6 +151,67 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       /// <returns>A task indicating completion of the handler.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task StreamAssist(global::Google.Cloud.DiscoveryEngine.V1.StreamAssistRequest request, grpc::IServerStreamWriter<global::Google.Cloud.DiscoveryEngine.V1.StreamAssistResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.Assistant> CreateAssistant(global::Google.Cloud.DiscoveryEngine.V1.CreateAssistantRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAssistant(global::Google.Cloud.DiscoveryEngine.V1.DeleteAssistantRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an [Assistant][google.cloud.discoveryengine.v1.Assistant]
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.Assistant> UpdateAssistant(global::Google.Cloud.DiscoveryEngine.V1.UpdateAssistantRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.Assistant> GetAssistant(global::Google.Cloud.DiscoveryEngine.V1.GetAssistantRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all [Assistant][google.cloud.discoveryengine.v1.Assistant]s under an
+      /// [Engine][google.cloud.discoveryengine.v1.Engine].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.ListAssistantsResponse> ListAssistants(global::Google.Cloud.DiscoveryEngine.V1.ListAssistantsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -152,6 +269,250 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_StreamAssist, null, options, request);
       }
+      /// <summary>
+      /// Creates an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.Assistant CreateAssistant(global::Google.Cloud.DiscoveryEngine.V1.CreateAssistantRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAssistant(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.Assistant CreateAssistant(global::Google.Cloud.DiscoveryEngine.V1.CreateAssistantRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAssistant, null, options, request);
+      }
+      /// <summary>
+      /// Creates an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.Assistant> CreateAssistantAsync(global::Google.Cloud.DiscoveryEngine.V1.CreateAssistantRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAssistantAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.Assistant> CreateAssistantAsync(global::Google.Cloud.DiscoveryEngine.V1.CreateAssistantRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAssistant, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAssistant(global::Google.Cloud.DiscoveryEngine.V1.DeleteAssistantRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAssistant(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAssistant(global::Google.Cloud.DiscoveryEngine.V1.DeleteAssistantRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAssistant, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAssistantAsync(global::Google.Cloud.DiscoveryEngine.V1.DeleteAssistantRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAssistantAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAssistantAsync(global::Google.Cloud.DiscoveryEngine.V1.DeleteAssistantRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAssistant, null, options, request);
+      }
+      /// <summary>
+      /// Updates an [Assistant][google.cloud.discoveryengine.v1.Assistant]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.Assistant UpdateAssistant(global::Google.Cloud.DiscoveryEngine.V1.UpdateAssistantRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAssistant(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an [Assistant][google.cloud.discoveryengine.v1.Assistant]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.Assistant UpdateAssistant(global::Google.Cloud.DiscoveryEngine.V1.UpdateAssistantRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAssistant, null, options, request);
+      }
+      /// <summary>
+      /// Updates an [Assistant][google.cloud.discoveryengine.v1.Assistant]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.Assistant> UpdateAssistantAsync(global::Google.Cloud.DiscoveryEngine.V1.UpdateAssistantRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAssistantAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an [Assistant][google.cloud.discoveryengine.v1.Assistant]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.Assistant> UpdateAssistantAsync(global::Google.Cloud.DiscoveryEngine.V1.UpdateAssistantRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAssistant, null, options, request);
+      }
+      /// <summary>
+      /// Gets an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.Assistant GetAssistant(global::Google.Cloud.DiscoveryEngine.V1.GetAssistantRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAssistant(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.Assistant GetAssistant(global::Google.Cloud.DiscoveryEngine.V1.GetAssistantRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAssistant, null, options, request);
+      }
+      /// <summary>
+      /// Gets an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.Assistant> GetAssistantAsync(global::Google.Cloud.DiscoveryEngine.V1.GetAssistantRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAssistantAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.Assistant> GetAssistantAsync(global::Google.Cloud.DiscoveryEngine.V1.GetAssistantRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAssistant, null, options, request);
+      }
+      /// <summary>
+      /// Lists all [Assistant][google.cloud.discoveryengine.v1.Assistant]s under an
+      /// [Engine][google.cloud.discoveryengine.v1.Engine].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.ListAssistantsResponse ListAssistants(global::Google.Cloud.DiscoveryEngine.V1.ListAssistantsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAssistants(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all [Assistant][google.cloud.discoveryengine.v1.Assistant]s under an
+      /// [Engine][google.cloud.discoveryengine.v1.Engine].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.ListAssistantsResponse ListAssistants(global::Google.Cloud.DiscoveryEngine.V1.ListAssistantsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAssistants, null, options, request);
+      }
+      /// <summary>
+      /// Lists all [Assistant][google.cloud.discoveryengine.v1.Assistant]s under an
+      /// [Engine][google.cloud.discoveryengine.v1.Engine].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.ListAssistantsResponse> ListAssistantsAsync(global::Google.Cloud.DiscoveryEngine.V1.ListAssistantsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAssistantsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all [Assistant][google.cloud.discoveryengine.v1.Assistant]s under an
+      /// [Engine][google.cloud.discoveryengine.v1.Engine].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.ListAssistantsResponse> ListAssistantsAsync(global::Google.Cloud.DiscoveryEngine.V1.ListAssistantsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAssistants, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AssistantServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -166,7 +527,12 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public static grpc::ServerServiceDefinition BindService(AssistantServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_StreamAssist, serviceImpl.StreamAssist).Build();
+          .AddMethod(__Method_StreamAssist, serviceImpl.StreamAssist)
+          .AddMethod(__Method_CreateAssistant, serviceImpl.CreateAssistant)
+          .AddMethod(__Method_DeleteAssistant, serviceImpl.DeleteAssistant)
+          .AddMethod(__Method_UpdateAssistant, serviceImpl.UpdateAssistant)
+          .AddMethod(__Method_GetAssistant, serviceImpl.GetAssistant)
+          .AddMethod(__Method_ListAssistants, serviceImpl.ListAssistants).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -177,6 +543,11 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, AssistantServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_StreamAssist, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.DiscoveryEngine.V1.StreamAssistRequest, global::Google.Cloud.DiscoveryEngine.V1.StreamAssistResponse>(serviceImpl.StreamAssist));
+      serviceBinder.AddMethod(__Method_CreateAssistant, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.CreateAssistantRequest, global::Google.Cloud.DiscoveryEngine.V1.Assistant>(serviceImpl.CreateAssistant));
+      serviceBinder.AddMethod(__Method_DeleteAssistant, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.DeleteAssistantRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAssistant));
+      serviceBinder.AddMethod(__Method_UpdateAssistant, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.UpdateAssistantRequest, global::Google.Cloud.DiscoveryEngine.V1.Assistant>(serviceImpl.UpdateAssistant));
+      serviceBinder.AddMethod(__Method_GetAssistant, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.GetAssistantRequest, global::Google.Cloud.DiscoveryEngine.V1.Assistant>(serviceImpl.GetAssistant));
+      serviceBinder.AddMethod(__Method_ListAssistants, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.ListAssistantsRequest, global::Google.Cloud.DiscoveryEngine.V1.ListAssistantsResponse>(serviceImpl.ListAssistants));
     }
 
   }

@@ -27,80 +27,134 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "CjNnb29nbGUvY2xvdWQvZGlzY292ZXJ5ZW5naW5lL3YxL2Fzc2lzdF9hbnN3",
             "ZXIucHJvdG8SH2dvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEaH2dv",
             "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVz",
-            "b3VyY2UucHJvdG8ijQYKDEFzc2lzdEFuc3dlchIRCgRuYW1lGAEgASgJQgPg",
-            "QQUSQgoFc3RhdGUYAiABKA4yMy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
-            "aW5lLnYxLkFzc2lzdEFuc3dlci5TdGF0ZRJECgdyZXBsaWVzGAMgAygLMjMu",
+            "b3VyY2UucHJvdG8aQWdvb2dsZS9jbG91ZC9kaXNjb3ZlcnllbmdpbmUvdjEv",
+            "Z3JvdW5kZWRfZ2VuZXJhdGlvbl9zZXJ2aWNlLnByb3RvGhxnb29nbGUvcHJv",
+            "dG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
+            "LnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byKjEQoMQXNzaXN0QW5z",
+            "d2VyEhMKBG5hbWUYASABKAlCBeJBAgUIEkIKBXN0YXRlGAIgASgOMjMuZ29v",
+            "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Bc3Npc3RBbnN3ZXIuU3Rh",
+            "dGUSbwoXY29ubmVjdG9yX2Rpc3BsYXlfbmFtZXMYDiADKAsySC5nb29nbGUu",
+            "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkFzc2lzdEFuc3dlci5Db25uZWN0",
+            "b3JEaXNwbGF5TmFtZXNFbnRyeUIE4kEBAxJECgdyZXBsaWVzGAMgAygLMjMu",
             "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Bc3Npc3RBbnN3ZXIu",
             "UmVwbHkSYQoWYXNzaXN0X3NraXBwZWRfcmVhc29ucxgFIAMoDjJBLmdvb2ds",
             "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuQXNzaXN0QW5zd2VyLkFzc2lz",
-            "dFNraXBwZWRSZWFzb24aZwoFUmVwbHkSVQoQZ3JvdW5kZWRfY29udGVudBgB",
-            "IAEoCzI5Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuQXNzaXN0",
-            "YW50R3JvdW5kZWRDb250ZW50SABCBwoFcmVwbHkiVwoFU3RhdGUSFQoRU1RB",
-            "VEVfVU5TUEVDSUZJRUQQABIPCgtJTl9QUk9HUkVTUxABEgoKBkZBSUxFRBAC",
-            "Eg0KCVNVQ0NFRURFRBADEgsKB1NLSVBQRUQQBCKBAQoTQXNzaXN0U2tpcHBl",
-            "ZFJlYXNvbhIlCiFBU1NJU1RfU0tJUFBFRF9SRUFTT05fVU5TUEVDSUZJRUQQ",
-            "ABIkCiBOT05fQVNTSVNUX1NFRUtJTkdfUVVFUllfSUdOT1JFRBABEh0KGUNV",
-            "U1RPTUVSX1BPTElDWV9WSU9MQVRJT04QAjq2AepBsgEKK2Rpc2NvdmVyeWVu",
-            "Z2luZS5nb29nbGVhcGlzLmNvbS9Bc3Npc3RBbnN3ZXISggFwcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY29sbGVjdGlvbnMve2Nv",
-            "bGxlY3Rpb259L2VuZ2luZXMve2VuZ2luZX0vc2Vzc2lvbnMve3Nlc3Npb259",
-            "L2Fzc2lzdEFuc3dlcnMve2Fzc2lzdF9hbnN3ZXJ9IrEGChBBc3Npc3RhbnRD",
-            "b250ZW50Eg4KBHRleHQYAiABKAlIABJNCgtpbmxpbmVfZGF0YRgDIAEoCzI2",
-            "Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuQXNzaXN0YW50Q29u",
-            "dGVudC5CbG9iSAASRgoEZmlsZRgEIAEoCzI2Lmdvb2dsZS5jbG91ZC5kaXNj",
-            "b3ZlcnllbmdpbmUudjEuQXNzaXN0YW50Q29udGVudC5GaWxlSAASWwoPZXhl",
-            "Y3V0YWJsZV9jb2RlGAcgASgLMkAuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVu",
-            "Z2luZS52MS5Bc3Npc3RhbnRDb250ZW50LkV4ZWN1dGFibGVDb2RlSAASZgoV",
-            "Y29kZV9leGVjdXRpb25fcmVzdWx0GAggASgLMkUuZ29vZ2xlLmNsb3VkLmRp",
-            "c2NvdmVyeWVuZ2luZS52MS5Bc3Npc3RhbnRDb250ZW50LkNvZGVFeGVjdXRp",
-            "b25SZXN1bHRIABIMCgRyb2xlGAEgASgJEhQKB3Rob3VnaHQYBiABKAhCA+BB",
-            "ARoxCgRCbG9iEhYKCW1pbWVfdHlwZRgBIAEoCUID4EECEhEKBGRhdGEYAiAB",
-            "KAxCA+BBAho0CgRGaWxlEhYKCW1pbWVfdHlwZRgBIAEoCUID4EECEhQKB2Zp",
-            "bGVfaWQYAiABKAlCA+BBAhojCg5FeGVjdXRhYmxlQ29kZRIRCgRjb2RlGAIg",
-            "ASgJQgPgQQIa9gEKE0NvZGVFeGVjdXRpb25SZXN1bHQSYwoHb3V0Y29tZRgB",
-            "IAEoDjJNLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuQXNzaXN0",
-            "YW50Q29udGVudC5Db2RlRXhlY3V0aW9uUmVzdWx0Lk91dGNvbWVCA+BBAhIT",
-            "CgZvdXRwdXQYAiABKAlCA+BBASJlCgdPdXRjb21lEhcKE09VVENPTUVfVU5T",
-            "UEVDSUZJRUQQABIOCgpPVVRDT01FX09LEAESEgoOT1VUQ09NRV9GQUlMRUQQ",
-            "AhIdChlPVVRDT01FX0RFQURMSU5FX0VYQ0VFREVEEANCBgoEZGF0YSLfBwoY",
-            "QXNzaXN0YW50R3JvdW5kZWRDb250ZW50EnIKF3RleHRfZ3JvdW5kaW5nX21l",
-            "dGFkYXRhGAMgASgLMk8uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
+            "dFNraXBwZWRSZWFzb24SfwoiY3VzdG9tZXJfcG9saWN5X2VuZm9yY2VtZW50",
+            "X3Jlc3VsdBgIIAEoCzJNLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUu",
+            "djEuQXNzaXN0QW5zd2VyLkN1c3RvbWVyUG9saWN5RW5mb3JjZW1lbnRSZXN1",
+            "bHRCBOJBAQEamAEKBVJlcGx5ElUKEGdyb3VuZGVkX2NvbnRlbnQYASABKAsy",
+            "OS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkFzc2lzdGFudEdy",
+            "b3VuZGVkQ29udGVudEgAEi8KC2NyZWF0ZV90aW1lGA4gASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEIHCgVyZXBseRqgCAofQ3VzdG9tZXJQb2xp",
+            "Y3lFbmZvcmNlbWVudFJlc3VsdBJmCgd2ZXJkaWN0GAEgASgOMlUuZ29vZ2xl",
+            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Bc3Npc3RBbnN3ZXIuQ3VzdG9t",
+            "ZXJQb2xpY3lFbmZvcmNlbWVudFJlc3VsdC5WZXJkaWN0En0KDnBvbGljeV9y",
+            "ZXN1bHRzGAMgAygLMmUuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
+            "MS5Bc3Npc3RBbnN3ZXIuQ3VzdG9tZXJQb2xpY3lFbmZvcmNlbWVudFJlc3Vs",
+            "dC5Qb2xpY3lFbmZvcmNlbWVudFJlc3VsdBJ9ChB2aW9sYXRpb25fc291cmNl",
+            "GAQgASgOMl0uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Bc3Np",
+            "c3RBbnN3ZXIuQ3VzdG9tZXJQb2xpY3lFbmZvcmNlbWVudFJlc3VsdC5WaW9s",
+            "YXRpb25Tb3VyY2VCBOJBAQMaNwodQmFubmVkUGhyYXNlRW5mb3JjZW1lbnRS",
+            "ZXN1bHQSFgoOYmFubmVkX3BocmFzZXMYASADKAkabQobTW9kZWxBcm1vckVu",
+            "Zm9yY2VtZW50UmVzdWx0Eh8KFW1vZGVsX2FybW9yX3Zpb2xhdGlvbhgBIAEo",
+            "CUgAEiMKBWVycm9yGAIgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNIAEIICgZy",
+            "ZXN1bHQa3wIKF1BvbGljeUVuZm9yY2VtZW50UmVzdWx0EpcBCiBiYW5uZWRf",
+            "cGhyYXNlX2VuZm9yY2VtZW50X3Jlc3VsdBgDIAEoCzJrLmdvb2dsZS5jbG91",
+            "ZC5kaXNjb3ZlcnllbmdpbmUudjEuQXNzaXN0QW5zd2VyLkN1c3RvbWVyUG9s",
+            "aWN5RW5mb3JjZW1lbnRSZXN1bHQuQmFubmVkUGhyYXNlRW5mb3JjZW1lbnRS",
+            "ZXN1bHRIABKTAQoebW9kZWxfYXJtb3JfZW5mb3JjZW1lbnRfcmVzdWx0GAQg",
+            "ASgLMmkuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Bc3Npc3RB",
+            "bnN3ZXIuQ3VzdG9tZXJQb2xpY3lFbmZvcmNlbWVudFJlc3VsdC5Nb2RlbEFy",
+            "bW9yRW5mb3JjZW1lbnRSZXN1bHRIAEIUChJlbmZvcmNlbWVudF9yZXN1bHQi",
+            "MAoHVmVyZGljdBIPCgtVTlNQRUNJRklFRBAAEgkKBUFMTE9XEAESCQoFQkxP",
+            "Q0sQAiJbCg9WaW9sYXRpb25Tb3VyY2USIAocVklPTEFUSU9OX1NPVVJDRV9V",
+            "TlNQRUNJRklFRBAAEgoKBlNZU1RFTRABEgoKBlBST01QVBACEg4KCkFUVEFD",
+            "SE1FTlQQAxo8ChpDb25uZWN0b3JEaXNwbGF5TmFtZXNFbnRyeRILCgNrZXkY",
+            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBImYKBVN0YXRlEhUKEVNUQVRFX1VO",
+            "U1BFQ0lGSUVEEAASDwoLSU5fUFJPR1JFU1MQARIKCgZGQUlMRUQQAhINCglT",
+            "VUNDRUVERUQQAxILCgdTS0lQUEVEEAQSDQoJQ0FOQ0VMTEVEEAUigQEKE0Fz",
+            "c2lzdFNraXBwZWRSZWFzb24SJQohQVNTSVNUX1NLSVBQRURfUkVBU09OX1VO",
+            "U1BFQ0lGSUVEEAASJAogTk9OX0FTU0lTVF9TRUVLSU5HX1FVRVJZX0lHTk9S",
+            "RUQQARIdChlDVVNUT01FUl9QT0xJQ1lfVklPTEFUSU9OEAI6tgHqQbIBCitk",
+            "aXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vQXNzaXN0QW5zd2VyEoIB",
+            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NvbGxl",
+            "Y3Rpb25zL3tjb2xsZWN0aW9ufS9lbmdpbmVzL3tlbmdpbmV9L3Nlc3Npb25z",
+            "L3tzZXNzaW9ufS9hc3Npc3RBbnN3ZXJzL3thc3Npc3RfYW5zd2VyfSK5BgoQ",
+            "QXNzaXN0YW50Q29udGVudBIOCgR0ZXh0GAIgASgJSAASTQoLaW5saW5lX2Rh",
+            "dGEYAyABKAsyNi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkFz",
+            "c2lzdGFudENvbnRlbnQuQmxvYkgAEkYKBGZpbGUYBCABKAsyNi5nb29nbGUu",
+            "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkFzc2lzdGFudENvbnRlbnQuRmls",
+            "ZUgAElsKD2V4ZWN1dGFibGVfY29kZRgHIAEoCzJALmdvb2dsZS5jbG91ZC5k",
+            "aXNjb3ZlcnllbmdpbmUudjEuQXNzaXN0YW50Q29udGVudC5FeGVjdXRhYmxl",
+            "Q29kZUgAEmYKFWNvZGVfZXhlY3V0aW9uX3Jlc3VsdBgIIAEoCzJFLmdvb2ds",
+            "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuQXNzaXN0YW50Q29udGVudC5D",
+            "b2RlRXhlY3V0aW9uUmVzdWx0SAASDAoEcm9sZRgBIAEoCRIVCgd0aG91Z2h0",
+            "GAYgASgIQgTiQQEBGjMKBEJsb2ISFwoJbWltZV90eXBlGAEgASgJQgTiQQEC",
+            "EhIKBGRhdGEYAiABKAxCBOJBAQIaNgoERmlsZRIXCgltaW1lX3R5cGUYASAB",
+            "KAlCBOJBAQISFQoHZmlsZV9pZBgCIAEoCUIE4kEBAhokCg5FeGVjdXRhYmxl",
+            "Q29kZRISCgRjb2RlGAIgASgJQgTiQQECGvgBChNDb2RlRXhlY3V0aW9uUmVz",
+            "dWx0EmQKB291dGNvbWUYASABKA4yTS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
+            "ZW5naW5lLnYxLkFzc2lzdGFudENvbnRlbnQuQ29kZUV4ZWN1dGlvblJlc3Vs",
+            "dC5PdXRjb21lQgTiQQECEhQKBm91dHB1dBgCIAEoCUIE4kEBASJlCgdPdXRj",
+            "b21lEhcKE09VVENPTUVfVU5TUEVDSUZJRUQQABIOCgpPVVRDT01FX09LEAES",
+            "EgoOT1VUQ09NRV9GQUlMRUQQAhIdChlPVVRDT01FX0RFQURMSU5FX0VYQ0VF",
+            "REVEEANCBgoEZGF0YSKbDAoYQXNzaXN0YW50R3JvdW5kZWRDb250ZW50EnIK",
+            "F3RleHRfZ3JvdW5kaW5nX21ldGFkYXRhGAMgASgLMk8uZ29vZ2xlLmNsb3Vk",
+            "LmRpc2NvdmVyeWVuZ2luZS52MS5Bc3Npc3RhbnRHcm91bmRlZENvbnRlbnQu",
+            "VGV4dEdyb3VuZGluZ01ldGFkYXRhSAASQgoHY29udGVudBgBIAEoCzIxLmdv",
+            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuQXNzaXN0YW50Q29udGVu",
+            "dBJMChFjaXRhdGlvbl9tZXRhZGF0YRgFIAEoCzIxLmdvb2dsZS5jbG91ZC5k",
+            "aXNjb3ZlcnllbmdpbmUudjEuQ2l0YXRpb25NZXRhZGF0YRrsCQoVVGV4dEdy",
+            "b3VuZGluZ01ldGFkYXRhEmkKCHNlZ21lbnRzGAQgAygLMlcuZ29vZ2xlLmNs",
+            "b3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Bc3Npc3RhbnRHcm91bmRlZENvbnRl",
+            "bnQuVGV4dEdyb3VuZGluZ01ldGFkYXRhLlNlZ21lbnQSdgoPdmlzdWFsX3Nl",
+            "Z21lbnRzGAYgAygLMl0uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
             "MS5Bc3Npc3RhbnRHcm91bmRlZENvbnRlbnQuVGV4dEdyb3VuZGluZ01ldGFk",
-            "YXRhSAASQgoHY29udGVudBgBIAEoCzIxLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
-            "cnllbmdpbmUudjEuQXNzaXN0YW50Q29udGVudBr+BQoVVGV4dEdyb3VuZGlu",
-            "Z01ldGFkYXRhEmkKCHNlZ21lbnRzGAQgAygLMlcuZ29vZ2xlLmNsb3VkLmRp",
-            "c2NvdmVyeWVuZ2luZS52MS5Bc3Npc3RhbnRHcm91bmRlZENvbnRlbnQuVGV4",
-            "dEdyb3VuZGluZ01ldGFkYXRhLlNlZ21lbnQSbQoKcmVmZXJlbmNlcxgCIAMo",
-            "CzJZLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuQXNzaXN0YW50",
-            "R3JvdW5kZWRDb250ZW50LlRleHRHcm91bmRpbmdNZXRhZGF0YS5SZWZlcmVu",
-            "Y2UacwoHU2VnbWVudBITCgtzdGFydF9pbmRleBgBIAEoAxIRCgllbmRfaW5k",
-            "ZXgYAiABKAMSGQoRcmVmZXJlbmNlX2luZGljZXMYBCADKAUSFwoPZ3JvdW5k",
-            "aW5nX3Njb3JlGAUgASgCEgwKBHRleHQYBiABKAkalQMKCVJlZmVyZW5jZRIP",
-            "Cgdjb250ZW50GAEgASgJEoUBChFkb2N1bWVudF9tZXRhZGF0YRgCIAEoCzJq",
-            "Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuQXNzaXN0YW50R3Jv",
-            "dW5kZWRDb250ZW50LlRleHRHcm91bmRpbmdNZXRhZGF0YS5SZWZlcmVuY2Uu",
-            "RG9jdW1lbnRNZXRhZGF0YRruAQoQRG9jdW1lbnRNZXRhZGF0YRJDCghkb2N1",
-            "bWVudBgBIAEoCUIs+kEpCidkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5j",
-            "b20vRG9jdW1lbnRIAIgBARIQCgN1cmkYAiABKAlIAYgBARISCgV0aXRsZRgD",
-            "IAEoCUgCiAEBEhwKD3BhZ2VfaWRlbnRpZmllchgEIAEoCUgDiAEBEhMKBmRv",
-            "bWFpbhgFIAEoCUgEiAEBQgsKCV9kb2N1bWVudEIGCgRfdXJpQggKBl90aXRs",
-            "ZUISChBfcGFnZV9pZGVudGlmaWVyQgkKB19kb21haW5CCgoIbWV0YWRhdGFC",
-            "hAIKI2NvbS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxQhFBc3Np",
-            "c3RBbnN3ZXJQcm90b1ABWk1jbG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVy",
-            "eWVuZ2luZS9hcGl2MS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3Zlcnllbmdp",
-            "bmVwYqICD0RJU0NPVkVSWUVOR0lORaoCH0dvb2dsZS5DbG91ZC5EaXNjb3Zl",
-            "cnlFbmdpbmUuVjHKAh9Hb29nbGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYx",
-            "6gIiR29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWIGcHJvdG8z"));
+            "YXRhLlZpc3VhbFNlZ21lbnQSbQoKcmVmZXJlbmNlcxgCIAMoCzJZLmdvb2ds",
+            "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuQXNzaXN0YW50R3JvdW5kZWRD",
+            "b250ZW50LlRleHRHcm91bmRpbmdNZXRhZGF0YS5SZWZlcmVuY2UacwoHU2Vn",
+            "bWVudBITCgtzdGFydF9pbmRleBgBIAEoAxIRCgllbmRfaW5kZXgYAiABKAMS",
+            "GQoRcmVmZXJlbmNlX2luZGljZXMYBCADKAUSFwoPZ3JvdW5kaW5nX3Njb3Jl",
+            "GAUgASgCEgwKBHRleHQYBiABKAkaPgoNVmlzdWFsU2VnbWVudBIZChFyZWZl",
+            "cmVuY2VfaW5kaWNlcxgBIAMoBRISCgpjb250ZW50X2lkGAIgASgJGssFCglS",
+            "ZWZlcmVuY2USDwoHY29udGVudBgBIAEoCRIUCgxjb2RlX3NuaXBwZXQYBCAB",
+            "KAkShQEKEWRvY3VtZW50X21ldGFkYXRhGAIgASgLMmouZ29vZ2xlLmNsb3Vk",
+            "LmRpc2NvdmVyeWVuZ2luZS52MS5Bc3Npc3RhbnRHcm91bmRlZENvbnRlbnQu",
+            "VGV4dEdyb3VuZGluZ01ldGFkYXRhLlJlZmVyZW5jZS5Eb2N1bWVudE1ldGFk",
+            "YXRhEjUKDmNodW5rX21ldGFkYXRhGAUgASgLMhcuZ29vZ2xlLnByb3RvYnVm",
+            "LlN0cnVjdEIE4kEBAxrXAwoQRG9jdW1lbnRNZXRhZGF0YRKFAQoIbGFuZ3Vh",
+            "Z2UYCCABKA4ycy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkFz",
+            "c2lzdGFudEdyb3VuZGVkQ29udGVudC5UZXh0R3JvdW5kaW5nTWV0YWRhdGEu",
+            "UmVmZXJlbmNlLkRvY3VtZW50TWV0YWRhdGEuTGFuZ3VhZ2USQwoIZG9jdW1l",
+            "bnQYASABKAlCLPpBKQonZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29t",
+            "L0RvY3VtZW50SACIAQESEAoDdXJpGAIgASgJSAGIAQESEgoFdGl0bGUYAyAB",
+            "KAlIAogBARIcCg9wYWdlX2lkZW50aWZpZXIYBCABKAlIA4gBARITCgZkb21h",
+            "aW4YBSABKAlIBIgBARIWCgltaW1lX3R5cGUYByABKAlIBYgBASI5CghMYW5n",
+            "dWFnZRIYChRMQU5HVUFHRV9VTlNQRUNJRklFRBAAEgoKBlBZVEhPThABEgcK",
+            "A1NRTBACQgsKCV9kb2N1bWVudEIGCgRfdXJpQggKBl90aXRsZUISChBfcGFn",
+            "ZV9pZGVudGlmaWVyQgkKB19kb21haW5CDAoKX21pbWVfdHlwZUIKCghtZXRh",
+            "ZGF0YUKEAgojY29tLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFC",
+            "EUFzc2lzdEFuc3dlclByb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vZGlz",
+            "Y292ZXJ5ZW5naW5lL2FwaXYxL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVy",
+            "eWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIfR29vZ2xlLkNsb3VkLkRp",
+            "c2NvdmVyeUVuZ2luZS5WMcoCH0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdp",
+            "bmVcVjHqAiJHb29nbGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.GroundedGenerationServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer), global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Parser, new[]{ "Name", "State", "Replies", "AssistSkippedReasons" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.State), typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.AssistSkippedReason) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.Reply), global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.Reply.Parser, new[]{ "GroundedContent" }, new[]{ "Reply" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer), global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Parser, new[]{ "Name", "State", "ConnectorDisplayNames", "Replies", "AssistSkippedReasons", "CustomerPolicyEnforcementResult" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.State), typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.AssistSkippedReason) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.Reply), global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.Reply.Parser, new[]{ "GroundedContent", "CreateTime" }, new[]{ "Reply" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult), global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Parser, new[]{ "Verdict", "PolicyResults", "ViolationSource" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.Verdict), typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.ViolationSource) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.BannedPhraseEnforcementResult), global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.BannedPhraseEnforcementResult.Parser, new[]{ "BannedPhrases" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.ModelArmorEnforcementResult), global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.ModelArmorEnforcementResult.Parser, new[]{ "ModelArmorViolation", "Error" }, new[]{ "Result" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.PolicyEnforcementResult), global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.PolicyEnforcementResult.Parser, new[]{ "BannedPhraseEnforcementResult", "ModelArmorEnforcementResult" }, new[]{ "EnforcementResult" }, null, null, null)}),
+            null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistantContent), global::Google.Cloud.DiscoveryEngine.V1.AssistantContent.Parser, new[]{ "Text", "InlineData", "File", "ExecutableCode", "CodeExecutionResult", "Role", "Thought" }, new[]{ "Data" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistantContent.Types.Blob), global::Google.Cloud.DiscoveryEngine.V1.AssistantContent.Types.Blob.Parser, new[]{ "MimeType", "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistantContent.Types.File), global::Google.Cloud.DiscoveryEngine.V1.AssistantContent.Types.File.Parser, new[]{ "MimeType", "FileId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistantContent.Types.ExecutableCode), global::Google.Cloud.DiscoveryEngine.V1.AssistantContent.Types.ExecutableCode.Parser, new[]{ "Code" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistantContent.Types.CodeExecutionResult), global::Google.Cloud.DiscoveryEngine.V1.AssistantContent.Types.CodeExecutionResult.Parser, new[]{ "Outcome", "Output" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistantContent.Types.CodeExecutionResult.Types.Outcome) }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent), global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Parser, new[]{ "TextGroundingMetadata", "Content" }, new[]{ "Metadata" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata), global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Parser, new[]{ "Segments", "References" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Segment), global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Segment.Parser, new[]{ "StartIndex", "EndIndex", "ReferenceIndices", "GroundingScore", "Text" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference), global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference.Parser, new[]{ "Content", "DocumentMetadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference.Types.DocumentMetadata), global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference.Types.DocumentMetadata.Parser, new[]{ "Document", "Uri", "Title", "PageIdentifier", "Domain" }, new[]{ "Document", "Uri", "Title", "PageIdentifier", "Domain" }, null, null, null)})})})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent), global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Parser, new[]{ "TextGroundingMetadata", "Content", "CitationMetadata" }, new[]{ "Metadata" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata), global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Parser, new[]{ "Segments", "VisualSegments", "References" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Segment), global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Segment.Parser, new[]{ "StartIndex", "EndIndex", "ReferenceIndices", "GroundingScore", "Text" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.VisualSegment), global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.VisualSegment.Parser, new[]{ "ReferenceIndices", "ContentId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference), global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference.Parser, new[]{ "Content", "CodeSnippet", "DocumentMetadata", "ChunkMetadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference.Types.DocumentMetadata), global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference.Types.DocumentMetadata.Parser, new[]{ "Language", "Document", "Uri", "Title", "PageIdentifier", "Domain", "MimeType" }, new[]{ "Document", "Uri", "Title", "PageIdentifier", "Domain", "MimeType" }, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference.Types.DocumentMetadata.Types.Language) }, null, null)})})})
           }));
     }
     #endregion
@@ -148,8 +202,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public AssistAnswer(AssistAnswer other) : this() {
       name_ = other.name_;
       state_ = other.state_;
+      connectorDisplayNames_ = other.connectorDisplayNames_.Clone();
       replies_ = other.replies_.Clone();
       assistSkippedReasons_ = other.assistSkippedReasons_.Clone();
+      customerPolicyEnforcementResult_ = other.customerPolicyEnforcementResult_ != null ? other.customerPolicyEnforcementResult_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -163,7 +219,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Immutable. Resource name of the `AssistAnswer`.
+    /// Immutable. Identifier. Resource name of the `AssistAnswer`.
     /// Format:
     /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/sessions/{session}/assistAnswers/{assist_answer}`
     ///
@@ -194,6 +250,25 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "connector_display_names" field.</summary>
+    public const int ConnectorDisplayNamesFieldNumber = 14;
+    private static readonly pbc::MapField<string, string>.Codec _map_connectorDisplayNames_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 114);
+    private readonly pbc::MapField<string, string> connectorDisplayNames_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Output only. Maps an internal connector agent name (the machine identifier
+    /// embedded in tool names, e.g. `custom_mcp_&lt;fingerprint>_agent`) to the
+    /// connector's human-readable display name. Populated at serving time for
+    /// custom MCP / agent gateway connectors so user-facing surfaces (e.g. the
+    /// tool-call chip) can show the connector name instead of its internal
+    /// identifier. Empty when there are no such connectors.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> ConnectorDisplayNames {
+      get { return connectorDisplayNames_; }
+    }
+
     /// <summary>Field number for the "replies" field.</summary>
     public const int RepliesFieldNumber = 3;
     private static readonly pb::FieldCodec<global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.Reply> _repeated_replies_codec
@@ -222,6 +297,23 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       get { return assistSkippedReasons_; }
     }
 
+    /// <summary>Field number for the "customer_policy_enforcement_result" field.</summary>
+    public const int CustomerPolicyEnforcementResultFieldNumber = 8;
+    private global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult customerPolicyEnforcementResult_;
+    /// <summary>
+    /// Optional. The field contains information about the various policy checks'
+    /// results like the banned phrases or the Model Armor checks. This field is
+    /// populated only if the assist call was skipped due to a policy violation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult CustomerPolicyEnforcementResult {
+      get { return customerPolicyEnforcementResult_; }
+      set {
+        customerPolicyEnforcementResult_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -239,8 +331,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (Name != other.Name) return false;
       if (State != other.State) return false;
+      if (!ConnectorDisplayNames.Equals(other.ConnectorDisplayNames)) return false;
       if(!replies_.Equals(other.replies_)) return false;
       if(!assistSkippedReasons_.Equals(other.assistSkippedReasons_)) return false;
+      if (!object.Equals(CustomerPolicyEnforcementResult, other.CustomerPolicyEnforcementResult)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -250,8 +344,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (State != global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.State.Unspecified) hash ^= State.GetHashCode();
+      hash ^= ConnectorDisplayNames.GetHashCode();
       hash ^= replies_.GetHashCode();
       hash ^= assistSkippedReasons_.GetHashCode();
+      if (customerPolicyEnforcementResult_ != null) hash ^= CustomerPolicyEnforcementResult.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -280,6 +376,11 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       replies_.WriteTo(output, _repeated_replies_codec);
       assistSkippedReasons_.WriteTo(output, _repeated_assistSkippedReasons_codec);
+      if (customerPolicyEnforcementResult_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(CustomerPolicyEnforcementResult);
+      }
+      connectorDisplayNames_.WriteTo(output, _map_connectorDisplayNames_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -300,6 +401,11 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       replies_.WriteTo(ref output, _repeated_replies_codec);
       assistSkippedReasons_.WriteTo(ref output, _repeated_assistSkippedReasons_codec);
+      if (customerPolicyEnforcementResult_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(CustomerPolicyEnforcementResult);
+      }
+      connectorDisplayNames_.WriteTo(ref output, _map_connectorDisplayNames_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -316,8 +422,12 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (State != global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
+      size += connectorDisplayNames_.CalculateSize(_map_connectorDisplayNames_codec);
       size += replies_.CalculateSize(_repeated_replies_codec);
       size += assistSkippedReasons_.CalculateSize(_repeated_assistSkippedReasons_codec);
+      if (customerPolicyEnforcementResult_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomerPolicyEnforcementResult);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -336,8 +446,15 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (other.State != global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.State.Unspecified) {
         State = other.State;
       }
+      connectorDisplayNames_.MergeFrom(other.connectorDisplayNames_);
       replies_.Add(other.replies_);
       assistSkippedReasons_.Add(other.assistSkippedReasons_);
+      if (other.customerPolicyEnforcementResult_ != null) {
+        if (customerPolicyEnforcementResult_ == null) {
+          CustomerPolicyEnforcementResult = new global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult();
+        }
+        CustomerPolicyEnforcementResult.MergeFrom(other.CustomerPolicyEnforcementResult);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -372,6 +489,17 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           case 42:
           case 40: {
             assistSkippedReasons_.AddEntriesFrom(input, _repeated_assistSkippedReasons_codec);
+            break;
+          }
+          case 66: {
+            if (customerPolicyEnforcementResult_ == null) {
+              CustomerPolicyEnforcementResult = new global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult();
+            }
+            input.ReadMessage(CustomerPolicyEnforcementResult);
+            break;
+          }
+          case 114: {
+            connectorDisplayNames_.AddEntriesFrom(input, _map_connectorDisplayNames_codec);
             break;
           }
         }
@@ -410,6 +538,17 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             assistSkippedReasons_.AddEntriesFrom(ref input, _repeated_assistSkippedReasons_codec);
             break;
           }
+          case 66: {
+            if (customerPolicyEnforcementResult_ == null) {
+              CustomerPolicyEnforcementResult = new global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult();
+            }
+            input.ReadMessage(CustomerPolicyEnforcementResult);
+            break;
+          }
+          case 114: {
+            connectorDisplayNames_.AddEntriesFrom(ref input, _map_connectorDisplayNames_codec);
+            break;
+          }
         }
       }
     }
@@ -444,6 +583,11 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         /// Assist operation has been skipped.
         /// </summary>
         [pbr::OriginalName("SKIPPED")] Skipped = 4,
+        /// <summary>
+        /// Assist operation has been cancelled (e.g. client closed the stream).
+        /// May contain a partial response.
+        /// </summary>
+        [pbr::OriginalName("CANCELLED")] Cancelled = 5,
       }
 
       /// <summary>
@@ -505,6 +649,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Reply(Reply other) : this() {
+          createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
           switch (other.ReplyCase) {
             case ReplyOneofCase.GroundedContent:
               GroundedContent = other.GroundedContent.Clone();
@@ -532,6 +677,21 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           set {
             reply_ = value;
             replyCase_ = value == null ? ReplyOneofCase.None : ReplyOneofCase.GroundedContent;
+          }
+        }
+
+        /// <summary>Field number for the "create_time" field.</summary>
+        public const int CreateTimeFieldNumber = 14;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+        /// <summary>
+        /// The time when the reply was created.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+          get { return createTime_; }
+          set {
+            createTime_ = value;
           }
         }
 
@@ -571,6 +731,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             return true;
           }
           if (!object.Equals(GroundedContent, other.GroundedContent)) return false;
+          if (!object.Equals(CreateTime, other.CreateTime)) return false;
           if (ReplyCase != other.ReplyCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -580,6 +741,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (replyCase_ == ReplyOneofCase.GroundedContent) hash ^= GroundedContent.GetHashCode();
+          if (createTime_ != null) hash ^= CreateTime.GetHashCode();
           hash ^= (int) replyCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -603,6 +765,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteRawTag(10);
             output.WriteMessage(GroundedContent);
           }
+          if (createTime_ != null) {
+            output.WriteRawTag(114);
+            output.WriteMessage(CreateTime);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -617,6 +783,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteRawTag(10);
             output.WriteMessage(GroundedContent);
           }
+          if (createTime_ != null) {
+            output.WriteRawTag(114);
+            output.WriteMessage(CreateTime);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -630,6 +800,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           if (replyCase_ == ReplyOneofCase.GroundedContent) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(GroundedContent);
           }
+          if (createTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -641,6 +814,12 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         public void MergeFrom(Reply other) {
           if (other == null) {
             return;
+          }
+          if (other.createTime_ != null) {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            CreateTime.MergeFrom(other.CreateTime);
           }
           switch (other.ReplyCase) {
             case ReplyOneofCase.GroundedContent:
@@ -679,6 +858,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 GroundedContent = subBuilder;
                 break;
               }
+              case 114: {
+                if (createTime_ == null) {
+                  CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(CreateTime);
+                break;
+              }
             }
           }
         #endif
@@ -707,10 +893,1145 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 GroundedContent = subBuilder;
                 break;
               }
+              case 114: {
+                if (createTime_ == null) {
+                  CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(CreateTime);
+                break;
+              }
             }
           }
         }
         #endif
+
+      }
+
+      /// <summary>
+      /// Customer policy enforcement results. Contains the results of the various
+      /// policy checks, like the banned phrases or the Model Armor checks.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class CustomerPolicyEnforcementResult : pb::IMessage<CustomerPolicyEnforcementResult>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<CustomerPolicyEnforcementResult> _parser = new pb::MessageParser<CustomerPolicyEnforcementResult>(() => new CustomerPolicyEnforcementResult());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<CustomerPolicyEnforcementResult> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CustomerPolicyEnforcementResult() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CustomerPolicyEnforcementResult(CustomerPolicyEnforcementResult other) : this() {
+          verdict_ = other.verdict_;
+          policyResults_ = other.policyResults_.Clone();
+          violationSource_ = other.violationSource_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CustomerPolicyEnforcementResult Clone() {
+          return new CustomerPolicyEnforcementResult(this);
+        }
+
+        /// <summary>Field number for the "verdict" field.</summary>
+        public const int VerdictFieldNumber = 1;
+        private global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.Verdict verdict_ = global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.Verdict.Unspecified;
+        /// <summary>
+        /// Final verdict of the customer policy enforcement. If only one policy
+        /// blocked the processing, the verdict is BLOCK.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.Verdict Verdict {
+          get { return verdict_; }
+          set {
+            verdict_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "policy_results" field.</summary>
+        public const int PolicyResultsFieldNumber = 3;
+        private static readonly pb::FieldCodec<global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.PolicyEnforcementResult> _repeated_policyResults_codec
+            = pb::FieldCodec.ForMessage(26, global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.PolicyEnforcementResult.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.PolicyEnforcementResult> policyResults_ = new pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.PolicyEnforcementResult>();
+        /// <summary>
+        /// Customer policy enforcement results.
+        /// Populated only if the assist call was skipped due to a policy
+        /// violation. It contains results from those filters that blocked the
+        /// processing of the query.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.PolicyEnforcementResult> PolicyResults {
+          get { return policyResults_; }
+        }
+
+        /// <summary>Field number for the "violation_source" field.</summary>
+        public const int ViolationSourceFieldNumber = 4;
+        private global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.ViolationSource violationSource_ = global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.ViolationSource.Unspecified;
+        /// <summary>
+        /// Output only. The source of the violation.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.ViolationSource ViolationSource {
+          get { return violationSource_; }
+          set {
+            violationSource_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as CustomerPolicyEnforcementResult);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(CustomerPolicyEnforcementResult other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Verdict != other.Verdict) return false;
+          if(!policyResults_.Equals(other.policyResults_)) return false;
+          if (ViolationSource != other.ViolationSource) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Verdict != global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.Verdict.Unspecified) hash ^= Verdict.GetHashCode();
+          hash ^= policyResults_.GetHashCode();
+          if (ViolationSource != global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.ViolationSource.Unspecified) hash ^= ViolationSource.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Verdict != global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.Verdict.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Verdict);
+          }
+          policyResults_.WriteTo(output, _repeated_policyResults_codec);
+          if (ViolationSource != global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.ViolationSource.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) ViolationSource);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Verdict != global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.Verdict.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Verdict);
+          }
+          policyResults_.WriteTo(ref output, _repeated_policyResults_codec);
+          if (ViolationSource != global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.ViolationSource.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) ViolationSource);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Verdict != global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.Verdict.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Verdict);
+          }
+          size += policyResults_.CalculateSize(_repeated_policyResults_codec);
+          if (ViolationSource != global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.ViolationSource.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ViolationSource);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(CustomerPolicyEnforcementResult other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Verdict != global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.Verdict.Unspecified) {
+            Verdict = other.Verdict;
+          }
+          policyResults_.Add(other.policyResults_);
+          if (other.ViolationSource != global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.ViolationSource.Unspecified) {
+            ViolationSource = other.ViolationSource;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Verdict = (global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.Verdict) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                policyResults_.AddEntriesFrom(input, _repeated_policyResults_codec);
+                break;
+              }
+              case 32: {
+                ViolationSource = (global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.ViolationSource) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Verdict = (global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.Verdict) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                policyResults_.AddEntriesFrom(ref input, _repeated_policyResults_codec);
+                break;
+              }
+              case 32: {
+                ViolationSource = (global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.ViolationSource) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the CustomerPolicyEnforcementResult message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The verdict of the customer policy enforcement.
+          /// </summary>
+          public enum Verdict {
+            /// <summary>
+            /// Unknown value.
+            /// </summary>
+            [pbr::OriginalName("UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// There was no policy violation.
+            /// </summary>
+            [pbr::OriginalName("ALLOW")] Allow = 1,
+            /// <summary>
+            /// Processing was blocked by the customer policy.
+            /// </summary>
+            [pbr::OriginalName("BLOCK")] Block = 2,
+          }
+
+          /// <summary>
+          /// If the assist call was skipped due to a policy violation, this contains
+          /// the source of the violation.
+          /// </summary>
+          public enum ViolationSource {
+            /// <summary>
+            /// Unknown value.
+            /// </summary>
+            [pbr::OriginalName("VIOLATION_SOURCE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Violation found in the system response.
+            /// </summary>
+            [pbr::OriginalName("SYSTEM")] System = 1,
+            /// <summary>
+            /// Violation found in the user prompt.
+            /// </summary>
+            [pbr::OriginalName("PROMPT")] Prompt = 2,
+            /// <summary>
+            /// Violation found in the user attachment.
+            /// </summary>
+            [pbr::OriginalName("ATTACHMENT")] Attachment = 3,
+          }
+
+          /// <summary>
+          /// Customer policy enforcement result for the banned phrase policy.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class BannedPhraseEnforcementResult : pb::IMessage<BannedPhraseEnforcementResult>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<BannedPhraseEnforcementResult> _parser = new pb::MessageParser<BannedPhraseEnforcementResult>(() => new BannedPhraseEnforcementResult());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<BannedPhraseEnforcementResult> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public BannedPhraseEnforcementResult() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public BannedPhraseEnforcementResult(BannedPhraseEnforcementResult other) : this() {
+              bannedPhrases_ = other.bannedPhrases_.Clone();
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public BannedPhraseEnforcementResult Clone() {
+              return new BannedPhraseEnforcementResult(this);
+            }
+
+            /// <summary>Field number for the "banned_phrases" field.</summary>
+            public const int BannedPhrasesFieldNumber = 1;
+            private static readonly pb::FieldCodec<string> _repeated_bannedPhrases_codec
+                = pb::FieldCodec.ForString(10);
+            private readonly pbc::RepeatedField<string> bannedPhrases_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// The banned phrases that were found in the query or the answer.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> BannedPhrases {
+              get { return bannedPhrases_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as BannedPhraseEnforcementResult);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(BannedPhraseEnforcementResult other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if(!bannedPhrases_.Equals(other.bannedPhrases_)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              hash ^= bannedPhrases_.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              bannedPhrases_.WriteTo(output, _repeated_bannedPhrases_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              bannedPhrases_.WriteTo(ref output, _repeated_bannedPhrases_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              size += bannedPhrases_.CalculateSize(_repeated_bannedPhrases_codec);
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(BannedPhraseEnforcementResult other) {
+              if (other == null) {
+                return;
+              }
+              bannedPhrases_.Add(other.bannedPhrases_);
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    bannedPhrases_.AddEntriesFrom(input, _repeated_bannedPhrases_codec);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    bannedPhrases_.AddEntriesFrom(ref input, _repeated_bannedPhrases_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Customer policy enforcement result for the Model Armor policy.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class ModelArmorEnforcementResult : pb::IMessage<ModelArmorEnforcementResult>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<ModelArmorEnforcementResult> _parser = new pb::MessageParser<ModelArmorEnforcementResult>(() => new ModelArmorEnforcementResult());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<ModelArmorEnforcementResult> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ModelArmorEnforcementResult() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ModelArmorEnforcementResult(ModelArmorEnforcementResult other) : this() {
+              switch (other.ResultCase) {
+                case ResultOneofCase.ModelArmorViolation:
+                  ModelArmorViolation = other.ModelArmorViolation;
+                  break;
+                case ResultOneofCase.Error:
+                  Error = other.Error.Clone();
+                  break;
+              }
+
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ModelArmorEnforcementResult Clone() {
+              return new ModelArmorEnforcementResult(this);
+            }
+
+            /// <summary>Field number for the "model_armor_violation" field.</summary>
+            public const int ModelArmorViolationFieldNumber = 1;
+            /// <summary>
+            /// The Model Armor violation that was found.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string ModelArmorViolation {
+              get { return HasModelArmorViolation ? (string) result_ : ""; }
+              set {
+                result_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                resultCase_ = ResultOneofCase.ModelArmorViolation;
+              }
+            }
+            /// <summary>Gets whether the "model_armor_violation" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasModelArmorViolation {
+              get { return resultCase_ == ResultOneofCase.ModelArmorViolation; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "model_armor_violation" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearModelArmorViolation() {
+              if (HasModelArmorViolation) {
+                ClearResult();
+              }
+            }
+
+            /// <summary>Field number for the "error" field.</summary>
+            public const int ErrorFieldNumber = 2;
+            /// <summary>
+            /// The error returned by Model Armor if the policy enforcement failed
+            /// for some reason.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Rpc.Status Error {
+              get { return resultCase_ == ResultOneofCase.Error ? (global::Google.Rpc.Status) result_ : null; }
+              set {
+                result_ = value;
+                resultCase_ = value == null ? ResultOneofCase.None : ResultOneofCase.Error;
+              }
+            }
+
+            private object result_;
+            /// <summary>Enum of possible cases for the "result" oneof.</summary>
+            public enum ResultOneofCase {
+              None = 0,
+              ModelArmorViolation = 1,
+              Error = 2,
+            }
+            private ResultOneofCase resultCase_ = ResultOneofCase.None;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ResultOneofCase ResultCase {
+              get { return resultCase_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearResult() {
+              resultCase_ = ResultOneofCase.None;
+              result_ = null;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as ModelArmorEnforcementResult);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(ModelArmorEnforcementResult other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (ModelArmorViolation != other.ModelArmorViolation) return false;
+              if (!object.Equals(Error, other.Error)) return false;
+              if (ResultCase != other.ResultCase) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (HasModelArmorViolation) hash ^= ModelArmorViolation.GetHashCode();
+              if (resultCase_ == ResultOneofCase.Error) hash ^= Error.GetHashCode();
+              hash ^= (int) resultCase_;
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (HasModelArmorViolation) {
+                output.WriteRawTag(10);
+                output.WriteString(ModelArmorViolation);
+              }
+              if (resultCase_ == ResultOneofCase.Error) {
+                output.WriteRawTag(18);
+                output.WriteMessage(Error);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (HasModelArmorViolation) {
+                output.WriteRawTag(10);
+                output.WriteString(ModelArmorViolation);
+              }
+              if (resultCase_ == ResultOneofCase.Error) {
+                output.WriteRawTag(18);
+                output.WriteMessage(Error);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (HasModelArmorViolation) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelArmorViolation);
+              }
+              if (resultCase_ == ResultOneofCase.Error) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Error);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(ModelArmorEnforcementResult other) {
+              if (other == null) {
+                return;
+              }
+              switch (other.ResultCase) {
+                case ResultOneofCase.ModelArmorViolation:
+                  ModelArmorViolation = other.ModelArmorViolation;
+                  break;
+                case ResultOneofCase.Error:
+                  if (Error == null) {
+                    Error = new global::Google.Rpc.Status();
+                  }
+                  Error.MergeFrom(other.Error);
+                  break;
+              }
+
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    ModelArmorViolation = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    global::Google.Rpc.Status subBuilder = new global::Google.Rpc.Status();
+                    if (resultCase_ == ResultOneofCase.Error) {
+                      subBuilder.MergeFrom(Error);
+                    }
+                    input.ReadMessage(subBuilder);
+                    Error = subBuilder;
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    ModelArmorViolation = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    global::Google.Rpc.Status subBuilder = new global::Google.Rpc.Status();
+                    if (resultCase_ == ResultOneofCase.Error) {
+                      subBuilder.MergeFrom(Error);
+                    }
+                    input.ReadMessage(subBuilder);
+                    Error = subBuilder;
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Customer policy enforcement result for a single policy type.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class PolicyEnforcementResult : pb::IMessage<PolicyEnforcementResult>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<PolicyEnforcementResult> _parser = new pb::MessageParser<PolicyEnforcementResult>(() => new PolicyEnforcementResult());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<PolicyEnforcementResult> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Descriptor.NestedTypes[2]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public PolicyEnforcementResult() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public PolicyEnforcementResult(PolicyEnforcementResult other) : this() {
+              switch (other.EnforcementResultCase) {
+                case EnforcementResultOneofCase.BannedPhraseEnforcementResult:
+                  BannedPhraseEnforcementResult = other.BannedPhraseEnforcementResult.Clone();
+                  break;
+                case EnforcementResultOneofCase.ModelArmorEnforcementResult:
+                  ModelArmorEnforcementResult = other.ModelArmorEnforcementResult.Clone();
+                  break;
+              }
+
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public PolicyEnforcementResult Clone() {
+              return new PolicyEnforcementResult(this);
+            }
+
+            /// <summary>Field number for the "banned_phrase_enforcement_result" field.</summary>
+            public const int BannedPhraseEnforcementResultFieldNumber = 3;
+            /// <summary>
+            /// The policy enforcement result for the banned phrase policy.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.BannedPhraseEnforcementResult BannedPhraseEnforcementResult {
+              get { return enforcementResultCase_ == EnforcementResultOneofCase.BannedPhraseEnforcementResult ? (global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.BannedPhraseEnforcementResult) enforcementResult_ : null; }
+              set {
+                enforcementResult_ = value;
+                enforcementResultCase_ = value == null ? EnforcementResultOneofCase.None : EnforcementResultOneofCase.BannedPhraseEnforcementResult;
+              }
+            }
+
+            /// <summary>Field number for the "model_armor_enforcement_result" field.</summary>
+            public const int ModelArmorEnforcementResultFieldNumber = 4;
+            /// <summary>
+            /// The policy enforcement result for the Model Armor policy.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.ModelArmorEnforcementResult ModelArmorEnforcementResult {
+              get { return enforcementResultCase_ == EnforcementResultOneofCase.ModelArmorEnforcementResult ? (global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.ModelArmorEnforcementResult) enforcementResult_ : null; }
+              set {
+                enforcementResult_ = value;
+                enforcementResultCase_ = value == null ? EnforcementResultOneofCase.None : EnforcementResultOneofCase.ModelArmorEnforcementResult;
+              }
+            }
+
+            private object enforcementResult_;
+            /// <summary>Enum of possible cases for the "enforcement_result" oneof.</summary>
+            public enum EnforcementResultOneofCase {
+              None = 0,
+              BannedPhraseEnforcementResult = 3,
+              ModelArmorEnforcementResult = 4,
+            }
+            private EnforcementResultOneofCase enforcementResultCase_ = EnforcementResultOneofCase.None;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public EnforcementResultOneofCase EnforcementResultCase {
+              get { return enforcementResultCase_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearEnforcementResult() {
+              enforcementResultCase_ = EnforcementResultOneofCase.None;
+              enforcementResult_ = null;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as PolicyEnforcementResult);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(PolicyEnforcementResult other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!object.Equals(BannedPhraseEnforcementResult, other.BannedPhraseEnforcementResult)) return false;
+              if (!object.Equals(ModelArmorEnforcementResult, other.ModelArmorEnforcementResult)) return false;
+              if (EnforcementResultCase != other.EnforcementResultCase) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (enforcementResultCase_ == EnforcementResultOneofCase.BannedPhraseEnforcementResult) hash ^= BannedPhraseEnforcementResult.GetHashCode();
+              if (enforcementResultCase_ == EnforcementResultOneofCase.ModelArmorEnforcementResult) hash ^= ModelArmorEnforcementResult.GetHashCode();
+              hash ^= (int) enforcementResultCase_;
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (enforcementResultCase_ == EnforcementResultOneofCase.BannedPhraseEnforcementResult) {
+                output.WriteRawTag(26);
+                output.WriteMessage(BannedPhraseEnforcementResult);
+              }
+              if (enforcementResultCase_ == EnforcementResultOneofCase.ModelArmorEnforcementResult) {
+                output.WriteRawTag(34);
+                output.WriteMessage(ModelArmorEnforcementResult);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (enforcementResultCase_ == EnforcementResultOneofCase.BannedPhraseEnforcementResult) {
+                output.WriteRawTag(26);
+                output.WriteMessage(BannedPhraseEnforcementResult);
+              }
+              if (enforcementResultCase_ == EnforcementResultOneofCase.ModelArmorEnforcementResult) {
+                output.WriteRawTag(34);
+                output.WriteMessage(ModelArmorEnforcementResult);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (enforcementResultCase_ == EnforcementResultOneofCase.BannedPhraseEnforcementResult) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(BannedPhraseEnforcementResult);
+              }
+              if (enforcementResultCase_ == EnforcementResultOneofCase.ModelArmorEnforcementResult) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModelArmorEnforcementResult);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(PolicyEnforcementResult other) {
+              if (other == null) {
+                return;
+              }
+              switch (other.EnforcementResultCase) {
+                case EnforcementResultOneofCase.BannedPhraseEnforcementResult:
+                  if (BannedPhraseEnforcementResult == null) {
+                    BannedPhraseEnforcementResult = new global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.BannedPhraseEnforcementResult();
+                  }
+                  BannedPhraseEnforcementResult.MergeFrom(other.BannedPhraseEnforcementResult);
+                  break;
+                case EnforcementResultOneofCase.ModelArmorEnforcementResult:
+                  if (ModelArmorEnforcementResult == null) {
+                    ModelArmorEnforcementResult = new global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.ModelArmorEnforcementResult();
+                  }
+                  ModelArmorEnforcementResult.MergeFrom(other.ModelArmorEnforcementResult);
+                  break;
+              }
+
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 26: {
+                    global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.BannedPhraseEnforcementResult subBuilder = new global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.BannedPhraseEnforcementResult();
+                    if (enforcementResultCase_ == EnforcementResultOneofCase.BannedPhraseEnforcementResult) {
+                      subBuilder.MergeFrom(BannedPhraseEnforcementResult);
+                    }
+                    input.ReadMessage(subBuilder);
+                    BannedPhraseEnforcementResult = subBuilder;
+                    break;
+                  }
+                  case 34: {
+                    global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.ModelArmorEnforcementResult subBuilder = new global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.ModelArmorEnforcementResult();
+                    if (enforcementResultCase_ == EnforcementResultOneofCase.ModelArmorEnforcementResult) {
+                      subBuilder.MergeFrom(ModelArmorEnforcementResult);
+                    }
+                    input.ReadMessage(subBuilder);
+                    ModelArmorEnforcementResult = subBuilder;
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 26: {
+                    global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.BannedPhraseEnforcementResult subBuilder = new global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.BannedPhraseEnforcementResult();
+                    if (enforcementResultCase_ == EnforcementResultOneofCase.BannedPhraseEnforcementResult) {
+                      subBuilder.MergeFrom(BannedPhraseEnforcementResult);
+                    }
+                    input.ReadMessage(subBuilder);
+                    BannedPhraseEnforcementResult = subBuilder;
+                    break;
+                  }
+                  case 34: {
+                    global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.ModelArmorEnforcementResult subBuilder = new global::Google.Cloud.DiscoveryEngine.V1.AssistAnswer.Types.CustomerPolicyEnforcementResult.Types.ModelArmorEnforcementResult();
+                    if (enforcementResultCase_ == EnforcementResultOneofCase.ModelArmorEnforcementResult) {
+                      subBuilder.MergeFrom(ModelArmorEnforcementResult);
+                    }
+                    input.ReadMessage(subBuilder);
+                    ModelArmorEnforcementResult = subBuilder;
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
 
       }
 
@@ -2290,6 +3611,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AssistantGroundedContent(AssistantGroundedContent other) : this() {
       content_ = other.content_ != null ? other.content_.Clone() : null;
+      citationMetadata_ = other.citationMetadata_ != null ? other.citationMetadata_.Clone() : null;
       switch (other.MetadataCase) {
         case MetadataOneofCase.TextGroundingMetadata:
           TextGroundingMetadata = other.TextGroundingMetadata.Clone();
@@ -2335,6 +3657,22 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "citation_metadata" field.</summary>
+    public const int CitationMetadataFieldNumber = 5;
+    private global::Google.Cloud.DiscoveryEngine.V1.CitationMetadata citationMetadata_;
+    /// <summary>
+    /// Source attribution of the generated content. See also
+    /// https://cloud.google.com/vertex-ai/generative-ai/docs/learn/overview#citation_check
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1.CitationMetadata CitationMetadata {
+      get { return citationMetadata_; }
+      set {
+        citationMetadata_ = value;
+      }
+    }
+
     private object metadata_;
     /// <summary>Enum of possible cases for the "metadata" oneof.</summary>
     public enum MetadataOneofCase {
@@ -2372,6 +3710,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (!object.Equals(TextGroundingMetadata, other.TextGroundingMetadata)) return false;
       if (!object.Equals(Content, other.Content)) return false;
+      if (!object.Equals(CitationMetadata, other.CitationMetadata)) return false;
       if (MetadataCase != other.MetadataCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2382,6 +3721,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       int hash = 1;
       if (metadataCase_ == MetadataOneofCase.TextGroundingMetadata) hash ^= TextGroundingMetadata.GetHashCode();
       if (content_ != null) hash ^= Content.GetHashCode();
+      if (citationMetadata_ != null) hash ^= CitationMetadata.GetHashCode();
       hash ^= (int) metadataCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2409,6 +3749,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(TextGroundingMetadata);
       }
+      if (citationMetadata_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CitationMetadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2427,6 +3771,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(TextGroundingMetadata);
       }
+      if (citationMetadata_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CitationMetadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2442,6 +3790,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (content_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Content);
+      }
+      if (citationMetadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CitationMetadata);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2460,6 +3811,12 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           Content = new global::Google.Cloud.DiscoveryEngine.V1.AssistantContent();
         }
         Content.MergeFrom(other.Content);
+      }
+      if (other.citationMetadata_ != null) {
+        if (citationMetadata_ == null) {
+          CitationMetadata = new global::Google.Cloud.DiscoveryEngine.V1.CitationMetadata();
+        }
+        CitationMetadata.MergeFrom(other.CitationMetadata);
       }
       switch (other.MetadataCase) {
         case MetadataOneofCase.TextGroundingMetadata:
@@ -2505,6 +3862,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             TextGroundingMetadata = subBuilder;
             break;
           }
+          case 42: {
+            if (citationMetadata_ == null) {
+              CitationMetadata = new global::Google.Cloud.DiscoveryEngine.V1.CitationMetadata();
+            }
+            input.ReadMessage(CitationMetadata);
+            break;
+          }
         }
       }
     #endif
@@ -2538,6 +3902,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             }
             input.ReadMessage(subBuilder);
             TextGroundingMetadata = subBuilder;
+            break;
+          }
+          case 42: {
+            if (citationMetadata_ == null) {
+              CitationMetadata = new global::Google.Cloud.DiscoveryEngine.V1.CitationMetadata();
+            }
+            input.ReadMessage(CitationMetadata);
             break;
           }
         }
@@ -2589,6 +3960,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TextGroundingMetadata(TextGroundingMetadata other) : this() {
           segments_ = other.segments_.Clone();
+          visualSegments_ = other.visualSegments_.Clone();
           references_ = other.references_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
@@ -2611,6 +3983,20 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Segment> Segments {
           get { return segments_; }
+        }
+
+        /// <summary>Field number for the "visual_segments" field.</summary>
+        public const int VisualSegmentsFieldNumber = 6;
+        private static readonly pb::FieldCodec<global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.VisualSegment> _repeated_visualSegments_codec
+            = pb::FieldCodec.ForMessage(50, global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.VisualSegment.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.VisualSegment> visualSegments_ = new pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.VisualSegment>();
+        /// <summary>
+        /// Grounding information for parts of the visual content.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.VisualSegment> VisualSegments {
+          get { return visualSegments_; }
         }
 
         /// <summary>Field number for the "references" field.</summary>
@@ -2643,6 +4029,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             return true;
           }
           if(!segments_.Equals(other.segments_)) return false;
+          if(!visualSegments_.Equals(other.visualSegments_)) return false;
           if(!references_.Equals(other.references_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -2652,6 +4039,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         public override int GetHashCode() {
           int hash = 1;
           hash ^= segments_.GetHashCode();
+          hash ^= visualSegments_.GetHashCode();
           hash ^= references_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -2673,6 +4061,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         #else
           references_.WriteTo(output, _repeated_references_codec);
           segments_.WriteTo(output, _repeated_segments_codec);
+          visualSegments_.WriteTo(output, _repeated_visualSegments_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -2685,6 +4074,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           references_.WriteTo(ref output, _repeated_references_codec);
           segments_.WriteTo(ref output, _repeated_segments_codec);
+          visualSegments_.WriteTo(ref output, _repeated_visualSegments_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -2696,6 +4086,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         public int CalculateSize() {
           int size = 0;
           size += segments_.CalculateSize(_repeated_segments_codec);
+          size += visualSegments_.CalculateSize(_repeated_visualSegments_codec);
           size += references_.CalculateSize(_repeated_references_codec);
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -2710,6 +4101,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             return;
           }
           segments_.Add(other.segments_);
+          visualSegments_.Add(other.visualSegments_);
           references_.Add(other.references_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -2738,6 +4130,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 segments_.AddEntriesFrom(input, _repeated_segments_codec);
                 break;
               }
+              case 50: {
+                visualSegments_.AddEntriesFrom(input, _repeated_visualSegments_codec);
+                break;
+              }
             }
           }
         #endif
@@ -2763,6 +4159,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               }
               case 34: {
                 segments_.AddEntriesFrom(ref input, _repeated_segments_codec);
+                break;
+              }
+              case 50: {
+                visualSegments_.AddEntriesFrom(ref input, _repeated_visualSegments_codec);
                 break;
               }
             }
@@ -3133,6 +4533,243 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
 
           /// <summary>
+          /// Grounding information for a visual segment.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class VisualSegment : pb::IMessage<VisualSegment>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<VisualSegment> _parser = new pb::MessageParser<VisualSegment>(() => new VisualSegment());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<VisualSegment> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public VisualSegment() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public VisualSegment(VisualSegment other) : this() {
+              referenceIndices_ = other.referenceIndices_.Clone();
+              contentId_ = other.contentId_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public VisualSegment Clone() {
+              return new VisualSegment(this);
+            }
+
+            /// <summary>Field number for the "reference_indices" field.</summary>
+            public const int ReferenceIndicesFieldNumber = 1;
+            private static readonly pb::FieldCodec<int> _repeated_referenceIndices_codec
+                = pb::FieldCodec.ForInt32(10);
+            private readonly pbc::RepeatedField<int> referenceIndices_ = new pbc::RepeatedField<int>();
+            /// <summary>
+            /// References for the visual segment.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<int> ReferenceIndices {
+              get { return referenceIndices_; }
+            }
+
+            /// <summary>Field number for the "content_id" field.</summary>
+            public const int ContentIdFieldNumber = 2;
+            private string contentId_ = "";
+            /// <summary>
+            /// The content id of the visual segment. In order to display the citation
+            /// of the visual element, this content_id needs to match with the
+            /// `grounded_content.content_metadata.content_id` field.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string ContentId {
+              get { return contentId_; }
+              set {
+                contentId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as VisualSegment);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(VisualSegment other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if(!referenceIndices_.Equals(other.referenceIndices_)) return false;
+              if (ContentId != other.ContentId) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              hash ^= referenceIndices_.GetHashCode();
+              if (ContentId.Length != 0) hash ^= ContentId.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              referenceIndices_.WriteTo(output, _repeated_referenceIndices_codec);
+              if (ContentId.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(ContentId);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              referenceIndices_.WriteTo(ref output, _repeated_referenceIndices_codec);
+              if (ContentId.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(ContentId);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              size += referenceIndices_.CalculateSize(_repeated_referenceIndices_codec);
+              if (ContentId.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(ContentId);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(VisualSegment other) {
+              if (other == null) {
+                return;
+              }
+              referenceIndices_.Add(other.referenceIndices_);
+              if (other.ContentId.Length != 0) {
+                ContentId = other.ContentId;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10:
+                  case 8: {
+                    referenceIndices_.AddEntriesFrom(input, _repeated_referenceIndices_codec);
+                    break;
+                  }
+                  case 18: {
+                    ContentId = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10:
+                  case 8: {
+                    referenceIndices_.AddEntriesFrom(ref input, _repeated_referenceIndices_codec);
+                    break;
+                  }
+                  case 18: {
+                    ContentId = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
           /// Referenced content and related document metadata.
           /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -3150,7 +4787,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Descriptor.NestedTypes[1]; }
+              get { return global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Descriptor.NestedTypes[2]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3171,7 +4808,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Reference(Reference other) : this() {
               content_ = other.content_;
+              codeSnippet_ = other.codeSnippet_;
               documentMetadata_ = other.documentMetadata_ != null ? other.documentMetadata_.Clone() : null;
+              chunkMetadata_ = other.chunkMetadata_ != null ? other.chunkMetadata_.Clone() : null;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -3196,6 +4835,21 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               }
             }
 
+            /// <summary>Field number for the "code_snippet" field.</summary>
+            public const int CodeSnippetFieldNumber = 4;
+            private string codeSnippet_ = "";
+            /// <summary>
+            /// Chunk of code snippet from the referenced document.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string CodeSnippet {
+              get { return codeSnippet_; }
+              set {
+                codeSnippet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
             /// <summary>Field number for the "document_metadata" field.</summary>
             public const int DocumentMetadataFieldNumber = 2;
             private global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference.Types.DocumentMetadata documentMetadata_;
@@ -3208,6 +4862,22 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               get { return documentMetadata_; }
               set {
                 documentMetadata_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "chunk_metadata" field.</summary>
+            public const int ChunkMetadataFieldNumber = 5;
+            private global::Google.Protobuf.WellKnownTypes.Struct chunkMetadata_;
+            /// <summary>
+            /// Output only. Generic structured chunk metadata from upstream data
+            /// source connectors.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Protobuf.WellKnownTypes.Struct ChunkMetadata {
+              get { return chunkMetadata_; }
+              set {
+                chunkMetadata_ = value;
               }
             }
 
@@ -3227,7 +4897,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 return true;
               }
               if (Content != other.Content) return false;
+              if (CodeSnippet != other.CodeSnippet) return false;
               if (!object.Equals(DocumentMetadata, other.DocumentMetadata)) return false;
+              if (!object.Equals(ChunkMetadata, other.ChunkMetadata)) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -3236,7 +4908,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             public override int GetHashCode() {
               int hash = 1;
               if (Content.Length != 0) hash ^= Content.GetHashCode();
+              if (CodeSnippet.Length != 0) hash ^= CodeSnippet.GetHashCode();
               if (documentMetadata_ != null) hash ^= DocumentMetadata.GetHashCode();
+              if (chunkMetadata_ != null) hash ^= ChunkMetadata.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -3263,6 +4937,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 output.WriteRawTag(18);
                 output.WriteMessage(DocumentMetadata);
               }
+              if (CodeSnippet.Length != 0) {
+                output.WriteRawTag(34);
+                output.WriteString(CodeSnippet);
+              }
+              if (chunkMetadata_ != null) {
+                output.WriteRawTag(42);
+                output.WriteMessage(ChunkMetadata);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -3281,6 +4963,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 output.WriteRawTag(18);
                 output.WriteMessage(DocumentMetadata);
               }
+              if (CodeSnippet.Length != 0) {
+                output.WriteRawTag(34);
+                output.WriteString(CodeSnippet);
+              }
+              if (chunkMetadata_ != null) {
+                output.WriteRawTag(42);
+                output.WriteMessage(ChunkMetadata);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -3294,8 +4984,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               if (Content.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
               }
+              if (CodeSnippet.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(CodeSnippet);
+              }
               if (documentMetadata_ != null) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(DocumentMetadata);
+              }
+              if (chunkMetadata_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(ChunkMetadata);
               }
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
@@ -3312,11 +5008,20 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               if (other.Content.Length != 0) {
                 Content = other.Content;
               }
+              if (other.CodeSnippet.Length != 0) {
+                CodeSnippet = other.CodeSnippet;
+              }
               if (other.documentMetadata_ != null) {
                 if (documentMetadata_ == null) {
                   DocumentMetadata = new global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference.Types.DocumentMetadata();
                 }
                 DocumentMetadata.MergeFrom(other.DocumentMetadata);
+              }
+              if (other.chunkMetadata_ != null) {
+                if (chunkMetadata_ == null) {
+                  ChunkMetadata = new global::Google.Protobuf.WellKnownTypes.Struct();
+                }
+                ChunkMetadata.MergeFrom(other.ChunkMetadata);
               }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
@@ -3348,6 +5053,17 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                     input.ReadMessage(DocumentMetadata);
                     break;
                   }
+                  case 34: {
+                    CodeSnippet = input.ReadString();
+                    break;
+                  }
+                  case 42: {
+                    if (chunkMetadata_ == null) {
+                      ChunkMetadata = new global::Google.Protobuf.WellKnownTypes.Struct();
+                    }
+                    input.ReadMessage(ChunkMetadata);
+                    break;
+                  }
                 }
               }
             #endif
@@ -3376,6 +5092,17 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                       DocumentMetadata = new global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference.Types.DocumentMetadata();
                     }
                     input.ReadMessage(DocumentMetadata);
+                    break;
+                  }
+                  case 34: {
+                    CodeSnippet = input.ReadString();
+                    break;
+                  }
+                  case 42: {
+                    if (chunkMetadata_ == null) {
+                      ChunkMetadata = new global::Google.Protobuf.WellKnownTypes.Struct();
+                    }
+                    input.ReadMessage(ChunkMetadata);
                     break;
                   }
                 }
@@ -3426,11 +5153,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public DocumentMetadata(DocumentMetadata other) : this() {
+                  language_ = other.language_;
                   document_ = other.document_;
                   uri_ = other.uri_;
                   title_ = other.title_;
                   pageIdentifier_ = other.pageIdentifier_;
                   domain_ = other.domain_;
+                  mimeType_ = other.mimeType_;
                   _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
                 }
 
@@ -3438,6 +5167,18 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public DocumentMetadata Clone() {
                   return new DocumentMetadata(this);
+                }
+
+                /// <summary>Field number for the "language" field.</summary>
+                public const int LanguageFieldNumber = 8;
+                private global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference.Types.DocumentMetadata.Types.Language language_ = global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference.Types.DocumentMetadata.Types.Language.Unspecified;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference.Types.DocumentMetadata.Types.Language Language {
+                  get { return language_; }
+                  set {
+                    language_ = value;
+                  }
                 }
 
                 /// <summary>Field number for the "document" field.</summary>
@@ -3588,6 +5329,36 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                   domain_ = null;
                 }
 
+                /// <summary>Field number for the "mime_type" field.</summary>
+                public const int MimeTypeFieldNumber = 7;
+                private readonly static string MimeTypeDefaultValue = "";
+
+                private string mimeType_;
+                /// <summary>
+                /// The mime type of the document.
+                /// https://www.iana.org/assignments/media-types/media-types.xhtml.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string MimeType {
+                  get { return mimeType_ ?? MimeTypeDefaultValue; }
+                  set {
+                    mimeType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+                /// <summary>Gets whether the "mime_type" field is set</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool HasMimeType {
+                  get { return mimeType_ != null; }
+                }
+                /// <summary>Clears the value of the "mime_type" field</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearMimeType() {
+                  mimeType_ = null;
+                }
+
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override bool Equals(object other) {
@@ -3603,11 +5374,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                   if (ReferenceEquals(other, this)) {
                     return true;
                   }
+                  if (Language != other.Language) return false;
                   if (Document != other.Document) return false;
                   if (Uri != other.Uri) return false;
                   if (Title != other.Title) return false;
                   if (PageIdentifier != other.PageIdentifier) return false;
                   if (Domain != other.Domain) return false;
+                  if (MimeType != other.MimeType) return false;
                   return Equals(_unknownFields, other._unknownFields);
                 }
 
@@ -3615,11 +5388,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override int GetHashCode() {
                   int hash = 1;
+                  if (Language != global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference.Types.DocumentMetadata.Types.Language.Unspecified) hash ^= Language.GetHashCode();
                   if (HasDocument) hash ^= Document.GetHashCode();
                   if (HasUri) hash ^= Uri.GetHashCode();
                   if (HasTitle) hash ^= Title.GetHashCode();
                   if (HasPageIdentifier) hash ^= PageIdentifier.GetHashCode();
                   if (HasDomain) hash ^= Domain.GetHashCode();
+                  if (HasMimeType) hash ^= MimeType.GetHashCode();
                   if (_unknownFields != null) {
                     hash ^= _unknownFields.GetHashCode();
                   }
@@ -3658,6 +5433,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                     output.WriteRawTag(42);
                     output.WriteString(Domain);
                   }
+                  if (HasMimeType) {
+                    output.WriteRawTag(58);
+                    output.WriteString(MimeType);
+                  }
+                  if (Language != global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference.Types.DocumentMetadata.Types.Language.Unspecified) {
+                    output.WriteRawTag(64);
+                    output.WriteEnum((int) Language);
+                  }
                   if (_unknownFields != null) {
                     _unknownFields.WriteTo(output);
                   }
@@ -3688,6 +5471,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                     output.WriteRawTag(42);
                     output.WriteString(Domain);
                   }
+                  if (HasMimeType) {
+                    output.WriteRawTag(58);
+                    output.WriteString(MimeType);
+                  }
+                  if (Language != global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference.Types.DocumentMetadata.Types.Language.Unspecified) {
+                    output.WriteRawTag(64);
+                    output.WriteEnum((int) Language);
+                  }
                   if (_unknownFields != null) {
                     _unknownFields.WriteTo(ref output);
                   }
@@ -3698,6 +5489,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int CalculateSize() {
                   int size = 0;
+                  if (Language != global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference.Types.DocumentMetadata.Types.Language.Unspecified) {
+                    size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Language);
+                  }
                   if (HasDocument) {
                     size += 1 + pb::CodedOutputStream.ComputeStringSize(Document);
                   }
@@ -3713,6 +5507,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                   if (HasDomain) {
                     size += 1 + pb::CodedOutputStream.ComputeStringSize(Domain);
                   }
+                  if (HasMimeType) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(MimeType);
+                  }
                   if (_unknownFields != null) {
                     size += _unknownFields.CalculateSize();
                   }
@@ -3724,6 +5521,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 public void MergeFrom(DocumentMetadata other) {
                   if (other == null) {
                     return;
+                  }
+                  if (other.Language != global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference.Types.DocumentMetadata.Types.Language.Unspecified) {
+                    Language = other.Language;
                   }
                   if (other.HasDocument) {
                     Document = other.Document;
@@ -3739,6 +5539,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                   }
                   if (other.HasDomain) {
                     Domain = other.Domain;
+                  }
+                  if (other.HasMimeType) {
+                    MimeType = other.MimeType;
                   }
                   _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
                 }
@@ -3777,6 +5580,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                       }
                       case 42: {
                         Domain = input.ReadString();
+                        break;
+                      }
+                      case 58: {
+                        MimeType = input.ReadString();
+                        break;
+                      }
+                      case 64: {
+                        Language = (global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference.Types.DocumentMetadata.Types.Language) input.ReadEnum();
                         break;
                       }
                     }
@@ -3818,10 +5629,36 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                         Domain = input.ReadString();
                         break;
                       }
+                      case 58: {
+                        MimeType = input.ReadString();
+                        break;
+                      }
+                      case 64: {
+                        Language = (global::Google.Cloud.DiscoveryEngine.V1.AssistantGroundedContent.Types.TextGroundingMetadata.Types.Reference.Types.DocumentMetadata.Types.Language) input.ReadEnum();
+                        break;
+                      }
                     }
                   }
                 }
                 #endif
+
+                #region Nested types
+                /// <summary>Container for nested types declared in the DocumentMetadata message type.</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static partial class Types {
+                  /// <summary>
+                  /// Language of the referenced content. For now, it is only used for
+                  /// code.
+                  /// </summary>
+                  public enum Language {
+                    [pbr::OriginalName("LANGUAGE_UNSPECIFIED")] Unspecified = 0,
+                    [pbr::OriginalName("PYTHON")] Python = 1,
+                    [pbr::OriginalName("SQL")] Sql = 2,
+                  }
+
+                }
+                #endregion
 
               }
 

@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -55,6 +56,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
             UpdateEngineSettings = existing.UpdateEngineSettings;
             GetEngineSettings = existing.GetEngineSettings;
             ListEnginesSettings = existing.ListEnginesSettings;
+            GetIamPolicySettings = existing.GetIamPolicySettings;
+            SetIamPolicySettings = existing.SetIamPolicySettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -158,6 +161,30 @@ namespace Google.Cloud.DiscoveryEngine.V1
         public gaxgrpc::CallSettings ListEnginesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EngineServiceClient.GetIamPolicy</c> and <c>EngineServiceClient.GetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EngineServiceClient.SetIamPolicy</c> and <c>EngineServiceClient.SetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -237,11 +264,15 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// The default EngineService scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/discoveryengine.readwrite</description></item>
+        /// <item><description>https://www.googleapis.com/auth/discoveryengine.serving.readwrite</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/discoveryengine.readwrite",
+            "https://www.googleapis.com/auth/discoveryengine.serving.readwrite",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -308,7 +339,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Creates an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -317,7 +348,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Creates an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -326,7 +357,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Creates an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -361,7 +392,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             lro::Operation<Engine, CreateEngineMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateEngineOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Creates an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, such as
@@ -391,7 +422,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Creates an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, such as
@@ -421,7 +452,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Creates an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, such as
@@ -446,7 +477,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             CreateEngineAsync(parent, engine, engineId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Creates an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, such as
@@ -476,7 +507,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Creates an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, such as
@@ -506,7 +537,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Creates an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, such as
@@ -531,7 +562,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             CreateEngineAsync(parent, engine, engineId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Deletes an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -540,7 +571,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Deletes an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -549,7 +580,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Deletes an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -584,7 +615,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             lro::Operation<wkt::Empty, DeleteEngineMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteEngineOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Deletes an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of
@@ -607,7 +638,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Deletes an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of
@@ -630,7 +661,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Deletes an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of
@@ -650,7 +681,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             DeleteEngineAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Deletes an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of
@@ -673,7 +704,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Deletes an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of
@@ -696,7 +727,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Deletes an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of
@@ -826,7 +857,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             UpdateEngineAsync(engine, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Gets an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -835,7 +866,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Gets an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -844,7 +875,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Gets an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -853,7 +884,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             GetEngineAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Gets an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of
@@ -869,7 +900,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Gets an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of
@@ -885,7 +916,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Gets an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of
@@ -898,7 +929,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             GetEngineAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Gets an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of
@@ -914,7 +945,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Gets an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of
@@ -930,7 +961,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Gets an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of
@@ -1101,6 +1132,403 @@ namespace Google.Cloud.DiscoveryEngine.V1
             }
             return ListEnginesAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Gets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist. An empty policy is returned if the
+        /// resource exists but does not have a policy set on it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy GetIamPolicy(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist. An empty policy is returned if the
+        /// resource exists but does not have a policy set on it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist. An empty policy is returned if the
+        /// resource exists but does not have a policy set on it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist. An empty policy is returned if the
+        /// resource exists but does not have a policy set on it.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy GetIamPolicy(string resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicy(new gciv::GetIamPolicyRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist. An empty policy is returned if the
+        /// resource exists but does not have a policy set on it.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(string resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicyAsync(new gciv::GetIamPolicyRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist. An empty policy is returned if the
+        /// resource exists but does not have a policy set on it.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(string resource, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist. An empty policy is returned if the
+        /// resource exists but does not have a policy set on it.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy GetIamPolicy(gax::IResourceName resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicy(new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist. An empty policy is returned if the
+        /// resource exists but does not have a policy set on it.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gax::IResourceName resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicyAsync(new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist. An empty policy is returned if the
+        /// resource exists but does not have a policy set on it.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gax::IResourceName resource, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist.
+        /// 
+        /// **Important:** When setting a policy directly on an Engine resource,
+        /// the only recommended roles in the bindings are:
+        /// `roles/discoveryengine.admin`,
+        /// `roles/discoveryengine.agentspaceAdmin`,
+        /// `roles/discoveryengine.user`,
+        /// `roles/discoveryengine.agentspaceUser`,
+        /// `roles/discoveryengine.viewer`,
+        /// `roles/discoveryengine.agentspaceViewer`.
+        /// Attempting to grant any other role will result in a warning in logging.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy SetIamPolicy(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist.
+        /// 
+        /// **Important:** When setting a policy directly on an Engine resource,
+        /// the only recommended roles in the bindings are:
+        /// `roles/discoveryengine.admin`,
+        /// `roles/discoveryengine.agentspaceAdmin`,
+        /// `roles/discoveryengine.user`,
+        /// `roles/discoveryengine.agentspaceUser`,
+        /// `roles/discoveryengine.viewer`,
+        /// `roles/discoveryengine.agentspaceViewer`.
+        /// Attempting to grant any other role will result in a warning in logging.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist.
+        /// 
+        /// **Important:** When setting a policy directly on an Engine resource,
+        /// the only recommended roles in the bindings are:
+        /// `roles/discoveryengine.admin`,
+        /// `roles/discoveryengine.agentspaceAdmin`,
+        /// `roles/discoveryengine.user`,
+        /// `roles/discoveryengine.agentspaceUser`,
+        /// `roles/discoveryengine.viewer`,
+        /// `roles/discoveryengine.agentspaceViewer`.
+        /// Attempting to grant any other role will result in a warning in logging.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, st::CancellationToken cancellationToken) =>
+            SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist.
+        /// 
+        /// **Important:** When setting a policy directly on an Engine resource,
+        /// the only recommended roles in the bindings are:
+        /// `roles/discoveryengine.admin`,
+        /// `roles/discoveryengine.agentspaceAdmin`,
+        /// `roles/discoveryengine.user`,
+        /// `roles/discoveryengine.agentspaceUser`,
+        /// `roles/discoveryengine.viewer`,
+        /// `roles/discoveryengine.agentspaceViewer`.
+        /// Attempting to grant any other role will result in a warning in logging.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy SetIamPolicy(string resource, gciv::Policy policy, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicy(new gciv::SetIamPolicyRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist.
+        /// 
+        /// **Important:** When setting a policy directly on an Engine resource,
+        /// the only recommended roles in the bindings are:
+        /// `roles/discoveryengine.admin`,
+        /// `roles/discoveryengine.agentspaceAdmin`,
+        /// `roles/discoveryengine.user`,
+        /// `roles/discoveryengine.agentspaceUser`,
+        /// `roles/discoveryengine.viewer`,
+        /// `roles/discoveryengine.agentspaceViewer`.
+        /// Attempting to grant any other role will result in a warning in logging.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(string resource, gciv::Policy policy, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicyAsync(new gciv::SetIamPolicyRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist.
+        /// 
+        /// **Important:** When setting a policy directly on an Engine resource,
+        /// the only recommended roles in the bindings are:
+        /// `roles/discoveryengine.admin`,
+        /// `roles/discoveryengine.agentspaceAdmin`,
+        /// `roles/discoveryengine.user`,
+        /// `roles/discoveryengine.agentspaceUser`,
+        /// `roles/discoveryengine.viewer`,
+        /// `roles/discoveryengine.agentspaceViewer`.
+        /// Attempting to grant any other role will result in a warning in logging.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(string resource, gciv::Policy policy, st::CancellationToken cancellationToken) =>
+            SetIamPolicyAsync(resource, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist.
+        /// 
+        /// **Important:** When setting a policy directly on an Engine resource,
+        /// the only recommended roles in the bindings are:
+        /// `roles/discoveryengine.admin`,
+        /// `roles/discoveryengine.agentspaceAdmin`,
+        /// `roles/discoveryengine.user`,
+        /// `roles/discoveryengine.agentspaceUser`,
+        /// `roles/discoveryengine.viewer`,
+        /// `roles/discoveryengine.agentspaceViewer`.
+        /// Attempting to grant any other role will result in a warning in logging.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy SetIamPolicy(gax::IResourceName resource, gciv::Policy policy, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicy(new gciv::SetIamPolicyRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist.
+        /// 
+        /// **Important:** When setting a policy directly on an Engine resource,
+        /// the only recommended roles in the bindings are:
+        /// `roles/discoveryengine.admin`,
+        /// `roles/discoveryengine.agentspaceAdmin`,
+        /// `roles/discoveryengine.user`,
+        /// `roles/discoveryengine.agentspaceUser`,
+        /// `roles/discoveryengine.viewer`,
+        /// `roles/discoveryengine.agentspaceViewer`.
+        /// Attempting to grant any other role will result in a warning in logging.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gax::IResourceName resource, gciv::Policy policy, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicyAsync(new gciv::SetIamPolicyRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist.
+        /// 
+        /// **Important:** When setting a policy directly on an Engine resource,
+        /// the only recommended roles in the bindings are:
+        /// `roles/discoveryengine.admin`,
+        /// `roles/discoveryengine.agentspaceAdmin`,
+        /// `roles/discoveryengine.user`,
+        /// `roles/discoveryengine.agentspaceUser`,
+        /// `roles/discoveryengine.viewer`,
+        /// `roles/discoveryengine.agentspaceViewer`.
+        /// Attempting to grant any other role will result in a warning in logging.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gax::IResourceName resource, gciv::Policy policy, st::CancellationToken cancellationToken) =>
+            SetIamPolicyAsync(resource, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>EngineService client wrapper implementation, for convenient use.</summary>
@@ -1119,6 +1547,10 @@ namespace Google.Cloud.DiscoveryEngine.V1
         private readonly gaxgrpc::ApiCall<GetEngineRequest, Engine> _callGetEngine;
 
         private readonly gaxgrpc::ApiCall<ListEnginesRequest, ListEnginesResponse> _callListEngines;
+
+        private readonly gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> _callGetIamPolicy;
+
+        private readonly gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> _callSetIamPolicy;
 
         /// <summary>
         /// Constructs a client wrapper for the EngineService service, with the specified gRPC client and settings.
@@ -1153,6 +1585,12 @@ namespace Google.Cloud.DiscoveryEngine.V1
             _callListEngines = clientHelper.BuildApiCall<ListEnginesRequest, ListEnginesResponse>("ListEngines", grpcClient.ListEnginesAsync, grpcClient.ListEngines, effectiveSettings.ListEnginesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEngines);
             Modify_ListEnginesApiCall(ref _callListEngines);
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callGetIamPolicy);
+            Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callSetIamPolicy);
+            Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1167,6 +1605,10 @@ namespace Google.Cloud.DiscoveryEngine.V1
         partial void Modify_GetEngineApiCall(ref gaxgrpc::ApiCall<GetEngineRequest, Engine> call);
 
         partial void Modify_ListEnginesApiCall(ref gaxgrpc::ApiCall<ListEnginesRequest, ListEnginesResponse> call);
+
+        partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> call);
+
+        partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> call);
 
         partial void OnConstruction(EngineService.EngineServiceClient grpcClient, EngineServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1186,11 +1628,15 @@ namespace Google.Cloud.DiscoveryEngine.V1
 
         partial void Modify_ListEnginesRequest(ref ListEnginesRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_GetIamPolicyRequest(ref gciv::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetIamPolicyRequest(ref gciv::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>The long-running operations client for <c>CreateEngine</c>.</summary>
         public override lro::OperationsClient CreateEngineOperationsClient { get; }
 
         /// <summary>
-        /// Creates a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Creates an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1202,7 +1648,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         }
 
         /// <summary>
-        /// Creates a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Creates an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1217,7 +1663,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         public override lro::OperationsClient DeleteEngineOperationsClient { get; }
 
         /// <summary>
-        /// Deletes a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Deletes an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1229,7 +1675,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         }
 
         /// <summary>
-        /// Deletes a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Deletes an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1265,7 +1711,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         }
 
         /// <summary>
-        /// Gets a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Gets an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1277,7 +1723,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         }
 
         /// <summary>
-        /// Gets a [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// Gets an [Engine][google.cloud.discoveryengine.v1.Engine].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1312,6 +1758,84 @@ namespace Google.Cloud.DiscoveryEngine.V1
         {
             Modify_ListEnginesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListEnginesRequest, ListEnginesResponse, Engine>(_callListEngines, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist. An empty policy is returned if the
+        /// resource exists but does not have a policy set on it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override gciv::Policy GetIamPolicy(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist. An empty policy is returned if the
+        /// resource exists but does not have a policy set on it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Sets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist.
+        /// 
+        /// **Important:** When setting a policy directly on an Engine resource,
+        /// the only recommended roles in the bindings are:
+        /// `roles/discoveryengine.admin`,
+        /// `roles/discoveryengine.agentspaceAdmin`,
+        /// `roles/discoveryengine.user`,
+        /// `roles/discoveryengine.agentspaceUser`,
+        /// `roles/discoveryengine.viewer`,
+        /// `roles/discoveryengine.agentspaceViewer`.
+        /// Attempting to grant any other role will result in a warning in logging.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override gciv::Policy SetIamPolicy(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Sets the IAM access control policy for an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine]. A `NOT_FOUND` error is
+        /// returned if the resource does not exist.
+        /// 
+        /// **Important:** When setting a policy directly on an Engine resource,
+        /// the only recommended roles in the bindings are:
+        /// `roles/discoveryengine.admin`,
+        /// `roles/discoveryengine.agentspaceAdmin`,
+        /// `roles/discoveryengine.user`,
+        /// `roles/discoveryengine.agentspaceUser`,
+        /// `roles/discoveryengine.viewer`,
+        /// `roles/discoveryengine.agentspaceViewer`.
+        /// Attempting to grant any other role will result in a warning in logging.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Async(request, callSettings);
         }
     }
 

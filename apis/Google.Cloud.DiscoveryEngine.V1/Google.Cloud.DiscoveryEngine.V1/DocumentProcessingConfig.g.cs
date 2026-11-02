@@ -27,7 +27,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "CkBnb29nbGUvY2xvdWQvZGlzY292ZXJ5ZW5naW5lL3YxL2RvY3VtZW50X3By",
             "b2Nlc3NpbmdfY29uZmlnLnByb3RvEh9nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
             "ZW5naW5lLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhln",
-            "b29nbGUvYXBpL3Jlc291cmNlLnByb3RvIoQOChhEb2N1bWVudFByb2Nlc3Np",
+            "b29nbGUvYXBpL3Jlc291cmNlLnByb3RvIuAOChhEb2N1bWVudFByb2Nlc3Np",
             "bmdDb25maWcSDAoEbmFtZRgBIAEoCRJhCg9jaHVua2luZ19jb25maWcYAyAB",
             "KAsySC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkRvY3VtZW50",
             "UHJvY2Vzc2luZ0NvbmZpZy5DaHVua2luZ0NvbmZpZxJnChZkZWZhdWx0X3Bh",
@@ -41,7 +41,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "b2Nlc3NpbmdDb25maWcuQ2h1bmtpbmdDb25maWcuTGF5b3V0QmFzZWRDaHVu",
             "a2luZ0NvbmZpZ0gAGlIKGUxheW91dEJhc2VkQ2h1bmtpbmdDb25maWcSEgoK",
             "Y2h1bmtfc2l6ZRgBIAEoBRIhChlpbmNsdWRlX2FuY2VzdG9yX2hlYWRpbmdz",
-            "GAIgASgIQgwKCmNodW5rX21vZGUa/AUKDVBhcnNpbmdDb25maWcSfgoWZGln",
+            "GAIgASgIQgwKCmNodW5rX21vZGUa2AYKDVBhcnNpbmdDb25maWcSfgoWZGln",
             "aXRhbF9wYXJzaW5nX2NvbmZpZxgBIAEoCzJcLmdvb2dsZS5jbG91ZC5kaXNj",
             "b3ZlcnllbmdpbmUudjEuRG9jdW1lbnRQcm9jZXNzaW5nQ29uZmlnLlBhcnNp",
             "bmdDb25maWcuRGlnaXRhbFBhcnNpbmdDb25maWdIABJ2ChJvY3JfcGFyc2lu",
@@ -52,35 +52,37 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "UHJvY2Vzc2luZ0NvbmZpZy5QYXJzaW5nQ29uZmlnLkxheW91dFBhcnNpbmdD",
             "b25maWdIABoWChREaWdpdGFsUGFyc2luZ0NvbmZpZxpTChBPY3JQYXJzaW5n",
             "Q29uZmlnEiYKGmVuaGFuY2VkX2RvY3VtZW50X2VsZW1lbnRzGAEgAygJQgIY",
-            "ARIXCg91c2VfbmF0aXZlX3RleHQYAiABKAga7gEKE0xheW91dFBhcnNpbmdD",
-            "b25maWcSJAoXZW5hYmxlX3RhYmxlX2Fubm90YXRpb24YASABKAhCA+BBARIk",
-            "ChdlbmFibGVfaW1hZ2VfYW5ub3RhdGlvbhgCIAEoCEID4EEBEiUKGHN0cnVj",
-            "dHVyZWRfY29udGVudF90eXBlcxgJIAMoCUID4EEBEiIKFWV4Y2x1ZGVfaHRt",
-            "bF9lbGVtZW50cxgKIAMoCUID4EEBEiEKFGV4Y2x1ZGVfaHRtbF9jbGFzc2Vz",
-            "GAsgAygJQgPgQQESHQoQZXhjbHVkZV9odG1sX2lkcxgMIAMoCUID4EEBQhcK",
-            "FXR5cGVfZGVkaWNhdGVkX2NvbmZpZxqGAQobUGFyc2luZ0NvbmZpZ092ZXJy",
-            "aWRlc0VudHJ5EgsKA2tleRgBIAEoCRJWCgV2YWx1ZRgCIAEoCzJHLmdvb2ds",
-            "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuRG9jdW1lbnRQcm9jZXNzaW5n",
-            "Q29uZmlnLlBhcnNpbmdDb25maWc6AjgBOooC6kGGAgo3ZGlzY292ZXJ5ZW5n",
-            "aW5lLmdvb2dsZWFwaXMuY29tL0RvY3VtZW50UHJvY2Vzc2luZ0NvbmZpZxJY",
-            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2RhdGFT",
-            "dG9yZXMve2RhdGFfc3RvcmV9L2RvY3VtZW50UHJvY2Vzc2luZ0NvbmZpZxJx",
-            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NvbGxl",
-            "Y3Rpb25zL3tjb2xsZWN0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfS9k",
-            "b2N1bWVudFByb2Nlc3NpbmdDb25maWdCkAIKI2NvbS5nb29nbGUuY2xvdWQu",
-            "ZGlzY292ZXJ5ZW5naW5lLnYxQh1Eb2N1bWVudFByb2Nlc3NpbmdDb25maWdQ",
-            "cm90b1ABWk1jbG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9h",
-            "cGl2MS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJ",
-            "U0NPVkVSWUVOR0lORaoCH0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUu",
-            "VjHKAh9Hb29nbGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYx6gIiR29vZ2xl",
-            "OjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWIGcHJvdG8z"));
+            "ARIXCg91c2VfbmF0aXZlX3RleHQYAiABKAgaygIKE0xheW91dFBhcnNpbmdD",
+            "b25maWcSJQoXZW5hYmxlX3RhYmxlX2Fubm90YXRpb24YASABKAhCBOJBAQES",
+            "JQoXZW5hYmxlX2ltYWdlX2Fubm90YXRpb24YAiABKAhCBOJBAQESJwoZZW5h",
+            "YmxlX2xsbV9sYXlvdXRfcGFyc2luZxgFIAEoCEIE4kEBARImChhzdHJ1Y3R1",
+            "cmVkX2NvbnRlbnRfdHlwZXMYCSADKAlCBOJBAQESIwoVZXhjbHVkZV9odG1s",
+            "X2VsZW1lbnRzGAogAygJQgTiQQEBEiIKFGV4Y2x1ZGVfaHRtbF9jbGFzc2Vz",
+            "GAsgAygJQgTiQQEBEh4KEGV4Y2x1ZGVfaHRtbF9pZHMYDCADKAlCBOJBAQES",
+            "KwodZW5hYmxlX2dldF9wcm9jZXNzZWRfZG9jdW1lbnQYDiABKAhCBOJBAQFC",
+            "FwoVdHlwZV9kZWRpY2F0ZWRfY29uZmlnGoYBChtQYXJzaW5nQ29uZmlnT3Zl",
+            "cnJpZGVzRW50cnkSCwoDa2V5GAEgASgJElYKBXZhbHVlGAIgASgLMkcuZ29v",
+            "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Eb2N1bWVudFByb2Nlc3Np",
+            "bmdDb25maWcuUGFyc2luZ0NvbmZpZzoCOAE6igLqQYYCCjdkaXNjb3Zlcnll",
+            "bmdpbmUuZ29vZ2xlYXBpcy5jb20vRG9jdW1lbnRQcm9jZXNzaW5nQ29uZmln",
+            "Elhwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZGF0",
+            "YVN0b3Jlcy97ZGF0YV9zdG9yZX0vZG9jdW1lbnRQcm9jZXNzaW5nQ29uZmln",
+            "EnFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY29s",
+            "bGVjdGlvbnMve2NvbGxlY3Rpb259L2RhdGFTdG9yZXMve2RhdGFfc3RvcmV9",
+            "L2RvY3VtZW50UHJvY2Vzc2luZ0NvbmZpZ0KQAgojY29tLmdvb2dsZS5jbG91",
+            "ZC5kaXNjb3ZlcnllbmdpbmUudjFCHURvY3VtZW50UHJvY2Vzc2luZ0NvbmZp",
+            "Z1Byb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5l",
+            "L2FwaXYxL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIP",
+            "RElTQ09WRVJZRU5HSU5FqgIfR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2lu",
+            "ZS5WMcoCH0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjHqAiJHb29n",
+            "bGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfig), global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfig.Parser, new[]{ "Name", "ChunkingConfig", "DefaultParsingConfig", "ParsingConfigOverrides" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfig.Types.ChunkingConfig), global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfig.Types.ChunkingConfig.Parser, new[]{ "LayoutBasedChunkingConfig" }, new[]{ "ChunkMode" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfig.Types.ChunkingConfig.Types.LayoutBasedChunkingConfig), global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfig.Types.ChunkingConfig.Types.LayoutBasedChunkingConfig.Parser, new[]{ "ChunkSize", "IncludeAncestorHeadings" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfig.Types.ParsingConfig), global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfig.Types.ParsingConfig.Parser, new[]{ "DigitalParsingConfig", "OcrParsingConfig", "LayoutParsingConfig" }, new[]{ "TypeDedicatedConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfig.Types.ParsingConfig.Types.DigitalParsingConfig), global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfig.Types.ParsingConfig.Types.DigitalParsingConfig.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfig.Types.ParsingConfig.Types.OcrParsingConfig), global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfig.Types.ParsingConfig.Types.OcrParsingConfig.Parser, new[]{ "EnhancedDocumentElements", "UseNativeText" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfig.Types.ParsingConfig.Types.LayoutParsingConfig), global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfig.Types.ParsingConfig.Types.LayoutParsingConfig.Parser, new[]{ "EnableTableAnnotation", "EnableImageAnnotation", "StructuredContentTypes", "ExcludeHtmlElements", "ExcludeHtmlClasses", "ExcludeHtmlIds" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfig.Types.ParsingConfig.Types.LayoutParsingConfig), global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfig.Types.ParsingConfig.Types.LayoutParsingConfig.Parser, new[]{ "EnableTableAnnotation", "EnableImageAnnotation", "EnableLlmLayoutParsing", "StructuredContentTypes", "ExcludeHtmlElements", "ExcludeHtmlClasses", "ExcludeHtmlIds", "EnableGetProcessedDocument" }, null, null, null, null)}),
             null, })
           }));
     }
@@ -1754,10 +1756,12 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             public LayoutParsingConfig(LayoutParsingConfig other) : this() {
               enableTableAnnotation_ = other.enableTableAnnotation_;
               enableImageAnnotation_ = other.enableImageAnnotation_;
+              enableLlmLayoutParsing_ = other.enableLlmLayoutParsing_;
               structuredContentTypes_ = other.structuredContentTypes_.Clone();
               excludeHtmlElements_ = other.excludeHtmlElements_.Clone();
               excludeHtmlClasses_ = other.excludeHtmlClasses_.Clone();
               excludeHtmlIds_ = other.excludeHtmlIds_.Clone();
+              enableGetProcessedDocument_ = other.enableGetProcessedDocument_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -1796,6 +1800,21 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               get { return enableImageAnnotation_; }
               set {
                 enableImageAnnotation_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "enable_llm_layout_parsing" field.</summary>
+            public const int EnableLlmLayoutParsingFieldNumber = 5;
+            private bool enableLlmLayoutParsing_;
+            /// <summary>
+            /// Optional. If true, the pdf layout will be refined using an LLM.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool EnableLlmLayoutParsing {
+              get { return enableLlmLayoutParsing_; }
+              set {
+                enableLlmLayoutParsing_ = value;
               }
             }
 
@@ -1858,6 +1877,22 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               get { return excludeHtmlIds_; }
             }
 
+            /// <summary>Field number for the "enable_get_processed_document" field.</summary>
+            public const int EnableGetProcessedDocumentFieldNumber = 14;
+            private bool enableGetProcessedDocument_;
+            /// <summary>
+            /// Optional. If true, the processed document will be made available for
+            /// the GetProcessedDocument API.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool EnableGetProcessedDocument {
+              get { return enableGetProcessedDocument_; }
+              set {
+                enableGetProcessedDocument_ = value;
+              }
+            }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
@@ -1875,10 +1910,12 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               }
               if (EnableTableAnnotation != other.EnableTableAnnotation) return false;
               if (EnableImageAnnotation != other.EnableImageAnnotation) return false;
+              if (EnableLlmLayoutParsing != other.EnableLlmLayoutParsing) return false;
               if(!structuredContentTypes_.Equals(other.structuredContentTypes_)) return false;
               if(!excludeHtmlElements_.Equals(other.excludeHtmlElements_)) return false;
               if(!excludeHtmlClasses_.Equals(other.excludeHtmlClasses_)) return false;
               if(!excludeHtmlIds_.Equals(other.excludeHtmlIds_)) return false;
+              if (EnableGetProcessedDocument != other.EnableGetProcessedDocument) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -1888,10 +1925,12 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               int hash = 1;
               if (EnableTableAnnotation != false) hash ^= EnableTableAnnotation.GetHashCode();
               if (EnableImageAnnotation != false) hash ^= EnableImageAnnotation.GetHashCode();
+              if (EnableLlmLayoutParsing != false) hash ^= EnableLlmLayoutParsing.GetHashCode();
               hash ^= structuredContentTypes_.GetHashCode();
               hash ^= excludeHtmlElements_.GetHashCode();
               hash ^= excludeHtmlClasses_.GetHashCode();
               hash ^= excludeHtmlIds_.GetHashCode();
+              if (EnableGetProcessedDocument != false) hash ^= EnableGetProcessedDocument.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -1918,10 +1957,18 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 output.WriteRawTag(16);
                 output.WriteBool(EnableImageAnnotation);
               }
+              if (EnableLlmLayoutParsing != false) {
+                output.WriteRawTag(40);
+                output.WriteBool(EnableLlmLayoutParsing);
+              }
               structuredContentTypes_.WriteTo(output, _repeated_structuredContentTypes_codec);
               excludeHtmlElements_.WriteTo(output, _repeated_excludeHtmlElements_codec);
               excludeHtmlClasses_.WriteTo(output, _repeated_excludeHtmlClasses_codec);
               excludeHtmlIds_.WriteTo(output, _repeated_excludeHtmlIds_codec);
+              if (EnableGetProcessedDocument != false) {
+                output.WriteRawTag(112);
+                output.WriteBool(EnableGetProcessedDocument);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -1940,10 +1987,18 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 output.WriteRawTag(16);
                 output.WriteBool(EnableImageAnnotation);
               }
+              if (EnableLlmLayoutParsing != false) {
+                output.WriteRawTag(40);
+                output.WriteBool(EnableLlmLayoutParsing);
+              }
               structuredContentTypes_.WriteTo(ref output, _repeated_structuredContentTypes_codec);
               excludeHtmlElements_.WriteTo(ref output, _repeated_excludeHtmlElements_codec);
               excludeHtmlClasses_.WriteTo(ref output, _repeated_excludeHtmlClasses_codec);
               excludeHtmlIds_.WriteTo(ref output, _repeated_excludeHtmlIds_codec);
+              if (EnableGetProcessedDocument != false) {
+                output.WriteRawTag(112);
+                output.WriteBool(EnableGetProcessedDocument);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -1960,10 +2015,16 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               if (EnableImageAnnotation != false) {
                 size += 1 + 1;
               }
+              if (EnableLlmLayoutParsing != false) {
+                size += 1 + 1;
+              }
               size += structuredContentTypes_.CalculateSize(_repeated_structuredContentTypes_codec);
               size += excludeHtmlElements_.CalculateSize(_repeated_excludeHtmlElements_codec);
               size += excludeHtmlClasses_.CalculateSize(_repeated_excludeHtmlClasses_codec);
               size += excludeHtmlIds_.CalculateSize(_repeated_excludeHtmlIds_codec);
+              if (EnableGetProcessedDocument != false) {
+                size += 1 + 1;
+              }
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
               }
@@ -1982,10 +2043,16 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               if (other.EnableImageAnnotation != false) {
                 EnableImageAnnotation = other.EnableImageAnnotation;
               }
+              if (other.EnableLlmLayoutParsing != false) {
+                EnableLlmLayoutParsing = other.EnableLlmLayoutParsing;
+              }
               structuredContentTypes_.Add(other.structuredContentTypes_);
               excludeHtmlElements_.Add(other.excludeHtmlElements_);
               excludeHtmlClasses_.Add(other.excludeHtmlClasses_);
               excludeHtmlIds_.Add(other.excludeHtmlIds_);
+              if (other.EnableGetProcessedDocument != false) {
+                EnableGetProcessedDocument = other.EnableGetProcessedDocument;
+              }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
 
@@ -2013,6 +2080,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                     EnableImageAnnotation = input.ReadBool();
                     break;
                   }
+                  case 40: {
+                    EnableLlmLayoutParsing = input.ReadBool();
+                    break;
+                  }
                   case 74: {
                     structuredContentTypes_.AddEntriesFrom(input, _repeated_structuredContentTypes_codec);
                     break;
@@ -2027,6 +2098,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                   }
                   case 98: {
                     excludeHtmlIds_.AddEntriesFrom(input, _repeated_excludeHtmlIds_codec);
+                    break;
+                  }
+                  case 112: {
+                    EnableGetProcessedDocument = input.ReadBool();
                     break;
                   }
                 }
@@ -2056,6 +2131,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                     EnableImageAnnotation = input.ReadBool();
                     break;
                   }
+                  case 40: {
+                    EnableLlmLayoutParsing = input.ReadBool();
+                    break;
+                  }
                   case 74: {
                     structuredContentTypes_.AddEntriesFrom(ref input, _repeated_structuredContentTypes_codec);
                     break;
@@ -2070,6 +2149,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                   }
                   case 98: {
                     excludeHtmlIds_.AddEntriesFrom(ref input, _repeated_excludeHtmlIds_codec);
+                    break;
+                  }
+                  case 112: {
+                    EnableGetProcessedDocument = input.ReadBool();
                     break;
                   }
                 }

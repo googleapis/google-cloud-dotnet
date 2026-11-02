@@ -57,4 +57,48 @@ namespace Google.Cloud.DiscoveryEngine.V1
             }
         }
     }
+
+    public partial class CreateAssistantRequest
+    {
+        /// <summary><see cref="EngineName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public EngineName ParentAsEngineName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : EngineName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteAssistantRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::AssistantName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::AssistantName AssistantName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::AssistantName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetAssistantRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::AssistantName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::AssistantName AssistantName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::AssistantName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListAssistantsRequest
+    {
+        /// <summary><see cref="EngineName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public EngineName ParentAsEngineName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : EngineName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }

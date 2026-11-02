@@ -22,11 +22,13 @@ using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
 using proto = Google.Protobuf;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.DiscoveryEngine.V1
 {
@@ -46,6 +48,11 @@ namespace Google.Cloud.DiscoveryEngine.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             StreamAssistSettings = existing.StreamAssistSettings;
+            CreateAssistantSettings = existing.CreateAssistantSettings;
+            DeleteAssistantSettings = existing.DeleteAssistantSettings;
+            UpdateAssistantSettings = existing.UpdateAssistantSettings;
+            GetAssistantSettings = existing.GetAssistantSettings;
+            ListAssistantsSettings = existing.ListAssistantsSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -58,6 +65,78 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </summary>
         /// <remarks>Timeout: 300 seconds.</remarks>
         public gaxgrpc::CallSettings StreamAssistSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssistantServiceClient.CreateAssistant</c> and <c>AssistantServiceClient.CreateAssistantAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAssistantSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssistantServiceClient.DeleteAssistant</c> and <c>AssistantServiceClient.DeleteAssistantAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAssistantSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssistantServiceClient.UpdateAssistant</c> and <c>AssistantServiceClient.UpdateAssistantAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAssistantSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssistantServiceClient.GetAssistant</c> and <c>AssistantServiceClient.GetAssistantAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAssistantSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssistantServiceClient.ListAssistants</c> and <c>AssistantServiceClient.ListAssistantsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAssistantsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -138,11 +217,17 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// The default AssistantService scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/discoveryengine.assist.readwrite</description></item>
+        /// <item><description>https://www.googleapis.com/auth/discoveryengine.readwrite</description></item>
+        /// <item><description>https://www.googleapis.com/auth/discoveryengine.serving.readwrite</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/discoveryengine.assist.readwrite",
+            "https://www.googleapis.com/auth/discoveryengine.readwrite",
+            "https://www.googleapis.com/auth/discoveryengine.serving.readwrite",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -223,6 +308,589 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <returns>The server stream.</returns>
         public virtual StreamAssistStream StreamAssist(StreamAssistRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Assistant CreateAssistant(CreateAssistantRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Assistant> CreateAssistantAsync(CreateAssistantRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Assistant> CreateAssistantAsync(CreateAssistantRequest request, st::CancellationToken cancellationToken) =>
+            CreateAssistantAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAssistant(DeleteAssistantRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAssistantAsync(DeleteAssistantRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAssistantAsync(DeleteAssistantRequest request, st::CancellationToken cancellationToken) =>
+            DeleteAssistantAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant]. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+        /// 
+        /// If the caller does not have permission to delete the
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant], regardless of
+        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// 
+        /// If the [Assistant][google.cloud.discoveryengine.v1.Assistant] to delete
+        /// does not exist, a NOT_FOUND error is returned.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAssistant(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAssistant(new DeleteAssistantRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant]. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+        /// 
+        /// If the caller does not have permission to delete the
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant], regardless of
+        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// 
+        /// If the [Assistant][google.cloud.discoveryengine.v1.Assistant] to delete
+        /// does not exist, a NOT_FOUND error is returned.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAssistantAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAssistantAsync(new DeleteAssistantRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant]. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+        /// 
+        /// If the caller does not have permission to delete the
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant], regardless of
+        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// 
+        /// If the [Assistant][google.cloud.discoveryengine.v1.Assistant] to delete
+        /// does not exist, a NOT_FOUND error is returned.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAssistantAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAssistantAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant]. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+        /// 
+        /// If the caller does not have permission to delete the
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant], regardless of
+        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// 
+        /// If the [Assistant][google.cloud.discoveryengine.v1.Assistant] to delete
+        /// does not exist, a NOT_FOUND error is returned.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAssistant(AssistantName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAssistant(new DeleteAssistantRequest
+            {
+                AssistantName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant]. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+        /// 
+        /// If the caller does not have permission to delete the
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant], regardless of
+        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// 
+        /// If the [Assistant][google.cloud.discoveryengine.v1.Assistant] to delete
+        /// does not exist, a NOT_FOUND error is returned.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAssistantAsync(AssistantName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAssistantAsync(new DeleteAssistantRequest
+            {
+                AssistantName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant]. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+        /// 
+        /// If the caller does not have permission to delete the
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant], regardless of
+        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// 
+        /// If the [Assistant][google.cloud.discoveryengine.v1.Assistant] to delete
+        /// does not exist, a NOT_FOUND error is returned.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAssistantAsync(AssistantName name, st::CancellationToken cancellationToken) =>
+            DeleteAssistantAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an [Assistant][google.cloud.discoveryengine.v1.Assistant]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Assistant UpdateAssistant(UpdateAssistantRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an [Assistant][google.cloud.discoveryengine.v1.Assistant]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Assistant> UpdateAssistantAsync(UpdateAssistantRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an [Assistant][google.cloud.discoveryengine.v1.Assistant]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Assistant> UpdateAssistantAsync(UpdateAssistantRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAssistantAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an [Assistant][google.cloud.discoveryengine.v1.Assistant]
+        /// </summary>
+        /// <param name="assistant">
+        /// Required. The [Assistant][google.cloud.discoveryengine.v1.Assistant] to
+        /// update.
+        /// 
+        /// The [Assistant][google.cloud.discoveryengine.v1.Assistant]'s `name` field
+        /// is used to identify the
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant] to update. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+        /// 
+        /// If the caller does not have permission to update the
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant], regardless of
+        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// 
+        /// If the [Assistant][google.cloud.discoveryengine.v1.Assistant] to update
+        /// does not exist, a NOT_FOUND error is returned.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Assistant UpdateAssistant(Assistant assistant, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAssistant(new UpdateAssistantRequest
+            {
+                Assistant = gax::GaxPreconditions.CheckNotNull(assistant, nameof(assistant)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an [Assistant][google.cloud.discoveryengine.v1.Assistant]
+        /// </summary>
+        /// <param name="assistant">
+        /// Required. The [Assistant][google.cloud.discoveryengine.v1.Assistant] to
+        /// update.
+        /// 
+        /// The [Assistant][google.cloud.discoveryengine.v1.Assistant]'s `name` field
+        /// is used to identify the
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant] to update. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+        /// 
+        /// If the caller does not have permission to update the
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant], regardless of
+        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// 
+        /// If the [Assistant][google.cloud.discoveryengine.v1.Assistant] to update
+        /// does not exist, a NOT_FOUND error is returned.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Assistant> UpdateAssistantAsync(Assistant assistant, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAssistantAsync(new UpdateAssistantRequest
+            {
+                Assistant = gax::GaxPreconditions.CheckNotNull(assistant, nameof(assistant)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an [Assistant][google.cloud.discoveryengine.v1.Assistant]
+        /// </summary>
+        /// <param name="assistant">
+        /// Required. The [Assistant][google.cloud.discoveryengine.v1.Assistant] to
+        /// update.
+        /// 
+        /// The [Assistant][google.cloud.discoveryengine.v1.Assistant]'s `name` field
+        /// is used to identify the
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant] to update. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+        /// 
+        /// If the caller does not have permission to update the
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant], regardless of
+        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// 
+        /// If the [Assistant][google.cloud.discoveryengine.v1.Assistant] to update
+        /// does not exist, a NOT_FOUND error is returned.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Assistant> UpdateAssistantAsync(Assistant assistant, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAssistantAsync(assistant, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Assistant GetAssistant(GetAssistantRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Assistant> GetAssistantAsync(GetAssistantRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Assistant> GetAssistantAsync(GetAssistantRequest request, st::CancellationToken cancellationToken) =>
+            GetAssistantAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant]. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Assistant GetAssistant(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAssistant(new GetAssistantRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant]. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Assistant> GetAssistantAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAssistantAsync(new GetAssistantRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant]. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Assistant> GetAssistantAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAssistantAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant]. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Assistant GetAssistant(AssistantName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAssistant(new GetAssistantRequest
+            {
+                AssistantName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant]. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Assistant> GetAssistantAsync(AssistantName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAssistantAsync(new GetAssistantRequest
+            {
+                AssistantName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of
+        /// [Assistant][google.cloud.discoveryengine.v1.Assistant]. Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Assistant> GetAssistantAsync(AssistantName name, st::CancellationToken cancellationToken) =>
+            GetAssistantAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all [Assistant][google.cloud.discoveryengine.v1.Assistant]s under an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Assistant"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAssistantsResponse, Assistant> ListAssistants(ListAssistantsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all [Assistant][google.cloud.discoveryengine.v1.Assistant]s under an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Assistant"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAssistantsResponse, Assistant> ListAssistantsAsync(ListAssistantsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all [Assistant][google.cloud.discoveryengine.v1.Assistant]s under an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Assistant"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAssistantsResponse, Assistant> ListAssistants(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssistantsRequest request = new ListAssistantsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssistants(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all [Assistant][google.cloud.discoveryengine.v1.Assistant]s under an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Assistant"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAssistantsResponse, Assistant> ListAssistantsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssistantsRequest request = new ListAssistantsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssistantsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all [Assistant][google.cloud.discoveryengine.v1.Assistant]s under an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Assistant"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAssistantsResponse, Assistant> ListAssistants(EngineName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssistantsRequest request = new ListAssistantsRequest
+            {
+                ParentAsEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssistants(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all [Assistant][google.cloud.discoveryengine.v1.Assistant]s under an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// Format:
+        /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Assistant"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAssistantsResponse, Assistant> ListAssistantsAsync(EngineName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssistantsRequest request = new ListAssistantsRequest
+            {
+                ParentAsEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssistantsAsync(request, callSettings);
+        }
     }
 
     /// <summary>AssistantService client wrapper implementation, for convenient use.</summary>
@@ -232,6 +900,16 @@ namespace Google.Cloud.DiscoveryEngine.V1
     public sealed partial class AssistantServiceClientImpl : AssistantServiceClient
     {
         private readonly gaxgrpc::ApiServerStreamingCall<StreamAssistRequest, StreamAssistResponse> _callStreamAssist;
+
+        private readonly gaxgrpc::ApiCall<CreateAssistantRequest, Assistant> _callCreateAssistant;
+
+        private readonly gaxgrpc::ApiCall<DeleteAssistantRequest, wkt::Empty> _callDeleteAssistant;
+
+        private readonly gaxgrpc::ApiCall<UpdateAssistantRequest, Assistant> _callUpdateAssistant;
+
+        private readonly gaxgrpc::ApiCall<GetAssistantRequest, Assistant> _callGetAssistant;
+
+        private readonly gaxgrpc::ApiCall<ListAssistantsRequest, ListAssistantsResponse> _callListAssistants;
 
         /// <summary>
         /// Constructs a client wrapper for the AssistantService service, with the specified gRPC client and settings.
@@ -252,6 +930,21 @@ namespace Google.Cloud.DiscoveryEngine.V1
             _callStreamAssist = clientHelper.BuildApiCall<StreamAssistRequest, StreamAssistResponse>("StreamAssist", grpcClient.StreamAssist, effectiveSettings.StreamAssistSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStreamAssist);
             Modify_StreamAssistApiCall(ref _callStreamAssist);
+            _callCreateAssistant = clientHelper.BuildApiCall<CreateAssistantRequest, Assistant>("CreateAssistant", grpcClient.CreateAssistantAsync, grpcClient.CreateAssistant, effectiveSettings.CreateAssistantSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAssistant);
+            Modify_CreateAssistantApiCall(ref _callCreateAssistant);
+            _callDeleteAssistant = clientHelper.BuildApiCall<DeleteAssistantRequest, wkt::Empty>("DeleteAssistant", grpcClient.DeleteAssistantAsync, grpcClient.DeleteAssistant, effectiveSettings.DeleteAssistantSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteAssistant);
+            Modify_DeleteAssistantApiCall(ref _callDeleteAssistant);
+            _callUpdateAssistant = clientHelper.BuildApiCall<UpdateAssistantRequest, Assistant>("UpdateAssistant", grpcClient.UpdateAssistantAsync, grpcClient.UpdateAssistant, effectiveSettings.UpdateAssistantSettings).WithGoogleRequestParam("assistant.name", request => request.Assistant?.Name);
+            Modify_ApiCall(ref _callUpdateAssistant);
+            Modify_UpdateAssistantApiCall(ref _callUpdateAssistant);
+            _callGetAssistant = clientHelper.BuildApiCall<GetAssistantRequest, Assistant>("GetAssistant", grpcClient.GetAssistantAsync, grpcClient.GetAssistant, effectiveSettings.GetAssistantSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAssistant);
+            Modify_GetAssistantApiCall(ref _callGetAssistant);
+            _callListAssistants = clientHelper.BuildApiCall<ListAssistantsRequest, ListAssistantsResponse>("ListAssistants", grpcClient.ListAssistantsAsync, grpcClient.ListAssistants, effectiveSettings.ListAssistantsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAssistants);
+            Modify_ListAssistantsApiCall(ref _callListAssistants);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -260,6 +953,16 @@ namespace Google.Cloud.DiscoveryEngine.V1
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiServerStreamingCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
         partial void Modify_StreamAssistApiCall(ref gaxgrpc::ApiServerStreamingCall<StreamAssistRequest, StreamAssistResponse> call);
+
+        partial void Modify_CreateAssistantApiCall(ref gaxgrpc::ApiCall<CreateAssistantRequest, Assistant> call);
+
+        partial void Modify_DeleteAssistantApiCall(ref gaxgrpc::ApiCall<DeleteAssistantRequest, wkt::Empty> call);
+
+        partial void Modify_UpdateAssistantApiCall(ref gaxgrpc::ApiCall<UpdateAssistantRequest, Assistant> call);
+
+        partial void Modify_GetAssistantApiCall(ref gaxgrpc::ApiCall<GetAssistantRequest, Assistant> call);
+
+        partial void Modify_ListAssistantsApiCall(ref gaxgrpc::ApiCall<ListAssistantsRequest, ListAssistantsResponse> call);
 
         partial void OnConstruction(AssistantService.AssistantServiceClient grpcClient, AssistantServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -270,6 +973,16 @@ namespace Google.Cloud.DiscoveryEngine.V1
         public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_StreamAssistRequest(ref StreamAssistRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateAssistantRequest(ref CreateAssistantRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteAssistantRequest(ref DeleteAssistantRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAssistantRequest(ref UpdateAssistantRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAssistantRequest(ref GetAssistantRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAssistantsRequest(ref ListAssistantsRequest request, ref gaxgrpc::CallSettings settings);
 
         internal sealed partial class StreamAssistStreamImpl : StreamAssistStream
         {
@@ -291,6 +1004,140 @@ namespace Google.Cloud.DiscoveryEngine.V1
             Modify_StreamAssistRequest(ref request, ref callSettings);
             return new StreamAssistStreamImpl(_callStreamAssist.Call(request, callSettings));
         }
+
+        /// <summary>
+        /// Creates an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Assistant CreateAssistant(CreateAssistantRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAssistantRequest(ref request, ref callSettings);
+            return _callCreateAssistant.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Assistant> CreateAssistantAsync(CreateAssistantRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAssistantRequest(ref request, ref callSettings);
+            return _callCreateAssistant.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteAssistant(DeleteAssistantRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAssistantRequest(ref request, ref callSettings);
+            _callDeleteAssistant.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteAssistantAsync(DeleteAssistantRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAssistantRequest(ref request, ref callSettings);
+            return _callDeleteAssistant.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an [Assistant][google.cloud.discoveryengine.v1.Assistant]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Assistant UpdateAssistant(UpdateAssistantRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAssistantRequest(ref request, ref callSettings);
+            return _callUpdateAssistant.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an [Assistant][google.cloud.discoveryengine.v1.Assistant]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Assistant> UpdateAssistantAsync(UpdateAssistantRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAssistantRequest(ref request, ref callSettings);
+            return _callUpdateAssistant.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Assistant GetAssistant(GetAssistantRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAssistantRequest(ref request, ref callSettings);
+            return _callGetAssistant.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an [Assistant][google.cloud.discoveryengine.v1.Assistant].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Assistant> GetAssistantAsync(GetAssistantRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAssistantRequest(ref request, ref callSettings);
+            return _callGetAssistant.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all [Assistant][google.cloud.discoveryengine.v1.Assistant]s under an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Assistant"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAssistantsResponse, Assistant> ListAssistants(ListAssistantsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAssistantsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAssistantsRequest, ListAssistantsResponse, Assistant>(_callListAssistants, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all [Assistant][google.cloud.discoveryengine.v1.Assistant]s under an
+        /// [Engine][google.cloud.discoveryengine.v1.Engine].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Assistant"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAssistantsResponse, Assistant> ListAssistantsAsync(ListAssistantsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAssistantsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAssistantsRequest, ListAssistantsResponse, Assistant>(_callListAssistants, request, callSettings);
+        }
+    }
+
+    public partial class ListAssistantsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAssistantsResponse : gaxgrpc::IPageResponse<Assistant>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Assistant> GetEnumerator() => Assistants.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public static partial class AssistantService

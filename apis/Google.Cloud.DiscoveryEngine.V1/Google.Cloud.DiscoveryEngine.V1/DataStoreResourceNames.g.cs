@@ -359,5 +359,26 @@ namespace Google.Cloud.DiscoveryEngine.V1
             get => string.IsNullOrEmpty(IdentityMappingStore) ? null : IdentityMappingStoreName.Parse(IdentityMappingStore, allowUnparsed: true);
             set => IdentityMappingStore = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class FederatedSearchConfig
+            {
+                public partial class Types
+                {
+                    public partial class NotebooklmConfig
+                    {
+                        /// <summary>
+                        /// <see cref="NotebookName"/>-typed view over the <see cref="Notebooks"/> resource name
+                        /// property.
+                        /// </summary>
+                        public gax::ResourceNameList<NotebookName> NotebooksAsNotebookNames
+                        {
+                            get => new gax::ResourceNameList<NotebookName>(Notebooks, s => string.IsNullOrEmpty(s) ? null : NotebookName.Parse(s, allowUnparsed: true));
+                        }
+                    }
+                }
+            }
+        }
     }
 }

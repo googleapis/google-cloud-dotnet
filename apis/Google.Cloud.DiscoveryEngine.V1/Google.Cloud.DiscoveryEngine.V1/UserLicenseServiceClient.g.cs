@@ -48,6 +48,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListUserLicensesSettings = existing.ListUserLicensesSettings;
+            ListLicenseConfigsUsageStatsSettings = existing.ListLicenseConfigsUsageStatsSettings;
             BatchUpdateUserLicensesSettings = existing.BatchUpdateUserLicensesSettings;
             BatchUpdateUserLicensesOperationsSettings = existing.BatchUpdateUserLicensesOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
@@ -67,6 +68,19 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListUserLicensesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>UserLicenseServiceClient.ListLicenseConfigsUsageStats</c> and
+        /// <c>UserLicenseServiceClient.ListLicenseConfigsUsageStatsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListLicenseConfigsUsageStatsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -178,11 +192,15 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// The default UserLicenseService scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/discoveryengine.readwrite</description></item>
+        /// <item><description>https://www.googleapis.com/auth/discoveryengine.serving.readwrite</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/discoveryengine.readwrite",
+            "https://www.googleapis.com/auth/discoveryengine.serving.readwrite",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -273,7 +291,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// Lists the User Licenses.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent [UserStore][] resource name, format:
+        /// Required. The parent [UserStore][google.cloud.discoveryengine.v1.UserStore]
+        /// resource name, format:
         /// `projects/{project}/locations/{location}/userStores/{user_store_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -307,7 +326,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// Lists the User Licenses.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent [UserStore][] resource name, format:
+        /// Required. The parent [UserStore][google.cloud.discoveryengine.v1.UserStore]
+        /// resource name, format:
         /// `projects/{project}/locations/{location}/userStores/{user_store_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -341,7 +361,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// Lists the User Licenses.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent [UserStore][] resource name, format:
+        /// Required. The parent [UserStore][google.cloud.discoveryengine.v1.UserStore]
+        /// resource name, format:
         /// `projects/{project}/locations/{location}/userStores/{user_store_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -375,7 +396,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// Lists the User Licenses.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent [UserStore][] resource name, format:
+        /// Required. The parent [UserStore][google.cloud.discoveryengine.v1.UserStore]
+        /// resource name, format:
         /// `projects/{project}/locations/{location}/userStores/{user_store_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -404,6 +426,135 @@ namespace Google.Cloud.DiscoveryEngine.V1
             }
             return ListUserLicensesAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Lists all the
+        /// [LicenseConfigUsageStats][google.cloud.discoveryengine.v1.LicenseConfigUsageStats]s
+        /// associated with the project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ListLicenseConfigsUsageStatsResponse ListLicenseConfigsUsageStats(ListLicenseConfigsUsageStatsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the
+        /// [LicenseConfigUsageStats][google.cloud.discoveryengine.v1.LicenseConfigUsageStats]s
+        /// associated with the project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListLicenseConfigsUsageStatsResponse> ListLicenseConfigsUsageStatsAsync(ListLicenseConfigsUsageStatsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the
+        /// [LicenseConfigUsageStats][google.cloud.discoveryengine.v1.LicenseConfigUsageStats]s
+        /// associated with the project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListLicenseConfigsUsageStatsResponse> ListLicenseConfigsUsageStatsAsync(ListLicenseConfigsUsageStatsRequest request, st::CancellationToken cancellationToken) =>
+            ListLicenseConfigsUsageStatsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all the
+        /// [LicenseConfigUsageStats][google.cloud.discoveryengine.v1.LicenseConfigUsageStats]s
+        /// associated with the project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent branch resource name, such as
+        /// `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ListLicenseConfigsUsageStatsResponse ListLicenseConfigsUsageStats(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ListLicenseConfigsUsageStats(new ListLicenseConfigsUsageStatsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all the
+        /// [LicenseConfigUsageStats][google.cloud.discoveryengine.v1.LicenseConfigUsageStats]s
+        /// associated with the project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent branch resource name, such as
+        /// `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListLicenseConfigsUsageStatsResponse> ListLicenseConfigsUsageStatsAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ListLicenseConfigsUsageStatsAsync(new ListLicenseConfigsUsageStatsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all the
+        /// [LicenseConfigUsageStats][google.cloud.discoveryengine.v1.LicenseConfigUsageStats]s
+        /// associated with the project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent branch resource name, such as
+        /// `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListLicenseConfigsUsageStatsResponse> ListLicenseConfigsUsageStatsAsync(string parent, st::CancellationToken cancellationToken) =>
+            ListLicenseConfigsUsageStatsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all the
+        /// [LicenseConfigUsageStats][google.cloud.discoveryengine.v1.LicenseConfigUsageStats]s
+        /// associated with the project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent branch resource name, such as
+        /// `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ListLicenseConfigsUsageStatsResponse ListLicenseConfigsUsageStats(UserStoreName parent, gaxgrpc::CallSettings callSettings = null) =>
+            ListLicenseConfigsUsageStats(new ListLicenseConfigsUsageStatsRequest
+            {
+                ParentAsUserStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all the
+        /// [LicenseConfigUsageStats][google.cloud.discoveryengine.v1.LicenseConfigUsageStats]s
+        /// associated with the project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent branch resource name, such as
+        /// `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListLicenseConfigsUsageStatsResponse> ListLicenseConfigsUsageStatsAsync(UserStoreName parent, gaxgrpc::CallSettings callSettings = null) =>
+            ListLicenseConfigsUsageStatsAsync(new ListLicenseConfigsUsageStatsRequest
+            {
+                ParentAsUserStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all the
+        /// [LicenseConfigUsageStats][google.cloud.discoveryengine.v1.LicenseConfigUsageStats]s
+        /// associated with the project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent branch resource name, such as
+        /// `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListLicenseConfigsUsageStatsResponse> ListLicenseConfigsUsageStatsAsync(UserStoreName parent, st::CancellationToken cancellationToken) =>
+            ListLicenseConfigsUsageStatsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates the User License.
@@ -471,6 +622,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
     {
         private readonly gaxgrpc::ApiCall<ListUserLicensesRequest, ListUserLicensesResponse> _callListUserLicenses;
 
+        private readonly gaxgrpc::ApiCall<ListLicenseConfigsUsageStatsRequest, ListLicenseConfigsUsageStatsResponse> _callListLicenseConfigsUsageStats;
+
         private readonly gaxgrpc::ApiCall<BatchUpdateUserLicensesRequest, lro::Operation> _callBatchUpdateUserLicenses;
 
         /// <summary>
@@ -493,6 +646,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
             _callListUserLicenses = clientHelper.BuildApiCall<ListUserLicensesRequest, ListUserLicensesResponse>("ListUserLicenses", grpcClient.ListUserLicensesAsync, grpcClient.ListUserLicenses, effectiveSettings.ListUserLicensesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListUserLicenses);
             Modify_ListUserLicensesApiCall(ref _callListUserLicenses);
+            _callListLicenseConfigsUsageStats = clientHelper.BuildApiCall<ListLicenseConfigsUsageStatsRequest, ListLicenseConfigsUsageStatsResponse>("ListLicenseConfigsUsageStats", grpcClient.ListLicenseConfigsUsageStatsAsync, grpcClient.ListLicenseConfigsUsageStats, effectiveSettings.ListLicenseConfigsUsageStatsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListLicenseConfigsUsageStats);
+            Modify_ListLicenseConfigsUsageStatsApiCall(ref _callListLicenseConfigsUsageStats);
             _callBatchUpdateUserLicenses = clientHelper.BuildApiCall<BatchUpdateUserLicensesRequest, lro::Operation>("BatchUpdateUserLicenses", grpcClient.BatchUpdateUserLicensesAsync, grpcClient.BatchUpdateUserLicenses, effectiveSettings.BatchUpdateUserLicensesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchUpdateUserLicenses);
             Modify_BatchUpdateUserLicensesApiCall(ref _callBatchUpdateUserLicenses);
@@ -502,6 +658,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
         partial void Modify_ListUserLicensesApiCall(ref gaxgrpc::ApiCall<ListUserLicensesRequest, ListUserLicensesResponse> call);
+
+        partial void Modify_ListLicenseConfigsUsageStatsApiCall(ref gaxgrpc::ApiCall<ListLicenseConfigsUsageStatsRequest, ListLicenseConfigsUsageStatsResponse> call);
 
         partial void Modify_BatchUpdateUserLicensesApiCall(ref gaxgrpc::ApiCall<BatchUpdateUserLicensesRequest, lro::Operation> call);
 
@@ -514,6 +672,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
         public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_ListUserLicensesRequest(ref ListUserLicensesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListLicenseConfigsUsageStatsRequest(ref ListLicenseConfigsUsageStatsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BatchUpdateUserLicensesRequest(ref BatchUpdateUserLicensesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -539,6 +699,34 @@ namespace Google.Cloud.DiscoveryEngine.V1
         {
             Modify_ListUserLicensesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListUserLicensesRequest, ListUserLicensesResponse, UserLicense>(_callListUserLicenses, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the
+        /// [LicenseConfigUsageStats][google.cloud.discoveryengine.v1.LicenseConfigUsageStats]s
+        /// associated with the project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ListLicenseConfigsUsageStatsResponse ListLicenseConfigsUsageStats(ListLicenseConfigsUsageStatsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListLicenseConfigsUsageStatsRequest(ref request, ref callSettings);
+            return _callListLicenseConfigsUsageStats.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the
+        /// [LicenseConfigUsageStats][google.cloud.discoveryengine.v1.LicenseConfigUsageStats]s
+        /// associated with the project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ListLicenseConfigsUsageStatsResponse> ListLicenseConfigsUsageStatsAsync(ListLicenseConfigsUsageStatsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListLicenseConfigsUsageStatsRequest(ref request, ref callSettings);
+            return _callListLicenseConfigsUsageStats.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>BatchUpdateUserLicenses</c>.</summary>

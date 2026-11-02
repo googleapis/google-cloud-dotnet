@@ -39,8 +39,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
                 },
                 {
                     "google.longrunning.Operations.GetOperation",
-                    // { "get": "/v1/{name=projects/*/operations/*}", "additionalBindings": [ { "get": "/v1/{name=projects/*/locations/*/collections/*/dataConnector/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/branches/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/models/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/schemas/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/siteSearchEngine/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/siteSearchEngine/targetSites/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/engines/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/dataStores/*/branches/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/dataStores/*/models/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/dataStores/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/identityMappingStores/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/operations/*}" }, { "get": "/v1/{name=projects/*/operations/*}" } ] }
-                    proto::ByteString.FromBase64("EiIvdjEve25hbWU9cHJvamVjdHMvKi9vcGVyYXRpb25zLyp9WkwSSi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YUNvbm5lY3Rvci9vcGVyYXRpb25zLyp9WlYSVC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YVN0b3Jlcy8qL2JyYW5jaGVzLyovb3BlcmF0aW9ucy8qfVpUElIvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb2xsZWN0aW9ucy8qL2RhdGFTdG9yZXMvKi9tb2RlbHMvKi9vcGVyYXRpb25zLyp9WksSSS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YVN0b3Jlcy8qL29wZXJhdGlvbnMvKn1aVRJTL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY29sbGVjdGlvbnMvKi9kYXRhU3RvcmVzLyovc2NoZW1hcy8qL29wZXJhdGlvbnMvKn1aXBJaL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY29sbGVjdGlvbnMvKi9kYXRhU3RvcmVzLyovc2l0ZVNlYXJjaEVuZ2luZS9vcGVyYXRpb25zLyp9WmgSZi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YVN0b3Jlcy8qL3NpdGVTZWFyY2hFbmdpbmUvdGFyZ2V0U2l0ZXMvb3BlcmF0aW9ucy8qfVpIEkYvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb2xsZWN0aW9ucy8qL2VuZ2luZXMvKi9vcGVyYXRpb25zLyp9Wj4SPC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovb3BlcmF0aW9ucy8qfVpIEkYvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU3RvcmVzLyovYnJhbmNoZXMvKi9vcGVyYXRpb25zLyp9WkYSRC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTdG9yZXMvKi9tb2RlbHMvKi9vcGVyYXRpb25zLyp9Wj0SOy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTdG9yZXMvKi9vcGVyYXRpb25zLyp9WkgSRi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2lkZW50aXR5TWFwcGluZ1N0b3Jlcy8qL29wZXJhdGlvbnMvKn1aMBIuL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovb3BlcmF0aW9ucy8qfVokEiIvdjEve25hbWU9cHJvamVjdHMvKi9vcGVyYXRpb25zLyp9")
+                    // { "get": "/v1/{name=projects/*/operations/*}", "additionalBindings": [ { "get": "/v1/{name=projects/*/locations/*/collections/*/dataConnector/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/branches/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/models/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/schemas/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/siteSearchEngine/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/dataStores/*/siteSearchEngine/targetSites/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/engines/*/assistants/*/agents/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/engines/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/collections/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/dataStores/*/branches/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/dataStores/*/models/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/dataStores/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/identityMappingStores/*/operations/*}" }, { "get": "/v1/{name=projects/*/locations/*/operations/*}" }, { "get": "/v1/{name=projects/*/operations/*}" } ] }
+                    proto::ByteString.FromBase64("EiIvdjEve25hbWU9cHJvamVjdHMvKi9vcGVyYXRpb25zLyp9WkwSSi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YUNvbm5lY3Rvci9vcGVyYXRpb25zLyp9WlYSVC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YVN0b3Jlcy8qL2JyYW5jaGVzLyovb3BlcmF0aW9ucy8qfVpUElIvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb2xsZWN0aW9ucy8qL2RhdGFTdG9yZXMvKi9tb2RlbHMvKi9vcGVyYXRpb25zLyp9WksSSS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YVN0b3Jlcy8qL29wZXJhdGlvbnMvKn1aVRJTL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY29sbGVjdGlvbnMvKi9kYXRhU3RvcmVzLyovc2NoZW1hcy8qL29wZXJhdGlvbnMvKn1aXBJaL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY29sbGVjdGlvbnMvKi9kYXRhU3RvcmVzLyovc2l0ZVNlYXJjaEVuZ2luZS9vcGVyYXRpb25zLyp9WmgSZi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YVN0b3Jlcy8qL3NpdGVTZWFyY2hFbmdpbmUvdGFyZ2V0U2l0ZXMvb3BlcmF0aW9ucy8qfVpeElwvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb2xsZWN0aW9ucy8qL2VuZ2luZXMvKi9hc3Npc3RhbnRzLyovYWdlbnRzLyovb3BlcmF0aW9ucy8qfVpIEkYvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb2xsZWN0aW9ucy8qL2VuZ2luZXMvKi9vcGVyYXRpb25zLyp9Wj4SPC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovb3BlcmF0aW9ucy8qfVpIEkYvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU3RvcmVzLyovYnJhbmNoZXMvKi9vcGVyYXRpb25zLyp9WkYSRC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTdG9yZXMvKi9tb2RlbHMvKi9vcGVyYXRpb25zLyp9Wj0SOy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTdG9yZXMvKi9vcGVyYXRpb25zLyp9WkgSRi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2lkZW50aXR5TWFwcGluZ1N0b3Jlcy8qL29wZXJhdGlvbnMvKn1aMBIuL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovb3BlcmF0aW9ucy8qfVokEiIvdjEve25hbWU9cHJvamVjdHMvKi9vcGVyYXRpb25zLyp9")
                 },
                 {
                     "google.longrunning.Operations.ListOperations",
@@ -51,12 +51,17 @@ namespace Google.Cloud.DiscoveryEngine.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return AclConfigReflection.Descriptor;
+            yield return AclConfigServiceReflection.Descriptor;
+            yield return AgentGatewaySettingReflection.Descriptor;
             yield return AnswerReflection.Descriptor;
             yield return AssistAnswerReflection.Descriptor;
             yield return AssistantReflection.Descriptor;
             yield return AssistantServiceReflection.Descriptor;
             yield return ChunkReflection.Descriptor;
             yield return CmekConfigServiceReflection.Descriptor;
+            yield return CollectionReflection.Descriptor;
+            yield return CollectionServiceReflection.Descriptor;
             yield return CommonReflection.Descriptor;
             yield return CompletionReflection.Descriptor;
             yield return CompletionServiceReflection.Descriptor;
@@ -65,6 +70,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
             yield return ConversationReflection.Descriptor;
             yield return ConversationalSearchServiceReflection.Descriptor;
             yield return CustomTuningModelReflection.Descriptor;
+            yield return DataConnectorReflection.Descriptor;
+            yield return DataConnectorServiceReflection.Descriptor;
             yield return DataStoreReflection.Descriptor;
             yield return DataStoreServiceReflection.Descriptor;
             yield return DocumentReflection.Descriptor;
@@ -72,11 +79,15 @@ namespace Google.Cloud.DiscoveryEngine.V1
             yield return DocumentServiceReflection.Descriptor;
             yield return EngineReflection.Descriptor;
             yield return EngineServiceReflection.Descriptor;
+            yield return FeedbackReflection.Descriptor;
             yield return GroundedGenerationServiceReflection.Descriptor;
             yield return GroundingReflection.Descriptor;
             yield return IdentityMappingStoreReflection.Descriptor;
             yield return IdentityMappingStoreServiceReflection.Descriptor;
             yield return ImportConfigReflection.Descriptor;
+            yield return LicenseConfigReflection.Descriptor;
+            yield return LicenseConfigServiceReflection.Descriptor;
+            yield return LoggingReflection.Descriptor;
             yield return ProjectReflection.Descriptor;
             yield return ProjectServiceReflection.Descriptor;
             yield return PurgeConfigReflection.Descriptor;
@@ -97,6 +108,10 @@ namespace Google.Cloud.DiscoveryEngine.V1
             yield return UserEventServiceReflection.Descriptor;
             yield return UserLicenseReflection.Descriptor;
             yield return UserLicenseServiceReflection.Descriptor;
+            yield return UserStoreReflection.Descriptor;
+            yield return UserStoreServiceReflection.Descriptor;
+            yield return WidgetConfigReflection.Descriptor;
+            yield return WidgetConfigServiceReflection.Descriptor;
             yield return gcl::LocationsReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }

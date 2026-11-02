@@ -36,6 +36,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsUserStoreName = UserStoreName.FromProjectLocationUserStore("[PROJECT]", "[LOCATION]", "[USER_STORE]"),
                 Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedEnumerable<ListUserLicensesResponse, UserLicense> response = userLicenseServiceClient.ListUserLicenses(request);
@@ -85,6 +86,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsUserStoreName = UserStoreName.FromProjectLocationUserStore("[PROJECT]", "[LOCATION]", "[USER_STORE]"),
                 Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListUserLicensesResponse, UserLicense> response = userLicenseServiceClient.ListUserLicensesAsync(request);
@@ -300,6 +302,93 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLicenseConfigsUsageStats</summary>
+        public void ListLicenseConfigsUsageStatsRequestObject()
+        {
+            // Snippet: ListLicenseConfigsUsageStats(ListLicenseConfigsUsageStatsRequest, CallSettings)
+            // Create client
+            UserLicenseServiceClient userLicenseServiceClient = UserLicenseServiceClient.Create();
+            // Initialize request argument(s)
+            ListLicenseConfigsUsageStatsRequest request = new ListLicenseConfigsUsageStatsRequest
+            {
+                ParentAsUserStoreName = UserStoreName.FromProjectLocationUserStore("[PROJECT]", "[LOCATION]", "[USER_STORE]"),
+            };
+            // Make the request
+            ListLicenseConfigsUsageStatsResponse response = userLicenseServiceClient.ListLicenseConfigsUsageStats(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLicenseConfigsUsageStatsAsync</summary>
+        public async Task ListLicenseConfigsUsageStatsRequestObjectAsync()
+        {
+            // Snippet: ListLicenseConfigsUsageStatsAsync(ListLicenseConfigsUsageStatsRequest, CallSettings)
+            // Additional: ListLicenseConfigsUsageStatsAsync(ListLicenseConfigsUsageStatsRequest, CancellationToken)
+            // Create client
+            UserLicenseServiceClient userLicenseServiceClient = await UserLicenseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListLicenseConfigsUsageStatsRequest request = new ListLicenseConfigsUsageStatsRequest
+            {
+                ParentAsUserStoreName = UserStoreName.FromProjectLocationUserStore("[PROJECT]", "[LOCATION]", "[USER_STORE]"),
+            };
+            // Make the request
+            ListLicenseConfigsUsageStatsResponse response = await userLicenseServiceClient.ListLicenseConfigsUsageStatsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLicenseConfigsUsageStats</summary>
+        public void ListLicenseConfigsUsageStats()
+        {
+            // Snippet: ListLicenseConfigsUsageStats(string, CallSettings)
+            // Create client
+            UserLicenseServiceClient userLicenseServiceClient = UserLicenseServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/userStores/[USER_STORE]";
+            // Make the request
+            ListLicenseConfigsUsageStatsResponse response = userLicenseServiceClient.ListLicenseConfigsUsageStats(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLicenseConfigsUsageStatsAsync</summary>
+        public async Task ListLicenseConfigsUsageStatsAsync()
+        {
+            // Snippet: ListLicenseConfigsUsageStatsAsync(string, CallSettings)
+            // Additional: ListLicenseConfigsUsageStatsAsync(string, CancellationToken)
+            // Create client
+            UserLicenseServiceClient userLicenseServiceClient = await UserLicenseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/userStores/[USER_STORE]";
+            // Make the request
+            ListLicenseConfigsUsageStatsResponse response = await userLicenseServiceClient.ListLicenseConfigsUsageStatsAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLicenseConfigsUsageStats</summary>
+        public void ListLicenseConfigsUsageStatsResourceNames()
+        {
+            // Snippet: ListLicenseConfigsUsageStats(UserStoreName, CallSettings)
+            // Create client
+            UserLicenseServiceClient userLicenseServiceClient = UserLicenseServiceClient.Create();
+            // Initialize request argument(s)
+            UserStoreName parent = UserStoreName.FromProjectLocationUserStore("[PROJECT]", "[LOCATION]", "[USER_STORE]");
+            // Make the request
+            ListLicenseConfigsUsageStatsResponse response = userLicenseServiceClient.ListLicenseConfigsUsageStats(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLicenseConfigsUsageStatsAsync</summary>
+        public async Task ListLicenseConfigsUsageStatsResourceNamesAsync()
+        {
+            // Snippet: ListLicenseConfigsUsageStatsAsync(UserStoreName, CallSettings)
+            // Additional: ListLicenseConfigsUsageStatsAsync(UserStoreName, CancellationToken)
+            // Create client
+            UserLicenseServiceClient userLicenseServiceClient = await UserLicenseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UserStoreName parent = UserStoreName.FromProjectLocationUserStore("[PROJECT]", "[LOCATION]", "[USER_STORE]");
+            // Make the request
+            ListLicenseConfigsUsageStatsResponse response = await userLicenseServiceClient.ListLicenseConfigsUsageStatsAsync(parent);
             // End snippet
         }
 

@@ -30,44 +30,49 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "cHJvdG8aLGdvb2dsZS9jbG91ZC9kaXNjb3ZlcnllbmdpbmUvdjEvYW5zd2Vy",
             "LnByb3RvGjNnb29nbGUvY2xvdWQvZGlzY292ZXJ5ZW5naW5lL3YxL2Fzc2lz",
             "dF9hbnN3ZXIucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJv",
-            "dG8iqQkKB1Nlc3Npb24SEQoEbmFtZRgBIAEoCUID4EEFEhkKDGRpc3BsYXlf",
-            "bmFtZRgHIAEoCUID4EEBEj0KBXN0YXRlGAIgASgOMi4uZ29vZ2xlLmNsb3Vk",
-            "LmRpc2NvdmVyeWVuZ2luZS52MS5TZXNzaW9uLlN0YXRlEhYKDnVzZXJfcHNl",
-            "dWRvX2lkGAMgASgJEjwKBXR1cm5zGAQgAygLMi0uZ29vZ2xlLmNsb3VkLmRp",
-            "c2NvdmVyeWVuZ2luZS52MS5TZXNzaW9uLlR1cm4SEwoGbGFiZWxzGAkgAygJ",
-            "QgPgQQESMwoKc3RhcnRfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAxIWCglpc19waW5uZWQYCCABKAhCA+BBARqr",
-            "AwoEVHVybhI6CgVxdWVyeRgBIAEoCzImLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
-            "cnllbmdpbmUudjEuUXVlcnlCA+BBARI9CgZhbnN3ZXIYAiABKAlCLeBBAfpB",
-            "JwolZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0Fuc3dlchJFCg9k",
-            "ZXRhaWxlZF9hbnN3ZXIYByABKAsyJy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
-            "ZW5naW5lLnYxLkFuc3dlckID4EEDElIKFmRldGFpbGVkX2Fzc2lzdF9hbnN3",
-            "ZXIYCCABKAsyLS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkFz",
-            "c2lzdEFuc3dlckID4EEDElkKDHF1ZXJ5X2NvbmZpZxgQIAMoCzI+Lmdvb2ds",
-            "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2Vzc2lvbi5UdXJuLlF1ZXJ5",
-            "Q29uZmlnRW50cnlCA+BBARoyChBRdWVyeUNvbmZpZ0VudHJ5EgsKA2tleRgB",
-            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiLwoFU3RhdGUSFQoRU1RBVEVfVU5T",
-            "UEVDSUZJRUQQABIPCgtJTl9QUk9HUkVTUxABOuYC6kHiAgomZGlzY292ZXJ5",
-            "ZW5naW5lLmdvb2dsZWFwaXMuY29tL1Nlc3Npb24SUnByb2plY3RzL3twcm9q",
-            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0",
-            "b3JlfS9zZXNzaW9ucy97c2Vzc2lvbn0Sa3Byb2plY3RzL3twcm9qZWN0fS9s",
-            "b2NhdGlvbnMve2xvY2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVjdGlvbn0v",
-            "ZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0vc2Vzc2lvbnMve3Nlc3Npb259EmRw",
-            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY29sbGVj",
-            "dGlvbnMve2NvbGxlY3Rpb259L2VuZ2luZXMve2VuZ2luZX0vc2Vzc2lvbnMv",
-            "e3Nlc3Npb259KghzZXNzaW9uczIHc2Vzc2lvbiI5CgVRdWVyeRIOCgR0ZXh0",
-            "GAIgASgJSAASFQoIcXVlcnlfaWQYASABKAlCA+BBA0IJCgdjb250ZW50Qv8B",
-            "CiNjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MUIMU2Vzc2lv",
-            "blByb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5l",
-            "L2FwaXYxL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIP",
-            "RElTQ09WRVJZRU5HSU5FqgIfR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2lu",
-            "ZS5WMcoCH0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjHqAiJHb29n",
-            "bGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYgZwcm90bzM="));
+            "dG8ijgsKB1Nlc3Npb24SEgoEbmFtZRgBIAEoCUIE4kEBBRIaCgxkaXNwbGF5",
+            "X25hbWUYByABKAlCBOJBAQESPQoFc3RhdGUYAiABKA4yLi5nb29nbGUuY2xv",
+            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxLlNlc3Npb24uU3RhdGUSFgoOdXNlcl9w",
+            "c2V1ZG9faWQYAyABKAkSPAoFdHVybnMYBCADKAsyLS5nb29nbGUuY2xvdWQu",
+            "ZGlzY292ZXJ5ZW5naW5lLnYxLlNlc3Npb24uVHVybhIUCgZsYWJlbHMYCSAD",
+            "KAlCBOJBAQESNAoKc3RhcnRfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCBOJBAQMSMgoIZW5kX3RpbWUYBiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEhcKCWlzX3Bpbm5lZBgIIAEoCEIE",
+            "4kEBARIvCiFwZW5kaW5nX2FzeW5jX2Fzc2lzdF9vcGVyYXRpb25faWQYFiAB",
+            "KAlCBOJBAQMaxAMKBFR1cm4SOwoFcXVlcnkYASABKAsyJi5nb29nbGUuY2xv",
+            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxLlF1ZXJ5QgTiQQEBEj4KBmFuc3dlchgC",
+            "IAEoCUIu4kEBAfpBJwolZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29t",
+            "L0Fuc3dlchJGCg9kZXRhaWxlZF9hbnN3ZXIYByABKAsyJy5nb29nbGUuY2xv",
+            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxLkFuc3dlckIE4kEBAxJTChZkZXRhaWxl",
+            "ZF9hc3Npc3RfYW5zd2VyGAggASgLMi0uZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
+            "eWVuZ2luZS52MS5Bc3Npc3RBbnN3ZXJCBOJBAQMSWgoMcXVlcnlfY29uZmln",
+            "GBAgAygLMj4uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZXNz",
+            "aW9uLlR1cm4uUXVlcnlDb25maWdFbnRyeUIE4kEBARISCgRsaXZlGBQgASgI",
+            "QgTiQQEBGjIKEFF1ZXJ5Q29uZmlnRW50cnkSCwoDa2V5GAEgASgJEg0KBXZh",
+            "bHVlGAIgASgJOgI4ASIvCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAA",
+            "Eg8KC0lOX1BST0dSRVNTEAE6+wPqQfcDCiZkaXNjb3ZlcnllbmdpbmUuZ29v",
+            "Z2xlYXBpcy5jb20vU2Vzc2lvbhJScHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L2RhdGFTdG9yZXMve2RhdGFfc3RvcmV9L3Nlc3Np",
+            "b25zL3tzZXNzaW9ufRJrcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
+            "bG9jYXRpb259L2NvbGxlY3Rpb25zL3tjb2xsZWN0aW9ufS9kYXRhU3RvcmVz",
+            "L3tkYXRhX3N0b3JlfS9zZXNzaW9ucy97c2Vzc2lvbn0SZHByb2plY3RzL3tw",
+            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb2xsZWN0aW9ucy97Y29s",
+            "bGVjdGlvbn0vZW5naW5lcy97ZW5naW5lfS9zZXNzaW9ucy97c2Vzc2lvbn0S",
+            "kgFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY29s",
+            "bGVjdGlvbnMve2NvbGxlY3Rpb259L2VuZ2luZXMve2VuZ2luZX0vY29sbGFi",
+            "b3JhdGl2ZVByb2plY3RzL3tjb2xsYWJvcmF0aXZlX3Byb2plY3R9L3Nlc3Np",
+            "b25zL3tzZXNzaW9ufSoIc2Vzc2lvbnMyB3Nlc3Npb24iOgoFUXVlcnkSDgoE",
+            "dGV4dBgCIAEoCUgAEhYKCHF1ZXJ5X2lkGAEgASgJQgTiQQEDQgkKB2NvbnRl",
+            "bnRC/wEKI2NvbS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxQgxT",
+            "ZXNzaW9uUHJvdG9QAVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9kaXNjb3Zlcnll",
+            "bmdpbmUvYXBpdjEvZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5l",
+            "cGKiAg9ESVNDT1ZFUllFTkdJTkWqAh9Hb29nbGUuQ2xvdWQuRGlzY292ZXJ5",
+            "RW5naW5lLlYxygIfR29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMeoC",
+            "Ikdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.AnswerReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.AssistAnswerReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Session), global::Google.Cloud.DiscoveryEngine.V1.Session.Parser, new[]{ "Name", "DisplayName", "State", "UserPseudoId", "Turns", "Labels", "StartTime", "EndTime", "IsPinned" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.Session.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Session.Types.Turn), global::Google.Cloud.DiscoveryEngine.V1.Session.Types.Turn.Parser, new[]{ "Query", "Answer", "DetailedAnswer", "DetailedAssistAnswer", "QueryConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Session), global::Google.Cloud.DiscoveryEngine.V1.Session.Parser, new[]{ "Name", "DisplayName", "State", "UserPseudoId", "Turns", "Labels", "StartTime", "EndTime", "IsPinned", "PendingAsyncAssistOperationId" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.Session.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Session.Types.Turn), global::Google.Cloud.DiscoveryEngine.V1.Session.Types.Turn.Parser, new[]{ "Query", "Answer", "DetailedAnswer", "DetailedAssistAnswer", "QueryConfig", "Live" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Query), global::Google.Cloud.DiscoveryEngine.V1.Query.Parser, new[]{ "Text", "QueryId" }, new[]{ "Content" }, null, null, null)
           }));
     }
@@ -122,6 +127,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
       isPinned_ = other.isPinned_;
+      pendingAsyncAssistOperationId_ = other.pendingAsyncAssistOperationId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -270,6 +276,24 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "pending_async_assist_operation_id" field.</summary>
+    public const int PendingAsyncAssistOperationIdFieldNumber = 22;
+    private string pendingAsyncAssistOperationId_ = "";
+    /// <summary>
+    /// Output only. Full resource name of an in-progress AsyncAssist operation for
+    /// this session, e.g.
+    /// `projects/*/locations/*/collections/*/engines/*/sessions/*/operations/*`.
+    /// Set when the operation starts and cleared when it finishes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PendingAsyncAssistOperationId {
+      get { return pendingAsyncAssistOperationId_; }
+      set {
+        pendingAsyncAssistOperationId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -294,6 +318,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(EndTime, other.EndTime)) return false;
       if (IsPinned != other.IsPinned) return false;
+      if (PendingAsyncAssistOperationId != other.PendingAsyncAssistOperationId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -310,6 +335,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
       if (IsPinned != false) hash ^= IsPinned.GetHashCode();
+      if (PendingAsyncAssistOperationId.Length != 0) hash ^= PendingAsyncAssistOperationId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -358,6 +384,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteBool(IsPinned);
       }
       labels_.WriteTo(output, _repeated_labels_codec);
+      if (PendingAsyncAssistOperationId.Length != 0) {
+        output.WriteRawTag(178, 1);
+        output.WriteString(PendingAsyncAssistOperationId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -398,6 +428,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteBool(IsPinned);
       }
       labels_.WriteTo(ref output, _repeated_labels_codec);
+      if (PendingAsyncAssistOperationId.Length != 0) {
+        output.WriteRawTag(178, 1);
+        output.WriteString(PendingAsyncAssistOperationId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -430,6 +464,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (IsPinned != false) {
         size += 1 + 1;
+      }
+      if (PendingAsyncAssistOperationId.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(PendingAsyncAssistOperationId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -471,6 +508,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (other.IsPinned != false) {
         IsPinned = other.IsPinned;
+      }
+      if (other.PendingAsyncAssistOperationId.Length != 0) {
+        PendingAsyncAssistOperationId = other.PendingAsyncAssistOperationId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -533,6 +573,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             labels_.AddEntriesFrom(input, _repeated_labels_codec);
             break;
           }
+          case 178: {
+            PendingAsyncAssistOperationId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -592,6 +636,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           case 74: {
             labels_.AddEntriesFrom(ref input, _repeated_labels_codec);
+            break;
+          }
+          case 178: {
+            PendingAsyncAssistOperationId = input.ReadString();
             break;
           }
         }
@@ -662,6 +710,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           detailedAnswer_ = other.detailedAnswer_ != null ? other.detailedAnswer_.Clone() : null;
           detailedAssistAnswer_ = other.detailedAssistAnswer_ != null ? other.detailedAssistAnswer_.Clone() : null;
           queryConfig_ = other.queryConfig_.Clone();
+          live_ = other.live_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -762,6 +811,21 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           get { return queryConfig_; }
         }
 
+        /// <summary>Field number for the "live" field.</summary>
+        public const int LiveFieldNumber = 20;
+        private bool live_;
+        /// <summary>
+        /// Optional. Indicates whether this turn is a live turn.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Live {
+          get { return live_; }
+          set {
+            live_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -782,6 +846,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           if (!object.Equals(DetailedAnswer, other.DetailedAnswer)) return false;
           if (!object.Equals(DetailedAssistAnswer, other.DetailedAssistAnswer)) return false;
           if (!QueryConfig.Equals(other.QueryConfig)) return false;
+          if (Live != other.Live) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -794,6 +859,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           if (detailedAnswer_ != null) hash ^= DetailedAnswer.GetHashCode();
           if (detailedAssistAnswer_ != null) hash ^= DetailedAssistAnswer.GetHashCode();
           hash ^= QueryConfig.GetHashCode();
+          if (Live != false) hash ^= Live.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -829,6 +895,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteMessage(DetailedAssistAnswer);
           }
           queryConfig_.WriteTo(output, _map_queryConfig_codec);
+          if (Live != false) {
+            output.WriteRawTag(160, 1);
+            output.WriteBool(Live);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -856,6 +926,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteMessage(DetailedAssistAnswer);
           }
           queryConfig_.WriteTo(ref output, _map_queryConfig_codec);
+          if (Live != false) {
+            output.WriteRawTag(160, 1);
+            output.WriteBool(Live);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -879,6 +953,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(DetailedAssistAnswer);
           }
           size += queryConfig_.CalculateSize(_map_queryConfig_codec);
+          if (Live != false) {
+            size += 2 + 1;
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -913,6 +990,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             DetailedAssistAnswer.MergeFrom(other.DetailedAssistAnswer);
           }
           queryConfig_.MergeFrom(other.queryConfig_);
+          if (other.Live != false) {
+            Live = other.Live;
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -961,6 +1041,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 queryConfig_.AddEntriesFrom(input, _map_queryConfig_codec);
                 break;
               }
+              case 160: {
+                Live = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -1007,6 +1091,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               }
               case 130: {
                 queryConfig_.AddEntriesFrom(ref input, _map_queryConfig_codec);
+                break;
+              }
+              case 160: {
+                Live = input.ReadBool();
                 break;
               }
             }

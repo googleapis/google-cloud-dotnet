@@ -28,28 +28,28 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "cHBpbmdfc3RvcmUucHJvdG8SH2dvb2dsZS5jbG91ZC5kaXNjb3Zlcnllbmdp",
             "bmUudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2ds",
             "ZS9hcGkvcmVzb3VyY2UucHJvdG8aOWdvb2dsZS9jbG91ZC9kaXNjb3Zlcnll",
-            "bmdpbmUvdjEvY21la19jb25maWdfc2VydmljZS5wcm90byKfAgoUSWRlbnRp",
-            "dHlNYXBwaW5nU3RvcmUSEQoEbmFtZRgBIAEoCUID4EEFEhkKDGttc19rZXlf",
-            "bmFtZRgDIAEoCUID4EEEEkUKC2NtZWtfY29uZmlnGAQgASgLMisuZ29vZ2xl",
-            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5DbWVrQ29uZmlnQgPgQQM6kQHq",
-            "QY0BCjNkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vSWRlbnRpdHlN",
-            "YXBwaW5nU3RvcmUSVnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9pZGVudGl0eU1hcHBpbmdTdG9yZXMve2lkZW50aXR5X21hcHBp",
-            "bmdfc3RvcmV9InUKFElkZW50aXR5TWFwcGluZ0VudHJ5EhEKB3VzZXJfaWQY",
-            "AiABKAlIABISCghncm91cF9pZBgDIAEoCUgAEh4KEWV4dGVybmFsX2lkZW50",
-            "aXR5GAEgASgJQgPgQQJCFgoUaWRlbnRpdHlfcHJvdmlkZXJfaWRCjAIKI2Nv",
-            "bS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxQhlJZGVudGl0eU1h",
-            "cHBpbmdTdG9yZVByb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292",
-            "ZXJ5ZW5naW5lL2FwaXYxL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVu",
-            "Z2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIfR29vZ2xlLkNsb3VkLkRpc2Nv",
-            "dmVyeUVuZ2luZS5WMcoCH0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVc",
-            "VjHqAiJHb29nbGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYgZwcm90",
-            "bzM="));
+            "bmdpbmUvdjEvY21la19jb25maWdfc2VydmljZS5wcm90byKiAgoUSWRlbnRp",
+            "dHlNYXBwaW5nU3RvcmUSEgoEbmFtZRgBIAEoCUIE4kEBBRIaCgxrbXNfa2V5",
+            "X25hbWUYAyABKAlCBOJBAQQSRgoLY21la19jb25maWcYBCABKAsyKy5nb29n",
+            "bGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkNtZWtDb25maWdCBOJBAQM6",
+            "kQHqQY0BCjNkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vSWRlbnRp",
+            "dHlNYXBwaW5nU3RvcmUSVnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9pZGVudGl0eU1hcHBpbmdTdG9yZXMve2lkZW50aXR5X21h",
+            "cHBpbmdfc3RvcmV9IpwBChRJZGVudGl0eU1hcHBpbmdFbnRyeRIRCgd1c2Vy",
+            "X2lkGAIgASgJSAASEgoIZ3JvdXBfaWQYAyABKAlIABIfChFleHRlcm5hbF9p",
+            "ZGVudGl0eRgBIAEoCUIE4kEBAhIkChZleHRlcm5hbF9pZGVudGl0eV9uYW1l",
+            "GAQgASgJQgTiQQEBQhYKFGlkZW50aXR5X3Byb3ZpZGVyX2lkQowCCiNjb20u",
+            "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MUIZSWRlbnRpdHlNYXBw",
+            "aW5nU3RvcmVQcm90b1ABWk1jbG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVy",
+            "eWVuZ2luZS9hcGl2MS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3Zlcnllbmdp",
+            "bmVwYqICD0RJU0NPVkVSWUVOR0lORaoCH0dvb2dsZS5DbG91ZC5EaXNjb3Zl",
+            "cnlFbmdpbmUuVjHKAh9Hb29nbGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYx",
+            "6gIiR29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore), global::Google.Cloud.DiscoveryEngine.V1.IdentityMappingStore.Parser, new[]{ "Name", "KmsKeyName", "CmekConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.IdentityMappingEntry), global::Google.Cloud.DiscoveryEngine.V1.IdentityMappingEntry.Parser, new[]{ "UserId", "GroupId", "ExternalIdentity" }, new[]{ "IdentityProviderId" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.IdentityMappingEntry), global::Google.Cloud.DiscoveryEngine.V1.IdentityMappingEntry.Parser, new[]{ "UserId", "GroupId", "ExternalIdentity", "ExternalIdentityName" }, new[]{ "IdentityProviderId" }, null, null, null)
           }));
     }
     #endregion
@@ -400,6 +400,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IdentityMappingEntry(IdentityMappingEntry other) : this() {
       externalIdentity_ = other.externalIdentity_;
+      externalIdentityName_ = other.externalIdentityName_;
       switch (other.IdentityProviderIdCase) {
         case IdentityProviderIdOneofCase.UserId:
           UserId = other.UserId;
@@ -500,6 +501,21 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "external_identity_name" field.</summary>
+    public const int ExternalIdentityNameFieldNumber = 4;
+    private string externalIdentityName_ = "";
+    /// <summary>
+    /// Optional. The name of the external identity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ExternalIdentityName {
+      get { return externalIdentityName_; }
+      set {
+        externalIdentityName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     private object identityProviderId_;
     /// <summary>Enum of possible cases for the "identity_provider_id" oneof.</summary>
     public enum IdentityProviderIdOneofCase {
@@ -539,6 +555,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (UserId != other.UserId) return false;
       if (GroupId != other.GroupId) return false;
       if (ExternalIdentity != other.ExternalIdentity) return false;
+      if (ExternalIdentityName != other.ExternalIdentityName) return false;
       if (IdentityProviderIdCase != other.IdentityProviderIdCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -550,6 +567,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (HasUserId) hash ^= UserId.GetHashCode();
       if (HasGroupId) hash ^= GroupId.GetHashCode();
       if (ExternalIdentity.Length != 0) hash ^= ExternalIdentity.GetHashCode();
+      if (ExternalIdentityName.Length != 0) hash ^= ExternalIdentityName.GetHashCode();
       hash ^= (int) identityProviderIdCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -581,6 +599,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(26);
         output.WriteString(GroupId);
       }
+      if (ExternalIdentityName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ExternalIdentityName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -603,6 +625,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(26);
         output.WriteString(GroupId);
       }
+      if (ExternalIdentityName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ExternalIdentityName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -622,6 +648,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (ExternalIdentity.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ExternalIdentity);
       }
+      if (ExternalIdentityName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ExternalIdentityName);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -636,6 +665,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (other.ExternalIdentity.Length != 0) {
         ExternalIdentity = other.ExternalIdentity;
+      }
+      if (other.ExternalIdentityName.Length != 0) {
+        ExternalIdentityName = other.ExternalIdentityName;
       }
       switch (other.IdentityProviderIdCase) {
         case IdentityProviderIdOneofCase.UserId:
@@ -677,6 +709,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             GroupId = input.ReadString();
             break;
           }
+          case 34: {
+            ExternalIdentityName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -706,6 +742,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           case 26: {
             GroupId = input.ReadString();
+            break;
+          }
+          case 34: {
+            ExternalIdentityName = input.ReadString();
             break;
           }
         }

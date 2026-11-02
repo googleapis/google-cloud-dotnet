@@ -317,5 +317,37 @@ namespace Google.Cloud.DiscoveryEngine.V1
             get => string.IsNullOrEmpty(Name) ? null : gcdv::AssistantName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class CustomerPolicy
+            {
+                public partial class Types
+                {
+                    public partial class ModelArmorConfig
+                    {
+                        /// <summary>
+                        /// <see cref="TemplateName"/>-typed view over the <see cref="UserPromptTemplate"/> resource
+                        /// name property.
+                        /// </summary>
+                        public TemplateName UserPromptTemplateAsTemplateName
+                        {
+                            get => string.IsNullOrEmpty(UserPromptTemplate) ? null : TemplateName.Parse(UserPromptTemplate, allowUnparsed: true);
+                            set => UserPromptTemplate = value?.ToString() ?? "";
+                        }
+
+                        /// <summary>
+                        /// <see cref="TemplateName"/>-typed view over the <see cref="ResponseTemplate"/> resource name
+                        /// property.
+                        /// </summary>
+                        public TemplateName ResponseTemplateAsTemplateName
+                        {
+                            get => string.IsNullOrEmpty(ResponseTemplate) ? null : TemplateName.Parse(ResponseTemplate, allowUnparsed: true);
+                            set => ResponseTemplate = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
+        }
     }
 }

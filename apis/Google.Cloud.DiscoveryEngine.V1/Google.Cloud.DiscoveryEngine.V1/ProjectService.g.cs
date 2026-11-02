@@ -30,29 +30,37 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "bnQucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdv",
             "b2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aLWdvb2dsZS9jbG91ZC9kaXNjb3Zl",
             "cnllbmdpbmUvdjEvcHJvamVjdC5wcm90bxojZ29vZ2xlL2xvbmdydW5uaW5n",
-            "L29wZXJhdGlvbnMucHJvdG8ioAEKF1Byb3Zpc2lvblByb2plY3RSZXF1ZXN0",
-            "EjwKBG5hbWUYASABKAlCLuBBAvpBKAomZGlzY292ZXJ5ZW5naW5lLmdvb2ds",
-            "ZWFwaXMuY29tL1Byb2plY3QSIgoVYWNjZXB0X2RhdGFfdXNlX3Rlcm1zGAIg",
-            "ASgIQgPgQQISIwoWZGF0YV91c2VfdGVybXNfdmVyc2lvbhgDIAEoCUID4EEC",
-            "IhoKGFByb3Zpc2lvblByb2plY3RNZXRhZGF0YTLsAgoOUHJvamVjdFNlcnZp",
-            "Y2UShQIKEFByb3Zpc2lvblByb2plY3QSOC5nb29nbGUuY2xvdWQuZGlzY292",
-            "ZXJ5ZW5naW5lLnYxLlByb3Zpc2lvblByb2plY3RSZXF1ZXN0Gh0uZ29vZ2xl",
-            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiKXAcpBYwonZ29vZ2xlLmNsb3VkLmRp",
-            "c2NvdmVyeWVuZ2luZS52MS5Qcm9qZWN0Ejhnb29nbGUuY2xvdWQuZGlzY292",
-            "ZXJ5ZW5naW5lLnYxLlByb3Zpc2lvblByb2plY3RNZXRhZGF0YdpBBG5hbWWC",
-            "0+STAiQiHy92MS97bmFtZT1wcm9qZWN0cy8qfTpwcm92aXNpb246ASoaUspB",
-            "HmRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3",
-            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1ChgIKI2NvbS5n",
-            "b29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxQhNQcm9qZWN0U2Vydmlj",
-            "ZVByb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5l",
-            "L2FwaXYxL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIP",
-            "RElTQ09WRVJZRU5HSU5FqgIfR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2lu",
-            "ZS5WMcoCH0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjHqAiJHb29n",
-            "bGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYgZwcm90bzM="));
+            "L29wZXJhdGlvbnMucHJvdG8ixQIKF1Byb3Zpc2lvblByb2plY3RSZXF1ZXN0",
+            "Ej0KBG5hbWUYASABKAlCL+JBAQL6QSgKJmRpc2NvdmVyeWVuZ2luZS5nb29n",
+            "bGVhcGlzLmNvbS9Qcm9qZWN0EiMKFWFjY2VwdF9kYXRhX3VzZV90ZXJtcxgC",
+            "IAEoCEIE4kEBAhIkChZkYXRhX3VzZV90ZXJtc192ZXJzaW9uGAMgASgJQgTi",
+            "QQECEl4KC3NhYXNfcGFyYW1zGAQgASgLMkMuZ29vZ2xlLmNsb3VkLmRpc2Nv",
+            "dmVyeWVuZ2luZS52MS5Qcm92aXNpb25Qcm9qZWN0UmVxdWVzdC5TYWFzUGFy",
+            "YW1zQgTiQQEBGkAKClNhYXNQYXJhbXMSHAoOYWNjZXB0X2Jpel9xb3MYASAB",
+            "KAhCBOJBAQESFAoGaXNfYml6GAIgASgIQgTiQQEBIhoKGFByb3Zpc2lvblBy",
+            "b2plY3RNZXRhZGF0YTKcBAoOUHJvamVjdFNlcnZpY2UStwIKEFByb3Zpc2lv",
+            "blByb2plY3QSOC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlBy",
+            "b3Zpc2lvblByb2plY3RSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
+            "ZXJhdGlvbiLJAcpBYwonZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
+            "MS5Qcm9qZWN0Ejhnb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlBy",
+            "b3Zpc2lvblByb2plY3RNZXRhZGF0YdpBBG5hbWWC0+STAlYiHy92MS97bmFt",
+            "ZT1wcm9qZWN0cy8qfTpwcm92aXNpb246ASpaMCIrL3YxL3tuYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyp9OnByb3Zpc2lvbjoBKhrPAcpBHmRpc2NvdmVy",
+            "eWVuZ2luZS5nb29nbGVhcGlzLmNvbdJBqgFodHRwczovL3d3dy5nb29nbGVh",
+            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2ds",
+            "ZWFwaXMuY29tL2F1dGgvZGlzY292ZXJ5ZW5naW5lLnJlYWR3cml0ZSxodHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Rpc2NvdmVyeWVuZ2luZS5z",
+            "ZXJ2aW5nLnJlYWR3cml0ZUKGAgojY29tLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
+            "cnllbmdpbmUudjFCE1Byb2plY3RTZXJ2aWNlUHJvdG9QAVpNY2xvdWQuZ29v",
+            "Z2xlLmNvbS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjEvZGlzY292ZXJ5ZW5n",
+            "aW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZFUllFTkdJTkWqAh9H",
+            "b29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5naW5lLlYxygIfR29vZ2xlXENsb3Vk",
+            "XERpc2NvdmVyeUVuZ2luZVxWMeoCIkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVy",
+            "eUVuZ2luZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.ProjectReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.ProvisionProjectRequest), global::Google.Cloud.DiscoveryEngine.V1.ProvisionProjectRequest.Parser, new[]{ "Name", "AcceptDataUseTerms", "DataUseTermsVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.ProvisionProjectRequest), global::Google.Cloud.DiscoveryEngine.V1.ProvisionProjectRequest.Parser, new[]{ "Name", "AcceptDataUseTerms", "DataUseTermsVersion", "SaasParams" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.ProvisionProjectRequest.Types.SaasParams), global::Google.Cloud.DiscoveryEngine.V1.ProvisionProjectRequest.Types.SaasParams.Parser, new[]{ "AcceptBizQos", "IsBiz" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.ProvisionProjectMetadata), global::Google.Cloud.DiscoveryEngine.V1.ProvisionProjectMetadata.Parser, null, null, null, null, null)
           }));
     }
@@ -103,6 +111,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       name_ = other.name_;
       acceptDataUseTerms_ = other.acceptDataUseTerms_;
       dataUseTermsVersion_ = other.dataUseTermsVersion_;
+      saasParams_ = other.saasParams_ != null ? other.saasParams_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -165,6 +174,21 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "saas_params" field.</summary>
+    public const int SaasParamsFieldNumber = 4;
+    private global::Google.Cloud.DiscoveryEngine.V1.ProvisionProjectRequest.Types.SaasParams saasParams_;
+    /// <summary>
+    /// Optional. Parameters for Agentspace.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1.ProvisionProjectRequest.Types.SaasParams SaasParams {
+      get { return saasParams_; }
+      set {
+        saasParams_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -183,6 +207,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (Name != other.Name) return false;
       if (AcceptDataUseTerms != other.AcceptDataUseTerms) return false;
       if (DataUseTermsVersion != other.DataUseTermsVersion) return false;
+      if (!object.Equals(SaasParams, other.SaasParams)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -193,6 +218,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (AcceptDataUseTerms != false) hash ^= AcceptDataUseTerms.GetHashCode();
       if (DataUseTermsVersion.Length != 0) hash ^= DataUseTermsVersion.GetHashCode();
+      if (saasParams_ != null) hash ^= SaasParams.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -223,6 +249,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(26);
         output.WriteString(DataUseTermsVersion);
       }
+      if (saasParams_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(SaasParams);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -245,6 +275,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(26);
         output.WriteString(DataUseTermsVersion);
       }
+      if (saasParams_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(SaasParams);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -263,6 +297,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (DataUseTermsVersion.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DataUseTermsVersion);
+      }
+      if (saasParams_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SaasParams);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -284,6 +321,12 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (other.DataUseTermsVersion.Length != 0) {
         DataUseTermsVersion = other.DataUseTermsVersion;
+      }
+      if (other.saasParams_ != null) {
+        if (saasParams_ == null) {
+          SaasParams = new global::Google.Cloud.DiscoveryEngine.V1.ProvisionProjectRequest.Types.SaasParams();
+        }
+        SaasParams.MergeFrom(other.SaasParams);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -314,6 +357,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           case 26: {
             DataUseTermsVersion = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (saasParams_ == null) {
+              SaasParams = new global::Google.Cloud.DiscoveryEngine.V1.ProvisionProjectRequest.Types.SaasParams();
+            }
+            input.ReadMessage(SaasParams);
             break;
           }
         }
@@ -347,10 +397,272 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             DataUseTermsVersion = input.ReadString();
             break;
           }
+          case 34: {
+            if (saasParams_ == null) {
+              SaasParams = new global::Google.Cloud.DiscoveryEngine.V1.ProvisionProjectRequest.Types.SaasParams();
+            }
+            input.ReadMessage(SaasParams);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ProvisionProjectRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Parameters for Agentspace.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SaasParams : pb::IMessage<SaasParams>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SaasParams> _parser = new pb::MessageParser<SaasParams>(() => new SaasParams());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SaasParams> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DiscoveryEngine.V1.ProvisionProjectRequest.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SaasParams() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SaasParams(SaasParams other) : this() {
+          acceptBizQos_ = other.acceptBizQos_;
+          isBiz_ = other.isBiz_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SaasParams Clone() {
+          return new SaasParams(this);
+        }
+
+        /// <summary>Field number for the "accept_biz_qos" field.</summary>
+        public const int AcceptBizQosFieldNumber = 1;
+        private bool acceptBizQos_;
+        /// <summary>
+        /// Optional. Set to `true` to specify that caller has read and would like to
+        /// give consent to the [Terms for Agent Space quality of service].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool AcceptBizQos {
+          get { return acceptBizQos_; }
+          set {
+            acceptBizQos_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "is_biz" field.</summary>
+        public const int IsBizFieldNumber = 2;
+        private bool isBiz_;
+        /// <summary>
+        /// Optional. Indicates if the current request is for Biz edition (= true) or
+        /// not
+        /// (= false).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool IsBiz {
+          get { return isBiz_; }
+          set {
+            isBiz_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SaasParams);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SaasParams other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (AcceptBizQos != other.AcceptBizQos) return false;
+          if (IsBiz != other.IsBiz) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (AcceptBizQos != false) hash ^= AcceptBizQos.GetHashCode();
+          if (IsBiz != false) hash ^= IsBiz.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (AcceptBizQos != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(AcceptBizQos);
+          }
+          if (IsBiz != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(IsBiz);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (AcceptBizQos != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(AcceptBizQos);
+          }
+          if (IsBiz != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(IsBiz);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (AcceptBizQos != false) {
+            size += 1 + 1;
+          }
+          if (IsBiz != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SaasParams other) {
+          if (other == null) {
+            return;
+          }
+          if (other.AcceptBizQos != false) {
+            AcceptBizQos = other.AcceptBizQos;
+          }
+          if (other.IsBiz != false) {
+            IsBiz = other.IsBiz;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                AcceptBizQos = input.ReadBool();
+                break;
+              }
+              case 16: {
+                IsBiz = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                AcceptBizQos = input.ReadBool();
+                break;
+              }
+              case 16: {
+                IsBiz = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 

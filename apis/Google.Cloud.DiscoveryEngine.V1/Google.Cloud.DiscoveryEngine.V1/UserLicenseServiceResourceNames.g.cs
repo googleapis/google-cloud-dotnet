@@ -30,6 +30,18 @@ namespace Google.Cloud.DiscoveryEngine.V1
         }
     }
 
+    public partial class ListLicenseConfigsUsageStatsRequest
+    {
+        /// <summary>
+        /// <see cref="UserStoreName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public UserStoreName ParentAsUserStoreName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : UserStoreName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class BatchUpdateUserLicensesRequest
     {
         /// <summary>

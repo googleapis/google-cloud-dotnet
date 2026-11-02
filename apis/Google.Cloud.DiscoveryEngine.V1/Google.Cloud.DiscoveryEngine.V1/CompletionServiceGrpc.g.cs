@@ -3,7 +3,7 @@
 //     source: google/cloud/discoveryengine/v1/completion_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -68,6 +68,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryResponse> __Marshaller_google_cloud_discoveryengine_v1_CompleteQueryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.AdvancedCompleteQueryRequest> __Marshaller_google_cloud_discoveryengine_v1_AdvancedCompleteQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.AdvancedCompleteQueryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.AdvancedCompleteQueryResponse> __Marshaller_google_cloud_discoveryengine_v1_AdvancedCompleteQueryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.AdvancedCompleteQueryResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesRequest> __Marshaller_google_cloud_discoveryengine_v1_ImportSuggestionDenyListEntriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
@@ -85,6 +89,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         "CompleteQuery",
         __Marshaller_google_cloud_discoveryengine_v1_CompleteQueryRequest,
         __Marshaller_google_cloud_discoveryengine_v1_CompleteQueryResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.AdvancedCompleteQueryRequest, global::Google.Cloud.DiscoveryEngine.V1.AdvancedCompleteQueryResponse> __Method_AdvancedCompleteQuery = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.AdvancedCompleteQueryRequest, global::Google.Cloud.DiscoveryEngine.V1.AdvancedCompleteQueryResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AdvancedCompleteQuery",
+        __Marshaller_google_cloud_discoveryengine_v1_AdvancedCompleteQueryRequest,
+        __Marshaller_google_cloud_discoveryengine_v1_AdvancedCompleteQueryResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesRequest, global::Google.LongRunning.Operation> __Method_ImportSuggestionDenyListEntries = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesRequest, global::Google.LongRunning.Operation>(
@@ -136,6 +148,18 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryResponse> CompleteQuery(global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Completes the user input with advanced keyword suggestions.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.AdvancedCompleteQueryResponse> AdvancedCompleteQuery(global::Google.Cloud.DiscoveryEngine.V1.AdvancedCompleteQueryRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -272,6 +296,54 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryResponse> CompleteQueryAsync(global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CompleteQuery, null, options, request);
+      }
+      /// <summary>
+      /// Completes the user input with advanced keyword suggestions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.AdvancedCompleteQueryResponse AdvancedCompleteQuery(global::Google.Cloud.DiscoveryEngine.V1.AdvancedCompleteQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AdvancedCompleteQuery(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Completes the user input with advanced keyword suggestions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.AdvancedCompleteQueryResponse AdvancedCompleteQuery(global::Google.Cloud.DiscoveryEngine.V1.AdvancedCompleteQueryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AdvancedCompleteQuery, null, options, request);
+      }
+      /// <summary>
+      /// Completes the user input with advanced keyword suggestions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.AdvancedCompleteQueryResponse> AdvancedCompleteQueryAsync(global::Google.Cloud.DiscoveryEngine.V1.AdvancedCompleteQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AdvancedCompleteQueryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Completes the user input with advanced keyword suggestions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.AdvancedCompleteQueryResponse> AdvancedCompleteQueryAsync(global::Google.Cloud.DiscoveryEngine.V1.AdvancedCompleteQueryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AdvancedCompleteQuery, null, options, request);
       }
       /// <summary>
       /// Imports all
@@ -512,6 +584,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CompleteQuery, serviceImpl.CompleteQuery)
+          .AddMethod(__Method_AdvancedCompleteQuery, serviceImpl.AdvancedCompleteQuery)
           .AddMethod(__Method_ImportSuggestionDenyListEntries, serviceImpl.ImportSuggestionDenyListEntries)
           .AddMethod(__Method_PurgeSuggestionDenyListEntries, serviceImpl.PurgeSuggestionDenyListEntries)
           .AddMethod(__Method_ImportCompletionSuggestions, serviceImpl.ImportCompletionSuggestions)
@@ -526,6 +599,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, CompletionServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CompleteQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryRequest, global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryResponse>(serviceImpl.CompleteQuery));
+      serviceBinder.AddMethod(__Method_AdvancedCompleteQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.AdvancedCompleteQueryRequest, global::Google.Cloud.DiscoveryEngine.V1.AdvancedCompleteQueryResponse>(serviceImpl.AdvancedCompleteQuery));
       serviceBinder.AddMethod(__Method_ImportSuggestionDenyListEntries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportSuggestionDenyListEntries));
       serviceBinder.AddMethod(__Method_PurgeSuggestionDenyListEntries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesRequest, global::Google.LongRunning.Operation>(serviceImpl.PurgeSuggestionDenyListEntries));
       serviceBinder.AddMethod(__Method_ImportCompletionSuggestions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.ImportCompletionSuggestionsRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportCompletionSuggestions));
