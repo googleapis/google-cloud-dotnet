@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 AutoProtectionPolicyId = "",
                 AutoProtectionPolicy = new AutoProtectionPolicy(),
+                RequestId = "",
             };
             // Make the request
             Operation<AutoProtectionPolicy, OperationMetadata> response = backupDRClient.CreateAutoProtectionPolicy(request);

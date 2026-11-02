@@ -330,6 +330,16 @@ namespace Google.Cloud.BackupDR.V1Beta
             get => string.IsNullOrEmpty(Name) ? null : gcbv::AppliedAutoProtectionPolicyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="AutoProtectionPolicyBindingName"/>-typed view over the <see cref="SourceBinding"/> resource name
+        /// property.
+        /// </summary>
+        public AutoProtectionPolicyBindingName SourceBindingAsAutoProtectionPolicyBindingName
+        {
+            get => string.IsNullOrEmpty(SourceBinding) ? null : AutoProtectionPolicyBindingName.Parse(SourceBinding, allowUnparsed: true);
+            set => SourceBinding = value?.ToString() ?? "";
+        }
     }
 
     public partial class ListAppliedAutoProtectionPoliciesRequest

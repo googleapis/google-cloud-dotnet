@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 AutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
                 Etag = "",
+                RequestId = "",
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteAutoProtectionPolicyAsync(request);

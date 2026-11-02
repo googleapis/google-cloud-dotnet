@@ -26,70 +26,74 @@ namespace Google.Cloud.BackupDR.V1Beta {
           string.Concat(
             "Cjdnb29nbGUvY2xvdWQvYmFja3VwZHIvdjFiZXRhL2F1dG9wcm90ZWN0aW9u",
             "cG9saWN5LnByb3RvEhxnb29nbGUuY2xvdWQuYmFja3VwZHIudjFiZXRhGh9n",
-            "b29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jl",
-            "c291cmNlLnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90",
-            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLZBgoUQXV0b1By",
-            "b3RlY3Rpb25Qb2xpY3kSEQoEbmFtZRgBIAEoCUID4EEIEhgKC2Rlc2NyaXB0",
-            "aW9uGAIgASgJQgPgQQESUAoTYmFja3VwX3BsYW5fZGV0YWlscxgDIAMoCzIu",
-            "Lmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MWJldGEuQmFja3VwUGxhbkRldGFp",
-            "bEID4EECEj0KCGNyaXRlcmlhGAQgASgLMiYuZ29vZ2xlLmNsb3VkLmJhY2t1",
-            "cGRyLnYxYmV0YS5Dcml0ZXJpYUID4EECEkwKBXN0YXRlGAUgASgOMjguZ29v",
-            "Z2xlLmNsb3VkLmJhY2t1cGRyLnYxYmV0YS5BdXRvUHJvdGVjdGlvblBvbGlj",
-            "eS5TdGF0ZUID4EEDEgwKBGV0YWcYBiABKAkSSgoPYmluZGluZ19zdW1tYXJ5",
-            "GAcgASgLMiwuZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxYmV0YS5CaW5kaW5n",
-            "U3VtbWFyeUID4EEDEl0KGXBvbGljeV9ldmFsdWF0aW9uX3N1bW1hcnkYCCAB",
-            "KAsyNS5nb29nbGUuY2xvdWQuYmFja3VwZHIudjFiZXRhLlBvbGljeUV2YWx1",
-            "YXRpb25TdW1tYXJ5QgPgQQMSNAoLY3JlYXRlX3RpbWUYCSABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYCiAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMiVAoFU3RhdGUS",
-            "FQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgoKBkFDVElW",
-            "RRACEgwKCFVQREFUSU5HEAMSDAoIREVMRVRJTkcQBDq5AepBtQEKLGJhY2t1",
-            "cGRyLmdvb2dsZWFwaXMuY29tL0F1dG9Qcm90ZWN0aW9uUG9saWN5Eldwcm9q",
-            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYXV0b1Byb3Rl",
-            "Y3Rpb25Qb2xpY2llcy97YXV0b19wcm90ZWN0aW9uX3BvbGljeX0qFmF1dG9Q",
-            "cm90ZWN0aW9uUG9saWNpZXMyFGF1dG9Qcm90ZWN0aW9uUG9saWN5Im8KEEJh",
-            "Y2t1cFBsYW5EZXRhaWwSGgoNcmVzb3VyY2VfdHlwZRgBIAEoCUID4EECEj8K",
-            "C2JhY2t1cF9wbGFuGAIgASgJQirgQQL6QSQKImJhY2t1cGRyLmdvb2dsZWFw",
-            "aXMuY29tL0JhY2t1cFBsYW4iXQoIQ3JpdGVyaWESUQoTbWF0Y2hpbmdfY29u",
-            "ZGl0aW9ucxgBIAMoCzIvLmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MWJldGEu",
-            "TWF0Y2hpbmdDb25kaXRpb25CA+BBAiJsChFNYXRjaGluZ0NvbmRpdGlvbhJK",
-            "Cg9sYWJlbF9jb25kaXRpb24YASABKAsyKi5nb29nbGUuY2xvdWQuYmFja3Vw",
-            "ZHIudjFiZXRhLktleVZhbHVlUGFpckID4EEBSABCCwoJY29uZGl0aW9uIooB",
-            "ChdQb2xpY3lFdmFsdWF0aW9uU3VtbWFyeRIkChdtYXRjaGluZ19yZXNvdXJj",
-            "ZV9jb3VudBgBIAEoA0ID4EEDEiUKGHByb3RlY3RlZF9yZXNvdXJjZV9jb3Vu",
-            "dBgCIAEoA0ID4EEDEiIKFWZhaWxlZF9yZXNvdXJjZV9jb3VudBgDIAEoA0ID",
-            "4EEDIiwKDkJpbmRpbmdTdW1tYXJ5EhoKDXByb2plY3RfY291bnQYASABKANC",
-            "A+BBAyI1CgxLZXlWYWx1ZVBhaXISEAoDa2V5GAEgASgJQgPgQQISEwoGdmFs",
-            "dWVzGAIgAygJQgPgQQIi3wEKIUNyZWF0ZUF1dG9Qcm90ZWN0aW9uUG9saWN5",
-            "UmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdv",
-            "b2dsZWFwaXMuY29tL0xvY2F0aW9uEiYKGWF1dG9fcHJvdGVjdGlvbl9wb2xp",
-            "Y3lfaWQYAiABKAlCA+BBAhJXChZhdXRvX3Byb3RlY3Rpb25fcG9saWN5GAMg",
-            "ASgLMjIuZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxYmV0YS5BdXRvUHJvdGVj",
-            "dGlvblBvbGljeUID4EECImQKHkdldEF1dG9Qcm90ZWN0aW9uUG9saWN5UmVx",
-            "dWVzdBJCCgRuYW1lGAEgASgJQjTgQQL6QS4KLGJhY2t1cGRyLmdvb2dsZWFw",
-            "aXMuY29tL0F1dG9Qcm90ZWN0aW9uUG9saWN5IrIBCiFVcGRhdGVBdXRvUHJv",
-            "dGVjdGlvblBvbGljeVJlcXVlc3QSVwoWYXV0b19wcm90ZWN0aW9uX3BvbGlj",
-            "eRgBIAEoCzIyLmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MWJldGEuQXV0b1By",
-            "b3RlY3Rpb25Qb2xpY3lCA+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAiJ1CiFEZWxldGVBdXRvUHJv",
-            "dGVjdGlvblBvbGljeVJlcXVlc3QSQgoEbmFtZRgBIAEoCUI04EEC+kEuCixi",
-            "YWNrdXBkci5nb29nbGVhcGlzLmNvbS9BdXRvUHJvdGVjdGlvblBvbGljeRIM",
-            "CgRldGFnGAIgASgJIrsBCiFMaXN0QXV0b1Byb3RlY3Rpb25Qb2xpY2llc1Jl",
-            "cXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29n",
-            "bGVhcGlzLmNvbS9Mb2NhdGlvbhIWCglwYWdlX3NpemUYAiABKAVCA+BBARIX",
-            "CgpwYWdlX3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQES",
-            "FQoIb3JkZXJfYnkYBSABKAlCA+BBASKoAQoiTGlzdEF1dG9Qcm90ZWN0aW9u",
-            "UG9saWNpZXNSZXNwb25zZRJUChhhdXRvX3Byb3RlY3Rpb25fcG9saWNpZXMY",
-            "ASADKAsyMi5nb29nbGUuY2xvdWQuYmFja3VwZHIudjFiZXRhLkF1dG9Qcm90",
-            "ZWN0aW9uUG9saWN5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJl",
-            "YWNoYWJsZRgDIAMoCULdAQogY29tLmdvb2dsZS5jbG91ZC5iYWNrdXBkci52",
-            "MWJldGFCGUF1dG9Qcm90ZWN0aW9uUG9saWN5UHJvdG9QAVo8Y2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9iYWNrdXBkci9hcGl2MWJldGEvYmFja3VwZHJwYjtiYWNr",
-            "dXBkcnBiqgIcR29vZ2xlLkNsb3VkLkJhY2t1cERSLlYxQmV0YcoCHEdvb2ds",
-            "ZVxDbG91ZFxCYWNrdXBEUlxWMWJldGHqAh9Hb29nbGU6OkNsb3VkOjpCYWNr",
-            "dXBEUjo6VjFiZXRhYgZwcm90bzM="));
+            "b29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhtnb29nbGUvYXBpL2Zp",
+            "ZWxkX2luZm8ucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aIGdv",
+            "b2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9i",
+            "dWYvdGltZXN0YW1wLnByb3RvIuMGChRBdXRvUHJvdGVjdGlvblBvbGljeRIT",
+            "CgRuYW1lGAEgASgJQgXiQQIDCBIZCgtkZXNjcmlwdGlvbhgCIAEoCUIE4kEB",
+            "ARJRChNiYWNrdXBfcGxhbl9kZXRhaWxzGAMgAygLMi4uZ29vZ2xlLmNsb3Vk",
+            "LmJhY2t1cGRyLnYxYmV0YS5CYWNrdXBQbGFuRGV0YWlsQgTiQQECEj4KCGNy",
+            "aXRlcmlhGAQgASgLMiYuZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxYmV0YS5D",
+            "cml0ZXJpYUIE4kEBAhJNCgVzdGF0ZRgFIAEoDjI4Lmdvb2dsZS5jbG91ZC5i",
+            "YWNrdXBkci52MWJldGEuQXV0b1Byb3RlY3Rpb25Qb2xpY3kuU3RhdGVCBOJB",
+            "AQMSDAoEZXRhZxgGIAEoCRJLCg9iaW5kaW5nX3N1bW1hcnkYByABKAsyLC5n",
+            "b29nbGUuY2xvdWQuYmFja3VwZHIudjFiZXRhLkJpbmRpbmdTdW1tYXJ5QgTi",
+            "QQEDEl4KGXBvbGljeV9ldmFsdWF0aW9uX3N1bW1hcnkYCCABKAsyNS5nb29n",
+            "bGUuY2xvdWQuYmFja3VwZHIudjFiZXRhLlBvbGljeUV2YWx1YXRpb25TdW1t",
+            "YXJ5QgTiQQEDEjUKC2NyZWF0ZV90aW1lGAkgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEIE4kEBAxI1Cgt1cGRhdGVfdGltZRgKIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMiVAoFU3RhdGUSFQoRU1RB",
+            "VEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgoKBkFDVElWRRACEgwK",
+            "CFVQREFUSU5HEAMSDAoIREVMRVRJTkcQBDq5AepBtQEKLGJhY2t1cGRyLmdv",
+            "b2dsZWFwaXMuY29tL0F1dG9Qcm90ZWN0aW9uUG9saWN5Eldwcm9qZWN0cy97",
+            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYXV0b1Byb3RlY3Rpb25Q",
+            "b2xpY2llcy97YXV0b19wcm90ZWN0aW9uX3BvbGljeX0qFmF1dG9Qcm90ZWN0",
+            "aW9uUG9saWNpZXMyFGF1dG9Qcm90ZWN0aW9uUG9saWN5InEKEEJhY2t1cFBs",
+            "YW5EZXRhaWwSGwoNcmVzb3VyY2VfdHlwZRgBIAEoCUIE4kEBAhJACgtiYWNr",
+            "dXBfcGxhbhgCIAEoCUIr4kEBAvpBJAoiYmFja3VwZHIuZ29vZ2xlYXBpcy5j",
+            "b20vQmFja3VwUGxhbiJeCghDcml0ZXJpYRJSChNtYXRjaGluZ19jb25kaXRp",
+            "b25zGAEgAygLMi8uZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxYmV0YS5NYXRj",
+            "aGluZ0NvbmRpdGlvbkIE4kEBAiJtChFNYXRjaGluZ0NvbmRpdGlvbhJLCg9s",
+            "YWJlbF9jb25kaXRpb24YASABKAsyKi5nb29nbGUuY2xvdWQuYmFja3VwZHIu",
+            "djFiZXRhLktleVZhbHVlUGFpckIE4kEBAUgAQgsKCWNvbmRpdGlvbiKNAQoX",
+            "UG9saWN5RXZhbHVhdGlvblN1bW1hcnkSJQoXbWF0Y2hpbmdfcmVzb3VyY2Vf",
+            "Y291bnQYASABKANCBOJBAQMSJgoYcHJvdGVjdGVkX3Jlc291cmNlX2NvdW50",
+            "GAIgASgDQgTiQQEDEiMKFWZhaWxlZF9yZXNvdXJjZV9jb3VudBgDIAEoA0IE",
+            "4kEBAyItCg5CaW5kaW5nU3VtbWFyeRIbCg1wcm9qZWN0X2NvdW50GAEgASgD",
+            "QgTiQQEDIjcKDEtleVZhbHVlUGFpchIRCgNrZXkYASABKAlCBOJBAQISFAoG",
+            "dmFsdWVzGAIgAygJQgTiQQECIoQCCiFDcmVhdGVBdXRvUHJvdGVjdGlvblBv",
+            "bGljeVJlcXVlc3QSOgoGcGFyZW50GAEgASgJQiriQQEC+kEjCiFsb2NhdGlv",
+            "bnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SJwoZYXV0b19wcm90ZWN0aW9u",
+            "X3BvbGljeV9pZBgCIAEoCUIE4kEBAhJYChZhdXRvX3Byb3RlY3Rpb25fcG9s",
+            "aWN5GAMgASgLMjIuZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxYmV0YS5BdXRv",
+            "UHJvdGVjdGlvblBvbGljeUIE4kEBAhIgCgpyZXF1ZXN0X2lkGAQgASgJQgzi",
+            "QQEB4ozP1wgCCAEiZQoeR2V0QXV0b1Byb3RlY3Rpb25Qb2xpY3lSZXF1ZXN0",
+            "EkMKBG5hbWUYASABKAlCNeJBAQL6QS4KLGJhY2t1cGRyLmdvb2dsZWFwaXMu",
+            "Y29tL0F1dG9Qcm90ZWN0aW9uUG9saWN5ItYBCiFVcGRhdGVBdXRvUHJvdGVj",
+            "dGlvblBvbGljeVJlcXVlc3QSWAoWYXV0b19wcm90ZWN0aW9uX3BvbGljeRgB",
+            "IAEoCzIyLmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MWJldGEuQXV0b1Byb3Rl",
+            "Y3Rpb25Qb2xpY3lCBOJBAQISNQoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuRmllbGRNYXNrQgTiQQEBEiAKCnJlcXVlc3RfaWQYAyAB",
+            "KAlCDOJBAQHijM/XCAIIASKeAQohRGVsZXRlQXV0b1Byb3RlY3Rpb25Qb2xp",
+            "Y3lSZXF1ZXN0EkMKBG5hbWUYASABKAlCNeJBAQL6QS4KLGJhY2t1cGRyLmdv",
+            "b2dsZWFwaXMuY29tL0F1dG9Qcm90ZWN0aW9uUG9saWN5EhIKBGV0YWcYAiAB",
+            "KAlCBOJBAQESIAoKcmVxdWVzdF9pZBgDIAEoCUIM4kEBAeKMz9cIAggBIsAB",
+            "CiFMaXN0QXV0b1Byb3RlY3Rpb25Qb2xpY2llc1JlcXVlc3QSOgoGcGFyZW50",
+            "GAEgASgJQiriQQEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9j",
+            "YXRpb24SFwoJcGFnZV9zaXplGAIgASgFQgTiQQEBEhgKCnBhZ2VfdG9rZW4Y",
+            "AyABKAlCBOJBAQESFAoGZmlsdGVyGAQgASgJQgTiQQEBEhYKCG9yZGVyX2J5",
+            "GAUgASgJQgTiQQEBIq4BCiJMaXN0QXV0b1Byb3RlY3Rpb25Qb2xpY2llc1Jl",
+            "c3BvbnNlElQKGGF1dG9fcHJvdGVjdGlvbl9wb2xpY2llcxgBIAMoCzIyLmdv",
+            "b2dsZS5jbG91ZC5iYWNrdXBkci52MWJldGEuQXV0b1Byb3RlY3Rpb25Qb2xp",
+            "Y3kSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhkKC3VucmVhY2hhYmxlGAMg",
+            "AygJQgTiQQEGQt0BCiBjb20uZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxYmV0",
+            "YUIZQXV0b1Byb3RlY3Rpb25Qb2xpY3lQcm90b1ABWjxjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL2JhY2t1cGRyL2FwaXYxYmV0YS9iYWNrdXBkcnBiO2JhY2t1cGRy",
+            "cGKqAhxHb29nbGUuQ2xvdWQuQmFja3VwRFIuVjFCZXRhygIcR29vZ2xlXENs",
+            "b3VkXEJhY2t1cERSXFYxYmV0YeoCH0dvb2dsZTo6Q2xvdWQ6OkJhY2t1cERS",
+            "OjpWMWJldGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.AutoProtectionPolicy), global::Google.Cloud.BackupDR.V1Beta.AutoProtectionPolicy.Parser, new[]{ "Name", "Description", "BackupPlanDetails", "Criteria", "State", "Etag", "BindingSummary", "PolicyEvaluationSummary", "CreateTime", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.BackupDR.V1Beta.AutoProtectionPolicy.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.BackupPlanDetail), global::Google.Cloud.BackupDR.V1Beta.BackupPlanDetail.Parser, new[]{ "ResourceType", "BackupPlan" }, null, null, null, null),
@@ -98,10 +102,10 @@ namespace Google.Cloud.BackupDR.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.PolicyEvaluationSummary), global::Google.Cloud.BackupDR.V1Beta.PolicyEvaluationSummary.Parser, new[]{ "MatchingResourceCount", "ProtectedResourceCount", "FailedResourceCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.BindingSummary), global::Google.Cloud.BackupDR.V1Beta.BindingSummary.Parser, new[]{ "ProjectCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.KeyValuePair), global::Google.Cloud.BackupDR.V1Beta.KeyValuePair.Parser, new[]{ "Key", "Values" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.CreateAutoProtectionPolicyRequest), global::Google.Cloud.BackupDR.V1Beta.CreateAutoProtectionPolicyRequest.Parser, new[]{ "Parent", "AutoProtectionPolicyId", "AutoProtectionPolicy" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.CreateAutoProtectionPolicyRequest), global::Google.Cloud.BackupDR.V1Beta.CreateAutoProtectionPolicyRequest.Parser, new[]{ "Parent", "AutoProtectionPolicyId", "AutoProtectionPolicy", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.GetAutoProtectionPolicyRequest), global::Google.Cloud.BackupDR.V1Beta.GetAutoProtectionPolicyRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.UpdateAutoProtectionPolicyRequest), global::Google.Cloud.BackupDR.V1Beta.UpdateAutoProtectionPolicyRequest.Parser, new[]{ "AutoProtectionPolicy", "UpdateMask" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.DeleteAutoProtectionPolicyRequest), global::Google.Cloud.BackupDR.V1Beta.DeleteAutoProtectionPolicyRequest.Parser, new[]{ "Name", "Etag" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.UpdateAutoProtectionPolicyRequest), global::Google.Cloud.BackupDR.V1Beta.UpdateAutoProtectionPolicyRequest.Parser, new[]{ "AutoProtectionPolicy", "UpdateMask", "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.DeleteAutoProtectionPolicyRequest), global::Google.Cloud.BackupDR.V1Beta.DeleteAutoProtectionPolicyRequest.Parser, new[]{ "Name", "Etag", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.ListAutoProtectionPoliciesRequest), global::Google.Cloud.BackupDR.V1Beta.ListAutoProtectionPoliciesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.ListAutoProtectionPoliciesResponse), global::Google.Cloud.BackupDR.V1Beta.ListAutoProtectionPoliciesResponse.Parser, new[]{ "AutoProtectionPolicies", "NextPageToken", "Unreachable" }, null, null, null, null)
           }));
@@ -174,7 +178,7 @@ namespace Google.Cloud.BackupDR.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Identifier. The resource name of the AutoprotectionPolicy.
+    /// Output only. Identifier. The resource name of the AutoprotectionPolicy.
     /// Format:
     /// `projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}`
     /// </summary>
@@ -191,7 +195,8 @@ namespace Google.Cloud.BackupDR.V1Beta {
     public const int DescriptionFieldNumber = 2;
     private string description_ = "";
     /// <summary>
-    /// Optional. A description of the policy.
+    /// Optional. A description of the policy. The description must be at most 2048
+    /// characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2009,7 +2014,7 @@ namespace Google.Cloud.BackupDR.V1Beta {
     private readonly pbc::RepeatedField<string> values_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Required. The values of the label to match.
-    /// There will be explicit “OR” between values of array.
+    /// There will be explicit "OR" between values of array.
     /// Each value must be in the format `{label_value}`.
     /// The value must match the regex
     /// Format: `[\\p{Ll}\\p{Lo}\\p{N}_-]{1,63}`.
@@ -2216,6 +2221,7 @@ namespace Google.Cloud.BackupDR.V1Beta {
       parent_ = other.parent_;
       autoProtectionPolicyId_ = other.autoProtectionPolicyId_;
       autoProtectionPolicy_ = other.autoProtectionPolicy_ != null ? other.autoProtectionPolicy_.Clone() : null;
+      requestId_ = other.requestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2247,6 +2253,9 @@ namespace Google.Cloud.BackupDR.V1Beta {
     /// <summary>
     /// Required. The ID to use for the policy.
     /// This will become the final component of the policy's resource name.
+    ///
+    /// This value must start with a lowercase letter followed by up to 62
+    /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2272,6 +2281,27 @@ namespace Google.Cloud.BackupDR.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 4;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. An optional request ID to identify requests. Specify a unique
+    /// request ID so that if you must retry your request, the server will know to
+    /// ignore the request if it has already been completed. The server will
+    /// guarantee that for at least 60 minutes since the first request.
+    ///
+    /// The request ID must be a valid UUID with the exception that zero UUID is
+    /// not supported (00000000-0000-0000-0000-000000000000).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2290,6 +2320,7 @@ namespace Google.Cloud.BackupDR.V1Beta {
       if (Parent != other.Parent) return false;
       if (AutoProtectionPolicyId != other.AutoProtectionPolicyId) return false;
       if (!object.Equals(AutoProtectionPolicy, other.AutoProtectionPolicy)) return false;
+      if (RequestId != other.RequestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2300,6 +2331,7 @@ namespace Google.Cloud.BackupDR.V1Beta {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (AutoProtectionPolicyId.Length != 0) hash ^= AutoProtectionPolicyId.GetHashCode();
       if (autoProtectionPolicy_ != null) hash ^= AutoProtectionPolicy.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2330,6 +2362,10 @@ namespace Google.Cloud.BackupDR.V1Beta {
         output.WriteRawTag(26);
         output.WriteMessage(AutoProtectionPolicy);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2352,6 +2388,10 @@ namespace Google.Cloud.BackupDR.V1Beta {
         output.WriteRawTag(26);
         output.WriteMessage(AutoProtectionPolicy);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2370,6 +2410,9 @@ namespace Google.Cloud.BackupDR.V1Beta {
       }
       if (autoProtectionPolicy_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AutoProtectionPolicy);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2394,6 +2437,9 @@ namespace Google.Cloud.BackupDR.V1Beta {
           AutoProtectionPolicy = new global::Google.Cloud.BackupDR.V1Beta.AutoProtectionPolicy();
         }
         AutoProtectionPolicy.MergeFrom(other.AutoProtectionPolicy);
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2429,6 +2475,10 @@ namespace Google.Cloud.BackupDR.V1Beta {
             input.ReadMessage(AutoProtectionPolicy);
             break;
           }
+          case 34: {
+            RequestId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2461,6 +2511,10 @@ namespace Google.Cloud.BackupDR.V1Beta {
               AutoProtectionPolicy = new global::Google.Cloud.BackupDR.V1Beta.AutoProtectionPolicy();
             }
             input.ReadMessage(AutoProtectionPolicy);
+            break;
+          }
+          case 34: {
+            RequestId = input.ReadString();
             break;
           }
         }
@@ -2716,6 +2770,7 @@ namespace Google.Cloud.BackupDR.V1Beta {
     public UpdateAutoProtectionPolicyRequest(UpdateAutoProtectionPolicyRequest other) : this() {
       autoProtectionPolicy_ = other.autoProtectionPolicy_ != null ? other.autoProtectionPolicy_.Clone() : null;
       updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      requestId_ = other.requestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2744,7 +2799,7 @@ namespace Google.Cloud.BackupDR.V1Beta {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required. Field mask is used to specify the fields to be overwritten in the
+    /// Optional. Field mask is used to specify the fields to be overwritten in the
     /// AutoProtectionPolicy resource by the update.
     /// The fields specified in the update_mask are relative to the resource, not
     /// the full request. A field will be overwritten if it is in the mask. If the
@@ -2756,6 +2811,27 @@ namespace Google.Cloud.BackupDR.V1Beta {
       get { return updateMask_; }
       set {
         updateMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 3;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. An optional request ID to identify requests. Specify a unique
+    /// request ID so that if you must retry your request, the server will know to
+    /// ignore the request if it has already been completed. The server will
+    /// guarantee that for at least 60 minutes since the first request.
+    ///
+    /// The request ID must be a valid UUID with the exception that zero UUID is
+    /// not supported (00000000-0000-0000-0000-000000000000).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2776,6 +2852,7 @@ namespace Google.Cloud.BackupDR.V1Beta {
       }
       if (!object.Equals(AutoProtectionPolicy, other.AutoProtectionPolicy)) return false;
       if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (RequestId != other.RequestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2785,6 +2862,7 @@ namespace Google.Cloud.BackupDR.V1Beta {
       int hash = 1;
       if (autoProtectionPolicy_ != null) hash ^= AutoProtectionPolicy.GetHashCode();
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2811,6 +2889,10 @@ namespace Google.Cloud.BackupDR.V1Beta {
         output.WriteRawTag(18);
         output.WriteMessage(UpdateMask);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2829,6 +2911,10 @@ namespace Google.Cloud.BackupDR.V1Beta {
         output.WriteRawTag(18);
         output.WriteMessage(UpdateMask);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2844,6 +2930,9 @@ namespace Google.Cloud.BackupDR.V1Beta {
       }
       if (updateMask_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2868,6 +2957,9 @@ namespace Google.Cloud.BackupDR.V1Beta {
           UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2902,6 +2994,10 @@ namespace Google.Cloud.BackupDR.V1Beta {
             input.ReadMessage(UpdateMask);
             break;
           }
+          case 26: {
+            RequestId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2933,6 +3029,10 @@ namespace Google.Cloud.BackupDR.V1Beta {
               UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
             input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
             break;
           }
         }
@@ -2982,6 +3082,7 @@ namespace Google.Cloud.BackupDR.V1Beta {
     public DeleteAutoProtectionPolicyRequest(DeleteAutoProtectionPolicyRequest other) : this() {
       name_ = other.name_;
       etag_ = other.etag_;
+      requestId_ = other.requestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3012,7 +3113,7 @@ namespace Google.Cloud.BackupDR.V1Beta {
     public const int EtagFieldNumber = 2;
     private string etag_ = "";
     /// <summary>
-    /// The current etag of the AutoProtectionPolicy.
+    /// Optional. The current etag of the AutoProtectionPolicy.
     /// If an etag is provided and does not match the current etag of the
     /// connection, the request will be rejected with an ABORTED error.
     /// </summary>
@@ -3022,6 +3123,27 @@ namespace Google.Cloud.BackupDR.V1Beta {
       get { return etag_; }
       set {
         etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 3;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. An optional request ID to identify requests. Specify a unique
+    /// request ID so that if you must retry your request, the server will know to
+    /// ignore the request if it has already been completed. The server will
+    /// guarantee that for at least 60 minutes since the first request.
+    ///
+    /// The request ID must be a valid UUID with the exception that zero UUID is
+    /// not supported (00000000-0000-0000-0000-000000000000).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -3042,6 +3164,7 @@ namespace Google.Cloud.BackupDR.V1Beta {
       }
       if (Name != other.Name) return false;
       if (Etag != other.Etag) return false;
+      if (RequestId != other.RequestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3051,6 +3174,7 @@ namespace Google.Cloud.BackupDR.V1Beta {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3077,6 +3201,10 @@ namespace Google.Cloud.BackupDR.V1Beta {
         output.WriteRawTag(18);
         output.WriteString(Etag);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3095,6 +3223,10 @@ namespace Google.Cloud.BackupDR.V1Beta {
         output.WriteRawTag(18);
         output.WriteString(Etag);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3110,6 +3242,9 @@ namespace Google.Cloud.BackupDR.V1Beta {
       }
       if (Etag.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3128,6 +3263,9 @@ namespace Google.Cloud.BackupDR.V1Beta {
       }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3156,6 +3294,10 @@ namespace Google.Cloud.BackupDR.V1Beta {
             Etag = input.ReadString();
             break;
           }
+          case 26: {
+            RequestId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -3181,6 +3323,10 @@ namespace Google.Cloud.BackupDR.V1Beta {
           }
           case 18: {
             Etag = input.ReadString();
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
             break;
           }
         }
@@ -3646,7 +3792,7 @@ namespace Google.Cloud.BackupDR.V1Beta {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Locations that could not be reached.
+    /// Unordered list. Locations that could not be reached.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

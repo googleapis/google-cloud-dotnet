@@ -39,6 +39,8 @@ namespace GoogleCSharpSnippets
             InitiateDeleteAutoProtectionPolicyBindingRequest request = new InitiateDeleteAutoProtectionPolicyBindingRequest
             {
                 AutoProtectionPolicyBindingName = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]"),
+                Etag = "",
+                RequestId = "",
             };
             // Make the request
             Operation<AutoProtectionPolicyBinding, OperationMetadata> response = await backupDRClient.InitiateDeleteAutoProtectionPolicyBindingAsync(request);

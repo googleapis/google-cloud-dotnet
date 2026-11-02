@@ -6963,6 +6963,7 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 AutoProtectionPolicyId = "",
                 AutoProtectionPolicy = new AutoProtectionPolicy(),
+                RequestId = "",
             };
             // Make the request
             Operation<AutoProtectionPolicy, OperationMetadata> response = backupDRClient.CreateAutoProtectionPolicy(request);
@@ -6998,6 +6999,7 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 AutoProtectionPolicyId = "",
                 AutoProtectionPolicy = new AutoProtectionPolicy(),
+                RequestId = "",
             };
             // Make the request
             Operation<AutoProtectionPolicy, OperationMetadata> response = await backupDRClient.CreateAutoProtectionPolicyAsync(request);
@@ -7524,6 +7526,7 @@ namespace GoogleCSharpSnippets
             {
                 AutoProtectionPolicy = new AutoProtectionPolicy(),
                 UpdateMask = new FieldMask(),
+                RequestId = "",
             };
             // Make the request
             Operation<AutoProtectionPolicy, OperationMetadata> response = backupDRClient.UpdateAutoProtectionPolicy(request);
@@ -7558,6 +7561,7 @@ namespace GoogleCSharpSnippets
             {
                 AutoProtectionPolicy = new AutoProtectionPolicy(),
                 UpdateMask = new FieldMask(),
+                RequestId = "",
             };
             // Make the request
             Operation<AutoProtectionPolicy, OperationMetadata> response = await backupDRClient.UpdateAutoProtectionPolicyAsync(request);
@@ -7652,6 +7656,7 @@ namespace GoogleCSharpSnippets
             {
                 AutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
                 Etag = "",
+                RequestId = "",
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = backupDRClient.DeleteAutoProtectionPolicy(request);
@@ -7686,6 +7691,7 @@ namespace GoogleCSharpSnippets
             {
                 AutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
                 Etag = "",
+                RequestId = "",
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteAutoProtectionPolicyAsync(request);
@@ -7838,6 +7844,7 @@ namespace GoogleCSharpSnippets
                 ParentAsAutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
                 AutoProtectionPolicyBindingId = "",
                 AutoProtectionPolicyBinding = new AutoProtectionPolicyBinding(),
+                RequestId = "",
             };
             // Make the request
             Operation<AutoProtectionPolicyBinding, OperationMetadata> response = backupDRClient.CreateAutoProtectionPolicyBinding(request);
@@ -7873,6 +7880,7 @@ namespace GoogleCSharpSnippets
                 ParentAsAutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
                 AutoProtectionPolicyBindingId = "",
                 AutoProtectionPolicyBinding = new AutoProtectionPolicyBinding(),
+                RequestId = "",
             };
             // Make the request
             Operation<AutoProtectionPolicyBinding, OperationMetadata> response = await backupDRClient.CreateAutoProtectionPolicyBindingAsync(request);
@@ -8678,6 +8686,8 @@ namespace GoogleCSharpSnippets
             InitiateDeleteAutoProtectionPolicyBindingRequest request = new InitiateDeleteAutoProtectionPolicyBindingRequest
             {
                 AutoProtectionPolicyBindingName = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]"),
+                Etag = "",
+                RequestId = "",
             };
             // Make the request
             Operation<AutoProtectionPolicyBinding, OperationMetadata> response = backupDRClient.InitiateDeleteAutoProtectionPolicyBinding(request);
@@ -8711,6 +8721,8 @@ namespace GoogleCSharpSnippets
             InitiateDeleteAutoProtectionPolicyBindingRequest request = new InitiateDeleteAutoProtectionPolicyBindingRequest
             {
                 AutoProtectionPolicyBindingName = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]"),
+                Etag = "",
+                RequestId = "",
             };
             // Make the request
             Operation<AutoProtectionPolicyBinding, OperationMetadata> response = await backupDRClient.InitiateDeleteAutoProtectionPolicyBindingAsync(request);

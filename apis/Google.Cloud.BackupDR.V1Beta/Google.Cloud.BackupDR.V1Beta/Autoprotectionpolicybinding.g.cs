@@ -26,63 +26,66 @@ namespace Google.Cloud.BackupDR.V1Beta {
           string.Concat(
             "Cj5nb29nbGUvY2xvdWQvYmFja3VwZHIvdjFiZXRhL2F1dG9wcm90ZWN0aW9u",
             "cG9saWN5YmluZGluZy5wcm90bxIcZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYx",
-            "YmV0YRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xl",
-            "L2FwaS9yZXNvdXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
-            "cC5wcm90byLRBQobQXV0b1Byb3RlY3Rpb25Qb2xpY3lCaW5kaW5nEhEKBG5h",
-            "bWUYASABKAlCA+BBCBIYCgtkZXNjcmlwdGlvbhgCIAEoCUID4EEBElMKBXN0",
-            "YXRlGAMgASgOMj8uZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxYmV0YS5BdXRv",
-            "UHJvdGVjdGlvblBvbGljeUJpbmRpbmcuU3RhdGVCA+BBAxIbCgVzY29wZRgE",
-            "IAEoCUIM4EEC4EEF+kEDCgEqEl8KGmJpbmRpbmdfZXZhbHVhdGlvbl9zdW1t",
-            "YXJ5GAUgASgLMjYuZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxYmV0YS5CaW5k",
-            "aW5nRXZhbHVhdGlvblN1bW1hcnlCA+BBAxI0CgtjcmVhdGVfdGltZRgGIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVf",
-            "dGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIR",
-            "CgRldGFnGAggASgJQgPgQQEiUAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJ",
-            "RUQQABIMCghDUkVBVElORxABEgoKBkFDVElWRRACEhYKEkRFTEVUSU9OX0lO",
-            "SVRJQVRFRBADOuAB6kHcAQozYmFja3VwZHIuZ29vZ2xlYXBpcy5jb20vQXV0",
-            "b1Byb3RlY3Rpb25Qb2xpY3lCaW5kaW5nEmpwcm9qZWN0cy97cHJvamVjdH0v",
-            "bG9jYXRpb25zL3tsb2NhdGlvbn0vYXV0b1Byb3RlY3Rpb25Qb2xpY2llcy97",
-            "YXV0b19wcm90ZWN0aW9uX3BvbGljeX0vYmluZGluZ3Mve2JpbmRpbmd9Khxh",
-            "dXRvUHJvdGVjdGlvblBvbGljeUJpbmRpbmdzMhthdXRvUHJvdGVjdGlvblBv",
-            "bGljeUJpbmRpbmciiwEKGEJpbmRpbmdFdmFsdWF0aW9uU3VtbWFyeRIkChdt",
-            "YXRjaGluZ19yZXNvdXJjZV9jb3VudBgBIAEoA0ID4EEDEiUKGHByb3RlY3Rl",
-            "ZF9yZXNvdXJjZV9jb3VudBgCIAEoA0ID4EEDEiIKFWZhaWxlZF9yZXNvdXJj",
-            "ZV9jb3VudBgDIAEoA0ID4EEDIogCCihDcmVhdGVBdXRvUHJvdGVjdGlvblBv",
-            "bGljeUJpbmRpbmdSZXF1ZXN0EkQKBnBhcmVudBgBIAEoCUI04EEC+kEuCixi",
-            "YWNrdXBkci5nb29nbGVhcGlzLmNvbS9BdXRvUHJvdGVjdGlvblBvbGljeRIu",
-            "CiFhdXRvX3Byb3RlY3Rpb25fcG9saWN5X2JpbmRpbmdfaWQYAiABKAlCA+BB",
-            "AhJmCh5hdXRvX3Byb3RlY3Rpb25fcG9saWN5X2JpbmRpbmcYAyABKAsyOS5n",
+            "YmV0YRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxobZ29vZ2xl",
+            "L2FwaS9maWVsZF9pbmZvLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
+            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvItIFChtBdXRv",
+            "UHJvdGVjdGlvblBvbGljeUJpbmRpbmcSEwoEbmFtZRgBIAEoCUIF4kECAwgS",
+            "GQoLZGVzY3JpcHRpb24YAiABKAlCBOJBAQESVAoFc3RhdGUYAyABKA4yPy5n",
             "b29nbGUuY2xvdWQuYmFja3VwZHIudjFiZXRhLkF1dG9Qcm90ZWN0aW9uUG9s",
-            "aWN5QmluZGluZ0ID4EECInIKJUdldEF1dG9Qcm90ZWN0aW9uUG9saWN5Qmlu",
-            "ZGluZ1JlcXVlc3QSSQoEbmFtZRgBIAEoCUI74EEC+kE1CjNiYWNrdXBkci5n",
-            "b29nbGVhcGlzLmNvbS9BdXRvUHJvdGVjdGlvblBvbGljeUJpbmRpbmcizAEK",
-            "J0xpc3RBdXRvUHJvdGVjdGlvblBvbGljeUJpbmRpbmdzUmVxdWVzdBJECgZw",
-            "YXJlbnQYASABKAlCNOBBAvpBLgosYmFja3VwZHIuZ29vZ2xlYXBpcy5jb20v",
-            "QXV0b1Byb3RlY3Rpb25Qb2xpY3kSFgoJcGFnZV9zaXplGAIgASgFQgPgQQES",
-            "FwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEhMKBmZpbHRlchgEIAEoCUID4EEB",
-            "EhUKCG9yZGVyX2J5GAUgASgJQgPgQQEiwQEKKExpc3RBdXRvUHJvdGVjdGlv",
-            "blBvbGljeUJpbmRpbmdzUmVzcG9uc2USYgofYXV0b19wcm90ZWN0aW9uX3Bv",
-            "bGljeV9iaW5kaW5ncxgBIAMoCzI5Lmdvb2dsZS5jbG91ZC5iYWNrdXBkci52",
-            "MWJldGEuQXV0b1Byb3RlY3Rpb25Qb2xpY3lCaW5kaW5nEhcKD25leHRfcGFn",
-            "ZV90b2tlbhgCIAEoCRIYCgt1bnJlYWNoYWJsZRgDIAMoCUID4EEGIn0KMElu",
-            "aXRpYXRlRGVsZXRlQXV0b1Byb3RlY3Rpb25Qb2xpY3lCaW5kaW5nUmVxdWVz",
-            "dBJJCgRuYW1lGAEgASgJQjvgQQL6QTUKM2JhY2t1cGRyLmdvb2dsZWFwaXMu",
-            "Y29tL0F1dG9Qcm90ZWN0aW9uUG9saWN5QmluZGluZ0LkAQogY29tLmdvb2ds",
-            "ZS5jbG91ZC5iYWNrdXBkci52MWJldGFCIEF1dG9Qcm90ZWN0aW9uUG9saWN5",
-            "QmluZGluZ1Byb3RvUAFaPGNsb3VkLmdvb2dsZS5jb20vZ28vYmFja3VwZHIv",
-            "YXBpdjFiZXRhL2JhY2t1cGRycGI7YmFja3VwZHJwYqoCHEdvb2dsZS5DbG91",
-            "ZC5CYWNrdXBEUi5WMUJldGHKAhxHb29nbGVcQ2xvdWRcQmFja3VwRFJcVjFi",
-            "ZXRh6gIfR29vZ2xlOjpDbG91ZDo6QmFja3VwRFI6OlYxYmV0YWIGcHJvdG8z"));
+            "aWN5QmluZGluZy5TdGF0ZUIE4kEBAxIaCgVzY29wZRgEIAEoCUIL4kECAgX6",
+            "QQMKASoSYAoaYmluZGluZ19ldmFsdWF0aW9uX3N1bW1hcnkYBSABKAsyNi5n",
+            "b29nbGUuY2xvdWQuYmFja3VwZHIudjFiZXRhLkJpbmRpbmdFdmFsdWF0aW9u",
+            "U3VtbWFyeUIE4kEBAxI1CgtjcmVhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMSNQoLdXBkYXRlX3RpbWUYByABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEgwKBGV0YWcYCCAB",
+            "KAkiUAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElO",
+            "RxABEgoKBkFDVElWRRACEhYKEkRFTEVUSU9OX0lOSVRJQVRFRBADOuAB6kHc",
+            "AQozYmFja3VwZHIuZ29vZ2xlYXBpcy5jb20vQXV0b1Byb3RlY3Rpb25Qb2xp",
+            "Y3lCaW5kaW5nEmpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
+            "dGlvbn0vYXV0b1Byb3RlY3Rpb25Qb2xpY2llcy97YXV0b19wcm90ZWN0aW9u",
+            "X3BvbGljeX0vYmluZGluZ3Mve2JpbmRpbmd9KhxhdXRvUHJvdGVjdGlvblBv",
+            "bGljeUJpbmRpbmdzMhthdXRvUHJvdGVjdGlvblBvbGljeUJpbmRpbmcijgEK",
+            "GEJpbmRpbmdFdmFsdWF0aW9uU3VtbWFyeRIlChdtYXRjaGluZ19yZXNvdXJj",
+            "ZV9jb3VudBgBIAEoA0IE4kEBAxImChhwcm90ZWN0ZWRfcmVzb3VyY2VfY291",
+            "bnQYAiABKANCBOJBAQMSIwoVZmFpbGVkX3Jlc291cmNlX2NvdW50GAMgASgD",
+            "QgTiQQEDIq0CCihDcmVhdGVBdXRvUHJvdGVjdGlvblBvbGljeUJpbmRpbmdS",
+            "ZXF1ZXN0EkUKBnBhcmVudBgBIAEoCUI14kEBAvpBLgosYmFja3VwZHIuZ29v",
+            "Z2xlYXBpcy5jb20vQXV0b1Byb3RlY3Rpb25Qb2xpY3kSLwohYXV0b19wcm90",
+            "ZWN0aW9uX3BvbGljeV9iaW5kaW5nX2lkGAIgASgJQgTiQQECEmcKHmF1dG9f",
+            "cHJvdGVjdGlvbl9wb2xpY3lfYmluZGluZxgDIAEoCzI5Lmdvb2dsZS5jbG91",
+            "ZC5iYWNrdXBkci52MWJldGEuQXV0b1Byb3RlY3Rpb25Qb2xpY3lCaW5kaW5n",
+            "QgTiQQECEiAKCnJlcXVlc3RfaWQYBCABKAlCDOJBAQHijM/XCAIIASJzCiVH",
+            "ZXRBdXRvUHJvdGVjdGlvblBvbGljeUJpbmRpbmdSZXF1ZXN0EkoKBG5hbWUY",
+            "ASABKAlCPOJBAQL6QTUKM2JhY2t1cGRyLmdvb2dsZWFwaXMuY29tL0F1dG9Q",
+            "cm90ZWN0aW9uUG9saWN5QmluZGluZyLRAQonTGlzdEF1dG9Qcm90ZWN0aW9u",
+            "UG9saWN5QmluZGluZ3NSZXF1ZXN0EkUKBnBhcmVudBgBIAEoCUI14kEBAvpB",
+            "LgosYmFja3VwZHIuZ29vZ2xlYXBpcy5jb20vQXV0b1Byb3RlY3Rpb25Qb2xp",
+            "Y3kSFwoJcGFnZV9zaXplGAIgASgFQgTiQQEBEhgKCnBhZ2VfdG9rZW4YAyAB",
+            "KAlCBOJBAQESFAoGZmlsdGVyGAQgASgJQgTiQQEBEhYKCG9yZGVyX2J5GAUg",
+            "ASgJQgTiQQEBIsIBCihMaXN0QXV0b1Byb3RlY3Rpb25Qb2xpY3lCaW5kaW5n",
+            "c1Jlc3BvbnNlEmIKH2F1dG9fcHJvdGVjdGlvbl9wb2xpY3lfYmluZGluZ3MY",
+            "ASADKAsyOS5nb29nbGUuY2xvdWQuYmFja3VwZHIudjFiZXRhLkF1dG9Qcm90",
+            "ZWN0aW9uUG9saWN5QmluZGluZxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkS",
+            "GQoLdW5yZWFjaGFibGUYAyADKAlCBOJBAQYitAEKMEluaXRpYXRlRGVsZXRl",
+            "QXV0b1Byb3RlY3Rpb25Qb2xpY3lCaW5kaW5nUmVxdWVzdBJKCgRuYW1lGAEg",
+            "ASgJQjziQQEC+kE1CjNiYWNrdXBkci5nb29nbGVhcGlzLmNvbS9BdXRvUHJv",
+            "dGVjdGlvblBvbGljeUJpbmRpbmcSEgoEZXRhZxgCIAEoCUIE4kEBARIgCgpy",
+            "ZXF1ZXN0X2lkGAMgASgJQgziQQEB4ozP1wgCCAFC5AEKIGNvbS5nb29nbGUu",
+            "Y2xvdWQuYmFja3VwZHIudjFiZXRhQiBBdXRvUHJvdGVjdGlvblBvbGljeUJp",
+            "bmRpbmdQcm90b1ABWjxjbG91ZC5nb29nbGUuY29tL2dvL2JhY2t1cGRyL2Fw",
+            "aXYxYmV0YS9iYWNrdXBkcnBiO2JhY2t1cGRycGKqAhxHb29nbGUuQ2xvdWQu",
+            "QmFja3VwRFIuVjFCZXRhygIcR29vZ2xlXENsb3VkXEJhY2t1cERSXFYxYmV0",
+            "YeoCH0dvb2dsZTo6Q2xvdWQ6OkJhY2t1cERSOjpWMWJldGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.AutoProtectionPolicyBinding), global::Google.Cloud.BackupDR.V1Beta.AutoProtectionPolicyBinding.Parser, new[]{ "Name", "Description", "State", "Scope", "BindingEvaluationSummary", "CreateTime", "UpdateTime", "Etag" }, null, new[]{ typeof(global::Google.Cloud.BackupDR.V1Beta.AutoProtectionPolicyBinding.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.BindingEvaluationSummary), global::Google.Cloud.BackupDR.V1Beta.BindingEvaluationSummary.Parser, new[]{ "MatchingResourceCount", "ProtectedResourceCount", "FailedResourceCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.CreateAutoProtectionPolicyBindingRequest), global::Google.Cloud.BackupDR.V1Beta.CreateAutoProtectionPolicyBindingRequest.Parser, new[]{ "Parent", "AutoProtectionPolicyBindingId", "AutoProtectionPolicyBinding" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.CreateAutoProtectionPolicyBindingRequest), global::Google.Cloud.BackupDR.V1Beta.CreateAutoProtectionPolicyBindingRequest.Parser, new[]{ "Parent", "AutoProtectionPolicyBindingId", "AutoProtectionPolicyBinding", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.GetAutoProtectionPolicyBindingRequest), global::Google.Cloud.BackupDR.V1Beta.GetAutoProtectionPolicyBindingRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.ListAutoProtectionPolicyBindingsRequest), global::Google.Cloud.BackupDR.V1Beta.ListAutoProtectionPolicyBindingsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.ListAutoProtectionPolicyBindingsResponse), global::Google.Cloud.BackupDR.V1Beta.ListAutoProtectionPolicyBindingsResponse.Parser, new[]{ "AutoProtectionPolicyBindings", "NextPageToken", "Unreachable" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.InitiateDeleteAutoProtectionPolicyBindingRequest), global::Google.Cloud.BackupDR.V1Beta.InitiateDeleteAutoProtectionPolicyBindingRequest.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1Beta.InitiateDeleteAutoProtectionPolicyBindingRequest), global::Google.Cloud.BackupDR.V1Beta.InitiateDeleteAutoProtectionPolicyBindingRequest.Parser, new[]{ "Name", "Etag", "RequestId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -150,8 +153,8 @@ namespace Google.Cloud.BackupDR.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Identifier. The resource name of the AutoProtectionPolicyBinding.
-    /// Format:
+    /// Output only. Identifier. The resource name of the
+    /// AutoProtectionPolicyBinding. Format:
     /// `projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -167,7 +170,8 @@ namespace Google.Cloud.BackupDR.V1Beta {
     public const int DescriptionFieldNumber = 2;
     private string description_ = "";
     /// <summary>
-    /// Optional. A description of the binding.
+    /// Optional. A description of the binding. The description must be at most
+    /// 2048 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -259,7 +263,7 @@ namespace Google.Cloud.BackupDR.V1Beta {
     public const int EtagFieldNumber = 8;
     private string etag_ = "";
     /// <summary>
-    /// Optional. Output only. The etag for the binding.
+    /// Output only. The etag for the binding.
     /// If this is provided on update, it must match the server's etag.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -966,6 +970,7 @@ namespace Google.Cloud.BackupDR.V1Beta {
       parent_ = other.parent_;
       autoProtectionPolicyBindingId_ = other.autoProtectionPolicyBindingId_;
       autoProtectionPolicyBinding_ = other.autoProtectionPolicyBinding_ != null ? other.autoProtectionPolicyBinding_.Clone() : null;
+      requestId_ = other.requestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -998,6 +1003,9 @@ namespace Google.Cloud.BackupDR.V1Beta {
     /// <summary>
     /// Required. The ID to use for the binding.
     /// This will become the final component of the binding's resource name.
+    ///
+    /// This value must start with a lowercase letter followed by up to 62
+    /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1023,6 +1031,27 @@ namespace Google.Cloud.BackupDR.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 4;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. An optional request ID to identify requests. Specify a unique
+    /// request ID so that if you must retry your request, the server will know to
+    /// ignore the request if it has already been completed. The server will
+    /// guarantee that for at least 60 minutes since the first request.
+    ///
+    /// The request ID must be a valid UUID with the exception that zero UUID is
+    /// not supported (00000000-0000-0000-0000-000000000000).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1041,6 +1070,7 @@ namespace Google.Cloud.BackupDR.V1Beta {
       if (Parent != other.Parent) return false;
       if (AutoProtectionPolicyBindingId != other.AutoProtectionPolicyBindingId) return false;
       if (!object.Equals(AutoProtectionPolicyBinding, other.AutoProtectionPolicyBinding)) return false;
+      if (RequestId != other.RequestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1051,6 +1081,7 @@ namespace Google.Cloud.BackupDR.V1Beta {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (AutoProtectionPolicyBindingId.Length != 0) hash ^= AutoProtectionPolicyBindingId.GetHashCode();
       if (autoProtectionPolicyBinding_ != null) hash ^= AutoProtectionPolicyBinding.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1081,6 +1112,10 @@ namespace Google.Cloud.BackupDR.V1Beta {
         output.WriteRawTag(26);
         output.WriteMessage(AutoProtectionPolicyBinding);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1103,6 +1138,10 @@ namespace Google.Cloud.BackupDR.V1Beta {
         output.WriteRawTag(26);
         output.WriteMessage(AutoProtectionPolicyBinding);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1121,6 +1160,9 @@ namespace Google.Cloud.BackupDR.V1Beta {
       }
       if (autoProtectionPolicyBinding_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AutoProtectionPolicyBinding);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1145,6 +1187,9 @@ namespace Google.Cloud.BackupDR.V1Beta {
           AutoProtectionPolicyBinding = new global::Google.Cloud.BackupDR.V1Beta.AutoProtectionPolicyBinding();
         }
         AutoProtectionPolicyBinding.MergeFrom(other.AutoProtectionPolicyBinding);
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1180,6 +1225,10 @@ namespace Google.Cloud.BackupDR.V1Beta {
             input.ReadMessage(AutoProtectionPolicyBinding);
             break;
           }
+          case 34: {
+            RequestId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1212,6 +1261,10 @@ namespace Google.Cloud.BackupDR.V1Beta {
               AutoProtectionPolicyBinding = new global::Google.Cloud.BackupDR.V1Beta.AutoProtectionPolicyBinding();
             }
             input.ReadMessage(AutoProtectionPolicyBinding);
+            break;
+          }
+          case 34: {
+            RequestId = input.ReadString();
             break;
           }
         }
@@ -2099,6 +2152,8 @@ namespace Google.Cloud.BackupDR.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InitiateDeleteAutoProtectionPolicyBindingRequest(InitiateDeleteAutoProtectionPolicyBindingRequest other) : this() {
       name_ = other.name_;
+      etag_ = other.etag_;
+      requestId_ = other.requestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2125,6 +2180,44 @@ namespace Google.Cloud.BackupDR.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "etag" field.</summary>
+    public const int EtagFieldNumber = 2;
+    private string etag_ = "";
+    /// <summary>
+    /// Optional. The current etag of the AutoProtectionPolicyBinding.
+    /// If an etag is provided and does not match the current etag of the
+    /// binding, deletion will be blocked and an ABORTED error will be returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Etag {
+      get { return etag_; }
+      set {
+        etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 3;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. An optional request ID to identify requests. Specify a unique
+    /// request ID so that if you must retry your request, the server will know to
+    /// ignore the request if it has already been completed. The server will
+    /// guarantee that for at least 60 minutes since the first request.
+    ///
+    /// The request ID must be a valid UUID with the exception that zero UUID is
+    /// not supported (00000000-0000-0000-0000-000000000000).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2141,6 +2234,8 @@ namespace Google.Cloud.BackupDR.V1Beta {
         return true;
       }
       if (Name != other.Name) return false;
+      if (Etag != other.Etag) return false;
+      if (RequestId != other.RequestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2149,6 +2244,8 @@ namespace Google.Cloud.BackupDR.V1Beta {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2171,6 +2268,14 @@ namespace Google.Cloud.BackupDR.V1Beta {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Etag);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2185,6 +2290,14 @@ namespace Google.Cloud.BackupDR.V1Beta {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Etag);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2197,6 +2310,12 @@ namespace Google.Cloud.BackupDR.V1Beta {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Etag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2212,6 +2331,12 @@ namespace Google.Cloud.BackupDR.V1Beta {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.Etag.Length != 0) {
+        Etag = other.Etag;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2236,6 +2361,14 @@ namespace Google.Cloud.BackupDR.V1Beta {
             Name = input.ReadString();
             break;
           }
+          case 18: {
+            Etag = input.ReadString();
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2257,6 +2390,14 @@ namespace Google.Cloud.BackupDR.V1Beta {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Etag = input.ReadString();
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
             break;
           }
         }
