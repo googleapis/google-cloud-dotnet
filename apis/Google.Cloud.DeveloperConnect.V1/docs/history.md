@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2026-11-02
+
+### New features
+
+- Add Normalized SCM methods for Git repository links
+
 ## Version 1.0.0-beta04, released 2026-02-23
 
 ### New features
