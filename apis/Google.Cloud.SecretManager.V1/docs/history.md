@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.0.0, released 2026-11-02
+
+### New features
+
+- Add top-level `CloudSqlSingleUserCredentials` message in `resources.proto` for Cloud SQL single-user managed rotation
+
+### Bug fixes
+
+- Update `EnableManagedRotationRequest` in `service.proto` to reference top-level `CloudSqlSingleUserCredentials` and rename `oneof credentials` to `oneof credential`
+
 ## Version 2.8.0, released 2026-07-13
 
 ### New features
