@@ -963,10 +963,10 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateAutoProtectionPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateAutoProtectionPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>BackupDRClient.CreateAutoProtectionPolicy</c> and
@@ -992,11 +992,17 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListAutoProtectionPoliciesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListAutoProtectionPoliciesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1004,11 +1010,17 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetAutoProtectionPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetAutoProtectionPolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1017,10 +1029,10 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateAutoProtectionPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings UpdateAutoProtectionPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>BackupDRClient.UpdateAutoProtectionPolicy</c> and
@@ -1047,10 +1059,10 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteAutoProtectionPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteAutoProtectionPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>BackupDRClient.DeleteAutoProtectionPolicy</c> and
@@ -1078,10 +1090,10 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateAutoProtectionPolicyBindingSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateAutoProtectionPolicyBindingSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>BackupDRClient.CreateAutoProtectionPolicyBinding</c> and
@@ -1108,11 +1120,17 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetAutoProtectionPolicyBindingSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetAutoProtectionPolicyBindingSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1121,11 +1139,17 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListAutoProtectionPolicyBindingsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListAutoProtectionPolicyBindingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1134,11 +1158,17 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListAppliedAutoProtectionPoliciesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListAppliedAutoProtectionPoliciesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1148,10 +1178,10 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings InitiateDeleteAutoProtectionPolicyBindingSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings InitiateDeleteAutoProtectionPolicyBindingSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>BackupDRClient.InitiateDeleteAutoProtectionPolicyBinding</c>
@@ -1190,11 +1220,17 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListBindingMatchingResourcesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListBindingMatchingResourcesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -6812,6 +6848,9 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// <param name="autoProtectionPolicyId">
         /// Required. The ID to use for the policy.
         /// This will become the final component of the policy's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6836,6 +6875,9 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// <param name="autoProtectionPolicyId">
         /// Required. The ID to use for the policy.
         /// This will become the final component of the policy's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6860,6 +6902,9 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// <param name="autoProtectionPolicyId">
         /// Required. The ID to use for the policy.
         /// This will become the final component of the policy's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6879,6 +6924,9 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// <param name="autoProtectionPolicyId">
         /// Required. The ID to use for the policy.
         /// This will become the final component of the policy's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6903,6 +6951,9 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// <param name="autoProtectionPolicyId">
         /// Required. The ID to use for the policy.
         /// This will become the final component of the policy's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6927,6 +6978,9 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// <param name="autoProtectionPolicyId">
         /// Required. The ID to use for the policy.
         /// This will become the final component of the policy's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7265,7 +7319,7 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// Required. The policy to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
         /// AutoProtectionPolicy resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
         /// the full request. A field will be overwritten if it is in the mask. If the
@@ -7277,7 +7331,7 @@ namespace Google.Cloud.BackupDR.V1Beta
             UpdateAutoProtectionPolicy(new UpdateAutoProtectionPolicyRequest
             {
                 AutoProtectionPolicy = gax::GaxPreconditions.CheckNotNull(autoProtectionPolicy, nameof(autoProtectionPolicy)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
@@ -7287,7 +7341,7 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// Required. The policy to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
         /// AutoProtectionPolicy resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
         /// the full request. A field will be overwritten if it is in the mask. If the
@@ -7299,7 +7353,7 @@ namespace Google.Cloud.BackupDR.V1Beta
             UpdateAutoProtectionPolicyAsync(new UpdateAutoProtectionPolicyRequest
             {
                 AutoProtectionPolicy = gax::GaxPreconditions.CheckNotNull(autoProtectionPolicy, nameof(autoProtectionPolicy)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
@@ -7309,7 +7363,7 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// Required. The policy to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
         /// AutoProtectionPolicy resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
         /// the full request. A field will be overwritten if it is in the mask. If the
@@ -7536,6 +7590,9 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// <param name="autoProtectionPolicyBindingId">
         /// Required. The ID to use for the binding.
         /// This will become the final component of the binding's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7562,6 +7619,9 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// <param name="autoProtectionPolicyBindingId">
         /// Required. The ID to use for the binding.
         /// This will become the final component of the binding's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7588,6 +7648,9 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// <param name="autoProtectionPolicyBindingId">
         /// Required. The ID to use for the binding.
         /// This will become the final component of the binding's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7609,6 +7672,9 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// <param name="autoProtectionPolicyBindingId">
         /// Required. The ID to use for the binding.
         /// This will become the final component of the binding's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7635,6 +7701,9 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// <param name="autoProtectionPolicyBindingId">
         /// Required. The ID to use for the binding.
         /// This will become the final component of the binding's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7661,6 +7730,9 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// <param name="autoProtectionPolicyBindingId">
         /// Required. The ID to use for the binding.
         /// This will become the final component of the binding's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

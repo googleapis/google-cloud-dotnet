@@ -28,42 +28,43 @@ namespace Google.Cloud.BackupDR.V1Beta {
             "Z3Jlc291cmNlLnByb3RvEhxnb29nbGUuY2xvdWQuYmFja3VwZHIudjFiZXRh",
             "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBp",
             "L3Jlc291cmNlLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
-            "b3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byJqCiFHZXRCaW5kaW5nTWF0",
-            "Y2hpbmdSZXNvdXJjZVJlcXVlc3QSRQoEbmFtZRgBIAEoCUI34EEC+kExCi9i",
-            "YWNrdXBkci5nb29nbGVhcGlzLmNvbS9CaW5kaW5nTWF0Y2hpbmdSZXNvdXJj",
-            "ZSLLAQojTGlzdEJpbmRpbmdNYXRjaGluZ1Jlc291cmNlc1JlcXVlc3QSRwoG",
-            "cGFyZW50GAEgASgJQjfgQQL6QTESL2JhY2t1cGRyLmdvb2dsZWFwaXMuY29t",
-            "L0JpbmRpbmdNYXRjaGluZ1Jlc291cmNlEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID",
-            "4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBARITCgZmaWx0ZXIYBCABKAlC",
-            "A+BBARIVCghvcmRlcl9ieRgFIAEoCUID4EEBIpIBCiRMaXN0QmluZGluZ01h",
-            "dGNoaW5nUmVzb3VyY2VzUmVzcG9uc2USUQoSbWF0Y2hpbmdfcmVzb3VyY2Vz",
-            "GAEgAygLMjUuZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxYmV0YS5CaW5kaW5n",
-            "TWF0Y2hpbmdSZXNvdXJjZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki3gMK",
-            "F0JpbmRpbmdNYXRjaGluZ1Jlc291cmNlEhEKBG5hbWUYASABKAlCA+BBCBIY",
-            "CghyZXNvdXJjZRgCIAEoCUIG4EEF4EECEj0KFGxhc3RfZXZhbHVhdGlvbl90",
-            "aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDElkK",
-            "F2F1dG9fcHJvdGVjdGlvbl9kZXRhaWxzGAQgASgLMjMuZ29vZ2xlLmNsb3Vk",
-            "LmJhY2t1cGRyLnYxYmV0YS5BdXRvUHJvdGVjdGlvbkRldGFpbHNCA+BBAzr7",
-            "AepB9wEKL2JhY2t1cGRyLmdvb2dsZWFwaXMuY29tL0JpbmRpbmdNYXRjaGlu",
-            "Z1Jlc291cmNlEpABcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L2F1dG9Qcm90ZWN0aW9uUG9saWNpZXMve2F1dG9fcHJvdGVjdGlv",
-            "bl9wb2xpY3l9L2JpbmRpbmdzL3tiaW5kaW5nfS9tYXRjaGluZ1Jlc291cmNl",
-            "cy97bWF0Y2hpbmdfcmVzb3VyY2V9KhhiaW5kaW5nTWF0Y2hpbmdSZXNvdXJj",
-            "ZXMyF2JpbmRpbmdNYXRjaGluZ1Jlc291cmNlIpgDChVBdXRvUHJvdGVjdGlv",
-            "bkRldGFpbHMSTQoFc3RhdGUYASABKA4yOS5nb29nbGUuY2xvdWQuYmFja3Vw",
-            "ZHIudjFiZXRhLkF1dG9Qcm90ZWN0aW9uRGV0YWlscy5TdGF0ZUID4EEDElYK",
-            "F2JhY2t1cF9wbGFuX2Fzc29jaWF0aW9uGAIgASgJQjXgQQP6QS8KLWJhY2t1",
-            "cGRyLmdvb2dsZWFwaXMuY29tL0JhY2t1cFBsYW5Bc3NvY2lhdGlvbhI/Cgtk",
-            "YXRhX3NvdXJjZRgDIAEoCUIq4EED+kEkCiJiYWNrdXBkci5nb29nbGVhcGlz",
-            "LmNvbS9EYXRhU291cmNlEiYKBWVycm9yGAQgASgLMhIuZ29vZ2xlLnJwYy5T",
-            "dGF0dXNCA+BBAyJvCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEg0K",
-            "CVBST1RFQ1RFRBABEhUKEVBST1RFQ1RJT05fRkFJTEVEEAISEAoMVU5QUk9U",
-            "RUNUSU5HEAMSFwoTVU5QUk9URUNUSU9OX0ZBSUxFRBAEQuABCiBjb20uZ29v",
-            "Z2xlLmNsb3VkLmJhY2t1cGRyLnYxYmV0YUIcQmluZGluZ01hdGNoaW5nUmVz",
-            "b3VyY2VQcm90b1ABWjxjbG91ZC5nb29nbGUuY29tL2dvL2JhY2t1cGRyL2Fw",
-            "aXYxYmV0YS9iYWNrdXBkcnBiO2JhY2t1cGRycGKqAhxHb29nbGUuQ2xvdWQu",
-            "QmFja3VwRFIuVjFCZXRhygIcR29vZ2xlXENsb3VkXEJhY2t1cERSXFYxYmV0",
-            "YeoCH0dvb2dsZTo6Q2xvdWQ6OkJhY2t1cERSOjpWMWJldGFiBnByb3RvMw=="));
+            "b3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byJrCiFHZXRCaW5kaW5nTWF0",
+            "Y2hpbmdSZXNvdXJjZVJlcXVlc3QSRgoEbmFtZRgBIAEoCUI44kEBAvpBMQov",
+            "YmFja3VwZHIuZ29vZ2xlYXBpcy5jb20vQmluZGluZ01hdGNoaW5nUmVzb3Vy",
+            "Y2Ui0AEKI0xpc3RCaW5kaW5nTWF0Y2hpbmdSZXNvdXJjZXNSZXF1ZXN0EkgK",
+            "BnBhcmVudBgBIAEoCUI44kEBAvpBMRIvYmFja3VwZHIuZ29vZ2xlYXBpcy5j",
+            "b20vQmluZGluZ01hdGNoaW5nUmVzb3VyY2USFwoJcGFnZV9zaXplGAIgASgF",
+            "QgTiQQEBEhgKCnBhZ2VfdG9rZW4YAyABKAlCBOJBAQESFAoGZmlsdGVyGAQg",
+            "ASgJQgTiQQEBEhYKCG9yZGVyX2J5GAUgASgJQgTiQQEBIpIBCiRMaXN0Qmlu",
+            "ZGluZ01hdGNoaW5nUmVzb3VyY2VzUmVzcG9uc2USUQoSbWF0Y2hpbmdfcmVz",
+            "b3VyY2VzGAEgAygLMjUuZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxYmV0YS5C",
+            "aW5kaW5nTWF0Y2hpbmdSZXNvdXJjZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiAB",
+            "KAki4AMKF0JpbmRpbmdNYXRjaGluZ1Jlc291cmNlEhMKBG5hbWUYASABKAlC",
+            "BeJBAggDEhYKCHJlc291cmNlGAIgASgJQgTiQQEDEj4KFGxhc3RfZXZhbHVh",
+            "dGlvbl90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE",
+            "4kEBAxJaChdhdXRvX3Byb3RlY3Rpb25fZGV0YWlscxgEIAEoCzIzLmdvb2ds",
+            "ZS5jbG91ZC5iYWNrdXBkci52MWJldGEuQXV0b1Byb3RlY3Rpb25EZXRhaWxz",
+            "QgTiQQEDOvsB6kH3AQovYmFja3VwZHIuZ29vZ2xlYXBpcy5jb20vQmluZGlu",
+            "Z01hdGNoaW5nUmVzb3VyY2USkAFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vYXV0b1Byb3RlY3Rpb25Qb2xpY2llcy97YXV0b19w",
+            "cm90ZWN0aW9uX3BvbGljeX0vYmluZGluZ3Mve2JpbmRpbmd9L21hdGNoaW5n",
+            "UmVzb3VyY2VzL3ttYXRjaGluZ19yZXNvdXJjZX0qGGJpbmRpbmdNYXRjaGlu",
+            "Z1Jlc291cmNlczIXYmluZGluZ01hdGNoaW5nUmVzb3VyY2UinAMKFUF1dG9Q",
+            "cm90ZWN0aW9uRGV0YWlscxJOCgVzdGF0ZRgBIAEoDjI5Lmdvb2dsZS5jbG91",
+            "ZC5iYWNrdXBkci52MWJldGEuQXV0b1Byb3RlY3Rpb25EZXRhaWxzLlN0YXRl",
+            "QgTiQQEDElcKF2JhY2t1cF9wbGFuX2Fzc29jaWF0aW9uGAIgASgJQjbiQQED",
+            "+kEvCi1iYWNrdXBkci5nb29nbGVhcGlzLmNvbS9CYWNrdXBQbGFuQXNzb2Np",
+            "YXRpb24SQAoLZGF0YV9zb3VyY2UYAyABKAlCK+JBAQP6QSQKImJhY2t1cGRy",
+            "Lmdvb2dsZWFwaXMuY29tL0RhdGFTb3VyY2USJwoFZXJyb3IYBCABKAsyEi5n",
+            "b29nbGUucnBjLlN0YXR1c0IE4kEBAyJvCgVTdGF0ZRIVChFTVEFURV9VTlNQ",
+            "RUNJRklFRBAAEg0KCVBST1RFQ1RFRBABEhUKEVBST1RFQ1RJT05fRkFJTEVE",
+            "EAISEAoMVU5QUk9URUNUSU5HEAMSFwoTVU5QUk9URUNUSU9OX0ZBSUxFRBAE",
+            "QuABCiBjb20uZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxYmV0YUIcQmluZGlu",
+            "Z01hdGNoaW5nUmVzb3VyY2VQcm90b1ABWjxjbG91ZC5nb29nbGUuY29tL2dv",
+            "L2JhY2t1cGRyL2FwaXYxYmV0YS9iYWNrdXBkcnBiO2JhY2t1cGRycGKqAhxH",
+            "b29nbGUuQ2xvdWQuQmFja3VwRFIuVjFCZXRhygIcR29vZ2xlXENsb3VkXEJh",
+            "Y2t1cERSXFYxYmV0YeoCH0dvb2dsZTo6Q2xvdWQ6OkJhY2t1cERSOjpWMWJl",
+            "dGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -956,8 +957,8 @@ namespace Google.Cloud.BackupDR.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Identifier. The resource name of the `BindingMatchingResource`.
-    /// Format:
+    /// Output only. Identifier. The resource name of the
+    /// `BindingMatchingResource`. Format:
     /// `projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}/matchingResources/{matching_resource}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -973,8 +974,8 @@ namespace Google.Cloud.BackupDR.V1Beta {
     public const int ResourceFieldNumber = 2;
     private string resource_ = "";
     /// <summary>
-    /// Required. Immutable. Resource name of the workload that matches the
-    /// criteria of the binding.
+    /// Output only. Resource name of the workload that matches the criteria of the
+    /// binding.
     ///
     /// The format can be either a relative resource name (e.g.,
     /// `projects/my-project/zones/us-central1-a/instances/my-instance`) or a

@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 AutoProtectionPolicy = new AutoProtectionPolicy(),
                 UpdateMask = new FieldMask(),
+                RequestId = "",
             };
             // Make the request
             Operation<AutoProtectionPolicy, OperationMetadata> response = backupDRClient.UpdateAutoProtectionPolicy(request);
