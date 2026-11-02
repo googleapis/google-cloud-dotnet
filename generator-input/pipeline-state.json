@@ -3826,7 +3826,7 @@
         {
             "id": "Google.Shopping.Merchant.Accounts.V1Beta",
             "currentVersion": "1.0.0-beta11",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-17T14:09:34.194000052Z",
             "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
@@ -3841,7 +3841,7 @@
         {
             "id": "Google.Shopping.Merchant.Conversions.V1Beta",
             "currentVersion": "1.0.0-beta03",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T21:45:00.107351331Z",
             "lastGeneratedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
@@ -3856,7 +3856,7 @@
         {
             "id": "Google.Shopping.Merchant.DataSources.V1Beta",
             "currentVersion": "1.0.0-beta06",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T21:45:32.738726892Z",
             "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
@@ -3871,7 +3871,7 @@
         {
             "id": "Google.Shopping.Merchant.Inventories.V1Beta",
             "currentVersion": "1.0.0-beta08",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-17T14:10:09.667015387Z",
             "lastGeneratedCommit": "bff62c7778d391191f44ad7428d36957fe61d30a",
@@ -3886,7 +3886,7 @@
         {
             "id": "Google.Shopping.Merchant.Lfp.V1Beta",
             "currentVersion": "1.0.0-beta04",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T21:47:05.629432505Z",
             "lastGeneratedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
@@ -3901,7 +3901,7 @@
         {
             "id": "Google.Shopping.Merchant.Notifications.V1Beta",
             "currentVersion": "1.0.0-beta03",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T21:47:39.063620443Z",
             "lastGeneratedCommit": "28769825ec5fa31815f172b0de490a84e74cb97a",
@@ -3916,7 +3916,7 @@
         {
             "id": "Google.Shopping.Merchant.Products.V1Beta",
             "currentVersion": "1.0.0-beta07",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-17T14:10:41.448059481Z",
             "lastGeneratedCommit": "cde1a533be7af822956b19fda5a3b0c20a6dde0a",
@@ -3931,7 +3931,7 @@
         {
             "id": "Google.Shopping.Merchant.Promotions.V1Beta",
             "currentVersion": "1.0.0-beta02",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T21:49:48.675655602Z",
             "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
@@ -3946,7 +3946,7 @@
         {
             "id": "Google.Shopping.Merchant.Quota.V1Beta",
             "currentVersion": "1.0.0-beta04",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T21:50:22.461955241Z",
             "lastGeneratedCommit": "3568ce2d811cc5062b3992f19b8bcc5846573659",
@@ -3961,7 +3961,7 @@
         {
             "id": "Google.Shopping.Merchant.Reports.V1Beta",
             "currentVersion": "1.0.0-beta04",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T21:50:56.063135133Z",
             "lastGeneratedCommit": "28769825ec5fa31815f172b0de490a84e74cb97a",
@@ -3976,7 +3976,7 @@
         {
             "id": "Google.Shopping.Merchant.Reviews.V1Beta",
             "currentVersion": "1.0.0-beta04",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T21:51:29.040470835Z",
             "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
@@ -4191,7 +4191,7 @@
         {
             "id": "Google.Shopping.Merchant.IssueResolution.V1Beta",
             "currentVersion": "1.0.0-beta05",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-17T14:37:58.701459378Z",
             "lastGeneratedCommit": "2150bc63d0a90edf5bacd601ef477b503eb5cf72",
@@ -4206,7 +4206,7 @@
         {
             "id": "Google.Shopping.Merchant.OrderTracking.V1Beta",
             "currentVersion": "1.0.0-beta03",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T21:54:24.259840824Z",
             "lastGeneratedCommit": "f1859b90227eb09ecd2fa85c96e89b60dbf688b5",
