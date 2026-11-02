@@ -263,6 +263,34 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             });
         }
 
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public async Task GqlQuery_NullBindings(bool named)
+        {
+            var db = _fixture.CreateDatastoreDb();
+            string kind = named ? "gql_null_named" : "gql_null_positional";
+            var keyFactory = db.CreateKeyFactory(kind);
+            var entities = new[]
+            {
+                new Entity { Key = keyFactory.CreateKey("null_tag"), ["tag"] = Value.ForNull() },
+                new Entity { Key = keyFactory.CreateKey("non_null_tag"), ["tag"] = "present" }
+            };
+            await db.InsertAsync(entities);
+
+            var gql = named
+                ? new GqlQuery { QueryString = $"SELECT * FROM {kind} WHERE tag = @tag", NamedBindings = { { "tag", (string) null } } }
+                : new GqlQuery { QueryString = $"SELECT * FROM {kind} WHERE tag = @1", PositionalBindings = { (string) null } };
+
+            await _fixture.RetryQueryAsync(async () =>
+            {
+                var results = await db.RunQueryAsync(gql);
+                var entity = Assert.Single(results.Entities);
+                Assert.Equal("null_tag", entity.Key.Path.Last().Name);
+                Assert.Null((string) entity["tag"]);
+            });
+        }
+
         [Fact]
         public void BeginTransaction_ReadOnly()
         {
