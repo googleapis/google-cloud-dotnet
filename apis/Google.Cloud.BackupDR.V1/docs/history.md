@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.10.0, released 2026-11-02
+
+### New features
+
+- Add Backup and DR AutoProtection v1 public protobuf definitions and update v1beta AutoProtection annotations
+
+### Documentation improvements
+
+- Update AutoProtection field documentation comments in v1 and v1beta
+- Update documentation comment for access_restriction in BackupVault proto
+
 ## Version 2.9.0, released 2026-03-30
 
 ### New features
