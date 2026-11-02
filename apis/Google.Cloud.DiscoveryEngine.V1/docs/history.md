@@ -1,30 +1,5 @@
 # Version history
 
-## Version 1.17.0, released 2026-11-02
-
-### New features
-
-- Add CreateAssistant, GetAssistant, ListAssistants, UpdateAssistant and DeleteAssistant RPCs to AssistantService
-- Add display_name, description, generation_config, web_grounding_type, default_web_grounding_toggle_off, enabled_tools, customer_policy, create_time and update_time fields to Assistant
-- Add AclConfigService and AclConfig resource
-- Add CollectionService and Collection resource
-- Add DataConnectorService and DataConnector resource
-- Add LicenseConfigService and LicenseConfig resource
-- Add UserStoreService and UserStore resource
-- Add WidgetConfigService and WidgetConfig resource
-- Add Create, Get, List and Delete RPCs to ServingConfigService
-- Add GetIamPolicy and SetIamPolicy RPCs to CollectionService, DataStoreService and EngineService
-- Add AdvancedCompleteQuery RPC to CompletionService
-- Add ListLicenseConfigsUsageStats RPC to UserLicenseService
-- Add AgentGatewaySetting, Feedback and logging messages
-- Add new fields to existing messages across the v1 surface
-- Add discoveryengine.readwrite, discoveryengine.serving.readwrite, discoveryengine.assist.readwrite and cloud_search.query OAuth scopes
-- Add resource definitions for AgentGateway, Model Armor Template, DLP ContentPolicy, Service Directory Service and Notebook
-
-### Documentation improvements
-
-- Update comments and field_behavior annotations on existing v1 messages, services and enums
-
 ## Version 1.16.0, released 2026-09-14
 
 ### New features
