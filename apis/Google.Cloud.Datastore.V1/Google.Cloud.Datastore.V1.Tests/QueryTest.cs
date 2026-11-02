@@ -47,5 +47,20 @@ namespace Google.Cloud.Datastore.V1.Tests
             var actual = new Query { Projection = { "prop1", "prop2" } };
             Assert.Equal(expected, actual);
         }
+
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void Add_NullValue_SetsNullValue(bool named)
+        {
+            var expectedParameter = new GqlQueryParameter { Value = Value.ForNull() };
+            var expected = named
+                ? new GqlQuery { NamedBindings = { { "param", expectedParameter } } }
+                : new GqlQuery { PositionalBindings = { expectedParameter } };
+            var actual = named
+                ? new GqlQuery { NamedBindings = { { "param", (Value) null } } }
+                : new GqlQuery { PositionalBindings = { (Value) null } };
+            Assert.Equal(expected, actual);
+        }
     }
 }
