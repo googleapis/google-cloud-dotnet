@@ -3412,7 +3412,7 @@
     },
     {
       "id": "Google.Cloud.Iam.Admin.V1",
-      "version": "2.5.0",
+      "version": "2.6.0",
       "type": "grpc",
       "productName": "Identity and Access Management (IAM)",
       "productUrl": "https://cloud.google.com/iam/docs",

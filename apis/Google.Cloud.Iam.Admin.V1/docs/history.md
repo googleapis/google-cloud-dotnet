@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.6.0, released 2026-11-02
+
+### New features
+
+- Workforce Identity Federation background attribute sync logging
+
 ## Version 2.5.0, released 2025-11-05
 
 ### New features
