@@ -1458,6 +1458,16 @@ namespace Google.Cloud.BackupDR.V1
             get => string.IsNullOrEmpty(BackupPlanAssociation) ? null : BackupPlanAssociationName.Parse(BackupPlanAssociation, allowUnparsed: true);
             set => BackupPlanAssociation = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="AutoProtectionPolicyBindingName"/>-typed view over the <see cref="AutoProtectionPolicyBinding"/>
+        /// resource name property.
+        /// </summary>
+        public AutoProtectionPolicyBindingName AutoProtectionPolicyBindingAsAutoProtectionPolicyBindingName
+        {
+            get => string.IsNullOrEmpty(AutoProtectionPolicyBinding) ? null : AutoProtectionPolicyBindingName.Parse(AutoProtectionPolicyBinding, allowUnparsed: true);
+            set => AutoProtectionPolicyBinding = value?.ToString() ?? "";
+        }
     }
 
     public partial class Backup

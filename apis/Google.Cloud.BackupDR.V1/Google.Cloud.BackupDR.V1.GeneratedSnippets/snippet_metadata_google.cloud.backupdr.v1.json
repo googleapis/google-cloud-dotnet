@@ -8990,12 +8990,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 63,
+          "end": 64,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 61,
+          "end": 62,
           "type": "SHORT"
         }
       ]
@@ -9039,12 +9039,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 64,
+          "end": 65,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 62,
+          "end": 63,
           "type": "SHORT"
         }
       ]
@@ -10576,6 +10576,3268 @@
         {
           "start": 36,
           "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateAutoProtectionPolicy_sync",
+      "title": "CreateAutoProtectionPolicyRequestObject",
+      "description": "Snippet for CreateAutoProtectionPolicy",
+      "file": "BackupDRClient.CreateAutoProtectionPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAutoProtectionPolicy",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateAutoProtectionPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicy, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateAutoProtectionPolicy_async",
+      "title": "CreateAutoProtectionPolicyRequestObjectAsync",
+      "description": "Snippet for CreateAutoProtectionPolicyAsync",
+      "file": "BackupDRClient.CreateAutoProtectionPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAutoProtectionPolicyAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateAutoProtectionPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicy, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateAutoProtectionPolicy_sync_flattened",
+      "title": "CreateAutoProtectionPolicy",
+      "description": "Snippet for CreateAutoProtectionPolicy",
+      "file": "BackupDRClient.CreateAutoProtectionPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAutoProtectionPolicy",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateAutoProtectionPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicy",
+            "name": "autoProtectionPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "autoProtectionPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicy, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateAutoProtectionPolicy_async_flattened",
+      "title": "CreateAutoProtectionPolicyAsync",
+      "description": "Snippet for CreateAutoProtectionPolicyAsync",
+      "file": "BackupDRClient.CreateAutoProtectionPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAutoProtectionPolicyAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateAutoProtectionPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicy",
+            "name": "autoProtectionPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "autoProtectionPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicy, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateAutoProtectionPolicy_sync_flattened_resourceNames",
+      "title": "CreateAutoProtectionPolicyResourceNames",
+      "description": "Snippet for CreateAutoProtectionPolicy",
+      "file": "BackupDRClient.CreateAutoProtectionPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAutoProtectionPolicy",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateAutoProtectionPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicy",
+            "name": "autoProtectionPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "autoProtectionPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicy, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateAutoProtectionPolicy_async_flattened_resourceNames",
+      "title": "CreateAutoProtectionPolicyResourceNamesAsync",
+      "description": "Snippet for CreateAutoProtectionPolicyAsync",
+      "file": "BackupDRClient.CreateAutoProtectionPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAutoProtectionPolicyAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateAutoProtectionPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicy",
+            "name": "autoProtectionPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "autoProtectionPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicy, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListAutoProtectionPolicies_sync",
+      "title": "ListAutoProtectionPoliciesRequestObject",
+      "description": "Snippet for ListAutoProtectionPolicies",
+      "file": "BackupDRClient.ListAutoProtectionPoliciesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutoProtectionPolicies",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListAutoProtectionPolicies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesResponse, Google.Cloud.BackupDR.V1.AutoProtectionPolicy>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListAutoProtectionPolicies",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListAutoProtectionPolicies",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListAutoProtectionPolicies_async",
+      "title": "ListAutoProtectionPoliciesRequestObjectAsync",
+      "description": "Snippet for ListAutoProtectionPoliciesAsync",
+      "file": "BackupDRClient.ListAutoProtectionPoliciesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutoProtectionPoliciesAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListAutoProtectionPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesResponse, Google.Cloud.BackupDR.V1.AutoProtectionPolicy>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListAutoProtectionPolicies",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListAutoProtectionPolicies",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListAutoProtectionPolicies_sync_flattened",
+      "title": "ListAutoProtectionPolicies",
+      "description": "Snippet for ListAutoProtectionPolicies",
+      "file": "BackupDRClient.ListAutoProtectionPoliciesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutoProtectionPolicies",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListAutoProtectionPolicies",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesResponse, Google.Cloud.BackupDR.V1.AutoProtectionPolicy>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListAutoProtectionPolicies",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListAutoProtectionPolicies",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListAutoProtectionPolicies_async_flattened",
+      "title": "ListAutoProtectionPoliciesAsync",
+      "description": "Snippet for ListAutoProtectionPoliciesAsync",
+      "file": "BackupDRClient.ListAutoProtectionPoliciesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutoProtectionPoliciesAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListAutoProtectionPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesResponse, Google.Cloud.BackupDR.V1.AutoProtectionPolicy>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListAutoProtectionPolicies",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListAutoProtectionPolicies",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListAutoProtectionPolicies_sync_flattened_resourceNames",
+      "title": "ListAutoProtectionPoliciesResourceNames",
+      "description": "Snippet for ListAutoProtectionPolicies",
+      "file": "BackupDRClient.ListAutoProtectionPoliciesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutoProtectionPolicies",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListAutoProtectionPolicies",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesResponse, Google.Cloud.BackupDR.V1.AutoProtectionPolicy>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListAutoProtectionPolicies",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListAutoProtectionPolicies",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListAutoProtectionPolicies_async_flattened_resourceNames",
+      "title": "ListAutoProtectionPoliciesResourceNamesAsync",
+      "description": "Snippet for ListAutoProtectionPoliciesAsync",
+      "file": "BackupDRClient.ListAutoProtectionPoliciesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutoProtectionPoliciesAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListAutoProtectionPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesResponse, Google.Cloud.BackupDR.V1.AutoProtectionPolicy>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListAutoProtectionPolicies",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListAutoProtectionPolicies",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetAutoProtectionPolicy_sync",
+      "title": "GetAutoProtectionPolicyRequestObject",
+      "description": "Snippet for GetAutoProtectionPolicy",
+      "file": "BackupDRClient.GetAutoProtectionPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutoProtectionPolicy",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetAutoProtectionPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.AutoProtectionPolicy",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetAutoProtectionPolicy_async",
+      "title": "GetAutoProtectionPolicyRequestObjectAsync",
+      "description": "Snippet for GetAutoProtectionPolicyAsync",
+      "file": "BackupDRClient.GetAutoProtectionPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutoProtectionPolicyAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetAutoProtectionPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.AutoProtectionPolicy>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetAutoProtectionPolicy_sync_flattened",
+      "title": "GetAutoProtectionPolicy",
+      "description": "Snippet for GetAutoProtectionPolicy",
+      "file": "BackupDRClient.GetAutoProtectionPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutoProtectionPolicy",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetAutoProtectionPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.AutoProtectionPolicy",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetAutoProtectionPolicy_async_flattened",
+      "title": "GetAutoProtectionPolicyAsync",
+      "description": "Snippet for GetAutoProtectionPolicyAsync",
+      "file": "BackupDRClient.GetAutoProtectionPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutoProtectionPolicyAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetAutoProtectionPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.AutoProtectionPolicy>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetAutoProtectionPolicy_sync_flattened_resourceNames",
+      "title": "GetAutoProtectionPolicyResourceNames",
+      "description": "Snippet for GetAutoProtectionPolicy",
+      "file": "BackupDRClient.GetAutoProtectionPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutoProtectionPolicy",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetAutoProtectionPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.AutoProtectionPolicy",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetAutoProtectionPolicy_async_flattened_resourceNames",
+      "title": "GetAutoProtectionPolicyResourceNamesAsync",
+      "description": "Snippet for GetAutoProtectionPolicyAsync",
+      "file": "BackupDRClient.GetAutoProtectionPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutoProtectionPolicyAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetAutoProtectionPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.AutoProtectionPolicy>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_UpdateAutoProtectionPolicy_sync",
+      "title": "UpdateAutoProtectionPolicyRequestObject",
+      "description": "Snippet for UpdateAutoProtectionPolicy",
+      "file": "BackupDRClient.UpdateAutoProtectionPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAutoProtectionPolicy",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.UpdateAutoProtectionPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.UpdateAutoProtectionPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicy, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "UpdateAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.UpdateAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_UpdateAutoProtectionPolicy_async",
+      "title": "UpdateAutoProtectionPolicyRequestObjectAsync",
+      "description": "Snippet for UpdateAutoProtectionPolicyAsync",
+      "file": "BackupDRClient.UpdateAutoProtectionPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAutoProtectionPolicyAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.UpdateAutoProtectionPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.UpdateAutoProtectionPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicy, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "UpdateAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.UpdateAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_UpdateAutoProtectionPolicy_sync_flattened",
+      "title": "UpdateAutoProtectionPolicy",
+      "description": "Snippet for UpdateAutoProtectionPolicy",
+      "file": "BackupDRClient.UpdateAutoProtectionPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAutoProtectionPolicy",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.UpdateAutoProtectionPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicy",
+            "name": "autoProtectionPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicy, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "UpdateAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.UpdateAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_UpdateAutoProtectionPolicy_async_flattened",
+      "title": "UpdateAutoProtectionPolicyAsync",
+      "description": "Snippet for UpdateAutoProtectionPolicyAsync",
+      "file": "BackupDRClient.UpdateAutoProtectionPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAutoProtectionPolicyAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.UpdateAutoProtectionPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicy",
+            "name": "autoProtectionPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicy, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "UpdateAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.UpdateAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteAutoProtectionPolicy_sync",
+      "title": "DeleteAutoProtectionPolicyRequestObject",
+      "description": "Snippet for DeleteAutoProtectionPolicy",
+      "file": "BackupDRClient.DeleteAutoProtectionPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAutoProtectionPolicy",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteAutoProtectionPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.DeleteAutoProtectionPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteAutoProtectionPolicy_async",
+      "title": "DeleteAutoProtectionPolicyRequestObjectAsync",
+      "description": "Snippet for DeleteAutoProtectionPolicyAsync",
+      "file": "BackupDRClient.DeleteAutoProtectionPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAutoProtectionPolicyAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteAutoProtectionPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.DeleteAutoProtectionPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteAutoProtectionPolicy_sync_flattened",
+      "title": "DeleteAutoProtectionPolicy",
+      "description": "Snippet for DeleteAutoProtectionPolicy",
+      "file": "BackupDRClient.DeleteAutoProtectionPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAutoProtectionPolicy",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteAutoProtectionPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteAutoProtectionPolicy_async_flattened",
+      "title": "DeleteAutoProtectionPolicyAsync",
+      "description": "Snippet for DeleteAutoProtectionPolicyAsync",
+      "file": "BackupDRClient.DeleteAutoProtectionPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAutoProtectionPolicyAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteAutoProtectionPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteAutoProtectionPolicy_sync_flattened_resourceNames",
+      "title": "DeleteAutoProtectionPolicyResourceNames",
+      "description": "Snippet for DeleteAutoProtectionPolicy",
+      "file": "BackupDRClient.DeleteAutoProtectionPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAutoProtectionPolicy",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteAutoProtectionPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteAutoProtectionPolicy_async_flattened_resourceNames",
+      "title": "DeleteAutoProtectionPolicyResourceNamesAsync",
+      "description": "Snippet for DeleteAutoProtectionPolicyAsync",
+      "file": "BackupDRClient.DeleteAutoProtectionPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAutoProtectionPolicyAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteAutoProtectionPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteAutoProtectionPolicy",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteAutoProtectionPolicy",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateAutoProtectionPolicyBinding_sync",
+      "title": "CreateAutoProtectionPolicyBindingRequestObject",
+      "description": "Snippet for CreateAutoProtectionPolicyBinding",
+      "file": "BackupDRClient.CreateAutoProtectionPolicyBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAutoProtectionPolicyBinding",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateAutoProtectionPolicyBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateAutoProtectionPolicyBinding",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateAutoProtectionPolicyBinding",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateAutoProtectionPolicyBinding_async",
+      "title": "CreateAutoProtectionPolicyBindingRequestObjectAsync",
+      "description": "Snippet for CreateAutoProtectionPolicyBindingAsync",
+      "file": "BackupDRClient.CreateAutoProtectionPolicyBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAutoProtectionPolicyBindingAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateAutoProtectionPolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateAutoProtectionPolicyBinding",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateAutoProtectionPolicyBinding",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateAutoProtectionPolicyBinding_sync_flattened",
+      "title": "CreateAutoProtectionPolicyBinding",
+      "description": "Snippet for CreateAutoProtectionPolicyBinding",
+      "file": "BackupDRClient.CreateAutoProtectionPolicyBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAutoProtectionPolicyBinding",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateAutoProtectionPolicyBinding",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding",
+            "name": "autoProtectionPolicyBinding"
+          },
+          {
+            "type": "System.String",
+            "name": "autoProtectionPolicyBindingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateAutoProtectionPolicyBinding",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateAutoProtectionPolicyBinding",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateAutoProtectionPolicyBinding_async_flattened",
+      "title": "CreateAutoProtectionPolicyBindingAsync",
+      "description": "Snippet for CreateAutoProtectionPolicyBindingAsync",
+      "file": "BackupDRClient.CreateAutoProtectionPolicyBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAutoProtectionPolicyBindingAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateAutoProtectionPolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding",
+            "name": "autoProtectionPolicyBinding"
+          },
+          {
+            "type": "System.String",
+            "name": "autoProtectionPolicyBindingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateAutoProtectionPolicyBinding",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateAutoProtectionPolicyBinding",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateAutoProtectionPolicyBinding_sync_flattened_resourceNames",
+      "title": "CreateAutoProtectionPolicyBindingResourceNames",
+      "description": "Snippet for CreateAutoProtectionPolicyBinding",
+      "file": "BackupDRClient.CreateAutoProtectionPolicyBindingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAutoProtectionPolicyBinding",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateAutoProtectionPolicyBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding",
+            "name": "autoProtectionPolicyBinding"
+          },
+          {
+            "type": "System.String",
+            "name": "autoProtectionPolicyBindingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateAutoProtectionPolicyBinding",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateAutoProtectionPolicyBinding",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateAutoProtectionPolicyBinding_async_flattened_resourceNames",
+      "title": "CreateAutoProtectionPolicyBindingResourceNamesAsync",
+      "description": "Snippet for CreateAutoProtectionPolicyBindingAsync",
+      "file": "BackupDRClient.CreateAutoProtectionPolicyBindingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAutoProtectionPolicyBindingAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateAutoProtectionPolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding",
+            "name": "autoProtectionPolicyBinding"
+          },
+          {
+            "type": "System.String",
+            "name": "autoProtectionPolicyBindingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateAutoProtectionPolicyBinding",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateAutoProtectionPolicyBinding",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetAutoProtectionPolicyBinding_sync",
+      "title": "GetAutoProtectionPolicyBindingRequestObject",
+      "description": "Snippet for GetAutoProtectionPolicyBinding",
+      "file": "BackupDRClient.GetAutoProtectionPolicyBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutoProtectionPolicyBinding",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetAutoProtectionPolicyBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetAutoProtectionPolicyBinding",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetAutoProtectionPolicyBinding",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetAutoProtectionPolicyBinding_async",
+      "title": "GetAutoProtectionPolicyBindingRequestObjectAsync",
+      "description": "Snippet for GetAutoProtectionPolicyBindingAsync",
+      "file": "BackupDRClient.GetAutoProtectionPolicyBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutoProtectionPolicyBindingAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetAutoProtectionPolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetAutoProtectionPolicyBinding",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetAutoProtectionPolicyBinding",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetAutoProtectionPolicyBinding_sync_flattened",
+      "title": "GetAutoProtectionPolicyBinding",
+      "description": "Snippet for GetAutoProtectionPolicyBinding",
+      "file": "BackupDRClient.GetAutoProtectionPolicyBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutoProtectionPolicyBinding",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetAutoProtectionPolicyBinding",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetAutoProtectionPolicyBinding",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetAutoProtectionPolicyBinding",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetAutoProtectionPolicyBinding_async_flattened",
+      "title": "GetAutoProtectionPolicyBindingAsync",
+      "description": "Snippet for GetAutoProtectionPolicyBindingAsync",
+      "file": "BackupDRClient.GetAutoProtectionPolicyBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutoProtectionPolicyBindingAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetAutoProtectionPolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetAutoProtectionPolicyBinding",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetAutoProtectionPolicyBinding",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetAutoProtectionPolicyBinding_sync_flattened_resourceNames",
+      "title": "GetAutoProtectionPolicyBindingResourceNames",
+      "description": "Snippet for GetAutoProtectionPolicyBinding",
+      "file": "BackupDRClient.GetAutoProtectionPolicyBindingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutoProtectionPolicyBinding",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetAutoProtectionPolicyBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyBindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetAutoProtectionPolicyBinding",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetAutoProtectionPolicyBinding",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetAutoProtectionPolicyBinding_async_flattened_resourceNames",
+      "title": "GetAutoProtectionPolicyBindingResourceNamesAsync",
+      "description": "Snippet for GetAutoProtectionPolicyBindingAsync",
+      "file": "BackupDRClient.GetAutoProtectionPolicyBindingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutoProtectionPolicyBindingAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetAutoProtectionPolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyBindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetAutoProtectionPolicyBinding",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetAutoProtectionPolicyBinding",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListAutoProtectionPolicyBindings_sync",
+      "title": "ListAutoProtectionPolicyBindingsRequestObject",
+      "description": "Snippet for ListAutoProtectionPolicyBindings",
+      "file": "BackupDRClient.ListAutoProtectionPolicyBindingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutoProtectionPolicyBindings",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListAutoProtectionPolicyBindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsResponse, Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListAutoProtectionPolicyBindings",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListAutoProtectionPolicyBindings",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListAutoProtectionPolicyBindings_async",
+      "title": "ListAutoProtectionPolicyBindingsRequestObjectAsync",
+      "description": "Snippet for ListAutoProtectionPolicyBindingsAsync",
+      "file": "BackupDRClient.ListAutoProtectionPolicyBindingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutoProtectionPolicyBindingsAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListAutoProtectionPolicyBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsResponse, Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListAutoProtectionPolicyBindings",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListAutoProtectionPolicyBindings",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListAutoProtectionPolicyBindings_sync_flattened",
+      "title": "ListAutoProtectionPolicyBindings",
+      "description": "Snippet for ListAutoProtectionPolicyBindings",
+      "file": "BackupDRClient.ListAutoProtectionPolicyBindingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutoProtectionPolicyBindings",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListAutoProtectionPolicyBindings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsResponse, Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListAutoProtectionPolicyBindings",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListAutoProtectionPolicyBindings",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListAutoProtectionPolicyBindings_async_flattened",
+      "title": "ListAutoProtectionPolicyBindingsAsync",
+      "description": "Snippet for ListAutoProtectionPolicyBindingsAsync",
+      "file": "BackupDRClient.ListAutoProtectionPolicyBindingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutoProtectionPolicyBindingsAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListAutoProtectionPolicyBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsResponse, Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListAutoProtectionPolicyBindings",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListAutoProtectionPolicyBindings",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListAutoProtectionPolicyBindings_sync_flattened_resourceNames",
+      "title": "ListAutoProtectionPolicyBindingsResourceNames",
+      "description": "Snippet for ListAutoProtectionPolicyBindings",
+      "file": "BackupDRClient.ListAutoProtectionPolicyBindingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutoProtectionPolicyBindings",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListAutoProtectionPolicyBindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsResponse, Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListAutoProtectionPolicyBindings",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListAutoProtectionPolicyBindings",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListAutoProtectionPolicyBindings_async_flattened_resourceNames",
+      "title": "ListAutoProtectionPolicyBindingsResourceNamesAsync",
+      "description": "Snippet for ListAutoProtectionPolicyBindingsAsync",
+      "file": "BackupDRClient.ListAutoProtectionPolicyBindingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAutoProtectionPolicyBindingsAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListAutoProtectionPolicyBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsResponse, Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListAutoProtectionPolicyBindings",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListAutoProtectionPolicyBindings",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListAppliedAutoProtectionPolicies_sync",
+      "title": "ListAppliedAutoProtectionPoliciesRequestObject",
+      "description": "Snippet for ListAppliedAutoProtectionPolicies",
+      "file": "BackupDRClient.ListAppliedAutoProtectionPoliciesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAppliedAutoProtectionPolicies",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListAppliedAutoProtectionPolicies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesResponse, Google.Cloud.BackupDR.V1.AppliedAutoProtectionPolicy>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListAppliedAutoProtectionPolicies",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListAppliedAutoProtectionPolicies",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListAppliedAutoProtectionPolicies_async",
+      "title": "ListAppliedAutoProtectionPoliciesRequestObjectAsync",
+      "description": "Snippet for ListAppliedAutoProtectionPoliciesAsync",
+      "file": "BackupDRClient.ListAppliedAutoProtectionPoliciesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAppliedAutoProtectionPoliciesAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListAppliedAutoProtectionPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesResponse, Google.Cloud.BackupDR.V1.AppliedAutoProtectionPolicy>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListAppliedAutoProtectionPolicies",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListAppliedAutoProtectionPolicies",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListAppliedAutoProtectionPolicies_sync_flattened",
+      "title": "ListAppliedAutoProtectionPolicies",
+      "description": "Snippet for ListAppliedAutoProtectionPolicies",
+      "file": "BackupDRClient.ListAppliedAutoProtectionPoliciesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAppliedAutoProtectionPolicies",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListAppliedAutoProtectionPolicies",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesResponse, Google.Cloud.BackupDR.V1.AppliedAutoProtectionPolicy>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListAppliedAutoProtectionPolicies",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListAppliedAutoProtectionPolicies",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListAppliedAutoProtectionPolicies_async_flattened",
+      "title": "ListAppliedAutoProtectionPoliciesAsync",
+      "description": "Snippet for ListAppliedAutoProtectionPoliciesAsync",
+      "file": "BackupDRClient.ListAppliedAutoProtectionPoliciesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAppliedAutoProtectionPoliciesAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListAppliedAutoProtectionPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesResponse, Google.Cloud.BackupDR.V1.AppliedAutoProtectionPolicy>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListAppliedAutoProtectionPolicies",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListAppliedAutoProtectionPolicies",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListAppliedAutoProtectionPolicies_sync_flattened_resourceNames",
+      "title": "ListAppliedAutoProtectionPoliciesResourceNames",
+      "description": "Snippet for ListAppliedAutoProtectionPolicies",
+      "file": "BackupDRClient.ListAppliedAutoProtectionPoliciesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAppliedAutoProtectionPolicies",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListAppliedAutoProtectionPolicies",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesResponse, Google.Cloud.BackupDR.V1.AppliedAutoProtectionPolicy>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListAppliedAutoProtectionPolicies",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListAppliedAutoProtectionPolicies",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListAppliedAutoProtectionPolicies_async_flattened_resourceNames",
+      "title": "ListAppliedAutoProtectionPoliciesResourceNamesAsync",
+      "description": "Snippet for ListAppliedAutoProtectionPoliciesAsync",
+      "file": "BackupDRClient.ListAppliedAutoProtectionPoliciesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAppliedAutoProtectionPoliciesAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListAppliedAutoProtectionPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesResponse, Google.Cloud.BackupDR.V1.AppliedAutoProtectionPolicy>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListAppliedAutoProtectionPolicies",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListAppliedAutoProtectionPolicies",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_InitiateDeleteAutoProtectionPolicyBinding_sync",
+      "title": "InitiateDeleteAutoProtectionPolicyBindingRequestObject",
+      "description": "Snippet for InitiateDeleteAutoProtectionPolicyBinding",
+      "file": "BackupDRClient.InitiateDeleteAutoProtectionPolicyBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InitiateDeleteAutoProtectionPolicyBinding",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.InitiateDeleteAutoProtectionPolicyBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.InitiateDeleteAutoProtectionPolicyBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "InitiateDeleteAutoProtectionPolicyBinding",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.InitiateDeleteAutoProtectionPolicyBinding",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_InitiateDeleteAutoProtectionPolicyBinding_async",
+      "title": "InitiateDeleteAutoProtectionPolicyBindingRequestObjectAsync",
+      "description": "Snippet for InitiateDeleteAutoProtectionPolicyBindingAsync",
+      "file": "BackupDRClient.InitiateDeleteAutoProtectionPolicyBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InitiateDeleteAutoProtectionPolicyBindingAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.InitiateDeleteAutoProtectionPolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.InitiateDeleteAutoProtectionPolicyBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "InitiateDeleteAutoProtectionPolicyBinding",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.InitiateDeleteAutoProtectionPolicyBinding",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_InitiateDeleteAutoProtectionPolicyBinding_sync_flattened",
+      "title": "InitiateDeleteAutoProtectionPolicyBinding",
+      "description": "Snippet for InitiateDeleteAutoProtectionPolicyBinding",
+      "file": "BackupDRClient.InitiateDeleteAutoProtectionPolicyBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InitiateDeleteAutoProtectionPolicyBinding",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.InitiateDeleteAutoProtectionPolicyBinding",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "InitiateDeleteAutoProtectionPolicyBinding",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.InitiateDeleteAutoProtectionPolicyBinding",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_InitiateDeleteAutoProtectionPolicyBinding_async_flattened",
+      "title": "InitiateDeleteAutoProtectionPolicyBindingAsync",
+      "description": "Snippet for InitiateDeleteAutoProtectionPolicyBindingAsync",
+      "file": "BackupDRClient.InitiateDeleteAutoProtectionPolicyBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InitiateDeleteAutoProtectionPolicyBindingAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.InitiateDeleteAutoProtectionPolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "InitiateDeleteAutoProtectionPolicyBinding",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.InitiateDeleteAutoProtectionPolicyBinding",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_InitiateDeleteAutoProtectionPolicyBinding_sync_flattened_resourceNames",
+      "title": "InitiateDeleteAutoProtectionPolicyBindingResourceNames",
+      "description": "Snippet for InitiateDeleteAutoProtectionPolicyBinding",
+      "file": "BackupDRClient.InitiateDeleteAutoProtectionPolicyBindingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InitiateDeleteAutoProtectionPolicyBinding",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.InitiateDeleteAutoProtectionPolicyBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyBindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "InitiateDeleteAutoProtectionPolicyBinding",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.InitiateDeleteAutoProtectionPolicyBinding",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_InitiateDeleteAutoProtectionPolicyBinding_async_flattened_resourceNames",
+      "title": "InitiateDeleteAutoProtectionPolicyBindingResourceNamesAsync",
+      "description": "Snippet for InitiateDeleteAutoProtectionPolicyBindingAsync",
+      "file": "BackupDRClient.InitiateDeleteAutoProtectionPolicyBindingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InitiateDeleteAutoProtectionPolicyBindingAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.InitiateDeleteAutoProtectionPolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyBindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "InitiateDeleteAutoProtectionPolicyBinding",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.InitiateDeleteAutoProtectionPolicyBinding",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListBindingMatchingResources_sync",
+      "title": "ListBindingMatchingResourcesRequestObject",
+      "description": "Snippet for ListBindingMatchingResources",
+      "file": "BackupDRClient.ListBindingMatchingResourcesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBindingMatchingResources",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListBindingMatchingResources",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesResponse, Google.Cloud.BackupDR.V1.BindingMatchingResource>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListBindingMatchingResources",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListBindingMatchingResources",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListBindingMatchingResources_async",
+      "title": "ListBindingMatchingResourcesRequestObjectAsync",
+      "description": "Snippet for ListBindingMatchingResourcesAsync",
+      "file": "BackupDRClient.ListBindingMatchingResourcesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBindingMatchingResourcesAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListBindingMatchingResourcesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesResponse, Google.Cloud.BackupDR.V1.BindingMatchingResource>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListBindingMatchingResources",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListBindingMatchingResources",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListBindingMatchingResources_sync_flattened",
+      "title": "ListBindingMatchingResources",
+      "description": "Snippet for ListBindingMatchingResources",
+      "file": "BackupDRClient.ListBindingMatchingResourcesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBindingMatchingResources",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListBindingMatchingResources",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesResponse, Google.Cloud.BackupDR.V1.BindingMatchingResource>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListBindingMatchingResources",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListBindingMatchingResources",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListBindingMatchingResources_async_flattened",
+      "title": "ListBindingMatchingResourcesAsync",
+      "description": "Snippet for ListBindingMatchingResourcesAsync",
+      "file": "BackupDRClient.ListBindingMatchingResourcesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBindingMatchingResourcesAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListBindingMatchingResourcesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesResponse, Google.Cloud.BackupDR.V1.BindingMatchingResource>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListBindingMatchingResources",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListBindingMatchingResources",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListBindingMatchingResources_sync_flattened_resourceNames",
+      "title": "ListBindingMatchingResourcesResourceNames",
+      "description": "Snippet for ListBindingMatchingResources",
+      "file": "BackupDRClient.ListBindingMatchingResourcesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBindingMatchingResources",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListBindingMatchingResources",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyBindingName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesResponse, Google.Cloud.BackupDR.V1.BindingMatchingResource>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListBindingMatchingResources",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListBindingMatchingResources",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListBindingMatchingResources_async_flattened_resourceNames",
+      "title": "ListBindingMatchingResourcesResourceNamesAsync",
+      "description": "Snippet for ListBindingMatchingResourcesAsync",
+      "file": "BackupDRClient.ListBindingMatchingResourcesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBindingMatchingResourcesAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListBindingMatchingResourcesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.AutoProtectionPolicyBindingName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesResponse, Google.Cloud.BackupDR.V1.BindingMatchingResource>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListBindingMatchingResources",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListBindingMatchingResources",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
           "type": "SHORT"
         }
       ]

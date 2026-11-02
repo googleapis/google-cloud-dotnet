@@ -179,6 +179,40 @@ namespace Google.Cloud.BackupDR.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse> __Marshaller_google_cloud_backupdr_v1_FetchDataSourceReferencesForResourceTypeResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.InitializeServiceRequest> __Marshaller_google_cloud_backupdr_v1_InitializeServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.InitializeServiceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyRequest> __Marshaller_google_cloud_backupdr_v1_CreateAutoProtectionPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesRequest> __Marshaller_google_cloud_backupdr_v1_ListAutoProtectionPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesResponse> __Marshaller_google_cloud_backupdr_v1_ListAutoProtectionPoliciesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyRequest> __Marshaller_google_cloud_backupdr_v1_GetAutoProtectionPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.AutoProtectionPolicy> __Marshaller_google_cloud_backupdr_v1_AutoProtectionPolicy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.AutoProtectionPolicy.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.UpdateAutoProtectionPolicyRequest> __Marshaller_google_cloud_backupdr_v1_UpdateAutoProtectionPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.UpdateAutoProtectionPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.DeleteAutoProtectionPolicyRequest> __Marshaller_google_cloud_backupdr_v1_DeleteAutoProtectionPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.DeleteAutoProtectionPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyBindingRequest> __Marshaller_google_cloud_backupdr_v1_CreateAutoProtectionPolicyBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyBindingRequest> __Marshaller_google_cloud_backupdr_v1_GetAutoProtectionPolicyBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding> __Marshaller_google_cloud_backupdr_v1_AutoProtectionPolicyBinding = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsRequest> __Marshaller_google_cloud_backupdr_v1_ListAutoProtectionPolicyBindingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsResponse> __Marshaller_google_cloud_backupdr_v1_ListAutoProtectionPolicyBindingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesRequest> __Marshaller_google_cloud_backupdr_v1_ListAppliedAutoProtectionPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesResponse> __Marshaller_google_cloud_backupdr_v1_ListAppliedAutoProtectionPoliciesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.InitiateDeleteAutoProtectionPolicyBindingRequest> __Marshaller_google_cloud_backupdr_v1_InitiateDeleteAutoProtectionPolicyBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.InitiateDeleteAutoProtectionPolicyBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesRequest> __Marshaller_google_cloud_backupdr_v1_ListBindingMatchingResourcesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesResponse> __Marshaller_google_cloud_backupdr_v1_ListBindingMatchingResourcesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.ListManagementServersRequest, global::Google.Cloud.BackupDR.V1.ListManagementServersResponse> __Method_ListManagementServers = new grpc::Method<global::Google.Cloud.BackupDR.V1.ListManagementServersRequest, global::Google.Cloud.BackupDR.V1.ListManagementServersResponse>(
@@ -475,6 +509,94 @@ namespace Google.Cloud.BackupDR.V1 {
         "InitializeService",
         __Marshaller_google_cloud_backupdr_v1_InitializeServiceRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyRequest, global::Google.LongRunning.Operation> __Method_CreateAutoProtectionPolicy = new grpc::Method<global::Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAutoProtectionPolicy",
+        __Marshaller_google_cloud_backupdr_v1_CreateAutoProtectionPolicyRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesRequest, global::Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesResponse> __Method_ListAutoProtectionPolicies = new grpc::Method<global::Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesRequest, global::Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAutoProtectionPolicies",
+        __Marshaller_google_cloud_backupdr_v1_ListAutoProtectionPoliciesRequest,
+        __Marshaller_google_cloud_backupdr_v1_ListAutoProtectionPoliciesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyRequest, global::Google.Cloud.BackupDR.V1.AutoProtectionPolicy> __Method_GetAutoProtectionPolicy = new grpc::Method<global::Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyRequest, global::Google.Cloud.BackupDR.V1.AutoProtectionPolicy>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAutoProtectionPolicy",
+        __Marshaller_google_cloud_backupdr_v1_GetAutoProtectionPolicyRequest,
+        __Marshaller_google_cloud_backupdr_v1_AutoProtectionPolicy);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.UpdateAutoProtectionPolicyRequest, global::Google.LongRunning.Operation> __Method_UpdateAutoProtectionPolicy = new grpc::Method<global::Google.Cloud.BackupDR.V1.UpdateAutoProtectionPolicyRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAutoProtectionPolicy",
+        __Marshaller_google_cloud_backupdr_v1_UpdateAutoProtectionPolicyRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.DeleteAutoProtectionPolicyRequest, global::Google.LongRunning.Operation> __Method_DeleteAutoProtectionPolicy = new grpc::Method<global::Google.Cloud.BackupDR.V1.DeleteAutoProtectionPolicyRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAutoProtectionPolicy",
+        __Marshaller_google_cloud_backupdr_v1_DeleteAutoProtectionPolicyRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyBindingRequest, global::Google.LongRunning.Operation> __Method_CreateAutoProtectionPolicyBinding = new grpc::Method<global::Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyBindingRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAutoProtectionPolicyBinding",
+        __Marshaller_google_cloud_backupdr_v1_CreateAutoProtectionPolicyBindingRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyBindingRequest, global::Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding> __Method_GetAutoProtectionPolicyBinding = new grpc::Method<global::Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyBindingRequest, global::Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAutoProtectionPolicyBinding",
+        __Marshaller_google_cloud_backupdr_v1_GetAutoProtectionPolicyBindingRequest,
+        __Marshaller_google_cloud_backupdr_v1_AutoProtectionPolicyBinding);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsRequest, global::Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsResponse> __Method_ListAutoProtectionPolicyBindings = new grpc::Method<global::Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsRequest, global::Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAutoProtectionPolicyBindings",
+        __Marshaller_google_cloud_backupdr_v1_ListAutoProtectionPolicyBindingsRequest,
+        __Marshaller_google_cloud_backupdr_v1_ListAutoProtectionPolicyBindingsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesRequest, global::Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesResponse> __Method_ListAppliedAutoProtectionPolicies = new grpc::Method<global::Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesRequest, global::Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAppliedAutoProtectionPolicies",
+        __Marshaller_google_cloud_backupdr_v1_ListAppliedAutoProtectionPoliciesRequest,
+        __Marshaller_google_cloud_backupdr_v1_ListAppliedAutoProtectionPoliciesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.InitiateDeleteAutoProtectionPolicyBindingRequest, global::Google.LongRunning.Operation> __Method_InitiateDeleteAutoProtectionPolicyBinding = new grpc::Method<global::Google.Cloud.BackupDR.V1.InitiateDeleteAutoProtectionPolicyBindingRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "InitiateDeleteAutoProtectionPolicyBinding",
+        __Marshaller_google_cloud_backupdr_v1_InitiateDeleteAutoProtectionPolicyBindingRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesRequest, global::Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesResponse> __Method_ListBindingMatchingResources = new grpc::Method<global::Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesRequest, global::Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBindingMatchingResources",
+        __Marshaller_google_cloud_backupdr_v1_ListBindingMatchingResourcesRequest,
+        __Marshaller_google_cloud_backupdr_v1_ListBindingMatchingResourcesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -928,6 +1050,140 @@ namespace Google.Cloud.BackupDR.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> InitializeService(global::Google.Cloud.BackupDR.V1.InitializeServiceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new AutoProtectionPolicy in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateAutoProtectionPolicy(global::Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists AutoProtectionPolicies for a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesResponse> ListAutoProtectionPolicies(global::Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single AutoProtectionPolicy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1.AutoProtectionPolicy> GetAutoProtectionPolicy(global::Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of a single AutoProtectionPolicy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateAutoProtectionPolicy(global::Google.Cloud.BackupDR.V1.UpdateAutoProtectionPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single AutoProtectionPolicy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteAutoProtectionPolicy(global::Google.Cloud.BackupDR.V1.DeleteAutoProtectionPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new AutoProtectionPolicyBinding in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateAutoProtectionPolicyBinding(global::Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the auto protection policy binding read from the CCFE tables.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding> GetAutoProtectionPolicyBinding(global::Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the auto protection policy bindings read from the CCFE tables.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsResponse> ListAutoProtectionPolicyBindings(global::Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists AppliedAutoProtectionPolicies in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesResponse> ListAppliedAutoProtectionPolicies(global::Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// InitiateDeleteAutoProtectionPolicyBinding initiates delete for
+      /// AutoProtectionPolicy Binding
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> InitiateDeleteAutoProtectionPolicyBinding(global::Google.Cloud.BackupDR.V1.InitiateDeleteAutoProtectionPolicyBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists Binding Matching Resources for a given AutoProtectionPolicyBinding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesResponse> ListBindingMatchingResources(global::Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2745,6 +3001,542 @@ namespace Google.Cloud.BackupDR.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_InitializeService, null, options, request);
       }
+      /// <summary>
+      /// Creates a new AutoProtectionPolicy in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateAutoProtectionPolicy(global::Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAutoProtectionPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new AutoProtectionPolicy in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateAutoProtectionPolicy(global::Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAutoProtectionPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new AutoProtectionPolicy in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAutoProtectionPolicyAsync(global::Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAutoProtectionPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new AutoProtectionPolicy in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAutoProtectionPolicyAsync(global::Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAutoProtectionPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Lists AutoProtectionPolicies for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesResponse ListAutoProtectionPolicies(global::Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAutoProtectionPolicies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists AutoProtectionPolicies for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesResponse ListAutoProtectionPolicies(global::Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAutoProtectionPolicies, null, options, request);
+      }
+      /// <summary>
+      /// Lists AutoProtectionPolicies for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesResponse> ListAutoProtectionPoliciesAsync(global::Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAutoProtectionPoliciesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists AutoProtectionPolicies for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesResponse> ListAutoProtectionPoliciesAsync(global::Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAutoProtectionPolicies, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single AutoProtectionPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.AutoProtectionPolicy GetAutoProtectionPolicy(global::Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAutoProtectionPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single AutoProtectionPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.AutoProtectionPolicy GetAutoProtectionPolicy(global::Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAutoProtectionPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single AutoProtectionPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.AutoProtectionPolicy> GetAutoProtectionPolicyAsync(global::Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAutoProtectionPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single AutoProtectionPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.AutoProtectionPolicy> GetAutoProtectionPolicyAsync(global::Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAutoProtectionPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single AutoProtectionPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateAutoProtectionPolicy(global::Google.Cloud.BackupDR.V1.UpdateAutoProtectionPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAutoProtectionPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single AutoProtectionPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateAutoProtectionPolicy(global::Google.Cloud.BackupDR.V1.UpdateAutoProtectionPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAutoProtectionPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single AutoProtectionPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAutoProtectionPolicyAsync(global::Google.Cloud.BackupDR.V1.UpdateAutoProtectionPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAutoProtectionPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single AutoProtectionPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAutoProtectionPolicyAsync(global::Google.Cloud.BackupDR.V1.UpdateAutoProtectionPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAutoProtectionPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single AutoProtectionPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteAutoProtectionPolicy(global::Google.Cloud.BackupDR.V1.DeleteAutoProtectionPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAutoProtectionPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single AutoProtectionPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteAutoProtectionPolicy(global::Google.Cloud.BackupDR.V1.DeleteAutoProtectionPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAutoProtectionPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single AutoProtectionPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAutoProtectionPolicyAsync(global::Google.Cloud.BackupDR.V1.DeleteAutoProtectionPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAutoProtectionPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single AutoProtectionPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAutoProtectionPolicyAsync(global::Google.Cloud.BackupDR.V1.DeleteAutoProtectionPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAutoProtectionPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new AutoProtectionPolicyBinding in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateAutoProtectionPolicyBinding(global::Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAutoProtectionPolicyBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new AutoProtectionPolicyBinding in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateAutoProtectionPolicyBinding(global::Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAutoProtectionPolicyBinding, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new AutoProtectionPolicyBinding in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAutoProtectionPolicyBindingAsync(global::Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAutoProtectionPolicyBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new AutoProtectionPolicyBinding in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAutoProtectionPolicyBindingAsync(global::Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAutoProtectionPolicyBinding, null, options, request);
+      }
+      /// <summary>
+      /// Returns the auto protection policy binding read from the CCFE tables.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding GetAutoProtectionPolicyBinding(global::Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAutoProtectionPolicyBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the auto protection policy binding read from the CCFE tables.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding GetAutoProtectionPolicyBinding(global::Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAutoProtectionPolicyBinding, null, options, request);
+      }
+      /// <summary>
+      /// Returns the auto protection policy binding read from the CCFE tables.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding> GetAutoProtectionPolicyBindingAsync(global::Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAutoProtectionPolicyBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the auto protection policy binding read from the CCFE tables.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding> GetAutoProtectionPolicyBindingAsync(global::Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAutoProtectionPolicyBinding, null, options, request);
+      }
+      /// <summary>
+      /// Returns the auto protection policy bindings read from the CCFE tables.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsResponse ListAutoProtectionPolicyBindings(global::Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAutoProtectionPolicyBindings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the auto protection policy bindings read from the CCFE tables.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsResponse ListAutoProtectionPolicyBindings(global::Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAutoProtectionPolicyBindings, null, options, request);
+      }
+      /// <summary>
+      /// Returns the auto protection policy bindings read from the CCFE tables.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsResponse> ListAutoProtectionPolicyBindingsAsync(global::Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAutoProtectionPolicyBindingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the auto protection policy bindings read from the CCFE tables.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsResponse> ListAutoProtectionPolicyBindingsAsync(global::Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAutoProtectionPolicyBindings, null, options, request);
+      }
+      /// <summary>
+      /// Lists AppliedAutoProtectionPolicies in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesResponse ListAppliedAutoProtectionPolicies(global::Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAppliedAutoProtectionPolicies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists AppliedAutoProtectionPolicies in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesResponse ListAppliedAutoProtectionPolicies(global::Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAppliedAutoProtectionPolicies, null, options, request);
+      }
+      /// <summary>
+      /// Lists AppliedAutoProtectionPolicies in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesResponse> ListAppliedAutoProtectionPoliciesAsync(global::Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAppliedAutoProtectionPoliciesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists AppliedAutoProtectionPolicies in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesResponse> ListAppliedAutoProtectionPoliciesAsync(global::Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAppliedAutoProtectionPolicies, null, options, request);
+      }
+      /// <summary>
+      /// InitiateDeleteAutoProtectionPolicyBinding initiates delete for
+      /// AutoProtectionPolicy Binding
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation InitiateDeleteAutoProtectionPolicyBinding(global::Google.Cloud.BackupDR.V1.InitiateDeleteAutoProtectionPolicyBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return InitiateDeleteAutoProtectionPolicyBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// InitiateDeleteAutoProtectionPolicyBinding initiates delete for
+      /// AutoProtectionPolicy Binding
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation InitiateDeleteAutoProtectionPolicyBinding(global::Google.Cloud.BackupDR.V1.InitiateDeleteAutoProtectionPolicyBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_InitiateDeleteAutoProtectionPolicyBinding, null, options, request);
+      }
+      /// <summary>
+      /// InitiateDeleteAutoProtectionPolicyBinding initiates delete for
+      /// AutoProtectionPolicy Binding
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> InitiateDeleteAutoProtectionPolicyBindingAsync(global::Google.Cloud.BackupDR.V1.InitiateDeleteAutoProtectionPolicyBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return InitiateDeleteAutoProtectionPolicyBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// InitiateDeleteAutoProtectionPolicyBinding initiates delete for
+      /// AutoProtectionPolicy Binding
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> InitiateDeleteAutoProtectionPolicyBindingAsync(global::Google.Cloud.BackupDR.V1.InitiateDeleteAutoProtectionPolicyBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_InitiateDeleteAutoProtectionPolicyBinding, null, options, request);
+      }
+      /// <summary>
+      /// Lists Binding Matching Resources for a given AutoProtectionPolicyBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesResponse ListBindingMatchingResources(global::Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBindingMatchingResources(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Binding Matching Resources for a given AutoProtectionPolicyBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesResponse ListBindingMatchingResources(global::Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBindingMatchingResources, null, options, request);
+      }
+      /// <summary>
+      /// Lists Binding Matching Resources for a given AutoProtectionPolicyBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesResponse> ListBindingMatchingResourcesAsync(global::Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBindingMatchingResourcesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Binding Matching Resources for a given AutoProtectionPolicyBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesResponse> ListBindingMatchingResourcesAsync(global::Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBindingMatchingResources, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override BackupDRClient NewInstance(ClientBaseConfiguration configuration)
@@ -2795,7 +3587,18 @@ namespace Google.Cloud.BackupDR.V1 {
           .AddMethod(__Method_GetDataSourceReference, serviceImpl.GetDataSourceReference)
           .AddMethod(__Method_ListDataSourceReferences, serviceImpl.ListDataSourceReferences)
           .AddMethod(__Method_FetchDataSourceReferencesForResourceType, serviceImpl.FetchDataSourceReferencesForResourceType)
-          .AddMethod(__Method_InitializeService, serviceImpl.InitializeService).Build();
+          .AddMethod(__Method_InitializeService, serviceImpl.InitializeService)
+          .AddMethod(__Method_CreateAutoProtectionPolicy, serviceImpl.CreateAutoProtectionPolicy)
+          .AddMethod(__Method_ListAutoProtectionPolicies, serviceImpl.ListAutoProtectionPolicies)
+          .AddMethod(__Method_GetAutoProtectionPolicy, serviceImpl.GetAutoProtectionPolicy)
+          .AddMethod(__Method_UpdateAutoProtectionPolicy, serviceImpl.UpdateAutoProtectionPolicy)
+          .AddMethod(__Method_DeleteAutoProtectionPolicy, serviceImpl.DeleteAutoProtectionPolicy)
+          .AddMethod(__Method_CreateAutoProtectionPolicyBinding, serviceImpl.CreateAutoProtectionPolicyBinding)
+          .AddMethod(__Method_GetAutoProtectionPolicyBinding, serviceImpl.GetAutoProtectionPolicyBinding)
+          .AddMethod(__Method_ListAutoProtectionPolicyBindings, serviceImpl.ListAutoProtectionPolicyBindings)
+          .AddMethod(__Method_ListAppliedAutoProtectionPolicies, serviceImpl.ListAppliedAutoProtectionPolicies)
+          .AddMethod(__Method_InitiateDeleteAutoProtectionPolicyBinding, serviceImpl.InitiateDeleteAutoProtectionPolicyBinding)
+          .AddMethod(__Method_ListBindingMatchingResources, serviceImpl.ListBindingMatchingResources).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2842,6 +3645,17 @@ namespace Google.Cloud.BackupDR.V1 {
       serviceBinder.AddMethod(__Method_ListDataSourceReferences, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesRequest, global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesResponse>(serviceImpl.ListDataSourceReferences));
       serviceBinder.AddMethod(__Method_FetchDataSourceReferencesForResourceType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest, global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse>(serviceImpl.FetchDataSourceReferencesForResourceType));
       serviceBinder.AddMethod(__Method_InitializeService, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.InitializeServiceRequest, global::Google.LongRunning.Operation>(serviceImpl.InitializeService));
+      serviceBinder.AddMethod(__Method_CreateAutoProtectionPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateAutoProtectionPolicy));
+      serviceBinder.AddMethod(__Method_ListAutoProtectionPolicies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesRequest, global::Google.Cloud.BackupDR.V1.ListAutoProtectionPoliciesResponse>(serviceImpl.ListAutoProtectionPolicies));
+      serviceBinder.AddMethod(__Method_GetAutoProtectionPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyRequest, global::Google.Cloud.BackupDR.V1.AutoProtectionPolicy>(serviceImpl.GetAutoProtectionPolicy));
+      serviceBinder.AddMethod(__Method_UpdateAutoProtectionPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.UpdateAutoProtectionPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateAutoProtectionPolicy));
+      serviceBinder.AddMethod(__Method_DeleteAutoProtectionPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.DeleteAutoProtectionPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteAutoProtectionPolicy));
+      serviceBinder.AddMethod(__Method_CreateAutoProtectionPolicyBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.CreateAutoProtectionPolicyBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateAutoProtectionPolicyBinding));
+      serviceBinder.AddMethod(__Method_GetAutoProtectionPolicyBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.GetAutoProtectionPolicyBindingRequest, global::Google.Cloud.BackupDR.V1.AutoProtectionPolicyBinding>(serviceImpl.GetAutoProtectionPolicyBinding));
+      serviceBinder.AddMethod(__Method_ListAutoProtectionPolicyBindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsRequest, global::Google.Cloud.BackupDR.V1.ListAutoProtectionPolicyBindingsResponse>(serviceImpl.ListAutoProtectionPolicyBindings));
+      serviceBinder.AddMethod(__Method_ListAppliedAutoProtectionPolicies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesRequest, global::Google.Cloud.BackupDR.V1.ListAppliedAutoProtectionPoliciesResponse>(serviceImpl.ListAppliedAutoProtectionPolicies));
+      serviceBinder.AddMethod(__Method_InitiateDeleteAutoProtectionPolicyBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.InitiateDeleteAutoProtectionPolicyBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.InitiateDeleteAutoProtectionPolicyBinding));
+      serviceBinder.AddMethod(__Method_ListBindingMatchingResources, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesRequest, global::Google.Cloud.BackupDR.V1.ListBindingMatchingResourcesResponse>(serviceImpl.ListBindingMatchingResources));
     }
 
   }

@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 BackupPlanAssociationName = BackupPlanAssociationName.FromProjectLocationBackupPlanAssociation("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN_ASSOCIATION]"),
                 RequestId = "",
+                AutoProtectionPolicyBindingAsAutoProtectionPolicyBindingName = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]"),
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteBackupPlanAssociationAsync(request);

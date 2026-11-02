@@ -317,6 +317,16 @@ namespace Google.Cloud.BackupDR.V1
             get => string.IsNullOrEmpty(BackupPlan) ? null : BackupPlanName.Parse(BackupPlan, allowUnparsed: true);
             set => BackupPlan = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="AutoProtectionPolicyBindingName"/>-typed view over the <see cref="AutoProtectionPolicyBinding"/>
+        /// resource name property.
+        /// </summary>
+        public AutoProtectionPolicyBindingName AutoProtectionPolicyBindingAsAutoProtectionPolicyBindingName
+        {
+            get => string.IsNullOrEmpty(AutoProtectionPolicyBinding) ? null : AutoProtectionPolicyBindingName.Parse(AutoProtectionPolicyBinding, allowUnparsed: true);
+            set => AutoProtectionPolicyBinding = value?.ToString() ?? "";
+        }
     }
 
     public partial class CreateBackupPlanAssociationRequest
@@ -376,6 +386,16 @@ namespace Google.Cloud.BackupDR.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcbv::BackupPlanAssociationName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="AutoProtectionPolicyBindingName"/>-typed view over the <see cref="AutoProtectionPolicyBinding"/>
+        /// resource name property.
+        /// </summary>
+        public AutoProtectionPolicyBindingName AutoProtectionPolicyBindingAsAutoProtectionPolicyBindingName
+        {
+            get => string.IsNullOrEmpty(AutoProtectionPolicyBinding) ? null : AutoProtectionPolicyBindingName.Parse(AutoProtectionPolicyBinding, allowUnparsed: true);
+            set => AutoProtectionPolicyBinding = value?.ToString() ?? "";
         }
     }
 

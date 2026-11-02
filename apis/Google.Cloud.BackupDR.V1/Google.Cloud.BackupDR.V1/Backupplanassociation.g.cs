@@ -32,86 +32,91 @@ namespace Google.Cloud.BackupDR.V1 {
             "b2dsZS9jbG91ZC9iYWNrdXBkci92MS9iYWNrdXB2YXVsdF9jbG91ZHNxbC5w",
             "cm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2ds",
             "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVz",
-            "LnByb3RvIukIChVCYWNrdXBQbGFuQXNzb2NpYXRpb24SFAoEbmFtZRgBIAEo",
-            "CUIG4EEI4EEDEh0KDXJlc291cmNlX3R5cGUYAiABKAlCBuBBBeBBAhIYCghy",
-            "ZXNvdXJjZRgDIAEoCUIG4EEF4EECEj8KC2JhY2t1cF9wbGFuGAQgASgJQirg",
-            "QQL6QSQKImJhY2t1cGRyLmdvb2dsZWFwaXMuY29tL0JhY2t1cFBsYW4SNAoL",
-            "Y3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQMSNAoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQMSSQoFc3RhdGUYByABKA4yNS5nb29nbGUuY2xvdWQu",
-            "YmFja3VwZHIudjEuQmFja3VwUGxhbkFzc29jaWF0aW9uLlN0YXRlQgPgQQMS",
-            "SAoRcnVsZXNfY29uZmlnX2luZm8YCCADKAsyKC5nb29nbGUuY2xvdWQuYmFj",
-            "a3VwZHIudjEuUnVsZUNvbmZpZ0luZm9CA+BBAxIYCgtkYXRhX3NvdXJjZRgJ",
-            "IAEoCUID4EEDEo8BCjVjbG91ZF9zcWxfaW5zdGFuY2VfYmFja3VwX3BsYW5f",
-            "YXNzb2NpYXRpb25fcHJvcGVydGllcxgKIAEoCzJJLmdvb2dsZS5jbG91ZC5i",
-            "YWNrdXBkci52MS5DbG91ZFNxbEluc3RhbmNlQmFja3VwUGxhbkFzc29jaWF0",
-            "aW9uUHJvcGVydGllc0ID4EEDSAASigEKMmFsbG95ZGJfY2x1c3Rlcl9iYWNr",
-            "dXBfcGxhbl9hc3NvY2lhdGlvbl9wcm9wZXJ0aWVzGA8gASgLMkcuZ29vZ2xl",
-            "LmNsb3VkLmJhY2t1cGRyLnYxLkFsbG95REJDbHVzdGVyQmFja3VwUGxhbkFz",
-            "c29jaWF0aW9uUHJvcGVydGllc0ID4EEDSAASJAoXYmFja3VwX3BsYW5fcmV2",
-            "aXNpb25faWQYCyABKAlCA+BBAxImChliYWNrdXBfcGxhbl9yZXZpc2lvbl9u",
-            "YW1lGAwgASgJQgPgQQMiYgoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQ",
-            "ABIMCghDUkVBVElORxABEgoKBkFDVElWRRACEgwKCERFTEVUSU5HEAMSDAoI",
-            "SU5BQ1RJVkUQBBIMCghVUERBVElORxAFOrwB6kG4AQotYmFja3VwZHIuZ29v",
-            "Z2xlYXBpcy5jb20vQmFja3VwUGxhbkFzc29jaWF0aW9uElhwcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYmFja3VwUGxhbkFzc29j",
-            "aWF0aW9ucy97YmFja3VwX3BsYW5fYXNzb2NpYXRpb259KhZiYWNrdXBQbGFu",
-            "QXNzb2NpYXRpb25zMhViYWNrdXBQbGFuQXNzb2NpYXRpb25CFQoTcmVzb3Vy",
-            "Y2VfcHJvcGVydGllcyKJAwoOUnVsZUNvbmZpZ0luZm8SFAoHcnVsZV9pZBgB",
-            "IAEoCUID4EEDElgKEWxhc3RfYmFja3VwX3N0YXRlGAMgASgOMjguZ29vZ2xl",
-            "LmNsb3VkLmJhY2t1cGRyLnYxLlJ1bGVDb25maWdJbmZvLkxhc3RCYWNrdXBT",
-            "dGF0ZUID4EEDEjIKEWxhc3RfYmFja3VwX2Vycm9yGAQgASgLMhIuZ29vZ2xl",
-            "LnJwYy5TdGF0dXNCA+BBAxJQCidsYXN0X3N1Y2Nlc3NmdWxfYmFja3VwX2Nv",
-            "bnNpc3RlbmN5X3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMigAEKD0xhc3RCYWNrdXBTdGF0ZRIhCh1MQVNUX0JBQ0tVUF9T",
-            "VEFURV9VTlNQRUNJRklFRBAAEhgKFEZJUlNUX0JBQ0tVUF9QRU5ESU5HEAES",
-            "FQoRUEVSTUlTU0lPTl9ERU5JRUQQAhINCglTVUNDRUVERUQQAxIKCgZGQUlM",
-            "RUQQBCKMAgoiQ3JlYXRlQmFja3VwUGxhbkFzc29jaWF0aW9uUmVxdWVzdBJF",
-            "CgZwYXJlbnQYASABKAlCNeBBAvpBLxItYmFja3VwZHIuZ29vZ2xlYXBpcy5j",
-            "b20vQmFja3VwUGxhbkFzc29jaWF0aW9uEicKGmJhY2t1cF9wbGFuX2Fzc29j",
-            "aWF0aW9uX2lkGAIgASgJQgPgQQISVQoXYmFja3VwX3BsYW5fYXNzb2NpYXRp",
-            "b24YAyABKAsyLy5nb29nbGUuY2xvdWQuYmFja3VwZHIudjEuQmFja3VwUGxh",
-            "bkFzc29jaWF0aW9uQgPgQQISHwoKcmVxdWVzdF9pZBgEIAEoCUIL4EEB4ozP",
-            "1wgCCAEisAEKIUxpc3RCYWNrdXBQbGFuQXNzb2NpYXRpb25zUmVxdWVzdBJF",
-            "CgZwYXJlbnQYASABKAlCNeBBAvpBLxItYmFja3VwZHIuZ29vZ2xlYXBpcy5j",
-            "b20vQmFja3VwUGxhbkFzc29jaWF0aW9uEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID",
-            "4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBARITCgZmaWx0ZXIYBCABKAlC",
-            "A+BBASKlAQoiTGlzdEJhY2t1cFBsYW5Bc3NvY2lhdGlvbnNSZXNwb25zZRJR",
-            "ChhiYWNrdXBfcGxhbl9hc3NvY2lhdGlvbnMYASADKAsyLy5nb29nbGUuY2xv",
-            "dWQuYmFja3VwZHIudjEuQmFja3VwUGxhbkFzc29jaWF0aW9uEhcKD25leHRf",
-            "cGFnZV90b2tlbhgCIAEoCRITCgt1bnJlYWNoYWJsZRgDIAMoCSLzAQoxRmV0",
-            "Y2hCYWNrdXBQbGFuQXNzb2NpYXRpb25zRm9yUmVzb3VyY2VUeXBlUmVxdWVz",
-            "dBJFCgZwYXJlbnQYASABKAlCNeBBAvpBLxItYmFja3VwZHIuZ29vZ2xlYXBp",
-            "cy5jb20vQmFja3VwUGxhbkFzc29jaWF0aW9uEhoKDXJlc291cmNlX3R5cGUY",
-            "AiABKAlCA+BBAhIWCglwYWdlX3NpemUYAyABKAVCA+BBARIXCgpwYWdlX3Rv",
-            "a2VuGAQgASgJQgPgQQESEwoGZmlsdGVyGAUgASgJQgPgQQESFQoIb3JkZXJf",
-            "YnkYBiABKAlCA+BBASKqAQoyRmV0Y2hCYWNrdXBQbGFuQXNzb2NpYXRpb25z",
-            "Rm9yUmVzb3VyY2VUeXBlUmVzcG9uc2USVgoYYmFja3VwX3BsYW5fYXNzb2Np",
-            "YXRpb25zGAEgAygLMi8uZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLkJhY2t1",
-            "cFBsYW5Bc3NvY2lhdGlvbkID4EEDEhwKD25leHRfcGFnZV90b2tlbhgCIAEo",
-            "CUID4EEDImYKH0dldEJhY2t1cFBsYW5Bc3NvY2lhdGlvblJlcXVlc3QSQwoE",
-            "bmFtZRgBIAEoCUI14EEC+kEvCi1iYWNrdXBkci5nb29nbGVhcGlzLmNvbS9C",
-            "YWNrdXBQbGFuQXNzb2NpYXRpb24iigEKIkRlbGV0ZUJhY2t1cFBsYW5Bc3Nv",
-            "Y2lhdGlvblJlcXVlc3QSQwoEbmFtZRgBIAEoCUI14EEC+kEvCi1iYWNrdXBk",
-            "ci5nb29nbGVhcGlzLmNvbS9CYWNrdXBQbGFuQXNzb2NpYXRpb24SHwoKcmVx",
-            "dWVzdF9pZBgCIAEoCUIL4EEB4ozP1wgCCAEi0gEKIlVwZGF0ZUJhY2t1cFBs",
-            "YW5Bc3NvY2lhdGlvblJlcXVlc3QSVQoXYmFja3VwX3BsYW5fYXNzb2NpYXRp",
-            "b24YASABKAsyLy5nb29nbGUuY2xvdWQuYmFja3VwZHIudjEuQmFja3VwUGxh",
-            "bkFzc29jaWF0aW9uQgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQISHwoKcmVxdWVzdF9pZBgDIAEo",
-            "CUIL4EEB4ozP1wgCCAEikgEKFFRyaWdnZXJCYWNrdXBSZXF1ZXN0EkMKBG5h",
-            "bWUYASABKAlCNeBBAvpBLwotYmFja3VwZHIuZ29vZ2xlYXBpcy5jb20vQmFj",
-            "a3VwUGxhbkFzc29jaWF0aW9uEhQKB3J1bGVfaWQYAiABKAlCA+BBAhIfCgpy",
-            "ZXF1ZXN0X2lkGAMgASgJQgvgQQHijM/XCAIIAULKAQocY29tLmdvb2dsZS5j",
-            "bG91ZC5iYWNrdXBkci52MUIaQmFja3VwUGxhbkFzc29jaWF0aW9uUHJvdG9Q",
-            "AVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9iYWNrdXBkci9hcGl2MS9iYWNrdXBk",
-            "cnBiO2JhY2t1cGRycGKqAhhHb29nbGUuQ2xvdWQuQmFja3VwRFIuVjHKAhhH",
-            "b29nbGVcQ2xvdWRcQmFja3VwRFJcVjHqAhtHb29nbGU6OkNsb3VkOjpCYWNr",
-            "dXBEUjo6VjFiBnByb3RvMw=="));
+            "LnByb3RvItYJChVCYWNrdXBQbGFuQXNzb2NpYXRpb24SEwoEbmFtZRgBIAEo",
+            "CUIF4kECCAMSHAoNcmVzb3VyY2VfdHlwZRgCIAEoCUIF4kECBQISFwoIcmVz",
+            "b3VyY2UYAyABKAlCBeJBAgUCEkAKC2JhY2t1cF9wbGFuGAQgASgJQiviQQEC",
+            "+kEkCiJiYWNrdXBkci5nb29nbGVhcGlzLmNvbS9CYWNrdXBQbGFuEjUKC2Ny",
+            "ZWF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE",
+            "4kEBAxI1Cgt1cGRhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCBOJBAQMSSgoFc3RhdGUYByABKA4yNS5nb29nbGUuY2xvdWQu",
+            "YmFja3VwZHIudjEuQmFja3VwUGxhbkFzc29jaWF0aW9uLlN0YXRlQgTiQQED",
+            "EkkKEXJ1bGVzX2NvbmZpZ19pbmZvGAggAygLMiguZ29vZ2xlLmNsb3VkLmJh",
+            "Y2t1cGRyLnYxLlJ1bGVDb25maWdJbmZvQgTiQQEDEhkKC2RhdGFfc291cmNl",
+            "GAkgASgJQgTiQQEDEpABCjVjbG91ZF9zcWxfaW5zdGFuY2VfYmFja3VwX3Bs",
+            "YW5fYXNzb2NpYXRpb25fcHJvcGVydGllcxgKIAEoCzJJLmdvb2dsZS5jbG91",
+            "ZC5iYWNrdXBkci52MS5DbG91ZFNxbEluc3RhbmNlQmFja3VwUGxhbkFzc29j",
+            "aWF0aW9uUHJvcGVydGllc0IE4kEBA0gAEosBCjJhbGxveWRiX2NsdXN0ZXJf",
+            "YmFja3VwX3BsYW5fYXNzb2NpYXRpb25fcHJvcGVydGllcxgPIAEoCzJHLmdv",
+            "b2dsZS5jbG91ZC5iYWNrdXBkci52MS5BbGxveURCQ2x1c3RlckJhY2t1cFBs",
+            "YW5Bc3NvY2lhdGlvblByb3BlcnRpZXNCBOJBAQNIABIlChdiYWNrdXBfcGxh",
+            "bl9yZXZpc2lvbl9pZBgLIAEoCUIE4kEBAxInChliYWNrdXBfcGxhbl9yZXZp",
+            "c2lvbl9uYW1lGAwgASgJQgTiQQEDEmQKHmF1dG9fcHJvdGVjdGlvbl9wb2xp",
+            "Y3lfYmluZGluZxgQIAEoCUI84kEBA/pBNQozYmFja3VwZHIuZ29vZ2xlYXBp",
+            "cy5jb20vQXV0b1Byb3RlY3Rpb25Qb2xpY3lCaW5kaW5nImIKBVN0YXRlEhUK",
+            "EVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIKCgZBQ1RJVkUQ",
+            "AhIMCghERUxFVElORxADEgwKCElOQUNUSVZFEAQSDAoIVVBEQVRJTkcQBTq8",
+            "AepBuAEKLWJhY2t1cGRyLmdvb2dsZWFwaXMuY29tL0JhY2t1cFBsYW5Bc3Nv",
+            "Y2lhdGlvbhJYcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
+            "b259L2JhY2t1cFBsYW5Bc3NvY2lhdGlvbnMve2JhY2t1cF9wbGFuX2Fzc29j",
+            "aWF0aW9ufSoWYmFja3VwUGxhbkFzc29jaWF0aW9uczIVYmFja3VwUGxhbkFz",
+            "c29jaWF0aW9uQhUKE3Jlc291cmNlX3Byb3BlcnRpZXMijQMKDlJ1bGVDb25m",
+            "aWdJbmZvEhUKB3J1bGVfaWQYASABKAlCBOJBAQMSWQoRbGFzdF9iYWNrdXBf",
+            "c3RhdGUYAyABKA4yOC5nb29nbGUuY2xvdWQuYmFja3VwZHIudjEuUnVsZUNv",
+            "bmZpZ0luZm8uTGFzdEJhY2t1cFN0YXRlQgTiQQEDEjMKEWxhc3RfYmFja3Vw",
+            "X2Vycm9yGAQgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCBOJBAQMSUQonbGFz",
+            "dF9zdWNjZXNzZnVsX2JhY2t1cF9jb25zaXN0ZW5jeV90aW1lGAUgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAyKAAQoPTGFzdEJhY2t1",
+            "cFN0YXRlEiEKHUxBU1RfQkFDS1VQX1NUQVRFX1VOU1BFQ0lGSUVEEAASGAoU",
+            "RklSU1RfQkFDS1VQX1BFTkRJTkcQARIVChFQRVJNSVNTSU9OX0RFTklFRBAC",
+            "Eg0KCVNVQ0NFRURFRBADEgoKBkZBSUxFRBAEIpACCiJDcmVhdGVCYWNrdXBQ",
+            "bGFuQXNzb2NpYXRpb25SZXF1ZXN0EkYKBnBhcmVudBgBIAEoCUI24kEBAvpB",
+            "LxItYmFja3VwZHIuZ29vZ2xlYXBpcy5jb20vQmFja3VwUGxhbkFzc29jaWF0",
+            "aW9uEigKGmJhY2t1cF9wbGFuX2Fzc29jaWF0aW9uX2lkGAIgASgJQgTiQQEC",
+            "ElYKF2JhY2t1cF9wbGFuX2Fzc29jaWF0aW9uGAMgASgLMi8uZ29vZ2xlLmNs",
+            "b3VkLmJhY2t1cGRyLnYxLkJhY2t1cFBsYW5Bc3NvY2lhdGlvbkIE4kEBAhIg",
+            "CgpyZXF1ZXN0X2lkGAQgASgJQgziQQEB4ozP1wgCCAEitAEKIUxpc3RCYWNr",
+            "dXBQbGFuQXNzb2NpYXRpb25zUmVxdWVzdBJGCgZwYXJlbnQYASABKAlCNuJB",
+            "AQL6QS8SLWJhY2t1cGRyLmdvb2dsZWFwaXMuY29tL0JhY2t1cFBsYW5Bc3Nv",
+            "Y2lhdGlvbhIXCglwYWdlX3NpemUYAiABKAVCBOJBAQESGAoKcGFnZV90b2tl",
+            "bhgDIAEoCUIE4kEBARIUCgZmaWx0ZXIYBCABKAlCBOJBAQEipQEKIkxpc3RC",
+            "YWNrdXBQbGFuQXNzb2NpYXRpb25zUmVzcG9uc2USUQoYYmFja3VwX3BsYW5f",
+            "YXNzb2NpYXRpb25zGAEgAygLMi8uZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYx",
+            "LkJhY2t1cFBsYW5Bc3NvY2lhdGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiAB",
+            "KAkSEwoLdW5yZWFjaGFibGUYAyADKAki+QEKMUZldGNoQmFja3VwUGxhbkFz",
+            "c29jaWF0aW9uc0ZvclJlc291cmNlVHlwZVJlcXVlc3QSRgoGcGFyZW50GAEg",
+            "ASgJQjbiQQEC+kEvEi1iYWNrdXBkci5nb29nbGVhcGlzLmNvbS9CYWNrdXBQ",
+            "bGFuQXNzb2NpYXRpb24SGwoNcmVzb3VyY2VfdHlwZRgCIAEoCUIE4kEBAhIX",
+            "CglwYWdlX3NpemUYAyABKAVCBOJBAQESGAoKcGFnZV90b2tlbhgEIAEoCUIE",
+            "4kEBARIUCgZmaWx0ZXIYBSABKAlCBOJBAQESFgoIb3JkZXJfYnkYBiABKAlC",
+            "BOJBAQEirAEKMkZldGNoQmFja3VwUGxhbkFzc29jaWF0aW9uc0ZvclJlc291",
+            "cmNlVHlwZVJlc3BvbnNlElcKGGJhY2t1cF9wbGFuX2Fzc29jaWF0aW9ucxgB",
+            "IAMoCzIvLmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MS5CYWNrdXBQbGFuQXNz",
+            "b2NpYXRpb25CBOJBAQMSHQoPbmV4dF9wYWdlX3Rva2VuGAIgASgJQgTiQQED",
+            "ImcKH0dldEJhY2t1cFBsYW5Bc3NvY2lhdGlvblJlcXVlc3QSRAoEbmFtZRgB",
+            "IAEoCUI24kEBAvpBLwotYmFja3VwZHIuZ29vZ2xlYXBpcy5jb20vQmFja3Vw",
+            "UGxhbkFzc29jaWF0aW9uIvIBCiJEZWxldGVCYWNrdXBQbGFuQXNzb2NpYXRp",
+            "b25SZXF1ZXN0EkQKBG5hbWUYASABKAlCNuJBAQL6QS8KLWJhY2t1cGRyLmdv",
+            "b2dsZWFwaXMuY29tL0JhY2t1cFBsYW5Bc3NvY2lhdGlvbhIgCgpyZXF1ZXN0",
+            "X2lkGAIgASgJQgziQQEB4ozP1wgCCAESZAoeYXV0b19wcm90ZWN0aW9uX3Bv",
+            "bGljeV9iaW5kaW5nGAMgASgJQjziQQEB+kE1CjNiYWNrdXBkci5nb29nbGVh",
+            "cGlzLmNvbS9BdXRvUHJvdGVjdGlvblBvbGljeUJpbmRpbmci1QEKIlVwZGF0",
+            "ZUJhY2t1cFBsYW5Bc3NvY2lhdGlvblJlcXVlc3QSVgoXYmFja3VwX3BsYW5f",
+            "YXNzb2NpYXRpb24YASABKAsyLy5nb29nbGUuY2xvdWQuYmFja3VwZHIudjEu",
+            "QmFja3VwUGxhbkFzc29jaWF0aW9uQgTiQQECEjUKC3VwZGF0ZV9tYXNrGAIg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0IE4kEBAhIgCgpyZXF1",
+            "ZXN0X2lkGAMgASgJQgziQQEB4ozP1wgCCAEilQEKFFRyaWdnZXJCYWNrdXBS",
+            "ZXF1ZXN0EkQKBG5hbWUYASABKAlCNuJBAQL6QS8KLWJhY2t1cGRyLmdvb2ds",
+            "ZWFwaXMuY29tL0JhY2t1cFBsYW5Bc3NvY2lhdGlvbhIVCgdydWxlX2lkGAIg",
+            "ASgJQgTiQQECEiAKCnJlcXVlc3RfaWQYAyABKAlCDOJBAQHijM/XCAIIAULK",
+            "AQocY29tLmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MUIaQmFja3VwUGxhbkFz",
+            "c29jaWF0aW9uUHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9iYWNrdXBk",
+            "ci9hcGl2MS9iYWNrdXBkcnBiO2JhY2t1cGRycGKqAhhHb29nbGUuQ2xvdWQu",
+            "QmFja3VwRFIuVjHKAhhHb29nbGVcQ2xvdWRcQmFja3VwRFJcVjHqAhtHb29n",
+            "bGU6OkNsb3VkOjpCYWNrdXBEUjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BackupDR.V1.BackupvaultAlloydbReflection.Descriptor, global::Google.Cloud.BackupDR.V1.BackupvaultCloudsqlReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.BackupPlanAssociation), global::Google.Cloud.BackupDR.V1.BackupPlanAssociation.Parser, new[]{ "Name", "ResourceType", "Resource", "BackupPlan", "CreateTime", "UpdateTime", "State", "RulesConfigInfo", "DataSource", "CloudSqlInstanceBackupPlanAssociationProperties", "AlloydbClusterBackupPlanAssociationProperties", "BackupPlanRevisionId", "BackupPlanRevisionName" }, new[]{ "ResourceProperties" }, new[]{ typeof(global::Google.Cloud.BackupDR.V1.BackupPlanAssociation.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.BackupPlanAssociation), global::Google.Cloud.BackupDR.V1.BackupPlanAssociation.Parser, new[]{ "Name", "ResourceType", "Resource", "BackupPlan", "CreateTime", "UpdateTime", "State", "RulesConfigInfo", "DataSource", "CloudSqlInstanceBackupPlanAssociationProperties", "AlloydbClusterBackupPlanAssociationProperties", "BackupPlanRevisionId", "BackupPlanRevisionName", "AutoProtectionPolicyBinding" }, new[]{ "ResourceProperties" }, new[]{ typeof(global::Google.Cloud.BackupDR.V1.BackupPlanAssociation.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.RuleConfigInfo), global::Google.Cloud.BackupDR.V1.RuleConfigInfo.Parser, new[]{ "RuleId", "LastBackupState", "LastBackupError", "LastSuccessfulBackupConsistencyTime" }, null, new[]{ typeof(global::Google.Cloud.BackupDR.V1.RuleConfigInfo.Types.LastBackupState) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.CreateBackupPlanAssociationRequest), global::Google.Cloud.BackupDR.V1.CreateBackupPlanAssociationRequest.Parser, new[]{ "Parent", "BackupPlanAssociationId", "BackupPlanAssociation", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.ListBackupPlanAssociationsRequest), global::Google.Cloud.BackupDR.V1.ListBackupPlanAssociationsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
@@ -119,7 +124,7 @@ namespace Google.Cloud.BackupDR.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeRequest), global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeRequest.Parser, new[]{ "Parent", "ResourceType", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeResponse), global::Google.Cloud.BackupDR.V1.FetchBackupPlanAssociationsForResourceTypeResponse.Parser, new[]{ "BackupPlanAssociations", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.GetBackupPlanAssociationRequest), global::Google.Cloud.BackupDR.V1.GetBackupPlanAssociationRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.DeleteBackupPlanAssociationRequest), global::Google.Cloud.BackupDR.V1.DeleteBackupPlanAssociationRequest.Parser, new[]{ "Name", "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.DeleteBackupPlanAssociationRequest), global::Google.Cloud.BackupDR.V1.DeleteBackupPlanAssociationRequest.Parser, new[]{ "Name", "RequestId", "AutoProtectionPolicyBinding" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.UpdateBackupPlanAssociationRequest), global::Google.Cloud.BackupDR.V1.UpdateBackupPlanAssociationRequest.Parser, new[]{ "BackupPlanAssociation", "UpdateMask", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.TriggerBackupRequest), global::Google.Cloud.BackupDR.V1.TriggerBackupRequest.Parser, new[]{ "Name", "RuleId", "RequestId" }, null, null, null, null)
           }));
@@ -178,6 +183,7 @@ namespace Google.Cloud.BackupDR.V1 {
       dataSource_ = other.dataSource_;
       backupPlanRevisionId_ = other.backupPlanRevisionId_;
       backupPlanRevisionName_ = other.backupPlanRevisionName_;
+      autoProtectionPolicyBinding_ = other.autoProtectionPolicyBinding_;
       switch (other.ResourcePropertiesCase) {
         case ResourcePropertiesOneofCase.CloudSqlInstanceBackupPlanAssociationProperties:
           CloudSqlInstanceBackupPlanAssociationProperties = other.CloudSqlInstanceBackupPlanAssociationProperties.Clone();
@@ -201,7 +207,7 @@ namespace Google.Cloud.BackupDR.V1 {
     private string name_ = "";
     /// <summary>
     /// Output only. Identifier. The resource name of BackupPlanAssociation in
-    /// below format Format :
+    /// below format Format:
     /// projects/{project}/locations/{location}/backupPlanAssociations/{backupPlanAssociationId}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -408,6 +414,23 @@ namespace Google.Cloud.BackupDR.V1 {
       }
     }
 
+    /// <summary>Field number for the "auto_protection_policy_binding" field.</summary>
+    public const int AutoProtectionPolicyBindingFieldNumber = 16;
+    private string autoProtectionPolicyBinding_ = "";
+    /// <summary>
+    /// Output only. The resource name of the `AutoProtectionPolicyBinding` that
+    /// manages this association, if any. Format:
+    /// `projects/{project}/locations/{location}/autoProtectionPolicies/{policy}/bindings/{binding}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AutoProtectionPolicyBinding {
+      get { return autoProtectionPolicyBinding_; }
+      set {
+        autoProtectionPolicyBinding_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     private object resourceProperties_;
     /// <summary>Enum of possible cases for the "resource_properties" oneof.</summary>
     public enum ResourcePropertiesOneofCase {
@@ -457,6 +480,7 @@ namespace Google.Cloud.BackupDR.V1 {
       if (!object.Equals(AlloydbClusterBackupPlanAssociationProperties, other.AlloydbClusterBackupPlanAssociationProperties)) return false;
       if (BackupPlanRevisionId != other.BackupPlanRevisionId) return false;
       if (BackupPlanRevisionName != other.BackupPlanRevisionName) return false;
+      if (AutoProtectionPolicyBinding != other.AutoProtectionPolicyBinding) return false;
       if (ResourcePropertiesCase != other.ResourcePropertiesCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -478,6 +502,7 @@ namespace Google.Cloud.BackupDR.V1 {
       if (resourcePropertiesCase_ == ResourcePropertiesOneofCase.AlloydbClusterBackupPlanAssociationProperties) hash ^= AlloydbClusterBackupPlanAssociationProperties.GetHashCode();
       if (BackupPlanRevisionId.Length != 0) hash ^= BackupPlanRevisionId.GetHashCode();
       if (BackupPlanRevisionName.Length != 0) hash ^= BackupPlanRevisionName.GetHashCode();
+      if (AutoProtectionPolicyBinding.Length != 0) hash ^= AutoProtectionPolicyBinding.GetHashCode();
       hash ^= (int) resourcePropertiesCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -546,6 +571,10 @@ namespace Google.Cloud.BackupDR.V1 {
         output.WriteRawTag(122);
         output.WriteMessage(AlloydbClusterBackupPlanAssociationProperties);
       }
+      if (AutoProtectionPolicyBinding.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(AutoProtectionPolicyBinding);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -605,6 +634,10 @@ namespace Google.Cloud.BackupDR.V1 {
         output.WriteRawTag(122);
         output.WriteMessage(AlloydbClusterBackupPlanAssociationProperties);
       }
+      if (AutoProtectionPolicyBinding.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(AutoProtectionPolicyBinding);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -651,6 +684,9 @@ namespace Google.Cloud.BackupDR.V1 {
       }
       if (BackupPlanRevisionName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(BackupPlanRevisionName);
+      }
+      if (AutoProtectionPolicyBinding.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(AutoProtectionPolicyBinding);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -700,6 +736,9 @@ namespace Google.Cloud.BackupDR.V1 {
       }
       if (other.BackupPlanRevisionName.Length != 0) {
         BackupPlanRevisionName = other.BackupPlanRevisionName;
+      }
+      if (other.AutoProtectionPolicyBinding.Length != 0) {
+        AutoProtectionPolicyBinding = other.AutoProtectionPolicyBinding;
       }
       switch (other.ResourcePropertiesCase) {
         case ResourcePropertiesOneofCase.CloudSqlInstanceBackupPlanAssociationProperties:
@@ -803,6 +842,10 @@ namespace Google.Cloud.BackupDR.V1 {
             AlloydbClusterBackupPlanAssociationProperties = subBuilder;
             break;
           }
+          case 130: {
+            AutoProtectionPolicyBinding = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -888,6 +931,10 @@ namespace Google.Cloud.BackupDR.V1 {
             }
             input.ReadMessage(subBuilder);
             AlloydbClusterBackupPlanAssociationProperties = subBuilder;
+            break;
+          }
+          case 130: {
+            AutoProtectionPolicyBinding = input.ReadString();
             break;
           }
         }
@@ -3166,6 +3213,7 @@ namespace Google.Cloud.BackupDR.V1 {
     public DeleteBackupPlanAssociationRequest(DeleteBackupPlanAssociationRequest other) : this() {
       name_ = other.name_;
       requestId_ = other.requestId_;
+      autoProtectionPolicyBinding_ = other.autoProtectionPolicyBinding_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3218,6 +3266,25 @@ namespace Google.Cloud.BackupDR.V1 {
       }
     }
 
+    /// <summary>Field number for the "auto_protection_policy_binding" field.</summary>
+    public const int AutoProtectionPolicyBindingFieldNumber = 3;
+    private string autoProtectionPolicyBinding_ = "";
+    /// <summary>
+    /// Optional. This field is exclusively used by Backup and DR's auto-protection
+    /// feature. The resource name of the `AutoProtectionPolicyBinding` that
+    /// triggered the deletion of this association.
+    /// Format:
+    /// `projects/{project}/locations/{location}/autoProtectionPolicies/{policy}/bindings/{binding}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AutoProtectionPolicyBinding {
+      get { return autoProtectionPolicyBinding_; }
+      set {
+        autoProtectionPolicyBinding_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3235,6 +3302,7 @@ namespace Google.Cloud.BackupDR.V1 {
       }
       if (Name != other.Name) return false;
       if (RequestId != other.RequestId) return false;
+      if (AutoProtectionPolicyBinding != other.AutoProtectionPolicyBinding) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3244,6 +3312,7 @@ namespace Google.Cloud.BackupDR.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (AutoProtectionPolicyBinding.Length != 0) hash ^= AutoProtectionPolicyBinding.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3270,6 +3339,10 @@ namespace Google.Cloud.BackupDR.V1 {
         output.WriteRawTag(18);
         output.WriteString(RequestId);
       }
+      if (AutoProtectionPolicyBinding.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(AutoProtectionPolicyBinding);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3288,6 +3361,10 @@ namespace Google.Cloud.BackupDR.V1 {
         output.WriteRawTag(18);
         output.WriteString(RequestId);
       }
+      if (AutoProtectionPolicyBinding.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(AutoProtectionPolicyBinding);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3303,6 +3380,9 @@ namespace Google.Cloud.BackupDR.V1 {
       }
       if (RequestId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (AutoProtectionPolicyBinding.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AutoProtectionPolicyBinding);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3321,6 +3401,9 @@ namespace Google.Cloud.BackupDR.V1 {
       }
       if (other.RequestId.Length != 0) {
         RequestId = other.RequestId;
+      }
+      if (other.AutoProtectionPolicyBinding.Length != 0) {
+        AutoProtectionPolicyBinding = other.AutoProtectionPolicyBinding;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3349,6 +3432,10 @@ namespace Google.Cloud.BackupDR.V1 {
             RequestId = input.ReadString();
             break;
           }
+          case 26: {
+            AutoProtectionPolicyBinding = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -3374,6 +3461,10 @@ namespace Google.Cloud.BackupDR.V1 {
           }
           case 18: {
             RequestId = input.ReadString();
+            break;
+          }
+          case 26: {
+            AutoProtectionPolicyBinding = input.ReadString();
             break;
           }
         }
