@@ -104,6 +104,22 @@ namespace Google.Cloud.BackupDR.V1
             FetchDataSourceReferencesForResourceTypeSettings = existing.FetchDataSourceReferencesForResourceTypeSettings;
             InitializeServiceSettings = existing.InitializeServiceSettings;
             InitializeServiceOperationsSettings = existing.InitializeServiceOperationsSettings.Clone();
+            CreateAutoProtectionPolicySettings = existing.CreateAutoProtectionPolicySettings;
+            CreateAutoProtectionPolicyOperationsSettings = existing.CreateAutoProtectionPolicyOperationsSettings.Clone();
+            ListAutoProtectionPoliciesSettings = existing.ListAutoProtectionPoliciesSettings;
+            GetAutoProtectionPolicySettings = existing.GetAutoProtectionPolicySettings;
+            UpdateAutoProtectionPolicySettings = existing.UpdateAutoProtectionPolicySettings;
+            UpdateAutoProtectionPolicyOperationsSettings = existing.UpdateAutoProtectionPolicyOperationsSettings.Clone();
+            DeleteAutoProtectionPolicySettings = existing.DeleteAutoProtectionPolicySettings;
+            DeleteAutoProtectionPolicyOperationsSettings = existing.DeleteAutoProtectionPolicyOperationsSettings.Clone();
+            CreateAutoProtectionPolicyBindingSettings = existing.CreateAutoProtectionPolicyBindingSettings;
+            CreateAutoProtectionPolicyBindingOperationsSettings = existing.CreateAutoProtectionPolicyBindingOperationsSettings.Clone();
+            GetAutoProtectionPolicyBindingSettings = existing.GetAutoProtectionPolicyBindingSettings;
+            ListAutoProtectionPolicyBindingsSettings = existing.ListAutoProtectionPolicyBindingsSettings;
+            ListAppliedAutoProtectionPoliciesSettings = existing.ListAppliedAutoProtectionPoliciesSettings;
+            InitiateDeleteAutoProtectionPolicyBindingSettings = existing.InitiateDeleteAutoProtectionPolicyBindingSettings;
+            InitiateDeleteAutoProtectionPolicyBindingOperationsSettings = existing.InitiateDeleteAutoProtectionPolicyBindingOperationsSettings.Clone();
+            ListBindingMatchingResourcesSettings = existing.ListBindingMatchingResourcesSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -938,6 +954,270 @@ namespace Google.Cloud.BackupDR.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.CreateAutoProtectionPolicy</c> and <c>BackupDRClient.CreateAutoProtectionPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAutoProtectionPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupDRClient.CreateAutoProtectionPolicy</c> and
+        /// <c>BackupDRClient.CreateAutoProtectionPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateAutoProtectionPolicyOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.ListAutoProtectionPolicies</c> and <c>BackupDRClient.ListAutoProtectionPoliciesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAutoProtectionPoliciesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.GetAutoProtectionPolicy</c> and <c>BackupDRClient.GetAutoProtectionPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAutoProtectionPolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.UpdateAutoProtectionPolicy</c> and <c>BackupDRClient.UpdateAutoProtectionPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAutoProtectionPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupDRClient.UpdateAutoProtectionPolicy</c> and
+        /// <c>BackupDRClient.UpdateAutoProtectionPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateAutoProtectionPolicyOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.DeleteAutoProtectionPolicy</c> and <c>BackupDRClient.DeleteAutoProtectionPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAutoProtectionPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupDRClient.DeleteAutoProtectionPolicy</c> and
+        /// <c>BackupDRClient.DeleteAutoProtectionPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteAutoProtectionPolicyOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.CreateAutoProtectionPolicyBinding</c> and
+        /// <c>BackupDRClient.CreateAutoProtectionPolicyBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAutoProtectionPolicyBindingSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupDRClient.CreateAutoProtectionPolicyBinding</c> and
+        /// <c>BackupDRClient.CreateAutoProtectionPolicyBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateAutoProtectionPolicyBindingOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.GetAutoProtectionPolicyBinding</c> and
+        /// <c>BackupDRClient.GetAutoProtectionPolicyBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAutoProtectionPolicyBindingSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.ListAutoProtectionPolicyBindings</c> and
+        /// <c>BackupDRClient.ListAutoProtectionPolicyBindingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAutoProtectionPolicyBindingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.ListAppliedAutoProtectionPolicies</c> and
+        /// <c>BackupDRClient.ListAppliedAutoProtectionPoliciesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAppliedAutoProtectionPoliciesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.InitiateDeleteAutoProtectionPolicyBinding</c> and
+        /// <c>BackupDRClient.InitiateDeleteAutoProtectionPolicyBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings InitiateDeleteAutoProtectionPolicyBindingSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupDRClient.InitiateDeleteAutoProtectionPolicyBinding</c>
+        /// and <c>BackupDRClient.InitiateDeleteAutoProtectionPolicyBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings InitiateDeleteAutoProtectionPolicyBindingOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.ListBindingMatchingResources</c> and <c>BackupDRClient.ListBindingMatchingResourcesAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBindingMatchingResourcesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -6451,6 +6731,1708 @@ namespace Google.Cloud.BackupDR.V1
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<InitializeServiceResponse, OperationMetadata>> PollOnceInitializeServiceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<InitializeServiceResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InitializeServiceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicy in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutoProtectionPolicy, OperationMetadata> CreateAutoProtectionPolicy(CreateAutoProtectionPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicy in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicy, OperationMetadata>> CreateAutoProtectionPolicyAsync(CreateAutoProtectionPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicy in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicy, OperationMetadata>> CreateAutoProtectionPolicyAsync(CreateAutoProtectionPolicyRequest request, st::CancellationToken cancellationToken) =>
+            CreateAutoProtectionPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateAutoProtectionPolicy</c>.</summary>
+        public virtual lro::OperationsClient CreateAutoProtectionPolicyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateAutoProtectionPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AutoProtectionPolicy, OperationMetadata> PollOnceCreateAutoProtectionPolicy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AutoProtectionPolicy, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAutoProtectionPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateAutoProtectionPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicy, OperationMetadata>> PollOnceCreateAutoProtectionPolicyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AutoProtectionPolicy, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAutoProtectionPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicy in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this policy will be created.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="autoProtectionPolicy">
+        /// Required. The AutoProtectionPolicy resource to create.
+        /// </param>
+        /// <param name="autoProtectionPolicyId">
+        /// Required. The ID to use for the policy.
+        /// This will become the final component of the policy's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutoProtectionPolicy, OperationMetadata> CreateAutoProtectionPolicy(string parent, AutoProtectionPolicy autoProtectionPolicy, string autoProtectionPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAutoProtectionPolicy(new CreateAutoProtectionPolicyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AutoProtectionPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(autoProtectionPolicyId, nameof(autoProtectionPolicyId)),
+                AutoProtectionPolicy = gax::GaxPreconditions.CheckNotNull(autoProtectionPolicy, nameof(autoProtectionPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicy in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this policy will be created.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="autoProtectionPolicy">
+        /// Required. The AutoProtectionPolicy resource to create.
+        /// </param>
+        /// <param name="autoProtectionPolicyId">
+        /// Required. The ID to use for the policy.
+        /// This will become the final component of the policy's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicy, OperationMetadata>> CreateAutoProtectionPolicyAsync(string parent, AutoProtectionPolicy autoProtectionPolicy, string autoProtectionPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAutoProtectionPolicyAsync(new CreateAutoProtectionPolicyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AutoProtectionPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(autoProtectionPolicyId, nameof(autoProtectionPolicyId)),
+                AutoProtectionPolicy = gax::GaxPreconditions.CheckNotNull(autoProtectionPolicy, nameof(autoProtectionPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicy in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this policy will be created.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="autoProtectionPolicy">
+        /// Required. The AutoProtectionPolicy resource to create.
+        /// </param>
+        /// <param name="autoProtectionPolicyId">
+        /// Required. The ID to use for the policy.
+        /// This will become the final component of the policy's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicy, OperationMetadata>> CreateAutoProtectionPolicyAsync(string parent, AutoProtectionPolicy autoProtectionPolicy, string autoProtectionPolicyId, st::CancellationToken cancellationToken) =>
+            CreateAutoProtectionPolicyAsync(parent, autoProtectionPolicy, autoProtectionPolicyId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicy in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this policy will be created.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="autoProtectionPolicy">
+        /// Required. The AutoProtectionPolicy resource to create.
+        /// </param>
+        /// <param name="autoProtectionPolicyId">
+        /// Required. The ID to use for the policy.
+        /// This will become the final component of the policy's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutoProtectionPolicy, OperationMetadata> CreateAutoProtectionPolicy(gagr::LocationName parent, AutoProtectionPolicy autoProtectionPolicy, string autoProtectionPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAutoProtectionPolicy(new CreateAutoProtectionPolicyRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AutoProtectionPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(autoProtectionPolicyId, nameof(autoProtectionPolicyId)),
+                AutoProtectionPolicy = gax::GaxPreconditions.CheckNotNull(autoProtectionPolicy, nameof(autoProtectionPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicy in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this policy will be created.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="autoProtectionPolicy">
+        /// Required. The AutoProtectionPolicy resource to create.
+        /// </param>
+        /// <param name="autoProtectionPolicyId">
+        /// Required. The ID to use for the policy.
+        /// This will become the final component of the policy's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicy, OperationMetadata>> CreateAutoProtectionPolicyAsync(gagr::LocationName parent, AutoProtectionPolicy autoProtectionPolicy, string autoProtectionPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAutoProtectionPolicyAsync(new CreateAutoProtectionPolicyRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AutoProtectionPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(autoProtectionPolicyId, nameof(autoProtectionPolicyId)),
+                AutoProtectionPolicy = gax::GaxPreconditions.CheckNotNull(autoProtectionPolicy, nameof(autoProtectionPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicy in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this policy will be created.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="autoProtectionPolicy">
+        /// Required. The AutoProtectionPolicy resource to create.
+        /// </param>
+        /// <param name="autoProtectionPolicyId">
+        /// Required. The ID to use for the policy.
+        /// This will become the final component of the policy's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicy, OperationMetadata>> CreateAutoProtectionPolicyAsync(gagr::LocationName parent, AutoProtectionPolicy autoProtectionPolicy, string autoProtectionPolicyId, st::CancellationToken cancellationToken) =>
+            CreateAutoProtectionPolicyAsync(parent, autoProtectionPolicy, autoProtectionPolicyId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists AutoProtectionPolicies for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AutoProtectionPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAutoProtectionPoliciesResponse, AutoProtectionPolicy> ListAutoProtectionPolicies(ListAutoProtectionPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists AutoProtectionPolicies for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AutoProtectionPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAutoProtectionPoliciesResponse, AutoProtectionPolicy> ListAutoProtectionPoliciesAsync(ListAutoProtectionPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists AutoProtectionPolicies for a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve the list of
+        /// policies. Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AutoProtectionPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAutoProtectionPoliciesResponse, AutoProtectionPolicy> ListAutoProtectionPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAutoProtectionPoliciesRequest request = new ListAutoProtectionPoliciesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAutoProtectionPolicies(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists AutoProtectionPolicies for a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve the list of
+        /// policies. Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AutoProtectionPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAutoProtectionPoliciesResponse, AutoProtectionPolicy> ListAutoProtectionPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAutoProtectionPoliciesRequest request = new ListAutoProtectionPoliciesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAutoProtectionPoliciesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists AutoProtectionPolicies for a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve the list of
+        /// policies. Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AutoProtectionPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAutoProtectionPoliciesResponse, AutoProtectionPolicy> ListAutoProtectionPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAutoProtectionPoliciesRequest request = new ListAutoProtectionPoliciesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAutoProtectionPolicies(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists AutoProtectionPolicies for a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve the list of
+        /// policies. Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AutoProtectionPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAutoProtectionPoliciesResponse, AutoProtectionPolicy> ListAutoProtectionPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAutoProtectionPoliciesRequest request = new ListAutoProtectionPoliciesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAutoProtectionPoliciesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutoProtectionPolicy GetAutoProtectionPolicy(GetAutoProtectionPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoProtectionPolicy> GetAutoProtectionPolicyAsync(GetAutoProtectionPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoProtectionPolicy> GetAutoProtectionPolicyAsync(GetAutoProtectionPolicyRequest request, st::CancellationToken cancellationToken) =>
+            GetAutoProtectionPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutoProtectionPolicy GetAutoProtectionPolicy(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutoProtectionPolicy(new GetAutoProtectionPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoProtectionPolicy> GetAutoProtectionPolicyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutoProtectionPolicyAsync(new GetAutoProtectionPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoProtectionPolicy> GetAutoProtectionPolicyAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAutoProtectionPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutoProtectionPolicy GetAutoProtectionPolicy(AutoProtectionPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutoProtectionPolicy(new GetAutoProtectionPolicyRequest
+            {
+                AutoProtectionPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoProtectionPolicy> GetAutoProtectionPolicyAsync(AutoProtectionPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutoProtectionPolicyAsync(new GetAutoProtectionPolicyRequest
+            {
+                AutoProtectionPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoProtectionPolicy> GetAutoProtectionPolicyAsync(AutoProtectionPolicyName name, st::CancellationToken cancellationToken) =>
+            GetAutoProtectionPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the parameters of a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutoProtectionPolicy, OperationMetadata> UpdateAutoProtectionPolicy(UpdateAutoProtectionPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicy, OperationMetadata>> UpdateAutoProtectionPolicyAsync(UpdateAutoProtectionPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicy, OperationMetadata>> UpdateAutoProtectionPolicyAsync(UpdateAutoProtectionPolicyRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAutoProtectionPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateAutoProtectionPolicy</c>.</summary>
+        public virtual lro::OperationsClient UpdateAutoProtectionPolicyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateAutoProtectionPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AutoProtectionPolicy, OperationMetadata> PollOnceUpdateAutoProtectionPolicy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AutoProtectionPolicy, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAutoProtectionPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateAutoProtectionPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicy, OperationMetadata>> PollOnceUpdateAutoProtectionPolicyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AutoProtectionPolicy, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAutoProtectionPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="autoProtectionPolicy">
+        /// Required. The policy to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// AutoProtectionPolicy resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutoProtectionPolicy, OperationMetadata> UpdateAutoProtectionPolicy(AutoProtectionPolicy autoProtectionPolicy, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAutoProtectionPolicy(new UpdateAutoProtectionPolicyRequest
+            {
+                AutoProtectionPolicy = gax::GaxPreconditions.CheckNotNull(autoProtectionPolicy, nameof(autoProtectionPolicy)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="autoProtectionPolicy">
+        /// Required. The policy to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// AutoProtectionPolicy resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicy, OperationMetadata>> UpdateAutoProtectionPolicyAsync(AutoProtectionPolicy autoProtectionPolicy, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAutoProtectionPolicyAsync(new UpdateAutoProtectionPolicyRequest
+            {
+                AutoProtectionPolicy = gax::GaxPreconditions.CheckNotNull(autoProtectionPolicy, nameof(autoProtectionPolicy)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="autoProtectionPolicy">
+        /// Required. The policy to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// AutoProtectionPolicy resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicy, OperationMetadata>> UpdateAutoProtectionPolicyAsync(AutoProtectionPolicy autoProtectionPolicy, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAutoProtectionPolicyAsync(autoProtectionPolicy, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAutoProtectionPolicy(DeleteAutoProtectionPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAutoProtectionPolicyAsync(DeleteAutoProtectionPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAutoProtectionPolicyAsync(DeleteAutoProtectionPolicyRequest request, st::CancellationToken cancellationToken) =>
+            DeleteAutoProtectionPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteAutoProtectionPolicy</c>.</summary>
+        public virtual lro::OperationsClient DeleteAutoProtectionPolicyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteAutoProtectionPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteAutoProtectionPolicy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAutoProtectionPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteAutoProtectionPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteAutoProtectionPolicyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAutoProtectionPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAutoProtectionPolicy(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAutoProtectionPolicy(new DeleteAutoProtectionPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAutoProtectionPolicyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAutoProtectionPolicyAsync(new DeleteAutoProtectionPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAutoProtectionPolicyAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAutoProtectionPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAutoProtectionPolicy(AutoProtectionPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAutoProtectionPolicy(new DeleteAutoProtectionPolicyRequest
+            {
+                AutoProtectionPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAutoProtectionPolicyAsync(AutoProtectionPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAutoProtectionPolicyAsync(new DeleteAutoProtectionPolicyRequest
+            {
+                AutoProtectionPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAutoProtectionPolicyAsync(AutoProtectionPolicyName name, st::CancellationToken cancellationToken) =>
+            DeleteAutoProtectionPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicyBinding in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutoProtectionPolicyBinding, OperationMetadata> CreateAutoProtectionPolicyBinding(CreateAutoProtectionPolicyBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicyBinding in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>> CreateAutoProtectionPolicyBindingAsync(CreateAutoProtectionPolicyBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicyBinding in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>> CreateAutoProtectionPolicyBindingAsync(CreateAutoProtectionPolicyBindingRequest request, st::CancellationToken cancellationToken) =>
+            CreateAutoProtectionPolicyBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateAutoProtectionPolicyBinding</c>.</summary>
+        public virtual lro::OperationsClient CreateAutoProtectionPolicyBindingOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateAutoProtectionPolicyBinding</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AutoProtectionPolicyBinding, OperationMetadata> PollOnceCreateAutoProtectionPolicyBinding(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAutoProtectionPolicyBindingOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateAutoProtectionPolicyBinding</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>> PollOnceCreateAutoProtectionPolicyBindingAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAutoProtectionPolicyBindingOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicyBinding in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this binding will be created.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+        /// </param>
+        /// <param name="autoProtectionPolicyBinding">
+        /// Required. The AutoProtectionPolicyBinding resource to create.
+        /// </param>
+        /// <param name="autoProtectionPolicyBindingId">
+        /// Required. The ID to use for the binding.
+        /// This will become the final component of the binding's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutoProtectionPolicyBinding, OperationMetadata> CreateAutoProtectionPolicyBinding(string parent, AutoProtectionPolicyBinding autoProtectionPolicyBinding, string autoProtectionPolicyBindingId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAutoProtectionPolicyBinding(new CreateAutoProtectionPolicyBindingRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AutoProtectionPolicyBindingId = gax::GaxPreconditions.CheckNotNullOrEmpty(autoProtectionPolicyBindingId, nameof(autoProtectionPolicyBindingId)),
+                AutoProtectionPolicyBinding = gax::GaxPreconditions.CheckNotNull(autoProtectionPolicyBinding, nameof(autoProtectionPolicyBinding)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicyBinding in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this binding will be created.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+        /// </param>
+        /// <param name="autoProtectionPolicyBinding">
+        /// Required. The AutoProtectionPolicyBinding resource to create.
+        /// </param>
+        /// <param name="autoProtectionPolicyBindingId">
+        /// Required. The ID to use for the binding.
+        /// This will become the final component of the binding's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>> CreateAutoProtectionPolicyBindingAsync(string parent, AutoProtectionPolicyBinding autoProtectionPolicyBinding, string autoProtectionPolicyBindingId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAutoProtectionPolicyBindingAsync(new CreateAutoProtectionPolicyBindingRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AutoProtectionPolicyBindingId = gax::GaxPreconditions.CheckNotNullOrEmpty(autoProtectionPolicyBindingId, nameof(autoProtectionPolicyBindingId)),
+                AutoProtectionPolicyBinding = gax::GaxPreconditions.CheckNotNull(autoProtectionPolicyBinding, nameof(autoProtectionPolicyBinding)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicyBinding in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this binding will be created.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+        /// </param>
+        /// <param name="autoProtectionPolicyBinding">
+        /// Required. The AutoProtectionPolicyBinding resource to create.
+        /// </param>
+        /// <param name="autoProtectionPolicyBindingId">
+        /// Required. The ID to use for the binding.
+        /// This will become the final component of the binding's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>> CreateAutoProtectionPolicyBindingAsync(string parent, AutoProtectionPolicyBinding autoProtectionPolicyBinding, string autoProtectionPolicyBindingId, st::CancellationToken cancellationToken) =>
+            CreateAutoProtectionPolicyBindingAsync(parent, autoProtectionPolicyBinding, autoProtectionPolicyBindingId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicyBinding in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this binding will be created.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+        /// </param>
+        /// <param name="autoProtectionPolicyBinding">
+        /// Required. The AutoProtectionPolicyBinding resource to create.
+        /// </param>
+        /// <param name="autoProtectionPolicyBindingId">
+        /// Required. The ID to use for the binding.
+        /// This will become the final component of the binding's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutoProtectionPolicyBinding, OperationMetadata> CreateAutoProtectionPolicyBinding(AutoProtectionPolicyName parent, AutoProtectionPolicyBinding autoProtectionPolicyBinding, string autoProtectionPolicyBindingId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAutoProtectionPolicyBinding(new CreateAutoProtectionPolicyBindingRequest
+            {
+                ParentAsAutoProtectionPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AutoProtectionPolicyBindingId = gax::GaxPreconditions.CheckNotNullOrEmpty(autoProtectionPolicyBindingId, nameof(autoProtectionPolicyBindingId)),
+                AutoProtectionPolicyBinding = gax::GaxPreconditions.CheckNotNull(autoProtectionPolicyBinding, nameof(autoProtectionPolicyBinding)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicyBinding in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this binding will be created.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+        /// </param>
+        /// <param name="autoProtectionPolicyBinding">
+        /// Required. The AutoProtectionPolicyBinding resource to create.
+        /// </param>
+        /// <param name="autoProtectionPolicyBindingId">
+        /// Required. The ID to use for the binding.
+        /// This will become the final component of the binding's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>> CreateAutoProtectionPolicyBindingAsync(AutoProtectionPolicyName parent, AutoProtectionPolicyBinding autoProtectionPolicyBinding, string autoProtectionPolicyBindingId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAutoProtectionPolicyBindingAsync(new CreateAutoProtectionPolicyBindingRequest
+            {
+                ParentAsAutoProtectionPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AutoProtectionPolicyBindingId = gax::GaxPreconditions.CheckNotNullOrEmpty(autoProtectionPolicyBindingId, nameof(autoProtectionPolicyBindingId)),
+                AutoProtectionPolicyBinding = gax::GaxPreconditions.CheckNotNull(autoProtectionPolicyBinding, nameof(autoProtectionPolicyBinding)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicyBinding in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this binding will be created.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+        /// </param>
+        /// <param name="autoProtectionPolicyBinding">
+        /// Required. The AutoProtectionPolicyBinding resource to create.
+        /// </param>
+        /// <param name="autoProtectionPolicyBindingId">
+        /// Required. The ID to use for the binding.
+        /// This will become the final component of the binding's resource name.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>> CreateAutoProtectionPolicyBindingAsync(AutoProtectionPolicyName parent, AutoProtectionPolicyBinding autoProtectionPolicyBinding, string autoProtectionPolicyBindingId, st::CancellationToken cancellationToken) =>
+            CreateAutoProtectionPolicyBindingAsync(parent, autoProtectionPolicyBinding, autoProtectionPolicyBindingId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the auto protection policy binding read from the CCFE tables.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutoProtectionPolicyBinding GetAutoProtectionPolicyBinding(GetAutoProtectionPolicyBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the auto protection policy binding read from the CCFE tables.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoProtectionPolicyBinding> GetAutoProtectionPolicyBindingAsync(GetAutoProtectionPolicyBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the auto protection policy binding read from the CCFE tables.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoProtectionPolicyBinding> GetAutoProtectionPolicyBindingAsync(GetAutoProtectionPolicyBindingRequest request, st::CancellationToken cancellationToken) =>
+            GetAutoProtectionPolicyBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the auto protection policy binding read from the CCFE tables.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the binding to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutoProtectionPolicyBinding GetAutoProtectionPolicyBinding(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutoProtectionPolicyBinding(new GetAutoProtectionPolicyBindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the auto protection policy binding read from the CCFE tables.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the binding to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoProtectionPolicyBinding> GetAutoProtectionPolicyBindingAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutoProtectionPolicyBindingAsync(new GetAutoProtectionPolicyBindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the auto protection policy binding read from the CCFE tables.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the binding to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoProtectionPolicyBinding> GetAutoProtectionPolicyBindingAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAutoProtectionPolicyBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the auto protection policy binding read from the CCFE tables.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the binding to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutoProtectionPolicyBinding GetAutoProtectionPolicyBinding(AutoProtectionPolicyBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutoProtectionPolicyBinding(new GetAutoProtectionPolicyBindingRequest
+            {
+                AutoProtectionPolicyBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the auto protection policy binding read from the CCFE tables.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the binding to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoProtectionPolicyBinding> GetAutoProtectionPolicyBindingAsync(AutoProtectionPolicyBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutoProtectionPolicyBindingAsync(new GetAutoProtectionPolicyBindingRequest
+            {
+                AutoProtectionPolicyBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the auto protection policy binding read from the CCFE tables.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the binding to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutoProtectionPolicyBinding> GetAutoProtectionPolicyBindingAsync(AutoProtectionPolicyBindingName name, st::CancellationToken cancellationToken) =>
+            GetAutoProtectionPolicyBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the auto protection policy bindings read from the CCFE tables.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AutoProtectionPolicyBinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding> ListAutoProtectionPolicyBindings(ListAutoProtectionPolicyBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the auto protection policy bindings read from the CCFE tables.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AutoProtectionPolicyBinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding> ListAutoProtectionPolicyBindingsAsync(ListAutoProtectionPolicyBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the auto protection policy bindings read from the CCFE tables.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve the list of
+        /// policies. Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AutoProtectionPolicyBinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding> ListAutoProtectionPolicyBindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAutoProtectionPolicyBindingsRequest request = new ListAutoProtectionPolicyBindingsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAutoProtectionPolicyBindings(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the auto protection policy bindings read from the CCFE tables.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve the list of
+        /// policies. Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AutoProtectionPolicyBinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding> ListAutoProtectionPolicyBindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAutoProtectionPolicyBindingsRequest request = new ListAutoProtectionPolicyBindingsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAutoProtectionPolicyBindingsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the auto protection policy bindings read from the CCFE tables.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve the list of
+        /// policies. Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AutoProtectionPolicyBinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding> ListAutoProtectionPolicyBindings(AutoProtectionPolicyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAutoProtectionPolicyBindingsRequest request = new ListAutoProtectionPolicyBindingsRequest
+            {
+                ParentAsAutoProtectionPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAutoProtectionPolicyBindings(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the auto protection policy bindings read from the CCFE tables.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve the list of
+        /// policies. Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AutoProtectionPolicyBinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding> ListAutoProtectionPolicyBindingsAsync(AutoProtectionPolicyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAutoProtectionPolicyBindingsRequest request = new ListAutoProtectionPolicyBindingsRequest
+            {
+                ParentAsAutoProtectionPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAutoProtectionPolicyBindingsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists AppliedAutoProtectionPolicies in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AppliedAutoProtectionPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy> ListAppliedAutoProtectionPolicies(ListAppliedAutoProtectionPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists AppliedAutoProtectionPolicies in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AppliedAutoProtectionPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy> ListAppliedAutoProtectionPoliciesAsync(ListAppliedAutoProtectionPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists AppliedAutoProtectionPolicies in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve the list of
+        /// applied policies. Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AppliedAutoProtectionPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy> ListAppliedAutoProtectionPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppliedAutoProtectionPoliciesRequest request = new ListAppliedAutoProtectionPoliciesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppliedAutoProtectionPolicies(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists AppliedAutoProtectionPolicies in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve the list of
+        /// applied policies. Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AppliedAutoProtectionPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy> ListAppliedAutoProtectionPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppliedAutoProtectionPoliciesRequest request = new ListAppliedAutoProtectionPoliciesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppliedAutoProtectionPoliciesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists AppliedAutoProtectionPolicies in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve the list of
+        /// applied policies. Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AppliedAutoProtectionPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy> ListAppliedAutoProtectionPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppliedAutoProtectionPoliciesRequest request = new ListAppliedAutoProtectionPoliciesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppliedAutoProtectionPolicies(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists AppliedAutoProtectionPolicies in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve the list of
+        /// applied policies. Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AppliedAutoProtectionPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy> ListAppliedAutoProtectionPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAppliedAutoProtectionPoliciesRequest request = new ListAppliedAutoProtectionPoliciesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAppliedAutoProtectionPoliciesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// InitiateDeleteAutoProtectionPolicyBinding initiates delete for
+        /// AutoProtectionPolicy Binding
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutoProtectionPolicyBinding, OperationMetadata> InitiateDeleteAutoProtectionPolicyBinding(InitiateDeleteAutoProtectionPolicyBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// InitiateDeleteAutoProtectionPolicyBinding initiates delete for
+        /// AutoProtectionPolicy Binding
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>> InitiateDeleteAutoProtectionPolicyBindingAsync(InitiateDeleteAutoProtectionPolicyBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// InitiateDeleteAutoProtectionPolicyBinding initiates delete for
+        /// AutoProtectionPolicy Binding
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>> InitiateDeleteAutoProtectionPolicyBindingAsync(InitiateDeleteAutoProtectionPolicyBindingRequest request, st::CancellationToken cancellationToken) =>
+            InitiateDeleteAutoProtectionPolicyBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>InitiateDeleteAutoProtectionPolicyBinding</c>.</summary>
+        public virtual lro::OperationsClient InitiateDeleteAutoProtectionPolicyBindingOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>InitiateDeleteAutoProtectionPolicyBinding</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AutoProtectionPolicyBinding, OperationMetadata> PollOnceInitiateDeleteAutoProtectionPolicyBinding(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InitiateDeleteAutoProtectionPolicyBindingOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>InitiateDeleteAutoProtectionPolicyBinding</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>> PollOnceInitiateDeleteAutoProtectionPolicyBindingAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InitiateDeleteAutoProtectionPolicyBindingOperationsClient, callSettings);
+
+        /// <summary>
+        /// InitiateDeleteAutoProtectionPolicyBinding initiates delete for
+        /// AutoProtectionPolicy Binding
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the binding to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutoProtectionPolicyBinding, OperationMetadata> InitiateDeleteAutoProtectionPolicyBinding(string name, gaxgrpc::CallSettings callSettings = null) =>
+            InitiateDeleteAutoProtectionPolicyBinding(new InitiateDeleteAutoProtectionPolicyBindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// InitiateDeleteAutoProtectionPolicyBinding initiates delete for
+        /// AutoProtectionPolicy Binding
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the binding to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>> InitiateDeleteAutoProtectionPolicyBindingAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            InitiateDeleteAutoProtectionPolicyBindingAsync(new InitiateDeleteAutoProtectionPolicyBindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// InitiateDeleteAutoProtectionPolicyBinding initiates delete for
+        /// AutoProtectionPolicy Binding
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the binding to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>> InitiateDeleteAutoProtectionPolicyBindingAsync(string name, st::CancellationToken cancellationToken) =>
+            InitiateDeleteAutoProtectionPolicyBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// InitiateDeleteAutoProtectionPolicyBinding initiates delete for
+        /// AutoProtectionPolicy Binding
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the binding to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutoProtectionPolicyBinding, OperationMetadata> InitiateDeleteAutoProtectionPolicyBinding(AutoProtectionPolicyBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            InitiateDeleteAutoProtectionPolicyBinding(new InitiateDeleteAutoProtectionPolicyBindingRequest
+            {
+                AutoProtectionPolicyBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// InitiateDeleteAutoProtectionPolicyBinding initiates delete for
+        /// AutoProtectionPolicy Binding
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the binding to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>> InitiateDeleteAutoProtectionPolicyBindingAsync(AutoProtectionPolicyBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            InitiateDeleteAutoProtectionPolicyBindingAsync(new InitiateDeleteAutoProtectionPolicyBindingRequest
+            {
+                AutoProtectionPolicyBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// InitiateDeleteAutoProtectionPolicyBinding initiates delete for
+        /// AutoProtectionPolicy Binding
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the binding to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>> InitiateDeleteAutoProtectionPolicyBindingAsync(AutoProtectionPolicyBindingName name, st::CancellationToken cancellationToken) =>
+            InitiateDeleteAutoProtectionPolicyBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists Binding Matching Resources for a given AutoProtectionPolicyBinding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BindingMatchingResource"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBindingMatchingResourcesResponse, BindingMatchingResource> ListBindingMatchingResources(ListBindingMatchingResourcesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Binding Matching Resources for a given AutoProtectionPolicyBinding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BindingMatchingResource"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBindingMatchingResourcesResponse, BindingMatchingResource> ListBindingMatchingResourcesAsync(ListBindingMatchingResourcesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Binding Matching Resources for a given AutoProtectionPolicyBinding.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project, location, auto protection policy and binding for
+        /// which to retrieve `BindingMatchingResources` information. Format:
+        /// `projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}`.
+        /// In Google Cloud Backup and DR, locations map to Google Cloud regions, for
+        /// example **us-central1**.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BindingMatchingResource"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBindingMatchingResourcesResponse, BindingMatchingResource> ListBindingMatchingResources(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBindingMatchingResourcesRequest request = new ListBindingMatchingResourcesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBindingMatchingResources(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Binding Matching Resources for a given AutoProtectionPolicyBinding.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project, location, auto protection policy and binding for
+        /// which to retrieve `BindingMatchingResources` information. Format:
+        /// `projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}`.
+        /// In Google Cloud Backup and DR, locations map to Google Cloud regions, for
+        /// example **us-central1**.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BindingMatchingResource"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBindingMatchingResourcesResponse, BindingMatchingResource> ListBindingMatchingResourcesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBindingMatchingResourcesRequest request = new ListBindingMatchingResourcesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBindingMatchingResourcesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Binding Matching Resources for a given AutoProtectionPolicyBinding.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project, location, auto protection policy and binding for
+        /// which to retrieve `BindingMatchingResources` information. Format:
+        /// `projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}`.
+        /// In Google Cloud Backup and DR, locations map to Google Cloud regions, for
+        /// example **us-central1**.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BindingMatchingResource"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBindingMatchingResourcesResponse, BindingMatchingResource> ListBindingMatchingResources(AutoProtectionPolicyBindingName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBindingMatchingResourcesRequest request = new ListBindingMatchingResourcesRequest
+            {
+                ParentAsAutoProtectionPolicyBindingName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBindingMatchingResources(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Binding Matching Resources for a given AutoProtectionPolicyBinding.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project, location, auto protection policy and binding for
+        /// which to retrieve `BindingMatchingResources` information. Format:
+        /// `projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}`.
+        /// In Google Cloud Backup and DR, locations map to Google Cloud regions, for
+        /// example **us-central1**.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BindingMatchingResource"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBindingMatchingResourcesResponse, BindingMatchingResource> ListBindingMatchingResourcesAsync(AutoProtectionPolicyBindingName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBindingMatchingResourcesRequest request = new ListBindingMatchingResourcesRequest
+            {
+                ParentAsAutoProtectionPolicyBindingName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBindingMatchingResourcesAsync(request, callSettings);
+        }
     }
 
     /// <summary>BackupDR client wrapper implementation, for convenient use.</summary>
@@ -6533,6 +8515,28 @@ namespace Google.Cloud.BackupDR.V1
 
         private readonly gaxgrpc::ApiCall<InitializeServiceRequest, lro::Operation> _callInitializeService;
 
+        private readonly gaxgrpc::ApiCall<CreateAutoProtectionPolicyRequest, lro::Operation> _callCreateAutoProtectionPolicy;
+
+        private readonly gaxgrpc::ApiCall<ListAutoProtectionPoliciesRequest, ListAutoProtectionPoliciesResponse> _callListAutoProtectionPolicies;
+
+        private readonly gaxgrpc::ApiCall<GetAutoProtectionPolicyRequest, AutoProtectionPolicy> _callGetAutoProtectionPolicy;
+
+        private readonly gaxgrpc::ApiCall<UpdateAutoProtectionPolicyRequest, lro::Operation> _callUpdateAutoProtectionPolicy;
+
+        private readonly gaxgrpc::ApiCall<DeleteAutoProtectionPolicyRequest, lro::Operation> _callDeleteAutoProtectionPolicy;
+
+        private readonly gaxgrpc::ApiCall<CreateAutoProtectionPolicyBindingRequest, lro::Operation> _callCreateAutoProtectionPolicyBinding;
+
+        private readonly gaxgrpc::ApiCall<GetAutoProtectionPolicyBindingRequest, AutoProtectionPolicyBinding> _callGetAutoProtectionPolicyBinding;
+
+        private readonly gaxgrpc::ApiCall<ListAutoProtectionPolicyBindingsRequest, ListAutoProtectionPolicyBindingsResponse> _callListAutoProtectionPolicyBindings;
+
+        private readonly gaxgrpc::ApiCall<ListAppliedAutoProtectionPoliciesRequest, ListAppliedAutoProtectionPoliciesResponse> _callListAppliedAutoProtectionPolicies;
+
+        private readonly gaxgrpc::ApiCall<InitiateDeleteAutoProtectionPolicyBindingRequest, lro::Operation> _callInitiateDeleteAutoProtectionPolicyBinding;
+
+        private readonly gaxgrpc::ApiCall<ListBindingMatchingResourcesRequest, ListBindingMatchingResourcesResponse> _callListBindingMatchingResources;
+
         /// <summary>
         /// Constructs a client wrapper for the BackupDR service, with the specified gRPC client and settings.
         /// </summary>
@@ -6565,6 +8569,11 @@ namespace Google.Cloud.BackupDR.V1
             DeleteBackupPlanAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupPlanAssociationOperationsSettings, logger);
             TriggerBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.TriggerBackupOperationsSettings, logger);
             InitializeServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InitializeServiceOperationsSettings, logger);
+            CreateAutoProtectionPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAutoProtectionPolicyOperationsSettings, logger);
+            UpdateAutoProtectionPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAutoProtectionPolicyOperationsSettings, logger);
+            DeleteAutoProtectionPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAutoProtectionPolicyOperationsSettings, logger);
+            CreateAutoProtectionPolicyBindingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAutoProtectionPolicyBindingOperationsSettings, logger);
+            InitiateDeleteAutoProtectionPolicyBindingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InitiateDeleteAutoProtectionPolicyBindingOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListManagementServers = clientHelper.BuildApiCall<ListManagementServersRequest, ListManagementServersResponse>("ListManagementServers", grpcClient.ListManagementServersAsync, grpcClient.ListManagementServers, effectiveSettings.ListManagementServersSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -6678,6 +8687,39 @@ namespace Google.Cloud.BackupDR.V1
             _callInitializeService = clientHelper.BuildApiCall<InitializeServiceRequest, lro::Operation>("InitializeService", grpcClient.InitializeServiceAsync, grpcClient.InitializeService, effectiveSettings.InitializeServiceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callInitializeService);
             Modify_InitializeServiceApiCall(ref _callInitializeService);
+            _callCreateAutoProtectionPolicy = clientHelper.BuildApiCall<CreateAutoProtectionPolicyRequest, lro::Operation>("CreateAutoProtectionPolicy", grpcClient.CreateAutoProtectionPolicyAsync, grpcClient.CreateAutoProtectionPolicy, effectiveSettings.CreateAutoProtectionPolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAutoProtectionPolicy);
+            Modify_CreateAutoProtectionPolicyApiCall(ref _callCreateAutoProtectionPolicy);
+            _callListAutoProtectionPolicies = clientHelper.BuildApiCall<ListAutoProtectionPoliciesRequest, ListAutoProtectionPoliciesResponse>("ListAutoProtectionPolicies", grpcClient.ListAutoProtectionPoliciesAsync, grpcClient.ListAutoProtectionPolicies, effectiveSettings.ListAutoProtectionPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAutoProtectionPolicies);
+            Modify_ListAutoProtectionPoliciesApiCall(ref _callListAutoProtectionPolicies);
+            _callGetAutoProtectionPolicy = clientHelper.BuildApiCall<GetAutoProtectionPolicyRequest, AutoProtectionPolicy>("GetAutoProtectionPolicy", grpcClient.GetAutoProtectionPolicyAsync, grpcClient.GetAutoProtectionPolicy, effectiveSettings.GetAutoProtectionPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAutoProtectionPolicy);
+            Modify_GetAutoProtectionPolicyApiCall(ref _callGetAutoProtectionPolicy);
+            _callUpdateAutoProtectionPolicy = clientHelper.BuildApiCall<UpdateAutoProtectionPolicyRequest, lro::Operation>("UpdateAutoProtectionPolicy", grpcClient.UpdateAutoProtectionPolicyAsync, grpcClient.UpdateAutoProtectionPolicy, effectiveSettings.UpdateAutoProtectionPolicySettings).WithGoogleRequestParam("auto_protection_policy.name", request => request.AutoProtectionPolicy?.Name);
+            Modify_ApiCall(ref _callUpdateAutoProtectionPolicy);
+            Modify_UpdateAutoProtectionPolicyApiCall(ref _callUpdateAutoProtectionPolicy);
+            _callDeleteAutoProtectionPolicy = clientHelper.BuildApiCall<DeleteAutoProtectionPolicyRequest, lro::Operation>("DeleteAutoProtectionPolicy", grpcClient.DeleteAutoProtectionPolicyAsync, grpcClient.DeleteAutoProtectionPolicy, effectiveSettings.DeleteAutoProtectionPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteAutoProtectionPolicy);
+            Modify_DeleteAutoProtectionPolicyApiCall(ref _callDeleteAutoProtectionPolicy);
+            _callCreateAutoProtectionPolicyBinding = clientHelper.BuildApiCall<CreateAutoProtectionPolicyBindingRequest, lro::Operation>("CreateAutoProtectionPolicyBinding", grpcClient.CreateAutoProtectionPolicyBindingAsync, grpcClient.CreateAutoProtectionPolicyBinding, effectiveSettings.CreateAutoProtectionPolicyBindingSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAutoProtectionPolicyBinding);
+            Modify_CreateAutoProtectionPolicyBindingApiCall(ref _callCreateAutoProtectionPolicyBinding);
+            _callGetAutoProtectionPolicyBinding = clientHelper.BuildApiCall<GetAutoProtectionPolicyBindingRequest, AutoProtectionPolicyBinding>("GetAutoProtectionPolicyBinding", grpcClient.GetAutoProtectionPolicyBindingAsync, grpcClient.GetAutoProtectionPolicyBinding, effectiveSettings.GetAutoProtectionPolicyBindingSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAutoProtectionPolicyBinding);
+            Modify_GetAutoProtectionPolicyBindingApiCall(ref _callGetAutoProtectionPolicyBinding);
+            _callListAutoProtectionPolicyBindings = clientHelper.BuildApiCall<ListAutoProtectionPolicyBindingsRequest, ListAutoProtectionPolicyBindingsResponse>("ListAutoProtectionPolicyBindings", grpcClient.ListAutoProtectionPolicyBindingsAsync, grpcClient.ListAutoProtectionPolicyBindings, effectiveSettings.ListAutoProtectionPolicyBindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAutoProtectionPolicyBindings);
+            Modify_ListAutoProtectionPolicyBindingsApiCall(ref _callListAutoProtectionPolicyBindings);
+            _callListAppliedAutoProtectionPolicies = clientHelper.BuildApiCall<ListAppliedAutoProtectionPoliciesRequest, ListAppliedAutoProtectionPoliciesResponse>("ListAppliedAutoProtectionPolicies", grpcClient.ListAppliedAutoProtectionPoliciesAsync, grpcClient.ListAppliedAutoProtectionPolicies, effectiveSettings.ListAppliedAutoProtectionPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAppliedAutoProtectionPolicies);
+            Modify_ListAppliedAutoProtectionPoliciesApiCall(ref _callListAppliedAutoProtectionPolicies);
+            _callInitiateDeleteAutoProtectionPolicyBinding = clientHelper.BuildApiCall<InitiateDeleteAutoProtectionPolicyBindingRequest, lro::Operation>("InitiateDeleteAutoProtectionPolicyBinding", grpcClient.InitiateDeleteAutoProtectionPolicyBindingAsync, grpcClient.InitiateDeleteAutoProtectionPolicyBinding, effectiveSettings.InitiateDeleteAutoProtectionPolicyBindingSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callInitiateDeleteAutoProtectionPolicyBinding);
+            Modify_InitiateDeleteAutoProtectionPolicyBindingApiCall(ref _callInitiateDeleteAutoProtectionPolicyBinding);
+            _callListBindingMatchingResources = clientHelper.BuildApiCall<ListBindingMatchingResourcesRequest, ListBindingMatchingResourcesResponse>("ListBindingMatchingResources", grpcClient.ListBindingMatchingResourcesAsync, grpcClient.ListBindingMatchingResources, effectiveSettings.ListBindingMatchingResourcesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBindingMatchingResources);
+            Modify_ListBindingMatchingResourcesApiCall(ref _callListBindingMatchingResources);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -6756,6 +8798,28 @@ namespace Google.Cloud.BackupDR.V1
         partial void Modify_FetchDataSourceReferencesForResourceTypeApiCall(ref gaxgrpc::ApiCall<FetchDataSourceReferencesForResourceTypeRequest, FetchDataSourceReferencesForResourceTypeResponse> call);
 
         partial void Modify_InitializeServiceApiCall(ref gaxgrpc::ApiCall<InitializeServiceRequest, lro::Operation> call);
+
+        partial void Modify_CreateAutoProtectionPolicyApiCall(ref gaxgrpc::ApiCall<CreateAutoProtectionPolicyRequest, lro::Operation> call);
+
+        partial void Modify_ListAutoProtectionPoliciesApiCall(ref gaxgrpc::ApiCall<ListAutoProtectionPoliciesRequest, ListAutoProtectionPoliciesResponse> call);
+
+        partial void Modify_GetAutoProtectionPolicyApiCall(ref gaxgrpc::ApiCall<GetAutoProtectionPolicyRequest, AutoProtectionPolicy> call);
+
+        partial void Modify_UpdateAutoProtectionPolicyApiCall(ref gaxgrpc::ApiCall<UpdateAutoProtectionPolicyRequest, lro::Operation> call);
+
+        partial void Modify_DeleteAutoProtectionPolicyApiCall(ref gaxgrpc::ApiCall<DeleteAutoProtectionPolicyRequest, lro::Operation> call);
+
+        partial void Modify_CreateAutoProtectionPolicyBindingApiCall(ref gaxgrpc::ApiCall<CreateAutoProtectionPolicyBindingRequest, lro::Operation> call);
+
+        partial void Modify_GetAutoProtectionPolicyBindingApiCall(ref gaxgrpc::ApiCall<GetAutoProtectionPolicyBindingRequest, AutoProtectionPolicyBinding> call);
+
+        partial void Modify_ListAutoProtectionPolicyBindingsApiCall(ref gaxgrpc::ApiCall<ListAutoProtectionPolicyBindingsRequest, ListAutoProtectionPolicyBindingsResponse> call);
+
+        partial void Modify_ListAppliedAutoProtectionPoliciesApiCall(ref gaxgrpc::ApiCall<ListAppliedAutoProtectionPoliciesRequest, ListAppliedAutoProtectionPoliciesResponse> call);
+
+        partial void Modify_InitiateDeleteAutoProtectionPolicyBindingApiCall(ref gaxgrpc::ApiCall<InitiateDeleteAutoProtectionPolicyBindingRequest, lro::Operation> call);
+
+        partial void Modify_ListBindingMatchingResourcesApiCall(ref gaxgrpc::ApiCall<ListBindingMatchingResourcesRequest, ListBindingMatchingResourcesResponse> call);
 
         partial void OnConstruction(BackupDR.BackupDRClient grpcClient, BackupDRSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -6841,6 +8905,28 @@ namespace Google.Cloud.BackupDR.V1
         partial void Modify_FetchDataSourceReferencesForResourceTypeRequest(ref FetchDataSourceReferencesForResourceTypeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_InitializeServiceRequest(ref InitializeServiceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateAutoProtectionPolicyRequest(ref CreateAutoProtectionPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAutoProtectionPoliciesRequest(ref ListAutoProtectionPoliciesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAutoProtectionPolicyRequest(ref GetAutoProtectionPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAutoProtectionPolicyRequest(ref UpdateAutoProtectionPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteAutoProtectionPolicyRequest(ref DeleteAutoProtectionPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateAutoProtectionPolicyBindingRequest(ref CreateAutoProtectionPolicyBindingRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAutoProtectionPolicyBindingRequest(ref GetAutoProtectionPolicyBindingRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAutoProtectionPolicyBindingsRequest(ref ListAutoProtectionPolicyBindingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAppliedAutoProtectionPoliciesRequest(ref ListAppliedAutoProtectionPoliciesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_InitiateDeleteAutoProtectionPolicyBindingRequest(ref InitiateDeleteAutoProtectionPolicyBindingRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBindingMatchingResourcesRequest(ref ListBindingMatchingResourcesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists ManagementServers in a given project and location.
@@ -7784,6 +9870,289 @@ namespace Google.Cloud.BackupDR.V1
             Modify_InitializeServiceRequest(ref request, ref callSettings);
             return new lro::Operation<InitializeServiceResponse, OperationMetadata>(await _callInitializeService.Async(request, callSettings).ConfigureAwait(false), InitializeServiceOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>CreateAutoProtectionPolicy</c>.</summary>
+        public override lro::OperationsClient CreateAutoProtectionPolicyOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicy in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AutoProtectionPolicy, OperationMetadata> CreateAutoProtectionPolicy(CreateAutoProtectionPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAutoProtectionPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<AutoProtectionPolicy, OperationMetadata>(_callCreateAutoProtectionPolicy.Sync(request, callSettings), CreateAutoProtectionPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicy in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AutoProtectionPolicy, OperationMetadata>> CreateAutoProtectionPolicyAsync(CreateAutoProtectionPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAutoProtectionPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<AutoProtectionPolicy, OperationMetadata>(await _callCreateAutoProtectionPolicy.Async(request, callSettings).ConfigureAwait(false), CreateAutoProtectionPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists AutoProtectionPolicies for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AutoProtectionPolicy"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAutoProtectionPoliciesResponse, AutoProtectionPolicy> ListAutoProtectionPolicies(ListAutoProtectionPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAutoProtectionPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAutoProtectionPoliciesRequest, ListAutoProtectionPoliciesResponse, AutoProtectionPolicy>(_callListAutoProtectionPolicies, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists AutoProtectionPolicies for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AutoProtectionPolicy"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAutoProtectionPoliciesResponse, AutoProtectionPolicy> ListAutoProtectionPoliciesAsync(ListAutoProtectionPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAutoProtectionPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAutoProtectionPoliciesRequest, ListAutoProtectionPoliciesResponse, AutoProtectionPolicy>(_callListAutoProtectionPolicies, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AutoProtectionPolicy GetAutoProtectionPolicy(GetAutoProtectionPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAutoProtectionPolicyRequest(ref request, ref callSettings);
+            return _callGetAutoProtectionPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AutoProtectionPolicy> GetAutoProtectionPolicyAsync(GetAutoProtectionPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAutoProtectionPolicyRequest(ref request, ref callSettings);
+            return _callGetAutoProtectionPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateAutoProtectionPolicy</c>.</summary>
+        public override lro::OperationsClient UpdateAutoProtectionPolicyOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AutoProtectionPolicy, OperationMetadata> UpdateAutoProtectionPolicy(UpdateAutoProtectionPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAutoProtectionPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<AutoProtectionPolicy, OperationMetadata>(_callUpdateAutoProtectionPolicy.Sync(request, callSettings), UpdateAutoProtectionPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AutoProtectionPolicy, OperationMetadata>> UpdateAutoProtectionPolicyAsync(UpdateAutoProtectionPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAutoProtectionPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<AutoProtectionPolicy, OperationMetadata>(await _callUpdateAutoProtectionPolicy.Async(request, callSettings).ConfigureAwait(false), UpdateAutoProtectionPolicyOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteAutoProtectionPolicy</c>.</summary>
+        public override lro::OperationsClient DeleteAutoProtectionPolicyOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteAutoProtectionPolicy(DeleteAutoProtectionPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAutoProtectionPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteAutoProtectionPolicy.Sync(request, callSettings), DeleteAutoProtectionPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single AutoProtectionPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAutoProtectionPolicyAsync(DeleteAutoProtectionPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAutoProtectionPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteAutoProtectionPolicy.Async(request, callSettings).ConfigureAwait(false), DeleteAutoProtectionPolicyOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateAutoProtectionPolicyBinding</c>.</summary>
+        public override lro::OperationsClient CreateAutoProtectionPolicyBindingOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicyBinding in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AutoProtectionPolicyBinding, OperationMetadata> CreateAutoProtectionPolicyBinding(CreateAutoProtectionPolicyBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAutoProtectionPolicyBindingRequest(ref request, ref callSettings);
+            return new lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>(_callCreateAutoProtectionPolicyBinding.Sync(request, callSettings), CreateAutoProtectionPolicyBindingOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new AutoProtectionPolicyBinding in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>> CreateAutoProtectionPolicyBindingAsync(CreateAutoProtectionPolicyBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAutoProtectionPolicyBindingRequest(ref request, ref callSettings);
+            return new lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>(await _callCreateAutoProtectionPolicyBinding.Async(request, callSettings).ConfigureAwait(false), CreateAutoProtectionPolicyBindingOperationsClient);
+        }
+
+        /// <summary>
+        /// Returns the auto protection policy binding read from the CCFE tables.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AutoProtectionPolicyBinding GetAutoProtectionPolicyBinding(GetAutoProtectionPolicyBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAutoProtectionPolicyBindingRequest(ref request, ref callSettings);
+            return _callGetAutoProtectionPolicyBinding.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the auto protection policy binding read from the CCFE tables.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AutoProtectionPolicyBinding> GetAutoProtectionPolicyBindingAsync(GetAutoProtectionPolicyBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAutoProtectionPolicyBindingRequest(ref request, ref callSettings);
+            return _callGetAutoProtectionPolicyBinding.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the auto protection policy bindings read from the CCFE tables.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AutoProtectionPolicyBinding"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding> ListAutoProtectionPolicyBindings(ListAutoProtectionPolicyBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAutoProtectionPolicyBindingsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAutoProtectionPolicyBindingsRequest, ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding>(_callListAutoProtectionPolicyBindings, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the auto protection policy bindings read from the CCFE tables.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AutoProtectionPolicyBinding"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding> ListAutoProtectionPolicyBindingsAsync(ListAutoProtectionPolicyBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAutoProtectionPolicyBindingsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAutoProtectionPolicyBindingsRequest, ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding>(_callListAutoProtectionPolicyBindings, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists AppliedAutoProtectionPolicies in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AppliedAutoProtectionPolicy"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy> ListAppliedAutoProtectionPolicies(ListAppliedAutoProtectionPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAppliedAutoProtectionPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAppliedAutoProtectionPoliciesRequest, ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy>(_callListAppliedAutoProtectionPolicies, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists AppliedAutoProtectionPolicies in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AppliedAutoProtectionPolicy"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy> ListAppliedAutoProtectionPoliciesAsync(ListAppliedAutoProtectionPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAppliedAutoProtectionPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAppliedAutoProtectionPoliciesRequest, ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy>(_callListAppliedAutoProtectionPolicies, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>InitiateDeleteAutoProtectionPolicyBinding</c>.</summary>
+        public override lro::OperationsClient InitiateDeleteAutoProtectionPolicyBindingOperationsClient { get; }
+
+        /// <summary>
+        /// InitiateDeleteAutoProtectionPolicyBinding initiates delete for
+        /// AutoProtectionPolicy Binding
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AutoProtectionPolicyBinding, OperationMetadata> InitiateDeleteAutoProtectionPolicyBinding(InitiateDeleteAutoProtectionPolicyBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_InitiateDeleteAutoProtectionPolicyBindingRequest(ref request, ref callSettings);
+            return new lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>(_callInitiateDeleteAutoProtectionPolicyBinding.Sync(request, callSettings), InitiateDeleteAutoProtectionPolicyBindingOperationsClient);
+        }
+
+        /// <summary>
+        /// InitiateDeleteAutoProtectionPolicyBinding initiates delete for
+        /// AutoProtectionPolicy Binding
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>> InitiateDeleteAutoProtectionPolicyBindingAsync(InitiateDeleteAutoProtectionPolicyBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_InitiateDeleteAutoProtectionPolicyBindingRequest(ref request, ref callSettings);
+            return new lro::Operation<AutoProtectionPolicyBinding, OperationMetadata>(await _callInitiateDeleteAutoProtectionPolicyBinding.Async(request, callSettings).ConfigureAwait(false), InitiateDeleteAutoProtectionPolicyBindingOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists Binding Matching Resources for a given AutoProtectionPolicyBinding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BindingMatchingResource"/> resources.</returns>
+        public override gax::PagedEnumerable<ListBindingMatchingResourcesResponse, BindingMatchingResource> ListBindingMatchingResources(ListBindingMatchingResourcesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBindingMatchingResourcesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBindingMatchingResourcesRequest, ListBindingMatchingResourcesResponse, BindingMatchingResource>(_callListBindingMatchingResources, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Binding Matching Resources for a given AutoProtectionPolicyBinding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BindingMatchingResource"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListBindingMatchingResourcesResponse, BindingMatchingResource> ListBindingMatchingResourcesAsync(ListBindingMatchingResourcesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBindingMatchingResourcesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBindingMatchingResourcesRequest, ListBindingMatchingResourcesResponse, BindingMatchingResource>(_callListBindingMatchingResources, request, callSettings);
+        }
     }
 
     public partial class ListManagementServersRequest : gaxgrpc::IPageRequest
@@ -7831,6 +10200,22 @@ namespace Google.Cloud.BackupDR.V1
     }
 
     public partial class FetchDataSourceReferencesForResourceTypeRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAutoProtectionPoliciesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAutoProtectionPolicyBindingsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAppliedAutoProtectionPoliciesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListBindingMatchingResourcesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -7926,6 +10311,40 @@ namespace Google.Cloud.BackupDR.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<DataSourceReference> GetEnumerator() => DataSourceReferences.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAutoProtectionPoliciesResponse : gaxgrpc::IPageResponse<AutoProtectionPolicy>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AutoProtectionPolicy> GetEnumerator() => AutoProtectionPolicies.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAutoProtectionPolicyBindingsResponse : gaxgrpc::IPageResponse<AutoProtectionPolicyBinding>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AutoProtectionPolicyBinding> GetEnumerator() =>
+            AutoProtectionPolicyBindings.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAppliedAutoProtectionPoliciesResponse : gaxgrpc::IPageResponse<AppliedAutoProtectionPolicy>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AppliedAutoProtectionPolicy> GetEnumerator() =>
+            AppliedAutoProtectionPolicies.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListBindingMatchingResourcesResponse : gaxgrpc::IPageResponse<BindingMatchingResource>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BindingMatchingResource> GetEnumerator() => MatchingResources.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

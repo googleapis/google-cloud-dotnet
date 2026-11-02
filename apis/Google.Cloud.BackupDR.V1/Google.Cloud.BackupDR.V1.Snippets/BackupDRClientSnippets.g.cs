@@ -5852,6 +5852,7 @@ namespace GoogleCSharpSnippets
             {
                 BackupPlanAssociationName = BackupPlanAssociationName.FromProjectLocationBackupPlanAssociation("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN_ASSOCIATION]"),
                 RequestId = "",
+                AutoProtectionPolicyBindingAsAutoProtectionPolicyBindingName = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]"),
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = backupDRClient.DeleteBackupPlanAssociation(request);
@@ -5886,6 +5887,7 @@ namespace GoogleCSharpSnippets
             {
                 BackupPlanAssociationName = BackupPlanAssociationName.FromProjectLocationBackupPlanAssociation("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN_ASSOCIATION]"),
                 RequestId = "",
+                AutoProtectionPolicyBindingAsAutoProtectionPolicyBindingName = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]"),
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteBackupPlanAssociationAsync(request);
@@ -6938,6 +6940,2198 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 InitializeServiceResponse retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicy</summary>
+        public void CreateAutoProtectionPolicyRequestObject()
+        {
+            // Snippet: CreateAutoProtectionPolicy(CreateAutoProtectionPolicyRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            CreateAutoProtectionPolicyRequest request = new CreateAutoProtectionPolicyRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AutoProtectionPolicyId = "",
+                AutoProtectionPolicy = new AutoProtectionPolicy(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<AutoProtectionPolicy, OperationMetadata> response = backupDRClient.CreateAutoProtectionPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicy, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateAutoProtectionPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicyAsync</summary>
+        public async Task CreateAutoProtectionPolicyRequestObjectAsync()
+        {
+            // Snippet: CreateAutoProtectionPolicyAsync(CreateAutoProtectionPolicyRequest, CallSettings)
+            // Additional: CreateAutoProtectionPolicyAsync(CreateAutoProtectionPolicyRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAutoProtectionPolicyRequest request = new CreateAutoProtectionPolicyRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AutoProtectionPolicyId = "",
+                AutoProtectionPolicy = new AutoProtectionPolicy(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<AutoProtectionPolicy, OperationMetadata> response = await backupDRClient.CreateAutoProtectionPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicy, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateAutoProtectionPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicy</summary>
+        public void CreateAutoProtectionPolicy()
+        {
+            // Snippet: CreateAutoProtectionPolicy(string, AutoProtectionPolicy, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            AutoProtectionPolicy autoProtectionPolicy = new AutoProtectionPolicy();
+            string autoProtectionPolicyId = "";
+            // Make the request
+            Operation<AutoProtectionPolicy, OperationMetadata> response = backupDRClient.CreateAutoProtectionPolicy(parent, autoProtectionPolicy, autoProtectionPolicyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicy, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateAutoProtectionPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicyAsync</summary>
+        public async Task CreateAutoProtectionPolicyAsync()
+        {
+            // Snippet: CreateAutoProtectionPolicyAsync(string, AutoProtectionPolicy, string, CallSettings)
+            // Additional: CreateAutoProtectionPolicyAsync(string, AutoProtectionPolicy, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            AutoProtectionPolicy autoProtectionPolicy = new AutoProtectionPolicy();
+            string autoProtectionPolicyId = "";
+            // Make the request
+            Operation<AutoProtectionPolicy, OperationMetadata> response = await backupDRClient.CreateAutoProtectionPolicyAsync(parent, autoProtectionPolicy, autoProtectionPolicyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicy, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateAutoProtectionPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicy</summary>
+        public void CreateAutoProtectionPolicyResourceNames()
+        {
+            // Snippet: CreateAutoProtectionPolicy(LocationName, AutoProtectionPolicy, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            AutoProtectionPolicy autoProtectionPolicy = new AutoProtectionPolicy();
+            string autoProtectionPolicyId = "";
+            // Make the request
+            Operation<AutoProtectionPolicy, OperationMetadata> response = backupDRClient.CreateAutoProtectionPolicy(parent, autoProtectionPolicy, autoProtectionPolicyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicy, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateAutoProtectionPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicyAsync</summary>
+        public async Task CreateAutoProtectionPolicyResourceNamesAsync()
+        {
+            // Snippet: CreateAutoProtectionPolicyAsync(LocationName, AutoProtectionPolicy, string, CallSettings)
+            // Additional: CreateAutoProtectionPolicyAsync(LocationName, AutoProtectionPolicy, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            AutoProtectionPolicy autoProtectionPolicy = new AutoProtectionPolicy();
+            string autoProtectionPolicyId = "";
+            // Make the request
+            Operation<AutoProtectionPolicy, OperationMetadata> response = await backupDRClient.CreateAutoProtectionPolicyAsync(parent, autoProtectionPolicy, autoProtectionPolicyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicy, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateAutoProtectionPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPolicies</summary>
+        public void ListAutoProtectionPoliciesRequestObject()
+        {
+            // Snippet: ListAutoProtectionPolicies(ListAutoProtectionPoliciesRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListAutoProtectionPoliciesRequest request = new ListAutoProtectionPoliciesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListAutoProtectionPoliciesResponse, AutoProtectionPolicy> response = backupDRClient.ListAutoProtectionPolicies(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPoliciesAsync</summary>
+        public async Task ListAutoProtectionPoliciesRequestObjectAsync()
+        {
+            // Snippet: ListAutoProtectionPoliciesAsync(ListAutoProtectionPoliciesRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAutoProtectionPoliciesRequest request = new ListAutoProtectionPoliciesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAutoProtectionPoliciesResponse, AutoProtectionPolicy> response = backupDRClient.ListAutoProtectionPoliciesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPolicies</summary>
+        public void ListAutoProtectionPolicies()
+        {
+            // Snippet: ListAutoProtectionPolicies(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListAutoProtectionPoliciesResponse, AutoProtectionPolicy> response = backupDRClient.ListAutoProtectionPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPoliciesAsync</summary>
+        public async Task ListAutoProtectionPoliciesAsync()
+        {
+            // Snippet: ListAutoProtectionPoliciesAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListAutoProtectionPoliciesResponse, AutoProtectionPolicy> response = backupDRClient.ListAutoProtectionPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPolicies</summary>
+        public void ListAutoProtectionPoliciesResourceNames()
+        {
+            // Snippet: ListAutoProtectionPolicies(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListAutoProtectionPoliciesResponse, AutoProtectionPolicy> response = backupDRClient.ListAutoProtectionPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPoliciesAsync</summary>
+        public async Task ListAutoProtectionPoliciesResourceNamesAsync()
+        {
+            // Snippet: ListAutoProtectionPoliciesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListAutoProtectionPoliciesResponse, AutoProtectionPolicy> response = backupDRClient.ListAutoProtectionPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicy</summary>
+        public void GetAutoProtectionPolicyRequestObject()
+        {
+            // Snippet: GetAutoProtectionPolicy(GetAutoProtectionPolicyRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            GetAutoProtectionPolicyRequest request = new GetAutoProtectionPolicyRequest
+            {
+                AutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
+            };
+            // Make the request
+            AutoProtectionPolicy response = backupDRClient.GetAutoProtectionPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicyAsync</summary>
+        public async Task GetAutoProtectionPolicyRequestObjectAsync()
+        {
+            // Snippet: GetAutoProtectionPolicyAsync(GetAutoProtectionPolicyRequest, CallSettings)
+            // Additional: GetAutoProtectionPolicyAsync(GetAutoProtectionPolicyRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAutoProtectionPolicyRequest request = new GetAutoProtectionPolicyRequest
+            {
+                AutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
+            };
+            // Make the request
+            AutoProtectionPolicy response = await backupDRClient.GetAutoProtectionPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicy</summary>
+        public void GetAutoProtectionPolicy()
+        {
+            // Snippet: GetAutoProtectionPolicy(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]";
+            // Make the request
+            AutoProtectionPolicy response = backupDRClient.GetAutoProtectionPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicyAsync</summary>
+        public async Task GetAutoProtectionPolicyAsync()
+        {
+            // Snippet: GetAutoProtectionPolicyAsync(string, CallSettings)
+            // Additional: GetAutoProtectionPolicyAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]";
+            // Make the request
+            AutoProtectionPolicy response = await backupDRClient.GetAutoProtectionPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicy</summary>
+        public void GetAutoProtectionPolicyResourceNames()
+        {
+            // Snippet: GetAutoProtectionPolicy(AutoProtectionPolicyName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            AutoProtectionPolicyName name = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]");
+            // Make the request
+            AutoProtectionPolicy response = backupDRClient.GetAutoProtectionPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicyAsync</summary>
+        public async Task GetAutoProtectionPolicyResourceNamesAsync()
+        {
+            // Snippet: GetAutoProtectionPolicyAsync(AutoProtectionPolicyName, CallSettings)
+            // Additional: GetAutoProtectionPolicyAsync(AutoProtectionPolicyName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            AutoProtectionPolicyName name = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]");
+            // Make the request
+            AutoProtectionPolicy response = await backupDRClient.GetAutoProtectionPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAutoProtectionPolicy</summary>
+        public void UpdateAutoProtectionPolicyRequestObject()
+        {
+            // Snippet: UpdateAutoProtectionPolicy(UpdateAutoProtectionPolicyRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            UpdateAutoProtectionPolicyRequest request = new UpdateAutoProtectionPolicyRequest
+            {
+                AutoProtectionPolicy = new AutoProtectionPolicy(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<AutoProtectionPolicy, OperationMetadata> response = backupDRClient.UpdateAutoProtectionPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicy, OperationMetadata> retrievedResponse = backupDRClient.PollOnceUpdateAutoProtectionPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAutoProtectionPolicyAsync</summary>
+        public async Task UpdateAutoProtectionPolicyRequestObjectAsync()
+        {
+            // Snippet: UpdateAutoProtectionPolicyAsync(UpdateAutoProtectionPolicyRequest, CallSettings)
+            // Additional: UpdateAutoProtectionPolicyAsync(UpdateAutoProtectionPolicyRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAutoProtectionPolicyRequest request = new UpdateAutoProtectionPolicyRequest
+            {
+                AutoProtectionPolicy = new AutoProtectionPolicy(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<AutoProtectionPolicy, OperationMetadata> response = await backupDRClient.UpdateAutoProtectionPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicy, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceUpdateAutoProtectionPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAutoProtectionPolicy</summary>
+        public void UpdateAutoProtectionPolicy()
+        {
+            // Snippet: UpdateAutoProtectionPolicy(AutoProtectionPolicy, FieldMask, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            AutoProtectionPolicy autoProtectionPolicy = new AutoProtectionPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<AutoProtectionPolicy, OperationMetadata> response = backupDRClient.UpdateAutoProtectionPolicy(autoProtectionPolicy, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicy, OperationMetadata> retrievedResponse = backupDRClient.PollOnceUpdateAutoProtectionPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAutoProtectionPolicyAsync</summary>
+        public async Task UpdateAutoProtectionPolicyAsync()
+        {
+            // Snippet: UpdateAutoProtectionPolicyAsync(AutoProtectionPolicy, FieldMask, CallSettings)
+            // Additional: UpdateAutoProtectionPolicyAsync(AutoProtectionPolicy, FieldMask, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            AutoProtectionPolicy autoProtectionPolicy = new AutoProtectionPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<AutoProtectionPolicy, OperationMetadata> response = await backupDRClient.UpdateAutoProtectionPolicyAsync(autoProtectionPolicy, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicy, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceUpdateAutoProtectionPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAutoProtectionPolicy</summary>
+        public void DeleteAutoProtectionPolicyRequestObject()
+        {
+            // Snippet: DeleteAutoProtectionPolicy(DeleteAutoProtectionPolicyRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            DeleteAutoProtectionPolicyRequest request = new DeleteAutoProtectionPolicyRequest
+            {
+                AutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
+                Etag = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteAutoProtectionPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteAutoProtectionPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAutoProtectionPolicyAsync</summary>
+        public async Task DeleteAutoProtectionPolicyRequestObjectAsync()
+        {
+            // Snippet: DeleteAutoProtectionPolicyAsync(DeleteAutoProtectionPolicyRequest, CallSettings)
+            // Additional: DeleteAutoProtectionPolicyAsync(DeleteAutoProtectionPolicyRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteAutoProtectionPolicyRequest request = new DeleteAutoProtectionPolicyRequest
+            {
+                AutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
+                Etag = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteAutoProtectionPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteAutoProtectionPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAutoProtectionPolicy</summary>
+        public void DeleteAutoProtectionPolicy()
+        {
+            // Snippet: DeleteAutoProtectionPolicy(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteAutoProtectionPolicy(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteAutoProtectionPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAutoProtectionPolicyAsync</summary>
+        public async Task DeleteAutoProtectionPolicyAsync()
+        {
+            // Snippet: DeleteAutoProtectionPolicyAsync(string, CallSettings)
+            // Additional: DeleteAutoProtectionPolicyAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteAutoProtectionPolicyAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteAutoProtectionPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAutoProtectionPolicy</summary>
+        public void DeleteAutoProtectionPolicyResourceNames()
+        {
+            // Snippet: DeleteAutoProtectionPolicy(AutoProtectionPolicyName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            AutoProtectionPolicyName name = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteAutoProtectionPolicy(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteAutoProtectionPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAutoProtectionPolicyAsync</summary>
+        public async Task DeleteAutoProtectionPolicyResourceNamesAsync()
+        {
+            // Snippet: DeleteAutoProtectionPolicyAsync(AutoProtectionPolicyName, CallSettings)
+            // Additional: DeleteAutoProtectionPolicyAsync(AutoProtectionPolicyName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            AutoProtectionPolicyName name = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteAutoProtectionPolicyAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteAutoProtectionPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicyBinding</summary>
+        public void CreateAutoProtectionPolicyBindingRequestObject()
+        {
+            // Snippet: CreateAutoProtectionPolicyBinding(CreateAutoProtectionPolicyBindingRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            CreateAutoProtectionPolicyBindingRequest request = new CreateAutoProtectionPolicyBindingRequest
+            {
+                ParentAsAutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
+                AutoProtectionPolicyBindingId = "",
+                AutoProtectionPolicyBinding = new AutoProtectionPolicyBinding(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = backupDRClient.CreateAutoProtectionPolicyBinding(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateAutoProtectionPolicyBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicyBindingAsync</summary>
+        public async Task CreateAutoProtectionPolicyBindingRequestObjectAsync()
+        {
+            // Snippet: CreateAutoProtectionPolicyBindingAsync(CreateAutoProtectionPolicyBindingRequest, CallSettings)
+            // Additional: CreateAutoProtectionPolicyBindingAsync(CreateAutoProtectionPolicyBindingRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAutoProtectionPolicyBindingRequest request = new CreateAutoProtectionPolicyBindingRequest
+            {
+                ParentAsAutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
+                AutoProtectionPolicyBindingId = "",
+                AutoProtectionPolicyBinding = new AutoProtectionPolicyBinding(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = await backupDRClient.CreateAutoProtectionPolicyBindingAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateAutoProtectionPolicyBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicyBinding</summary>
+        public void CreateAutoProtectionPolicyBinding()
+        {
+            // Snippet: CreateAutoProtectionPolicyBinding(string, AutoProtectionPolicyBinding, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]";
+            AutoProtectionPolicyBinding autoProtectionPolicyBinding = new AutoProtectionPolicyBinding();
+            string autoProtectionPolicyBindingId = "";
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = backupDRClient.CreateAutoProtectionPolicyBinding(parent, autoProtectionPolicyBinding, autoProtectionPolicyBindingId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateAutoProtectionPolicyBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicyBindingAsync</summary>
+        public async Task CreateAutoProtectionPolicyBindingAsync()
+        {
+            // Snippet: CreateAutoProtectionPolicyBindingAsync(string, AutoProtectionPolicyBinding, string, CallSettings)
+            // Additional: CreateAutoProtectionPolicyBindingAsync(string, AutoProtectionPolicyBinding, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]";
+            AutoProtectionPolicyBinding autoProtectionPolicyBinding = new AutoProtectionPolicyBinding();
+            string autoProtectionPolicyBindingId = "";
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = await backupDRClient.CreateAutoProtectionPolicyBindingAsync(parent, autoProtectionPolicyBinding, autoProtectionPolicyBindingId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateAutoProtectionPolicyBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicyBinding</summary>
+        public void CreateAutoProtectionPolicyBindingResourceNames()
+        {
+            // Snippet: CreateAutoProtectionPolicyBinding(AutoProtectionPolicyName, AutoProtectionPolicyBinding, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            AutoProtectionPolicyName parent = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]");
+            AutoProtectionPolicyBinding autoProtectionPolicyBinding = new AutoProtectionPolicyBinding();
+            string autoProtectionPolicyBindingId = "";
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = backupDRClient.CreateAutoProtectionPolicyBinding(parent, autoProtectionPolicyBinding, autoProtectionPolicyBindingId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateAutoProtectionPolicyBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicyBindingAsync</summary>
+        public async Task CreateAutoProtectionPolicyBindingResourceNamesAsync()
+        {
+            // Snippet: CreateAutoProtectionPolicyBindingAsync(AutoProtectionPolicyName, AutoProtectionPolicyBinding, string, CallSettings)
+            // Additional: CreateAutoProtectionPolicyBindingAsync(AutoProtectionPolicyName, AutoProtectionPolicyBinding, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            AutoProtectionPolicyName parent = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]");
+            AutoProtectionPolicyBinding autoProtectionPolicyBinding = new AutoProtectionPolicyBinding();
+            string autoProtectionPolicyBindingId = "";
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = await backupDRClient.CreateAutoProtectionPolicyBindingAsync(parent, autoProtectionPolicyBinding, autoProtectionPolicyBindingId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateAutoProtectionPolicyBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicyBinding</summary>
+        public void GetAutoProtectionPolicyBindingRequestObject()
+        {
+            // Snippet: GetAutoProtectionPolicyBinding(GetAutoProtectionPolicyBindingRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            GetAutoProtectionPolicyBindingRequest request = new GetAutoProtectionPolicyBindingRequest
+            {
+                AutoProtectionPolicyBindingName = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]"),
+            };
+            // Make the request
+            AutoProtectionPolicyBinding response = backupDRClient.GetAutoProtectionPolicyBinding(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicyBindingAsync</summary>
+        public async Task GetAutoProtectionPolicyBindingRequestObjectAsync()
+        {
+            // Snippet: GetAutoProtectionPolicyBindingAsync(GetAutoProtectionPolicyBindingRequest, CallSettings)
+            // Additional: GetAutoProtectionPolicyBindingAsync(GetAutoProtectionPolicyBindingRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAutoProtectionPolicyBindingRequest request = new GetAutoProtectionPolicyBindingRequest
+            {
+                AutoProtectionPolicyBindingName = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]"),
+            };
+            // Make the request
+            AutoProtectionPolicyBinding response = await backupDRClient.GetAutoProtectionPolicyBindingAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicyBinding</summary>
+        public void GetAutoProtectionPolicyBinding()
+        {
+            // Snippet: GetAutoProtectionPolicyBinding(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]/bindings/[BINDING]";
+            // Make the request
+            AutoProtectionPolicyBinding response = backupDRClient.GetAutoProtectionPolicyBinding(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicyBindingAsync</summary>
+        public async Task GetAutoProtectionPolicyBindingAsync()
+        {
+            // Snippet: GetAutoProtectionPolicyBindingAsync(string, CallSettings)
+            // Additional: GetAutoProtectionPolicyBindingAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]/bindings/[BINDING]";
+            // Make the request
+            AutoProtectionPolicyBinding response = await backupDRClient.GetAutoProtectionPolicyBindingAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicyBinding</summary>
+        public void GetAutoProtectionPolicyBindingResourceNames()
+        {
+            // Snippet: GetAutoProtectionPolicyBinding(AutoProtectionPolicyBindingName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            AutoProtectionPolicyBindingName name = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]");
+            // Make the request
+            AutoProtectionPolicyBinding response = backupDRClient.GetAutoProtectionPolicyBinding(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicyBindingAsync</summary>
+        public async Task GetAutoProtectionPolicyBindingResourceNamesAsync()
+        {
+            // Snippet: GetAutoProtectionPolicyBindingAsync(AutoProtectionPolicyBindingName, CallSettings)
+            // Additional: GetAutoProtectionPolicyBindingAsync(AutoProtectionPolicyBindingName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            AutoProtectionPolicyBindingName name = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]");
+            // Make the request
+            AutoProtectionPolicyBinding response = await backupDRClient.GetAutoProtectionPolicyBindingAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPolicyBindings</summary>
+        public void ListAutoProtectionPolicyBindingsRequestObject()
+        {
+            // Snippet: ListAutoProtectionPolicyBindings(ListAutoProtectionPolicyBindingsRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListAutoProtectionPolicyBindingsRequest request = new ListAutoProtectionPolicyBindingsRequest
+            {
+                ParentAsAutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding> response = backupDRClient.ListAutoProtectionPolicyBindings(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AutoProtectionPolicyBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAutoProtectionPolicyBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicyBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicyBinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicyBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPolicyBindingsAsync</summary>
+        public async Task ListAutoProtectionPolicyBindingsRequestObjectAsync()
+        {
+            // Snippet: ListAutoProtectionPolicyBindingsAsync(ListAutoProtectionPolicyBindingsRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAutoProtectionPolicyBindingsRequest request = new ListAutoProtectionPolicyBindingsRequest
+            {
+                ParentAsAutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding> response = backupDRClient.ListAutoProtectionPolicyBindingsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AutoProtectionPolicyBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAutoProtectionPolicyBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicyBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicyBinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicyBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPolicyBindings</summary>
+        public void ListAutoProtectionPolicyBindings()
+        {
+            // Snippet: ListAutoProtectionPolicyBindings(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]";
+            // Make the request
+            PagedEnumerable<ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding> response = backupDRClient.ListAutoProtectionPolicyBindings(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AutoProtectionPolicyBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAutoProtectionPolicyBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicyBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicyBinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicyBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPolicyBindingsAsync</summary>
+        public async Task ListAutoProtectionPolicyBindingsAsync()
+        {
+            // Snippet: ListAutoProtectionPolicyBindingsAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]";
+            // Make the request
+            PagedAsyncEnumerable<ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding> response = backupDRClient.ListAutoProtectionPolicyBindingsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AutoProtectionPolicyBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAutoProtectionPolicyBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicyBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicyBinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicyBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPolicyBindings</summary>
+        public void ListAutoProtectionPolicyBindingsResourceNames()
+        {
+            // Snippet: ListAutoProtectionPolicyBindings(AutoProtectionPolicyName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            AutoProtectionPolicyName parent = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]");
+            // Make the request
+            PagedEnumerable<ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding> response = backupDRClient.ListAutoProtectionPolicyBindings(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AutoProtectionPolicyBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAutoProtectionPolicyBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicyBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicyBinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicyBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPolicyBindingsAsync</summary>
+        public async Task ListAutoProtectionPolicyBindingsResourceNamesAsync()
+        {
+            // Snippet: ListAutoProtectionPolicyBindingsAsync(AutoProtectionPolicyName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            AutoProtectionPolicyName parent = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]");
+            // Make the request
+            PagedAsyncEnumerable<ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding> response = backupDRClient.ListAutoProtectionPolicyBindingsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AutoProtectionPolicyBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAutoProtectionPolicyBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicyBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicyBinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicyBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAppliedAutoProtectionPolicies</summary>
+        public void ListAppliedAutoProtectionPoliciesRequestObject()
+        {
+            // Snippet: ListAppliedAutoProtectionPolicies(ListAppliedAutoProtectionPoliciesRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListAppliedAutoProtectionPoliciesRequest request = new ListAppliedAutoProtectionPoliciesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy> response = backupDRClient.ListAppliedAutoProtectionPolicies(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AppliedAutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAppliedAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AppliedAutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AppliedAutoProtectionPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AppliedAutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAppliedAutoProtectionPoliciesAsync</summary>
+        public async Task ListAppliedAutoProtectionPoliciesRequestObjectAsync()
+        {
+            // Snippet: ListAppliedAutoProtectionPoliciesAsync(ListAppliedAutoProtectionPoliciesRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAppliedAutoProtectionPoliciesRequest request = new ListAppliedAutoProtectionPoliciesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy> response = backupDRClient.ListAppliedAutoProtectionPoliciesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AppliedAutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAppliedAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AppliedAutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AppliedAutoProtectionPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AppliedAutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAppliedAutoProtectionPolicies</summary>
+        public void ListAppliedAutoProtectionPolicies()
+        {
+            // Snippet: ListAppliedAutoProtectionPolicies(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy> response = backupDRClient.ListAppliedAutoProtectionPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AppliedAutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAppliedAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AppliedAutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AppliedAutoProtectionPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AppliedAutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAppliedAutoProtectionPoliciesAsync</summary>
+        public async Task ListAppliedAutoProtectionPoliciesAsync()
+        {
+            // Snippet: ListAppliedAutoProtectionPoliciesAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy> response = backupDRClient.ListAppliedAutoProtectionPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AppliedAutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAppliedAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AppliedAutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AppliedAutoProtectionPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AppliedAutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAppliedAutoProtectionPolicies</summary>
+        public void ListAppliedAutoProtectionPoliciesResourceNames()
+        {
+            // Snippet: ListAppliedAutoProtectionPolicies(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy> response = backupDRClient.ListAppliedAutoProtectionPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AppliedAutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAppliedAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AppliedAutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AppliedAutoProtectionPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AppliedAutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAppliedAutoProtectionPoliciesAsync</summary>
+        public async Task ListAppliedAutoProtectionPoliciesResourceNamesAsync()
+        {
+            // Snippet: ListAppliedAutoProtectionPoliciesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy> response = backupDRClient.ListAppliedAutoProtectionPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AppliedAutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAppliedAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AppliedAutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AppliedAutoProtectionPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AppliedAutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for InitiateDeleteAutoProtectionPolicyBinding</summary>
+        public void InitiateDeleteAutoProtectionPolicyBindingRequestObject()
+        {
+            // Snippet: InitiateDeleteAutoProtectionPolicyBinding(InitiateDeleteAutoProtectionPolicyBindingRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            InitiateDeleteAutoProtectionPolicyBindingRequest request = new InitiateDeleteAutoProtectionPolicyBindingRequest
+            {
+                AutoProtectionPolicyBindingName = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]"),
+                Etag = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = backupDRClient.InitiateDeleteAutoProtectionPolicyBinding(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = backupDRClient.PollOnceInitiateDeleteAutoProtectionPolicyBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InitiateDeleteAutoProtectionPolicyBindingAsync</summary>
+        public async Task InitiateDeleteAutoProtectionPolicyBindingRequestObjectAsync()
+        {
+            // Snippet: InitiateDeleteAutoProtectionPolicyBindingAsync(InitiateDeleteAutoProtectionPolicyBindingRequest, CallSettings)
+            // Additional: InitiateDeleteAutoProtectionPolicyBindingAsync(InitiateDeleteAutoProtectionPolicyBindingRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            InitiateDeleteAutoProtectionPolicyBindingRequest request = new InitiateDeleteAutoProtectionPolicyBindingRequest
+            {
+                AutoProtectionPolicyBindingName = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]"),
+                Etag = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = await backupDRClient.InitiateDeleteAutoProtectionPolicyBindingAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceInitiateDeleteAutoProtectionPolicyBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InitiateDeleteAutoProtectionPolicyBinding</summary>
+        public void InitiateDeleteAutoProtectionPolicyBinding()
+        {
+            // Snippet: InitiateDeleteAutoProtectionPolicyBinding(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]/bindings/[BINDING]";
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = backupDRClient.InitiateDeleteAutoProtectionPolicyBinding(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = backupDRClient.PollOnceInitiateDeleteAutoProtectionPolicyBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InitiateDeleteAutoProtectionPolicyBindingAsync</summary>
+        public async Task InitiateDeleteAutoProtectionPolicyBindingAsync()
+        {
+            // Snippet: InitiateDeleteAutoProtectionPolicyBindingAsync(string, CallSettings)
+            // Additional: InitiateDeleteAutoProtectionPolicyBindingAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]/bindings/[BINDING]";
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = await backupDRClient.InitiateDeleteAutoProtectionPolicyBindingAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceInitiateDeleteAutoProtectionPolicyBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InitiateDeleteAutoProtectionPolicyBinding</summary>
+        public void InitiateDeleteAutoProtectionPolicyBindingResourceNames()
+        {
+            // Snippet: InitiateDeleteAutoProtectionPolicyBinding(AutoProtectionPolicyBindingName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            AutoProtectionPolicyBindingName name = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]");
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = backupDRClient.InitiateDeleteAutoProtectionPolicyBinding(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = backupDRClient.PollOnceInitiateDeleteAutoProtectionPolicyBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InitiateDeleteAutoProtectionPolicyBindingAsync</summary>
+        public async Task InitiateDeleteAutoProtectionPolicyBindingResourceNamesAsync()
+        {
+            // Snippet: InitiateDeleteAutoProtectionPolicyBindingAsync(AutoProtectionPolicyBindingName, CallSettings)
+            // Additional: InitiateDeleteAutoProtectionPolicyBindingAsync(AutoProtectionPolicyBindingName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            AutoProtectionPolicyBindingName name = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]");
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = await backupDRClient.InitiateDeleteAutoProtectionPolicyBindingAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceInitiateDeleteAutoProtectionPolicyBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBindingMatchingResources</summary>
+        public void ListBindingMatchingResourcesRequestObject()
+        {
+            // Snippet: ListBindingMatchingResources(ListBindingMatchingResourcesRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListBindingMatchingResourcesRequest request = new ListBindingMatchingResourcesRequest
+            {
+                ParentAsAutoProtectionPolicyBindingName = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListBindingMatchingResourcesResponse, BindingMatchingResource> response = backupDRClient.ListBindingMatchingResources(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BindingMatchingResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBindingMatchingResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BindingMatchingResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BindingMatchingResource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BindingMatchingResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBindingMatchingResourcesAsync</summary>
+        public async Task ListBindingMatchingResourcesRequestObjectAsync()
+        {
+            // Snippet: ListBindingMatchingResourcesAsync(ListBindingMatchingResourcesRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListBindingMatchingResourcesRequest request = new ListBindingMatchingResourcesRequest
+            {
+                ParentAsAutoProtectionPolicyBindingName = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListBindingMatchingResourcesResponse, BindingMatchingResource> response = backupDRClient.ListBindingMatchingResourcesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BindingMatchingResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBindingMatchingResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BindingMatchingResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BindingMatchingResource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BindingMatchingResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBindingMatchingResources</summary>
+        public void ListBindingMatchingResources()
+        {
+            // Snippet: ListBindingMatchingResources(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]/bindings/[BINDING]";
+            // Make the request
+            PagedEnumerable<ListBindingMatchingResourcesResponse, BindingMatchingResource> response = backupDRClient.ListBindingMatchingResources(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BindingMatchingResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBindingMatchingResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BindingMatchingResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BindingMatchingResource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BindingMatchingResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBindingMatchingResourcesAsync</summary>
+        public async Task ListBindingMatchingResourcesAsync()
+        {
+            // Snippet: ListBindingMatchingResourcesAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]/bindings/[BINDING]";
+            // Make the request
+            PagedAsyncEnumerable<ListBindingMatchingResourcesResponse, BindingMatchingResource> response = backupDRClient.ListBindingMatchingResourcesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BindingMatchingResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBindingMatchingResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BindingMatchingResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BindingMatchingResource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BindingMatchingResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBindingMatchingResources</summary>
+        public void ListBindingMatchingResourcesResourceNames()
+        {
+            // Snippet: ListBindingMatchingResources(AutoProtectionPolicyBindingName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            AutoProtectionPolicyBindingName parent = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]");
+            // Make the request
+            PagedEnumerable<ListBindingMatchingResourcesResponse, BindingMatchingResource> response = backupDRClient.ListBindingMatchingResources(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BindingMatchingResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBindingMatchingResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BindingMatchingResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BindingMatchingResource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BindingMatchingResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBindingMatchingResourcesAsync</summary>
+        public async Task ListBindingMatchingResourcesResourceNamesAsync()
+        {
+            // Snippet: ListBindingMatchingResourcesAsync(AutoProtectionPolicyBindingName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            AutoProtectionPolicyBindingName parent = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]");
+            // Make the request
+            PagedAsyncEnumerable<ListBindingMatchingResourcesResponse, BindingMatchingResource> response = backupDRClient.ListBindingMatchingResourcesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BindingMatchingResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBindingMatchingResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BindingMatchingResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BindingMatchingResource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BindingMatchingResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
     }

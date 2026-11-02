@@ -10,6 +10,18 @@
         "grpc": {
           "libraryClient": "BackupDRClient",
           "rpcs": {
+            "CreateAutoProtectionPolicy": {
+              "methods": [
+                "CreateAutoProtectionPolicy",
+                "CreateAutoProtectionPolicyAsync"
+              ]
+            },
+            "CreateAutoProtectionPolicyBinding": {
+              "methods": [
+                "CreateAutoProtectionPolicyBinding",
+                "CreateAutoProtectionPolicyBindingAsync"
+              ]
+            },
             "CreateBackupPlan": {
               "methods": [
                 "CreateBackupPlan",
@@ -32,6 +44,12 @@
               "methods": [
                 "CreateManagementServer",
                 "CreateManagementServerAsync"
+              ]
+            },
+            "DeleteAutoProtectionPolicy": {
+              "methods": [
+                "DeleteAutoProtectionPolicy",
+                "DeleteAutoProtectionPolicyAsync"
               ]
             },
             "DeleteBackup": {
@@ -88,6 +106,18 @@
                 "FetchUsableBackupVaultsAsync"
               ]
             },
+            "GetAutoProtectionPolicy": {
+              "methods": [
+                "GetAutoProtectionPolicy",
+                "GetAutoProtectionPolicyAsync"
+              ]
+            },
+            "GetAutoProtectionPolicyBinding": {
+              "methods": [
+                "GetAutoProtectionPolicyBinding",
+                "GetAutoProtectionPolicyBindingAsync"
+              ]
+            },
             "GetBackup": {
               "methods": [
                 "GetBackup",
@@ -142,6 +172,30 @@
                 "InitializeServiceAsync"
               ]
             },
+            "InitiateDeleteAutoProtectionPolicyBinding": {
+              "methods": [
+                "InitiateDeleteAutoProtectionPolicyBinding",
+                "InitiateDeleteAutoProtectionPolicyBindingAsync"
+              ]
+            },
+            "ListAppliedAutoProtectionPolicies": {
+              "methods": [
+                "ListAppliedAutoProtectionPolicies",
+                "ListAppliedAutoProtectionPoliciesAsync"
+              ]
+            },
+            "ListAutoProtectionPolicies": {
+              "methods": [
+                "ListAutoProtectionPolicies",
+                "ListAutoProtectionPoliciesAsync"
+              ]
+            },
+            "ListAutoProtectionPolicyBindings": {
+              "methods": [
+                "ListAutoProtectionPolicyBindings",
+                "ListAutoProtectionPolicyBindingsAsync"
+              ]
+            },
             "ListBackupPlanAssociations": {
               "methods": [
                 "ListBackupPlanAssociations",
@@ -172,6 +226,12 @@
                 "ListBackupsAsync"
               ]
             },
+            "ListBindingMatchingResources": {
+              "methods": [
+                "ListBindingMatchingResources",
+                "ListBindingMatchingResourcesAsync"
+              ]
+            },
             "ListDataSourceReferences": {
               "methods": [
                 "ListDataSourceReferences",
@@ -200,6 +260,12 @@
               "methods": [
                 "TriggerBackup",
                 "TriggerBackupAsync"
+              ]
+            },
+            "UpdateAutoProtectionPolicy": {
+              "methods": [
+                "UpdateAutoProtectionPolicy",
+                "UpdateAutoProtectionPolicyAsync"
               ]
             },
             "UpdateBackup": {
