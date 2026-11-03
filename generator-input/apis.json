@@ -5936,6 +5936,26 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.Sql.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud SQL Admin",
+      "productUrl": "https://cloud.google.com/sql/docs/",
+      "description": "Cloud SQL Admin API",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/sql/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "sqladmin",
+      "serviceConfigFile": "sqladmin_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Storage.Control.V2",
       "version": "1.11.0",
       "type": "grpc",
