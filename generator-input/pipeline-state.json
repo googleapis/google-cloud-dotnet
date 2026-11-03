@@ -5271,6 +5271,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.Sql.V1/Google.Cloud.Sql.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.Sql.V1Beta4",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/sql/v1beta4"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.Sql.V1Beta4/Google.Cloud.Sql.V1Beta4"
+            ]
         }
     ],
     "ignoredApiPaths": [
