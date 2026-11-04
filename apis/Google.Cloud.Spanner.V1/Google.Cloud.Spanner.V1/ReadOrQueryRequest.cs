@@ -301,6 +301,15 @@ namespace Google.Cloud.Spanner.V1
         public ReliableStreamReader ExecuteReadOrQueryStreamReader(PooledSession session, CallSettings callSettings) =>
             session.ManagedTransaction.ExecuteReadOrQueryStreamReader(this, callSettings);
 
+        /// <summary>
+        /// Creates a <see cref="ReliableStreamReader"/> for this request
+        /// </summary>
+        /// <param name="transaction">The transaction to use for the request.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A <see cref="ReliableStreamReader"/> for this request.</returns>
+        public ReliableStreamReader ExecuteReadOrQueryStreamReader(ManagedTransaction transaction, CallSettings callSettings) =>
+            transaction.ExecuteReadOrQueryStreamReader(this, callSettings);
+
         /// <inheritdoc/>
         public override bool Equals(object o) =>
             o is ReadOrQueryRequest request && request.UnderlyingRequest.Equals(UnderlyingRequest);
@@ -373,6 +382,15 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>A task representing the asynchronous operation. When the task completes, the result is the response from the RPC.</returns>
         public Task<PartitionResponse> PartitionReadOrQueryAsync(PooledSession session, CallSettings callSettings) =>
             session.ManagedTransaction.PartitionReadOrQueryAsync(this, callSettings);
+
+        /// <summary>
+        /// Executes a PartitionRead or PartitionQuery RPC asynchronously.
+        /// </summary>
+        /// <param name="transaction">The transaction to use for the request.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the asynchronous operation. When the task completes, the result is the response from the RPC.</returns>
+        public Task<PartitionResponse> PartitionReadOrQueryAsync(ManagedTransaction transaction, CallSettings callSettings) =>
+            transaction.PartitionReadOrQueryAsync(this, callSettings);
 
         /// <inheritdoc/>
         public override bool Equals(object o) =>
