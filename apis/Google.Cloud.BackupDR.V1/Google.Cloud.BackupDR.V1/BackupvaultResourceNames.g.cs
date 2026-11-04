@@ -1505,6 +1505,19 @@ namespace Google.Cloud.BackupDR.V1
         }
     }
 
+    public partial class VerificationSummary
+    {
+        /// <summary>
+        /// <see cref="RestoreTemplateExecutionName"/>-typed view over the <see cref="LastVerificationExecution"/>
+        /// resource name property.
+        /// </summary>
+        public RestoreTemplateExecutionName LastVerificationExecutionAsRestoreTemplateExecutionName
+        {
+            get => string.IsNullOrEmpty(LastVerificationExecution) ? null : RestoreTemplateExecutionName.Parse(LastVerificationExecution, allowUnparsed: true);
+            set => LastVerificationExecution = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateBackupVaultRequest
     {
         /// <summary>
