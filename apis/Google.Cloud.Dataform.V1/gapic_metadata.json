@@ -40,6 +40,12 @@
                 "CreateCompilationResultAsync"
               ]
             },
+            "CreateCompilationResultLongRunning": {
+              "methods": [
+                "CreateCompilationResultLongRunning",
+                "CreateCompilationResultLongRunningAsync"
+              ]
+            },
             "CreateFolder": {
               "methods": [
                 "CreateFolder",
