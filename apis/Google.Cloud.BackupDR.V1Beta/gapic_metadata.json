@@ -46,6 +46,24 @@
                 "CreateManagementServerAsync"
               ]
             },
+            "CreateRestoreTemplate": {
+              "methods": [
+                "CreateRestoreTemplate",
+                "CreateRestoreTemplateAsync"
+              ]
+            },
+            "CreateRestoreVerificationPlan": {
+              "methods": [
+                "CreateRestoreVerificationPlan",
+                "CreateRestoreVerificationPlanAsync"
+              ]
+            },
+            "CreateRestoreVerificationPlanAssociation": {
+              "methods": [
+                "CreateRestoreVerificationPlanAssociation",
+                "CreateRestoreVerificationPlanAssociationAsync"
+              ]
+            },
             "DeleteAutoProtectionPolicy": {
               "methods": [
                 "DeleteAutoProtectionPolicy",
@@ -80,6 +98,24 @@
               "methods": [
                 "DeleteManagementServer",
                 "DeleteManagementServerAsync"
+              ]
+            },
+            "DeleteRestoreTemplate": {
+              "methods": [
+                "DeleteRestoreTemplate",
+                "DeleteRestoreTemplateAsync"
+              ]
+            },
+            "DeleteRestoreVerificationPlan": {
+              "methods": [
+                "DeleteRestoreVerificationPlan",
+                "DeleteRestoreVerificationPlanAsync"
+              ]
+            },
+            "DeleteRestoreVerificationPlanAssociation": {
+              "methods": [
+                "DeleteRestoreVerificationPlanAssociation",
+                "DeleteRestoreVerificationPlanAssociationAsync"
               ]
             },
             "FetchBackupPlanAssociationsForResourceType": {
@@ -172,6 +208,30 @@
                 "GetManagementServerAsync"
               ]
             },
+            "GetRestoreTemplate": {
+              "methods": [
+                "GetRestoreTemplate",
+                "GetRestoreTemplateAsync"
+              ]
+            },
+            "GetRestoreTemplateExecution": {
+              "methods": [
+                "GetRestoreTemplateExecution",
+                "GetRestoreTemplateExecutionAsync"
+              ]
+            },
+            "GetRestoreVerificationPlan": {
+              "methods": [
+                "GetRestoreVerificationPlan",
+                "GetRestoreVerificationPlanAsync"
+              ]
+            },
+            "GetRestoreVerificationPlanAssociation": {
+              "methods": [
+                "GetRestoreVerificationPlanAssociation",
+                "GetRestoreVerificationPlanAssociationAsync"
+              ]
+            },
             "InitializeService": {
               "methods": [
                 "InitializeService",
@@ -256,16 +316,58 @@
                 "ListManagementServersAsync"
               ]
             },
+            "ListRestoreTemplateExecutions": {
+              "methods": [
+                "ListRestoreTemplateExecutions",
+                "ListRestoreTemplateExecutionsAsync"
+              ]
+            },
+            "ListRestoreTemplates": {
+              "methods": [
+                "ListRestoreTemplates",
+                "ListRestoreTemplatesAsync"
+              ]
+            },
+            "ListRestoreVerificationPlanAssociations": {
+              "methods": [
+                "ListRestoreVerificationPlanAssociations",
+                "ListRestoreVerificationPlanAssociationsAsync"
+              ]
+            },
+            "ListRestoreVerificationPlans": {
+              "methods": [
+                "ListRestoreVerificationPlans",
+                "ListRestoreVerificationPlansAsync"
+              ]
+            },
             "RestoreBackup": {
               "methods": [
                 "RestoreBackup",
                 "RestoreBackupAsync"
               ]
             },
+            "RunRestoreTemplate": {
+              "methods": [
+                "RunRestoreTemplate",
+                "RunRestoreTemplateAsync"
+              ]
+            },
             "TriggerBackup": {
               "methods": [
                 "TriggerBackup",
                 "TriggerBackupAsync"
+              ]
+            },
+            "TriggerRestoreCleanup": {
+              "methods": [
+                "TriggerRestoreCleanup",
+                "TriggerRestoreCleanupAsync"
+              ]
+            },
+            "TriggerRestoreVerification": {
+              "methods": [
+                "TriggerRestoreVerification",
+                "TriggerRestoreVerificationAsync"
               ]
             },
             "UpdateAutoProtectionPolicy": {
@@ -302,6 +404,12 @@
               "methods": [
                 "UpdateDataSource",
                 "UpdateDataSourceAsync"
+              ]
+            },
+            "UpdateRestoreTemplate": {
+              "methods": [
+                "UpdateRestoreTemplate",
+                "UpdateRestoreTemplateAsync"
               ]
             }
           }
