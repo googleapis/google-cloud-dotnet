@@ -41,6 +41,13 @@ namespace GoogleCSharpSnippets
                 ReportFormat = GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat.Unspecified,
                 ComplianceFramework = "",
                 ValidateOnly = false,
+                ParameterOverrides =
+                {
+                    {
+                        "",
+                        new ParameterOverrides()
+                    },
+                },
             };
             // Make the request
             AuditScopeReport response = await auditManagerClient.GenerateAuditScopeReportAsync(request);

@@ -1012,6 +1012,13 @@ namespace GoogleCSharpSnippets
                 ReportFormat = GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat.Unspecified,
                 ComplianceFramework = "",
                 ValidateOnly = false,
+                ParameterOverrides =
+                {
+                    {
+                        "",
+                        new ParameterOverrides()
+                    },
+                },
             };
             // Make the request
             AuditScopeReport response = auditManagerClient.GenerateAuditScopeReport(request);
@@ -1032,6 +1039,13 @@ namespace GoogleCSharpSnippets
                 ReportFormat = GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat.Unspecified,
                 ComplianceFramework = "",
                 ValidateOnly = false,
+                ParameterOverrides =
+                {
+                    {
+                        "",
+                        new ParameterOverrides()
+                    },
+                },
             };
             // Make the request
             AuditScopeReport response = await auditManagerClient.GenerateAuditScopeReportAsync(request);
@@ -1086,6 +1100,13 @@ namespace GoogleCSharpSnippets
                 GcsUri = "",
                 ReportFormat = GenerateAuditReportRequest.Types.AuditReportFormat.Unspecified,
                 ComplianceFramework = "",
+                ParameterOverrides =
+                {
+                    {
+                        "",
+                        new ParameterOverrides()
+                    },
+                },
                 ValidateOnly = false,
             };
             // Make the request
@@ -1123,6 +1144,13 @@ namespace GoogleCSharpSnippets
                 GcsUri = "",
                 ReportFormat = GenerateAuditReportRequest.Types.AuditReportFormat.Unspecified,
                 ComplianceFramework = "",
+                ParameterOverrides =
+                {
+                    {
+                        "",
+                        new ParameterOverrides()
+                    },
+                },
                 ValidateOnly = false,
             };
             // Make the request
