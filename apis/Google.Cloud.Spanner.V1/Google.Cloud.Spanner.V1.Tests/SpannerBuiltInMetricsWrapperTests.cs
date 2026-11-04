@@ -150,7 +150,7 @@ public class SpannerBuiltInMetricsWrapperTests
         var uniqueIds = new HashSet<string>();
         foreach (var client in clients)
         {
-            uniqueIds.Add(client._clientIdentity.Id);
+            uniqueIds.Add(client.ClientIdentity.Id);
         }
         Assert.Equal(clientCount, uniqueIds.Count);
 
@@ -177,13 +177,13 @@ public class SpannerBuiltInMetricsWrapperTests
 
         foreach (var client in clients)
         {
-            var scoped = FilterMeasurements(measurements, client._clientIdentity.Id);
+            var scoped = FilterMeasurements(measurements, client.ClientIdentity.Id);
             Assert.Single(scoped, m => m.Name == "operation_count");
             Assert.Single(scoped, m => m.Name == "attempt_count");
             Assert.All(scoped, m =>
             {
-                Assert.Equal(client._clientIdentity.Id, m.GetTag("client_uid"));
-                Assert.Equal(client._clientIdentity.Hash, m.GetTag("client_hash"));
+                Assert.Equal(client.ClientIdentity.Id, m.GetTag("client_uid"));
+                Assert.Equal(client.ClientIdentity.Hash, m.GetTag("client_hash"));
             });
         }
 
@@ -222,7 +222,7 @@ public class SpannerBuiltInMetricsWrapperTests
             await instrumentedClient.ExecuteSqlAsync(request, null);
         });
 
-        var scoped = FilterMeasurements(measurements, instrumentedClient._clientIdentity.Id);
+        var scoped = FilterMeasurements(measurements, instrumentedClient.ClientIdentity.Id);
 
         // 3 operation count and 3 operation latencies should ahve been emitted for this specific method
         Assert.Equal(3, scoped.Count(m => m.Name == "operation_count"));
@@ -248,7 +248,7 @@ public class SpannerBuiltInMetricsWrapperTests
 
         var measurements = await RunWithMeterListenerAsync(() => invoke(instrumentedClient));
 
-        AssertRecordedData(measurements, instrumentedClient._clientIdentity.Id, expectedMethod, expectedStatus);
+        AssertRecordedData(measurements, instrumentedClient.ClientIdentity.Id, expectedMethod, expectedStatus);
     }
 
     [Theory]
@@ -271,7 +271,7 @@ public class SpannerBuiltInMetricsWrapperTests
             Assert.Equal(expectedException.Message, thrownException.Message);
         });
 
-        AssertRecordedData(measurements, instrumentedClient._clientIdentity.Id, expectedMethod, expectedStatus);
+        AssertRecordedData(measurements, instrumentedClient.ClientIdentity.Id, expectedMethod, expectedStatus);
     }
 
     public static TheoryData<Action<SpannerClient>, Func<SpannerClient, Task>, string, string> SuccessfulResponses => new()
