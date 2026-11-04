@@ -5283,6 +5283,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.Sql.V1Beta4/Google.Cloud.Sql.V1Beta4"
             ]
+        },
+        {
+            "id": "Google.Cloud.SaasPlatform.SaasServiceMgmt.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/saasplatform/saasservicemgmt/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.SaasPlatform.SaasServiceMgmt.V1/Google.Cloud.SaasPlatform.SaasServiceMgmt.V1"
+            ]
         }
     ],
     "ignoredApiPaths": [
