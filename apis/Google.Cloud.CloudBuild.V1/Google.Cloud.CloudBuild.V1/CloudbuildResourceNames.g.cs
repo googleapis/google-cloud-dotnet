@@ -4705,6 +4705,7 @@ namespace Google.Cloud.CloudBuild.V1
                 /// <see cref="NetworkAttachmentName"/>-typed view over the <see cref="NetworkAttachment"/> resource
                 /// name property.
                 /// </summary>
+                [sys::ObsoleteAttribute]
                 public NetworkAttachmentName NetworkAttachmentAsNetworkAttachmentName
                 {
                     get => string.IsNullOrEmpty(NetworkAttachment) ? null : NetworkAttachmentName.Parse(NetworkAttachment, allowUnparsed: true);
