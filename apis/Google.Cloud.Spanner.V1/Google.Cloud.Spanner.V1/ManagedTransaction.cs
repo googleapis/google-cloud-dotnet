@@ -721,19 +721,12 @@ public sealed class ManagedTransaction : IAsyncDisposable
         MaybeApplyDirectedReadOptions(request.UnderlyingRequest);
 
         Grpc.Core.IAsyncStreamReader<PartialResultSet> stream = new ResultStream(_client, request, this, callSettings);
-        // Only clients built by SpannerClientBuilder are wrapped in a BuiltInMetricsWrapper and record operation metrics.
-        if (_client is SpannerBuiltInMetrics.BuiltInMetricsWrapper metricsWrapper)
-        {
-            string methodName = request.IsQuery
-                ? nameof(SpannerClient.ExecuteStreamingSql)
-                : nameof(SpannerClient.StreamingRead);
-            stream = new SpannerBuiltInMetrics.InstrumentedOperationStreamReader(
-                stream,
-                SpannerBuiltInMetrics.DefaultStopwatchProvider.Instance.StartNew(),
-                methodName,
-                request,
-                metricsWrapper._clientIdentity);
-        }
+        stream = new SpannerBuiltInMetrics.InstrumentedOperationStreamReader(
+            stream,
+            SpannerBuiltInMetrics.DefaultStopwatchProvider.Instance.StartNew(),
+            request.IsQuery ? nameof(SpannerClient.ExecuteStreamingSql) : nameof(SpannerClient.StreamingRead),
+            request,
+            _client.ClientIdentity);
         return new ReliableStreamReader(stream, _client.Settings.Logger);
     }
 

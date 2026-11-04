@@ -28,6 +28,13 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public virtual SpannerSettings Settings { get; protected set; }
 
+        /// <summary>
+        /// The identity used to label built-in metrics recorded for this client. Won't change for the lifetime of this client.
+        /// Defaults to a random identity generated when this client is created. Clients built by <see cref="SpannerClientBuilder"/>
+        /// use the same identity as their metrics interceptor.
+        /// </summary>
+        internal SpannerBuiltInMetrics.ClientIdentity ClientIdentity { get; private protected set; } = SpannerBuiltInMetrics.Labeler.GenerateIdentity();
+
         internal void MaybeApplyRouteToLeaderHeader(ref CallSettings settings, TransactionOptions.ModeOneofCase transactionMode)
         {
             if (transactionMode == TransactionOptions.ModeOneofCase.ReadWrite ||

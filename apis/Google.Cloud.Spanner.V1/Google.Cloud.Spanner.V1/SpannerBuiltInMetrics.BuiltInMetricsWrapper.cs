@@ -30,7 +30,6 @@ internal static partial class SpannerBuiltInMetrics
     internal class BuiltInMetricsWrapper : SpannerClient
     {
         private readonly SpannerClient _inner;
-        internal readonly ClientIdentity _clientIdentity;
 
         ///<inheritdoc/>
         public override Spanner.SpannerClient GrpcClient => _inner.GrpcClient;
@@ -47,7 +46,7 @@ internal static partial class SpannerBuiltInMetrics
         private BuiltInMetricsWrapper(SpannerClient inner, ClientIdentity clientIdentity)
         {
             _inner = GaxPreconditions.CheckNotNull(inner, nameof(inner));
-            _clientIdentity = clientIdentity;
+            ClientIdentity = clientIdentity;
         }
 
         /// <summary>
@@ -187,7 +186,7 @@ internal static partial class SpannerBuiltInMetrics
         private void RecordMetrics(string method, object request, StatusCode status, double latencyMs)
         {
             var provider = request as IDatabaseNameProvider;
-            var labels = Labeler.GetLabels(method, provider, status, _clientIdentity);
+            var labels = Labeler.GetLabels(method, provider, status, ClientIdentity);
             RecordOperationMetrics(latencyMs, labels);
         }
     }
