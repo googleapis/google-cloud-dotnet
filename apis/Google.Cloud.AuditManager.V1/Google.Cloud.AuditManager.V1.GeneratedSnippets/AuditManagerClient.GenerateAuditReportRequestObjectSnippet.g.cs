@@ -41,6 +41,13 @@ namespace GoogleCSharpSnippets
                 GcsUri = "",
                 ReportFormat = GenerateAuditReportRequest.Types.AuditReportFormat.Unspecified,
                 ComplianceFramework = "",
+                ParameterOverrides =
+                {
+                    {
+                        "",
+                        new ParameterOverrides()
+                    },
+                },
                 ValidateOnly = false,
             };
             // Make the request

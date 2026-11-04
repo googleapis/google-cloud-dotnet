@@ -67,6 +67,7 @@ namespace Google.Cloud.AuditManager.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AuditmanagerReflection.Descriptor;
+            yield return ParametersReflection.Descriptor;
             yield return gcl::LocationsReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
