@@ -524,10 +524,6 @@ namespace Google.Maps.RouteOptimization.V1
         /// The [response][google.longrunning.Operation.response] field type is
         /// [OptimizeToursResponse][google.maps.routeoptimization.v1.OptimizeToursResponse],
         /// if successful.
-        /// 
-        /// Experimental: See
-        /// https://developers.google.com/maps/tt/route-optimization/experimental/otlr/make-request
-        /// for more details.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -552,10 +548,6 @@ namespace Google.Maps.RouteOptimization.V1
         /// The [response][google.longrunning.Operation.response] field type is
         /// [OptimizeToursResponse][google.maps.routeoptimization.v1.OptimizeToursResponse],
         /// if successful.
-        /// 
-        /// Experimental: See
-        /// https://developers.google.com/maps/tt/route-optimization/experimental/otlr/make-request
-        /// for more details.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -580,10 +572,6 @@ namespace Google.Maps.RouteOptimization.V1
         /// The [response][google.longrunning.Operation.response] field type is
         /// [OptimizeToursResponse][google.maps.routeoptimization.v1.OptimizeToursResponse],
         /// if successful.
-        /// 
-        /// Experimental: See
-        /// https://developers.google.com/maps/tt/route-optimization/experimental/otlr/make-request
-        /// for more details.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -638,14 +626,10 @@ namespace Google.Maps.RouteOptimization.V1
         /// `&lt;parent&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// progress of the computation. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [OptimizeToursLongRunningMetadata][google.maps.routeoptimization.v1.OptimizeToursUriMetadata].
+        /// [OptimizeToursUriMetadata][google.maps.routeoptimization.v1.OptimizeToursUriMetadata].
         /// The [response][google.longrunning.Operation.response] field type is
         /// [OptimizeToursUriResponse][google.maps.routeoptimization.v1.OptimizeToursUriResponse],
         /// if successful.
-        /// 
-        /// Experimental: See
-        /// https://developers.google.com/maps/tt/route-optimization/experimental/otlr/make-request
-        /// for more details.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -673,14 +657,10 @@ namespace Google.Maps.RouteOptimization.V1
         /// `&lt;parent&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// progress of the computation. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [OptimizeToursLongRunningMetadata][google.maps.routeoptimization.v1.OptimizeToursUriMetadata].
+        /// [OptimizeToursUriMetadata][google.maps.routeoptimization.v1.OptimizeToursUriMetadata].
         /// The [response][google.longrunning.Operation.response] field type is
         /// [OptimizeToursUriResponse][google.maps.routeoptimization.v1.OptimizeToursUriResponse],
         /// if successful.
-        /// 
-        /// Experimental: See
-        /// https://developers.google.com/maps/tt/route-optimization/experimental/otlr/make-request
-        /// for more details.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -708,14 +688,10 @@ namespace Google.Maps.RouteOptimization.V1
         /// `&lt;parent&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// progress of the computation. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [OptimizeToursLongRunningMetadata][google.maps.routeoptimization.v1.OptimizeToursUriMetadata].
+        /// [OptimizeToursUriMetadata][google.maps.routeoptimization.v1.OptimizeToursUriMetadata].
         /// The [response][google.longrunning.Operation.response] field type is
         /// [OptimizeToursUriResponse][google.maps.routeoptimization.v1.OptimizeToursUriResponse],
         /// if successful.
-        /// 
-        /// Experimental: See
-        /// https://developers.google.com/maps/tt/route-optimization/experimental/otlr/make-request
-        /// for more details.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -973,10 +949,6 @@ namespace Google.Maps.RouteOptimization.V1
         /// The [response][google.longrunning.Operation.response] field type is
         /// [OptimizeToursResponse][google.maps.routeoptimization.v1.OptimizeToursResponse],
         /// if successful.
-        /// 
-        /// Experimental: See
-        /// https://developers.google.com/maps/tt/route-optimization/experimental/otlr/make-request
-        /// for more details.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1004,10 +976,6 @@ namespace Google.Maps.RouteOptimization.V1
         /// The [response][google.longrunning.Operation.response] field type is
         /// [OptimizeToursResponse][google.maps.routeoptimization.v1.OptimizeToursResponse],
         /// if successful.
-        /// 
-        /// Experimental: See
-        /// https://developers.google.com/maps/tt/route-optimization/experimental/otlr/make-request
-        /// for more details.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1041,14 +1009,10 @@ namespace Google.Maps.RouteOptimization.V1
         /// `&lt;parent&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// progress of the computation. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [OptimizeToursLongRunningMetadata][google.maps.routeoptimization.v1.OptimizeToursUriMetadata].
+        /// [OptimizeToursUriMetadata][google.maps.routeoptimization.v1.OptimizeToursUriMetadata].
         /// The [response][google.longrunning.Operation.response] field type is
         /// [OptimizeToursUriResponse][google.maps.routeoptimization.v1.OptimizeToursUriResponse],
         /// if successful.
-        /// 
-        /// Experimental: See
-        /// https://developers.google.com/maps/tt/route-optimization/experimental/otlr/make-request
-        /// for more details.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1079,14 +1043,10 @@ namespace Google.Maps.RouteOptimization.V1
         /// `&lt;parent&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// progress of the computation. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [OptimizeToursLongRunningMetadata][google.maps.routeoptimization.v1.OptimizeToursUriMetadata].
+        /// [OptimizeToursUriMetadata][google.maps.routeoptimization.v1.OptimizeToursUriMetadata].
         /// The [response][google.longrunning.Operation.response] field type is
         /// [OptimizeToursUriResponse][google.maps.routeoptimization.v1.OptimizeToursUriResponse],
         /// if successful.
-        /// 
-        /// Experimental: See
-        /// https://developers.google.com/maps/tt/route-optimization/experimental/otlr/make-request
-        /// for more details.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
