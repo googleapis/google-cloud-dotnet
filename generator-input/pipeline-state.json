@@ -5265,6 +5265,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "3558b21a1fcbd9b2be9920e493e2307d6a4839a9",
             "apiPaths": [
                 "google/cloud/sql/v1"
             ],
