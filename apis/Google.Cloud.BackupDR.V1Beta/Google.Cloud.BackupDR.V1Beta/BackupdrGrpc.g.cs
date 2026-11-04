@@ -78,6 +78,58 @@ namespace Google.Cloud.BackupDR.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.DeleteManagementServerRequest> __Marshaller_google_cloud_backupdr_v1beta_DeleteManagementServerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.DeleteManagementServerRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.CreateRestoreTemplateRequest> __Marshaller_google_cloud_backupdr_v1beta_CreateRestoreTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.CreateRestoreTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.GetRestoreTemplateRequest> __Marshaller_google_cloud_backupdr_v1beta_GetRestoreTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.GetRestoreTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.RestoreTemplate> __Marshaller_google_cloud_backupdr_v1beta_RestoreTemplate = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.RestoreTemplate.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplatesRequest> __Marshaller_google_cloud_backupdr_v1beta_ListRestoreTemplatesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplatesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplatesResponse> __Marshaller_google_cloud_backupdr_v1beta_ListRestoreTemplatesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplatesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.UpdateRestoreTemplateRequest> __Marshaller_google_cloud_backupdr_v1beta_UpdateRestoreTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.UpdateRestoreTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreTemplateRequest> __Marshaller_google_cloud_backupdr_v1beta_DeleteRestoreTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.RunRestoreTemplateRequest> __Marshaller_google_cloud_backupdr_v1beta_RunRestoreTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.RunRestoreTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.GetRestoreTemplateExecutionRequest> __Marshaller_google_cloud_backupdr_v1beta_GetRestoreTemplateExecutionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.GetRestoreTemplateExecutionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.RestoreTemplateExecution> __Marshaller_google_cloud_backupdr_v1beta_RestoreTemplateExecution = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.RestoreTemplateExecution.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplateExecutionsRequest> __Marshaller_google_cloud_backupdr_v1beta_ListRestoreTemplateExecutionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplateExecutionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplateExecutionsResponse> __Marshaller_google_cloud_backupdr_v1beta_ListRestoreTemplateExecutionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplateExecutionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.TriggerRestoreCleanupRequest> __Marshaller_google_cloud_backupdr_v1beta_TriggerRestoreCleanupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.TriggerRestoreCleanupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.CreateRestoreVerificationPlanRequest> __Marshaller_google_cloud_backupdr_v1beta_CreateRestoreVerificationPlanRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.CreateRestoreVerificationPlanRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.CreateRestoreVerificationPlanAssociationRequest> __Marshaller_google_cloud_backupdr_v1beta_CreateRestoreVerificationPlanAssociationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.CreateRestoreVerificationPlanAssociationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.GetRestoreVerificationPlanAssociationRequest> __Marshaller_google_cloud_backupdr_v1beta_GetRestoreVerificationPlanAssociationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.GetRestoreVerificationPlanAssociationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.RestoreVerificationPlanAssociation> __Marshaller_google_cloud_backupdr_v1beta_RestoreVerificationPlanAssociation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.RestoreVerificationPlanAssociation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlanAssociationsRequest> __Marshaller_google_cloud_backupdr_v1beta_ListRestoreVerificationPlanAssociationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlanAssociationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlanAssociationsResponse> __Marshaller_google_cloud_backupdr_v1beta_ListRestoreVerificationPlanAssociationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlanAssociationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreVerificationPlanAssociationRequest> __Marshaller_google_cloud_backupdr_v1beta_DeleteRestoreVerificationPlanAssociationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreVerificationPlanAssociationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.TriggerRestoreVerificationRequest> __Marshaller_google_cloud_backupdr_v1beta_TriggerRestoreVerificationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.TriggerRestoreVerificationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.GetRestoreVerificationPlanRequest> __Marshaller_google_cloud_backupdr_v1beta_GetRestoreVerificationPlanRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.GetRestoreVerificationPlanRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.RestoreVerificationPlan> __Marshaller_google_cloud_backupdr_v1beta_RestoreVerificationPlan = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.RestoreVerificationPlan.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlansRequest> __Marshaller_google_cloud_backupdr_v1beta_ListRestoreVerificationPlansRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlansRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlansResponse> __Marshaller_google_cloud_backupdr_v1beta_ListRestoreVerificationPlansResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlansResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreVerificationPlanRequest> __Marshaller_google_cloud_backupdr_v1beta_DeleteRestoreVerificationPlanRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreVerificationPlanRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.CreateBackupVaultRequest> __Marshaller_google_cloud_backupdr_v1beta_CreateBackupVaultRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.CreateBackupVaultRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1Beta.ListBackupVaultsRequest> __Marshaller_google_cloud_backupdr_v1beta_ListBackupVaultsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1Beta.ListBackupVaultsRequest.Parser));
@@ -248,6 +300,150 @@ namespace Google.Cloud.BackupDR.V1Beta {
         __ServiceName,
         "DeleteManagementServer",
         __Marshaller_google_cloud_backupdr_v1beta_DeleteManagementServerRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1Beta.CreateRestoreTemplateRequest, global::Google.LongRunning.Operation> __Method_CreateRestoreTemplate = new grpc::Method<global::Google.Cloud.BackupDR.V1Beta.CreateRestoreTemplateRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateRestoreTemplate",
+        __Marshaller_google_cloud_backupdr_v1beta_CreateRestoreTemplateRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1Beta.GetRestoreTemplateRequest, global::Google.Cloud.BackupDR.V1Beta.RestoreTemplate> __Method_GetRestoreTemplate = new grpc::Method<global::Google.Cloud.BackupDR.V1Beta.GetRestoreTemplateRequest, global::Google.Cloud.BackupDR.V1Beta.RestoreTemplate>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetRestoreTemplate",
+        __Marshaller_google_cloud_backupdr_v1beta_GetRestoreTemplateRequest,
+        __Marshaller_google_cloud_backupdr_v1beta_RestoreTemplate);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplatesRequest, global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplatesResponse> __Method_ListRestoreTemplates = new grpc::Method<global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplatesRequest, global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplatesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListRestoreTemplates",
+        __Marshaller_google_cloud_backupdr_v1beta_ListRestoreTemplatesRequest,
+        __Marshaller_google_cloud_backupdr_v1beta_ListRestoreTemplatesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1Beta.UpdateRestoreTemplateRequest, global::Google.LongRunning.Operation> __Method_UpdateRestoreTemplate = new grpc::Method<global::Google.Cloud.BackupDR.V1Beta.UpdateRestoreTemplateRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateRestoreTemplate",
+        __Marshaller_google_cloud_backupdr_v1beta_UpdateRestoreTemplateRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreTemplateRequest, global::Google.LongRunning.Operation> __Method_DeleteRestoreTemplate = new grpc::Method<global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreTemplateRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteRestoreTemplate",
+        __Marshaller_google_cloud_backupdr_v1beta_DeleteRestoreTemplateRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1Beta.RunRestoreTemplateRequest, global::Google.LongRunning.Operation> __Method_RunRestoreTemplate = new grpc::Method<global::Google.Cloud.BackupDR.V1Beta.RunRestoreTemplateRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RunRestoreTemplate",
+        __Marshaller_google_cloud_backupdr_v1beta_RunRestoreTemplateRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1Beta.GetRestoreTemplateExecutionRequest, global::Google.Cloud.BackupDR.V1Beta.RestoreTemplateExecution> __Method_GetRestoreTemplateExecution = new grpc::Method<global::Google.Cloud.BackupDR.V1Beta.GetRestoreTemplateExecutionRequest, global::Google.Cloud.BackupDR.V1Beta.RestoreTemplateExecution>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetRestoreTemplateExecution",
+        __Marshaller_google_cloud_backupdr_v1beta_GetRestoreTemplateExecutionRequest,
+        __Marshaller_google_cloud_backupdr_v1beta_RestoreTemplateExecution);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplateExecutionsRequest, global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplateExecutionsResponse> __Method_ListRestoreTemplateExecutions = new grpc::Method<global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplateExecutionsRequest, global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplateExecutionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListRestoreTemplateExecutions",
+        __Marshaller_google_cloud_backupdr_v1beta_ListRestoreTemplateExecutionsRequest,
+        __Marshaller_google_cloud_backupdr_v1beta_ListRestoreTemplateExecutionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1Beta.TriggerRestoreCleanupRequest, global::Google.LongRunning.Operation> __Method_TriggerRestoreCleanup = new grpc::Method<global::Google.Cloud.BackupDR.V1Beta.TriggerRestoreCleanupRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "TriggerRestoreCleanup",
+        __Marshaller_google_cloud_backupdr_v1beta_TriggerRestoreCleanupRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1Beta.CreateRestoreVerificationPlanRequest, global::Google.LongRunning.Operation> __Method_CreateRestoreVerificationPlan = new grpc::Method<global::Google.Cloud.BackupDR.V1Beta.CreateRestoreVerificationPlanRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateRestoreVerificationPlan",
+        __Marshaller_google_cloud_backupdr_v1beta_CreateRestoreVerificationPlanRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1Beta.CreateRestoreVerificationPlanAssociationRequest, global::Google.LongRunning.Operation> __Method_CreateRestoreVerificationPlanAssociation = new grpc::Method<global::Google.Cloud.BackupDR.V1Beta.CreateRestoreVerificationPlanAssociationRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateRestoreVerificationPlanAssociation",
+        __Marshaller_google_cloud_backupdr_v1beta_CreateRestoreVerificationPlanAssociationRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1Beta.GetRestoreVerificationPlanAssociationRequest, global::Google.Cloud.BackupDR.V1Beta.RestoreVerificationPlanAssociation> __Method_GetRestoreVerificationPlanAssociation = new grpc::Method<global::Google.Cloud.BackupDR.V1Beta.GetRestoreVerificationPlanAssociationRequest, global::Google.Cloud.BackupDR.V1Beta.RestoreVerificationPlanAssociation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetRestoreVerificationPlanAssociation",
+        __Marshaller_google_cloud_backupdr_v1beta_GetRestoreVerificationPlanAssociationRequest,
+        __Marshaller_google_cloud_backupdr_v1beta_RestoreVerificationPlanAssociation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlanAssociationsRequest, global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlanAssociationsResponse> __Method_ListRestoreVerificationPlanAssociations = new grpc::Method<global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlanAssociationsRequest, global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlanAssociationsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListRestoreVerificationPlanAssociations",
+        __Marshaller_google_cloud_backupdr_v1beta_ListRestoreVerificationPlanAssociationsRequest,
+        __Marshaller_google_cloud_backupdr_v1beta_ListRestoreVerificationPlanAssociationsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreVerificationPlanAssociationRequest, global::Google.LongRunning.Operation> __Method_DeleteRestoreVerificationPlanAssociation = new grpc::Method<global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreVerificationPlanAssociationRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteRestoreVerificationPlanAssociation",
+        __Marshaller_google_cloud_backupdr_v1beta_DeleteRestoreVerificationPlanAssociationRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1Beta.TriggerRestoreVerificationRequest, global::Google.LongRunning.Operation> __Method_TriggerRestoreVerification = new grpc::Method<global::Google.Cloud.BackupDR.V1Beta.TriggerRestoreVerificationRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "TriggerRestoreVerification",
+        __Marshaller_google_cloud_backupdr_v1beta_TriggerRestoreVerificationRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1Beta.GetRestoreVerificationPlanRequest, global::Google.Cloud.BackupDR.V1Beta.RestoreVerificationPlan> __Method_GetRestoreVerificationPlan = new grpc::Method<global::Google.Cloud.BackupDR.V1Beta.GetRestoreVerificationPlanRequest, global::Google.Cloud.BackupDR.V1Beta.RestoreVerificationPlan>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetRestoreVerificationPlan",
+        __Marshaller_google_cloud_backupdr_v1beta_GetRestoreVerificationPlanRequest,
+        __Marshaller_google_cloud_backupdr_v1beta_RestoreVerificationPlan);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlansRequest, global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlansResponse> __Method_ListRestoreVerificationPlans = new grpc::Method<global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlansRequest, global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlansResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListRestoreVerificationPlans",
+        __Marshaller_google_cloud_backupdr_v1beta_ListRestoreVerificationPlansRequest,
+        __Marshaller_google_cloud_backupdr_v1beta_ListRestoreVerificationPlansResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreVerificationPlanRequest, global::Google.LongRunning.Operation> __Method_DeleteRestoreVerificationPlan = new grpc::Method<global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreVerificationPlanRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteRestoreVerificationPlan",
+        __Marshaller_google_cloud_backupdr_v1beta_DeleteRestoreVerificationPlanRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -664,6 +860,231 @@ namespace Google.Cloud.BackupDR.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteManagementServer(global::Google.Cloud.BackupDR.V1Beta.DeleteManagementServerRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new RestoreTemplate in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateRestoreTemplate(global::Google.Cloud.BackupDR.V1Beta.CreateRestoreTemplateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a RestoreTemplate.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1Beta.RestoreTemplate> GetRestoreTemplate(global::Google.Cloud.BackupDR.V1Beta.GetRestoreTemplateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists RestoreTemplates in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplatesResponse> ListRestoreTemplates(global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplatesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the settings of a RestoreTemplate.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateRestoreTemplate(global::Google.Cloud.BackupDR.V1Beta.UpdateRestoreTemplateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a RestoreTemplate.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteRestoreTemplate(global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreTemplateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Runs a RestoreTemplate.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RunRestoreTemplate(global::Google.Cloud.BackupDR.V1Beta.RunRestoreTemplateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a RestoreTemplateExecution.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1Beta.RestoreTemplateExecution> GetRestoreTemplateExecution(global::Google.Cloud.BackupDR.V1Beta.GetRestoreTemplateExecutionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists RestoreTemplateExecutions in a given project, location and restore
+      /// template.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplateExecutionsResponse> ListRestoreTemplateExecutions(global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplateExecutionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Triggers cleanup of restored resources created during execution.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> TriggerRestoreCleanup(global::Google.Cloud.BackupDR.V1Beta.TriggerRestoreCleanupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new RestoreVerificationPlan in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateRestoreVerificationPlan(global::Google.Cloud.BackupDR.V1Beta.CreateRestoreVerificationPlanRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new RestoreVerificationPlanAssociation in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateRestoreVerificationPlanAssociation(global::Google.Cloud.BackupDR.V1Beta.CreateRestoreVerificationPlanAssociationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single RestoreVerificationPlanAssociation in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1Beta.RestoreVerificationPlanAssociation> GetRestoreVerificationPlanAssociation(global::Google.Cloud.BackupDR.V1Beta.GetRestoreVerificationPlanAssociationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists RestoreVerificationPlanAssociations in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlanAssociationsResponse> ListRestoreVerificationPlanAssociations(global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlanAssociationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single RestoreVerificationPlanAssociation in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteRestoreVerificationPlanAssociation(global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreVerificationPlanAssociationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Triggers a new Restore Verification for the association in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> TriggerRestoreVerification(global::Google.Cloud.BackupDR.V1Beta.TriggerRestoreVerificationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single RestoreVerificationPlan. Returns the requested
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1Beta.RestoreVerificationPlan> GetRestoreVerificationPlan(global::Google.Cloud.BackupDR.V1Beta.GetRestoreVerificationPlanRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists RestoreVerificationPlans in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlansResponse> ListRestoreVerificationPlans(global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlansRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single RestoreVerificationPlan. If the `force` flag is set to
+      /// `true`, any RestoreVerificationPlanAssociations linked to this
+      /// RestoreVerificationPlan will also be deleted.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteRestoreVerificationPlan(global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreVerificationPlanRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1432,6 +1853,906 @@ namespace Google.Cloud.BackupDR.V1Beta {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteManagementServerAsync(global::Google.Cloud.BackupDR.V1Beta.DeleteManagementServerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteManagementServer, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new RestoreTemplate in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateRestoreTemplate(global::Google.Cloud.BackupDR.V1Beta.CreateRestoreTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateRestoreTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new RestoreTemplate in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateRestoreTemplate(global::Google.Cloud.BackupDR.V1Beta.CreateRestoreTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateRestoreTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new RestoreTemplate in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateRestoreTemplateAsync(global::Google.Cloud.BackupDR.V1Beta.CreateRestoreTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateRestoreTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new RestoreTemplate in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateRestoreTemplateAsync(global::Google.Cloud.BackupDR.V1Beta.CreateRestoreTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateRestoreTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a RestoreTemplate.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1Beta.RestoreTemplate GetRestoreTemplate(global::Google.Cloud.BackupDR.V1Beta.GetRestoreTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRestoreTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a RestoreTemplate.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1Beta.RestoreTemplate GetRestoreTemplate(global::Google.Cloud.BackupDR.V1Beta.GetRestoreTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetRestoreTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a RestoreTemplate.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1Beta.RestoreTemplate> GetRestoreTemplateAsync(global::Google.Cloud.BackupDR.V1Beta.GetRestoreTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRestoreTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a RestoreTemplate.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1Beta.RestoreTemplate> GetRestoreTemplateAsync(global::Google.Cloud.BackupDR.V1Beta.GetRestoreTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetRestoreTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Lists RestoreTemplates in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplatesResponse ListRestoreTemplates(global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRestoreTemplates(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists RestoreTemplates in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplatesResponse ListRestoreTemplates(global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplatesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListRestoreTemplates, null, options, request);
+      }
+      /// <summary>
+      /// Lists RestoreTemplates in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplatesResponse> ListRestoreTemplatesAsync(global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRestoreTemplatesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists RestoreTemplates in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplatesResponse> ListRestoreTemplatesAsync(global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplatesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListRestoreTemplates, null, options, request);
+      }
+      /// <summary>
+      /// Updates the settings of a RestoreTemplate.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateRestoreTemplate(global::Google.Cloud.BackupDR.V1Beta.UpdateRestoreTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateRestoreTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the settings of a RestoreTemplate.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateRestoreTemplate(global::Google.Cloud.BackupDR.V1Beta.UpdateRestoreTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateRestoreTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Updates the settings of a RestoreTemplate.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateRestoreTemplateAsync(global::Google.Cloud.BackupDR.V1Beta.UpdateRestoreTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateRestoreTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the settings of a RestoreTemplate.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateRestoreTemplateAsync(global::Google.Cloud.BackupDR.V1Beta.UpdateRestoreTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateRestoreTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a RestoreTemplate.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteRestoreTemplate(global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteRestoreTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a RestoreTemplate.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteRestoreTemplate(global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteRestoreTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a RestoreTemplate.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteRestoreTemplateAsync(global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteRestoreTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a RestoreTemplate.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteRestoreTemplateAsync(global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteRestoreTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Runs a RestoreTemplate.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RunRestoreTemplate(global::Google.Cloud.BackupDR.V1Beta.RunRestoreTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RunRestoreTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Runs a RestoreTemplate.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RunRestoreTemplate(global::Google.Cloud.BackupDR.V1Beta.RunRestoreTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RunRestoreTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Runs a RestoreTemplate.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RunRestoreTemplateAsync(global::Google.Cloud.BackupDR.V1Beta.RunRestoreTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RunRestoreTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Runs a RestoreTemplate.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RunRestoreTemplateAsync(global::Google.Cloud.BackupDR.V1Beta.RunRestoreTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RunRestoreTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a RestoreTemplateExecution.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1Beta.RestoreTemplateExecution GetRestoreTemplateExecution(global::Google.Cloud.BackupDR.V1Beta.GetRestoreTemplateExecutionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRestoreTemplateExecution(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a RestoreTemplateExecution.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1Beta.RestoreTemplateExecution GetRestoreTemplateExecution(global::Google.Cloud.BackupDR.V1Beta.GetRestoreTemplateExecutionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetRestoreTemplateExecution, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a RestoreTemplateExecution.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1Beta.RestoreTemplateExecution> GetRestoreTemplateExecutionAsync(global::Google.Cloud.BackupDR.V1Beta.GetRestoreTemplateExecutionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRestoreTemplateExecutionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a RestoreTemplateExecution.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1Beta.RestoreTemplateExecution> GetRestoreTemplateExecutionAsync(global::Google.Cloud.BackupDR.V1Beta.GetRestoreTemplateExecutionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetRestoreTemplateExecution, null, options, request);
+      }
+      /// <summary>
+      /// Lists RestoreTemplateExecutions in a given project, location and restore
+      /// template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplateExecutionsResponse ListRestoreTemplateExecutions(global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplateExecutionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRestoreTemplateExecutions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists RestoreTemplateExecutions in a given project, location and restore
+      /// template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplateExecutionsResponse ListRestoreTemplateExecutions(global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplateExecutionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListRestoreTemplateExecutions, null, options, request);
+      }
+      /// <summary>
+      /// Lists RestoreTemplateExecutions in a given project, location and restore
+      /// template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplateExecutionsResponse> ListRestoreTemplateExecutionsAsync(global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplateExecutionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRestoreTemplateExecutionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists RestoreTemplateExecutions in a given project, location and restore
+      /// template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplateExecutionsResponse> ListRestoreTemplateExecutionsAsync(global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplateExecutionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListRestoreTemplateExecutions, null, options, request);
+      }
+      /// <summary>
+      /// Triggers cleanup of restored resources created during execution.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation TriggerRestoreCleanup(global::Google.Cloud.BackupDR.V1Beta.TriggerRestoreCleanupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TriggerRestoreCleanup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Triggers cleanup of restored resources created during execution.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation TriggerRestoreCleanup(global::Google.Cloud.BackupDR.V1Beta.TriggerRestoreCleanupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_TriggerRestoreCleanup, null, options, request);
+      }
+      /// <summary>
+      /// Triggers cleanup of restored resources created during execution.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> TriggerRestoreCleanupAsync(global::Google.Cloud.BackupDR.V1Beta.TriggerRestoreCleanupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TriggerRestoreCleanupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Triggers cleanup of restored resources created during execution.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> TriggerRestoreCleanupAsync(global::Google.Cloud.BackupDR.V1Beta.TriggerRestoreCleanupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_TriggerRestoreCleanup, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new RestoreVerificationPlan in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateRestoreVerificationPlan(global::Google.Cloud.BackupDR.V1Beta.CreateRestoreVerificationPlanRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateRestoreVerificationPlan(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new RestoreVerificationPlan in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateRestoreVerificationPlan(global::Google.Cloud.BackupDR.V1Beta.CreateRestoreVerificationPlanRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateRestoreVerificationPlan, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new RestoreVerificationPlan in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateRestoreVerificationPlanAsync(global::Google.Cloud.BackupDR.V1Beta.CreateRestoreVerificationPlanRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateRestoreVerificationPlanAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new RestoreVerificationPlan in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateRestoreVerificationPlanAsync(global::Google.Cloud.BackupDR.V1Beta.CreateRestoreVerificationPlanRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateRestoreVerificationPlan, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new RestoreVerificationPlanAssociation in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateRestoreVerificationPlanAssociation(global::Google.Cloud.BackupDR.V1Beta.CreateRestoreVerificationPlanAssociationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateRestoreVerificationPlanAssociation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new RestoreVerificationPlanAssociation in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateRestoreVerificationPlanAssociation(global::Google.Cloud.BackupDR.V1Beta.CreateRestoreVerificationPlanAssociationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateRestoreVerificationPlanAssociation, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new RestoreVerificationPlanAssociation in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateRestoreVerificationPlanAssociationAsync(global::Google.Cloud.BackupDR.V1Beta.CreateRestoreVerificationPlanAssociationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateRestoreVerificationPlanAssociationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new RestoreVerificationPlanAssociation in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateRestoreVerificationPlanAssociationAsync(global::Google.Cloud.BackupDR.V1Beta.CreateRestoreVerificationPlanAssociationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateRestoreVerificationPlanAssociation, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single RestoreVerificationPlanAssociation in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1Beta.RestoreVerificationPlanAssociation GetRestoreVerificationPlanAssociation(global::Google.Cloud.BackupDR.V1Beta.GetRestoreVerificationPlanAssociationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRestoreVerificationPlanAssociation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single RestoreVerificationPlanAssociation in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1Beta.RestoreVerificationPlanAssociation GetRestoreVerificationPlanAssociation(global::Google.Cloud.BackupDR.V1Beta.GetRestoreVerificationPlanAssociationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetRestoreVerificationPlanAssociation, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single RestoreVerificationPlanAssociation in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1Beta.RestoreVerificationPlanAssociation> GetRestoreVerificationPlanAssociationAsync(global::Google.Cloud.BackupDR.V1Beta.GetRestoreVerificationPlanAssociationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRestoreVerificationPlanAssociationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single RestoreVerificationPlanAssociation in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1Beta.RestoreVerificationPlanAssociation> GetRestoreVerificationPlanAssociationAsync(global::Google.Cloud.BackupDR.V1Beta.GetRestoreVerificationPlanAssociationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetRestoreVerificationPlanAssociation, null, options, request);
+      }
+      /// <summary>
+      /// Lists RestoreVerificationPlanAssociations in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlanAssociationsResponse ListRestoreVerificationPlanAssociations(global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlanAssociationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRestoreVerificationPlanAssociations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists RestoreVerificationPlanAssociations in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlanAssociationsResponse ListRestoreVerificationPlanAssociations(global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlanAssociationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListRestoreVerificationPlanAssociations, null, options, request);
+      }
+      /// <summary>
+      /// Lists RestoreVerificationPlanAssociations in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlanAssociationsResponse> ListRestoreVerificationPlanAssociationsAsync(global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlanAssociationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRestoreVerificationPlanAssociationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists RestoreVerificationPlanAssociations in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlanAssociationsResponse> ListRestoreVerificationPlanAssociationsAsync(global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlanAssociationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListRestoreVerificationPlanAssociations, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single RestoreVerificationPlanAssociation in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteRestoreVerificationPlanAssociation(global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreVerificationPlanAssociationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteRestoreVerificationPlanAssociation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single RestoreVerificationPlanAssociation in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteRestoreVerificationPlanAssociation(global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreVerificationPlanAssociationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteRestoreVerificationPlanAssociation, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single RestoreVerificationPlanAssociation in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteRestoreVerificationPlanAssociationAsync(global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreVerificationPlanAssociationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteRestoreVerificationPlanAssociationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single RestoreVerificationPlanAssociation in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteRestoreVerificationPlanAssociationAsync(global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreVerificationPlanAssociationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteRestoreVerificationPlanAssociation, null, options, request);
+      }
+      /// <summary>
+      /// Triggers a new Restore Verification for the association in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation TriggerRestoreVerification(global::Google.Cloud.BackupDR.V1Beta.TriggerRestoreVerificationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TriggerRestoreVerification(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Triggers a new Restore Verification for the association in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation TriggerRestoreVerification(global::Google.Cloud.BackupDR.V1Beta.TriggerRestoreVerificationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_TriggerRestoreVerification, null, options, request);
+      }
+      /// <summary>
+      /// Triggers a new Restore Verification for the association in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> TriggerRestoreVerificationAsync(global::Google.Cloud.BackupDR.V1Beta.TriggerRestoreVerificationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TriggerRestoreVerificationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Triggers a new Restore Verification for the association in a given
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> TriggerRestoreVerificationAsync(global::Google.Cloud.BackupDR.V1Beta.TriggerRestoreVerificationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_TriggerRestoreVerification, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single RestoreVerificationPlan. Returns the requested
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1Beta.RestoreVerificationPlan GetRestoreVerificationPlan(global::Google.Cloud.BackupDR.V1Beta.GetRestoreVerificationPlanRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRestoreVerificationPlan(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single RestoreVerificationPlan. Returns the requested
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1Beta.RestoreVerificationPlan GetRestoreVerificationPlan(global::Google.Cloud.BackupDR.V1Beta.GetRestoreVerificationPlanRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetRestoreVerificationPlan, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single RestoreVerificationPlan. Returns the requested
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1Beta.RestoreVerificationPlan> GetRestoreVerificationPlanAsync(global::Google.Cloud.BackupDR.V1Beta.GetRestoreVerificationPlanRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRestoreVerificationPlanAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single RestoreVerificationPlan. Returns the requested
+      /// RestoreVerificationPlan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1Beta.RestoreVerificationPlan> GetRestoreVerificationPlanAsync(global::Google.Cloud.BackupDR.V1Beta.GetRestoreVerificationPlanRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetRestoreVerificationPlan, null, options, request);
+      }
+      /// <summary>
+      /// Lists RestoreVerificationPlans in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlansResponse ListRestoreVerificationPlans(global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlansRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRestoreVerificationPlans(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists RestoreVerificationPlans in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlansResponse ListRestoreVerificationPlans(global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlansRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListRestoreVerificationPlans, null, options, request);
+      }
+      /// <summary>
+      /// Lists RestoreVerificationPlans in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlansResponse> ListRestoreVerificationPlansAsync(global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlansRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRestoreVerificationPlansAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists RestoreVerificationPlans in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlansResponse> ListRestoreVerificationPlansAsync(global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlansRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListRestoreVerificationPlans, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single RestoreVerificationPlan. If the `force` flag is set to
+      /// `true`, any RestoreVerificationPlanAssociations linked to this
+      /// RestoreVerificationPlan will also be deleted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteRestoreVerificationPlan(global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreVerificationPlanRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteRestoreVerificationPlan(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single RestoreVerificationPlan. If the `force` flag is set to
+      /// `true`, any RestoreVerificationPlanAssociations linked to this
+      /// RestoreVerificationPlan will also be deleted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteRestoreVerificationPlan(global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreVerificationPlanRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteRestoreVerificationPlan, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single RestoreVerificationPlan. If the `force` flag is set to
+      /// `true`, any RestoreVerificationPlanAssociations linked to this
+      /// RestoreVerificationPlan will also be deleted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteRestoreVerificationPlanAsync(global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreVerificationPlanRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteRestoreVerificationPlanAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single RestoreVerificationPlan. If the `force` flag is set to
+      /// `true`, any RestoreVerificationPlanAssociations linked to this
+      /// RestoreVerificationPlan will also be deleted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteRestoreVerificationPlanAsync(global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreVerificationPlanRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteRestoreVerificationPlan, null, options, request);
       }
       /// <summary>
       /// Creates a new BackupVault in a given project and location.
@@ -3627,6 +4948,24 @@ namespace Google.Cloud.BackupDR.V1Beta {
           .AddMethod(__Method_GetManagementServer, serviceImpl.GetManagementServer)
           .AddMethod(__Method_CreateManagementServer, serviceImpl.CreateManagementServer)
           .AddMethod(__Method_DeleteManagementServer, serviceImpl.DeleteManagementServer)
+          .AddMethod(__Method_CreateRestoreTemplate, serviceImpl.CreateRestoreTemplate)
+          .AddMethod(__Method_GetRestoreTemplate, serviceImpl.GetRestoreTemplate)
+          .AddMethod(__Method_ListRestoreTemplates, serviceImpl.ListRestoreTemplates)
+          .AddMethod(__Method_UpdateRestoreTemplate, serviceImpl.UpdateRestoreTemplate)
+          .AddMethod(__Method_DeleteRestoreTemplate, serviceImpl.DeleteRestoreTemplate)
+          .AddMethod(__Method_RunRestoreTemplate, serviceImpl.RunRestoreTemplate)
+          .AddMethod(__Method_GetRestoreTemplateExecution, serviceImpl.GetRestoreTemplateExecution)
+          .AddMethod(__Method_ListRestoreTemplateExecutions, serviceImpl.ListRestoreTemplateExecutions)
+          .AddMethod(__Method_TriggerRestoreCleanup, serviceImpl.TriggerRestoreCleanup)
+          .AddMethod(__Method_CreateRestoreVerificationPlan, serviceImpl.CreateRestoreVerificationPlan)
+          .AddMethod(__Method_CreateRestoreVerificationPlanAssociation, serviceImpl.CreateRestoreVerificationPlanAssociation)
+          .AddMethod(__Method_GetRestoreVerificationPlanAssociation, serviceImpl.GetRestoreVerificationPlanAssociation)
+          .AddMethod(__Method_ListRestoreVerificationPlanAssociations, serviceImpl.ListRestoreVerificationPlanAssociations)
+          .AddMethod(__Method_DeleteRestoreVerificationPlanAssociation, serviceImpl.DeleteRestoreVerificationPlanAssociation)
+          .AddMethod(__Method_TriggerRestoreVerification, serviceImpl.TriggerRestoreVerification)
+          .AddMethod(__Method_GetRestoreVerificationPlan, serviceImpl.GetRestoreVerificationPlan)
+          .AddMethod(__Method_ListRestoreVerificationPlans, serviceImpl.ListRestoreVerificationPlans)
+          .AddMethod(__Method_DeleteRestoreVerificationPlan, serviceImpl.DeleteRestoreVerificationPlan)
           .AddMethod(__Method_CreateBackupVault, serviceImpl.CreateBackupVault)
           .AddMethod(__Method_ListBackupVaults, serviceImpl.ListBackupVaults)
           .AddMethod(__Method_FetchUsableBackupVaults, serviceImpl.FetchUsableBackupVaults)
@@ -3685,6 +5024,24 @@ namespace Google.Cloud.BackupDR.V1Beta {
       serviceBinder.AddMethod(__Method_GetManagementServer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.GetManagementServerRequest, global::Google.Cloud.BackupDR.V1Beta.ManagementServer>(serviceImpl.GetManagementServer));
       serviceBinder.AddMethod(__Method_CreateManagementServer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.CreateManagementServerRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateManagementServer));
       serviceBinder.AddMethod(__Method_DeleteManagementServer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.DeleteManagementServerRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteManagementServer));
+      serviceBinder.AddMethod(__Method_CreateRestoreTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.CreateRestoreTemplateRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateRestoreTemplate));
+      serviceBinder.AddMethod(__Method_GetRestoreTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.GetRestoreTemplateRequest, global::Google.Cloud.BackupDR.V1Beta.RestoreTemplate>(serviceImpl.GetRestoreTemplate));
+      serviceBinder.AddMethod(__Method_ListRestoreTemplates, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplatesRequest, global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplatesResponse>(serviceImpl.ListRestoreTemplates));
+      serviceBinder.AddMethod(__Method_UpdateRestoreTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.UpdateRestoreTemplateRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateRestoreTemplate));
+      serviceBinder.AddMethod(__Method_DeleteRestoreTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreTemplateRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteRestoreTemplate));
+      serviceBinder.AddMethod(__Method_RunRestoreTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.RunRestoreTemplateRequest, global::Google.LongRunning.Operation>(serviceImpl.RunRestoreTemplate));
+      serviceBinder.AddMethod(__Method_GetRestoreTemplateExecution, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.GetRestoreTemplateExecutionRequest, global::Google.Cloud.BackupDR.V1Beta.RestoreTemplateExecution>(serviceImpl.GetRestoreTemplateExecution));
+      serviceBinder.AddMethod(__Method_ListRestoreTemplateExecutions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplateExecutionsRequest, global::Google.Cloud.BackupDR.V1Beta.ListRestoreTemplateExecutionsResponse>(serviceImpl.ListRestoreTemplateExecutions));
+      serviceBinder.AddMethod(__Method_TriggerRestoreCleanup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.TriggerRestoreCleanupRequest, global::Google.LongRunning.Operation>(serviceImpl.TriggerRestoreCleanup));
+      serviceBinder.AddMethod(__Method_CreateRestoreVerificationPlan, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.CreateRestoreVerificationPlanRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateRestoreVerificationPlan));
+      serviceBinder.AddMethod(__Method_CreateRestoreVerificationPlanAssociation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.CreateRestoreVerificationPlanAssociationRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateRestoreVerificationPlanAssociation));
+      serviceBinder.AddMethod(__Method_GetRestoreVerificationPlanAssociation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.GetRestoreVerificationPlanAssociationRequest, global::Google.Cloud.BackupDR.V1Beta.RestoreVerificationPlanAssociation>(serviceImpl.GetRestoreVerificationPlanAssociation));
+      serviceBinder.AddMethod(__Method_ListRestoreVerificationPlanAssociations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlanAssociationsRequest, global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlanAssociationsResponse>(serviceImpl.ListRestoreVerificationPlanAssociations));
+      serviceBinder.AddMethod(__Method_DeleteRestoreVerificationPlanAssociation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreVerificationPlanAssociationRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteRestoreVerificationPlanAssociation));
+      serviceBinder.AddMethod(__Method_TriggerRestoreVerification, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.TriggerRestoreVerificationRequest, global::Google.LongRunning.Operation>(serviceImpl.TriggerRestoreVerification));
+      serviceBinder.AddMethod(__Method_GetRestoreVerificationPlan, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.GetRestoreVerificationPlanRequest, global::Google.Cloud.BackupDR.V1Beta.RestoreVerificationPlan>(serviceImpl.GetRestoreVerificationPlan));
+      serviceBinder.AddMethod(__Method_ListRestoreVerificationPlans, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlansRequest, global::Google.Cloud.BackupDR.V1Beta.ListRestoreVerificationPlansResponse>(serviceImpl.ListRestoreVerificationPlans));
+      serviceBinder.AddMethod(__Method_DeleteRestoreVerificationPlan, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.DeleteRestoreVerificationPlanRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteRestoreVerificationPlan));
       serviceBinder.AddMethod(__Method_CreateBackupVault, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.CreateBackupVaultRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateBackupVault));
       serviceBinder.AddMethod(__Method_ListBackupVaults, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.ListBackupVaultsRequest, global::Google.Cloud.BackupDR.V1Beta.ListBackupVaultsResponse>(serviceImpl.ListBackupVaults));
       serviceBinder.AddMethod(__Method_FetchUsableBackupVaults, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1Beta.FetchUsableBackupVaultsRequest, global::Google.Cloud.BackupDR.V1Beta.FetchUsableBackupVaultsResponse>(serviceImpl.FetchUsableBackupVaults));

@@ -56,6 +56,34 @@ namespace Google.Cloud.BackupDR.V1Beta
             CreateManagementServerOperationsSettings = existing.CreateManagementServerOperationsSettings.Clone();
             DeleteManagementServerSettings = existing.DeleteManagementServerSettings;
             DeleteManagementServerOperationsSettings = existing.DeleteManagementServerOperationsSettings.Clone();
+            CreateRestoreTemplateSettings = existing.CreateRestoreTemplateSettings;
+            CreateRestoreTemplateOperationsSettings = existing.CreateRestoreTemplateOperationsSettings.Clone();
+            GetRestoreTemplateSettings = existing.GetRestoreTemplateSettings;
+            ListRestoreTemplatesSettings = existing.ListRestoreTemplatesSettings;
+            UpdateRestoreTemplateSettings = existing.UpdateRestoreTemplateSettings;
+            UpdateRestoreTemplateOperationsSettings = existing.UpdateRestoreTemplateOperationsSettings.Clone();
+            DeleteRestoreTemplateSettings = existing.DeleteRestoreTemplateSettings;
+            DeleteRestoreTemplateOperationsSettings = existing.DeleteRestoreTemplateOperationsSettings.Clone();
+            RunRestoreTemplateSettings = existing.RunRestoreTemplateSettings;
+            RunRestoreTemplateOperationsSettings = existing.RunRestoreTemplateOperationsSettings.Clone();
+            GetRestoreTemplateExecutionSettings = existing.GetRestoreTemplateExecutionSettings;
+            ListRestoreTemplateExecutionsSettings = existing.ListRestoreTemplateExecutionsSettings;
+            TriggerRestoreCleanupSettings = existing.TriggerRestoreCleanupSettings;
+            TriggerRestoreCleanupOperationsSettings = existing.TriggerRestoreCleanupOperationsSettings.Clone();
+            CreateRestoreVerificationPlanSettings = existing.CreateRestoreVerificationPlanSettings;
+            CreateRestoreVerificationPlanOperationsSettings = existing.CreateRestoreVerificationPlanOperationsSettings.Clone();
+            CreateRestoreVerificationPlanAssociationSettings = existing.CreateRestoreVerificationPlanAssociationSettings;
+            CreateRestoreVerificationPlanAssociationOperationsSettings = existing.CreateRestoreVerificationPlanAssociationOperationsSettings.Clone();
+            GetRestoreVerificationPlanAssociationSettings = existing.GetRestoreVerificationPlanAssociationSettings;
+            ListRestoreVerificationPlanAssociationsSettings = existing.ListRestoreVerificationPlanAssociationsSettings;
+            DeleteRestoreVerificationPlanAssociationSettings = existing.DeleteRestoreVerificationPlanAssociationSettings;
+            DeleteRestoreVerificationPlanAssociationOperationsSettings = existing.DeleteRestoreVerificationPlanAssociationOperationsSettings.Clone();
+            TriggerRestoreVerificationSettings = existing.TriggerRestoreVerificationSettings;
+            TriggerRestoreVerificationOperationsSettings = existing.TriggerRestoreVerificationOperationsSettings.Clone();
+            GetRestoreVerificationPlanSettings = existing.GetRestoreVerificationPlanSettings;
+            ListRestoreVerificationPlansSettings = existing.ListRestoreVerificationPlansSettings;
+            DeleteRestoreVerificationPlanSettings = existing.DeleteRestoreVerificationPlanSettings;
+            DeleteRestoreVerificationPlanOperationsSettings = existing.DeleteRestoreVerificationPlanOperationsSettings.Clone();
             CreateBackupVaultSettings = existing.CreateBackupVaultSettings;
             CreateBackupVaultOperationsSettings = existing.CreateBackupVaultOperationsSettings.Clone();
             ListBackupVaultsSettings = existing.ListBackupVaultsSettings;
@@ -220,6 +248,459 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteManagementServerOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.CreateRestoreTemplate</c> and <c>BackupDRClient.CreateRestoreTemplateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateRestoreTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupDRClient.CreateRestoreTemplate</c> and
+        /// <c>BackupDRClient.CreateRestoreTemplateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateRestoreTemplateOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.GetRestoreTemplate</c> and <c>BackupDRClient.GetRestoreTemplateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetRestoreTemplateSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.ListRestoreTemplates</c> and <c>BackupDRClient.ListRestoreTemplatesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListRestoreTemplatesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.UpdateRestoreTemplate</c> and <c>BackupDRClient.UpdateRestoreTemplateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateRestoreTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupDRClient.UpdateRestoreTemplate</c> and
+        /// <c>BackupDRClient.UpdateRestoreTemplateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateRestoreTemplateOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.DeleteRestoreTemplate</c> and <c>BackupDRClient.DeleteRestoreTemplateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteRestoreTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupDRClient.DeleteRestoreTemplate</c> and
+        /// <c>BackupDRClient.DeleteRestoreTemplateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteRestoreTemplateOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.RunRestoreTemplate</c> and <c>BackupDRClient.RunRestoreTemplateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RunRestoreTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupDRClient.RunRestoreTemplate</c> and
+        /// <c>BackupDRClient.RunRestoreTemplateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RunRestoreTemplateOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.GetRestoreTemplateExecution</c> and <c>BackupDRClient.GetRestoreTemplateExecutionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetRestoreTemplateExecutionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.ListRestoreTemplateExecutions</c> and <c>BackupDRClient.ListRestoreTemplateExecutionsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListRestoreTemplateExecutionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.TriggerRestoreCleanup</c> and <c>BackupDRClient.TriggerRestoreCleanupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings TriggerRestoreCleanupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupDRClient.TriggerRestoreCleanup</c> and
+        /// <c>BackupDRClient.TriggerRestoreCleanupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings TriggerRestoreCleanupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.CreateRestoreVerificationPlan</c> and <c>BackupDRClient.CreateRestoreVerificationPlanAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateRestoreVerificationPlanSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupDRClient.CreateRestoreVerificationPlan</c> and
+        /// <c>BackupDRClient.CreateRestoreVerificationPlanAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateRestoreVerificationPlanOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.CreateRestoreVerificationPlanAssociation</c> and
+        /// <c>BackupDRClient.CreateRestoreVerificationPlanAssociationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateRestoreVerificationPlanAssociationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupDRClient.CreateRestoreVerificationPlanAssociation</c>
+        /// and <c>BackupDRClient.CreateRestoreVerificationPlanAssociationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateRestoreVerificationPlanAssociationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.GetRestoreVerificationPlanAssociation</c> and
+        /// <c>BackupDRClient.GetRestoreVerificationPlanAssociationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetRestoreVerificationPlanAssociationSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.ListRestoreVerificationPlanAssociations</c> and
+        /// <c>BackupDRClient.ListRestoreVerificationPlanAssociationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListRestoreVerificationPlanAssociationsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.DeleteRestoreVerificationPlanAssociation</c> and
+        /// <c>BackupDRClient.DeleteRestoreVerificationPlanAssociationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteRestoreVerificationPlanAssociationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupDRClient.DeleteRestoreVerificationPlanAssociation</c>
+        /// and <c>BackupDRClient.DeleteRestoreVerificationPlanAssociationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteRestoreVerificationPlanAssociationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.TriggerRestoreVerification</c> and <c>BackupDRClient.TriggerRestoreVerificationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings TriggerRestoreVerificationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupDRClient.TriggerRestoreVerification</c> and
+        /// <c>BackupDRClient.TriggerRestoreVerificationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings TriggerRestoreVerificationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.GetRestoreVerificationPlan</c> and <c>BackupDRClient.GetRestoreVerificationPlanAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetRestoreVerificationPlanSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.ListRestoreVerificationPlans</c> and <c>BackupDRClient.ListRestoreVerificationPlansAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListRestoreVerificationPlansSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.DeleteRestoreVerificationPlan</c> and <c>BackupDRClient.DeleteRestoreVerificationPlanAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteRestoreVerificationPlanSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupDRClient.DeleteRestoreVerificationPlan</c> and
+        /// <c>BackupDRClient.DeleteRestoreVerificationPlanAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteRestoreVerificationPlanOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -2006,6 +2487,2819 @@ namespace Google.Cloud.BackupDR.V1Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteManagementServerAsync(ManagementServerName name, st::CancellationToken cancellationToken) =>
             DeleteManagementServerAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new RestoreTemplate in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreTemplate, OperationMetadata> CreateRestoreTemplate(CreateRestoreTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new RestoreTemplate in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreTemplate, OperationMetadata>> CreateRestoreTemplateAsync(CreateRestoreTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new RestoreTemplate in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreTemplate, OperationMetadata>> CreateRestoreTemplateAsync(CreateRestoreTemplateRequest request, st::CancellationToken cancellationToken) =>
+            CreateRestoreTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateRestoreTemplate</c>.</summary>
+        public virtual lro::OperationsClient CreateRestoreTemplateOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateRestoreTemplate</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<RestoreTemplate, OperationMetadata> PollOnceCreateRestoreTemplate(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RestoreTemplate, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateRestoreTemplateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateRestoreTemplate</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<RestoreTemplate, OperationMetadata>> PollOnceCreateRestoreTemplateAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RestoreTemplate, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateRestoreTemplateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new RestoreTemplate in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The restore template project and location in the format
+        /// 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="restoreTemplate">
+        /// Required. A RestoreTemplate resource.
+        /// </param>
+        /// <param name="restoreTemplateId">
+        /// Required. The ID of the restore template to create. The ID must be
+        /// unique for the specified project and location.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreTemplate, OperationMetadata> CreateRestoreTemplate(string parent, RestoreTemplate restoreTemplate, string restoreTemplateId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRestoreTemplate(new CreateRestoreTemplateRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                RestoreTemplateId = gax::GaxPreconditions.CheckNotNullOrEmpty(restoreTemplateId, nameof(restoreTemplateId)),
+                RestoreTemplate = gax::GaxPreconditions.CheckNotNull(restoreTemplate, nameof(restoreTemplate)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new RestoreTemplate in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The restore template project and location in the format
+        /// 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="restoreTemplate">
+        /// Required. A RestoreTemplate resource.
+        /// </param>
+        /// <param name="restoreTemplateId">
+        /// Required. The ID of the restore template to create. The ID must be
+        /// unique for the specified project and location.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreTemplate, OperationMetadata>> CreateRestoreTemplateAsync(string parent, RestoreTemplate restoreTemplate, string restoreTemplateId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRestoreTemplateAsync(new CreateRestoreTemplateRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                RestoreTemplateId = gax::GaxPreconditions.CheckNotNullOrEmpty(restoreTemplateId, nameof(restoreTemplateId)),
+                RestoreTemplate = gax::GaxPreconditions.CheckNotNull(restoreTemplate, nameof(restoreTemplate)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new RestoreTemplate in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The restore template project and location in the format
+        /// 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="restoreTemplate">
+        /// Required. A RestoreTemplate resource.
+        /// </param>
+        /// <param name="restoreTemplateId">
+        /// Required. The ID of the restore template to create. The ID must be
+        /// unique for the specified project and location.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreTemplate, OperationMetadata>> CreateRestoreTemplateAsync(string parent, RestoreTemplate restoreTemplate, string restoreTemplateId, st::CancellationToken cancellationToken) =>
+            CreateRestoreTemplateAsync(parent, restoreTemplate, restoreTemplateId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new RestoreTemplate in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The restore template project and location in the format
+        /// 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="restoreTemplate">
+        /// Required. A RestoreTemplate resource.
+        /// </param>
+        /// <param name="restoreTemplateId">
+        /// Required. The ID of the restore template to create. The ID must be
+        /// unique for the specified project and location.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreTemplate, OperationMetadata> CreateRestoreTemplate(gagr::LocationName parent, RestoreTemplate restoreTemplate, string restoreTemplateId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRestoreTemplate(new CreateRestoreTemplateRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                RestoreTemplateId = gax::GaxPreconditions.CheckNotNullOrEmpty(restoreTemplateId, nameof(restoreTemplateId)),
+                RestoreTemplate = gax::GaxPreconditions.CheckNotNull(restoreTemplate, nameof(restoreTemplate)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new RestoreTemplate in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The restore template project and location in the format
+        /// 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="restoreTemplate">
+        /// Required. A RestoreTemplate resource.
+        /// </param>
+        /// <param name="restoreTemplateId">
+        /// Required. The ID of the restore template to create. The ID must be
+        /// unique for the specified project and location.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreTemplate, OperationMetadata>> CreateRestoreTemplateAsync(gagr::LocationName parent, RestoreTemplate restoreTemplate, string restoreTemplateId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRestoreTemplateAsync(new CreateRestoreTemplateRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                RestoreTemplateId = gax::GaxPreconditions.CheckNotNullOrEmpty(restoreTemplateId, nameof(restoreTemplateId)),
+                RestoreTemplate = gax::GaxPreconditions.CheckNotNull(restoreTemplate, nameof(restoreTemplate)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new RestoreTemplate in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The restore template project and location in the format
+        /// 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="restoreTemplate">
+        /// Required. A RestoreTemplate resource.
+        /// </param>
+        /// <param name="restoreTemplateId">
+        /// Required. The ID of the restore template to create. The ID must be
+        /// unique for the specified project and location.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreTemplate, OperationMetadata>> CreateRestoreTemplateAsync(gagr::LocationName parent, RestoreTemplate restoreTemplate, string restoreTemplateId, st::CancellationToken cancellationToken) =>
+            CreateRestoreTemplateAsync(parent, restoreTemplate, restoreTemplateId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a RestoreTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RestoreTemplate GetRestoreTemplate(GetRestoreTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a RestoreTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreTemplate> GetRestoreTemplateAsync(GetRestoreTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a RestoreTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreTemplate> GetRestoreTemplateAsync(GetRestoreTemplateRequest request, st::CancellationToken cancellationToken) =>
+            GetRestoreTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a RestoreTemplate.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RestoreTemplate GetRestoreTemplate(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestoreTemplate(new GetRestoreTemplateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a RestoreTemplate.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreTemplate> GetRestoreTemplateAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestoreTemplateAsync(new GetRestoreTemplateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a RestoreTemplate.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreTemplate> GetRestoreTemplateAsync(string name, st::CancellationToken cancellationToken) =>
+            GetRestoreTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a RestoreTemplate.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RestoreTemplate GetRestoreTemplate(RestoreTemplateName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestoreTemplate(new GetRestoreTemplateRequest
+            {
+                RestoreTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a RestoreTemplate.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreTemplate> GetRestoreTemplateAsync(RestoreTemplateName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestoreTemplateAsync(new GetRestoreTemplateRequest
+            {
+                RestoreTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a RestoreTemplate.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreTemplate> GetRestoreTemplateAsync(RestoreTemplateName name, st::CancellationToken cancellationToken) =>
+            GetRestoreTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists RestoreTemplates in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestoreTemplate"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRestoreTemplatesResponse, RestoreTemplate> ListRestoreTemplates(ListRestoreTemplatesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists RestoreTemplates in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RestoreTemplate"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRestoreTemplatesResponse, RestoreTemplate> ListRestoreTemplatesAsync(ListRestoreTemplatesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists RestoreTemplates in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which to list the restore
+        /// templates.
+        /// Format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestoreTemplate"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRestoreTemplatesResponse, RestoreTemplate> ListRestoreTemplates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoreTemplatesRequest request = new ListRestoreTemplatesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoreTemplates(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreTemplates in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which to list the restore
+        /// templates.
+        /// Format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RestoreTemplate"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRestoreTemplatesResponse, RestoreTemplate> ListRestoreTemplatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoreTemplatesRequest request = new ListRestoreTemplatesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoreTemplatesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreTemplates in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which to list the restore
+        /// templates.
+        /// Format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestoreTemplate"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRestoreTemplatesResponse, RestoreTemplate> ListRestoreTemplates(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoreTemplatesRequest request = new ListRestoreTemplatesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoreTemplates(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreTemplates in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which to list the restore
+        /// templates.
+        /// Format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RestoreTemplate"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRestoreTemplatesResponse, RestoreTemplate> ListRestoreTemplatesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoreTemplatesRequest request = new ListRestoreTemplatesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoreTemplatesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the settings of a RestoreTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreTemplate, OperationMetadata> UpdateRestoreTemplate(UpdateRestoreTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the settings of a RestoreTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreTemplate, OperationMetadata>> UpdateRestoreTemplateAsync(UpdateRestoreTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the settings of a RestoreTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreTemplate, OperationMetadata>> UpdateRestoreTemplateAsync(UpdateRestoreTemplateRequest request, st::CancellationToken cancellationToken) =>
+            UpdateRestoreTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateRestoreTemplate</c>.</summary>
+        public virtual lro::OperationsClient UpdateRestoreTemplateOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateRestoreTemplate</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<RestoreTemplate, OperationMetadata> PollOnceUpdateRestoreTemplate(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RestoreTemplate, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateRestoreTemplateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateRestoreTemplate</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<RestoreTemplate, OperationMetadata>> PollOnceUpdateRestoreTemplateAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RestoreTemplate, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateRestoreTemplateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the settings of a RestoreTemplate.
+        /// </summary>
+        /// <param name="restoreTemplate">
+        /// Required. The restore template to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// Field mask is used to specify the fields to be overwritten in the
+        /// RestoreTemplate resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreTemplate, OperationMetadata> UpdateRestoreTemplate(RestoreTemplate restoreTemplate, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateRestoreTemplate(new UpdateRestoreTemplateRequest
+            {
+                UpdateMask = updateMask,
+                RestoreTemplate = gax::GaxPreconditions.CheckNotNull(restoreTemplate, nameof(restoreTemplate)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the settings of a RestoreTemplate.
+        /// </summary>
+        /// <param name="restoreTemplate">
+        /// Required. The restore template to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// Field mask is used to specify the fields to be overwritten in the
+        /// RestoreTemplate resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreTemplate, OperationMetadata>> UpdateRestoreTemplateAsync(RestoreTemplate restoreTemplate, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateRestoreTemplateAsync(new UpdateRestoreTemplateRequest
+            {
+                UpdateMask = updateMask,
+                RestoreTemplate = gax::GaxPreconditions.CheckNotNull(restoreTemplate, nameof(restoreTemplate)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the settings of a RestoreTemplate.
+        /// </summary>
+        /// <param name="restoreTemplate">
+        /// Required. The restore template to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// Field mask is used to specify the fields to be overwritten in the
+        /// RestoreTemplate resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreTemplate, OperationMetadata>> UpdateRestoreTemplateAsync(RestoreTemplate restoreTemplate, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateRestoreTemplateAsync(restoreTemplate, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a RestoreTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteRestoreTemplate(DeleteRestoreTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a RestoreTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreTemplateAsync(DeleteRestoreTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a RestoreTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreTemplateAsync(DeleteRestoreTemplateRequest request, st::CancellationToken cancellationToken) =>
+            DeleteRestoreTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteRestoreTemplate</c>.</summary>
+        public virtual lro::OperationsClient DeleteRestoreTemplateOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteRestoreTemplate</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteRestoreTemplate(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteRestoreTemplateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteRestoreTemplate</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteRestoreTemplateAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteRestoreTemplateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a RestoreTemplate.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template to delete.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteRestoreTemplate(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRestoreTemplate(new DeleteRestoreTemplateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a RestoreTemplate.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template to delete.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreTemplateAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRestoreTemplateAsync(new DeleteRestoreTemplateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a RestoreTemplate.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template to delete.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreTemplateAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteRestoreTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a RestoreTemplate.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template to delete.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteRestoreTemplate(RestoreTemplateName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRestoreTemplate(new DeleteRestoreTemplateRequest
+            {
+                RestoreTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a RestoreTemplate.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template to delete.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreTemplateAsync(RestoreTemplateName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRestoreTemplateAsync(new DeleteRestoreTemplateRequest
+            {
+                RestoreTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a RestoreTemplate.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template to delete.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreTemplateAsync(RestoreTemplateName name, st::CancellationToken cancellationToken) =>
+            DeleteRestoreTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Runs a RestoreTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RunRestoreTemplateResponse, OperationMetadata> RunRestoreTemplate(RunRestoreTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Runs a RestoreTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RunRestoreTemplateResponse, OperationMetadata>> RunRestoreTemplateAsync(RunRestoreTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Runs a RestoreTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RunRestoreTemplateResponse, OperationMetadata>> RunRestoreTemplateAsync(RunRestoreTemplateRequest request, st::CancellationToken cancellationToken) =>
+            RunRestoreTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RunRestoreTemplate</c>.</summary>
+        public virtual lro::OperationsClient RunRestoreTemplateOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RunRestoreTemplate</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<RunRestoreTemplateResponse, OperationMetadata> PollOnceRunRestoreTemplate(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RunRestoreTemplateResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RunRestoreTemplateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RunRestoreTemplate</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<RunRestoreTemplateResponse, OperationMetadata>> PollOnceRunRestoreTemplateAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RunRestoreTemplateResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RunRestoreTemplateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Runs a RestoreTemplate.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template to run.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RunRestoreTemplateResponse, OperationMetadata> RunRestoreTemplate(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RunRestoreTemplate(new RunRestoreTemplateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Runs a RestoreTemplate.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template to run.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RunRestoreTemplateResponse, OperationMetadata>> RunRestoreTemplateAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RunRestoreTemplateAsync(new RunRestoreTemplateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Runs a RestoreTemplate.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template to run.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RunRestoreTemplateResponse, OperationMetadata>> RunRestoreTemplateAsync(string name, st::CancellationToken cancellationToken) =>
+            RunRestoreTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Runs a RestoreTemplate.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template to run.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RunRestoreTemplateResponse, OperationMetadata> RunRestoreTemplate(RestoreTemplateName name, gaxgrpc::CallSettings callSettings = null) =>
+            RunRestoreTemplate(new RunRestoreTemplateRequest
+            {
+                RestoreTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Runs a RestoreTemplate.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template to run.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RunRestoreTemplateResponse, OperationMetadata>> RunRestoreTemplateAsync(RestoreTemplateName name, gaxgrpc::CallSettings callSettings = null) =>
+            RunRestoreTemplateAsync(new RunRestoreTemplateRequest
+            {
+                RestoreTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Runs a RestoreTemplate.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template to run.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RunRestoreTemplateResponse, OperationMetadata>> RunRestoreTemplateAsync(RestoreTemplateName name, st::CancellationToken cancellationToken) =>
+            RunRestoreTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a RestoreTemplateExecution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RestoreTemplateExecution GetRestoreTemplateExecution(GetRestoreTemplateExecutionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a RestoreTemplateExecution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreTemplateExecution> GetRestoreTemplateExecutionAsync(GetRestoreTemplateExecutionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a RestoreTemplateExecution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreTemplateExecution> GetRestoreTemplateExecutionAsync(GetRestoreTemplateExecutionRequest request, st::CancellationToken cancellationToken) =>
+            GetRestoreTemplateExecutionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a RestoreTemplateExecution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template execution to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}/executions/{execution_id}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RestoreTemplateExecution GetRestoreTemplateExecution(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestoreTemplateExecution(new GetRestoreTemplateExecutionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a RestoreTemplateExecution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template execution to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}/executions/{execution_id}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreTemplateExecution> GetRestoreTemplateExecutionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestoreTemplateExecutionAsync(new GetRestoreTemplateExecutionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a RestoreTemplateExecution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template execution to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}/executions/{execution_id}'
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreTemplateExecution> GetRestoreTemplateExecutionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetRestoreTemplateExecutionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a RestoreTemplateExecution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template execution to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}/executions/{execution_id}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RestoreTemplateExecution GetRestoreTemplateExecution(RestoreTemplateExecutionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestoreTemplateExecution(new GetRestoreTemplateExecutionRequest
+            {
+                RestoreTemplateExecutionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a RestoreTemplateExecution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template execution to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}/executions/{execution_id}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreTemplateExecution> GetRestoreTemplateExecutionAsync(RestoreTemplateExecutionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestoreTemplateExecutionAsync(new GetRestoreTemplateExecutionRequest
+            {
+                RestoreTemplateExecutionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a RestoreTemplateExecution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the restore template execution to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}/executions/{execution_id}'
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreTemplateExecution> GetRestoreTemplateExecutionAsync(RestoreTemplateExecutionName name, st::CancellationToken cancellationToken) =>
+            GetRestoreTemplateExecutionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists RestoreTemplateExecutions in a given project, location and restore
+        /// template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestoreTemplateExecution"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRestoreTemplateExecutionsResponse, RestoreTemplateExecution> ListRestoreTemplateExecutions(ListRestoreTemplateExecutionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists RestoreTemplateExecutions in a given project, location and restore
+        /// template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RestoreTemplateExecution"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRestoreTemplateExecutionsResponse, RestoreTemplateExecution> ListRestoreTemplateExecutionsAsync(ListRestoreTemplateExecutionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists RestoreTemplateExecutions in a given project, location and restore
+        /// template.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project, location, and restore template for which to retrieve
+        /// executions information.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreTemplates/{restore_template}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestoreTemplateExecution"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRestoreTemplateExecutionsResponse, RestoreTemplateExecution> ListRestoreTemplateExecutions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoreTemplateExecutionsRequest request = new ListRestoreTemplateExecutionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoreTemplateExecutions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreTemplateExecutions in a given project, location and restore
+        /// template.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project, location, and restore template for which to retrieve
+        /// executions information.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreTemplates/{restore_template}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RestoreTemplateExecution"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRestoreTemplateExecutionsResponse, RestoreTemplateExecution> ListRestoreTemplateExecutionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoreTemplateExecutionsRequest request = new ListRestoreTemplateExecutionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoreTemplateExecutionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreTemplateExecutions in a given project, location and restore
+        /// template.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project, location, and restore template for which to retrieve
+        /// executions information.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreTemplates/{restore_template}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestoreTemplateExecution"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRestoreTemplateExecutionsResponse, RestoreTemplateExecution> ListRestoreTemplateExecutions(RestoreTemplateName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoreTemplateExecutionsRequest request = new ListRestoreTemplateExecutionsRequest
+            {
+                ParentAsRestoreTemplateName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoreTemplateExecutions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreTemplateExecutions in a given project, location and restore
+        /// template.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project, location, and restore template for which to retrieve
+        /// executions information.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreTemplates/{restore_template}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RestoreTemplateExecution"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRestoreTemplateExecutionsResponse, RestoreTemplateExecution> ListRestoreTemplateExecutionsAsync(RestoreTemplateName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoreTemplateExecutionsRequest request = new ListRestoreTemplateExecutionsRequest
+            {
+                ParentAsRestoreTemplateName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoreTemplateExecutionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Triggers cleanup of restored resources created during execution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreTemplateExecution, OperationMetadata> TriggerRestoreCleanup(TriggerRestoreCleanupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Triggers cleanup of restored resources created during execution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreTemplateExecution, OperationMetadata>> TriggerRestoreCleanupAsync(TriggerRestoreCleanupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Triggers cleanup of restored resources created during execution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreTemplateExecution, OperationMetadata>> TriggerRestoreCleanupAsync(TriggerRestoreCleanupRequest request, st::CancellationToken cancellationToken) =>
+            TriggerRestoreCleanupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>TriggerRestoreCleanup</c>.</summary>
+        public virtual lro::OperationsClient TriggerRestoreCleanupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>TriggerRestoreCleanup</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<RestoreTemplateExecution, OperationMetadata> PollOnceTriggerRestoreCleanup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RestoreTemplateExecution, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), TriggerRestoreCleanupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>TriggerRestoreCleanup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<RestoreTemplateExecution, OperationMetadata>> PollOnceTriggerRestoreCleanupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RestoreTemplateExecution, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), TriggerRestoreCleanupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Triggers cleanup of restored resources created during execution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the restore template execution.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}/executions/{execution_id}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreTemplateExecution, OperationMetadata> TriggerRestoreCleanup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            TriggerRestoreCleanup(new TriggerRestoreCleanupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Triggers cleanup of restored resources created during execution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the restore template execution.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}/executions/{execution_id}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreTemplateExecution, OperationMetadata>> TriggerRestoreCleanupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            TriggerRestoreCleanupAsync(new TriggerRestoreCleanupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Triggers cleanup of restored resources created during execution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the restore template execution.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}/executions/{execution_id}'
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreTemplateExecution, OperationMetadata>> TriggerRestoreCleanupAsync(string name, st::CancellationToken cancellationToken) =>
+            TriggerRestoreCleanupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Triggers cleanup of restored resources created during execution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the restore template execution.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}/executions/{execution_id}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreTemplateExecution, OperationMetadata> TriggerRestoreCleanup(RestoreTemplateExecutionName name, gaxgrpc::CallSettings callSettings = null) =>
+            TriggerRestoreCleanup(new TriggerRestoreCleanupRequest
+            {
+                RestoreTemplateExecutionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Triggers cleanup of restored resources created during execution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the restore template execution.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}/executions/{execution_id}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreTemplateExecution, OperationMetadata>> TriggerRestoreCleanupAsync(RestoreTemplateExecutionName name, gaxgrpc::CallSettings callSettings = null) =>
+            TriggerRestoreCleanupAsync(new TriggerRestoreCleanupRequest
+            {
+                RestoreTemplateExecutionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Triggers cleanup of restored resources created during execution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the restore template execution.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}/executions/{execution_id}'
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreTemplateExecution, OperationMetadata>> TriggerRestoreCleanupAsync(RestoreTemplateExecutionName name, st::CancellationToken cancellationToken) =>
+            TriggerRestoreCleanupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlan in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreVerificationPlan, OperationMetadata> CreateRestoreVerificationPlan(CreateRestoreVerificationPlanRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlan in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVerificationPlan, OperationMetadata>> CreateRestoreVerificationPlanAsync(CreateRestoreVerificationPlanRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlan in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVerificationPlan, OperationMetadata>> CreateRestoreVerificationPlanAsync(CreateRestoreVerificationPlanRequest request, st::CancellationToken cancellationToken) =>
+            CreateRestoreVerificationPlanAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateRestoreVerificationPlan</c>.</summary>
+        public virtual lro::OperationsClient CreateRestoreVerificationPlanOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateRestoreVerificationPlan</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<RestoreVerificationPlan, OperationMetadata> PollOnceCreateRestoreVerificationPlan(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RestoreVerificationPlan, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateRestoreVerificationPlanOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateRestoreVerificationPlan</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVerificationPlan, OperationMetadata>> PollOnceCreateRestoreVerificationPlanAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RestoreVerificationPlan, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateRestoreVerificationPlanOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlan in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The `RestoreVerificationPlan` project and location in the format
+        /// `projects/{project}/locations/{location}`. In Google Cloud Backup and DR
+        /// locations map to Google Cloud regions, for example **us-central1**.
+        /// </param>
+        /// <param name="restoreVerificationPlan">
+        /// Required. The `RestoreVerificationPlan` resource object to create.
+        /// </param>
+        /// <param name="restoreVerificationPlanId">
+        /// Required. The name of the `RestoreVerificationPlan` to create. The name
+        /// must be unique for the specified project and location. The name must start
+        /// with a lowercase letter followed by up to 62 lowercase letters, numbers, or
+        /// hyphens. Pattern, `^[a-z]([-a-z0-9]*[a-z0-9])?$`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreVerificationPlan, OperationMetadata> CreateRestoreVerificationPlan(string parent, RestoreVerificationPlan restoreVerificationPlan, string restoreVerificationPlanId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRestoreVerificationPlan(new CreateRestoreVerificationPlanRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                RestoreVerificationPlanId = gax::GaxPreconditions.CheckNotNullOrEmpty(restoreVerificationPlanId, nameof(restoreVerificationPlanId)),
+                RestoreVerificationPlan = gax::GaxPreconditions.CheckNotNull(restoreVerificationPlan, nameof(restoreVerificationPlan)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlan in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The `RestoreVerificationPlan` project and location in the format
+        /// `projects/{project}/locations/{location}`. In Google Cloud Backup and DR
+        /// locations map to Google Cloud regions, for example **us-central1**.
+        /// </param>
+        /// <param name="restoreVerificationPlan">
+        /// Required. The `RestoreVerificationPlan` resource object to create.
+        /// </param>
+        /// <param name="restoreVerificationPlanId">
+        /// Required. The name of the `RestoreVerificationPlan` to create. The name
+        /// must be unique for the specified project and location. The name must start
+        /// with a lowercase letter followed by up to 62 lowercase letters, numbers, or
+        /// hyphens. Pattern, `^[a-z]([-a-z0-9]*[a-z0-9])?$`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVerificationPlan, OperationMetadata>> CreateRestoreVerificationPlanAsync(string parent, RestoreVerificationPlan restoreVerificationPlan, string restoreVerificationPlanId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRestoreVerificationPlanAsync(new CreateRestoreVerificationPlanRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                RestoreVerificationPlanId = gax::GaxPreconditions.CheckNotNullOrEmpty(restoreVerificationPlanId, nameof(restoreVerificationPlanId)),
+                RestoreVerificationPlan = gax::GaxPreconditions.CheckNotNull(restoreVerificationPlan, nameof(restoreVerificationPlan)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlan in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The `RestoreVerificationPlan` project and location in the format
+        /// `projects/{project}/locations/{location}`. In Google Cloud Backup and DR
+        /// locations map to Google Cloud regions, for example **us-central1**.
+        /// </param>
+        /// <param name="restoreVerificationPlan">
+        /// Required. The `RestoreVerificationPlan` resource object to create.
+        /// </param>
+        /// <param name="restoreVerificationPlanId">
+        /// Required. The name of the `RestoreVerificationPlan` to create. The name
+        /// must be unique for the specified project and location. The name must start
+        /// with a lowercase letter followed by up to 62 lowercase letters, numbers, or
+        /// hyphens. Pattern, `^[a-z]([-a-z0-9]*[a-z0-9])?$`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVerificationPlan, OperationMetadata>> CreateRestoreVerificationPlanAsync(string parent, RestoreVerificationPlan restoreVerificationPlan, string restoreVerificationPlanId, st::CancellationToken cancellationToken) =>
+            CreateRestoreVerificationPlanAsync(parent, restoreVerificationPlan, restoreVerificationPlanId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlan in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The `RestoreVerificationPlan` project and location in the format
+        /// `projects/{project}/locations/{location}`. In Google Cloud Backup and DR
+        /// locations map to Google Cloud regions, for example **us-central1**.
+        /// </param>
+        /// <param name="restoreVerificationPlan">
+        /// Required. The `RestoreVerificationPlan` resource object to create.
+        /// </param>
+        /// <param name="restoreVerificationPlanId">
+        /// Required. The name of the `RestoreVerificationPlan` to create. The name
+        /// must be unique for the specified project and location. The name must start
+        /// with a lowercase letter followed by up to 62 lowercase letters, numbers, or
+        /// hyphens. Pattern, `^[a-z]([-a-z0-9]*[a-z0-9])?$`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreVerificationPlan, OperationMetadata> CreateRestoreVerificationPlan(gagr::LocationName parent, RestoreVerificationPlan restoreVerificationPlan, string restoreVerificationPlanId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRestoreVerificationPlan(new CreateRestoreVerificationPlanRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                RestoreVerificationPlanId = gax::GaxPreconditions.CheckNotNullOrEmpty(restoreVerificationPlanId, nameof(restoreVerificationPlanId)),
+                RestoreVerificationPlan = gax::GaxPreconditions.CheckNotNull(restoreVerificationPlan, nameof(restoreVerificationPlan)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlan in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The `RestoreVerificationPlan` project and location in the format
+        /// `projects/{project}/locations/{location}`. In Google Cloud Backup and DR
+        /// locations map to Google Cloud regions, for example **us-central1**.
+        /// </param>
+        /// <param name="restoreVerificationPlan">
+        /// Required. The `RestoreVerificationPlan` resource object to create.
+        /// </param>
+        /// <param name="restoreVerificationPlanId">
+        /// Required. The name of the `RestoreVerificationPlan` to create. The name
+        /// must be unique for the specified project and location. The name must start
+        /// with a lowercase letter followed by up to 62 lowercase letters, numbers, or
+        /// hyphens. Pattern, `^[a-z]([-a-z0-9]*[a-z0-9])?$`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVerificationPlan, OperationMetadata>> CreateRestoreVerificationPlanAsync(gagr::LocationName parent, RestoreVerificationPlan restoreVerificationPlan, string restoreVerificationPlanId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRestoreVerificationPlanAsync(new CreateRestoreVerificationPlanRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                RestoreVerificationPlanId = gax::GaxPreconditions.CheckNotNullOrEmpty(restoreVerificationPlanId, nameof(restoreVerificationPlanId)),
+                RestoreVerificationPlan = gax::GaxPreconditions.CheckNotNull(restoreVerificationPlan, nameof(restoreVerificationPlan)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlan in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The `RestoreVerificationPlan` project and location in the format
+        /// `projects/{project}/locations/{location}`. In Google Cloud Backup and DR
+        /// locations map to Google Cloud regions, for example **us-central1**.
+        /// </param>
+        /// <param name="restoreVerificationPlan">
+        /// Required. The `RestoreVerificationPlan` resource object to create.
+        /// </param>
+        /// <param name="restoreVerificationPlanId">
+        /// Required. The name of the `RestoreVerificationPlan` to create. The name
+        /// must be unique for the specified project and location. The name must start
+        /// with a lowercase letter followed by up to 62 lowercase letters, numbers, or
+        /// hyphens. Pattern, `^[a-z]([-a-z0-9]*[a-z0-9])?$`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVerificationPlan, OperationMetadata>> CreateRestoreVerificationPlanAsync(gagr::LocationName parent, RestoreVerificationPlan restoreVerificationPlan, string restoreVerificationPlanId, st::CancellationToken cancellationToken) =>
+            CreateRestoreVerificationPlanAsync(parent, restoreVerificationPlan, restoreVerificationPlanId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreVerificationPlanAssociation, OperationMetadata> CreateRestoreVerificationPlanAssociation(CreateRestoreVerificationPlanAssociationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVerificationPlanAssociation, OperationMetadata>> CreateRestoreVerificationPlanAssociationAsync(CreateRestoreVerificationPlanAssociationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVerificationPlanAssociation, OperationMetadata>> CreateRestoreVerificationPlanAssociationAsync(CreateRestoreVerificationPlanAssociationRequest request, st::CancellationToken cancellationToken) =>
+            CreateRestoreVerificationPlanAssociationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateRestoreVerificationPlanAssociation</c>.</summary>
+        public virtual lro::OperationsClient CreateRestoreVerificationPlanAssociationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateRestoreVerificationPlanAssociation</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<RestoreVerificationPlanAssociation, OperationMetadata> PollOnceCreateRestoreVerificationPlanAssociation(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RestoreVerificationPlanAssociation, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateRestoreVerificationPlanAssociationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateRestoreVerificationPlanAssociation</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVerificationPlanAssociation, OperationMetadata>> PollOnceCreateRestoreVerificationPlanAssociationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RestoreVerificationPlanAssociation, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateRestoreVerificationPlanAssociationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this association will be created.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}`
+        /// </param>
+        /// <param name="restoreVerificationPlanAssociation">
+        /// Required. The RestoreVerificationPlanAssociation resource to create.
+        /// </param>
+        /// <param name="restoreVerificationPlanAssociationId">
+        /// Required. The ID to use for the association, which will become the final
+        /// component of the association's resource name.
+        /// 
+        /// This value should be 1-63 characters, and valid characters are
+        /// /[a-z0-9_-]/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreVerificationPlanAssociation, OperationMetadata> CreateRestoreVerificationPlanAssociation(string parent, RestoreVerificationPlanAssociation restoreVerificationPlanAssociation, string restoreVerificationPlanAssociationId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRestoreVerificationPlanAssociation(new CreateRestoreVerificationPlanAssociationRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                RestoreVerificationPlanAssociationId = gax::GaxPreconditions.CheckNotNullOrEmpty(restoreVerificationPlanAssociationId, nameof(restoreVerificationPlanAssociationId)),
+                RestoreVerificationPlanAssociation = gax::GaxPreconditions.CheckNotNull(restoreVerificationPlanAssociation, nameof(restoreVerificationPlanAssociation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this association will be created.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}`
+        /// </param>
+        /// <param name="restoreVerificationPlanAssociation">
+        /// Required. The RestoreVerificationPlanAssociation resource to create.
+        /// </param>
+        /// <param name="restoreVerificationPlanAssociationId">
+        /// Required. The ID to use for the association, which will become the final
+        /// component of the association's resource name.
+        /// 
+        /// This value should be 1-63 characters, and valid characters are
+        /// /[a-z0-9_-]/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVerificationPlanAssociation, OperationMetadata>> CreateRestoreVerificationPlanAssociationAsync(string parent, RestoreVerificationPlanAssociation restoreVerificationPlanAssociation, string restoreVerificationPlanAssociationId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRestoreVerificationPlanAssociationAsync(new CreateRestoreVerificationPlanAssociationRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                RestoreVerificationPlanAssociationId = gax::GaxPreconditions.CheckNotNullOrEmpty(restoreVerificationPlanAssociationId, nameof(restoreVerificationPlanAssociationId)),
+                RestoreVerificationPlanAssociation = gax::GaxPreconditions.CheckNotNull(restoreVerificationPlanAssociation, nameof(restoreVerificationPlanAssociation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this association will be created.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}`
+        /// </param>
+        /// <param name="restoreVerificationPlanAssociation">
+        /// Required. The RestoreVerificationPlanAssociation resource to create.
+        /// </param>
+        /// <param name="restoreVerificationPlanAssociationId">
+        /// Required. The ID to use for the association, which will become the final
+        /// component of the association's resource name.
+        /// 
+        /// This value should be 1-63 characters, and valid characters are
+        /// /[a-z0-9_-]/.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVerificationPlanAssociation, OperationMetadata>> CreateRestoreVerificationPlanAssociationAsync(string parent, RestoreVerificationPlanAssociation restoreVerificationPlanAssociation, string restoreVerificationPlanAssociationId, st::CancellationToken cancellationToken) =>
+            CreateRestoreVerificationPlanAssociationAsync(parent, restoreVerificationPlanAssociation, restoreVerificationPlanAssociationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this association will be created.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}`
+        /// </param>
+        /// <param name="restoreVerificationPlanAssociation">
+        /// Required. The RestoreVerificationPlanAssociation resource to create.
+        /// </param>
+        /// <param name="restoreVerificationPlanAssociationId">
+        /// Required. The ID to use for the association, which will become the final
+        /// component of the association's resource name.
+        /// 
+        /// This value should be 1-63 characters, and valid characters are
+        /// /[a-z0-9_-]/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RestoreVerificationPlanAssociation, OperationMetadata> CreateRestoreVerificationPlanAssociation(RestoreVerificationPlanName parent, RestoreVerificationPlanAssociation restoreVerificationPlanAssociation, string restoreVerificationPlanAssociationId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRestoreVerificationPlanAssociation(new CreateRestoreVerificationPlanAssociationRequest
+            {
+                ParentAsRestoreVerificationPlanName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                RestoreVerificationPlanAssociationId = gax::GaxPreconditions.CheckNotNullOrEmpty(restoreVerificationPlanAssociationId, nameof(restoreVerificationPlanAssociationId)),
+                RestoreVerificationPlanAssociation = gax::GaxPreconditions.CheckNotNull(restoreVerificationPlanAssociation, nameof(restoreVerificationPlanAssociation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this association will be created.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}`
+        /// </param>
+        /// <param name="restoreVerificationPlanAssociation">
+        /// Required. The RestoreVerificationPlanAssociation resource to create.
+        /// </param>
+        /// <param name="restoreVerificationPlanAssociationId">
+        /// Required. The ID to use for the association, which will become the final
+        /// component of the association's resource name.
+        /// 
+        /// This value should be 1-63 characters, and valid characters are
+        /// /[a-z0-9_-]/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVerificationPlanAssociation, OperationMetadata>> CreateRestoreVerificationPlanAssociationAsync(RestoreVerificationPlanName parent, RestoreVerificationPlanAssociation restoreVerificationPlanAssociation, string restoreVerificationPlanAssociationId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRestoreVerificationPlanAssociationAsync(new CreateRestoreVerificationPlanAssociationRequest
+            {
+                ParentAsRestoreVerificationPlanName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                RestoreVerificationPlanAssociationId = gax::GaxPreconditions.CheckNotNullOrEmpty(restoreVerificationPlanAssociationId, nameof(restoreVerificationPlanAssociationId)),
+                RestoreVerificationPlanAssociation = gax::GaxPreconditions.CheckNotNull(restoreVerificationPlanAssociation, nameof(restoreVerificationPlanAssociation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this association will be created.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}`
+        /// </param>
+        /// <param name="restoreVerificationPlanAssociation">
+        /// Required. The RestoreVerificationPlanAssociation resource to create.
+        /// </param>
+        /// <param name="restoreVerificationPlanAssociationId">
+        /// Required. The ID to use for the association, which will become the final
+        /// component of the association's resource name.
+        /// 
+        /// This value should be 1-63 characters, and valid characters are
+        /// /[a-z0-9_-]/.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RestoreVerificationPlanAssociation, OperationMetadata>> CreateRestoreVerificationPlanAssociationAsync(RestoreVerificationPlanName parent, RestoreVerificationPlanAssociation restoreVerificationPlanAssociation, string restoreVerificationPlanAssociationId, st::CancellationToken cancellationToken) =>
+            CreateRestoreVerificationPlanAssociationAsync(parent, restoreVerificationPlanAssociation, restoreVerificationPlanAssociationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RestoreVerificationPlanAssociation GetRestoreVerificationPlanAssociation(GetRestoreVerificationPlanAssociationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreVerificationPlanAssociation> GetRestoreVerificationPlanAssociationAsync(GetRestoreVerificationPlanAssociationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreVerificationPlanAssociation> GetRestoreVerificationPlanAssociationAsync(GetRestoreVerificationPlanAssociationRequest request, st::CancellationToken cancellationToken) =>
+            GetRestoreVerificationPlanAssociationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the RestoreVerificationPlanAssociation to
+        /// retrieve.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/{association}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RestoreVerificationPlanAssociation GetRestoreVerificationPlanAssociation(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestoreVerificationPlanAssociation(new GetRestoreVerificationPlanAssociationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the RestoreVerificationPlanAssociation to
+        /// retrieve.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/{association}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreVerificationPlanAssociation> GetRestoreVerificationPlanAssociationAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestoreVerificationPlanAssociationAsync(new GetRestoreVerificationPlanAssociationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the RestoreVerificationPlanAssociation to
+        /// retrieve.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/{association}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreVerificationPlanAssociation> GetRestoreVerificationPlanAssociationAsync(string name, st::CancellationToken cancellationToken) =>
+            GetRestoreVerificationPlanAssociationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the RestoreVerificationPlanAssociation to
+        /// retrieve.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/{association}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RestoreVerificationPlanAssociation GetRestoreVerificationPlanAssociation(RestoreVerificationPlanAssociationName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestoreVerificationPlanAssociation(new GetRestoreVerificationPlanAssociationRequest
+            {
+                RestoreVerificationPlanAssociationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the RestoreVerificationPlanAssociation to
+        /// retrieve.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/{association}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreVerificationPlanAssociation> GetRestoreVerificationPlanAssociationAsync(RestoreVerificationPlanAssociationName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestoreVerificationPlanAssociationAsync(new GetRestoreVerificationPlanAssociationRequest
+            {
+                RestoreVerificationPlanAssociationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the RestoreVerificationPlanAssociation to
+        /// retrieve.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/{association}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreVerificationPlanAssociation> GetRestoreVerificationPlanAssociationAsync(RestoreVerificationPlanAssociationName name, st::CancellationToken cancellationToken) =>
+            GetRestoreVerificationPlanAssociationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists RestoreVerificationPlanAssociations in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestoreVerificationPlanAssociation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRestoreVerificationPlanAssociationsResponse, RestoreVerificationPlanAssociation> ListRestoreVerificationPlanAssociations(ListRestoreVerificationPlanAssociationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists RestoreVerificationPlanAssociations in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="RestoreVerificationPlanAssociation"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListRestoreVerificationPlanAssociationsResponse, RestoreVerificationPlanAssociation> ListRestoreVerificationPlanAssociationsAsync(ListRestoreVerificationPlanAssociationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists RestoreVerificationPlanAssociations in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent RestoreVerificationPlan name.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestoreVerificationPlanAssociation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRestoreVerificationPlanAssociationsResponse, RestoreVerificationPlanAssociation> ListRestoreVerificationPlanAssociations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoreVerificationPlanAssociationsRequest request = new ListRestoreVerificationPlanAssociationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoreVerificationPlanAssociations(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreVerificationPlanAssociations in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent RestoreVerificationPlan name.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="RestoreVerificationPlanAssociation"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListRestoreVerificationPlanAssociationsResponse, RestoreVerificationPlanAssociation> ListRestoreVerificationPlanAssociationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoreVerificationPlanAssociationsRequest request = new ListRestoreVerificationPlanAssociationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoreVerificationPlanAssociationsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreVerificationPlanAssociations in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent RestoreVerificationPlan name.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestoreVerificationPlanAssociation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRestoreVerificationPlanAssociationsResponse, RestoreVerificationPlanAssociation> ListRestoreVerificationPlanAssociations(RestoreVerificationPlanName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoreVerificationPlanAssociationsRequest request = new ListRestoreVerificationPlanAssociationsRequest
+            {
+                ParentAsRestoreVerificationPlanName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoreVerificationPlanAssociations(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreVerificationPlanAssociations in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent RestoreVerificationPlan name.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="RestoreVerificationPlanAssociation"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListRestoreVerificationPlanAssociationsResponse, RestoreVerificationPlanAssociation> ListRestoreVerificationPlanAssociationsAsync(RestoreVerificationPlanName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoreVerificationPlanAssociationsRequest request = new ListRestoreVerificationPlanAssociationsRequest
+            {
+                ParentAsRestoreVerificationPlanName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoreVerificationPlanAssociationsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteRestoreVerificationPlanAssociation(DeleteRestoreVerificationPlanAssociationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreVerificationPlanAssociationAsync(DeleteRestoreVerificationPlanAssociationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreVerificationPlanAssociationAsync(DeleteRestoreVerificationPlanAssociationRequest request, st::CancellationToken cancellationToken) =>
+            DeleteRestoreVerificationPlanAssociationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteRestoreVerificationPlanAssociation</c>.</summary>
+        public virtual lro::OperationsClient DeleteRestoreVerificationPlanAssociationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteRestoreVerificationPlanAssociation</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteRestoreVerificationPlanAssociation(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteRestoreVerificationPlanAssociationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteRestoreVerificationPlanAssociation</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteRestoreVerificationPlanAssociationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteRestoreVerificationPlanAssociationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the RestoreVerificationPlanAssociation to
+        /// delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/{association}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteRestoreVerificationPlanAssociation(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRestoreVerificationPlanAssociation(new DeleteRestoreVerificationPlanAssociationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the RestoreVerificationPlanAssociation to
+        /// delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/{association}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreVerificationPlanAssociationAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRestoreVerificationPlanAssociationAsync(new DeleteRestoreVerificationPlanAssociationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the RestoreVerificationPlanAssociation to
+        /// delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/{association}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreVerificationPlanAssociationAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteRestoreVerificationPlanAssociationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the RestoreVerificationPlanAssociation to
+        /// delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/{association}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteRestoreVerificationPlanAssociation(RestoreVerificationPlanAssociationName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRestoreVerificationPlanAssociation(new DeleteRestoreVerificationPlanAssociationRequest
+            {
+                RestoreVerificationPlanAssociationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the RestoreVerificationPlanAssociation to
+        /// delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/{association}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreVerificationPlanAssociationAsync(RestoreVerificationPlanAssociationName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRestoreVerificationPlanAssociationAsync(new DeleteRestoreVerificationPlanAssociationRequest
+            {
+                RestoreVerificationPlanAssociationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the RestoreVerificationPlanAssociation to
+        /// delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/{association}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreVerificationPlanAssociationAsync(RestoreVerificationPlanAssociationName name, st::CancellationToken cancellationToken) =>
+            DeleteRestoreVerificationPlanAssociationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Triggers a new Restore Verification for the association in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TriggerRestoreVerificationResponse, OperationMetadata> TriggerRestoreVerification(TriggerRestoreVerificationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Triggers a new Restore Verification for the association in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TriggerRestoreVerificationResponse, OperationMetadata>> TriggerRestoreVerificationAsync(TriggerRestoreVerificationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Triggers a new Restore Verification for the association in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TriggerRestoreVerificationResponse, OperationMetadata>> TriggerRestoreVerificationAsync(TriggerRestoreVerificationRequest request, st::CancellationToken cancellationToken) =>
+            TriggerRestoreVerificationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>TriggerRestoreVerification</c>.</summary>
+        public virtual lro::OperationsClient TriggerRestoreVerificationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>TriggerRestoreVerification</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<TriggerRestoreVerificationResponse, OperationMetadata> PollOnceTriggerRestoreVerification(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<TriggerRestoreVerificationResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), TriggerRestoreVerificationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>TriggerRestoreVerification</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<TriggerRestoreVerificationResponse, OperationMetadata>> PollOnceTriggerRestoreVerificationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<TriggerRestoreVerificationResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), TriggerRestoreVerificationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Triggers a new Restore Verification for the association in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the RestoreVerificationPlanAssociation to
+        /// trigger.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/{association}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TriggerRestoreVerificationResponse, OperationMetadata> TriggerRestoreVerification(string name, gaxgrpc::CallSettings callSettings = null) =>
+            TriggerRestoreVerification(new TriggerRestoreVerificationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Triggers a new Restore Verification for the association in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the RestoreVerificationPlanAssociation to
+        /// trigger.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/{association}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TriggerRestoreVerificationResponse, OperationMetadata>> TriggerRestoreVerificationAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            TriggerRestoreVerificationAsync(new TriggerRestoreVerificationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Triggers a new Restore Verification for the association in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the RestoreVerificationPlanAssociation to
+        /// trigger.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/{association}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TriggerRestoreVerificationResponse, OperationMetadata>> TriggerRestoreVerificationAsync(string name, st::CancellationToken cancellationToken) =>
+            TriggerRestoreVerificationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Triggers a new Restore Verification for the association in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the RestoreVerificationPlanAssociation to
+        /// trigger.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/{association}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TriggerRestoreVerificationResponse, OperationMetadata> TriggerRestoreVerification(RestoreVerificationPlanAssociationName name, gaxgrpc::CallSettings callSettings = null) =>
+            TriggerRestoreVerification(new TriggerRestoreVerificationRequest
+            {
+                RestoreVerificationPlanAssociationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Triggers a new Restore Verification for the association in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the RestoreVerificationPlanAssociation to
+        /// trigger.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/{association}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TriggerRestoreVerificationResponse, OperationMetadata>> TriggerRestoreVerificationAsync(RestoreVerificationPlanAssociationName name, gaxgrpc::CallSettings callSettings = null) =>
+            TriggerRestoreVerificationAsync(new TriggerRestoreVerificationRequest
+            {
+                RestoreVerificationPlanAssociationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Triggers a new Restore Verification for the association in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the RestoreVerificationPlanAssociation to
+        /// trigger.
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/{association}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TriggerRestoreVerificationResponse, OperationMetadata>> TriggerRestoreVerificationAsync(RestoreVerificationPlanAssociationName name, st::CancellationToken cancellationToken) =>
+            TriggerRestoreVerificationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlan. Returns the requested
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RestoreVerificationPlan GetRestoreVerificationPlan(GetRestoreVerificationPlanRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlan. Returns the requested
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreVerificationPlan> GetRestoreVerificationPlanAsync(GetRestoreVerificationPlanRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlan. Returns the requested
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreVerificationPlan> GetRestoreVerificationPlanAsync(GetRestoreVerificationPlanRequest request, st::CancellationToken cancellationToken) =>
+            GetRestoreVerificationPlanAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlan. Returns the requested
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the `RestoreVerificationPlan` to retrieve.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RestoreVerificationPlan GetRestoreVerificationPlan(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestoreVerificationPlan(new GetRestoreVerificationPlanRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlan. Returns the requested
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the `RestoreVerificationPlan` to retrieve.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreVerificationPlan> GetRestoreVerificationPlanAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestoreVerificationPlanAsync(new GetRestoreVerificationPlanRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlan. Returns the requested
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the `RestoreVerificationPlan` to retrieve.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreVerificationPlan> GetRestoreVerificationPlanAsync(string name, st::CancellationToken cancellationToken) =>
+            GetRestoreVerificationPlanAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlan. Returns the requested
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the `RestoreVerificationPlan` to retrieve.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RestoreVerificationPlan GetRestoreVerificationPlan(RestoreVerificationPlanName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestoreVerificationPlan(new GetRestoreVerificationPlanRequest
+            {
+                RestoreVerificationPlanName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlan. Returns the requested
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the `RestoreVerificationPlan` to retrieve.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreVerificationPlan> GetRestoreVerificationPlanAsync(RestoreVerificationPlanName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRestoreVerificationPlanAsync(new GetRestoreVerificationPlanRequest
+            {
+                RestoreVerificationPlanName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlan. Returns the requested
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the `RestoreVerificationPlan` to retrieve.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RestoreVerificationPlan> GetRestoreVerificationPlanAsync(RestoreVerificationPlanName name, st::CancellationToken cancellationToken) =>
+            GetRestoreVerificationPlanAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists RestoreVerificationPlans in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestoreVerificationPlan"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRestoreVerificationPlansResponse, RestoreVerificationPlan> ListRestoreVerificationPlans(ListRestoreVerificationPlansRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists RestoreVerificationPlans in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RestoreVerificationPlan"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRestoreVerificationPlansResponse, RestoreVerificationPlan> ListRestoreVerificationPlansAsync(ListRestoreVerificationPlansRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists RestoreVerificationPlans in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve
+        /// `RestoreVerificationPlans` information. Format:
+        /// `projects/{project}/locations/{location}`. In Google Cloud Backup and DR,
+        /// locations map to Google Cloud regions, for example **us-central1**. To
+        /// retrieve restore verification plans for all locations, use
+        /// "-" for the `{location}` value.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestoreVerificationPlan"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRestoreVerificationPlansResponse, RestoreVerificationPlan> ListRestoreVerificationPlans(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoreVerificationPlansRequest request = new ListRestoreVerificationPlansRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoreVerificationPlans(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreVerificationPlans in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve
+        /// `RestoreVerificationPlans` information. Format:
+        /// `projects/{project}/locations/{location}`. In Google Cloud Backup and DR,
+        /// locations map to Google Cloud regions, for example **us-central1**. To
+        /// retrieve restore verification plans for all locations, use
+        /// "-" for the `{location}` value.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RestoreVerificationPlan"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRestoreVerificationPlansResponse, RestoreVerificationPlan> ListRestoreVerificationPlansAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoreVerificationPlansRequest request = new ListRestoreVerificationPlansRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoreVerificationPlansAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreVerificationPlans in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve
+        /// `RestoreVerificationPlans` information. Format:
+        /// `projects/{project}/locations/{location}`. In Google Cloud Backup and DR,
+        /// locations map to Google Cloud regions, for example **us-central1**. To
+        /// retrieve restore verification plans for all locations, use
+        /// "-" for the `{location}` value.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestoreVerificationPlan"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRestoreVerificationPlansResponse, RestoreVerificationPlan> ListRestoreVerificationPlans(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoreVerificationPlansRequest request = new ListRestoreVerificationPlansRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoreVerificationPlans(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreVerificationPlans in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve
+        /// `RestoreVerificationPlans` information. Format:
+        /// `projects/{project}/locations/{location}`. In Google Cloud Backup and DR,
+        /// locations map to Google Cloud regions, for example **us-central1**. To
+        /// retrieve restore verification plans for all locations, use
+        /// "-" for the `{location}` value.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RestoreVerificationPlan"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRestoreVerificationPlansResponse, RestoreVerificationPlan> ListRestoreVerificationPlansAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRestoreVerificationPlansRequest request = new ListRestoreVerificationPlansRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRestoreVerificationPlansAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlan. If the `force` flag is set to
+        /// `true`, any RestoreVerificationPlanAssociations linked to this
+        /// RestoreVerificationPlan will also be deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteRestoreVerificationPlan(DeleteRestoreVerificationPlanRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlan. If the `force` flag is set to
+        /// `true`, any RestoreVerificationPlanAssociations linked to this
+        /// RestoreVerificationPlan will also be deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreVerificationPlanAsync(DeleteRestoreVerificationPlanRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlan. If the `force` flag is set to
+        /// `true`, any RestoreVerificationPlanAssociations linked to this
+        /// RestoreVerificationPlan will also be deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreVerificationPlanAsync(DeleteRestoreVerificationPlanRequest request, st::CancellationToken cancellationToken) =>
+            DeleteRestoreVerificationPlanAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteRestoreVerificationPlan</c>.</summary>
+        public virtual lro::OperationsClient DeleteRestoreVerificationPlanOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteRestoreVerificationPlan</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteRestoreVerificationPlan(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteRestoreVerificationPlanOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteRestoreVerificationPlan</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteRestoreVerificationPlanAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteRestoreVerificationPlanOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlan. If the `force` flag is set to
+        /// `true`, any RestoreVerificationPlanAssociations linked to this
+        /// RestoreVerificationPlan will also be deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the `RestoreVerificationPlan` to delete.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteRestoreVerificationPlan(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRestoreVerificationPlan(new DeleteRestoreVerificationPlanRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlan. If the `force` flag is set to
+        /// `true`, any RestoreVerificationPlanAssociations linked to this
+        /// RestoreVerificationPlan will also be deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the `RestoreVerificationPlan` to delete.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreVerificationPlanAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRestoreVerificationPlanAsync(new DeleteRestoreVerificationPlanRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlan. If the `force` flag is set to
+        /// `true`, any RestoreVerificationPlanAssociations linked to this
+        /// RestoreVerificationPlan will also be deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the `RestoreVerificationPlan` to delete.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreVerificationPlanAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteRestoreVerificationPlanAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlan. If the `force` flag is set to
+        /// `true`, any RestoreVerificationPlanAssociations linked to this
+        /// RestoreVerificationPlan will also be deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the `RestoreVerificationPlan` to delete.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteRestoreVerificationPlan(RestoreVerificationPlanName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRestoreVerificationPlan(new DeleteRestoreVerificationPlanRequest
+            {
+                RestoreVerificationPlanName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlan. If the `force` flag is set to
+        /// `true`, any RestoreVerificationPlanAssociations linked to this
+        /// RestoreVerificationPlan will also be deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the `RestoreVerificationPlan` to delete.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreVerificationPlanAsync(RestoreVerificationPlanName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRestoreVerificationPlanAsync(new DeleteRestoreVerificationPlanRequest
+            {
+                RestoreVerificationPlanName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlan. If the `force` flag is set to
+        /// `true`, any RestoreVerificationPlanAssociations linked to this
+        /// RestoreVerificationPlan will also be deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the `RestoreVerificationPlan` to delete.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreVerificationPlanAsync(RestoreVerificationPlanName name, st::CancellationToken cancellationToken) =>
+            DeleteRestoreVerificationPlanAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new BackupVault in a given project and location.
@@ -8615,6 +11909,42 @@ namespace Google.Cloud.BackupDR.V1Beta
 
         private readonly gaxgrpc::ApiCall<DeleteManagementServerRequest, lro::Operation> _callDeleteManagementServer;
 
+        private readonly gaxgrpc::ApiCall<CreateRestoreTemplateRequest, lro::Operation> _callCreateRestoreTemplate;
+
+        private readonly gaxgrpc::ApiCall<GetRestoreTemplateRequest, RestoreTemplate> _callGetRestoreTemplate;
+
+        private readonly gaxgrpc::ApiCall<ListRestoreTemplatesRequest, ListRestoreTemplatesResponse> _callListRestoreTemplates;
+
+        private readonly gaxgrpc::ApiCall<UpdateRestoreTemplateRequest, lro::Operation> _callUpdateRestoreTemplate;
+
+        private readonly gaxgrpc::ApiCall<DeleteRestoreTemplateRequest, lro::Operation> _callDeleteRestoreTemplate;
+
+        private readonly gaxgrpc::ApiCall<RunRestoreTemplateRequest, lro::Operation> _callRunRestoreTemplate;
+
+        private readonly gaxgrpc::ApiCall<GetRestoreTemplateExecutionRequest, RestoreTemplateExecution> _callGetRestoreTemplateExecution;
+
+        private readonly gaxgrpc::ApiCall<ListRestoreTemplateExecutionsRequest, ListRestoreTemplateExecutionsResponse> _callListRestoreTemplateExecutions;
+
+        private readonly gaxgrpc::ApiCall<TriggerRestoreCleanupRequest, lro::Operation> _callTriggerRestoreCleanup;
+
+        private readonly gaxgrpc::ApiCall<CreateRestoreVerificationPlanRequest, lro::Operation> _callCreateRestoreVerificationPlan;
+
+        private readonly gaxgrpc::ApiCall<CreateRestoreVerificationPlanAssociationRequest, lro::Operation> _callCreateRestoreVerificationPlanAssociation;
+
+        private readonly gaxgrpc::ApiCall<GetRestoreVerificationPlanAssociationRequest, RestoreVerificationPlanAssociation> _callGetRestoreVerificationPlanAssociation;
+
+        private readonly gaxgrpc::ApiCall<ListRestoreVerificationPlanAssociationsRequest, ListRestoreVerificationPlanAssociationsResponse> _callListRestoreVerificationPlanAssociations;
+
+        private readonly gaxgrpc::ApiCall<DeleteRestoreVerificationPlanAssociationRequest, lro::Operation> _callDeleteRestoreVerificationPlanAssociation;
+
+        private readonly gaxgrpc::ApiCall<TriggerRestoreVerificationRequest, lro::Operation> _callTriggerRestoreVerification;
+
+        private readonly gaxgrpc::ApiCall<GetRestoreVerificationPlanRequest, RestoreVerificationPlan> _callGetRestoreVerificationPlan;
+
+        private readonly gaxgrpc::ApiCall<ListRestoreVerificationPlansRequest, ListRestoreVerificationPlansResponse> _callListRestoreVerificationPlans;
+
+        private readonly gaxgrpc::ApiCall<DeleteRestoreVerificationPlanRequest, lro::Operation> _callDeleteRestoreVerificationPlan;
+
         private readonly gaxgrpc::ApiCall<CreateBackupVaultRequest, lro::Operation> _callCreateBackupVault;
 
         private readonly gaxgrpc::ApiCall<ListBackupVaultsRequest, ListBackupVaultsResponse> _callListBackupVaults;
@@ -8722,6 +12052,16 @@ namespace Google.Cloud.BackupDR.V1Beta
             });
             CreateManagementServerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateManagementServerOperationsSettings, logger);
             DeleteManagementServerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteManagementServerOperationsSettings, logger);
+            CreateRestoreTemplateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRestoreTemplateOperationsSettings, logger);
+            UpdateRestoreTemplateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRestoreTemplateOperationsSettings, logger);
+            DeleteRestoreTemplateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRestoreTemplateOperationsSettings, logger);
+            RunRestoreTemplateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunRestoreTemplateOperationsSettings, logger);
+            TriggerRestoreCleanupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.TriggerRestoreCleanupOperationsSettings, logger);
+            CreateRestoreVerificationPlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRestoreVerificationPlanOperationsSettings, logger);
+            CreateRestoreVerificationPlanAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRestoreVerificationPlanAssociationOperationsSettings, logger);
+            DeleteRestoreVerificationPlanAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRestoreVerificationPlanAssociationOperationsSettings, logger);
+            TriggerRestoreVerificationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.TriggerRestoreVerificationOperationsSettings, logger);
+            DeleteRestoreVerificationPlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRestoreVerificationPlanOperationsSettings, logger);
             CreateBackupVaultOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupVaultOperationsSettings, logger);
             UpdateBackupVaultOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupVaultOperationsSettings, logger);
             DeleteBackupVaultOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupVaultOperationsSettings, logger);
@@ -8756,6 +12096,60 @@ namespace Google.Cloud.BackupDR.V1Beta
             _callDeleteManagementServer = clientHelper.BuildApiCall<DeleteManagementServerRequest, lro::Operation>("DeleteManagementServer", grpcClient.DeleteManagementServerAsync, grpcClient.DeleteManagementServer, effectiveSettings.DeleteManagementServerSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteManagementServer);
             Modify_DeleteManagementServerApiCall(ref _callDeleteManagementServer);
+            _callCreateRestoreTemplate = clientHelper.BuildApiCall<CreateRestoreTemplateRequest, lro::Operation>("CreateRestoreTemplate", grpcClient.CreateRestoreTemplateAsync, grpcClient.CreateRestoreTemplate, effectiveSettings.CreateRestoreTemplateSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateRestoreTemplate);
+            Modify_CreateRestoreTemplateApiCall(ref _callCreateRestoreTemplate);
+            _callGetRestoreTemplate = clientHelper.BuildApiCall<GetRestoreTemplateRequest, RestoreTemplate>("GetRestoreTemplate", grpcClient.GetRestoreTemplateAsync, grpcClient.GetRestoreTemplate, effectiveSettings.GetRestoreTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetRestoreTemplate);
+            Modify_GetRestoreTemplateApiCall(ref _callGetRestoreTemplate);
+            _callListRestoreTemplates = clientHelper.BuildApiCall<ListRestoreTemplatesRequest, ListRestoreTemplatesResponse>("ListRestoreTemplates", grpcClient.ListRestoreTemplatesAsync, grpcClient.ListRestoreTemplates, effectiveSettings.ListRestoreTemplatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListRestoreTemplates);
+            Modify_ListRestoreTemplatesApiCall(ref _callListRestoreTemplates);
+            _callUpdateRestoreTemplate = clientHelper.BuildApiCall<UpdateRestoreTemplateRequest, lro::Operation>("UpdateRestoreTemplate", grpcClient.UpdateRestoreTemplateAsync, grpcClient.UpdateRestoreTemplate, effectiveSettings.UpdateRestoreTemplateSettings).WithGoogleRequestParam("restore_template.name", request => request.RestoreTemplate?.Name);
+            Modify_ApiCall(ref _callUpdateRestoreTemplate);
+            Modify_UpdateRestoreTemplateApiCall(ref _callUpdateRestoreTemplate);
+            _callDeleteRestoreTemplate = clientHelper.BuildApiCall<DeleteRestoreTemplateRequest, lro::Operation>("DeleteRestoreTemplate", grpcClient.DeleteRestoreTemplateAsync, grpcClient.DeleteRestoreTemplate, effectiveSettings.DeleteRestoreTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteRestoreTemplate);
+            Modify_DeleteRestoreTemplateApiCall(ref _callDeleteRestoreTemplate);
+            _callRunRestoreTemplate = clientHelper.BuildApiCall<RunRestoreTemplateRequest, lro::Operation>("RunRestoreTemplate", grpcClient.RunRestoreTemplateAsync, grpcClient.RunRestoreTemplate, effectiveSettings.RunRestoreTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRunRestoreTemplate);
+            Modify_RunRestoreTemplateApiCall(ref _callRunRestoreTemplate);
+            _callGetRestoreTemplateExecution = clientHelper.BuildApiCall<GetRestoreTemplateExecutionRequest, RestoreTemplateExecution>("GetRestoreTemplateExecution", grpcClient.GetRestoreTemplateExecutionAsync, grpcClient.GetRestoreTemplateExecution, effectiveSettings.GetRestoreTemplateExecutionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetRestoreTemplateExecution);
+            Modify_GetRestoreTemplateExecutionApiCall(ref _callGetRestoreTemplateExecution);
+            _callListRestoreTemplateExecutions = clientHelper.BuildApiCall<ListRestoreTemplateExecutionsRequest, ListRestoreTemplateExecutionsResponse>("ListRestoreTemplateExecutions", grpcClient.ListRestoreTemplateExecutionsAsync, grpcClient.ListRestoreTemplateExecutions, effectiveSettings.ListRestoreTemplateExecutionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListRestoreTemplateExecutions);
+            Modify_ListRestoreTemplateExecutionsApiCall(ref _callListRestoreTemplateExecutions);
+            _callTriggerRestoreCleanup = clientHelper.BuildApiCall<TriggerRestoreCleanupRequest, lro::Operation>("TriggerRestoreCleanup", grpcClient.TriggerRestoreCleanupAsync, grpcClient.TriggerRestoreCleanup, effectiveSettings.TriggerRestoreCleanupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callTriggerRestoreCleanup);
+            Modify_TriggerRestoreCleanupApiCall(ref _callTriggerRestoreCleanup);
+            _callCreateRestoreVerificationPlan = clientHelper.BuildApiCall<CreateRestoreVerificationPlanRequest, lro::Operation>("CreateRestoreVerificationPlan", grpcClient.CreateRestoreVerificationPlanAsync, grpcClient.CreateRestoreVerificationPlan, effectiveSettings.CreateRestoreVerificationPlanSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateRestoreVerificationPlan);
+            Modify_CreateRestoreVerificationPlanApiCall(ref _callCreateRestoreVerificationPlan);
+            _callCreateRestoreVerificationPlanAssociation = clientHelper.BuildApiCall<CreateRestoreVerificationPlanAssociationRequest, lro::Operation>("CreateRestoreVerificationPlanAssociation", grpcClient.CreateRestoreVerificationPlanAssociationAsync, grpcClient.CreateRestoreVerificationPlanAssociation, effectiveSettings.CreateRestoreVerificationPlanAssociationSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateRestoreVerificationPlanAssociation);
+            Modify_CreateRestoreVerificationPlanAssociationApiCall(ref _callCreateRestoreVerificationPlanAssociation);
+            _callGetRestoreVerificationPlanAssociation = clientHelper.BuildApiCall<GetRestoreVerificationPlanAssociationRequest, RestoreVerificationPlanAssociation>("GetRestoreVerificationPlanAssociation", grpcClient.GetRestoreVerificationPlanAssociationAsync, grpcClient.GetRestoreVerificationPlanAssociation, effectiveSettings.GetRestoreVerificationPlanAssociationSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetRestoreVerificationPlanAssociation);
+            Modify_GetRestoreVerificationPlanAssociationApiCall(ref _callGetRestoreVerificationPlanAssociation);
+            _callListRestoreVerificationPlanAssociations = clientHelper.BuildApiCall<ListRestoreVerificationPlanAssociationsRequest, ListRestoreVerificationPlanAssociationsResponse>("ListRestoreVerificationPlanAssociations", grpcClient.ListRestoreVerificationPlanAssociationsAsync, grpcClient.ListRestoreVerificationPlanAssociations, effectiveSettings.ListRestoreVerificationPlanAssociationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListRestoreVerificationPlanAssociations);
+            Modify_ListRestoreVerificationPlanAssociationsApiCall(ref _callListRestoreVerificationPlanAssociations);
+            _callDeleteRestoreVerificationPlanAssociation = clientHelper.BuildApiCall<DeleteRestoreVerificationPlanAssociationRequest, lro::Operation>("DeleteRestoreVerificationPlanAssociation", grpcClient.DeleteRestoreVerificationPlanAssociationAsync, grpcClient.DeleteRestoreVerificationPlanAssociation, effectiveSettings.DeleteRestoreVerificationPlanAssociationSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteRestoreVerificationPlanAssociation);
+            Modify_DeleteRestoreVerificationPlanAssociationApiCall(ref _callDeleteRestoreVerificationPlanAssociation);
+            _callTriggerRestoreVerification = clientHelper.BuildApiCall<TriggerRestoreVerificationRequest, lro::Operation>("TriggerRestoreVerification", grpcClient.TriggerRestoreVerificationAsync, grpcClient.TriggerRestoreVerification, effectiveSettings.TriggerRestoreVerificationSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callTriggerRestoreVerification);
+            Modify_TriggerRestoreVerificationApiCall(ref _callTriggerRestoreVerification);
+            _callGetRestoreVerificationPlan = clientHelper.BuildApiCall<GetRestoreVerificationPlanRequest, RestoreVerificationPlan>("GetRestoreVerificationPlan", grpcClient.GetRestoreVerificationPlanAsync, grpcClient.GetRestoreVerificationPlan, effectiveSettings.GetRestoreVerificationPlanSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetRestoreVerificationPlan);
+            Modify_GetRestoreVerificationPlanApiCall(ref _callGetRestoreVerificationPlan);
+            _callListRestoreVerificationPlans = clientHelper.BuildApiCall<ListRestoreVerificationPlansRequest, ListRestoreVerificationPlansResponse>("ListRestoreVerificationPlans", grpcClient.ListRestoreVerificationPlansAsync, grpcClient.ListRestoreVerificationPlans, effectiveSettings.ListRestoreVerificationPlansSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListRestoreVerificationPlans);
+            Modify_ListRestoreVerificationPlansApiCall(ref _callListRestoreVerificationPlans);
+            _callDeleteRestoreVerificationPlan = clientHelper.BuildApiCall<DeleteRestoreVerificationPlanRequest, lro::Operation>("DeleteRestoreVerificationPlan", grpcClient.DeleteRestoreVerificationPlanAsync, grpcClient.DeleteRestoreVerificationPlan, effectiveSettings.DeleteRestoreVerificationPlanSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteRestoreVerificationPlan);
+            Modify_DeleteRestoreVerificationPlanApiCall(ref _callDeleteRestoreVerificationPlan);
             _callCreateBackupVault = clientHelper.BuildApiCall<CreateBackupVaultRequest, lro::Operation>("CreateBackupVault", grpcClient.CreateBackupVaultAsync, grpcClient.CreateBackupVault, effectiveSettings.CreateBackupVaultSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBackupVault);
             Modify_CreateBackupVaultApiCall(ref _callCreateBackupVault);
@@ -8904,6 +12298,42 @@ namespace Google.Cloud.BackupDR.V1Beta
 
         partial void Modify_DeleteManagementServerApiCall(ref gaxgrpc::ApiCall<DeleteManagementServerRequest, lro::Operation> call);
 
+        partial void Modify_CreateRestoreTemplateApiCall(ref gaxgrpc::ApiCall<CreateRestoreTemplateRequest, lro::Operation> call);
+
+        partial void Modify_GetRestoreTemplateApiCall(ref gaxgrpc::ApiCall<GetRestoreTemplateRequest, RestoreTemplate> call);
+
+        partial void Modify_ListRestoreTemplatesApiCall(ref gaxgrpc::ApiCall<ListRestoreTemplatesRequest, ListRestoreTemplatesResponse> call);
+
+        partial void Modify_UpdateRestoreTemplateApiCall(ref gaxgrpc::ApiCall<UpdateRestoreTemplateRequest, lro::Operation> call);
+
+        partial void Modify_DeleteRestoreTemplateApiCall(ref gaxgrpc::ApiCall<DeleteRestoreTemplateRequest, lro::Operation> call);
+
+        partial void Modify_RunRestoreTemplateApiCall(ref gaxgrpc::ApiCall<RunRestoreTemplateRequest, lro::Operation> call);
+
+        partial void Modify_GetRestoreTemplateExecutionApiCall(ref gaxgrpc::ApiCall<GetRestoreTemplateExecutionRequest, RestoreTemplateExecution> call);
+
+        partial void Modify_ListRestoreTemplateExecutionsApiCall(ref gaxgrpc::ApiCall<ListRestoreTemplateExecutionsRequest, ListRestoreTemplateExecutionsResponse> call);
+
+        partial void Modify_TriggerRestoreCleanupApiCall(ref gaxgrpc::ApiCall<TriggerRestoreCleanupRequest, lro::Operation> call);
+
+        partial void Modify_CreateRestoreVerificationPlanApiCall(ref gaxgrpc::ApiCall<CreateRestoreVerificationPlanRequest, lro::Operation> call);
+
+        partial void Modify_CreateRestoreVerificationPlanAssociationApiCall(ref gaxgrpc::ApiCall<CreateRestoreVerificationPlanAssociationRequest, lro::Operation> call);
+
+        partial void Modify_GetRestoreVerificationPlanAssociationApiCall(ref gaxgrpc::ApiCall<GetRestoreVerificationPlanAssociationRequest, RestoreVerificationPlanAssociation> call);
+
+        partial void Modify_ListRestoreVerificationPlanAssociationsApiCall(ref gaxgrpc::ApiCall<ListRestoreVerificationPlanAssociationsRequest, ListRestoreVerificationPlanAssociationsResponse> call);
+
+        partial void Modify_DeleteRestoreVerificationPlanAssociationApiCall(ref gaxgrpc::ApiCall<DeleteRestoreVerificationPlanAssociationRequest, lro::Operation> call);
+
+        partial void Modify_TriggerRestoreVerificationApiCall(ref gaxgrpc::ApiCall<TriggerRestoreVerificationRequest, lro::Operation> call);
+
+        partial void Modify_GetRestoreVerificationPlanApiCall(ref gaxgrpc::ApiCall<GetRestoreVerificationPlanRequest, RestoreVerificationPlan> call);
+
+        partial void Modify_ListRestoreVerificationPlansApiCall(ref gaxgrpc::ApiCall<ListRestoreVerificationPlansRequest, ListRestoreVerificationPlansResponse> call);
+
+        partial void Modify_DeleteRestoreVerificationPlanApiCall(ref gaxgrpc::ApiCall<DeleteRestoreVerificationPlanRequest, lro::Operation> call);
+
         partial void Modify_CreateBackupVaultApiCall(ref gaxgrpc::ApiCall<CreateBackupVaultRequest, lro::Operation> call);
 
         partial void Modify_ListBackupVaultsApiCall(ref gaxgrpc::ApiCall<ListBackupVaultsRequest, ListBackupVaultsResponse> call);
@@ -9012,6 +12442,42 @@ namespace Google.Cloud.BackupDR.V1Beta
         partial void Modify_CreateManagementServerRequest(ref CreateManagementServerRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteManagementServerRequest(ref DeleteManagementServerRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateRestoreTemplateRequest(ref CreateRestoreTemplateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetRestoreTemplateRequest(ref GetRestoreTemplateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListRestoreTemplatesRequest(ref ListRestoreTemplatesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateRestoreTemplateRequest(ref UpdateRestoreTemplateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteRestoreTemplateRequest(ref DeleteRestoreTemplateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RunRestoreTemplateRequest(ref RunRestoreTemplateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetRestoreTemplateExecutionRequest(ref GetRestoreTemplateExecutionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListRestoreTemplateExecutionsRequest(ref ListRestoreTemplateExecutionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_TriggerRestoreCleanupRequest(ref TriggerRestoreCleanupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateRestoreVerificationPlanRequest(ref CreateRestoreVerificationPlanRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateRestoreVerificationPlanAssociationRequest(ref CreateRestoreVerificationPlanAssociationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetRestoreVerificationPlanAssociationRequest(ref GetRestoreVerificationPlanAssociationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListRestoreVerificationPlanAssociationsRequest(ref ListRestoreVerificationPlanAssociationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteRestoreVerificationPlanAssociationRequest(ref DeleteRestoreVerificationPlanAssociationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_TriggerRestoreVerificationRequest(ref TriggerRestoreVerificationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetRestoreVerificationPlanRequest(ref GetRestoreVerificationPlanRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListRestoreVerificationPlansRequest(ref ListRestoreVerificationPlansRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteRestoreVerificationPlanRequest(ref DeleteRestoreVerificationPlanRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateBackupVaultRequest(ref CreateBackupVaultRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -9203,6 +12669,488 @@ namespace Google.Cloud.BackupDR.V1Beta
         {
             Modify_DeleteManagementServerRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteManagementServer.Async(request, callSettings).ConfigureAwait(false), DeleteManagementServerOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateRestoreTemplate</c>.</summary>
+        public override lro::OperationsClient CreateRestoreTemplateOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new RestoreTemplate in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<RestoreTemplate, OperationMetadata> CreateRestoreTemplate(CreateRestoreTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateRestoreTemplateRequest(ref request, ref callSettings);
+            return new lro::Operation<RestoreTemplate, OperationMetadata>(_callCreateRestoreTemplate.Sync(request, callSettings), CreateRestoreTemplateOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new RestoreTemplate in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<RestoreTemplate, OperationMetadata>> CreateRestoreTemplateAsync(CreateRestoreTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateRestoreTemplateRequest(ref request, ref callSettings);
+            return new lro::Operation<RestoreTemplate, OperationMetadata>(await _callCreateRestoreTemplate.Async(request, callSettings).ConfigureAwait(false), CreateRestoreTemplateOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets details of a RestoreTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RestoreTemplate GetRestoreTemplate(GetRestoreTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRestoreTemplateRequest(ref request, ref callSettings);
+            return _callGetRestoreTemplate.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a RestoreTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RestoreTemplate> GetRestoreTemplateAsync(GetRestoreTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRestoreTemplateRequest(ref request, ref callSettings);
+            return _callGetRestoreTemplate.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreTemplates in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestoreTemplate"/> resources.</returns>
+        public override gax::PagedEnumerable<ListRestoreTemplatesResponse, RestoreTemplate> ListRestoreTemplates(ListRestoreTemplatesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRestoreTemplatesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListRestoreTemplatesRequest, ListRestoreTemplatesResponse, RestoreTemplate>(_callListRestoreTemplates, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreTemplates in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RestoreTemplate"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListRestoreTemplatesResponse, RestoreTemplate> ListRestoreTemplatesAsync(ListRestoreTemplatesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRestoreTemplatesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRestoreTemplatesRequest, ListRestoreTemplatesResponse, RestoreTemplate>(_callListRestoreTemplates, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateRestoreTemplate</c>.</summary>
+        public override lro::OperationsClient UpdateRestoreTemplateOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the settings of a RestoreTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<RestoreTemplate, OperationMetadata> UpdateRestoreTemplate(UpdateRestoreTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRestoreTemplateRequest(ref request, ref callSettings);
+            return new lro::Operation<RestoreTemplate, OperationMetadata>(_callUpdateRestoreTemplate.Sync(request, callSettings), UpdateRestoreTemplateOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the settings of a RestoreTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<RestoreTemplate, OperationMetadata>> UpdateRestoreTemplateAsync(UpdateRestoreTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRestoreTemplateRequest(ref request, ref callSettings);
+            return new lro::Operation<RestoreTemplate, OperationMetadata>(await _callUpdateRestoreTemplate.Async(request, callSettings).ConfigureAwait(false), UpdateRestoreTemplateOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteRestoreTemplate</c>.</summary>
+        public override lro::OperationsClient DeleteRestoreTemplateOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a RestoreTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteRestoreTemplate(DeleteRestoreTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteRestoreTemplateRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteRestoreTemplate.Sync(request, callSettings), DeleteRestoreTemplateOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a RestoreTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreTemplateAsync(DeleteRestoreTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteRestoreTemplateRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteRestoreTemplate.Async(request, callSettings).ConfigureAwait(false), DeleteRestoreTemplateOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>RunRestoreTemplate</c>.</summary>
+        public override lro::OperationsClient RunRestoreTemplateOperationsClient { get; }
+
+        /// <summary>
+        /// Runs a RestoreTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<RunRestoreTemplateResponse, OperationMetadata> RunRestoreTemplate(RunRestoreTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RunRestoreTemplateRequest(ref request, ref callSettings);
+            return new lro::Operation<RunRestoreTemplateResponse, OperationMetadata>(_callRunRestoreTemplate.Sync(request, callSettings), RunRestoreTemplateOperationsClient);
+        }
+
+        /// <summary>
+        /// Runs a RestoreTemplate.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<RunRestoreTemplateResponse, OperationMetadata>> RunRestoreTemplateAsync(RunRestoreTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RunRestoreTemplateRequest(ref request, ref callSettings);
+            return new lro::Operation<RunRestoreTemplateResponse, OperationMetadata>(await _callRunRestoreTemplate.Async(request, callSettings).ConfigureAwait(false), RunRestoreTemplateOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets details of a RestoreTemplateExecution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RestoreTemplateExecution GetRestoreTemplateExecution(GetRestoreTemplateExecutionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRestoreTemplateExecutionRequest(ref request, ref callSettings);
+            return _callGetRestoreTemplateExecution.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a RestoreTemplateExecution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RestoreTemplateExecution> GetRestoreTemplateExecutionAsync(GetRestoreTemplateExecutionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRestoreTemplateExecutionRequest(ref request, ref callSettings);
+            return _callGetRestoreTemplateExecution.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreTemplateExecutions in a given project, location and restore
+        /// template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestoreTemplateExecution"/> resources.</returns>
+        public override gax::PagedEnumerable<ListRestoreTemplateExecutionsResponse, RestoreTemplateExecution> ListRestoreTemplateExecutions(ListRestoreTemplateExecutionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRestoreTemplateExecutionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListRestoreTemplateExecutionsRequest, ListRestoreTemplateExecutionsResponse, RestoreTemplateExecution>(_callListRestoreTemplateExecutions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreTemplateExecutions in a given project, location and restore
+        /// template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RestoreTemplateExecution"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListRestoreTemplateExecutionsResponse, RestoreTemplateExecution> ListRestoreTemplateExecutionsAsync(ListRestoreTemplateExecutionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRestoreTemplateExecutionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRestoreTemplateExecutionsRequest, ListRestoreTemplateExecutionsResponse, RestoreTemplateExecution>(_callListRestoreTemplateExecutions, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>TriggerRestoreCleanup</c>.</summary>
+        public override lro::OperationsClient TriggerRestoreCleanupOperationsClient { get; }
+
+        /// <summary>
+        /// Triggers cleanup of restored resources created during execution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<RestoreTemplateExecution, OperationMetadata> TriggerRestoreCleanup(TriggerRestoreCleanupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TriggerRestoreCleanupRequest(ref request, ref callSettings);
+            return new lro::Operation<RestoreTemplateExecution, OperationMetadata>(_callTriggerRestoreCleanup.Sync(request, callSettings), TriggerRestoreCleanupOperationsClient);
+        }
+
+        /// <summary>
+        /// Triggers cleanup of restored resources created during execution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<RestoreTemplateExecution, OperationMetadata>> TriggerRestoreCleanupAsync(TriggerRestoreCleanupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TriggerRestoreCleanupRequest(ref request, ref callSettings);
+            return new lro::Operation<RestoreTemplateExecution, OperationMetadata>(await _callTriggerRestoreCleanup.Async(request, callSettings).ConfigureAwait(false), TriggerRestoreCleanupOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateRestoreVerificationPlan</c>.</summary>
+        public override lro::OperationsClient CreateRestoreVerificationPlanOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlan in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<RestoreVerificationPlan, OperationMetadata> CreateRestoreVerificationPlan(CreateRestoreVerificationPlanRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateRestoreVerificationPlanRequest(ref request, ref callSettings);
+            return new lro::Operation<RestoreVerificationPlan, OperationMetadata>(_callCreateRestoreVerificationPlan.Sync(request, callSettings), CreateRestoreVerificationPlanOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlan in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<RestoreVerificationPlan, OperationMetadata>> CreateRestoreVerificationPlanAsync(CreateRestoreVerificationPlanRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateRestoreVerificationPlanRequest(ref request, ref callSettings);
+            return new lro::Operation<RestoreVerificationPlan, OperationMetadata>(await _callCreateRestoreVerificationPlan.Async(request, callSettings).ConfigureAwait(false), CreateRestoreVerificationPlanOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateRestoreVerificationPlanAssociation</c>.</summary>
+        public override lro::OperationsClient CreateRestoreVerificationPlanAssociationOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<RestoreVerificationPlanAssociation, OperationMetadata> CreateRestoreVerificationPlanAssociation(CreateRestoreVerificationPlanAssociationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateRestoreVerificationPlanAssociationRequest(ref request, ref callSettings);
+            return new lro::Operation<RestoreVerificationPlanAssociation, OperationMetadata>(_callCreateRestoreVerificationPlanAssociation.Sync(request, callSettings), CreateRestoreVerificationPlanAssociationOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<RestoreVerificationPlanAssociation, OperationMetadata>> CreateRestoreVerificationPlanAssociationAsync(CreateRestoreVerificationPlanAssociationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateRestoreVerificationPlanAssociationRequest(ref request, ref callSettings);
+            return new lro::Operation<RestoreVerificationPlanAssociation, OperationMetadata>(await _callCreateRestoreVerificationPlanAssociation.Async(request, callSettings).ConfigureAwait(false), CreateRestoreVerificationPlanAssociationOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RestoreVerificationPlanAssociation GetRestoreVerificationPlanAssociation(GetRestoreVerificationPlanAssociationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRestoreVerificationPlanAssociationRequest(ref request, ref callSettings);
+            return _callGetRestoreVerificationPlanAssociation.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RestoreVerificationPlanAssociation> GetRestoreVerificationPlanAssociationAsync(GetRestoreVerificationPlanAssociationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRestoreVerificationPlanAssociationRequest(ref request, ref callSettings);
+            return _callGetRestoreVerificationPlanAssociation.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreVerificationPlanAssociations in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestoreVerificationPlanAssociation"/> resources.</returns>
+        public override gax::PagedEnumerable<ListRestoreVerificationPlanAssociationsResponse, RestoreVerificationPlanAssociation> ListRestoreVerificationPlanAssociations(ListRestoreVerificationPlanAssociationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRestoreVerificationPlanAssociationsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListRestoreVerificationPlanAssociationsRequest, ListRestoreVerificationPlanAssociationsResponse, RestoreVerificationPlanAssociation>(_callListRestoreVerificationPlanAssociations, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreVerificationPlanAssociations in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="RestoreVerificationPlanAssociation"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ListRestoreVerificationPlanAssociationsResponse, RestoreVerificationPlanAssociation> ListRestoreVerificationPlanAssociationsAsync(ListRestoreVerificationPlanAssociationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRestoreVerificationPlanAssociationsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRestoreVerificationPlanAssociationsRequest, ListRestoreVerificationPlanAssociationsResponse, RestoreVerificationPlanAssociation>(_callListRestoreVerificationPlanAssociations, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteRestoreVerificationPlanAssociation</c>.</summary>
+        public override lro::OperationsClient DeleteRestoreVerificationPlanAssociationOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteRestoreVerificationPlanAssociation(DeleteRestoreVerificationPlanAssociationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteRestoreVerificationPlanAssociationRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteRestoreVerificationPlanAssociation.Sync(request, callSettings), DeleteRestoreVerificationPlanAssociationOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlanAssociation in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreVerificationPlanAssociationAsync(DeleteRestoreVerificationPlanAssociationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteRestoreVerificationPlanAssociationRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteRestoreVerificationPlanAssociation.Async(request, callSettings).ConfigureAwait(false), DeleteRestoreVerificationPlanAssociationOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>TriggerRestoreVerification</c>.</summary>
+        public override lro::OperationsClient TriggerRestoreVerificationOperationsClient { get; }
+
+        /// <summary>
+        /// Triggers a new Restore Verification for the association in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<TriggerRestoreVerificationResponse, OperationMetadata> TriggerRestoreVerification(TriggerRestoreVerificationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TriggerRestoreVerificationRequest(ref request, ref callSettings);
+            return new lro::Operation<TriggerRestoreVerificationResponse, OperationMetadata>(_callTriggerRestoreVerification.Sync(request, callSettings), TriggerRestoreVerificationOperationsClient);
+        }
+
+        /// <summary>
+        /// Triggers a new Restore Verification for the association in a given
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<TriggerRestoreVerificationResponse, OperationMetadata>> TriggerRestoreVerificationAsync(TriggerRestoreVerificationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TriggerRestoreVerificationRequest(ref request, ref callSettings);
+            return new lro::Operation<TriggerRestoreVerificationResponse, OperationMetadata>(await _callTriggerRestoreVerification.Async(request, callSettings).ConfigureAwait(false), TriggerRestoreVerificationOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlan. Returns the requested
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RestoreVerificationPlan GetRestoreVerificationPlan(GetRestoreVerificationPlanRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRestoreVerificationPlanRequest(ref request, ref callSettings);
+            return _callGetRestoreVerificationPlan.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single RestoreVerificationPlan. Returns the requested
+        /// RestoreVerificationPlan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RestoreVerificationPlan> GetRestoreVerificationPlanAsync(GetRestoreVerificationPlanRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRestoreVerificationPlanRequest(ref request, ref callSettings);
+            return _callGetRestoreVerificationPlan.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreVerificationPlans in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RestoreVerificationPlan"/> resources.</returns>
+        public override gax::PagedEnumerable<ListRestoreVerificationPlansResponse, RestoreVerificationPlan> ListRestoreVerificationPlans(ListRestoreVerificationPlansRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRestoreVerificationPlansRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListRestoreVerificationPlansRequest, ListRestoreVerificationPlansResponse, RestoreVerificationPlan>(_callListRestoreVerificationPlans, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists RestoreVerificationPlans in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RestoreVerificationPlan"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListRestoreVerificationPlansResponse, RestoreVerificationPlan> ListRestoreVerificationPlansAsync(ListRestoreVerificationPlansRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRestoreVerificationPlansRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRestoreVerificationPlansRequest, ListRestoreVerificationPlansResponse, RestoreVerificationPlan>(_callListRestoreVerificationPlans, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteRestoreVerificationPlan</c>.</summary>
+        public override lro::OperationsClient DeleteRestoreVerificationPlanOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlan. If the `force` flag is set to
+        /// `true`, any RestoreVerificationPlanAssociations linked to this
+        /// RestoreVerificationPlan will also be deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteRestoreVerificationPlan(DeleteRestoreVerificationPlanRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteRestoreVerificationPlanRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteRestoreVerificationPlan.Sync(request, callSettings), DeleteRestoreVerificationPlanOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single RestoreVerificationPlan. If the `force` flag is set to
+        /// `true`, any RestoreVerificationPlanAssociations linked to this
+        /// RestoreVerificationPlan will also be deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRestoreVerificationPlanAsync(DeleteRestoreVerificationPlanRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteRestoreVerificationPlanRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteRestoreVerificationPlan.Async(request, callSettings).ConfigureAwait(false), DeleteRestoreVerificationPlanOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>CreateBackupVault</c>.</summary>
@@ -10358,6 +14306,22 @@ namespace Google.Cloud.BackupDR.V1Beta
     {
     }
 
+    public partial class ListRestoreTemplatesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListRestoreTemplateExecutionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListRestoreVerificationPlanAssociationsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListRestoreVerificationPlansRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListBackupVaultsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -10422,6 +14386,39 @@ namespace Google.Cloud.BackupDR.V1Beta
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<ManagementServer> GetEnumerator() => ManagementServers.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListRestoreTemplatesResponse : gaxgrpc::IPageResponse<RestoreTemplate>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<RestoreTemplate> GetEnumerator() => RestoreTemplates.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListRestoreTemplateExecutionsResponse : gaxgrpc::IPageResponse<RestoreTemplateExecution>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<RestoreTemplateExecution> GetEnumerator() => RestoreTemplateExecutions.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListRestoreVerificationPlanAssociationsResponse : gaxgrpc::IPageResponse<RestoreVerificationPlanAssociation>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<RestoreVerificationPlanAssociation> GetEnumerator() =>
+            RestoreVerificationPlanAssociations.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListRestoreVerificationPlansResponse : gaxgrpc::IPageResponse<RestoreVerificationPlan>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<RestoreVerificationPlan> GetEnumerator() => RestoreVerificationPlans.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

@@ -5176,7 +5176,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-11-02T19:46:09.921505277Z",
-            "lastGeneratedCommit": "4c561f4c54490e2b750b3fcbe463c1a4b06aa614",
+            "lastGeneratedCommit": "b2ab2a7e260ef25004a51d522963f737c4be7be8",
             "lastReleasedCommit": "4c561f4c54490e2b750b3fcbe463c1a4b06aa614",
             "apiPaths": [
                 "google/cloud/backupdr/v1beta"

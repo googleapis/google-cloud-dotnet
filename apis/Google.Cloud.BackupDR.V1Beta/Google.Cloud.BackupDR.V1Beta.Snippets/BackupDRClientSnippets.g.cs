@@ -776,6 +776,3313 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateRestoreTemplate</summary>
+        public void CreateRestoreTemplateRequestObject()
+        {
+            // Snippet: CreateRestoreTemplate(CreateRestoreTemplateRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            CreateRestoreTemplateRequest request = new CreateRestoreTemplateRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                RestoreTemplateId = "",
+                RestoreTemplate = new RestoreTemplate(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<RestoreTemplate, OperationMetadata> response = backupDRClient.CreateRestoreTemplate(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreTemplate, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreTemplate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreTemplate, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateRestoreTemplate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreTemplate retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreTemplateAsync</summary>
+        public async Task CreateRestoreTemplateRequestObjectAsync()
+        {
+            // Snippet: CreateRestoreTemplateAsync(CreateRestoreTemplateRequest, CallSettings)
+            // Additional: CreateRestoreTemplateAsync(CreateRestoreTemplateRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateRestoreTemplateRequest request = new CreateRestoreTemplateRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                RestoreTemplateId = "",
+                RestoreTemplate = new RestoreTemplate(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<RestoreTemplate, OperationMetadata> response = await backupDRClient.CreateRestoreTemplateAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreTemplate, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreTemplate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreTemplate, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateRestoreTemplateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreTemplate retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreTemplate</summary>
+        public void CreateRestoreTemplate()
+        {
+            // Snippet: CreateRestoreTemplate(string, RestoreTemplate, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            RestoreTemplate restoreTemplate = new RestoreTemplate();
+            string restoreTemplateId = "";
+            // Make the request
+            Operation<RestoreTemplate, OperationMetadata> response = backupDRClient.CreateRestoreTemplate(parent, restoreTemplate, restoreTemplateId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreTemplate, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreTemplate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreTemplate, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateRestoreTemplate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreTemplate retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreTemplateAsync</summary>
+        public async Task CreateRestoreTemplateAsync()
+        {
+            // Snippet: CreateRestoreTemplateAsync(string, RestoreTemplate, string, CallSettings)
+            // Additional: CreateRestoreTemplateAsync(string, RestoreTemplate, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            RestoreTemplate restoreTemplate = new RestoreTemplate();
+            string restoreTemplateId = "";
+            // Make the request
+            Operation<RestoreTemplate, OperationMetadata> response = await backupDRClient.CreateRestoreTemplateAsync(parent, restoreTemplate, restoreTemplateId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreTemplate, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreTemplate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreTemplate, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateRestoreTemplateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreTemplate retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreTemplate</summary>
+        public void CreateRestoreTemplateResourceNames()
+        {
+            // Snippet: CreateRestoreTemplate(LocationName, RestoreTemplate, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            RestoreTemplate restoreTemplate = new RestoreTemplate();
+            string restoreTemplateId = "";
+            // Make the request
+            Operation<RestoreTemplate, OperationMetadata> response = backupDRClient.CreateRestoreTemplate(parent, restoreTemplate, restoreTemplateId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreTemplate, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreTemplate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreTemplate, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateRestoreTemplate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreTemplate retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreTemplateAsync</summary>
+        public async Task CreateRestoreTemplateResourceNamesAsync()
+        {
+            // Snippet: CreateRestoreTemplateAsync(LocationName, RestoreTemplate, string, CallSettings)
+            // Additional: CreateRestoreTemplateAsync(LocationName, RestoreTemplate, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            RestoreTemplate restoreTemplate = new RestoreTemplate();
+            string restoreTemplateId = "";
+            // Make the request
+            Operation<RestoreTemplate, OperationMetadata> response = await backupDRClient.CreateRestoreTemplateAsync(parent, restoreTemplate, restoreTemplateId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreTemplate, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreTemplate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreTemplate, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateRestoreTemplateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreTemplate retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreTemplate</summary>
+        public void GetRestoreTemplateRequestObject()
+        {
+            // Snippet: GetRestoreTemplate(GetRestoreTemplateRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            GetRestoreTemplateRequest request = new GetRestoreTemplateRequest
+            {
+                RestoreTemplateName = RestoreTemplateName.FromProjectLocationRestoreTemplate("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]"),
+            };
+            // Make the request
+            RestoreTemplate response = backupDRClient.GetRestoreTemplate(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreTemplateAsync</summary>
+        public async Task GetRestoreTemplateRequestObjectAsync()
+        {
+            // Snippet: GetRestoreTemplateAsync(GetRestoreTemplateRequest, CallSettings)
+            // Additional: GetRestoreTemplateAsync(GetRestoreTemplateRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            GetRestoreTemplateRequest request = new GetRestoreTemplateRequest
+            {
+                RestoreTemplateName = RestoreTemplateName.FromProjectLocationRestoreTemplate("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]"),
+            };
+            // Make the request
+            RestoreTemplate response = await backupDRClient.GetRestoreTemplateAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreTemplate</summary>
+        public void GetRestoreTemplate()
+        {
+            // Snippet: GetRestoreTemplate(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreTemplates/[RESTORE_TEMPLATE]";
+            // Make the request
+            RestoreTemplate response = backupDRClient.GetRestoreTemplate(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreTemplateAsync</summary>
+        public async Task GetRestoreTemplateAsync()
+        {
+            // Snippet: GetRestoreTemplateAsync(string, CallSettings)
+            // Additional: GetRestoreTemplateAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreTemplates/[RESTORE_TEMPLATE]";
+            // Make the request
+            RestoreTemplate response = await backupDRClient.GetRestoreTemplateAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreTemplate</summary>
+        public void GetRestoreTemplateResourceNames()
+        {
+            // Snippet: GetRestoreTemplate(RestoreTemplateName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            RestoreTemplateName name = RestoreTemplateName.FromProjectLocationRestoreTemplate("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]");
+            // Make the request
+            RestoreTemplate response = backupDRClient.GetRestoreTemplate(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreTemplateAsync</summary>
+        public async Task GetRestoreTemplateResourceNamesAsync()
+        {
+            // Snippet: GetRestoreTemplateAsync(RestoreTemplateName, CallSettings)
+            // Additional: GetRestoreTemplateAsync(RestoreTemplateName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreTemplateName name = RestoreTemplateName.FromProjectLocationRestoreTemplate("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]");
+            // Make the request
+            RestoreTemplate response = await backupDRClient.GetRestoreTemplateAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreTemplates</summary>
+        public void ListRestoreTemplatesRequestObject()
+        {
+            // Snippet: ListRestoreTemplates(ListRestoreTemplatesRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListRestoreTemplatesRequest request = new ListRestoreTemplatesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListRestoreTemplatesResponse, RestoreTemplate> response = backupDRClient.ListRestoreTemplates(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RestoreTemplate item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRestoreTemplatesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreTemplate item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreTemplate> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreTemplate item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreTemplatesAsync</summary>
+        public async Task ListRestoreTemplatesRequestObjectAsync()
+        {
+            // Snippet: ListRestoreTemplatesAsync(ListRestoreTemplatesRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListRestoreTemplatesRequest request = new ListRestoreTemplatesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListRestoreTemplatesResponse, RestoreTemplate> response = backupDRClient.ListRestoreTemplatesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (RestoreTemplate item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListRestoreTemplatesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreTemplate item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreTemplate> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreTemplate item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreTemplates</summary>
+        public void ListRestoreTemplates()
+        {
+            // Snippet: ListRestoreTemplates(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListRestoreTemplatesResponse, RestoreTemplate> response = backupDRClient.ListRestoreTemplates(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RestoreTemplate item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRestoreTemplatesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreTemplate item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreTemplate> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreTemplate item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreTemplatesAsync</summary>
+        public async Task ListRestoreTemplatesAsync()
+        {
+            // Snippet: ListRestoreTemplatesAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListRestoreTemplatesResponse, RestoreTemplate> response = backupDRClient.ListRestoreTemplatesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (RestoreTemplate item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListRestoreTemplatesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreTemplate item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreTemplate> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreTemplate item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreTemplates</summary>
+        public void ListRestoreTemplatesResourceNames()
+        {
+            // Snippet: ListRestoreTemplates(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListRestoreTemplatesResponse, RestoreTemplate> response = backupDRClient.ListRestoreTemplates(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RestoreTemplate item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRestoreTemplatesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreTemplate item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreTemplate> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreTemplate item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreTemplatesAsync</summary>
+        public async Task ListRestoreTemplatesResourceNamesAsync()
+        {
+            // Snippet: ListRestoreTemplatesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListRestoreTemplatesResponse, RestoreTemplate> response = backupDRClient.ListRestoreTemplatesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (RestoreTemplate item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListRestoreTemplatesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreTemplate item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreTemplate> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreTemplate item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRestoreTemplate</summary>
+        public void UpdateRestoreTemplateRequestObject()
+        {
+            // Snippet: UpdateRestoreTemplate(UpdateRestoreTemplateRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            UpdateRestoreTemplateRequest request = new UpdateRestoreTemplateRequest
+            {
+                UpdateMask = new FieldMask(),
+                RestoreTemplate = new RestoreTemplate(),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<RestoreTemplate, OperationMetadata> response = backupDRClient.UpdateRestoreTemplate(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreTemplate, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreTemplate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreTemplate, OperationMetadata> retrievedResponse = backupDRClient.PollOnceUpdateRestoreTemplate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreTemplate retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRestoreTemplateAsync</summary>
+        public async Task UpdateRestoreTemplateRequestObjectAsync()
+        {
+            // Snippet: UpdateRestoreTemplateAsync(UpdateRestoreTemplateRequest, CallSettings)
+            // Additional: UpdateRestoreTemplateAsync(UpdateRestoreTemplateRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateRestoreTemplateRequest request = new UpdateRestoreTemplateRequest
+            {
+                UpdateMask = new FieldMask(),
+                RestoreTemplate = new RestoreTemplate(),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<RestoreTemplate, OperationMetadata> response = await backupDRClient.UpdateRestoreTemplateAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreTemplate, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreTemplate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreTemplate, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceUpdateRestoreTemplateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreTemplate retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRestoreTemplate</summary>
+        public void UpdateRestoreTemplate()
+        {
+            // Snippet: UpdateRestoreTemplate(RestoreTemplate, FieldMask, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            RestoreTemplate restoreTemplate = new RestoreTemplate();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<RestoreTemplate, OperationMetadata> response = backupDRClient.UpdateRestoreTemplate(restoreTemplate, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreTemplate, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreTemplate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreTemplate, OperationMetadata> retrievedResponse = backupDRClient.PollOnceUpdateRestoreTemplate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreTemplate retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRestoreTemplateAsync</summary>
+        public async Task UpdateRestoreTemplateAsync()
+        {
+            // Snippet: UpdateRestoreTemplateAsync(RestoreTemplate, FieldMask, CallSettings)
+            // Additional: UpdateRestoreTemplateAsync(RestoreTemplate, FieldMask, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreTemplate restoreTemplate = new RestoreTemplate();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<RestoreTemplate, OperationMetadata> response = await backupDRClient.UpdateRestoreTemplateAsync(restoreTemplate, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreTemplate, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreTemplate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreTemplate, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceUpdateRestoreTemplateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreTemplate retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreTemplate</summary>
+        public void DeleteRestoreTemplateRequestObject()
+        {
+            // Snippet: DeleteRestoreTemplate(DeleteRestoreTemplateRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            DeleteRestoreTemplateRequest request = new DeleteRestoreTemplateRequest
+            {
+                RestoreTemplateName = RestoreTemplateName.FromProjectLocationRestoreTemplate("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]"),
+                RequestId = "",
+                Force = false,
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteRestoreTemplate(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteRestoreTemplate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreTemplateAsync</summary>
+        public async Task DeleteRestoreTemplateRequestObjectAsync()
+        {
+            // Snippet: DeleteRestoreTemplateAsync(DeleteRestoreTemplateRequest, CallSettings)
+            // Additional: DeleteRestoreTemplateAsync(DeleteRestoreTemplateRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteRestoreTemplateRequest request = new DeleteRestoreTemplateRequest
+            {
+                RestoreTemplateName = RestoreTemplateName.FromProjectLocationRestoreTemplate("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]"),
+                RequestId = "",
+                Force = false,
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteRestoreTemplateAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteRestoreTemplateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreTemplate</summary>
+        public void DeleteRestoreTemplate()
+        {
+            // Snippet: DeleteRestoreTemplate(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreTemplates/[RESTORE_TEMPLATE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteRestoreTemplate(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteRestoreTemplate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreTemplateAsync</summary>
+        public async Task DeleteRestoreTemplateAsync()
+        {
+            // Snippet: DeleteRestoreTemplateAsync(string, CallSettings)
+            // Additional: DeleteRestoreTemplateAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreTemplates/[RESTORE_TEMPLATE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteRestoreTemplateAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteRestoreTemplateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreTemplate</summary>
+        public void DeleteRestoreTemplateResourceNames()
+        {
+            // Snippet: DeleteRestoreTemplate(RestoreTemplateName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            RestoreTemplateName name = RestoreTemplateName.FromProjectLocationRestoreTemplate("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteRestoreTemplate(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteRestoreTemplate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreTemplateAsync</summary>
+        public async Task DeleteRestoreTemplateResourceNamesAsync()
+        {
+            // Snippet: DeleteRestoreTemplateAsync(RestoreTemplateName, CallSettings)
+            // Additional: DeleteRestoreTemplateAsync(RestoreTemplateName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreTemplateName name = RestoreTemplateName.FromProjectLocationRestoreTemplate("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteRestoreTemplateAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteRestoreTemplateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunRestoreTemplate</summary>
+        public void RunRestoreTemplateRequestObject()
+        {
+            // Snippet: RunRestoreTemplate(RunRestoreTemplateRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            RunRestoreTemplateRequest request = new RunRestoreTemplateRequest
+            {
+                RestoreTemplateName = RestoreTemplateName.FromProjectLocationRestoreTemplate("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]"),
+                BackupAsBackupName = BackupName.FromProjectLocationBackupvaultDatasourceBackup("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]", "[BACKUP]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<RunRestoreTemplateResponse, OperationMetadata> response = backupDRClient.RunRestoreTemplate(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RunRestoreTemplateResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RunRestoreTemplateResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RunRestoreTemplateResponse, OperationMetadata> retrievedResponse = backupDRClient.PollOnceRunRestoreTemplate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RunRestoreTemplateResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunRestoreTemplateAsync</summary>
+        public async Task RunRestoreTemplateRequestObjectAsync()
+        {
+            // Snippet: RunRestoreTemplateAsync(RunRestoreTemplateRequest, CallSettings)
+            // Additional: RunRestoreTemplateAsync(RunRestoreTemplateRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            RunRestoreTemplateRequest request = new RunRestoreTemplateRequest
+            {
+                RestoreTemplateName = RestoreTemplateName.FromProjectLocationRestoreTemplate("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]"),
+                BackupAsBackupName = BackupName.FromProjectLocationBackupvaultDatasourceBackup("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]", "[BACKUP]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<RunRestoreTemplateResponse, OperationMetadata> response = await backupDRClient.RunRestoreTemplateAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RunRestoreTemplateResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RunRestoreTemplateResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RunRestoreTemplateResponse, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceRunRestoreTemplateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RunRestoreTemplateResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunRestoreTemplate</summary>
+        public void RunRestoreTemplate()
+        {
+            // Snippet: RunRestoreTemplate(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreTemplates/[RESTORE_TEMPLATE]";
+            // Make the request
+            Operation<RunRestoreTemplateResponse, OperationMetadata> response = backupDRClient.RunRestoreTemplate(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RunRestoreTemplateResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RunRestoreTemplateResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RunRestoreTemplateResponse, OperationMetadata> retrievedResponse = backupDRClient.PollOnceRunRestoreTemplate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RunRestoreTemplateResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunRestoreTemplateAsync</summary>
+        public async Task RunRestoreTemplateAsync()
+        {
+            // Snippet: RunRestoreTemplateAsync(string, CallSettings)
+            // Additional: RunRestoreTemplateAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreTemplates/[RESTORE_TEMPLATE]";
+            // Make the request
+            Operation<RunRestoreTemplateResponse, OperationMetadata> response = await backupDRClient.RunRestoreTemplateAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RunRestoreTemplateResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RunRestoreTemplateResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RunRestoreTemplateResponse, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceRunRestoreTemplateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RunRestoreTemplateResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunRestoreTemplate</summary>
+        public void RunRestoreTemplateResourceNames()
+        {
+            // Snippet: RunRestoreTemplate(RestoreTemplateName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            RestoreTemplateName name = RestoreTemplateName.FromProjectLocationRestoreTemplate("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]");
+            // Make the request
+            Operation<RunRestoreTemplateResponse, OperationMetadata> response = backupDRClient.RunRestoreTemplate(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RunRestoreTemplateResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RunRestoreTemplateResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RunRestoreTemplateResponse, OperationMetadata> retrievedResponse = backupDRClient.PollOnceRunRestoreTemplate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RunRestoreTemplateResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunRestoreTemplateAsync</summary>
+        public async Task RunRestoreTemplateResourceNamesAsync()
+        {
+            // Snippet: RunRestoreTemplateAsync(RestoreTemplateName, CallSettings)
+            // Additional: RunRestoreTemplateAsync(RestoreTemplateName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreTemplateName name = RestoreTemplateName.FromProjectLocationRestoreTemplate("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]");
+            // Make the request
+            Operation<RunRestoreTemplateResponse, OperationMetadata> response = await backupDRClient.RunRestoreTemplateAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RunRestoreTemplateResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RunRestoreTemplateResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RunRestoreTemplateResponse, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceRunRestoreTemplateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RunRestoreTemplateResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreTemplateExecution</summary>
+        public void GetRestoreTemplateExecutionRequestObject()
+        {
+            // Snippet: GetRestoreTemplateExecution(GetRestoreTemplateExecutionRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            GetRestoreTemplateExecutionRequest request = new GetRestoreTemplateExecutionRequest
+            {
+                RestoreTemplateExecutionName = RestoreTemplateExecutionName.FromProjectLocationRestoreTemplateExecution("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]", "[EXECUTION]"),
+            };
+            // Make the request
+            RestoreTemplateExecution response = backupDRClient.GetRestoreTemplateExecution(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreTemplateExecutionAsync</summary>
+        public async Task GetRestoreTemplateExecutionRequestObjectAsync()
+        {
+            // Snippet: GetRestoreTemplateExecutionAsync(GetRestoreTemplateExecutionRequest, CallSettings)
+            // Additional: GetRestoreTemplateExecutionAsync(GetRestoreTemplateExecutionRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            GetRestoreTemplateExecutionRequest request = new GetRestoreTemplateExecutionRequest
+            {
+                RestoreTemplateExecutionName = RestoreTemplateExecutionName.FromProjectLocationRestoreTemplateExecution("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]", "[EXECUTION]"),
+            };
+            // Make the request
+            RestoreTemplateExecution response = await backupDRClient.GetRestoreTemplateExecutionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreTemplateExecution</summary>
+        public void GetRestoreTemplateExecution()
+        {
+            // Snippet: GetRestoreTemplateExecution(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreTemplates/[RESTORE_TEMPLATE]/executions/[EXECUTION]";
+            // Make the request
+            RestoreTemplateExecution response = backupDRClient.GetRestoreTemplateExecution(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreTemplateExecutionAsync</summary>
+        public async Task GetRestoreTemplateExecutionAsync()
+        {
+            // Snippet: GetRestoreTemplateExecutionAsync(string, CallSettings)
+            // Additional: GetRestoreTemplateExecutionAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreTemplates/[RESTORE_TEMPLATE]/executions/[EXECUTION]";
+            // Make the request
+            RestoreTemplateExecution response = await backupDRClient.GetRestoreTemplateExecutionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreTemplateExecution</summary>
+        public void GetRestoreTemplateExecutionResourceNames()
+        {
+            // Snippet: GetRestoreTemplateExecution(RestoreTemplateExecutionName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            RestoreTemplateExecutionName name = RestoreTemplateExecutionName.FromProjectLocationRestoreTemplateExecution("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]", "[EXECUTION]");
+            // Make the request
+            RestoreTemplateExecution response = backupDRClient.GetRestoreTemplateExecution(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreTemplateExecutionAsync</summary>
+        public async Task GetRestoreTemplateExecutionResourceNamesAsync()
+        {
+            // Snippet: GetRestoreTemplateExecutionAsync(RestoreTemplateExecutionName, CallSettings)
+            // Additional: GetRestoreTemplateExecutionAsync(RestoreTemplateExecutionName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreTemplateExecutionName name = RestoreTemplateExecutionName.FromProjectLocationRestoreTemplateExecution("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]", "[EXECUTION]");
+            // Make the request
+            RestoreTemplateExecution response = await backupDRClient.GetRestoreTemplateExecutionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreTemplateExecutions</summary>
+        public void ListRestoreTemplateExecutionsRequestObject()
+        {
+            // Snippet: ListRestoreTemplateExecutions(ListRestoreTemplateExecutionsRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListRestoreTemplateExecutionsRequest request = new ListRestoreTemplateExecutionsRequest
+            {
+                ParentAsRestoreTemplateName = RestoreTemplateName.FromProjectLocationRestoreTemplate("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListRestoreTemplateExecutionsResponse, RestoreTemplateExecution> response = backupDRClient.ListRestoreTemplateExecutions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RestoreTemplateExecution item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRestoreTemplateExecutionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreTemplateExecution item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreTemplateExecution> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreTemplateExecution item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreTemplateExecutionsAsync</summary>
+        public async Task ListRestoreTemplateExecutionsRequestObjectAsync()
+        {
+            // Snippet: ListRestoreTemplateExecutionsAsync(ListRestoreTemplateExecutionsRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListRestoreTemplateExecutionsRequest request = new ListRestoreTemplateExecutionsRequest
+            {
+                ParentAsRestoreTemplateName = RestoreTemplateName.FromProjectLocationRestoreTemplate("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListRestoreTemplateExecutionsResponse, RestoreTemplateExecution> response = backupDRClient.ListRestoreTemplateExecutionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (RestoreTemplateExecution item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListRestoreTemplateExecutionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreTemplateExecution item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreTemplateExecution> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreTemplateExecution item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreTemplateExecutions</summary>
+        public void ListRestoreTemplateExecutions()
+        {
+            // Snippet: ListRestoreTemplateExecutions(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/restoreTemplates/[RESTORE_TEMPLATE]";
+            // Make the request
+            PagedEnumerable<ListRestoreTemplateExecutionsResponse, RestoreTemplateExecution> response = backupDRClient.ListRestoreTemplateExecutions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RestoreTemplateExecution item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRestoreTemplateExecutionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreTemplateExecution item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreTemplateExecution> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreTemplateExecution item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreTemplateExecutionsAsync</summary>
+        public async Task ListRestoreTemplateExecutionsAsync()
+        {
+            // Snippet: ListRestoreTemplateExecutionsAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/restoreTemplates/[RESTORE_TEMPLATE]";
+            // Make the request
+            PagedAsyncEnumerable<ListRestoreTemplateExecutionsResponse, RestoreTemplateExecution> response = backupDRClient.ListRestoreTemplateExecutionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (RestoreTemplateExecution item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListRestoreTemplateExecutionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreTemplateExecution item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreTemplateExecution> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreTemplateExecution item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreTemplateExecutions</summary>
+        public void ListRestoreTemplateExecutionsResourceNames()
+        {
+            // Snippet: ListRestoreTemplateExecutions(RestoreTemplateName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            RestoreTemplateName parent = RestoreTemplateName.FromProjectLocationRestoreTemplate("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]");
+            // Make the request
+            PagedEnumerable<ListRestoreTemplateExecutionsResponse, RestoreTemplateExecution> response = backupDRClient.ListRestoreTemplateExecutions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RestoreTemplateExecution item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRestoreTemplateExecutionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreTemplateExecution item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreTemplateExecution> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreTemplateExecution item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreTemplateExecutionsAsync</summary>
+        public async Task ListRestoreTemplateExecutionsResourceNamesAsync()
+        {
+            // Snippet: ListRestoreTemplateExecutionsAsync(RestoreTemplateName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreTemplateName parent = RestoreTemplateName.FromProjectLocationRestoreTemplate("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]");
+            // Make the request
+            PagedAsyncEnumerable<ListRestoreTemplateExecutionsResponse, RestoreTemplateExecution> response = backupDRClient.ListRestoreTemplateExecutionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (RestoreTemplateExecution item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListRestoreTemplateExecutionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreTemplateExecution item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreTemplateExecution> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreTemplateExecution item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for TriggerRestoreCleanup</summary>
+        public void TriggerRestoreCleanupRequestObject()
+        {
+            // Snippet: TriggerRestoreCleanup(TriggerRestoreCleanupRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            TriggerRestoreCleanupRequest request = new TriggerRestoreCleanupRequest
+            {
+                RestoreTemplateExecutionName = RestoreTemplateExecutionName.FromProjectLocationRestoreTemplateExecution("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]", "[EXECUTION]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<RestoreTemplateExecution, OperationMetadata> response = backupDRClient.TriggerRestoreCleanup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreTemplateExecution, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreTemplateExecution result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreTemplateExecution, OperationMetadata> retrievedResponse = backupDRClient.PollOnceTriggerRestoreCleanup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreTemplateExecution retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TriggerRestoreCleanupAsync</summary>
+        public async Task TriggerRestoreCleanupRequestObjectAsync()
+        {
+            // Snippet: TriggerRestoreCleanupAsync(TriggerRestoreCleanupRequest, CallSettings)
+            // Additional: TriggerRestoreCleanupAsync(TriggerRestoreCleanupRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            TriggerRestoreCleanupRequest request = new TriggerRestoreCleanupRequest
+            {
+                RestoreTemplateExecutionName = RestoreTemplateExecutionName.FromProjectLocationRestoreTemplateExecution("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]", "[EXECUTION]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<RestoreTemplateExecution, OperationMetadata> response = await backupDRClient.TriggerRestoreCleanupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreTemplateExecution, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreTemplateExecution result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreTemplateExecution, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceTriggerRestoreCleanupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreTemplateExecution retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TriggerRestoreCleanup</summary>
+        public void TriggerRestoreCleanup()
+        {
+            // Snippet: TriggerRestoreCleanup(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreTemplates/[RESTORE_TEMPLATE]/executions/[EXECUTION]";
+            // Make the request
+            Operation<RestoreTemplateExecution, OperationMetadata> response = backupDRClient.TriggerRestoreCleanup(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreTemplateExecution, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreTemplateExecution result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreTemplateExecution, OperationMetadata> retrievedResponse = backupDRClient.PollOnceTriggerRestoreCleanup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreTemplateExecution retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TriggerRestoreCleanupAsync</summary>
+        public async Task TriggerRestoreCleanupAsync()
+        {
+            // Snippet: TriggerRestoreCleanupAsync(string, CallSettings)
+            // Additional: TriggerRestoreCleanupAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreTemplates/[RESTORE_TEMPLATE]/executions/[EXECUTION]";
+            // Make the request
+            Operation<RestoreTemplateExecution, OperationMetadata> response = await backupDRClient.TriggerRestoreCleanupAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreTemplateExecution, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreTemplateExecution result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreTemplateExecution, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceTriggerRestoreCleanupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreTemplateExecution retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TriggerRestoreCleanup</summary>
+        public void TriggerRestoreCleanupResourceNames()
+        {
+            // Snippet: TriggerRestoreCleanup(RestoreTemplateExecutionName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            RestoreTemplateExecutionName name = RestoreTemplateExecutionName.FromProjectLocationRestoreTemplateExecution("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]", "[EXECUTION]");
+            // Make the request
+            Operation<RestoreTemplateExecution, OperationMetadata> response = backupDRClient.TriggerRestoreCleanup(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreTemplateExecution, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreTemplateExecution result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreTemplateExecution, OperationMetadata> retrievedResponse = backupDRClient.PollOnceTriggerRestoreCleanup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreTemplateExecution retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TriggerRestoreCleanupAsync</summary>
+        public async Task TriggerRestoreCleanupResourceNamesAsync()
+        {
+            // Snippet: TriggerRestoreCleanupAsync(RestoreTemplateExecutionName, CallSettings)
+            // Additional: TriggerRestoreCleanupAsync(RestoreTemplateExecutionName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreTemplateExecutionName name = RestoreTemplateExecutionName.FromProjectLocationRestoreTemplateExecution("[PROJECT]", "[LOCATION]", "[RESTORE_TEMPLATE]", "[EXECUTION]");
+            // Make the request
+            Operation<RestoreTemplateExecution, OperationMetadata> response = await backupDRClient.TriggerRestoreCleanupAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreTemplateExecution, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreTemplateExecution result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreTemplateExecution, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceTriggerRestoreCleanupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreTemplateExecution retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreVerificationPlan</summary>
+        public void CreateRestoreVerificationPlanRequestObject()
+        {
+            // Snippet: CreateRestoreVerificationPlan(CreateRestoreVerificationPlanRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            CreateRestoreVerificationPlanRequest request = new CreateRestoreVerificationPlanRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                RestoreVerificationPlanId = "",
+                RestoreVerificationPlan = new RestoreVerificationPlan(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<RestoreVerificationPlan, OperationMetadata> response = backupDRClient.CreateRestoreVerificationPlan(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreVerificationPlan, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreVerificationPlan result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreVerificationPlan, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateRestoreVerificationPlan(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreVerificationPlan retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreVerificationPlanAsync</summary>
+        public async Task CreateRestoreVerificationPlanRequestObjectAsync()
+        {
+            // Snippet: CreateRestoreVerificationPlanAsync(CreateRestoreVerificationPlanRequest, CallSettings)
+            // Additional: CreateRestoreVerificationPlanAsync(CreateRestoreVerificationPlanRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateRestoreVerificationPlanRequest request = new CreateRestoreVerificationPlanRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                RestoreVerificationPlanId = "",
+                RestoreVerificationPlan = new RestoreVerificationPlan(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<RestoreVerificationPlan, OperationMetadata> response = await backupDRClient.CreateRestoreVerificationPlanAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreVerificationPlan, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreVerificationPlan result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreVerificationPlan, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateRestoreVerificationPlanAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreVerificationPlan retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreVerificationPlan</summary>
+        public void CreateRestoreVerificationPlan()
+        {
+            // Snippet: CreateRestoreVerificationPlan(string, RestoreVerificationPlan, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            RestoreVerificationPlan restoreVerificationPlan = new RestoreVerificationPlan();
+            string restoreVerificationPlanId = "";
+            // Make the request
+            Operation<RestoreVerificationPlan, OperationMetadata> response = backupDRClient.CreateRestoreVerificationPlan(parent, restoreVerificationPlan, restoreVerificationPlanId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreVerificationPlan, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreVerificationPlan result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreVerificationPlan, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateRestoreVerificationPlan(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreVerificationPlan retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreVerificationPlanAsync</summary>
+        public async Task CreateRestoreVerificationPlanAsync()
+        {
+            // Snippet: CreateRestoreVerificationPlanAsync(string, RestoreVerificationPlan, string, CallSettings)
+            // Additional: CreateRestoreVerificationPlanAsync(string, RestoreVerificationPlan, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            RestoreVerificationPlan restoreVerificationPlan = new RestoreVerificationPlan();
+            string restoreVerificationPlanId = "";
+            // Make the request
+            Operation<RestoreVerificationPlan, OperationMetadata> response = await backupDRClient.CreateRestoreVerificationPlanAsync(parent, restoreVerificationPlan, restoreVerificationPlanId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreVerificationPlan, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreVerificationPlan result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreVerificationPlan, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateRestoreVerificationPlanAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreVerificationPlan retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreVerificationPlan</summary>
+        public void CreateRestoreVerificationPlanResourceNames()
+        {
+            // Snippet: CreateRestoreVerificationPlan(LocationName, RestoreVerificationPlan, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            RestoreVerificationPlan restoreVerificationPlan = new RestoreVerificationPlan();
+            string restoreVerificationPlanId = "";
+            // Make the request
+            Operation<RestoreVerificationPlan, OperationMetadata> response = backupDRClient.CreateRestoreVerificationPlan(parent, restoreVerificationPlan, restoreVerificationPlanId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreVerificationPlan, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreVerificationPlan result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreVerificationPlan, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateRestoreVerificationPlan(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreVerificationPlan retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreVerificationPlanAsync</summary>
+        public async Task CreateRestoreVerificationPlanResourceNamesAsync()
+        {
+            // Snippet: CreateRestoreVerificationPlanAsync(LocationName, RestoreVerificationPlan, string, CallSettings)
+            // Additional: CreateRestoreVerificationPlanAsync(LocationName, RestoreVerificationPlan, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            RestoreVerificationPlan restoreVerificationPlan = new RestoreVerificationPlan();
+            string restoreVerificationPlanId = "";
+            // Make the request
+            Operation<RestoreVerificationPlan, OperationMetadata> response = await backupDRClient.CreateRestoreVerificationPlanAsync(parent, restoreVerificationPlan, restoreVerificationPlanId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreVerificationPlan, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreVerificationPlan result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreVerificationPlan, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateRestoreVerificationPlanAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreVerificationPlan retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreVerificationPlanAssociation</summary>
+        public void CreateRestoreVerificationPlanAssociationRequestObject()
+        {
+            // Snippet: CreateRestoreVerificationPlanAssociation(CreateRestoreVerificationPlanAssociationRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            CreateRestoreVerificationPlanAssociationRequest request = new CreateRestoreVerificationPlanAssociationRequest
+            {
+                ParentAsRestoreVerificationPlanName = RestoreVerificationPlanName.FromProjectLocationRestoreVerificationPlan("[PROJECT]", "[LOCATION]", "[RESTOREVERIFICATIONPLAN]"),
+                RestoreVerificationPlanAssociationId = "",
+                RestoreVerificationPlanAssociation = new RestoreVerificationPlanAssociation(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<RestoreVerificationPlanAssociation, OperationMetadata> response = backupDRClient.CreateRestoreVerificationPlanAssociation(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreVerificationPlanAssociation, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreVerificationPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreVerificationPlanAssociation, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateRestoreVerificationPlanAssociation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreVerificationPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreVerificationPlanAssociationAsync</summary>
+        public async Task CreateRestoreVerificationPlanAssociationRequestObjectAsync()
+        {
+            // Snippet: CreateRestoreVerificationPlanAssociationAsync(CreateRestoreVerificationPlanAssociationRequest, CallSettings)
+            // Additional: CreateRestoreVerificationPlanAssociationAsync(CreateRestoreVerificationPlanAssociationRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateRestoreVerificationPlanAssociationRequest request = new CreateRestoreVerificationPlanAssociationRequest
+            {
+                ParentAsRestoreVerificationPlanName = RestoreVerificationPlanName.FromProjectLocationRestoreVerificationPlan("[PROJECT]", "[LOCATION]", "[RESTOREVERIFICATIONPLAN]"),
+                RestoreVerificationPlanAssociationId = "",
+                RestoreVerificationPlanAssociation = new RestoreVerificationPlanAssociation(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<RestoreVerificationPlanAssociation, OperationMetadata> response = await backupDRClient.CreateRestoreVerificationPlanAssociationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreVerificationPlanAssociation, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreVerificationPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreVerificationPlanAssociation, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateRestoreVerificationPlanAssociationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreVerificationPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreVerificationPlanAssociation</summary>
+        public void CreateRestoreVerificationPlanAssociation()
+        {
+            // Snippet: CreateRestoreVerificationPlanAssociation(string, RestoreVerificationPlanAssociation, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/restoreVerificationPlans/[RESTOREVERIFICATIONPLAN]";
+            RestoreVerificationPlanAssociation restoreVerificationPlanAssociation = new RestoreVerificationPlanAssociation();
+            string restoreVerificationPlanAssociationId = "";
+            // Make the request
+            Operation<RestoreVerificationPlanAssociation, OperationMetadata> response = backupDRClient.CreateRestoreVerificationPlanAssociation(parent, restoreVerificationPlanAssociation, restoreVerificationPlanAssociationId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreVerificationPlanAssociation, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreVerificationPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreVerificationPlanAssociation, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateRestoreVerificationPlanAssociation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreVerificationPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreVerificationPlanAssociationAsync</summary>
+        public async Task CreateRestoreVerificationPlanAssociationAsync()
+        {
+            // Snippet: CreateRestoreVerificationPlanAssociationAsync(string, RestoreVerificationPlanAssociation, string, CallSettings)
+            // Additional: CreateRestoreVerificationPlanAssociationAsync(string, RestoreVerificationPlanAssociation, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/restoreVerificationPlans/[RESTOREVERIFICATIONPLAN]";
+            RestoreVerificationPlanAssociation restoreVerificationPlanAssociation = new RestoreVerificationPlanAssociation();
+            string restoreVerificationPlanAssociationId = "";
+            // Make the request
+            Operation<RestoreVerificationPlanAssociation, OperationMetadata> response = await backupDRClient.CreateRestoreVerificationPlanAssociationAsync(parent, restoreVerificationPlanAssociation, restoreVerificationPlanAssociationId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreVerificationPlanAssociation, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreVerificationPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreVerificationPlanAssociation, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateRestoreVerificationPlanAssociationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreVerificationPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreVerificationPlanAssociation</summary>
+        public void CreateRestoreVerificationPlanAssociationResourceNames()
+        {
+            // Snippet: CreateRestoreVerificationPlanAssociation(RestoreVerificationPlanName, RestoreVerificationPlanAssociation, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            RestoreVerificationPlanName parent = RestoreVerificationPlanName.FromProjectLocationRestoreVerificationPlan("[PROJECT]", "[LOCATION]", "[RESTOREVERIFICATIONPLAN]");
+            RestoreVerificationPlanAssociation restoreVerificationPlanAssociation = new RestoreVerificationPlanAssociation();
+            string restoreVerificationPlanAssociationId = "";
+            // Make the request
+            Operation<RestoreVerificationPlanAssociation, OperationMetadata> response = backupDRClient.CreateRestoreVerificationPlanAssociation(parent, restoreVerificationPlanAssociation, restoreVerificationPlanAssociationId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreVerificationPlanAssociation, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreVerificationPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreVerificationPlanAssociation, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateRestoreVerificationPlanAssociation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreVerificationPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRestoreVerificationPlanAssociationAsync</summary>
+        public async Task CreateRestoreVerificationPlanAssociationResourceNamesAsync()
+        {
+            // Snippet: CreateRestoreVerificationPlanAssociationAsync(RestoreVerificationPlanName, RestoreVerificationPlanAssociation, string, CallSettings)
+            // Additional: CreateRestoreVerificationPlanAssociationAsync(RestoreVerificationPlanName, RestoreVerificationPlanAssociation, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreVerificationPlanName parent = RestoreVerificationPlanName.FromProjectLocationRestoreVerificationPlan("[PROJECT]", "[LOCATION]", "[RESTOREVERIFICATIONPLAN]");
+            RestoreVerificationPlanAssociation restoreVerificationPlanAssociation = new RestoreVerificationPlanAssociation();
+            string restoreVerificationPlanAssociationId = "";
+            // Make the request
+            Operation<RestoreVerificationPlanAssociation, OperationMetadata> response = await backupDRClient.CreateRestoreVerificationPlanAssociationAsync(parent, restoreVerificationPlanAssociation, restoreVerificationPlanAssociationId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreVerificationPlanAssociation, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreVerificationPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreVerificationPlanAssociation, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateRestoreVerificationPlanAssociationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreVerificationPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreVerificationPlanAssociation</summary>
+        public void GetRestoreVerificationPlanAssociationRequestObject()
+        {
+            // Snippet: GetRestoreVerificationPlanAssociation(GetRestoreVerificationPlanAssociationRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            GetRestoreVerificationPlanAssociationRequest request = new GetRestoreVerificationPlanAssociationRequest
+            {
+                RestoreVerificationPlanAssociationName = RestoreVerificationPlanAssociationName.FromProjectLocationRestoreVerificationPlanAssociation("[PROJECT]", "[LOCATION]", "[RESTORE_VERIFICATION_PLAN]", "[ASSOCIATION]"),
+            };
+            // Make the request
+            RestoreVerificationPlanAssociation response = backupDRClient.GetRestoreVerificationPlanAssociation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreVerificationPlanAssociationAsync</summary>
+        public async Task GetRestoreVerificationPlanAssociationRequestObjectAsync()
+        {
+            // Snippet: GetRestoreVerificationPlanAssociationAsync(GetRestoreVerificationPlanAssociationRequest, CallSettings)
+            // Additional: GetRestoreVerificationPlanAssociationAsync(GetRestoreVerificationPlanAssociationRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            GetRestoreVerificationPlanAssociationRequest request = new GetRestoreVerificationPlanAssociationRequest
+            {
+                RestoreVerificationPlanAssociationName = RestoreVerificationPlanAssociationName.FromProjectLocationRestoreVerificationPlanAssociation("[PROJECT]", "[LOCATION]", "[RESTORE_VERIFICATION_PLAN]", "[ASSOCIATION]"),
+            };
+            // Make the request
+            RestoreVerificationPlanAssociation response = await backupDRClient.GetRestoreVerificationPlanAssociationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreVerificationPlanAssociation</summary>
+        public void GetRestoreVerificationPlanAssociation()
+        {
+            // Snippet: GetRestoreVerificationPlanAssociation(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreVerificationPlans/[RESTORE_VERIFICATION_PLAN]/associations/[ASSOCIATION]";
+            // Make the request
+            RestoreVerificationPlanAssociation response = backupDRClient.GetRestoreVerificationPlanAssociation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreVerificationPlanAssociationAsync</summary>
+        public async Task GetRestoreVerificationPlanAssociationAsync()
+        {
+            // Snippet: GetRestoreVerificationPlanAssociationAsync(string, CallSettings)
+            // Additional: GetRestoreVerificationPlanAssociationAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreVerificationPlans/[RESTORE_VERIFICATION_PLAN]/associations/[ASSOCIATION]";
+            // Make the request
+            RestoreVerificationPlanAssociation response = await backupDRClient.GetRestoreVerificationPlanAssociationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreVerificationPlanAssociation</summary>
+        public void GetRestoreVerificationPlanAssociationResourceNames()
+        {
+            // Snippet: GetRestoreVerificationPlanAssociation(RestoreVerificationPlanAssociationName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            RestoreVerificationPlanAssociationName name = RestoreVerificationPlanAssociationName.FromProjectLocationRestoreVerificationPlanAssociation("[PROJECT]", "[LOCATION]", "[RESTORE_VERIFICATION_PLAN]", "[ASSOCIATION]");
+            // Make the request
+            RestoreVerificationPlanAssociation response = backupDRClient.GetRestoreVerificationPlanAssociation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreVerificationPlanAssociationAsync</summary>
+        public async Task GetRestoreVerificationPlanAssociationResourceNamesAsync()
+        {
+            // Snippet: GetRestoreVerificationPlanAssociationAsync(RestoreVerificationPlanAssociationName, CallSettings)
+            // Additional: GetRestoreVerificationPlanAssociationAsync(RestoreVerificationPlanAssociationName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreVerificationPlanAssociationName name = RestoreVerificationPlanAssociationName.FromProjectLocationRestoreVerificationPlanAssociation("[PROJECT]", "[LOCATION]", "[RESTORE_VERIFICATION_PLAN]", "[ASSOCIATION]");
+            // Make the request
+            RestoreVerificationPlanAssociation response = await backupDRClient.GetRestoreVerificationPlanAssociationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreVerificationPlanAssociations</summary>
+        public void ListRestoreVerificationPlanAssociationsRequestObject()
+        {
+            // Snippet: ListRestoreVerificationPlanAssociations(ListRestoreVerificationPlanAssociationsRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListRestoreVerificationPlanAssociationsRequest request = new ListRestoreVerificationPlanAssociationsRequest
+            {
+                ParentAsRestoreVerificationPlanName = RestoreVerificationPlanName.FromProjectLocationRestoreVerificationPlan("[PROJECT]", "[LOCATION]", "[RESTOREVERIFICATIONPLAN]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListRestoreVerificationPlanAssociationsResponse, RestoreVerificationPlanAssociation> response = backupDRClient.ListRestoreVerificationPlanAssociations(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RestoreVerificationPlanAssociation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRestoreVerificationPlanAssociationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreVerificationPlanAssociation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreVerificationPlanAssociation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreVerificationPlanAssociation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreVerificationPlanAssociationsAsync</summary>
+        public async Task ListRestoreVerificationPlanAssociationsRequestObjectAsync()
+        {
+            // Snippet: ListRestoreVerificationPlanAssociationsAsync(ListRestoreVerificationPlanAssociationsRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListRestoreVerificationPlanAssociationsRequest request = new ListRestoreVerificationPlanAssociationsRequest
+            {
+                ParentAsRestoreVerificationPlanName = RestoreVerificationPlanName.FromProjectLocationRestoreVerificationPlan("[PROJECT]", "[LOCATION]", "[RESTOREVERIFICATIONPLAN]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListRestoreVerificationPlanAssociationsResponse, RestoreVerificationPlanAssociation> response = backupDRClient.ListRestoreVerificationPlanAssociationsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (RestoreVerificationPlanAssociation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListRestoreVerificationPlanAssociationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreVerificationPlanAssociation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreVerificationPlanAssociation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreVerificationPlanAssociation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreVerificationPlanAssociations</summary>
+        public void ListRestoreVerificationPlanAssociations()
+        {
+            // Snippet: ListRestoreVerificationPlanAssociations(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/restoreVerificationPlans/[RESTOREVERIFICATIONPLAN]";
+            // Make the request
+            PagedEnumerable<ListRestoreVerificationPlanAssociationsResponse, RestoreVerificationPlanAssociation> response = backupDRClient.ListRestoreVerificationPlanAssociations(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RestoreVerificationPlanAssociation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRestoreVerificationPlanAssociationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreVerificationPlanAssociation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreVerificationPlanAssociation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreVerificationPlanAssociation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreVerificationPlanAssociationsAsync</summary>
+        public async Task ListRestoreVerificationPlanAssociationsAsync()
+        {
+            // Snippet: ListRestoreVerificationPlanAssociationsAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/restoreVerificationPlans/[RESTOREVERIFICATIONPLAN]";
+            // Make the request
+            PagedAsyncEnumerable<ListRestoreVerificationPlanAssociationsResponse, RestoreVerificationPlanAssociation> response = backupDRClient.ListRestoreVerificationPlanAssociationsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (RestoreVerificationPlanAssociation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListRestoreVerificationPlanAssociationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreVerificationPlanAssociation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreVerificationPlanAssociation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreVerificationPlanAssociation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreVerificationPlanAssociations</summary>
+        public void ListRestoreVerificationPlanAssociationsResourceNames()
+        {
+            // Snippet: ListRestoreVerificationPlanAssociations(RestoreVerificationPlanName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            RestoreVerificationPlanName parent = RestoreVerificationPlanName.FromProjectLocationRestoreVerificationPlan("[PROJECT]", "[LOCATION]", "[RESTOREVERIFICATIONPLAN]");
+            // Make the request
+            PagedEnumerable<ListRestoreVerificationPlanAssociationsResponse, RestoreVerificationPlanAssociation> response = backupDRClient.ListRestoreVerificationPlanAssociations(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RestoreVerificationPlanAssociation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRestoreVerificationPlanAssociationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreVerificationPlanAssociation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreVerificationPlanAssociation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreVerificationPlanAssociation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreVerificationPlanAssociationsAsync</summary>
+        public async Task ListRestoreVerificationPlanAssociationsResourceNamesAsync()
+        {
+            // Snippet: ListRestoreVerificationPlanAssociationsAsync(RestoreVerificationPlanName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreVerificationPlanName parent = RestoreVerificationPlanName.FromProjectLocationRestoreVerificationPlan("[PROJECT]", "[LOCATION]", "[RESTOREVERIFICATIONPLAN]");
+            // Make the request
+            PagedAsyncEnumerable<ListRestoreVerificationPlanAssociationsResponse, RestoreVerificationPlanAssociation> response = backupDRClient.ListRestoreVerificationPlanAssociationsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (RestoreVerificationPlanAssociation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListRestoreVerificationPlanAssociationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreVerificationPlanAssociation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreVerificationPlanAssociation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreVerificationPlanAssociation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreVerificationPlanAssociation</summary>
+        public void DeleteRestoreVerificationPlanAssociationRequestObject()
+        {
+            // Snippet: DeleteRestoreVerificationPlanAssociation(DeleteRestoreVerificationPlanAssociationRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            DeleteRestoreVerificationPlanAssociationRequest request = new DeleteRestoreVerificationPlanAssociationRequest
+            {
+                RestoreVerificationPlanAssociationName = RestoreVerificationPlanAssociationName.FromProjectLocationRestoreVerificationPlanAssociation("[PROJECT]", "[LOCATION]", "[RESTORE_VERIFICATION_PLAN]", "[ASSOCIATION]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteRestoreVerificationPlanAssociation(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteRestoreVerificationPlanAssociation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreVerificationPlanAssociationAsync</summary>
+        public async Task DeleteRestoreVerificationPlanAssociationRequestObjectAsync()
+        {
+            // Snippet: DeleteRestoreVerificationPlanAssociationAsync(DeleteRestoreVerificationPlanAssociationRequest, CallSettings)
+            // Additional: DeleteRestoreVerificationPlanAssociationAsync(DeleteRestoreVerificationPlanAssociationRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteRestoreVerificationPlanAssociationRequest request = new DeleteRestoreVerificationPlanAssociationRequest
+            {
+                RestoreVerificationPlanAssociationName = RestoreVerificationPlanAssociationName.FromProjectLocationRestoreVerificationPlanAssociation("[PROJECT]", "[LOCATION]", "[RESTORE_VERIFICATION_PLAN]", "[ASSOCIATION]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteRestoreVerificationPlanAssociationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteRestoreVerificationPlanAssociationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreVerificationPlanAssociation</summary>
+        public void DeleteRestoreVerificationPlanAssociation()
+        {
+            // Snippet: DeleteRestoreVerificationPlanAssociation(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreVerificationPlans/[RESTORE_VERIFICATION_PLAN]/associations/[ASSOCIATION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteRestoreVerificationPlanAssociation(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteRestoreVerificationPlanAssociation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreVerificationPlanAssociationAsync</summary>
+        public async Task DeleteRestoreVerificationPlanAssociationAsync()
+        {
+            // Snippet: DeleteRestoreVerificationPlanAssociationAsync(string, CallSettings)
+            // Additional: DeleteRestoreVerificationPlanAssociationAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreVerificationPlans/[RESTORE_VERIFICATION_PLAN]/associations/[ASSOCIATION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteRestoreVerificationPlanAssociationAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteRestoreVerificationPlanAssociationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreVerificationPlanAssociation</summary>
+        public void DeleteRestoreVerificationPlanAssociationResourceNames()
+        {
+            // Snippet: DeleteRestoreVerificationPlanAssociation(RestoreVerificationPlanAssociationName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            RestoreVerificationPlanAssociationName name = RestoreVerificationPlanAssociationName.FromProjectLocationRestoreVerificationPlanAssociation("[PROJECT]", "[LOCATION]", "[RESTORE_VERIFICATION_PLAN]", "[ASSOCIATION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteRestoreVerificationPlanAssociation(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteRestoreVerificationPlanAssociation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreVerificationPlanAssociationAsync</summary>
+        public async Task DeleteRestoreVerificationPlanAssociationResourceNamesAsync()
+        {
+            // Snippet: DeleteRestoreVerificationPlanAssociationAsync(RestoreVerificationPlanAssociationName, CallSettings)
+            // Additional: DeleteRestoreVerificationPlanAssociationAsync(RestoreVerificationPlanAssociationName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreVerificationPlanAssociationName name = RestoreVerificationPlanAssociationName.FromProjectLocationRestoreVerificationPlanAssociation("[PROJECT]", "[LOCATION]", "[RESTORE_VERIFICATION_PLAN]", "[ASSOCIATION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteRestoreVerificationPlanAssociationAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteRestoreVerificationPlanAssociationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TriggerRestoreVerification</summary>
+        public void TriggerRestoreVerificationRequestObject()
+        {
+            // Snippet: TriggerRestoreVerification(TriggerRestoreVerificationRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            TriggerRestoreVerificationRequest request = new TriggerRestoreVerificationRequest
+            {
+                RestoreVerificationPlanAssociationName = RestoreVerificationPlanAssociationName.FromProjectLocationRestoreVerificationPlanAssociation("[PROJECT]", "[LOCATION]", "[RESTORE_VERIFICATION_PLAN]", "[ASSOCIATION]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<TriggerRestoreVerificationResponse, OperationMetadata> response = backupDRClient.TriggerRestoreVerification(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TriggerRestoreVerificationResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            TriggerRestoreVerificationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TriggerRestoreVerificationResponse, OperationMetadata> retrievedResponse = backupDRClient.PollOnceTriggerRestoreVerification(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TriggerRestoreVerificationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TriggerRestoreVerificationAsync</summary>
+        public async Task TriggerRestoreVerificationRequestObjectAsync()
+        {
+            // Snippet: TriggerRestoreVerificationAsync(TriggerRestoreVerificationRequest, CallSettings)
+            // Additional: TriggerRestoreVerificationAsync(TriggerRestoreVerificationRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            TriggerRestoreVerificationRequest request = new TriggerRestoreVerificationRequest
+            {
+                RestoreVerificationPlanAssociationName = RestoreVerificationPlanAssociationName.FromProjectLocationRestoreVerificationPlanAssociation("[PROJECT]", "[LOCATION]", "[RESTORE_VERIFICATION_PLAN]", "[ASSOCIATION]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<TriggerRestoreVerificationResponse, OperationMetadata> response = await backupDRClient.TriggerRestoreVerificationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TriggerRestoreVerificationResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            TriggerRestoreVerificationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TriggerRestoreVerificationResponse, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceTriggerRestoreVerificationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TriggerRestoreVerificationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TriggerRestoreVerification</summary>
+        public void TriggerRestoreVerification()
+        {
+            // Snippet: TriggerRestoreVerification(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreVerificationPlans/[RESTORE_VERIFICATION_PLAN]/associations/[ASSOCIATION]";
+            // Make the request
+            Operation<TriggerRestoreVerificationResponse, OperationMetadata> response = backupDRClient.TriggerRestoreVerification(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TriggerRestoreVerificationResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            TriggerRestoreVerificationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TriggerRestoreVerificationResponse, OperationMetadata> retrievedResponse = backupDRClient.PollOnceTriggerRestoreVerification(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TriggerRestoreVerificationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TriggerRestoreVerificationAsync</summary>
+        public async Task TriggerRestoreVerificationAsync()
+        {
+            // Snippet: TriggerRestoreVerificationAsync(string, CallSettings)
+            // Additional: TriggerRestoreVerificationAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreVerificationPlans/[RESTORE_VERIFICATION_PLAN]/associations/[ASSOCIATION]";
+            // Make the request
+            Operation<TriggerRestoreVerificationResponse, OperationMetadata> response = await backupDRClient.TriggerRestoreVerificationAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TriggerRestoreVerificationResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            TriggerRestoreVerificationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TriggerRestoreVerificationResponse, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceTriggerRestoreVerificationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TriggerRestoreVerificationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TriggerRestoreVerification</summary>
+        public void TriggerRestoreVerificationResourceNames()
+        {
+            // Snippet: TriggerRestoreVerification(RestoreVerificationPlanAssociationName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            RestoreVerificationPlanAssociationName name = RestoreVerificationPlanAssociationName.FromProjectLocationRestoreVerificationPlanAssociation("[PROJECT]", "[LOCATION]", "[RESTORE_VERIFICATION_PLAN]", "[ASSOCIATION]");
+            // Make the request
+            Operation<TriggerRestoreVerificationResponse, OperationMetadata> response = backupDRClient.TriggerRestoreVerification(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TriggerRestoreVerificationResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            TriggerRestoreVerificationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TriggerRestoreVerificationResponse, OperationMetadata> retrievedResponse = backupDRClient.PollOnceTriggerRestoreVerification(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TriggerRestoreVerificationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TriggerRestoreVerificationAsync</summary>
+        public async Task TriggerRestoreVerificationResourceNamesAsync()
+        {
+            // Snippet: TriggerRestoreVerificationAsync(RestoreVerificationPlanAssociationName, CallSettings)
+            // Additional: TriggerRestoreVerificationAsync(RestoreVerificationPlanAssociationName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreVerificationPlanAssociationName name = RestoreVerificationPlanAssociationName.FromProjectLocationRestoreVerificationPlanAssociation("[PROJECT]", "[LOCATION]", "[RESTORE_VERIFICATION_PLAN]", "[ASSOCIATION]");
+            // Make the request
+            Operation<TriggerRestoreVerificationResponse, OperationMetadata> response = await backupDRClient.TriggerRestoreVerificationAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TriggerRestoreVerificationResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            TriggerRestoreVerificationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TriggerRestoreVerificationResponse, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceTriggerRestoreVerificationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TriggerRestoreVerificationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreVerificationPlan</summary>
+        public void GetRestoreVerificationPlanRequestObject()
+        {
+            // Snippet: GetRestoreVerificationPlan(GetRestoreVerificationPlanRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            GetRestoreVerificationPlanRequest request = new GetRestoreVerificationPlanRequest
+            {
+                RestoreVerificationPlanName = RestoreVerificationPlanName.FromProjectLocationRestoreVerificationPlan("[PROJECT]", "[LOCATION]", "[RESTOREVERIFICATIONPLAN]"),
+            };
+            // Make the request
+            RestoreVerificationPlan response = backupDRClient.GetRestoreVerificationPlan(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreVerificationPlanAsync</summary>
+        public async Task GetRestoreVerificationPlanRequestObjectAsync()
+        {
+            // Snippet: GetRestoreVerificationPlanAsync(GetRestoreVerificationPlanRequest, CallSettings)
+            // Additional: GetRestoreVerificationPlanAsync(GetRestoreVerificationPlanRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            GetRestoreVerificationPlanRequest request = new GetRestoreVerificationPlanRequest
+            {
+                RestoreVerificationPlanName = RestoreVerificationPlanName.FromProjectLocationRestoreVerificationPlan("[PROJECT]", "[LOCATION]", "[RESTOREVERIFICATIONPLAN]"),
+            };
+            // Make the request
+            RestoreVerificationPlan response = await backupDRClient.GetRestoreVerificationPlanAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreVerificationPlan</summary>
+        public void GetRestoreVerificationPlan()
+        {
+            // Snippet: GetRestoreVerificationPlan(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreVerificationPlans/[RESTOREVERIFICATIONPLAN]";
+            // Make the request
+            RestoreVerificationPlan response = backupDRClient.GetRestoreVerificationPlan(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreVerificationPlanAsync</summary>
+        public async Task GetRestoreVerificationPlanAsync()
+        {
+            // Snippet: GetRestoreVerificationPlanAsync(string, CallSettings)
+            // Additional: GetRestoreVerificationPlanAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreVerificationPlans/[RESTOREVERIFICATIONPLAN]";
+            // Make the request
+            RestoreVerificationPlan response = await backupDRClient.GetRestoreVerificationPlanAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreVerificationPlan</summary>
+        public void GetRestoreVerificationPlanResourceNames()
+        {
+            // Snippet: GetRestoreVerificationPlan(RestoreVerificationPlanName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            RestoreVerificationPlanName name = RestoreVerificationPlanName.FromProjectLocationRestoreVerificationPlan("[PROJECT]", "[LOCATION]", "[RESTOREVERIFICATIONPLAN]");
+            // Make the request
+            RestoreVerificationPlan response = backupDRClient.GetRestoreVerificationPlan(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRestoreVerificationPlanAsync</summary>
+        public async Task GetRestoreVerificationPlanResourceNamesAsync()
+        {
+            // Snippet: GetRestoreVerificationPlanAsync(RestoreVerificationPlanName, CallSettings)
+            // Additional: GetRestoreVerificationPlanAsync(RestoreVerificationPlanName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreVerificationPlanName name = RestoreVerificationPlanName.FromProjectLocationRestoreVerificationPlan("[PROJECT]", "[LOCATION]", "[RESTOREVERIFICATIONPLAN]");
+            // Make the request
+            RestoreVerificationPlan response = await backupDRClient.GetRestoreVerificationPlanAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreVerificationPlans</summary>
+        public void ListRestoreVerificationPlansRequestObject()
+        {
+            // Snippet: ListRestoreVerificationPlans(ListRestoreVerificationPlansRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListRestoreVerificationPlansRequest request = new ListRestoreVerificationPlansRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListRestoreVerificationPlansResponse, RestoreVerificationPlan> response = backupDRClient.ListRestoreVerificationPlans(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RestoreVerificationPlan item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRestoreVerificationPlansResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreVerificationPlan item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreVerificationPlan> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreVerificationPlan item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreVerificationPlansAsync</summary>
+        public async Task ListRestoreVerificationPlansRequestObjectAsync()
+        {
+            // Snippet: ListRestoreVerificationPlansAsync(ListRestoreVerificationPlansRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListRestoreVerificationPlansRequest request = new ListRestoreVerificationPlansRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListRestoreVerificationPlansResponse, RestoreVerificationPlan> response = backupDRClient.ListRestoreVerificationPlansAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (RestoreVerificationPlan item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListRestoreVerificationPlansResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreVerificationPlan item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreVerificationPlan> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreVerificationPlan item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreVerificationPlans</summary>
+        public void ListRestoreVerificationPlans()
+        {
+            // Snippet: ListRestoreVerificationPlans(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListRestoreVerificationPlansResponse, RestoreVerificationPlan> response = backupDRClient.ListRestoreVerificationPlans(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RestoreVerificationPlan item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRestoreVerificationPlansResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreVerificationPlan item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreVerificationPlan> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreVerificationPlan item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreVerificationPlansAsync</summary>
+        public async Task ListRestoreVerificationPlansAsync()
+        {
+            // Snippet: ListRestoreVerificationPlansAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListRestoreVerificationPlansResponse, RestoreVerificationPlan> response = backupDRClient.ListRestoreVerificationPlansAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (RestoreVerificationPlan item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListRestoreVerificationPlansResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreVerificationPlan item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreVerificationPlan> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreVerificationPlan item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreVerificationPlans</summary>
+        public void ListRestoreVerificationPlansResourceNames()
+        {
+            // Snippet: ListRestoreVerificationPlans(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListRestoreVerificationPlansResponse, RestoreVerificationPlan> response = backupDRClient.ListRestoreVerificationPlans(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RestoreVerificationPlan item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRestoreVerificationPlansResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreVerificationPlan item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreVerificationPlan> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreVerificationPlan item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRestoreVerificationPlansAsync</summary>
+        public async Task ListRestoreVerificationPlansResourceNamesAsync()
+        {
+            // Snippet: ListRestoreVerificationPlansAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListRestoreVerificationPlansResponse, RestoreVerificationPlan> response = backupDRClient.ListRestoreVerificationPlansAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (RestoreVerificationPlan item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListRestoreVerificationPlansResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RestoreVerificationPlan item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RestoreVerificationPlan> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RestoreVerificationPlan item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreVerificationPlan</summary>
+        public void DeleteRestoreVerificationPlanRequestObject()
+        {
+            // Snippet: DeleteRestoreVerificationPlan(DeleteRestoreVerificationPlanRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            DeleteRestoreVerificationPlanRequest request = new DeleteRestoreVerificationPlanRequest
+            {
+                RestoreVerificationPlanName = RestoreVerificationPlanName.FromProjectLocationRestoreVerificationPlan("[PROJECT]", "[LOCATION]", "[RESTOREVERIFICATIONPLAN]"),
+                RequestId = "",
+                Force = false,
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteRestoreVerificationPlan(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteRestoreVerificationPlan(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreVerificationPlanAsync</summary>
+        public async Task DeleteRestoreVerificationPlanRequestObjectAsync()
+        {
+            // Snippet: DeleteRestoreVerificationPlanAsync(DeleteRestoreVerificationPlanRequest, CallSettings)
+            // Additional: DeleteRestoreVerificationPlanAsync(DeleteRestoreVerificationPlanRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteRestoreVerificationPlanRequest request = new DeleteRestoreVerificationPlanRequest
+            {
+                RestoreVerificationPlanName = RestoreVerificationPlanName.FromProjectLocationRestoreVerificationPlan("[PROJECT]", "[LOCATION]", "[RESTOREVERIFICATIONPLAN]"),
+                RequestId = "",
+                Force = false,
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteRestoreVerificationPlanAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteRestoreVerificationPlanAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreVerificationPlan</summary>
+        public void DeleteRestoreVerificationPlan()
+        {
+            // Snippet: DeleteRestoreVerificationPlan(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreVerificationPlans/[RESTOREVERIFICATIONPLAN]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteRestoreVerificationPlan(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteRestoreVerificationPlan(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreVerificationPlanAsync</summary>
+        public async Task DeleteRestoreVerificationPlanAsync()
+        {
+            // Snippet: DeleteRestoreVerificationPlanAsync(string, CallSettings)
+            // Additional: DeleteRestoreVerificationPlanAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/restoreVerificationPlans/[RESTOREVERIFICATIONPLAN]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteRestoreVerificationPlanAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteRestoreVerificationPlanAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreVerificationPlan</summary>
+        public void DeleteRestoreVerificationPlanResourceNames()
+        {
+            // Snippet: DeleteRestoreVerificationPlan(RestoreVerificationPlanName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            RestoreVerificationPlanName name = RestoreVerificationPlanName.FromProjectLocationRestoreVerificationPlan("[PROJECT]", "[LOCATION]", "[RESTOREVERIFICATIONPLAN]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteRestoreVerificationPlan(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteRestoreVerificationPlan(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRestoreVerificationPlanAsync</summary>
+        public async Task DeleteRestoreVerificationPlanResourceNamesAsync()
+        {
+            // Snippet: DeleteRestoreVerificationPlanAsync(RestoreVerificationPlanName, CallSettings)
+            // Additional: DeleteRestoreVerificationPlanAsync(RestoreVerificationPlanName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreVerificationPlanName name = RestoreVerificationPlanName.FromProjectLocationRestoreVerificationPlan("[PROJECT]", "[LOCATION]", "[RESTOREVERIFICATIONPLAN]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteRestoreVerificationPlanAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteRestoreVerificationPlanAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateBackupVault</summary>
         public void CreateBackupVaultRequestObject()
         {
