@@ -13843,6 +13843,5309 @@
       ]
     },
     {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateRestoreTemplate_sync",
+      "title": "CreateRestoreTemplateRequestObject",
+      "description": "Snippet for CreateRestoreTemplate",
+      "file": "BackupDRClient.CreateRestoreTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreTemplate",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateRestoreTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.CreateRestoreTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreTemplate, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateRestoreTemplate_async",
+      "title": "CreateRestoreTemplateRequestObjectAsync",
+      "description": "Snippet for CreateRestoreTemplateAsync",
+      "file": "BackupDRClient.CreateRestoreTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreTemplateAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateRestoreTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.CreateRestoreTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreTemplate, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateRestoreTemplate_sync_flattened",
+      "title": "CreateRestoreTemplate",
+      "description": "Snippet for CreateRestoreTemplate",
+      "file": "BackupDRClient.CreateRestoreTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreTemplate",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateRestoreTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreTemplate",
+            "name": "restoreTemplate"
+          },
+          {
+            "type": "System.String",
+            "name": "restoreTemplateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreTemplate, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateRestoreTemplate_async_flattened",
+      "title": "CreateRestoreTemplateAsync",
+      "description": "Snippet for CreateRestoreTemplateAsync",
+      "file": "BackupDRClient.CreateRestoreTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreTemplateAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateRestoreTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreTemplate",
+            "name": "restoreTemplate"
+          },
+          {
+            "type": "System.String",
+            "name": "restoreTemplateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreTemplate, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateRestoreTemplate_sync_flattened_resourceNames",
+      "title": "CreateRestoreTemplateResourceNames",
+      "description": "Snippet for CreateRestoreTemplate",
+      "file": "BackupDRClient.CreateRestoreTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreTemplate",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateRestoreTemplate",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreTemplate",
+            "name": "restoreTemplate"
+          },
+          {
+            "type": "System.String",
+            "name": "restoreTemplateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreTemplate, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateRestoreTemplate_async_flattened_resourceNames",
+      "title": "CreateRestoreTemplateResourceNamesAsync",
+      "description": "Snippet for CreateRestoreTemplateAsync",
+      "file": "BackupDRClient.CreateRestoreTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreTemplateAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateRestoreTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreTemplate",
+            "name": "restoreTemplate"
+          },
+          {
+            "type": "System.String",
+            "name": "restoreTemplateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreTemplate, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreTemplate_sync",
+      "title": "GetRestoreTemplateRequestObject",
+      "description": "Snippet for GetRestoreTemplate",
+      "file": "BackupDRClient.GetRestoreTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreTemplate",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.GetRestoreTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.RestoreTemplate",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreTemplate_async",
+      "title": "GetRestoreTemplateRequestObjectAsync",
+      "description": "Snippet for GetRestoreTemplateAsync",
+      "file": "BackupDRClient.GetRestoreTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreTemplateAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.GetRestoreTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.RestoreTemplate>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreTemplate_sync_flattened",
+      "title": "GetRestoreTemplate",
+      "description": "Snippet for GetRestoreTemplate",
+      "file": "BackupDRClient.GetRestoreTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreTemplate",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.RestoreTemplate",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreTemplate_async_flattened",
+      "title": "GetRestoreTemplateAsync",
+      "description": "Snippet for GetRestoreTemplateAsync",
+      "file": "BackupDRClient.GetRestoreTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreTemplateAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.RestoreTemplate>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreTemplate_sync_flattened_resourceNames",
+      "title": "GetRestoreTemplateResourceNames",
+      "description": "Snippet for GetRestoreTemplate",
+      "file": "BackupDRClient.GetRestoreTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreTemplate",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.RestoreTemplate",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreTemplate_async_flattened_resourceNames",
+      "title": "GetRestoreTemplateResourceNamesAsync",
+      "description": "Snippet for GetRestoreTemplateAsync",
+      "file": "BackupDRClient.GetRestoreTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreTemplateAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.RestoreTemplate>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreTemplates_sync",
+      "title": "ListRestoreTemplatesRequestObject",
+      "description": "Snippet for ListRestoreTemplates",
+      "file": "BackupDRClient.ListRestoreTemplatesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreTemplates",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreTemplates",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.ListRestoreTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListRestoreTemplatesResponse, Google.Cloud.BackupDR.V1.RestoreTemplate>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreTemplates",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreTemplates",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreTemplates_async",
+      "title": "ListRestoreTemplatesRequestObjectAsync",
+      "description": "Snippet for ListRestoreTemplatesAsync",
+      "file": "BackupDRClient.ListRestoreTemplatesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreTemplatesAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.ListRestoreTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListRestoreTemplatesResponse, Google.Cloud.BackupDR.V1.RestoreTemplate>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreTemplates",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreTemplates",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreTemplates_sync_flattened",
+      "title": "ListRestoreTemplates",
+      "description": "Snippet for ListRestoreTemplates",
+      "file": "BackupDRClient.ListRestoreTemplatesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreTemplates",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreTemplates",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListRestoreTemplatesResponse, Google.Cloud.BackupDR.V1.RestoreTemplate>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreTemplates",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreTemplates",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreTemplates_async_flattened",
+      "title": "ListRestoreTemplatesAsync",
+      "description": "Snippet for ListRestoreTemplatesAsync",
+      "file": "BackupDRClient.ListRestoreTemplatesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreTemplatesAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListRestoreTemplatesResponse, Google.Cloud.BackupDR.V1.RestoreTemplate>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreTemplates",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreTemplates",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreTemplates_sync_flattened_resourceNames",
+      "title": "ListRestoreTemplatesResourceNames",
+      "description": "Snippet for ListRestoreTemplates",
+      "file": "BackupDRClient.ListRestoreTemplatesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreTemplates",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreTemplates",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListRestoreTemplatesResponse, Google.Cloud.BackupDR.V1.RestoreTemplate>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreTemplates",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreTemplates",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreTemplates_async_flattened_resourceNames",
+      "title": "ListRestoreTemplatesResourceNamesAsync",
+      "description": "Snippet for ListRestoreTemplatesAsync",
+      "file": "BackupDRClient.ListRestoreTemplatesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreTemplatesAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListRestoreTemplatesResponse, Google.Cloud.BackupDR.V1.RestoreTemplate>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreTemplates",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreTemplates",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_UpdateRestoreTemplate_sync",
+      "title": "UpdateRestoreTemplateRequestObject",
+      "description": "Snippet for UpdateRestoreTemplate",
+      "file": "BackupDRClient.UpdateRestoreTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRestoreTemplate",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.UpdateRestoreTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.UpdateRestoreTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreTemplate, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "UpdateRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.UpdateRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_UpdateRestoreTemplate_async",
+      "title": "UpdateRestoreTemplateRequestObjectAsync",
+      "description": "Snippet for UpdateRestoreTemplateAsync",
+      "file": "BackupDRClient.UpdateRestoreTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRestoreTemplateAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.UpdateRestoreTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.UpdateRestoreTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreTemplate, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "UpdateRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.UpdateRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_UpdateRestoreTemplate_sync_flattened",
+      "title": "UpdateRestoreTemplate",
+      "description": "Snippet for UpdateRestoreTemplate",
+      "file": "BackupDRClient.UpdateRestoreTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRestoreTemplate",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.UpdateRestoreTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreTemplate",
+            "name": "restoreTemplate"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreTemplate, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "UpdateRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.UpdateRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_UpdateRestoreTemplate_async_flattened",
+      "title": "UpdateRestoreTemplateAsync",
+      "description": "Snippet for UpdateRestoreTemplateAsync",
+      "file": "BackupDRClient.UpdateRestoreTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRestoreTemplateAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.UpdateRestoreTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreTemplate",
+            "name": "restoreTemplate"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreTemplate, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "UpdateRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.UpdateRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteRestoreTemplate_sync",
+      "title": "DeleteRestoreTemplateRequestObject",
+      "description": "Snippet for DeleteRestoreTemplate",
+      "file": "BackupDRClient.DeleteRestoreTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreTemplate",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteRestoreTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.DeleteRestoreTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteRestoreTemplate_async",
+      "title": "DeleteRestoreTemplateRequestObjectAsync",
+      "description": "Snippet for DeleteRestoreTemplateAsync",
+      "file": "BackupDRClient.DeleteRestoreTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreTemplateAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteRestoreTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.DeleteRestoreTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteRestoreTemplate_sync_flattened",
+      "title": "DeleteRestoreTemplate",
+      "description": "Snippet for DeleteRestoreTemplate",
+      "file": "BackupDRClient.DeleteRestoreTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreTemplate",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteRestoreTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteRestoreTemplate_async_flattened",
+      "title": "DeleteRestoreTemplateAsync",
+      "description": "Snippet for DeleteRestoreTemplateAsync",
+      "file": "BackupDRClient.DeleteRestoreTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreTemplateAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteRestoreTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteRestoreTemplate_sync_flattened_resourceNames",
+      "title": "DeleteRestoreTemplateResourceNames",
+      "description": "Snippet for DeleteRestoreTemplate",
+      "file": "BackupDRClient.DeleteRestoreTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreTemplate",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteRestoreTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteRestoreTemplate_async_flattened_resourceNames",
+      "title": "DeleteRestoreTemplateResourceNamesAsync",
+      "description": "Snippet for DeleteRestoreTemplateAsync",
+      "file": "BackupDRClient.DeleteRestoreTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreTemplateAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteRestoreTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_RunRestoreTemplate_sync",
+      "title": "RunRestoreTemplateRequestObject",
+      "description": "Snippet for RunRestoreTemplate",
+      "file": "BackupDRClient.RunRestoreTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunRestoreTemplate",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.RunRestoreTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RunRestoreTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RunRestoreTemplateResponse, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "RunRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.RunRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_RunRestoreTemplate_async",
+      "title": "RunRestoreTemplateRequestObjectAsync",
+      "description": "Snippet for RunRestoreTemplateAsync",
+      "file": "BackupDRClient.RunRestoreTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunRestoreTemplateAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.RunRestoreTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RunRestoreTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RunRestoreTemplateResponse, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "RunRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.RunRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_RunRestoreTemplate_sync_flattened",
+      "title": "RunRestoreTemplate",
+      "description": "Snippet for RunRestoreTemplate",
+      "file": "BackupDRClient.RunRestoreTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunRestoreTemplate",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.RunRestoreTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RunRestoreTemplateResponse, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "RunRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.RunRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_RunRestoreTemplate_async_flattened",
+      "title": "RunRestoreTemplateAsync",
+      "description": "Snippet for RunRestoreTemplateAsync",
+      "file": "BackupDRClient.RunRestoreTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunRestoreTemplateAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.RunRestoreTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RunRestoreTemplateResponse, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "RunRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.RunRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_RunRestoreTemplate_sync_flattened_resourceNames",
+      "title": "RunRestoreTemplateResourceNames",
+      "description": "Snippet for RunRestoreTemplate",
+      "file": "BackupDRClient.RunRestoreTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunRestoreTemplate",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.RunRestoreTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RunRestoreTemplateResponse, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "RunRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.RunRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_RunRestoreTemplate_async_flattened_resourceNames",
+      "title": "RunRestoreTemplateResourceNamesAsync",
+      "description": "Snippet for RunRestoreTemplateAsync",
+      "file": "BackupDRClient.RunRestoreTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunRestoreTemplateAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.RunRestoreTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RunRestoreTemplateResponse, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "RunRestoreTemplate",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.RunRestoreTemplate",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreTemplateExecution_sync",
+      "title": "GetRestoreTemplateExecutionRequestObject",
+      "description": "Snippet for GetRestoreTemplateExecution",
+      "file": "BackupDRClient.GetRestoreTemplateExecutionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreTemplateExecution",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreTemplateExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.GetRestoreTemplateExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.RestoreTemplateExecution",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreTemplateExecution",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreTemplateExecution",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreTemplateExecution_async",
+      "title": "GetRestoreTemplateExecutionRequestObjectAsync",
+      "description": "Snippet for GetRestoreTemplateExecutionAsync",
+      "file": "BackupDRClient.GetRestoreTemplateExecutionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreTemplateExecutionAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreTemplateExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.GetRestoreTemplateExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.RestoreTemplateExecution>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreTemplateExecution",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreTemplateExecution",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreTemplateExecution_sync_flattened",
+      "title": "GetRestoreTemplateExecution",
+      "description": "Snippet for GetRestoreTemplateExecution",
+      "file": "BackupDRClient.GetRestoreTemplateExecutionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreTemplateExecution",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreTemplateExecution",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.RestoreTemplateExecution",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreTemplateExecution",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreTemplateExecution",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreTemplateExecution_async_flattened",
+      "title": "GetRestoreTemplateExecutionAsync",
+      "description": "Snippet for GetRestoreTemplateExecutionAsync",
+      "file": "BackupDRClient.GetRestoreTemplateExecutionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreTemplateExecutionAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreTemplateExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.RestoreTemplateExecution>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreTemplateExecution",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreTemplateExecution",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreTemplateExecution_sync_flattened_resourceNames",
+      "title": "GetRestoreTemplateExecutionResourceNames",
+      "description": "Snippet for GetRestoreTemplateExecution",
+      "file": "BackupDRClient.GetRestoreTemplateExecutionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreTemplateExecution",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreTemplateExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreTemplateExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.RestoreTemplateExecution",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreTemplateExecution",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreTemplateExecution",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreTemplateExecution_async_flattened_resourceNames",
+      "title": "GetRestoreTemplateExecutionResourceNamesAsync",
+      "description": "Snippet for GetRestoreTemplateExecutionAsync",
+      "file": "BackupDRClient.GetRestoreTemplateExecutionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreTemplateExecutionAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreTemplateExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreTemplateExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.RestoreTemplateExecution>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreTemplateExecution",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreTemplateExecution",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreTemplateExecutions_sync",
+      "title": "ListRestoreTemplateExecutionsRequestObject",
+      "description": "Snippet for ListRestoreTemplateExecutions",
+      "file": "BackupDRClient.ListRestoreTemplateExecutionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreTemplateExecutions",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreTemplateExecutions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.ListRestoreTemplateExecutionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListRestoreTemplateExecutionsResponse, Google.Cloud.BackupDR.V1.RestoreTemplateExecution>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreTemplateExecutions",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreTemplateExecutions",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreTemplateExecutions_async",
+      "title": "ListRestoreTemplateExecutionsRequestObjectAsync",
+      "description": "Snippet for ListRestoreTemplateExecutionsAsync",
+      "file": "BackupDRClient.ListRestoreTemplateExecutionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreTemplateExecutionsAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreTemplateExecutionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.ListRestoreTemplateExecutionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListRestoreTemplateExecutionsResponse, Google.Cloud.BackupDR.V1.RestoreTemplateExecution>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreTemplateExecutions",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreTemplateExecutions",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreTemplateExecutions_sync_flattened",
+      "title": "ListRestoreTemplateExecutions",
+      "description": "Snippet for ListRestoreTemplateExecutions",
+      "file": "BackupDRClient.ListRestoreTemplateExecutionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreTemplateExecutions",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreTemplateExecutions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListRestoreTemplateExecutionsResponse, Google.Cloud.BackupDR.V1.RestoreTemplateExecution>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreTemplateExecutions",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreTemplateExecutions",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreTemplateExecutions_async_flattened",
+      "title": "ListRestoreTemplateExecutionsAsync",
+      "description": "Snippet for ListRestoreTemplateExecutionsAsync",
+      "file": "BackupDRClient.ListRestoreTemplateExecutionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreTemplateExecutionsAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreTemplateExecutionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListRestoreTemplateExecutionsResponse, Google.Cloud.BackupDR.V1.RestoreTemplateExecution>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreTemplateExecutions",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreTemplateExecutions",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreTemplateExecutions_sync_flattened_resourceNames",
+      "title": "ListRestoreTemplateExecutionsResourceNames",
+      "description": "Snippet for ListRestoreTemplateExecutions",
+      "file": "BackupDRClient.ListRestoreTemplateExecutionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreTemplateExecutions",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreTemplateExecutions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreTemplateName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListRestoreTemplateExecutionsResponse, Google.Cloud.BackupDR.V1.RestoreTemplateExecution>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreTemplateExecutions",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreTemplateExecutions",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreTemplateExecutions_async_flattened_resourceNames",
+      "title": "ListRestoreTemplateExecutionsResourceNamesAsync",
+      "description": "Snippet for ListRestoreTemplateExecutionsAsync",
+      "file": "BackupDRClient.ListRestoreTemplateExecutionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreTemplateExecutionsAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreTemplateExecutionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreTemplateName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListRestoreTemplateExecutionsResponse, Google.Cloud.BackupDR.V1.RestoreTemplateExecution>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreTemplateExecutions",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreTemplateExecutions",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_TriggerRestoreCleanup_sync",
+      "title": "TriggerRestoreCleanupRequestObject",
+      "description": "Snippet for TriggerRestoreCleanup",
+      "file": "BackupDRClient.TriggerRestoreCleanupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TriggerRestoreCleanup",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.TriggerRestoreCleanup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.TriggerRestoreCleanupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreTemplateExecution, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "TriggerRestoreCleanup",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.TriggerRestoreCleanup",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_TriggerRestoreCleanup_async",
+      "title": "TriggerRestoreCleanupRequestObjectAsync",
+      "description": "Snippet for TriggerRestoreCleanupAsync",
+      "file": "BackupDRClient.TriggerRestoreCleanupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TriggerRestoreCleanupAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.TriggerRestoreCleanupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.TriggerRestoreCleanupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreTemplateExecution, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "TriggerRestoreCleanup",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.TriggerRestoreCleanup",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_TriggerRestoreCleanup_sync_flattened",
+      "title": "TriggerRestoreCleanup",
+      "description": "Snippet for TriggerRestoreCleanup",
+      "file": "BackupDRClient.TriggerRestoreCleanupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TriggerRestoreCleanup",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.TriggerRestoreCleanup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreTemplateExecution, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "TriggerRestoreCleanup",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.TriggerRestoreCleanup",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_TriggerRestoreCleanup_async_flattened",
+      "title": "TriggerRestoreCleanupAsync",
+      "description": "Snippet for TriggerRestoreCleanupAsync",
+      "file": "BackupDRClient.TriggerRestoreCleanupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TriggerRestoreCleanupAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.TriggerRestoreCleanupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreTemplateExecution, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "TriggerRestoreCleanup",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.TriggerRestoreCleanup",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_TriggerRestoreCleanup_sync_flattened_resourceNames",
+      "title": "TriggerRestoreCleanupResourceNames",
+      "description": "Snippet for TriggerRestoreCleanup",
+      "file": "BackupDRClient.TriggerRestoreCleanupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TriggerRestoreCleanup",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.TriggerRestoreCleanup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreTemplateExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreTemplateExecution, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "TriggerRestoreCleanup",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.TriggerRestoreCleanup",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_TriggerRestoreCleanup_async_flattened_resourceNames",
+      "title": "TriggerRestoreCleanupResourceNamesAsync",
+      "description": "Snippet for TriggerRestoreCleanupAsync",
+      "file": "BackupDRClient.TriggerRestoreCleanupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TriggerRestoreCleanupAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.TriggerRestoreCleanupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreTemplateExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreTemplateExecution, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "TriggerRestoreCleanup",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.TriggerRestoreCleanup",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateRestoreVerificationPlan_sync",
+      "title": "CreateRestoreVerificationPlanRequestObject",
+      "description": "Snippet for CreateRestoreVerificationPlan",
+      "file": "BackupDRClient.CreateRestoreVerificationPlanRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreVerificationPlan",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateRestoreVerificationPlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.CreateRestoreVerificationPlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreVerificationPlan, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreVerificationPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateRestoreVerificationPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateRestoreVerificationPlan_async",
+      "title": "CreateRestoreVerificationPlanRequestObjectAsync",
+      "description": "Snippet for CreateRestoreVerificationPlanAsync",
+      "file": "BackupDRClient.CreateRestoreVerificationPlanRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreVerificationPlanAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateRestoreVerificationPlanAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.CreateRestoreVerificationPlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreVerificationPlan, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreVerificationPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateRestoreVerificationPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateRestoreVerificationPlan_sync_flattened",
+      "title": "CreateRestoreVerificationPlan",
+      "description": "Snippet for CreateRestoreVerificationPlan",
+      "file": "BackupDRClient.CreateRestoreVerificationPlanSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreVerificationPlan",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateRestoreVerificationPlan",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlan",
+            "name": "restoreVerificationPlan"
+          },
+          {
+            "type": "System.String",
+            "name": "restoreVerificationPlanId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreVerificationPlan, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreVerificationPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateRestoreVerificationPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateRestoreVerificationPlan_async_flattened",
+      "title": "CreateRestoreVerificationPlanAsync",
+      "description": "Snippet for CreateRestoreVerificationPlanAsync",
+      "file": "BackupDRClient.CreateRestoreVerificationPlanAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreVerificationPlanAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateRestoreVerificationPlanAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlan",
+            "name": "restoreVerificationPlan"
+          },
+          {
+            "type": "System.String",
+            "name": "restoreVerificationPlanId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreVerificationPlan, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreVerificationPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateRestoreVerificationPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateRestoreVerificationPlan_sync_flattened_resourceNames",
+      "title": "CreateRestoreVerificationPlanResourceNames",
+      "description": "Snippet for CreateRestoreVerificationPlan",
+      "file": "BackupDRClient.CreateRestoreVerificationPlanResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreVerificationPlan",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateRestoreVerificationPlan",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlan",
+            "name": "restoreVerificationPlan"
+          },
+          {
+            "type": "System.String",
+            "name": "restoreVerificationPlanId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreVerificationPlan, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreVerificationPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateRestoreVerificationPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateRestoreVerificationPlan_async_flattened_resourceNames",
+      "title": "CreateRestoreVerificationPlanResourceNamesAsync",
+      "description": "Snippet for CreateRestoreVerificationPlanAsync",
+      "file": "BackupDRClient.CreateRestoreVerificationPlanResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreVerificationPlanAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateRestoreVerificationPlanAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlan",
+            "name": "restoreVerificationPlan"
+          },
+          {
+            "type": "System.String",
+            "name": "restoreVerificationPlanId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreVerificationPlan, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreVerificationPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateRestoreVerificationPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateRestoreVerificationPlanAssociation_sync",
+      "title": "CreateRestoreVerificationPlanAssociationRequestObject",
+      "description": "Snippet for CreateRestoreVerificationPlanAssociation",
+      "file": "BackupDRClient.CreateRestoreVerificationPlanAssociationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreVerificationPlanAssociation",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateRestoreVerificationPlanAssociation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.CreateRestoreVerificationPlanAssociationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreVerificationPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateRestoreVerificationPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateRestoreVerificationPlanAssociation_async",
+      "title": "CreateRestoreVerificationPlanAssociationRequestObjectAsync",
+      "description": "Snippet for CreateRestoreVerificationPlanAssociationAsync",
+      "file": "BackupDRClient.CreateRestoreVerificationPlanAssociationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreVerificationPlanAssociationAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateRestoreVerificationPlanAssociationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.CreateRestoreVerificationPlanAssociationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreVerificationPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateRestoreVerificationPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateRestoreVerificationPlanAssociation_sync_flattened",
+      "title": "CreateRestoreVerificationPlanAssociation",
+      "description": "Snippet for CreateRestoreVerificationPlanAssociation",
+      "file": "BackupDRClient.CreateRestoreVerificationPlanAssociationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreVerificationPlanAssociation",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateRestoreVerificationPlanAssociation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation",
+            "name": "restoreVerificationPlanAssociation"
+          },
+          {
+            "type": "System.String",
+            "name": "restoreVerificationPlanAssociationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreVerificationPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateRestoreVerificationPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateRestoreVerificationPlanAssociation_async_flattened",
+      "title": "CreateRestoreVerificationPlanAssociationAsync",
+      "description": "Snippet for CreateRestoreVerificationPlanAssociationAsync",
+      "file": "BackupDRClient.CreateRestoreVerificationPlanAssociationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreVerificationPlanAssociationAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateRestoreVerificationPlanAssociationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation",
+            "name": "restoreVerificationPlanAssociation"
+          },
+          {
+            "type": "System.String",
+            "name": "restoreVerificationPlanAssociationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreVerificationPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateRestoreVerificationPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateRestoreVerificationPlanAssociation_sync_flattened_resourceNames",
+      "title": "CreateRestoreVerificationPlanAssociationResourceNames",
+      "description": "Snippet for CreateRestoreVerificationPlanAssociation",
+      "file": "BackupDRClient.CreateRestoreVerificationPlanAssociationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreVerificationPlanAssociation",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateRestoreVerificationPlanAssociation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation",
+            "name": "restoreVerificationPlanAssociation"
+          },
+          {
+            "type": "System.String",
+            "name": "restoreVerificationPlanAssociationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreVerificationPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateRestoreVerificationPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_CreateRestoreVerificationPlanAssociation_async_flattened_resourceNames",
+      "title": "CreateRestoreVerificationPlanAssociationResourceNamesAsync",
+      "description": "Snippet for CreateRestoreVerificationPlanAssociationAsync",
+      "file": "BackupDRClient.CreateRestoreVerificationPlanAssociationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRestoreVerificationPlanAssociationAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.CreateRestoreVerificationPlanAssociationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation",
+            "name": "restoreVerificationPlanAssociation"
+          },
+          {
+            "type": "System.String",
+            "name": "restoreVerificationPlanAssociationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "CreateRestoreVerificationPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.CreateRestoreVerificationPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreVerificationPlanAssociation_sync",
+      "title": "GetRestoreVerificationPlanAssociationRequestObject",
+      "description": "Snippet for GetRestoreVerificationPlanAssociation",
+      "file": "BackupDRClient.GetRestoreVerificationPlanAssociationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreVerificationPlanAssociation",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreVerificationPlanAssociation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.GetRestoreVerificationPlanAssociationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreVerificationPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreVerificationPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreVerificationPlanAssociation_async",
+      "title": "GetRestoreVerificationPlanAssociationRequestObjectAsync",
+      "description": "Snippet for GetRestoreVerificationPlanAssociationAsync",
+      "file": "BackupDRClient.GetRestoreVerificationPlanAssociationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreVerificationPlanAssociationAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreVerificationPlanAssociationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.GetRestoreVerificationPlanAssociationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreVerificationPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreVerificationPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreVerificationPlanAssociation_sync_flattened",
+      "title": "GetRestoreVerificationPlanAssociation",
+      "description": "Snippet for GetRestoreVerificationPlanAssociation",
+      "file": "BackupDRClient.GetRestoreVerificationPlanAssociationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreVerificationPlanAssociation",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreVerificationPlanAssociation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreVerificationPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreVerificationPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreVerificationPlanAssociation_async_flattened",
+      "title": "GetRestoreVerificationPlanAssociationAsync",
+      "description": "Snippet for GetRestoreVerificationPlanAssociationAsync",
+      "file": "BackupDRClient.GetRestoreVerificationPlanAssociationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreVerificationPlanAssociationAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreVerificationPlanAssociationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreVerificationPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreVerificationPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreVerificationPlanAssociation_sync_flattened_resourceNames",
+      "title": "GetRestoreVerificationPlanAssociationResourceNames",
+      "description": "Snippet for GetRestoreVerificationPlanAssociation",
+      "file": "BackupDRClient.GetRestoreVerificationPlanAssociationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreVerificationPlanAssociation",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreVerificationPlanAssociation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreVerificationPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreVerificationPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreVerificationPlanAssociation_async_flattened_resourceNames",
+      "title": "GetRestoreVerificationPlanAssociationResourceNamesAsync",
+      "description": "Snippet for GetRestoreVerificationPlanAssociationAsync",
+      "file": "BackupDRClient.GetRestoreVerificationPlanAssociationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreVerificationPlanAssociationAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreVerificationPlanAssociationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreVerificationPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreVerificationPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreVerificationPlanAssociations_sync",
+      "title": "ListRestoreVerificationPlanAssociationsRequestObject",
+      "description": "Snippet for ListRestoreVerificationPlanAssociations",
+      "file": "BackupDRClient.ListRestoreVerificationPlanAssociationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreVerificationPlanAssociations",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreVerificationPlanAssociations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.ListRestoreVerificationPlanAssociationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListRestoreVerificationPlanAssociationsResponse, Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreVerificationPlanAssociations",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreVerificationPlanAssociations",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreVerificationPlanAssociations_async",
+      "title": "ListRestoreVerificationPlanAssociationsRequestObjectAsync",
+      "description": "Snippet for ListRestoreVerificationPlanAssociationsAsync",
+      "file": "BackupDRClient.ListRestoreVerificationPlanAssociationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreVerificationPlanAssociationsAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreVerificationPlanAssociationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.ListRestoreVerificationPlanAssociationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListRestoreVerificationPlanAssociationsResponse, Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreVerificationPlanAssociations",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreVerificationPlanAssociations",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreVerificationPlanAssociations_sync_flattened",
+      "title": "ListRestoreVerificationPlanAssociations",
+      "description": "Snippet for ListRestoreVerificationPlanAssociations",
+      "file": "BackupDRClient.ListRestoreVerificationPlanAssociationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreVerificationPlanAssociations",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreVerificationPlanAssociations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListRestoreVerificationPlanAssociationsResponse, Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreVerificationPlanAssociations",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreVerificationPlanAssociations",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreVerificationPlanAssociations_async_flattened",
+      "title": "ListRestoreVerificationPlanAssociationsAsync",
+      "description": "Snippet for ListRestoreVerificationPlanAssociationsAsync",
+      "file": "BackupDRClient.ListRestoreVerificationPlanAssociationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreVerificationPlanAssociationsAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreVerificationPlanAssociationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListRestoreVerificationPlanAssociationsResponse, Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreVerificationPlanAssociations",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreVerificationPlanAssociations",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreVerificationPlanAssociations_sync_flattened_resourceNames",
+      "title": "ListRestoreVerificationPlanAssociationsResourceNames",
+      "description": "Snippet for ListRestoreVerificationPlanAssociations",
+      "file": "BackupDRClient.ListRestoreVerificationPlanAssociationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreVerificationPlanAssociations",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreVerificationPlanAssociations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListRestoreVerificationPlanAssociationsResponse, Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreVerificationPlanAssociations",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreVerificationPlanAssociations",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreVerificationPlanAssociations_async_flattened_resourceNames",
+      "title": "ListRestoreVerificationPlanAssociationsResourceNamesAsync",
+      "description": "Snippet for ListRestoreVerificationPlanAssociationsAsync",
+      "file": "BackupDRClient.ListRestoreVerificationPlanAssociationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreVerificationPlanAssociationsAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreVerificationPlanAssociationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListRestoreVerificationPlanAssociationsResponse, Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociation>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreVerificationPlanAssociations",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreVerificationPlanAssociations",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteRestoreVerificationPlanAssociation_sync",
+      "title": "DeleteRestoreVerificationPlanAssociationRequestObject",
+      "description": "Snippet for DeleteRestoreVerificationPlanAssociation",
+      "file": "BackupDRClient.DeleteRestoreVerificationPlanAssociationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreVerificationPlanAssociation",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteRestoreVerificationPlanAssociation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.DeleteRestoreVerificationPlanAssociationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreVerificationPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteRestoreVerificationPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteRestoreVerificationPlanAssociation_async",
+      "title": "DeleteRestoreVerificationPlanAssociationRequestObjectAsync",
+      "description": "Snippet for DeleteRestoreVerificationPlanAssociationAsync",
+      "file": "BackupDRClient.DeleteRestoreVerificationPlanAssociationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreVerificationPlanAssociationAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteRestoreVerificationPlanAssociationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.DeleteRestoreVerificationPlanAssociationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreVerificationPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteRestoreVerificationPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteRestoreVerificationPlanAssociation_sync_flattened",
+      "title": "DeleteRestoreVerificationPlanAssociation",
+      "description": "Snippet for DeleteRestoreVerificationPlanAssociation",
+      "file": "BackupDRClient.DeleteRestoreVerificationPlanAssociationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreVerificationPlanAssociation",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteRestoreVerificationPlanAssociation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreVerificationPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteRestoreVerificationPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteRestoreVerificationPlanAssociation_async_flattened",
+      "title": "DeleteRestoreVerificationPlanAssociationAsync",
+      "description": "Snippet for DeleteRestoreVerificationPlanAssociationAsync",
+      "file": "BackupDRClient.DeleteRestoreVerificationPlanAssociationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreVerificationPlanAssociationAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteRestoreVerificationPlanAssociationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreVerificationPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteRestoreVerificationPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteRestoreVerificationPlanAssociation_sync_flattened_resourceNames",
+      "title": "DeleteRestoreVerificationPlanAssociationResourceNames",
+      "description": "Snippet for DeleteRestoreVerificationPlanAssociation",
+      "file": "BackupDRClient.DeleteRestoreVerificationPlanAssociationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreVerificationPlanAssociation",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteRestoreVerificationPlanAssociation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreVerificationPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteRestoreVerificationPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteRestoreVerificationPlanAssociation_async_flattened_resourceNames",
+      "title": "DeleteRestoreVerificationPlanAssociationResourceNamesAsync",
+      "description": "Snippet for DeleteRestoreVerificationPlanAssociationAsync",
+      "file": "BackupDRClient.DeleteRestoreVerificationPlanAssociationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreVerificationPlanAssociationAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteRestoreVerificationPlanAssociationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreVerificationPlanAssociation",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteRestoreVerificationPlanAssociation",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_TriggerRestoreVerification_sync",
+      "title": "TriggerRestoreVerificationRequestObject",
+      "description": "Snippet for TriggerRestoreVerification",
+      "file": "BackupDRClient.TriggerRestoreVerificationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TriggerRestoreVerification",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.TriggerRestoreVerification",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.TriggerRestoreVerificationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.TriggerRestoreVerificationResponse, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "TriggerRestoreVerification",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.TriggerRestoreVerification",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_TriggerRestoreVerification_async",
+      "title": "TriggerRestoreVerificationRequestObjectAsync",
+      "description": "Snippet for TriggerRestoreVerificationAsync",
+      "file": "BackupDRClient.TriggerRestoreVerificationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TriggerRestoreVerificationAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.TriggerRestoreVerificationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.TriggerRestoreVerificationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.TriggerRestoreVerificationResponse, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "TriggerRestoreVerification",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.TriggerRestoreVerification",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_TriggerRestoreVerification_sync_flattened",
+      "title": "TriggerRestoreVerification",
+      "description": "Snippet for TriggerRestoreVerification",
+      "file": "BackupDRClient.TriggerRestoreVerificationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TriggerRestoreVerification",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.TriggerRestoreVerification",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.TriggerRestoreVerificationResponse, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "TriggerRestoreVerification",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.TriggerRestoreVerification",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_TriggerRestoreVerification_async_flattened",
+      "title": "TriggerRestoreVerificationAsync",
+      "description": "Snippet for TriggerRestoreVerificationAsync",
+      "file": "BackupDRClient.TriggerRestoreVerificationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TriggerRestoreVerificationAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.TriggerRestoreVerificationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.TriggerRestoreVerificationResponse, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "TriggerRestoreVerification",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.TriggerRestoreVerification",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_TriggerRestoreVerification_sync_flattened_resourceNames",
+      "title": "TriggerRestoreVerificationResourceNames",
+      "description": "Snippet for TriggerRestoreVerification",
+      "file": "BackupDRClient.TriggerRestoreVerificationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TriggerRestoreVerification",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.TriggerRestoreVerification",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.TriggerRestoreVerificationResponse, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "TriggerRestoreVerification",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.TriggerRestoreVerification",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_TriggerRestoreVerification_async_flattened_resourceNames",
+      "title": "TriggerRestoreVerificationResourceNamesAsync",
+      "description": "Snippet for TriggerRestoreVerificationAsync",
+      "file": "BackupDRClient.TriggerRestoreVerificationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TriggerRestoreVerificationAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.TriggerRestoreVerificationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanAssociationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.TriggerRestoreVerificationResponse, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "TriggerRestoreVerification",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.TriggerRestoreVerification",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreVerificationPlan_sync",
+      "title": "GetRestoreVerificationPlanRequestObject",
+      "description": "Snippet for GetRestoreVerificationPlan",
+      "file": "BackupDRClient.GetRestoreVerificationPlanRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreVerificationPlan",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreVerificationPlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.GetRestoreVerificationPlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.RestoreVerificationPlan",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreVerificationPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreVerificationPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreVerificationPlan_async",
+      "title": "GetRestoreVerificationPlanRequestObjectAsync",
+      "description": "Snippet for GetRestoreVerificationPlanAsync",
+      "file": "BackupDRClient.GetRestoreVerificationPlanRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreVerificationPlanAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreVerificationPlanAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.GetRestoreVerificationPlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.RestoreVerificationPlan>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreVerificationPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreVerificationPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreVerificationPlan_sync_flattened",
+      "title": "GetRestoreVerificationPlan",
+      "description": "Snippet for GetRestoreVerificationPlan",
+      "file": "BackupDRClient.GetRestoreVerificationPlanSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreVerificationPlan",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreVerificationPlan",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.RestoreVerificationPlan",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreVerificationPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreVerificationPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreVerificationPlan_async_flattened",
+      "title": "GetRestoreVerificationPlanAsync",
+      "description": "Snippet for GetRestoreVerificationPlanAsync",
+      "file": "BackupDRClient.GetRestoreVerificationPlanAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreVerificationPlanAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreVerificationPlanAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.RestoreVerificationPlan>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreVerificationPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreVerificationPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreVerificationPlan_sync_flattened_resourceNames",
+      "title": "GetRestoreVerificationPlanResourceNames",
+      "description": "Snippet for GetRestoreVerificationPlan",
+      "file": "BackupDRClient.GetRestoreVerificationPlanResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreVerificationPlan",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreVerificationPlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BackupDR.V1.RestoreVerificationPlan",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreVerificationPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreVerificationPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_GetRestoreVerificationPlan_async_flattened_resourceNames",
+      "title": "GetRestoreVerificationPlanResourceNamesAsync",
+      "description": "Snippet for GetRestoreVerificationPlanAsync",
+      "file": "BackupDRClient.GetRestoreVerificationPlanResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRestoreVerificationPlanAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.GetRestoreVerificationPlanAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BackupDR.V1.RestoreVerificationPlan>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "GetRestoreVerificationPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.GetRestoreVerificationPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreVerificationPlans_sync",
+      "title": "ListRestoreVerificationPlansRequestObject",
+      "description": "Snippet for ListRestoreVerificationPlans",
+      "file": "BackupDRClient.ListRestoreVerificationPlansRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreVerificationPlans",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreVerificationPlans",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.ListRestoreVerificationPlansRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListRestoreVerificationPlansResponse, Google.Cloud.BackupDR.V1.RestoreVerificationPlan>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreVerificationPlans",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreVerificationPlans",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreVerificationPlans_async",
+      "title": "ListRestoreVerificationPlansRequestObjectAsync",
+      "description": "Snippet for ListRestoreVerificationPlansAsync",
+      "file": "BackupDRClient.ListRestoreVerificationPlansRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreVerificationPlansAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreVerificationPlansAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.ListRestoreVerificationPlansRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListRestoreVerificationPlansResponse, Google.Cloud.BackupDR.V1.RestoreVerificationPlan>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreVerificationPlans",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreVerificationPlans",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreVerificationPlans_sync_flattened",
+      "title": "ListRestoreVerificationPlans",
+      "description": "Snippet for ListRestoreVerificationPlans",
+      "file": "BackupDRClient.ListRestoreVerificationPlansSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreVerificationPlans",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreVerificationPlans",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListRestoreVerificationPlansResponse, Google.Cloud.BackupDR.V1.RestoreVerificationPlan>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreVerificationPlans",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreVerificationPlans",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreVerificationPlans_async_flattened",
+      "title": "ListRestoreVerificationPlansAsync",
+      "description": "Snippet for ListRestoreVerificationPlansAsync",
+      "file": "BackupDRClient.ListRestoreVerificationPlansAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreVerificationPlansAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreVerificationPlansAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListRestoreVerificationPlansResponse, Google.Cloud.BackupDR.V1.RestoreVerificationPlan>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreVerificationPlans",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreVerificationPlans",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreVerificationPlans_sync_flattened_resourceNames",
+      "title": "ListRestoreVerificationPlansResourceNames",
+      "description": "Snippet for ListRestoreVerificationPlans",
+      "file": "BackupDRClient.ListRestoreVerificationPlansResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreVerificationPlans",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreVerificationPlans",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BackupDR.V1.ListRestoreVerificationPlansResponse, Google.Cloud.BackupDR.V1.RestoreVerificationPlan>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreVerificationPlans",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreVerificationPlans",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_ListRestoreVerificationPlans_async_flattened_resourceNames",
+      "title": "ListRestoreVerificationPlansResourceNamesAsync",
+      "description": "Snippet for ListRestoreVerificationPlansAsync",
+      "file": "BackupDRClient.ListRestoreVerificationPlansResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRestoreVerificationPlansAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.ListRestoreVerificationPlansAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BackupDR.V1.ListRestoreVerificationPlansResponse, Google.Cloud.BackupDR.V1.RestoreVerificationPlan>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "ListRestoreVerificationPlans",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.ListRestoreVerificationPlans",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteRestoreVerificationPlan_sync",
+      "title": "DeleteRestoreVerificationPlanRequestObject",
+      "description": "Snippet for DeleteRestoreVerificationPlan",
+      "file": "BackupDRClient.DeleteRestoreVerificationPlanRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreVerificationPlan",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteRestoreVerificationPlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.DeleteRestoreVerificationPlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreVerificationPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteRestoreVerificationPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteRestoreVerificationPlan_async",
+      "title": "DeleteRestoreVerificationPlanRequestObjectAsync",
+      "description": "Snippet for DeleteRestoreVerificationPlanAsync",
+      "file": "BackupDRClient.DeleteRestoreVerificationPlanRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreVerificationPlanAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteRestoreVerificationPlanAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.DeleteRestoreVerificationPlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreVerificationPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteRestoreVerificationPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteRestoreVerificationPlan_sync_flattened",
+      "title": "DeleteRestoreVerificationPlan",
+      "description": "Snippet for DeleteRestoreVerificationPlan",
+      "file": "BackupDRClient.DeleteRestoreVerificationPlanSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreVerificationPlan",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteRestoreVerificationPlan",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreVerificationPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteRestoreVerificationPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteRestoreVerificationPlan_async_flattened",
+      "title": "DeleteRestoreVerificationPlanAsync",
+      "description": "Snippet for DeleteRestoreVerificationPlanAsync",
+      "file": "BackupDRClient.DeleteRestoreVerificationPlanAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreVerificationPlanAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteRestoreVerificationPlanAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreVerificationPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteRestoreVerificationPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteRestoreVerificationPlan_sync_flattened_resourceNames",
+      "title": "DeleteRestoreVerificationPlanResourceNames",
+      "description": "Snippet for DeleteRestoreVerificationPlan",
+      "file": "BackupDRClient.DeleteRestoreVerificationPlanResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreVerificationPlan",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteRestoreVerificationPlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreVerificationPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteRestoreVerificationPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_DeleteRestoreVerificationPlan_async_flattened_resourceNames",
+      "title": "DeleteRestoreVerificationPlanResourceNamesAsync",
+      "description": "Snippet for DeleteRestoreVerificationPlanAsync",
+      "file": "BackupDRClient.DeleteRestoreVerificationPlanResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRestoreVerificationPlanAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.DeleteRestoreVerificationPlanAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.RestoreVerificationPlanName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "DeleteRestoreVerificationPlan",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.DeleteRestoreVerificationPlan",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "backupdr_v1_generated_BackupDrProtectionSummary_ListResourceBackupConfigs_sync",
       "title": "ListResourceBackupConfigsRequestObject",
       "description": "Snippet for ListResourceBackupConfigs",

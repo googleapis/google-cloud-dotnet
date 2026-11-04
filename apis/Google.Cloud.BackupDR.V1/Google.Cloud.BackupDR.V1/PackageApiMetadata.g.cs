@@ -97,6 +97,11 @@ namespace Google.Cloud.BackupDR.V1
             yield return BindingmatchingresourceReflection.Descriptor;
             yield return DatasourcereferenceReflection.Descriptor;
             yield return ProtectionSummaryReflection.Descriptor;
+            yield return RestoreTemplateReflection.Descriptor;
+            yield return RestoreTemplateCommonReflection.Descriptor;
+            yield return RestoreTemplateExecutionReflection.Descriptor;
+            yield return RestoreVerificationPlanReflection.Descriptor;
+            yield return RestoreVerificationPlanAssociationReflection.Descriptor;
             yield return gciv::IamPolicyReflection.Descriptor;
             yield return gciv::OptionsReflection.Descriptor;
             yield return gciv::PolicyReflection.Descriptor;
