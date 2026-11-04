@@ -8897,6 +8897,103 @@
       ]
     },
     {
+      "regionTag": "dataform_v1beta1_generated_Dataform_FetchWorkspaceHistory_sync",
+      "title": "FetchWorkspaceHistoryRequestObject",
+      "description": "Snippet for FetchWorkspaceHistory",
+      "file": "DataformClient.FetchWorkspaceHistoryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchWorkspaceHistory",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.FetchWorkspaceHistory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryResponse, Google.Cloud.Dataform.V1Beta1.CommitLogEntry>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "FetchWorkspaceHistory",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.FetchWorkspaceHistory",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_FetchWorkspaceHistory_async",
+      "title": "FetchWorkspaceHistoryRequestObjectAsync",
+      "description": "Snippet for FetchWorkspaceHistoryAsync",
+      "file": "DataformClient.FetchWorkspaceHistoryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchWorkspaceHistoryAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.FetchWorkspaceHistoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryResponse, Google.Cloud.Dataform.V1Beta1.CommitLogEntry>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "FetchWorkspaceHistory",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.FetchWorkspaceHistory",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dataform_v1beta1_generated_Dataform_CommitWorkspaceChanges_sync",
       "title": "CommitWorkspaceChangesRequestObject",
       "description": "Snippet for CommitWorkspaceChanges",
@@ -12374,6 +12471,309 @@
         {
           "start": 35,
           "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateCompilationResultLongRunning_sync",
+      "title": "CreateCompilationResultLongRunningRequestObject",
+      "description": "Snippet for CreateCompilationResultLongRunning",
+      "file": "DataformClient.CreateCompilationResultLongRunningRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCompilationResultLongRunning",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateCompilationResultLongRunning",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CreateCompilationResultRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataform.V1Beta1.CompilationResult, Google.Cloud.Dataform.V1Beta1.CreateCompilationResultMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateCompilationResultLongRunning",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateCompilationResultLongRunning",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateCompilationResultLongRunning_async",
+      "title": "CreateCompilationResultLongRunningRequestObjectAsync",
+      "description": "Snippet for CreateCompilationResultLongRunningAsync",
+      "file": "DataformClient.CreateCompilationResultLongRunningRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCompilationResultLongRunningAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateCompilationResultLongRunningAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CreateCompilationResultRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataform.V1Beta1.CompilationResult, Google.Cloud.Dataform.V1Beta1.CreateCompilationResultMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateCompilationResultLongRunning",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateCompilationResultLongRunning",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateCompilationResultLongRunning_sync_flattened",
+      "title": "CreateCompilationResultLongRunning",
+      "description": "Snippet for CreateCompilationResultLongRunning",
+      "file": "DataformClient.CreateCompilationResultLongRunningSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCompilationResultLongRunning",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateCompilationResultLongRunning",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CompilationResult",
+            "name": "compilationResult"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataform.V1Beta1.CompilationResult, Google.Cloud.Dataform.V1Beta1.CreateCompilationResultMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateCompilationResultLongRunning",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateCompilationResultLongRunning",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateCompilationResultLongRunning_async_flattened",
+      "title": "CreateCompilationResultLongRunningAsync",
+      "description": "Snippet for CreateCompilationResultLongRunningAsync",
+      "file": "DataformClient.CreateCompilationResultLongRunningAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCompilationResultLongRunningAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateCompilationResultLongRunningAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CompilationResult",
+            "name": "compilationResult"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataform.V1Beta1.CompilationResult, Google.Cloud.Dataform.V1Beta1.CreateCompilationResultMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateCompilationResultLongRunning",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateCompilationResultLongRunning",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateCompilationResultLongRunning_sync_flattened_resourceNames",
+      "title": "CreateCompilationResultLongRunningResourceNames",
+      "description": "Snippet for CreateCompilationResultLongRunning",
+      "file": "DataformClient.CreateCompilationResultLongRunningResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCompilationResultLongRunning",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateCompilationResultLongRunning",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CompilationResult",
+            "name": "compilationResult"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataform.V1Beta1.CompilationResult, Google.Cloud.Dataform.V1Beta1.CreateCompilationResultMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateCompilationResultLongRunning",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateCompilationResultLongRunning",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateCompilationResultLongRunning_async_flattened_resourceNames",
+      "title": "CreateCompilationResultLongRunningResourceNamesAsync",
+      "description": "Snippet for CreateCompilationResultLongRunningAsync",
+      "file": "DataformClient.CreateCompilationResultLongRunningResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCompilationResultLongRunningAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateCompilationResultLongRunningAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CompilationResult",
+            "name": "compilationResult"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataform.V1Beta1.CompilationResult, Google.Cloud.Dataform.V1Beta1.CreateCompilationResultMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateCompilationResultLongRunning",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateCompilationResultLongRunning",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
           "type": "SHORT"
         }
       ]

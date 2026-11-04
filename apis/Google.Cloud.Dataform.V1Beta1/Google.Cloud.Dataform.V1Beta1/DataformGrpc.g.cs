@@ -203,6 +203,10 @@ namespace Google.Cloud.Dataform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.FetchGitAheadBehindResponse> __Marshaller_google_cloud_dataform_v1beta1_FetchGitAheadBehindResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.FetchGitAheadBehindResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryRequest> __Marshaller_google_cloud_dataform_v1beta1_FetchWorkspaceHistoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryResponse> __Marshaller_google_cloud_dataform_v1beta1_FetchWorkspaceHistoryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest> __Marshaller_google_cloud_dataform_v1beta1_CommitWorkspaceChangesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesResponse> __Marshaller_google_cloud_dataform_v1beta1_CommitWorkspaceChangesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesResponse.Parser));
@@ -666,6 +670,14 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         __Marshaller_google_cloud_dataform_v1beta1_FetchGitAheadBehindResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryRequest, global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryResponse> __Method_FetchWorkspaceHistory = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryRequest, global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchWorkspaceHistory",
+        __Marshaller_google_cloud_dataform_v1beta1_FetchWorkspaceHistoryRequest,
+        __Marshaller_google_cloud_dataform_v1beta1_FetchWorkspaceHistoryResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest, global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesResponse> __Method_CommitWorkspaceChanges = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest, global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -824,6 +836,14 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         "CreateCompilationResult",
         __Marshaller_google_cloud_dataform_v1beta1_CreateCompilationResultRequest,
         __Marshaller_google_cloud_dataform_v1beta1_CompilationResult);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.CreateCompilationResultRequest, global::Google.LongRunning.Operation> __Method_CreateCompilationResultLongRunning = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.CreateCompilationResultRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateCompilationResultLongRunning",
+        __Marshaller_google_cloud_dataform_v1beta1_CreateCompilationResultRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.QueryCompilationResultActionsRequest, global::Google.Cloud.Dataform.V1Beta1.QueryCompilationResultActionsResponse> __Method_QueryCompilationResultActions = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.QueryCompilationResultActionsRequest, global::Google.Cloud.Dataform.V1Beta1.QueryCompilationResultActionsResponse>(
@@ -1493,6 +1513,18 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       }
 
       /// <summary>
+      /// Fetches a Workspace's history of commits.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryResponse> FetchWorkspaceHistory(global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Applies a Git commit for uncommitted files in a Workspace.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1734,6 +1766,19 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataform.V1Beta1.CompilationResult> CreateCompilationResult(global::Google.Cloud.Dataform.V1Beta1.CreateCompilationResultRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new CompilationResult in a given project and location
+      /// asynchronously.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateCompilationResultLongRunning(global::Google.Cloud.Dataform.V1Beta1.CreateCompilationResultRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -4077,6 +4122,54 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_FetchGitAheadBehind, null, options, request);
       }
       /// <summary>
+      /// Fetches a Workspace's history of commits.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryResponse FetchWorkspaceHistory(global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchWorkspaceHistory(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches a Workspace's history of commits.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryResponse FetchWorkspaceHistory(global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchWorkspaceHistory, null, options, request);
+      }
+      /// <summary>
+      /// Fetches a Workspace's history of commits.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryResponse> FetchWorkspaceHistoryAsync(global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchWorkspaceHistoryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches a Workspace's history of commits.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryResponse> FetchWorkspaceHistoryAsync(global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchWorkspaceHistory, null, options, request);
+      }
+      /// <summary>
       /// Applies a Git commit for uncommitted files in a Workspace.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -5061,6 +5154,58 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCompilationResult, null, options, request);
       }
       /// <summary>
+      /// Creates a new CompilationResult in a given project and location
+      /// asynchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateCompilationResultLongRunning(global::Google.Cloud.Dataform.V1Beta1.CreateCompilationResultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCompilationResultLongRunning(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new CompilationResult in a given project and location
+      /// asynchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateCompilationResultLongRunning(global::Google.Cloud.Dataform.V1Beta1.CreateCompilationResultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateCompilationResultLongRunning, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new CompilationResult in a given project and location
+      /// asynchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateCompilationResultLongRunningAsync(global::Google.Cloud.Dataform.V1Beta1.CreateCompilationResultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCompilationResultLongRunningAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new CompilationResult in a given project and location
+      /// asynchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateCompilationResultLongRunningAsync(global::Google.Cloud.Dataform.V1Beta1.CreateCompilationResultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateCompilationResultLongRunning, null, options, request);
+      }
+      /// <summary>
       /// Returns CompilationResultActions in a given CompilationResult.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -6016,6 +6161,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
           .AddMethod(__Method_PushGitCommits, serviceImpl.PushGitCommits)
           .AddMethod(__Method_FetchFileGitStatuses, serviceImpl.FetchFileGitStatuses)
           .AddMethod(__Method_FetchGitAheadBehind, serviceImpl.FetchGitAheadBehind)
+          .AddMethod(__Method_FetchWorkspaceHistory, serviceImpl.FetchWorkspaceHistory)
           .AddMethod(__Method_CommitWorkspaceChanges, serviceImpl.CommitWorkspaceChanges)
           .AddMethod(__Method_ResetWorkspaceChanges, serviceImpl.ResetWorkspaceChanges)
           .AddMethod(__Method_FetchFileDiff, serviceImpl.FetchFileDiff)
@@ -6036,6 +6182,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
           .AddMethod(__Method_ListCompilationResults, serviceImpl.ListCompilationResults)
           .AddMethod(__Method_GetCompilationResult, serviceImpl.GetCompilationResult)
           .AddMethod(__Method_CreateCompilationResult, serviceImpl.CreateCompilationResult)
+          .AddMethod(__Method_CreateCompilationResultLongRunning, serviceImpl.CreateCompilationResultLongRunning)
           .AddMethod(__Method_QueryCompilationResultActions, serviceImpl.QueryCompilationResultActions)
           .AddMethod(__Method_ListWorkflowConfigs, serviceImpl.ListWorkflowConfigs)
           .AddMethod(__Method_GetWorkflowConfig, serviceImpl.GetWorkflowConfig)
@@ -6104,6 +6251,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       serviceBinder.AddMethod(__Method_PushGitCommits, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest, global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsResponse>(serviceImpl.PushGitCommits));
       serviceBinder.AddMethod(__Method_FetchFileGitStatuses, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.FetchFileGitStatusesRequest, global::Google.Cloud.Dataform.V1Beta1.FetchFileGitStatusesResponse>(serviceImpl.FetchFileGitStatuses));
       serviceBinder.AddMethod(__Method_FetchGitAheadBehind, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.FetchGitAheadBehindRequest, global::Google.Cloud.Dataform.V1Beta1.FetchGitAheadBehindResponse>(serviceImpl.FetchGitAheadBehind));
+      serviceBinder.AddMethod(__Method_FetchWorkspaceHistory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryRequest, global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceHistoryResponse>(serviceImpl.FetchWorkspaceHistory));
       serviceBinder.AddMethod(__Method_CommitWorkspaceChanges, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest, global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesResponse>(serviceImpl.CommitWorkspaceChanges));
       serviceBinder.AddMethod(__Method_ResetWorkspaceChanges, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest, global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesResponse>(serviceImpl.ResetWorkspaceChanges));
       serviceBinder.AddMethod(__Method_FetchFileDiff, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.FetchFileDiffRequest, global::Google.Cloud.Dataform.V1Beta1.FetchFileDiffResponse>(serviceImpl.FetchFileDiff));
@@ -6124,6 +6272,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       serviceBinder.AddMethod(__Method_ListCompilationResults, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.ListCompilationResultsRequest, global::Google.Cloud.Dataform.V1Beta1.ListCompilationResultsResponse>(serviceImpl.ListCompilationResults));
       serviceBinder.AddMethod(__Method_GetCompilationResult, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.GetCompilationResultRequest, global::Google.Cloud.Dataform.V1Beta1.CompilationResult>(serviceImpl.GetCompilationResult));
       serviceBinder.AddMethod(__Method_CreateCompilationResult, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.CreateCompilationResultRequest, global::Google.Cloud.Dataform.V1Beta1.CompilationResult>(serviceImpl.CreateCompilationResult));
+      serviceBinder.AddMethod(__Method_CreateCompilationResultLongRunning, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.CreateCompilationResultRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateCompilationResultLongRunning));
       serviceBinder.AddMethod(__Method_QueryCompilationResultActions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.QueryCompilationResultActionsRequest, global::Google.Cloud.Dataform.V1Beta1.QueryCompilationResultActionsResponse>(serviceImpl.QueryCompilationResultActions));
       serviceBinder.AddMethod(__Method_ListWorkflowConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.ListWorkflowConfigsRequest, global::Google.Cloud.Dataform.V1Beta1.ListWorkflowConfigsResponse>(serviceImpl.ListWorkflowConfigs));
       serviceBinder.AddMethod(__Method_GetWorkflowConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.GetWorkflowConfigRequest, global::Google.Cloud.Dataform.V1Beta1.WorkflowConfig>(serviceImpl.GetWorkflowConfig));

@@ -4519,6 +4519,102 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for FetchWorkspaceHistory</summary>
+        public void FetchWorkspaceHistoryRequestObject()
+        {
+            // Snippet: FetchWorkspaceHistory(FetchWorkspaceHistoryRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::FetchWorkspaceHistoryRequest request = new gcdv::FetchWorkspaceHistoryRequest
+            {
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+            };
+            // Make the request
+            PagedEnumerable<gcdv::FetchWorkspaceHistoryResponse, gcdv::CommitLogEntry> response = dataformClient.FetchWorkspaceHistory(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::CommitLogEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcdv::FetchWorkspaceHistoryResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::CommitLogEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::CommitLogEntry> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::CommitLogEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchWorkspaceHistoryAsync</summary>
+        public async Task FetchWorkspaceHistoryRequestObjectAsync()
+        {
+            // Snippet: FetchWorkspaceHistoryAsync(FetchWorkspaceHistoryRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::FetchWorkspaceHistoryRequest request = new gcdv::FetchWorkspaceHistoryRequest
+            {
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<gcdv::FetchWorkspaceHistoryResponse, gcdv::CommitLogEntry> response = dataformClient.FetchWorkspaceHistoryAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcdv::CommitLogEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcdv::FetchWorkspaceHistoryResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::CommitLogEntry item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::CommitLogEntry> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::CommitLogEntry item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for CommitWorkspaceChanges</summary>
         public void CommitWorkspaceChangesRequestObject()
         {
@@ -6151,6 +6247,195 @@ namespace GoogleCSharpSnippets
             gcdv::CompilationResult compilationResult = new gcdv::CompilationResult();
             // Make the request
             gcdv::CompilationResult response = await dataformClient.CreateCompilationResultAsync(parent, compilationResult);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCompilationResultLongRunning</summary>
+        public void CreateCompilationResultLongRunningRequestObject()
+        {
+            // Snippet: CreateCompilationResultLongRunning(CreateCompilationResultRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::CreateCompilationResultRequest request = new gcdv::CreateCompilationResultRequest
+            {
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                CompilationResult = new gcdv::CompilationResult(),
+            };
+            // Make the request
+            Operation<gcdv::CompilationResult, gcdv::CreateCompilationResultMetadata> response = dataformClient.CreateCompilationResultLongRunning(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::CompilationResult, gcdv::CreateCompilationResultMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdv::CompilationResult result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::CompilationResult, gcdv::CreateCompilationResultMetadata> retrievedResponse = dataformClient.PollOnceCreateCompilationResultLongRunning(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::CompilationResult retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCompilationResultLongRunningAsync</summary>
+        public async Task CreateCompilationResultLongRunningRequestObjectAsync()
+        {
+            // Snippet: CreateCompilationResultLongRunningAsync(CreateCompilationResultRequest, CallSettings)
+            // Additional: CreateCompilationResultLongRunningAsync(CreateCompilationResultRequest, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::CreateCompilationResultRequest request = new gcdv::CreateCompilationResultRequest
+            {
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                CompilationResult = new gcdv::CompilationResult(),
+            };
+            // Make the request
+            Operation<gcdv::CompilationResult, gcdv::CreateCompilationResultMetadata> response = await dataformClient.CreateCompilationResultLongRunningAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::CompilationResult, gcdv::CreateCompilationResultMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdv::CompilationResult result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::CompilationResult, gcdv::CreateCompilationResultMetadata> retrievedResponse = await dataformClient.PollOnceCreateCompilationResultLongRunningAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::CompilationResult retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCompilationResultLongRunning</summary>
+        public void CreateCompilationResultLongRunning()
+        {
+            // Snippet: CreateCompilationResultLongRunning(string, CompilationResult, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            gcdv::CompilationResult compilationResult = new gcdv::CompilationResult();
+            // Make the request
+            Operation<gcdv::CompilationResult, gcdv::CreateCompilationResultMetadata> response = dataformClient.CreateCompilationResultLongRunning(parent, compilationResult);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::CompilationResult, gcdv::CreateCompilationResultMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdv::CompilationResult result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::CompilationResult, gcdv::CreateCompilationResultMetadata> retrievedResponse = dataformClient.PollOnceCreateCompilationResultLongRunning(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::CompilationResult retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCompilationResultLongRunningAsync</summary>
+        public async Task CreateCompilationResultLongRunningAsync()
+        {
+            // Snippet: CreateCompilationResultLongRunningAsync(string, CompilationResult, CallSettings)
+            // Additional: CreateCompilationResultLongRunningAsync(string, CompilationResult, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            gcdv::CompilationResult compilationResult = new gcdv::CompilationResult();
+            // Make the request
+            Operation<gcdv::CompilationResult, gcdv::CreateCompilationResultMetadata> response = await dataformClient.CreateCompilationResultLongRunningAsync(parent, compilationResult);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::CompilationResult, gcdv::CreateCompilationResultMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdv::CompilationResult result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::CompilationResult, gcdv::CreateCompilationResultMetadata> retrievedResponse = await dataformClient.PollOnceCreateCompilationResultLongRunningAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::CompilationResult retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCompilationResultLongRunning</summary>
+        public void CreateCompilationResultLongRunningResourceNames()
+        {
+            // Snippet: CreateCompilationResultLongRunning(RepositoryName, CompilationResult, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::CompilationResult compilationResult = new gcdv::CompilationResult();
+            // Make the request
+            Operation<gcdv::CompilationResult, gcdv::CreateCompilationResultMetadata> response = dataformClient.CreateCompilationResultLongRunning(parent, compilationResult);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::CompilationResult, gcdv::CreateCompilationResultMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdv::CompilationResult result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::CompilationResult, gcdv::CreateCompilationResultMetadata> retrievedResponse = dataformClient.PollOnceCreateCompilationResultLongRunning(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::CompilationResult retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCompilationResultLongRunningAsync</summary>
+        public async Task CreateCompilationResultLongRunningResourceNamesAsync()
+        {
+            // Snippet: CreateCompilationResultLongRunningAsync(RepositoryName, CompilationResult, CallSettings)
+            // Additional: CreateCompilationResultLongRunningAsync(RepositoryName, CompilationResult, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::CompilationResult compilationResult = new gcdv::CompilationResult();
+            // Make the request
+            Operation<gcdv::CompilationResult, gcdv::CreateCompilationResultMetadata> response = await dataformClient.CreateCompilationResultLongRunningAsync(parent, compilationResult);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::CompilationResult, gcdv::CreateCompilationResultMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdv::CompilationResult result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::CompilationResult, gcdv::CreateCompilationResultMetadata> retrievedResponse = await dataformClient.PollOnceCreateCompilationResultLongRunningAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::CompilationResult retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 

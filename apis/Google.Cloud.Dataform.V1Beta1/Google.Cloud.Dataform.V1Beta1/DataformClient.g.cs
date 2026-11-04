@@ -97,6 +97,7 @@ namespace Google.Cloud.Dataform.V1Beta1
             PushGitCommitsSettings = existing.PushGitCommitsSettings;
             FetchFileGitStatusesSettings = existing.FetchFileGitStatusesSettings;
             FetchGitAheadBehindSettings = existing.FetchGitAheadBehindSettings;
+            FetchWorkspaceHistorySettings = existing.FetchWorkspaceHistorySettings;
             CommitWorkspaceChangesSettings = existing.CommitWorkspaceChangesSettings;
             ResetWorkspaceChangesSettings = existing.ResetWorkspaceChangesSettings;
             FetchFileDiffSettings = existing.FetchFileDiffSettings;
@@ -117,6 +118,8 @@ namespace Google.Cloud.Dataform.V1Beta1
             ListCompilationResultsSettings = existing.ListCompilationResultsSettings;
             GetCompilationResultSettings = existing.GetCompilationResultSettings;
             CreateCompilationResultSettings = existing.CreateCompilationResultSettings;
+            CreateCompilationResultLongRunningSettings = existing.CreateCompilationResultLongRunningSettings;
+            CreateCompilationResultLongRunningOperationsSettings = existing.CreateCompilationResultLongRunningOperationsSettings.Clone();
             QueryCompilationResultActionsSettings = existing.QueryCompilationResultActionsSettings;
             ListWorkflowConfigsSettings = existing.ListWorkflowConfigsSettings;
             GetWorkflowConfigSettings = existing.GetWorkflowConfigSettings;
@@ -741,6 +744,18 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.FetchWorkspaceHistory</c> and <c>DataformClient.FetchWorkspaceHistoryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchWorkspaceHistorySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DataformClient.CommitWorkspaceChanges</c> and <c>DataformClient.CommitWorkspaceChangesAsync</c>.
         /// </summary>
         /// <remarks>
@@ -978,6 +993,37 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CreateCompilationResultSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.CreateCompilationResultLongRunning</c> and
+        /// <c>DataformClient.CreateCompilationResultLongRunningAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateCompilationResultLongRunningSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataformClient.CreateCompilationResultLongRunning</c> and
+        /// <c>DataformClient.CreateCompilationResultLongRunningAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateCompilationResultLongRunningOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -5272,6 +5318,24 @@ namespace Google.Cloud.Dataform.V1Beta1
             FetchGitAheadBehindAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Fetches a Workspace's history of commits.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CommitLogEntry"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchWorkspaceHistoryResponse, CommitLogEntry> FetchWorkspaceHistory(FetchWorkspaceHistoryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches a Workspace's history of commits.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CommitLogEntry"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchWorkspaceHistoryResponse, CommitLogEntry> FetchWorkspaceHistoryAsync(FetchWorkspaceHistoryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
         /// Applies a Git commit for uncommitted files in a Workspace.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6606,6 +6670,175 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<CompilationResult> CreateCompilationResultAsync(RepositoryName parent, CompilationResult compilationResult, st::CancellationToken cancellationToken) =>
             CreateCompilationResultAsync(parent, compilationResult, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new CompilationResult in a given project and location
+        /// asynchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CompilationResult, CreateCompilationResultMetadata> CreateCompilationResultLongRunning(CreateCompilationResultRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new CompilationResult in a given project and location
+        /// asynchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CompilationResult, CreateCompilationResultMetadata>> CreateCompilationResultLongRunningAsync(CreateCompilationResultRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new CompilationResult in a given project and location
+        /// asynchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CompilationResult, CreateCompilationResultMetadata>> CreateCompilationResultLongRunningAsync(CreateCompilationResultRequest request, st::CancellationToken cancellationToken) =>
+            CreateCompilationResultLongRunningAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateCompilationResultLongRunning</c>.</summary>
+        public virtual lro::OperationsClient CreateCompilationResultLongRunningOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateCompilationResultLongRunning</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<CompilationResult, CreateCompilationResultMetadata> PollOnceCreateCompilationResultLongRunning(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CompilationResult, CreateCompilationResultMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateCompilationResultLongRunningOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateCompilationResultLongRunning</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<CompilationResult, CreateCompilationResultMetadata>> PollOnceCreateCompilationResultLongRunningAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CompilationResult, CreateCompilationResultMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateCompilationResultLongRunningOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new CompilationResult in a given project and location
+        /// asynchronously.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the compilation result. Must be
+        /// in the format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="compilationResult">
+        /// Required. The compilation result to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CompilationResult, CreateCompilationResultMetadata> CreateCompilationResultLongRunning(string parent, CompilationResult compilationResult, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCompilationResultLongRunning(new CreateCompilationResultRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                CompilationResult = gax::GaxPreconditions.CheckNotNull(compilationResult, nameof(compilationResult)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new CompilationResult in a given project and location
+        /// asynchronously.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the compilation result. Must be
+        /// in the format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="compilationResult">
+        /// Required. The compilation result to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CompilationResult, CreateCompilationResultMetadata>> CreateCompilationResultLongRunningAsync(string parent, CompilationResult compilationResult, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCompilationResultLongRunningAsync(new CreateCompilationResultRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                CompilationResult = gax::GaxPreconditions.CheckNotNull(compilationResult, nameof(compilationResult)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new CompilationResult in a given project and location
+        /// asynchronously.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the compilation result. Must be
+        /// in the format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="compilationResult">
+        /// Required. The compilation result to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CompilationResult, CreateCompilationResultMetadata>> CreateCompilationResultLongRunningAsync(string parent, CompilationResult compilationResult, st::CancellationToken cancellationToken) =>
+            CreateCompilationResultLongRunningAsync(parent, compilationResult, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new CompilationResult in a given project and location
+        /// asynchronously.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the compilation result. Must be
+        /// in the format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="compilationResult">
+        /// Required. The compilation result to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CompilationResult, CreateCompilationResultMetadata> CreateCompilationResultLongRunning(RepositoryName parent, CompilationResult compilationResult, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCompilationResultLongRunning(new CreateCompilationResultRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CompilationResult = gax::GaxPreconditions.CheckNotNull(compilationResult, nameof(compilationResult)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new CompilationResult in a given project and location
+        /// asynchronously.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the compilation result. Must be
+        /// in the format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="compilationResult">
+        /// Required. The compilation result to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CompilationResult, CreateCompilationResultMetadata>> CreateCompilationResultLongRunningAsync(RepositoryName parent, CompilationResult compilationResult, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCompilationResultLongRunningAsync(new CreateCompilationResultRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CompilationResult = gax::GaxPreconditions.CheckNotNull(compilationResult, nameof(compilationResult)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new CompilationResult in a given project and location
+        /// asynchronously.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the compilation result. Must be
+        /// in the format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="compilationResult">
+        /// Required. The compilation result to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CompilationResult, CreateCompilationResultMetadata>> CreateCompilationResultLongRunningAsync(RepositoryName parent, CompilationResult compilationResult, st::CancellationToken cancellationToken) =>
+            CreateCompilationResultLongRunningAsync(parent, compilationResult, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns CompilationResultActions in a given CompilationResult.
@@ -8316,6 +8549,8 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         private readonly gaxgrpc::ApiCall<FetchGitAheadBehindRequest, FetchGitAheadBehindResponse> _callFetchGitAheadBehind;
 
+        private readonly gaxgrpc::ApiCall<FetchWorkspaceHistoryRequest, FetchWorkspaceHistoryResponse> _callFetchWorkspaceHistory;
+
         private readonly gaxgrpc::ApiCall<CommitWorkspaceChangesRequest, CommitWorkspaceChangesResponse> _callCommitWorkspaceChanges;
 
         private readonly gaxgrpc::ApiCall<ResetWorkspaceChangesRequest, ResetWorkspaceChangesResponse> _callResetWorkspaceChanges;
@@ -8355,6 +8590,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         private readonly gaxgrpc::ApiCall<GetCompilationResultRequest, CompilationResult> _callGetCompilationResult;
 
         private readonly gaxgrpc::ApiCall<CreateCompilationResultRequest, CompilationResult> _callCreateCompilationResult;
+
+        private readonly gaxgrpc::ApiCall<CreateCompilationResultRequest, lro::Operation> _callCreateCompilationResultLongRunning;
 
         private readonly gaxgrpc::ApiCall<QueryCompilationResultActionsRequest, QueryCompilationResultActionsResponse> _callQueryCompilationResultActions;
 
@@ -8410,6 +8647,7 @@ namespace Google.Cloud.Dataform.V1Beta1
             MoveFolderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MoveFolderOperationsSettings, logger);
             DeleteRepositoryLongRunningOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRepositoryLongRunningOperationsSettings, logger);
             MoveRepositoryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MoveRepositoryOperationsSettings, logger);
+            CreateCompilationResultLongRunningOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCompilationResultLongRunningOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callGetTeamFolder = clientHelper.BuildApiCall<GetTeamFolderRequest, TeamFolder>("GetTeamFolder", grpcClient.GetTeamFolderAsync, grpcClient.GetTeamFolder, effectiveSettings.GetTeamFolderSettings).WithGoogleRequestParam("name", request => request.Name);
@@ -8538,6 +8776,9 @@ namespace Google.Cloud.Dataform.V1Beta1
             _callFetchGitAheadBehind = clientHelper.BuildApiCall<FetchGitAheadBehindRequest, FetchGitAheadBehindResponse>("FetchGitAheadBehind", grpcClient.FetchGitAheadBehindAsync, grpcClient.FetchGitAheadBehind, effectiveSettings.FetchGitAheadBehindSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callFetchGitAheadBehind);
             Modify_FetchGitAheadBehindApiCall(ref _callFetchGitAheadBehind);
+            _callFetchWorkspaceHistory = clientHelper.BuildApiCall<FetchWorkspaceHistoryRequest, FetchWorkspaceHistoryResponse>("FetchWorkspaceHistory", grpcClient.FetchWorkspaceHistoryAsync, grpcClient.FetchWorkspaceHistory, effectiveSettings.FetchWorkspaceHistorySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callFetchWorkspaceHistory);
+            Modify_FetchWorkspaceHistoryApiCall(ref _callFetchWorkspaceHistory);
             _callCommitWorkspaceChanges = clientHelper.BuildApiCall<CommitWorkspaceChangesRequest, CommitWorkspaceChangesResponse>("CommitWorkspaceChanges", grpcClient.CommitWorkspaceChangesAsync, grpcClient.CommitWorkspaceChanges, effectiveSettings.CommitWorkspaceChangesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCommitWorkspaceChanges);
             Modify_CommitWorkspaceChangesApiCall(ref _callCommitWorkspaceChanges);
@@ -8598,6 +8839,9 @@ namespace Google.Cloud.Dataform.V1Beta1
             _callCreateCompilationResult = clientHelper.BuildApiCall<CreateCompilationResultRequest, CompilationResult>("CreateCompilationResult", grpcClient.CreateCompilationResultAsync, grpcClient.CreateCompilationResult, effectiveSettings.CreateCompilationResultSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCompilationResult);
             Modify_CreateCompilationResultApiCall(ref _callCreateCompilationResult);
+            _callCreateCompilationResultLongRunning = clientHelper.BuildApiCall<CreateCompilationResultRequest, lro::Operation>("CreateCompilationResultLongRunning", grpcClient.CreateCompilationResultLongRunningAsync, grpcClient.CreateCompilationResultLongRunning, effectiveSettings.CreateCompilationResultLongRunningSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateCompilationResultLongRunning);
+            Modify_CreateCompilationResultLongRunningApiCall(ref _callCreateCompilationResultLongRunning);
             _callQueryCompilationResultActions = clientHelper.BuildApiCall<QueryCompilationResultActionsRequest, QueryCompilationResultActionsResponse>("QueryCompilationResultActions", grpcClient.QueryCompilationResultActionsAsync, grpcClient.QueryCompilationResultActions, effectiveSettings.QueryCompilationResultActionsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callQueryCompilationResultActions);
             Modify_QueryCompilationResultActionsApiCall(ref _callQueryCompilationResultActions);
@@ -8738,6 +8982,8 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         partial void Modify_FetchGitAheadBehindApiCall(ref gaxgrpc::ApiCall<FetchGitAheadBehindRequest, FetchGitAheadBehindResponse> call);
 
+        partial void Modify_FetchWorkspaceHistoryApiCall(ref gaxgrpc::ApiCall<FetchWorkspaceHistoryRequest, FetchWorkspaceHistoryResponse> call);
+
         partial void Modify_CommitWorkspaceChangesApiCall(ref gaxgrpc::ApiCall<CommitWorkspaceChangesRequest, CommitWorkspaceChangesResponse> call);
 
         partial void Modify_ResetWorkspaceChangesApiCall(ref gaxgrpc::ApiCall<ResetWorkspaceChangesRequest, ResetWorkspaceChangesResponse> call);
@@ -8777,6 +9023,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         partial void Modify_GetCompilationResultApiCall(ref gaxgrpc::ApiCall<GetCompilationResultRequest, CompilationResult> call);
 
         partial void Modify_CreateCompilationResultApiCall(ref gaxgrpc::ApiCall<CreateCompilationResultRequest, CompilationResult> call);
+
+        partial void Modify_CreateCompilationResultLongRunningApiCall(ref gaxgrpc::ApiCall<CreateCompilationResultRequest, lro::Operation> call);
 
         partial void Modify_QueryCompilationResultActionsApiCall(ref gaxgrpc::ApiCall<QueryCompilationResultActionsRequest, QueryCompilationResultActionsResponse> call);
 
@@ -8906,6 +9154,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         partial void Modify_FetchFileGitStatusesRequest(ref FetchFileGitStatusesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_FetchGitAheadBehindRequest(ref FetchGitAheadBehindRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchWorkspaceHistoryRequest(ref FetchWorkspaceHistoryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CommitWorkspaceChangesRequest(ref CommitWorkspaceChangesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -10060,6 +10310,30 @@ namespace Google.Cloud.Dataform.V1Beta1
         }
 
         /// <summary>
+        /// Fetches a Workspace's history of commits.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CommitLogEntry"/> resources.</returns>
+        public override gax::PagedEnumerable<FetchWorkspaceHistoryResponse, CommitLogEntry> FetchWorkspaceHistory(FetchWorkspaceHistoryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchWorkspaceHistoryRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<FetchWorkspaceHistoryRequest, FetchWorkspaceHistoryResponse, CommitLogEntry>(_callFetchWorkspaceHistory, request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches a Workspace's history of commits.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CommitLogEntry"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<FetchWorkspaceHistoryResponse, CommitLogEntry> FetchWorkspaceHistoryAsync(FetchWorkspaceHistoryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchWorkspaceHistoryRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<FetchWorkspaceHistoryRequest, FetchWorkspaceHistoryResponse, CommitLogEntry>(_callFetchWorkspaceHistory, request, callSettings);
+        }
+
+        /// <summary>
         /// Applies a Git commit for uncommitted files in a Workspace.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -10551,6 +10825,35 @@ namespace Google.Cloud.Dataform.V1Beta1
             return _callCreateCompilationResult.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>CreateCompilationResultLongRunning</c>.</summary>
+        public override lro::OperationsClient CreateCompilationResultLongRunningOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new CompilationResult in a given project and location
+        /// asynchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<CompilationResult, CreateCompilationResultMetadata> CreateCompilationResultLongRunning(CreateCompilationResultRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCompilationResultRequest(ref request, ref callSettings);
+            return new lro::Operation<CompilationResult, CreateCompilationResultMetadata>(_callCreateCompilationResultLongRunning.Sync(request, callSettings), CreateCompilationResultLongRunningOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new CompilationResult in a given project and location
+        /// asynchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<CompilationResult, CreateCompilationResultMetadata>> CreateCompilationResultLongRunningAsync(CreateCompilationResultRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCompilationResultRequest(ref request, ref callSettings);
+            return new lro::Operation<CompilationResult, CreateCompilationResultMetadata>(await _callCreateCompilationResultLongRunning.Async(request, callSettings).ConfigureAwait(false), CreateCompilationResultLongRunningOperationsClient);
+        }
+
         /// <summary>
         /// Returns CompilationResultActions in a given CompilationResult.
         /// </summary>
@@ -11038,6 +11341,10 @@ namespace Google.Cloud.Dataform.V1Beta1
     {
     }
 
+    public partial class FetchWorkspaceHistoryRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class QueryDirectoryContentsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -11138,6 +11445,14 @@ namespace Google.Cloud.Dataform.V1Beta1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<BranchMetadata> GetEnumerator() => Branches.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class FetchWorkspaceHistoryResponse : gaxgrpc::IPageResponse<CommitLogEntry>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<CommitLogEntry> GetEnumerator() => Commits.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
