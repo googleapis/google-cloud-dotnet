@@ -4134,7 +4134,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-11-02T19:45:10.947506576Z",
-            "lastGeneratedCommit": "d4dd5e80f3e941043abe09572495dde9601b9a4e",
+            "lastGeneratedCommit": "ff6017f2a8a0ea789f7398e9027625c0a144c18d",
             "lastReleasedCommit": "d4dd5e80f3e941043abe09572495dde9601b9a4e",
             "apiPaths": [
                 "google/cloud/chronicle/v1"
@@ -4356,7 +4356,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-10-26T20:00:28.259910342Z",
-            "lastGeneratedCommit": "cfc42c251e2148d608fb2fe67b2348129e640f7c",
+            "lastGeneratedCommit": "f7c8ebcc7e698cffaa77c532fbca8bd501591577",
             "lastReleasedCommit": "cfc42c251e2148d608fb2fe67b2348129e640f7c",
             "apiPaths": [
                 "google/cloud/geminidataanalytics/v1beta"

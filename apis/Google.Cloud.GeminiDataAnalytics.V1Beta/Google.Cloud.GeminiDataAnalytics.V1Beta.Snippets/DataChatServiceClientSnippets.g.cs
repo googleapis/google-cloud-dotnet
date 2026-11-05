@@ -689,6 +689,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsConversationName = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]"),
                 Filter = "",
+                PendingWriteWaitSkipped = false,
             };
             // Make the request
             PagedEnumerable<ListMessagesResponse, StorageMessage> response = dataChatServiceClient.ListMessages(request);
@@ -738,6 +739,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsConversationName = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]"),
                 Filter = "",
+                PendingWriteWaitSkipped = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListMessagesResponse, StorageMessage> response = dataChatServiceClient.ListMessagesAsync(request);
