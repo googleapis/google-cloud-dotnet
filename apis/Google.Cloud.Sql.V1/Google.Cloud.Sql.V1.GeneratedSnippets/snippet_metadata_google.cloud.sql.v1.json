@@ -6398,6 +6398,200 @@
       ]
     },
     {
+      "regionTag": "sqladmin_v1_generated_SqlInstancesService_Start_sync",
+      "title": "StartRequestObject",
+      "description": "Snippet for Start",
+      "file": "SqlInstancesServiceClient.StartRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Start",
+        "fullName": "Google.Cloud.Sql.V1.SqlInstancesServiceClient.Start",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Sql.V1.SqlInstancesStartRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Sql.V1.Operation",
+        "client": {
+          "shortName": "SqlInstancesServiceClient",
+          "fullName": "Google.Cloud.Sql.V1.SqlInstancesServiceClient"
+        },
+        "method": {
+          "shortName": "Start",
+          "fullName": "google.cloud.sql.v1.SqlInstancesService.Start",
+          "service": {
+            "shortName": "SqlInstancesService",
+            "fullName": "google.cloud.sql.v1.SqlInstancesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "sqladmin_v1_generated_SqlInstancesService_Start_async",
+      "title": "StartRequestObjectAsync",
+      "description": "Snippet for StartAsync",
+      "file": "SqlInstancesServiceClient.StartRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartAsync",
+        "fullName": "Google.Cloud.Sql.V1.SqlInstancesServiceClient.StartAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Sql.V1.SqlInstancesStartRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Sql.V1.Operation>",
+        "client": {
+          "shortName": "SqlInstancesServiceClient",
+          "fullName": "Google.Cloud.Sql.V1.SqlInstancesServiceClient"
+        },
+        "method": {
+          "shortName": "Start",
+          "fullName": "google.cloud.sql.v1.SqlInstancesService.Start",
+          "service": {
+            "shortName": "SqlInstancesService",
+            "fullName": "google.cloud.sql.v1.SqlInstancesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "sqladmin_v1_generated_SqlInstancesService_Stop_sync",
+      "title": "StopRequestObject",
+      "description": "Snippet for Stop",
+      "file": "SqlInstancesServiceClient.StopRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Stop",
+        "fullName": "Google.Cloud.Sql.V1.SqlInstancesServiceClient.Stop",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Sql.V1.SqlInstancesStopRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Sql.V1.Operation",
+        "client": {
+          "shortName": "SqlInstancesServiceClient",
+          "fullName": "Google.Cloud.Sql.V1.SqlInstancesServiceClient"
+        },
+        "method": {
+          "shortName": "Stop",
+          "fullName": "google.cloud.sql.v1.SqlInstancesService.Stop",
+          "service": {
+            "shortName": "SqlInstancesService",
+            "fullName": "google.cloud.sql.v1.SqlInstancesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "sqladmin_v1_generated_SqlInstancesService_Stop_async",
+      "title": "StopRequestObjectAsync",
+      "description": "Snippet for StopAsync",
+      "file": "SqlInstancesServiceClient.StopRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopAsync",
+        "fullName": "Google.Cloud.Sql.V1.SqlInstancesServiceClient.StopAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Sql.V1.SqlInstancesStopRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Sql.V1.Operation>",
+        "client": {
+          "shortName": "SqlInstancesServiceClient",
+          "fullName": "Google.Cloud.Sql.V1.SqlInstancesServiceClient"
+        },
+        "method": {
+          "shortName": "Stop",
+          "fullName": "google.cloud.sql.v1.SqlInstancesService.Stop",
+          "service": {
+            "shortName": "SqlInstancesService",
+            "fullName": "google.cloud.sql.v1.SqlInstancesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "sqladmin_v1_generated_SqlInstancesService_RestoreBackup_sync",
       "title": "RestoreBackupRequestObject",
       "description": "Snippet for RestoreBackup",
@@ -7950,6 +8144,103 @@
       ]
     },
     {
+      "regionTag": "sqladmin_v1_generated_SqlInstancesService_ExecuteSqlReadOnly_sync",
+      "title": "ExecuteSqlReadOnlyRequestObject",
+      "description": "Snippet for ExecuteSqlReadOnly",
+      "file": "SqlInstancesServiceClient.ExecuteSqlReadOnlyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteSqlReadOnly",
+        "fullName": "Google.Cloud.Sql.V1.SqlInstancesServiceClient.ExecuteSqlReadOnly",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyResponse",
+        "client": {
+          "shortName": "SqlInstancesServiceClient",
+          "fullName": "Google.Cloud.Sql.V1.SqlInstancesServiceClient"
+        },
+        "method": {
+          "shortName": "ExecuteSqlReadOnly",
+          "fullName": "google.cloud.sql.v1.SqlInstancesService.ExecuteSqlReadOnly",
+          "service": {
+            "shortName": "SqlInstancesService",
+            "fullName": "google.cloud.sql.v1.SqlInstancesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "sqladmin_v1_generated_SqlInstancesService_ExecuteSqlReadOnly_async",
+      "title": "ExecuteSqlReadOnlyRequestObjectAsync",
+      "description": "Snippet for ExecuteSqlReadOnlyAsync",
+      "file": "SqlInstancesServiceClient.ExecuteSqlReadOnlyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteSqlReadOnlyAsync",
+        "fullName": "Google.Cloud.Sql.V1.SqlInstancesServiceClient.ExecuteSqlReadOnlyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyResponse>",
+        "client": {
+          "shortName": "SqlInstancesServiceClient",
+          "fullName": "Google.Cloud.Sql.V1.SqlInstancesServiceClient"
+        },
+        "method": {
+          "shortName": "ExecuteSqlReadOnly",
+          "fullName": "google.cloud.sql.v1.SqlInstancesService.ExecuteSqlReadOnly",
+          "service": {
+            "shortName": "SqlInstancesService",
+            "fullName": "google.cloud.sql.v1.SqlInstancesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "sqladmin_v1_generated_SqlInstancesService_ExecuteSql_sync",
       "title": "ExecuteSqlRequestObject",
       "description": "Snippet for ExecuteSql",
@@ -8430,6 +8721,103 @@
         {
           "start": 35,
           "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "sqladmin_v1_generated_SqlInstancesService_ReconcileNetworking_sync",
+      "title": "ReconcileNetworkingRequestObject",
+      "description": "Snippet for ReconcileNetworking",
+      "file": "SqlInstancesServiceClient.ReconcileNetworkingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReconcileNetworking",
+        "fullName": "Google.Cloud.Sql.V1.SqlInstancesServiceClient.ReconcileNetworking",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Sql.V1.SqlInstancesReconcileNetworkingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Sql.V1.Operation",
+        "client": {
+          "shortName": "SqlInstancesServiceClient",
+          "fullName": "Google.Cloud.Sql.V1.SqlInstancesServiceClient"
+        },
+        "method": {
+          "shortName": "ReconcileNetworking",
+          "fullName": "google.cloud.sql.v1.SqlInstancesService.ReconcileNetworking",
+          "service": {
+            "shortName": "SqlInstancesService",
+            "fullName": "google.cloud.sql.v1.SqlInstancesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "sqladmin_v1_generated_SqlInstancesService_ReconcileNetworking_async",
+      "title": "ReconcileNetworkingRequestObjectAsync",
+      "description": "Snippet for ReconcileNetworkingAsync",
+      "file": "SqlInstancesServiceClient.ReconcileNetworkingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReconcileNetworkingAsync",
+        "fullName": "Google.Cloud.Sql.V1.SqlInstancesServiceClient.ReconcileNetworkingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Sql.V1.SqlInstancesReconcileNetworkingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Sql.V1.Operation>",
+        "client": {
+          "shortName": "SqlInstancesServiceClient",
+          "fullName": "Google.Cloud.Sql.V1.SqlInstancesServiceClient"
+        },
+        "method": {
+          "shortName": "ReconcileNetworking",
+          "fullName": "google.cloud.sql.v1.SqlInstancesService.ReconcileNetworking",
+          "service": {
+            "shortName": "SqlInstancesService",
+            "fullName": "google.cloud.sql.v1.SqlInstancesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
           "type": "SHORT"
         }
       ]
@@ -9091,6 +9479,297 @@
         "method": {
           "shortName": "List",
           "fullName": "google.cloud.sql.v1.SqlSslCertsService.List",
+          "service": {
+            "shortName": "SqlSslCertsService",
+            "fullName": "google.cloud.sql.v1.SqlSslCertsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "sqladmin_v1_generated_SqlSslCertsService_UpdateCustomerManagedCertificate_sync",
+      "title": "UpdateCustomerManagedCertificateRequestObject",
+      "description": "Snippet for UpdateCustomerManagedCertificate",
+      "file": "SqlSslCertsServiceClient.UpdateCustomerManagedCertificateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCustomerManagedCertificate",
+        "fullName": "Google.Cloud.Sql.V1.SqlSslCertsServiceClient.UpdateCustomerManagedCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Sql.V1.UpdateCustomerManagedCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Sql.V1.Operation",
+        "client": {
+          "shortName": "SqlSslCertsServiceClient",
+          "fullName": "Google.Cloud.Sql.V1.SqlSslCertsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCustomerManagedCertificate",
+          "fullName": "google.cloud.sql.v1.SqlSslCertsService.UpdateCustomerManagedCertificate",
+          "service": {
+            "shortName": "SqlSslCertsService",
+            "fullName": "google.cloud.sql.v1.SqlSslCertsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "sqladmin_v1_generated_SqlSslCertsService_UpdateCustomerManagedCertificate_async",
+      "title": "UpdateCustomerManagedCertificateRequestObjectAsync",
+      "description": "Snippet for UpdateCustomerManagedCertificateAsync",
+      "file": "SqlSslCertsServiceClient.UpdateCustomerManagedCertificateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCustomerManagedCertificateAsync",
+        "fullName": "Google.Cloud.Sql.V1.SqlSslCertsServiceClient.UpdateCustomerManagedCertificateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Sql.V1.UpdateCustomerManagedCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Sql.V1.Operation>",
+        "client": {
+          "shortName": "SqlSslCertsServiceClient",
+          "fullName": "Google.Cloud.Sql.V1.SqlSslCertsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCustomerManagedCertificate",
+          "fullName": "google.cloud.sql.v1.SqlSslCertsService.UpdateCustomerManagedCertificate",
+          "service": {
+            "shortName": "SqlSslCertsService",
+            "fullName": "google.cloud.sql.v1.SqlSslCertsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 51,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 49,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "sqladmin_v1_generated_SqlSslCertsService_DeleteCustomerManagedCertificate_sync",
+      "title": "DeleteCustomerManagedCertificateRequestObject",
+      "description": "Snippet for DeleteCustomerManagedCertificate",
+      "file": "SqlSslCertsServiceClient.DeleteCustomerManagedCertificateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCustomerManagedCertificate",
+        "fullName": "Google.Cloud.Sql.V1.SqlSslCertsServiceClient.DeleteCustomerManagedCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Sql.V1.DeleteCustomerManagedCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Sql.V1.Operation",
+        "client": {
+          "shortName": "SqlSslCertsServiceClient",
+          "fullName": "Google.Cloud.Sql.V1.SqlSslCertsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCustomerManagedCertificate",
+          "fullName": "google.cloud.sql.v1.SqlSslCertsService.DeleteCustomerManagedCertificate",
+          "service": {
+            "shortName": "SqlSslCertsService",
+            "fullName": "google.cloud.sql.v1.SqlSslCertsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "sqladmin_v1_generated_SqlSslCertsService_DeleteCustomerManagedCertificate_async",
+      "title": "DeleteCustomerManagedCertificateRequestObjectAsync",
+      "description": "Snippet for DeleteCustomerManagedCertificateAsync",
+      "file": "SqlSslCertsServiceClient.DeleteCustomerManagedCertificateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCustomerManagedCertificateAsync",
+        "fullName": "Google.Cloud.Sql.V1.SqlSslCertsServiceClient.DeleteCustomerManagedCertificateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Sql.V1.DeleteCustomerManagedCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Sql.V1.Operation>",
+        "client": {
+          "shortName": "SqlSslCertsServiceClient",
+          "fullName": "Google.Cloud.Sql.V1.SqlSslCertsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCustomerManagedCertificate",
+          "fullName": "google.cloud.sql.v1.SqlSslCertsService.DeleteCustomerManagedCertificate",
+          "service": {
+            "shortName": "SqlSslCertsService",
+            "fullName": "google.cloud.sql.v1.SqlSslCertsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "sqladmin_v1_generated_SqlSslCertsService_ListCustomerManagedCertificates_sync",
+      "title": "ListCustomerManagedCertificatesRequestObject",
+      "description": "Snippet for ListCustomerManagedCertificates",
+      "file": "SqlSslCertsServiceClient.ListCustomerManagedCertificatesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCustomerManagedCertificates",
+        "fullName": "Google.Cloud.Sql.V1.SqlSslCertsServiceClient.ListCustomerManagedCertificates",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Sql.V1.ListCustomerManagedCertificatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Sql.V1.ListCustomerManagedCertificatesResponse",
+        "client": {
+          "shortName": "SqlSslCertsServiceClient",
+          "fullName": "Google.Cloud.Sql.V1.SqlSslCertsServiceClient"
+        },
+        "method": {
+          "shortName": "ListCustomerManagedCertificates",
+          "fullName": "google.cloud.sql.v1.SqlSslCertsService.ListCustomerManagedCertificates",
+          "service": {
+            "shortName": "SqlSslCertsService",
+            "fullName": "google.cloud.sql.v1.SqlSslCertsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "sqladmin_v1_generated_SqlSslCertsService_ListCustomerManagedCertificates_async",
+      "title": "ListCustomerManagedCertificatesRequestObjectAsync",
+      "description": "Snippet for ListCustomerManagedCertificatesAsync",
+      "file": "SqlSslCertsServiceClient.ListCustomerManagedCertificatesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCustomerManagedCertificatesAsync",
+        "fullName": "Google.Cloud.Sql.V1.SqlSslCertsServiceClient.ListCustomerManagedCertificatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Sql.V1.ListCustomerManagedCertificatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Sql.V1.ListCustomerManagedCertificatesResponse>",
+        "client": {
+          "shortName": "SqlSslCertsServiceClient",
+          "fullName": "Google.Cloud.Sql.V1.SqlSslCertsServiceClient"
+        },
+        "method": {
+          "shortName": "ListCustomerManagedCertificates",
+          "fullName": "google.cloud.sql.v1.SqlSslCertsService.ListCustomerManagedCertificates",
           "service": {
             "shortName": "SqlSslCertsService",
             "fullName": "google.cloud.sql.v1.SqlSslCertsService"

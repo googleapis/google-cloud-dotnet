@@ -1186,6 +1186,43 @@ namespace Google.Cloud.Sql.V1
         }
     }
 
+    public partial class WorkloadReplayConfig
+    {
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="SourceInstance"/> resource name property.
+        /// </summary>
+        public InstanceName SourceInstanceAsInstanceName
+        {
+            get => string.IsNullOrEmpty(SourceInstance) ? null : InstanceName.Parse(SourceInstance, allowUnparsed: true);
+            set => SourceInstance = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class WorkloadCaptureConfig
+    {
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="ReplayInstance"/> resource name property.
+        /// </summary>
+        public InstanceName ReplayInstanceAsInstanceName
+        {
+            get => string.IsNullOrEmpty(ReplayInstance) ? null : InstanceName.Parse(ReplayInstance, allowUnparsed: true);
+            set => ReplayInstance = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ExecuteSqlReadOnlyPayload
+    {
+        /// <summary>
+        /// <see cref="SecretVersionName"/>-typed view over the <see cref="PasswordSecretVersion"/> resource name
+        /// property.
+        /// </summary>
+        public SecretVersionName PasswordSecretVersionAsSecretVersionName
+        {
+            get => string.IsNullOrEmpty(PasswordSecretVersion) ? null : SecretVersionName.Parse(PasswordSecretVersion, allowUnparsed: true);
+            set => PasswordSecretVersion = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ExecuteSqlPayload
     {
         /// <summary>
@@ -1196,6 +1233,17 @@ namespace Google.Cloud.Sql.V1
         {
             get => string.IsNullOrEmpty(PasswordSecretVersion) ? null : SecretVersionName.Parse(PasswordSecretVersion, allowUnparsed: true);
             set => PasswordSecretVersion = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class PscDnsReconcileNetworkingRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Networks"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<NetworkName> NetworksAsNetworkNames
+        {
+            get => new gax::ResourceNameList<NetworkName>(Networks, s => string.IsNullOrEmpty(s) ? null : NetworkName.Parse(s, allowUnparsed: true));
         }
     }
 }

@@ -28,45 +28,76 @@ namespace Google.Cloud.Sql.V1 {
             "dG8SE2dvb2dsZS5jbG91ZC5zcWwudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
             "bnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29nbGUvYXBp",
             "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGi1nb29nbGUvY2xvdWQvc3FsL3YxL2Ns",
-            "b3VkX3NxbF9yZXNvdXJjZXMucHJvdG8iVwoYU3FsU3NsQ2VydHNEZWxldGVS",
-            "ZXF1ZXN0EhAKCGluc3RhbmNlGAEgASgJEg8KB3Byb2plY3QYAiABKAkSGAoQ",
-            "c2hhMV9maW5nZXJwcmludBgDIAEoCSJUChVTcWxTc2xDZXJ0c0dldFJlcXVl",
-            "c3QSEAoIaW5zdGFuY2UYASABKAkSDwoHcHJvamVjdBgCIAEoCRIYChBzaGEx",
-            "X2ZpbmdlcnByaW50GAMgASgJIncKGFNxbFNzbENlcnRzSW5zZXJ0UmVxdWVz",
-            "dBIQCghpbnN0YW5jZRgBIAEoCRIPCgdwcm9qZWN0GAIgASgJEjgKBGJvZHkY",
-            "ZCABKAsyKi5nb29nbGUuY2xvdWQuc3FsLnYxLlNzbENlcnRzSW5zZXJ0UmVx",
-            "dWVzdCI7ChZTcWxTc2xDZXJ0c0xpc3RSZXF1ZXN0EhAKCGluc3RhbmNlGAEg",
-            "ASgJEg8KB3Byb2plY3QYAiABKAkiLAoVU3NsQ2VydHNJbnNlcnRSZXF1ZXN0",
-            "EhMKC2NvbW1vbl9uYW1lGAEgASgJIsgBChZTc2xDZXJ0c0luc2VydFJlc3Bv",
-            "bnNlEgwKBGtpbmQYASABKAkSMQoJb3BlcmF0aW9uGAIgASgLMh4uZ29vZ2xl",
-            "LmNsb3VkLnNxbC52MS5PcGVyYXRpb24SNAoOc2VydmVyX2NhX2NlcnQYAyAB",
-            "KAsyHC5nb29nbGUuY2xvdWQuc3FsLnYxLlNzbENlcnQSNwoLY2xpZW50X2Nl",
-            "cnQYBCABKAsyIi5nb29nbGUuY2xvdWQuc3FsLnYxLlNzbENlcnREZXRhaWwi",
-            "UQoUU3NsQ2VydHNMaXN0UmVzcG9uc2USDAoEa2luZBgBIAEoCRIrCgVpdGVt",
-            "cxgCIAMoCzIcLmdvb2dsZS5jbG91ZC5zcWwudjEuU3NsQ2VydDKqBgoSU3Fs",
-            "U3NsQ2VydHNTZXJ2aWNlEqgBCgZEZWxldGUSLS5nb29nbGUuY2xvdWQuc3Fs",
-            "LnYxLlNxbFNzbENlcnRzRGVsZXRlUmVxdWVzdBoeLmdvb2dsZS5jbG91ZC5z",
-            "cWwudjEuT3BlcmF0aW9uIk+C0+STAkkqRy92MS9wcm9qZWN0cy97cHJvamVj",
-            "dH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vc3NsQ2VydHMve3NoYTFfZmluZ2Vy",
-            "cHJpbnR9EqABCgNHZXQSKi5nb29nbGUuY2xvdWQuc3FsLnYxLlNxbFNzbENl",
-            "cnRzR2V0UmVxdWVzdBocLmdvb2dsZS5jbG91ZC5zcWwudjEuU3NsQ2VydCJP",
-            "gtPkkwJJEkcvdjEvcHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5z",
-            "dGFuY2V9L3NzbENlcnRzL3tzaGExX2ZpbmdlcnByaW50fRKoAQoGSW5zZXJ0",
-            "Ei0uZ29vZ2xlLmNsb3VkLnNxbC52MS5TcWxTc2xDZXJ0c0luc2VydFJlcXVl",
-            "c3QaKy5nb29nbGUuY2xvdWQuc3FsLnYxLlNzbENlcnRzSW5zZXJ0UmVzcG9u",
-            "c2UiQoLT5JMCPCI0L3YxL3Byb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMv",
-            "e2luc3RhbmNlfS9zc2xDZXJ0czoEYm9keRKcAQoETGlzdBIrLmdvb2dsZS5j",
-            "bG91ZC5zcWwudjEuU3FsU3NsQ2VydHNMaXN0UmVxdWVzdBopLmdvb2dsZS5j",
-            "bG91ZC5zcWwudjEuU3NsQ2VydHNMaXN0UmVzcG9uc2UiPILT5JMCNhI0L3Yx",
-            "L3Byb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS9zc2xD",
-            "ZXJ0cxp8ykEXc3FsYWRtaW4uZ29vZ2xlYXBpcy5jb23SQV9odHRwczovL3d3",
-            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvc3Fsc2VydmljZS5hZG1pbkJdChdj",
-            "b20uZ29vZ2xlLmNsb3VkLnNxbC52MUIVQ2xvdWRTcWxTc2xDZXJ0c1Byb3Rv",
-            "UAFaKWNsb3VkLmdvb2dsZS5jb20vZ28vc3FsL2FwaXYxL3NxbHBiO3NxbHBi",
-            "YgZwcm90bzM="));
+            "b3VkX3NxbF9yZXNvdXJjZXMucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVs",
+            "ZF9tYXNrLnByb3RvIlcKGFNxbFNzbENlcnRzRGVsZXRlUmVxdWVzdBIQCghp",
+            "bnN0YW5jZRgBIAEoCRIPCgdwcm9qZWN0GAIgASgJEhgKEHNoYTFfZmluZ2Vy",
+            "cHJpbnQYAyABKAkiVAoVU3FsU3NsQ2VydHNHZXRSZXF1ZXN0EhAKCGluc3Rh",
+            "bmNlGAEgASgJEg8KB3Byb2plY3QYAiABKAkSGAoQc2hhMV9maW5nZXJwcmlu",
+            "dBgDIAEoCSJ3ChhTcWxTc2xDZXJ0c0luc2VydFJlcXVlc3QSEAoIaW5zdGFu",
+            "Y2UYASABKAkSDwoHcHJvamVjdBgCIAEoCRI4CgRib2R5GGQgASgLMiouZ29v",
+            "Z2xlLmNsb3VkLnNxbC52MS5Tc2xDZXJ0c0luc2VydFJlcXVlc3QiOwoWU3Fs",
+            "U3NsQ2VydHNMaXN0UmVxdWVzdBIQCghpbnN0YW5jZRgBIAEoCRIPCgdwcm9q",
+            "ZWN0GAIgASgJIiwKFVNzbENlcnRzSW5zZXJ0UmVxdWVzdBITCgtjb21tb25f",
+            "bmFtZRgBIAEoCSLIAQoWU3NsQ2VydHNJbnNlcnRSZXNwb25zZRIMCgRraW5k",
+            "GAEgASgJEjEKCW9wZXJhdGlvbhgCIAEoCzIeLmdvb2dsZS5jbG91ZC5zcWwu",
+            "djEuT3BlcmF0aW9uEjQKDnNlcnZlcl9jYV9jZXJ0GAMgASgLMhwuZ29vZ2xl",
+            "LmNsb3VkLnNxbC52MS5Tc2xDZXJ0EjcKC2NsaWVudF9jZXJ0GAQgASgLMiIu",
+            "Z29vZ2xlLmNsb3VkLnNxbC52MS5Tc2xDZXJ0RGV0YWlsIlEKFFNzbENlcnRz",
+            "TGlzdFJlc3BvbnNlEgwKBGtpbmQYASABKAkSKwoFaXRlbXMYAiADKAsyHC5n",
+            "b29nbGUuY2xvdWQuc3FsLnYxLlNzbENlcnQiuAIKJ1VwZGF0ZUN1c3RvbWVy",
+            "TWFuYWdlZENlcnRpZmljYXRlUmVxdWVzdBIWCghpbnN0YW5jZRgBIAEoCUIE",
+            "4kEBAhIVCgdwcm9qZWN0GAIgASgJQgTiQQECEmgKI2N1c3RvbWVyX21hbmFn",
+            "ZWRfY2VydGlmaWNhdGVfY29uZmlnGAMgASgLMjUuZ29vZ2xlLmNsb3VkLnNx",
+            "bC52MS5DdXN0b21lck1hbmFnZWRDZXJ0aWZpY2F0ZUNvbmZpZ0IE4kEBAhI1",
+            "Cgt1cGRhdGVfbWFzaxgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1h",
+            "c2tCBOJBAQESGwoNYWxsb3dfbWlzc2luZxgFIAEoCEIE4kEBARIgChJjZXJ0",
+            "aWZpY2F0ZV9idW5kbGUYBiABKAlCBOJBAQIiegonRGVsZXRlQ3VzdG9tZXJN",
+            "YW5hZ2VkQ2VydGlmaWNhdGVSZXF1ZXN0EhYKCGluc3RhbmNlGAEgASgJQgTi",
+            "QQECEhUKB3Byb2plY3QYAiABKAlCBOJBAQISIAoSY2VydGlmaWNhdGVfYnVu",
+            "ZGxlGAMgASgJQgTiQQECIlcKJkxpc3RDdXN0b21lck1hbmFnZWRDZXJ0aWZp",
+            "Y2F0ZXNSZXF1ZXN0EhYKCGluc3RhbmNlGAEgASgJQgTiQQECEhUKB3Byb2pl",
+            "Y3QYAiABKAlCBOJBAQIijQEKJ0xpc3RDdXN0b21lck1hbmFnZWRDZXJ0aWZp",
+            "Y2F0ZXNSZXNwb25zZRJiCh1jdXN0b21lcl9tYW5hZ2VkX2NlcnRpZmljYXRl",
+            "cxgBIAMoCzI1Lmdvb2dsZS5jbG91ZC5zcWwudjEuQ3VzdG9tZXJNYW5hZ2Vk",
+            "Q2VydGlmaWNhdGVDb25maWdCBOJBAQIy7wsKElNxbFNzbENlcnRzU2Vydmlj",
+            "ZRKoAQoGRGVsZXRlEi0uZ29vZ2xlLmNsb3VkLnNxbC52MS5TcWxTc2xDZXJ0",
+            "c0RlbGV0ZVJlcXVlc3QaHi5nb29nbGUuY2xvdWQuc3FsLnYxLk9wZXJhdGlv",
+            "biJPgtPkkwJJKkcvdjEvcHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97",
+            "aW5zdGFuY2V9L3NzbENlcnRzL3tzaGExX2ZpbmdlcnByaW50fRKgAQoDR2V0",
+            "EiouZ29vZ2xlLmNsb3VkLnNxbC52MS5TcWxTc2xDZXJ0c0dldFJlcXVlc3Qa",
+            "HC5nb29nbGUuY2xvdWQuc3FsLnYxLlNzbENlcnQiT4LT5JMCSRJHL3YxL3By",
+            "b2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS9zc2xDZXJ0",
+            "cy97c2hhMV9maW5nZXJwcmludH0SqAEKBkluc2VydBItLmdvb2dsZS5jbG91",
+            "ZC5zcWwudjEuU3FsU3NsQ2VydHNJbnNlcnRSZXF1ZXN0GisuZ29vZ2xlLmNs",
+            "b3VkLnNxbC52MS5Tc2xDZXJ0c0luc2VydFJlc3BvbnNlIkKC0+STAjwiNC92",
+            "MS9wcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vc3Ns",
+            "Q2VydHM6BGJvZHkSnAEKBExpc3QSKy5nb29nbGUuY2xvdWQuc3FsLnYxLlNx",
+            "bFNzbENlcnRzTGlzdFJlcXVlc3QaKS5nb29nbGUuY2xvdWQuc3FsLnYxLlNz",
+            "bENlcnRzTGlzdFJlc3BvbnNlIjyC0+STAjYSNC92MS9wcm9qZWN0cy97cHJv",
+            "amVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vc3NsQ2VydHMS6QEKIFVwZGF0",
+            "ZUN1c3RvbWVyTWFuYWdlZENlcnRpZmljYXRlEjwuZ29vZ2xlLmNsb3VkLnNx",
+            "bC52MS5VcGRhdGVDdXN0b21lck1hbmFnZWRDZXJ0aWZpY2F0ZVJlcXVlc3Qa",
+            "Hi5nb29nbGUuY2xvdWQuc3FsLnYxLk9wZXJhdGlvbiJngtPkkwJhMlwvdjEv",
+            "cHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L2N1c3Rv",
+            "bWVyTWFuYWdlZENlcnRpZmljYXRlcy97Y2VydGlmaWNhdGVfYnVuZGxlfToB",
+            "KhLmAQogRGVsZXRlQ3VzdG9tZXJNYW5hZ2VkQ2VydGlmaWNhdGUSPC5nb29n",
+            "bGUuY2xvdWQuc3FsLnYxLkRlbGV0ZUN1c3RvbWVyTWFuYWdlZENlcnRpZmlj",
+            "YXRlUmVxdWVzdBoeLmdvb2dsZS5jbG91ZC5zcWwudjEuT3BlcmF0aW9uImSC",
+            "0+STAl4qXC92MS9wcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0",
+            "YW5jZX0vY3VzdG9tZXJNYW5hZ2VkQ2VydGlmaWNhdGVzL3tjZXJ0aWZpY2F0",
+            "ZV9idW5kbGV9Eu0BCh9MaXN0Q3VzdG9tZXJNYW5hZ2VkQ2VydGlmaWNhdGVz",
+            "EjsuZ29vZ2xlLmNsb3VkLnNxbC52MS5MaXN0Q3VzdG9tZXJNYW5hZ2VkQ2Vy",
+            "dGlmaWNhdGVzUmVxdWVzdBo8Lmdvb2dsZS5jbG91ZC5zcWwudjEuTGlzdEN1",
+            "c3RvbWVyTWFuYWdlZENlcnRpZmljYXRlc1Jlc3BvbnNlIk+C0+STAkkSRy92",
+            "MS9wcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vY3Vz",
+            "dG9tZXJNYW5hZ2VkQ2VydGlmaWNhdGVzGnzKQRdzcWxhZG1pbi5nb29nbGVh",
+            "cGlzLmNvbdJBX2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xv",
+            "dWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9z",
+            "cWxzZXJ2aWNlLmFkbWluQl0KF2NvbS5nb29nbGUuY2xvdWQuc3FsLnYxQhVD",
+            "bG91ZFNxbFNzbENlcnRzUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9z",
+            "cWwvYXBpdjEvc3FscGI7c3FscGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Sql.V1.CloudSqlResourcesReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Sql.V1.CloudSqlResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Sql.V1.SqlSslCertsDeleteRequest), global::Google.Cloud.Sql.V1.SqlSslCertsDeleteRequest.Parser, new[]{ "Instance", "Project", "Sha1Fingerprint" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Sql.V1.SqlSslCertsGetRequest), global::Google.Cloud.Sql.V1.SqlSslCertsGetRequest.Parser, new[]{ "Instance", "Project", "Sha1Fingerprint" }, null, null, null, null),
@@ -74,7 +105,11 @@ namespace Google.Cloud.Sql.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Sql.V1.SqlSslCertsListRequest), global::Google.Cloud.Sql.V1.SqlSslCertsListRequest.Parser, new[]{ "Instance", "Project" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Sql.V1.SslCertsInsertRequest), global::Google.Cloud.Sql.V1.SslCertsInsertRequest.Parser, new[]{ "CommonName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Sql.V1.SslCertsInsertResponse), global::Google.Cloud.Sql.V1.SslCertsInsertResponse.Parser, new[]{ "Kind", "Operation", "ServerCaCert", "ClientCert" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Sql.V1.SslCertsListResponse), global::Google.Cloud.Sql.V1.SslCertsListResponse.Parser, new[]{ "Kind", "Items" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Sql.V1.SslCertsListResponse), global::Google.Cloud.Sql.V1.SslCertsListResponse.Parser, new[]{ "Kind", "Items" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Sql.V1.UpdateCustomerManagedCertificateRequest), global::Google.Cloud.Sql.V1.UpdateCustomerManagedCertificateRequest.Parser, new[]{ "Instance", "Project", "CustomerManagedCertificateConfig", "UpdateMask", "AllowMissing", "CertificateBundle" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Sql.V1.DeleteCustomerManagedCertificateRequest), global::Google.Cloud.Sql.V1.DeleteCustomerManagedCertificateRequest.Parser, new[]{ "Instance", "Project", "CertificateBundle" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesRequest), global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesRequest.Parser, new[]{ "Instance", "Project" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesResponse), global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesResponse.Parser, new[]{ "CustomerManagedCertificates" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1953,6 +1988,1158 @@ namespace Google.Cloud.Sql.V1 {
           }
           case 18: {
             items_.AddEntriesFrom(ref input, _repeated_items_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for SqlSslCertsService.UpdateCustomerManagedCertificate.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateCustomerManagedCertificateRequest : pb::IMessage<UpdateCustomerManagedCertificateRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateCustomerManagedCertificateRequest> _parser = new pb::MessageParser<UpdateCustomerManagedCertificateRequest>(() => new UpdateCustomerManagedCertificateRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateCustomerManagedCertificateRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Sql.V1.CloudSqlSslCertsReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateCustomerManagedCertificateRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateCustomerManagedCertificateRequest(UpdateCustomerManagedCertificateRequest other) : this() {
+      instance_ = other.instance_;
+      project_ = other.project_;
+      customerManagedCertificateConfig_ = other.customerManagedCertificateConfig_ != null ? other.customerManagedCertificateConfig_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      allowMissing_ = other.allowMissing_;
+      certificateBundle_ = other.certificateBundle_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateCustomerManagedCertificateRequest Clone() {
+      return new UpdateCustomerManagedCertificateRequest(this);
+    }
+
+    /// <summary>Field number for the "instance" field.</summary>
+    public const int InstanceFieldNumber = 1;
+    private string instance_ = "";
+    /// <summary>
+    /// Required. Cloud SQL instance ID. This does not include the project ID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Instance {
+      get { return instance_; }
+      set {
+        instance_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "project" field.</summary>
+    public const int ProjectFieldNumber = 2;
+    private string project_ = "";
+    /// <summary>
+    /// Required. Project ID of the project that contains the instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Project {
+      get { return project_; }
+      set {
+        project_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "customer_managed_certificate_config" field.</summary>
+    public const int CustomerManagedCertificateConfigFieldNumber = 3;
+    private global::Google.Cloud.Sql.V1.CustomerManagedCertificateConfig customerManagedCertificateConfig_;
+    /// <summary>
+    /// Required. The customer managed certificate bundle SSL configuration to
+    /// update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Sql.V1.CustomerManagedCertificateConfig CustomerManagedCertificateConfig {
+      get { return customerManagedCertificateConfig_; }
+      set {
+        customerManagedCertificateConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Optional. The list of fields to be updated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "allow_missing" field.</summary>
+    public const int AllowMissingFieldNumber = 5;
+    private bool allowMissing_;
+    /// <summary>
+    /// Optional. If set to true, and the customer managed certificate bundle
+    /// configuration is not found, a new customer managed certificate bundle
+    /// configuration will be created. In this situation, `update_mask` is ignored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AllowMissing {
+      get { return allowMissing_; }
+      set {
+        allowMissing_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "certificate_bundle" field.</summary>
+    public const int CertificateBundleFieldNumber = 6;
+    private string certificateBundle_ = "";
+    /// <summary>
+    /// Required. Name tag of the customer managed certificate bundle to update. It
+    /// must start with a letter, be alphanumeric, and have a maximum length of 10
+    /// characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CertificateBundle {
+      get { return certificateBundle_; }
+      set {
+        certificateBundle_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateCustomerManagedCertificateRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateCustomerManagedCertificateRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Instance != other.Instance) return false;
+      if (Project != other.Project) return false;
+      if (!object.Equals(CustomerManagedCertificateConfig, other.CustomerManagedCertificateConfig)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (AllowMissing != other.AllowMissing) return false;
+      if (CertificateBundle != other.CertificateBundle) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Instance.Length != 0) hash ^= Instance.GetHashCode();
+      if (Project.Length != 0) hash ^= Project.GetHashCode();
+      if (customerManagedCertificateConfig_ != null) hash ^= CustomerManagedCertificateConfig.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (AllowMissing != false) hash ^= AllowMissing.GetHashCode();
+      if (CertificateBundle.Length != 0) hash ^= CertificateBundle.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Instance.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Instance);
+      }
+      if (Project.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Project);
+      }
+      if (customerManagedCertificateConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CustomerManagedCertificateConfig);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(UpdateMask);
+      }
+      if (AllowMissing != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(AllowMissing);
+      }
+      if (CertificateBundle.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(CertificateBundle);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Instance.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Instance);
+      }
+      if (Project.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Project);
+      }
+      if (customerManagedCertificateConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CustomerManagedCertificateConfig);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(UpdateMask);
+      }
+      if (AllowMissing != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(AllowMissing);
+      }
+      if (CertificateBundle.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(CertificateBundle);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Instance.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Instance);
+      }
+      if (Project.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Project);
+      }
+      if (customerManagedCertificateConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomerManagedCertificateConfig);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (AllowMissing != false) {
+        size += 1 + 1;
+      }
+      if (CertificateBundle.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CertificateBundle);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateCustomerManagedCertificateRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Instance.Length != 0) {
+        Instance = other.Instance;
+      }
+      if (other.Project.Length != 0) {
+        Project = other.Project;
+      }
+      if (other.customerManagedCertificateConfig_ != null) {
+        if (customerManagedCertificateConfig_ == null) {
+          CustomerManagedCertificateConfig = new global::Google.Cloud.Sql.V1.CustomerManagedCertificateConfig();
+        }
+        CustomerManagedCertificateConfig.MergeFrom(other.CustomerManagedCertificateConfig);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.AllowMissing != false) {
+        AllowMissing = other.AllowMissing;
+      }
+      if (other.CertificateBundle.Length != 0) {
+        CertificateBundle = other.CertificateBundle;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Instance = input.ReadString();
+            break;
+          }
+          case 18: {
+            Project = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (customerManagedCertificateConfig_ == null) {
+              CustomerManagedCertificateConfig = new global::Google.Cloud.Sql.V1.CustomerManagedCertificateConfig();
+            }
+            input.ReadMessage(CustomerManagedCertificateConfig);
+            break;
+          }
+          case 34: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 40: {
+            AllowMissing = input.ReadBool();
+            break;
+          }
+          case 50: {
+            CertificateBundle = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Instance = input.ReadString();
+            break;
+          }
+          case 18: {
+            Project = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (customerManagedCertificateConfig_ == null) {
+              CustomerManagedCertificateConfig = new global::Google.Cloud.Sql.V1.CustomerManagedCertificateConfig();
+            }
+            input.ReadMessage(CustomerManagedCertificateConfig);
+            break;
+          }
+          case 34: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 40: {
+            AllowMissing = input.ReadBool();
+            break;
+          }
+          case 50: {
+            CertificateBundle = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for SqlSslCertsService.DeleteCustomerManagedCertificate.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteCustomerManagedCertificateRequest : pb::IMessage<DeleteCustomerManagedCertificateRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteCustomerManagedCertificateRequest> _parser = new pb::MessageParser<DeleteCustomerManagedCertificateRequest>(() => new DeleteCustomerManagedCertificateRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteCustomerManagedCertificateRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Sql.V1.CloudSqlSslCertsReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteCustomerManagedCertificateRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteCustomerManagedCertificateRequest(DeleteCustomerManagedCertificateRequest other) : this() {
+      instance_ = other.instance_;
+      project_ = other.project_;
+      certificateBundle_ = other.certificateBundle_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteCustomerManagedCertificateRequest Clone() {
+      return new DeleteCustomerManagedCertificateRequest(this);
+    }
+
+    /// <summary>Field number for the "instance" field.</summary>
+    public const int InstanceFieldNumber = 1;
+    private string instance_ = "";
+    /// <summary>
+    /// Required. Cloud SQL instance ID. This does not include the project ID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Instance {
+      get { return instance_; }
+      set {
+        instance_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "project" field.</summary>
+    public const int ProjectFieldNumber = 2;
+    private string project_ = "";
+    /// <summary>
+    /// Required. Project ID of the project that contains the instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Project {
+      get { return project_; }
+      set {
+        project_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "certificate_bundle" field.</summary>
+    public const int CertificateBundleFieldNumber = 3;
+    private string certificateBundle_ = "";
+    /// <summary>
+    /// Required. Name tag of the customer managed certificate bundle to delete. It
+    /// must start with a letter, be alphanumeric, and have a maximum length of 10
+    /// characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CertificateBundle {
+      get { return certificateBundle_; }
+      set {
+        certificateBundle_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteCustomerManagedCertificateRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteCustomerManagedCertificateRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Instance != other.Instance) return false;
+      if (Project != other.Project) return false;
+      if (CertificateBundle != other.CertificateBundle) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Instance.Length != 0) hash ^= Instance.GetHashCode();
+      if (Project.Length != 0) hash ^= Project.GetHashCode();
+      if (CertificateBundle.Length != 0) hash ^= CertificateBundle.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Instance.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Instance);
+      }
+      if (Project.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Project);
+      }
+      if (CertificateBundle.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(CertificateBundle);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Instance.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Instance);
+      }
+      if (Project.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Project);
+      }
+      if (CertificateBundle.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(CertificateBundle);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Instance.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Instance);
+      }
+      if (Project.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Project);
+      }
+      if (CertificateBundle.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CertificateBundle);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteCustomerManagedCertificateRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Instance.Length != 0) {
+        Instance = other.Instance;
+      }
+      if (other.Project.Length != 0) {
+        Project = other.Project;
+      }
+      if (other.CertificateBundle.Length != 0) {
+        CertificateBundle = other.CertificateBundle;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Instance = input.ReadString();
+            break;
+          }
+          case 18: {
+            Project = input.ReadString();
+            break;
+          }
+          case 26: {
+            CertificateBundle = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Instance = input.ReadString();
+            break;
+          }
+          case 18: {
+            Project = input.ReadString();
+            break;
+          }
+          case 26: {
+            CertificateBundle = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for SqlSslCertsService.ListCustomerManagedCertificates.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListCustomerManagedCertificatesRequest : pb::IMessage<ListCustomerManagedCertificatesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListCustomerManagedCertificatesRequest> _parser = new pb::MessageParser<ListCustomerManagedCertificatesRequest>(() => new ListCustomerManagedCertificatesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListCustomerManagedCertificatesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Sql.V1.CloudSqlSslCertsReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListCustomerManagedCertificatesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListCustomerManagedCertificatesRequest(ListCustomerManagedCertificatesRequest other) : this() {
+      instance_ = other.instance_;
+      project_ = other.project_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListCustomerManagedCertificatesRequest Clone() {
+      return new ListCustomerManagedCertificatesRequest(this);
+    }
+
+    /// <summary>Field number for the "instance" field.</summary>
+    public const int InstanceFieldNumber = 1;
+    private string instance_ = "";
+    /// <summary>
+    /// Required. Cloud SQL instance ID. This does not include the project ID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Instance {
+      get { return instance_; }
+      set {
+        instance_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "project" field.</summary>
+    public const int ProjectFieldNumber = 2;
+    private string project_ = "";
+    /// <summary>
+    /// Required. Project ID of the project that contains the instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Project {
+      get { return project_; }
+      set {
+        project_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListCustomerManagedCertificatesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListCustomerManagedCertificatesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Instance != other.Instance) return false;
+      if (Project != other.Project) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Instance.Length != 0) hash ^= Instance.GetHashCode();
+      if (Project.Length != 0) hash ^= Project.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Instance.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Instance);
+      }
+      if (Project.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Project);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Instance.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Instance);
+      }
+      if (Project.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Project);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Instance.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Instance);
+      }
+      if (Project.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Project);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListCustomerManagedCertificatesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Instance.Length != 0) {
+        Instance = other.Instance;
+      }
+      if (other.Project.Length != 0) {
+        Project = other.Project;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Instance = input.ReadString();
+            break;
+          }
+          case 18: {
+            Project = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Instance = input.ReadString();
+            break;
+          }
+          case 18: {
+            Project = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response message for SqlSslCertsService.ListCustomerManagedCertificates.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListCustomerManagedCertificatesResponse : pb::IMessage<ListCustomerManagedCertificatesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListCustomerManagedCertificatesResponse> _parser = new pb::MessageParser<ListCustomerManagedCertificatesResponse>(() => new ListCustomerManagedCertificatesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListCustomerManagedCertificatesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Sql.V1.CloudSqlSslCertsReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListCustomerManagedCertificatesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListCustomerManagedCertificatesResponse(ListCustomerManagedCertificatesResponse other) : this() {
+      customerManagedCertificates_ = other.customerManagedCertificates_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListCustomerManagedCertificatesResponse Clone() {
+      return new ListCustomerManagedCertificatesResponse(this);
+    }
+
+    /// <summary>Field number for the "customer_managed_certificates" field.</summary>
+    public const int CustomerManagedCertificatesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Sql.V1.CustomerManagedCertificateConfig> _repeated_customerManagedCertificates_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Sql.V1.CustomerManagedCertificateConfig.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Sql.V1.CustomerManagedCertificateConfig> customerManagedCertificates_ = new pbc::RepeatedField<global::Google.Cloud.Sql.V1.CustomerManagedCertificateConfig>();
+    /// <summary>
+    /// Required. List of customer managed SSL configurations for the instance.
+    /// Note: Sensitive private keys (e.g., PEER_CLIENT_KEY) are redacted in this
+    /// response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Sql.V1.CustomerManagedCertificateConfig> CustomerManagedCertificates {
+      get { return customerManagedCertificates_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListCustomerManagedCertificatesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListCustomerManagedCertificatesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!customerManagedCertificates_.Equals(other.customerManagedCertificates_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= customerManagedCertificates_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      customerManagedCertificates_.WriteTo(output, _repeated_customerManagedCertificates_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      customerManagedCertificates_.WriteTo(ref output, _repeated_customerManagedCertificates_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += customerManagedCertificates_.CalculateSize(_repeated_customerManagedCertificates_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListCustomerManagedCertificatesResponse other) {
+      if (other == null) {
+        return;
+      }
+      customerManagedCertificates_.Add(other.customerManagedCertificates_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            customerManagedCertificates_.AddEntriesFrom(input, _repeated_customerManagedCertificates_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            customerManagedCertificates_.AddEntriesFrom(ref input, _repeated_customerManagedCertificates_codec);
             break;
           }
         }

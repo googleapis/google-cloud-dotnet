@@ -79,6 +79,14 @@ namespace Google.Cloud.Sql.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Sql.V1.SqlSslCertsListRequest> __Marshaller_google_cloud_sql_v1_SqlSslCertsListRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Sql.V1.SqlSslCertsListRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Sql.V1.SslCertsListResponse> __Marshaller_google_cloud_sql_v1_SslCertsListResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Sql.V1.SslCertsListResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Sql.V1.UpdateCustomerManagedCertificateRequest> __Marshaller_google_cloud_sql_v1_UpdateCustomerManagedCertificateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Sql.V1.UpdateCustomerManagedCertificateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Sql.V1.DeleteCustomerManagedCertificateRequest> __Marshaller_google_cloud_sql_v1_DeleteCustomerManagedCertificateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Sql.V1.DeleteCustomerManagedCertificateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesRequest> __Marshaller_google_cloud_sql_v1_ListCustomerManagedCertificatesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesResponse> __Marshaller_google_cloud_sql_v1_ListCustomerManagedCertificatesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Sql.V1.SqlSslCertsDeleteRequest, global::Google.Cloud.Sql.V1.Operation> __Method_Delete = new grpc::Method<global::Google.Cloud.Sql.V1.SqlSslCertsDeleteRequest, global::Google.Cloud.Sql.V1.Operation>(
@@ -111,6 +119,30 @@ namespace Google.Cloud.Sql.V1 {
         "List",
         __Marshaller_google_cloud_sql_v1_SqlSslCertsListRequest,
         __Marshaller_google_cloud_sql_v1_SslCertsListResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Sql.V1.UpdateCustomerManagedCertificateRequest, global::Google.Cloud.Sql.V1.Operation> __Method_UpdateCustomerManagedCertificate = new grpc::Method<global::Google.Cloud.Sql.V1.UpdateCustomerManagedCertificateRequest, global::Google.Cloud.Sql.V1.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateCustomerManagedCertificate",
+        __Marshaller_google_cloud_sql_v1_UpdateCustomerManagedCertificateRequest,
+        __Marshaller_google_cloud_sql_v1_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Sql.V1.DeleteCustomerManagedCertificateRequest, global::Google.Cloud.Sql.V1.Operation> __Method_DeleteCustomerManagedCertificate = new grpc::Method<global::Google.Cloud.Sql.V1.DeleteCustomerManagedCertificateRequest, global::Google.Cloud.Sql.V1.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteCustomerManagedCertificate",
+        __Marshaller_google_cloud_sql_v1_DeleteCustomerManagedCertificateRequest,
+        __Marshaller_google_cloud_sql_v1_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesRequest, global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesResponse> __Method_ListCustomerManagedCertificates = new grpc::Method<global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesRequest, global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListCustomerManagedCertificates",
+        __Marshaller_google_cloud_sql_v1_ListCustomerManagedCertificatesRequest,
+        __Marshaller_google_cloud_sql_v1_ListCustomerManagedCertificatesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -171,6 +203,45 @@ namespace Google.Cloud.Sql.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Sql.V1.SslCertsListResponse> List(global::Google.Cloud.Sql.V1.SqlSslCertsListRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Upload and update customer managed certificate bundle for an existing Cloud
+      /// SQL instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Sql.V1.Operation> UpdateCustomerManagedCertificate(global::Google.Cloud.Sql.V1.UpdateCustomerManagedCertificateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Delete customer managed certificate bundle for an existing Cloud SQL
+      /// instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Sql.V1.Operation> DeleteCustomerManagedCertificate(global::Google.Cloud.Sql.V1.DeleteCustomerManagedCertificateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List all customer managed certificate bundles for an existing Cloud SQL
+      /// instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesResponse> ListCustomerManagedCertificates(global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -416,6 +487,162 @@ namespace Google.Cloud.Sql.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_List, null, options, request);
       }
+      /// <summary>
+      /// Upload and update customer managed certificate bundle for an existing Cloud
+      /// SQL instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Sql.V1.Operation UpdateCustomerManagedCertificate(global::Google.Cloud.Sql.V1.UpdateCustomerManagedCertificateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCustomerManagedCertificate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Upload and update customer managed certificate bundle for an existing Cloud
+      /// SQL instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Sql.V1.Operation UpdateCustomerManagedCertificate(global::Google.Cloud.Sql.V1.UpdateCustomerManagedCertificateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateCustomerManagedCertificate, null, options, request);
+      }
+      /// <summary>
+      /// Upload and update customer managed certificate bundle for an existing Cloud
+      /// SQL instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Sql.V1.Operation> UpdateCustomerManagedCertificateAsync(global::Google.Cloud.Sql.V1.UpdateCustomerManagedCertificateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCustomerManagedCertificateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Upload and update customer managed certificate bundle for an existing Cloud
+      /// SQL instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Sql.V1.Operation> UpdateCustomerManagedCertificateAsync(global::Google.Cloud.Sql.V1.UpdateCustomerManagedCertificateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateCustomerManagedCertificate, null, options, request);
+      }
+      /// <summary>
+      /// Delete customer managed certificate bundle for an existing Cloud SQL
+      /// instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Sql.V1.Operation DeleteCustomerManagedCertificate(global::Google.Cloud.Sql.V1.DeleteCustomerManagedCertificateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCustomerManagedCertificate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete customer managed certificate bundle for an existing Cloud SQL
+      /// instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Sql.V1.Operation DeleteCustomerManagedCertificate(global::Google.Cloud.Sql.V1.DeleteCustomerManagedCertificateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteCustomerManagedCertificate, null, options, request);
+      }
+      /// <summary>
+      /// Delete customer managed certificate bundle for an existing Cloud SQL
+      /// instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Sql.V1.Operation> DeleteCustomerManagedCertificateAsync(global::Google.Cloud.Sql.V1.DeleteCustomerManagedCertificateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCustomerManagedCertificateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete customer managed certificate bundle for an existing Cloud SQL
+      /// instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Sql.V1.Operation> DeleteCustomerManagedCertificateAsync(global::Google.Cloud.Sql.V1.DeleteCustomerManagedCertificateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteCustomerManagedCertificate, null, options, request);
+      }
+      /// <summary>
+      /// List all customer managed certificate bundles for an existing Cloud SQL
+      /// instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesResponse ListCustomerManagedCertificates(global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListCustomerManagedCertificates(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all customer managed certificate bundles for an existing Cloud SQL
+      /// instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesResponse ListCustomerManagedCertificates(global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListCustomerManagedCertificates, null, options, request);
+      }
+      /// <summary>
+      /// List all customer managed certificate bundles for an existing Cloud SQL
+      /// instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesResponse> ListCustomerManagedCertificatesAsync(global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListCustomerManagedCertificatesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all customer managed certificate bundles for an existing Cloud SQL
+      /// instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesResponse> ListCustomerManagedCertificatesAsync(global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListCustomerManagedCertificates, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SqlSslCertsServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -433,7 +660,10 @@ namespace Google.Cloud.Sql.V1 {
           .AddMethod(__Method_Delete, serviceImpl.Delete)
           .AddMethod(__Method_Get, serviceImpl.Get)
           .AddMethod(__Method_Insert, serviceImpl.Insert)
-          .AddMethod(__Method_List, serviceImpl.List).Build();
+          .AddMethod(__Method_List, serviceImpl.List)
+          .AddMethod(__Method_UpdateCustomerManagedCertificate, serviceImpl.UpdateCustomerManagedCertificate)
+          .AddMethod(__Method_DeleteCustomerManagedCertificate, serviceImpl.DeleteCustomerManagedCertificate)
+          .AddMethod(__Method_ListCustomerManagedCertificates, serviceImpl.ListCustomerManagedCertificates).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -447,6 +677,9 @@ namespace Google.Cloud.Sql.V1 {
       serviceBinder.AddMethod(__Method_Get, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlSslCertsGetRequest, global::Google.Cloud.Sql.V1.SslCert>(serviceImpl.Get));
       serviceBinder.AddMethod(__Method_Insert, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlSslCertsInsertRequest, global::Google.Cloud.Sql.V1.SslCertsInsertResponse>(serviceImpl.Insert));
       serviceBinder.AddMethod(__Method_List, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlSslCertsListRequest, global::Google.Cloud.Sql.V1.SslCertsListResponse>(serviceImpl.List));
+      serviceBinder.AddMethod(__Method_UpdateCustomerManagedCertificate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.UpdateCustomerManagedCertificateRequest, global::Google.Cloud.Sql.V1.Operation>(serviceImpl.UpdateCustomerManagedCertificate));
+      serviceBinder.AddMethod(__Method_DeleteCustomerManagedCertificate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.DeleteCustomerManagedCertificateRequest, global::Google.Cloud.Sql.V1.Operation>(serviceImpl.DeleteCustomerManagedCertificate));
+      serviceBinder.AddMethod(__Method_ListCustomerManagedCertificates, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesRequest, global::Google.Cloud.Sql.V1.ListCustomerManagedCertificatesResponse>(serviceImpl.ListCustomerManagedCertificates));
     }
 
   }

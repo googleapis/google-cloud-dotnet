@@ -17,6 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     using Google.Cloud.Sql.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -165,6 +166,121 @@ namespace GoogleCSharpSnippets
             };
             // Make the request
             SslCertsListResponse response = await sqlSslCertsServiceClient.ListAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomerManagedCertificate</summary>
+        public void UpdateCustomerManagedCertificateRequestObject()
+        {
+            // Snippet: UpdateCustomerManagedCertificate(UpdateCustomerManagedCertificateRequest, CallSettings)
+            // Create client
+            SqlSslCertsServiceClient sqlSslCertsServiceClient = SqlSslCertsServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateCustomerManagedCertificateRequest request = new UpdateCustomerManagedCertificateRequest
+            {
+                Instance = "",
+                Project = "",
+                CustomerManagedCertificateConfig = new CustomerManagedCertificateConfig(),
+                UpdateMask = new FieldMask(),
+                AllowMissing = false,
+                CertificateBundle = "",
+            };
+            // Make the request
+            Operation response = sqlSslCertsServiceClient.UpdateCustomerManagedCertificate(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomerManagedCertificateAsync</summary>
+        public async Task UpdateCustomerManagedCertificateRequestObjectAsync()
+        {
+            // Snippet: UpdateCustomerManagedCertificateAsync(UpdateCustomerManagedCertificateRequest, CallSettings)
+            // Additional: UpdateCustomerManagedCertificateAsync(UpdateCustomerManagedCertificateRequest, CancellationToken)
+            // Create client
+            SqlSslCertsServiceClient sqlSslCertsServiceClient = await SqlSslCertsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateCustomerManagedCertificateRequest request = new UpdateCustomerManagedCertificateRequest
+            {
+                Instance = "",
+                Project = "",
+                CustomerManagedCertificateConfig = new CustomerManagedCertificateConfig(),
+                UpdateMask = new FieldMask(),
+                AllowMissing = false,
+                CertificateBundle = "",
+            };
+            // Make the request
+            Operation response = await sqlSslCertsServiceClient.UpdateCustomerManagedCertificateAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomerManagedCertificate</summary>
+        public void DeleteCustomerManagedCertificateRequestObject()
+        {
+            // Snippet: DeleteCustomerManagedCertificate(DeleteCustomerManagedCertificateRequest, CallSettings)
+            // Create client
+            SqlSslCertsServiceClient sqlSslCertsServiceClient = SqlSslCertsServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteCustomerManagedCertificateRequest request = new DeleteCustomerManagedCertificateRequest
+            {
+                Instance = "",
+                Project = "",
+                CertificateBundle = "",
+            };
+            // Make the request
+            Operation response = sqlSslCertsServiceClient.DeleteCustomerManagedCertificate(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomerManagedCertificateAsync</summary>
+        public async Task DeleteCustomerManagedCertificateRequestObjectAsync()
+        {
+            // Snippet: DeleteCustomerManagedCertificateAsync(DeleteCustomerManagedCertificateRequest, CallSettings)
+            // Additional: DeleteCustomerManagedCertificateAsync(DeleteCustomerManagedCertificateRequest, CancellationToken)
+            // Create client
+            SqlSslCertsServiceClient sqlSslCertsServiceClient = await SqlSslCertsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteCustomerManagedCertificateRequest request = new DeleteCustomerManagedCertificateRequest
+            {
+                Instance = "",
+                Project = "",
+                CertificateBundle = "",
+            };
+            // Make the request
+            Operation response = await sqlSslCertsServiceClient.DeleteCustomerManagedCertificateAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomerManagedCertificates</summary>
+        public void ListCustomerManagedCertificatesRequestObject()
+        {
+            // Snippet: ListCustomerManagedCertificates(ListCustomerManagedCertificatesRequest, CallSettings)
+            // Create client
+            SqlSslCertsServiceClient sqlSslCertsServiceClient = SqlSslCertsServiceClient.Create();
+            // Initialize request argument(s)
+            ListCustomerManagedCertificatesRequest request = new ListCustomerManagedCertificatesRequest
+            {
+                Instance = "",
+                Project = "",
+            };
+            // Make the request
+            ListCustomerManagedCertificatesResponse response = sqlSslCertsServiceClient.ListCustomerManagedCertificates(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomerManagedCertificatesAsync</summary>
+        public async Task ListCustomerManagedCertificatesRequestObjectAsync()
+        {
+            // Snippet: ListCustomerManagedCertificatesAsync(ListCustomerManagedCertificatesRequest, CallSettings)
+            // Additional: ListCustomerManagedCertificatesAsync(ListCustomerManagedCertificatesRequest, CancellationToken)
+            // Create client
+            SqlSslCertsServiceClient sqlSslCertsServiceClient = await SqlSslCertsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListCustomerManagedCertificatesRequest request = new ListCustomerManagedCertificatesRequest
+            {
+                Instance = "",
+                Project = "",
+            };
+            // Make the request
+            ListCustomerManagedCertificatesResponse response = await sqlSslCertsServiceClient.ListCustomerManagedCertificatesAsync(request);
             // End snippet
         }
     }
