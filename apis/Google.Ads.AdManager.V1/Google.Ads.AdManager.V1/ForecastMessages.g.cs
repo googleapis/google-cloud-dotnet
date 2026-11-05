@@ -29,109 +29,117 @@ namespace Google.Ads.AdManager.V1 {
             "YW5hZ2VyL3YxL2NyZWF0aXZlX3BsYWNlaG9sZGVyLnByb3RvGihnb29nbGUv",
             "YWRzL2FkbWFuYWdlci92MS9kYXRlX3JhbmdlLnByb3RvGi9nb29nbGUvYWRz",
             "L2FkbWFuYWdlci92MS9mb3JlY2FzdGluZ19lbnVtcy5wcm90bxooZ29vZ2xl",
-            "L2Fkcy9hZG1hbmFnZXIvdjEvZ29hbF9lbnVtcy5wcm90bxonZ29vZ2xlL2Fk",
-            "cy9hZG1hbmFnZXIvdjEvdGFyZ2V0aW5nLnByb3RvGh9nb29nbGUvYXBpL2Zp",
-            "ZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3Rv",
-            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIrMCChtBdmFpbGFi",
-            "aWxpdHlGb3JlY2FzdE9wdGlvbnMSNwoldGFyZ2V0aW5nX2NyaXRlcmlhX2Jy",
-            "ZWFrZG93bl9pbmNsdWRlZBgBIAEoCEID4EEBSACIAQESMAoeY29udGVuZGlu",
-            "Z19saW5lX2l0ZW1zX2luY2x1ZGVkGAIgASgIQgPgQQFIAYgBARJOCglicmVh",
-            "a2Rvd24YAyABKAsyMS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5Gb3JlY2Fz",
-            "dEJyZWFrZG93bk9wdGlvbnNCA+BBAUgCiAEBQigKJl90YXJnZXRpbmdfY3Jp",
-            "dGVyaWFfYnJlYWtkb3duX2luY2x1ZGVkQiEKH19jb250ZW5kaW5nX2xpbmVf",
-            "aXRlbXNfaW5jbHVkZWRCDAoKX2JyZWFrZG93biKIBwoUQXZhaWxhYmlsaXR5",
-            "Rm9yZWNhc3QSPgoJbGluZV9pdGVtGAEgASgJQib6QSMKIWFkbWFuYWdlci5n",
-            "b29nbGVhcGlzLmNvbS9MaW5lSXRlbUgAiAEBEjcKBW9yZGVyGAIgASgJQiP6",
-            "QSAKHmFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9PcmRlckgBiAEBEkYKCXVu",
-            "aXRfdHlwZRgDIAEoDjIuLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlVuaXRU",
-            "eXBlRW51bS5Vbml0VHlwZUgCiAEBEhwKD2F2YWlsYWJsZV91bml0cxgEIAEo",
-            "A0gDiAEBEhwKD2RlbGl2ZXJlZF91bml0cxgFIAEoA0gEiAEBEhoKDW1hdGNo",
-            "ZWRfdW5pdHMYBiABKANIBYgBARIbCg5wb3NzaWJsZV91bml0cxgHIAEoA0gG",
-            "iAEBEhsKDnJlc2VydmVkX3VuaXRzGAggASgDSAeIAQESPgoKYnJlYWtkb3du",
-            "cxgJIAMoCzIqLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkZvcmVjYXN0QnJl",
-            "YWtkb3duEloKHXRhcmdldGluZ19jcml0ZXJpYV9icmVha2Rvd25zGAogAygL",
-            "MjMuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuVGFyZ2V0aW5nQ3JpdGVyaWFC",
-            "cmVha2Rvd24SSgoVY29udGVuZGluZ19saW5lX2l0ZW1zGAsgAygLMisuZ29v",
-            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuQ29udGVuZGluZ0xpbmVJdGVtEl0KH2Fs",
-            "dGVybmF0aXZlX3VuaXRfdHlwZV9mb3JlY2FzdHMYDCADKAsyNC5nb29nbGUu",
-            "YWRzLmFkbWFuYWdlci52MS5BbHRlcm5hdGl2ZVVuaXRUeXBlRm9yZWNhc3QS",
-            "UAoWZGVtb2dyYXBoaWNfYnJlYWtkb3ducxgOIAMoCzIwLmdvb2dsZS5hZHMu",
-            "YWRtYW5hZ2VyLnYxLkdycERlbW9ncmFwaGljQnJlYWtkb3duQgwKCl9saW5l",
-            "X2l0ZW1CCAoGX29yZGVyQgwKCl91bml0X3R5cGVCEgoQX2F2YWlsYWJsZV91",
-            "bml0c0ISChBfZGVsaXZlcmVkX3VuaXRzQhAKDl9tYXRjaGVkX3VuaXRzQhEK",
-            "D19wb3NzaWJsZV91bml0c0IRCg9fcmVzZXJ2ZWRfdW5pdHMiYAoXRGVsaXZl",
-            "cnlGb3JlY2FzdE9wdGlvbnMSRQoSaWdub3JlZF9saW5lX2l0ZW1zGAEgAygJ",
-            "QingQQH6QSMKIWFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9MaW5lSXRlbSJx",
-            "ChZEZWxpdmVyeUZvcmVjYXN0UmVzdWx0ElcKHGxpbmVfaXRlbV9kZWxpdmVy",
-            "eV9mb3JlY2FzdHMYASADKAsyMS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5M",
-            "aW5lSXRlbURlbGl2ZXJ5Rm9yZWNhc3QimQEKGEZvcmVjYXN0QnJlYWtkb3du",
-            "T3B0aW9ucxI1Cgx0aW1lX3dpbmRvd3MYASADKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQESRgoHdGFyZ2V0cxgCIAMoCzIwLmdvb2dsZS5h",
-            "ZHMuYWRtYW5hZ2VyLnYxLkZvcmVjYXN0QnJlYWtkb3duVGFyZ2V0QgPgQQEi",
-            "+QEKF0ZvcmVjYXN0QnJlYWtkb3duVGFyZ2V0EhkKDGRpc3BsYXlfbmFtZRgB",
-            "IAEoCUgAiAEBEjoKCXRhcmdldGluZxgCIAEoCzIiLmdvb2dsZS5hZHMuYWRt",
-            "YW5hZ2VyLnYxLlRhcmdldGluZ0gBiAEBEk8KFGNyZWF0aXZlX3BsYWNlaG9s",
-            "ZGVyGAMgASgLMiwuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3JlYXRpdmVQ",
-            "bGFjZWhvbGRlckgCiAEBQg8KDV9kaXNwbGF5X25hbWVCDAoKX3RhcmdldGlu",
-            "Z0IXChVfY3JlYXRpdmVfcGxhY2Vob2xkZXIiuQEKEUZvcmVjYXN0QnJlYWtk",
-            "b3duEi4KCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wEiwKCGVuZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcBJGCg1uYW1lZF9lbnRyaWVzGAMgAygLMi8uZ29vZ2xlLmFkcy5h",
-            "ZG1hbmFnZXIudjEuRm9yZWNhc3RCcmVha2Rvd25FbnRyeSKBAQoWRm9yZWNh",
-            "c3RCcmVha2Rvd25FbnRyeRIZCgxkaXNwbGF5X25hbWUYASABKAlIAIgBARI7",
-            "Cghmb3JlY2FzdBgCIAEoCzIpLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkRl",
-            "bGl2ZXJ5Rm9yZWNhc3RCDwoNX2Rpc3BsYXlfbmFtZSJ+ChBEZWxpdmVyeUZv",
-            "cmVjYXN0EhQKB21hdGNoZWQYASABKANIAIgBARIWCglhdmFpbGFibGUYAiAB",
-            "KANIAYgBARIVCghwb3NzaWJsZRgDIAEoA0gCiAEBQgoKCF9tYXRjaGVkQgwK",
-            "Cl9hdmFpbGFibGVCCwoJX3Bvc3NpYmxlIqoDChpUYXJnZXRpbmdDcml0ZXJp",
-            "YUJyZWFrZG93bhJ6ChN0YXJnZXRpbmdfZGltZW5zaW9uGAEgASgOMlguZ29v",
-            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuRm9yZWNhc3RpbmdUYXJnZXRpbmdEaW1l",
-            "bnNpb25FbnVtLkZvcmVjYXN0aW5nVGFyZ2V0aW5nRGltZW5zaW9uSACIAQES",
-            "IgoVdGFyZ2V0aW5nX2NyaXRlcmlhX2lkGAIgASgDSAGIAQESHwoSdGFyZ2V0",
-            "aW5nX2NyaXRlcmlhGAMgASgJSAKIAQESFQoIZXhjbHVkZWQYBCABKAhIA4gB",
-            "ARIcCg9hdmFpbGFibGVfdW5pdHMYBSABKANIBIgBARIaCg1tYXRjaGVkX3Vu",
-            "aXRzGAYgASgDSAWIAQFCFgoUX3RhcmdldGluZ19kaW1lbnNpb25CGAoWX3Rh",
-            "cmdldGluZ19jcml0ZXJpYV9pZEIVChNfdGFyZ2V0aW5nX2NyaXRlcmlhQgsK",
-            "CV9leGNsdWRlZEISChBfYXZhaWxhYmxlX3VuaXRzQhAKDl9tYXRjaGVkX3Vu",
-            "aXRzIpYBChJDb250ZW5kaW5nTGluZUl0ZW0SPgoJbGluZV9pdGVtGAEgASgJ",
-            "Qib6QSMKIWFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9MaW5lSXRlbUgAiAEB",
-            "Eh0KEGNvbnRlbmRpbmdfdW5pdHMYAiABKANIAYgBAUIMCgpfbGluZV9pdGVt",
-            "QhMKEV9jb250ZW5kaW5nX3VuaXRzIoMCChtBbHRlcm5hdGl2ZVVuaXRUeXBl",
-            "Rm9yZWNhc3QSRgoJdW5pdF90eXBlGAEgASgOMi4uZ29vZ2xlLmFkcy5hZG1h",
-            "bmFnZXIudjEuVW5pdFR5cGVFbnVtLlVuaXRUeXBlSACIAQESGgoNbWF0Y2hl",
-            "ZF91bml0cxgCIAEoA0gBiAEBEhwKD2F2YWlsYWJsZV91bml0cxgDIAEoA0gC",
-            "iAEBEhsKDnBvc3NpYmxlX3VuaXRzGAQgASgDSAOIAQFCDAoKX3VuaXRfdHlw",
-            "ZUIQCg5fbWF0Y2hlZF91bml0c0ISChBfYXZhaWxhYmxlX3VuaXRzQhEKD19w",
-            "b3NzaWJsZV91bml0cyKnAwoXR3JwRGVtb2dyYXBoaWNCcmVha2Rvd24SHAoP",
-            "YXZhaWxhYmxlX3VuaXRzGAEgASgDSACIAQESGgoNbWF0Y2hlZF91bml0cxgC",
-            "IAEoA0gBiAEBEloKCXVuaXRfdHlwZRgDIAEoDjJCLmdvb2dsZS5hZHMuYWRt",
-            "YW5hZ2VyLnYxLkZvcmVjYXN0aW5nR3JwVW5pdEVudW0uRm9yZWNhc3RpbmdH",
-            "cnBVbml0SAKIAQESWwoGZ2VuZGVyGAQgASgOMkYuZ29vZ2xlLmFkcy5hZG1h",
-            "bmFnZXIudjEuRm9yZWNhc3RpbmdHcnBHZW5kZXJFbnVtLkZvcmVjYXN0aW5n",
-            "R3JwR2VuZGVySAOIAQESUgoDYWdlGAUgASgOMkAuZ29vZ2xlLmFkcy5hZG1h",
-            "bmFnZXIudjEuRm9yZWNhc3RpbmdHcnBBZ2VFbnVtLkZvcmVjYXN0aW5nR3Jw",
-            "QWdlSASIAQFCEgoQX2F2YWlsYWJsZV91bml0c0IQCg5fbWF0Y2hlZF91bml0",
-            "c0IMCgpfdW5pdF90eXBlQgkKB19nZW5kZXJCBgoEX2FnZSKlAwoYTGluZUl0",
-            "ZW1EZWxpdmVyeUZvcmVjYXN0Ej4KCWxpbmVfaXRlbRgBIAEoCUIm+kEjCiFh",
-            "ZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vTGluZUl0ZW1IAIgBARI3CgVvcmRl",
-            "chgCIAEoCUIj+kEgCh5hZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vT3JkZXJI",
-            "AYgBARJGCgl1bml0X3R5cGUYAyABKA4yLi5nb29nbGUuYWRzLmFkbWFuYWdl",
-            "ci52MS5Vbml0VHlwZUVudW0uVW5pdFR5cGVIAogBARIlChhwcmVkaWN0ZWRf",
-            "ZGVsaXZlcnlfdW5pdHMYBCABKANIA4gBARIcCg9kZWxpdmVyZWRfdW5pdHMY",
-            "BSABKANIBIgBARIaCg1tYXRjaGVkX3VuaXRzGAYgASgDSAWIAQFCDAoKX2xp",
-            "bmVfaXRlbUIICgZfb3JkZXJCDAoKX3VuaXRfdHlwZUIbChlfcHJlZGljdGVk",
-            "X2RlbGl2ZXJ5X3VuaXRzQhIKEF9kZWxpdmVyZWRfdW5pdHNCEAoOX21hdGNo",
-            "ZWRfdW5pdHMiYAoKVGltZVNlcmllcxJCChZ0aW1lX3Nlcmllc19kYXRlX3Jh",
-            "bmdlGAEgASgLMiIuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuRGF0ZVJhbmdl",
-            "Eg4KBnZhbHVlcxgCIAMoAyJVChRFeGlzdGluZ0xpbmVJdGVtTGlzdBI9Cgps",
-            "aW5lX2l0ZW1zGAEgAygJQingQQL6QSMKIWFkbWFuYWdlci5nb29nbGVhcGlz",
-            "LmNvbS9MaW5lSXRlbULJAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYx",
-            "QhVGb3JlY2FzdE1lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcv",
-            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdl",
-            "cqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1h",
-            "bmFnZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "L2Fkcy9hZG1hbmFnZXIvdjEvZ29hbF9lbnVtcy5wcm90bxowZ29vZ2xlL2Fk",
+            "cy9hZG1hbmFnZXIvdjEvbGluZV9pdGVtX21lc3NhZ2VzLnByb3RvGidnb29n",
+            "bGUvYWRzL2FkbWFuYWdlci92MS90YXJnZXRpbmcucHJvdG8aH2dvb2dsZS9h",
+            "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2Uu",
+            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8itgIKG0F2",
+            "YWlsYWJpbGl0eUZvcmVjYXN0T3B0aW9ucxI4CiV0YXJnZXRpbmdfY3JpdGVy",
+            "aWFfYnJlYWtkb3duX2luY2x1ZGVkGAEgASgIQgTiQQEBSACIAQESMQoeY29u",
+            "dGVuZGluZ19saW5lX2l0ZW1zX2luY2x1ZGVkGAIgASgIQgTiQQEBSAGIAQES",
+            "TwoJYnJlYWtkb3duGAMgASgLMjEuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEu",
+            "Rm9yZWNhc3RCcmVha2Rvd25PcHRpb25zQgTiQQEBSAKIAQFCKAomX3Rhcmdl",
+            "dGluZ19jcml0ZXJpYV9icmVha2Rvd25faW5jbHVkZWRCIQofX2NvbnRlbmRp",
+            "bmdfbGluZV9pdGVtc19pbmNsdWRlZEIMCgpfYnJlYWtkb3duIogHChRBdmFp",
+            "bGFiaWxpdHlGb3JlY2FzdBI+CglsaW5lX2l0ZW0YASABKAlCJvpBIwohYWRt",
+            "YW5hZ2VyLmdvb2dsZWFwaXMuY29tL0xpbmVJdGVtSACIAQESNwoFb3JkZXIY",
+            "AiABKAlCI/pBIAoeYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL09yZGVySAGI",
+            "AQESRgoJdW5pdF90eXBlGAMgASgOMi4uZ29vZ2xlLmFkcy5hZG1hbmFnZXIu",
+            "djEuVW5pdFR5cGVFbnVtLlVuaXRUeXBlSAKIAQESHAoPYXZhaWxhYmxlX3Vu",
+            "aXRzGAQgASgDSAOIAQESHAoPZGVsaXZlcmVkX3VuaXRzGAUgASgDSASIAQES",
+            "GgoNbWF0Y2hlZF91bml0cxgGIAEoA0gFiAEBEhsKDnBvc3NpYmxlX3VuaXRz",
+            "GAcgASgDSAaIAQESGwoOcmVzZXJ2ZWRfdW5pdHMYCCABKANIB4gBARI+Cgpi",
+            "cmVha2Rvd25zGAkgAygLMiouZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuRm9y",
+            "ZWNhc3RCcmVha2Rvd24SWgoddGFyZ2V0aW5nX2NyaXRlcmlhX2JyZWFrZG93",
+            "bnMYCiADKAsyMy5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5UYXJnZXRpbmdD",
+            "cml0ZXJpYUJyZWFrZG93bhJKChVjb250ZW5kaW5nX2xpbmVfaXRlbXMYCyAD",
+            "KAsyKy5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5Db250ZW5kaW5nTGluZUl0",
+            "ZW0SXQofYWx0ZXJuYXRpdmVfdW5pdF90eXBlX2ZvcmVjYXN0cxgMIAMoCzI0",
+            "Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkFsdGVybmF0aXZlVW5pdFR5cGVG",
+            "b3JlY2FzdBJQChZkZW1vZ3JhcGhpY19icmVha2Rvd25zGA4gAygLMjAuZ29v",
+            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuR3JwRGVtb2dyYXBoaWNCcmVha2Rvd25C",
+            "DAoKX2xpbmVfaXRlbUIICgZfb3JkZXJCDAoKX3VuaXRfdHlwZUISChBfYXZh",
+            "aWxhYmxlX3VuaXRzQhIKEF9kZWxpdmVyZWRfdW5pdHNCEAoOX21hdGNoZWRf",
+            "dW5pdHNCEQoPX3Bvc3NpYmxlX3VuaXRzQhEKD19yZXNlcnZlZF91bml0cyJh",
+            "ChdEZWxpdmVyeUZvcmVjYXN0T3B0aW9ucxJGChJpZ25vcmVkX2xpbmVfaXRl",
+            "bXMYASADKAlCKuJBAQH6QSMKIWFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9M",
+            "aW5lSXRlbSJxChZEZWxpdmVyeUZvcmVjYXN0UmVzdWx0ElcKHGxpbmVfaXRl",
+            "bV9kZWxpdmVyeV9mb3JlY2FzdHMYASADKAsyMS5nb29nbGUuYWRzLmFkbWFu",
+            "YWdlci52MS5MaW5lSXRlbURlbGl2ZXJ5Rm9yZWNhc3QimwEKGEZvcmVjYXN0",
+            "QnJlYWtkb3duT3B0aW9ucxI2Cgx0aW1lX3dpbmRvd3MYASADKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEBEkcKB3RhcmdldHMYAiADKAsy",
+            "MC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5Gb3JlY2FzdEJyZWFrZG93blRh",
+            "cmdldEIE4kEBASL5AQoXRm9yZWNhc3RCcmVha2Rvd25UYXJnZXQSGQoMZGlz",
+            "cGxheV9uYW1lGAEgASgJSACIAQESOgoJdGFyZ2V0aW5nGAIgASgLMiIuZ29v",
+            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuVGFyZ2V0aW5nSAGIAQESTwoUY3JlYXRp",
+            "dmVfcGxhY2Vob2xkZXIYAyABKAsyLC5nb29nbGUuYWRzLmFkbWFuYWdlci52",
+            "MS5DcmVhdGl2ZVBsYWNlaG9sZGVySAKIAQFCDwoNX2Rpc3BsYXlfbmFtZUIM",
+            "CgpfdGFyZ2V0aW5nQhcKFV9jcmVhdGl2ZV9wbGFjZWhvbGRlciK5AQoRRm9y",
+            "ZWNhc3RCcmVha2Rvd24SLgoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wEkYKDW5hbWVkX2VudHJpZXMYAyADKAsyLy5n",
+            "b29nbGUuYWRzLmFkbWFuYWdlci52MS5Gb3JlY2FzdEJyZWFrZG93bkVudHJ5",
+            "IoEBChZGb3JlY2FzdEJyZWFrZG93bkVudHJ5EhkKDGRpc3BsYXlfbmFtZRgB",
+            "IAEoCUgAiAEBEjsKCGZvcmVjYXN0GAIgASgLMikuZ29vZ2xlLmFkcy5hZG1h",
+            "bmFnZXIudjEuRGVsaXZlcnlGb3JlY2FzdEIPCg1fZGlzcGxheV9uYW1lIn4K",
+            "EERlbGl2ZXJ5Rm9yZWNhc3QSFAoHbWF0Y2hlZBgBIAEoA0gAiAEBEhYKCWF2",
+            "YWlsYWJsZRgCIAEoA0gBiAEBEhUKCHBvc3NpYmxlGAMgASgDSAKIAQFCCgoI",
+            "X21hdGNoZWRCDAoKX2F2YWlsYWJsZUILCglfcG9zc2libGUiqgMKGlRhcmdl",
+            "dGluZ0NyaXRlcmlhQnJlYWtkb3duEnoKE3RhcmdldGluZ19kaW1lbnNpb24Y",
+            "ASABKA4yWC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5Gb3JlY2FzdGluZ1Rh",
+            "cmdldGluZ0RpbWVuc2lvbkVudW0uRm9yZWNhc3RpbmdUYXJnZXRpbmdEaW1l",
+            "bnNpb25IAIgBARIiChV0YXJnZXRpbmdfY3JpdGVyaWFfaWQYAiABKANIAYgB",
+            "ARIfChJ0YXJnZXRpbmdfY3JpdGVyaWEYAyABKAlIAogBARIVCghleGNsdWRl",
+            "ZBgEIAEoCEgDiAEBEhwKD2F2YWlsYWJsZV91bml0cxgFIAEoA0gEiAEBEhoK",
+            "DW1hdGNoZWRfdW5pdHMYBiABKANIBYgBAUIWChRfdGFyZ2V0aW5nX2RpbWVu",
+            "c2lvbkIYChZfdGFyZ2V0aW5nX2NyaXRlcmlhX2lkQhUKE190YXJnZXRpbmdf",
+            "Y3JpdGVyaWFCCwoJX2V4Y2x1ZGVkQhIKEF9hdmFpbGFibGVfdW5pdHNCEAoO",
+            "X21hdGNoZWRfdW5pdHMilgEKEkNvbnRlbmRpbmdMaW5lSXRlbRI+CglsaW5l",
+            "X2l0ZW0YASABKAlCJvpBIwohYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0xp",
+            "bmVJdGVtSACIAQESHQoQY29udGVuZGluZ191bml0cxgCIAEoA0gBiAEBQgwK",
+            "Cl9saW5lX2l0ZW1CEwoRX2NvbnRlbmRpbmdfdW5pdHMigwIKG0FsdGVybmF0",
+            "aXZlVW5pdFR5cGVGb3JlY2FzdBJGCgl1bml0X3R5cGUYASABKA4yLi5nb29n",
+            "bGUuYWRzLmFkbWFuYWdlci52MS5Vbml0VHlwZUVudW0uVW5pdFR5cGVIAIgB",
+            "ARIaCg1tYXRjaGVkX3VuaXRzGAIgASgDSAGIAQESHAoPYXZhaWxhYmxlX3Vu",
+            "aXRzGAMgASgDSAKIAQESGwoOcG9zc2libGVfdW5pdHMYBCABKANIA4gBAUIM",
+            "CgpfdW5pdF90eXBlQhAKDl9tYXRjaGVkX3VuaXRzQhIKEF9hdmFpbGFibGVf",
+            "dW5pdHNCEQoPX3Bvc3NpYmxlX3VuaXRzIqcDChdHcnBEZW1vZ3JhcGhpY0Jy",
+            "ZWFrZG93bhIcCg9hdmFpbGFibGVfdW5pdHMYASABKANIAIgBARIaCg1tYXRj",
+            "aGVkX3VuaXRzGAIgASgDSAGIAQESWgoJdW5pdF90eXBlGAMgASgOMkIuZ29v",
+            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuRm9yZWNhc3RpbmdHcnBVbml0RW51bS5G",
+            "b3JlY2FzdGluZ0dycFVuaXRIAogBARJbCgZnZW5kZXIYBCABKA4yRi5nb29n",
+            "bGUuYWRzLmFkbWFuYWdlci52MS5Gb3JlY2FzdGluZ0dycEdlbmRlckVudW0u",
+            "Rm9yZWNhc3RpbmdHcnBHZW5kZXJIA4gBARJSCgNhZ2UYBSABKA4yQC5nb29n",
+            "bGUuYWRzLmFkbWFuYWdlci52MS5Gb3JlY2FzdGluZ0dycEFnZUVudW0uRm9y",
+            "ZWNhc3RpbmdHcnBBZ2VIBIgBAUISChBfYXZhaWxhYmxlX3VuaXRzQhAKDl9t",
+            "YXRjaGVkX3VuaXRzQgwKCl91bml0X3R5cGVCCQoHX2dlbmRlckIGCgRfYWdl",
+            "IqUDChhMaW5lSXRlbURlbGl2ZXJ5Rm9yZWNhc3QSPgoJbGluZV9pdGVtGAEg",
+            "ASgJQib6QSMKIWFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9MaW5lSXRlbUgA",
+            "iAEBEjcKBW9yZGVyGAIgASgJQiP6QSAKHmFkbWFuYWdlci5nb29nbGVhcGlz",
+            "LmNvbS9PcmRlckgBiAEBEkYKCXVuaXRfdHlwZRgDIAEoDjIuLmdvb2dsZS5h",
+            "ZHMuYWRtYW5hZ2VyLnYxLlVuaXRUeXBlRW51bS5Vbml0VHlwZUgCiAEBEiUK",
+            "GHByZWRpY3RlZF9kZWxpdmVyeV91bml0cxgEIAEoA0gDiAEBEhwKD2RlbGl2",
+            "ZXJlZF91bml0cxgFIAEoA0gEiAEBEhoKDW1hdGNoZWRfdW5pdHMYBiABKANI",
+            "BYgBAUIMCgpfbGluZV9pdGVtQggKBl9vcmRlckIMCgpfdW5pdF90eXBlQhsK",
+            "GV9wcmVkaWN0ZWRfZGVsaXZlcnlfdW5pdHNCEgoQX2RlbGl2ZXJlZF91bml0",
+            "c0IQCg5fbWF0Y2hlZF91bml0cyJgCgpUaW1lU2VyaWVzEkIKFnRpbWVfc2Vy",
+            "aWVzX2RhdGVfcmFuZ2UYASABKAsyIi5nb29nbGUuYWRzLmFkbWFuYWdlci52",
+            "MS5EYXRlUmFuZ2USDgoGdmFsdWVzGAIgAygDIlYKFEV4aXN0aW5nTGluZUl0",
+            "ZW1MaXN0Ej4KCmxpbmVfaXRlbXMYASADKAlCKuJBAQL6QSMKIWFkbWFuYWdl",
+            "ci5nb29nbGVhcGlzLmNvbS9MaW5lSXRlbSKlAQoTRm9yZWNhc3RpbmdMaW5l",
+            "SXRlbRI8CglsaW5lX2l0ZW0YASABKAsyIS5nb29nbGUuYWRzLmFkbWFuYWdl",
+            "ci52MS5MaW5lSXRlbUIE4kEBAUgAEj0KCmFkdmVydGlzZXIYAyABKAlCKeJB",
+            "AQH6QSIKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Db21wYW55QhEKD2xp",
+            "bmVfaXRlbV9lbnRyeSJtChdGb3JlY2FzdGluZ0xpbmVJdGVtTGlzdBJSChZm",
+            "b3JlY2FzdGluZ19saW5lX2l0ZW1zGAEgAygLMiwuZ29vZ2xlLmFkcy5hZG1h",
+            "bmFnZXIudjEuRm9yZWNhc3RpbmdMaW5lSXRlbUIE4kEBAkLJAQobY29tLmdv",
+            "b2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhVGb3JlY2FzdE1lc3NhZ2VzUHJvdG9Q",
+            "AVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMv",
+            "YWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2Vy",
+            "LlYxygIXR29vZ2xlXEFkc1xBZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFkczo6",
+            "QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.CreativePlaceholderReflection.Descriptor, global::Google.Ads.AdManager.V1.DateRangeReflection.Descriptor, global::Google.Ads.AdManager.V1.ForecastingEnumsReflection.Descriptor, global::Google.Ads.AdManager.V1.GoalEnumsReflection.Descriptor, global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.CreativePlaceholderReflection.Descriptor, global::Google.Ads.AdManager.V1.DateRangeReflection.Descriptor, global::Google.Ads.AdManager.V1.ForecastingEnumsReflection.Descriptor, global::Google.Ads.AdManager.V1.GoalEnumsReflection.Descriptor, global::Google.Ads.AdManager.V1.LineItemMessagesReflection.Descriptor, global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AvailabilityForecastOptions), global::Google.Ads.AdManager.V1.AvailabilityForecastOptions.Parser, new[]{ "TargetingCriteriaBreakdownIncluded", "ContendingLineItemsIncluded", "Breakdown" }, new[]{ "TargetingCriteriaBreakdownIncluded", "ContendingLineItemsIncluded", "Breakdown" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AvailabilityForecast), global::Google.Ads.AdManager.V1.AvailabilityForecast.Parser, new[]{ "LineItem", "Order", "UnitType", "AvailableUnits", "DeliveredUnits", "MatchedUnits", "PossibleUnits", "ReservedUnits", "Breakdowns", "TargetingCriteriaBreakdowns", "ContendingLineItems", "AlternativeUnitTypeForecasts", "DemographicBreakdowns" }, new[]{ "LineItem", "Order", "UnitType", "AvailableUnits", "DeliveredUnits", "MatchedUnits", "PossibleUnits", "ReservedUnits" }, null, null, null),
@@ -148,7 +156,9 @@ namespace Google.Ads.AdManager.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.GrpDemographicBreakdown), global::Google.Ads.AdManager.V1.GrpDemographicBreakdown.Parser, new[]{ "AvailableUnits", "MatchedUnits", "UnitType", "Gender", "Age" }, new[]{ "AvailableUnits", "MatchedUnits", "UnitType", "Gender", "Age" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.LineItemDeliveryForecast), global::Google.Ads.AdManager.V1.LineItemDeliveryForecast.Parser, new[]{ "LineItem", "Order", "UnitType", "PredictedDeliveryUnits", "DeliveredUnits", "MatchedUnits" }, new[]{ "LineItem", "Order", "UnitType", "PredictedDeliveryUnits", "DeliveredUnits", "MatchedUnits" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.TimeSeries), global::Google.Ads.AdManager.V1.TimeSeries.Parser, new[]{ "TimeSeriesDateRange", "Values" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ExistingLineItemList), global::Google.Ads.AdManager.V1.ExistingLineItemList.Parser, new[]{ "LineItems" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ExistingLineItemList), global::Google.Ads.AdManager.V1.ExistingLineItemList.Parser, new[]{ "LineItems" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ForecastingLineItem), global::Google.Ads.AdManager.V1.ForecastingLineItem.Parser, new[]{ "LineItem", "Advertiser" }, new[]{ "LineItemEntry" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ForecastingLineItemList), global::Google.Ads.AdManager.V1.ForecastingLineItemList.Parser, new[]{ "ForecastingLineItems" }, null, null, null, null)
           }));
     }
     #endregion
@@ -215,7 +225,7 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// Optional. When specified, forecast result for the availability line item
     /// will also include breakdowns by its targeting in
-    /// [AvailabilityForecast.targetingCriteriaBreakdowns][].
+    /// [AvailabilityForecast.targetingCriteriaBreakdowns][google.ads.admanager.v1.AvailabilityForecast.targeting_criteria_breakdowns].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -247,7 +257,7 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// Optional. When specified, the forecast result for the availability line
     /// item will also include contending line items in
-    /// [AvailabilityForecast.contendingLineItems][].
+    /// [AvailabilityForecast.contendingLineItems][google.ads.admanager.v1.AvailabilityForecast.contending_line_items].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -638,8 +648,8 @@ namespace Google.Ads.AdManager.V1 {
     private global::Google.Ads.AdManager.V1.UnitTypeEnum.Types.UnitType unitType_;
     /// <summary>
     /// The unit with which the goal or cap of the LineItem is defined. Will be the
-    /// same value as [Goal.unitType][] for both a set line item or a
-    /// prospective one.
+    /// same value as [Goal.unitType][google.ads.admanager.v1.Goal.unit_type] for
+    /// both a set line item or a prospective one.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -669,10 +679,10 @@ namespace Google.Ads.AdManager.V1 {
 
     private long availableUnits_;
     /// <summary>
-    /// The number of units, defined by [Goal.unitType][], that can
-    /// be booked without affecting the delivery of any reserved line items.
-    /// Exceeding this value won't cause an overbook, but lower priority line items
-    /// may not run.
+    /// The number of units, defined by
+    /// [Goal.unitType][google.ads.admanager.v1.Goal.unit_type], that can be booked
+    /// without affecting the delivery of any reserved line items. Exceeding this
+    /// value won't cause an overbook, but lower priority line items may not run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -702,8 +712,9 @@ namespace Google.Ads.AdManager.V1 {
 
     private long deliveredUnits_;
     /// <summary>
-    /// The number of units, defined by [Goal.unitType][], that have already been
-    /// served if the reservation is already running.
+    /// The number of units, defined by
+    /// [Goal.unitType][google.ads.admanager.v1.Goal.unit_type], that have already
+    /// been served if the reservation is already running.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -733,8 +744,9 @@ namespace Google.Ads.AdManager.V1 {
 
     private long matchedUnits_;
     /// <summary>
-    /// The number of units, defined by [Goal.unitType][], that match the specified
-    /// targeting and delivery settings.
+    /// The number of units, defined by
+    /// [Goal.unitType][google.ads.admanager.v1.Goal.unit_type], that match the
+    /// specified targeting and delivery settings.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -764,7 +776,8 @@ namespace Google.Ads.AdManager.V1 {
 
     private long possibleUnits_;
     /// <summary>
-    /// The maximum number of units, defined by [Goal.unitType][], that could be
+    /// The maximum number of units, defined by
+    /// [Goal.unitType][google.ads.admanager.v1.Goal.unit_type], that could be
     /// booked by taking inventory away from lower priority line items and some
     /// same priority line items.
     ///
@@ -799,7 +812,8 @@ namespace Google.Ads.AdManager.V1 {
 
     private long reservedUnits_;
     /// <summary>
-    /// The number of reserved units, defined by [Goal.unitType][], requested. This
+    /// The number of reserved units, defined by
+    /// [Goal.unitType][google.ads.admanager.v1.Goal.unit_type], requested. This
     /// can be an absolute or percentage value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -831,7 +845,7 @@ namespace Google.Ads.AdManager.V1 {
     private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.ForecastBreakdown> breakdowns_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.ForecastBreakdown>();
     /// <summary>
     /// The breakdowns for each time window defined in
-    /// [ForecastBreakdownOptions.timeWindows][].
+    /// [ForecastBreakdownOptions.timeWindows][google.ads.admanager.v1.ForecastBreakdownOptions.time_windows].
     ///
     /// If no breakdown was requested through
     /// [AvailabilityForecastOptions.breakdown][google.ads.admanager.v1.AvailabilityForecastOptions.breakdown],
@@ -1958,7 +1972,9 @@ namespace Google.Ads.AdManager.V1 {
     private string displayName_;
     /// <summary>
     /// An optional name for this breakdown target, to be populated in the
-    /// corresponding [ForecastBreakdownEntry.displayName][] field.
+    /// corresponding
+    /// [ForecastBreakdownEntry.displayName][google.ads.admanager.v1.ForecastBreakdownEntry.display_name]
+    /// field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2569,7 +2585,8 @@ namespace Google.Ads.AdManager.V1 {
     private string displayName_;
     /// <summary>
     /// The optional name of this entry, as specified in the corresponding
-    /// [ForecastBreakdownTarget.displayName][] field.
+    /// [ForecastBreakdownTarget.displayName][google.ads.admanager.v1.ForecastBreakdownTarget.display_name]
+    /// field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4849,8 +4866,8 @@ namespace Google.Ads.AdManager.V1 {
     private global::Google.Ads.AdManager.V1.UnitTypeEnum.Types.UnitType unitType_;
     /// <summary>
     /// The unit with which the goal or cap of the LineItem is defined. Will be the
-    /// same value as [Goal.unitType][] for both a set line item or a prospective
-    /// one.
+    /// same value as [Goal.unitType][google.ads.admanager.v1.Goal.unit_type] for
+    /// both a set line item or a prospective one.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4880,9 +4897,10 @@ namespace Google.Ads.AdManager.V1 {
 
     private long predictedDeliveryUnits_;
     /// <summary>
-    /// The number of units, defined by [Goal.unitType][], that will be delivered
-    /// by the line item. Delivery of existing line items that are of same or lower
-    /// priorities may be impacted.
+    /// The number of units, defined by
+    /// [Goal.unitType][google.ads.admanager.v1.Goal.unit_type], that will be
+    /// delivered by the line item. Delivery of existing line items that are of
+    /// same or lower priorities may be impacted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4912,8 +4930,9 @@ namespace Google.Ads.AdManager.V1 {
 
     private long deliveredUnits_;
     /// <summary>
-    /// The number of units, defined by [Goal.unitType][], that have already been
-    /// served if the reservation is already running.
+    /// The number of units, defined by
+    /// [Goal.unitType][google.ads.admanager.v1.Goal.unit_type], that have already
+    /// been served if the reservation is already running.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4943,7 +4962,8 @@ namespace Google.Ads.AdManager.V1 {
 
     private long matchedUnits_;
     /// <summary>
-    /// The number of units, defined by [Goal.unitType][], that match the
+    /// The number of units, defined by
+    /// [Goal.unitType][google.ads.admanager.v1.Goal.unit_type], that match the
     /// specified LineItem#targeting and delivery settings.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5666,6 +5686,493 @@ namespace Google.Ads.AdManager.V1 {
             break;
           case 10: {
             lineItems_.AddEntriesFrom(ref input, _repeated_lineItems_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A [LineItem][google.ads.admanager.v1.LineItem] or [ProposalLineItem][] to be
+  /// forecasted along with an optional override advertiser.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ForecastingLineItem : pb::IMessage<ForecastingLineItem>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ForecastingLineItem> _parser = new pb::MessageParser<ForecastingLineItem>(() => new ForecastingLineItem());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ForecastingLineItem> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.ForecastMessagesReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ForecastingLineItem() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ForecastingLineItem(ForecastingLineItem other) : this() {
+      advertiser_ = other.advertiser_;
+      switch (other.LineItemEntryCase) {
+        case LineItemEntryOneofCase.LineItem:
+          LineItem = other.LineItem.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ForecastingLineItem Clone() {
+      return new ForecastingLineItem(this);
+    }
+
+    /// <summary>Field number for the "line_item" field.</summary>
+    public const int LineItemFieldNumber = 1;
+    /// <summary>
+    /// Optional. The [LineItem][google.ads.admanager.v1.LineItem] to be
+    /// forecasted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.LineItem LineItem {
+      get { return lineItemEntryCase_ == LineItemEntryOneofCase.LineItem ? (global::Google.Ads.AdManager.V1.LineItem) lineItemEntry_ : null; }
+      set {
+        lineItemEntry_ = value;
+        lineItemEntryCase_ = value == null ? LineItemEntryOneofCase.None : LineItemEntryOneofCase.LineItem;
+      }
+    }
+
+    /// <summary>Field number for the "advertiser" field.</summary>
+    public const int AdvertiserFieldNumber = 3;
+    private string advertiser_ = "";
+    /// <summary>
+    /// Optional. The resource name of the advertiser
+    /// [Company][google.ads.admanager.v1.Company] for the prospective line item.
+    /// Format: `networks/{network_code}/companies/{company_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Advertiser {
+      get { return advertiser_; }
+      set {
+        advertiser_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private object lineItemEntry_;
+    /// <summary>Enum of possible cases for the "line_item_entry" oneof.</summary>
+    public enum LineItemEntryOneofCase {
+      None = 0,
+      LineItem = 1,
+    }
+    private LineItemEntryOneofCase lineItemEntryCase_ = LineItemEntryOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LineItemEntryOneofCase LineItemEntryCase {
+      get { return lineItemEntryCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLineItemEntry() {
+      lineItemEntryCase_ = LineItemEntryOneofCase.None;
+      lineItemEntry_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ForecastingLineItem);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ForecastingLineItem other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(LineItem, other.LineItem)) return false;
+      if (Advertiser != other.Advertiser) return false;
+      if (LineItemEntryCase != other.LineItemEntryCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (lineItemEntryCase_ == LineItemEntryOneofCase.LineItem) hash ^= LineItem.GetHashCode();
+      if (Advertiser.Length != 0) hash ^= Advertiser.GetHashCode();
+      hash ^= (int) lineItemEntryCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (lineItemEntryCase_ == LineItemEntryOneofCase.LineItem) {
+        output.WriteRawTag(10);
+        output.WriteMessage(LineItem);
+      }
+      if (Advertiser.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Advertiser);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (lineItemEntryCase_ == LineItemEntryOneofCase.LineItem) {
+        output.WriteRawTag(10);
+        output.WriteMessage(LineItem);
+      }
+      if (Advertiser.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Advertiser);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (lineItemEntryCase_ == LineItemEntryOneofCase.LineItem) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LineItem);
+      }
+      if (Advertiser.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Advertiser);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ForecastingLineItem other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Advertiser.Length != 0) {
+        Advertiser = other.Advertiser;
+      }
+      switch (other.LineItemEntryCase) {
+        case LineItemEntryOneofCase.LineItem:
+          if (LineItem == null) {
+            LineItem = new global::Google.Ads.AdManager.V1.LineItem();
+          }
+          LineItem.MergeFrom(other.LineItem);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Ads.AdManager.V1.LineItem subBuilder = new global::Google.Ads.AdManager.V1.LineItem();
+            if (lineItemEntryCase_ == LineItemEntryOneofCase.LineItem) {
+              subBuilder.MergeFrom(LineItem);
+            }
+            input.ReadMessage(subBuilder);
+            LineItem = subBuilder;
+            break;
+          }
+          case 26: {
+            Advertiser = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Ads.AdManager.V1.LineItem subBuilder = new global::Google.Ads.AdManager.V1.LineItem();
+            if (lineItemEntryCase_ == LineItemEntryOneofCase.LineItem) {
+              subBuilder.MergeFrom(LineItem);
+            }
+            input.ReadMessage(subBuilder);
+            LineItem = subBuilder;
+            break;
+          }
+          case 26: {
+            Advertiser = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// [ForecastingLineItemList][google.ads.admanager.v1.ForecastingLineItemList] is
+  /// a wrapper around a repeated field of
+  /// [ForecastingLineItem][google.ads.admanager.v1.ForecastingLineItem] objects.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ForecastingLineItemList : pb::IMessage<ForecastingLineItemList>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ForecastingLineItemList> _parser = new pb::MessageParser<ForecastingLineItemList>(() => new ForecastingLineItemList());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ForecastingLineItemList> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.ForecastMessagesReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ForecastingLineItemList() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ForecastingLineItemList(ForecastingLineItemList other) : this() {
+      forecastingLineItems_ = other.forecastingLineItems_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ForecastingLineItemList Clone() {
+      return new ForecastingLineItemList(this);
+    }
+
+    /// <summary>Field number for the "forecasting_line_items" field.</summary>
+    public const int ForecastingLineItemsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.ForecastingLineItem> _repeated_forecastingLineItems_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Ads.AdManager.V1.ForecastingLineItem.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.ForecastingLineItem> forecastingLineItems_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.ForecastingLineItem>();
+    /// <summary>
+    /// Required. The list of
+    /// [ForecastingLineItem][google.ads.admanager.v1.ForecastingLineItem] objects.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.ForecastingLineItem> ForecastingLineItems {
+      get { return forecastingLineItems_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ForecastingLineItemList);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ForecastingLineItemList other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!forecastingLineItems_.Equals(other.forecastingLineItems_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= forecastingLineItems_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      forecastingLineItems_.WriteTo(output, _repeated_forecastingLineItems_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      forecastingLineItems_.WriteTo(ref output, _repeated_forecastingLineItems_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += forecastingLineItems_.CalculateSize(_repeated_forecastingLineItems_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ForecastingLineItemList other) {
+      if (other == null) {
+        return;
+      }
+      forecastingLineItems_.Add(other.forecastingLineItems_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            forecastingLineItems_.AddEntriesFrom(input, _repeated_forecastingLineItems_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            forecastingLineItems_.AddEntriesFrom(ref input, _repeated_forecastingLineItems_codec);
             break;
           }
         }

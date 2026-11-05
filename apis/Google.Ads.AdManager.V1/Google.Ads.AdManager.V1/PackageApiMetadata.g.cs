@@ -66,12 +66,15 @@ namespace Google.Ads.AdManager.V1
             yield return AdUnitMessagesReflection.Descriptor;
             yield return AdUnitServiceReflection.Descriptor;
             yield return AdmanagerErrorReflection.Descriptor;
+            yield return AllocationDeliveryProfileMessagesReflection.Descriptor;
             yield return ApplicationEnumsReflection.Descriptor;
             yield return ApplicationMessagesReflection.Descriptor;
             yield return ApplicationServiceReflection.Descriptor;
             yield return AppliedLabelReflection.Descriptor;
             yield return AssetEnumsReflection.Descriptor;
             yield return AssetMessagesReflection.Descriptor;
+            yield return AudienceSegmentCategoryMessagesReflection.Descriptor;
+            yield return AudienceSegmentCategoryServiceReflection.Descriptor;
             yield return AudienceSegmentEnumsReflection.Descriptor;
             yield return AudienceSegmentMessagesReflection.Descriptor;
             yield return AudienceSegmentServiceReflection.Descriptor;
@@ -90,6 +93,9 @@ namespace Google.Ads.AdManager.V1
             yield return CdnConfigTypeEnumReflection.Descriptor;
             yield return CdnSecurityPolicyEnumReflection.Descriptor;
             yield return CdnSecurityPolicyOriginForwardingEnumReflection.Descriptor;
+            yield return ChangeEventEnumsReflection.Descriptor;
+            yield return ChangeEventMessagesReflection.Descriptor;
+            yield return ChangeEventServiceReflection.Descriptor;
             yield return ChildContentEligibilityEnumReflection.Descriptor;
             yield return ChildPublisherMessagesReflection.Descriptor;
             yield return ChildPublisherServiceReflection.Descriptor;
@@ -153,6 +159,7 @@ namespace Google.Ads.AdManager.V1
             yield return DaiSessionMessagesReflection.Descriptor;
             yield return DaiSessionServiceReflection.Descriptor;
             yield return DateRangeReflection.Descriptor;
+            yield return DaypartingTimeZoneEnumReflection.Descriptor;
             yield return DealBuyerPermissionTypeEnumReflection.Descriptor;
             yield return DealPriorityTierEnumReflection.Descriptor;
             yield return DeliveryEnumsReflection.Descriptor;
@@ -170,6 +177,9 @@ namespace Google.Ads.AdManager.V1
             yield return EnvironmentTypeEnumReflection.Descriptor;
             yield return ExchangeSyndicationProductEnumReflection.Descriptor;
             yield return ExclusionScopeEnumReflection.Descriptor;
+            yield return ForecastAdjustmentEnumsReflection.Descriptor;
+            yield return ForecastAdjustmentMessagesReflection.Descriptor;
+            yield return ForecastAdjustmentServiceReflection.Descriptor;
             yield return ForecastMessagesReflection.Descriptor;
             yield return ForecastServiceReflection.Descriptor;
             yield return ForecastingEnumsReflection.Descriptor;
@@ -181,6 +191,7 @@ namespace Google.Ads.AdManager.V1
             yield return GrpProviderEnumReflection.Descriptor;
             yield return GrpSettingsReflection.Descriptor;
             yield return GrpTargetGenderEnumReflection.Descriptor;
+            yield return InventoryUrlMessagesReflection.Descriptor;
             yield return LabelEnumsReflection.Descriptor;
             yield return LabelMessagesReflection.Descriptor;
             yield return LabelServiceReflection.Descriptor;
@@ -287,6 +298,8 @@ namespace Google.Ads.AdManager.V1
             yield return ThirdPartyDataDeclarationTypeEnumReflection.Descriptor;
             yield return ThirdPartyMeasurementSettingsReflection.Descriptor;
             yield return TimeUnitEnumReflection.Descriptor;
+            yield return TrafficForecastSegmentMessagesReflection.Descriptor;
+            yield return TrafficForecastSegmentServiceReflection.Descriptor;
             yield return UserMessagesReflection.Descriptor;
             yield return UserServiceReflection.Descriptor;
             yield return VastRedirectTypeEnumReflection.Descriptor;
@@ -297,6 +310,11 @@ namespace Google.Ads.AdManager.V1
             yield return ViewabilityProviderMessagesReflection.Descriptor;
             yield return ViewabilityProviderServiceReflection.Descriptor;
             yield return WebPropertyReflection.Descriptor;
+            yield return YieldEnumsReflection.Descriptor;
+            yield return YieldEnvironmentTypeEnumReflection.Descriptor;
+            yield return YieldFormatEnumReflection.Descriptor;
+            yield return YieldPartnerMessagesReflection.Descriptor;
+            yield return YieldPartnerServiceReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
     }

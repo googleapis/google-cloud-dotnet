@@ -317,6 +317,27 @@
         }
       }
     },
+    "AudienceSegmentCategoryService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AudienceSegmentCategoryServiceClient",
+          "rpcs": {
+            "GetAudienceSegmentCategory": {
+              "methods": [
+                "GetAudienceSegmentCategory",
+                "GetAudienceSegmentCategoryAsync"
+              ]
+            },
+            "ListAudienceSegmentCategories": {
+              "methods": [
+                "ListAudienceSegmentCategories",
+                "ListAudienceSegmentCategoriesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "AudienceSegmentService": {
       "clients": {
         "grpc": {
@@ -551,6 +572,27 @@
               "methods": [
                 "UpdateCdnConfig",
                 "UpdateCdnConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ChangeEventService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ChangeEventServiceClient",
+          "rpcs": {
+            "GetChangeEvent": {
+              "methods": [
+                "GetChangeEvent",
+                "GetChangeEventAsync"
+              ]
+            },
+            "ListChangeEvents": {
+              "methods": [
+                "ListChangeEvents",
+                "ListChangeEventsAsync"
               ]
             }
           }
@@ -1409,6 +1451,69 @@
         }
       }
     },
+    "ForecastAdjustmentService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ForecastAdjustmentServiceClient",
+          "rpcs": {
+            "BatchActivateForecastAdjustments": {
+              "methods": [
+                "BatchActivateForecastAdjustments",
+                "BatchActivateForecastAdjustmentsAsync"
+              ]
+            },
+            "BatchCreateForecastAdjustments": {
+              "methods": [
+                "BatchCreateForecastAdjustments",
+                "BatchCreateForecastAdjustmentsAsync"
+              ]
+            },
+            "BatchDeactivateForecastAdjustments": {
+              "methods": [
+                "BatchDeactivateForecastAdjustments",
+                "BatchDeactivateForecastAdjustmentsAsync"
+              ]
+            },
+            "BatchUpdateForecastAdjustments": {
+              "methods": [
+                "BatchUpdateForecastAdjustments",
+                "BatchUpdateForecastAdjustmentsAsync"
+              ]
+            },
+            "CalculateDailyAdOpportunityCounts": {
+              "methods": [
+                "CalculateDailyAdOpportunityCounts",
+                "CalculateDailyAdOpportunityCountsAsync"
+              ]
+            },
+            "CreateForecastAdjustment": {
+              "methods": [
+                "CreateForecastAdjustment",
+                "CreateForecastAdjustmentAsync"
+              ]
+            },
+            "GetForecastAdjustment": {
+              "methods": [
+                "GetForecastAdjustment",
+                "GetForecastAdjustmentAsync"
+              ]
+            },
+            "ListForecastAdjustments": {
+              "methods": [
+                "ListForecastAdjustments",
+                "ListForecastAdjustmentsAsync"
+              ]
+            },
+            "UpdateForecastAdjustment": {
+              "methods": [
+                "UpdateForecastAdjustment",
+                "UpdateForecastAdjustmentAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "ForecastService": {
       "clients": {
         "grpc": {
@@ -1519,6 +1624,42 @@
         "grpc": {
           "libraryClient": "LineItemCreativeAssociationServiceClient",
           "rpcs": {
+            "BatchActivateLineItemCreativeAssociations": {
+              "methods": [
+                "BatchActivateLineItemCreativeAssociations",
+                "BatchActivateLineItemCreativeAssociationsAsync"
+              ]
+            },
+            "BatchCreateLineItemCreativeAssociations": {
+              "methods": [
+                "BatchCreateLineItemCreativeAssociations",
+                "BatchCreateLineItemCreativeAssociationsAsync"
+              ]
+            },
+            "BatchDeactivateLineItemCreativeAssociations": {
+              "methods": [
+                "BatchDeactivateLineItemCreativeAssociations",
+                "BatchDeactivateLineItemCreativeAssociationsAsync"
+              ]
+            },
+            "BatchDeleteLineItemCreativeAssociations": {
+              "methods": [
+                "BatchDeleteLineItemCreativeAssociations",
+                "BatchDeleteLineItemCreativeAssociationsAsync"
+              ]
+            },
+            "BatchUpdateLineItemCreativeAssociations": {
+              "methods": [
+                "BatchUpdateLineItemCreativeAssociations",
+                "BatchUpdateLineItemCreativeAssociationsAsync"
+              ]
+            },
+            "CreateLineItemCreativeAssociation": {
+              "methods": [
+                "CreateLineItemCreativeAssociation",
+                "CreateLineItemCreativeAssociationAsync"
+              ]
+            },
             "GetLineItemCreativeAssociation": {
               "methods": [
                 "GetLineItemCreativeAssociation",
@@ -1529,6 +1670,18 @@
               "methods": [
                 "ListLineItemCreativeAssociations",
                 "ListLineItemCreativeAssociationsAsync"
+              ]
+            },
+            "PreviewLineItemCreativeAssociation": {
+              "methods": [
+                "PreviewLineItemCreativeAssociation",
+                "PreviewLineItemCreativeAssociationAsync"
+              ]
+            },
+            "UpdateLineItemCreativeAssociation": {
+              "methods": [
+                "UpdateLineItemCreativeAssociation",
+                "UpdateLineItemCreativeAssociationAsync"
               ]
             }
           }
@@ -2669,6 +2822,51 @@
         }
       }
     },
+    "TrafficForecastSegmentService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "TrafficForecastSegmentServiceClient",
+          "rpcs": {
+            "BatchCreateTrafficForecastSegments": {
+              "methods": [
+                "BatchCreateTrafficForecastSegments",
+                "BatchCreateTrafficForecastSegmentsAsync"
+              ]
+            },
+            "BatchUpdateTrafficForecastSegments": {
+              "methods": [
+                "BatchUpdateTrafficForecastSegments",
+                "BatchUpdateTrafficForecastSegmentsAsync"
+              ]
+            },
+            "CreateTrafficForecastSegment": {
+              "methods": [
+                "CreateTrafficForecastSegment",
+                "CreateTrafficForecastSegmentAsync"
+              ]
+            },
+            "GetTrafficForecastSegment": {
+              "methods": [
+                "GetTrafficForecastSegment",
+                "GetTrafficForecastSegmentAsync"
+              ]
+            },
+            "ListTrafficForecastSegments": {
+              "methods": [
+                "ListTrafficForecastSegments",
+                "ListTrafficForecastSegmentsAsync"
+              ]
+            },
+            "UpdateTrafficForecastSegment": {
+              "methods": [
+                "UpdateTrafficForecastSegment",
+                "UpdateTrafficForecastSegmentAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "UserService": {
       "clients": {
         "grpc": {
@@ -2765,6 +2963,27 @@
               "methods": [
                 "UpdateViewabilityProvider",
                 "UpdateViewabilityProviderAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "YieldPartnerService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "YieldPartnerServiceClient",
+          "rpcs": {
+            "GetYieldPartner": {
+              "methods": [
+                "GetYieldPartner",
+                "GetYieldPartnerAsync"
+              ]
+            },
+            "ListYieldPartners": {
+              "methods": [
+                "ListYieldPartners",
+                "ListYieldPartnersAsync"
               ]
             }
           }

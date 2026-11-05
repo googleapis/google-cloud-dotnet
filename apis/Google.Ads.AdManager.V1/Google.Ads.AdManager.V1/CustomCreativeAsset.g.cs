@@ -28,14 +28,14 @@ namespace Google.Ads.AdManager.V1 {
             "ZXQucHJvdG8SF2dvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxGixnb29nbGUvYWRz",
             "L2FkbWFuYWdlci92MS9jcmVhdGl2ZV9hc3NldC5wcm90bxofZ29vZ2xlL2Fw",
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
-            "cm90byJ+ChNDdXN0b21DcmVhdGl2ZUFzc2V0EhwKCm1hY3JvX25hbWUYASAB",
-            "KAlCA+BBAUgAiAEBEjoKBWFzc2V0GAYgASgLMiYuZ29vZ2xlLmFkcy5hZG1h",
-            "bmFnZXIudjEuQ3JlYXRpdmVBc3NldEID4EECQg0KC19tYWNyb19uYW1lQswB",
-            "Chtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFCGEN1c3RvbUNyZWF0aXZl",
-            "QXNzZXRQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
-            "bGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFk",
-            "cy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdv",
-            "b2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
+            "cm90byKAAQoTQ3VzdG9tQ3JlYXRpdmVBc3NldBIdCgptYWNyb19uYW1lGAEg",
+            "ASgJQgTiQQEBSACIAQESOwoFYXNzZXQYBiABKAsyJi5nb29nbGUuYWRzLmFk",
+            "bWFuYWdlci52MS5DcmVhdGl2ZUFzc2V0QgTiQQECQg0KC19tYWNyb19uYW1l",
+            "QswBChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFCGEN1c3RvbUNyZWF0",
+            "aXZlQXNzZXRQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
+            "b29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xl",
+            "LkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoC",
+            "Gkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.CreativeAssetReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

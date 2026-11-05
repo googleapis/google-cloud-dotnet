@@ -289,5 +289,42 @@ namespace Google.Ads.AdManager.V1
             get => string.IsNullOrEmpty(Name) ? null : gaav::EntitySignalsMappingName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="AudienceSegmentName"/>-typed view over the <see cref="AudienceSegment"/> resource name property.
+        /// </summary>
+        public AudienceSegmentName AudienceSegmentAsAudienceSegmentName
+        {
+            get => string.IsNullOrEmpty(AudienceSegment) ? null : AudienceSegmentName.Parse(AudienceSegment, allowUnparsed: true);
+            set => AudienceSegment = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="ContentBundleName"/>-typed view over the <see cref="ContentBundle"/> resource name property.
+        /// </summary>
+        public ContentBundleName ContentBundleAsContentBundleName
+        {
+            get => string.IsNullOrEmpty(ContentBundle) ? null : ContentBundleName.Parse(ContentBundle, allowUnparsed: true);
+            set => ContentBundle = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="CustomTargetingValueName"/>-typed view over the <see cref="CustomTargetingValue"/> resource name
+        /// property.
+        /// </summary>
+        public CustomTargetingValueName CustomTargetingValueAsCustomTargetingValueName
+        {
+            get => string.IsNullOrEmpty(CustomTargetingValue) ? null : CustomTargetingValueName.Parse(CustomTargetingValue, allowUnparsed: true);
+            set => CustomTargetingValue = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="TaxonomyCategoryName"/>-typed view over the <see cref="TaxonomyCategories"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<TaxonomyCategoryName> TaxonomyCategoriesAsTaxonomyCategoryNames
+        {
+            get => new gax::ResourceNameList<TaxonomyCategoryName>(TaxonomyCategories, s => string.IsNullOrEmpty(s) ? null : TaxonomyCategoryName.Parse(s, allowUnparsed: true));
+        }
     }
 }

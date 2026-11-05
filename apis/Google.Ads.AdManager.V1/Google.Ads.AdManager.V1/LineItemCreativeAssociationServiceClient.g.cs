@@ -27,6 +27,7 @@ using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Ads.AdManager.V1
 {
@@ -52,6 +53,14 @@ namespace Google.Ads.AdManager.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetLineItemCreativeAssociationSettings = existing.GetLineItemCreativeAssociationSettings;
             ListLineItemCreativeAssociationsSettings = existing.ListLineItemCreativeAssociationsSettings;
+            CreateLineItemCreativeAssociationSettings = existing.CreateLineItemCreativeAssociationSettings;
+            BatchCreateLineItemCreativeAssociationsSettings = existing.BatchCreateLineItemCreativeAssociationsSettings;
+            UpdateLineItemCreativeAssociationSettings = existing.UpdateLineItemCreativeAssociationSettings;
+            BatchUpdateLineItemCreativeAssociationsSettings = existing.BatchUpdateLineItemCreativeAssociationsSettings;
+            BatchActivateLineItemCreativeAssociationsSettings = existing.BatchActivateLineItemCreativeAssociationsSettings;
+            BatchDeactivateLineItemCreativeAssociationsSettings = existing.BatchDeactivateLineItemCreativeAssociationsSettings;
+            BatchDeleteLineItemCreativeAssociationsSettings = existing.BatchDeleteLineItemCreativeAssociationsSettings;
+            PreviewLineItemCreativeAssociationSettings = existing.PreviewLineItemCreativeAssociationSettings;
             OnCopy(existing);
         }
 
@@ -82,6 +91,110 @@ namespace Google.Ads.AdManager.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListLineItemCreativeAssociationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LineItemCreativeAssociationServiceClient.CreateLineItemCreativeAssociation</c> and
+        /// <c>LineItemCreativeAssociationServiceClient.CreateLineItemCreativeAssociationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateLineItemCreativeAssociationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LineItemCreativeAssociationServiceClient.BatchCreateLineItemCreativeAssociations</c> and
+        /// <c>LineItemCreativeAssociationServiceClient.BatchCreateLineItemCreativeAssociationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchCreateLineItemCreativeAssociationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LineItemCreativeAssociationServiceClient.UpdateLineItemCreativeAssociation</c> and
+        /// <c>LineItemCreativeAssociationServiceClient.UpdateLineItemCreativeAssociationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateLineItemCreativeAssociationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LineItemCreativeAssociationServiceClient.BatchUpdateLineItemCreativeAssociations</c> and
+        /// <c>LineItemCreativeAssociationServiceClient.BatchUpdateLineItemCreativeAssociationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchUpdateLineItemCreativeAssociationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LineItemCreativeAssociationServiceClient.BatchActivateLineItemCreativeAssociations</c> and
+        /// <c>LineItemCreativeAssociationServiceClient.BatchActivateLineItemCreativeAssociationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchActivateLineItemCreativeAssociationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LineItemCreativeAssociationServiceClient.BatchDeactivateLineItemCreativeAssociations</c> and
+        /// <c>LineItemCreativeAssociationServiceClient.BatchDeactivateLineItemCreativeAssociationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchDeactivateLineItemCreativeAssociationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LineItemCreativeAssociationServiceClient.BatchDeleteLineItemCreativeAssociations</c> and
+        /// <c>LineItemCreativeAssociationServiceClient.BatchDeleteLineItemCreativeAssociationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchDeleteLineItemCreativeAssociationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LineItemCreativeAssociationServiceClient.PreviewLineItemCreativeAssociation</c> and
+        /// <c>LineItemCreativeAssociationServiceClient.PreviewLineItemCreativeAssociationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PreviewLineItemCreativeAssociationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="LineItemCreativeAssociationServiceSettings"/> object.</returns>
@@ -512,6 +625,1251 @@ namespace Google.Ads.AdManager.V1
             }
             return ListLineItemCreativeAssociationsAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Creates a `LineItemCreativeAssociation` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LineItemCreativeAssociation CreateLineItemCreativeAssociation(CreateLineItemCreativeAssociationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a `LineItemCreativeAssociation` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LineItemCreativeAssociation> CreateLineItemCreativeAssociationAsync(CreateLineItemCreativeAssociationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a `LineItemCreativeAssociation` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LineItemCreativeAssociation> CreateLineItemCreativeAssociationAsync(CreateLineItemCreativeAssociationRequest request, st::CancellationToken cancellationToken) =>
+            CreateLineItemCreativeAssociationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a `LineItemCreativeAssociation` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `LineItemCreativeAssociation` will
+        /// be created. Format: `networks/{network_code}/lineItems/{line_item_id}`
+        /// </param>
+        /// <param name="lineItemCreativeAssociation">
+        /// Required. The `LineItemCreativeAssociation` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LineItemCreativeAssociation CreateLineItemCreativeAssociation(string parent, LineItemCreativeAssociation lineItemCreativeAssociation, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLineItemCreativeAssociation(new CreateLineItemCreativeAssociationRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                LineItemCreativeAssociation = gax::GaxPreconditions.CheckNotNull(lineItemCreativeAssociation, nameof(lineItemCreativeAssociation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `LineItemCreativeAssociation` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `LineItemCreativeAssociation` will
+        /// be created. Format: `networks/{network_code}/lineItems/{line_item_id}`
+        /// </param>
+        /// <param name="lineItemCreativeAssociation">
+        /// Required. The `LineItemCreativeAssociation` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LineItemCreativeAssociation> CreateLineItemCreativeAssociationAsync(string parent, LineItemCreativeAssociation lineItemCreativeAssociation, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLineItemCreativeAssociationAsync(new CreateLineItemCreativeAssociationRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                LineItemCreativeAssociation = gax::GaxPreconditions.CheckNotNull(lineItemCreativeAssociation, nameof(lineItemCreativeAssociation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `LineItemCreativeAssociation` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `LineItemCreativeAssociation` will
+        /// be created. Format: `networks/{network_code}/lineItems/{line_item_id}`
+        /// </param>
+        /// <param name="lineItemCreativeAssociation">
+        /// Required. The `LineItemCreativeAssociation` to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LineItemCreativeAssociation> CreateLineItemCreativeAssociationAsync(string parent, LineItemCreativeAssociation lineItemCreativeAssociation, st::CancellationToken cancellationToken) =>
+            CreateLineItemCreativeAssociationAsync(parent, lineItemCreativeAssociation, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a `LineItemCreativeAssociation` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `LineItemCreativeAssociation` will
+        /// be created. Format: `networks/{network_code}/lineItems/{line_item_id}`
+        /// </param>
+        /// <param name="lineItemCreativeAssociation">
+        /// Required. The `LineItemCreativeAssociation` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LineItemCreativeAssociation CreateLineItemCreativeAssociation(LineItemName parent, LineItemCreativeAssociation lineItemCreativeAssociation, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLineItemCreativeAssociation(new CreateLineItemCreativeAssociationRequest
+            {
+                ParentAsLineItemName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                LineItemCreativeAssociation = gax::GaxPreconditions.CheckNotNull(lineItemCreativeAssociation, nameof(lineItemCreativeAssociation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `LineItemCreativeAssociation` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `LineItemCreativeAssociation` will
+        /// be created. Format: `networks/{network_code}/lineItems/{line_item_id}`
+        /// </param>
+        /// <param name="lineItemCreativeAssociation">
+        /// Required. The `LineItemCreativeAssociation` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LineItemCreativeAssociation> CreateLineItemCreativeAssociationAsync(LineItemName parent, LineItemCreativeAssociation lineItemCreativeAssociation, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLineItemCreativeAssociationAsync(new CreateLineItemCreativeAssociationRequest
+            {
+                ParentAsLineItemName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                LineItemCreativeAssociation = gax::GaxPreconditions.CheckNotNull(lineItemCreativeAssociation, nameof(lineItemCreativeAssociation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `LineItemCreativeAssociation` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `LineItemCreativeAssociation` will
+        /// be created. Format: `networks/{network_code}/lineItems/{line_item_id}`
+        /// </param>
+        /// <param name="lineItemCreativeAssociation">
+        /// Required. The `LineItemCreativeAssociation` to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LineItemCreativeAssociation> CreateLineItemCreativeAssociationAsync(LineItemName parent, LineItemCreativeAssociation lineItemCreativeAssociation, st::CancellationToken cancellationToken) =>
+            CreateLineItemCreativeAssociationAsync(parent, lineItemCreativeAssociation, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateLineItemCreativeAssociationsResponse BatchCreateLineItemCreativeAssociations(BatchCreateLineItemCreativeAssociationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateLineItemCreativeAssociationsResponse> BatchCreateLineItemCreativeAssociationsAsync(BatchCreateLineItemCreativeAssociationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateLineItemCreativeAssociationsResponse> BatchCreateLineItemCreativeAssociationsAsync(BatchCreateLineItemCreativeAssociationsRequest request, st::CancellationToken cancellationToken) =>
+            BatchCreateLineItemCreativeAssociationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// created. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `LineItemCreativeAssociation` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateLineItemCreativeAssociationsResponse BatchCreateLineItemCreativeAssociations(string parent, scg::IEnumerable<CreateLineItemCreativeAssociationRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateLineItemCreativeAssociations(new BatchCreateLineItemCreativeAssociationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// created. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `LineItemCreativeAssociation` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateLineItemCreativeAssociationsResponse> BatchCreateLineItemCreativeAssociationsAsync(string parent, scg::IEnumerable<CreateLineItemCreativeAssociationRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateLineItemCreativeAssociationsAsync(new BatchCreateLineItemCreativeAssociationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// created. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `LineItemCreativeAssociation` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateLineItemCreativeAssociationsResponse> BatchCreateLineItemCreativeAssociationsAsync(string parent, scg::IEnumerable<CreateLineItemCreativeAssociationRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateLineItemCreativeAssociationsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// created. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `LineItemCreativeAssociation` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateLineItemCreativeAssociationsResponse BatchCreateLineItemCreativeAssociations(LineItemName parent, scg::IEnumerable<CreateLineItemCreativeAssociationRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateLineItemCreativeAssociations(new BatchCreateLineItemCreativeAssociationsRequest
+            {
+                ParentAsLineItemName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// created. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `LineItemCreativeAssociation` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateLineItemCreativeAssociationsResponse> BatchCreateLineItemCreativeAssociationsAsync(LineItemName parent, scg::IEnumerable<CreateLineItemCreativeAssociationRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateLineItemCreativeAssociationsAsync(new BatchCreateLineItemCreativeAssociationsRequest
+            {
+                ParentAsLineItemName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// created. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `LineItemCreativeAssociation` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateLineItemCreativeAssociationsResponse> BatchCreateLineItemCreativeAssociationsAsync(LineItemName parent, scg::IEnumerable<CreateLineItemCreativeAssociationRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateLineItemCreativeAssociationsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a `LineItemCreativeAssociation` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LineItemCreativeAssociation UpdateLineItemCreativeAssociation(UpdateLineItemCreativeAssociationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a `LineItemCreativeAssociation` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LineItemCreativeAssociation> UpdateLineItemCreativeAssociationAsync(UpdateLineItemCreativeAssociationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a `LineItemCreativeAssociation` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LineItemCreativeAssociation> UpdateLineItemCreativeAssociationAsync(UpdateLineItemCreativeAssociationRequest request, st::CancellationToken cancellationToken) =>
+            UpdateLineItemCreativeAssociationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a `LineItemCreativeAssociation` object.
+        /// </summary>
+        /// <param name="lineItemCreativeAssociation">
+        /// Required. The `LineItemCreativeAssociation` to update.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LineItemCreativeAssociation UpdateLineItemCreativeAssociation(LineItemCreativeAssociation lineItemCreativeAssociation, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateLineItemCreativeAssociation(new UpdateLineItemCreativeAssociationRequest
+            {
+                LineItemCreativeAssociation = gax::GaxPreconditions.CheckNotNull(lineItemCreativeAssociation, nameof(lineItemCreativeAssociation)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a `LineItemCreativeAssociation` object.
+        /// </summary>
+        /// <param name="lineItemCreativeAssociation">
+        /// Required. The `LineItemCreativeAssociation` to update.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LineItemCreativeAssociation> UpdateLineItemCreativeAssociationAsync(LineItemCreativeAssociation lineItemCreativeAssociation, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateLineItemCreativeAssociationAsync(new UpdateLineItemCreativeAssociationRequest
+            {
+                LineItemCreativeAssociation = gax::GaxPreconditions.CheckNotNull(lineItemCreativeAssociation, nameof(lineItemCreativeAssociation)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a `LineItemCreativeAssociation` object.
+        /// </summary>
+        /// <param name="lineItemCreativeAssociation">
+        /// Required. The `LineItemCreativeAssociation` to update.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LineItemCreativeAssociation> UpdateLineItemCreativeAssociationAsync(LineItemCreativeAssociation lineItemCreativeAssociation, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateLineItemCreativeAssociationAsync(lineItemCreativeAssociation, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch updates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateLineItemCreativeAssociationsResponse BatchUpdateLineItemCreativeAssociations(BatchUpdateLineItemCreativeAssociationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch updates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateLineItemCreativeAssociationsResponse> BatchUpdateLineItemCreativeAssociationsAsync(BatchUpdateLineItemCreativeAssociationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch updates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateLineItemCreativeAssociationsResponse> BatchUpdateLineItemCreativeAssociationsAsync(BatchUpdateLineItemCreativeAssociationsRequest request, st::CancellationToken cancellationToken) =>
+            BatchUpdateLineItemCreativeAssociationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch updates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// updated. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `LineItemCreativeAssociation` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateLineItemCreativeAssociationsResponse BatchUpdateLineItemCreativeAssociations(string parent, scg::IEnumerable<UpdateLineItemCreativeAssociationRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateLineItemCreativeAssociations(new BatchUpdateLineItemCreativeAssociationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch updates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// updated. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `LineItemCreativeAssociation` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateLineItemCreativeAssociationsResponse> BatchUpdateLineItemCreativeAssociationsAsync(string parent, scg::IEnumerable<UpdateLineItemCreativeAssociationRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateLineItemCreativeAssociationsAsync(new BatchUpdateLineItemCreativeAssociationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch updates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// updated. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `LineItemCreativeAssociation` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateLineItemCreativeAssociationsResponse> BatchUpdateLineItemCreativeAssociationsAsync(string parent, scg::IEnumerable<UpdateLineItemCreativeAssociationRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchUpdateLineItemCreativeAssociationsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch updates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// updated. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `LineItemCreativeAssociation` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateLineItemCreativeAssociationsResponse BatchUpdateLineItemCreativeAssociations(LineItemName parent, scg::IEnumerable<UpdateLineItemCreativeAssociationRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateLineItemCreativeAssociations(new BatchUpdateLineItemCreativeAssociationsRequest
+            {
+                ParentAsLineItemName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch updates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// updated. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `LineItemCreativeAssociation` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateLineItemCreativeAssociationsResponse> BatchUpdateLineItemCreativeAssociationsAsync(LineItemName parent, scg::IEnumerable<UpdateLineItemCreativeAssociationRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateLineItemCreativeAssociationsAsync(new BatchUpdateLineItemCreativeAssociationsRequest
+            {
+                ParentAsLineItemName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch updates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// updated. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `LineItemCreativeAssociation` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateLineItemCreativeAssociationsResponse> BatchUpdateLineItemCreativeAssociationsAsync(LineItemName parent, scg::IEnumerable<UpdateLineItemCreativeAssociationRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchUpdateLineItemCreativeAssociationsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Activate a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchActivateLineItemCreativeAssociationsResponse BatchActivateLineItemCreativeAssociations(BatchActivateLineItemCreativeAssociationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Activate a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateLineItemCreativeAssociationsResponse> BatchActivateLineItemCreativeAssociationsAsync(BatchActivateLineItemCreativeAssociationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Activate a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateLineItemCreativeAssociationsResponse> BatchActivateLineItemCreativeAssociationsAsync(BatchActivateLineItemCreativeAssociationsRequest request, st::CancellationToken cancellationToken) =>
+            BatchActivateLineItemCreativeAssociationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Activate a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// activated. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `LineItemCreativeAssociation` objects to
+        /// activate. A maximum of 1000 objects can be activated in a batch. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchActivateLineItemCreativeAssociationsResponse BatchActivateLineItemCreativeAssociations(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivateLineItemCreativeAssociations(new BatchActivateLineItemCreativeAssociationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Activate a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// activated. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `LineItemCreativeAssociation` objects to
+        /// activate. A maximum of 1000 objects can be activated in a batch. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateLineItemCreativeAssociationsResponse> BatchActivateLineItemCreativeAssociationsAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivateLineItemCreativeAssociationsAsync(new BatchActivateLineItemCreativeAssociationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Activate a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// activated. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `LineItemCreativeAssociation` objects to
+        /// activate. A maximum of 1000 objects can be activated in a batch. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateLineItemCreativeAssociationsResponse> BatchActivateLineItemCreativeAssociationsAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchActivateLineItemCreativeAssociationsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Activate a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// activated. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `LineItemCreativeAssociation` objects to
+        /// activate. A maximum of 1000 objects can be activated in a batch. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchActivateLineItemCreativeAssociationsResponse BatchActivateLineItemCreativeAssociations(LineItemName parent, scg::IEnumerable<LineItemCreativeAssociationName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivateLineItemCreativeAssociations(new BatchActivateLineItemCreativeAssociationsRequest
+            {
+                ParentAsLineItemName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                LineItemCreativeAssociationNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Activate a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// activated. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `LineItemCreativeAssociation` objects to
+        /// activate. A maximum of 1000 objects can be activated in a batch. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateLineItemCreativeAssociationsResponse> BatchActivateLineItemCreativeAssociationsAsync(LineItemName parent, scg::IEnumerable<LineItemCreativeAssociationName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivateLineItemCreativeAssociationsAsync(new BatchActivateLineItemCreativeAssociationsRequest
+            {
+                ParentAsLineItemName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                LineItemCreativeAssociationNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Activate a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// activated. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `LineItemCreativeAssociation` objects to
+        /// activate. A maximum of 1000 objects can be activated in a batch. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateLineItemCreativeAssociationsResponse> BatchActivateLineItemCreativeAssociationsAsync(LineItemName parent, scg::IEnumerable<LineItemCreativeAssociationName> names, st::CancellationToken cancellationToken) =>
+            BatchActivateLineItemCreativeAssociationsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deactivates a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchDeactivateLineItemCreativeAssociationsResponse BatchDeactivateLineItemCreativeAssociations(BatchDeactivateLineItemCreativeAssociationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deactivates a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateLineItemCreativeAssociationsResponse> BatchDeactivateLineItemCreativeAssociationsAsync(BatchDeactivateLineItemCreativeAssociationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deactivates a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateLineItemCreativeAssociationsResponse> BatchDeactivateLineItemCreativeAssociationsAsync(BatchDeactivateLineItemCreativeAssociationsRequest request, st::CancellationToken cancellationToken) =>
+            BatchDeactivateLineItemCreativeAssociationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deactivates a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// deactivated.
+        /// This request supports using the "-" character as a wildcard for resources
+        /// that span across multiple LineItem parents.
+        /// Format: `networks/{network_code}/lineItems/{line_item_id}`
+        /// Format: `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `LineItemCreativeAssociation` objects to
+        /// deactivate. A maximum of 1000 objects can be deactivated in a batch.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchDeactivateLineItemCreativeAssociationsResponse BatchDeactivateLineItemCreativeAssociations(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivateLineItemCreativeAssociations(new BatchDeactivateLineItemCreativeAssociationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deactivates a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// deactivated.
+        /// This request supports using the "-" character as a wildcard for resources
+        /// that span across multiple LineItem parents.
+        /// Format: `networks/{network_code}/lineItems/{line_item_id}`
+        /// Format: `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `LineItemCreativeAssociation` objects to
+        /// deactivate. A maximum of 1000 objects can be deactivated in a batch.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateLineItemCreativeAssociationsResponse> BatchDeactivateLineItemCreativeAssociationsAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivateLineItemCreativeAssociationsAsync(new BatchDeactivateLineItemCreativeAssociationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deactivates a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// deactivated.
+        /// This request supports using the "-" character as a wildcard for resources
+        /// that span across multiple LineItem parents.
+        /// Format: `networks/{network_code}/lineItems/{line_item_id}`
+        /// Format: `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `LineItemCreativeAssociation` objects to
+        /// deactivate. A maximum of 1000 objects can be deactivated in a batch.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateLineItemCreativeAssociationsResponse> BatchDeactivateLineItemCreativeAssociationsAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchDeactivateLineItemCreativeAssociationsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deactivates a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// deactivated.
+        /// This request supports using the "-" character as a wildcard for resources
+        /// that span across multiple LineItem parents.
+        /// Format: `networks/{network_code}/lineItems/{line_item_id}`
+        /// Format: `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `LineItemCreativeAssociation` objects to
+        /// deactivate. A maximum of 1000 objects can be deactivated in a batch.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchDeactivateLineItemCreativeAssociationsResponse BatchDeactivateLineItemCreativeAssociations(LineItemName parent, scg::IEnumerable<LineItemCreativeAssociationName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivateLineItemCreativeAssociations(new BatchDeactivateLineItemCreativeAssociationsRequest
+            {
+                ParentAsLineItemName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                LineItemCreativeAssociationNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deactivates a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// deactivated.
+        /// This request supports using the "-" character as a wildcard for resources
+        /// that span across multiple LineItem parents.
+        /// Format: `networks/{network_code}/lineItems/{line_item_id}`
+        /// Format: `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `LineItemCreativeAssociation` objects to
+        /// deactivate. A maximum of 1000 objects can be deactivated in a batch.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateLineItemCreativeAssociationsResponse> BatchDeactivateLineItemCreativeAssociationsAsync(LineItemName parent, scg::IEnumerable<LineItemCreativeAssociationName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivateLineItemCreativeAssociationsAsync(new BatchDeactivateLineItemCreativeAssociationsRequest
+            {
+                ParentAsLineItemName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                LineItemCreativeAssociationNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deactivates a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// deactivated.
+        /// This request supports using the "-" character as a wildcard for resources
+        /// that span across multiple LineItem parents.
+        /// Format: `networks/{network_code}/lineItems/{line_item_id}`
+        /// Format: `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `LineItemCreativeAssociation` objects to
+        /// deactivate. A maximum of 1000 objects can be deactivated in a batch.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateLineItemCreativeAssociationsResponse> BatchDeactivateLineItemCreativeAssociationsAsync(LineItemName parent, scg::IEnumerable<LineItemCreativeAssociationName> names, st::CancellationToken cancellationToken) =>
+            BatchDeactivateLineItemCreativeAssociationsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void BatchDeleteLineItemCreativeAssociations(BatchDeleteLineItemCreativeAssociationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task BatchDeleteLineItemCreativeAssociationsAsync(BatchDeleteLineItemCreativeAssociationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task BatchDeleteLineItemCreativeAssociationsAsync(BatchDeleteLineItemCreativeAssociationsRequest request, st::CancellationToken cancellationToken) =>
+            BatchDeleteLineItemCreativeAssociationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// deleted. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `LineItemCreativeAssociation` objects to delete.
+        /// A maximum of 1000 objects can be deleted in a batch.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void BatchDeleteLineItemCreativeAssociations(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteLineItemCreativeAssociations(new BatchDeleteLineItemCreativeAssociationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// deleted. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `LineItemCreativeAssociation` objects to delete.
+        /// A maximum of 1000 objects can be deleted in a batch.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task BatchDeleteLineItemCreativeAssociationsAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteLineItemCreativeAssociationsAsync(new BatchDeleteLineItemCreativeAssociationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// deleted. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `LineItemCreativeAssociation` objects to delete.
+        /// A maximum of 1000 objects can be deleted in a batch.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task BatchDeleteLineItemCreativeAssociationsAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchDeleteLineItemCreativeAssociationsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// deleted. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `LineItemCreativeAssociation` objects to delete.
+        /// A maximum of 1000 objects can be deleted in a batch.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void BatchDeleteLineItemCreativeAssociations(LineItemName parent, scg::IEnumerable<LineItemCreativeAssociationName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteLineItemCreativeAssociations(new BatchDeleteLineItemCreativeAssociationsRequest
+            {
+                ParentAsLineItemName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                LineItemCreativeAssociationNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// deleted. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `LineItemCreativeAssociation` objects to delete.
+        /// A maximum of 1000 objects can be deleted in a batch.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task BatchDeleteLineItemCreativeAssociationsAsync(LineItemName parent, scg::IEnumerable<LineItemCreativeAssociationName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteLineItemCreativeAssociationsAsync(new BatchDeleteLineItemCreativeAssociationsRequest
+            {
+                ParentAsLineItemName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                LineItemCreativeAssociationNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `LineItemCreativeAssociations` will be
+        /// deleted. This request supports using the "-" character as a wildcard for
+        /// resources that span across multiple LineItem parents. Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}` Format:
+        /// `networks/{network_code}/lineItems/-`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `LineItemCreativeAssociation` objects to delete.
+        /// A maximum of 1000 objects can be deleted in a batch.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task BatchDeleteLineItemCreativeAssociationsAsync(LineItemName parent, scg::IEnumerable<LineItemCreativeAssociationName> names, st::CancellationToken cancellationToken) =>
+            BatchDeleteLineItemCreativeAssociationsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch previews for the
+        /// [LineItemCreativeAssociation][google.ads.admanager.v1.LineItemCreativeAssociation].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PreviewLineItemCreativeAssociationResponse PreviewLineItemCreativeAssociation(PreviewLineItemCreativeAssociationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch previews for the
+        /// [LineItemCreativeAssociation][google.ads.admanager.v1.LineItemCreativeAssociation].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PreviewLineItemCreativeAssociationResponse> PreviewLineItemCreativeAssociationAsync(PreviewLineItemCreativeAssociationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch previews for the
+        /// [LineItemCreativeAssociation][google.ads.admanager.v1.LineItemCreativeAssociation].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PreviewLineItemCreativeAssociationResponse> PreviewLineItemCreativeAssociationAsync(PreviewLineItemCreativeAssociationRequest request, st::CancellationToken cancellationToken) =>
+            PreviewLineItemCreativeAssociationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch previews for the
+        /// [LineItemCreativeAssociation][google.ads.admanager.v1.LineItemCreativeAssociation].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `LineItemCreativeAssociation` object to preview.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="siteUrl">
+        /// Required. The URL of the site that the creative should be previewed in
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PreviewLineItemCreativeAssociationResponse PreviewLineItemCreativeAssociation(string name, string siteUrl, gaxgrpc::CallSettings callSettings = null) =>
+            PreviewLineItemCreativeAssociation(new PreviewLineItemCreativeAssociationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                SiteUrl = gax::GaxPreconditions.CheckNotNullOrEmpty(siteUrl, nameof(siteUrl)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch previews for the
+        /// [LineItemCreativeAssociation][google.ads.admanager.v1.LineItemCreativeAssociation].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `LineItemCreativeAssociation` object to preview.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="siteUrl">
+        /// Required. The URL of the site that the creative should be previewed in
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PreviewLineItemCreativeAssociationResponse> PreviewLineItemCreativeAssociationAsync(string name, string siteUrl, gaxgrpc::CallSettings callSettings = null) =>
+            PreviewLineItemCreativeAssociationAsync(new PreviewLineItemCreativeAssociationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                SiteUrl = gax::GaxPreconditions.CheckNotNullOrEmpty(siteUrl, nameof(siteUrl)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch previews for the
+        /// [LineItemCreativeAssociation][google.ads.admanager.v1.LineItemCreativeAssociation].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `LineItemCreativeAssociation` object to preview.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="siteUrl">
+        /// Required. The URL of the site that the creative should be previewed in
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PreviewLineItemCreativeAssociationResponse> PreviewLineItemCreativeAssociationAsync(string name, string siteUrl, st::CancellationToken cancellationToken) =>
+            PreviewLineItemCreativeAssociationAsync(name, siteUrl, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch previews for the
+        /// [LineItemCreativeAssociation][google.ads.admanager.v1.LineItemCreativeAssociation].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `LineItemCreativeAssociation` object to preview.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="siteUrl">
+        /// Required. The URL of the site that the creative should be previewed in
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PreviewLineItemCreativeAssociationResponse PreviewLineItemCreativeAssociation(LineItemCreativeAssociationName name, string siteUrl, gaxgrpc::CallSettings callSettings = null) =>
+            PreviewLineItemCreativeAssociation(new PreviewLineItemCreativeAssociationRequest
+            {
+                LineItemCreativeAssociationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                SiteUrl = gax::GaxPreconditions.CheckNotNullOrEmpty(siteUrl, nameof(siteUrl)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch previews for the
+        /// [LineItemCreativeAssociation][google.ads.admanager.v1.LineItemCreativeAssociation].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `LineItemCreativeAssociation` object to preview.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="siteUrl">
+        /// Required. The URL of the site that the creative should be previewed in
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PreviewLineItemCreativeAssociationResponse> PreviewLineItemCreativeAssociationAsync(LineItemCreativeAssociationName name, string siteUrl, gaxgrpc::CallSettings callSettings = null) =>
+            PreviewLineItemCreativeAssociationAsync(new PreviewLineItemCreativeAssociationRequest
+            {
+                LineItemCreativeAssociationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                SiteUrl = gax::GaxPreconditions.CheckNotNullOrEmpty(siteUrl, nameof(siteUrl)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch previews for the
+        /// [LineItemCreativeAssociation][google.ads.admanager.v1.LineItemCreativeAssociation].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `LineItemCreativeAssociation` object to preview.
+        /// Format:
+        /// `networks/{network_code}/lineItems/{line_item_id}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="siteUrl">
+        /// Required. The URL of the site that the creative should be previewed in
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PreviewLineItemCreativeAssociationResponse> PreviewLineItemCreativeAssociationAsync(LineItemCreativeAssociationName name, string siteUrl, st::CancellationToken cancellationToken) =>
+            PreviewLineItemCreativeAssociationAsync(name, siteUrl, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>LineItemCreativeAssociationService client wrapper implementation, for convenient use.</summary>
@@ -523,6 +1881,22 @@ namespace Google.Ads.AdManager.V1
         private readonly gaxgrpc::ApiCall<GetLineItemCreativeAssociationRequest, LineItemCreativeAssociation> _callGetLineItemCreativeAssociation;
 
         private readonly gaxgrpc::ApiCall<ListLineItemCreativeAssociationsRequest, ListLineItemCreativeAssociationsResponse> _callListLineItemCreativeAssociations;
+
+        private readonly gaxgrpc::ApiCall<CreateLineItemCreativeAssociationRequest, LineItemCreativeAssociation> _callCreateLineItemCreativeAssociation;
+
+        private readonly gaxgrpc::ApiCall<BatchCreateLineItemCreativeAssociationsRequest, BatchCreateLineItemCreativeAssociationsResponse> _callBatchCreateLineItemCreativeAssociations;
+
+        private readonly gaxgrpc::ApiCall<UpdateLineItemCreativeAssociationRequest, LineItemCreativeAssociation> _callUpdateLineItemCreativeAssociation;
+
+        private readonly gaxgrpc::ApiCall<BatchUpdateLineItemCreativeAssociationsRequest, BatchUpdateLineItemCreativeAssociationsResponse> _callBatchUpdateLineItemCreativeAssociations;
+
+        private readonly gaxgrpc::ApiCall<BatchActivateLineItemCreativeAssociationsRequest, BatchActivateLineItemCreativeAssociationsResponse> _callBatchActivateLineItemCreativeAssociations;
+
+        private readonly gaxgrpc::ApiCall<BatchDeactivateLineItemCreativeAssociationsRequest, BatchDeactivateLineItemCreativeAssociationsResponse> _callBatchDeactivateLineItemCreativeAssociations;
+
+        private readonly gaxgrpc::ApiCall<BatchDeleteLineItemCreativeAssociationsRequest, wkt::Empty> _callBatchDeleteLineItemCreativeAssociations;
+
+        private readonly gaxgrpc::ApiCall<PreviewLineItemCreativeAssociationRequest, PreviewLineItemCreativeAssociationResponse> _callPreviewLineItemCreativeAssociation;
 
         /// <summary>
         /// Constructs a client wrapper for the LineItemCreativeAssociationService service, with the specified gRPC
@@ -548,6 +1922,30 @@ namespace Google.Ads.AdManager.V1
             _callListLineItemCreativeAssociations = clientHelper.BuildApiCall<ListLineItemCreativeAssociationsRequest, ListLineItemCreativeAssociationsResponse>("ListLineItemCreativeAssociations", grpcClient.ListLineItemCreativeAssociationsAsync, grpcClient.ListLineItemCreativeAssociations, effectiveSettings.ListLineItemCreativeAssociationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListLineItemCreativeAssociations);
             Modify_ListLineItemCreativeAssociationsApiCall(ref _callListLineItemCreativeAssociations);
+            _callCreateLineItemCreativeAssociation = clientHelper.BuildApiCall<CreateLineItemCreativeAssociationRequest, LineItemCreativeAssociation>("CreateLineItemCreativeAssociation", grpcClient.CreateLineItemCreativeAssociationAsync, grpcClient.CreateLineItemCreativeAssociation, effectiveSettings.CreateLineItemCreativeAssociationSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateLineItemCreativeAssociation);
+            Modify_CreateLineItemCreativeAssociationApiCall(ref _callCreateLineItemCreativeAssociation);
+            _callBatchCreateLineItemCreativeAssociations = clientHelper.BuildApiCall<BatchCreateLineItemCreativeAssociationsRequest, BatchCreateLineItemCreativeAssociationsResponse>("BatchCreateLineItemCreativeAssociations", grpcClient.BatchCreateLineItemCreativeAssociationsAsync, grpcClient.BatchCreateLineItemCreativeAssociations, effectiveSettings.BatchCreateLineItemCreativeAssociationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchCreateLineItemCreativeAssociations);
+            Modify_BatchCreateLineItemCreativeAssociationsApiCall(ref _callBatchCreateLineItemCreativeAssociations);
+            _callUpdateLineItemCreativeAssociation = clientHelper.BuildApiCall<UpdateLineItemCreativeAssociationRequest, LineItemCreativeAssociation>("UpdateLineItemCreativeAssociation", grpcClient.UpdateLineItemCreativeAssociationAsync, grpcClient.UpdateLineItemCreativeAssociation, effectiveSettings.UpdateLineItemCreativeAssociationSettings).WithGoogleRequestParam("line_item_creative_association.name", request => request.LineItemCreativeAssociation?.Name);
+            Modify_ApiCall(ref _callUpdateLineItemCreativeAssociation);
+            Modify_UpdateLineItemCreativeAssociationApiCall(ref _callUpdateLineItemCreativeAssociation);
+            _callBatchUpdateLineItemCreativeAssociations = clientHelper.BuildApiCall<BatchUpdateLineItemCreativeAssociationsRequest, BatchUpdateLineItemCreativeAssociationsResponse>("BatchUpdateLineItemCreativeAssociations", grpcClient.BatchUpdateLineItemCreativeAssociationsAsync, grpcClient.BatchUpdateLineItemCreativeAssociations, effectiveSettings.BatchUpdateLineItemCreativeAssociationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchUpdateLineItemCreativeAssociations);
+            Modify_BatchUpdateLineItemCreativeAssociationsApiCall(ref _callBatchUpdateLineItemCreativeAssociations);
+            _callBatchActivateLineItemCreativeAssociations = clientHelper.BuildApiCall<BatchActivateLineItemCreativeAssociationsRequest, BatchActivateLineItemCreativeAssociationsResponse>("BatchActivateLineItemCreativeAssociations", grpcClient.BatchActivateLineItemCreativeAssociationsAsync, grpcClient.BatchActivateLineItemCreativeAssociations, effectiveSettings.BatchActivateLineItemCreativeAssociationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchActivateLineItemCreativeAssociations);
+            Modify_BatchActivateLineItemCreativeAssociationsApiCall(ref _callBatchActivateLineItemCreativeAssociations);
+            _callBatchDeactivateLineItemCreativeAssociations = clientHelper.BuildApiCall<BatchDeactivateLineItemCreativeAssociationsRequest, BatchDeactivateLineItemCreativeAssociationsResponse>("BatchDeactivateLineItemCreativeAssociations", grpcClient.BatchDeactivateLineItemCreativeAssociationsAsync, grpcClient.BatchDeactivateLineItemCreativeAssociations, effectiveSettings.BatchDeactivateLineItemCreativeAssociationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchDeactivateLineItemCreativeAssociations);
+            Modify_BatchDeactivateLineItemCreativeAssociationsApiCall(ref _callBatchDeactivateLineItemCreativeAssociations);
+            _callBatchDeleteLineItemCreativeAssociations = clientHelper.BuildApiCall<BatchDeleteLineItemCreativeAssociationsRequest, wkt::Empty>("BatchDeleteLineItemCreativeAssociations", grpcClient.BatchDeleteLineItemCreativeAssociationsAsync, grpcClient.BatchDeleteLineItemCreativeAssociations, effectiveSettings.BatchDeleteLineItemCreativeAssociationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchDeleteLineItemCreativeAssociations);
+            Modify_BatchDeleteLineItemCreativeAssociationsApiCall(ref _callBatchDeleteLineItemCreativeAssociations);
+            _callPreviewLineItemCreativeAssociation = clientHelper.BuildApiCall<PreviewLineItemCreativeAssociationRequest, PreviewLineItemCreativeAssociationResponse>("PreviewLineItemCreativeAssociation", grpcClient.PreviewLineItemCreativeAssociationAsync, grpcClient.PreviewLineItemCreativeAssociation, effectiveSettings.PreviewLineItemCreativeAssociationSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callPreviewLineItemCreativeAssociation);
+            Modify_PreviewLineItemCreativeAssociationApiCall(ref _callPreviewLineItemCreativeAssociation);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -557,6 +1955,22 @@ namespace Google.Ads.AdManager.V1
 
         partial void Modify_ListLineItemCreativeAssociationsApiCall(ref gaxgrpc::ApiCall<ListLineItemCreativeAssociationsRequest, ListLineItemCreativeAssociationsResponse> call);
 
+        partial void Modify_CreateLineItemCreativeAssociationApiCall(ref gaxgrpc::ApiCall<CreateLineItemCreativeAssociationRequest, LineItemCreativeAssociation> call);
+
+        partial void Modify_BatchCreateLineItemCreativeAssociationsApiCall(ref gaxgrpc::ApiCall<BatchCreateLineItemCreativeAssociationsRequest, BatchCreateLineItemCreativeAssociationsResponse> call);
+
+        partial void Modify_UpdateLineItemCreativeAssociationApiCall(ref gaxgrpc::ApiCall<UpdateLineItemCreativeAssociationRequest, LineItemCreativeAssociation> call);
+
+        partial void Modify_BatchUpdateLineItemCreativeAssociationsApiCall(ref gaxgrpc::ApiCall<BatchUpdateLineItemCreativeAssociationsRequest, BatchUpdateLineItemCreativeAssociationsResponse> call);
+
+        partial void Modify_BatchActivateLineItemCreativeAssociationsApiCall(ref gaxgrpc::ApiCall<BatchActivateLineItemCreativeAssociationsRequest, BatchActivateLineItemCreativeAssociationsResponse> call);
+
+        partial void Modify_BatchDeactivateLineItemCreativeAssociationsApiCall(ref gaxgrpc::ApiCall<BatchDeactivateLineItemCreativeAssociationsRequest, BatchDeactivateLineItemCreativeAssociationsResponse> call);
+
+        partial void Modify_BatchDeleteLineItemCreativeAssociationsApiCall(ref gaxgrpc::ApiCall<BatchDeleteLineItemCreativeAssociationsRequest, wkt::Empty> call);
+
+        partial void Modify_PreviewLineItemCreativeAssociationApiCall(ref gaxgrpc::ApiCall<PreviewLineItemCreativeAssociationRequest, PreviewLineItemCreativeAssociationResponse> call);
+
         partial void OnConstruction(LineItemCreativeAssociationService.LineItemCreativeAssociationServiceClient grpcClient, LineItemCreativeAssociationServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC LineItemCreativeAssociationService client</summary>
@@ -565,6 +1979,22 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_GetLineItemCreativeAssociationRequest(ref GetLineItemCreativeAssociationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListLineItemCreativeAssociationsRequest(ref ListLineItemCreativeAssociationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateLineItemCreativeAssociationRequest(ref CreateLineItemCreativeAssociationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchCreateLineItemCreativeAssociationsRequest(ref BatchCreateLineItemCreativeAssociationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateLineItemCreativeAssociationRequest(ref UpdateLineItemCreativeAssociationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchUpdateLineItemCreativeAssociationsRequest(ref BatchUpdateLineItemCreativeAssociationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchActivateLineItemCreativeAssociationsRequest(ref BatchActivateLineItemCreativeAssociationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchDeactivateLineItemCreativeAssociationsRequest(ref BatchDeactivateLineItemCreativeAssociationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchDeleteLineItemCreativeAssociationsRequest(ref BatchDeleteLineItemCreativeAssociationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PreviewLineItemCreativeAssociationRequest(ref PreviewLineItemCreativeAssociationRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Retrieves a `LineItemCreativeAssociation` object.
@@ -612,6 +2042,200 @@ namespace Google.Ads.AdManager.V1
         {
             Modify_ListLineItemCreativeAssociationsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListLineItemCreativeAssociationsRequest, ListLineItemCreativeAssociationsResponse, LineItemCreativeAssociation>(_callListLineItemCreativeAssociations, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a `LineItemCreativeAssociation` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override LineItemCreativeAssociation CreateLineItemCreativeAssociation(CreateLineItemCreativeAssociationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateLineItemCreativeAssociationRequest(ref request, ref callSettings);
+            return _callCreateLineItemCreativeAssociation.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a `LineItemCreativeAssociation` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<LineItemCreativeAssociation> CreateLineItemCreativeAssociationAsync(CreateLineItemCreativeAssociationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateLineItemCreativeAssociationRequest(ref request, ref callSettings);
+            return _callCreateLineItemCreativeAssociation.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchCreateLineItemCreativeAssociationsResponse BatchCreateLineItemCreativeAssociations(BatchCreateLineItemCreativeAssociationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateLineItemCreativeAssociationsRequest(ref request, ref callSettings);
+            return _callBatchCreateLineItemCreativeAssociations.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchCreateLineItemCreativeAssociationsResponse> BatchCreateLineItemCreativeAssociationsAsync(BatchCreateLineItemCreativeAssociationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateLineItemCreativeAssociationsRequest(ref request, ref callSettings);
+            return _callBatchCreateLineItemCreativeAssociations.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a `LineItemCreativeAssociation` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override LineItemCreativeAssociation UpdateLineItemCreativeAssociation(UpdateLineItemCreativeAssociationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateLineItemCreativeAssociationRequest(ref request, ref callSettings);
+            return _callUpdateLineItemCreativeAssociation.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a `LineItemCreativeAssociation` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<LineItemCreativeAssociation> UpdateLineItemCreativeAssociationAsync(UpdateLineItemCreativeAssociationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateLineItemCreativeAssociationRequest(ref request, ref callSettings);
+            return _callUpdateLineItemCreativeAssociation.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Batch updates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchUpdateLineItemCreativeAssociationsResponse BatchUpdateLineItemCreativeAssociations(BatchUpdateLineItemCreativeAssociationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateLineItemCreativeAssociationsRequest(ref request, ref callSettings);
+            return _callBatchUpdateLineItemCreativeAssociations.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Batch updates `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchUpdateLineItemCreativeAssociationsResponse> BatchUpdateLineItemCreativeAssociationsAsync(BatchUpdateLineItemCreativeAssociationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateLineItemCreativeAssociationsRequest(ref request, ref callSettings);
+            return _callBatchUpdateLineItemCreativeAssociations.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Activate a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchActivateLineItemCreativeAssociationsResponse BatchActivateLineItemCreativeAssociations(BatchActivateLineItemCreativeAssociationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchActivateLineItemCreativeAssociationsRequest(ref request, ref callSettings);
+            return _callBatchActivateLineItemCreativeAssociations.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Activate a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchActivateLineItemCreativeAssociationsResponse> BatchActivateLineItemCreativeAssociationsAsync(BatchActivateLineItemCreativeAssociationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchActivateLineItemCreativeAssociationsRequest(ref request, ref callSettings);
+            return _callBatchActivateLineItemCreativeAssociations.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deactivates a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchDeactivateLineItemCreativeAssociationsResponse BatchDeactivateLineItemCreativeAssociations(BatchDeactivateLineItemCreativeAssociationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeactivateLineItemCreativeAssociationsRequest(ref request, ref callSettings);
+            return _callBatchDeactivateLineItemCreativeAssociations.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deactivates a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchDeactivateLineItemCreativeAssociationsResponse> BatchDeactivateLineItemCreativeAssociationsAsync(BatchDeactivateLineItemCreativeAssociationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeactivateLineItemCreativeAssociationsRequest(ref request, ref callSettings);
+            return _callBatchDeactivateLineItemCreativeAssociations.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void BatchDeleteLineItemCreativeAssociations(BatchDeleteLineItemCreativeAssociationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeleteLineItemCreativeAssociationsRequest(ref request, ref callSettings);
+            _callBatchDeleteLineItemCreativeAssociations.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a list of `LineItemCreativeAssociation` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task BatchDeleteLineItemCreativeAssociationsAsync(BatchDeleteLineItemCreativeAssociationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeleteLineItemCreativeAssociationsRequest(ref request, ref callSettings);
+            return _callBatchDeleteLineItemCreativeAssociations.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch previews for the
+        /// [LineItemCreativeAssociation][google.ads.admanager.v1.LineItemCreativeAssociation].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PreviewLineItemCreativeAssociationResponse PreviewLineItemCreativeAssociation(PreviewLineItemCreativeAssociationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PreviewLineItemCreativeAssociationRequest(ref request, ref callSettings);
+            return _callPreviewLineItemCreativeAssociation.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch previews for the
+        /// [LineItemCreativeAssociation][google.ads.admanager.v1.LineItemCreativeAssociation].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PreviewLineItemCreativeAssociationResponse> PreviewLineItemCreativeAssociationAsync(PreviewLineItemCreativeAssociationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PreviewLineItemCreativeAssociationRequest(ref request, ref callSettings);
+            return _callPreviewLineItemCreativeAssociation.Async(request, callSettings);
         }
     }
 

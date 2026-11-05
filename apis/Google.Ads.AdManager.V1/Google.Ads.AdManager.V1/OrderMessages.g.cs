@@ -30,51 +30,53 @@ namespace Google.Ads.AdManager.V1 {
             "Z2VyL3YxL2N1c3RvbV9maWVsZF92YWx1ZS5wcm90bxopZ29vZ2xlL2Fkcy9h",
             "ZG1hbmFnZXIvdjEvb3JkZXJfZW51bXMucHJvdG8aH2dvb2dsZS9hcGkvZmll",
             "bGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8a",
-            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ihBEKBU9yZGVyEhEK",
-            "BG5hbWUYASABKAlCA+BBCBIcCghvcmRlcl9pZBgEIAEoA0IFGAHgQQNIAIgB",
-            "ARIeCgxkaXNwbGF5X25hbWUYAiABKAlCA+BBAkgBiAEBEh4KDHByb2dyYW1t",
-            "YXRpYxgDIAEoCEID4EEBSAKIAQESPgoKdHJhZmZpY2tlchgXIAEoCUIl4EEC",
-            "+kEfCh1hZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vVXNlckgDiAEBEkgKE2Fk",
-            "dmVydGlzZXJfY29udGFjdHMYBSADKAlCK+BBAeBBBvpBIgogYWRtYW5hZ2Vy",
-            "Lmdvb2dsZWFwaXMuY29tL0NvbnRhY3QSQQoKYWR2ZXJ0aXNlchgGIAEoCUIo",
-            "4EEC+kEiCiBhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQ29tcGFueUgEiAEB",
-            "EkEKD2FnZW5jeV9jb250YWN0cxgHIAMoCUIo4EEB+kEiCiBhZG1hbmFnZXIu",
-            "Z29vZ2xlYXBpcy5jb20vQ29udGFjdBI9CgZhZ2VuY3kYCCABKAlCKOBBAfpB",
-            "IgogYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0NvbXBhbnlIBYgBARI8Cg1h",
-            "cHBsaWVkX3RlYW1zGAkgAygJQiXgQQH6QR8KHWFkbWFuYWdlci5nb29nbGVh",
-            "cGlzLmNvbS9UZWFtEj4KD2VmZmVjdGl2ZV90ZWFtcxgcIAMoCUIl4EED+kEf",
-            "Ch1hZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vVGVhbRI7CgdjcmVhdG9yGAog",
-            "ASgJQiXgQQP6QR8KHWFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Vc2VySAaI",
-            "AQESHwoNY3VycmVuY3lfY29kZRgLIAEoCUID4EEDSAeIAQESOAoKc3RhcnRf",
-            "dGltZRgTIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA0gI",
-            "iAEBEjYKCGVuZF90aW1lGAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcEID4EEDSAmIAQESJAoSdW5saW1pdGVkX2VuZF90aW1lGC0gASgIQgPg",
-            "QQNICogBARIjChFleHRlcm5hbF9vcmRlcl9pZBgNIAEoBUID4EEBSAuIAQES",
-            "GgoIYXJjaGl2ZWQYDiABKAhCA+BBA0gMiAEBEiYKFGxhc3RfbW9kaWZpZWRf",
-            "YnlfYXBwGA8gASgJQgPgQQNIDYgBARI5Cgt1cGRhdGVfdGltZRgQIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA0gOiAEBEhcKBW5vdGVz",
-            "GBEgASgJQgPgQQFID4gBARIbCglwb19udW1iZXIYEiABKAlCA+BBAUgQiAEB",
-            "Ek4KBnN0YXR1cxgUIAEoDjI0Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLk9y",
-            "ZGVyU3RhdHVzRW51bS5PcmRlclN0YXR1c0ID4EEDSBGIAQESPwoLc2FsZXNw",
-            "ZXJzb24YFSABKAlCJeBBAfpBHwodYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
-            "L1VzZXJIEogBARJHChVzZWNvbmRhcnlfc2FsZXNwZW9wbGUYFiADKAlCKOBB",
-            "AeBBBvpBHwodYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1VzZXISRwoVc2Vj",
-            "b25kYXJ5X3RyYWZmaWNrZXJzGBggAygJQijgQQHgQQb6QR8KHWFkbWFuYWdl",
-            "ci5nb29nbGVhcGlzLmNvbS9Vc2VyEkIKDmFwcGxpZWRfbGFiZWxzGBkgAygL",
-            "MiUuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQXBwbGllZExhYmVsQgPgQQES",
-            "TAoYZWZmZWN0aXZlX2FwcGxpZWRfbGFiZWxzGBogAygLMiUuZ29vZ2xlLmFk",
-            "cy5hZG1hbmFnZXIudjEuQXBwbGllZExhYmVsQgPgQQMSSwoTY3VzdG9tX2Zp",
-            "ZWxkX3ZhbHVlcxgmIAMoCzIpLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkN1",
-            "c3RvbUZpZWxkVmFsdWVCA+BBARInChVpbXByZXNzaW9uc19kZWxpdmVyZWQY",
-            "KSABKANCA+BBA0gTiAEBEigKFnRvdGFsX2NsaWNrc19kZWxpdmVyZWQYNSAB",
-            "KANCA+BBA0gUiAEBEjYKJHRvdGFsX3ZpZXdhYmxlX2ltcHJlc3Npb25zX2Rl",
-            "bGl2ZXJlZBg2IAEoA0ID4EEDSBWIAQE6WupBVwoeYWRtYW5hZ2VyLmdvb2ds",
-            "ZWFwaXMuY29tL09yZGVyEiZuZXR3b3Jrcy97bmV0d29ya19jb2RlfS9vcmRl",
-            "cnMve29yZGVyfSoGb3JkZXJzMgVvcmRlckILCglfb3JkZXJfaWRCDwoNX2Rp",
-            "c3BsYXlfbmFtZUIPCg1fcHJvZ3JhbW1hdGljQg0KC190cmFmZmlja2VyQg0K",
-            "C19hZHZlcnRpc2VyQgkKB19hZ2VuY3lCCgoIX2NyZWF0b3JCEAoOX2N1cnJl",
-            "bmN5X2NvZGVCDQoLX3N0YXJ0X3RpbWVCCwoJX2VuZF90aW1lQhUKE191bmxp",
-            "bWl0ZWRfZW5kX3RpbWVCFAoSX2V4dGVybmFsX29yZGVyX2lkQgsKCV9hcmNo",
+            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i3hEKBU9yZGVyEhIK",
+            "BG5hbWUYASABKAlCBOJBAQgSHQoIb3JkZXJfaWQYBCABKANCBhgB4kEBA0gA",
+            "iAEBEh8KDGRpc3BsYXlfbmFtZRgCIAEoCUIE4kEBAkgBiAEBEh8KDHByb2dy",
+            "YW1tYXRpYxgDIAEoCEIE4kEBAUgCiAEBEj8KCnRyYWZmaWNrZXIYFyABKAlC",
+            "JuJBAQL6QR8KHWFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Vc2VySAOIAQES",
+            "RwoTYWR2ZXJ0aXNlcl9jb250YWN0cxgFIAMoCUIq4kECAQb6QSIKIGFkbWFu",
+            "YWdlci5nb29nbGVhcGlzLmNvbS9Db250YWN0EkIKCmFkdmVydGlzZXIYBiAB",
+            "KAlCKeJBAQL6QSIKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Db21wYW55",
+            "SASIAQESQgoPYWdlbmN5X2NvbnRhY3RzGAcgAygJQiniQQEB+kEiCiBhZG1h",
+            "bmFnZXIuZ29vZ2xlYXBpcy5jb20vQ29udGFjdBI+CgZhZ2VuY3kYCCABKAlC",
+            "KeJBAQH6QSIKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Db21wYW55SAWI",
+            "AQESPQoNYXBwbGllZF90ZWFtcxgJIAMoCUIm4kEBAfpBHwodYWRtYW5hZ2Vy",
+            "Lmdvb2dsZWFwaXMuY29tL1RlYW0SPwoPZWZmZWN0aXZlX3RlYW1zGBwgAygJ",
+            "QibiQQED+kEfCh1hZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vVGVhbRI8Cgdj",
+            "cmVhdG9yGAogASgJQibiQQED+kEfCh1hZG1hbmFnZXIuZ29vZ2xlYXBpcy5j",
+            "b20vVXNlckgGiAEBEiAKDWN1cnJlbmN5X2NvZGUYCyABKAlCBOJBAQNIB4gB",
+            "ARI5CgpzdGFydF90aW1lGBMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEIE4kEBA0gIiAEBEjcKCGVuZF90aW1lGAwgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEIE4kEBA0gJiAEBEicKEnVubGltaXRlZF9lbmRf",
+            "dGltZRgtIAEoCEIGGAHiQQEDSAqIAQESJQoSZW5kX3RpbWVfdW5saW1pdGVk",
+            "GFIgASgIQgTiQQEDSAuIAQESJAoRZXh0ZXJuYWxfb3JkZXJfaWQYDSABKAVC",
+            "BOJBAQFIDIgBARIbCghhcmNoaXZlZBgOIAEoCEIE4kEBA0gNiAEBEicKFGxh",
+            "c3RfbW9kaWZpZWRfYnlfYXBwGA8gASgJQgTiQQEDSA6IAQESOgoLdXBkYXRl",
+            "X3RpbWUYECABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQED",
+            "SA+IAQESGAoFbm90ZXMYESABKAlCBOJBAQFIEIgBARIcCglwb19udW1iZXIY",
+            "EiABKAlCBOJBAQFIEYgBARJPCgZzdGF0dXMYFCABKA4yNC5nb29nbGUuYWRz",
+            "LmFkbWFuYWdlci52MS5PcmRlclN0YXR1c0VudW0uT3JkZXJTdGF0dXNCBOJB",
+            "AQNIEogBARJACgtzYWxlc3BlcnNvbhgVIAEoCUIm4kEBAfpBHwodYWRtYW5h",
+            "Z2VyLmdvb2dsZWFwaXMuY29tL1VzZXJIE4gBARJGChVzZWNvbmRhcnlfc2Fs",
+            "ZXNwZW9wbGUYFiADKAlCJ+JBAgEG+kEfCh1hZG1hbmFnZXIuZ29vZ2xlYXBp",
+            "cy5jb20vVXNlchJGChVzZWNvbmRhcnlfdHJhZmZpY2tlcnMYGCADKAlCJ+JB",
+            "AgEG+kEfCh1hZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vVXNlchJDCg5hcHBs",
+            "aWVkX2xhYmVscxgZIAMoCzIlLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkFw",
+            "cGxpZWRMYWJlbEIE4kEBARJNChhlZmZlY3RpdmVfYXBwbGllZF9sYWJlbHMY",
+            "GiADKAsyJS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5BcHBsaWVkTGFiZWxC",
+            "BOJBAQMSTAoTY3VzdG9tX2ZpZWxkX3ZhbHVlcxgmIAMoCzIpLmdvb2dsZS5h",
+            "ZHMuYWRtYW5hZ2VyLnYxLkN1c3RvbUZpZWxkVmFsdWVCBOJBAQESKAoVaW1w",
+            "cmVzc2lvbnNfZGVsaXZlcmVkGCkgASgDQgTiQQEDSBSIAQESKQoWdG90YWxf",
+            "Y2xpY2tzX2RlbGl2ZXJlZBg1IAEoA0IE4kEBA0gViAEBEjcKJHRvdGFsX3Zp",
+            "ZXdhYmxlX2ltcHJlc3Npb25zX2RlbGl2ZXJlZBg2IAEoA0IE4kEBA0gWiAEB",
+            "OlrqQVcKHmFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9PcmRlchImbmV0d29y",
+            "a3Mve25ldHdvcmtfY29kZX0vb3JkZXJzL3tvcmRlcn0qBm9yZGVyczIFb3Jk",
+            "ZXJCCwoJX29yZGVyX2lkQg8KDV9kaXNwbGF5X25hbWVCDwoNX3Byb2dyYW1t",
+            "YXRpY0INCgtfdHJhZmZpY2tlckINCgtfYWR2ZXJ0aXNlckIJCgdfYWdlbmN5",
+            "QgoKCF9jcmVhdG9yQhAKDl9jdXJyZW5jeV9jb2RlQg0KC19zdGFydF90aW1l",
+            "QgsKCV9lbmRfdGltZUIVChNfdW5saW1pdGVkX2VuZF90aW1lQhUKE19lbmRf",
+            "dGltZV91bmxpbWl0ZWRCFAoSX2V4dGVybmFsX29yZGVyX2lkQgsKCV9hcmNo",
             "aXZlZEIXChVfbGFzdF9tb2RpZmllZF9ieV9hcHBCDgoMX3VwZGF0ZV90aW1l",
             "QggKBl9ub3Rlc0IMCgpfcG9fbnVtYmVyQgkKB19zdGF0dXNCDgoMX3NhbGVz",
             "cGVyc29uQhgKFl9pbXByZXNzaW9uc19kZWxpdmVyZWRCGQoXX3RvdGFsX2Ns",
@@ -87,7 +89,7 @@ namespace Google.Ads.AdManager.V1 {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.AppliedLabelReflection.Descriptor, global::Google.Ads.AdManager.V1.CustomFieldValueReflection.Descriptor, global::Google.Ads.AdManager.V1.OrderEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Order), global::Google.Ads.AdManager.V1.Order.Parser, new[]{ "Name", "OrderId", "DisplayName", "Programmatic", "Trafficker", "AdvertiserContacts", "Advertiser", "AgencyContacts", "Agency", "AppliedTeams", "EffectiveTeams", "Creator", "CurrencyCode", "StartTime", "EndTime", "UnlimitedEndTime", "ExternalOrderId", "Archived", "LastModifiedByApp", "UpdateTime", "Notes", "PoNumber", "Status", "Salesperson", "SecondarySalespeople", "SecondaryTraffickers", "AppliedLabels", "EffectiveAppliedLabels", "CustomFieldValues", "ImpressionsDelivered", "TotalClicksDelivered", "TotalViewableImpressionsDelivered" }, new[]{ "OrderId", "DisplayName", "Programmatic", "Trafficker", "Advertiser", "Agency", "Creator", "CurrencyCode", "StartTime", "EndTime", "UnlimitedEndTime", "ExternalOrderId", "Archived", "LastModifiedByApp", "UpdateTime", "Notes", "PoNumber", "Status", "Salesperson", "ImpressionsDelivered", "TotalClicksDelivered", "TotalViewableImpressionsDelivered" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Order), global::Google.Ads.AdManager.V1.Order.Parser, new[]{ "Name", "OrderId", "DisplayName", "Programmatic", "Trafficker", "AdvertiserContacts", "Advertiser", "AgencyContacts", "Agency", "AppliedTeams", "EffectiveTeams", "Creator", "CurrencyCode", "StartTime", "EndTime", "UnlimitedEndTime", "EndTimeUnlimited", "ExternalOrderId", "Archived", "LastModifiedByApp", "UpdateTime", "Notes", "PoNumber", "Status", "Salesperson", "SecondarySalespeople", "SecondaryTraffickers", "AppliedLabels", "EffectiveAppliedLabels", "CustomFieldValues", "ImpressionsDelivered", "TotalClicksDelivered", "TotalViewableImpressionsDelivered" }, new[]{ "OrderId", "DisplayName", "Programmatic", "Trafficker", "Advertiser", "Agency", "Creator", "CurrencyCode", "StartTime", "EndTime", "UnlimitedEndTime", "EndTimeUnlimited", "ExternalOrderId", "Archived", "LastModifiedByApp", "UpdateTime", "Notes", "PoNumber", "Status", "Salesperson", "ImpressionsDelivered", "TotalClicksDelivered", "TotalViewableImpressionsDelivered" }, null, null, null)
           }));
     }
     #endregion
@@ -150,6 +152,7 @@ namespace Google.Ads.AdManager.V1 {
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
       unlimitedEndTime_ = other.unlimitedEndTime_;
+      endTimeUnlimited_ = other.endTimeUnlimited_;
       externalOrderId_ = other.externalOrderId_;
       archived_ = other.archived_;
       lastModifiedByApp_ = other.lastModifiedByApp_;
@@ -537,8 +540,10 @@ namespace Google.Ads.AdManager.V1 {
 
     private bool unlimitedEndTime_;
     /// <summary>
-    /// Output only. Indicates whether or not this Order has an end time.
+    /// Output only. Deprecated: Indicates whether or not this Order has an end
+    /// time.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool UnlimitedEndTime {
@@ -549,16 +554,48 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
     /// <summary>Gets whether the "unlimited_end_time" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasUnlimitedEndTime {
       get { return (_hasBits0 & 64) != 0; }
     }
     /// <summary>Clears the value of the "unlimited_end_time" field</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearUnlimitedEndTime() {
       _hasBits0 &= ~64;
+    }
+
+    /// <summary>Field number for the "end_time_unlimited" field.</summary>
+    public const int EndTimeUnlimitedFieldNumber = 82;
+    private readonly static bool EndTimeUnlimitedDefaultValue = false;
+
+    private bool endTimeUnlimited_;
+    /// <summary>
+    /// Output only. Indicates whether or not this Order has an end time.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EndTimeUnlimited {
+      get { if ((_hasBits0 & 512) != 0) { return endTimeUnlimited_; } else { return EndTimeUnlimitedDefaultValue; } }
+      set {
+        _hasBits0 |= 512;
+        endTimeUnlimited_ = value;
+      }
+    }
+    /// <summary>Gets whether the "end_time_unlimited" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEndTimeUnlimited {
+      get { return (_hasBits0 & 512) != 0; }
+    }
+    /// <summary>Clears the value of the "end_time_unlimited" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEndTimeUnlimited() {
+      _hasBits0 &= ~512;
     }
 
     /// <summary>Field number for the "external_order_id" field.</summary>
@@ -988,6 +1025,7 @@ namespace Google.Ads.AdManager.V1 {
       if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(EndTime, other.EndTime)) return false;
       if (UnlimitedEndTime != other.UnlimitedEndTime) return false;
+      if (EndTimeUnlimited != other.EndTimeUnlimited) return false;
       if (ExternalOrderId != other.ExternalOrderId) return false;
       if (Archived != other.Archived) return false;
       if (LastModifiedByApp != other.LastModifiedByApp) return false;
@@ -1027,6 +1065,7 @@ namespace Google.Ads.AdManager.V1 {
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
       if (HasUnlimitedEndTime) hash ^= UnlimitedEndTime.GetHashCode();
+      if (HasEndTimeUnlimited) hash ^= EndTimeUnlimited.GetHashCode();
       if (HasExternalOrderId) hash ^= ExternalOrderId.GetHashCode();
       if (HasArchived) hash ^= Archived.GetHashCode();
       if (HasLastModifiedByApp) hash ^= LastModifiedByApp.GetHashCode();
@@ -1162,6 +1201,10 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(176, 3);
         output.WriteInt64(TotalViewableImpressionsDelivered);
       }
+      if (HasEndTimeUnlimited) {
+        output.WriteRawTag(144, 5);
+        output.WriteBool(EndTimeUnlimited);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1273,6 +1316,10 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(176, 3);
         output.WriteInt64(TotalViewableImpressionsDelivered);
       }
+      if (HasEndTimeUnlimited) {
+        output.WriteRawTag(144, 5);
+        output.WriteBool(EndTimeUnlimited);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1321,6 +1368,9 @@ namespace Google.Ads.AdManager.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
       }
       if (HasUnlimitedEndTime) {
+        size += 2 + 1;
+      }
+      if (HasEndTimeUnlimited) {
         size += 2 + 1;
       }
       if (HasExternalOrderId) {
@@ -1418,6 +1468,9 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (other.HasUnlimitedEndTime) {
         UnlimitedEndTime = other.UnlimitedEndTime;
+      }
+      if (other.HasEndTimeUnlimited) {
+        EndTimeUnlimited = other.EndTimeUnlimited;
       }
       if (other.HasExternalOrderId) {
         ExternalOrderId = other.ExternalOrderId;
@@ -1616,6 +1669,10 @@ namespace Google.Ads.AdManager.V1 {
             TotalViewableImpressionsDelivered = input.ReadInt64();
             break;
           }
+          case 656: {
+            EndTimeUnlimited = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1770,6 +1827,10 @@ namespace Google.Ads.AdManager.V1 {
           }
           case 432: {
             TotalViewableImpressionsDelivered = input.ReadInt64();
+            break;
+          }
+          case 656: {
+            EndTimeUnlimited = input.ReadBool();
             break;
           }
         }

@@ -19,6 +19,27 @@ using gax = Google.Api.Gax;
 
 namespace Google.Ads.AdManager.V1
 {
+    public partial class InventoryUrlTargeting
+    {
+        /// <summary>
+        /// <see cref="InventoryUrlName"/>-typed view over the <see cref="TargetedInventoryUrls"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<InventoryUrlName> TargetedInventoryUrlsAsInventoryUrlNames
+        {
+            get => new gax::ResourceNameList<InventoryUrlName>(TargetedInventoryUrls, s => string.IsNullOrEmpty(s) ? null : InventoryUrlName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="InventoryUrlName"/>-typed view over the <see cref="ExcludedInventoryUrls"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<InventoryUrlName> ExcludedInventoryUrlsAsInventoryUrlNames
+        {
+            get => new gax::ResourceNameList<InventoryUrlName>(ExcludedInventoryUrls, s => string.IsNullOrEmpty(s) ? null : InventoryUrlName.Parse(s, allowUnparsed: true));
+        }
+    }
+
     public partial class GeoTargeting
     {
         /// <summary>
@@ -321,6 +342,39 @@ namespace Google.Ads.AdManager.V1
         public gax::ResourceNameList<CmsMetadataValueName> CmsMetadataValuesAsCmsMetadataValueNames
         {
             get => new gax::ResourceNameList<CmsMetadataValueName>(CmsMetadataValues, s => string.IsNullOrEmpty(s) ? null : CmsMetadataValueName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class PublisherProvidedSignalsTargeting
+    {
+        /// <summary>
+        /// <see cref="TaxonomyCategoryName"/>-typed view over the <see cref="TargetedTaxonomyCategories"/> resource
+        /// name property.
+        /// </summary>
+        public gax::ResourceNameList<TaxonomyCategoryName> TargetedTaxonomyCategoriesAsTaxonomyCategoryNames
+        {
+            get => new gax::ResourceNameList<TaxonomyCategoryName>(TargetedTaxonomyCategories, s => string.IsNullOrEmpty(s) ? null : TaxonomyCategoryName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="TaxonomyCategoryName"/>-typed view over the <see cref="ExcludedTaxonomyCategories"/> resource
+        /// name property.
+        /// </summary>
+        public gax::ResourceNameList<TaxonomyCategoryName> ExcludedTaxonomyCategoriesAsTaxonomyCategoryNames
+        {
+            get => new gax::ResourceNameList<TaxonomyCategoryName>(ExcludedTaxonomyCategories, s => string.IsNullOrEmpty(s) ? null : TaxonomyCategoryName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class ContextualTargeting
+    {
+        /// <summary>
+        /// <see cref="ContentLabelName"/>-typed view over the <see cref="ExcludedContentLabels"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<ContentLabelName> ExcludedContentLabelsAsContentLabelNames
+        {
+            get => new gax::ResourceNameList<ContentLabelName>(ExcludedContentLabels, s => string.IsNullOrEmpty(s) ? null : ContentLabelName.Parse(s, allowUnparsed: true));
         }
     }
 

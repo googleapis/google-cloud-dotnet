@@ -90,4 +90,16 @@ namespace Google.Ads.AdManager.V1
             get => new gax::ResourceNameList<LineItemName>(LineItems, s => string.IsNullOrEmpty(s) ? null : LineItemName.Parse(s, allowUnparsed: true));
         }
     }
+
+    public partial class ForecastingLineItem
+    {
+        /// <summary>
+        /// <see cref="CompanyName"/>-typed view over the <see cref="Advertiser"/> resource name property.
+        /// </summary>
+        public CompanyName AdvertiserAsCompanyName
+        {
+            get => string.IsNullOrEmpty(Advertiser) ? null : CompanyName.Parse(Advertiser, allowUnparsed: true);
+            set => Advertiser = value?.ToString() ?? "";
+        }
+    }
 }

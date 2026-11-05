@@ -31,63 +31,67 @@ namespace Google.Ads.AdManager.V1 {
             "YW5hZ2VyL3YxL3RhcmdldGluZy5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0",
             "aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9h",
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2Uu",
-            "cHJvdG8ilwIKHlJ1bkF2YWlsYWJpbGl0eUZvcmVjYXN0UmVxdWVzdBJHChJl",
-            "eGlzdGluZ19saW5lX2l0ZW0YAyABKAlCKeBBAfpBIwohYWRtYW5hZ2VyLmdv",
-            "b2dsZWFwaXMuY29tL0xpbmVJdGVtSAASOAoGcGFyZW50GAEgASgJQijgQQL6",
-            "QSIKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9OZXR3b3JrEmAKHWF2YWls",
-            "YWJpbGl0eV9mb3JlY2FzdF9vcHRpb25zGAIgASgLMjQuZ29vZ2xlLmFkcy5h",
-            "ZG1hbmFnZXIudjEuQXZhaWxhYmlsaXR5Rm9yZWNhc3RPcHRpb25zQgPgQQJC",
-            "EAoObGluZV9pdGVtX2RhdGEidgofUnVuQXZhaWxhYmlsaXR5Rm9yZWNhc3RS",
-            "ZXNwb25zZRJTChxhdmFpbGFiaWxpdHlfZm9yZWNhc3RfcmVzdWx0GAEgASgL",
-            "Mi0uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQXZhaWxhYmlsaXR5Rm9yZWNh",
-            "c3QilQIKGlJ1bkRlbGl2ZXJ5Rm9yZWNhc3RSZXF1ZXN0ElEKE2V4aXN0aW5n",
-            "X2xpbmVfaXRlbXMYAyABKAsyLS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5F",
-            "eGlzdGluZ0xpbmVJdGVtTGlzdEID4EEBSAASOAoGcGFyZW50GAEgASgJQijg",
-            "QQL6QSIKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9OZXR3b3JrElgKGWRl",
+            "cHJvdG8i7wIKHlJ1bkF2YWlsYWJpbGl0eUZvcmVjYXN0UmVxdWVzdBJIChJl",
+            "eGlzdGluZ19saW5lX2l0ZW0YAyABKAlCKuJBAQH6QSMKIWFkbWFuYWdlci5n",
+            "b29nbGVhcGlzLmNvbS9MaW5lSXRlbUgAElMKFWZvcmVjYXN0aW5nX2xpbmVf",
+            "aXRlbRgGIAEoCzIsLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkZvcmVjYXN0",
+            "aW5nTGluZUl0ZW1CBOJBAQFIABI5CgZwYXJlbnQYASABKAlCKeJBAQL6QSIK",
+            "IGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9OZXR3b3JrEmEKHWF2YWlsYWJp",
+            "bGl0eV9mb3JlY2FzdF9vcHRpb25zGAIgASgLMjQuZ29vZ2xlLmFkcy5hZG1h",
+            "bmFnZXIudjEuQXZhaWxhYmlsaXR5Rm9yZWNhc3RPcHRpb25zQgTiQQECQhAK",
+            "DmxpbmVfaXRlbV9kYXRhInYKH1J1bkF2YWlsYWJpbGl0eUZvcmVjYXN0UmVz",
+            "cG9uc2USUwocYXZhaWxhYmlsaXR5X2ZvcmVjYXN0X3Jlc3VsdBgBIAEoCzIt",
+            "Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkF2YWlsYWJpbGl0eUZvcmVjYXN0",
+            "IvICChpSdW5EZWxpdmVyeUZvcmVjYXN0UmVxdWVzdBJSChNleGlzdGluZ19s",
+            "aW5lX2l0ZW1zGAMgASgLMi0uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuRXhp",
+            "c3RpbmdMaW5lSXRlbUxpc3RCBOJBAQFIABJYChZmb3JlY2FzdGluZ19saW5l",
+            "X2l0ZW1zGAYgASgLMjAuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuRm9yZWNh",
+            "c3RpbmdMaW5lSXRlbUxpc3RCBOJBAQFIABI5CgZwYXJlbnQYASABKAlCKeJB",
+            "AQL6QSIKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9OZXR3b3JrElkKGWRl",
             "bGl2ZXJ5X2ZvcmVjYXN0X29wdGlvbnMYAiABKAsyMC5nb29nbGUuYWRzLmFk",
-            "bWFuYWdlci52MS5EZWxpdmVyeUZvcmVjYXN0T3B0aW9uc0ID4EECQhAKDmxp",
-            "bmVfaXRlbV9kYXRhInAKG1J1bkRlbGl2ZXJ5Rm9yZWNhc3RSZXNwb25zZRJR",
-            "ChhkZWxpdmVyeV9mb3JlY2FzdF9yZXN1bHQYASABKAsyLy5nb29nbGUuYWRz",
-            "LmFkbWFuYWdlci52MS5EZWxpdmVyeUZvcmVjYXN0UmVzdWx0ItQBChVSdW5U",
-            "cmFmZmljRGF0YVJlcXVlc3QSOAoGcGFyZW50GAEgASgJQijgQQL6QSIKIGFk",
-            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9OZXR3b3JrEjoKCXRhcmdldGluZxgC",
-            "IAEoCzIiLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlRhcmdldGluZ0ID4EEC",
-            "EkUKFHJlcXVlc3RlZF9kYXRlX3JhbmdlGAMgASgLMiIuZ29vZ2xlLmFkcy5h",
-            "ZG1hbmFnZXIudjEuRGF0ZVJhbmdlQgPgQQIisAIKFlJ1blRyYWZmaWNEYXRh",
-            "UmVzcG9uc2USQwoWaGlzdG9yaWNhbF90aW1lX3NlcmllcxgBIAEoCzIjLmdv",
-            "b2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlRpbWVTZXJpZXMSQwoWZm9yZWNhc3Rl",
-            "ZF90aW1lX3NlcmllcxgCIAEoCzIjLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYx",
-            "LlRpbWVTZXJpZXMSTAofZm9yZWNhc3RlZF9hc3NpZ25lZF90aW1lX3Nlcmll",
-            "cxgDIAEoCzIjLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlRpbWVTZXJpZXMS",
-            "PgoSb3ZlcmFsbF9kYXRlX3JhbmdlGAQgASgLMiIuZ29vZ2xlLmFkcy5hZG1h",
-            "bmFnZXIudjEuRGF0ZVJhbmdlMtUFCg9Gb3JlY2FzdFNlcnZpY2US0QEKF1J1",
-            "bkF2YWlsYWJpbGl0eUZvcmVjYXN0EjcuZ29vZ2xlLmFkcy5hZG1hbmFnZXIu",
-            "djEuUnVuQXZhaWxhYmlsaXR5Rm9yZWNhc3RSZXF1ZXN0GjguZ29vZ2xlLmFk",
-            "cy5hZG1hbmFnZXIudjEuUnVuQXZhaWxhYmlsaXR5Rm9yZWNhc3RSZXNwb25z",
-            "ZSJD2kEGcGFyZW50gtPkkwI0Ii8vdjEve3BhcmVudD1uZXR3b3Jrcy8qfTpy",
-            "dW5BdmFpbGFiaWxpdHlGb3JlY2FzdDoBKhLBAQoTUnVuRGVsaXZlcnlGb3Jl",
-            "Y2FzdBIzLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlJ1bkRlbGl2ZXJ5Rm9y",
-            "ZWNhc3RSZXF1ZXN0GjQuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuUnVuRGVs",
-            "aXZlcnlGb3JlY2FzdFJlc3BvbnNlIj/aQQZwYXJlbnSC0+STAjAiKy92MS97",
-            "cGFyZW50PW5ldHdvcmtzLyp9OnJ1bkRlbGl2ZXJ5Rm9yZWNhc3Q6ASoSrQEK",
-            "DlJ1blRyYWZmaWNEYXRhEi4uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuUnVu",
-            "VHJhZmZpY0RhdGFSZXF1ZXN0Gi8uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEu",
-            "UnVuVHJhZmZpY0RhdGFSZXNwb25zZSI62kEGcGFyZW50gtPkkwIrIiYvdjEv",
-            "e3BhcmVudD1uZXR3b3Jrcy8qfTpydW5UcmFmZmljRGF0YToBKhp6ykEYYWRt",
-            "YW5hZ2VyLmdvb2dsZWFwaXMuY29t0kFcaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
-            "cy5jb20vYXV0aC9hZG1hbmFnZXIsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
-            "b20vYXV0aC9hZG1hbmFnZXIucmVhZG9ubHlCyAEKG2NvbS5nb29nbGUuYWRz",
-            "LmFkbWFuYWdlci52MUIURm9yZWNhc3RTZXJ2aWNlUHJvdG9QAVpAZ29vZ2xl",
-            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2Vy",
-            "L3YxO2FkbWFuYWdlcqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29v",
-            "Z2xlXEFkc1xBZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2Vy",
-            "OjpWMWIGcHJvdG8z"));
+            "bWFuYWdlci52MS5EZWxpdmVyeUZvcmVjYXN0T3B0aW9uc0IE4kEBAkIQCg5s",
+            "aW5lX2l0ZW1fZGF0YSJwChtSdW5EZWxpdmVyeUZvcmVjYXN0UmVzcG9uc2US",
+            "UQoYZGVsaXZlcnlfZm9yZWNhc3RfcmVzdWx0GAEgASgLMi8uZ29vZ2xlLmFk",
+            "cy5hZG1hbmFnZXIudjEuRGVsaXZlcnlGb3JlY2FzdFJlc3VsdCLXAQoVUnVu",
+            "VHJhZmZpY0RhdGFSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4kEBAvpBIgog",
+            "YWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL05ldHdvcmsSOwoJdGFyZ2V0aW5n",
+            "GAIgASgLMiIuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuVGFyZ2V0aW5nQgTi",
+            "QQECEkYKFHJlcXVlc3RlZF9kYXRlX3JhbmdlGAMgASgLMiIuZ29vZ2xlLmFk",
+            "cy5hZG1hbmFnZXIudjEuRGF0ZVJhbmdlQgTiQQECIrACChZSdW5UcmFmZmlj",
+            "RGF0YVJlc3BvbnNlEkMKFmhpc3RvcmljYWxfdGltZV9zZXJpZXMYASABKAsy",
+            "Iy5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5UaW1lU2VyaWVzEkMKFmZvcmVj",
+            "YXN0ZWRfdGltZV9zZXJpZXMYAiABKAsyIy5nb29nbGUuYWRzLmFkbWFuYWdl",
+            "ci52MS5UaW1lU2VyaWVzEkwKH2ZvcmVjYXN0ZWRfYXNzaWduZWRfdGltZV9z",
+            "ZXJpZXMYAyABKAsyIy5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5UaW1lU2Vy",
+            "aWVzEj4KEm92ZXJhbGxfZGF0ZV9yYW5nZRgEIAEoCzIiLmdvb2dsZS5hZHMu",
+            "YWRtYW5hZ2VyLnYxLkRhdGVSYW5nZTLVBQoPRm9yZWNhc3RTZXJ2aWNlEtEB",
+            "ChdSdW5BdmFpbGFiaWxpdHlGb3JlY2FzdBI3Lmdvb2dsZS5hZHMuYWRtYW5h",
+            "Z2VyLnYxLlJ1bkF2YWlsYWJpbGl0eUZvcmVjYXN0UmVxdWVzdBo4Lmdvb2ds",
+            "ZS5hZHMuYWRtYW5hZ2VyLnYxLlJ1bkF2YWlsYWJpbGl0eUZvcmVjYXN0UmVz",
+            "cG9uc2UiQ9pBBnBhcmVudILT5JMCNCIvL3YxL3twYXJlbnQ9bmV0d29ya3Mv",
+            "Kn06cnVuQXZhaWxhYmlsaXR5Rm9yZWNhc3Q6ASoSwQEKE1J1bkRlbGl2ZXJ5",
+            "Rm9yZWNhc3QSMy5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5SdW5EZWxpdmVy",
+            "eUZvcmVjYXN0UmVxdWVzdBo0Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlJ1",
+            "bkRlbGl2ZXJ5Rm9yZWNhc3RSZXNwb25zZSI/2kEGcGFyZW50gtPkkwIwIisv",
+            "djEve3BhcmVudD1uZXR3b3Jrcy8qfTpydW5EZWxpdmVyeUZvcmVjYXN0OgEq",
+            "Eq0BCg5SdW5UcmFmZmljRGF0YRIuLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYx",
+            "LlJ1blRyYWZmaWNEYXRhUmVxdWVzdBovLmdvb2dsZS5hZHMuYWRtYW5hZ2Vy",
+            "LnYxLlJ1blRyYWZmaWNEYXRhUmVzcG9uc2UiOtpBBnBhcmVudILT5JMCKyIm",
+            "L3YxL3twYXJlbnQ9bmV0d29ya3MvKn06cnVuVHJhZmZpY0RhdGE6ASoaespB",
+            "GGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbdJBXGh0dHBzOi8vd3d3Lmdvb2ds",
+            "ZWFwaXMuY29tL2F1dGgvYWRtYW5hZ2VyLGh0dHBzOi8vd3d3Lmdvb2dsZWFw",
+            "aXMuY29tL2F1dGgvYWRtYW5hZ2VyLnJlYWRvbmx5QsgBChtjb20uZ29vZ2xl",
+            "LmFkcy5hZG1hbmFnZXIudjFCFEZvcmVjYXN0U2VydmljZVByb3RvUAFaQGdv",
+            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFu",
+            "YWdlci92MTthZG1hbmFnZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5WMcoC",
+            "F0dvb2dsZVxBZHNcQWRNYW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFu",
+            "YWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.DateRangeReflection.Descriptor, global::Google.Ads.AdManager.V1.ForecastMessagesReflection.Descriptor, global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.RunAvailabilityForecastRequest), global::Google.Ads.AdManager.V1.RunAvailabilityForecastRequest.Parser, new[]{ "ExistingLineItem", "Parent", "AvailabilityForecastOptions" }, new[]{ "LineItemData" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.RunAvailabilityForecastRequest), global::Google.Ads.AdManager.V1.RunAvailabilityForecastRequest.Parser, new[]{ "ExistingLineItem", "ForecastingLineItem", "Parent", "AvailabilityForecastOptions" }, new[]{ "LineItemData" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.RunAvailabilityForecastResponse), global::Google.Ads.AdManager.V1.RunAvailabilityForecastResponse.Parser, new[]{ "AvailabilityForecastResult" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.RunDeliveryForecastRequest), global::Google.Ads.AdManager.V1.RunDeliveryForecastRequest.Parser, new[]{ "ExistingLineItems", "Parent", "DeliveryForecastOptions" }, new[]{ "LineItemData" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.RunDeliveryForecastRequest), global::Google.Ads.AdManager.V1.RunDeliveryForecastRequest.Parser, new[]{ "ExistingLineItems", "ForecastingLineItems", "Parent", "DeliveryForecastOptions" }, new[]{ "LineItemData" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.RunDeliveryForecastResponse), global::Google.Ads.AdManager.V1.RunDeliveryForecastResponse.Parser, new[]{ "DeliveryForecastResult" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.RunTrafficDataRequest), global::Google.Ads.AdManager.V1.RunTrafficDataRequest.Parser, new[]{ "Parent", "Targeting", "RequestedDateRange" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.RunTrafficDataResponse), global::Google.Ads.AdManager.V1.RunTrafficDataResponse.Parser, new[]{ "HistoricalTimeSeries", "ForecastedTimeSeries", "ForecastedAssignedTimeSeries", "OverallDateRange" }, null, null, null, null)
@@ -98,7 +102,7 @@ namespace Google.Ads.AdManager.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request object for [RunAvailabilityForecast][] method.
+  /// Request object for `RunAvailabilityForecast` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RunAvailabilityForecastRequest : pb::IMessage<RunAvailabilityForecastRequest>
@@ -140,6 +144,9 @@ namespace Google.Ads.AdManager.V1 {
       switch (other.LineItemDataCase) {
         case LineItemDataOneofCase.ExistingLineItem:
           ExistingLineItem = other.ExistingLineItem;
+          break;
+        case LineItemDataOneofCase.ForecastingLineItem:
+          ForecastingLineItem = other.ForecastingLineItem.Clone();
           break;
       }
 
@@ -183,6 +190,23 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "forecasting_line_item" field.</summary>
+    public const int ForecastingLineItemFieldNumber = 6;
+    /// <summary>
+    /// Optional. The
+    /// [ForecastingLineItem][google.ads.admanager.v1.ForecastingLineItem] to be
+    /// forecasted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ForecastingLineItem ForecastingLineItem {
+      get { return lineItemDataCase_ == LineItemDataOneofCase.ForecastingLineItem ? (global::Google.Ads.AdManager.V1.ForecastingLineItem) lineItemData_ : null; }
+      set {
+        lineItemData_ = value;
+        lineItemDataCase_ = value == null ? LineItemDataOneofCase.None : LineItemDataOneofCase.ForecastingLineItem;
+      }
+    }
+
     /// <summary>Field number for the "parent" field.</summary>
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
@@ -218,6 +242,7 @@ namespace Google.Ads.AdManager.V1 {
     public enum LineItemDataOneofCase {
       None = 0,
       ExistingLineItem = 3,
+      ForecastingLineItem = 6,
     }
     private LineItemDataOneofCase lineItemDataCase_ = LineItemDataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -249,6 +274,7 @@ namespace Google.Ads.AdManager.V1 {
         return true;
       }
       if (ExistingLineItem != other.ExistingLineItem) return false;
+      if (!object.Equals(ForecastingLineItem, other.ForecastingLineItem)) return false;
       if (Parent != other.Parent) return false;
       if (!object.Equals(AvailabilityForecastOptions, other.AvailabilityForecastOptions)) return false;
       if (LineItemDataCase != other.LineItemDataCase) return false;
@@ -260,6 +286,7 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (HasExistingLineItem) hash ^= ExistingLineItem.GetHashCode();
+      if (lineItemDataCase_ == LineItemDataOneofCase.ForecastingLineItem) hash ^= ForecastingLineItem.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (availabilityForecastOptions_ != null) hash ^= AvailabilityForecastOptions.GetHashCode();
       hash ^= (int) lineItemDataCase_;
@@ -293,6 +320,10 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(26);
         output.WriteString(ExistingLineItem);
       }
+      if (lineItemDataCase_ == LineItemDataOneofCase.ForecastingLineItem) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ForecastingLineItem);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -315,6 +346,10 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(26);
         output.WriteString(ExistingLineItem);
       }
+      if (lineItemDataCase_ == LineItemDataOneofCase.ForecastingLineItem) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ForecastingLineItem);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -327,6 +362,9 @@ namespace Google.Ads.AdManager.V1 {
       int size = 0;
       if (HasExistingLineItem) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ExistingLineItem);
+      }
+      if (lineItemDataCase_ == LineItemDataOneofCase.ForecastingLineItem) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ForecastingLineItem);
       }
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
@@ -358,6 +396,12 @@ namespace Google.Ads.AdManager.V1 {
       switch (other.LineItemDataCase) {
         case LineItemDataOneofCase.ExistingLineItem:
           ExistingLineItem = other.ExistingLineItem;
+          break;
+        case LineItemDataOneofCase.ForecastingLineItem:
+          if (ForecastingLineItem == null) {
+            ForecastingLineItem = new global::Google.Ads.AdManager.V1.ForecastingLineItem();
+          }
+          ForecastingLineItem.MergeFrom(other.ForecastingLineItem);
           break;
       }
 
@@ -395,6 +439,15 @@ namespace Google.Ads.AdManager.V1 {
             ExistingLineItem = input.ReadString();
             break;
           }
+          case 50: {
+            global::Google.Ads.AdManager.V1.ForecastingLineItem subBuilder = new global::Google.Ads.AdManager.V1.ForecastingLineItem();
+            if (lineItemDataCase_ == LineItemDataOneofCase.ForecastingLineItem) {
+              subBuilder.MergeFrom(ForecastingLineItem);
+            }
+            input.ReadMessage(subBuilder);
+            ForecastingLineItem = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -429,6 +482,15 @@ namespace Google.Ads.AdManager.V1 {
             ExistingLineItem = input.ReadString();
             break;
           }
+          case 50: {
+            global::Google.Ads.AdManager.V1.ForecastingLineItem subBuilder = new global::Google.Ads.AdManager.V1.ForecastingLineItem();
+            if (lineItemDataCase_ == LineItemDataOneofCase.ForecastingLineItem) {
+              subBuilder.MergeFrom(ForecastingLineItem);
+            }
+            input.ReadMessage(subBuilder);
+            ForecastingLineItem = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -437,7 +499,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Response object for [RunAvailabilityForecast][] method.
+  /// Response object for `RunAvailabilityForecast` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RunAvailabilityForecastResponse : pb::IMessage<RunAvailabilityForecastResponse>
@@ -650,7 +712,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for [RunDeliveryForecast][] method.
+  /// Request object for `RunDeliveryForecast` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RunDeliveryForecastRequest : pb::IMessage<RunDeliveryForecastRequest>
@@ -693,6 +755,9 @@ namespace Google.Ads.AdManager.V1 {
         case LineItemDataOneofCase.ExistingLineItems:
           ExistingLineItems = other.ExistingLineItems.Clone();
           break;
+        case LineItemDataOneofCase.ForecastingLineItems:
+          ForecastingLineItems = other.ForecastingLineItems.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -717,6 +782,23 @@ namespace Google.Ads.AdManager.V1 {
       set {
         lineItemData_ = value;
         lineItemDataCase_ = value == null ? LineItemDataOneofCase.None : LineItemDataOneofCase.ExistingLineItems;
+      }
+    }
+
+    /// <summary>Field number for the "forecasting_line_items" field.</summary>
+    public const int ForecastingLineItemsFieldNumber = 6;
+    /// <summary>
+    /// Optional. The
+    /// [ForecastingLineItems][google.ads.admanager.v1.ForecastingLineItem] to be
+    /// forecasted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ForecastingLineItemList ForecastingLineItems {
+      get { return lineItemDataCase_ == LineItemDataOneofCase.ForecastingLineItems ? (global::Google.Ads.AdManager.V1.ForecastingLineItemList) lineItemData_ : null; }
+      set {
+        lineItemData_ = value;
+        lineItemDataCase_ = value == null ? LineItemDataOneofCase.None : LineItemDataOneofCase.ForecastingLineItems;
       }
     }
 
@@ -755,6 +837,7 @@ namespace Google.Ads.AdManager.V1 {
     public enum LineItemDataOneofCase {
       None = 0,
       ExistingLineItems = 3,
+      ForecastingLineItems = 6,
     }
     private LineItemDataOneofCase lineItemDataCase_ = LineItemDataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -786,6 +869,7 @@ namespace Google.Ads.AdManager.V1 {
         return true;
       }
       if (!object.Equals(ExistingLineItems, other.ExistingLineItems)) return false;
+      if (!object.Equals(ForecastingLineItems, other.ForecastingLineItems)) return false;
       if (Parent != other.Parent) return false;
       if (!object.Equals(DeliveryForecastOptions, other.DeliveryForecastOptions)) return false;
       if (LineItemDataCase != other.LineItemDataCase) return false;
@@ -797,6 +881,7 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (lineItemDataCase_ == LineItemDataOneofCase.ExistingLineItems) hash ^= ExistingLineItems.GetHashCode();
+      if (lineItemDataCase_ == LineItemDataOneofCase.ForecastingLineItems) hash ^= ForecastingLineItems.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (deliveryForecastOptions_ != null) hash ^= DeliveryForecastOptions.GetHashCode();
       hash ^= (int) lineItemDataCase_;
@@ -830,6 +915,10 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(ExistingLineItems);
       }
+      if (lineItemDataCase_ == LineItemDataOneofCase.ForecastingLineItems) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ForecastingLineItems);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -852,6 +941,10 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(ExistingLineItems);
       }
+      if (lineItemDataCase_ == LineItemDataOneofCase.ForecastingLineItems) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ForecastingLineItems);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -864,6 +957,9 @@ namespace Google.Ads.AdManager.V1 {
       int size = 0;
       if (lineItemDataCase_ == LineItemDataOneofCase.ExistingLineItems) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExistingLineItems);
+      }
+      if (lineItemDataCase_ == LineItemDataOneofCase.ForecastingLineItems) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ForecastingLineItems);
       }
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
@@ -898,6 +994,12 @@ namespace Google.Ads.AdManager.V1 {
             ExistingLineItems = new global::Google.Ads.AdManager.V1.ExistingLineItemList();
           }
           ExistingLineItems.MergeFrom(other.ExistingLineItems);
+          break;
+        case LineItemDataOneofCase.ForecastingLineItems:
+          if (ForecastingLineItems == null) {
+            ForecastingLineItems = new global::Google.Ads.AdManager.V1.ForecastingLineItemList();
+          }
+          ForecastingLineItems.MergeFrom(other.ForecastingLineItems);
           break;
       }
 
@@ -940,6 +1042,15 @@ namespace Google.Ads.AdManager.V1 {
             ExistingLineItems = subBuilder;
             break;
           }
+          case 50: {
+            global::Google.Ads.AdManager.V1.ForecastingLineItemList subBuilder = new global::Google.Ads.AdManager.V1.ForecastingLineItemList();
+            if (lineItemDataCase_ == LineItemDataOneofCase.ForecastingLineItems) {
+              subBuilder.MergeFrom(ForecastingLineItems);
+            }
+            input.ReadMessage(subBuilder);
+            ForecastingLineItems = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -979,6 +1090,15 @@ namespace Google.Ads.AdManager.V1 {
             ExistingLineItems = subBuilder;
             break;
           }
+          case 50: {
+            global::Google.Ads.AdManager.V1.ForecastingLineItemList subBuilder = new global::Google.Ads.AdManager.V1.ForecastingLineItemList();
+            if (lineItemDataCase_ == LineItemDataOneofCase.ForecastingLineItems) {
+              subBuilder.MergeFrom(ForecastingLineItems);
+            }
+            input.ReadMessage(subBuilder);
+            ForecastingLineItems = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -987,7 +1107,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Response object for [RunDeliveryForecast][] method.
+  /// Response object for `RunDeliveryForecast` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RunDeliveryForecastResponse : pb::IMessage<RunDeliveryForecastResponse>
@@ -1200,7 +1320,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Request object for [RunTrafficData][] method.
+  /// Request object for `RunTrafficData` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RunTrafficDataRequest : pb::IMessage<RunTrafficDataRequest>
@@ -1509,7 +1629,7 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
-  /// Response object for [RunTrafficData][] method.
+  /// Response object for `RunTrafficData` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RunTrafficDataResponse : pb::IMessage<RunTrafficDataResponse>
