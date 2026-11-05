@@ -2752,6 +2752,30 @@ namespace Google.Cloud.Sql.V1Beta4
         }
     }
 
+    public partial class WorkloadReplayConfig
+    {
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="SourceInstance"/> resource name property.
+        /// </summary>
+        public InstanceName SourceInstanceAsInstanceName
+        {
+            get => string.IsNullOrEmpty(SourceInstance) ? null : InstanceName.Parse(SourceInstance, allowUnparsed: true);
+            set => SourceInstance = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class WorkloadCaptureConfig
+    {
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="ReplayInstance"/> resource name property.
+        /// </summary>
+        public InstanceName ReplayInstanceAsInstanceName
+        {
+            get => string.IsNullOrEmpty(ReplayInstance) ? null : InstanceName.Parse(ReplayInstance, allowUnparsed: true);
+            set => ReplayInstance = value?.ToString() ?? "";
+        }
+    }
+
     public partial class InstancesRestoreBackupRequest
     {
         /// <summary><see cref="BackupName"/>-typed view over the <see cref="Backup"/> resource name property.</summary>

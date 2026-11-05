@@ -934,6 +934,80 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for Start</summary>
+        public void StartRequestObject()
+        {
+            // Snippet: Start(SqlInstancesStartRequest, CallSettings)
+            // Create client
+            SqlInstancesServiceClient sqlInstancesServiceClient = SqlInstancesServiceClient.Create();
+            // Initialize request argument(s)
+            SqlInstancesStartRequest request = new SqlInstancesStartRequest
+            {
+                Instance = "",
+                Project = "",
+                Location = "",
+            };
+            // Make the request
+            Operation response = sqlInstancesServiceClient.Start(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartAsync</summary>
+        public async Task StartRequestObjectAsync()
+        {
+            // Snippet: StartAsync(SqlInstancesStartRequest, CallSettings)
+            // Additional: StartAsync(SqlInstancesStartRequest, CancellationToken)
+            // Create client
+            SqlInstancesServiceClient sqlInstancesServiceClient = await SqlInstancesServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SqlInstancesStartRequest request = new SqlInstancesStartRequest
+            {
+                Instance = "",
+                Project = "",
+                Location = "",
+            };
+            // Make the request
+            Operation response = await sqlInstancesServiceClient.StartAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for Stop</summary>
+        public void StopRequestObject()
+        {
+            // Snippet: Stop(SqlInstancesStopRequest, CallSettings)
+            // Create client
+            SqlInstancesServiceClient sqlInstancesServiceClient = SqlInstancesServiceClient.Create();
+            // Initialize request argument(s)
+            SqlInstancesStopRequest request = new SqlInstancesStopRequest
+            {
+                Instance = "",
+                Project = "",
+                Location = "",
+            };
+            // Make the request
+            Operation response = sqlInstancesServiceClient.Stop(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopAsync</summary>
+        public async Task StopRequestObjectAsync()
+        {
+            // Snippet: StopAsync(SqlInstancesStopRequest, CallSettings)
+            // Additional: StopAsync(SqlInstancesStopRequest, CancellationToken)
+            // Create client
+            SqlInstancesServiceClient sqlInstancesServiceClient = await SqlInstancesServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SqlInstancesStopRequest request = new SqlInstancesStopRequest
+            {
+                Instance = "",
+                Project = "",
+                Location = "",
+            };
+            // Make the request
+            Operation response = await sqlInstancesServiceClient.StopAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for RestoreBackup</summary>
         public void RestoreBackupRequestObject()
         {
@@ -1578,6 +1652,45 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ExecuteSqlReadOnly</summary>
+        public void ExecuteSqlReadOnlyRequestObject()
+        {
+            // Snippet: ExecuteSqlReadOnly(SqlInstancesExecuteSqlReadOnlyRequest, CallSettings)
+            // Create client
+            SqlInstancesServiceClient sqlInstancesServiceClient = SqlInstancesServiceClient.Create();
+            // Initialize request argument(s)
+            SqlInstancesExecuteSqlReadOnlyRequest request = new SqlInstancesExecuteSqlReadOnlyRequest
+            {
+                Instance = "",
+                Project = "",
+                Location = "",
+                Body = new ExecuteSqlReadOnlyPayload(),
+            };
+            // Make the request
+            SqlInstancesExecuteSqlReadOnlyResponse response = sqlInstancesServiceClient.ExecuteSqlReadOnly(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteSqlReadOnlyAsync</summary>
+        public async Task ExecuteSqlReadOnlyRequestObjectAsync()
+        {
+            // Snippet: ExecuteSqlReadOnlyAsync(SqlInstancesExecuteSqlReadOnlyRequest, CallSettings)
+            // Additional: ExecuteSqlReadOnlyAsync(SqlInstancesExecuteSqlReadOnlyRequest, CancellationToken)
+            // Create client
+            SqlInstancesServiceClient sqlInstancesServiceClient = await SqlInstancesServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SqlInstancesExecuteSqlReadOnlyRequest request = new SqlInstancesExecuteSqlReadOnlyRequest
+            {
+                Instance = "",
+                Project = "",
+                Location = "",
+                Body = new ExecuteSqlReadOnlyPayload(),
+            };
+            // Make the request
+            SqlInstancesExecuteSqlReadOnlyResponse response = await sqlInstancesServiceClient.ExecuteSqlReadOnlyAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for ExecuteSql</summary>
         public void ExecuteSqlRequestObject()
         {
@@ -1764,6 +1877,45 @@ namespace GoogleCSharpSnippets
             };
             // Make the request
             Operation response = await sqlInstancesServiceClient.PointInTimeRestoreAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReconcileNetworking</summary>
+        public void ReconcileNetworkingRequestObject()
+        {
+            // Snippet: ReconcileNetworking(SqlInstancesReconcileNetworkingRequest, CallSettings)
+            // Create client
+            SqlInstancesServiceClient sqlInstancesServiceClient = SqlInstancesServiceClient.Create();
+            // Initialize request argument(s)
+            SqlInstancesReconcileNetworkingRequest request = new SqlInstancesReconcileNetworkingRequest
+            {
+                Instance = "",
+                Project = "",
+                PscDns = new PscDnsReconcileNetworkingRequest(),
+                Location = "",
+            };
+            // Make the request
+            Operation response = sqlInstancesServiceClient.ReconcileNetworking(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReconcileNetworkingAsync</summary>
+        public async Task ReconcileNetworkingRequestObjectAsync()
+        {
+            // Snippet: ReconcileNetworkingAsync(SqlInstancesReconcileNetworkingRequest, CallSettings)
+            // Additional: ReconcileNetworkingAsync(SqlInstancesReconcileNetworkingRequest, CancellationToken)
+            // Create client
+            SqlInstancesServiceClient sqlInstancesServiceClient = await SqlInstancesServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SqlInstancesReconcileNetworkingRequest request = new SqlInstancesReconcileNetworkingRequest
+            {
+                Instance = "",
+                Project = "",
+                PscDns = new PscDnsReconcileNetworkingRequest(),
+                Location = "",
+            };
+            // Make the request
+            Operation response = await sqlInstancesServiceClient.ReconcileNetworkingAsync(request);
             // End snippet
         }
     }

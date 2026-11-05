@@ -49,6 +49,9 @@ namespace Google.Cloud.Sql.V1Beta4
             GetSettings = existing.GetSettings;
             InsertSettings = existing.InsertSettings;
             ListSettings = existing.ListSettings;
+            UpdateCustomerManagedCertificateSettings = existing.UpdateCustomerManagedCertificateSettings;
+            DeleteCustomerManagedCertificateSettings = existing.DeleteCustomerManagedCertificateSettings;
+            ListCustomerManagedCertificatesSettings = existing.ListCustomerManagedCertificatesSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -102,6 +105,45 @@ namespace Google.Cloud.Sql.V1Beta4
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SqlSslCertsServiceClient.UpdateCustomerManagedCertificate</c> and
+        /// <c>SqlSslCertsServiceClient.UpdateCustomerManagedCertificateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateCustomerManagedCertificateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SqlSslCertsServiceClient.DeleteCustomerManagedCertificate</c> and
+        /// <c>SqlSslCertsServiceClient.DeleteCustomerManagedCertificateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteCustomerManagedCertificateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SqlSslCertsServiceClient.ListCustomerManagedCertificates</c> and
+        /// <c>SqlSslCertsServiceClient.ListCustomerManagedCertificatesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListCustomerManagedCertificatesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -379,6 +421,96 @@ namespace Google.Cloud.Sql.V1Beta4
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SslCertsListResponse> ListAsync(SqlSslCertsListRequest request, st::CancellationToken cancellationToken) =>
             ListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Upload and update customer managed certificate bundle for an existing
+        /// Cloud SQL instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Operation UpdateCustomerManagedCertificate(UpdateCustomerManagedCertificateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Upload and update customer managed certificate bundle for an existing
+        /// Cloud SQL instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> UpdateCustomerManagedCertificateAsync(UpdateCustomerManagedCertificateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Upload and update customer managed certificate bundle for an existing
+        /// Cloud SQL instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> UpdateCustomerManagedCertificateAsync(UpdateCustomerManagedCertificateRequest request, st::CancellationToken cancellationToken) =>
+            UpdateCustomerManagedCertificateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete customer managed certificate bundle for an existing Cloud SQL
+        /// instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Operation DeleteCustomerManagedCertificate(DeleteCustomerManagedCertificateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete customer managed certificate bundle for an existing Cloud SQL
+        /// instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> DeleteCustomerManagedCertificateAsync(DeleteCustomerManagedCertificateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete customer managed certificate bundle for an existing Cloud SQL
+        /// instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> DeleteCustomerManagedCertificateAsync(DeleteCustomerManagedCertificateRequest request, st::CancellationToken cancellationToken) =>
+            DeleteCustomerManagedCertificateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List all customer managed certificate bundles for an existing Cloud SQL
+        /// instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ListCustomerManagedCertificatesResponse ListCustomerManagedCertificates(ListCustomerManagedCertificatesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List all customer managed certificate bundles for an existing Cloud SQL
+        /// instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListCustomerManagedCertificatesResponse> ListCustomerManagedCertificatesAsync(ListCustomerManagedCertificatesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List all customer managed certificate bundles for an existing Cloud SQL
+        /// instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListCustomerManagedCertificatesResponse> ListCustomerManagedCertificatesAsync(ListCustomerManagedCertificatesRequest request, st::CancellationToken cancellationToken) =>
+            ListCustomerManagedCertificatesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>SqlSslCertsService client wrapper implementation, for convenient use.</summary>
@@ -394,6 +526,12 @@ namespace Google.Cloud.Sql.V1Beta4
         private readonly gaxgrpc::ApiCall<SqlSslCertsInsertRequest, SslCertsInsertResponse> _callInsert;
 
         private readonly gaxgrpc::ApiCall<SqlSslCertsListRequest, SslCertsListResponse> _callList;
+
+        private readonly gaxgrpc::ApiCall<UpdateCustomerManagedCertificateRequest, Operation> _callUpdateCustomerManagedCertificate;
+
+        private readonly gaxgrpc::ApiCall<DeleteCustomerManagedCertificateRequest, Operation> _callDeleteCustomerManagedCertificate;
+
+        private readonly gaxgrpc::ApiCall<ListCustomerManagedCertificatesRequest, ListCustomerManagedCertificatesResponse> _callListCustomerManagedCertificates;
 
         /// <summary>
         /// Constructs a client wrapper for the SqlSslCertsService service, with the specified gRPC client and settings.
@@ -423,6 +561,15 @@ namespace Google.Cloud.Sql.V1Beta4
             _callList = clientHelper.BuildApiCall<SqlSslCertsListRequest, SslCertsListResponse>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
+            _callUpdateCustomerManagedCertificate = clientHelper.BuildApiCall<UpdateCustomerManagedCertificateRequest, Operation>("UpdateCustomerManagedCertificate", grpcClient.UpdateCustomerManagedCertificateAsync, grpcClient.UpdateCustomerManagedCertificate, effectiveSettings.UpdateCustomerManagedCertificateSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("instance", request => request.Instance).WithGoogleRequestParam("certificate_bundle", request => request.CertificateBundle);
+            Modify_ApiCall(ref _callUpdateCustomerManagedCertificate);
+            Modify_UpdateCustomerManagedCertificateApiCall(ref _callUpdateCustomerManagedCertificate);
+            _callDeleteCustomerManagedCertificate = clientHelper.BuildApiCall<DeleteCustomerManagedCertificateRequest, Operation>("DeleteCustomerManagedCertificate", grpcClient.DeleteCustomerManagedCertificateAsync, grpcClient.DeleteCustomerManagedCertificate, effectiveSettings.DeleteCustomerManagedCertificateSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("instance", request => request.Instance).WithGoogleRequestParam("certificate_bundle", request => request.CertificateBundle);
+            Modify_ApiCall(ref _callDeleteCustomerManagedCertificate);
+            Modify_DeleteCustomerManagedCertificateApiCall(ref _callDeleteCustomerManagedCertificate);
+            _callListCustomerManagedCertificates = clientHelper.BuildApiCall<ListCustomerManagedCertificatesRequest, ListCustomerManagedCertificatesResponse>("ListCustomerManagedCertificates", grpcClient.ListCustomerManagedCertificatesAsync, grpcClient.ListCustomerManagedCertificates, effectiveSettings.ListCustomerManagedCertificatesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callListCustomerManagedCertificates);
+            Modify_ListCustomerManagedCertificatesApiCall(ref _callListCustomerManagedCertificates);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -435,6 +582,12 @@ namespace Google.Cloud.Sql.V1Beta4
         partial void Modify_InsertApiCall(ref gaxgrpc::ApiCall<SqlSslCertsInsertRequest, SslCertsInsertResponse> call);
 
         partial void Modify_ListApiCall(ref gaxgrpc::ApiCall<SqlSslCertsListRequest, SslCertsListResponse> call);
+
+        partial void Modify_UpdateCustomerManagedCertificateApiCall(ref gaxgrpc::ApiCall<UpdateCustomerManagedCertificateRequest, Operation> call);
+
+        partial void Modify_DeleteCustomerManagedCertificateApiCall(ref gaxgrpc::ApiCall<DeleteCustomerManagedCertificateRequest, Operation> call);
+
+        partial void Modify_ListCustomerManagedCertificatesApiCall(ref gaxgrpc::ApiCall<ListCustomerManagedCertificatesRequest, ListCustomerManagedCertificatesResponse> call);
 
         partial void OnConstruction(SqlSslCertsService.SqlSslCertsServiceClient grpcClient, SqlSslCertsServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -451,6 +604,12 @@ namespace Google.Cloud.Sql.V1Beta4
         partial void Modify_SqlSslCertsInsertRequest(ref SqlSslCertsInsertRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SqlSslCertsListRequest(ref SqlSslCertsListRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateCustomerManagedCertificateRequest(ref UpdateCustomerManagedCertificateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteCustomerManagedCertificateRequest(ref DeleteCustomerManagedCertificateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListCustomerManagedCertificatesRequest(ref ListCustomerManagedCertificatesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Deletes the SSL certificate. For First Generation instances, the
@@ -556,6 +715,84 @@ namespace Google.Cloud.Sql.V1Beta4
         {
             Modify_SqlSslCertsListRequest(ref request, ref callSettings);
             return _callList.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Upload and update customer managed certificate bundle for an existing
+        /// Cloud SQL instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Operation UpdateCustomerManagedCertificate(UpdateCustomerManagedCertificateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCustomerManagedCertificateRequest(ref request, ref callSettings);
+            return _callUpdateCustomerManagedCertificate.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Upload and update customer managed certificate bundle for an existing
+        /// Cloud SQL instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Operation> UpdateCustomerManagedCertificateAsync(UpdateCustomerManagedCertificateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCustomerManagedCertificateRequest(ref request, ref callSettings);
+            return _callUpdateCustomerManagedCertificate.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Delete customer managed certificate bundle for an existing Cloud SQL
+        /// instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Operation DeleteCustomerManagedCertificate(DeleteCustomerManagedCertificateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCustomerManagedCertificateRequest(ref request, ref callSettings);
+            return _callDeleteCustomerManagedCertificate.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Delete customer managed certificate bundle for an existing Cloud SQL
+        /// instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Operation> DeleteCustomerManagedCertificateAsync(DeleteCustomerManagedCertificateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCustomerManagedCertificateRequest(ref request, ref callSettings);
+            return _callDeleteCustomerManagedCertificate.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List all customer managed certificate bundles for an existing Cloud SQL
+        /// instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ListCustomerManagedCertificatesResponse ListCustomerManagedCertificates(ListCustomerManagedCertificatesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListCustomerManagedCertificatesRequest(ref request, ref callSettings);
+            return _callListCustomerManagedCertificates.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// List all customer managed certificate bundles for an existing Cloud SQL
+        /// instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ListCustomerManagedCertificatesResponse> ListCustomerManagedCertificatesAsync(ListCustomerManagedCertificatesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListCustomerManagedCertificatesRequest(ref request, ref callSettings);
+            return _callListCustomerManagedCertificates.Async(request, callSettings);
         }
     }
 
