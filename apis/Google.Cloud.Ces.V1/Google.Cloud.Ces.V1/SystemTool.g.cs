@@ -26,10 +26,10 @@ namespace Google.Cloud.Ces.V1 {
           string.Concat(
             "CiVnb29nbGUvY2xvdWQvY2VzL3YxL3N5c3RlbV90b29sLnByb3RvEhNnb29n",
             "bGUuY2xvdWQuY2VzLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnBy",
-            "b3RvIjkKClN5c3RlbVRvb2wSEQoEbmFtZRgBIAEoCUID4EECEhgKC2Rlc2Ny",
-            "aXB0aW9uGAIgASgJQgPgQQNCVwoXY29tLmdvb2dsZS5jbG91ZC5jZXMudjFC",
-            "D1N5c3RlbVRvb2xQcm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL2Nlcy9h",
-            "cGl2MS9jZXNwYjtjZXNwYmIGcHJvdG8z"));
+            "b3RvIjsKClN5c3RlbVRvb2wSEgoEbmFtZRgBIAEoCUIE4kEBAhIZCgtkZXNj",
+            "cmlwdGlvbhgCIAEoCUIE4kEBA0JXChdjb20uZ29vZ2xlLmNsb3VkLmNlcy52",
+            "MUIPU3lzdGVtVG9vbFByb3RvUAFaKWNsb3VkLmdvb2dsZS5jb20vZ28vY2Vz",
+            "L2FwaXYxL2Nlc3BiO2Nlc3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
