@@ -28,23 +28,133 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta {
             "cmF0aW9uX21ldGFkYXRhLnByb3RvEidnb29nbGUuY2xvdWQuaHlwZXJjb21w",
             "dXRlY2x1c3Rlci52MWJldGEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
             "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9wcm90",
-            "b2J1Zi90aW1lc3RhbXAucHJvdG8i4wEKEU9wZXJhdGlvbk1ldGFkYXRhEjQK",
+            "b2J1Zi90aW1lc3RhbXAucHJvdG8ivQIKEU9wZXJhdGlvbk1ldGFkYXRhEjUK",
             "C2NyZWF0ZV90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEID4EEDEjEKCGVuZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEDEhMKBnRhcmdldBgDIAEoCUID4EEDEhEKBHZlcmIYBCAB",
-            "KAlCA+BBAxIjChZyZXF1ZXN0ZWRfY2FuY2VsbGF0aW9uGAUgASgIQgPgQQMS",
-            "GAoLYXBpX3ZlcnNpb24YBiABKAlCA+BBA0KnAgorY29tLmdvb2dsZS5jbG91",
-            "ZC5oeXBlcmNvbXB1dGVjbHVzdGVyLnYxYmV0YUIWT3BlcmF0aW9uTWV0YWRh",
-            "dGFQcm90b1ABWl1jbG91ZC5nb29nbGUuY29tL2dvL2h5cGVyY29tcHV0ZWNs",
-            "dXN0ZXIvYXBpdjFiZXRhL2h5cGVyY29tcHV0ZWNsdXN0ZXJwYjtoeXBlcmNv",
-            "bXB1dGVjbHVzdGVycGKqAidHb29nbGUuQ2xvdWQuSHlwZXJjb21wdXRlQ2x1",
-            "c3Rlci5WMUJldGHKAidHb29nbGVcQ2xvdWRcSHlwZXJjb21wdXRlQ2x1c3Rl",
-            "clxWMWJldGHqAipHb29nbGU6OkNsb3VkOjpIeXBlcmNvbXB1dGVDbHVzdGVy",
-            "OjpWMWJldGFiBnByb3RvMw=="));
+            "cEIE4kEBAxIyCghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCBOJBAQMSFAoGdGFyZ2V0GAMgASgJQgTiQQEDEhIKBHZlcmIY",
+            "BCABKAlCBOJBAQMSJAoWcmVxdWVzdGVkX2NhbmNlbGxhdGlvbhgFIAEoCEIE",
+            "4kEBAxIZCgthcGlfdmVyc2lvbhgGIAEoCUIE4kEBAxJSCghwcm9ncmVzcxgH",
+            "IAEoCzI6Lmdvb2dsZS5jbG91ZC5oeXBlcmNvbXB1dGVjbHVzdGVyLnYxYmV0",
+            "YS5PcGVyYXRpb25Qcm9ncmVzc0IE4kEBAyJgChFPcGVyYXRpb25Qcm9ncmVz",
+            "cxJLCgVzdGVwcxgBIAMoCzI2Lmdvb2dsZS5jbG91ZC5oeXBlcmNvbXB1dGVj",
+            "bHVzdGVyLnYxYmV0YS5PcGVyYXRpb25TdGVwQgTiQQEDIvgSCg1PcGVyYXRp",
+            "b25TdGVwElYKDmNyZWF0ZV9uZXR3b3JrGAIgASgLMjYuZ29vZ2xlLmNsb3Vk",
+            "Lmh5cGVyY29tcHV0ZWNsdXN0ZXIudjFiZXRhLkNyZWF0ZU5ldHdvcmtCBOJB",
+            "AQNIABJyCh1jcmVhdGVfcHJpdmF0ZV9zZXJ2aWNlX2FjY2VzcxgDIAEoCzJD",
+            "Lmdvb2dsZS5jbG91ZC5oeXBlcmNvbXB1dGVjbHVzdGVyLnYxYmV0YS5DcmVh",
+            "dGVQcml2YXRlU2VydmljZUFjY2Vzc0IE4kEBA0gAEmsKGWNyZWF0ZV9maWxl",
+            "c3RvcmVfaW5zdGFuY2UYBCABKAsyQC5nb29nbGUuY2xvdWQuaHlwZXJjb21w",
+            "dXRlY2x1c3Rlci52MWJldGEuQ3JlYXRlRmlsZXN0b3JlSW5zdGFuY2VCBOJB",
+            "AQNIABJjChVjcmVhdGVfc3RvcmFnZV9idWNrZXQYBSABKAsyPC5nb29nbGUu",
+            "Y2xvdWQuaHlwZXJjb21wdXRlY2x1c3Rlci52MWJldGEuQ3JlYXRlU3RvcmFn",
+            "ZUJ1Y2tldEIE4kEBA0gAEmUKFmNyZWF0ZV9sdXN0cmVfaW5zdGFuY2UYBiAB",
+            "KAsyPS5nb29nbGUuY2xvdWQuaHlwZXJjb21wdXRlY2x1c3Rlci52MWJldGEu",
+            "Q3JlYXRlTHVzdHJlSW5zdGFuY2VCBOJBAQNIABJgChNjcmVhdGVfb3JjaGVz",
+            "dHJhdG9yGAggASgLMjsuZ29vZ2xlLmNsb3VkLmh5cGVyY29tcHV0ZWNsdXN0",
+            "ZXIudjFiZXRhLkNyZWF0ZU9yY2hlc3RyYXRvckIE4kEBA0gAElYKDmNyZWF0",
+            "ZV9ub2Rlc2V0GAkgASgLMjYuZ29vZ2xlLmNsb3VkLmh5cGVyY29tcHV0ZWNs",
+            "dXN0ZXIudjFiZXRhLkNyZWF0ZU5vZGVzZXRCBOJBAQNIABJaChBjcmVhdGVf",
+            "cGFydGl0aW9uGAogASgLMjguZ29vZ2xlLmNsb3VkLmh5cGVyY29tcHV0ZWNs",
+            "dXN0ZXIudjFiZXRhLkNyZWF0ZVBhcnRpdGlvbkIE4kEBA0gAElsKEWNyZWF0",
+            "ZV9sb2dpbl9ub2RlGAsgASgLMjguZ29vZ2xlLmNsb3VkLmh5cGVyY29tcHV0",
+            "ZWNsdXN0ZXIudjFiZXRhLkNyZWF0ZUxvZ2luTm9kZUIE4kEBA0gAEmEKFGNo",
+            "ZWNrX2NsdXN0ZXJfaGVhbHRoGAwgASgLMjsuZ29vZ2xlLmNsb3VkLmh5cGVy",
+            "Y29tcHV0ZWNsdXN0ZXIudjFiZXRhLkNoZWNrQ2x1c3RlckhlYWx0aEIE4kEB",
+            "A0gAEmAKE3VwZGF0ZV9vcmNoZXN0cmF0b3IYDSABKAsyOy5nb29nbGUuY2xv",
+            "dWQuaHlwZXJjb21wdXRlY2x1c3Rlci52MWJldGEuVXBkYXRlT3JjaGVzdHJh",
+            "dG9yQgTiQQEDSAASVgoOdXBkYXRlX25vZGVzZXQYDiABKAsyNi5nb29nbGUu",
+            "Y2xvdWQuaHlwZXJjb21wdXRlY2x1c3Rlci52MWJldGEuVXBkYXRlTm9kZXNl",
+            "dEIE4kEBA0gAEloKEHVwZGF0ZV9wYXJ0aXRpb24YDyABKAsyOC5nb29nbGUu",
+            "Y2xvdWQuaHlwZXJjb21wdXRlY2x1c3Rlci52MWJldGEuVXBkYXRlUGFydGl0",
+            "aW9uQgTiQQEDSAASWwoRdXBkYXRlX2xvZ2luX25vZGUYECABKAsyOC5nb29n",
+            "bGUuY2xvdWQuaHlwZXJjb21wdXRlY2x1c3Rlci52MWJldGEuVXBkYXRlTG9n",
+            "aW5Ob2RlQgTiQQEDSAASYAoTZGVsZXRlX29yY2hlc3RyYXRvchgSIAEoCzI7",
+            "Lmdvb2dsZS5jbG91ZC5oeXBlcmNvbXB1dGVjbHVzdGVyLnYxYmV0YS5EZWxl",
+            "dGVPcmNoZXN0cmF0b3JCBOJBAQNIABJWCg5kZWxldGVfbm9kZXNldBgTIAEo",
+            "CzI2Lmdvb2dsZS5jbG91ZC5oeXBlcmNvbXB1dGVjbHVzdGVyLnYxYmV0YS5E",
+            "ZWxldGVOb2Rlc2V0QgTiQQEDSAASWgoQZGVsZXRlX3BhcnRpdGlvbhgUIAEo",
+            "CzI4Lmdvb2dsZS5jbG91ZC5oeXBlcmNvbXB1dGVjbHVzdGVyLnYxYmV0YS5E",
+            "ZWxldGVQYXJ0aXRpb25CBOJBAQNIABJbChFkZWxldGVfbG9naW5fbm9kZRgV",
+            "IAEoCzI4Lmdvb2dsZS5jbG91ZC5oeXBlcmNvbXB1dGVjbHVzdGVyLnYxYmV0",
+            "YS5EZWxldGVMb2dpbk5vZGVCBOJBAQNIABJrChlkZWxldGVfZmlsZXN0b3Jl",
+            "X2luc3RhbmNlGBYgASgLMkAuZ29vZ2xlLmNsb3VkLmh5cGVyY29tcHV0ZWNs",
+            "dXN0ZXIudjFiZXRhLkRlbGV0ZUZpbGVzdG9yZUluc3RhbmNlQgTiQQEDSAAS",
+            "YwoVZGVsZXRlX3N0b3JhZ2VfYnVja2V0GBcgASgLMjwuZ29vZ2xlLmNsb3Vk",
+            "Lmh5cGVyY29tcHV0ZWNsdXN0ZXIudjFiZXRhLkRlbGV0ZVN0b3JhZ2VCdWNr",
+            "ZXRCBOJBAQNIABJlChZkZWxldGVfbHVzdHJlX2luc3RhbmNlGBggASgLMj0u",
+            "Z29vZ2xlLmNsb3VkLmh5cGVyY29tcHV0ZWNsdXN0ZXIudjFiZXRhLkRlbGV0",
+            "ZUx1c3RyZUluc3RhbmNlQgTiQQEDSAAScgodZGVsZXRlX3ByaXZhdGVfc2Vy",
+            "dmljZV9hY2Nlc3MYGSABKAsyQy5nb29nbGUuY2xvdWQuaHlwZXJjb21wdXRl",
+            "Y2x1c3Rlci52MWJldGEuRGVsZXRlUHJpdmF0ZVNlcnZpY2VBY2Nlc3NCBOJB",
+            "AQNIABJWCg5kZWxldGVfbmV0d29yaxgaIAEoCzI2Lmdvb2dsZS5jbG91ZC5o",
+            "eXBlcmNvbXB1dGVjbHVzdGVyLnYxYmV0YS5EZWxldGVOZXR3b3JrQgTiQQED",
+            "SAASUQoFc3RhdGUYASABKA4yPC5nb29nbGUuY2xvdWQuaHlwZXJjb21wdXRl",
+            "Y2x1c3Rlci52MWJldGEuT3BlcmF0aW9uU3RlcC5TdGF0ZUIE4kEBAyJGCgVT",
+            "dGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1dBSVRJTkcQARIPCgtJ",
+            "Tl9QUk9HUkVTUxACEggKBERPTkUQA0IGCgR0eXBlIkkKDUNyZWF0ZU5ldHdv",
+            "cmsSOAoHbmV0d29yaxgBIAEoCUIn4kEBA/pBIAoeY29tcHV0ZS5nb29nbGVh",
+            "cGlzLmNvbS9OZXR3b3JrIhwKGkNyZWF0ZVByaXZhdGVTZXJ2aWNlQWNjZXNz",
+            "IlcKF0NyZWF0ZUZpbGVzdG9yZUluc3RhbmNlEjwKCWZpbGVzdG9yZRgBIAEo",
+            "CUIp4kEBA/pBIgogZmlsZS5nb29nbGVhcGlzLmNvbS9GaWxlSW5zdGFuY2Ui",
+            "TQoTQ3JlYXRlU3RvcmFnZUJ1Y2tldBI2CgZidWNrZXQYASABKAlCJuJBAQP6",
+            "QR8KHXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vQnVja2V0Ik8KFENyZWF0ZUx1",
+            "c3RyZUluc3RhbmNlEjcKBmx1c3RyZRgBIAEoCUIn4kEBA/pBIAoebHVzdHJl",
+            "Lmdvb2dsZWFwaXMuY29tL0luc3RhbmNlIhQKEkNyZWF0ZU9yY2hlc3RyYXRv",
+            "ciInCg1DcmVhdGVOb2Rlc2V0EhYKCG5vZGVzZXRzGAEgAygJQgTiQQEDIisK",
+            "D0NyZWF0ZVBhcnRpdGlvbhIYCgpwYXJ0aXRpb25zGAEgAygJQgTiQQEDIhEK",
+            "D0NyZWF0ZUxvZ2luTm9kZSIUChJDaGVja0NsdXN0ZXJIZWFsdGgiFAoSVXBk",
+            "YXRlT3JjaGVzdHJhdG9yIicKDVVwZGF0ZU5vZGVzZXQSFgoIbm9kZXNldHMY",
+            "ASADKAlCBOJBAQMiKwoPVXBkYXRlUGFydGl0aW9uEhgKCnBhcnRpdGlvbnMY",
+            "ASADKAlCBOJBAQMiEQoPVXBkYXRlTG9naW5Ob2RlIhQKEkRlbGV0ZU9yY2hl",
+            "c3RyYXRvciInCg1EZWxldGVOb2Rlc2V0EhYKCG5vZGVzZXRzGAEgAygJQgTi",
+            "QQEDIisKD0RlbGV0ZVBhcnRpdGlvbhIYCgpwYXJ0aXRpb25zGAEgAygJQgTi",
+            "QQEDIhEKD0RlbGV0ZUxvZ2luTm9kZSJXChdEZWxldGVGaWxlc3RvcmVJbnN0",
+            "YW5jZRI8CglmaWxlc3RvcmUYASABKAlCKeJBAQP6QSIKIGZpbGUuZ29vZ2xl",
+            "YXBpcy5jb20vRmlsZUluc3RhbmNlIk0KE0RlbGV0ZVN0b3JhZ2VCdWNrZXQS",
+            "NgoGYnVja2V0GAEgASgJQibiQQED+kEfCh1zdG9yYWdlLmdvb2dsZWFwaXMu",
+            "Y29tL0J1Y2tldCJPChREZWxldGVMdXN0cmVJbnN0YW5jZRI3CgZsdXN0cmUY",
+            "ASABKAlCJ+JBAQP6QSAKHmx1c3RyZS5nb29nbGVhcGlzLmNvbS9JbnN0YW5j",
+            "ZSIcChpEZWxldGVQcml2YXRlU2VydmljZUFjY2VzcyJJCg1EZWxldGVOZXR3",
+            "b3JrEjgKB25ldHdvcmsYASABKAlCJ+JBAQP6QSAKHmNvbXB1dGUuZ29vZ2xl",
+            "YXBpcy5jb20vTmV0d29ya0KIAworY29tLmdvb2dsZS5jbG91ZC5oeXBlcmNv",
+            "bXB1dGVjbHVzdGVyLnYxYmV0YUIWT3BlcmF0aW9uTWV0YWRhdGFQcm90b1AB",
+            "Wl1jbG91ZC5nb29nbGUuY29tL2dvL2h5cGVyY29tcHV0ZWNsdXN0ZXIvYXBp",
+            "djFiZXRhL2h5cGVyY29tcHV0ZWNsdXN0ZXJwYjtoeXBlcmNvbXB1dGVjbHVz",
+            "dGVycGKqAidHb29nbGUuQ2xvdWQuSHlwZXJjb21wdXRlQ2x1c3Rlci5WMUJl",
+            "dGHKAidHb29nbGVcQ2xvdWRcSHlwZXJjb21wdXRlQ2x1c3RlclxWMWJldGHq",
+            "AipHb29nbGU6OkNsb3VkOjpIeXBlcmNvbXB1dGVDbHVzdGVyOjpWMWJldGHq",
+            "QV4KHmx1c3RyZS5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRI8cHJvamVjdHMv",
+            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2luc3RhbmNlcy97aW5z",
+            "dGFuY2V9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadata), global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadata.Parser, new[]{ "CreateTime", "EndTime", "Target", "Verb", "RequestedCancellation", "ApiVersion" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadata), global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadata.Parser, new[]{ "CreateTime", "EndTime", "Target", "Verb", "RequestedCancellation", "ApiVersion", "Progress" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.OperationProgress), global::Google.Cloud.HypercomputeCluster.V1Beta.OperationProgress.Parser, new[]{ "Steps" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.OperationStep), global::Google.Cloud.HypercomputeCluster.V1Beta.OperationStep.Parser, new[]{ "CreateNetwork", "CreatePrivateServiceAccess", "CreateFilestoreInstance", "CreateStorageBucket", "CreateLustreInstance", "CreateOrchestrator", "CreateNodeset", "CreatePartition", "CreateLoginNode", "CheckClusterHealth", "UpdateOrchestrator", "UpdateNodeset", "UpdatePartition", "UpdateLoginNode", "DeleteOrchestrator", "DeleteNodeset", "DeletePartition", "DeleteLoginNode", "DeleteFilestoreInstance", "DeleteStorageBucket", "DeleteLustreInstance", "DeletePrivateServiceAccess", "DeleteNetwork", "State" }, new[]{ "Type" }, new[]{ typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.OperationStep.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.CreateNetwork), global::Google.Cloud.HypercomputeCluster.V1Beta.CreateNetwork.Parser, new[]{ "Network" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.CreatePrivateServiceAccess), global::Google.Cloud.HypercomputeCluster.V1Beta.CreatePrivateServiceAccess.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.CreateFilestoreInstance), global::Google.Cloud.HypercomputeCluster.V1Beta.CreateFilestoreInstance.Parser, new[]{ "Filestore" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.CreateStorageBucket), global::Google.Cloud.HypercomputeCluster.V1Beta.CreateStorageBucket.Parser, new[]{ "Bucket" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.CreateLustreInstance), global::Google.Cloud.HypercomputeCluster.V1Beta.CreateLustreInstance.Parser, new[]{ "Lustre" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.CreateOrchestrator), global::Google.Cloud.HypercomputeCluster.V1Beta.CreateOrchestrator.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.CreateNodeset), global::Google.Cloud.HypercomputeCluster.V1Beta.CreateNodeset.Parser, new[]{ "Nodesets" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.CreatePartition), global::Google.Cloud.HypercomputeCluster.V1Beta.CreatePartition.Parser, new[]{ "Partitions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.CreateLoginNode), global::Google.Cloud.HypercomputeCluster.V1Beta.CreateLoginNode.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.CheckClusterHealth), global::Google.Cloud.HypercomputeCluster.V1Beta.CheckClusterHealth.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateOrchestrator), global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateOrchestrator.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateNodeset), global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateNodeset.Parser, new[]{ "Nodesets" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.UpdatePartition), global::Google.Cloud.HypercomputeCluster.V1Beta.UpdatePartition.Parser, new[]{ "Partitions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateLoginNode), global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateLoginNode.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteOrchestrator), global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteOrchestrator.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteNodeset), global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteNodeset.Parser, new[]{ "Nodesets" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.DeletePartition), global::Google.Cloud.HypercomputeCluster.V1Beta.DeletePartition.Parser, new[]{ "Partitions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteLoginNode), global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteLoginNode.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteFilestoreInstance), global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteFilestoreInstance.Parser, new[]{ "Filestore" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteStorageBucket), global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteStorageBucket.Parser, new[]{ "Bucket" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteLustreInstance), global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteLustreInstance.Parser, new[]{ "Lustre" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.DeletePrivateServiceAccess), global::Google.Cloud.HypercomputeCluster.V1Beta.DeletePrivateServiceAccess.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteNetwork), global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteNetwork.Parser, new[]{ "Network" }, null, null, null, null)
           }));
     }
     #endregion
@@ -95,6 +205,7 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta {
       verb_ = other.verb_;
       requestedCancellation_ = other.requestedCancellation_;
       apiVersion_ = other.apiVersion_;
+      progress_ = other.progress_ != null ? other.progress_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -199,6 +310,21 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "progress" field.</summary>
+    public const int ProgressFieldNumber = 7;
+    private global::Google.Cloud.HypercomputeCluster.V1Beta.OperationProgress progress_;
+    /// <summary>
+    /// Output only. Progress of the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.OperationProgress Progress {
+      get { return progress_; }
+      set {
+        progress_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -220,6 +346,7 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta {
       if (Verb != other.Verb) return false;
       if (RequestedCancellation != other.RequestedCancellation) return false;
       if (ApiVersion != other.ApiVersion) return false;
+      if (!object.Equals(Progress, other.Progress)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -233,6 +360,7 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta {
       if (Verb.Length != 0) hash ^= Verb.GetHashCode();
       if (RequestedCancellation != false) hash ^= RequestedCancellation.GetHashCode();
       if (ApiVersion.Length != 0) hash ^= ApiVersion.GetHashCode();
+      if (progress_ != null) hash ^= Progress.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -275,6 +403,10 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta {
         output.WriteRawTag(50);
         output.WriteString(ApiVersion);
       }
+      if (progress_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Progress);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -309,6 +441,10 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta {
         output.WriteRawTag(50);
         output.WriteString(ApiVersion);
       }
+      if (progress_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Progress);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -336,6 +472,9 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta {
       }
       if (ApiVersion.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ApiVersion);
+      }
+      if (progress_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Progress);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -372,6 +511,12 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta {
       }
       if (other.ApiVersion.Length != 0) {
         ApiVersion = other.ApiVersion;
+      }
+      if (other.progress_ != null) {
+        if (progress_ == null) {
+          Progress = new global::Google.Cloud.HypercomputeCluster.V1Beta.OperationProgress();
+        }
+        Progress.MergeFrom(other.Progress);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -422,6 +567,13 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta {
             ApiVersion = input.ReadString();
             break;
           }
+          case 58: {
+            if (progress_ == null) {
+              Progress = new global::Google.Cloud.HypercomputeCluster.V1Beta.OperationProgress();
+            }
+            input.ReadMessage(Progress);
+            break;
+          }
         }
       }
     #endif
@@ -469,6 +621,6061 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta {
           }
           case 50: {
             ApiVersion = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (progress_ == null) {
+              Progress = new global::Google.Cloud.HypercomputeCluster.V1Beta.OperationProgress();
+            }
+            input.ReadMessage(Progress);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Message describing the progress of a cluster mutation long-running operation.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class OperationProgress : pb::IMessage<OperationProgress>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<OperationProgress> _parser = new pb::MessageParser<OperationProgress>(() => new OperationProgress());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<OperationProgress> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OperationProgress() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OperationProgress(OperationProgress other) : this() {
+      steps_ = other.steps_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OperationProgress Clone() {
+      return new OperationProgress(this);
+    }
+
+    /// <summary>Field number for the "steps" field.</summary>
+    public const int StepsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.HypercomputeCluster.V1Beta.OperationStep> _repeated_steps_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.HypercomputeCluster.V1Beta.OperationStep.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.HypercomputeCluster.V1Beta.OperationStep> steps_ = new pbc::RepeatedField<global::Google.Cloud.HypercomputeCluster.V1Beta.OperationStep>();
+    /// <summary>
+    /// Output only. Steps and status of the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.HypercomputeCluster.V1Beta.OperationStep> Steps {
+      get { return steps_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as OperationProgress);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(OperationProgress other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!steps_.Equals(other.steps_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= steps_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      steps_.WriteTo(output, _repeated_steps_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      steps_.WriteTo(ref output, _repeated_steps_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += steps_.CalculateSize(_repeated_steps_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(OperationProgress other) {
+      if (other == null) {
+        return;
+      }
+      steps_.Add(other.steps_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            steps_.AddEntriesFrom(input, _repeated_steps_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            steps_.AddEntriesFrom(ref input, _repeated_steps_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Message describing the status of a single step in a cluster mutation
+  /// long-running operation.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class OperationStep : pb::IMessage<OperationStep>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<OperationStep> _parser = new pb::MessageParser<OperationStep>(() => new OperationStep());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<OperationStep> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OperationStep() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OperationStep(OperationStep other) : this() {
+      state_ = other.state_;
+      switch (other.TypeCase) {
+        case TypeOneofCase.CreateNetwork:
+          CreateNetwork = other.CreateNetwork.Clone();
+          break;
+        case TypeOneofCase.CreatePrivateServiceAccess:
+          CreatePrivateServiceAccess = other.CreatePrivateServiceAccess.Clone();
+          break;
+        case TypeOneofCase.CreateFilestoreInstance:
+          CreateFilestoreInstance = other.CreateFilestoreInstance.Clone();
+          break;
+        case TypeOneofCase.CreateStorageBucket:
+          CreateStorageBucket = other.CreateStorageBucket.Clone();
+          break;
+        case TypeOneofCase.CreateLustreInstance:
+          CreateLustreInstance = other.CreateLustreInstance.Clone();
+          break;
+        case TypeOneofCase.CreateOrchestrator:
+          CreateOrchestrator = other.CreateOrchestrator.Clone();
+          break;
+        case TypeOneofCase.CreateNodeset:
+          CreateNodeset = other.CreateNodeset.Clone();
+          break;
+        case TypeOneofCase.CreatePartition:
+          CreatePartition = other.CreatePartition.Clone();
+          break;
+        case TypeOneofCase.CreateLoginNode:
+          CreateLoginNode = other.CreateLoginNode.Clone();
+          break;
+        case TypeOneofCase.CheckClusterHealth:
+          CheckClusterHealth = other.CheckClusterHealth.Clone();
+          break;
+        case TypeOneofCase.UpdateOrchestrator:
+          UpdateOrchestrator = other.UpdateOrchestrator.Clone();
+          break;
+        case TypeOneofCase.UpdateNodeset:
+          UpdateNodeset = other.UpdateNodeset.Clone();
+          break;
+        case TypeOneofCase.UpdatePartition:
+          UpdatePartition = other.UpdatePartition.Clone();
+          break;
+        case TypeOneofCase.UpdateLoginNode:
+          UpdateLoginNode = other.UpdateLoginNode.Clone();
+          break;
+        case TypeOneofCase.DeleteOrchestrator:
+          DeleteOrchestrator = other.DeleteOrchestrator.Clone();
+          break;
+        case TypeOneofCase.DeleteNodeset:
+          DeleteNodeset = other.DeleteNodeset.Clone();
+          break;
+        case TypeOneofCase.DeletePartition:
+          DeletePartition = other.DeletePartition.Clone();
+          break;
+        case TypeOneofCase.DeleteLoginNode:
+          DeleteLoginNode = other.DeleteLoginNode.Clone();
+          break;
+        case TypeOneofCase.DeleteFilestoreInstance:
+          DeleteFilestoreInstance = other.DeleteFilestoreInstance.Clone();
+          break;
+        case TypeOneofCase.DeleteStorageBucket:
+          DeleteStorageBucket = other.DeleteStorageBucket.Clone();
+          break;
+        case TypeOneofCase.DeleteLustreInstance:
+          DeleteLustreInstance = other.DeleteLustreInstance.Clone();
+          break;
+        case TypeOneofCase.DeletePrivateServiceAccess:
+          DeletePrivateServiceAccess = other.DeletePrivateServiceAccess.Clone();
+          break;
+        case TypeOneofCase.DeleteNetwork:
+          DeleteNetwork = other.DeleteNetwork.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OperationStep Clone() {
+      return new OperationStep(this);
+    }
+
+    /// <summary>Field number for the "create_network" field.</summary>
+    public const int CreateNetworkFieldNumber = 2;
+    /// <summary>
+    /// Output only. If set, indicates that new network creation is part of the
+    /// operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.CreateNetwork CreateNetwork {
+      get { return typeCase_ == TypeOneofCase.CreateNetwork ? (global::Google.Cloud.HypercomputeCluster.V1Beta.CreateNetwork) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.CreateNetwork;
+      }
+    }
+
+    /// <summary>Field number for the "create_private_service_access" field.</summary>
+    public const int CreatePrivateServiceAccessFieldNumber = 3;
+    /// <summary>
+    /// Output only. If set, indicates that new private service access creation
+    /// is part of the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.CreatePrivateServiceAccess CreatePrivateServiceAccess {
+      get { return typeCase_ == TypeOneofCase.CreatePrivateServiceAccess ? (global::Google.Cloud.HypercomputeCluster.V1Beta.CreatePrivateServiceAccess) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.CreatePrivateServiceAccess;
+      }
+    }
+
+    /// <summary>Field number for the "create_filestore_instance" field.</summary>
+    public const int CreateFilestoreInstanceFieldNumber = 4;
+    /// <summary>
+    /// Output only. If set, indicates that new Filestore instance creation is
+    /// part of the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.CreateFilestoreInstance CreateFilestoreInstance {
+      get { return typeCase_ == TypeOneofCase.CreateFilestoreInstance ? (global::Google.Cloud.HypercomputeCluster.V1Beta.CreateFilestoreInstance) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.CreateFilestoreInstance;
+      }
+    }
+
+    /// <summary>Field number for the "create_storage_bucket" field.</summary>
+    public const int CreateStorageBucketFieldNumber = 5;
+    /// <summary>
+    /// Output only. If set, indicates that new Cloud Storage bucket creation is
+    /// part of the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.CreateStorageBucket CreateStorageBucket {
+      get { return typeCase_ == TypeOneofCase.CreateStorageBucket ? (global::Google.Cloud.HypercomputeCluster.V1Beta.CreateStorageBucket) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.CreateStorageBucket;
+      }
+    }
+
+    /// <summary>Field number for the "create_lustre_instance" field.</summary>
+    public const int CreateLustreInstanceFieldNumber = 6;
+    /// <summary>
+    /// Output only. If set, indicates that new Lustre instance creation is part
+    /// of the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.CreateLustreInstance CreateLustreInstance {
+      get { return typeCase_ == TypeOneofCase.CreateLustreInstance ? (global::Google.Cloud.HypercomputeCluster.V1Beta.CreateLustreInstance) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.CreateLustreInstance;
+      }
+    }
+
+    /// <summary>Field number for the "create_orchestrator" field.</summary>
+    public const int CreateOrchestratorFieldNumber = 8;
+    /// <summary>
+    /// Output only. If set, indicates that orchestrator creation is part of the
+    /// operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.CreateOrchestrator CreateOrchestrator {
+      get { return typeCase_ == TypeOneofCase.CreateOrchestrator ? (global::Google.Cloud.HypercomputeCluster.V1Beta.CreateOrchestrator) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.CreateOrchestrator;
+      }
+    }
+
+    /// <summary>Field number for the "create_nodeset" field.</summary>
+    public const int CreateNodesetFieldNumber = 9;
+    /// <summary>
+    /// Output only. If set, indicates that new nodeset creation is part of the
+    /// operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.CreateNodeset CreateNodeset {
+      get { return typeCase_ == TypeOneofCase.CreateNodeset ? (global::Google.Cloud.HypercomputeCluster.V1Beta.CreateNodeset) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.CreateNodeset;
+      }
+    }
+
+    /// <summary>Field number for the "create_partition" field.</summary>
+    public const int CreatePartitionFieldNumber = 10;
+    /// <summary>
+    /// Output only. If set, indicates that new partition creation is part of the
+    /// operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.CreatePartition CreatePartition {
+      get { return typeCase_ == TypeOneofCase.CreatePartition ? (global::Google.Cloud.HypercomputeCluster.V1Beta.CreatePartition) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.CreatePartition;
+      }
+    }
+
+    /// <summary>Field number for the "create_login_node" field.</summary>
+    public const int CreateLoginNodeFieldNumber = 11;
+    /// <summary>
+    /// Output only. If set, indicates that new login node creation is part of
+    /// the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.CreateLoginNode CreateLoginNode {
+      get { return typeCase_ == TypeOneofCase.CreateLoginNode ? (global::Google.Cloud.HypercomputeCluster.V1Beta.CreateLoginNode) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.CreateLoginNode;
+      }
+    }
+
+    /// <summary>Field number for the "check_cluster_health" field.</summary>
+    public const int CheckClusterHealthFieldNumber = 12;
+    /// <summary>
+    /// Output only. If set, indicates that cluster health check is part of the
+    /// operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.CheckClusterHealth CheckClusterHealth {
+      get { return typeCase_ == TypeOneofCase.CheckClusterHealth ? (global::Google.Cloud.HypercomputeCluster.V1Beta.CheckClusterHealth) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.CheckClusterHealth;
+      }
+    }
+
+    /// <summary>Field number for the "update_orchestrator" field.</summary>
+    public const int UpdateOrchestratorFieldNumber = 13;
+    /// <summary>
+    /// Output only. If set, indicates that an orchestrator update is part of the
+    /// operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateOrchestrator UpdateOrchestrator {
+      get { return typeCase_ == TypeOneofCase.UpdateOrchestrator ? (global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateOrchestrator) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.UpdateOrchestrator;
+      }
+    }
+
+    /// <summary>Field number for the "update_nodeset" field.</summary>
+    public const int UpdateNodesetFieldNumber = 14;
+    /// <summary>
+    /// Output only. If set, indicates that nodeset update is part of the
+    /// operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateNodeset UpdateNodeset {
+      get { return typeCase_ == TypeOneofCase.UpdateNodeset ? (global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateNodeset) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.UpdateNodeset;
+      }
+    }
+
+    /// <summary>Field number for the "update_partition" field.</summary>
+    public const int UpdatePartitionFieldNumber = 15;
+    /// <summary>
+    /// Output only. If set, indicates that partition update is part of the
+    /// operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.UpdatePartition UpdatePartition {
+      get { return typeCase_ == TypeOneofCase.UpdatePartition ? (global::Google.Cloud.HypercomputeCluster.V1Beta.UpdatePartition) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.UpdatePartition;
+      }
+    }
+
+    /// <summary>Field number for the "update_login_node" field.</summary>
+    public const int UpdateLoginNodeFieldNumber = 16;
+    /// <summary>
+    /// Output only. If set, indicates that login node update is part of the
+    /// operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateLoginNode UpdateLoginNode {
+      get { return typeCase_ == TypeOneofCase.UpdateLoginNode ? (global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateLoginNode) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.UpdateLoginNode;
+      }
+    }
+
+    /// <summary>Field number for the "delete_orchestrator" field.</summary>
+    public const int DeleteOrchestratorFieldNumber = 18;
+    /// <summary>
+    /// Output only. If set, indicates that orchestrator deletion is part of the
+    /// operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteOrchestrator DeleteOrchestrator {
+      get { return typeCase_ == TypeOneofCase.DeleteOrchestrator ? (global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteOrchestrator) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.DeleteOrchestrator;
+      }
+    }
+
+    /// <summary>Field number for the "delete_nodeset" field.</summary>
+    public const int DeleteNodesetFieldNumber = 19;
+    /// <summary>
+    /// Output only. If set, indicates that nodeset deletion is part of the
+    /// operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteNodeset DeleteNodeset {
+      get { return typeCase_ == TypeOneofCase.DeleteNodeset ? (global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteNodeset) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.DeleteNodeset;
+      }
+    }
+
+    /// <summary>Field number for the "delete_partition" field.</summary>
+    public const int DeletePartitionFieldNumber = 20;
+    /// <summary>
+    /// Output only. If set, indicates that partition deletion is part of the
+    /// operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.DeletePartition DeletePartition {
+      get { return typeCase_ == TypeOneofCase.DeletePartition ? (global::Google.Cloud.HypercomputeCluster.V1Beta.DeletePartition) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.DeletePartition;
+      }
+    }
+
+    /// <summary>Field number for the "delete_login_node" field.</summary>
+    public const int DeleteLoginNodeFieldNumber = 21;
+    /// <summary>
+    /// Output only. If set, indicates that login node deletion is part of the
+    /// operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteLoginNode DeleteLoginNode {
+      get { return typeCase_ == TypeOneofCase.DeleteLoginNode ? (global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteLoginNode) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.DeleteLoginNode;
+      }
+    }
+
+    /// <summary>Field number for the "delete_filestore_instance" field.</summary>
+    public const int DeleteFilestoreInstanceFieldNumber = 22;
+    /// <summary>
+    /// Output only. If set, indicates that Filestore instance deletion is part
+    /// of the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteFilestoreInstance DeleteFilestoreInstance {
+      get { return typeCase_ == TypeOneofCase.DeleteFilestoreInstance ? (global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteFilestoreInstance) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.DeleteFilestoreInstance;
+      }
+    }
+
+    /// <summary>Field number for the "delete_storage_bucket" field.</summary>
+    public const int DeleteStorageBucketFieldNumber = 23;
+    /// <summary>
+    /// Output only. If set, indicates that Cloud Storage bucket deletion is part
+    /// of the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteStorageBucket DeleteStorageBucket {
+      get { return typeCase_ == TypeOneofCase.DeleteStorageBucket ? (global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteStorageBucket) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.DeleteStorageBucket;
+      }
+    }
+
+    /// <summary>Field number for the "delete_lustre_instance" field.</summary>
+    public const int DeleteLustreInstanceFieldNumber = 24;
+    /// <summary>
+    /// Output only. If set, indicates that Lustre instance deletion is part of
+    /// the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteLustreInstance DeleteLustreInstance {
+      get { return typeCase_ == TypeOneofCase.DeleteLustreInstance ? (global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteLustreInstance) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.DeleteLustreInstance;
+      }
+    }
+
+    /// <summary>Field number for the "delete_private_service_access" field.</summary>
+    public const int DeletePrivateServiceAccessFieldNumber = 25;
+    /// <summary>
+    /// Output only. If set, indicates that private service access deletion is
+    /// part of the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.DeletePrivateServiceAccess DeletePrivateServiceAccess {
+      get { return typeCase_ == TypeOneofCase.DeletePrivateServiceAccess ? (global::Google.Cloud.HypercomputeCluster.V1Beta.DeletePrivateServiceAccess) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.DeletePrivateServiceAccess;
+      }
+    }
+
+    /// <summary>Field number for the "delete_network" field.</summary>
+    public const int DeleteNetworkFieldNumber = 26;
+    /// <summary>
+    /// Output only. If set, indicates that network deletion is part of the
+    /// operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteNetwork DeleteNetwork {
+      get { return typeCase_ == TypeOneofCase.DeleteNetwork ? (global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteNetwork) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.DeleteNetwork;
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 1;
+    private global::Google.Cloud.HypercomputeCluster.V1Beta.OperationStep.Types.State state_ = global::Google.Cloud.HypercomputeCluster.V1Beta.OperationStep.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. State of the operation step.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.HypercomputeCluster.V1Beta.OperationStep.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    private object type_;
+    /// <summary>Enum of possible cases for the "type" oneof.</summary>
+    public enum TypeOneofCase {
+      None = 0,
+      CreateNetwork = 2,
+      CreatePrivateServiceAccess = 3,
+      CreateFilestoreInstance = 4,
+      CreateStorageBucket = 5,
+      CreateLustreInstance = 6,
+      CreateOrchestrator = 8,
+      CreateNodeset = 9,
+      CreatePartition = 10,
+      CreateLoginNode = 11,
+      CheckClusterHealth = 12,
+      UpdateOrchestrator = 13,
+      UpdateNodeset = 14,
+      UpdatePartition = 15,
+      UpdateLoginNode = 16,
+      DeleteOrchestrator = 18,
+      DeleteNodeset = 19,
+      DeletePartition = 20,
+      DeleteLoginNode = 21,
+      DeleteFilestoreInstance = 22,
+      DeleteStorageBucket = 23,
+      DeleteLustreInstance = 24,
+      DeletePrivateServiceAccess = 25,
+      DeleteNetwork = 26,
+    }
+    private TypeOneofCase typeCase_ = TypeOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TypeOneofCase TypeCase {
+      get { return typeCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearType() {
+      typeCase_ = TypeOneofCase.None;
+      type_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as OperationStep);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(OperationStep other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(CreateNetwork, other.CreateNetwork)) return false;
+      if (!object.Equals(CreatePrivateServiceAccess, other.CreatePrivateServiceAccess)) return false;
+      if (!object.Equals(CreateFilestoreInstance, other.CreateFilestoreInstance)) return false;
+      if (!object.Equals(CreateStorageBucket, other.CreateStorageBucket)) return false;
+      if (!object.Equals(CreateLustreInstance, other.CreateLustreInstance)) return false;
+      if (!object.Equals(CreateOrchestrator, other.CreateOrchestrator)) return false;
+      if (!object.Equals(CreateNodeset, other.CreateNodeset)) return false;
+      if (!object.Equals(CreatePartition, other.CreatePartition)) return false;
+      if (!object.Equals(CreateLoginNode, other.CreateLoginNode)) return false;
+      if (!object.Equals(CheckClusterHealth, other.CheckClusterHealth)) return false;
+      if (!object.Equals(UpdateOrchestrator, other.UpdateOrchestrator)) return false;
+      if (!object.Equals(UpdateNodeset, other.UpdateNodeset)) return false;
+      if (!object.Equals(UpdatePartition, other.UpdatePartition)) return false;
+      if (!object.Equals(UpdateLoginNode, other.UpdateLoginNode)) return false;
+      if (!object.Equals(DeleteOrchestrator, other.DeleteOrchestrator)) return false;
+      if (!object.Equals(DeleteNodeset, other.DeleteNodeset)) return false;
+      if (!object.Equals(DeletePartition, other.DeletePartition)) return false;
+      if (!object.Equals(DeleteLoginNode, other.DeleteLoginNode)) return false;
+      if (!object.Equals(DeleteFilestoreInstance, other.DeleteFilestoreInstance)) return false;
+      if (!object.Equals(DeleteStorageBucket, other.DeleteStorageBucket)) return false;
+      if (!object.Equals(DeleteLustreInstance, other.DeleteLustreInstance)) return false;
+      if (!object.Equals(DeletePrivateServiceAccess, other.DeletePrivateServiceAccess)) return false;
+      if (!object.Equals(DeleteNetwork, other.DeleteNetwork)) return false;
+      if (State != other.State) return false;
+      if (TypeCase != other.TypeCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (typeCase_ == TypeOneofCase.CreateNetwork) hash ^= CreateNetwork.GetHashCode();
+      if (typeCase_ == TypeOneofCase.CreatePrivateServiceAccess) hash ^= CreatePrivateServiceAccess.GetHashCode();
+      if (typeCase_ == TypeOneofCase.CreateFilestoreInstance) hash ^= CreateFilestoreInstance.GetHashCode();
+      if (typeCase_ == TypeOneofCase.CreateStorageBucket) hash ^= CreateStorageBucket.GetHashCode();
+      if (typeCase_ == TypeOneofCase.CreateLustreInstance) hash ^= CreateLustreInstance.GetHashCode();
+      if (typeCase_ == TypeOneofCase.CreateOrchestrator) hash ^= CreateOrchestrator.GetHashCode();
+      if (typeCase_ == TypeOneofCase.CreateNodeset) hash ^= CreateNodeset.GetHashCode();
+      if (typeCase_ == TypeOneofCase.CreatePartition) hash ^= CreatePartition.GetHashCode();
+      if (typeCase_ == TypeOneofCase.CreateLoginNode) hash ^= CreateLoginNode.GetHashCode();
+      if (typeCase_ == TypeOneofCase.CheckClusterHealth) hash ^= CheckClusterHealth.GetHashCode();
+      if (typeCase_ == TypeOneofCase.UpdateOrchestrator) hash ^= UpdateOrchestrator.GetHashCode();
+      if (typeCase_ == TypeOneofCase.UpdateNodeset) hash ^= UpdateNodeset.GetHashCode();
+      if (typeCase_ == TypeOneofCase.UpdatePartition) hash ^= UpdatePartition.GetHashCode();
+      if (typeCase_ == TypeOneofCase.UpdateLoginNode) hash ^= UpdateLoginNode.GetHashCode();
+      if (typeCase_ == TypeOneofCase.DeleteOrchestrator) hash ^= DeleteOrchestrator.GetHashCode();
+      if (typeCase_ == TypeOneofCase.DeleteNodeset) hash ^= DeleteNodeset.GetHashCode();
+      if (typeCase_ == TypeOneofCase.DeletePartition) hash ^= DeletePartition.GetHashCode();
+      if (typeCase_ == TypeOneofCase.DeleteLoginNode) hash ^= DeleteLoginNode.GetHashCode();
+      if (typeCase_ == TypeOneofCase.DeleteFilestoreInstance) hash ^= DeleteFilestoreInstance.GetHashCode();
+      if (typeCase_ == TypeOneofCase.DeleteStorageBucket) hash ^= DeleteStorageBucket.GetHashCode();
+      if (typeCase_ == TypeOneofCase.DeleteLustreInstance) hash ^= DeleteLustreInstance.GetHashCode();
+      if (typeCase_ == TypeOneofCase.DeletePrivateServiceAccess) hash ^= DeletePrivateServiceAccess.GetHashCode();
+      if (typeCase_ == TypeOneofCase.DeleteNetwork) hash ^= DeleteNetwork.GetHashCode();
+      if (State != global::Google.Cloud.HypercomputeCluster.V1Beta.OperationStep.Types.State.Unspecified) hash ^= State.GetHashCode();
+      hash ^= (int) typeCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (State != global::Google.Cloud.HypercomputeCluster.V1Beta.OperationStep.Types.State.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) State);
+      }
+      if (typeCase_ == TypeOneofCase.CreateNetwork) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateNetwork);
+      }
+      if (typeCase_ == TypeOneofCase.CreatePrivateServiceAccess) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreatePrivateServiceAccess);
+      }
+      if (typeCase_ == TypeOneofCase.CreateFilestoreInstance) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CreateFilestoreInstance);
+      }
+      if (typeCase_ == TypeOneofCase.CreateStorageBucket) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CreateStorageBucket);
+      }
+      if (typeCase_ == TypeOneofCase.CreateLustreInstance) {
+        output.WriteRawTag(50);
+        output.WriteMessage(CreateLustreInstance);
+      }
+      if (typeCase_ == TypeOneofCase.CreateOrchestrator) {
+        output.WriteRawTag(66);
+        output.WriteMessage(CreateOrchestrator);
+      }
+      if (typeCase_ == TypeOneofCase.CreateNodeset) {
+        output.WriteRawTag(74);
+        output.WriteMessage(CreateNodeset);
+      }
+      if (typeCase_ == TypeOneofCase.CreatePartition) {
+        output.WriteRawTag(82);
+        output.WriteMessage(CreatePartition);
+      }
+      if (typeCase_ == TypeOneofCase.CreateLoginNode) {
+        output.WriteRawTag(90);
+        output.WriteMessage(CreateLoginNode);
+      }
+      if (typeCase_ == TypeOneofCase.CheckClusterHealth) {
+        output.WriteRawTag(98);
+        output.WriteMessage(CheckClusterHealth);
+      }
+      if (typeCase_ == TypeOneofCase.UpdateOrchestrator) {
+        output.WriteRawTag(106);
+        output.WriteMessage(UpdateOrchestrator);
+      }
+      if (typeCase_ == TypeOneofCase.UpdateNodeset) {
+        output.WriteRawTag(114);
+        output.WriteMessage(UpdateNodeset);
+      }
+      if (typeCase_ == TypeOneofCase.UpdatePartition) {
+        output.WriteRawTag(122);
+        output.WriteMessage(UpdatePartition);
+      }
+      if (typeCase_ == TypeOneofCase.UpdateLoginNode) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(UpdateLoginNode);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteOrchestrator) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(DeleteOrchestrator);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteNodeset) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(DeleteNodeset);
+      }
+      if (typeCase_ == TypeOneofCase.DeletePartition) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(DeletePartition);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteLoginNode) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(DeleteLoginNode);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteFilestoreInstance) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(DeleteFilestoreInstance);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteStorageBucket) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(DeleteStorageBucket);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteLustreInstance) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(DeleteLustreInstance);
+      }
+      if (typeCase_ == TypeOneofCase.DeletePrivateServiceAccess) {
+        output.WriteRawTag(202, 1);
+        output.WriteMessage(DeletePrivateServiceAccess);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteNetwork) {
+        output.WriteRawTag(210, 1);
+        output.WriteMessage(DeleteNetwork);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (State != global::Google.Cloud.HypercomputeCluster.V1Beta.OperationStep.Types.State.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) State);
+      }
+      if (typeCase_ == TypeOneofCase.CreateNetwork) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateNetwork);
+      }
+      if (typeCase_ == TypeOneofCase.CreatePrivateServiceAccess) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreatePrivateServiceAccess);
+      }
+      if (typeCase_ == TypeOneofCase.CreateFilestoreInstance) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CreateFilestoreInstance);
+      }
+      if (typeCase_ == TypeOneofCase.CreateStorageBucket) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CreateStorageBucket);
+      }
+      if (typeCase_ == TypeOneofCase.CreateLustreInstance) {
+        output.WriteRawTag(50);
+        output.WriteMessage(CreateLustreInstance);
+      }
+      if (typeCase_ == TypeOneofCase.CreateOrchestrator) {
+        output.WriteRawTag(66);
+        output.WriteMessage(CreateOrchestrator);
+      }
+      if (typeCase_ == TypeOneofCase.CreateNodeset) {
+        output.WriteRawTag(74);
+        output.WriteMessage(CreateNodeset);
+      }
+      if (typeCase_ == TypeOneofCase.CreatePartition) {
+        output.WriteRawTag(82);
+        output.WriteMessage(CreatePartition);
+      }
+      if (typeCase_ == TypeOneofCase.CreateLoginNode) {
+        output.WriteRawTag(90);
+        output.WriteMessage(CreateLoginNode);
+      }
+      if (typeCase_ == TypeOneofCase.CheckClusterHealth) {
+        output.WriteRawTag(98);
+        output.WriteMessage(CheckClusterHealth);
+      }
+      if (typeCase_ == TypeOneofCase.UpdateOrchestrator) {
+        output.WriteRawTag(106);
+        output.WriteMessage(UpdateOrchestrator);
+      }
+      if (typeCase_ == TypeOneofCase.UpdateNodeset) {
+        output.WriteRawTag(114);
+        output.WriteMessage(UpdateNodeset);
+      }
+      if (typeCase_ == TypeOneofCase.UpdatePartition) {
+        output.WriteRawTag(122);
+        output.WriteMessage(UpdatePartition);
+      }
+      if (typeCase_ == TypeOneofCase.UpdateLoginNode) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(UpdateLoginNode);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteOrchestrator) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(DeleteOrchestrator);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteNodeset) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(DeleteNodeset);
+      }
+      if (typeCase_ == TypeOneofCase.DeletePartition) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(DeletePartition);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteLoginNode) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(DeleteLoginNode);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteFilestoreInstance) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(DeleteFilestoreInstance);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteStorageBucket) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(DeleteStorageBucket);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteLustreInstance) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(DeleteLustreInstance);
+      }
+      if (typeCase_ == TypeOneofCase.DeletePrivateServiceAccess) {
+        output.WriteRawTag(202, 1);
+        output.WriteMessage(DeletePrivateServiceAccess);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteNetwork) {
+        output.WriteRawTag(210, 1);
+        output.WriteMessage(DeleteNetwork);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (typeCase_ == TypeOneofCase.CreateNetwork) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateNetwork);
+      }
+      if (typeCase_ == TypeOneofCase.CreatePrivateServiceAccess) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreatePrivateServiceAccess);
+      }
+      if (typeCase_ == TypeOneofCase.CreateFilestoreInstance) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateFilestoreInstance);
+      }
+      if (typeCase_ == TypeOneofCase.CreateStorageBucket) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateStorageBucket);
+      }
+      if (typeCase_ == TypeOneofCase.CreateLustreInstance) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateLustreInstance);
+      }
+      if (typeCase_ == TypeOneofCase.CreateOrchestrator) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateOrchestrator);
+      }
+      if (typeCase_ == TypeOneofCase.CreateNodeset) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateNodeset);
+      }
+      if (typeCase_ == TypeOneofCase.CreatePartition) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreatePartition);
+      }
+      if (typeCase_ == TypeOneofCase.CreateLoginNode) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateLoginNode);
+      }
+      if (typeCase_ == TypeOneofCase.CheckClusterHealth) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CheckClusterHealth);
+      }
+      if (typeCase_ == TypeOneofCase.UpdateOrchestrator) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateOrchestrator);
+      }
+      if (typeCase_ == TypeOneofCase.UpdateNodeset) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateNodeset);
+      }
+      if (typeCase_ == TypeOneofCase.UpdatePartition) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdatePartition);
+      }
+      if (typeCase_ == TypeOneofCase.UpdateLoginNode) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(UpdateLoginNode);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteOrchestrator) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DeleteOrchestrator);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteNodeset) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DeleteNodeset);
+      }
+      if (typeCase_ == TypeOneofCase.DeletePartition) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DeletePartition);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteLoginNode) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DeleteLoginNode);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteFilestoreInstance) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DeleteFilestoreInstance);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteStorageBucket) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DeleteStorageBucket);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteLustreInstance) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DeleteLustreInstance);
+      }
+      if (typeCase_ == TypeOneofCase.DeletePrivateServiceAccess) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DeletePrivateServiceAccess);
+      }
+      if (typeCase_ == TypeOneofCase.DeleteNetwork) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DeleteNetwork);
+      }
+      if (State != global::Google.Cloud.HypercomputeCluster.V1Beta.OperationStep.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(OperationStep other) {
+      if (other == null) {
+        return;
+      }
+      if (other.State != global::Google.Cloud.HypercomputeCluster.V1Beta.OperationStep.Types.State.Unspecified) {
+        State = other.State;
+      }
+      switch (other.TypeCase) {
+        case TypeOneofCase.CreateNetwork:
+          if (CreateNetwork == null) {
+            CreateNetwork = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateNetwork();
+          }
+          CreateNetwork.MergeFrom(other.CreateNetwork);
+          break;
+        case TypeOneofCase.CreatePrivateServiceAccess:
+          if (CreatePrivateServiceAccess == null) {
+            CreatePrivateServiceAccess = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreatePrivateServiceAccess();
+          }
+          CreatePrivateServiceAccess.MergeFrom(other.CreatePrivateServiceAccess);
+          break;
+        case TypeOneofCase.CreateFilestoreInstance:
+          if (CreateFilestoreInstance == null) {
+            CreateFilestoreInstance = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateFilestoreInstance();
+          }
+          CreateFilestoreInstance.MergeFrom(other.CreateFilestoreInstance);
+          break;
+        case TypeOneofCase.CreateStorageBucket:
+          if (CreateStorageBucket == null) {
+            CreateStorageBucket = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateStorageBucket();
+          }
+          CreateStorageBucket.MergeFrom(other.CreateStorageBucket);
+          break;
+        case TypeOneofCase.CreateLustreInstance:
+          if (CreateLustreInstance == null) {
+            CreateLustreInstance = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateLustreInstance();
+          }
+          CreateLustreInstance.MergeFrom(other.CreateLustreInstance);
+          break;
+        case TypeOneofCase.CreateOrchestrator:
+          if (CreateOrchestrator == null) {
+            CreateOrchestrator = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateOrchestrator();
+          }
+          CreateOrchestrator.MergeFrom(other.CreateOrchestrator);
+          break;
+        case TypeOneofCase.CreateNodeset:
+          if (CreateNodeset == null) {
+            CreateNodeset = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateNodeset();
+          }
+          CreateNodeset.MergeFrom(other.CreateNodeset);
+          break;
+        case TypeOneofCase.CreatePartition:
+          if (CreatePartition == null) {
+            CreatePartition = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreatePartition();
+          }
+          CreatePartition.MergeFrom(other.CreatePartition);
+          break;
+        case TypeOneofCase.CreateLoginNode:
+          if (CreateLoginNode == null) {
+            CreateLoginNode = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateLoginNode();
+          }
+          CreateLoginNode.MergeFrom(other.CreateLoginNode);
+          break;
+        case TypeOneofCase.CheckClusterHealth:
+          if (CheckClusterHealth == null) {
+            CheckClusterHealth = new global::Google.Cloud.HypercomputeCluster.V1Beta.CheckClusterHealth();
+          }
+          CheckClusterHealth.MergeFrom(other.CheckClusterHealth);
+          break;
+        case TypeOneofCase.UpdateOrchestrator:
+          if (UpdateOrchestrator == null) {
+            UpdateOrchestrator = new global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateOrchestrator();
+          }
+          UpdateOrchestrator.MergeFrom(other.UpdateOrchestrator);
+          break;
+        case TypeOneofCase.UpdateNodeset:
+          if (UpdateNodeset == null) {
+            UpdateNodeset = new global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateNodeset();
+          }
+          UpdateNodeset.MergeFrom(other.UpdateNodeset);
+          break;
+        case TypeOneofCase.UpdatePartition:
+          if (UpdatePartition == null) {
+            UpdatePartition = new global::Google.Cloud.HypercomputeCluster.V1Beta.UpdatePartition();
+          }
+          UpdatePartition.MergeFrom(other.UpdatePartition);
+          break;
+        case TypeOneofCase.UpdateLoginNode:
+          if (UpdateLoginNode == null) {
+            UpdateLoginNode = new global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateLoginNode();
+          }
+          UpdateLoginNode.MergeFrom(other.UpdateLoginNode);
+          break;
+        case TypeOneofCase.DeleteOrchestrator:
+          if (DeleteOrchestrator == null) {
+            DeleteOrchestrator = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteOrchestrator();
+          }
+          DeleteOrchestrator.MergeFrom(other.DeleteOrchestrator);
+          break;
+        case TypeOneofCase.DeleteNodeset:
+          if (DeleteNodeset == null) {
+            DeleteNodeset = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteNodeset();
+          }
+          DeleteNodeset.MergeFrom(other.DeleteNodeset);
+          break;
+        case TypeOneofCase.DeletePartition:
+          if (DeletePartition == null) {
+            DeletePartition = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeletePartition();
+          }
+          DeletePartition.MergeFrom(other.DeletePartition);
+          break;
+        case TypeOneofCase.DeleteLoginNode:
+          if (DeleteLoginNode == null) {
+            DeleteLoginNode = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteLoginNode();
+          }
+          DeleteLoginNode.MergeFrom(other.DeleteLoginNode);
+          break;
+        case TypeOneofCase.DeleteFilestoreInstance:
+          if (DeleteFilestoreInstance == null) {
+            DeleteFilestoreInstance = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteFilestoreInstance();
+          }
+          DeleteFilestoreInstance.MergeFrom(other.DeleteFilestoreInstance);
+          break;
+        case TypeOneofCase.DeleteStorageBucket:
+          if (DeleteStorageBucket == null) {
+            DeleteStorageBucket = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteStorageBucket();
+          }
+          DeleteStorageBucket.MergeFrom(other.DeleteStorageBucket);
+          break;
+        case TypeOneofCase.DeleteLustreInstance:
+          if (DeleteLustreInstance == null) {
+            DeleteLustreInstance = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteLustreInstance();
+          }
+          DeleteLustreInstance.MergeFrom(other.DeleteLustreInstance);
+          break;
+        case TypeOneofCase.DeletePrivateServiceAccess:
+          if (DeletePrivateServiceAccess == null) {
+            DeletePrivateServiceAccess = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeletePrivateServiceAccess();
+          }
+          DeletePrivateServiceAccess.MergeFrom(other.DeletePrivateServiceAccess);
+          break;
+        case TypeOneofCase.DeleteNetwork:
+          if (DeleteNetwork == null) {
+            DeleteNetwork = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteNetwork();
+          }
+          DeleteNetwork.MergeFrom(other.DeleteNetwork);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            State = (global::Google.Cloud.HypercomputeCluster.V1Beta.OperationStep.Types.State) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.CreateNetwork subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateNetwork();
+            if (typeCase_ == TypeOneofCase.CreateNetwork) {
+              subBuilder.MergeFrom(CreateNetwork);
+            }
+            input.ReadMessage(subBuilder);
+            CreateNetwork = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.CreatePrivateServiceAccess subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreatePrivateServiceAccess();
+            if (typeCase_ == TypeOneofCase.CreatePrivateServiceAccess) {
+              subBuilder.MergeFrom(CreatePrivateServiceAccess);
+            }
+            input.ReadMessage(subBuilder);
+            CreatePrivateServiceAccess = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.CreateFilestoreInstance subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateFilestoreInstance();
+            if (typeCase_ == TypeOneofCase.CreateFilestoreInstance) {
+              subBuilder.MergeFrom(CreateFilestoreInstance);
+            }
+            input.ReadMessage(subBuilder);
+            CreateFilestoreInstance = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.CreateStorageBucket subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateStorageBucket();
+            if (typeCase_ == TypeOneofCase.CreateStorageBucket) {
+              subBuilder.MergeFrom(CreateStorageBucket);
+            }
+            input.ReadMessage(subBuilder);
+            CreateStorageBucket = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.CreateLustreInstance subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateLustreInstance();
+            if (typeCase_ == TypeOneofCase.CreateLustreInstance) {
+              subBuilder.MergeFrom(CreateLustreInstance);
+            }
+            input.ReadMessage(subBuilder);
+            CreateLustreInstance = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.CreateOrchestrator subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateOrchestrator();
+            if (typeCase_ == TypeOneofCase.CreateOrchestrator) {
+              subBuilder.MergeFrom(CreateOrchestrator);
+            }
+            input.ReadMessage(subBuilder);
+            CreateOrchestrator = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.CreateNodeset subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateNodeset();
+            if (typeCase_ == TypeOneofCase.CreateNodeset) {
+              subBuilder.MergeFrom(CreateNodeset);
+            }
+            input.ReadMessage(subBuilder);
+            CreateNodeset = subBuilder;
+            break;
+          }
+          case 82: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.CreatePartition subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreatePartition();
+            if (typeCase_ == TypeOneofCase.CreatePartition) {
+              subBuilder.MergeFrom(CreatePartition);
+            }
+            input.ReadMessage(subBuilder);
+            CreatePartition = subBuilder;
+            break;
+          }
+          case 90: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.CreateLoginNode subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateLoginNode();
+            if (typeCase_ == TypeOneofCase.CreateLoginNode) {
+              subBuilder.MergeFrom(CreateLoginNode);
+            }
+            input.ReadMessage(subBuilder);
+            CreateLoginNode = subBuilder;
+            break;
+          }
+          case 98: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.CheckClusterHealth subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.CheckClusterHealth();
+            if (typeCase_ == TypeOneofCase.CheckClusterHealth) {
+              subBuilder.MergeFrom(CheckClusterHealth);
+            }
+            input.ReadMessage(subBuilder);
+            CheckClusterHealth = subBuilder;
+            break;
+          }
+          case 106: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateOrchestrator subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateOrchestrator();
+            if (typeCase_ == TypeOneofCase.UpdateOrchestrator) {
+              subBuilder.MergeFrom(UpdateOrchestrator);
+            }
+            input.ReadMessage(subBuilder);
+            UpdateOrchestrator = subBuilder;
+            break;
+          }
+          case 114: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateNodeset subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateNodeset();
+            if (typeCase_ == TypeOneofCase.UpdateNodeset) {
+              subBuilder.MergeFrom(UpdateNodeset);
+            }
+            input.ReadMessage(subBuilder);
+            UpdateNodeset = subBuilder;
+            break;
+          }
+          case 122: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.UpdatePartition subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.UpdatePartition();
+            if (typeCase_ == TypeOneofCase.UpdatePartition) {
+              subBuilder.MergeFrom(UpdatePartition);
+            }
+            input.ReadMessage(subBuilder);
+            UpdatePartition = subBuilder;
+            break;
+          }
+          case 130: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateLoginNode subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateLoginNode();
+            if (typeCase_ == TypeOneofCase.UpdateLoginNode) {
+              subBuilder.MergeFrom(UpdateLoginNode);
+            }
+            input.ReadMessage(subBuilder);
+            UpdateLoginNode = subBuilder;
+            break;
+          }
+          case 146: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteOrchestrator subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteOrchestrator();
+            if (typeCase_ == TypeOneofCase.DeleteOrchestrator) {
+              subBuilder.MergeFrom(DeleteOrchestrator);
+            }
+            input.ReadMessage(subBuilder);
+            DeleteOrchestrator = subBuilder;
+            break;
+          }
+          case 154: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteNodeset subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteNodeset();
+            if (typeCase_ == TypeOneofCase.DeleteNodeset) {
+              subBuilder.MergeFrom(DeleteNodeset);
+            }
+            input.ReadMessage(subBuilder);
+            DeleteNodeset = subBuilder;
+            break;
+          }
+          case 162: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.DeletePartition subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeletePartition();
+            if (typeCase_ == TypeOneofCase.DeletePartition) {
+              subBuilder.MergeFrom(DeletePartition);
+            }
+            input.ReadMessage(subBuilder);
+            DeletePartition = subBuilder;
+            break;
+          }
+          case 170: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteLoginNode subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteLoginNode();
+            if (typeCase_ == TypeOneofCase.DeleteLoginNode) {
+              subBuilder.MergeFrom(DeleteLoginNode);
+            }
+            input.ReadMessage(subBuilder);
+            DeleteLoginNode = subBuilder;
+            break;
+          }
+          case 178: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteFilestoreInstance subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteFilestoreInstance();
+            if (typeCase_ == TypeOneofCase.DeleteFilestoreInstance) {
+              subBuilder.MergeFrom(DeleteFilestoreInstance);
+            }
+            input.ReadMessage(subBuilder);
+            DeleteFilestoreInstance = subBuilder;
+            break;
+          }
+          case 186: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteStorageBucket subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteStorageBucket();
+            if (typeCase_ == TypeOneofCase.DeleteStorageBucket) {
+              subBuilder.MergeFrom(DeleteStorageBucket);
+            }
+            input.ReadMessage(subBuilder);
+            DeleteStorageBucket = subBuilder;
+            break;
+          }
+          case 194: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteLustreInstance subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteLustreInstance();
+            if (typeCase_ == TypeOneofCase.DeleteLustreInstance) {
+              subBuilder.MergeFrom(DeleteLustreInstance);
+            }
+            input.ReadMessage(subBuilder);
+            DeleteLustreInstance = subBuilder;
+            break;
+          }
+          case 202: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.DeletePrivateServiceAccess subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeletePrivateServiceAccess();
+            if (typeCase_ == TypeOneofCase.DeletePrivateServiceAccess) {
+              subBuilder.MergeFrom(DeletePrivateServiceAccess);
+            }
+            input.ReadMessage(subBuilder);
+            DeletePrivateServiceAccess = subBuilder;
+            break;
+          }
+          case 210: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteNetwork subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteNetwork();
+            if (typeCase_ == TypeOneofCase.DeleteNetwork) {
+              subBuilder.MergeFrom(DeleteNetwork);
+            }
+            input.ReadMessage(subBuilder);
+            DeleteNetwork = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            State = (global::Google.Cloud.HypercomputeCluster.V1Beta.OperationStep.Types.State) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.CreateNetwork subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateNetwork();
+            if (typeCase_ == TypeOneofCase.CreateNetwork) {
+              subBuilder.MergeFrom(CreateNetwork);
+            }
+            input.ReadMessage(subBuilder);
+            CreateNetwork = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.CreatePrivateServiceAccess subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreatePrivateServiceAccess();
+            if (typeCase_ == TypeOneofCase.CreatePrivateServiceAccess) {
+              subBuilder.MergeFrom(CreatePrivateServiceAccess);
+            }
+            input.ReadMessage(subBuilder);
+            CreatePrivateServiceAccess = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.CreateFilestoreInstance subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateFilestoreInstance();
+            if (typeCase_ == TypeOneofCase.CreateFilestoreInstance) {
+              subBuilder.MergeFrom(CreateFilestoreInstance);
+            }
+            input.ReadMessage(subBuilder);
+            CreateFilestoreInstance = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.CreateStorageBucket subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateStorageBucket();
+            if (typeCase_ == TypeOneofCase.CreateStorageBucket) {
+              subBuilder.MergeFrom(CreateStorageBucket);
+            }
+            input.ReadMessage(subBuilder);
+            CreateStorageBucket = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.CreateLustreInstance subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateLustreInstance();
+            if (typeCase_ == TypeOneofCase.CreateLustreInstance) {
+              subBuilder.MergeFrom(CreateLustreInstance);
+            }
+            input.ReadMessage(subBuilder);
+            CreateLustreInstance = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.CreateOrchestrator subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateOrchestrator();
+            if (typeCase_ == TypeOneofCase.CreateOrchestrator) {
+              subBuilder.MergeFrom(CreateOrchestrator);
+            }
+            input.ReadMessage(subBuilder);
+            CreateOrchestrator = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.CreateNodeset subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateNodeset();
+            if (typeCase_ == TypeOneofCase.CreateNodeset) {
+              subBuilder.MergeFrom(CreateNodeset);
+            }
+            input.ReadMessage(subBuilder);
+            CreateNodeset = subBuilder;
+            break;
+          }
+          case 82: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.CreatePartition subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreatePartition();
+            if (typeCase_ == TypeOneofCase.CreatePartition) {
+              subBuilder.MergeFrom(CreatePartition);
+            }
+            input.ReadMessage(subBuilder);
+            CreatePartition = subBuilder;
+            break;
+          }
+          case 90: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.CreateLoginNode subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.CreateLoginNode();
+            if (typeCase_ == TypeOneofCase.CreateLoginNode) {
+              subBuilder.MergeFrom(CreateLoginNode);
+            }
+            input.ReadMessage(subBuilder);
+            CreateLoginNode = subBuilder;
+            break;
+          }
+          case 98: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.CheckClusterHealth subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.CheckClusterHealth();
+            if (typeCase_ == TypeOneofCase.CheckClusterHealth) {
+              subBuilder.MergeFrom(CheckClusterHealth);
+            }
+            input.ReadMessage(subBuilder);
+            CheckClusterHealth = subBuilder;
+            break;
+          }
+          case 106: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateOrchestrator subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateOrchestrator();
+            if (typeCase_ == TypeOneofCase.UpdateOrchestrator) {
+              subBuilder.MergeFrom(UpdateOrchestrator);
+            }
+            input.ReadMessage(subBuilder);
+            UpdateOrchestrator = subBuilder;
+            break;
+          }
+          case 114: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateNodeset subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateNodeset();
+            if (typeCase_ == TypeOneofCase.UpdateNodeset) {
+              subBuilder.MergeFrom(UpdateNodeset);
+            }
+            input.ReadMessage(subBuilder);
+            UpdateNodeset = subBuilder;
+            break;
+          }
+          case 122: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.UpdatePartition subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.UpdatePartition();
+            if (typeCase_ == TypeOneofCase.UpdatePartition) {
+              subBuilder.MergeFrom(UpdatePartition);
+            }
+            input.ReadMessage(subBuilder);
+            UpdatePartition = subBuilder;
+            break;
+          }
+          case 130: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateLoginNode subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.UpdateLoginNode();
+            if (typeCase_ == TypeOneofCase.UpdateLoginNode) {
+              subBuilder.MergeFrom(UpdateLoginNode);
+            }
+            input.ReadMessage(subBuilder);
+            UpdateLoginNode = subBuilder;
+            break;
+          }
+          case 146: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteOrchestrator subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteOrchestrator();
+            if (typeCase_ == TypeOneofCase.DeleteOrchestrator) {
+              subBuilder.MergeFrom(DeleteOrchestrator);
+            }
+            input.ReadMessage(subBuilder);
+            DeleteOrchestrator = subBuilder;
+            break;
+          }
+          case 154: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteNodeset subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteNodeset();
+            if (typeCase_ == TypeOneofCase.DeleteNodeset) {
+              subBuilder.MergeFrom(DeleteNodeset);
+            }
+            input.ReadMessage(subBuilder);
+            DeleteNodeset = subBuilder;
+            break;
+          }
+          case 162: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.DeletePartition subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeletePartition();
+            if (typeCase_ == TypeOneofCase.DeletePartition) {
+              subBuilder.MergeFrom(DeletePartition);
+            }
+            input.ReadMessage(subBuilder);
+            DeletePartition = subBuilder;
+            break;
+          }
+          case 170: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteLoginNode subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteLoginNode();
+            if (typeCase_ == TypeOneofCase.DeleteLoginNode) {
+              subBuilder.MergeFrom(DeleteLoginNode);
+            }
+            input.ReadMessage(subBuilder);
+            DeleteLoginNode = subBuilder;
+            break;
+          }
+          case 178: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteFilestoreInstance subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteFilestoreInstance();
+            if (typeCase_ == TypeOneofCase.DeleteFilestoreInstance) {
+              subBuilder.MergeFrom(DeleteFilestoreInstance);
+            }
+            input.ReadMessage(subBuilder);
+            DeleteFilestoreInstance = subBuilder;
+            break;
+          }
+          case 186: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteStorageBucket subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteStorageBucket();
+            if (typeCase_ == TypeOneofCase.DeleteStorageBucket) {
+              subBuilder.MergeFrom(DeleteStorageBucket);
+            }
+            input.ReadMessage(subBuilder);
+            DeleteStorageBucket = subBuilder;
+            break;
+          }
+          case 194: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteLustreInstance subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteLustreInstance();
+            if (typeCase_ == TypeOneofCase.DeleteLustreInstance) {
+              subBuilder.MergeFrom(DeleteLustreInstance);
+            }
+            input.ReadMessage(subBuilder);
+            DeleteLustreInstance = subBuilder;
+            break;
+          }
+          case 202: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.DeletePrivateServiceAccess subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeletePrivateServiceAccess();
+            if (typeCase_ == TypeOneofCase.DeletePrivateServiceAccess) {
+              subBuilder.MergeFrom(DeletePrivateServiceAccess);
+            }
+            input.ReadMessage(subBuilder);
+            DeletePrivateServiceAccess = subBuilder;
+            break;
+          }
+          case 210: {
+            global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteNetwork subBuilder = new global::Google.Cloud.HypercomputeCluster.V1Beta.DeleteNetwork();
+            if (typeCase_ == TypeOneofCase.DeleteNetwork) {
+              subBuilder.MergeFrom(DeleteNetwork);
+            }
+            input.ReadMessage(subBuilder);
+            DeleteNetwork = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the OperationStep message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// State of the operation step.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// Unspecified state.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Initial state before step execution starts.
+        /// </summary>
+        [pbr::OriginalName("WAITING")] Waiting = 1,
+        /// <summary>
+        /// Step execution is running in progress.
+        /// </summary>
+        [pbr::OriginalName("IN_PROGRESS")] InProgress = 2,
+        /// <summary>
+        /// Step execution is completed.
+        /// </summary>
+        [pbr::OriginalName("DONE")] Done = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that a new network should be created.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateNetwork : pb::IMessage<CreateNetwork>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateNetwork> _parser = new pb::MessageParser<CreateNetwork>(() => new CreateNetwork());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateNetwork> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateNetwork() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateNetwork(CreateNetwork other) : this() {
+      network_ = other.network_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateNetwork Clone() {
+      return new CreateNetwork(this);
+    }
+
+    /// <summary>Field number for the "network" field.</summary>
+    public const int NetworkFieldNumber = 1;
+    private string network_ = "";
+    /// <summary>
+    /// Output only. Name of the network to create, in the format
+    /// `projects/{project}/global/networks/{network}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Network {
+      get { return network_; }
+      set {
+        network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateNetwork);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateNetwork other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Network != other.Network) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Network.Length != 0) hash ^= Network.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Network.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Network);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Network.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Network);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Network.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Network);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateNetwork other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Network.Length != 0) {
+        Network = other.Network;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Network = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Network = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that a new private service access should
+  /// be created.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreatePrivateServiceAccess : pb::IMessage<CreatePrivateServiceAccess>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreatePrivateServiceAccess> _parser = new pb::MessageParser<CreatePrivateServiceAccess>(() => new CreatePrivateServiceAccess());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreatePrivateServiceAccess> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreatePrivateServiceAccess() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreatePrivateServiceAccess(CreatePrivateServiceAccess other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreatePrivateServiceAccess Clone() {
+      return new CreatePrivateServiceAccess(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreatePrivateServiceAccess);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreatePrivateServiceAccess other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreatePrivateServiceAccess other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that a new filestore instance should be
+  /// created.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateFilestoreInstance : pb::IMessage<CreateFilestoreInstance>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateFilestoreInstance> _parser = new pb::MessageParser<CreateFilestoreInstance>(() => new CreateFilestoreInstance());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateFilestoreInstance> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateFilestoreInstance() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateFilestoreInstance(CreateFilestoreInstance other) : this() {
+      filestore_ = other.filestore_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateFilestoreInstance Clone() {
+      return new CreateFilestoreInstance(this);
+    }
+
+    /// <summary>Field number for the "filestore" field.</summary>
+    public const int FilestoreFieldNumber = 1;
+    private string filestore_ = "";
+    /// <summary>
+    /// Output only. Name of the Filestore instance, in the format
+    /// `projects/{project}/locations/{location}/instances/{instance}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filestore {
+      get { return filestore_; }
+      set {
+        filestore_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateFilestoreInstance);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateFilestoreInstance other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Filestore != other.Filestore) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Filestore.Length != 0) hash ^= Filestore.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Filestore.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Filestore);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Filestore.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Filestore);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Filestore.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filestore);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateFilestoreInstance other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Filestore.Length != 0) {
+        Filestore = other.Filestore;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Filestore = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Filestore = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that a new storage bucket should be
+  /// created.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateStorageBucket : pb::IMessage<CreateStorageBucket>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateStorageBucket> _parser = new pb::MessageParser<CreateStorageBucket>(() => new CreateStorageBucket());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateStorageBucket> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateStorageBucket() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateStorageBucket(CreateStorageBucket other) : this() {
+      bucket_ = other.bucket_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateStorageBucket Clone() {
+      return new CreateStorageBucket(this);
+    }
+
+    /// <summary>Field number for the "bucket" field.</summary>
+    public const int BucketFieldNumber = 1;
+    private string bucket_ = "";
+    /// <summary>
+    /// Output only. Name of the bucket.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Bucket {
+      get { return bucket_; }
+      set {
+        bucket_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateStorageBucket);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateStorageBucket other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Bucket != other.Bucket) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Bucket.Length != 0) hash ^= Bucket.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Bucket.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Bucket);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Bucket.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Bucket);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Bucket.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Bucket);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateStorageBucket other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Bucket.Length != 0) {
+        Bucket = other.Bucket;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Bucket = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Bucket = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that a new lustre instance should be
+  /// created.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateLustreInstance : pb::IMessage<CreateLustreInstance>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateLustreInstance> _parser = new pb::MessageParser<CreateLustreInstance>(() => new CreateLustreInstance());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateLustreInstance> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateLustreInstance() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateLustreInstance(CreateLustreInstance other) : this() {
+      lustre_ = other.lustre_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateLustreInstance Clone() {
+      return new CreateLustreInstance(this);
+    }
+
+    /// <summary>Field number for the "lustre" field.</summary>
+    public const int LustreFieldNumber = 1;
+    private string lustre_ = "";
+    /// <summary>
+    /// Output only. Name of the Managed Lustre instance, in the format
+    /// `projects/{project}/locations/{location}/instances/{instance}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Lustre {
+      get { return lustre_; }
+      set {
+        lustre_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateLustreInstance);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateLustreInstance other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Lustre != other.Lustre) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Lustre.Length != 0) hash ^= Lustre.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Lustre.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Lustre);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Lustre.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Lustre);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Lustre.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Lustre);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateLustreInstance other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Lustre.Length != 0) {
+        Lustre = other.Lustre;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Lustre = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Lustre = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that an orchestrator should be created.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateOrchestrator : pb::IMessage<CreateOrchestrator>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateOrchestrator> _parser = new pb::MessageParser<CreateOrchestrator>(() => new CreateOrchestrator());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateOrchestrator> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateOrchestrator() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateOrchestrator(CreateOrchestrator other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateOrchestrator Clone() {
+      return new CreateOrchestrator(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateOrchestrator);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateOrchestrator other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateOrchestrator other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that a nodeset should be created.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateNodeset : pb::IMessage<CreateNodeset>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateNodeset> _parser = new pb::MessageParser<CreateNodeset>(() => new CreateNodeset());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateNodeset> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateNodeset() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateNodeset(CreateNodeset other) : this() {
+      nodesets_ = other.nodesets_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateNodeset Clone() {
+      return new CreateNodeset(this);
+    }
+
+    /// <summary>Field number for the "nodesets" field.</summary>
+    public const int NodesetsFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_nodesets_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> nodesets_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. Name of the nodeset to create
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Nodesets {
+      get { return nodesets_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateNodeset);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateNodeset other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!nodesets_.Equals(other.nodesets_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= nodesets_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      nodesets_.WriteTo(output, _repeated_nodesets_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      nodesets_.WriteTo(ref output, _repeated_nodesets_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += nodesets_.CalculateSize(_repeated_nodesets_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateNodeset other) {
+      if (other == null) {
+        return;
+      }
+      nodesets_.Add(other.nodesets_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            nodesets_.AddEntriesFrom(input, _repeated_nodesets_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            nodesets_.AddEntriesFrom(ref input, _repeated_nodesets_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that a partition should be created.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreatePartition : pb::IMessage<CreatePartition>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreatePartition> _parser = new pb::MessageParser<CreatePartition>(() => new CreatePartition());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreatePartition> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreatePartition() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreatePartition(CreatePartition other) : this() {
+      partitions_ = other.partitions_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreatePartition Clone() {
+      return new CreatePartition(this);
+    }
+
+    /// <summary>Field number for the "partitions" field.</summary>
+    public const int PartitionsFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_partitions_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> partitions_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. Name of the partition to create
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Partitions {
+      get { return partitions_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreatePartition);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreatePartition other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!partitions_.Equals(other.partitions_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= partitions_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      partitions_.WriteTo(output, _repeated_partitions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      partitions_.WriteTo(ref output, _repeated_partitions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += partitions_.CalculateSize(_repeated_partitions_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreatePartition other) {
+      if (other == null) {
+        return;
+      }
+      partitions_.Add(other.partitions_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            partitions_.AddEntriesFrom(input, _repeated_partitions_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            partitions_.AddEntriesFrom(ref input, _repeated_partitions_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that a login node should be created.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateLoginNode : pb::IMessage<CreateLoginNode>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateLoginNode> _parser = new pb::MessageParser<CreateLoginNode>(() => new CreateLoginNode());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateLoginNode> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateLoginNode() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateLoginNode(CreateLoginNode other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateLoginNode Clone() {
+      return new CreateLoginNode(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateLoginNode);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateLoginNode other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateLoginNode other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that cluster health check should be
+  /// performed.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CheckClusterHealth : pb::IMessage<CheckClusterHealth>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CheckClusterHealth> _parser = new pb::MessageParser<CheckClusterHealth>(() => new CheckClusterHealth());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CheckClusterHealth> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CheckClusterHealth() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CheckClusterHealth(CheckClusterHealth other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CheckClusterHealth Clone() {
+      return new CheckClusterHealth(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CheckClusterHealth);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CheckClusterHealth other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CheckClusterHealth other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that an orchestrator should be updated.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateOrchestrator : pb::IMessage<UpdateOrchestrator>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateOrchestrator> _parser = new pb::MessageParser<UpdateOrchestrator>(() => new UpdateOrchestrator());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateOrchestrator> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateOrchestrator() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateOrchestrator(UpdateOrchestrator other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateOrchestrator Clone() {
+      return new UpdateOrchestrator(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateOrchestrator);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateOrchestrator other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateOrchestrator other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that a nodeset should be updated.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateNodeset : pb::IMessage<UpdateNodeset>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateNodeset> _parser = new pb::MessageParser<UpdateNodeset>(() => new UpdateNodeset());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateNodeset> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateNodeset() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateNodeset(UpdateNodeset other) : this() {
+      nodesets_ = other.nodesets_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateNodeset Clone() {
+      return new UpdateNodeset(this);
+    }
+
+    /// <summary>Field number for the "nodesets" field.</summary>
+    public const int NodesetsFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_nodesets_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> nodesets_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. Name of the nodeset to update
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Nodesets {
+      get { return nodesets_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateNodeset);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateNodeset other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!nodesets_.Equals(other.nodesets_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= nodesets_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      nodesets_.WriteTo(output, _repeated_nodesets_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      nodesets_.WriteTo(ref output, _repeated_nodesets_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += nodesets_.CalculateSize(_repeated_nodesets_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateNodeset other) {
+      if (other == null) {
+        return;
+      }
+      nodesets_.Add(other.nodesets_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            nodesets_.AddEntriesFrom(input, _repeated_nodesets_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            nodesets_.AddEntriesFrom(ref input, _repeated_nodesets_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that a partition should be updated.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdatePartition : pb::IMessage<UpdatePartition>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdatePartition> _parser = new pb::MessageParser<UpdatePartition>(() => new UpdatePartition());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdatePartition> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdatePartition() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdatePartition(UpdatePartition other) : this() {
+      partitions_ = other.partitions_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdatePartition Clone() {
+      return new UpdatePartition(this);
+    }
+
+    /// <summary>Field number for the "partitions" field.</summary>
+    public const int PartitionsFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_partitions_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> partitions_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. Name of the partition to update
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Partitions {
+      get { return partitions_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdatePartition);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdatePartition other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!partitions_.Equals(other.partitions_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= partitions_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      partitions_.WriteTo(output, _repeated_partitions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      partitions_.WriteTo(ref output, _repeated_partitions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += partitions_.CalculateSize(_repeated_partitions_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdatePartition other) {
+      if (other == null) {
+        return;
+      }
+      partitions_.Add(other.partitions_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            partitions_.AddEntriesFrom(input, _repeated_partitions_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            partitions_.AddEntriesFrom(ref input, _repeated_partitions_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that a login node should be updated.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateLoginNode : pb::IMessage<UpdateLoginNode>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateLoginNode> _parser = new pb::MessageParser<UpdateLoginNode>(() => new UpdateLoginNode());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateLoginNode> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateLoginNode() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateLoginNode(UpdateLoginNode other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateLoginNode Clone() {
+      return new UpdateLoginNode(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateLoginNode);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateLoginNode other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateLoginNode other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that an orchestrator should be deleted.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteOrchestrator : pb::IMessage<DeleteOrchestrator>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteOrchestrator> _parser = new pb::MessageParser<DeleteOrchestrator>(() => new DeleteOrchestrator());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteOrchestrator> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteOrchestrator() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteOrchestrator(DeleteOrchestrator other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteOrchestrator Clone() {
+      return new DeleteOrchestrator(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteOrchestrator);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteOrchestrator other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteOrchestrator other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that a nodeset should be deleted.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteNodeset : pb::IMessage<DeleteNodeset>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteNodeset> _parser = new pb::MessageParser<DeleteNodeset>(() => new DeleteNodeset());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteNodeset> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteNodeset() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteNodeset(DeleteNodeset other) : this() {
+      nodesets_ = other.nodesets_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteNodeset Clone() {
+      return new DeleteNodeset(this);
+    }
+
+    /// <summary>Field number for the "nodesets" field.</summary>
+    public const int NodesetsFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_nodesets_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> nodesets_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. Name of the nodeset to delete
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Nodesets {
+      get { return nodesets_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteNodeset);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteNodeset other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!nodesets_.Equals(other.nodesets_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= nodesets_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      nodesets_.WriteTo(output, _repeated_nodesets_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      nodesets_.WriteTo(ref output, _repeated_nodesets_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += nodesets_.CalculateSize(_repeated_nodesets_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteNodeset other) {
+      if (other == null) {
+        return;
+      }
+      nodesets_.Add(other.nodesets_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            nodesets_.AddEntriesFrom(input, _repeated_nodesets_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            nodesets_.AddEntriesFrom(ref input, _repeated_nodesets_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that a partition should be deleted.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeletePartition : pb::IMessage<DeletePartition>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeletePartition> _parser = new pb::MessageParser<DeletePartition>(() => new DeletePartition());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeletePartition> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeletePartition() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeletePartition(DeletePartition other) : this() {
+      partitions_ = other.partitions_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeletePartition Clone() {
+      return new DeletePartition(this);
+    }
+
+    /// <summary>Field number for the "partitions" field.</summary>
+    public const int PartitionsFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_partitions_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> partitions_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. Name of the partition to delete
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Partitions {
+      get { return partitions_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeletePartition);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeletePartition other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!partitions_.Equals(other.partitions_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= partitions_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      partitions_.WriteTo(output, _repeated_partitions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      partitions_.WriteTo(ref output, _repeated_partitions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += partitions_.CalculateSize(_repeated_partitions_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeletePartition other) {
+      if (other == null) {
+        return;
+      }
+      partitions_.Add(other.partitions_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            partitions_.AddEntriesFrom(input, _repeated_partitions_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            partitions_.AddEntriesFrom(ref input, _repeated_partitions_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that a login node should be deleted.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteLoginNode : pb::IMessage<DeleteLoginNode>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteLoginNode> _parser = new pb::MessageParser<DeleteLoginNode>(() => new DeleteLoginNode());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteLoginNode> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[20]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteLoginNode() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteLoginNode(DeleteLoginNode other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteLoginNode Clone() {
+      return new DeleteLoginNode(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteLoginNode);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteLoginNode other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteLoginNode other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that a Filestore instance should be
+  /// deleted.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteFilestoreInstance : pb::IMessage<DeleteFilestoreInstance>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteFilestoreInstance> _parser = new pb::MessageParser<DeleteFilestoreInstance>(() => new DeleteFilestoreInstance());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteFilestoreInstance> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteFilestoreInstance() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteFilestoreInstance(DeleteFilestoreInstance other) : this() {
+      filestore_ = other.filestore_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteFilestoreInstance Clone() {
+      return new DeleteFilestoreInstance(this);
+    }
+
+    /// <summary>Field number for the "filestore" field.</summary>
+    public const int FilestoreFieldNumber = 1;
+    private string filestore_ = "";
+    /// <summary>
+    /// Output only. Name of the Filestore instance, in the format
+    /// `projects/{project}/locations/{location}/instances/{instance}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filestore {
+      get { return filestore_; }
+      set {
+        filestore_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteFilestoreInstance);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteFilestoreInstance other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Filestore != other.Filestore) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Filestore.Length != 0) hash ^= Filestore.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Filestore.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Filestore);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Filestore.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Filestore);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Filestore.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filestore);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteFilestoreInstance other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Filestore.Length != 0) {
+        Filestore = other.Filestore;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Filestore = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Filestore = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that Cloud Storage bucket should be
+  /// deleted.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteStorageBucket : pb::IMessage<DeleteStorageBucket>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteStorageBucket> _parser = new pb::MessageParser<DeleteStorageBucket>(() => new DeleteStorageBucket());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteStorageBucket> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[22]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteStorageBucket() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteStorageBucket(DeleteStorageBucket other) : this() {
+      bucket_ = other.bucket_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteStorageBucket Clone() {
+      return new DeleteStorageBucket(this);
+    }
+
+    /// <summary>Field number for the "bucket" field.</summary>
+    public const int BucketFieldNumber = 1;
+    private string bucket_ = "";
+    /// <summary>
+    /// Output only. Name of the bucket.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Bucket {
+      get { return bucket_; }
+      set {
+        bucket_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteStorageBucket);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteStorageBucket other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Bucket != other.Bucket) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Bucket.Length != 0) hash ^= Bucket.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Bucket.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Bucket);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Bucket.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Bucket);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Bucket.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Bucket);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteStorageBucket other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Bucket.Length != 0) {
+        Bucket = other.Bucket;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Bucket = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Bucket = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates that a Lustre instance should be
+  /// deleted.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteLustreInstance : pb::IMessage<DeleteLustreInstance>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteLustreInstance> _parser = new pb::MessageParser<DeleteLustreInstance>(() => new DeleteLustreInstance());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteLustreInstance> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[23]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteLustreInstance() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteLustreInstance(DeleteLustreInstance other) : this() {
+      lustre_ = other.lustre_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteLustreInstance Clone() {
+      return new DeleteLustreInstance(this);
+    }
+
+    /// <summary>Field number for the "lustre" field.</summary>
+    public const int LustreFieldNumber = 1;
+    private string lustre_ = "";
+    /// <summary>
+    /// Output only. Name of the Managed Lustre instance, in the format
+    /// `projects/{project}/locations/{location}/instances/{instance}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Lustre {
+      get { return lustre_; }
+      set {
+        lustre_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteLustreInstance);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteLustreInstance other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Lustre != other.Lustre) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Lustre.Length != 0) hash ^= Lustre.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Lustre.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Lustre);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Lustre.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Lustre);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Lustre.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Lustre);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteLustreInstance other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Lustre.Length != 0) {
+        Lustre = other.Lustre;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Lustre = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Lustre = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates private service access deletion
+  /// step.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeletePrivateServiceAccess : pb::IMessage<DeletePrivateServiceAccess>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeletePrivateServiceAccess> _parser = new pb::MessageParser<DeletePrivateServiceAccess>(() => new DeletePrivateServiceAccess());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeletePrivateServiceAccess> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[24]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeletePrivateServiceAccess() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeletePrivateServiceAccess(DeletePrivateServiceAccess other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeletePrivateServiceAccess Clone() {
+      return new DeletePrivateServiceAccess(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeletePrivateServiceAccess);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeletePrivateServiceAccess other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeletePrivateServiceAccess other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When set in OperationStep, indicates network deletion step with the
+  /// resource name.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteNetwork : pb::IMessage<DeleteNetwork>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteNetwork> _parser = new pb::MessageParser<DeleteNetwork>(() => new DeleteNetwork());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteNetwork> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadataReflection.Descriptor.MessageTypes[25]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteNetwork() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteNetwork(DeleteNetwork other) : this() {
+      network_ = other.network_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteNetwork Clone() {
+      return new DeleteNetwork(this);
+    }
+
+    /// <summary>Field number for the "network" field.</summary>
+    public const int NetworkFieldNumber = 1;
+    private string network_ = "";
+    /// <summary>
+    /// Output only. Name of the network to delete, in the format
+    /// `projects/{project}/global/networks/{network}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Network {
+      get { return network_; }
+      set {
+        network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteNetwork);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteNetwork other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Network != other.Network) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Network.Length != 0) hash ^= Network.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Network.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Network);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Network.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Network);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Network.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Network);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteNetwork other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Network.Length != 0) {
+        Network = other.Network;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Network = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Network = input.ReadString();
             break;
           }
         }

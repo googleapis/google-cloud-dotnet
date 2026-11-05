@@ -34,6 +34,12 @@
                 "ListClustersAsync"
               ]
             },
+            "ListNodes": {
+              "methods": [
+                "ListNodes",
+                "ListNodesAsync"
+              ]
+            },
             "UpdateCluster": {
               "methods": [
                 "UpdateCluster",

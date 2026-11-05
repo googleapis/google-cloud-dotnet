@@ -1421,6 +1421,325 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_ListNodes_sync",
+      "title": "ListNodesRequestObject",
+      "description": "Snippet for ListNodes",
+      "file": "HypercomputeClusterClient.ListNodesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNodes",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.ListNodes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.ListNodesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.HypercomputeCluster.V1Beta.ListNodesResponse, Google.Cloud.HypercomputeCluster.V1Beta.Node>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "ListNodes",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.ListNodes",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_ListNodes_async",
+      "title": "ListNodesRequestObjectAsync",
+      "description": "Snippet for ListNodesAsync",
+      "file": "HypercomputeClusterClient.ListNodesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNodesAsync",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.ListNodesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.ListNodesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.HypercomputeCluster.V1Beta.ListNodesResponse, Google.Cloud.HypercomputeCluster.V1Beta.Node>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "ListNodes",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.ListNodes",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_ListNodes_sync_flattened",
+      "title": "ListNodes",
+      "description": "Snippet for ListNodes",
+      "file": "HypercomputeClusterClient.ListNodesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNodes",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.ListNodes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.HypercomputeCluster.V1Beta.ListNodesResponse, Google.Cloud.HypercomputeCluster.V1Beta.Node>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "ListNodes",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.ListNodes",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_ListNodes_async_flattened",
+      "title": "ListNodesAsync",
+      "description": "Snippet for ListNodesAsync",
+      "file": "HypercomputeClusterClient.ListNodesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNodesAsync",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.ListNodesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.HypercomputeCluster.V1Beta.ListNodesResponse, Google.Cloud.HypercomputeCluster.V1Beta.Node>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "ListNodes",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.ListNodes",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_ListNodes_sync_flattened_resourceNames",
+      "title": "ListNodesResourceNames",
+      "description": "Snippet for ListNodes",
+      "file": "HypercomputeClusterClient.ListNodesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNodes",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.ListNodes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.HypercomputeCluster.V1Beta.ListNodesResponse, Google.Cloud.HypercomputeCluster.V1Beta.Node>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "ListNodes",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.ListNodes",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_ListNodes_async_flattened_resourceNames",
+      "title": "ListNodesResourceNamesAsync",
+      "description": "Snippet for ListNodesAsync",
+      "file": "HypercomputeClusterClient.ListNodesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNodesAsync",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.ListNodesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.HypercomputeCluster.V1Beta.ListNodesResponse, Google.Cloud.HypercomputeCluster.V1Beta.Node>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "ListNodes",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.ListNodes",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
