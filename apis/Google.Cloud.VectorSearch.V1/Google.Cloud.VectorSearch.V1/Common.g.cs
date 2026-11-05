@@ -25,16 +25,17 @@ namespace Google.Cloud.VectorSearch.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvdmVjdG9yc2VhcmNoL3YxL2NvbW1vbi5wcm90bxIc",
-            "Z29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52MSpXCg5EaXN0YW5jZU1ldHJp",
-            "YxIfChtESVNUQU5DRV9NRVRSSUNfVU5TUEVDSUZJRUQQABIPCgtET1RfUFJP",
-            "RFVDVBABEhMKD0NPU0lORV9ESVNUQU5DRRACQtcBCiBjb20uZ29vZ2xlLmNs",
-            "b3VkLnZlY3RvcnNlYXJjaC52MUILQ29tbW9uUHJvdG9QAVpEY2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby92ZWN0b3JzZWFyY2gvYXBpdjEvdmVjdG9yc2VhcmNocGI7",
-            "dmVjdG9yc2VhcmNocGKqAhxHb29nbGUuQ2xvdWQuVmVjdG9yU2VhcmNoLlYx",
-            "ygIcR29vZ2xlXENsb3VkXFZlY3RvclNlYXJjaFxWMeoCH0dvb2dsZTo6Q2xv",
-            "dWQ6OlZlY3RvclNlYXJjaDo6VjFiBnByb3RvMw=="));
+            "Z29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52MRofZ29vZ2xlL2FwaS9maWVs",
+            "ZF9iZWhhdmlvci5wcm90bypXCg5EaXN0YW5jZU1ldHJpYxIfChtESVNUQU5D",
+            "RV9NRVRSSUNfVU5TUEVDSUZJRUQQABIPCgtET1RfUFJPRFVDVBABEhMKD0NP",
+            "U0lORV9ESVNUQU5DRRACQtcBCiBjb20uZ29vZ2xlLmNsb3VkLnZlY3RvcnNl",
+            "YXJjaC52MUILQ29tbW9uUHJvdG9QAVpEY2xvdWQuZ29vZ2xlLmNvbS9nby92",
+            "ZWN0b3JzZWFyY2gvYXBpdjEvdmVjdG9yc2VhcmNocGI7dmVjdG9yc2VhcmNo",
+            "cGKqAhxHb29nbGUuQ2xvdWQuVmVjdG9yU2VhcmNoLlYxygIcR29vZ2xlXENs",
+            "b3VkXFZlY3RvclNlYXJjaFxWMeoCH0dvb2dsZTo6Q2xvdWQ6OlZlY3RvclNl",
+            "YXJjaDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.VectorSearch.V1.DistanceMetric), }, null, null));
     }
     #endregion
