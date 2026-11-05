@@ -68,6 +68,8 @@ namespace Google.Cloud.Sql.V1
             SwitchoverSettings = existing.SwitchoverSettings;
             ResetSslConfigSettings = existing.ResetSslConfigSettings;
             RestartSettings = existing.RestartSettings;
+            StartSettings = existing.StartSettings;
+            StopSettings = existing.StopSettings;
             RestoreBackupSettings = existing.RestoreBackupSettings;
             RotateServerCaSettings = existing.RotateServerCaSettings;
             RotateServerCertificateSettings = existing.RotateServerCertificateSettings;
@@ -84,11 +86,13 @@ namespace Google.Cloud.Sql.V1
             GetDiskShrinkConfigSettings = existing.GetDiskShrinkConfigSettings;
             ResetReplicaSizeSettings = existing.ResetReplicaSizeSettings;
             GetLatestRecoveryTimeSettings = existing.GetLatestRecoveryTimeSettings;
+            ExecuteSqlReadOnlySettings = existing.ExecuteSqlReadOnlySettings;
             ExecuteSqlSettings = existing.ExecuteSqlSettings;
             AcquireSsrsLeaseSettings = existing.AcquireSsrsLeaseSettings;
             ReleaseSsrsLeaseSettings = existing.ReleaseSsrsLeaseSettings;
             PreCheckMajorVersionUpgradeSettings = existing.PreCheckMajorVersionUpgradeSettings;
             PointInTimeRestoreSettings = existing.PointInTimeRestoreSettings;
+            ReconcileNetworkingSettings = existing.ReconcileNetworkingSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -365,6 +369,30 @@ namespace Google.Cloud.Sql.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SqlInstancesServiceClient.Start</c> and <c>SqlInstancesServiceClient.StartAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StartSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SqlInstancesServiceClient.Stop</c> and <c>SqlInstancesServiceClient.StopAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StopSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SqlInstancesServiceClient.RestoreBackup</c> and <c>SqlInstancesServiceClient.RestoreBackupAsync</c>.
         /// </summary>
         /// <remarks>
@@ -566,6 +594,19 @@ namespace Google.Cloud.Sql.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SqlInstancesServiceClient.ExecuteSqlReadOnly</c> and <c>SqlInstancesServiceClient.ExecuteSqlReadOnlyAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExecuteSqlReadOnlySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SqlInstancesServiceClient.ExecuteSql</c> and <c>SqlInstancesServiceClient.ExecuteSqlAsync</c>.
         /// </summary>
         /// <remarks>
@@ -627,6 +668,19 @@ namespace Google.Cloud.Sql.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings PointInTimeRestoreSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SqlInstancesServiceClient.ReconcileNetworking</c> and
+        /// <c>SqlInstancesServiceClient.ReconcileNetworkingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ReconcileNetworkingSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1497,6 +1551,60 @@ namespace Google.Cloud.Sql.V1
             RestartAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Starts a Cloud SQL instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Operation Start(SqlInstancesStartRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Starts a Cloud SQL instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> StartAsync(SqlInstancesStartRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Starts a Cloud SQL instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> StartAsync(SqlInstancesStartRequest request, st::CancellationToken cancellationToken) =>
+            StartAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Stops a Cloud SQL instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Operation Stop(SqlInstancesStopRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Stops a Cloud SQL instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> StopAsync(SqlInstancesStopRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Stops a Cloud SQL instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> StopAsync(SqlInstancesStopRequest request, st::CancellationToken cancellationToken) =>
+            StopAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Restores a backup of a Cloud SQL instance. Using this operation might cause
         /// your instance to restart.
         /// </summary>
@@ -1965,6 +2073,33 @@ namespace Google.Cloud.Sql.V1
             GetLatestRecoveryTimeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Execute SQL statements in read-only mode.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SqlInstancesExecuteSqlReadOnlyResponse ExecuteSqlReadOnly(SqlInstancesExecuteSqlReadOnlyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Execute SQL statements in read-only mode.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SqlInstancesExecuteSqlReadOnlyResponse> ExecuteSqlReadOnlyAsync(SqlInstancesExecuteSqlReadOnlyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Execute SQL statements in read-only mode.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SqlInstancesExecuteSqlReadOnlyResponse> ExecuteSqlReadOnlyAsync(SqlInstancesExecuteSqlReadOnlyRequest request, st::CancellationToken cancellationToken) =>
+            ExecuteSqlReadOnlyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Execute SQL statements.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2101,6 +2236,42 @@ namespace Google.Cloud.Sql.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Operation> PointInTimeRestoreAsync(SqlInstancesPointInTimeRestoreRequest request, st::CancellationToken cancellationToken) =>
             PointInTimeRestoreAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Repairs and recreates networking resources for a Cloud SQL instance. For
+        /// Private Service Connect (PSC), this operation recreates PSC DNS write
+        /// endpoints on specified VPC networks and reconciles Private Service Connect
+        /// connectivity infrastructure for the instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Operation ReconcileNetworking(SqlInstancesReconcileNetworkingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Repairs and recreates networking resources for a Cloud SQL instance. For
+        /// Private Service Connect (PSC), this operation recreates PSC DNS write
+        /// endpoints on specified VPC networks and reconciles Private Service Connect
+        /// connectivity infrastructure for the instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> ReconcileNetworkingAsync(SqlInstancesReconcileNetworkingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Repairs and recreates networking resources for a Cloud SQL instance. For
+        /// Private Service Connect (PSC), this operation recreates PSC DNS write
+        /// endpoints on specified VPC networks and reconciles Private Service Connect
+        /// connectivity infrastructure for the instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> ReconcileNetworkingAsync(SqlInstancesReconcileNetworkingRequest request, st::CancellationToken cancellationToken) =>
+            ReconcileNetworkingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>SqlInstancesService client wrapper implementation, for convenient use.</summary>
@@ -2153,6 +2324,10 @@ namespace Google.Cloud.Sql.V1
 
         private readonly gaxgrpc::ApiCall<SqlInstancesRestartRequest, Operation> _callRestart;
 
+        private readonly gaxgrpc::ApiCall<SqlInstancesStartRequest, Operation> _callStart;
+
+        private readonly gaxgrpc::ApiCall<SqlInstancesStopRequest, Operation> _callStop;
+
         private readonly gaxgrpc::ApiCall<SqlInstancesRestoreBackupRequest, Operation> _callRestoreBackup;
 
         private readonly gaxgrpc::ApiCall<SqlInstancesRotateServerCaRequest, Operation> _callRotateServerCa;
@@ -2185,6 +2360,8 @@ namespace Google.Cloud.Sql.V1
 
         private readonly gaxgrpc::ApiCall<SqlInstancesGetLatestRecoveryTimeRequest, SqlInstancesGetLatestRecoveryTimeResponse> _callGetLatestRecoveryTime;
 
+        private readonly gaxgrpc::ApiCall<SqlInstancesExecuteSqlReadOnlyRequest, SqlInstancesExecuteSqlReadOnlyResponse> _callExecuteSqlReadOnly;
+
         private readonly gaxgrpc::ApiCall<SqlInstancesExecuteSqlRequest, SqlInstancesExecuteSqlResponse> _callExecuteSql;
 
         private readonly gaxgrpc::ApiCall<SqlInstancesAcquireSsrsLeaseRequest, SqlInstancesAcquireSsrsLeaseResponse> _callAcquireSsrsLease;
@@ -2194,6 +2371,8 @@ namespace Google.Cloud.Sql.V1
         private readonly gaxgrpc::ApiCall<SqlInstancesPreCheckMajorVersionUpgradeRequest, Operation> _callPreCheckMajorVersionUpgrade;
 
         private readonly gaxgrpc::ApiCall<SqlInstancesPointInTimeRestoreRequest, Operation> _callPointInTimeRestore;
+
+        private readonly gaxgrpc::ApiCall<SqlInstancesReconcileNetworkingRequest, Operation> _callReconcileNetworking;
 
         /// <summary>
         /// Constructs a client wrapper for the SqlInstancesService service, with the specified gRPC client and
@@ -2278,6 +2457,12 @@ namespace Google.Cloud.Sql.V1
             _callRestart = clientHelper.BuildApiCall<SqlInstancesRestartRequest, Operation>("Restart", grpcClient.RestartAsync, grpcClient.Restart, effectiveSettings.RestartSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callRestart);
             Modify_RestartApiCall(ref _callRestart);
+            _callStart = clientHelper.BuildApiCall<SqlInstancesStartRequest, Operation>("Start", grpcClient.StartAsync, grpcClient.Start, effectiveSettings.StartSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callStart);
+            Modify_StartApiCall(ref _callStart);
+            _callStop = clientHelper.BuildApiCall<SqlInstancesStopRequest, Operation>("Stop", grpcClient.StopAsync, grpcClient.Stop, effectiveSettings.StopSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callStop);
+            Modify_StopApiCall(ref _callStop);
             _callRestoreBackup = clientHelper.BuildApiCall<SqlInstancesRestoreBackupRequest, Operation>("RestoreBackup", grpcClient.RestoreBackupAsync, grpcClient.RestoreBackup, effectiveSettings.RestoreBackupSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callRestoreBackup);
             Modify_RestoreBackupApiCall(ref _callRestoreBackup);
@@ -2326,6 +2511,9 @@ namespace Google.Cloud.Sql.V1
             _callGetLatestRecoveryTime = clientHelper.BuildApiCall<SqlInstancesGetLatestRecoveryTimeRequest, SqlInstancesGetLatestRecoveryTimeResponse>("GetLatestRecoveryTime", grpcClient.GetLatestRecoveryTimeAsync, grpcClient.GetLatestRecoveryTime, effectiveSettings.GetLatestRecoveryTimeSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callGetLatestRecoveryTime);
             Modify_GetLatestRecoveryTimeApiCall(ref _callGetLatestRecoveryTime);
+            _callExecuteSqlReadOnly = clientHelper.BuildApiCall<SqlInstancesExecuteSqlReadOnlyRequest, SqlInstancesExecuteSqlReadOnlyResponse>("ExecuteSqlReadOnly", grpcClient.ExecuteSqlReadOnlyAsync, grpcClient.ExecuteSqlReadOnly, effectiveSettings.ExecuteSqlReadOnlySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callExecuteSqlReadOnly);
+            Modify_ExecuteSqlReadOnlyApiCall(ref _callExecuteSqlReadOnly);
             _callExecuteSql = clientHelper.BuildApiCall<SqlInstancesExecuteSqlRequest, SqlInstancesExecuteSqlResponse>("ExecuteSql", grpcClient.ExecuteSqlAsync, grpcClient.ExecuteSql, effectiveSettings.ExecuteSqlSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callExecuteSql);
             Modify_ExecuteSqlApiCall(ref _callExecuteSql);
@@ -2341,6 +2529,9 @@ namespace Google.Cloud.Sql.V1
             _callPointInTimeRestore = clientHelper.BuildApiCall<SqlInstancesPointInTimeRestoreRequest, Operation>("PointInTimeRestore", grpcClient.PointInTimeRestoreAsync, grpcClient.PointInTimeRestore, effectiveSettings.PointInTimeRestoreSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callPointInTimeRestore);
             Modify_PointInTimeRestoreApiCall(ref _callPointInTimeRestore);
+            _callReconcileNetworking = clientHelper.BuildApiCall<SqlInstancesReconcileNetworkingRequest, Operation>("ReconcileNetworking", grpcClient.ReconcileNetworkingAsync, grpcClient.ReconcileNetworking, effectiveSettings.ReconcileNetworkingSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callReconcileNetworking);
+            Modify_ReconcileNetworkingApiCall(ref _callReconcileNetworking);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2390,6 +2581,10 @@ namespace Google.Cloud.Sql.V1
 
         partial void Modify_RestartApiCall(ref gaxgrpc::ApiCall<SqlInstancesRestartRequest, Operation> call);
 
+        partial void Modify_StartApiCall(ref gaxgrpc::ApiCall<SqlInstancesStartRequest, Operation> call);
+
+        partial void Modify_StopApiCall(ref gaxgrpc::ApiCall<SqlInstancesStopRequest, Operation> call);
+
         partial void Modify_RestoreBackupApiCall(ref gaxgrpc::ApiCall<SqlInstancesRestoreBackupRequest, Operation> call);
 
         partial void Modify_RotateServerCaApiCall(ref gaxgrpc::ApiCall<SqlInstancesRotateServerCaRequest, Operation> call);
@@ -2422,6 +2617,8 @@ namespace Google.Cloud.Sql.V1
 
         partial void Modify_GetLatestRecoveryTimeApiCall(ref gaxgrpc::ApiCall<SqlInstancesGetLatestRecoveryTimeRequest, SqlInstancesGetLatestRecoveryTimeResponse> call);
 
+        partial void Modify_ExecuteSqlReadOnlyApiCall(ref gaxgrpc::ApiCall<SqlInstancesExecuteSqlReadOnlyRequest, SqlInstancesExecuteSqlReadOnlyResponse> call);
+
         partial void Modify_ExecuteSqlApiCall(ref gaxgrpc::ApiCall<SqlInstancesExecuteSqlRequest, SqlInstancesExecuteSqlResponse> call);
 
         partial void Modify_AcquireSsrsLeaseApiCall(ref gaxgrpc::ApiCall<SqlInstancesAcquireSsrsLeaseRequest, SqlInstancesAcquireSsrsLeaseResponse> call);
@@ -2431,6 +2628,8 @@ namespace Google.Cloud.Sql.V1
         partial void Modify_PreCheckMajorVersionUpgradeApiCall(ref gaxgrpc::ApiCall<SqlInstancesPreCheckMajorVersionUpgradeRequest, Operation> call);
 
         partial void Modify_PointInTimeRestoreApiCall(ref gaxgrpc::ApiCall<SqlInstancesPointInTimeRestoreRequest, Operation> call);
+
+        partial void Modify_ReconcileNetworkingApiCall(ref gaxgrpc::ApiCall<SqlInstancesReconcileNetworkingRequest, Operation> call);
 
         partial void OnConstruction(SqlInstancesService.SqlInstancesServiceClient grpcClient, SqlInstancesServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2484,6 +2683,10 @@ namespace Google.Cloud.Sql.V1
 
         partial void Modify_SqlInstancesRestartRequest(ref SqlInstancesRestartRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_SqlInstancesStartRequest(ref SqlInstancesStartRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SqlInstancesStopRequest(ref SqlInstancesStopRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_SqlInstancesRestoreBackupRequest(ref SqlInstancesRestoreBackupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SqlInstancesRotateServerCaRequest(ref SqlInstancesRotateServerCaRequest request, ref gaxgrpc::CallSettings settings);
@@ -2516,6 +2719,8 @@ namespace Google.Cloud.Sql.V1
 
         partial void Modify_SqlInstancesGetLatestRecoveryTimeRequest(ref SqlInstancesGetLatestRecoveryTimeRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_SqlInstancesExecuteSqlReadOnlyRequest(ref SqlInstancesExecuteSqlReadOnlyRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_SqlInstancesExecuteSqlRequest(ref SqlInstancesExecuteSqlRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SqlInstancesAcquireSsrsLeaseRequest(ref SqlInstancesAcquireSsrsLeaseRequest request, ref gaxgrpc::CallSettings settings);
@@ -2525,6 +2730,8 @@ namespace Google.Cloud.Sql.V1
         partial void Modify_SqlInstancesPreCheckMajorVersionUpgradeRequest(ref SqlInstancesPreCheckMajorVersionUpgradeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SqlInstancesPointInTimeRestoreRequest(ref SqlInstancesPointInTimeRestoreRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SqlInstancesReconcileNetworkingRequest(ref SqlInstancesReconcileNetworkingRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Adds a new trusted Certificate Authority (CA) version for the specified
@@ -3141,6 +3348,54 @@ namespace Google.Cloud.Sql.V1
         }
 
         /// <summary>
+        /// Starts a Cloud SQL instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Operation Start(SqlInstancesStartRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SqlInstancesStartRequest(ref request, ref callSettings);
+            return _callStart.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Starts a Cloud SQL instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Operation> StartAsync(SqlInstancesStartRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SqlInstancesStartRequest(ref request, ref callSettings);
+            return _callStart.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Stops a Cloud SQL instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Operation Stop(SqlInstancesStopRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SqlInstancesStopRequest(ref request, ref callSettings);
+            return _callStop.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Stops a Cloud SQL instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Operation> StopAsync(SqlInstancesStopRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SqlInstancesStopRequest(ref request, ref callSettings);
+            return _callStop.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Restores a backup of a Cloud SQL instance. Using this operation might cause
         /// your instance to restart.
         /// </summary>
@@ -3549,6 +3804,30 @@ namespace Google.Cloud.Sql.V1
         }
 
         /// <summary>
+        /// Execute SQL statements in read-only mode.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SqlInstancesExecuteSqlReadOnlyResponse ExecuteSqlReadOnly(SqlInstancesExecuteSqlReadOnlyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SqlInstancesExecuteSqlReadOnlyRequest(ref request, ref callSettings);
+            return _callExecuteSqlReadOnly.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Execute SQL statements in read-only mode.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SqlInstancesExecuteSqlReadOnlyResponse> ExecuteSqlReadOnlyAsync(SqlInstancesExecuteSqlReadOnlyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SqlInstancesExecuteSqlReadOnlyRequest(ref request, ref callSettings);
+            return _callExecuteSqlReadOnly.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Execute SQL statements.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3668,6 +3947,36 @@ namespace Google.Cloud.Sql.V1
         {
             Modify_SqlInstancesPointInTimeRestoreRequest(ref request, ref callSettings);
             return _callPointInTimeRestore.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Repairs and recreates networking resources for a Cloud SQL instance. For
+        /// Private Service Connect (PSC), this operation recreates PSC DNS write
+        /// endpoints on specified VPC networks and reconciles Private Service Connect
+        /// connectivity infrastructure for the instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Operation ReconcileNetworking(SqlInstancesReconcileNetworkingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SqlInstancesReconcileNetworkingRequest(ref request, ref callSettings);
+            return _callReconcileNetworking.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Repairs and recreates networking resources for a Cloud SQL instance. For
+        /// Private Service Connect (PSC), this operation recreates PSC DNS write
+        /// endpoints on specified VPC networks and reconciles Private Service Connect
+        /// connectivity infrastructure for the instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Operation> ReconcileNetworkingAsync(SqlInstancesReconcileNetworkingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SqlInstancesReconcileNetworkingRequest(ref request, ref callSettings);
+            return _callReconcileNetworking.Async(request, callSettings);
         }
     }
 

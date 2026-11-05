@@ -120,6 +120,10 @@ namespace Google.Cloud.Sql.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Sql.V1.SqlInstancesRestartRequest> __Marshaller_google_cloud_sql_v1_SqlInstancesRestartRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Sql.V1.SqlInstancesRestartRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Sql.V1.SqlInstancesStartRequest> __Marshaller_google_cloud_sql_v1_SqlInstancesStartRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Sql.V1.SqlInstancesStartRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Sql.V1.SqlInstancesStopRequest> __Marshaller_google_cloud_sql_v1_SqlInstancesStopRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Sql.V1.SqlInstancesStopRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Sql.V1.SqlInstancesRestoreBackupRequest> __Marshaller_google_cloud_sql_v1_SqlInstancesRestoreBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Sql.V1.SqlInstancesRestoreBackupRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Sql.V1.SqlInstancesRotateServerCaRequest> __Marshaller_google_cloud_sql_v1_SqlInstancesRotateServerCaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Sql.V1.SqlInstancesRotateServerCaRequest.Parser));
@@ -160,6 +164,10 @@ namespace Google.Cloud.Sql.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Sql.V1.SqlInstancesGetLatestRecoveryTimeResponse> __Marshaller_google_cloud_sql_v1_SqlInstancesGetLatestRecoveryTimeResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Sql.V1.SqlInstancesGetLatestRecoveryTimeResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyRequest> __Marshaller_google_cloud_sql_v1_SqlInstancesExecuteSqlReadOnlyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyResponse> __Marshaller_google_cloud_sql_v1_SqlInstancesExecuteSqlReadOnlyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlRequest> __Marshaller_google_cloud_sql_v1_SqlInstancesExecuteSqlRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlResponse> __Marshaller_google_cloud_sql_v1_SqlInstancesExecuteSqlResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlResponse.Parser));
@@ -175,6 +183,8 @@ namespace Google.Cloud.Sql.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Sql.V1.SqlInstancesPreCheckMajorVersionUpgradeRequest> __Marshaller_google_cloud_sql_v1_SqlInstancesPreCheckMajorVersionUpgradeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Sql.V1.SqlInstancesPreCheckMajorVersionUpgradeRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Sql.V1.SqlInstancesPointInTimeRestoreRequest> __Marshaller_google_cloud_sql_v1_SqlInstancesPointInTimeRestoreRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Sql.V1.SqlInstancesPointInTimeRestoreRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Sql.V1.SqlInstancesReconcileNetworkingRequest> __Marshaller_google_cloud_sql_v1_SqlInstancesReconcileNetworkingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Sql.V1.SqlInstancesReconcileNetworkingRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Sql.V1.SqlInstancesAddServerCaRequest, global::Google.Cloud.Sql.V1.Operation> __Method_AddServerCa = new grpc::Method<global::Google.Cloud.Sql.V1.SqlInstancesAddServerCaRequest, global::Google.Cloud.Sql.V1.Operation>(
@@ -353,6 +363,22 @@ namespace Google.Cloud.Sql.V1 {
         __Marshaller_google_cloud_sql_v1_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Sql.V1.SqlInstancesStartRequest, global::Google.Cloud.Sql.V1.Operation> __Method_Start = new grpc::Method<global::Google.Cloud.Sql.V1.SqlInstancesStartRequest, global::Google.Cloud.Sql.V1.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Start",
+        __Marshaller_google_cloud_sql_v1_SqlInstancesStartRequest,
+        __Marshaller_google_cloud_sql_v1_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Sql.V1.SqlInstancesStopRequest, global::Google.Cloud.Sql.V1.Operation> __Method_Stop = new grpc::Method<global::Google.Cloud.Sql.V1.SqlInstancesStopRequest, global::Google.Cloud.Sql.V1.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Stop",
+        __Marshaller_google_cloud_sql_v1_SqlInstancesStopRequest,
+        __Marshaller_google_cloud_sql_v1_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Sql.V1.SqlInstancesRestoreBackupRequest, global::Google.Cloud.Sql.V1.Operation> __Method_RestoreBackup = new grpc::Method<global::Google.Cloud.Sql.V1.SqlInstancesRestoreBackupRequest, global::Google.Cloud.Sql.V1.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -481,6 +507,14 @@ namespace Google.Cloud.Sql.V1 {
         __Marshaller_google_cloud_sql_v1_SqlInstancesGetLatestRecoveryTimeResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyRequest, global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyResponse> __Method_ExecuteSqlReadOnly = new grpc::Method<global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyRequest, global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExecuteSqlReadOnly",
+        __Marshaller_google_cloud_sql_v1_SqlInstancesExecuteSqlReadOnlyRequest,
+        __Marshaller_google_cloud_sql_v1_SqlInstancesExecuteSqlReadOnlyResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlRequest, global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlResponse> __Method_ExecuteSql = new grpc::Method<global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlRequest, global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -518,6 +552,14 @@ namespace Google.Cloud.Sql.V1 {
         __ServiceName,
         "PointInTimeRestore",
         __Marshaller_google_cloud_sql_v1_SqlInstancesPointInTimeRestoreRequest,
+        __Marshaller_google_cloud_sql_v1_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Sql.V1.SqlInstancesReconcileNetworkingRequest, global::Google.Cloud.Sql.V1.Operation> __Method_ReconcileNetworking = new grpc::Method<global::Google.Cloud.Sql.V1.SqlInstancesReconcileNetworkingRequest, global::Google.Cloud.Sql.V1.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ReconcileNetworking",
+        __Marshaller_google_cloud_sql_v1_SqlInstancesReconcileNetworkingRequest,
         __Marshaller_google_cloud_sql_v1_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -838,6 +880,30 @@ namespace Google.Cloud.Sql.V1 {
       }
 
       /// <summary>
+      /// Starts a Cloud SQL instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Sql.V1.Operation> Start(global::Google.Cloud.Sql.V1.SqlInstancesStartRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Stops a Cloud SQL instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Sql.V1.Operation> Stop(global::Google.Cloud.Sql.V1.SqlInstancesStopRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Restores a backup of a Cloud SQL instance. Using this operation might cause
       /// your instance to restart.
       /// </summary>
@@ -1042,6 +1108,18 @@ namespace Google.Cloud.Sql.V1 {
       }
 
       /// <summary>
+      /// Execute SQL statements in read-only mode.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyResponse> ExecuteSqlReadOnly(global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Execute SQL statements.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1098,6 +1176,21 @@ namespace Google.Cloud.Sql.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Sql.V1.Operation> PointInTimeRestore(global::Google.Cloud.Sql.V1.SqlInstancesPointInTimeRestoreRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Repairs and recreates networking resources for a Cloud SQL instance. For
+      /// Private Service Connect (PSC), this operation recreates PSC DNS write
+      /// endpoints on specified VPC networks and reconciles Private Service Connect
+      /// connectivity infrastructure for the instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Sql.V1.Operation> ReconcileNetworking(global::Google.Cloud.Sql.V1.SqlInstancesReconcileNetworkingRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2360,6 +2453,102 @@ namespace Google.Cloud.Sql.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_Restart, null, options, request);
       }
       /// <summary>
+      /// Starts a Cloud SQL instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Sql.V1.Operation Start(global::Google.Cloud.Sql.V1.SqlInstancesStartRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return Start(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Starts a Cloud SQL instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Sql.V1.Operation Start(global::Google.Cloud.Sql.V1.SqlInstancesStartRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_Start, null, options, request);
+      }
+      /// <summary>
+      /// Starts a Cloud SQL instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Sql.V1.Operation> StartAsync(global::Google.Cloud.Sql.V1.SqlInstancesStartRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StartAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Starts a Cloud SQL instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Sql.V1.Operation> StartAsync(global::Google.Cloud.Sql.V1.SqlInstancesStartRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_Start, null, options, request);
+      }
+      /// <summary>
+      /// Stops a Cloud SQL instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Sql.V1.Operation Stop(global::Google.Cloud.Sql.V1.SqlInstancesStopRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return Stop(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Stops a Cloud SQL instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Sql.V1.Operation Stop(global::Google.Cloud.Sql.V1.SqlInstancesStopRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_Stop, null, options, request);
+      }
+      /// <summary>
+      /// Stops a Cloud SQL instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Sql.V1.Operation> StopAsync(global::Google.Cloud.Sql.V1.SqlInstancesStopRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StopAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Stops a Cloud SQL instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Sql.V1.Operation> StopAsync(global::Google.Cloud.Sql.V1.SqlInstancesStopRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_Stop, null, options, request);
+      }
+      /// <summary>
       /// Restores a backup of a Cloud SQL instance. Using this operation might cause
       /// your instance to restart.
       /// </summary>
@@ -3176,6 +3365,54 @@ namespace Google.Cloud.Sql.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetLatestRecoveryTime, null, options, request);
       }
       /// <summary>
+      /// Execute SQL statements in read-only mode.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyResponse ExecuteSqlReadOnly(global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExecuteSqlReadOnly(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Execute SQL statements in read-only mode.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyResponse ExecuteSqlReadOnly(global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExecuteSqlReadOnly, null, options, request);
+      }
+      /// <summary>
+      /// Execute SQL statements in read-only mode.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyResponse> ExecuteSqlReadOnlyAsync(global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExecuteSqlReadOnlyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Execute SQL statements in read-only mode.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyResponse> ExecuteSqlReadOnlyAsync(global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExecuteSqlReadOnly, null, options, request);
+      }
+      /// <summary>
       /// Execute SQL statements.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -3419,6 +3656,66 @@ namespace Google.Cloud.Sql.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_PointInTimeRestore, null, options, request);
       }
+      /// <summary>
+      /// Repairs and recreates networking resources for a Cloud SQL instance. For
+      /// Private Service Connect (PSC), this operation recreates PSC DNS write
+      /// endpoints on specified VPC networks and reconciles Private Service Connect
+      /// connectivity infrastructure for the instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Sql.V1.Operation ReconcileNetworking(global::Google.Cloud.Sql.V1.SqlInstancesReconcileNetworkingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReconcileNetworking(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Repairs and recreates networking resources for a Cloud SQL instance. For
+      /// Private Service Connect (PSC), this operation recreates PSC DNS write
+      /// endpoints on specified VPC networks and reconciles Private Service Connect
+      /// connectivity infrastructure for the instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Sql.V1.Operation ReconcileNetworking(global::Google.Cloud.Sql.V1.SqlInstancesReconcileNetworkingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ReconcileNetworking, null, options, request);
+      }
+      /// <summary>
+      /// Repairs and recreates networking resources for a Cloud SQL instance. For
+      /// Private Service Connect (PSC), this operation recreates PSC DNS write
+      /// endpoints on specified VPC networks and reconciles Private Service Connect
+      /// connectivity infrastructure for the instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Sql.V1.Operation> ReconcileNetworkingAsync(global::Google.Cloud.Sql.V1.SqlInstancesReconcileNetworkingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReconcileNetworkingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Repairs and recreates networking resources for a Cloud SQL instance. For
+      /// Private Service Connect (PSC), this operation recreates PSC DNS write
+      /// endpoints on specified VPC networks and reconciles Private Service Connect
+      /// connectivity infrastructure for the instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Sql.V1.Operation> ReconcileNetworkingAsync(global::Google.Cloud.Sql.V1.SqlInstancesReconcileNetworkingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ReconcileNetworking, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SqlInstancesServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -3455,6 +3752,8 @@ namespace Google.Cloud.Sql.V1 {
           .AddMethod(__Method_Switchover, serviceImpl.Switchover)
           .AddMethod(__Method_ResetSslConfig, serviceImpl.ResetSslConfig)
           .AddMethod(__Method_Restart, serviceImpl.Restart)
+          .AddMethod(__Method_Start, serviceImpl.Start)
+          .AddMethod(__Method_Stop, serviceImpl.Stop)
           .AddMethod(__Method_RestoreBackup, serviceImpl.RestoreBackup)
           .AddMethod(__Method_RotateServerCa, serviceImpl.RotateServerCa)
           .AddMethod(__Method_RotateServerCertificate, serviceImpl.RotateServerCertificate)
@@ -3471,11 +3770,13 @@ namespace Google.Cloud.Sql.V1 {
           .AddMethod(__Method_GetDiskShrinkConfig, serviceImpl.GetDiskShrinkConfig)
           .AddMethod(__Method_ResetReplicaSize, serviceImpl.ResetReplicaSize)
           .AddMethod(__Method_GetLatestRecoveryTime, serviceImpl.GetLatestRecoveryTime)
+          .AddMethod(__Method_ExecuteSqlReadOnly, serviceImpl.ExecuteSqlReadOnly)
           .AddMethod(__Method_ExecuteSql, serviceImpl.ExecuteSql)
           .AddMethod(__Method_AcquireSsrsLease, serviceImpl.AcquireSsrsLease)
           .AddMethod(__Method_ReleaseSsrsLease, serviceImpl.ReleaseSsrsLease)
           .AddMethod(__Method_PreCheckMajorVersionUpgrade, serviceImpl.PreCheckMajorVersionUpgrade)
-          .AddMethod(__Method_PointInTimeRestore, serviceImpl.PointInTimeRestore).Build();
+          .AddMethod(__Method_PointInTimeRestore, serviceImpl.PointInTimeRestore)
+          .AddMethod(__Method_ReconcileNetworking, serviceImpl.ReconcileNetworking).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -3507,6 +3808,8 @@ namespace Google.Cloud.Sql.V1 {
       serviceBinder.AddMethod(__Method_Switchover, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlInstancesSwitchoverRequest, global::Google.Cloud.Sql.V1.Operation>(serviceImpl.Switchover));
       serviceBinder.AddMethod(__Method_ResetSslConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlInstancesResetSslConfigRequest, global::Google.Cloud.Sql.V1.Operation>(serviceImpl.ResetSslConfig));
       serviceBinder.AddMethod(__Method_Restart, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlInstancesRestartRequest, global::Google.Cloud.Sql.V1.Operation>(serviceImpl.Restart));
+      serviceBinder.AddMethod(__Method_Start, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlInstancesStartRequest, global::Google.Cloud.Sql.V1.Operation>(serviceImpl.Start));
+      serviceBinder.AddMethod(__Method_Stop, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlInstancesStopRequest, global::Google.Cloud.Sql.V1.Operation>(serviceImpl.Stop));
       serviceBinder.AddMethod(__Method_RestoreBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlInstancesRestoreBackupRequest, global::Google.Cloud.Sql.V1.Operation>(serviceImpl.RestoreBackup));
       serviceBinder.AddMethod(__Method_RotateServerCa, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlInstancesRotateServerCaRequest, global::Google.Cloud.Sql.V1.Operation>(serviceImpl.RotateServerCa));
       serviceBinder.AddMethod(__Method_RotateServerCertificate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlInstancesRotateServerCertificateRequest, global::Google.Cloud.Sql.V1.Operation>(serviceImpl.RotateServerCertificate));
@@ -3523,11 +3826,13 @@ namespace Google.Cloud.Sql.V1 {
       serviceBinder.AddMethod(__Method_GetDiskShrinkConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlInstancesGetDiskShrinkConfigRequest, global::Google.Cloud.Sql.V1.SqlInstancesGetDiskShrinkConfigResponse>(serviceImpl.GetDiskShrinkConfig));
       serviceBinder.AddMethod(__Method_ResetReplicaSize, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlInstancesResetReplicaSizeRequest, global::Google.Cloud.Sql.V1.Operation>(serviceImpl.ResetReplicaSize));
       serviceBinder.AddMethod(__Method_GetLatestRecoveryTime, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlInstancesGetLatestRecoveryTimeRequest, global::Google.Cloud.Sql.V1.SqlInstancesGetLatestRecoveryTimeResponse>(serviceImpl.GetLatestRecoveryTime));
+      serviceBinder.AddMethod(__Method_ExecuteSqlReadOnly, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyRequest, global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlReadOnlyResponse>(serviceImpl.ExecuteSqlReadOnly));
       serviceBinder.AddMethod(__Method_ExecuteSql, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlRequest, global::Google.Cloud.Sql.V1.SqlInstancesExecuteSqlResponse>(serviceImpl.ExecuteSql));
       serviceBinder.AddMethod(__Method_AcquireSsrsLease, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlInstancesAcquireSsrsLeaseRequest, global::Google.Cloud.Sql.V1.SqlInstancesAcquireSsrsLeaseResponse>(serviceImpl.AcquireSsrsLease));
       serviceBinder.AddMethod(__Method_ReleaseSsrsLease, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlInstancesReleaseSsrsLeaseRequest, global::Google.Cloud.Sql.V1.SqlInstancesReleaseSsrsLeaseResponse>(serviceImpl.ReleaseSsrsLease));
       serviceBinder.AddMethod(__Method_PreCheckMajorVersionUpgrade, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlInstancesPreCheckMajorVersionUpgradeRequest, global::Google.Cloud.Sql.V1.Operation>(serviceImpl.PreCheckMajorVersionUpgrade));
       serviceBinder.AddMethod(__Method_PointInTimeRestore, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlInstancesPointInTimeRestoreRequest, global::Google.Cloud.Sql.V1.Operation>(serviceImpl.PointInTimeRestore));
+      serviceBinder.AddMethod(__Method_ReconcileNetworking, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Sql.V1.SqlInstancesReconcileNetworkingRequest, global::Google.Cloud.Sql.V1.Operation>(serviceImpl.ReconcileNetworking));
     }
 
   }
