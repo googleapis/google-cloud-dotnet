@@ -57,6 +57,7 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta
             UpdateClusterOperationsSettings = existing.UpdateClusterOperationsSettings.Clone();
             DeleteClusterSettings = existing.DeleteClusterSettings;
             DeleteClusterOperationsSettings = existing.DeleteClusterOperationsSettings.Clone();
+            ListNodesSettings = existing.ListNodesSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -188,6 +189,18 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>HypercomputeClusterClient.ListNodes</c> and <c>HypercomputeClusterClient.ListNodesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListNodesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -670,9 +683,10 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta
         /// Required. Cluster to create.
         /// </param>
         /// <param name="clusterId">
-        /// Required. ID of the cluster to create. Must conform to
-        /// [RFC-1034](https://datatracker.ietf.org/doc/html/rfc1034) (lower-case,
-        /// alphanumeric, and at most 63 characters).
+        /// Required. The ID of the cluster to create.
+        /// The cluster ID must start with a lowercase letter (`a`-`z`), use only
+        /// lowercase letters or numbers, and contain up to 10 characters. For example,
+        /// specify `cluster001`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -695,9 +709,10 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta
         /// Required. Cluster to create.
         /// </param>
         /// <param name="clusterId">
-        /// Required. ID of the cluster to create. Must conform to
-        /// [RFC-1034](https://datatracker.ietf.org/doc/html/rfc1034) (lower-case,
-        /// alphanumeric, and at most 63 characters).
+        /// Required. The ID of the cluster to create.
+        /// The cluster ID must start with a lowercase letter (`a`-`z`), use only
+        /// lowercase letters or numbers, and contain up to 10 characters. For example,
+        /// specify `cluster001`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -720,9 +735,10 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta
         /// Required. Cluster to create.
         /// </param>
         /// <param name="clusterId">
-        /// Required. ID of the cluster to create. Must conform to
-        /// [RFC-1034](https://datatracker.ietf.org/doc/html/rfc1034) (lower-case,
-        /// alphanumeric, and at most 63 characters).
+        /// Required. The ID of the cluster to create.
+        /// The cluster ID must start with a lowercase letter (`a`-`z`), use only
+        /// lowercase letters or numbers, and contain up to 10 characters. For example,
+        /// specify `cluster001`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -740,9 +756,10 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta
         /// Required. Cluster to create.
         /// </param>
         /// <param name="clusterId">
-        /// Required. ID of the cluster to create. Must conform to
-        /// [RFC-1034](https://datatracker.ietf.org/doc/html/rfc1034) (lower-case,
-        /// alphanumeric, and at most 63 characters).
+        /// Required. The ID of the cluster to create.
+        /// The cluster ID must start with a lowercase letter (`a`-`z`), use only
+        /// lowercase letters or numbers, and contain up to 10 characters. For example,
+        /// specify `cluster001`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -765,9 +782,10 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta
         /// Required. Cluster to create.
         /// </param>
         /// <param name="clusterId">
-        /// Required. ID of the cluster to create. Must conform to
-        /// [RFC-1034](https://datatracker.ietf.org/doc/html/rfc1034) (lower-case,
-        /// alphanumeric, and at most 63 characters).
+        /// Required. The ID of the cluster to create.
+        /// The cluster ID must start with a lowercase letter (`a`-`z`), use only
+        /// lowercase letters or numbers, and contain up to 10 characters. For example,
+        /// specify `cluster001`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -790,9 +808,10 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta
         /// Required. Cluster to create.
         /// </param>
         /// <param name="clusterId">
-        /// Required. ID of the cluster to create. Must conform to
-        /// [RFC-1034](https://datatracker.ietf.org/doc/html/rfc1034) (lower-case,
-        /// alphanumeric, and at most 63 characters).
+        /// Required. The ID of the cluster to create.
+        /// The cluster ID must start with a lowercase letter (`a`-`z`), use only
+        /// lowercase letters or numbers, and contain up to 10 characters. For example,
+        /// specify `cluster001`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1044,6 +1063,160 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteClusterAsync(ClusterName name, st::CancellationToken cancellationToken) =>
             DeleteClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists Nodes in a given cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Node"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNodesResponse, Node> ListNodes(ListNodesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Nodes in a given cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Node"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNodesResponse, Node> ListNodesAsync(ListNodesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Nodes in a given cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent cluster of the nodes to list, in the format
+        /// `projects/{project}/locations/{location}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Node"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNodesResponse, Node> ListNodes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodesRequest request = new ListNodesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodes(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Nodes in a given cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent cluster of the nodes to list, in the format
+        /// `projects/{project}/locations/{location}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Node"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNodesResponse, Node> ListNodesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodesRequest request = new ListNodesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Nodes in a given cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent cluster of the nodes to list, in the format
+        /// `projects/{project}/locations/{location}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Node"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNodesResponse, Node> ListNodes(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodesRequest request = new ListNodesRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodes(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Nodes in a given cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent cluster of the nodes to list, in the format
+        /// `projects/{project}/locations/{location}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Node"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNodesResponse, Node> ListNodesAsync(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodesRequest request = new ListNodesRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodesAsync(request, callSettings);
+        }
     }
 
     /// <summary>HypercomputeCluster client wrapper implementation, for convenient use.</summary>
@@ -1061,6 +1234,8 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta
         private readonly gaxgrpc::ApiCall<UpdateClusterRequest, lro::Operation> _callUpdateCluster;
 
         private readonly gaxgrpc::ApiCall<DeleteClusterRequest, lro::Operation> _callDeleteCluster;
+
+        private readonly gaxgrpc::ApiCall<ListNodesRequest, ListNodesResponse> _callListNodes;
 
         /// <summary>
         /// Constructs a client wrapper for the HypercomputeCluster service, with the specified gRPC client and
@@ -1097,6 +1272,9 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta
             _callDeleteCluster = clientHelper.BuildApiCall<DeleteClusterRequest, lro::Operation>("DeleteCluster", grpcClient.DeleteClusterAsync, grpcClient.DeleteCluster, effectiveSettings.DeleteClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCluster);
             Modify_DeleteClusterApiCall(ref _callDeleteCluster);
+            _callListNodes = clientHelper.BuildApiCall<ListNodesRequest, ListNodesResponse>("ListNodes", grpcClient.ListNodesAsync, grpcClient.ListNodes, effectiveSettings.ListNodesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListNodes);
+            Modify_ListNodesApiCall(ref _callListNodes);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1111,6 +1289,8 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta
         partial void Modify_UpdateClusterApiCall(ref gaxgrpc::ApiCall<UpdateClusterRequest, lro::Operation> call);
 
         partial void Modify_DeleteClusterApiCall(ref gaxgrpc::ApiCall<DeleteClusterRequest, lro::Operation> call);
+
+        partial void Modify_ListNodesApiCall(ref gaxgrpc::ApiCall<ListNodesRequest, ListNodesResponse> call);
 
         partial void OnConstruction(HypercomputeCluster.HypercomputeClusterClient grpcClient, HypercomputeClusterSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1129,6 +1309,8 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta
         partial void Modify_UpdateClusterRequest(ref UpdateClusterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteClusterRequest(ref DeleteClusterRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListNodesRequest(ref ListNodesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Clusters in a given project and location.
@@ -1258,9 +1440,37 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta
             Modify_DeleteClusterRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteCluster.Async(request, callSettings).ConfigureAwait(false), DeleteClusterOperationsClient);
         }
+
+        /// <summary>
+        /// Lists Nodes in a given cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Node"/> resources.</returns>
+        public override gax::PagedEnumerable<ListNodesResponse, Node> ListNodes(ListNodesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListNodesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListNodesRequest, ListNodesResponse, Node>(_callListNodes, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Nodes in a given cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Node"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListNodesResponse, Node> ListNodesAsync(ListNodesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListNodesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListNodesRequest, ListNodesResponse, Node>(_callListNodes, request, callSettings);
+        }
     }
 
     public partial class ListClustersRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListNodesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -1268,6 +1478,14 @@ namespace Google.Cloud.HypercomputeCluster.V1Beta
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Cluster> GetEnumerator() => Clusters.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListNodesResponse : gaxgrpc::IPageResponse<Node>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Node> GetEnumerator() => Nodes.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
