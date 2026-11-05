@@ -32,129 +32,158 @@ namespace Google.Cloud.VectorSearch.V1 {
             "Y3RvcnNlYXJjaC92MS9jb21tb24ucHJvdG8aLmdvb2dsZS9jbG91ZC92ZWN0",
             "b3JzZWFyY2gvdjEvZGF0YV9vYmplY3QucHJvdG8aM2dvb2dsZS9jbG91ZC92",
             "ZWN0b3JzZWFyY2gvdjEvZW1iZWRkaW5nX2NvbmZpZy5wcm90bxocZ29vZ2xl",
-            "L3Byb3RvYnVmL3N0cnVjdC5wcm90byJiCgxPdXRwdXRGaWVsZHMSGAoLZGF0",
-            "YV9maWVsZHMYASADKAlCA+BBARIaCg12ZWN0b3JfZmllbGRzGAIgAygJQgPg",
-            "QQESHAoPbWV0YWRhdGFfZmllbGRzGAMgAygJQgPgQQEivwMKClNlYXJjaEhp",
-            "bnQSSQoIa25uX2hpbnQYAyABKAsyMC5nb29nbGUuY2xvdWQudmVjdG9yc2Vh",
-            "cmNoLnYxLlNlYXJjaEhpbnQuS25uSGludEID4EEBSAASTQoKaW5kZXhfaGlu",
-            "dBgEIAEoCzIyLmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuU2VhcmNo",
-            "SGludC5JbmRleEhpbnRCA+BBAUgAGv0BCglJbmRleEhpbnQSZgoSZGVuc2Vf",
-            "c2Nhbm5fcGFyYW1zGAIgASgLMkMuZ29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJj",
-            "aC52MS5TZWFyY2hIaW50LkluZGV4SGludC5EZW5zZVNjYW5uUGFyYW1zQgPg",
-            "QQFIABI3CgRuYW1lGAEgASgJQingQQL6QSMKIXZlY3RvcnNlYXJjaC5nb29n",
-            "bGVhcGlzLmNvbS9JbmRleBpFChBEZW5zZVNjYW5uUGFyYW1zEh8KDXRhcmdl",
-            "dF9yZWNhbGwYAyABKAFCA+BBAUgAiAEBQhAKDl90YXJnZXRfcmVjYWxsQggK",
-            "BnBhcmFtcxoJCgdLbm5IaW50QgwKCmluZGV4X3R5cGUi5gEKBlNlYXJjaBJD",
-            "Cg12ZWN0b3Jfc2VhcmNoGAEgASgLMiouZ29vZ2xlLmNsb3VkLnZlY3RvcnNl",
-            "YXJjaC52MS5WZWN0b3JTZWFyY2hIABJHCg9zZW1hbnRpY19zZWFyY2gYAiAB",
-            "KAsyLC5nb29nbGUuY2xvdWQudmVjdG9yc2VhcmNoLnYxLlNlbWFudGljU2Vh",
-            "cmNoSAASPwoLdGV4dF9zZWFyY2gYAyABKAsyKC5nb29nbGUuY2xvdWQudmVj",
-            "dG9yc2VhcmNoLnYxLlRleHRTZWFyY2hIAEINCgtzZWFyY2hfdHlwZSLjAwoM",
-            "VmVjdG9yU2VhcmNoEjsKBnZlY3RvchgBIAEoCzIpLmdvb2dsZS5jbG91ZC52",
-            "ZWN0b3JzZWFyY2gudjEuRGVuc2VWZWN0b3JIABJDCg1zcGFyc2VfdmVjdG9y",
-            "GAIgASgLMiouZ29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52MS5TcGFyc2VW",
-            "ZWN0b3JIABIZCgxzZWFyY2hfZmllbGQYCCABKAlCA+BBAhIsCgZmaWx0ZXIY",
-            "BCABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0QgPgQQESFwoFdG9wX2sY",
-            "BSABKAVCA+BBAUgBiAEBEkYKDW91dHB1dF9maWVsZHMYByABKAsyKi5nb29n",
-            "bGUuY2xvdWQudmVjdG9yc2VhcmNoLnYxLk91dHB1dEZpZWxkc0ID4EEBEkIK",
-            "C3NlYXJjaF9oaW50GAkgASgLMiguZ29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJj",
-            "aC52MS5TZWFyY2hIaW50QgPgQQESSgoPZGlzdGFuY2VfbWV0cmljGAsgASgO",
-            "MiwuZ29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52MS5EaXN0YW5jZU1ldHJp",
-            "Y0ID4EEBQg0KC3ZlY3Rvcl90eXBlQggKBl90b3BfayLrAgoOU2VtYW50aWNT",
-            "ZWFyY2gSGAoLc2VhcmNoX3RleHQYASABKAlCA+BBARIZCgxzZWFyY2hfZmll",
-            "bGQYAiABKAlCA+BBAhJHCgl0YXNrX3R5cGUYBSABKA4yLy5nb29nbGUuY2xv",
-            "dWQudmVjdG9yc2VhcmNoLnYxLkVtYmVkZGluZ1Rhc2tUeXBlQgPgQQESRgoN",
-            "b3V0cHV0X2ZpZWxkcxgDIAEoCzIqLmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFy",
-            "Y2gudjEuT3V0cHV0RmllbGRzQgPgQQESLAoGZmlsdGVyGAYgASgLMhcuZ29v",
-            "Z2xlLnByb3RvYnVmLlN0cnVjdEID4EEBEhcKBXRvcF9rGAQgASgFQgPgQQFI",
-            "AIgBARJCCgtzZWFyY2hfaGludBgHIAEoCzIoLmdvb2dsZS5jbG91ZC52ZWN0",
-            "b3JzZWFyY2gudjEuU2VhcmNoSGludEID4EEBQggKBl90b3BfayLeAQoKVGV4",
-            "dFNlYXJjaBIYCgtzZWFyY2hfdGV4dBgBIAEoCUID4EEBEh0KEGRhdGFfZmll",
-            "bGRfbmFtZXMYAiADKAlCA+BBARJGCg1vdXRwdXRfZmllbGRzGAMgASgLMiou",
-            "Z29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52MS5PdXRwdXRGaWVsZHNCA+BB",
-            "ARIXCgV0b3BfaxgEIAEoBUID4EEBSACIAQESLAoGZmlsdGVyGAUgASgLMhcu",
-            "Z29vZ2xlLnByb3RvYnVmLlN0cnVjdEID4EEBQggKBl90b3BfayLuAgoYU2Vh",
-            "cmNoRGF0YU9iamVjdHNSZXF1ZXN0EkMKDXZlY3Rvcl9zZWFyY2gYAiABKAsy",
-            "Ki5nb29nbGUuY2xvdWQudmVjdG9yc2VhcmNoLnYxLlZlY3RvclNlYXJjaEgA",
-            "EkcKD3NlbWFudGljX3NlYXJjaBgEIAEoCzIsLmdvb2dsZS5jbG91ZC52ZWN0",
-            "b3JzZWFyY2gudjEuU2VtYW50aWNTZWFyY2hIABJECgt0ZXh0X3NlYXJjaBgH",
-            "IAEoCzIoLmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuVGV4dFNlYXJj",
-            "aEID4EEBSAASPgoGcGFyZW50GAEgASgJQi7gQQL6QSgKJnZlY3RvcnNlYXJj",
-            "aC5nb29nbGVhcGlzLmNvbS9Db2xsZWN0aW9uEhYKCXBhZ2Vfc2l6ZRgFIAEo",
-            "BUID4EEBEhcKCnBhZ2VfdG9rZW4YBiABKAlCA+BBAUINCgtzZWFyY2hfdHlw",
-            "ZSJ7CgxTZWFyY2hSZXN1bHQSQgoLZGF0YV9vYmplY3QYASABKAsyKC5nb29n",
-            "bGUuY2xvdWQudmVjdG9yc2VhcmNoLnYxLkRhdGFPYmplY3RCA+BBAxIaCghk",
-            "aXN0YW5jZRgCIAEoAUID4EEDSACIAQFCCwoJX2Rpc3RhbmNlInsKGVNlYXJj",
-            "aERhdGFPYmplY3RzUmVzcG9uc2USQAoHcmVzdWx0cxgBIAMoCzIqLmdvb2ds",
-            "ZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuU2VhcmNoUmVzdWx0QgPgQQMSHAoP",
-            "bmV4dF9wYWdlX3Rva2VuGAIgASgJQgPgQQMi1AEKG0FnZ3JlZ2F0ZURhdGFP",
-            "YmplY3RzUmVxdWVzdBI+CgZwYXJlbnQYASABKAlCLuBBAvpBKAomdmVjdG9y",
-            "c2VhcmNoLmdvb2dsZWFwaXMuY29tL0NvbGxlY3Rpb24SLAoGZmlsdGVyGAIg",
-            "ASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEID4EEBEkcKCWFnZ3JlZ2F0",
-            "ZRgDIAEoDjIvLmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuQWdncmVn",
-            "YXRpb25NZXRob2RCA+BBAiJXChxBZ2dyZWdhdGVEYXRhT2JqZWN0c1Jlc3Bv",
-            "bnNlEjcKEWFnZ3JlZ2F0ZV9yZXN1bHRzGAEgAygLMhcuZ29vZ2xlLnByb3Rv",
-            "YnVmLlN0cnVjdEID4EEDIoACChdRdWVyeURhdGFPYmplY3RzUmVxdWVzdBI+",
-            "CgZwYXJlbnQYASABKAlCLuBBAvpBKAomdmVjdG9yc2VhcmNoLmdvb2dsZWFw",
-            "aXMuY29tL0NvbGxlY3Rpb24SLAoGZmlsdGVyGAIgASgLMhcuZ29vZ2xlLnBy",
-            "b3RvYnVmLlN0cnVjdEID4EEBEkYKDW91dHB1dF9maWVsZHMYByABKAsyKi5n",
-            "b29nbGUuY2xvdWQudmVjdG9yc2VhcmNoLnYxLk91dHB1dEZpZWxkc0ID4EEB",
-            "EhYKCXBhZ2Vfc2l6ZRgFIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YBiABKAlC",
-            "A+BBASJ9ChhRdWVyeURhdGFPYmplY3RzUmVzcG9uc2USQwoMZGF0YV9vYmpl",
-            "Y3RzGAQgAygLMiguZ29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52MS5EYXRh",
-            "T2JqZWN0QgPgQQMSHAoPbmV4dF9wYWdlX3Rva2VuGAMgASgJQgPgQQMitgMK",
-            "HUJhdGNoU2VhcmNoRGF0YU9iamVjdHNSZXF1ZXN0Ej4KBnBhcmVudBgBIAEo",
-            "CUIu4EEC+kEoCiZ2ZWN0b3JzZWFyY2guZ29vZ2xlYXBpcy5jb20vQ29sbGVj",
-            "dGlvbhI7CghzZWFyY2hlcxgCIAMoCzIkLmdvb2dsZS5jbG91ZC52ZWN0b3Jz",
-            "ZWFyY2gudjEuU2VhcmNoQgPgQQISZwoHY29tYmluZRgDIAEoCzJRLmdvb2ds",
-            "ZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuQmF0Y2hTZWFyY2hEYXRhT2JqZWN0",
-            "c1JlcXVlc3QuQ29tYmluZVJlc3VsdHNPcHRpb25zQgPgQQEargEKFUNvbWJp",
-            "bmVSZXN1bHRzT3B0aW9ucxI5CgZyYW5rZXIYASABKAsyJC5nb29nbGUuY2xv",
-            "dWQudmVjdG9yc2VhcmNoLnYxLlJhbmtlckID4EECEkYKDW91dHB1dF9maWVs",
-            "ZHMYAiABKAsyKi5nb29nbGUuY2xvdWQudmVjdG9yc2VhcmNoLnYxLk91dHB1",
-            "dEZpZWxkc0ID4EEBEhIKBXRvcF9rGAMgASgFQgPgQQEiqwEKBlJhbmtlchJB",
-            "CgNycmYYASABKAsyMi5nb29nbGUuY2xvdWQudmVjdG9yc2VhcmNoLnYxLlJl",
-            "Y2lwcm9jYWxSYW5rRnVzaW9uSAASSAoNdmVydGV4X3JhbmtlchgCIAEoCzIq",
-            "Lmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuVmVydGV4UmFua2VyQgPg",
-            "QQFIAUIICgZyYW5rZXJCCgoIcmVyYW5rZXIiLAoUUmVjaXByb2NhbFJhbmtG",
-            "dXNpb24SFAoHd2VpZ2h0cxgBIAMoAUID4EECIv4BCgxWZXJ0ZXhSYW5rZXIS",
-            "VQoQdGV4dF9yZWNvcmRfc3BlYxgGIAEoCzI5Lmdvb2dsZS5jbG91ZC52ZWN0",
-            "b3JzZWFyY2gudjEuVmVydGV4UmFua2VyLlRleHRSZWNvcmRTcGVjSAASEgoF",
-            "bW9kZWwYBCABKAlCA+BBAhISCgV0b3BfbhgFIAEoBUID4EECGmAKDlRleHRS",
-            "ZWNvcmRTcGVjEhIKBXF1ZXJ5GAEgASgJQgPgQQISGwoOdGl0bGVfdGVtcGxh",
-            "dGUYAiABKAlCA+BBARIdChBjb250ZW50X3RlbXBsYXRlGAMgASgJQgPgQQFC",
-            "DQoLcmVjb3JkX3NwZWMibwoeQmF0Y2hTZWFyY2hEYXRhT2JqZWN0c1Jlc3Bv",
-            "bnNlEk0KB3Jlc3VsdHMYASADKAsyNy5nb29nbGUuY2xvdWQudmVjdG9yc2Vh",
-            "cmNoLnYxLlNlYXJjaERhdGFPYmplY3RzUmVzcG9uc2VCA+BBAypCChFBZ2dy",
-            "ZWdhdGlvbk1ldGhvZBIiCh5BR0dSRUdBVElPTl9NRVRIT0RfVU5TUEVDSUZJ",
-            "RUQQABIJCgVDT1VOVBABMuYHChdEYXRhT2JqZWN0U2VhcmNoU2VydmljZRLV",
-            "AQoRU2VhcmNoRGF0YU9iamVjdHMSNi5nb29nbGUuY2xvdWQudmVjdG9yc2Vh",
-            "cmNoLnYxLlNlYXJjaERhdGFPYmplY3RzUmVxdWVzdBo3Lmdvb2dsZS5jbG91",
-            "ZC52ZWN0b3JzZWFyY2gudjEuU2VhcmNoRGF0YU9iamVjdHNSZXNwb25zZSJP",
-            "gtPkkwJJIkQvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nv",
-            "bGxlY3Rpb25zLyp9L2RhdGFPYmplY3RzOnNlYXJjaDoBKhLRAQoQUXVlcnlE",
-            "YXRhT2JqZWN0cxI1Lmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuUXVl",
-            "cnlEYXRhT2JqZWN0c1JlcXVlc3QaNi5nb29nbGUuY2xvdWQudmVjdG9yc2Vh",
-            "cmNoLnYxLlF1ZXJ5RGF0YU9iamVjdHNSZXNwb25zZSJOgtPkkwJIIkMvdjEv",
-            "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyp9",
-            "L2RhdGFPYmplY3RzOnF1ZXJ5OgEqEuEBChRBZ2dyZWdhdGVEYXRhT2JqZWN0",
-            "cxI5Lmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuQWdncmVnYXRlRGF0",
-            "YU9iamVjdHNSZXF1ZXN0GjouZ29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52",
-            "MS5BZ2dyZWdhdGVEYXRhT2JqZWN0c1Jlc3BvbnNlIlKC0+STAkwiRy92MS97",
+            "L3Byb3RvYnVmL3N0cnVjdC5wcm90byJlCgxPdXRwdXRGaWVsZHMSGQoLZGF0",
+            "YV9maWVsZHMYASADKAlCBOJBAQESGwoNdmVjdG9yX2ZpZWxkcxgCIAMoCUIE",
+            "4kEBARIdCg9tZXRhZGF0YV9maWVsZHMYAyADKAlCBOJBAQEixAMKClNlYXJj",
+            "aEhpbnQSSgoIa25uX2hpbnQYAyABKAsyMC5nb29nbGUuY2xvdWQudmVjdG9y",
+            "c2VhcmNoLnYxLlNlYXJjaEhpbnQuS25uSGludEIE4kEBAUgAEk4KCmluZGV4",
+            "X2hpbnQYBCABKAsyMi5nb29nbGUuY2xvdWQudmVjdG9yc2VhcmNoLnYxLlNl",
+            "YXJjaEhpbnQuSW5kZXhIaW50QgTiQQEBSAAagAIKCUluZGV4SGludBJnChJk",
+            "ZW5zZV9zY2Fubl9wYXJhbXMYAiABKAsyQy5nb29nbGUuY2xvdWQudmVjdG9y",
+            "c2VhcmNoLnYxLlNlYXJjaEhpbnQuSW5kZXhIaW50LkRlbnNlU2Nhbm5QYXJh",
+            "bXNCBOJBAQFIABI4CgRuYW1lGAEgASgJQiriQQEC+kEjCiF2ZWN0b3JzZWFy",
+            "Y2guZ29vZ2xlYXBpcy5jb20vSW5kZXgaRgoQRGVuc2VTY2FublBhcmFtcxIg",
+            "Cg10YXJnZXRfcmVjYWxsGAMgASgBQgTiQQEBSACIAQFCEAoOX3RhcmdldF9y",
+            "ZWNhbGxCCAoGcGFyYW1zGgkKB0tubkhpbnRCDAoKaW5kZXhfdHlwZSLmAQoG",
+            "U2VhcmNoEkMKDXZlY3Rvcl9zZWFyY2gYASABKAsyKi5nb29nbGUuY2xvdWQu",
+            "dmVjdG9yc2VhcmNoLnYxLlZlY3RvclNlYXJjaEgAEkcKD3NlbWFudGljX3Nl",
+            "YXJjaBgCIAEoCzIsLmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuU2Vt",
+            "YW50aWNTZWFyY2hIABI/Cgt0ZXh0X3NlYXJjaBgDIAEoCzIoLmdvb2dsZS5j",
+            "bG91ZC52ZWN0b3JzZWFyY2gudjEuVGV4dFNlYXJjaEgAQg0KC3NlYXJjaF90",
+            "eXBlIukDCgxWZWN0b3JTZWFyY2gSOwoGdmVjdG9yGAEgASgLMikuZ29vZ2xl",
+            "LmNsb3VkLnZlY3RvcnNlYXJjaC52MS5EZW5zZVZlY3RvckgAEkMKDXNwYXJz",
+            "ZV92ZWN0b3IYAiABKAsyKi5nb29nbGUuY2xvdWQudmVjdG9yc2VhcmNoLnYx",
+            "LlNwYXJzZVZlY3RvckgAEhoKDHNlYXJjaF9maWVsZBgIIAEoCUIE4kEBAhIt",
+            "CgZmaWx0ZXIYBCABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0QgTiQQEB",
+            "EhgKBXRvcF9rGAUgASgFQgTiQQEBSAGIAQESRwoNb3V0cHV0X2ZpZWxkcxgH",
+            "IAEoCzIqLmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuT3V0cHV0Rmll",
+            "bGRzQgTiQQEBEkMKC3NlYXJjaF9oaW50GAkgASgLMiguZ29vZ2xlLmNsb3Vk",
+            "LnZlY3RvcnNlYXJjaC52MS5TZWFyY2hIaW50QgTiQQEBEksKD2Rpc3RhbmNl",
+            "X21ldHJpYxgLIAEoDjIsLmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEu",
+            "RGlzdGFuY2VNZXRyaWNCBOJBAQFCDQoLdmVjdG9yX3R5cGVCCAoGX3RvcF9r",
+            "IvICCg5TZW1hbnRpY1NlYXJjaBIZCgtzZWFyY2hfdGV4dBgBIAEoCUIE4kEB",
+            "ARIaCgxzZWFyY2hfZmllbGQYAiABKAlCBOJBAQISSAoJdGFza190eXBlGAUg",
+            "ASgOMi8uZ29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52MS5FbWJlZGRpbmdU",
+            "YXNrVHlwZUIE4kEBARJHCg1vdXRwdXRfZmllbGRzGAMgASgLMiouZ29vZ2xl",
+            "LmNsb3VkLnZlY3RvcnNlYXJjaC52MS5PdXRwdXRGaWVsZHNCBOJBAQESLQoG",
+            "ZmlsdGVyGAYgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEIE4kEBARIY",
+            "CgV0b3BfaxgEIAEoBUIE4kEBAUgAiAEBEkMKC3NlYXJjaF9oaW50GAcgASgL",
+            "MiguZ29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52MS5TZWFyY2hIaW50QgTi",
+            "QQEBQggKBl90b3BfayKyAgoKVGV4dFNlYXJjaBIZCgtzZWFyY2hfdGV4dBgB",
+            "IAEoCUIE4kEBARIeChBkYXRhX2ZpZWxkX25hbWVzGAIgAygJQgTiQQEBEkcK",
+            "DW91dHB1dF9maWVsZHMYAyABKAsyKi5nb29nbGUuY2xvdWQudmVjdG9yc2Vh",
+            "cmNoLnYxLk91dHB1dEZpZWxkc0IE4kEBARIYCgV0b3BfaxgEIAEoBUIE4kEB",
+            "AUgAiAEBEi0KBmZpbHRlchgFIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1",
+            "Y3RCBOJBAQESTQoQc3RydWN0dXJlZF9xdWVyeRgGIAEoCzItLmdvb2dsZS5j",
+            "bG91ZC52ZWN0b3JzZWFyY2gudjEuU3RydWN0dXJlZFF1ZXJ5QgTiQQEBQggK",
+            "Bl90b3BfayL6AQoPU3RydWN0dXJlZFF1ZXJ5Ej0KBHRleHQYASABKAsyJy5n",
+            "b29nbGUuY2xvdWQudmVjdG9yc2VhcmNoLnYxLlRleHRRdWVyeUIE4kEBAUgA",
+            "Ej8KBXVuYXJ5GAIgASgLMiguZ29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52",
+            "MS5VbmFyeVF1ZXJ5QgTiQQEBSAASRAoHY29tYmluZRgDIAEoCzIrLmdvb2ds",
+            "ZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuQ29tYmluZWRRdWVyeUIE4kEBAUgA",
+            "EhMKBWJvb3N0GAQgASgCQgTiQQEBQgwKCnF1ZXJ5X3R5cGUikQIKCVRleHRR",
+            "dWVyeRISCgR0ZXh0GAEgASgJQgTiQQECEhQKBmZpZWxkcxgCIAMoCUIE4kEB",
+            "AhJLCgptYXRjaF90eXBlGAMgASgOMjEuZ29vZ2xlLmNsb3VkLnZlY3RvcnNl",
+            "YXJjaC52MS5UZXh0UXVlcnkuTWF0Y2hUeXBlQgTiQQEBEk8KEXF1ZXJ5X2Vu",
+            "aGFuY2VtZW50GAQgASgLMi4uZ29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52",
+            "MS5RdWVyeUVuaGFuY2VtZW50QgTiQQEBIjwKCU1hdGNoVHlwZRIaChZNQVRD",
+            "SF9UWVBFX1VOU1BFQ0lGSUVEEAASCAoEVEVYVBABEgkKBUVYQUNUEAIiRgoQ",
+            "UXVlcnlFbmhhbmNlbWVudBIVCgdlbmFibGVkGAEgASgIQgTiQQEBEhsKDWxh",
+            "bmd1YWdlX2NvZGUYAiABKAlCBOJBAQEiyAEKClVuYXJ5UXVlcnkSQwoCb3AY",
+            "ASABKA4yMS5nb29nbGUuY2xvdWQudmVjdG9yc2VhcmNoLnYxLlVuYXJ5UXVl",
+            "cnkuT3BlcmF0b3JCBOJBAQISRgoJc3ViX3F1ZXJ5GAIgASgLMi0uZ29vZ2xl",
+            "LmNsb3VkLnZlY3RvcnNlYXJjaC52MS5TdHJ1Y3R1cmVkUXVlcnlCBOJBAQIi",
+            "LQoIT3BlcmF0b3ISGAoUT1BFUkFUT1JfVU5TUEVDSUZJRUQQABIHCgNOT1QQ",
+            "ASLYAQoNQ29tYmluZWRRdWVyeRJGCgJvcBgBIAEoDjI0Lmdvb2dsZS5jbG91",
+            "ZC52ZWN0b3JzZWFyY2gudjEuQ29tYmluZWRRdWVyeS5PcGVyYXRvckIE4kEB",
+            "AhJICgtzdWJfcXVlcmllcxgCIAMoCzItLmdvb2dsZS5jbG91ZC52ZWN0b3Jz",
+            "ZWFyY2gudjEuU3RydWN0dXJlZFF1ZXJ5QgTiQQECIjUKCE9wZXJhdG9yEhgK",
+            "FE9QRVJBVE9SX1VOU1BFQ0lGSUVEEAASBwoDQU5EEAESBgoCT1IQAiLyAgoY",
+            "U2VhcmNoRGF0YU9iamVjdHNSZXF1ZXN0EkMKDXZlY3Rvcl9zZWFyY2gYAiAB",
+            "KAsyKi5nb29nbGUuY2xvdWQudmVjdG9yc2VhcmNoLnYxLlZlY3RvclNlYXJj",
+            "aEgAEkcKD3NlbWFudGljX3NlYXJjaBgEIAEoCzIsLmdvb2dsZS5jbG91ZC52",
+            "ZWN0b3JzZWFyY2gudjEuU2VtYW50aWNTZWFyY2hIABJFCgt0ZXh0X3NlYXJj",
+            "aBgHIAEoCzIoLmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuVGV4dFNl",
+            "YXJjaEIE4kEBAUgAEj8KBnBhcmVudBgBIAEoCUIv4kEBAvpBKAomdmVjdG9y",
+            "c2VhcmNoLmdvb2dsZWFwaXMuY29tL0NvbGxlY3Rpb24SFwoJcGFnZV9zaXpl",
+            "GAUgASgFQgTiQQEBEhgKCnBhZ2VfdG9rZW4YBiABKAlCBOJBAQFCDQoLc2Vh",
+            "cmNoX3R5cGUifQoMU2VhcmNoUmVzdWx0EkMKC2RhdGFfb2JqZWN0GAEgASgL",
+            "MiguZ29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52MS5EYXRhT2JqZWN0QgTi",
+            "QQEDEhsKCGRpc3RhbmNlGAIgASgBQgTiQQEDSACIAQFCCwoJX2Rpc3RhbmNl",
+            "In0KGVNlYXJjaERhdGFPYmplY3RzUmVzcG9uc2USQQoHcmVzdWx0cxgBIAMo",
+            "CzIqLmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuU2VhcmNoUmVzdWx0",
+            "QgTiQQEDEh0KD25leHRfcGFnZV90b2tlbhgCIAEoCUIE4kEBAyLXAQobQWdn",
+            "cmVnYXRlRGF0YU9iamVjdHNSZXF1ZXN0Ej8KBnBhcmVudBgBIAEoCUIv4kEB",
+            "AvpBKAomdmVjdG9yc2VhcmNoLmdvb2dsZWFwaXMuY29tL0NvbGxlY3Rpb24S",
+            "LQoGZmlsdGVyGAIgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEIE4kEB",
+            "ARJICglhZ2dyZWdhdGUYAyABKA4yLy5nb29nbGUuY2xvdWQudmVjdG9yc2Vh",
+            "cmNoLnYxLkFnZ3JlZ2F0aW9uTWV0aG9kQgTiQQECIlgKHEFnZ3JlZ2F0ZURh",
+            "dGFPYmplY3RzUmVzcG9uc2USOAoRYWdncmVnYXRlX3Jlc3VsdHMYASADKAsy",
+            "Fy5nb29nbGUucHJvdG9idWYuU3RydWN0QgTiQQEDIoUCChdRdWVyeURhdGFP",
+            "YmplY3RzUmVxdWVzdBI/CgZwYXJlbnQYASABKAlCL+JBAQL6QSgKJnZlY3Rv",
+            "cnNlYXJjaC5nb29nbGVhcGlzLmNvbS9Db2xsZWN0aW9uEi0KBmZpbHRlchgC",
+            "IAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCBOJBAQESRwoNb3V0cHV0",
+            "X2ZpZWxkcxgHIAEoCzIqLmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEu",
+            "T3V0cHV0RmllbGRzQgTiQQEBEhcKCXBhZ2Vfc2l6ZRgFIAEoBUIE4kEBARIY",
+            "CgpwYWdlX3Rva2VuGAYgASgJQgTiQQEBIn8KGFF1ZXJ5RGF0YU9iamVjdHNS",
+            "ZXNwb25zZRJECgxkYXRhX29iamVjdHMYBCADKAsyKC5nb29nbGUuY2xvdWQu",
+            "dmVjdG9yc2VhcmNoLnYxLkRhdGFPYmplY3RCBOJBAQMSHQoPbmV4dF9wYWdl",
+            "X3Rva2VuGAMgASgJQgTiQQEDIrwDCh1CYXRjaFNlYXJjaERhdGFPYmplY3Rz",
+            "UmVxdWVzdBI/CgZwYXJlbnQYASABKAlCL+JBAQL6QSgKJnZlY3RvcnNlYXJj",
+            "aC5nb29nbGVhcGlzLmNvbS9Db2xsZWN0aW9uEjwKCHNlYXJjaGVzGAIgAygL",
+            "MiQuZ29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52MS5TZWFyY2hCBOJBAQIS",
+            "aAoHY29tYmluZRgDIAEoCzJRLmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gu",
+            "djEuQmF0Y2hTZWFyY2hEYXRhT2JqZWN0c1JlcXVlc3QuQ29tYmluZVJlc3Vs",
+            "dHNPcHRpb25zQgTiQQEBGrEBChVDb21iaW5lUmVzdWx0c09wdGlvbnMSOgoG",
+            "cmFua2VyGAEgASgLMiQuZ29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52MS5S",
+            "YW5rZXJCBOJBAQISRwoNb3V0cHV0X2ZpZWxkcxgCIAEoCzIqLmdvb2dsZS5j",
+            "bG91ZC52ZWN0b3JzZWFyY2gudjEuT3V0cHV0RmllbGRzQgTiQQEBEhMKBXRv",
+            "cF9rGAMgASgFQgTiQQEBIqwBCgZSYW5rZXISQQoDcnJmGAEgASgLMjIuZ29v",
+            "Z2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52MS5SZWNpcHJvY2FsUmFua0Z1c2lv",
+            "bkgAEkkKDXZlcnRleF9yYW5rZXIYAiABKAsyKi5nb29nbGUuY2xvdWQudmVj",
+            "dG9yc2VhcmNoLnYxLlZlcnRleFJhbmtlckIE4kEBAUgBQggKBnJhbmtlckIK",
+            "CghyZXJhbmtlciItChRSZWNpcHJvY2FsUmFua0Z1c2lvbhIVCgd3ZWlnaHRz",
+            "GAEgAygBQgTiQQECIoMCCgxWZXJ0ZXhSYW5rZXISVQoQdGV4dF9yZWNvcmRf",
+            "c3BlYxgGIAEoCzI5Lmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuVmVy",
+            "dGV4UmFua2VyLlRleHRSZWNvcmRTcGVjSAASEwoFbW9kZWwYBCABKAlCBOJB",
+            "AQISEwoFdG9wX24YBSABKAVCBOJBAQIaYwoOVGV4dFJlY29yZFNwZWMSEwoF",
+            "cXVlcnkYASABKAlCBOJBAQISHAoOdGl0bGVfdGVtcGxhdGUYAiABKAlCBOJB",
+            "AQESHgoQY29udGVudF90ZW1wbGF0ZRgDIAEoCUIE4kEBAUINCgtyZWNvcmRf",
+            "c3BlYyJwCh5CYXRjaFNlYXJjaERhdGFPYmplY3RzUmVzcG9uc2USTgoHcmVz",
+            "dWx0cxgBIAMoCzI3Lmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuU2Vh",
+            "cmNoRGF0YU9iamVjdHNSZXNwb25zZUIE4kEBAypCChFBZ2dyZWdhdGlvbk1l",
+            "dGhvZBIiCh5BR0dSRUdBVElPTl9NRVRIT0RfVU5TUEVDSUZJRUQQABIJCgVD",
+            "T1VOVBABMssIChdEYXRhT2JqZWN0U2VhcmNoU2VydmljZRLVAQoRU2VhcmNo",
+            "RGF0YU9iamVjdHMSNi5nb29nbGUuY2xvdWQudmVjdG9yc2VhcmNoLnYxLlNl",
+            "YXJjaERhdGFPYmplY3RzUmVxdWVzdBo3Lmdvb2dsZS5jbG91ZC52ZWN0b3Jz",
+            "ZWFyY2gudjEuU2VhcmNoRGF0YU9iamVjdHNSZXNwb25zZSJPgtPkkwJJIkQv",
+            "djEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25z",
+            "Lyp9L2RhdGFPYmplY3RzOnNlYXJjaDoBKhLRAQoQUXVlcnlEYXRhT2JqZWN0",
+            "cxI1Lmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuUXVlcnlEYXRhT2Jq",
+            "ZWN0c1JlcXVlc3QaNi5nb29nbGUuY2xvdWQudmVjdG9yc2VhcmNoLnYxLlF1",
+            "ZXJ5RGF0YU9iamVjdHNSZXNwb25zZSJOgtPkkwJIIkMvdjEve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyp9L2RhdGFPYmpl",
+            "Y3RzOnF1ZXJ5OgEqEuEBChRBZ2dyZWdhdGVEYXRhT2JqZWN0cxI5Lmdvb2ds",
+            "ZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuQWdncmVnYXRlRGF0YU9iamVjdHNS",
+            "ZXF1ZXN0GjouZ29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52MS5BZ2dyZWdh",
+            "dGVEYXRhT2JqZWN0c1Jlc3BvbnNlIlKC0+STAkwiRy92MS97cGFyZW50PXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyovY29sbGVjdGlvbnMvKn0vZGF0YU9iamVj",
+            "dHM6YWdncmVnYXRlOgEqEukBChZCYXRjaFNlYXJjaERhdGFPYmplY3RzEjsu",
+            "Z29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52MS5CYXRjaFNlYXJjaERhdGFP",
+            "YmplY3RzUmVxdWVzdBo8Lmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEu",
+            "QmF0Y2hTZWFyY2hEYXRhT2JqZWN0c1Jlc3BvbnNlIlSC0+STAk4iSS92MS97",
             "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovY29sbGVjdGlvbnMvKn0v",
-            "ZGF0YU9iamVjdHM6YWdncmVnYXRlOgEqEukBChZCYXRjaFNlYXJjaERhdGFP",
-            "YmplY3RzEjsuZ29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52MS5CYXRjaFNl",
-            "YXJjaERhdGFPYmplY3RzUmVxdWVzdBo8Lmdvb2dsZS5jbG91ZC52ZWN0b3Jz",
-            "ZWFyY2gudjEuQmF0Y2hTZWFyY2hEYXRhT2JqZWN0c1Jlc3BvbnNlIlSC0+ST",
-            "Ak4iSS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovY29sbGVj",
-            "dGlvbnMvKn0vZGF0YU9iamVjdHM6YmF0Y2hTZWFyY2g6ASoaT8pBG3ZlY3Rv",
-            "cnNlYXJjaC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C6AEKIGNvbS5nb29nbGUuY2xv",
-            "dWQudmVjdG9yc2VhcmNoLnYxQhxEYXRhT2JqZWN0U2VhcmNoU2VydmljZVBy",
-            "b3RvUAFaRGNsb3VkLmdvb2dsZS5jb20vZ28vdmVjdG9yc2VhcmNoL2FwaXYx",
-            "L3ZlY3RvcnNlYXJjaHBiO3ZlY3RvcnNlYXJjaHBiqgIcR29vZ2xlLkNsb3Vk",
-            "LlZlY3RvclNlYXJjaC5WMcoCHEdvb2dsZVxDbG91ZFxWZWN0b3JTZWFyY2hc",
-            "VjHqAh9Hb29nbGU6OkNsb3VkOjpWZWN0b3JTZWFyY2g6OlYxYgZwcm90bzM="));
+            "ZGF0YU9iamVjdHM6YmF0Y2hTZWFyY2g6ASoaswHKQRt2ZWN0b3JzZWFyY2gu",
+            "Z29vZ2xlYXBpcy5jb23SQZEBaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
+            "YXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
+            "bS9hdXRoL3ZlY3RvcnNlYXJjaCxodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
+            "bS9hdXRoL3ZlY3RvcnNlYXJjaC5yZWFkb25seULoAQogY29tLmdvb2dsZS5j",
+            "bG91ZC52ZWN0b3JzZWFyY2gudjFCHERhdGFPYmplY3RTZWFyY2hTZXJ2aWNl",
+            "UHJvdG9QAVpEY2xvdWQuZ29vZ2xlLmNvbS9nby92ZWN0b3JzZWFyY2gvYXBp",
+            "djEvdmVjdG9yc2VhcmNocGI7dmVjdG9yc2VhcmNocGKqAhxHb29nbGUuQ2xv",
+            "dWQuVmVjdG9yU2VhcmNoLlYxygIcR29vZ2xlXENsb3VkXFZlY3RvclNlYXJj",
+            "aFxWMeoCH0dvb2dsZTo6Q2xvdWQ6OlZlY3RvclNlYXJjaDo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.VectorSearch.V1.CommonReflection.Descriptor, global::Google.Cloud.VectorSearch.V1.DataObjectReflection.Descriptor, global::Google.Cloud.VectorSearch.V1.EmbeddingConfigReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.VectorSearch.V1.AggregationMethod), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -164,7 +193,12 @@ namespace Google.Cloud.VectorSearch.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.Search), global::Google.Cloud.VectorSearch.V1.Search.Parser, new[]{ "VectorSearch", "SemanticSearch", "TextSearch" }, new[]{ "SearchType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.VectorSearch), global::Google.Cloud.VectorSearch.V1.VectorSearch.Parser, new[]{ "Vector", "SparseVector", "SearchField", "Filter", "TopK", "OutputFields", "SearchHint", "DistanceMetric" }, new[]{ "VectorType", "TopK" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.SemanticSearch), global::Google.Cloud.VectorSearch.V1.SemanticSearch.Parser, new[]{ "SearchText", "SearchField", "TaskType", "OutputFields", "Filter", "TopK", "SearchHint" }, new[]{ "TopK" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.TextSearch), global::Google.Cloud.VectorSearch.V1.TextSearch.Parser, new[]{ "SearchText", "DataFieldNames", "OutputFields", "TopK", "Filter" }, new[]{ "TopK" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.TextSearch), global::Google.Cloud.VectorSearch.V1.TextSearch.Parser, new[]{ "SearchText", "DataFieldNames", "OutputFields", "TopK", "Filter", "StructuredQuery" }, new[]{ "TopK" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.StructuredQuery), global::Google.Cloud.VectorSearch.V1.StructuredQuery.Parser, new[]{ "Text", "Unary", "Combine", "Boost" }, new[]{ "QueryType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.TextQuery), global::Google.Cloud.VectorSearch.V1.TextQuery.Parser, new[]{ "Text", "Fields", "MatchType", "QueryEnhancement" }, null, new[]{ typeof(global::Google.Cloud.VectorSearch.V1.TextQuery.Types.MatchType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.QueryEnhancement), global::Google.Cloud.VectorSearch.V1.QueryEnhancement.Parser, new[]{ "Enabled", "LanguageCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.UnaryQuery), global::Google.Cloud.VectorSearch.V1.UnaryQuery.Parser, new[]{ "Op", "SubQuery" }, null, new[]{ typeof(global::Google.Cloud.VectorSearch.V1.UnaryQuery.Types.Operator) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.CombinedQuery), global::Google.Cloud.VectorSearch.V1.CombinedQuery.Parser, new[]{ "Op", "SubQueries" }, null, new[]{ typeof(global::Google.Cloud.VectorSearch.V1.CombinedQuery.Types.Operator) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.SearchDataObjectsRequest), global::Google.Cloud.VectorSearch.V1.SearchDataObjectsRequest.Parser, new[]{ "VectorSearch", "SemanticSearch", "TextSearch", "Parent", "PageSize", "PageToken" }, new[]{ "SearchType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.SearchResult), global::Google.Cloud.VectorSearch.V1.SearchResult.Parser, new[]{ "DataObject", "Distance" }, new[]{ "Distance" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.SearchDataObjectsResponse), global::Google.Cloud.VectorSearch.V1.SearchDataObjectsResponse.Parser, new[]{ "Results", "NextPageToken" }, null, null, null, null),
@@ -201,7 +235,14 @@ namespace Google.Cloud.VectorSearch.V1 {
 
   #region Messages
   /// <summary>
-  /// Defines a output fields struct for data in DataObject.
+  /// Defines an output fields struct for data in DataObject.
+  ///
+  /// Output fields are opt-in. A search or query result contains only the data
+  /// object name and ID, plus the fields listed here. If this message is unset or
+  /// a list is empty, the corresponding part of the data object (`data`,
+  /// `vectors` or metadata) is omitted from the result; it is not an indication
+  /// that the stored data object is empty. Use `"*"` in a list to return all
+  /// fields of that kind.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OutputFields : pb::IMessage<OutputFields>
@@ -256,7 +297,8 @@ namespace Google.Cloud.VectorSearch.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> dataFields_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. The fields from the data fields to include in the output.
+    /// Optional. The fields from the data fields to include in the output. Use
+    /// `"*"` to include all data fields. If empty, `data` is omitted from results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -270,7 +312,9 @@ namespace Google.Cloud.VectorSearch.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> vectorFields_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. The fields from the vector fields to include in the output.
+    /// Optional. The fields from the vector fields to include in the output. Use
+    /// `"*"` to include all vector fields. If empty, `vectors` is omitted from
+    /// results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -284,7 +328,9 @@ namespace Google.Cloud.VectorSearch.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> metadataFields_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. The fields from the DataObject metadata to include in the output.
+    /// Optional. The DataObject metadata fields to include in the output:
+    /// `create_time`, `update_time` and `etag`. Use `"*"` to include all metadata
+    /// fields. If empty, these fields are omitted from results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1921,8 +1967,34 @@ namespace Google.Cloud.VectorSearch.V1 {
     public const int FilterFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Struct filter_;
     /// <summary>
-    /// Optional. A JSON filter expression, e.g. {"genre": {"$eq": "sci-fi"}},
-    /// represented as a google.protobuf.Struct.
+    /// Optional. A JSON filter expression, e.g. `{"genre": {"$eq": "sci-fi"}}`,
+    /// represented as a `google.protobuf.Struct`.
+    ///
+    /// An empty filter (`{}`) matches all data objects. Otherwise, each JSON
+    /// object in the filter must have exactly one key: either a field name mapped
+    /// to one operator (`{"price": {"$lt": 100}}`), or a logical operator: `$and`
+    /// or `$or` with a list of filters, or `$not` with one filter. Field
+    /// operators and their values: `$eq` and `$ne` take a string, number or bool;
+    /// `$lt`, `$lte`, `$gt` and `$gte` take a number; `$in`, `$nin` and `$all`
+    /// take a list of strings; `$exists` takes a bool. Several keys in one object
+    /// (implicit AND) and implicit equality (`{"genre": "sci-fi"}`) are rejected;
+    /// use `$and` and `$eq` instead.
+    ///
+    /// Logical operators can be nested at most 2 levels deep, e.g.
+    /// `{"$and": [{"$or": [{"a": {"$eq": 1}}, {"b": {"$eq": 2}}]}]}`. Deeper
+    /// filters are rejected with `INVALID_ARGUMENT`.
+    ///
+    /// Which filters are accepted depends on how the search is served. If it is
+    /// served by an approximate nearest neighbor (ANN) index (by default when a
+    /// ready index exists on `search_field`, or when one is selected via
+    /// `search_hint.index_hint`), every filtered field must be listed in
+    /// `Index.filter_fields` at index creation, `$or` and `$all` are accepted
+    /// only at the top level of the filter, and `$not` and `$exists` are not
+    /// supported. Not every unsupported filter is rejected: most produce
+    /// `INVALID_ARGUMENT`, but some are silently ignored, so do not rely on the
+    /// error. If no ready index exists on `search_field`, or if
+    /// `search_hint.knn_hint` is set, the search is served by K-Nearest Neighbor
+    /// (KNN) search, which has none of these filter restrictions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2526,8 +2598,34 @@ namespace Google.Cloud.VectorSearch.V1 {
     public const int FilterFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Struct filter_;
     /// <summary>
-    /// Optional. A JSON filter expression, e.g. {"genre": {"$eq": "sci-fi"}},
-    /// represented as a google.protobuf.Struct.
+    /// Optional. A JSON filter expression, e.g. `{"genre": {"$eq": "sci-fi"}}`,
+    /// represented as a `google.protobuf.Struct`.
+    ///
+    /// An empty filter (`{}`) matches all data objects. Otherwise, each JSON
+    /// object in the filter must have exactly one key: either a field name mapped
+    /// to one operator (`{"price": {"$lt": 100}}`), or a logical operator: `$and`
+    /// or `$or` with a list of filters, or `$not` with one filter. Field
+    /// operators and their values: `$eq` and `$ne` take a string, number or bool;
+    /// `$lt`, `$lte`, `$gt` and `$gte` take a number; `$in`, `$nin` and `$all`
+    /// take a list of strings; `$exists` takes a bool. Several keys in one object
+    /// (implicit AND) and implicit equality (`{"genre": "sci-fi"}`) are rejected;
+    /// use `$and` and `$eq` instead.
+    ///
+    /// Logical operators can be nested at most 2 levels deep, e.g.
+    /// `{"$and": [{"$or": [{"a": {"$eq": 1}}, {"b": {"$eq": 2}}]}]}`. Deeper
+    /// filters are rejected with `INVALID_ARGUMENT`.
+    ///
+    /// Which filters are accepted depends on how the search is served. If it is
+    /// served by an approximate nearest neighbor (ANN) index (by default when a
+    /// ready index exists on `search_field`, or when one is selected via
+    /// `search_hint.index_hint`), every filtered field must be listed in
+    /// `Index.filter_fields` at index creation, `$or` and `$all` are accepted
+    /// only at the top level of the filter, and `$not` and `$exists` are not
+    /// supported. Not every unsupported filter is rejected: most produce
+    /// `INVALID_ARGUMENT`, but some are silently ignored, so do not rely on the
+    /// error. If no ready index exists on `search_field`, or if
+    /// `search_hint.knn_hint` is set, the search is served by K-Nearest Neighbor
+    /// (KNN) search, which has none of these filter restrictions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2942,6 +3040,7 @@ namespace Google.Cloud.VectorSearch.V1 {
       outputFields_ = other.outputFields_ != null ? other.outputFields_.Clone() : null;
       topK_ = other.topK_;
       filter_ = other.filter_ != null ? other.filter_.Clone() : null;
+      structuredQuery_ = other.structuredQuery_ != null ? other.structuredQuery_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3032,6 +3131,20 @@ namespace Google.Cloud.VectorSearch.V1 {
     /// <summary>
     /// Optional. A JSON filter expression, e.g. `{"genre": {"$eq": "sci-fi"}}`,
     /// represented as a `google.protobuf.Struct`.
+    ///
+    /// An empty filter (`{}`) matches all data objects. Otherwise, each JSON
+    /// object in the filter must have exactly one key: either a field name mapped
+    /// to one operator (`{"price": {"$lt": 100}}`), or a logical operator: `$and`
+    /// or `$or` with a list of filters, or `$not` with one filter. Field
+    /// operators and their values: `$eq` and `$ne` take a string, number or bool;
+    /// `$lt`, `$lte`, `$gt` and `$gte` take a number; `$in`, `$nin` and `$all`
+    /// take a list of strings; `$exists` takes a bool. Several keys in one object
+    /// (implicit AND) and implicit equality (`{"genre": "sci-fi"}`) are rejected;
+    /// use `$and` and `$eq` instead.
+    ///
+    /// Logical operators can be nested at most 2 levels deep, e.g.
+    /// `{"$and": [{"$or": [{"a": {"$eq": 1}}, {"b": {"$eq": 2}}]}]}`. Deeper
+    /// filters are rejected with `INVALID_ARGUMENT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3039,6 +3152,25 @@ namespace Google.Cloud.VectorSearch.V1 {
       get { return filter_; }
       set {
         filter_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "structured_query" field.</summary>
+    public const int StructuredQueryFieldNumber = 6;
+    private global::Google.Cloud.VectorSearch.V1.StructuredQuery structuredQuery_;
+    /// <summary>
+    /// Optional. Structured query definition. When set, `search_text` and
+    /// `data_field_names` must be left empty; otherwise the request will be
+    /// rejected with an `INVALID_ARGUMENT` error. Conversely, when
+    /// `structured_query` is unset, both `search_text` and `data_field_names`
+    /// are required.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VectorSearch.V1.StructuredQuery StructuredQuery {
+      get { return structuredQuery_; }
+      set {
+        structuredQuery_ = value;
       }
     }
 
@@ -3062,6 +3194,7 @@ namespace Google.Cloud.VectorSearch.V1 {
       if (!object.Equals(OutputFields, other.OutputFields)) return false;
       if (TopK != other.TopK) return false;
       if (!object.Equals(Filter, other.Filter)) return false;
+      if (!object.Equals(StructuredQuery, other.StructuredQuery)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3074,6 +3207,7 @@ namespace Google.Cloud.VectorSearch.V1 {
       if (outputFields_ != null) hash ^= OutputFields.GetHashCode();
       if (HasTopK) hash ^= TopK.GetHashCode();
       if (filter_ != null) hash ^= Filter.GetHashCode();
+      if (structuredQuery_ != null) hash ^= StructuredQuery.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3109,6 +3243,10 @@ namespace Google.Cloud.VectorSearch.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(Filter);
       }
+      if (structuredQuery_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(StructuredQuery);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3136,6 +3274,10 @@ namespace Google.Cloud.VectorSearch.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(Filter);
       }
+      if (structuredQuery_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(StructuredQuery);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3158,6 +3300,9 @@ namespace Google.Cloud.VectorSearch.V1 {
       }
       if (filter_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Filter);
+      }
+      if (structuredQuery_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StructuredQuery);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3189,6 +3334,12 @@ namespace Google.Cloud.VectorSearch.V1 {
           Filter = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         Filter.MergeFrom(other.Filter);
+      }
+      if (other.structuredQuery_ != null) {
+        if (structuredQuery_ == null) {
+          StructuredQuery = new global::Google.Cloud.VectorSearch.V1.StructuredQuery();
+        }
+        StructuredQuery.MergeFrom(other.StructuredQuery);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3233,6 +3384,13 @@ namespace Google.Cloud.VectorSearch.V1 {
               Filter = new global::Google.Protobuf.WellKnownTypes.Struct();
             }
             input.ReadMessage(Filter);
+            break;
+          }
+          case 50: {
+            if (structuredQuery_ == null) {
+              StructuredQuery = new global::Google.Cloud.VectorSearch.V1.StructuredQuery();
+            }
+            input.ReadMessage(StructuredQuery);
             break;
           }
         }
@@ -3280,10 +3438,1557 @@ namespace Google.Cloud.VectorSearch.V1 {
             input.ReadMessage(Filter);
             break;
           }
+          case 50: {
+            if (structuredQuery_ == null) {
+              StructuredQuery = new global::Google.Cloud.VectorSearch.V1.StructuredQuery();
+            }
+            input.ReadMessage(StructuredQuery);
+            break;
+          }
         }
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// A structured query for text search. Allows expressing field-targeted text
+  /// queries combined via boolean operators, with optional per-node boosting.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class StructuredQuery : pb::IMessage<StructuredQuery>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StructuredQuery> _parser = new pb::MessageParser<StructuredQuery>(() => new StructuredQuery());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StructuredQuery> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StructuredQuery() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StructuredQuery(StructuredQuery other) : this() {
+      boost_ = other.boost_;
+      switch (other.QueryTypeCase) {
+        case QueryTypeOneofCase.Text:
+          Text = other.Text.Clone();
+          break;
+        case QueryTypeOneofCase.Unary:
+          Unary = other.Unary.Clone();
+          break;
+        case QueryTypeOneofCase.Combine:
+          Combine = other.Combine.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StructuredQuery Clone() {
+      return new StructuredQuery(this);
+    }
+
+    /// <summary>Field number for the "text" field.</summary>
+    public const int TextFieldNumber = 1;
+    /// <summary>
+    /// Optional. A leaf-level text query.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VectorSearch.V1.TextQuery Text {
+      get { return queryTypeCase_ == QueryTypeOneofCase.Text ? (global::Google.Cloud.VectorSearch.V1.TextQuery) queryType_ : null; }
+      set {
+        queryType_ = value;
+        queryTypeCase_ = value == null ? QueryTypeOneofCase.None : QueryTypeOneofCase.Text;
+      }
+    }
+
+    /// <summary>Field number for the "unary" field.</summary>
+    public const int UnaryFieldNumber = 2;
+    /// <summary>
+    /// Optional. A query that applies a unary operator to a sub-query.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VectorSearch.V1.UnaryQuery Unary {
+      get { return queryTypeCase_ == QueryTypeOneofCase.Unary ? (global::Google.Cloud.VectorSearch.V1.UnaryQuery) queryType_ : null; }
+      set {
+        queryType_ = value;
+        queryTypeCase_ = value == null ? QueryTypeOneofCase.None : QueryTypeOneofCase.Unary;
+      }
+    }
+
+    /// <summary>Field number for the "combine" field.</summary>
+    public const int CombineFieldNumber = 3;
+    /// <summary>
+    /// Optional. A query that combines multiple sub-queries with a boolean
+    /// operator.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VectorSearch.V1.CombinedQuery Combine {
+      get { return queryTypeCase_ == QueryTypeOneofCase.Combine ? (global::Google.Cloud.VectorSearch.V1.CombinedQuery) queryType_ : null; }
+      set {
+        queryType_ = value;
+        queryTypeCase_ = value == null ? QueryTypeOneofCase.None : QueryTypeOneofCase.Combine;
+      }
+    }
+
+    /// <summary>Field number for the "boost" field.</summary>
+    public const int BoostFieldNumber = 4;
+    private float boost_;
+    /// <summary>
+    /// Optional. Optional multiplier applied to this query node's contribution to
+    /// the final relevance score. Must be non-negative; if unset or 0, defaults
+    /// to 1.0. Values greater than 1.0 increase its influence on ranking, values
+    /// between 0.0 and 1.0 decrease it.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Boost {
+      get { return boost_; }
+      set {
+        boost_ = value;
+      }
+    }
+
+    private object queryType_;
+    /// <summary>Enum of possible cases for the "query_type" oneof.</summary>
+    public enum QueryTypeOneofCase {
+      None = 0,
+      Text = 1,
+      Unary = 2,
+      Combine = 3,
+    }
+    private QueryTypeOneofCase queryTypeCase_ = QueryTypeOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueryTypeOneofCase QueryTypeCase {
+      get { return queryTypeCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearQueryType() {
+      queryTypeCase_ = QueryTypeOneofCase.None;
+      queryType_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StructuredQuery);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StructuredQuery other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Text, other.Text)) return false;
+      if (!object.Equals(Unary, other.Unary)) return false;
+      if (!object.Equals(Combine, other.Combine)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Boost, other.Boost)) return false;
+      if (QueryTypeCase != other.QueryTypeCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (queryTypeCase_ == QueryTypeOneofCase.Text) hash ^= Text.GetHashCode();
+      if (queryTypeCase_ == QueryTypeOneofCase.Unary) hash ^= Unary.GetHashCode();
+      if (queryTypeCase_ == QueryTypeOneofCase.Combine) hash ^= Combine.GetHashCode();
+      if (Boost != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Boost);
+      hash ^= (int) queryTypeCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (queryTypeCase_ == QueryTypeOneofCase.Text) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Text);
+      }
+      if (queryTypeCase_ == QueryTypeOneofCase.Unary) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Unary);
+      }
+      if (queryTypeCase_ == QueryTypeOneofCase.Combine) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Combine);
+      }
+      if (Boost != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Boost);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (queryTypeCase_ == QueryTypeOneofCase.Text) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Text);
+      }
+      if (queryTypeCase_ == QueryTypeOneofCase.Unary) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Unary);
+      }
+      if (queryTypeCase_ == QueryTypeOneofCase.Combine) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Combine);
+      }
+      if (Boost != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Boost);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (queryTypeCase_ == QueryTypeOneofCase.Text) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Text);
+      }
+      if (queryTypeCase_ == QueryTypeOneofCase.Unary) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Unary);
+      }
+      if (queryTypeCase_ == QueryTypeOneofCase.Combine) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Combine);
+      }
+      if (Boost != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StructuredQuery other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Boost != 0F) {
+        Boost = other.Boost;
+      }
+      switch (other.QueryTypeCase) {
+        case QueryTypeOneofCase.Text:
+          if (Text == null) {
+            Text = new global::Google.Cloud.VectorSearch.V1.TextQuery();
+          }
+          Text.MergeFrom(other.Text);
+          break;
+        case QueryTypeOneofCase.Unary:
+          if (Unary == null) {
+            Unary = new global::Google.Cloud.VectorSearch.V1.UnaryQuery();
+          }
+          Unary.MergeFrom(other.Unary);
+          break;
+        case QueryTypeOneofCase.Combine:
+          if (Combine == null) {
+            Combine = new global::Google.Cloud.VectorSearch.V1.CombinedQuery();
+          }
+          Combine.MergeFrom(other.Combine);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.VectorSearch.V1.TextQuery subBuilder = new global::Google.Cloud.VectorSearch.V1.TextQuery();
+            if (queryTypeCase_ == QueryTypeOneofCase.Text) {
+              subBuilder.MergeFrom(Text);
+            }
+            input.ReadMessage(subBuilder);
+            Text = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.VectorSearch.V1.UnaryQuery subBuilder = new global::Google.Cloud.VectorSearch.V1.UnaryQuery();
+            if (queryTypeCase_ == QueryTypeOneofCase.Unary) {
+              subBuilder.MergeFrom(Unary);
+            }
+            input.ReadMessage(subBuilder);
+            Unary = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.VectorSearch.V1.CombinedQuery subBuilder = new global::Google.Cloud.VectorSearch.V1.CombinedQuery();
+            if (queryTypeCase_ == QueryTypeOneofCase.Combine) {
+              subBuilder.MergeFrom(Combine);
+            }
+            input.ReadMessage(subBuilder);
+            Combine = subBuilder;
+            break;
+          }
+          case 37: {
+            Boost = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.VectorSearch.V1.TextQuery subBuilder = new global::Google.Cloud.VectorSearch.V1.TextQuery();
+            if (queryTypeCase_ == QueryTypeOneofCase.Text) {
+              subBuilder.MergeFrom(Text);
+            }
+            input.ReadMessage(subBuilder);
+            Text = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.VectorSearch.V1.UnaryQuery subBuilder = new global::Google.Cloud.VectorSearch.V1.UnaryQuery();
+            if (queryTypeCase_ == QueryTypeOneofCase.Unary) {
+              subBuilder.MergeFrom(Unary);
+            }
+            input.ReadMessage(subBuilder);
+            Unary = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.VectorSearch.V1.CombinedQuery subBuilder = new global::Google.Cloud.VectorSearch.V1.CombinedQuery();
+            if (queryTypeCase_ == QueryTypeOneofCase.Combine) {
+              subBuilder.MergeFrom(Combine);
+            }
+            input.ReadMessage(subBuilder);
+            Combine = subBuilder;
+            break;
+          }
+          case 37: {
+            Boost = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A leaf-level text query targeting one or more data fields. When multiple
+  /// fields are specified, this is equivalent to combining per-field matches with
+  /// an OR operator (i.e. the query matches if the text is found in any of the
+  /// listed fields).
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TextQuery : pb::IMessage<TextQuery>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TextQuery> _parser = new pb::MessageParser<TextQuery>(() => new TextQuery());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TextQuery> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TextQuery() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TextQuery(TextQuery other) : this() {
+      text_ = other.text_;
+      fields_ = other.fields_.Clone();
+      matchType_ = other.matchType_;
+      queryEnhancement_ = other.queryEnhancement_ != null ? other.queryEnhancement_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TextQuery Clone() {
+      return new TextQuery(this);
+    }
+
+    /// <summary>Field number for the "text" field.</summary>
+    public const int TextFieldNumber = 1;
+    private string text_ = "";
+    /// <summary>
+    /// Required. The text to search for.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Text {
+      get { return text_; }
+      set {
+        text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "fields" field.</summary>
+    public const int FieldsFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_fields_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> fields_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Required. The data fields to search against.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Fields {
+      get { return fields_; }
+    }
+
+    /// <summary>Field number for the "match_type" field.</summary>
+    public const int MatchTypeFieldNumber = 3;
+    private global::Google.Cloud.VectorSearch.V1.TextQuery.Types.MatchType matchType_ = global::Google.Cloud.VectorSearch.V1.TextQuery.Types.MatchType.Unspecified;
+    /// <summary>
+    /// Optional. The matching strategy to apply for this query. If unset, defaults
+    /// to `TEXT`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VectorSearch.V1.TextQuery.Types.MatchType MatchType {
+      get { return matchType_; }
+      set {
+        matchType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "query_enhancement" field.</summary>
+    public const int QueryEnhancementFieldNumber = 4;
+    private global::Google.Cloud.VectorSearch.V1.QueryEnhancement queryEnhancement_;
+    /// <summary>
+    /// Optional. The query enhancement settings to apply for this query.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VectorSearch.V1.QueryEnhancement QueryEnhancement {
+      get { return queryEnhancement_; }
+      set {
+        queryEnhancement_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TextQuery);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TextQuery other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Text != other.Text) return false;
+      if(!fields_.Equals(other.fields_)) return false;
+      if (MatchType != other.MatchType) return false;
+      if (!object.Equals(QueryEnhancement, other.QueryEnhancement)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Text.Length != 0) hash ^= Text.GetHashCode();
+      hash ^= fields_.GetHashCode();
+      if (MatchType != global::Google.Cloud.VectorSearch.V1.TextQuery.Types.MatchType.Unspecified) hash ^= MatchType.GetHashCode();
+      if (queryEnhancement_ != null) hash ^= QueryEnhancement.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Text.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Text);
+      }
+      fields_.WriteTo(output, _repeated_fields_codec);
+      if (MatchType != global::Google.Cloud.VectorSearch.V1.TextQuery.Types.MatchType.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) MatchType);
+      }
+      if (queryEnhancement_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(QueryEnhancement);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Text.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Text);
+      }
+      fields_.WriteTo(ref output, _repeated_fields_codec);
+      if (MatchType != global::Google.Cloud.VectorSearch.V1.TextQuery.Types.MatchType.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) MatchType);
+      }
+      if (queryEnhancement_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(QueryEnhancement);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Text.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
+      }
+      size += fields_.CalculateSize(_repeated_fields_codec);
+      if (MatchType != global::Google.Cloud.VectorSearch.V1.TextQuery.Types.MatchType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MatchType);
+      }
+      if (queryEnhancement_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(QueryEnhancement);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TextQuery other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Text.Length != 0) {
+        Text = other.Text;
+      }
+      fields_.Add(other.fields_);
+      if (other.MatchType != global::Google.Cloud.VectorSearch.V1.TextQuery.Types.MatchType.Unspecified) {
+        MatchType = other.MatchType;
+      }
+      if (other.queryEnhancement_ != null) {
+        if (queryEnhancement_ == null) {
+          QueryEnhancement = new global::Google.Cloud.VectorSearch.V1.QueryEnhancement();
+        }
+        QueryEnhancement.MergeFrom(other.QueryEnhancement);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Text = input.ReadString();
+            break;
+          }
+          case 18: {
+            fields_.AddEntriesFrom(input, _repeated_fields_codec);
+            break;
+          }
+          case 24: {
+            MatchType = (global::Google.Cloud.VectorSearch.V1.TextQuery.Types.MatchType) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (queryEnhancement_ == null) {
+              QueryEnhancement = new global::Google.Cloud.VectorSearch.V1.QueryEnhancement();
+            }
+            input.ReadMessage(QueryEnhancement);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Text = input.ReadString();
+            break;
+          }
+          case 18: {
+            fields_.AddEntriesFrom(ref input, _repeated_fields_codec);
+            break;
+          }
+          case 24: {
+            MatchType = (global::Google.Cloud.VectorSearch.V1.TextQuery.Types.MatchType) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (queryEnhancement_ == null) {
+              QueryEnhancement = new global::Google.Cloud.VectorSearch.V1.QueryEnhancement();
+            }
+            input.ReadMessage(QueryEnhancement);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TextQuery message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The matching strategy to apply when comparing `text` against the content
+      /// of `fields`.
+      /// </summary>
+      public enum MatchType {
+        /// <summary>
+        /// Defaults to `TEXT`.
+        /// </summary>
+        [pbr::OriginalName("MATCH_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Treats `text` as individual search terms combined with an implicit
+        /// AND: every term must appear in the field, in any order and any
+        /// position. Case-insensitive.
+        /// </summary>
+        [pbr::OriginalName("TEXT")] Text = 1,
+        /// <summary>
+        /// Matches only when the entire field value is exactly equal to `text`.
+        /// </summary>
+        [pbr::OriginalName("EXACT")] Exact = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Query enhancement settings. When enabled, expands the search terms with
+  /// stemming, synonyms, and spelling corrections, and removes stop words.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class QueryEnhancement : pb::IMessage<QueryEnhancement>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<QueryEnhancement> _parser = new pb::MessageParser<QueryEnhancement>(() => new QueryEnhancement());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<QueryEnhancement> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueryEnhancement() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueryEnhancement(QueryEnhancement other) : this() {
+      enabled_ = other.enabled_;
+      languageCode_ = other.languageCode_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueryEnhancement Clone() {
+      return new QueryEnhancement(this);
+    }
+
+    /// <summary>Field number for the "enabled" field.</summary>
+    public const int EnabledFieldNumber = 1;
+    private bool enabled_;
+    /// <summary>
+    /// Optional. Whether query enhancement is enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Enabled {
+      get { return enabled_; }
+      set {
+        enabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "language_code" field.</summary>
+    public const int LanguageCodeFieldNumber = 2;
+    private string languageCode_ = "";
+    /// <summary>
+    /// Optional. The IETF BCP 47 language tag, such as "en-US", for query
+    /// enhancement. If unset, the language is detected automatically. See
+    /// &lt;https://en.wikipedia.org/wiki/IETF_language_tag>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LanguageCode {
+      get { return languageCode_; }
+      set {
+        languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as QueryEnhancement);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(QueryEnhancement other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Enabled != other.Enabled) return false;
+      if (LanguageCode != other.LanguageCode) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Enabled != false) hash ^= Enabled.GetHashCode();
+      if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Enabled != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Enabled);
+      }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(LanguageCode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Enabled != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Enabled);
+      }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(LanguageCode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Enabled != false) {
+        size += 1 + 1;
+      }
+      if (LanguageCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(QueryEnhancement other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Enabled != false) {
+        Enabled = other.Enabled;
+      }
+      if (other.LanguageCode.Length != 0) {
+        LanguageCode = other.LanguageCode;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Enabled = input.ReadBool();
+            break;
+          }
+          case 18: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Enabled = input.ReadBool();
+            break;
+          }
+          case 18: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A query that applies a unary operator to a sub-query.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UnaryQuery : pb::IMessage<UnaryQuery>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UnaryQuery> _parser = new pb::MessageParser<UnaryQuery>(() => new UnaryQuery());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UnaryQuery> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UnaryQuery() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UnaryQuery(UnaryQuery other) : this() {
+      op_ = other.op_;
+      subQuery_ = other.subQuery_ != null ? other.subQuery_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UnaryQuery Clone() {
+      return new UnaryQuery(this);
+    }
+
+    /// <summary>Field number for the "op" field.</summary>
+    public const int OpFieldNumber = 1;
+    private global::Google.Cloud.VectorSearch.V1.UnaryQuery.Types.Operator op_ = global::Google.Cloud.VectorSearch.V1.UnaryQuery.Types.Operator.Unspecified;
+    /// <summary>
+    /// Required. The unary operator to apply.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VectorSearch.V1.UnaryQuery.Types.Operator Op {
+      get { return op_; }
+      set {
+        op_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sub_query" field.</summary>
+    public const int SubQueryFieldNumber = 2;
+    private global::Google.Cloud.VectorSearch.V1.StructuredQuery subQuery_;
+    /// <summary>
+    /// Required. The sub-query the operator is applied to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VectorSearch.V1.StructuredQuery SubQuery {
+      get { return subQuery_; }
+      set {
+        subQuery_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UnaryQuery);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UnaryQuery other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Op != other.Op) return false;
+      if (!object.Equals(SubQuery, other.SubQuery)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Op != global::Google.Cloud.VectorSearch.V1.UnaryQuery.Types.Operator.Unspecified) hash ^= Op.GetHashCode();
+      if (subQuery_ != null) hash ^= SubQuery.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Op != global::Google.Cloud.VectorSearch.V1.UnaryQuery.Types.Operator.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Op);
+      }
+      if (subQuery_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SubQuery);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Op != global::Google.Cloud.VectorSearch.V1.UnaryQuery.Types.Operator.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Op);
+      }
+      if (subQuery_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SubQuery);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Op != global::Google.Cloud.VectorSearch.V1.UnaryQuery.Types.Operator.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Op);
+      }
+      if (subQuery_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SubQuery);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UnaryQuery other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Op != global::Google.Cloud.VectorSearch.V1.UnaryQuery.Types.Operator.Unspecified) {
+        Op = other.Op;
+      }
+      if (other.subQuery_ != null) {
+        if (subQuery_ == null) {
+          SubQuery = new global::Google.Cloud.VectorSearch.V1.StructuredQuery();
+        }
+        SubQuery.MergeFrom(other.SubQuery);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Op = (global::Google.Cloud.VectorSearch.V1.UnaryQuery.Types.Operator) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (subQuery_ == null) {
+              SubQuery = new global::Google.Cloud.VectorSearch.V1.StructuredQuery();
+            }
+            input.ReadMessage(SubQuery);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Op = (global::Google.Cloud.VectorSearch.V1.UnaryQuery.Types.Operator) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (subQuery_ == null) {
+              SubQuery = new global::Google.Cloud.VectorSearch.V1.StructuredQuery();
+            }
+            input.ReadMessage(SubQuery);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the UnaryQuery message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Unary operators applicable to a sub-query.
+      /// </summary>
+      public enum Operator {
+        /// <summary>
+        /// Default value. This value is unused.
+        /// </summary>
+        [pbr::OriginalName("OPERATOR_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Negates the sub-query.
+        /// </summary>
+        [pbr::OriginalName("NOT")] Not = 1,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// A query that combines multiple sub-queries with a boolean operator.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CombinedQuery : pb::IMessage<CombinedQuery>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CombinedQuery> _parser = new pb::MessageParser<CombinedQuery>(() => new CombinedQuery());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CombinedQuery> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CombinedQuery() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CombinedQuery(CombinedQuery other) : this() {
+      op_ = other.op_;
+      subQueries_ = other.subQueries_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CombinedQuery Clone() {
+      return new CombinedQuery(this);
+    }
+
+    /// <summary>Field number for the "op" field.</summary>
+    public const int OpFieldNumber = 1;
+    private global::Google.Cloud.VectorSearch.V1.CombinedQuery.Types.Operator op_ = global::Google.Cloud.VectorSearch.V1.CombinedQuery.Types.Operator.Unspecified;
+    /// <summary>
+    /// Required. The boolean operator used to combine the sub-queries.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VectorSearch.V1.CombinedQuery.Types.Operator Op {
+      get { return op_; }
+      set {
+        op_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sub_queries" field.</summary>
+    public const int SubQueriesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.VectorSearch.V1.StructuredQuery> _repeated_subQueries_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.VectorSearch.V1.StructuredQuery.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VectorSearch.V1.StructuredQuery> subQueries_ = new pbc::RepeatedField<global::Google.Cloud.VectorSearch.V1.StructuredQuery>();
+    /// <summary>
+    /// Required. The sub-queries to be combined.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.VectorSearch.V1.StructuredQuery> SubQueries {
+      get { return subQueries_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CombinedQuery);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CombinedQuery other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Op != other.Op) return false;
+      if(!subQueries_.Equals(other.subQueries_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Op != global::Google.Cloud.VectorSearch.V1.CombinedQuery.Types.Operator.Unspecified) hash ^= Op.GetHashCode();
+      hash ^= subQueries_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Op != global::Google.Cloud.VectorSearch.V1.CombinedQuery.Types.Operator.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Op);
+      }
+      subQueries_.WriteTo(output, _repeated_subQueries_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Op != global::Google.Cloud.VectorSearch.V1.CombinedQuery.Types.Operator.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Op);
+      }
+      subQueries_.WriteTo(ref output, _repeated_subQueries_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Op != global::Google.Cloud.VectorSearch.V1.CombinedQuery.Types.Operator.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Op);
+      }
+      size += subQueries_.CalculateSize(_repeated_subQueries_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CombinedQuery other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Op != global::Google.Cloud.VectorSearch.V1.CombinedQuery.Types.Operator.Unspecified) {
+        Op = other.Op;
+      }
+      subQueries_.Add(other.subQueries_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Op = (global::Google.Cloud.VectorSearch.V1.CombinedQuery.Types.Operator) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            subQueries_.AddEntriesFrom(input, _repeated_subQueries_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Op = (global::Google.Cloud.VectorSearch.V1.CombinedQuery.Types.Operator) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            subQueries_.AddEntriesFrom(ref input, _repeated_subQueries_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the CombinedQuery message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Boolean operators used to combine sub-queries.
+      /// </summary>
+      public enum Operator {
+        /// <summary>
+        /// Default value. This value is unused.
+        /// </summary>
+        [pbr::OriginalName("OPERATOR_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// All sub-queries must match.
+        /// </summary>
+        [pbr::OriginalName("AND")] And = 1,
+        /// <summary>
+        /// At least one sub-query must match.
+        /// </summary>
+        [pbr::OriginalName("OR")] Or = 2,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -3305,7 +5010,7 @@ namespace Google.Cloud.VectorSearch.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3793,7 +5498,7 @@ namespace Google.Cloud.VectorSearch.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4063,7 +5768,7 @@ namespace Google.Cloud.VectorSearch.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4299,7 +6004,7 @@ namespace Google.Cloud.VectorSearch.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4351,8 +6056,22 @@ namespace Google.Cloud.VectorSearch.V1 {
     public const int FilterFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Struct filter_;
     /// <summary>
-    /// Optional. A JSON filter expression, e.g. {"genre": {"$eq": "sci-fi"}},
-    /// represented as a google.protobuf.Struct.
+    /// Optional. A JSON filter expression, e.g. `{"genre": {"$eq": "sci-fi"}}`,
+    /// represented as a `google.protobuf.Struct`.
+    ///
+    /// An empty filter (`{}`) matches all data objects. Otherwise, each JSON
+    /// object in the filter must have exactly one key: either a field name mapped
+    /// to one operator (`{"price": {"$lt": 100}}`), or a logical operator: `$and`
+    /// or `$or` with a list of filters, or `$not` with one filter. Field
+    /// operators and their values: `$eq` and `$ne` take a string, number or bool;
+    /// `$lt`, `$lte`, `$gt` and `$gte` take a number; `$in`, `$nin` and `$all`
+    /// take a list of strings; `$exists` takes a bool. Several keys in one object
+    /// (implicit AND) and implicit equality (`{"genre": "sci-fi"}`) are rejected;
+    /// use `$and` and `$eq` instead.
+    ///
+    /// Logical operators can be nested at most 2 levels deep, e.g.
+    /// `{"$and": [{"$or": [{"a": {"$eq": 1}}, {"b": {"$eq": 2}}]}]}`. Deeper
+    /// filters are rejected with `INVALID_ARGUMENT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4595,7 +6314,7 @@ namespace Google.Cloud.VectorSearch.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4789,7 +6508,7 @@ namespace Google.Cloud.VectorSearch.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4843,8 +6562,22 @@ namespace Google.Cloud.VectorSearch.V1 {
     public const int FilterFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Struct filter_;
     /// <summary>
-    /// Optional. A JSON filter expression, e.g. {"genre": {"$eq": "sci-fi"}},
-    /// represented as a google.protobuf.Struct.
+    /// Optional. A JSON filter expression, e.g. `{"genre": {"$eq": "sci-fi"}}`,
+    /// represented as a `google.protobuf.Struct`.
+    ///
+    /// An empty filter (`{}`) matches all data objects. Otherwise, each JSON
+    /// object in the filter must have exactly one key: either a field name mapped
+    /// to one operator (`{"price": {"$lt": 100}}`), or a logical operator: `$and`
+    /// or `$or` with a list of filters, or `$not` with one filter. Field
+    /// operators and their values: `$eq` and `$ne` take a string, number or bool;
+    /// `$lt`, `$lte`, `$gt` and `$gte` take a number; `$in`, `$nin` and `$all`
+    /// take a list of strings; `$exists` takes a bool. Several keys in one object
+    /// (implicit AND) and implicit equality (`{"genre": "sci-fi"}`) are rejected;
+    /// use `$and` and `$eq` instead.
+    ///
+    /// Logical operators can be nested at most 2 levels deep, e.g.
+    /// `{"$and": [{"$or": [{"a": {"$eq": 1}}, {"b": {"$eq": 2}}]}]}`. Deeper
+    /// filters are rejected with `INVALID_ARGUMENT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5180,7 +6913,7 @@ namespace Google.Cloud.VectorSearch.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5415,7 +7148,7 @@ namespace Google.Cloud.VectorSearch.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6009,7 +7742,7 @@ namespace Google.Cloud.VectorSearch.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6339,7 +8072,7 @@ namespace Google.Cloud.VectorSearch.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6536,7 +8269,7 @@ namespace Google.Cloud.VectorSearch.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7158,7 +8891,7 @@ namespace Google.Cloud.VectorSearch.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
