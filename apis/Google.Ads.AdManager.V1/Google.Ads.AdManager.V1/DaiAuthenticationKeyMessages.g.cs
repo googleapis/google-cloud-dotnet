@@ -28,27 +28,30 @@ namespace Google.Ads.AdManager.V1 {
             "a2V5X21lc3NhZ2VzLnByb3RvEhdnb29nbGUuYWRzLmFkbWFuYWdlci52MRo6",
             "Z29vZ2xlL2Fkcy9hZG1hbmFnZXIvdjEvZGFpX2F1dGhlbnRpY2F0aW9uX2tl",
             "eV9lbnVtcy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
-            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byL3AwoURGFpQXV0aGVudGlj",
-            "YXRpb25LZXkSEQoEbmFtZRgBIAEoCUID4EEIEmwKBnN0YXR1cxgEIAEoDjJS",
-            "Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkRhaUF1dGhlbnRpY2F0aW9uS2V5",
-            "U3RhdHVzRW51bS5EYWlBdXRoZW50aWNhdGlvbktleVN0YXR1c0ID4EEDSACI",
-            "AQESHgoMZGlzcGxheV9uYW1lGAUgASgJQgPgQQJIAYgBARJqCghrZXlfdHlw",
-            "ZRgGIAEoDjJOLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkRhaUF1dGhlbnRp",
-            "Y2F0aW9uS2V5VHlwZUVudW0uRGFpQXV0aGVudGljYXRpb25LZXlUeXBlQgPg",
-            "QQFIAogBATqoAepBpAEKLWFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9EYWlB",
-            "dXRoZW50aWNhdGlvbktleRJGbmV0d29ya3Mve25ldHdvcmtfY29kZX0vZGFp",
-            "QXV0aGVudGljYXRpb25LZXlzL3tkYWlfYXV0aGVudGljYXRpb25fa2V5fSoV",
-            "ZGFpQXV0aGVudGljYXRpb25LZXlzMhRkYWlBdXRoZW50aWNhdGlvbktleUIJ",
-            "Cgdfc3RhdHVzQg8KDV9kaXNwbGF5X25hbWVCCwoJX2tleV90eXBlQtUBChtj",
-            "b20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFCIURhaUF1dGhlbnRpY2F0aW9u",
-            "S2V5TWVzc2FnZXNQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29v",
-            "Z2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdlclxW",
-            "MeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
+            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
+            "L3RpbWVzdGFtcC5wcm90byLSBAoURGFpQXV0aGVudGljYXRpb25LZXkSEgoE",
+            "bmFtZRgBIAEoCUIE4kEBCBIWCgNrZXkYAiABKAlCBOJBAQNIAIgBARI1Cgtj",
+            "cmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "BOJBAQMSbQoGc3RhdHVzGAQgASgOMlIuZ29vZ2xlLmFkcy5hZG1hbmFnZXIu",
+            "djEuRGFpQXV0aGVudGljYXRpb25LZXlTdGF0dXNFbnVtLkRhaUF1dGhlbnRp",
+            "Y2F0aW9uS2V5U3RhdHVzQgTiQQEDSAGIAQESHwoMZGlzcGxheV9uYW1lGAUg",
+            "ASgJQgTiQQECSAKIAQESawoIa2V5X3R5cGUYBiABKA4yTi5nb29nbGUuYWRz",
+            "LmFkbWFuYWdlci52MS5EYWlBdXRoZW50aWNhdGlvbktleVR5cGVFbnVtLkRh",
+            "aUF1dGhlbnRpY2F0aW9uS2V5VHlwZUIE4kEBAUgDiAEBOqgB6kGkAQotYWRt",
+            "YW5hZ2VyLmdvb2dsZWFwaXMuY29tL0RhaUF1dGhlbnRpY2F0aW9uS2V5EkZu",
+            "ZXR3b3Jrcy97bmV0d29ya19jb2RlfS9kYWlBdXRoZW50aWNhdGlvbktleXMv",
+            "e2RhaV9hdXRoZW50aWNhdGlvbl9rZXl9KhVkYWlBdXRoZW50aWNhdGlvbktl",
+            "eXMyFGRhaUF1dGhlbnRpY2F0aW9uS2V5QgYKBF9rZXlCCQoHX3N0YXR1c0IP",
+            "Cg1fZGlzcGxheV9uYW1lQgsKCV9rZXlfdHlwZULVAQobY29tLmdvb2dsZS5h",
+            "ZHMuYWRtYW5hZ2VyLnYxQiFEYWlBdXRoZW50aWNhdGlvbktleU1lc3NhZ2Vz",
+            "UHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoCF0dvb2dsZS5BZHMuQWRN",
+            "YW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFnZXJcVjHqAhpHb29nbGU6",
+            "OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.DaiAuthenticationKeyEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.DaiAuthenticationKeyEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.DaiAuthenticationKey), global::Google.Ads.AdManager.V1.DaiAuthenticationKey.Parser, new[]{ "Name", "Status", "DisplayName", "KeyType" }, new[]{ "Status", "DisplayName", "KeyType" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.DaiAuthenticationKey), global::Google.Ads.AdManager.V1.DaiAuthenticationKey.Parser, new[]{ "Name", "Key", "CreateTime", "Status", "DisplayName", "KeyType" }, new[]{ "Key", "Status", "DisplayName", "KeyType" }, null, null, null)
           }));
     }
     #endregion
@@ -97,6 +100,8 @@ namespace Google.Ads.AdManager.V1 {
     public DaiAuthenticationKey(DaiAuthenticationKey other) : this() {
       _hasBits0 = other._hasBits0;
       name_ = other.name_;
+      key_ = other.key_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       status_ = other.status_;
       displayName_ = other.displayName_;
       keyType_ = other.keyType_;
@@ -123,6 +128,50 @@ namespace Google.Ads.AdManager.V1 {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "key" field.</summary>
+    public const int KeyFieldNumber = 2;
+    private readonly static string KeyDefaultValue = "";
+
+    private string key_;
+    /// <summary>
+    /// Output only. The value of the secure key.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Key {
+      get { return key_ ?? KeyDefaultValue; }
+      set {
+        key_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "key" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasKey {
+      get { return key_ != null; }
+    }
+    /// <summary>Clears the value of the "key" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearKey() {
+      key_ = null;
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. The date and time this DaiAuthenticationKey was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
       }
     }
 
@@ -238,6 +287,8 @@ namespace Google.Ads.AdManager.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (Key != other.Key) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (Status != other.Status) return false;
       if (DisplayName != other.DisplayName) return false;
       if (KeyType != other.KeyType) return false;
@@ -249,6 +300,8 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (HasKey) hash ^= Key.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (HasStatus) hash ^= Status.GetHashCode();
       if (HasDisplayName) hash ^= DisplayName.GetHashCode();
       if (HasKeyType) hash ^= KeyType.GetHashCode();
@@ -273,6 +326,14 @@ namespace Google.Ads.AdManager.V1 {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
+      }
+      if (HasKey) {
+        output.WriteRawTag(18);
+        output.WriteString(Key);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
       }
       if (HasStatus) {
         output.WriteRawTag(32);
@@ -300,6 +361,14 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (HasKey) {
+        output.WriteRawTag(18);
+        output.WriteString(Key);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
       if (HasStatus) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Status);
@@ -325,6 +394,12 @@ namespace Google.Ads.AdManager.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
+      if (HasKey) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Key);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
       if (HasStatus) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
@@ -348,6 +423,15 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.HasKey) {
+        Key = other.Key;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
       }
       if (other.HasStatus) {
         Status = other.Status;
@@ -379,6 +463,17 @@ namespace Google.Ads.AdManager.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Key = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
             break;
           }
           case 32: {
@@ -414,6 +509,17 @@ namespace Google.Ads.AdManager.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Key = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
             break;
           }
           case 32: {

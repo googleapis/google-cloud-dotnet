@@ -27,25 +27,33 @@ namespace Google.Ads.AdManager.V1 {
             "Cj1nb29nbGUvYWRzL2FkbWFuYWdlci92MS9lbnRpdHlfc2lnbmFsc19tYXBw",
             "aW5nX21lc3NhZ2VzLnByb3RvEhdnb29nbGUuYWRzLmFkbWFuYWdlci52MRof",
             "Z29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9y",
-            "ZXNvdXJjZS5wcm90byKwAwoURW50aXR5U2lnbmFsc01hcHBpbmcSHQoTYXVk",
-            "aWVuY2Vfc2VnbWVudF9pZBgDIAEoA0gAEhsKEWNvbnRlbnRfYnVuZGxlX2lk",
-            "GAQgASgDSAASIwoZY3VzdG9tX3RhcmdldGluZ192YWx1ZV9pZBgFIAEoA0gA",
-            "EhEKBG5hbWUYASABKAlCA+BBCBItChllbnRpdHlfc2lnbmFsc19tYXBwaW5n",
-            "X2lkGAIgASgDQgUYAeBBA0gBiAEBEiIKFXRheG9ub215X2NhdGVnb3J5X2lk",
-            "cxgGIAMoA0ID4EEBOqgB6kGkAQotYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
-            "L0VudGl0eVNpZ25hbHNNYXBwaW5nEkZuZXR3b3Jrcy97bmV0d29ya19jb2Rl",
-            "fS9lbnRpdHlTaWduYWxzTWFwcGluZ3Mve2VudGl0eV9zaWduYWxzX21hcHBp",
-            "bmd9KhVlbnRpdHlTaWduYWxzTWFwcGluZ3MyFGVudGl0eVNpZ25hbHNNYXBw",
-            "aW5nQggKBmVudGl0eUIcChpfZW50aXR5X3NpZ25hbHNfbWFwcGluZ19pZELV",
-            "AQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQiFFbnRpdHlTaWduYWxz",
-            "TWFwcGluZ01lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoC",
-            "F0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFn",
-            "ZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "ZXNvdXJjZS5wcm90byKJBgoURW50aXR5U2lnbmFsc01hcHBpbmcSIQoTYXVk",
+            "aWVuY2Vfc2VnbWVudF9pZBgDIAEoA0ICGAFIABIfChFjb250ZW50X2J1bmRs",
+            "ZV9pZBgEIAEoA0ICGAFIABInChljdXN0b21fdGFyZ2V0aW5nX3ZhbHVlX2lk",
+            "GAUgASgDQgIYAUgAEkkKEGF1ZGllbmNlX3NlZ21lbnQYCiABKAlCLfpBKgoo",
+            "YWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0F1ZGllbmNlU2VnbWVudEgBEkUK",
+            "DmNvbnRlbnRfYnVuZGxlGAsgASgJQiv6QSgKJmFkbWFuYWdlci5nb29nbGVh",
+            "cGlzLmNvbS9Db250ZW50QnVuZGxlSAESVAoWY3VzdG9tX3RhcmdldGluZ192",
+            "YWx1ZRgMIAEoCUIy+kEvCi1hZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQ3Vz",
+            "dG9tVGFyZ2V0aW5nVmFsdWVIARISCgRuYW1lGAEgASgJQgTiQQEIEi4KGWVu",
+            "dGl0eV9zaWduYWxzX21hcHBpbmdfaWQYAiABKANCBhgB4kEBA0gCiAEBEiUK",
+            "FXRheG9ub215X2NhdGVnb3J5X2lkcxgGIAMoA0IGGAHiQQEBEk8KE3RheG9u",
+            "b215X2NhdGVnb3JpZXMYDSADKAlCMuJBAQH6QSsKKWFkbWFuYWdlci5nb29n",
+            "bGVhcGlzLmNvbS9UYXhvbm9teUNhdGVnb3J5OqgB6kGkAQotYWRtYW5hZ2Vy",
+            "Lmdvb2dsZWFwaXMuY29tL0VudGl0eVNpZ25hbHNNYXBwaW5nEkZuZXR3b3Jr",
+            "cy97bmV0d29ya19jb2RlfS9lbnRpdHlTaWduYWxzTWFwcGluZ3Mve2VudGl0",
+            "eV9zaWduYWxzX21hcHBpbmd9KhVlbnRpdHlTaWduYWxzTWFwcGluZ3MyFGVu",
+            "dGl0eVNpZ25hbHNNYXBwaW5nQggKBmVudGl0eUINCgtlbnRpdHlfbmFtZUIc",
+            "ChpfZW50aXR5X3NpZ25hbHNfbWFwcGluZ19pZELVAQobY29tLmdvb2dsZS5h",
+            "ZHMuYWRtYW5hZ2VyLnYxQiFFbnRpdHlTaWduYWxzTWFwcGluZ01lc3NhZ2Vz",
+            "UHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoCF0dvb2dsZS5BZHMuQWRN",
+            "YW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFnZXJcVjHqAhpHb29nbGU6",
+            "OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.EntitySignalsMapping), global::Google.Ads.AdManager.V1.EntitySignalsMapping.Parser, new[]{ "AudienceSegmentId", "ContentBundleId", "CustomTargetingValueId", "Name", "EntitySignalsMappingId", "TaxonomyCategoryIds" }, new[]{ "Entity", "EntitySignalsMappingId" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.EntitySignalsMapping), global::Google.Ads.AdManager.V1.EntitySignalsMapping.Parser, new[]{ "AudienceSegmentId", "ContentBundleId", "CustomTargetingValueId", "AudienceSegment", "ContentBundle", "CustomTargetingValue", "Name", "EntitySignalsMappingId", "TaxonomyCategoryIds", "TaxonomyCategories" }, new[]{ "Entity", "EntityName", "EntitySignalsMappingId" }, null, null, null)
           }));
     }
     #endregion
@@ -95,6 +103,7 @@ namespace Google.Ads.AdManager.V1 {
       name_ = other.name_;
       entitySignalsMappingId_ = other.entitySignalsMappingId_;
       taxonomyCategoryIds_ = other.taxonomyCategoryIds_.Clone();
+      taxonomyCategories_ = other.taxonomyCategories_.Clone();
       switch (other.EntityCase) {
         case EntityOneofCase.AudienceSegmentId:
           AudienceSegmentId = other.AudienceSegmentId;
@@ -104,6 +113,18 @@ namespace Google.Ads.AdManager.V1 {
           break;
         case EntityOneofCase.CustomTargetingValueId:
           CustomTargetingValueId = other.CustomTargetingValueId;
+          break;
+      }
+
+      switch (other.EntityNameCase) {
+        case EntityNameOneofCase.AudienceSegment:
+          AudienceSegment = other.AudienceSegment;
+          break;
+        case EntityNameOneofCase.ContentBundle:
+          ContentBundle = other.ContentBundle;
+          break;
+        case EntityNameOneofCase.CustomTargetingValue:
+          CustomTargetingValue = other.CustomTargetingValue;
           break;
       }
 
@@ -119,8 +140,9 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>Field number for the "audience_segment_id" field.</summary>
     public const int AudienceSegmentIdFieldNumber = 3;
     /// <summary>
-    /// ID of an AudienceSegment that this mapping belongs to.
+    /// Deprecated: ID of an AudienceSegment that this mapping belongs to.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long AudienceSegmentId {
@@ -131,12 +153,14 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
     /// <summary>Gets whether the "audience_segment_id" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasAudienceSegmentId {
       get { return entityCase_ == EntityOneofCase.AudienceSegmentId; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "audience_segment_id" </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearAudienceSegmentId() {
@@ -148,8 +172,9 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>Field number for the "content_bundle_id" field.</summary>
     public const int ContentBundleIdFieldNumber = 4;
     /// <summary>
-    /// ID of a ContentBundle that this mapping belongs to.
+    /// Deprecated: ID of a ContentBundle that this mapping belongs to.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ContentBundleId {
@@ -160,12 +185,14 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
     /// <summary>Gets whether the "content_bundle_id" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasContentBundleId {
       get { return entityCase_ == EntityOneofCase.ContentBundleId; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "content_bundle_id" </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearContentBundleId() {
@@ -177,8 +204,9 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>Field number for the "custom_targeting_value_id" field.</summary>
     public const int CustomTargetingValueIdFieldNumber = 5;
     /// <summary>
-    /// ID of a CustomValue that this mapping belongs to.
+    /// Deprecated: ID of a CustomTargetingValue that this mapping belongs to.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long CustomTargetingValueId {
@@ -189,17 +217,115 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
     /// <summary>Gets whether the "custom_targeting_value_id" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasCustomTargetingValueId {
       get { return entityCase_ == EntityOneofCase.CustomTargetingValueId; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "custom_targeting_value_id" </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearCustomTargetingValueId() {
       if (HasCustomTargetingValueId) {
         ClearEntity();
+      }
+    }
+
+    /// <summary>Field number for the "audience_segment" field.</summary>
+    public const int AudienceSegmentFieldNumber = 10;
+    /// <summary>
+    /// The resource name of an
+    /// [AudienceSegment][google.ads.admanager.v1.AudienceSegment] that this
+    /// mapping belongs to. Format:
+    /// `networks/{network_code}/audienceSegments/{audience_segment_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AudienceSegment {
+      get { return HasAudienceSegment ? (string) entityName_ : ""; }
+      set {
+        entityName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        entityNameCase_ = EntityNameOneofCase.AudienceSegment;
+      }
+    }
+    /// <summary>Gets whether the "audience_segment" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAudienceSegment {
+      get { return entityNameCase_ == EntityNameOneofCase.AudienceSegment; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "audience_segment" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAudienceSegment() {
+      if (HasAudienceSegment) {
+        ClearEntityName();
+      }
+    }
+
+    /// <summary>Field number for the "content_bundle" field.</summary>
+    public const int ContentBundleFieldNumber = 11;
+    /// <summary>
+    /// The resource name of a
+    /// [ContentBundle][google.ads.admanager.v1.ContentBundle] that this mapping
+    /// belongs to. Format:
+    /// `networks/{network_code}/contentBundles/{content_bundle_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ContentBundle {
+      get { return HasContentBundle ? (string) entityName_ : ""; }
+      set {
+        entityName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        entityNameCase_ = EntityNameOneofCase.ContentBundle;
+      }
+    }
+    /// <summary>Gets whether the "content_bundle" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasContentBundle {
+      get { return entityNameCase_ == EntityNameOneofCase.ContentBundle; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "content_bundle" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearContentBundle() {
+      if (HasContentBundle) {
+        ClearEntityName();
+      }
+    }
+
+    /// <summary>Field number for the "custom_targeting_value" field.</summary>
+    public const int CustomTargetingValueFieldNumber = 12;
+    /// <summary>
+    /// The resource name of a
+    /// [CustomTargetingValue][google.ads.admanager.v1.CustomTargetingValue] that
+    /// this mapping belongs to. Format:
+    /// `networks/{network_code}/customTargetingValues/{custom_targeting_value_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomTargetingValue {
+      get { return HasCustomTargetingValue ? (string) entityName_ : ""; }
+      set {
+        entityName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        entityNameCase_ = EntityNameOneofCase.CustomTargetingValue;
+      }
+    }
+    /// <summary>Gets whether the "custom_targeting_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCustomTargetingValue {
+      get { return entityNameCase_ == EntityNameOneofCase.CustomTargetingValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "custom_targeting_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCustomTargetingValue() {
+      if (HasCustomTargetingValue) {
+        ClearEntityName();
       }
     }
 
@@ -259,13 +385,31 @@ namespace Google.Ads.AdManager.V1 {
         = pb::FieldCodec.ForInt64(50);
     private readonly pbc::RepeatedField<long> taxonomyCategoryIds_ = new pbc::RepeatedField<long>();
     /// <summary>
-    /// Optional. The IDs of the categories that are associated with the
-    /// referencing entity.
+    /// Optional. Deprecated: The IDs of the categories that are associated with
+    /// the referencing entity.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<long> TaxonomyCategoryIds {
       get { return taxonomyCategoryIds_; }
+    }
+
+    /// <summary>Field number for the "taxonomy_categories" field.</summary>
+    public const int TaxonomyCategoriesFieldNumber = 13;
+    private static readonly pb::FieldCodec<string> _repeated_taxonomyCategories_codec
+        = pb::FieldCodec.ForString(106);
+    private readonly pbc::RepeatedField<string> taxonomyCategories_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The resource names of the
+    /// [TaxonomyCategory][google.ads.admanager.v1.TaxonomyCategory] that are
+    /// associated with the referencing entity. Format:
+    /// `networks/{network_code}/taxonomyCategories/{taxonomyCategoryId}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> TaxonomyCategories {
+      get { return taxonomyCategories_; }
     }
 
     private object entity_;
@@ -290,6 +434,28 @@ namespace Google.Ads.AdManager.V1 {
       entity_ = null;
     }
 
+    private object entityName_;
+    /// <summary>Enum of possible cases for the "entity_name" oneof.</summary>
+    public enum EntityNameOneofCase {
+      None = 0,
+      AudienceSegment = 10,
+      ContentBundle = 11,
+      CustomTargetingValue = 12,
+    }
+    private EntityNameOneofCase entityNameCase_ = EntityNameOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EntityNameOneofCase EntityNameCase {
+      get { return entityNameCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEntityName() {
+      entityNameCase_ = EntityNameOneofCase.None;
+      entityName_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -308,10 +474,15 @@ namespace Google.Ads.AdManager.V1 {
       if (AudienceSegmentId != other.AudienceSegmentId) return false;
       if (ContentBundleId != other.ContentBundleId) return false;
       if (CustomTargetingValueId != other.CustomTargetingValueId) return false;
+      if (AudienceSegment != other.AudienceSegment) return false;
+      if (ContentBundle != other.ContentBundle) return false;
+      if (CustomTargetingValue != other.CustomTargetingValue) return false;
       if (Name != other.Name) return false;
       if (EntitySignalsMappingId != other.EntitySignalsMappingId) return false;
       if(!taxonomyCategoryIds_.Equals(other.taxonomyCategoryIds_)) return false;
+      if(!taxonomyCategories_.Equals(other.taxonomyCategories_)) return false;
       if (EntityCase != other.EntityCase) return false;
+      if (EntityNameCase != other.EntityNameCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -322,10 +493,15 @@ namespace Google.Ads.AdManager.V1 {
       if (HasAudienceSegmentId) hash ^= AudienceSegmentId.GetHashCode();
       if (HasContentBundleId) hash ^= ContentBundleId.GetHashCode();
       if (HasCustomTargetingValueId) hash ^= CustomTargetingValueId.GetHashCode();
+      if (HasAudienceSegment) hash ^= AudienceSegment.GetHashCode();
+      if (HasContentBundle) hash ^= ContentBundle.GetHashCode();
+      if (HasCustomTargetingValue) hash ^= CustomTargetingValue.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (HasEntitySignalsMappingId) hash ^= EntitySignalsMappingId.GetHashCode();
       hash ^= taxonomyCategoryIds_.GetHashCode();
+      hash ^= taxonomyCategories_.GetHashCode();
       hash ^= (int) entityCase_;
+      hash ^= (int) entityNameCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -365,6 +541,19 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteInt64(CustomTargetingValueId);
       }
       taxonomyCategoryIds_.WriteTo(output, _repeated_taxonomyCategoryIds_codec);
+      if (HasAudienceSegment) {
+        output.WriteRawTag(82);
+        output.WriteString(AudienceSegment);
+      }
+      if (HasContentBundle) {
+        output.WriteRawTag(90);
+        output.WriteString(ContentBundle);
+      }
+      if (HasCustomTargetingValue) {
+        output.WriteRawTag(98);
+        output.WriteString(CustomTargetingValue);
+      }
+      taxonomyCategories_.WriteTo(output, _repeated_taxonomyCategories_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -396,6 +585,19 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteInt64(CustomTargetingValueId);
       }
       taxonomyCategoryIds_.WriteTo(ref output, _repeated_taxonomyCategoryIds_codec);
+      if (HasAudienceSegment) {
+        output.WriteRawTag(82);
+        output.WriteString(AudienceSegment);
+      }
+      if (HasContentBundle) {
+        output.WriteRawTag(90);
+        output.WriteString(ContentBundle);
+      }
+      if (HasCustomTargetingValue) {
+        output.WriteRawTag(98);
+        output.WriteString(CustomTargetingValue);
+      }
+      taxonomyCategories_.WriteTo(ref output, _repeated_taxonomyCategories_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -415,6 +617,15 @@ namespace Google.Ads.AdManager.V1 {
       if (HasCustomTargetingValueId) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(CustomTargetingValueId);
       }
+      if (HasAudienceSegment) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AudienceSegment);
+      }
+      if (HasContentBundle) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ContentBundle);
+      }
+      if (HasCustomTargetingValue) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomTargetingValue);
+      }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
@@ -422,6 +633,7 @@ namespace Google.Ads.AdManager.V1 {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(EntitySignalsMappingId);
       }
       size += taxonomyCategoryIds_.CalculateSize(_repeated_taxonomyCategoryIds_codec);
+      size += taxonomyCategories_.CalculateSize(_repeated_taxonomyCategories_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -441,6 +653,7 @@ namespace Google.Ads.AdManager.V1 {
         EntitySignalsMappingId = other.EntitySignalsMappingId;
       }
       taxonomyCategoryIds_.Add(other.taxonomyCategoryIds_);
+      taxonomyCategories_.Add(other.taxonomyCategories_);
       switch (other.EntityCase) {
         case EntityOneofCase.AudienceSegmentId:
           AudienceSegmentId = other.AudienceSegmentId;
@@ -450,6 +663,18 @@ namespace Google.Ads.AdManager.V1 {
           break;
         case EntityOneofCase.CustomTargetingValueId:
           CustomTargetingValueId = other.CustomTargetingValueId;
+          break;
+      }
+
+      switch (other.EntityNameCase) {
+        case EntityNameOneofCase.AudienceSegment:
+          AudienceSegment = other.AudienceSegment;
+          break;
+        case EntityNameOneofCase.ContentBundle:
+          ContentBundle = other.ContentBundle;
+          break;
+        case EntityNameOneofCase.CustomTargetingValue:
+          CustomTargetingValue = other.CustomTargetingValue;
           break;
       }
 
@@ -497,6 +722,22 @@ namespace Google.Ads.AdManager.V1 {
             taxonomyCategoryIds_.AddEntriesFrom(input, _repeated_taxonomyCategoryIds_codec);
             break;
           }
+          case 82: {
+            AudienceSegment = input.ReadString();
+            break;
+          }
+          case 90: {
+            ContentBundle = input.ReadString();
+            break;
+          }
+          case 98: {
+            CustomTargetingValue = input.ReadString();
+            break;
+          }
+          case 106: {
+            taxonomyCategories_.AddEntriesFrom(input, _repeated_taxonomyCategories_codec);
+            break;
+          }
         }
       }
     #endif
@@ -539,6 +780,22 @@ namespace Google.Ads.AdManager.V1 {
           case 50:
           case 48: {
             taxonomyCategoryIds_.AddEntriesFrom(ref input, _repeated_taxonomyCategoryIds_codec);
+            break;
+          }
+          case 82: {
+            AudienceSegment = input.ReadString();
+            break;
+          }
+          case 90: {
+            ContentBundle = input.ReadString();
+            break;
+          }
+          case 98: {
+            CustomTargetingValue = input.ReadString();
+            break;
+          }
+          case 106: {
+            taxonomyCategories_.AddEntriesFrom(ref input, _repeated_taxonomyCategories_codec);
             break;
           }
         }

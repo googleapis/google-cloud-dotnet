@@ -276,5 +276,15 @@ namespace Google.Ads.AdManager.V1
         {
             get => new gax::ResourceNameList<CompanyName>(ViewabilityProviderCompanies, s => string.IsNullOrEmpty(s) ? null : CompanyName.Parse(s, allowUnparsed: true));
         }
+
+        /// <summary>
+        /// <see cref="AllocationDeliveryProfileName"/>-typed view over the <see cref="AllocationDeliveryProfile"/>
+        /// resource name property.
+        /// </summary>
+        public AllocationDeliveryProfileName AllocationDeliveryProfileAsAllocationDeliveryProfileName
+        {
+            get => string.IsNullOrEmpty(AllocationDeliveryProfile) ? null : AllocationDeliveryProfileName.Parse(AllocationDeliveryProfile, allowUnparsed: true);
+            set => AllocationDeliveryProfile = value?.ToString() ?? "";
+        }
     }
 }

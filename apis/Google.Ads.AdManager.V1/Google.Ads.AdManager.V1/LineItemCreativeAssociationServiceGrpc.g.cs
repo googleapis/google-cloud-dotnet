@@ -71,6 +71,34 @@ namespace Google.Ads.AdManager.V1 {
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListLineItemCreativeAssociationsRequest> __Marshaller_google_ads_admanager_v1_ListLineItemCreativeAssociationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListLineItemCreativeAssociationsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListLineItemCreativeAssociationsResponse> __Marshaller_google_ads_admanager_v1_ListLineItemCreativeAssociationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListLineItemCreativeAssociationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.CreateLineItemCreativeAssociationRequest> __Marshaller_google_ads_admanager_v1_CreateLineItemCreativeAssociationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.CreateLineItemCreativeAssociationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreateLineItemCreativeAssociationsRequest> __Marshaller_google_ads_admanager_v1_BatchCreateLineItemCreativeAssociationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreateLineItemCreativeAssociationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreateLineItemCreativeAssociationsResponse> __Marshaller_google_ads_admanager_v1_BatchCreateLineItemCreativeAssociationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreateLineItemCreativeAssociationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.UpdateLineItemCreativeAssociationRequest> __Marshaller_google_ads_admanager_v1_UpdateLineItemCreativeAssociationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.UpdateLineItemCreativeAssociationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateLineItemCreativeAssociationsRequest> __Marshaller_google_ads_admanager_v1_BatchUpdateLineItemCreativeAssociationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateLineItemCreativeAssociationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateLineItemCreativeAssociationsResponse> __Marshaller_google_ads_admanager_v1_BatchUpdateLineItemCreativeAssociationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateLineItemCreativeAssociationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchActivateLineItemCreativeAssociationsRequest> __Marshaller_google_ads_admanager_v1_BatchActivateLineItemCreativeAssociationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchActivateLineItemCreativeAssociationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchActivateLineItemCreativeAssociationsResponse> __Marshaller_google_ads_admanager_v1_BatchActivateLineItemCreativeAssociationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchActivateLineItemCreativeAssociationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDeactivateLineItemCreativeAssociationsRequest> __Marshaller_google_ads_admanager_v1_BatchDeactivateLineItemCreativeAssociationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDeactivateLineItemCreativeAssociationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDeactivateLineItemCreativeAssociationsResponse> __Marshaller_google_ads_admanager_v1_BatchDeactivateLineItemCreativeAssociationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDeactivateLineItemCreativeAssociationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDeleteLineItemCreativeAssociationsRequest> __Marshaller_google_ads_admanager_v1_BatchDeleteLineItemCreativeAssociationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDeleteLineItemCreativeAssociationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.PreviewLineItemCreativeAssociationRequest> __Marshaller_google_ads_admanager_v1_PreviewLineItemCreativeAssociationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.PreviewLineItemCreativeAssociationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.PreviewLineItemCreativeAssociationResponse> __Marshaller_google_ads_admanager_v1_PreviewLineItemCreativeAssociationResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.PreviewLineItemCreativeAssociationResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.AdManager.V1.GetLineItemCreativeAssociationRequest, global::Google.Ads.AdManager.V1.LineItemCreativeAssociation> __Method_GetLineItemCreativeAssociation = new grpc::Method<global::Google.Ads.AdManager.V1.GetLineItemCreativeAssociationRequest, global::Google.Ads.AdManager.V1.LineItemCreativeAssociation>(
@@ -87,6 +115,70 @@ namespace Google.Ads.AdManager.V1 {
         "ListLineItemCreativeAssociations",
         __Marshaller_google_ads_admanager_v1_ListLineItemCreativeAssociationsRequest,
         __Marshaller_google_ads_admanager_v1_ListLineItemCreativeAssociationsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.CreateLineItemCreativeAssociationRequest, global::Google.Ads.AdManager.V1.LineItemCreativeAssociation> __Method_CreateLineItemCreativeAssociation = new grpc::Method<global::Google.Ads.AdManager.V1.CreateLineItemCreativeAssociationRequest, global::Google.Ads.AdManager.V1.LineItemCreativeAssociation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateLineItemCreativeAssociation",
+        __Marshaller_google_ads_admanager_v1_CreateLineItemCreativeAssociationRequest,
+        __Marshaller_google_ads_admanager_v1_LineItemCreativeAssociation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchCreateLineItemCreativeAssociationsRequest, global::Google.Ads.AdManager.V1.BatchCreateLineItemCreativeAssociationsResponse> __Method_BatchCreateLineItemCreativeAssociations = new grpc::Method<global::Google.Ads.AdManager.V1.BatchCreateLineItemCreativeAssociationsRequest, global::Google.Ads.AdManager.V1.BatchCreateLineItemCreativeAssociationsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchCreateLineItemCreativeAssociations",
+        __Marshaller_google_ads_admanager_v1_BatchCreateLineItemCreativeAssociationsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchCreateLineItemCreativeAssociationsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.UpdateLineItemCreativeAssociationRequest, global::Google.Ads.AdManager.V1.LineItemCreativeAssociation> __Method_UpdateLineItemCreativeAssociation = new grpc::Method<global::Google.Ads.AdManager.V1.UpdateLineItemCreativeAssociationRequest, global::Google.Ads.AdManager.V1.LineItemCreativeAssociation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateLineItemCreativeAssociation",
+        __Marshaller_google_ads_admanager_v1_UpdateLineItemCreativeAssociationRequest,
+        __Marshaller_google_ads_admanager_v1_LineItemCreativeAssociation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateLineItemCreativeAssociationsRequest, global::Google.Ads.AdManager.V1.BatchUpdateLineItemCreativeAssociationsResponse> __Method_BatchUpdateLineItemCreativeAssociations = new grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateLineItemCreativeAssociationsRequest, global::Google.Ads.AdManager.V1.BatchUpdateLineItemCreativeAssociationsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchUpdateLineItemCreativeAssociations",
+        __Marshaller_google_ads_admanager_v1_BatchUpdateLineItemCreativeAssociationsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchUpdateLineItemCreativeAssociationsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchActivateLineItemCreativeAssociationsRequest, global::Google.Ads.AdManager.V1.BatchActivateLineItemCreativeAssociationsResponse> __Method_BatchActivateLineItemCreativeAssociations = new grpc::Method<global::Google.Ads.AdManager.V1.BatchActivateLineItemCreativeAssociationsRequest, global::Google.Ads.AdManager.V1.BatchActivateLineItemCreativeAssociationsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchActivateLineItemCreativeAssociations",
+        __Marshaller_google_ads_admanager_v1_BatchActivateLineItemCreativeAssociationsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchActivateLineItemCreativeAssociationsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchDeactivateLineItemCreativeAssociationsRequest, global::Google.Ads.AdManager.V1.BatchDeactivateLineItemCreativeAssociationsResponse> __Method_BatchDeactivateLineItemCreativeAssociations = new grpc::Method<global::Google.Ads.AdManager.V1.BatchDeactivateLineItemCreativeAssociationsRequest, global::Google.Ads.AdManager.V1.BatchDeactivateLineItemCreativeAssociationsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchDeactivateLineItemCreativeAssociations",
+        __Marshaller_google_ads_admanager_v1_BatchDeactivateLineItemCreativeAssociationsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchDeactivateLineItemCreativeAssociationsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchDeleteLineItemCreativeAssociationsRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_BatchDeleteLineItemCreativeAssociations = new grpc::Method<global::Google.Ads.AdManager.V1.BatchDeleteLineItemCreativeAssociationsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchDeleteLineItemCreativeAssociations",
+        __Marshaller_google_ads_admanager_v1_BatchDeleteLineItemCreativeAssociationsRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.PreviewLineItemCreativeAssociationRequest, global::Google.Ads.AdManager.V1.PreviewLineItemCreativeAssociationResponse> __Method_PreviewLineItemCreativeAssociation = new grpc::Method<global::Google.Ads.AdManager.V1.PreviewLineItemCreativeAssociationRequest, global::Google.Ads.AdManager.V1.PreviewLineItemCreativeAssociationResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "PreviewLineItemCreativeAssociation",
+        __Marshaller_google_ads_admanager_v1_PreviewLineItemCreativeAssociationRequest,
+        __Marshaller_google_ads_admanager_v1_PreviewLineItemCreativeAssociationResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -118,6 +210,103 @@ namespace Google.Ads.AdManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.ListLineItemCreativeAssociationsResponse> ListLineItemCreativeAssociations(global::Google.Ads.AdManager.V1.ListLineItemCreativeAssociationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a `LineItemCreativeAssociation` object.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.LineItemCreativeAssociation> CreateLineItemCreativeAssociation(global::Google.Ads.AdManager.V1.CreateLineItemCreativeAssociationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchCreateLineItemCreativeAssociationsResponse> BatchCreateLineItemCreativeAssociations(global::Google.Ads.AdManager.V1.BatchCreateLineItemCreativeAssociationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a `LineItemCreativeAssociation` object.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.LineItemCreativeAssociation> UpdateLineItemCreativeAssociation(global::Google.Ads.AdManager.V1.UpdateLineItemCreativeAssociationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch updates `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchUpdateLineItemCreativeAssociationsResponse> BatchUpdateLineItemCreativeAssociations(global::Google.Ads.AdManager.V1.BatchUpdateLineItemCreativeAssociationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Activate a list of `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchActivateLineItemCreativeAssociationsResponse> BatchActivateLineItemCreativeAssociations(global::Google.Ads.AdManager.V1.BatchActivateLineItemCreativeAssociationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deactivates a list of `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchDeactivateLineItemCreativeAssociationsResponse> BatchDeactivateLineItemCreativeAssociations(global::Google.Ads.AdManager.V1.BatchDeactivateLineItemCreativeAssociationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a list of `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> BatchDeleteLineItemCreativeAssociations(global::Google.Ads.AdManager.V1.BatchDeleteLineItemCreativeAssociationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetch previews for the
+      /// [LineItemCreativeAssociation][google.ads.admanager.v1.LineItemCreativeAssociation].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.PreviewLineItemCreativeAssociationResponse> PreviewLineItemCreativeAssociation(global::Google.Ads.AdManager.V1.PreviewLineItemCreativeAssociationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -247,6 +436,394 @@ namespace Google.Ads.AdManager.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListLineItemCreativeAssociations, null, options, request);
       }
+      /// <summary>
+      /// Creates a `LineItemCreativeAssociation` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.LineItemCreativeAssociation CreateLineItemCreativeAssociation(global::Google.Ads.AdManager.V1.CreateLineItemCreativeAssociationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateLineItemCreativeAssociation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a `LineItemCreativeAssociation` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.LineItemCreativeAssociation CreateLineItemCreativeAssociation(global::Google.Ads.AdManager.V1.CreateLineItemCreativeAssociationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateLineItemCreativeAssociation, null, options, request);
+      }
+      /// <summary>
+      /// Creates a `LineItemCreativeAssociation` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.LineItemCreativeAssociation> CreateLineItemCreativeAssociationAsync(global::Google.Ads.AdManager.V1.CreateLineItemCreativeAssociationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateLineItemCreativeAssociationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a `LineItemCreativeAssociation` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.LineItemCreativeAssociation> CreateLineItemCreativeAssociationAsync(global::Google.Ads.AdManager.V1.CreateLineItemCreativeAssociationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateLineItemCreativeAssociation, null, options, request);
+      }
+      /// <summary>
+      /// Creates `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchCreateLineItemCreativeAssociationsResponse BatchCreateLineItemCreativeAssociations(global::Google.Ads.AdManager.V1.BatchCreateLineItemCreativeAssociationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateLineItemCreativeAssociations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchCreateLineItemCreativeAssociationsResponse BatchCreateLineItemCreativeAssociations(global::Google.Ads.AdManager.V1.BatchCreateLineItemCreativeAssociationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchCreateLineItemCreativeAssociations, null, options, request);
+      }
+      /// <summary>
+      /// Creates `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchCreateLineItemCreativeAssociationsResponse> BatchCreateLineItemCreativeAssociationsAsync(global::Google.Ads.AdManager.V1.BatchCreateLineItemCreativeAssociationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateLineItemCreativeAssociationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchCreateLineItemCreativeAssociationsResponse> BatchCreateLineItemCreativeAssociationsAsync(global::Google.Ads.AdManager.V1.BatchCreateLineItemCreativeAssociationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchCreateLineItemCreativeAssociations, null, options, request);
+      }
+      /// <summary>
+      /// Updates a `LineItemCreativeAssociation` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.LineItemCreativeAssociation UpdateLineItemCreativeAssociation(global::Google.Ads.AdManager.V1.UpdateLineItemCreativeAssociationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateLineItemCreativeAssociation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a `LineItemCreativeAssociation` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.LineItemCreativeAssociation UpdateLineItemCreativeAssociation(global::Google.Ads.AdManager.V1.UpdateLineItemCreativeAssociationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateLineItemCreativeAssociation, null, options, request);
+      }
+      /// <summary>
+      /// Updates a `LineItemCreativeAssociation` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.LineItemCreativeAssociation> UpdateLineItemCreativeAssociationAsync(global::Google.Ads.AdManager.V1.UpdateLineItemCreativeAssociationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateLineItemCreativeAssociationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a `LineItemCreativeAssociation` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.LineItemCreativeAssociation> UpdateLineItemCreativeAssociationAsync(global::Google.Ads.AdManager.V1.UpdateLineItemCreativeAssociationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateLineItemCreativeAssociation, null, options, request);
+      }
+      /// <summary>
+      /// Batch updates `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdateLineItemCreativeAssociationsResponse BatchUpdateLineItemCreativeAssociations(global::Google.Ads.AdManager.V1.BatchUpdateLineItemCreativeAssociationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateLineItemCreativeAssociations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch updates `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdateLineItemCreativeAssociationsResponse BatchUpdateLineItemCreativeAssociations(global::Google.Ads.AdManager.V1.BatchUpdateLineItemCreativeAssociationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateLineItemCreativeAssociations, null, options, request);
+      }
+      /// <summary>
+      /// Batch updates `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdateLineItemCreativeAssociationsResponse> BatchUpdateLineItemCreativeAssociationsAsync(global::Google.Ads.AdManager.V1.BatchUpdateLineItemCreativeAssociationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateLineItemCreativeAssociationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch updates `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdateLineItemCreativeAssociationsResponse> BatchUpdateLineItemCreativeAssociationsAsync(global::Google.Ads.AdManager.V1.BatchUpdateLineItemCreativeAssociationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchUpdateLineItemCreativeAssociations, null, options, request);
+      }
+      /// <summary>
+      /// Activate a list of `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchActivateLineItemCreativeAssociationsResponse BatchActivateLineItemCreativeAssociations(global::Google.Ads.AdManager.V1.BatchActivateLineItemCreativeAssociationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchActivateLineItemCreativeAssociations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Activate a list of `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchActivateLineItemCreativeAssociationsResponse BatchActivateLineItemCreativeAssociations(global::Google.Ads.AdManager.V1.BatchActivateLineItemCreativeAssociationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchActivateLineItemCreativeAssociations, null, options, request);
+      }
+      /// <summary>
+      /// Activate a list of `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchActivateLineItemCreativeAssociationsResponse> BatchActivateLineItemCreativeAssociationsAsync(global::Google.Ads.AdManager.V1.BatchActivateLineItemCreativeAssociationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchActivateLineItemCreativeAssociationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Activate a list of `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchActivateLineItemCreativeAssociationsResponse> BatchActivateLineItemCreativeAssociationsAsync(global::Google.Ads.AdManager.V1.BatchActivateLineItemCreativeAssociationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchActivateLineItemCreativeAssociations, null, options, request);
+      }
+      /// <summary>
+      /// Deactivates a list of `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchDeactivateLineItemCreativeAssociationsResponse BatchDeactivateLineItemCreativeAssociations(global::Google.Ads.AdManager.V1.BatchDeactivateLineItemCreativeAssociationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeactivateLineItemCreativeAssociations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deactivates a list of `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchDeactivateLineItemCreativeAssociationsResponse BatchDeactivateLineItemCreativeAssociations(global::Google.Ads.AdManager.V1.BatchDeactivateLineItemCreativeAssociationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchDeactivateLineItemCreativeAssociations, null, options, request);
+      }
+      /// <summary>
+      /// Deactivates a list of `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchDeactivateLineItemCreativeAssociationsResponse> BatchDeactivateLineItemCreativeAssociationsAsync(global::Google.Ads.AdManager.V1.BatchDeactivateLineItemCreativeAssociationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeactivateLineItemCreativeAssociationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deactivates a list of `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchDeactivateLineItemCreativeAssociationsResponse> BatchDeactivateLineItemCreativeAssociationsAsync(global::Google.Ads.AdManager.V1.BatchDeactivateLineItemCreativeAssociationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchDeactivateLineItemCreativeAssociations, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a list of `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty BatchDeleteLineItemCreativeAssociations(global::Google.Ads.AdManager.V1.BatchDeleteLineItemCreativeAssociationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeleteLineItemCreativeAssociations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a list of `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty BatchDeleteLineItemCreativeAssociations(global::Google.Ads.AdManager.V1.BatchDeleteLineItemCreativeAssociationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchDeleteLineItemCreativeAssociations, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a list of `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> BatchDeleteLineItemCreativeAssociationsAsync(global::Google.Ads.AdManager.V1.BatchDeleteLineItemCreativeAssociationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeleteLineItemCreativeAssociationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a list of `LineItemCreativeAssociation` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> BatchDeleteLineItemCreativeAssociationsAsync(global::Google.Ads.AdManager.V1.BatchDeleteLineItemCreativeAssociationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchDeleteLineItemCreativeAssociations, null, options, request);
+      }
+      /// <summary>
+      /// Fetch previews for the
+      /// [LineItemCreativeAssociation][google.ads.admanager.v1.LineItemCreativeAssociation].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.PreviewLineItemCreativeAssociationResponse PreviewLineItemCreativeAssociation(global::Google.Ads.AdManager.V1.PreviewLineItemCreativeAssociationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PreviewLineItemCreativeAssociation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetch previews for the
+      /// [LineItemCreativeAssociation][google.ads.admanager.v1.LineItemCreativeAssociation].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.PreviewLineItemCreativeAssociationResponse PreviewLineItemCreativeAssociation(global::Google.Ads.AdManager.V1.PreviewLineItemCreativeAssociationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_PreviewLineItemCreativeAssociation, null, options, request);
+      }
+      /// <summary>
+      /// Fetch previews for the
+      /// [LineItemCreativeAssociation][google.ads.admanager.v1.LineItemCreativeAssociation].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.PreviewLineItemCreativeAssociationResponse> PreviewLineItemCreativeAssociationAsync(global::Google.Ads.AdManager.V1.PreviewLineItemCreativeAssociationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PreviewLineItemCreativeAssociationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetch previews for the
+      /// [LineItemCreativeAssociation][google.ads.admanager.v1.LineItemCreativeAssociation].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.PreviewLineItemCreativeAssociationResponse> PreviewLineItemCreativeAssociationAsync(global::Google.Ads.AdManager.V1.PreviewLineItemCreativeAssociationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_PreviewLineItemCreativeAssociation, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override LineItemCreativeAssociationServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -262,7 +839,15 @@ namespace Google.Ads.AdManager.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetLineItemCreativeAssociation, serviceImpl.GetLineItemCreativeAssociation)
-          .AddMethod(__Method_ListLineItemCreativeAssociations, serviceImpl.ListLineItemCreativeAssociations).Build();
+          .AddMethod(__Method_ListLineItemCreativeAssociations, serviceImpl.ListLineItemCreativeAssociations)
+          .AddMethod(__Method_CreateLineItemCreativeAssociation, serviceImpl.CreateLineItemCreativeAssociation)
+          .AddMethod(__Method_BatchCreateLineItemCreativeAssociations, serviceImpl.BatchCreateLineItemCreativeAssociations)
+          .AddMethod(__Method_UpdateLineItemCreativeAssociation, serviceImpl.UpdateLineItemCreativeAssociation)
+          .AddMethod(__Method_BatchUpdateLineItemCreativeAssociations, serviceImpl.BatchUpdateLineItemCreativeAssociations)
+          .AddMethod(__Method_BatchActivateLineItemCreativeAssociations, serviceImpl.BatchActivateLineItemCreativeAssociations)
+          .AddMethod(__Method_BatchDeactivateLineItemCreativeAssociations, serviceImpl.BatchDeactivateLineItemCreativeAssociations)
+          .AddMethod(__Method_BatchDeleteLineItemCreativeAssociations, serviceImpl.BatchDeleteLineItemCreativeAssociations)
+          .AddMethod(__Method_PreviewLineItemCreativeAssociation, serviceImpl.PreviewLineItemCreativeAssociation).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -274,6 +859,14 @@ namespace Google.Ads.AdManager.V1 {
     {
       serviceBinder.AddMethod(__Method_GetLineItemCreativeAssociation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.GetLineItemCreativeAssociationRequest, global::Google.Ads.AdManager.V1.LineItemCreativeAssociation>(serviceImpl.GetLineItemCreativeAssociation));
       serviceBinder.AddMethod(__Method_ListLineItemCreativeAssociations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.ListLineItemCreativeAssociationsRequest, global::Google.Ads.AdManager.V1.ListLineItemCreativeAssociationsResponse>(serviceImpl.ListLineItemCreativeAssociations));
+      serviceBinder.AddMethod(__Method_CreateLineItemCreativeAssociation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.CreateLineItemCreativeAssociationRequest, global::Google.Ads.AdManager.V1.LineItemCreativeAssociation>(serviceImpl.CreateLineItemCreativeAssociation));
+      serviceBinder.AddMethod(__Method_BatchCreateLineItemCreativeAssociations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchCreateLineItemCreativeAssociationsRequest, global::Google.Ads.AdManager.V1.BatchCreateLineItemCreativeAssociationsResponse>(serviceImpl.BatchCreateLineItemCreativeAssociations));
+      serviceBinder.AddMethod(__Method_UpdateLineItemCreativeAssociation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.UpdateLineItemCreativeAssociationRequest, global::Google.Ads.AdManager.V1.LineItemCreativeAssociation>(serviceImpl.UpdateLineItemCreativeAssociation));
+      serviceBinder.AddMethod(__Method_BatchUpdateLineItemCreativeAssociations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchUpdateLineItemCreativeAssociationsRequest, global::Google.Ads.AdManager.V1.BatchUpdateLineItemCreativeAssociationsResponse>(serviceImpl.BatchUpdateLineItemCreativeAssociations));
+      serviceBinder.AddMethod(__Method_BatchActivateLineItemCreativeAssociations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchActivateLineItemCreativeAssociationsRequest, global::Google.Ads.AdManager.V1.BatchActivateLineItemCreativeAssociationsResponse>(serviceImpl.BatchActivateLineItemCreativeAssociations));
+      serviceBinder.AddMethod(__Method_BatchDeactivateLineItemCreativeAssociations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchDeactivateLineItemCreativeAssociationsRequest, global::Google.Ads.AdManager.V1.BatchDeactivateLineItemCreativeAssociationsResponse>(serviceImpl.BatchDeactivateLineItemCreativeAssociations));
+      serviceBinder.AddMethod(__Method_BatchDeleteLineItemCreativeAssociations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchDeleteLineItemCreativeAssociationsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.BatchDeleteLineItemCreativeAssociations));
+      serviceBinder.AddMethod(__Method_PreviewLineItemCreativeAssociation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.PreviewLineItemCreativeAssociationRequest, global::Google.Ads.AdManager.V1.PreviewLineItemCreativeAssociationResponse>(serviceImpl.PreviewLineItemCreativeAssociation));
     }
 
   }

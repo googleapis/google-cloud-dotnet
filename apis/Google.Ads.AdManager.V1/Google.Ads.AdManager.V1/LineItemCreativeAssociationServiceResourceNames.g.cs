@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaav = Google.Ads.AdManager.V1;
+using gax = Google.Api.Gax;
 
 namespace Google.Ads.AdManager.V1
 {
@@ -41,6 +42,118 @@ namespace Google.Ads.AdManager.V1
         {
             get => string.IsNullOrEmpty(Parent) ? null : LineItemName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateLineItemCreativeAssociationRequest
+    {
+        /// <summary>
+        /// <see cref="LineItemName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public LineItemName ParentAsLineItemName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : LineItemName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchCreateLineItemCreativeAssociationsRequest
+    {
+        /// <summary>
+        /// <see cref="LineItemName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public LineItemName ParentAsLineItemName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : LineItemName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchUpdateLineItemCreativeAssociationsRequest
+    {
+        /// <summary>
+        /// <see cref="LineItemName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public LineItemName ParentAsLineItemName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : LineItemName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchActivateLineItemCreativeAssociationsRequest
+    {
+        /// <summary>
+        /// <see cref="LineItemName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public LineItemName ParentAsLineItemName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : LineItemName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="LineItemCreativeAssociationName"/>-typed view over the <see cref="Names"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<LineItemCreativeAssociationName> LineItemCreativeAssociationNames
+        {
+            get => new gax::ResourceNameList<LineItemCreativeAssociationName>(Names, s => string.IsNullOrEmpty(s) ? null : LineItemCreativeAssociationName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class BatchDeactivateLineItemCreativeAssociationsRequest
+    {
+        /// <summary>
+        /// <see cref="LineItemName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public LineItemName ParentAsLineItemName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : LineItemName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="LineItemCreativeAssociationName"/>-typed view over the <see cref="Names"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<LineItemCreativeAssociationName> LineItemCreativeAssociationNames
+        {
+            get => new gax::ResourceNameList<LineItemCreativeAssociationName>(Names, s => string.IsNullOrEmpty(s) ? null : LineItemCreativeAssociationName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class BatchDeleteLineItemCreativeAssociationsRequest
+    {
+        /// <summary>
+        /// <see cref="LineItemName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public LineItemName ParentAsLineItemName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : LineItemName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="LineItemCreativeAssociationName"/>-typed view over the <see cref="Names"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<LineItemCreativeAssociationName> LineItemCreativeAssociationNames
+        {
+            get => new gax::ResourceNameList<LineItemCreativeAssociationName>(Names, s => string.IsNullOrEmpty(s) ? null : LineItemCreativeAssociationName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class PreviewLineItemCreativeAssociationRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::LineItemCreativeAssociationName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gaav::LineItemCreativeAssociationName LineItemCreativeAssociationName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::LineItemCreativeAssociationName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }
