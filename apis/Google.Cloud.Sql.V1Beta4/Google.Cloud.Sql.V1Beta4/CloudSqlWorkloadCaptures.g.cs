@@ -51,7 +51,7 @@ namespace Google.Cloud.Sql.V1Beta4 {
             "amVjdBgBIAEoCUIE4kEBAhIWCghpbnN0YW5jZRgCIAEoCUIE4kEBAiJyChxX",
             "b3JrbG9hZENhcHR1cmVzTGlzdFJlc3BvbnNlEkQKEXdvcmtsb2FkX2NhcHR1",
             "cmVzGAEgAygLMikuZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0Lldvcmtsb2Fk",
-            "Q2FwdHVyZRIMCgRraW5kGAIgASgJIsgECg9Xb3JrbG9hZENhcHR1cmUSGQoL",
+            "Q2FwdHVyZRIMCgRraW5kGAIgASgJIpAGCg9Xb3JrbG9hZENhcHR1cmUSGQoL",
             "d29ya2xvYWRfaWQYASABKAlCBOJBAQMSQgoPc291cmNlX2luc3RhbmNlGAIg",
             "ASgJQiniQQED+kEiCiBjbG91ZHNxbC5nb29nbGVhcGlzLmNvbS9JbnN0YW5j",
             "ZRJVChZ3b3JrbG9hZF9jYXB0dXJlX3N0YXRlGAMgASgOMi8uZ29vZ2xlLmNs",
@@ -61,39 +61,43 @@ namespace Google.Cloud.Sql.V1Beta4 {
             "aW1lc3RhbXBCBOJBAQMSRwoPcmVwbGF5X2luc3RhbmNlGAYgASgJQiniQQED",
             "+kEiCiBjbG91ZHNxbC5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZUgAiAEBEiEK",
             "DnJldGVudGlvbl9kYXlzGAcgASgFQgTiQQEDSAGIAQESHAoJYmFja3VwX2lk",
-            "GAggASgJQgTiQQEDSAKIAQEiVgoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJ",
-            "RUQQABILCgdSVU5OSU5HEAESDQoJQ09NUExFVEVEEAISCgoGRkFJTEVEEAMS",
-            "DgoKVEVSTUlOQVRFRBAEQhIKEF9yZXBsYXlfaW5zdGFuY2VCEQoPX3JldGVu",
-            "dGlvbl9kYXlzQgwKCl9iYWNrdXBfaWQyjAkKGlNxbFdvcmtsb2FkQ2FwdHVy",
-            "ZXNTZXJ2aWNlErwBCgVTdGFydBI2Lmdvb2dsZS5jbG91ZC5zcWwudjFiZXRh",
-            "NC5Xb3JrbG9hZENhcHR1cmVzU3RhcnRSZXF1ZXN0GiMuZ29vZ2xlLmNsb3Vk",
-            "LnNxbC52MWJldGE0Lk9wZXJhdGlvbiJWgtPkkwJQIksvc3FsL3YxYmV0YTQv",
-            "cHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L3dvcmts",
-            "b2FkQ2FwdHVyZXM6c3RhcnQ6ASoSuQEKBFN0b3ASNS5nb29nbGUuY2xvdWQu",
-            "c3FsLnYxYmV0YTQuV29ya2xvYWRDYXB0dXJlc1N0b3BSZXF1ZXN0GiMuZ29v",
-            "Z2xlLmNsb3VkLnNxbC52MWJldGE0Lk9wZXJhdGlvbiJVgtPkkwJPIkovc3Fs",
-            "L3YxYmV0YTQvcHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFu",
-            "Y2V9L3dvcmtsb2FkQ2FwdHVyZXM6c3RvcDoBKhLcAQoLU3RhcnRSZXBsYXkS",
-            "PC5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuV29ya2xvYWRDYXB0dXJlc1N0",
-            "YXJ0UmVwbGF5UmVxdWVzdBojLmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5P",
-            "cGVyYXRpb24iaoLT5JMCZCJfL3NxbC92MWJldGE0L3Byb2plY3RzL3twcm9q",
-            "ZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS93b3JrbG9hZENhcHR1cmVzL3t3",
-            "b3JrbG9hZF9pZH06c3RhcnRSZXBsYXk6ASoSywEKClN0b3BSZXBsYXkSOy5n",
-            "b29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuV29ya2xvYWRDYXB0dXJlc1N0b3BS",
-            "ZXBsYXlSZXF1ZXN0GiMuZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0Lk9wZXJh",
-            "dGlvbiJbgtPkkwJVIlAvc3FsL3YxYmV0YTQvcHJvamVjdHMve3Byb2plY3R9",
-            "L2luc3RhbmNlcy97aW5zdGFuY2V9L3dvcmtsb2FkQ2FwdHVyZXM6c3RvcFJl",
-            "cGxheToBKhLHAQoETGlzdBI4Lmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5T",
-            "cWxXb3JrbG9hZENhcHR1cmVzTGlzdFJlcXVlc3QaNi5nb29nbGUuY2xvdWQu",
-            "c3FsLnYxYmV0YTQuV29ya2xvYWRDYXB0dXJlc0xpc3RSZXNwb25zZSJNgtPk",
-            "kwJHEkUvc3FsL3YxYmV0YTQvcHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNl",
-            "cy97aW5zdGFuY2V9L3dvcmtsb2FkQ2FwdHVyZXMafMpBF3NxbGFkbWluLmdv",
-            "b2dsZWFwaXMuY29t0kFfaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
-            "aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL3NxbHNlcnZpY2UuYWRtaW5CbwocY29tLmdvb2dsZS5jbG91ZC5zcWwu",
-            "djFiZXRhNEIdQ2xvdWRTcWxXb3JrbG9hZENhcHR1cmVzUHJvdG9QAVouY2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9zcWwvYXBpdjFiZXRhNC9zcWxwYjtzcWxwYmIG",
-            "cHJvdG8z"));
+            "GAggASgJQgTiQQEDSAKIAQESWQoMY2FwdHVyZV9tb2RlGA0gASgOMj0uZ29v",
+            "Z2xlLmNsb3VkLnNxbC52MWJldGE0Lldvcmtsb2FkQ2FwdHVyZS5Xb3JrbG9h",
+            "ZENhcHR1cmVNb2RlQgTiQQEDIlYKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lG",
+            "SUVEEAASCwoHUlVOTklORxABEg0KCUNPTVBMRVRFRBACEgoKBkZBSUxFRBAD",
+            "Eg4KClRFUk1JTkFURUQQBCJrChNXb3JrbG9hZENhcHR1cmVNb2RlEiUKIVdP",
+            "UktMT0FEX0NBUFRVUkVfTU9ERV9VTlNQRUNJRklFRBAAEhAKDENBUFRVUkVf",
+            "T05MWRABEhsKF0NBUFRVUkVfQU5EX0xJVkVfUkVQTEFZEAJCEgoQX3JlcGxh",
+            "eV9pbnN0YW5jZUIRCg9fcmV0ZW50aW9uX2RheXNCDAoKX2JhY2t1cF9pZDKM",
+            "CQoaU3FsV29ya2xvYWRDYXB0dXJlc1NlcnZpY2USvAEKBVN0YXJ0EjYuZ29v",
+            "Z2xlLmNsb3VkLnNxbC52MWJldGE0Lldvcmtsb2FkQ2FwdHVyZXNTdGFydFJl",
+            "cXVlc3QaIy5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuT3BlcmF0aW9uIlaC",
+            "0+STAlAiSy9zcWwvdjFiZXRhNC9wcm9qZWN0cy97cHJvamVjdH0vaW5zdGFu",
+            "Y2VzL3tpbnN0YW5jZX0vd29ya2xvYWRDYXB0dXJlczpzdGFydDoBKhK5AQoE",
+            "U3RvcBI1Lmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5Xb3JrbG9hZENhcHR1",
+            "cmVzU3RvcFJlcXVlc3QaIy5nb29nbGUuY2xvdWQuc3FsLnYxYmV0YTQuT3Bl",
+            "cmF0aW9uIlWC0+STAk8iSi9zcWwvdjFiZXRhNC9wcm9qZWN0cy97cHJvamVj",
+            "dH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vd29ya2xvYWRDYXB0dXJlczpzdG9w",
+            "OgEqEtwBCgtTdGFydFJlcGxheRI8Lmdvb2dsZS5jbG91ZC5zcWwudjFiZXRh",
+            "NC5Xb3JrbG9hZENhcHR1cmVzU3RhcnRSZXBsYXlSZXF1ZXN0GiMuZ29vZ2xl",
+            "LmNsb3VkLnNxbC52MWJldGE0Lk9wZXJhdGlvbiJqgtPkkwJkIl8vc3FsL3Yx",
+            "YmV0YTQvcHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9",
+            "L3dvcmtsb2FkQ2FwdHVyZXMve3dvcmtsb2FkX2lkfTpzdGFydFJlcGxheToB",
+            "KhLLAQoKU3RvcFJlcGxheRI7Lmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5X",
+            "b3JrbG9hZENhcHR1cmVzU3RvcFJlcGxheVJlcXVlc3QaIy5nb29nbGUuY2xv",
+            "dWQuc3FsLnYxYmV0YTQuT3BlcmF0aW9uIluC0+STAlUiUC9zcWwvdjFiZXRh",
+            "NC9wcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vd29y",
+            "a2xvYWRDYXB0dXJlczpzdG9wUmVwbGF5OgEqEscBCgRMaXN0EjguZ29vZ2xl",
+            "LmNsb3VkLnNxbC52MWJldGE0LlNxbFdvcmtsb2FkQ2FwdHVyZXNMaXN0UmVx",
+            "dWVzdBo2Lmdvb2dsZS5jbG91ZC5zcWwudjFiZXRhNC5Xb3JrbG9hZENhcHR1",
+            "cmVzTGlzdFJlc3BvbnNlIk2C0+STAkcSRS9zcWwvdjFiZXRhNC9wcm9qZWN0",
+            "cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vd29ya2xvYWRDYXB0",
+            "dXJlcxp8ykEXc3FsYWRtaW4uZ29vZ2xlYXBpcy5jb23SQV9odHRwczovL3d3",
+            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvc3Fsc2VydmljZS5hZG1pbkJvChxj",
+            "b20uZ29vZ2xlLmNsb3VkLnNxbC52MWJldGE0Qh1DbG91ZFNxbFdvcmtsb2Fk",
+            "Q2FwdHVyZXNQcm90b1ABWi5jbG91ZC5nb29nbGUuY29tL2dvL3NxbC9hcGl2",
+            "MWJldGE0L3NxbHBiO3NxbHBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Sql.V1Beta4.CloudSqlResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -103,7 +107,7 @@ namespace Google.Cloud.Sql.V1Beta4 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Sql.V1Beta4.WorkloadCapturesStopReplayRequest), global::Google.Cloud.Sql.V1Beta4.WorkloadCapturesStopReplayRequest.Parser, new[]{ "Project", "Instance", "StopWorkloadReplayContext" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Sql.V1Beta4.SqlWorkloadCapturesListRequest), global::Google.Cloud.Sql.V1Beta4.SqlWorkloadCapturesListRequest.Parser, new[]{ "Project", "Instance" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Sql.V1Beta4.WorkloadCapturesListResponse), global::Google.Cloud.Sql.V1Beta4.WorkloadCapturesListResponse.Parser, new[]{ "WorkloadCaptures", "Kind" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Sql.V1Beta4.WorkloadCapture), global::Google.Cloud.Sql.V1Beta4.WorkloadCapture.Parser, new[]{ "WorkloadId", "SourceInstance", "WorkloadCaptureState", "StartTime", "EndTime", "ReplayInstance", "RetentionDays", "BackupId" }, new[]{ "ReplayInstance", "RetentionDays", "BackupId" }, new[]{ typeof(global::Google.Cloud.Sql.V1Beta4.WorkloadCapture.Types.State) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Sql.V1Beta4.WorkloadCapture), global::Google.Cloud.Sql.V1Beta4.WorkloadCapture.Parser, new[]{ "WorkloadId", "SourceInstance", "WorkloadCaptureState", "StartTime", "EndTime", "ReplayInstance", "RetentionDays", "BackupId", "CaptureMode" }, new[]{ "ReplayInstance", "RetentionDays", "BackupId" }, new[]{ typeof(global::Google.Cloud.Sql.V1Beta4.WorkloadCapture.Types.State), typeof(global::Google.Cloud.Sql.V1Beta4.WorkloadCapture.Types.WorkloadCaptureMode) }, null, null)
           }));
     }
     #endregion
@@ -1852,6 +1856,7 @@ namespace Google.Cloud.Sql.V1Beta4 {
       replayInstance_ = other.replayInstance_;
       retentionDays_ = other.retentionDays_;
       backupId_ = other.backupId_;
+      captureMode_ = other.captureMode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2024,6 +2029,21 @@ namespace Google.Cloud.Sql.V1Beta4 {
       backupId_ = null;
     }
 
+    /// <summary>Field number for the "capture_mode" field.</summary>
+    public const int CaptureModeFieldNumber = 13;
+    private global::Google.Cloud.Sql.V1Beta4.WorkloadCapture.Types.WorkloadCaptureMode captureMode_ = global::Google.Cloud.Sql.V1Beta4.WorkloadCapture.Types.WorkloadCaptureMode.Unspecified;
+    /// <summary>
+    /// Output only. The capture mode of the workload capture.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Sql.V1Beta4.WorkloadCapture.Types.WorkloadCaptureMode CaptureMode {
+      get { return captureMode_; }
+      set {
+        captureMode_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2047,6 +2067,7 @@ namespace Google.Cloud.Sql.V1Beta4 {
       if (ReplayInstance != other.ReplayInstance) return false;
       if (RetentionDays != other.RetentionDays) return false;
       if (BackupId != other.BackupId) return false;
+      if (CaptureMode != other.CaptureMode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2062,6 +2083,7 @@ namespace Google.Cloud.Sql.V1Beta4 {
       if (HasReplayInstance) hash ^= ReplayInstance.GetHashCode();
       if (HasRetentionDays) hash ^= RetentionDays.GetHashCode();
       if (HasBackupId) hash ^= BackupId.GetHashCode();
+      if (CaptureMode != global::Google.Cloud.Sql.V1Beta4.WorkloadCapture.Types.WorkloadCaptureMode.Unspecified) hash ^= CaptureMode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2112,6 +2134,10 @@ namespace Google.Cloud.Sql.V1Beta4 {
         output.WriteRawTag(66);
         output.WriteString(BackupId);
       }
+      if (CaptureMode != global::Google.Cloud.Sql.V1Beta4.WorkloadCapture.Types.WorkloadCaptureMode.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) CaptureMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2154,6 +2180,10 @@ namespace Google.Cloud.Sql.V1Beta4 {
         output.WriteRawTag(66);
         output.WriteString(BackupId);
       }
+      if (CaptureMode != global::Google.Cloud.Sql.V1Beta4.WorkloadCapture.Types.WorkloadCaptureMode.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) CaptureMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2187,6 +2217,9 @@ namespace Google.Cloud.Sql.V1Beta4 {
       }
       if (HasBackupId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(BackupId);
+      }
+      if (CaptureMode != global::Google.Cloud.Sql.V1Beta4.WorkloadCapture.Types.WorkloadCaptureMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CaptureMode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2229,6 +2262,9 @@ namespace Google.Cloud.Sql.V1Beta4 {
       }
       if (other.HasBackupId) {
         BackupId = other.BackupId;
+      }
+      if (other.CaptureMode != global::Google.Cloud.Sql.V1Beta4.WorkloadCapture.Types.WorkloadCaptureMode.Unspecified) {
+        CaptureMode = other.CaptureMode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2285,6 +2321,10 @@ namespace Google.Cloud.Sql.V1Beta4 {
           }
           case 66: {
             BackupId = input.ReadString();
+            break;
+          }
+          case 104: {
+            CaptureMode = (global::Google.Cloud.Sql.V1Beta4.WorkloadCapture.Types.WorkloadCaptureMode) input.ReadEnum();
             break;
           }
         }
@@ -2344,6 +2384,10 @@ namespace Google.Cloud.Sql.V1Beta4 {
             BackupId = input.ReadString();
             break;
           }
+          case 104: {
+            CaptureMode = (global::Google.Cloud.Sql.V1Beta4.WorkloadCapture.Types.WorkloadCaptureMode) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -2381,6 +2425,25 @@ namespace Google.Cloud.Sql.V1Beta4 {
         /// or when the maximum duration is reached.
         /// </summary>
         [pbr::OriginalName("TERMINATED")] Terminated = 4,
+      }
+
+      /// <summary>
+      /// Specifies the mode of the workload capture.
+      /// </summary>
+      public enum WorkloadCaptureMode {
+        /// <summary>
+        /// Default value. This value is unused.
+        /// </summary>
+        [pbr::OriginalName("WORKLOAD_CAPTURE_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Records and stores the workload without live replay.
+        /// </summary>
+        [pbr::OriginalName("CAPTURE_ONLY")] CaptureOnly = 1,
+        /// <summary>
+        /// Records the workload and simultaneously replays it on a live replay
+        /// instance.
+        /// </summary>
+        [pbr::OriginalName("CAPTURE_AND_LIVE_REPLAY")] CaptureAndLiveReplay = 2,
       }
 
     }

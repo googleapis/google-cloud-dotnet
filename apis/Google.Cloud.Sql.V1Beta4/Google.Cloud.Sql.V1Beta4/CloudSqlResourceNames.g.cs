@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcsv = Google.Cloud.Sql.V1Beta4;
 
 namespace Google.Cloud.Sql.V1Beta4
@@ -68,6 +69,19 @@ namespace Google.Cloud.Sql.V1Beta4
         }
     }
 
+    public partial class ExecuteSqlReadOnlyPayload
+    {
+        /// <summary>
+        /// <see cref="SecretVersionName"/>-typed view over the <see cref="PasswordSecretVersion"/> resource name
+        /// property.
+        /// </summary>
+        public SecretVersionName PasswordSecretVersionAsSecretVersionName
+        {
+            get => string.IsNullOrEmpty(PasswordSecretVersion) ? null : SecretVersionName.Parse(PasswordSecretVersion, allowUnparsed: true);
+            set => PasswordSecretVersion = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ExecuteSqlPayload
     {
         /// <summary>
@@ -78,6 +92,17 @@ namespace Google.Cloud.Sql.V1Beta4
         {
             get => string.IsNullOrEmpty(PasswordSecretVersion) ? null : SecretVersionName.Parse(PasswordSecretVersion, allowUnparsed: true);
             set => PasswordSecretVersion = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class PscDnsReconcileNetworkingRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Networks"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<NetworkName> NetworksAsNetworkNames
+        {
+            get => new gax::ResourceNameList<NetworkName>(Networks, s => string.IsNullOrEmpty(s) ? null : NetworkName.Parse(s, allowUnparsed: true));
         }
     }
 }

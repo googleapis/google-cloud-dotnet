@@ -290,6 +290,12 @@
                 "ExecuteSqlAsync"
               ]
             },
+            "ExecuteSqlReadOnly": {
+              "methods": [
+                "ExecuteSqlReadOnly",
+                "ExecuteSqlReadOnlyAsync"
+              ]
+            },
             "Export": {
               "methods": [
                 "Export",
@@ -386,6 +392,12 @@
                 "PromoteReplicaAsync"
               ]
             },
+            "ReconcileNetworking": {
+              "methods": [
+                "ReconcileNetworking",
+                "ReconcileNetworkingAsync"
+              ]
+            },
             "Reencrypt": {
               "methods": [
                 "Reencrypt",
@@ -446,6 +458,12 @@
                 "RotateServerCertificateAsync"
               ]
             },
+            "Start": {
+              "methods": [
+                "Start",
+                "StartAsync"
+              ]
+            },
             "StartExternalSync": {
               "methods": [
                 "StartExternalSync",
@@ -456,6 +474,12 @@
               "methods": [
                 "StartReplica",
                 "StartReplicaAsync"
+              ]
+            },
+            "Stop": {
+              "methods": [
+                "Stop",
+                "StopAsync"
               ]
             },
             "StopReplica": {
@@ -530,6 +554,12 @@
                 "DeleteAsync"
               ]
             },
+            "DeleteCustomerManagedCertificate": {
+              "methods": [
+                "DeleteCustomerManagedCertificate",
+                "DeleteCustomerManagedCertificateAsync"
+              ]
+            },
             "Get": {
               "methods": [
                 "Get",
@@ -546,6 +576,18 @@
               "methods": [
                 "List",
                 "ListAsync"
+              ]
+            },
+            "ListCustomerManagedCertificates": {
+              "methods": [
+                "ListCustomerManagedCertificates",
+                "ListCustomerManagedCertificatesAsync"
+              ]
+            },
+            "UpdateCustomerManagedCertificate": {
+              "methods": [
+                "UpdateCustomerManagedCertificate",
+                "UpdateCustomerManagedCertificateAsync"
               ]
             }
           }
