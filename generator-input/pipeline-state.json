@@ -5291,6 +5291,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "3c0fb524083ae89e680689725a4c9c90de5f7ad2",
             "apiPaths": [
                 "google/cloud/saasplatform/saasservicemgmt/v1"
             ],
