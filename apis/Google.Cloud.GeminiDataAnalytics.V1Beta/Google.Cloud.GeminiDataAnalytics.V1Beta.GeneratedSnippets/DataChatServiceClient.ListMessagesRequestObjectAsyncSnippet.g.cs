@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsConversationName = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]"),
                 Filter = "",
+                PendingWriteWaitSkipped = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListMessagesResponse, StorageMessage> response = dataChatServiceClient.ListMessagesAsync(request);
