@@ -33,6 +33,7 @@ namespace Google.Ads.DataManager.V1
             yield return AdEventReflection.Descriptor;
             yield return AgeRangeReflection.Descriptor;
             yield return AudienceReflection.Descriptor;
+            yield return CallInfoReflection.Descriptor;
             yield return CartDataReflection.Descriptor;
             yield return ConsentReflection.Descriptor;
             yield return DestinationReflection.Descriptor;
@@ -48,7 +49,9 @@ namespace Google.Ads.DataManager.V1
             yield return ItemParameterReflection.Descriptor;
             yield return MatchRateReflection.Descriptor;
             yield return PartnerLinkServiceReflection.Descriptor;
+            yield return PartnerMatchReportEntryReflection.Descriptor;
             yield return ProcessingErrorsReflection.Descriptor;
+            yield return ReportingServiceReflection.Descriptor;
             yield return RequestStatusPerDestinationReflection.Descriptor;
             yield return TermsOfServiceReflection.Descriptor;
             yield return UserReflection.Descriptor;

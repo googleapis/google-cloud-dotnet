@@ -27,107 +27,117 @@ namespace Google.Ads.DataManager.V1 {
             "CjFnb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL3Byb2Nlc3NpbmdfZXJyb3Jz",
             "LnByb3RvEhlnb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxIkgKCUVycm9ySW5m",
             "bxI7CgxlcnJvcl9jb3VudHMYASADKAsyJS5nb29nbGUuYWRzLmRhdGFtYW5h",
-            "Z2VyLnYxLkVycm9yQ291bnQiZAoKRXJyb3JDb3VudBIUCgxyZWNvcmRfY291",
+            "Z2VyLnYxLkVycm9yQ291bnQifAoKRXJyb3JDb3VudBIUCgxyZWNvcmRfY291",
             "bnQYASABKAMSQAoGcmVhc29uGAIgASgOMjAuZ29vZ2xlLmFkcy5kYXRhbWFu",
-            "YWdlci52MS5Qcm9jZXNzaW5nRXJyb3JSZWFzb24iTgoLV2FybmluZ0luZm8S",
-            "PwoOd2FybmluZ19jb3VudHMYASADKAsyJy5nb29nbGUuYWRzLmRhdGFtYW5h",
-            "Z2VyLnYxLldhcm5pbmdDb3VudCJoCgxXYXJuaW5nQ291bnQSFAoMcmVjb3Jk",
-            "X2NvdW50GAEgASgDEkIKBnJlYXNvbhgCIAEoDjIyLmdvb2dsZS5hZHMuZGF0",
-            "YW1hbmFnZXIudjEuUHJvY2Vzc2luZ1dhcm5pbmdSZWFzb24ibAoMRmllbGRX",
-            "YXJuaW5nEjgKBnJlYXNvbhgBIAEoDjIoLmdvb2dsZS5hZHMuZGF0YW1hbmFn",
-            "ZXIudjEuV2FybmluZ1JlYXNvbhITCgtkZXNjcmlwdGlvbhgCIAEoCRINCgVm",
-            "aWVsZBgDIAEoCSq7EgoVUHJvY2Vzc2luZ0Vycm9yUmVhc29uEicKI1BST0NF",
-            "U1NJTkdfRVJST1JfUkVBU09OX1VOU1BFQ0lGSUVEEAASMwovUFJPQ0VTU0lO",
-            "R19FUlJPUl9SRUFTT05fSU5WQUxJRF9DVVNUT01fVkFSSUFCTEUQARI3CjNQ",
-            "Uk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9DVVNUT01fVkFSSUFCTEVfTk9UX0VO",
-            "QUJMRUQQAhIpCiVQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9FVkVOVF9UT09f",
-            "T0xEEAMSKgomUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fREVOSUVEX0NPTlNF",
-            "TlQQBBImCiJQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9OT19DT05TRU5UEAUS",
-            "KwonUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fVU5LTk9XTl9DT05TRU5UEAYS",
-            "KwonUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fRFVQTElDQVRFX0dDTElEEAcS",
-            "NAowUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fRFVQTElDQVRFX1RSQU5TQUNU",
-            "SU9OX0lEEAgSKgomUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fSU5WQUxJRF9H",
-            "QlJBSUQQCRIpCiVQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9JTlZBTElEX0dD",
-            "TElEEAoSLworUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fSU5WQUxJRF9NRVJD",
-            "SEFOVF9JRBALEioKJlBST0NFU1NJTkdfRVJST1JfUkVBU09OX0lOVkFMSURf",
-            "V0JSQUlEEAwSKgomUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fSU5URVJOQUxf",
-            "RVJST1IQDRJVClFQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9ERVNUSU5BVElP",
-            "Tl9BQ0NPVU5UX0VOSEFOQ0VEX0NPTlZFUlNJT05TX1RFUk1TX05PVF9TSUdO",
-            "RUQQDhIpCiVQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9JTlZBTElEX0VWRU5U",
-            "EA8SPQo5UFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fSU5TVUZGSUNJRU5UX01B",
-            "VENIRURfVFJBTlNBQ1RJT05TEBASNQoxUFJPQ0VTU0lOR19FUlJPUl9SRUFT",
-            "T05fSU5TVUZGSUNJRU5UX1RSQU5TQUNUSU9OUxAREioKJlBST0NFU1NJTkdf",
-            "RVJST1JfUkVBU09OX0lOVkFMSURfRk9STUFUEBISLAooUFJPQ0VTU0lOR19F",
-            "UlJPUl9SRUFTT05fREVDUllQVElPTl9FUlJPUhATEjAKLFBST0NFU1NJTkdf",
-            "RVJST1JfUkVBU09OX0RFS19ERUNSWVBUSU9OX0VSUk9SEBQSJwojUFJPQ0VT",
-            "U0lOR19FUlJPUl9SRUFTT05fSU5WQUxJRF9XSVAQFRInCiNQUk9DRVNTSU5H",
-            "X0VSUk9SX1JFQVNPTl9JTlZBTElEX0tFSxAWEisKJ1BST0NFU1NJTkdfRVJS",
-            "T1JfUkVBU09OX1dJUF9BVVRIX0ZBSUxFRBAXEjEKLVBST0NFU1NJTkdfRVJS",
-            "T1JfUkVBU09OX0tFS19QRVJNSVNTSU9OX0RFTklFRBAYEisKJ1BST0NFU1NJ",
-            "TkdfRVJST1JfUkVBU09OX0FXU19BVVRIX0ZBSUxFRBAbEjwKOFBST0NFU1NJ",
-            "TkdfRVJST1JfUkVBU09OX1VTRVJfSURFTlRJRklFUl9ERUNSWVBUSU9OX0VS",
-            "Uk9SEBkSQQo9UFJPQ0VTU0lOR19FUlJPUl9PUEVSQVRJTkdfQUNDT1VOVF9N",
-            "SVNNQVRDSF9GT1JfQURfSURFTlRJRklFUhAaElQKUFBST0NFU1NJTkdfRVJS",
-            "T1JfUkVBU09OX09ORV9QRVJfQ0xJQ0tfQ09OVkVSU0lPTl9BQ1RJT05fTk9U",
-            "X1BFUk1JVFRFRF9XSVRIX0JSQUlEEBwSLgoqUFJPQ0VTU0lOR19FUlJPUl9S",
-            "RUFTT05fTUFUQ0hfSURfTk9UX0ZPVU5EEB0SOgo2UFJPQ0VTU0lOR19FUlJP",
-            "Ul9SRUFTT05fVVNFUl9JRF9OT1RfRk9VTkRfRk9SX01BVENIX0lEEB4SNwoz",
-            "UFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fVVNFUl9JRF9OT1RfRk9VTkRfRk9S",
-            "X0dDTElEEB8SNwozUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fVVNFUl9JRF9O",
-            "T1RfRk9VTkRfRk9SX0RDTElEECASMgouUFJPQ0VTU0lOR19FUlJPUl9SRUFT",
-            "T05fSU5WQUxJRF9BRF9JREVOVElGSUVSUxAhEjQKMFBST0NFU1NJTkdfRVJS",
-            "T1JfUkVBU09OX0lOVkFMSURfTU9CSUxFX0lEX0ZPUk1BVBAiEjoKNlBST0NF",
-            "U1NJTkdfRVJST1JfUkVBU09OX09SSUdJTkFMX0NPTlZFUlNJT05TX05PVF9G",
-            "T1VORBAjEjEKLVBST0NFU1NJTkdfRVJST1JfUkVBU09OX0VWRU5UX0lEX0RF",
-            "Q09ERV9FUlJPUhAkEj8KO1BST0NFU1NJTkdfRVJST1JfUkVBU09OX1VTRVJf",
-            "SURfTk9UX0ZPVU5EX0ZPUl9JTVBSRVNTSU9OX0lEECUSLQopUFJPQ0VTU0lO",
-            "R19FUlJPUl9SRUFTT05fVVNFUl9JRF9OT1RfRk9VTkQQJhI1CjFQUk9DRVNT",
-            "SU5HX0VSUk9SX1JFQVNPTl9DT05WRVJTSU9OX1BSRUNFREVTX0NMSUNLECcS",
-            "LAooUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fVE9PX1JFQ0VOVF9DTElDSxAo",
-            "EikKJVBST0NFU1NJTkdfRVJST1JfUkVBU09OX0lOVkFMSURfQ0xJQ0sQKRI/",
-            "CjtQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9JTlZBTElEX09QRVJBVElOR19B",
-            "Q0NPVU5UX0ZPUl9DTElDSxAqEisKJ1BST0NFU1NJTkdfRVJST1JfUkVBU09O",
-            "X0NMSUNLX05PVF9GT1VORBArEj0KOVBST0NFU1NJTkdfRVJST1JfUkVBU09O",
-            "X0VYVEVSTkFMX0FUVFJJQlVUSU9OX0RBVEFfTUlTU0lORxAsKv8DChdQcm9j",
-            "ZXNzaW5nV2FybmluZ1JlYXNvbhIpCiVQUk9DRVNTSU5HX1dBUk5JTkdfUkVB",
-            "U09OX1VOU1BFQ0lGSUVEEAASMwovUFJPQ0VTU0lOR19XQVJOSU5HX1JFQVNP",
-            "Tl9LRUtfUEVSTUlTU0lPTl9ERU5JRUQQARIyCi5QUk9DRVNTSU5HX1dBUk5J",
-            "TkdfUkVBU09OX0RFS19ERUNSWVBUSU9OX0VSUk9SEAISLgoqUFJPQ0VTU0lO",
-            "R19XQVJOSU5HX1JFQVNPTl9ERUNSWVBUSU9OX0VSUk9SEAMSLQopUFJPQ0VT",
-            "U0lOR19XQVJOSU5HX1JFQVNPTl9XSVBfQVVUSF9GQUlMRUQQBBIpCiVQUk9D",
-            "RVNTSU5HX1dBUk5JTkdfUkVBU09OX0lOVkFMSURfV0lQEAUSKQolUFJPQ0VT",
-            "U0lOR19XQVJOSU5HX1JFQVNPTl9JTlZBTElEX0tFSxAGEj4KOlBST0NFU1NJ",
-            "TkdfV0FSTklOR19SRUFTT05fVVNFUl9JREVOVElGSUVSX0RFQ1JZUFRJT05f",
-            "RVJST1IQBxIsCihQUk9DRVNTSU5HX1dBUk5JTkdfUkVBU09OX0lOVEVSTkFM",
-            "X0VSUk9SEAgSLQopUFJPQ0VTU0lOR19XQVJOSU5HX1JFQVNPTl9BV1NfQVVU",
-            "SF9GQUlMRUQQCSrCBQoNV2FybmluZ1JlYXNvbhIeChpXQVJOSU5HX1JFQVNP",
-            "Tl9VTlNQRUNJRklFRBAAEi4KKldBUk5JTkdfUkVBU09OX0NVU1RPTV9WQVJJ",
-            "QUJMRV9OT1RfRU5BQkxFRBABEjEKLVdBUk5JTkdfUkVBU09OX0NVU1RPTV9W",
-            "QVJJQUJMRV9OT1RfUFJFREVGSU5FRBACEkAKPFdBUk5JTkdfUkVBU09OX0NB",
-            "UlRfREFUQV9OT1RfU1VQUE9SVEVEX1dJVEhfR0JSQUlEX09SX1dCUkFJRBAD",
-            "Ej0KOVdBUk5JTkdfUkVBU09OX0NBUlRfREFUQV9JVEVNX01FUkNIQU5UX1BS",
-            "T0RVQ1RfSURfTUlTU0lORxAEEjQKMFdBUk5JTkdfUkVBU09OX0NBUlRfREFU",
-            "QV9JVEVNX1VOSVRfUFJJQ0VfTUlTU0lORxAFEhoKFldBUk5JTkdfUkVBU09O",
-            "X0dFTkVSSUMQBhIkCiBXQVJOSU5HX1JFQVNPTl9JTlZBTElEX0NMSUVOVF9J",
-            "RBAHEisKJ1dBUk5JTkdfUkVBU09OX0lOVkFMSURfU1VCRElWSVNJT05fQ09E",
-            "RRAIEiYKIldBUk5JTkdfUkVBU09OX0lOVkFMSURfUkVHSU9OX0NPREUQCRIs",
-            "CihXQVJOSU5HX1JFQVNPTl9JTlZBTElEX1NVQkNPTlRJTkVOVF9DT0RFEAoS",
-            "KQolV0FSTklOR19SRUFTT05fSU5WQUxJRF9DT05USU5FTlRfQ09ERRALEioK",
-            "JldBUk5JTkdfUkVBU09OX0lOVkFMSURfREVWSUNFX0NBVEVHT1JZEAwSMwov",
-            "V0FSTklOR19SRUFTT05fSU5WQUxJRF9ERVZJQ0VfU0NSRUVOX1JFU09MVVRJ",
-            "T04QDRImCiJXQVJOSU5HX1JFQVNPTl9JTlZBTElEX01FUkNIQU5UX0lEEA5C",
-            "0gEKHWNvbS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxQhVQcm9jZXNzaW5n",
-            "RXJyb3JzUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhbWFuYWdl",
-            "ci9hcGl2MS9kYXRhbWFuYWdlcnBiO2RhdGFtYW5hZ2VycGKqAhlHb29nbGUu",
-            "QWRzLkRhdGFNYW5hZ2VyLlYxygIZR29vZ2xlXEFkc1xEYXRhTWFuYWdlclxW",
-            "MeoCHEdvb2dsZTo6QWRzOjpEYXRhTWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "YWdlci52MS5Qcm9jZXNzaW5nRXJyb3JSZWFzb24SFgoOcmVjb3JkX2luZGlj",
+            "ZXMYAyADKAUiTgoLV2FybmluZ0luZm8SPwoOd2FybmluZ19jb3VudHMYASAD",
+            "KAsyJy5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLldhcm5pbmdDb3VudCKA",
+            "AQoMV2FybmluZ0NvdW50EhQKDHJlY29yZF9jb3VudBgBIAEoAxJCCgZyZWFz",
+            "b24YAiABKA4yMi5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlByb2Nlc3Np",
+            "bmdXYXJuaW5nUmVhc29uEhYKDnJlY29yZF9pbmRpY2VzGAMgAygFImwKDEZp",
+            "ZWxkV2FybmluZxI4CgZyZWFzb24YASABKA4yKC5nb29nbGUuYWRzLmRhdGFt",
+            "YW5hZ2VyLnYxLldhcm5pbmdSZWFzb24SEwoLZGVzY3JpcHRpb24YAiABKAkS",
+            "DQoFZmllbGQYAyABKAkqpRQKFVByb2Nlc3NpbmdFcnJvclJlYXNvbhInCiNQ",
+            "Uk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9VTlNQRUNJRklFRBAAEjMKL1BST0NF",
+            "U1NJTkdfRVJST1JfUkVBU09OX0lOVkFMSURfQ1VTVE9NX1ZBUklBQkxFEAES",
+            "NwozUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fQ1VTVE9NX1ZBUklBQkxFX05P",
+            "VF9FTkFCTEVEEAISKQolUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fRVZFTlRf",
+            "VE9PX09MRBADEioKJlBST0NFU1NJTkdfRVJST1JfUkVBU09OX0RFTklFRF9D",
+            "T05TRU5UEAQSJgoiUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fTk9fQ09OU0VO",
+            "VBAFEisKJ1BST0NFU1NJTkdfRVJST1JfUkVBU09OX1VOS05PV05fQ09OU0VO",
+            "VBAGEisKJ1BST0NFU1NJTkdfRVJST1JfUkVBU09OX0RVUExJQ0FURV9HQ0xJ",
+            "RBAHEjQKMFBST0NFU1NJTkdfRVJST1JfUkVBU09OX0RVUExJQ0FURV9UUkFO",
+            "U0FDVElPTl9JRBAIEioKJlBST0NFU1NJTkdfRVJST1JfUkVBU09OX0lOVkFM",
+            "SURfR0JSQUlEEAkSKQolUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fSU5WQUxJ",
+            "RF9HQ0xJRBAKEi8KK1BST0NFU1NJTkdfRVJST1JfUkVBU09OX0lOVkFMSURf",
+            "TUVSQ0hBTlRfSUQQCxIqCiZQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9JTlZB",
+            "TElEX1dCUkFJRBAMEioKJlBST0NFU1NJTkdfRVJST1JfUkVBU09OX0lOVEVS",
+            "TkFMX0VSUk9SEA0SVQpRUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fREVTVElO",
+            "QVRJT05fQUNDT1VOVF9FTkhBTkNFRF9DT05WRVJTSU9OU19URVJNU19OT1Rf",
+            "U0lHTkVEEA4SKQolUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fSU5WQUxJRF9F",
+            "VkVOVBAPEj0KOVBST0NFU1NJTkdfRVJST1JfUkVBU09OX0lOU1VGRklDSUVO",
+            "VF9NQVRDSEVEX1RSQU5TQUNUSU9OUxAQEjUKMVBST0NFU1NJTkdfRVJST1Jf",
+            "UkVBU09OX0lOU1VGRklDSUVOVF9UUkFOU0FDVElPTlMQERIqCiZQUk9DRVNT",
+            "SU5HX0VSUk9SX1JFQVNPTl9JTlZBTElEX0ZPUk1BVBASEiwKKFBST0NFU1NJ",
+            "TkdfRVJST1JfUkVBU09OX0RFQ1JZUFRJT05fRVJST1IQExIwCixQUk9DRVNT",
+            "SU5HX0VSUk9SX1JFQVNPTl9ERUtfREVDUllQVElPTl9FUlJPUhAUEicKI1BS",
+            "T0NFU1NJTkdfRVJST1JfUkVBU09OX0lOVkFMSURfV0lQEBUSJwojUFJPQ0VT",
+            "U0lOR19FUlJPUl9SRUFTT05fSU5WQUxJRF9LRUsQFhIrCidQUk9DRVNTSU5H",
+            "X0VSUk9SX1JFQVNPTl9XSVBfQVVUSF9GQUlMRUQQFxIxCi1QUk9DRVNTSU5H",
+            "X0VSUk9SX1JFQVNPTl9LRUtfUEVSTUlTU0lPTl9ERU5JRUQQGBIrCidQUk9D",
+            "RVNTSU5HX0VSUk9SX1JFQVNPTl9BV1NfQVVUSF9GQUlMRUQQGxI8CjhQUk9D",
+            "RVNTSU5HX0VSUk9SX1JFQVNPTl9VU0VSX0lERU5USUZJRVJfREVDUllQVElP",
+            "Tl9FUlJPUhAZEkEKPVBST0NFU1NJTkdfRVJST1JfT1BFUkFUSU5HX0FDQ09V",
+            "TlRfTUlTTUFUQ0hfRk9SX0FEX0lERU5USUZJRVIQGhJUClBQUk9DRVNTSU5H",
+            "X0VSUk9SX1JFQVNPTl9PTkVfUEVSX0NMSUNLX0NPTlZFUlNJT05fQUNUSU9O",
+            "X05PVF9QRVJNSVRURURfV0lUSF9CUkFJRBAcEi4KKlBST0NFU1NJTkdfRVJS",
+            "T1JfUkVBU09OX01BVENIX0lEX05PVF9GT1VORBAdEjoKNlBST0NFU1NJTkdf",
+            "RVJST1JfUkVBU09OX1VTRVJfSURfTk9UX0ZPVU5EX0ZPUl9NQVRDSF9JRBAe",
+            "EjcKM1BST0NFU1NJTkdfRVJST1JfUkVBU09OX1VTRVJfSURfTk9UX0ZPVU5E",
+            "X0ZPUl9HQ0xJRBAfEjcKM1BST0NFU1NJTkdfRVJST1JfUkVBU09OX1VTRVJf",
+            "SURfTk9UX0ZPVU5EX0ZPUl9EQ0xJRBAgEjIKLlBST0NFU1NJTkdfRVJST1Jf",
+            "UkVBU09OX0lOVkFMSURfQURfSURFTlRJRklFUlMQIRI0CjBQUk9DRVNTSU5H",
+            "X0VSUk9SX1JFQVNPTl9JTlZBTElEX01PQklMRV9JRF9GT1JNQVQQIhI6CjZQ",
+            "Uk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9PUklHSU5BTF9DT05WRVJTSU9OU19O",
+            "T1RfRk9VTkQQIxIxCi1QUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9FVkVOVF9J",
+            "RF9ERUNPREVfRVJST1IQJBI/CjtQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9V",
+            "U0VSX0lEX05PVF9GT1VORF9GT1JfSU1QUkVTU0lPTl9JRBAlEi0KKVBST0NF",
+            "U1NJTkdfRVJST1JfUkVBU09OX1VTRVJfSURfTk9UX0ZPVU5EECYSNQoxUFJP",
+            "Q0VTU0lOR19FUlJPUl9SRUFTT05fQ09OVkVSU0lPTl9QUkVDRURFU19DTElD",
+            "SxAnEiwKKFBST0NFU1NJTkdfRVJST1JfUkVBU09OX1RPT19SRUNFTlRfQ0xJ",
+            "Q0sQKBIpCiVQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9JTlZBTElEX0NMSUNL",
+            "ECkSPwo7UFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fSU5WQUxJRF9PUEVSQVRJ",
+            "TkdfQUNDT1VOVF9GT1JfQ0xJQ0sQKhIrCidQUk9DRVNTSU5HX0VSUk9SX1JF",
+            "QVNPTl9DTElDS19OT1RfRk9VTkQQKxI9CjlQUk9DRVNTSU5HX0VSUk9SX1JF",
+            "QVNPTl9FWFRFUk5BTF9BVFRSSUJVVElPTl9EQVRBX01JU1NJTkcQLBI8CjhQ",
+            "Uk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9ERVNUSU5BVElPTl9UT09fUkVDRU5U",
+            "TFlfQ1JFQVRFRBAtEikKJVBST0NFU1NJTkdfRVJST1JfUkVBU09OX0VYUElS",
+            "RURfQ0xJQ0sQLhIrCidQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9UT09fUkVD",
+            "RU5UX0NBTEwQLxIoCiRQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9FWFBJUkVE",
+            "X0NBTEwQMBIoCiRQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9JTlZBTElEX0NB",
+            "TEwQMSr4BAoXUHJvY2Vzc2luZ1dhcm5pbmdSZWFzb24SKQolUFJPQ0VTU0lO",
+            "R19XQVJOSU5HX1JFQVNPTl9VTlNQRUNJRklFRBAAEjMKL1BST0NFU1NJTkdf",
+            "V0FSTklOR19SRUFTT05fS0VLX1BFUk1JU1NJT05fREVOSUVEEAESMgouUFJP",
+            "Q0VTU0lOR19XQVJOSU5HX1JFQVNPTl9ERUtfREVDUllQVElPTl9FUlJPUhAC",
+            "Ei4KKlBST0NFU1NJTkdfV0FSTklOR19SRUFTT05fREVDUllQVElPTl9FUlJP",
+            "UhADEi0KKVBST0NFU1NJTkdfV0FSTklOR19SRUFTT05fV0lQX0FVVEhfRkFJ",
+            "TEVEEAQSKQolUFJPQ0VTU0lOR19XQVJOSU5HX1JFQVNPTl9JTlZBTElEX1dJ",
+            "UBAFEikKJVBST0NFU1NJTkdfV0FSTklOR19SRUFTT05fSU5WQUxJRF9LRUsQ",
+            "BhI+CjpQUk9DRVNTSU5HX1dBUk5JTkdfUkVBU09OX1VTRVJfSURFTlRJRklF",
+            "Ul9ERUNSWVBUSU9OX0VSUk9SEAcSLAooUFJPQ0VTU0lOR19XQVJOSU5HX1JF",
+            "QVNPTl9JTlRFUk5BTF9FUlJPUhAIEi0KKVBST0NFU1NJTkdfV0FSTklOR19S",
+            "RUFTT05fQVdTX0FVVEhfRkFJTEVEEAkSOQo1UFJPQ0VTU0lOR19XQVJOSU5H",
+            "X1JFQVNPTl9DVVNUT01fVkFSSUFCTEVfTk9UX0VOQUJMRUQQChI8CjhQUk9D",
+            "RVNTSU5HX1dBUk5JTkdfUkVBU09OX0NVU1RPTV9WQVJJQUJMRV9OT1RfUFJF",
+            "REVGSU5FRBALKuwFCg1XYXJuaW5nUmVhc29uEh4KGldBUk5JTkdfUkVBU09O",
+            "X1VOU1BFQ0lGSUVEEAASLgoqV0FSTklOR19SRUFTT05fQ1VTVE9NX1ZBUklB",
+            "QkxFX05PVF9FTkFCTEVEEAESMQotV0FSTklOR19SRUFTT05fQ1VTVE9NX1ZB",
+            "UklBQkxFX05PVF9QUkVERUZJTkVEEAISQAo8V0FSTklOR19SRUFTT05fQ0FS",
+            "VF9EQVRBX05PVF9TVVBQT1JURURfV0lUSF9HQlJBSURfT1JfV0JSQUlEEAMS",
+            "PQo5V0FSTklOR19SRUFTT05fQ0FSVF9EQVRBX0lURU1fTUVSQ0hBTlRfUFJP",
+            "RFVDVF9JRF9NSVNTSU5HEAQSNAowV0FSTklOR19SRUFTT05fQ0FSVF9EQVRB",
+            "X0lURU1fVU5JVF9QUklDRV9NSVNTSU5HEAUSGgoWV0FSTklOR19SRUFTT05f",
+            "R0VORVJJQxAGEiQKIFdBUk5JTkdfUkVBU09OX0lOVkFMSURfQ0xJRU5UX0lE",
+            "EAcSKwonV0FSTklOR19SRUFTT05fSU5WQUxJRF9TVUJESVZJU0lPTl9DT0RF",
+            "EAgSJgoiV0FSTklOR19SRUFTT05fSU5WQUxJRF9SRUdJT05fQ09ERRAJEiwK",
+            "KFdBUk5JTkdfUkVBU09OX0lOVkFMSURfU1VCQ09OVElORU5UX0NPREUQChIp",
+            "CiVXQVJOSU5HX1JFQVNPTl9JTlZBTElEX0NPTlRJTkVOVF9DT0RFEAsSKgom",
+            "V0FSTklOR19SRUFTT05fSU5WQUxJRF9ERVZJQ0VfQ0FURUdPUlkQDBIzCi9X",
+            "QVJOSU5HX1JFQVNPTl9JTlZBTElEX0RFVklDRV9TQ1JFRU5fUkVTT0xVVElP",
+            "ThANEiYKIldBUk5JTkdfUkVBU09OX0lOVkFMSURfTUVSQ0hBTlRfSUQQDhIo",
+            "CiRXQVJOSU5HX1JFQVNPTl9JTlZBTElEX05VTUJFUl9GT1JNQVQQD0LSAQod",
+            "Y29tLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjFCFVByb2Nlc3NpbmdFcnJv",
+            "cnNQcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFtYW5hZ2VyL2Fw",
+            "aXYxL2RhdGFtYW5hZ2VycGI7ZGF0YW1hbmFnZXJwYqoCGUdvb2dsZS5BZHMu",
+            "RGF0YU1hbmFnZXIuVjHKAhlHb29nbGVcQWRzXERhdGFNYW5hZ2VyXFYx6gIc",
+            "R29vZ2xlOjpBZHM6OkRhdGFNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.ProcessingErrorReason), typeof(global::Google.Ads.DataManager.V1.ProcessingWarningReason), typeof(global::Google.Ads.DataManager.V1.WarningReason), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.ErrorInfo), global::Google.Ads.DataManager.V1.ErrorInfo.Parser, new[]{ "ErrorCounts" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.ErrorCount), global::Google.Ads.DataManager.V1.ErrorCount.Parser, new[]{ "RecordCount", "Reason" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.ErrorCount), global::Google.Ads.DataManager.V1.ErrorCount.Parser, new[]{ "RecordCount", "Reason", "RecordIndices" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.WarningInfo), global::Google.Ads.DataManager.V1.WarningInfo.Parser, new[]{ "WarningCounts" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.WarningCount), global::Google.Ads.DataManager.V1.WarningCount.Parser, new[]{ "RecordCount", "Reason" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.WarningCount), global::Google.Ads.DataManager.V1.WarningCount.Parser, new[]{ "RecordCount", "Reason", "RecordIndices" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.FieldWarning), global::Google.Ads.DataManager.V1.FieldWarning.Parser, new[]{ "Reason", "Description", "Field" }, null, null, null, null)
           }));
     }
@@ -333,6 +343,27 @@ namespace Google.Ads.DataManager.V1 {
     /// an external attribution conversion action isn't supported.
     /// </summary>
     [pbr::OriginalName("PROCESSING_ERROR_REASON_EXTERNAL_ATTRIBUTION_DATA_MISSING")] ExternalAttributionDataMissing = 44,
+    /// <summary>
+    /// The destination was created too recently. Try again in a few hours.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_DESTINATION_TOO_RECENTLY_CREATED")] DestinationTooRecentlyCreated = 45,
+    /// <summary>
+    /// The matched click is older than the conversion action's configured
+    /// click-through conversion lookback window (or the 90-day click TTL).
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_EXPIRED_CLICK")] ExpiredClick = 46,
+    /// <summary>
+    /// The call is still being processed.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_TOO_RECENT_CALL")] TooRecentCall = 47,
+    /// <summary>
+    /// The call is too old for this conversion to be imported.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_EXPIRED_CALL")] ExpiredCall = 48,
+    /// <summary>
+    /// The call was not found.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_INVALID_CALL")] InvalidCall = 49,
   }
 
   /// <summary>
@@ -383,6 +414,19 @@ namespace Google.Ads.DataManager.V1 {
     /// The system failed to authenticate with AWS.
     /// </summary>
     [pbr::OriginalName("PROCESSING_WARNING_REASON_AWS_AUTH_FAILED")] AwsAuthFailed = 9,
+    /// <summary>
+    /// A [CustomVariable][google.ads.datamanager.v1.CustomVariable] or
+    /// [ItemCustomVariable][google.ads.datamanager.v1.ItemCustomVariable] is not
+    /// enabled in the account.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_WARNING_REASON_CUSTOM_VARIABLE_NOT_ENABLED")] CustomVariableNotEnabled = 10,
+    /// <summary>
+    /// The value of a [CustomVariable][google.ads.datamanager.v1.CustomVariable]
+    /// or [ItemCustomVariable][google.ads.datamanager.v1.ItemCustomVariable] is
+    /// not among the predefined allowed values configured for the custom variable
+    /// on the destination account and will be replaced by an uncategorized value.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_WARNING_REASON_CUSTOM_VARIABLE_NOT_PREDEFINED")] CustomVariableNotPredefined = 11,
   }
 
   /// <summary>
@@ -472,6 +516,10 @@ namespace Google.Ads.DataManager.V1 {
     /// invalid.
     /// </summary>
     [pbr::OriginalName("WARNING_REASON_INVALID_MERCHANT_ID")] InvalidMerchantId = 14,
+    /// <summary>
+    /// The number format is invalid.
+    /// </summary>
+    [pbr::OriginalName("WARNING_REASON_INVALID_NUMBER_FORMAT")] InvalidNumberFormat = 15,
   }
 
   #endregion
@@ -711,6 +759,7 @@ namespace Google.Ads.DataManager.V1 {
     public ErrorCount(ErrorCount other) : this() {
       recordCount_ = other.recordCount_;
       reason_ = other.reason_;
+      recordIndices_ = other.recordIndices_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -750,6 +799,21 @@ namespace Google.Ads.DataManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "record_indices" field.</summary>
+    public const int RecordIndicesFieldNumber = 3;
+    private static readonly pb::FieldCodec<int> _repeated_recordIndices_codec
+        = pb::FieldCodec.ForInt32(26);
+    private readonly pbc::RepeatedField<int> recordIndices_ = new pbc::RepeatedField<int>();
+    /// <summary>
+    /// The 0-based indices of the records in the original request that failed
+    /// with this error reason.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<int> RecordIndices {
+      get { return recordIndices_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -767,6 +831,7 @@ namespace Google.Ads.DataManager.V1 {
       }
       if (RecordCount != other.RecordCount) return false;
       if (Reason != other.Reason) return false;
+      if(!recordIndices_.Equals(other.recordIndices_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -776,6 +841,7 @@ namespace Google.Ads.DataManager.V1 {
       int hash = 1;
       if (RecordCount != 0L) hash ^= RecordCount.GetHashCode();
       if (Reason != global::Google.Ads.DataManager.V1.ProcessingErrorReason.Unspecified) hash ^= Reason.GetHashCode();
+      hash ^= recordIndices_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -802,6 +868,7 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(16);
         output.WriteEnum((int) Reason);
       }
+      recordIndices_.WriteTo(output, _repeated_recordIndices_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -820,6 +887,7 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(16);
         output.WriteEnum((int) Reason);
       }
+      recordIndices_.WriteTo(ref output, _repeated_recordIndices_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -836,6 +904,7 @@ namespace Google.Ads.DataManager.V1 {
       if (Reason != global::Google.Ads.DataManager.V1.ProcessingErrorReason.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Reason);
       }
+      size += recordIndices_.CalculateSize(_repeated_recordIndices_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -854,6 +923,7 @@ namespace Google.Ads.DataManager.V1 {
       if (other.Reason != global::Google.Ads.DataManager.V1.ProcessingErrorReason.Unspecified) {
         Reason = other.Reason;
       }
+      recordIndices_.Add(other.recordIndices_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -881,6 +951,11 @@ namespace Google.Ads.DataManager.V1 {
             Reason = (global::Google.Ads.DataManager.V1.ProcessingErrorReason) input.ReadEnum();
             break;
           }
+          case 26:
+          case 24: {
+            recordIndices_.AddEntriesFrom(input, _repeated_recordIndices_codec);
+            break;
+          }
         }
       }
     #endif
@@ -906,6 +981,11 @@ namespace Google.Ads.DataManager.V1 {
           }
           case 16: {
             Reason = (global::Google.Ads.DataManager.V1.ProcessingErrorReason) input.ReadEnum();
+            break;
+          }
+          case 26:
+          case 24: {
+            recordIndices_.AddEntriesFrom(ref input, _repeated_recordIndices_codec);
             break;
           }
         }
@@ -1148,6 +1228,7 @@ namespace Google.Ads.DataManager.V1 {
     public WarningCount(WarningCount other) : this() {
       recordCount_ = other.recordCount_;
       reason_ = other.reason_;
+      recordIndices_ = other.recordIndices_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1187,6 +1268,21 @@ namespace Google.Ads.DataManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "record_indices" field.</summary>
+    public const int RecordIndicesFieldNumber = 3;
+    private static readonly pb::FieldCodec<int> _repeated_recordIndices_codec
+        = pb::FieldCodec.ForInt32(26);
+    private readonly pbc::RepeatedField<int> recordIndices_ = new pbc::RepeatedField<int>();
+    /// <summary>
+    /// The 0-based indices of the records in the original request that had this
+    /// warning reason.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<int> RecordIndices {
+      get { return recordIndices_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1204,6 +1300,7 @@ namespace Google.Ads.DataManager.V1 {
       }
       if (RecordCount != other.RecordCount) return false;
       if (Reason != other.Reason) return false;
+      if(!recordIndices_.Equals(other.recordIndices_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1213,6 +1310,7 @@ namespace Google.Ads.DataManager.V1 {
       int hash = 1;
       if (RecordCount != 0L) hash ^= RecordCount.GetHashCode();
       if (Reason != global::Google.Ads.DataManager.V1.ProcessingWarningReason.Unspecified) hash ^= Reason.GetHashCode();
+      hash ^= recordIndices_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1239,6 +1337,7 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(16);
         output.WriteEnum((int) Reason);
       }
+      recordIndices_.WriteTo(output, _repeated_recordIndices_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1257,6 +1356,7 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(16);
         output.WriteEnum((int) Reason);
       }
+      recordIndices_.WriteTo(ref output, _repeated_recordIndices_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1273,6 +1373,7 @@ namespace Google.Ads.DataManager.V1 {
       if (Reason != global::Google.Ads.DataManager.V1.ProcessingWarningReason.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Reason);
       }
+      size += recordIndices_.CalculateSize(_repeated_recordIndices_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1291,6 +1392,7 @@ namespace Google.Ads.DataManager.V1 {
       if (other.Reason != global::Google.Ads.DataManager.V1.ProcessingWarningReason.Unspecified) {
         Reason = other.Reason;
       }
+      recordIndices_.Add(other.recordIndices_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1318,6 +1420,11 @@ namespace Google.Ads.DataManager.V1 {
             Reason = (global::Google.Ads.DataManager.V1.ProcessingWarningReason) input.ReadEnum();
             break;
           }
+          case 26:
+          case 24: {
+            recordIndices_.AddEntriesFrom(input, _repeated_recordIndices_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1343,6 +1450,11 @@ namespace Google.Ads.DataManager.V1 {
           }
           case 16: {
             Reason = (global::Google.Ads.DataManager.V1.ProcessingWarningReason) input.ReadEnum();
+            break;
+          }
+          case 26:
+          case 24: {
+            recordIndices_.AddEntriesFrom(ref input, _repeated_recordIndices_codec);
             break;
           }
         }

@@ -26,23 +26,23 @@ namespace Google.Ads.DataManager.V1 {
           string.Concat(
             "Ci9nb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL3VzZXJfcHJvcGVydGllcy5w",
             "cm90bxIZZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MRofZ29vZ2xlL2FwaS9m",
-            "aWVsZF9iZWhhdmlvci5wcm90byL7AQoOVXNlclByb3BlcnRpZXMSQwoNY3Vz",
+            "aWVsZF9iZWhhdmlvci5wcm90byL+AQoOVXNlclByb3BlcnRpZXMSRAoNY3Vz",
             "dG9tZXJfdHlwZRgBIAEoDjInLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEu",
-            "Q3VzdG9tZXJUeXBlQgPgQQESUgoVY3VzdG9tZXJfdmFsdWVfYnVja2V0GAIg",
-            "ASgOMi4uZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5DdXN0b21lclZhbHVl",
-            "QnVja2V0QgPgQQESUAoaYWRkaXRpb25hbF91c2VyX3Byb3BlcnRpZXMYAyAD",
-            "KAsyJy5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlVzZXJQcm9wZXJ0eUID",
-            "4EEBIj4KDFVzZXJQcm9wZXJ0eRIaCg1wcm9wZXJ0eV9uYW1lGAEgASgJQgPg",
-            "QQISEgoFdmFsdWUYAiABKAlCA+BBAipUCgxDdXN0b21lclR5cGUSHQoZQ1VT",
-            "VE9NRVJfVFlQRV9VTlNQRUNJRklFRBAAEgcKA05FVxABEg0KCVJFVFVSTklO",
-            "RxACEg0KCVJFRU5HQUdFRBADKlsKE0N1c3RvbWVyVmFsdWVCdWNrZXQSJQoh",
-            "Q1VTVE9NRVJfVkFMVUVfQlVDS0VUX1VOU1BFQ0lGSUVEEAASBwoDTE9XEAES",
-            "CgoGTUVESVVNEAISCAoESElHSBADQtABCh1jb20uZ29vZ2xlLmFkcy5kYXRh",
-            "bWFuYWdlci52MUITVXNlclByb3BlcnRpZXNQcm90b1ABWkFjbG91ZC5nb29n",
-            "bGUuY29tL2dvL2RhdGFtYW5hZ2VyL2FwaXYxL2RhdGFtYW5hZ2VycGI7ZGF0",
-            "YW1hbmFnZXJwYqoCGUdvb2dsZS5BZHMuRGF0YU1hbmFnZXIuVjHKAhlHb29n",
-            "bGVcQWRzXERhdGFNYW5hZ2VyXFYx6gIcR29vZ2xlOjpBZHM6OkRhdGFNYW5h",
-            "Z2VyOjpWMWIGcHJvdG8z"));
+            "Q3VzdG9tZXJUeXBlQgTiQQEBElMKFWN1c3RvbWVyX3ZhbHVlX2J1Y2tldBgC",
+            "IAEoDjIuLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuQ3VzdG9tZXJWYWx1",
+            "ZUJ1Y2tldEIE4kEBARJRChphZGRpdGlvbmFsX3VzZXJfcHJvcGVydGllcxgD",
+            "IAMoCzInLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuVXNlclByb3BlcnR5",
+            "QgTiQQEBIkAKDFVzZXJQcm9wZXJ0eRIbCg1wcm9wZXJ0eV9uYW1lGAEgASgJ",
+            "QgTiQQECEhMKBXZhbHVlGAIgASgJQgTiQQECKlQKDEN1c3RvbWVyVHlwZRId",
+            "ChlDVVNUT01FUl9UWVBFX1VOU1BFQ0lGSUVEEAASBwoDTkVXEAESDQoJUkVU",
+            "VVJOSU5HEAISDQoJUkVFTkdBR0VEEAMqWwoTQ3VzdG9tZXJWYWx1ZUJ1Y2tl",
+            "dBIlCiFDVVNUT01FUl9WQUxVRV9CVUNLRVRfVU5TUEVDSUZJRUQQABIHCgNM",
+            "T1cQARIKCgZNRURJVU0QAhIICgRISUdIEANC0AEKHWNvbS5nb29nbGUuYWRz",
+            "LmRhdGFtYW5hZ2VyLnYxQhNVc2VyUHJvcGVydGllc1Byb3RvUAFaQWNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vZGF0YW1hbmFnZXIvYXBpdjEvZGF0YW1hbmFnZXJw",
+            "YjtkYXRhbWFuYWdlcnBiqgIZR29vZ2xlLkFkcy5EYXRhTWFuYWdlci5WMcoC",
+            "GUdvb2dsZVxBZHNcRGF0YU1hbmFnZXJcVjHqAhxHb29nbGU6OkFkczo6RGF0",
+            "YU1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.CustomerType), typeof(global::Google.Ads.DataManager.V1.CustomerValueBucket), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -190,7 +190,7 @@ namespace Google.Ads.DataManager.V1 {
     private readonly pbc::RepeatedField<global::Google.Ads.DataManager.V1.UserProperty> additionalUserProperties_ = new pbc::RepeatedField<global::Google.Ads.DataManager.V1.UserProperty>();
     /// <summary>
     /// Optional. A bucket of any additional [user
-    /// properties](https://developers.google.com/analytics/devguides/collection/protocol/ga4/user-properties)
+    /// properties](https://support.google.com/analytics/answer/9355671)
     /// for the user associated with this event.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -380,7 +380,7 @@ namespace Google.Ads.DataManager.V1 {
 
   /// <summary>
   /// A bucket of any additional [user
-  /// properties](https://developers.google.com/analytics/devguides/collection/protocol/ga4/user-properties)
+  /// properties](https://support.google.com/analytics/answer/9355671)
   /// for the user associated with this event.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]

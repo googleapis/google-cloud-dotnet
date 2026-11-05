@@ -26,17 +26,17 @@ namespace Google.Ads.DataManager.V1 {
           string.Concat(
             "Cidnb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL2NvbnNlbnQucHJvdG8SGWdv",
             "b2dsZS5hZHMuZGF0YW1hbmFnZXIudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVo",
-            "YXZpb3IucHJvdG8imQEKB0NvbnNlbnQSQwoMYWRfdXNlcl9kYXRhGAEgASgO",
-            "MiguZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5Db25zZW50U3RhdHVzQgPg",
-            "QQESSQoSYWRfcGVyc29uYWxpemF0aW9uGAIgASgOMiguZ29vZ2xlLmFkcy5k",
-            "YXRhbWFuYWdlci52MS5Db25zZW50U3RhdHVzQgPgQQEqWAoNQ29uc2VudFN0",
-            "YXR1cxIeChpDT05TRU5UX1NUQVRVU19VTlNQRUNJRklFRBAAEhMKD0NPTlNF",
-            "TlRfR1JBTlRFRBABEhIKDkNPTlNFTlRfREVOSUVEEAJCyQEKHWNvbS5nb29n",
-            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxQgxDb25zZW50UHJvdG9QAVpBY2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9kYXRhbWFuYWdlci9hcGl2MS9kYXRhbWFuYWdlcnBi",
-            "O2RhdGFtYW5hZ2VycGKqAhlHb29nbGUuQWRzLkRhdGFNYW5hZ2VyLlYxygIZ",
-            "R29vZ2xlXEFkc1xEYXRhTWFuYWdlclxWMeoCHEdvb2dsZTo6QWRzOjpEYXRh",
-            "TWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "YXZpb3IucHJvdG8imwEKB0NvbnNlbnQSRAoMYWRfdXNlcl9kYXRhGAEgASgO",
+            "MiguZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5Db25zZW50U3RhdHVzQgTi",
+            "QQEBEkoKEmFkX3BlcnNvbmFsaXphdGlvbhgCIAEoDjIoLmdvb2dsZS5hZHMu",
+            "ZGF0YW1hbmFnZXIudjEuQ29uc2VudFN0YXR1c0IE4kEBASpYCg1Db25zZW50",
+            "U3RhdHVzEh4KGkNPTlNFTlRfU1RBVFVTX1VOU1BFQ0lGSUVEEAASEwoPQ09O",
+            "U0VOVF9HUkFOVEVEEAESEgoOQ09OU0VOVF9ERU5JRUQQAkLJAQodY29tLmdv",
+            "b2dsZS5hZHMuZGF0YW1hbmFnZXIudjFCDENvbnNlbnRQcm90b1ABWkFjbG91",
+            "ZC5nb29nbGUuY29tL2dvL2RhdGFtYW5hZ2VyL2FwaXYxL2RhdGFtYW5hZ2Vy",
+            "cGI7ZGF0YW1hbmFnZXJwYqoCGUdvb2dsZS5BZHMuRGF0YU1hbmFnZXIuVjHK",
+            "AhlHb29nbGVcQWRzXERhdGFNYW5hZ2VyXFYx6gIcR29vZ2xlOjpBZHM6OkRh",
+            "dGFNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.ConsentStatus), }, null, new pbr::GeneratedClrTypeInfo[] {

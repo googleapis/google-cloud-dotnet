@@ -26,17 +26,17 @@ namespace Google.Ads.DataManager.V1 {
           string.Concat(
             "CjBnb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL3Rlcm1zX29mX3NlcnZpY2Uu",
             "cHJvdG8SGWdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEaH2dvb2dsZS9hcGkv",
-            "ZmllbGRfYmVoYXZpb3IucHJvdG8idgoOVGVybXNPZlNlcnZpY2USZAomY3Vz",
+            "ZmllbGRfYmVoYXZpb3IucHJvdG8idwoOVGVybXNPZlNlcnZpY2USZQomY3Vz",
             "dG9tZXJfbWF0Y2hfdGVybXNfb2Zfc2VydmljZV9zdGF0dXMYASABKA4yLy5n",
             "b29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlRlcm1zT2ZTZXJ2aWNlU3RhdHVz",
-            "QgPgQQEqWwoUVGVybXNPZlNlcnZpY2VTdGF0dXMSJwojVEVSTVNfT0ZfU0VS",
-            "VklDRV9TVEFUVVNfVU5TUEVDSUZJRUQQABIMCghBQ0NFUFRFRBABEgwKCFJF",
-            "SkVDVEVEEAJC0AEKHWNvbS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxQhNU",
-            "ZXJtc09mU2VydmljZVByb3RvUAFaQWNsb3VkLmdvb2dsZS5jb20vZ28vZGF0",
-            "YW1hbmFnZXIvYXBpdjEvZGF0YW1hbmFnZXJwYjtkYXRhbWFuYWdlcnBiqgIZ",
-            "R29vZ2xlLkFkcy5EYXRhTWFuYWdlci5WMcoCGUdvb2dsZVxBZHNcRGF0YU1h",
-            "bmFnZXJcVjHqAhxHb29nbGU6OkFkczo6RGF0YU1hbmFnZXI6OlYxYgZwcm90",
-            "bzM="));
+            "QgTiQQEBKlsKFFRlcm1zT2ZTZXJ2aWNlU3RhdHVzEicKI1RFUk1TX09GX1NF",
+            "UlZJQ0VfU1RBVFVTX1VOU1BFQ0lGSUVEEAASDAoIQUNDRVBURUQQARIMCghS",
+            "RUpFQ1RFRBACQtABCh1jb20uZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MUIT",
+            "VGVybXNPZlNlcnZpY2VQcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2Rh",
+            "dGFtYW5hZ2VyL2FwaXYxL2RhdGFtYW5hZ2VycGI7ZGF0YW1hbmFnZXJwYqoC",
+            "GUdvb2dsZS5BZHMuRGF0YU1hbmFnZXIuVjHKAhlHb29nbGVcQWRzXERhdGFN",
+            "YW5hZ2VyXFYx6gIcR29vZ2xlOjpBZHM6OkRhdGFNYW5hZ2VyOjpWMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.TermsOfServiceStatus), }, null, new pbr::GeneratedClrTypeInfo[] {

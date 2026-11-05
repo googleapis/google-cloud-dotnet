@@ -1790,6 +1790,214 @@
       ]
     },
     {
+      "regionTag": "datamanager_v1_generated_ReportingService_RetrievePartnerMatchReport_sync",
+      "title": "RetrievePartnerMatchReportRequestObject",
+      "description": "Snippet for RetrievePartnerMatchReport",
+      "file": "ReportingServiceClient.RetrievePartnerMatchReportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrievePartnerMatchReport",
+        "fullName": "Google.Ads.DataManager.V1.ReportingServiceClient.RetrievePartnerMatchReport",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.RetrievePartnerMatchReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.DataManager.V1.RetrievePartnerMatchReportResponse, Google.Ads.DataManager.V1.PartnerMatchReportEntry>",
+        "client": {
+          "shortName": "ReportingServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.ReportingServiceClient"
+        },
+        "method": {
+          "shortName": "RetrievePartnerMatchReport",
+          "fullName": "google.ads.datamanager.v1.ReportingService.RetrievePartnerMatchReport",
+          "service": {
+            "shortName": "ReportingService",
+            "fullName": "google.ads.datamanager.v1.ReportingService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_ReportingService_RetrievePartnerMatchReport_async",
+      "title": "RetrievePartnerMatchReportRequestObjectAsync",
+      "description": "Snippet for RetrievePartnerMatchReportAsync",
+      "file": "ReportingServiceClient.RetrievePartnerMatchReportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrievePartnerMatchReportAsync",
+        "fullName": "Google.Ads.DataManager.V1.ReportingServiceClient.RetrievePartnerMatchReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.RetrievePartnerMatchReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.DataManager.V1.RetrievePartnerMatchReportResponse, Google.Ads.DataManager.V1.PartnerMatchReportEntry>",
+        "client": {
+          "shortName": "ReportingServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.ReportingServiceClient"
+        },
+        "method": {
+          "shortName": "RetrievePartnerMatchReport",
+          "fullName": "google.ads.datamanager.v1.ReportingService.RetrievePartnerMatchReport",
+          "service": {
+            "shortName": "ReportingService",
+            "fullName": "google.ads.datamanager.v1.ReportingService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_ReportingService_RetrievePartnerMatchReport_sync_flattened",
+      "title": "RetrievePartnerMatchReport",
+      "description": "Snippet for RetrievePartnerMatchReport",
+      "file": "ReportingServiceClient.RetrievePartnerMatchReportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrievePartnerMatchReport",
+        "fullName": "Google.Ads.DataManager.V1.ReportingServiceClient.RetrievePartnerMatchReport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.DataManager.V1.RetrievePartnerMatchReportResponse, Google.Ads.DataManager.V1.PartnerMatchReportEntry>",
+        "client": {
+          "shortName": "ReportingServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.ReportingServiceClient"
+        },
+        "method": {
+          "shortName": "RetrievePartnerMatchReport",
+          "fullName": "google.ads.datamanager.v1.ReportingService.RetrievePartnerMatchReport",
+          "service": {
+            "shortName": "ReportingService",
+            "fullName": "google.ads.datamanager.v1.ReportingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_ReportingService_RetrievePartnerMatchReport_async_flattened",
+      "title": "RetrievePartnerMatchReportAsync",
+      "description": "Snippet for RetrievePartnerMatchReportAsync",
+      "file": "ReportingServiceClient.RetrievePartnerMatchReportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrievePartnerMatchReportAsync",
+        "fullName": "Google.Ads.DataManager.V1.ReportingServiceClient.RetrievePartnerMatchReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.DataManager.V1.RetrievePartnerMatchReportResponse, Google.Ads.DataManager.V1.PartnerMatchReportEntry>",
+        "client": {
+          "shortName": "ReportingServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.ReportingServiceClient"
+        },
+        "method": {
+          "shortName": "RetrievePartnerMatchReport",
+          "fullName": "google.ads.datamanager.v1.ReportingService.RetrievePartnerMatchReport",
+          "service": {
+            "shortName": "ReportingService",
+            "fullName": "google.ads.datamanager.v1.ReportingService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "datamanager_v1_generated_UserListDirectLicenseService_CreateUserListDirectLicense_sync",
       "title": "CreateUserListDirectLicenseRequestObject",
       "description": "Snippet for CreateUserListDirectLicense",
