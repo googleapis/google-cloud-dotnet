@@ -565,6 +565,15 @@ namespace Google.Ads.DataManager.V1
         /// Analytics.
         /// 
         /// This feature is only available to accounts on an allowlist.
+        /// 
+        /// Authorization Headers:
+        /// 
+        /// This method also requires the following header to define how the API
+        /// authorizes access for the request:
+        /// 
+        /// * `login-account`: (Required) The resource name of the Data Partner account
+        /// where the Google Account of the credentials is a user. Format:
+        /// `accountTypes/DATA_PARTNER/accounts/{loginAccountId}`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -578,6 +587,15 @@ namespace Google.Ads.DataManager.V1
         /// Analytics.
         /// 
         /// This feature is only available to accounts on an allowlist.
+        /// 
+        /// Authorization Headers:
+        /// 
+        /// This method also requires the following header to define how the API
+        /// authorizes access for the request:
+        /// 
+        /// * `login-account`: (Required) The resource name of the Data Partner account
+        /// where the Google Account of the credentials is a user. Format:
+        /// `accountTypes/DATA_PARTNER/accounts/{loginAccountId}`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -591,6 +609,15 @@ namespace Google.Ads.DataManager.V1
         /// Analytics.
         /// 
         /// This feature is only available to accounts on an allowlist.
+        /// 
+        /// Authorization Headers:
+        /// 
+        /// This method also requires the following header to define how the API
+        /// authorizes access for the request:
+        /// 
+        /// * `login-account`: (Required) The resource name of the Data Partner account
+        /// where the Google Account of the credentials is a user. Format:
+        /// `accountTypes/DATA_PARTNER/accounts/{loginAccountId}`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -909,6 +936,15 @@ namespace Google.Ads.DataManager.V1
         /// Analytics.
         /// 
         /// This feature is only available to accounts on an allowlist.
+        /// 
+        /// Authorization Headers:
+        /// 
+        /// This method also requires the following header to define how the API
+        /// authorizes access for the request:
+        /// 
+        /// * `login-account`: (Required) The resource name of the Data Partner account
+        /// where the Google Account of the credentials is a user. Format:
+        /// `accountTypes/DATA_PARTNER/accounts/{loginAccountId}`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -925,6 +961,15 @@ namespace Google.Ads.DataManager.V1
         /// Analytics.
         /// 
         /// This feature is only available to accounts on an allowlist.
+        /// 
+        /// Authorization Headers:
+        /// 
+        /// This method also requires the following header to define how the API
+        /// authorizes access for the request:
+        /// 
+        /// * `login-account`: (Required) The resource name of the Data Partner account
+        /// where the Google Account of the credentials is a user. Format:
+        /// `accountTypes/DATA_PARTNER/accounts/{loginAccountId}`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

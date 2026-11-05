@@ -26,13 +26,13 @@ namespace Google.Ads.DataManager.V1 {
           string.Concat(
             "Ci5nb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL2l0ZW1fcGFyYW1ldGVyLnBy",
             "b3RvEhlnb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxGh9nb29nbGUvYXBpL2Zp",
-            "ZWxkX2JlaGF2aW9yLnByb3RvIkAKDUl0ZW1QYXJhbWV0ZXISGwoOcGFyYW1l",
-            "dGVyX25hbWUYASABKAlCA+BBAhISCgV2YWx1ZRgCIAEoCUID4EECQs8BCh1j",
-            "b20uZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MUISSXRlbVBhcmFtZXRlclBy",
-            "b3RvUAFaQWNsb3VkLmdvb2dsZS5jb20vZ28vZGF0YW1hbmFnZXIvYXBpdjEv",
-            "ZGF0YW1hbmFnZXJwYjtkYXRhbWFuYWdlcnBiqgIZR29vZ2xlLkFkcy5EYXRh",
-            "TWFuYWdlci5WMcoCGUdvb2dsZVxBZHNcRGF0YU1hbmFnZXJcVjHqAhxHb29n",
-            "bGU6OkFkczo6RGF0YU1hbmFnZXI6OlYxYgZwcm90bzM="));
+            "ZWxkX2JlaGF2aW9yLnByb3RvIkIKDUl0ZW1QYXJhbWV0ZXISHAoOcGFyYW1l",
+            "dGVyX25hbWUYASABKAlCBOJBAQISEwoFdmFsdWUYAiABKAlCBOJBAQJCzwEK",
+            "HWNvbS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxQhJJdGVtUGFyYW1ldGVy",
+            "UHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhbWFuYWdlci9hcGl2",
+            "MS9kYXRhbWFuYWdlcnBiO2RhdGFtYW5hZ2VycGKqAhlHb29nbGUuQWRzLkRh",
+            "dGFNYW5hZ2VyLlYxygIZR29vZ2xlXEFkc1xEYXRhTWFuYWdlclxWMeoCHEdv",
+            "b2dsZTo6QWRzOjpEYXRhTWFuYWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -45,7 +45,7 @@ namespace Google.Ads.DataManager.V1 {
   #region Messages
   /// <summary>
   /// A bucket of any [event parameters related to an
-  /// item](https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference/events)
+  /// item](https://developers.google.com/data-manager/api/reference/analytics/recommended-events)
   /// to be included within the event that were not already specified using other
   /// structured fields.
   /// </summary>

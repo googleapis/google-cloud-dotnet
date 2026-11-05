@@ -27,29 +27,29 @@ namespace Google.Ads.DataManager.V1 {
             "Cilnb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL2NhcnRfZGF0YS5wcm90bxIZ",
             "Z29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MRouZ29vZ2xlL2Fkcy9kYXRhbWFu",
             "YWdlci92MS9pdGVtX3BhcmFtZXRlci5wcm90bxofZ29vZ2xlL2FwaS9maWVs",
-            "ZF9iZWhhdmlvci5wcm90byLjAQoIQ2FydERhdGESGAoLbWVyY2hhbnRfaWQY",
-            "ASABKAlCA+BBARIgChNtZXJjaGFudF9mZWVkX2xhYmVsGAIgASgJQgPgQQES",
-            "KAobbWVyY2hhbnRfZmVlZF9sYW5ndWFnZV9jb2RlGAMgASgJQgPgQQESIQoU",
-            "dHJhbnNhY3Rpb25fZGlzY291bnQYBCABKAFCA+BBARIzCgVpdGVtcxgFIAMo",
-            "CzIfLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuSXRlbUID4EEBEhkKDGNv",
-            "dXBvbl9jb2RlcxgGIAMoCUID4EEBIq4DCgRJdGVtEiAKE21lcmNoYW50X3By",
-            "b2R1Y3RfaWQYASABKAlCA+BBARIVCghxdWFudGl0eRgCIAEoA0ID4EEBEhcK",
-            "CnVuaXRfcHJpY2UYAyABKAFCA+BBARIUCgdpdGVtX2lkGAQgASgJQgPgQQES",
-            "UQoaYWRkaXRpb25hbF9pdGVtX3BhcmFtZXRlcnMYBSADKAsyKC5nb29nbGUu",
-            "YWRzLmRhdGFtYW5hZ2VyLnYxLkl0ZW1QYXJhbWV0ZXJCA+BBARIYCgttZXJj",
-            "aGFudF9pZBgGIAEoCUID4EEBEiAKE21lcmNoYW50X2ZlZWRfbGFiZWwYByAB",
-            "KAlCA+BBARIoChttZXJjaGFudF9mZWVkX2xhbmd1YWdlX2NvZGUYCCABKAlC",
-            "A+BBARIiChBjb252ZXJzaW9uX3ZhbHVlGAkgASgBQgPgQQFIAIgBARJMChBj",
-            "dXN0b21fdmFyaWFibGVzGAogAygLMi0uZ29vZ2xlLmFkcy5kYXRhbWFuYWdl",
-            "ci52MS5JdGVtQ3VzdG9tVmFyaWFibGVCA+BBAUITChFfY29udmVyc2lvbl92",
-            "YWx1ZSJkChJJdGVtQ3VzdG9tVmFyaWFibGUSFQoIdmFyaWFibGUYASABKAlC",
-            "A+BBARISCgV2YWx1ZRgCIAEoCUID4EEBEiMKFmRlc3RpbmF0aW9uX3JlZmVy",
-            "ZW5jZXMYAyADKAlCA+BBAULKAQodY29tLmdvb2dsZS5hZHMuZGF0YW1hbmFn",
-            "ZXIudjFCDUNhcnREYXRhUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9k",
-            "YXRhbWFuYWdlci9hcGl2MS9kYXRhbWFuYWdlcnBiO2RhdGFtYW5hZ2VycGKq",
-            "AhlHb29nbGUuQWRzLkRhdGFNYW5hZ2VyLlYxygIZR29vZ2xlXEFkc1xEYXRh",
-            "TWFuYWdlclxWMeoCHEdvb2dsZTo6QWRzOjpEYXRhTWFuYWdlcjo6VjFiBnBy",
-            "b3RvMw=="));
+            "ZF9iZWhhdmlvci5wcm90byLpAQoIQ2FydERhdGESGQoLbWVyY2hhbnRfaWQY",
+            "ASABKAlCBOJBAQESIQoTbWVyY2hhbnRfZmVlZF9sYWJlbBgCIAEoCUIE4kEB",
+            "ARIpChttZXJjaGFudF9mZWVkX2xhbmd1YWdlX2NvZGUYAyABKAlCBOJBAQES",
+            "IgoUdHJhbnNhY3Rpb25fZGlzY291bnQYBCABKAFCBOJBAQESNAoFaXRlbXMY",
+            "BSADKAsyHy5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkl0ZW1CBOJBAQES",
+            "GgoMY291cG9uX2NvZGVzGAYgAygJQgTiQQEBIrgDCgRJdGVtEiEKE21lcmNo",
+            "YW50X3Byb2R1Y3RfaWQYASABKAlCBOJBAQESFgoIcXVhbnRpdHkYAiABKANC",
+            "BOJBAQESGAoKdW5pdF9wcmljZRgDIAEoAUIE4kEBARIVCgdpdGVtX2lkGAQg",
+            "ASgJQgTiQQEBElIKGmFkZGl0aW9uYWxfaXRlbV9wYXJhbWV0ZXJzGAUgAygL",
+            "MiguZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5JdGVtUGFyYW1ldGVyQgTi",
+            "QQEBEhkKC21lcmNoYW50X2lkGAYgASgJQgTiQQEBEiEKE21lcmNoYW50X2Zl",
+            "ZWRfbGFiZWwYByABKAlCBOJBAQESKQobbWVyY2hhbnRfZmVlZF9sYW5ndWFn",
+            "ZV9jb2RlGAggASgJQgTiQQEBEiMKEGNvbnZlcnNpb25fdmFsdWUYCSABKAFC",
+            "BOJBAQFIAIgBARJNChBjdXN0b21fdmFyaWFibGVzGAogAygLMi0uZ29vZ2xl",
+            "LmFkcy5kYXRhbWFuYWdlci52MS5JdGVtQ3VzdG9tVmFyaWFibGVCBOJBAQFC",
+            "EwoRX2NvbnZlcnNpb25fdmFsdWUiZwoSSXRlbUN1c3RvbVZhcmlhYmxlEhYK",
+            "CHZhcmlhYmxlGAEgASgJQgTiQQEBEhMKBXZhbHVlGAIgASgJQgTiQQEBEiQK",
+            "FmRlc3RpbmF0aW9uX3JlZmVyZW5jZXMYAyADKAlCBOJBAQFCygEKHWNvbS5n",
+            "b29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxQg1DYXJ0RGF0YVByb3RvUAFaQWNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vZGF0YW1hbmFnZXIvYXBpdjEvZGF0YW1hbmFn",
+            "ZXJwYjtkYXRhbWFuYWdlcnBiqgIZR29vZ2xlLkFkcy5EYXRhTWFuYWdlci5W",
+            "McoCGUdvb2dsZVxBZHNcRGF0YU1hbmFnZXJcVjHqAhxHb29nbGU6OkFkczo6",
+            "RGF0YU1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.DataManager.V1.ItemParameterReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -577,7 +577,7 @@ namespace Google.Ads.DataManager.V1 {
     private readonly pbc::RepeatedField<global::Google.Ads.DataManager.V1.ItemParameter> additionalItemParameters_ = new pbc::RepeatedField<global::Google.Ads.DataManager.V1.ItemParameter>();
     /// <summary>
     /// Optional. A bucket of any [event parameters related to an
-    /// item](https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference/events)
+    /// item](https://developers.google.com/data-manager/api/reference/analytics/recommended-events)
     /// to be included within the event that were not already specified using other
     /// structured fields.
     /// </summary>

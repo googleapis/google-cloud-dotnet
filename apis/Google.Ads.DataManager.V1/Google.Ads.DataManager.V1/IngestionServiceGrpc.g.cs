@@ -263,6 +263,15 @@ namespace Google.Ads.DataManager.V1 {
       /// Analytics.
       ///
       /// This feature is only available to accounts on an allowlist.
+      ///
+      /// Authorization Headers:
+      ///
+      /// This method also requires the following header to define how the API
+      /// authorizes access for the request:
+      ///
+      /// * `login-account`: (Required) The resource name of the Data Partner account
+      ///   where the Google Account of the credentials is a user. Format:
+      ///   `accountTypes/DATA_PARTNER/accounts/{loginAccountId}`
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -668,6 +677,15 @@ namespace Google.Ads.DataManager.V1 {
       /// Analytics.
       ///
       /// This feature is only available to accounts on an allowlist.
+      ///
+      /// Authorization Headers:
+      ///
+      /// This method also requires the following header to define how the API
+      /// authorizes access for the request:
+      ///
+      /// * `login-account`: (Required) The resource name of the Data Partner account
+      ///   where the Google Account of the credentials is a user. Format:
+      ///   `accountTypes/DATA_PARTNER/accounts/{loginAccountId}`
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -685,6 +703,15 @@ namespace Google.Ads.DataManager.V1 {
       /// Analytics.
       ///
       /// This feature is only available to accounts on an allowlist.
+      ///
+      /// Authorization Headers:
+      ///
+      /// This method also requires the following header to define how the API
+      /// authorizes access for the request:
+      ///
+      /// * `login-account`: (Required) The resource name of the Data Partner account
+      ///   where the Google Account of the credentials is a user. Format:
+      ///   `accountTypes/DATA_PARTNER/accounts/{loginAccountId}`
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -700,6 +727,15 @@ namespace Google.Ads.DataManager.V1 {
       /// Analytics.
       ///
       /// This feature is only available to accounts on an allowlist.
+      ///
+      /// Authorization Headers:
+      ///
+      /// This method also requires the following header to define how the API
+      /// authorizes access for the request:
+      ///
+      /// * `login-account`: (Required) The resource name of the Data Partner account
+      ///   where the Google Account of the credentials is a user. Format:
+      ///   `accountTypes/DATA_PARTNER/accounts/{loginAccountId}`
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -717,6 +753,15 @@ namespace Google.Ads.DataManager.V1 {
       /// Analytics.
       ///
       /// This feature is only available to accounts on an allowlist.
+      ///
+      /// Authorization Headers:
+      ///
+      /// This method also requires the following header to define how the API
+      /// authorizes access for the request:
+      ///
+      /// * `login-account`: (Required) The resource name of the Data Partner account
+      ///   where the Google Account of the credentials is a user. Format:
+      ///   `accountTypes/DATA_PARTNER/accounts/{loginAccountId}`
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
