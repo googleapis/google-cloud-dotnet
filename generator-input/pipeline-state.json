@@ -2462,36 +2462,6 @@
             ]
         },
         {
-            "id": "Google.Cloud.Parallelstore.V1",
-            "currentVersion": "1.4.0",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-11-09T19:24:54.435217930Z",
-            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
-            "lastReleasedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
-            "apiPaths": [
-                "google/cloud/parallelstore/v1"
-            ],
-            "sourcePaths": [
-                "apis/Google.Cloud.Parallelstore.V1/Google.Cloud.Parallelstore.V1"
-            ]
-        },
-        {
-            "id": "Google.Cloud.Parallelstore.V1Beta",
-            "currentVersion": "1.0.0-beta10",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-11-09T19:26:11.275756775Z",
-            "lastGeneratedCommit": "4d2bfee25b0740d5b996dcd079ff5a562f8848b1",
-            "lastReleasedCommit": "4d2bfee25b0740d5b996dcd079ff5a562f8848b1",
-            "apiPaths": [
-                "google/cloud/parallelstore/v1beta"
-            ],
-            "sourcePaths": [
-                "apis/Google.Cloud.Parallelstore.V1Beta/Google.Cloud.Parallelstore.V1Beta"
-            ]
-        },
-        {
             "id": "Google.Cloud.ParameterManager.V1",
             "currentVersion": "1.1.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
