@@ -3664,8 +3664,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
         /// </summary>
         [pbr::OriginalName("DIRECT_VPC_EGRESS_CONNECTION")] DirectVpcEgressConnection = 35,
         /// <summary>
-        /// Forwarding state: for packets originating from a serverless endpoint
-        /// forwarded through public (external) connectivity.
+        /// Forwarding state: for packets originating from a serverless
+        /// endpoint forwarded through public (external) connectivity.
         /// </summary>
         [pbr::OriginalName("SERVERLESS_EXTERNAL_CONNECTION")] ServerlessExternalConnection = 36,
         /// <summary>
@@ -3812,7 +3812,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int UriFieldNumber = 2;
     private string uri_ = "";
     /// <summary>
-    /// URI of a Compute Engine instance.
+    /// URI of a Compute Engine instance in format
+    /// "projects/{project}/zones/{zone}/instances/{instance}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3842,7 +3843,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int NetworkUriFieldNumber = 4;
     private string networkUri_ = "";
     /// <summary>
-    /// URI of a Compute Engine network.
+    /// URI of a Compute Engine network in format
+    /// "projects/{project}/global/networks/{network}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3917,7 +3919,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int PscNetworkAttachmentUriFieldNumber = 9;
     private string pscNetworkAttachmentUri_ = "";
     /// <summary>
-    /// URI of the PSC network attachment the NIC is attached to (if relevant).
+    /// URI of the PSC network attachment the NIC is attached to (if relevant) in
+    /// format
+    /// "projects/{project}/regions/{region}/networkAttachments/{network_attachment}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4429,7 +4433,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int UriFieldNumber = 2;
     private string uri_ = "";
     /// <summary>
-    /// URI of a Compute Engine network.
+    /// URI of a Compute Engine network in format
+    /// "projects/{project}/global/networks/{network}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4444,7 +4449,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int MatchedSubnetUriFieldNumber = 5;
     private string matchedSubnetUri_ = "";
     /// <summary>
-    /// URI of the subnet matching the source IP address of the test.
+    /// URI of the subnet matching the source IP address of the test in format
+    /// "projects/{project}/regions/{region}/subnetworks/{subnetwork}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4803,8 +4809,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int UriFieldNumber = 2;
     private string uri_ = "";
     /// <summary>
-    /// The URI of the firewall rule. This field is not applicable to implied
-    /// VPC firewall rules.
+    /// The URI of the firewall rule in format
+    /// "projects/{project}/global/firewalls/{firewall}". This field is not
+    /// applicable to implied VPC firewall rules.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4864,7 +4871,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int NetworkUriFieldNumber = 6;
     private string networkUri_ = "";
     /// <summary>
-    /// The URI of the VPC network that the firewall rule is associated with.
+    /// The URI of the VPC network that the firewall rule is associated with in
+    /// format "projects/{project}/global/networks/{network}".
     /// This field is not applicable to hierarchical firewall policy rules.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4929,6 +4937,12 @@ namespace Google.Cloud.NetworkManagement.V1 {
     /// The URI of the firewall policy that this rule is associated with.
     /// This field is not applicable to VPC firewall rules and implied VPC firewall
     /// rules.
+    /// Format:
+    /// * `locations/global/firewallPolicies/{policy_id}` (hierarchical policy)
+    /// * `projects/{project_id}/global/firewallPolicies/{policy_id}` (global
+    /// network firewall policy)
+    /// * `projects/{project_id}/regions/{region}/firewallPolicies/{policy_id}`
+    /// (regional network firewall policy)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5633,8 +5647,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int UriFieldNumber = 2;
     private string uri_ = "";
     /// <summary>
-    /// URI of a route. SUBNET, STATIC, PEERING_SUBNET (only for peering network)
-    /// and POLICY_BASED routes only.
+    /// URI of a route in format
+    /// "projects/{project}/global/routes/{route}". SUBNET, STATIC,
+    /// PEERING_SUBNET (only for peering network) and POLICY_BASED routes only.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5701,7 +5716,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int NetworkUriFieldNumber = 5;
     private string networkUri_ = "";
     /// <summary>
-    /// URI of a VPC network where route is located.
+    /// URI of a VPC network where route is located in format
+    /// "projects/{project}/global/networks/{network}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5804,7 +5820,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
 
     private string nccHubUri_;
     /// <summary>
-    /// URI of the NCC Hub the route is advertised by. PEERING_SUBNET and
+    /// URI of the NCC Hub the route is advertised by in format
+    /// "projects/{project}/locations/global/hubs/{hub}". PEERING_SUBNET and
     /// PEERING_DYNAMIC routes that are advertised by NCC Hub only.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5834,8 +5851,11 @@ namespace Google.Cloud.NetworkManagement.V1 {
 
     private string nccSpokeUri_;
     /// <summary>
-    /// URI of the destination NCC Spoke. PEERING_SUBNET and PEERING_DYNAMIC routes
-    /// that are advertised by NCC Hub only.
+    /// URI of the destination NCC Spoke in format
+    /// "projects/{project}/locations/{location}/spokes/{spoke}" (regional) or
+    /// "projects/{project}/locations/global/spokes/{spoke}" (global).
+    /// PEERING_SUBNET and PEERING_DYNAMIC routes that are advertised by NCC Hub
+    /// only.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5865,7 +5885,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     private string advertisedRouteSourceRouterUri_;
     /// <summary>
     /// For ADVERTISED dynamic routes, the URI of the Cloud Router that advertised
-    /// the corresponding IP prefix.
+    /// the corresponding IP prefix in format
+    /// "projects/{project}/regions/{region}/routers/{router}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5943,7 +5964,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int NextHopNetworkUriFieldNumber = 21;
     private string nextHopNetworkUri_ = "";
     /// <summary>
-    /// URI of a VPC network where the next hop resource is located.
+    /// URI of a VPC network where the next hop resource is located in format
+    /// "projects/{project}/global/networks/{network}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5960,6 +5982,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
     /// <summary>
     /// For PEERING_SUBNET and PEERING_STATIC routes, the URI of the originating
     /// SUBNET/STATIC route.
+    /// Format: `projects/{project_id}/global/routes/{route_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5992,6 +6015,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     /// <summary>
     /// For PEERING_SUBNET and PEERING_DYNAMIC routes that are advertised by NCC
     /// Hub, the URI of the corresponding route in NCC Hub's routing table.
+    /// Format:
+    /// `projects/{project_id}/locations/global/hubs/{hub_id}/routeTables/{route_table_id}/routes/{route_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7177,7 +7202,10 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int UriFieldNumber = 2;
     private string uri_ = "";
     /// <summary>
-    /// URI of the forwarding rule.
+    /// URI of the forwarding rule in format
+    /// "projects/{project}/global/forwardingRules/{forwarding_rule}" (global) or
+    /// "projects/{project}/regions/{region}/forwardingRules/{forwarding_rule}"
+    /// (regional).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7252,7 +7280,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int NetworkUriFieldNumber = 7;
     private string networkUri_ = "";
     /// <summary>
-    /// Network URI.
+    /// URI of a VPC network where the forwarding rule is located in format
+    /// "projects/{project}/global/networks/{network}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7299,7 +7328,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     private string pscServiceAttachmentUri_ = "";
     /// <summary>
     /// URI of the PSC service attachment this forwarding rule targets (if
-    /// applicable).
+    /// applicable) in format
+    /// "projects/{project}/regions/{region}/serviceAttachments/{service_attachment}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7824,7 +7854,12 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int BackendUriFieldNumber = 5;
     private string backendUri_ = "";
     /// <summary>
-    /// Backend configuration URI.
+    /// URI of the backend associated with the load balancer.
+    /// Format:
+    /// * `projects/{project_id}/regions/{region}/backendServices/{backend_service_id}`
+    /// * `projects/{project_id}/global/backendServices/{backend_service_id}`
+    /// * `projects/{project_id}/regions/{region}/targetPools/{target_pool_id}`
+    /// * `projects/{project_id}/zones/{zone}/targetInstances/{target_instance_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8193,7 +8228,15 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int UriFieldNumber = 2;
     private string uri_ = "";
     /// <summary>
-    /// URI of a Compute Engine instance or network endpoint.
+    /// URI of the backend instance or network endpoint.
+    /// Format:
+    /// * `projects/{project_id}/zones/{zone}/instances/{instance_id}` (instance)
+    /// * `projects/{project_id}/zones/{zone}/networkEndpointGroups/{neg_id}`
+    /// (zonal NEG)
+    /// * `projects/{project_id}/regions/{region}/networkEndpointGroups/{neg_id}`
+    /// (regional NEG)
+    /// * `projects/{project_id}/global/networkEndpointGroups/{neg_id}` (global
+    /// NEG)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8564,7 +8607,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int UriFieldNumber = 2;
     private string uri_ = "";
     /// <summary>
-    /// URI of a hybrid subnet.
+    /// URI of the hybrid subnet.
+    /// Format:
+    /// `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8851,7 +8896,11 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int UriFieldNumber = 2;
     private string uri_ = "";
     /// <summary>
-    /// URI of a VPN gateway.
+    /// URI of the VPN gateway.
+    /// Format:
+    /// * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}` (HA
+    /// VPN gateway)
+    /// * `projects/{project_id}/regions/{region}/targetVpnGateways/{target_vpn_gateway_id}` (Classic VPN gateway)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8866,7 +8915,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int NetworkUriFieldNumber = 3;
     private string networkUri_ = "";
     /// <summary>
-    /// URI of a Compute Engine network where the VPN gateway is configured.
+    /// URI of the VPC network where the VPN gateway is configured.
+    /// Format: `projects/{project_id}/global/networks/{network_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8896,9 +8946,10 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int VpnTunnelUriFieldNumber = 5;
     private string vpnTunnelUri_ = "";
     /// <summary>
-    /// A VPN tunnel that is associated with this VPN gateway.
+    /// URI of the VPN tunnel associated with the VPN gateway.
     /// There may be multiple VPN tunnels configured on a VPN gateway, and only
     /// the one relevant to the test is displayed.
+    /// Format: `projects/{project_id}/regions/{region}/vpnTunnels/{vpn_tunnel_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9260,7 +9311,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int UriFieldNumber = 2;
     private string uri_ = "";
     /// <summary>
-    /// URI of a VPN tunnel.
+    /// URI of the VPN tunnel.
+    /// Format: `projects/{project_id}/regions/{region}/vpnTunnels/{vpn_tunnel_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9276,6 +9328,10 @@ namespace Google.Cloud.NetworkManagement.V1 {
     private string sourceGateway_ = "";
     /// <summary>
     /// URI of the VPN gateway at local end of the tunnel.
+    /// Format:
+    /// * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}` (HA
+    /// VPN gateway)
+    /// * `projects/{project_id}/regions/{region}/targetVpnGateways/{target_vpn_gateway_id}` (Classic VPN gateway)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9291,6 +9347,11 @@ namespace Google.Cloud.NetworkManagement.V1 {
     private string remoteGateway_ = "";
     /// <summary>
     /// URI of a VPN gateway at remote end of the tunnel.
+    /// Format:
+    /// * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}`
+    /// (GCP HA VPN gateway)
+    /// * `projects/{project_id}/global/peerVpnGateways/{peer_vpn_gateway_id}` (GCP
+    /// peer VPN gateway)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9335,7 +9396,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int NetworkUriFieldNumber = 7;
     private string networkUri_ = "";
     /// <summary>
-    /// URI of a Compute Engine network where the VPN tunnel is configured.
+    /// URI of the VPC network where the VPN tunnel is configured.
+    /// Format: `projects/{project_id}/global/networks/{network_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9813,7 +9875,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int UriFieldNumber = 2;
     private string uri_ = "";
     /// <summary>
-    /// URI of an Interconnect attachment.
+    /// URI of the Interconnect attachment.
+    /// Format:
+    /// `projects/{project_id}/regions/{region}/interconnectAttachments/{attachment_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9828,8 +9892,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int InterconnectUriFieldNumber = 3;
     private string interconnectUri_ = "";
     /// <summary>
-    /// URI of the Interconnect where the Interconnect attachment is
-    /// configured.
+    /// URI of the Interconnect.
+    /// Format: `projects/{project_id}/global/interconnects/{interconnect_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9861,6 +9925,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
     private string cloudRouterUri_ = "";
     /// <summary>
     /// URI of the Cloud Router to be used for dynamic routing.
+    /// Format: `projects/{project_id}/regions/{region}/routers/{router_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10357,6 +10422,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
     private string sourceNetworkUri_ = "";
     /// <summary>
     /// URI of the network where this packet originates from.
+    /// Format: `projects/{project_id}/global/networks/{network_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10372,6 +10438,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
     private string destinationNetworkUri_ = "";
     /// <summary>
     /// URI of the network where this packet is sent to.
+    /// Format: `projects/{project_id}/global/networks/{network_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10779,6 +10846,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
     private string resourceUri_ = "";
     /// <summary>
     /// URI of the resource that the packet is delivered to.
+    /// For example:
+    /// * `"projects/{project}/zones/{zone}/instances/{instance}"`
+    /// * `"projects/{project}/regions/{region}/networkEndpointGroups/{network_endpoint_group}"`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11327,6 +11397,11 @@ namespace Google.Cloud.NetworkManagement.V1 {
     private string resourceUri_ = "";
     /// <summary>
     /// URI of the resource that the packet is forwarded to.
+    /// Format:
+    /// * `projects/{project_id}/global/networks/{network_id}` (VPC peering
+    /// network)
+    /// * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}`
+    /// (VPN gateway)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11672,6 +11747,10 @@ namespace Google.Cloud.NetworkManagement.V1 {
     private string resourceUri_ = "";
     /// <summary>
     /// URI of the resource that caused the abort.
+    /// Format:
+    /// * `projects/{project_id}/global/networks/{network_id}` (VPC network)
+    /// * `projects/{project_id}/zones/{zone}/instances/{instance_id}` (VM
+    /// instance)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12230,6 +12309,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
     private string resourceUri_ = "";
     /// <summary>
     /// URI of the resource that caused the drop.
+    /// Format:
+    /// * `projects/{project_id}/global/firewalls/{firewall_id}` (firewall rule)
+    /// * `projects/{project_id}/global/routes/{route_id}` (route)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13208,7 +13290,12 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int ClusterUriFieldNumber = 2;
     private string clusterUri_ = "";
     /// <summary>
-    /// URI of a GKE cluster.
+    /// URI of the GKE cluster.
+    /// Format:
+    /// * `projects/{project_id}/locations/{location}/clusters/{cluster_id}`
+    /// (regional cluster)
+    /// * `projects/{project_id}/zones/{zone}/clusters/{cluster_id}` (zonal
+    /// cluster)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13223,7 +13310,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int ClusterNetworkUriFieldNumber = 4;
     private string clusterNetworkUri_ = "";
     /// <summary>
-    /// URI of a GKE cluster network.
+    /// URI of the GKE cluster network.
+    /// Format: `projects/{project_id}/global/networks/{network_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13607,6 +13695,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
     private string networkUri_ = "";
     /// <summary>
     /// URI of the network containing the GKE Pod.
+    /// Format: `projects/{project_id}/global/networks/{network_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14748,7 +14837,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int UriFieldNumber = 2;
     private string uri_ = "";
     /// <summary>
-    /// URI of a Cloud SQL instance.
+    /// URI of a Cloud SQL instance in format
+    /// "projects/{project}/instances/{instance}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14764,7 +14854,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
     private string networkUri_ = "";
     /// <summary>
     /// URI of a Cloud SQL instance network or empty string if the instance does
-    /// not have one.
+    /// not have one. In format "projects/{project}/global/networks/{network}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -15153,7 +15243,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int UriFieldNumber = 2;
     private string uri_ = "";
     /// <summary>
-    /// URI of a Cloud Redis Instance.
+    /// URI of a Cloud Redis Instance in format
+    /// "projects/{project}/locations/{location}/instances/{instance}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -15168,7 +15259,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int NetworkUriFieldNumber = 3;
     private string networkUri_ = "";
     /// <summary>
-    /// URI of a Cloud Redis Instance network.
+    /// URI of a Cloud Redis Instance network in format
+    /// "projects/{project}/global/networks/{network}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -15962,7 +16054,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int UriFieldNumber = 2;
     private string uri_ = "";
     /// <summary>
-    /// URI of a Cloud Function.
+    /// URI of the Cloud Function.
+    /// Format:
+    /// `projects/{project_id}/locations/{location}/functions/{function_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -16286,7 +16380,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int UriFieldNumber = 2;
     private string uri_ = "";
     /// <summary>
-    /// URI of a Cloud Run revision.
+    /// URI of the Cloud Run revision.
+    /// Format:
+    /// `projects/{project_id}/locations/{location}/revisions/{revision_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -16317,6 +16413,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     private string serviceUri_ = "";
     /// <summary>
     /// URI of Cloud Run service this revision belongs to.
+    /// Format: `projects/{project_id}/locations/{location}/services/{service_id}`
+    /// Mutually exclusive with `worker_pool_uri`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -16609,7 +16707,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int UriFieldNumber = 2;
     private string uri_ = "";
     /// <summary>
-    /// URI of a Cloud Run job.
+    /// URI of the Cloud Run job.
+    /// Format: `projects/{project_id}/locations/{location}/jobs/{job_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -16894,7 +16993,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int UriFieldNumber = 2;
     private string uri_ = "";
     /// <summary>
-    /// URI of an App Engine version.
+    /// URI of the App Engine version.
+    /// Format: `apps/{app_id}/services/{service_id}/versions/{version_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -17218,6 +17318,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     private string uri_ = "";
     /// <summary>
     /// URI of a VPC connector.
+    /// Format:
+    /// `projects/{project_id}/locations/{location}/connectors/{connector_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -17489,7 +17591,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int NetworkUriFieldNumber = 1;
     private string networkUri_ = "";
     /// <summary>
-    /// URI of direct access network.
+    /// URI of the VPC network for direct egress.
+    /// Format: `projects/{project_id}/global/networks/{network_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -17504,7 +17607,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int SubnetworkUriFieldNumber = 2;
     private string subnetworkUri_ = "";
     /// <summary>
-    /// URI of direct access subnetwork.
+    /// URI of the subnetwork for direct egress.
+    /// Format:
+    /// `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18096,7 +18201,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int NetworkUriFieldNumber = 3;
     private string networkUri_ = "";
     /// <summary>
-    /// URI of the network where NAT translation takes place.
+    /// URI of the VPC network where NAT translation takes place.
+    /// Format: `projects/{project_id}/global/networks/{network_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18233,7 +18339,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int RouterUriFieldNumber = 12;
     private string routerUri_ = "";
     /// <summary>
-    /// Uri of the Cloud Router. Only valid when type is CLOUD_NAT.
+    /// URI of the Cloud Router. Only valid when type is CLOUD_NAT.
+    /// Format: `projects/{project_id}/regions/{region}/routers/{router_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18995,7 +19102,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int SubnetUriFieldNumber = 10;
     private string subnetUri_ = "";
     /// <summary>
-    /// Uri of proxy subnet.
+    /// URI of the proxy subnet.
+    /// Format:
+    /// `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -19010,7 +19119,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int NetworkUriFieldNumber = 11;
     private string networkUri_ = "";
     /// <summary>
-    /// URI of the network where connection is proxied.
+    /// URI of the VPC network where connection is proxied.
+    /// Format: `projects/{project_id}/global/networks/{network_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -19480,8 +19590,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int InstanceUriFieldNumber = 2;
     private string instanceUri_ = "";
     /// <summary>
-    /// URI of the backend instance (if applicable). Populated for instance group
-    /// backends, and zonal NEG backends.
+    /// URI of the backend instance (if applicable) in format
+    /// "projects/{project}/zones/{zone}/instances/{instance}". Populated for
+    /// instance group backends, and zonal NEG backends.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -19496,7 +19607,11 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int BackendServiceUriFieldNumber = 3;
     private string backendServiceUri_ = "";
     /// <summary>
-    /// URI of the backend service this backend belongs to (if applicable).
+    /// URI of the backend service this backend belongs to (if applicable) in
+    /// format
+    /// "projects/{project}/regions/{region}/backendServices/{backend_service}"
+    /// (regional) or "projects/{project}/global/backendServices/{backend_service}"
+    /// (global).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -19511,7 +19626,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int InstanceGroupUriFieldNumber = 4;
     private string instanceGroupUri_ = "";
     /// <summary>
-    /// URI of the instance group this backend belongs to (if applicable).
+    /// URI of the instance group this backend belongs to (if applicable) in
+    /// format "projects/{project}/zones/{zone}/instanceGroups/{instance_group}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -19526,7 +19642,14 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int NetworkEndpointGroupUriFieldNumber = 5;
     private string networkEndpointGroupUri_ = "";
     /// <summary>
-    /// URI of the network endpoint group this backend belongs to (if applicable).
+    /// URI of the network endpoint group this backend belongs to (if applicable)
+    /// Format:
+    /// * `projects/{project_id}/zones/{zone}/networkEndpointGroups/{neg_id}`
+    /// (zonal NEG)
+    /// * `projects/{project_id}/regions/{region}/networkEndpointGroups/{neg_id}`
+    /// (regional NEG)
+    /// * `projects/{project_id}/global/networkEndpointGroups/{neg_id}` (global
+    /// NEG)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -19541,7 +19664,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int BackendBucketUriFieldNumber = 8;
     private string backendBucketUri_ = "";
     /// <summary>
-    /// URI of the backend bucket this backend targets (if applicable).
+    /// URI of the backend bucket this backend targets (if applicable) in format
+    /// "projects/{project}/global/backendBuckets/{backend_bucket}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -19557,7 +19681,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     private string pscServiceAttachmentUri_ = "";
     /// <summary>
     /// URI of the PSC service attachment this PSC NEG backend targets (if
-    /// applicable).
+    /// applicable) in format
+    /// "projects/{project}/regions/{region}/serviceAttachments/{service_attachment}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -19588,6 +19713,11 @@ namespace Google.Cloud.NetworkManagement.V1 {
     private string healthCheckUri_ = "";
     /// <summary>
     /// URI of the health check attached to this backend (if applicable).
+    /// Format:
+    /// * `projects/{project_id}/global/healthChecks/{health_check_id}`
+    /// * `projects/{project_id}/regions/{region}/healthChecks/{health_check_id}`
+    /// * `projects/{project_id}/global/httpHealthChecks/{health_check_id}`
+    /// (legacy)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -20274,7 +20404,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int NegUriFieldNumber = 1;
     private string negUri_ = "";
     /// <summary>
-    /// URI of the serverless network endpoint group.
+    /// URI of the serverless network endpoint group in format
+    /// "projects/{project}/regions/{region}/networkEndpointGroups/{network_endpoint_group}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -20481,6 +20612,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     /// <summary>
     /// URI of the security profile group associated with this firewall packet
     /// inspection.
+    /// Format:
+    /// `organizations/{organization_id}/locations/global/securityProfileGroups/{security_profile_group_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
