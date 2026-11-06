@@ -1,9 +1,0 @@
-[
-  {
-    "method": "ListInstances",
-    "client": "ParallelstoreClient",
-    "arguments": {
-      "parent": "projects/${PROJECT_ID}/locations/us-central1-a"
-    }
-  }
-]
