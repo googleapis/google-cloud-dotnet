@@ -189,8 +189,19 @@ namespace Google.Cloud.Spanner.Data
                         return ExecuteMutationsAsync(cancellationToken);
                     case SpannerCommandType.Dml:
                         return ExecuteDmlAsync(cancellationToken);
+                    case SpannerCommandType.Select:
+                    case SpannerCommandType.Read:
+                        return ExecuteQueryNonQueryAsync(cancellationToken);
                     default:
-                        throw new InvalidOperationException("ExecuteNonQuery functionality is only available for DML and DDL commands");
+                        throw new InvalidOperationException("ExecuteNonQuery functionality is only available for query, read, DML and DDL commands");
+                }
+            }
+
+            private async Task<int> ExecuteQueryNonQueryAsync(CancellationToken cancellationToken)
+            {
+                using (await ExecuteReaderAsync(CommandBehavior.Default, cancellationToken).ConfigureAwait(false))
+                {
+                    return -1;
                 }
             }
 
