@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.3.0, released 2026-11-09
+
+### New features
+
+- Added structured query support to text search via `TextSearch.structured_query` (`StructuredQuery`, `TextQuery`, `UnaryQuery`, `CombinedQuery`, `QueryEnhancement`)
+
+### Documentation improvements
+
+- Documented filter expression syntax, supported operators, nesting limits and ANN vs. KNN filter restrictions
+- Clarified that `OutputFields` are opt-in and that `"*"` returns all fields
+
 ## Version 1.2.0, released 2026-09-21
 
 ### New features
