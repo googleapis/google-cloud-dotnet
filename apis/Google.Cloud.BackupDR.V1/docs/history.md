@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.11.0, released 2026-11-09
+
+### New features
+
+- Add Backup and DR Restore Verification v1 public protobuf definitions
+
 ## Version 2.10.0, released 2026-11-02
 
 ### New features
