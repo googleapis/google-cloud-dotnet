@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.3.0, released 2026-11-09
+
+### New features
+
+- Added method `CreateCompilationResultLongRunning` and message `CreateCompilationResultMetadata` to service `Dataform`
+- Added support for BigQuery unit tests with `BigQueryUnitTest` in `CompilationResultAction` and `BigQueryUnitTestAction` in `WorkflowInvocationAction`
+- Added fields `concurrent_actions_limit` and `execution_mode` to message `.google.cloud.dataform.v1.InvocationConfig`
+- Added state `QUEUED` to enum `.google.cloud.dataform.v1.WorkflowInvocationAction.State`
+
+### Documentation improvements
+
+- Updated documentation and field descriptions in `FileSearchResult` and `InvocationConfig`
+
 ## Version 1.2.0, released 2026-09-28
 
 ### New features
