@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.18.0, released 2026-11-09
+
+### Bug fixes
+
+- Mark CmekConfig.kms_key as REQUIRED
+
+### Documentation improvements
+
+- Note that CmekConfig.kms_key is required
+
 ## Version 1.17.0, released 2026-11-02
 
 ### New features
