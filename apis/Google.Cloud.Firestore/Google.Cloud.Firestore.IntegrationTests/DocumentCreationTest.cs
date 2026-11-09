@@ -50,7 +50,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             await Assert.ThrowsAsync<RpcException>(() => reference.CreateAsync(new { Name = "Other" }));
         }
 
-        [Fact(Skip="b/575457334")]
+        [Fact]
         public async Task Create_WithNestedArray()
         {
             var collection = _fixture.NonQueryCollection;
