@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta09, released 2026-11-09
+
+### New features
+
+- Add IpVersion enum and ip_version field on PscAutoConnection for IPv6 PSC endpoints
+
+### Bug fixes
+
+- Update ip_address format annotation on PscAutoConnection and PscConnection to IPV4_OR_IPV6
+
 ## Version 1.0.0-beta08, released 2026-10-27
 
 ### New features
