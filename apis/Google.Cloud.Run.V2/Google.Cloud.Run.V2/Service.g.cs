@@ -39,117 +39,122 @@ namespace Google.Cloud.Run.V2 {
             "YnVmL3RpbWVzdGFtcC5wcm90byKxAQoUQ3JlYXRlU2VydmljZVJlcXVlc3QS",
             "MwoGcGFyZW50GAEgASgJQiPiQQEC+kEcEhpydW4uZ29vZ2xlYXBpcy5jb20v",
             "U2VydmljZRIzCgdzZXJ2aWNlGAIgASgLMhwuZ29vZ2xlLmNsb3VkLnJ1bi52",
-            "Mi5TZXJ2aWNlQgTiQQECEhgKCnNlcnZpY2VfaWQYAyABKAlCBOJBAQISFQoN",
-            "dmFsaWRhdGVfb25seRgEIAEoCCK2AQoUVXBkYXRlU2VydmljZVJlcXVlc3QS",
+            "Mi5TZXJ2aWNlQgTiQQECEhgKCnNlcnZpY2VfaWQYAyABKAlCBOJBAQESFQoN",
+            "dmFsaWRhdGVfb25seRgEIAEoCCLYAQoUVXBkYXRlU2VydmljZVJlcXVlc3QS",
             "NQoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRN",
             "YXNrQgTiQQEBEjMKB3NlcnZpY2UYASABKAsyHC5nb29nbGUuY2xvdWQucnVu",
             "LnYyLlNlcnZpY2VCBOJBAQISFQoNdmFsaWRhdGVfb25seRgDIAEoCBIbCg1h",
-            "bGxvd19taXNzaW5nGAQgASgIQgTiQQEBIocBChNMaXN0U2VydmljZXNSZXF1",
-            "ZXN0EjMKBnBhcmVudBgBIAEoCUIj4kEBAvpBHBIacnVuLmdvb2dsZWFwaXMu",
-            "Y29tL1NlcnZpY2USEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4Y",
-            "AyABKAkSFAoMc2hvd19kZWxldGVkGAQgASgIInoKFExpc3RTZXJ2aWNlc1Jl",
-            "c3BvbnNlEi4KCHNlcnZpY2VzGAEgAygLMhwuZ29vZ2xlLmNsb3VkLnJ1bi52",
-            "Mi5TZXJ2aWNlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRIZCgt1bnJlYWNo",
-            "YWJsZRgDIAMoCUIE4kEBAyJGChFHZXRTZXJ2aWNlUmVxdWVzdBIxCgRuYW1l",
-            "GAEgASgJQiPiQQEC+kEcChpydW4uZ29vZ2xlYXBpcy5jb20vU2VydmljZSJu",
-            "ChREZWxldGVTZXJ2aWNlUmVxdWVzdBIxCgRuYW1lGAEgASgJQiPiQQEC+kEc",
-            "ChpydW4uZ29vZ2xlYXBpcy5jb20vU2VydmljZRIVCg12YWxpZGF0ZV9vbmx5",
-            "GAIgASgIEgwKBGV0YWcYAyABKAkiyA8KB1NlcnZpY2USEgoEbmFtZRgBIAEo",
-            "CUIE4kEBCBITCgtkZXNjcmlwdGlvbhgCIAEoCRIRCgN1aWQYAyABKAlCBOJB",
-            "AQMSGAoKZ2VuZXJhdGlvbhgEIAEoA0IE4kEBAxI+CgZsYWJlbHMYBSADKAsy",
-            "KC5nb29nbGUuY2xvdWQucnVuLnYyLlNlcnZpY2UuTGFiZWxzRW50cnlCBOJB",
-            "AQESSAoLYW5ub3RhdGlvbnMYBiADKAsyLS5nb29nbGUuY2xvdWQucnVuLnYy",
-            "LlNlcnZpY2UuQW5ub3RhdGlvbnNFbnRyeUIE4kEBARI1CgtjcmVhdGVfdGlt",
-            "ZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMSNQoL",
-            "dXBkYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgTiQQEDEjUKC2RlbGV0ZV90aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEIE4kEBAxI1CgtleHBpcmVfdGltZRgKIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMSFQoHY3JlYXRvchgLIAEoCUIE",
-            "4kEBAxIbCg1sYXN0X21vZGlmaWVyGAwgASgJQgTiQQEDEg4KBmNsaWVudBgN",
-            "IAEoCRIWCg5jbGllbnRfdmVyc2lvbhgOIAEoCRI6CgdpbmdyZXNzGA8gASgO",
-            "MiMuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5JbmdyZXNzVHJhZmZpY0IE4kEBARIz",
-            "CgxsYXVuY2hfc3RhZ2UYECABKA4yFy5nb29nbGUuYXBpLkxhdW5jaFN0YWdl",
-            "QgTiQQEBEkwKFGJpbmFyeV9hdXRob3JpemF0aW9uGBEgASgLMiguZ29vZ2xl",
-            "LmNsb3VkLnJ1bi52Mi5CaW5hcnlBdXRob3JpemF0aW9uQgTiQQEBEj0KCHRl",
-            "bXBsYXRlGBIgASgLMiUuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5SZXZpc2lvblRl",
-            "bXBsYXRlQgTiQQECEjkKB3RyYWZmaWMYEyADKAsyIi5nb29nbGUuY2xvdWQu",
-            "cnVuLnYyLlRyYWZmaWNUYXJnZXRCBOJBAQESOgoHc2NhbGluZxgUIAEoCzIj",
-            "Lmdvb2dsZS5jbG91ZC5ydW4udjIuU2VydmljZVNjYWxpbmdCBOJBAQESIgoU",
-            "aW52b2tlcl9pYW1fZGlzYWJsZWQYFSABKAhCBOJBAQESIgoUZGVmYXVsdF91",
-            "cmlfZGlzYWJsZWQYFiABKAhCBOJBAQESEgoEdXJscxgYIAMoCUIE4kEBAxIZ",
-            "CgtpYXBfZW5hYmxlZBgZIAEoCEIE4kEBARJVChVtdWx0aV9yZWdpb25fc2V0",
-            "dGluZ3MYGiABKAsyMC5nb29nbGUuY2xvdWQucnVuLnYyLlNlcnZpY2UuTXVs",
-            "dGlSZWdpb25TZXR0aW5nc0IE4kEBARIYChBjdXN0b21fYXVkaWVuY2VzGCUg",
-            "AygJEiEKE29ic2VydmVkX2dlbmVyYXRpb24YHiABKANCBOJBAQMSQAoSdGVy",
-            "bWluYWxfY29uZGl0aW9uGB8gASgLMh4uZ29vZ2xlLmNsb3VkLnJ1bi52Mi5D",
-            "b25kaXRpb25CBOJBAQMSOAoKY29uZGl0aW9ucxggIAMoCzIeLmdvb2dsZS5j",
-            "bG91ZC5ydW4udjIuQ29uZGl0aW9uQgTiQQEDEkMKFWxhdGVzdF9yZWFkeV9y",
-            "ZXZpc2lvbhghIAEoCUIk4kEBA/pBHQobcnVuLmdvb2dsZWFwaXMuY29tL1Jl",
-            "dmlzaW9uEkUKF2xhdGVzdF9jcmVhdGVkX3JldmlzaW9uGCIgASgJQiTiQQED",
-            "+kEdChtydW4uZ29vZ2xlYXBpcy5jb20vUmV2aXNpb24SSAoQdHJhZmZpY19z",
-            "dGF0dXNlcxgjIAMoCzIoLmdvb2dsZS5jbG91ZC5ydW4udjIuVHJhZmZpY1Rh",
-            "cmdldFN0YXR1c0IE4kEBAxIRCgN1cmkYJCABKAlCBOJBAQMSGwoNc2F0aXNm",
-            "aWVzX3B6cxgmIAEoCEIE4kEBAxImChh0aHJlYXRfZGV0ZWN0aW9uX2VuYWJs",
-            "ZWQYKCABKAhCBOJBAQMSPAoMYnVpbGRfY29uZmlnGCkgASgLMiAuZ29vZ2xl",
-            "LmNsb3VkLnJ1bi52Mi5CdWlsZENvbmZpZ0IE4kEBARIZCgtyZWNvbmNpbGlu",
-            "ZxhiIAEoCEIE4kEBAxISCgRldGFnGGMgASgJQgTiQQEBGksKE011bHRpUmVn",
-            "aW9uU2V0dGluZ3MSFQoHcmVnaW9ucxgBIAMoCUIE4kEBAhIdCg9tdWx0aV9y",
-            "ZWdpb25faWQYAiABKAlCBOJBAQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEg",
-            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ARoyChBBbm5vdGF0aW9uc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6XupBWwoacnVuLmdvb2ds",
-            "ZWFwaXMuY29tL1NlcnZpY2USOnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9zZXJ2aWNlcy97c2VydmljZX1SAQEyzQ0KCFNlcnZp",
-            "Y2VzEv0BCg1DcmVhdGVTZXJ2aWNlEikuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5D",
-            "cmVhdGVTZXJ2aWNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
-            "YXRpb24ioQHKQRIKB1NlcnZpY2USB1NlcnZpY2XaQRlwYXJlbnQsc2Vydmlj",
-            "ZSxzZXJ2aWNlX2lkgtPkkwI3IiwvdjIve3BhcmVudD1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qfS9zZXJ2aWNlczoHc2VydmljZYrT5JMCLRIrCgZwYXJlbnQS",
-            "IXByb2plY3RzLyovbG9jYXRpb25zL3tsb2NhdGlvbj0qfRLDAQoKR2V0U2Vy",
-            "dmljZRImLmdvb2dsZS5jbG91ZC5ydW4udjIuR2V0U2VydmljZVJlcXVlc3Qa",
-            "HC5nb29nbGUuY2xvdWQucnVuLnYyLlNlcnZpY2Uib9pBBG5hbWWC0+STAi4S",
-            "LC92Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NlcnZpY2VzLyp9",
-            "itPkkwIuEiwKBG5hbWUSJHByb2plY3RzLyovbG9jYXRpb25zL3tsb2NhdGlv",
-            "bj0qfS8qKhLVAQoMTGlzdFNlcnZpY2VzEiguZ29vZ2xlLmNsb3VkLnJ1bi52",
-            "Mi5MaXN0U2VydmljZXNSZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5M",
-            "aXN0U2VydmljZXNSZXNwb25zZSJw2kEGcGFyZW50gtPkkwIuEiwvdjIve3Bh",
-            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9zZXJ2aWNlc4rT5JMCLRIr",
-            "CgZwYXJlbnQSIXByb2plY3RzLyovbG9jYXRpb25zL3tsb2NhdGlvbj0qfRKS",
-            "AgoNVXBkYXRlU2VydmljZRIpLmdvb2dsZS5jbG91ZC5ydW4udjIuVXBkYXRl",
-            "U2VydmljZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
-            "IrYBykESCgdTZXJ2aWNlEgdTZXJ2aWNl2kEHc2VydmljZdpBE3NlcnZpY2Us",
-            "dXBkYXRlX21hc2uC0+STAj8yNC92Mi97c2VydmljZS5uYW1lPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyovc2VydmljZXMvKn06B3NlcnZpY2WK0+STAjYSNAoM",
-            "c2VydmljZS5uYW1lEiRwcm9qZWN0cy8qL2xvY2F0aW9ucy97bG9jYXRpb249",
-            "Kn0vKioS4AEKDURlbGV0ZVNlcnZpY2USKS5nb29nbGUuY2xvdWQucnVuLnYy",
-            "LkRlbGV0ZVNlcnZpY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
-            "ZXJhdGlvbiKEAcpBEgoHU2VydmljZRIHU2VydmljZdpBBG5hbWWC0+STAi4q",
-            "LC92Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NlcnZpY2VzLyp9",
-            "itPkkwIuEiwKBG5hbWUSJHByb2plY3RzLyovbG9jYXRpb25zL3tsb2NhdGlv",
-            "bj0qfS8qKhKQAQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5HZXRJ",
-            "YW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiRYLT5JMC",
-            "PxI9L3YyL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NlcnZp",
-            "Y2VzLyp9OmdldElhbVBvbGljeRKTAQoMU2V0SWFtUG9saWN5EiIuZ29vZ2xl",
-            "LmlhbS52MS5TZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Q",
-            "b2xpY3kiSILT5JMCQiI9L3YyL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL3NlcnZpY2VzLyp9OnNldElhbVBvbGljeToBKhK5AQoSVGVzdElh",
-            "bVBlcm1pc3Npb25zEiguZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lv",
-            "bnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNS",
-            "ZXNwb25zZSJOgtPkkwJIIkMvdjIve3Jlc291cmNlPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovc2VydmljZXMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqGkbK",
-            "QRJydW4uZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlz",
-            "LmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQlQKF2NvbS5nb29nbGUuY2xvdWQu",
-            "cnVuLnYyQgxTZXJ2aWNlUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9y",
-            "dW4vYXBpdjIvcnVucGI7cnVucGJiBnByb3RvMw=="));
+            "bGxvd19taXNzaW5nGAQgASgIQgTiQQEBEiAKEmZvcmNlX25ld19yZXZpc2lv",
+            "bhgFIAEoCEIE4kEBASKHAQoTTGlzdFNlcnZpY2VzUmVxdWVzdBIzCgZwYXJl",
+            "bnQYASABKAlCI+JBAQL6QRwSGnJ1bi5nb29nbGVhcGlzLmNvbS9TZXJ2aWNl",
+            "EhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEhQKDHNo",
+            "b3dfZGVsZXRlZBgEIAEoCCJ6ChRMaXN0U2VydmljZXNSZXNwb25zZRIuCghz",
+            "ZXJ2aWNlcxgBIAMoCzIcLmdvb2dsZS5jbG91ZC5ydW4udjIuU2VydmljZRIX",
+            "Cg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSGQoLdW5yZWFjaGFibGUYAyADKAlC",
+            "BOJBAQMiRgoRR2V0U2VydmljZVJlcXVlc3QSMQoEbmFtZRgBIAEoCUIj4kEB",
+            "AvpBHAoacnVuLmdvb2dsZWFwaXMuY29tL1NlcnZpY2UibgoURGVsZXRlU2Vy",
+            "dmljZVJlcXVlc3QSMQoEbmFtZRgBIAEoCUIj4kEBAvpBHAoacnVuLmdvb2ds",
+            "ZWFwaXMuY29tL1NlcnZpY2USFQoNdmFsaWRhdGVfb25seRgCIAEoCBIMCgRl",
+            "dGFnGAMgASgJIrwQCgdTZXJ2aWNlEhIKBG5hbWUYASABKAlCBOJBAQgSEwoL",
+            "ZGVzY3JpcHRpb24YAiABKAkSEQoDdWlkGAMgASgJQgTiQQEDEhgKCmdlbmVy",
+            "YXRpb24YBCABKANCBOJBAQMSPgoGbGFiZWxzGAUgAygLMiguZ29vZ2xlLmNs",
+            "b3VkLnJ1bi52Mi5TZXJ2aWNlLkxhYmVsc0VudHJ5QgTiQQEBEkgKC2Fubm90",
+            "YXRpb25zGAYgAygLMi0uZ29vZ2xlLmNsb3VkLnJ1bi52Mi5TZXJ2aWNlLkFu",
+            "bm90YXRpb25zRW50cnlCBOJBAQESNQoLY3JlYXRlX3RpbWUYByABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEjUKC3VwZGF0ZV90aW1l",
+            "GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxI1Cgtk",
+            "ZWxldGVfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "BOJBAQMSNQoLZXhwaXJlX3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgTiQQEDEhUKB2NyZWF0b3IYCyABKAlCBOJBAQMSGwoNbGFz",
+            "dF9tb2RpZmllchgMIAEoCUIE4kEBAxIOCgZjbGllbnQYDSABKAkSFgoOY2xp",
+            "ZW50X3ZlcnNpb24YDiABKAkSOgoHaW5ncmVzcxgPIAEoDjIjLmdvb2dsZS5j",
+            "bG91ZC5ydW4udjIuSW5ncmVzc1RyYWZmaWNCBOJBAQESMwoMbGF1bmNoX3N0",
+            "YWdlGBAgASgOMhcuZ29vZ2xlLmFwaS5MYXVuY2hTdGFnZUIE4kEBARJMChRi",
+            "aW5hcnlfYXV0aG9yaXphdGlvbhgRIAEoCzIoLmdvb2dsZS5jbG91ZC5ydW4u",
+            "djIuQmluYXJ5QXV0aG9yaXphdGlvbkIE4kEBARI9Cgh0ZW1wbGF0ZRgSIAEo",
+            "CzIlLmdvb2dsZS5jbG91ZC5ydW4udjIuUmV2aXNpb25UZW1wbGF0ZUIE4kEB",
+            "AhI5Cgd0cmFmZmljGBMgAygLMiIuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5UcmFm",
+            "ZmljVGFyZ2V0QgTiQQEBEjoKB3NjYWxpbmcYFCABKAsyIy5nb29nbGUuY2xv",
+            "dWQucnVuLnYyLlNlcnZpY2VTY2FsaW5nQgTiQQEBEiIKFGludm9rZXJfaWFt",
+            "X2Rpc2FibGVkGBUgASgIQgTiQQEBEiIKFGRlZmF1bHRfdXJpX2Rpc2FibGVk",
+            "GBYgASgIQgTiQQEBEhIKBHVybHMYGCADKAlCBOJBAQMSGQoLaWFwX2VuYWJs",
+            "ZWQYGSABKAhCBOJBAQESHgoLc3NoX2VuYWJsZWQYHSABKAhCBOJBAQFIAIgB",
+            "ARJVChVtdWx0aV9yZWdpb25fc2V0dGluZ3MYGiABKAsyMC5nb29nbGUuY2xv",
+            "dWQucnVuLnYyLlNlcnZpY2UuTXVsdGlSZWdpb25TZXR0aW5nc0IE4kEBARIY",
+            "ChBjdXN0b21fYXVkaWVuY2VzGCUgAygJEiEKE29ic2VydmVkX2dlbmVyYXRp",
+            "b24YHiABKANCBOJBAQMSQAoSdGVybWluYWxfY29uZGl0aW9uGB8gASgLMh4u",
+            "Z29vZ2xlLmNsb3VkLnJ1bi52Mi5Db25kaXRpb25CBOJBAQMSOAoKY29uZGl0",
+            "aW9ucxggIAMoCzIeLmdvb2dsZS5jbG91ZC5ydW4udjIuQ29uZGl0aW9uQgTi",
+            "QQEDEkMKFWxhdGVzdF9yZWFkeV9yZXZpc2lvbhghIAEoCUIk4kEBA/pBHQob",
+            "cnVuLmdvb2dsZWFwaXMuY29tL1JldmlzaW9uEkUKF2xhdGVzdF9jcmVhdGVk",
+            "X3JldmlzaW9uGCIgASgJQiTiQQED+kEdChtydW4uZ29vZ2xlYXBpcy5jb20v",
+            "UmV2aXNpb24SSAoQdHJhZmZpY19zdGF0dXNlcxgjIAMoCzIoLmdvb2dsZS5j",
+            "bG91ZC5ydW4udjIuVHJhZmZpY1RhcmdldFN0YXR1c0IE4kEBAxIRCgN1cmkY",
+            "JCABKAlCBOJBAQMSGwoNc2F0aXNmaWVzX3B6cxgmIAEoCEIE4kEBAxImChh0",
+            "aHJlYXRfZGV0ZWN0aW9uX2VuYWJsZWQYKCABKAhCBOJBAQMSPAoMYnVpbGRf",
+            "Y29uZmlnGCkgASgLMiAuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5CdWlsZENvbmZp",
+            "Z0IE4kEBARJCCg9mdW5jdGlvbmFsX3R5cGUYKiABKA4yIy5nb29nbGUuY2xv",
+            "dWQucnVuLnYyLkZ1bmN0aW9uYWxUeXBlQgTiQQEBEhkKC3JlY29uY2lsaW5n",
+            "GGIgASgIQgTiQQEDEhIKBGV0YWcYYyABKAlCBOJBAQEaSwoTTXVsdGlSZWdp",
+            "b25TZXR0aW5ncxIVCgdyZWdpb25zGAEgAygJQgTiQQECEh0KD211bHRpX3Jl",
+            "Z2lvbl9pZBgCIAEoCUIE4kEBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASAB",
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBGjIKEEFubm90YXRpb25zRW50cnkSCwoD",
+            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATpe6kFbChpydW4uZ29vZ2xl",
+            "YXBpcy5jb20vU2VydmljZRI6cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L3NlcnZpY2VzL3tzZXJ2aWNlfVIBAUIOCgxfc3NoX2Vu",
+            "YWJsZWQynw4KCFNlcnZpY2VzEv0BCg1DcmVhdGVTZXJ2aWNlEikuZ29vZ2xl",
+            "LmNsb3VkLnJ1bi52Mi5DcmVhdGVTZXJ2aWNlUmVxdWVzdBodLmdvb2dsZS5s",
+            "b25ncnVubmluZy5PcGVyYXRpb24ioQHKQRIKB1NlcnZpY2USB1NlcnZpY2Xa",
+            "QRlwYXJlbnQsc2VydmljZSxzZXJ2aWNlX2lkgtPkkwI3IiwvdjIve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9zZXJ2aWNlczoHc2VydmljZYrT",
+            "5JMCLRIrCgZwYXJlbnQSIXByb2plY3RzLyovbG9jYXRpb25zL3tsb2NhdGlv",
+            "bj0qfRLDAQoKR2V0U2VydmljZRImLmdvb2dsZS5jbG91ZC5ydW4udjIuR2V0",
+            "U2VydmljZVJlcXVlc3QaHC5nb29nbGUuY2xvdWQucnVuLnYyLlNlcnZpY2Ui",
+            "b9pBBG5hbWWC0+STAi4SLC92Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL3NlcnZpY2VzLyp9itPkkwIuEiwKBG5hbWUSJHByb2plY3RzLyovbG9j",
+            "YXRpb25zL3tsb2NhdGlvbj0qfS8qKhLVAQoMTGlzdFNlcnZpY2VzEiguZ29v",
+            "Z2xlLmNsb3VkLnJ1bi52Mi5MaXN0U2VydmljZXNSZXF1ZXN0GikuZ29vZ2xl",
+            "LmNsb3VkLnJ1bi52Mi5MaXN0U2VydmljZXNSZXNwb25zZSJw2kEGcGFyZW50",
+            "gtPkkwIuEiwvdjIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9z",
+            "ZXJ2aWNlc4rT5JMCLRIrCgZwYXJlbnQSIXByb2plY3RzLyovbG9jYXRpb25z",
+            "L3tsb2NhdGlvbj0qfRKSAgoNVXBkYXRlU2VydmljZRIpLmdvb2dsZS5jbG91",
+            "ZC5ydW4udjIuVXBkYXRlU2VydmljZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
+            "bm5pbmcuT3BlcmF0aW9uIrYBykESCgdTZXJ2aWNlEgdTZXJ2aWNl2kEHc2Vy",
+            "dmljZdpBE3NlcnZpY2UsdXBkYXRlX21hc2uC0+STAj8yNC92Mi97c2Vydmlj",
+            "ZS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovc2VydmljZXMvKn06B3Nl",
+            "cnZpY2WK0+STAjYSNAoMc2VydmljZS5uYW1lEiRwcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy97bG9jYXRpb249Kn0vKioS4AEKDURlbGV0ZVNlcnZpY2USKS5nb29n",
+            "bGUuY2xvdWQucnVuLnYyLkRlbGV0ZVNlcnZpY2VSZXF1ZXN0Gh0uZ29vZ2xl",
+            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiKEAcpBEgoHU2VydmljZRIHU2Vydmlj",
+            "ZdpBBG5hbWWC0+STAi4qLC92Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL3NlcnZpY2VzLyp9itPkkwIuEiwKBG5hbWUSJHByb2plY3RzLyovbG9j",
+            "YXRpb25zL3tsb2NhdGlvbj0qfS8qKhKQAQoMR2V0SWFtUG9saWN5EiIuZ29v",
+            "Z2xlLmlhbS52MS5HZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52",
+            "MS5Qb2xpY3kiRYLT5JMCPxI9L3YyL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL3NlcnZpY2VzLyp9OmdldElhbVBvbGljeRKTAQoMU2V0SWFt",
+            "UG9saWN5EiIuZ29vZ2xlLmlhbS52MS5TZXRJYW1Qb2xpY3lSZXF1ZXN0GhUu",
+            "Z29vZ2xlLmlhbS52MS5Qb2xpY3kiSILT5JMCQiI9L3YyL3tyZXNvdXJjZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NlcnZpY2VzLyp9OnNldElhbVBvbGlj",
+            "eToBKhK5AQoSVGVzdElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlhbS52MS5U",
+            "ZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52MS5UZXN0",
+            "SWFtUGVybWlzc2lvbnNSZXNwb25zZSJOgtPkkwJIIkMvdjIve3Jlc291cmNl",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovc2VydmljZXMvKn06dGVzdElhbVBl",
+            "cm1pc3Npb25zOgEqGpcBykEScnVuLmdvb2dsZWFwaXMuY29t0kF/aHR0cHM6",
+            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3J1bixodHRwczovL3d3dy5n",
+            "b29nbGVhcGlzLmNvbS9hdXRoL3J1bi5yZWFkb25seUJUChdjb20uZ29vZ2xl",
+            "LmNsb3VkLnJ1bi52MkIMU2VydmljZVByb3RvUAFaKWNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vcnVuL2FwaXYyL3J1bnBiO3J1bnBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.LaunchStageReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.RoutingReflection.Descriptor, global::Google.Cloud.Run.V2.ConditionReflection.Descriptor, global::Google.Cloud.Run.V2.RevisionTemplateReflection.Descriptor, global::Google.Cloud.Run.V2.TrafficTargetReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.CreateServiceRequest), global::Google.Cloud.Run.V2.CreateServiceRequest.Parser, new[]{ "Parent", "Service", "ServiceId", "ValidateOnly" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.UpdateServiceRequest), global::Google.Cloud.Run.V2.UpdateServiceRequest.Parser, new[]{ "UpdateMask", "Service", "ValidateOnly", "AllowMissing" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.UpdateServiceRequest), global::Google.Cloud.Run.V2.UpdateServiceRequest.Parser, new[]{ "UpdateMask", "Service", "ValidateOnly", "AllowMissing", "ForceNewRevision" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListServicesRequest), global::Google.Cloud.Run.V2.ListServicesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "ShowDeleted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListServicesResponse), global::Google.Cloud.Run.V2.ListServicesResponse.Parser, new[]{ "Services", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.GetServiceRequest), global::Google.Cloud.Run.V2.GetServiceRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.DeleteServiceRequest), global::Google.Cloud.Run.V2.DeleteServiceRequest.Parser, new[]{ "Name", "ValidateOnly", "Etag" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Service), global::Google.Cloud.Run.V2.Service.Parser, new[]{ "Name", "Description", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "UpdateTime", "DeleteTime", "ExpireTime", "Creator", "LastModifier", "Client", "ClientVersion", "Ingress", "LaunchStage", "BinaryAuthorization", "Template", "Traffic", "Scaling", "InvokerIamDisabled", "DefaultUriDisabled", "Urls", "IapEnabled", "MultiRegionSettings", "CustomAudiences", "ObservedGeneration", "TerminalCondition", "Conditions", "LatestReadyRevision", "LatestCreatedRevision", "TrafficStatuses", "Uri", "SatisfiesPzs", "ThreatDetectionEnabled", "BuildConfig", "Reconciling", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Service.Types.MultiRegionSettings), global::Google.Cloud.Run.V2.Service.Types.MultiRegionSettings.Parser, new[]{ "Regions", "MultiRegionId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Service), global::Google.Cloud.Run.V2.Service.Parser, new[]{ "Name", "Description", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "UpdateTime", "DeleteTime", "ExpireTime", "Creator", "LastModifier", "Client", "ClientVersion", "Ingress", "LaunchStage", "BinaryAuthorization", "Template", "Traffic", "Scaling", "InvokerIamDisabled", "DefaultUriDisabled", "Urls", "IapEnabled", "SshEnabled", "MultiRegionSettings", "CustomAudiences", "ObservedGeneration", "TerminalCondition", "Conditions", "LatestReadyRevision", "LatestCreatedRevision", "TrafficStatuses", "Uri", "SatisfiesPzs", "ThreatDetectionEnabled", "BuildConfig", "FunctionalType", "Reconciling", "Etag" }, new[]{ "SshEnabled" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Service.Types.MultiRegionSettings), global::Google.Cloud.Run.V2.Service.Types.MultiRegionSettings.Parser, new[]{ "Regions", "MultiRegionId" }, null, null, null, null),
             null, null, })
           }));
     }
@@ -244,9 +249,10 @@ namespace Google.Cloud.Run.V2 {
     public const int ServiceIdFieldNumber = 3;
     private string serviceId_ = "";
     /// <summary>
-    /// Required. The unique identifier for the Service. It must begin with letter,
+    /// Optional. The unique identifier for the Service. It must begin with letter,
     /// and cannot end with hyphen; must contain fewer than 50 characters.
     /// The name of the service becomes {parent}/services/{service_id}.
+    /// If not provided, the server will generate a unique `service_id`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -537,6 +543,7 @@ namespace Google.Cloud.Run.V2 {
       service_ = other.service_ != null ? other.service_.Clone() : null;
       validateOnly_ = other.validateOnly_;
       allowMissing_ = other.allowMissing_;
+      forceNewRevision_ = other.forceNewRevision_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -609,6 +616,28 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "force_new_revision" field.</summary>
+    public const int ForceNewRevisionFieldNumber = 5;
+    private bool forceNewRevision_;
+    /// <summary>
+    /// Optional. If set to true, a new revision will be created from the template
+    /// even if the system doesn't detect any changes from the previously deployed
+    /// revision.
+    ///
+    /// This may be useful for cases where the underlying resources need to be
+    /// recreated or reinitialized. For example if the image is specified by label,
+    /// but the underlying image digest has changed) or if the container performs
+    /// deployment initialization work that needs to be performed again.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ForceNewRevision {
+      get { return forceNewRevision_; }
+      set {
+        forceNewRevision_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -628,6 +657,7 @@ namespace Google.Cloud.Run.V2 {
       if (!object.Equals(Service, other.Service)) return false;
       if (ValidateOnly != other.ValidateOnly) return false;
       if (AllowMissing != other.AllowMissing) return false;
+      if (ForceNewRevision != other.ForceNewRevision) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -639,6 +669,7 @@ namespace Google.Cloud.Run.V2 {
       if (service_ != null) hash ^= Service.GetHashCode();
       if (ValidateOnly != false) hash ^= ValidateOnly.GetHashCode();
       if (AllowMissing != false) hash ^= AllowMissing.GetHashCode();
+      if (ForceNewRevision != false) hash ^= ForceNewRevision.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -673,6 +704,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(32);
         output.WriteBool(AllowMissing);
       }
+      if (ForceNewRevision != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(ForceNewRevision);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -699,6 +734,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(32);
         output.WriteBool(AllowMissing);
       }
+      if (ForceNewRevision != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(ForceNewRevision);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -719,6 +758,9 @@ namespace Google.Cloud.Run.V2 {
         size += 1 + 1;
       }
       if (AllowMissing != false) {
+        size += 1 + 1;
+      }
+      if (ForceNewRevision != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -750,6 +792,9 @@ namespace Google.Cloud.Run.V2 {
       }
       if (other.AllowMissing != false) {
         AllowMissing = other.AllowMissing;
+      }
+      if (other.ForceNewRevision != false) {
+        ForceNewRevision = other.ForceNewRevision;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -792,6 +837,10 @@ namespace Google.Cloud.Run.V2 {
             AllowMissing = input.ReadBool();
             break;
           }
+          case 40: {
+            ForceNewRevision = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -831,6 +880,10 @@ namespace Google.Cloud.Run.V2 {
           }
           case 32: {
             AllowMissing = input.ReadBool();
+            break;
+          }
+          case 40: {
+            ForceNewRevision = input.ReadBool();
             break;
           }
         }
@@ -1941,6 +1994,7 @@ namespace Google.Cloud.Run.V2 {
   {
     private static readonly pb::MessageParser<Service> _parser = new pb::MessageParser<Service>(() => new Service());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Service> Parser { get { return _parser; } }
@@ -1968,6 +2022,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Service(Service other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       description_ = other.description_;
       uid_ = other.uid_;
@@ -1992,6 +2047,7 @@ namespace Google.Cloud.Run.V2 {
       defaultUriDisabled_ = other.defaultUriDisabled_;
       urls_ = other.urls_.Clone();
       iapEnabled_ = other.iapEnabled_;
+      sshEnabled_ = other.sshEnabled_;
       multiRegionSettings_ = other.multiRegionSettings_ != null ? other.multiRegionSettings_.Clone() : null;
       customAudiences_ = other.customAudiences_.Clone();
       observedGeneration_ = other.observedGeneration_;
@@ -2004,6 +2060,7 @@ namespace Google.Cloud.Run.V2 {
       satisfiesPzs_ = other.satisfiesPzs_;
       threatDetectionEnabled_ = other.threatDetectionEnabled_;
       buildConfig_ = other.buildConfig_ != null ? other.buildConfig_.Clone() : null;
+      functionalType_ = other.functionalType_;
       reconciling_ = other.reconciling_;
       etag_ = other.etag_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2419,6 +2476,36 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "ssh_enabled" field.</summary>
+    public const int SshEnabledFieldNumber = 29;
+    private readonly static bool SshEnabledDefaultValue = false;
+
+    private bool sshEnabled_;
+    /// <summary>
+    /// Optional. Enables SSH access to the Service.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SshEnabled {
+      get { if ((_hasBits0 & 1) != 0) { return sshEnabled_; } else { return SshEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        sshEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ssh_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSshEnabled {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "ssh_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSshEnabled() {
+      _hasBits0 &= ~1;
+    }
+
     /// <summary>Field number for the "multi_region_settings" field.</summary>
     public const int MultiRegionSettingsFieldNumber = 26;
     private global::Google.Cloud.Run.V2.Service.Types.MultiRegionSettings multiRegionSettings_;
@@ -2617,6 +2704,21 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "functional_type" field.</summary>
+    public const int FunctionalTypeFieldNumber = 42;
+    private global::Google.Cloud.Run.V2.FunctionalType functionalType_ = global::Google.Cloud.Run.V2.FunctionalType.Unspecified;
+    /// <summary>
+    /// Optional. The functional type of the Service.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.FunctionalType FunctionalType {
+      get { return functionalType_; }
+      set {
+        functionalType_ = value;
+      }
+    }
+
     /// <summary>Field number for the "reconciling" field.</summary>
     public const int ReconcilingFieldNumber = 98;
     private bool reconciling_;
@@ -2708,6 +2810,7 @@ namespace Google.Cloud.Run.V2 {
       if (DefaultUriDisabled != other.DefaultUriDisabled) return false;
       if(!urls_.Equals(other.urls_)) return false;
       if (IapEnabled != other.IapEnabled) return false;
+      if (SshEnabled != other.SshEnabled) return false;
       if (!object.Equals(MultiRegionSettings, other.MultiRegionSettings)) return false;
       if(!customAudiences_.Equals(other.customAudiences_)) return false;
       if (ObservedGeneration != other.ObservedGeneration) return false;
@@ -2720,6 +2823,7 @@ namespace Google.Cloud.Run.V2 {
       if (SatisfiesPzs != other.SatisfiesPzs) return false;
       if (ThreatDetectionEnabled != other.ThreatDetectionEnabled) return false;
       if (!object.Equals(BuildConfig, other.BuildConfig)) return false;
+      if (FunctionalType != other.FunctionalType) return false;
       if (Reconciling != other.Reconciling) return false;
       if (Etag != other.Etag) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -2753,6 +2857,7 @@ namespace Google.Cloud.Run.V2 {
       if (DefaultUriDisabled != false) hash ^= DefaultUriDisabled.GetHashCode();
       hash ^= urls_.GetHashCode();
       if (IapEnabled != false) hash ^= IapEnabled.GetHashCode();
+      if (HasSshEnabled) hash ^= SshEnabled.GetHashCode();
       if (multiRegionSettings_ != null) hash ^= MultiRegionSettings.GetHashCode();
       hash ^= customAudiences_.GetHashCode();
       if (ObservedGeneration != 0L) hash ^= ObservedGeneration.GetHashCode();
@@ -2765,6 +2870,7 @@ namespace Google.Cloud.Run.V2 {
       if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
       if (ThreatDetectionEnabled != false) hash ^= ThreatDetectionEnabled.GetHashCode();
       if (buildConfig_ != null) hash ^= BuildConfig.GetHashCode();
+      if (FunctionalType != global::Google.Cloud.Run.V2.FunctionalType.Unspecified) hash ^= FunctionalType.GetHashCode();
       if (Reconciling != false) hash ^= Reconciling.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (_unknownFields != null) {
@@ -2873,6 +2979,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(210, 1);
         output.WriteMessage(MultiRegionSettings);
       }
+      if (HasSshEnabled) {
+        output.WriteRawTag(232, 1);
+        output.WriteBool(SshEnabled);
+      }
       if (ObservedGeneration != 0L) {
         output.WriteRawTag(240, 1);
         output.WriteInt64(ObservedGeneration);
@@ -2907,6 +3017,10 @@ namespace Google.Cloud.Run.V2 {
       if (buildConfig_ != null) {
         output.WriteRawTag(202, 2);
         output.WriteMessage(BuildConfig);
+      }
+      if (FunctionalType != global::Google.Cloud.Run.V2.FunctionalType.Unspecified) {
+        output.WriteRawTag(208, 2);
+        output.WriteEnum((int) FunctionalType);
       }
       if (Reconciling != false) {
         output.WriteRawTag(144, 6);
@@ -3014,6 +3128,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(210, 1);
         output.WriteMessage(MultiRegionSettings);
       }
+      if (HasSshEnabled) {
+        output.WriteRawTag(232, 1);
+        output.WriteBool(SshEnabled);
+      }
       if (ObservedGeneration != 0L) {
         output.WriteRawTag(240, 1);
         output.WriteInt64(ObservedGeneration);
@@ -3048,6 +3166,10 @@ namespace Google.Cloud.Run.V2 {
       if (buildConfig_ != null) {
         output.WriteRawTag(202, 2);
         output.WriteMessage(BuildConfig);
+      }
+      if (FunctionalType != global::Google.Cloud.Run.V2.FunctionalType.Unspecified) {
+        output.WriteRawTag(208, 2);
+        output.WriteEnum((int) FunctionalType);
       }
       if (Reconciling != false) {
         output.WriteRawTag(144, 6);
@@ -3131,6 +3253,9 @@ namespace Google.Cloud.Run.V2 {
       if (IapEnabled != false) {
         size += 2 + 1;
       }
+      if (HasSshEnabled) {
+        size += 2 + 1;
+      }
       if (multiRegionSettings_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(MultiRegionSettings);
       }
@@ -3160,6 +3285,9 @@ namespace Google.Cloud.Run.V2 {
       }
       if (buildConfig_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(BuildConfig);
+      }
+      if (FunctionalType != global::Google.Cloud.Run.V2.FunctionalType.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) FunctionalType);
       }
       if (Reconciling != false) {
         size += 2 + 1;
@@ -3264,6 +3392,9 @@ namespace Google.Cloud.Run.V2 {
       if (other.IapEnabled != false) {
         IapEnabled = other.IapEnabled;
       }
+      if (other.HasSshEnabled) {
+        SshEnabled = other.SshEnabled;
+      }
       if (other.multiRegionSettings_ != null) {
         if (multiRegionSettings_ == null) {
           MultiRegionSettings = new global::Google.Cloud.Run.V2.Service.Types.MultiRegionSettings();
@@ -3302,6 +3433,9 @@ namespace Google.Cloud.Run.V2 {
           BuildConfig = new global::Google.Cloud.Run.V2.BuildConfig();
         }
         BuildConfig.MergeFrom(other.BuildConfig);
+      }
+      if (other.FunctionalType != global::Google.Cloud.Run.V2.FunctionalType.Unspecified) {
+        FunctionalType = other.FunctionalType;
       }
       if (other.Reconciling != false) {
         Reconciling = other.Reconciling;
@@ -3452,6 +3586,10 @@ namespace Google.Cloud.Run.V2 {
             input.ReadMessage(MultiRegionSettings);
             break;
           }
+          case 232: {
+            SshEnabled = input.ReadBool();
+            break;
+          }
           case 240: {
             ObservedGeneration = input.ReadInt64();
             break;
@@ -3500,6 +3638,10 @@ namespace Google.Cloud.Run.V2 {
               BuildConfig = new global::Google.Cloud.Run.V2.BuildConfig();
             }
             input.ReadMessage(BuildConfig);
+            break;
+          }
+          case 336: {
+            FunctionalType = (global::Google.Cloud.Run.V2.FunctionalType) input.ReadEnum();
             break;
           }
           case 784: {
@@ -3653,6 +3795,10 @@ namespace Google.Cloud.Run.V2 {
             input.ReadMessage(MultiRegionSettings);
             break;
           }
+          case 232: {
+            SshEnabled = input.ReadBool();
+            break;
+          }
           case 240: {
             ObservedGeneration = input.ReadInt64();
             break;
@@ -3701,6 +3847,10 @@ namespace Google.Cloud.Run.V2 {
               BuildConfig = new global::Google.Cloud.Run.V2.BuildConfig();
             }
             input.ReadMessage(BuildConfig);
+            break;
+          }
+          case 336: {
+            FunctionalType = (global::Google.Cloud.Run.V2.FunctionalType) input.ReadEnum();
             break;
           }
           case 784: {

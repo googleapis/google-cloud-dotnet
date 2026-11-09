@@ -306,11 +306,15 @@ namespace Google.Cloud.Run.V2
         /// The default Services scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/run</description></item>
+        /// <item><description>https://www.googleapis.com/auth/run.readonly</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/run",
+            "https://www.googleapis.com/auth/run.readonly",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -441,9 +445,10 @@ namespace Google.Cloud.Run.V2
         /// Required. The Service instance to create.
         /// </param>
         /// <param name="serviceId">
-        /// Required. The unique identifier for the Service. It must begin with letter,
+        /// Optional. The unique identifier for the Service. It must begin with letter,
         /// and cannot end with hyphen; must contain fewer than 50 characters.
         /// The name of the service becomes {parent}/services/{service_id}.
+        /// If not provided, the server will generate a unique `service_id`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -452,7 +457,7 @@ namespace Google.Cloud.Run.V2
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Service = gax::GaxPreconditions.CheckNotNull(service, nameof(service)),
-                ServiceId = gax::GaxPreconditions.CheckNotNullOrEmpty(serviceId, nameof(serviceId)),
+                ServiceId = serviceId ?? "",
             }, callSettings);
 
         /// <summary>
@@ -467,9 +472,10 @@ namespace Google.Cloud.Run.V2
         /// Required. The Service instance to create.
         /// </param>
         /// <param name="serviceId">
-        /// Required. The unique identifier for the Service. It must begin with letter,
+        /// Optional. The unique identifier for the Service. It must begin with letter,
         /// and cannot end with hyphen; must contain fewer than 50 characters.
         /// The name of the service becomes {parent}/services/{service_id}.
+        /// If not provided, the server will generate a unique `service_id`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -478,7 +484,7 @@ namespace Google.Cloud.Run.V2
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Service = gax::GaxPreconditions.CheckNotNull(service, nameof(service)),
-                ServiceId = gax::GaxPreconditions.CheckNotNullOrEmpty(serviceId, nameof(serviceId)),
+                ServiceId = serviceId ?? "",
             }, callSettings);
 
         /// <summary>
@@ -493,9 +499,10 @@ namespace Google.Cloud.Run.V2
         /// Required. The Service instance to create.
         /// </param>
         /// <param name="serviceId">
-        /// Required. The unique identifier for the Service. It must begin with letter,
+        /// Optional. The unique identifier for the Service. It must begin with letter,
         /// and cannot end with hyphen; must contain fewer than 50 characters.
         /// The name of the service becomes {parent}/services/{service_id}.
+        /// If not provided, the server will generate a unique `service_id`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -514,9 +521,10 @@ namespace Google.Cloud.Run.V2
         /// Required. The Service instance to create.
         /// </param>
         /// <param name="serviceId">
-        /// Required. The unique identifier for the Service. It must begin with letter,
+        /// Optional. The unique identifier for the Service. It must begin with letter,
         /// and cannot end with hyphen; must contain fewer than 50 characters.
         /// The name of the service becomes {parent}/services/{service_id}.
+        /// If not provided, the server will generate a unique `service_id`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -525,7 +533,7 @@ namespace Google.Cloud.Run.V2
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Service = gax::GaxPreconditions.CheckNotNull(service, nameof(service)),
-                ServiceId = gax::GaxPreconditions.CheckNotNullOrEmpty(serviceId, nameof(serviceId)),
+                ServiceId = serviceId ?? "",
             }, callSettings);
 
         /// <summary>
@@ -540,9 +548,10 @@ namespace Google.Cloud.Run.V2
         /// Required. The Service instance to create.
         /// </param>
         /// <param name="serviceId">
-        /// Required. The unique identifier for the Service. It must begin with letter,
+        /// Optional. The unique identifier for the Service. It must begin with letter,
         /// and cannot end with hyphen; must contain fewer than 50 characters.
         /// The name of the service becomes {parent}/services/{service_id}.
+        /// If not provided, the server will generate a unique `service_id`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -551,7 +560,7 @@ namespace Google.Cloud.Run.V2
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Service = gax::GaxPreconditions.CheckNotNull(service, nameof(service)),
-                ServiceId = gax::GaxPreconditions.CheckNotNullOrEmpty(serviceId, nameof(serviceId)),
+                ServiceId = serviceId ?? "",
             }, callSettings);
 
         /// <summary>
@@ -566,9 +575,10 @@ namespace Google.Cloud.Run.V2
         /// Required. The Service instance to create.
         /// </param>
         /// <param name="serviceId">
-        /// Required. The unique identifier for the Service. It must begin with letter,
+        /// Optional. The unique identifier for the Service. It must begin with letter,
         /// and cannot end with hyphen; must contain fewer than 50 characters.
         /// The name of the service becomes {parent}/services/{service_id}.
+        /// If not provided, the server will generate a unique `service_id`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

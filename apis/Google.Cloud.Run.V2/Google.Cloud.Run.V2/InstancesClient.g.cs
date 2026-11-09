@@ -18,6 +18,7 @@
 using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -30,6 +31,7 @@ using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Run.V2
 {
@@ -50,6 +52,8 @@ namespace Google.Cloud.Run.V2
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateInstanceSettings = existing.CreateInstanceSettings;
             CreateInstanceOperationsSettings = existing.CreateInstanceOperationsSettings.Clone();
+            UpdateInstanceSettings = existing.UpdateInstanceSettings;
+            UpdateInstanceOperationsSettings = existing.UpdateInstanceOperationsSettings.Clone();
             DeleteInstanceSettings = existing.DeleteInstanceSettings;
             DeleteInstanceOperationsSettings = existing.DeleteInstanceOperationsSettings.Clone();
             GetInstanceSettings = existing.GetInstanceSettings;
@@ -58,6 +62,9 @@ namespace Google.Cloud.Run.V2
             StopInstanceOperationsSettings = existing.StopInstanceOperationsSettings.Clone();
             StartInstanceSettings = existing.StartInstanceSettings;
             StartInstanceOperationsSettings = existing.StartInstanceOperationsSettings.Clone();
+            GetIamPolicySettings = existing.GetIamPolicySettings;
+            SetIamPolicySettings = existing.SetIamPolicySettings;
+            TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -90,6 +97,36 @@ namespace Google.Cloud.Run.V2
         /// </list>
         /// </remarks>
         public lro::OperationsSettings CreateInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstancesClient.UpdateInstance</c> and <c>InstancesClient.UpdateInstanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.UpdateInstance</c> and
+        /// <c>InstancesClient.UpdateInstanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -209,6 +246,42 @@ namespace Google.Cloud.Run.V2
         };
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstancesClient.GetIamPolicy</c> and <c>InstancesClient.GetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstancesClient.SetIamPolicy</c> and <c>InstancesClient.SetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstancesClient.TestIamPermissions</c> and <c>InstancesClient.TestIamPermissionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -285,11 +358,15 @@ namespace Google.Cloud.Run.V2
         /// The default Instances scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/run</description></item>
+        /// <item><description>https://www.googleapis.com/auth/run.readonly</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/run",
+            "https://www.googleapis.com/auth/run.readonly",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -412,6 +489,8 @@ namespace Google.Cloud.Run.V2
         /// Creates an Instance.
         /// </summary>
         /// <param name="parent">
+        /// Required. The location and project in which this Instance should be
+        /// created.
         /// </param>
         /// <param name="instance">
         /// </param>
@@ -428,6 +507,8 @@ namespace Google.Cloud.Run.V2
         /// Creates an Instance.
         /// </summary>
         /// <param name="parent">
+        /// Required. The location and project in which this Instance should be
+        /// created.
         /// </param>
         /// <param name="instance">
         /// </param>
@@ -444,6 +525,8 @@ namespace Google.Cloud.Run.V2
         /// Creates an Instance.
         /// </summary>
         /// <param name="parent">
+        /// Required. The location and project in which this Instance should be
+        /// created.
         /// </param>
         /// <param name="instance">
         /// </param>
@@ -456,6 +539,8 @@ namespace Google.Cloud.Run.V2
         /// Creates an Instance.
         /// </summary>
         /// <param name="parent">
+        /// Required. The location and project in which this Instance should be
+        /// created.
         /// </param>
         /// <param name="instance">
         /// </param>
@@ -472,6 +557,8 @@ namespace Google.Cloud.Run.V2
         /// Creates an Instance.
         /// </summary>
         /// <param name="parent">
+        /// Required. The location and project in which this Instance should be
+        /// created.
         /// </param>
         /// <param name="instance">
         /// </param>
@@ -488,6 +575,8 @@ namespace Google.Cloud.Run.V2
         /// Creates an Instance.
         /// </summary>
         /// <param name="parent">
+        /// Required. The location and project in which this Instance should be
+        /// created.
         /// </param>
         /// <param name="instance">
         /// </param>
@@ -497,7 +586,110 @@ namespace Google.Cloud.Run.V2
             CreateInstanceAsync(parent, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a Instance
+        /// Updates an Instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, Instance> UpdateInstance(UpdateInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an Instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, Instance>> UpdateInstanceAsync(UpdateInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an Instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, Instance>> UpdateInstanceAsync(UpdateInstanceRequest request, st::CancellationToken cancellationToken) =>
+            UpdateInstanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateInstance</c>.</summary>
+        public virtual lro::OperationsClient UpdateInstanceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateInstance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Instance, Instance> PollOnceUpdateInstance(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, Instance>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateInstanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateInstance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Instance, Instance>> PollOnceUpdateInstanceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, Instance>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateInstanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates an Instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The Instance to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, Instance> UpdateInstance(Instance instance, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateInstance(new UpdateInstanceRequest
+            {
+                UpdateMask = updateMask,
+                Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an Instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The Instance to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, Instance>> UpdateInstanceAsync(Instance instance, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateInstanceAsync(new UpdateInstanceRequest
+            {
+                UpdateMask = updateMask,
+                Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an Instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The Instance to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, Instance>> UpdateInstanceAsync(Instance instance, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateInstanceAsync(instance, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an Instance
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -506,7 +698,7 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a Instance
+        /// Deletes an Instance
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -515,7 +707,7 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a Instance
+        /// Deletes an Instance
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -550,9 +742,10 @@ namespace Google.Cloud.Run.V2
             lro::Operation<Instance, Instance>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteInstanceOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes a Instance
+        /// Deletes an Instance
         /// </summary>
         /// <param name="name">
+        /// Required. The name of the Instance to delete.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -563,9 +756,10 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Deletes a Instance
+        /// Deletes an Instance
         /// </summary>
         /// <param name="name">
+        /// Required. The name of the Instance to delete.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -576,9 +770,10 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Deletes a Instance
+        /// Deletes an Instance
         /// </summary>
         /// <param name="name">
+        /// Required. The name of the Instance to delete.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -586,9 +781,10 @@ namespace Google.Cloud.Run.V2
             DeleteInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a Instance
+        /// Deletes an Instance
         /// </summary>
         /// <param name="name">
+        /// Required. The name of the Instance to delete.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -599,9 +795,10 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Deletes a Instance
+        /// Deletes an Instance
         /// </summary>
         /// <param name="name">
+        /// Required. The name of the Instance to delete.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -612,9 +809,10 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Deletes a Instance
+        /// Deletes an Instance
         /// </summary>
         /// <param name="name">
+        /// Required. The name of the Instance to delete.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -622,7 +820,7 @@ namespace Google.Cloud.Run.V2
             DeleteInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a Instance
+        /// Gets an Instance
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -631,7 +829,7 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a Instance
+        /// Gets an Instance
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -640,7 +838,7 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a Instance
+        /// Gets an Instance
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -649,9 +847,10 @@ namespace Google.Cloud.Run.V2
             GetInstanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a Instance
+        /// Gets an Instance
         /// </summary>
         /// <param name="name">
+        /// Required. The name of the Instance to retrieve.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -662,9 +861,10 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets a Instance
+        /// Gets an Instance
         /// </summary>
         /// <param name="name">
+        /// Required. The name of the Instance to retrieve.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -675,9 +875,10 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets a Instance
+        /// Gets an Instance
         /// </summary>
         /// <param name="name">
+        /// Required. The name of the Instance to retrieve.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -685,9 +886,10 @@ namespace Google.Cloud.Run.V2
             GetInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a Instance
+        /// Gets an Instance
         /// </summary>
         /// <param name="name">
+        /// Required. The name of the Instance to retrieve.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -698,9 +900,10 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets a Instance
+        /// Gets an Instance
         /// </summary>
         /// <param name="name">
+        /// Required. The name of the Instance to retrieve.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -711,9 +914,10 @@ namespace Google.Cloud.Run.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets a Instance
+        /// Gets an Instance
         /// </summary>
         /// <param name="name">
+        /// Required. The name of the Instance to retrieve.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -743,8 +947,6 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
-        /// Format: projects/{project}/locations/{location}, where {project} can be
-        /// project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -778,8 +980,6 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
-        /// Format: projects/{project}/locations/{location}, where {project} can be
-        /// project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -813,8 +1013,6 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
-        /// Format: projects/{project}/locations/{location}, where {project} can be
-        /// project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -848,8 +1046,6 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
-        /// Format: projects/{project}/locations/{location}, where {project} can be
-        /// project id or number.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -936,9 +1132,6 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Instance to stop.
-        /// Format:
-        /// `projects/{project}/locations/{location}/instances/{instance}`,
-        /// where `{project}` can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -953,9 +1146,6 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Instance to stop.
-        /// Format:
-        /// `projects/{project}/locations/{location}/instances/{instance}`,
-        /// where `{project}` can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -970,9 +1160,6 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Instance to stop.
-        /// Format:
-        /// `projects/{project}/locations/{location}/instances/{instance}`,
-        /// where `{project}` can be project id or number.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -984,9 +1171,6 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Instance to stop.
-        /// Format:
-        /// `projects/{project}/locations/{location}/instances/{instance}`,
-        /// where `{project}` can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1001,9 +1185,6 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Instance to stop.
-        /// Format:
-        /// `projects/{project}/locations/{location}/instances/{instance}`,
-        /// where `{project}` can be project id or number.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1018,9 +1199,6 @@ namespace Google.Cloud.Run.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Instance to stop.
-        /// Format:
-        /// `projects/{project}/locations/{location}/instances/{instance}`,
-        /// where `{project}` can be project id or number.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1084,10 +1262,7 @@ namespace Google.Cloud.Run.V2
         /// Starts an Instance.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Instance to stop.
-        /// Format:
-        /// `projects/{project}/locations/{location}/instances/{instance}`,
-        /// where `{project}` can be project id or number.
+        /// Required. The name of the Instance to start.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1101,10 +1276,7 @@ namespace Google.Cloud.Run.V2
         /// Starts an Instance.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Instance to stop.
-        /// Format:
-        /// `projects/{project}/locations/{location}/instances/{instance}`,
-        /// where `{project}` can be project id or number.
+        /// Required. The name of the Instance to start.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1118,10 +1290,7 @@ namespace Google.Cloud.Run.V2
         /// Starts an Instance.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Instance to stop.
-        /// Format:
-        /// `projects/{project}/locations/{location}/instances/{instance}`,
-        /// where `{project}` can be project id or number.
+        /// Required. The name of the Instance to start.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1132,10 +1301,7 @@ namespace Google.Cloud.Run.V2
         /// Starts an Instance.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Instance to stop.
-        /// Format:
-        /// `projects/{project}/locations/{location}/instances/{instance}`,
-        /// where `{project}` can be project id or number.
+        /// Required. The name of the Instance to start.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1149,10 +1315,7 @@ namespace Google.Cloud.Run.V2
         /// Starts an Instance.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Instance to stop.
-        /// Format:
-        /// `projects/{project}/locations/{location}/instances/{instance}`,
-        /// where `{project}` can be project id or number.
+        /// Required. The name of the Instance to start.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1166,15 +1329,105 @@ namespace Google.Cloud.Run.V2
         /// Starts an Instance.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Instance to stop.
-        /// Format:
-        /// `projects/{project}/locations/{location}/instances/{instance}`,
-        /// where `{project}` can be project id or number.
+        /// Required. The name of the Instance to start.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Instance, Instance>> StartInstanceAsync(InstanceName name, st::CancellationToken cancellationToken) =>
             StartInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the IAM Access Control policy currently in effect for the given
+        /// Instance. This result does not include any inherited policies.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy GetIamPolicy(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the IAM Access Control policy currently in effect for the given
+        /// Instance. This result does not include any inherited policies.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the IAM Access Control policy currently in effect for the given
+        /// Instance. This result does not include any inherited policies.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the IAM Access control policy for the specified Instance. Overwrites
+        /// any existing policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy SetIamPolicy(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the IAM Access control policy for the specified Instance. Overwrites
+        /// any existing policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the IAM Access control policy for the specified Instance. Overwrites
+        /// any existing policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, st::CancellationToken cancellationToken) =>
+            SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified Instance.
+        /// 
+        /// There are no permissions required for making this API call.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::TestIamPermissionsResponse TestIamPermissions(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified Instance.
+        /// 
+        /// There are no permissions required for making this API call.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified Instance.
+        /// 
+        /// There are no permissions required for making this API call.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, st::CancellationToken cancellationToken) =>
+            TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Instances client wrapper implementation, for convenient use.</summary>
@@ -1185,6 +1438,8 @@ namespace Google.Cloud.Run.V2
     {
         private readonly gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> _callCreateInstance;
 
+        private readonly gaxgrpc::ApiCall<UpdateInstanceRequest, lro::Operation> _callUpdateInstance;
+
         private readonly gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> _callDeleteInstance;
 
         private readonly gaxgrpc::ApiCall<GetInstanceRequest, Instance> _callGetInstance;
@@ -1194,6 +1449,12 @@ namespace Google.Cloud.Run.V2
         private readonly gaxgrpc::ApiCall<StopInstanceRequest, lro::Operation> _callStopInstance;
 
         private readonly gaxgrpc::ApiCall<StartInstanceRequest, lro::Operation> _callStartInstance;
+
+        private readonly gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> _callGetIamPolicy;
+
+        private readonly gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> _callSetIamPolicy;
+
+        private readonly gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> _callTestIamPermissions;
 
         /// <summary>
         /// Constructs a client wrapper for the Instances service, with the specified gRPC client and settings.
@@ -1211,6 +1472,7 @@ namespace Google.Cloud.Run.V2
                 Logger = logger,
             });
             CreateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstanceOperationsSettings, logger);
+            UpdateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInstanceOperationsSettings, logger);
             DeleteInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInstanceOperationsSettings, logger);
             StopInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopInstanceOperationsSettings, logger);
             StartInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartInstanceOperationsSettings, logger);
@@ -1218,6 +1480,9 @@ namespace Google.Cloud.Run.V2
             _callCreateInstance = clientHelper.BuildApiCall<CreateInstanceRequest, lro::Operation>("CreateInstance", grpcClient.CreateInstanceAsync, grpcClient.CreateInstance, effectiveSettings.CreateInstanceSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<CreateInstanceRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/?$", request => request.Parent));
             Modify_ApiCall(ref _callCreateInstance);
             Modify_CreateInstanceApiCall(ref _callCreateInstance);
+            _callUpdateInstance = clientHelper.BuildApiCall<UpdateInstanceRequest, lro::Operation>("UpdateInstance", grpcClient.UpdateInstanceAsync, grpcClient.UpdateInstance, effectiveSettings.UpdateInstanceSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<UpdateInstanceRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)(?:/.*)?$", request => request.Instance?.Name));
+            Modify_ApiCall(ref _callUpdateInstance);
+            Modify_UpdateInstanceApiCall(ref _callUpdateInstance);
             _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, lro::Operation>("DeleteInstance", grpcClient.DeleteInstanceAsync, grpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<DeleteInstanceRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)(?:/.*)?$", request => request.Name));
             Modify_ApiCall(ref _callDeleteInstance);
             Modify_DeleteInstanceApiCall(ref _callDeleteInstance);
@@ -1233,12 +1498,23 @@ namespace Google.Cloud.Run.V2
             _callStartInstance = clientHelper.BuildApiCall<StartInstanceRequest, lro::Operation>("StartInstance", grpcClient.StartInstanceAsync, grpcClient.StartInstance, effectiveSettings.StartInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStartInstance);
             Modify_StartInstanceApiCall(ref _callStartInstance);
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callGetIamPolicy);
+            Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callSetIamPolicy);
+            Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
+            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callTestIamPermissions);
+            Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
         partial void Modify_CreateInstanceApiCall(ref gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> call);
+
+        partial void Modify_UpdateInstanceApiCall(ref gaxgrpc::ApiCall<UpdateInstanceRequest, lro::Operation> call);
 
         partial void Modify_DeleteInstanceApiCall(ref gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> call);
 
@@ -1250,6 +1526,12 @@ namespace Google.Cloud.Run.V2
 
         partial void Modify_StartInstanceApiCall(ref gaxgrpc::ApiCall<StartInstanceRequest, lro::Operation> call);
 
+        partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> call);
+
+        partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> call);
+
+        partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> call);
+
         partial void OnConstruction(Instances.InstancesClient grpcClient, InstancesSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Instances client</summary>
@@ -1260,6 +1542,8 @@ namespace Google.Cloud.Run.V2
 
         partial void Modify_CreateInstanceRequest(ref CreateInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_UpdateInstanceRequest(ref UpdateInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteInstanceRequest(ref DeleteInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetInstanceRequest(ref GetInstanceRequest request, ref gaxgrpc::CallSettings settings);
@@ -1269,6 +1553,12 @@ namespace Google.Cloud.Run.V2
         partial void Modify_StopInstanceRequest(ref StopInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_StartInstanceRequest(ref StartInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetIamPolicyRequest(ref gciv::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetIamPolicyRequest(ref gciv::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateInstance</c>.</summary>
         public override lro::OperationsClient CreateInstanceOperationsClient { get; }
@@ -1297,11 +1587,38 @@ namespace Google.Cloud.Run.V2
             return new lro::Operation<Instance, Instance>(await _callCreateInstance.Async(request, callSettings).ConfigureAwait(false), CreateInstanceOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>UpdateInstance</c>.</summary>
+        public override lro::OperationsClient UpdateInstanceOperationsClient { get; }
+
+        /// <summary>
+        /// Updates an Instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Instance, Instance> UpdateInstance(UpdateInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateInstanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, Instance>(_callUpdateInstance.Sync(request, callSettings), UpdateInstanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates an Instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Instance, Instance>> UpdateInstanceAsync(UpdateInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateInstanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, Instance>(await _callUpdateInstance.Async(request, callSettings).ConfigureAwait(false), UpdateInstanceOperationsClient);
+        }
+
         /// <summary>The long-running operations client for <c>DeleteInstance</c>.</summary>
         public override lro::OperationsClient DeleteInstanceOperationsClient { get; }
 
         /// <summary>
-        /// Deletes a Instance
+        /// Deletes an Instance
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1313,7 +1630,7 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Deletes a Instance
+        /// Deletes an Instance
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1325,7 +1642,7 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Gets a Instance
+        /// Gets an Instance
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1337,7 +1654,7 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Gets a Instance
+        /// Gets an Instance
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1424,6 +1741,86 @@ namespace Google.Cloud.Run.V2
         {
             Modify_StartInstanceRequest(ref request, ref callSettings);
             return new lro::Operation<Instance, Instance>(await _callStartInstance.Async(request, callSettings).ConfigureAwait(false), StartInstanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets the IAM Access Control policy currently in effect for the given
+        /// Instance. This result does not include any inherited policies.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override gciv::Policy GetIamPolicy(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the IAM Access Control policy currently in effect for the given
+        /// Instance. This result does not include any inherited policies.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Sets the IAM Access control policy for the specified Instance. Overwrites
+        /// any existing policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override gciv::Policy SetIamPolicy(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Sets the IAM Access control policy for the specified Instance. Overwrites
+        /// any existing policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified Instance.
+        /// 
+        /// There are no permissions required for making this API call.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override gciv::TestIamPermissionsResponse TestIamPermissions(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestIamPermissionsRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified Instance.
+        /// 
+        /// There are no permissions required for making this API call.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestIamPermissionsRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Async(request, callSettings);
         }
     }
 

@@ -27,21 +27,24 @@ namespace Google.Cloud.Run.V2 {
             "Cixnb29nbGUvY2xvdWQvcnVuL3YyL2V4ZWN1dGlvbl90ZW1wbGF0ZS5wcm90",
             "bxITZ29vZ2xlLmNsb3VkLnJ1bi52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
             "dmlvci5wcm90bxonZ29vZ2xlL2Nsb3VkL3J1bi92Mi90YXNrX3RlbXBsYXRl",
-            "LnByb3RvIvICChFFeGVjdXRpb25UZW1wbGF0ZRJCCgZsYWJlbHMYASADKAsy",
+            "LnByb3RvIt4DChFFeGVjdXRpb25UZW1wbGF0ZRJCCgZsYWJlbHMYASADKAsy",
             "Mi5nb29nbGUuY2xvdWQucnVuLnYyLkV4ZWN1dGlvblRlbXBsYXRlLkxhYmVs",
             "c0VudHJ5EkwKC2Fubm90YXRpb25zGAIgAygLMjcuZ29vZ2xlLmNsb3VkLnJ1",
             "bi52Mi5FeGVjdXRpb25UZW1wbGF0ZS5Bbm5vdGF0aW9uc0VudHJ5EhkKC3Bh",
             "cmFsbGVsaXNtGAMgASgFQgTiQQEBEhIKCnRhc2tfY291bnQYBCABKAUSOQoI",
             "dGVtcGxhdGUYBSABKAsyIS5nb29nbGUuY2xvdWQucnVuLnYyLlRhc2tUZW1w",
-            "bGF0ZUIE4kEBAhotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
-            "dWUYAiABKAk6AjgBGjIKEEFubm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgJOgI4AUJeChdjb20uZ29vZ2xlLmNsb3VkLnJ1bi52",
-            "MkIWRXhlY3V0aW9uVGVtcGxhdGVQcm90b1ABWiljbG91ZC5nb29nbGUuY29t",
-            "L2dvL3J1bi9hcGl2Mi9ydW5wYjtydW5wYmIGcHJvdG8z"));
+            "bGF0ZUIE4kEBAhIiCg9kZWxheV9leGVjdXRpb24YCCABKAhCBOJBAQFIAIgB",
+            "ARIUCgZjbGllbnQYCSABKAlCBOJBAQESHAoOY2xpZW50X3ZlcnNpb24YCiAB",
+            "KAlCBOJBAQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
+            "GAIgASgJOgI4ARoyChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoCToCOAFCEgoQX2RlbGF5X2V4ZWN1dGlvbkJeChdjb20u",
+            "Z29vZ2xlLmNsb3VkLnJ1bi52MkIWRXhlY3V0aW9uVGVtcGxhdGVQcm90b1AB",
+            "WiljbG91ZC5nb29nbGUuY29tL2dvL3J1bi9hcGl2Mi9ydW5wYjtydW5wYmIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Run.V2.TaskTemplateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ExecutionTemplate), global::Google.Cloud.Run.V2.ExecutionTemplate.Parser, new[]{ "Labels", "Annotations", "Parallelism", "TaskCount", "Template" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ExecutionTemplate), global::Google.Cloud.Run.V2.ExecutionTemplate.Parser, new[]{ "Labels", "Annotations", "Parallelism", "TaskCount", "Template", "DelayExecution", "Client", "ClientVersion" }, new[]{ "DelayExecution" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -60,6 +63,7 @@ namespace Google.Cloud.Run.V2 {
   {
     private static readonly pb::MessageParser<ExecutionTemplate> _parser = new pb::MessageParser<ExecutionTemplate>(() => new ExecutionTemplate());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ExecutionTemplate> Parser { get { return _parser; } }
@@ -87,11 +91,15 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExecutionTemplate(ExecutionTemplate other) : this() {
+      _hasBits0 = other._hasBits0;
       labels_ = other.labels_.Clone();
       annotations_ = other.annotations_.Clone();
       parallelism_ = other.parallelism_;
       taskCount_ = other.taskCount_;
       template_ = other.template_ != null ? other.template_.Clone() : null;
+      delayExecution_ = other.delayExecution_;
+      client_ = other.client_;
+      clientVersion_ = other.clientVersion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -203,6 +211,67 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "delay_execution" field.</summary>
+    public const int DelayExecutionFieldNumber = 8;
+    private readonly static bool DelayExecutionDefaultValue = false;
+
+    private bool delayExecution_;
+    /// <summary>
+    /// Optional. If true, the system will start the execution within the next 12
+    /// hours depending on available capacity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DelayExecution {
+      get { if ((_hasBits0 & 1) != 0) { return delayExecution_; } else { return DelayExecutionDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        delayExecution_ = value;
+      }
+    }
+    /// <summary>Gets whether the "delay_execution" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDelayExecution {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "delay_execution" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDelayExecution() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "client" field.</summary>
+    public const int ClientFieldNumber = 9;
+    private string client_ = "";
+    /// <summary>
+    /// Optional. Arbitrary identifier for the API client.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Client {
+      get { return client_; }
+      set {
+        client_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "client_version" field.</summary>
+    public const int ClientVersionFieldNumber = 10;
+    private string clientVersion_ = "";
+    /// <summary>
+    /// Optional. Arbitrary version identifier for the API client.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ClientVersion {
+      get { return clientVersion_; }
+      set {
+        clientVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -223,6 +292,9 @@ namespace Google.Cloud.Run.V2 {
       if (Parallelism != other.Parallelism) return false;
       if (TaskCount != other.TaskCount) return false;
       if (!object.Equals(Template, other.Template)) return false;
+      if (DelayExecution != other.DelayExecution) return false;
+      if (Client != other.Client) return false;
+      if (ClientVersion != other.ClientVersion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -235,6 +307,9 @@ namespace Google.Cloud.Run.V2 {
       if (Parallelism != 0) hash ^= Parallelism.GetHashCode();
       if (TaskCount != 0) hash ^= TaskCount.GetHashCode();
       if (template_ != null) hash ^= Template.GetHashCode();
+      if (HasDelayExecution) hash ^= DelayExecution.GetHashCode();
+      if (Client.Length != 0) hash ^= Client.GetHashCode();
+      if (ClientVersion.Length != 0) hash ^= ClientVersion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -267,6 +342,18 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(42);
         output.WriteMessage(Template);
       }
+      if (HasDelayExecution) {
+        output.WriteRawTag(64);
+        output.WriteBool(DelayExecution);
+      }
+      if (Client.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(Client);
+      }
+      if (ClientVersion.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(ClientVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -291,6 +378,18 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(42);
         output.WriteMessage(Template);
       }
+      if (HasDelayExecution) {
+        output.WriteRawTag(64);
+        output.WriteBool(DelayExecution);
+      }
+      if (Client.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(Client);
+      }
+      if (ClientVersion.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(ClientVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -311,6 +410,15 @@ namespace Google.Cloud.Run.V2 {
       }
       if (template_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Template);
+      }
+      if (HasDelayExecution) {
+        size += 1 + 1;
+      }
+      if (Client.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Client);
+      }
+      if (ClientVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClientVersion);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -337,6 +445,15 @@ namespace Google.Cloud.Run.V2 {
           Template = new global::Google.Cloud.Run.V2.TaskTemplate();
         }
         Template.MergeFrom(other.Template);
+      }
+      if (other.HasDelayExecution) {
+        DelayExecution = other.DelayExecution;
+      }
+      if (other.Client.Length != 0) {
+        Client = other.Client;
+      }
+      if (other.ClientVersion.Length != 0) {
+        ClientVersion = other.ClientVersion;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -380,6 +497,18 @@ namespace Google.Cloud.Run.V2 {
             input.ReadMessage(Template);
             break;
           }
+          case 64: {
+            DelayExecution = input.ReadBool();
+            break;
+          }
+          case 74: {
+            Client = input.ReadString();
+            break;
+          }
+          case 82: {
+            ClientVersion = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -420,6 +549,18 @@ namespace Google.Cloud.Run.V2 {
               Template = new global::Google.Cloud.Run.V2.TaskTemplate();
             }
             input.ReadMessage(Template);
+            break;
+          }
+          case 64: {
+            DelayExecution = input.ReadBool();
+            break;
+          }
+          case 74: {
+            Client = input.ReadString();
+            break;
+          }
+          case 82: {
+            ClientVersion = input.ReadString();
             break;
           }
         }

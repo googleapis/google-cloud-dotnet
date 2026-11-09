@@ -26,7 +26,7 @@ namespace Google.Cloud.Run.V2 {
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvcnVuL3YyL2NvbmRpdGlvbi5wcm90bxITZ29vZ2xl",
             "LmNsb3VkLnJ1bi52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
-            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLlDAoJQ29uZGl0",
+            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byL9DgoJQ29uZGl0",
             "aW9uEgwKBHR5cGUYASABKAkSMwoFc3RhdGUYAiABKA4yJC5nb29nbGUuY2xv",
             "dWQucnVuLnYyLkNvbmRpdGlvbi5TdGF0ZRIPCgdtZXNzYWdlGAMgASgJEjgK",
             "FGxhc3RfdHJhbnNpdGlvbl90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVm",
@@ -36,40 +36,46 @@ namespace Google.Cloud.Run.V2 {
             "A0gAEk4KD3JldmlzaW9uX3JlYXNvbhgJIAEoDjItLmdvb2dsZS5jbG91ZC5y",
             "dW4udjIuQ29uZGl0aW9uLlJldmlzaW9uUmVhc29uQgTiQQEDSAASUAoQZXhl",
             "Y3V0aW9uX3JlYXNvbhgLIAEoDjIuLmdvb2dsZS5jbG91ZC5ydW4udjIuQ29u",
-            "ZGl0aW9uLkV4ZWN1dGlvblJlYXNvbkIE4kEBA0gAIn8KBVN0YXRlEhUKEVNU",
-            "QVRFX1VOU1BFQ0lGSUVEEAASFQoRQ09ORElUSU9OX1BFTkRJTkcQARIZChVD",
-            "T05ESVRJT05fUkVDT05DSUxJTkcQAhIUChBDT05ESVRJT05fRkFJTEVEEAMS",
-            "FwoTQ09ORElUSU9OX1NVQ0NFRURFRBAEIkYKCFNldmVyaXR5EhgKFFNFVkVS",
-            "SVRZX1VOU1BFQ0lGSUVEEAASCQoFRVJST1IQARILCgdXQVJOSU5HEAISCAoE",
-            "SU5GTxADIs0DCgxDb21tb25SZWFzb24SGwoXQ09NTU9OX1JFQVNPTl9VTkRF",
-            "RklORUQQABILCgdVTktOT1dOEAESEwoPUkVWSVNJT05fRkFJTEVEEAMSHgoa",
-            "UFJPR1JFU1NfREVBRExJTkVfRVhDRUVERUQQBBIVChFDT05UQUlORVJfTUlT",
-            "U0lORxAGEh8KG0NPTlRBSU5FUl9QRVJNSVNTSU9OX0RFTklFRBAHEiAKHENP",
-            "TlRBSU5FUl9JTUFHRV9VTkFVVEhPUklaRUQQCBIuCipDT05UQUlORVJfSU1B",
-            "R0VfQVVUSE9SSVpBVElPTl9DSEVDS19GQUlMRUQQCRIkCiBFTkNSWVBUSU9O",
-            "X0tFWV9QRVJNSVNTSU9OX0RFTklFRBAKEh8KG0VOQ1JZUFRJT05fS0VZX0NI",
-            "RUNLX0ZBSUxFRBALEh8KG1NFQ1JFVFNfQUNDRVNTX0NIRUNLX0ZBSUxFRBAM",
-            "EhkKFVdBSVRJTkdfRk9SX09QRVJBVElPThANEhMKD0lNTUVESUFURV9SRVRS",
-            "WRAOEhMKD1BPU1RQT05FRF9SRVRSWRAPEgwKCElOVEVSTkFMEBASGQoVVlBD",
-            "X05FVFdPUktfTk9UX0ZPVU5EEBEiygIKDlJldmlzaW9uUmVhc29uEh0KGVJF",
-            "VklTSU9OX1JFQVNPTl9VTkRFRklORUQQABILCgdQRU5ESU5HEAESCwoHUkVT",
-            "RVJWRRACEgsKB1JFVElSRUQQAxIMCghSRVRJUklORxAEEg4KClJFQ1JFQVRJ",
-            "TkcQBRIgChxIRUFMVEhfQ0hFQ0tfQ09OVEFJTkVSX0VSUk9SEAYSJAogQ1VT",
-            "VE9NSVpFRF9QQVRIX1JFU1BPTlNFX1BFTkRJTkcQBxIhCh1NSU5fSU5TVEFO",
-            "Q0VTX05PVF9QUk9WSVNJT05FRBAIEiEKHUFDVElWRV9SRVZJU0lPTl9MSU1J",
-            "VF9SRUFDSEVEEAkSEQoNTk9fREVQTE9ZTUVOVBAKEhgKFEhFQUxUSF9DSEVD",
-            "S19TS0lQUEVEEAsSGQoVTUlOX0lOU1RBTkNFU19XQVJNSU5HEAwitgEKD0V4",
-            "ZWN1dGlvblJlYXNvbhIeChpFWEVDVVRJT05fUkVBU09OX1VOREVGSU5FRBAA",
-            "EiQKIEpPQl9TVEFUVVNfU0VSVklDRV9QT0xMSU5HX0VSUk9SEAESFgoSTk9O",
-            "X1pFUk9fRVhJVF9DT0RFEAISDQoJQ0FOQ0VMTEVEEAMSDgoKQ0FOQ0VMTElO",
-            "RxAEEgsKB0RFTEVURUQQBRIZChVERUxBWUVEX1NUQVJUX1BFTkRJTkcQBkIJ",
-            "CgdyZWFzb25zQlYKF2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQg5Db25kaXRp",
-            "b25Qcm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL3J1bi9hcGl2Mi9ydW5w",
-            "YjtydW5wYmIGcHJvdG8z"));
+            "ZGl0aW9uLkV4ZWN1dGlvblJlYXNvbkIE4kEBA0gAEk4KD2luc3RhbmNlX3Jl",
+            "YXNvbhgMIAEoDjItLmdvb2dsZS5jbG91ZC5ydW4udjIuQ29uZGl0aW9uLklu",
+            "c3RhbmNlUmVhc29uQgTiQQEDSAAifwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVD",
+            "SUZJRUQQABIVChFDT05ESVRJT05fUEVORElORxABEhkKFUNPTkRJVElPTl9S",
+            "RUNPTkNJTElORxACEhQKEENPTkRJVElPTl9GQUlMRUQQAxIXChNDT05ESVRJ",
+            "T05fU1VDQ0VFREVEEAQiRgoIU2V2ZXJpdHkSGAoUU0VWRVJJVFlfVU5TUEVD",
+            "SUZJRUQQABIJCgVFUlJPUhABEgsKB1dBUk5JTkcQAhIICgRJTkZPEAMizQMK",
+            "DENvbW1vblJlYXNvbhIbChdDT01NT05fUkVBU09OX1VOREVGSU5FRBAAEgsK",
+            "B1VOS05PV04QARITCg9SRVZJU0lPTl9GQUlMRUQQAxIeChpQUk9HUkVTU19E",
+            "RUFETElORV9FWENFRURFRBAEEhUKEUNPTlRBSU5FUl9NSVNTSU5HEAYSHwob",
+            "Q09OVEFJTkVSX1BFUk1JU1NJT05fREVOSUVEEAcSIAocQ09OVEFJTkVSX0lN",
+            "QUdFX1VOQVVUSE9SSVpFRBAIEi4KKkNPTlRBSU5FUl9JTUFHRV9BVVRIT1JJ",
+            "WkFUSU9OX0NIRUNLX0ZBSUxFRBAJEiQKIEVOQ1JZUFRJT05fS0VZX1BFUk1J",
+            "U1NJT05fREVOSUVEEAoSHwobRU5DUllQVElPTl9LRVlfQ0hFQ0tfRkFJTEVE",
+            "EAsSHwobU0VDUkVUU19BQ0NFU1NfQ0hFQ0tfRkFJTEVEEAwSGQoVV0FJVElO",
+            "R19GT1JfT1BFUkFUSU9OEA0SEwoPSU1NRURJQVRFX1JFVFJZEA4SEwoPUE9T",
+            "VFBPTkVEX1JFVFJZEA8SDAoISU5URVJOQUwQEBIZChVWUENfTkVUV09SS19O",
+            "T1RfRk9VTkQQESLKAgoOUmV2aXNpb25SZWFzb24SHQoZUkVWSVNJT05fUkVB",
+            "U09OX1VOREVGSU5FRBAAEgsKB1BFTkRJTkcQARILCgdSRVNFUlZFEAISCwoH",
+            "UkVUSVJFRBADEgwKCFJFVElSSU5HEAQSDgoKUkVDUkVBVElORxAFEiAKHEhF",
+            "QUxUSF9DSEVDS19DT05UQUlORVJfRVJST1IQBhIkCiBDVVNUT01JWkVEX1BB",
+            "VEhfUkVTUE9OU0VfUEVORElORxAHEiEKHU1JTl9JTlNUQU5DRVNfTk9UX1BS",
+            "T1ZJU0lPTkVEEAgSIQodQUNUSVZFX1JFVklTSU9OX0xJTUlUX1JFQUNIRUQQ",
+            "CRIRCg1OT19ERVBMT1lNRU5UEAoSGAoUSEVBTFRIX0NIRUNLX1NLSVBQRUQQ",
+            "CxIZChVNSU5fSU5TVEFOQ0VTX1dBUk1JTkcQDCLmAQoPRXhlY3V0aW9uUmVh",
+            "c29uEh4KGkVYRUNVVElPTl9SRUFTT05fVU5ERUZJTkVEEAASJAogSk9CX1NU",
+            "QVRVU19TRVJWSUNFX1BPTExJTkdfRVJST1IQARIWChJOT05fWkVST19FWElU",
+            "X0NPREUQAhINCglDQU5DRUxMRUQQAxIOCgpDQU5DRUxMSU5HEAQSCwoHREVM",
+            "RVRFRBAFEhkKFURFTEFZRURfU1RBUlRfUEVORElORxAGEi4KKkRFTEFZRURf",
+            "RVhFQ1VUSU9OX0VYQ0VFRElOR19EVVJBVElPTl9MSU1JVBAHIpUBCg5JbnN0",
+            "YW5jZVJlYXNvbhIfChtJTlNUQU5DRV9SRUFTT05fVU5TUEVDSUZJRUQQABIU",
+            "ChBJTlNUQU5DRV9ERUxFVEVEEAESFAoQSU5TVEFOQ0VfU1RPUFBFRBACEhUK",
+            "EUlOU1RBTkNFX1NUT1BQSU5HEAMSHwobSU5TVEFOQ0VfTk9OX1pFUk9fRVhJ",
+            "VF9DT0RFEARCCQoHcmVhc29uc0JWChdjb20uZ29vZ2xlLmNsb3VkLnJ1bi52",
+            "MkIOQ29uZGl0aW9uUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9ydW4v",
+            "YXBpdjIvcnVucGI7cnVucGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Condition), global::Google.Cloud.Run.V2.Condition.Parser, new[]{ "Type", "State", "Message", "LastTransitionTime", "Severity", "Reason", "RevisionReason", "ExecutionReason" }, new[]{ "Reasons" }, new[]{ typeof(global::Google.Cloud.Run.V2.Condition.Types.State), typeof(global::Google.Cloud.Run.V2.Condition.Types.Severity), typeof(global::Google.Cloud.Run.V2.Condition.Types.CommonReason), typeof(global::Google.Cloud.Run.V2.Condition.Types.RevisionReason), typeof(global::Google.Cloud.Run.V2.Condition.Types.ExecutionReason) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Condition), global::Google.Cloud.Run.V2.Condition.Parser, new[]{ "Type", "State", "Message", "LastTransitionTime", "Severity", "Reason", "RevisionReason", "ExecutionReason", "InstanceReason" }, new[]{ "Reasons" }, new[]{ typeof(global::Google.Cloud.Run.V2.Condition.Types.State), typeof(global::Google.Cloud.Run.V2.Condition.Types.Severity), typeof(global::Google.Cloud.Run.V2.Condition.Types.CommonReason), typeof(global::Google.Cloud.Run.V2.Condition.Types.RevisionReason), typeof(global::Google.Cloud.Run.V2.Condition.Types.ExecutionReason), typeof(global::Google.Cloud.Run.V2.Condition.Types.InstanceReason) }, null, null)
           }));
     }
     #endregion
@@ -128,6 +134,9 @@ namespace Google.Cloud.Run.V2 {
           break;
         case ReasonsOneofCase.ExecutionReason:
           ExecutionReason = other.ExecutionReason;
+          break;
+        case ReasonsOneofCase.InstanceReason:
+          InstanceReason = other.InstanceReason;
           break;
       }
 
@@ -306,6 +315,35 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "instance_reason" field.</summary>
+    public const int InstanceReasonFieldNumber = 12;
+    /// <summary>
+    /// Output only. A reason for the instance condition.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.Condition.Types.InstanceReason InstanceReason {
+      get { return HasInstanceReason ? (global::Google.Cloud.Run.V2.Condition.Types.InstanceReason) reasons_ : global::Google.Cloud.Run.V2.Condition.Types.InstanceReason.Unspecified; }
+      set {
+        reasons_ = value;
+        reasonsCase_ = ReasonsOneofCase.InstanceReason;
+      }
+    }
+    /// <summary>Gets whether the "instance_reason" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInstanceReason {
+      get { return reasonsCase_ == ReasonsOneofCase.InstanceReason; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "instance_reason" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInstanceReason() {
+      if (HasInstanceReason) {
+        ClearReasons();
+      }
+    }
+
     private object reasons_;
     /// <summary>Enum of possible cases for the "reasons" oneof.</summary>
     public enum ReasonsOneofCase {
@@ -313,6 +351,7 @@ namespace Google.Cloud.Run.V2 {
       Reason = 6,
       RevisionReason = 9,
       ExecutionReason = 11,
+      InstanceReason = 12,
     }
     private ReasonsOneofCase reasonsCase_ = ReasonsOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -351,6 +390,7 @@ namespace Google.Cloud.Run.V2 {
       if (Reason != other.Reason) return false;
       if (RevisionReason != other.RevisionReason) return false;
       if (ExecutionReason != other.ExecutionReason) return false;
+      if (InstanceReason != other.InstanceReason) return false;
       if (ReasonsCase != other.ReasonsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -367,6 +407,7 @@ namespace Google.Cloud.Run.V2 {
       if (HasReason) hash ^= Reason.GetHashCode();
       if (HasRevisionReason) hash ^= RevisionReason.GetHashCode();
       if (HasExecutionReason) hash ^= ExecutionReason.GetHashCode();
+      if (HasInstanceReason) hash ^= InstanceReason.GetHashCode();
       hash ^= (int) reasonsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -418,6 +459,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(88);
         output.WriteEnum((int) ExecutionReason);
       }
+      if (HasInstanceReason) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) InstanceReason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -460,6 +505,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(88);
         output.WriteEnum((int) ExecutionReason);
       }
+      if (HasInstanceReason) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) InstanceReason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -493,6 +542,9 @@ namespace Google.Cloud.Run.V2 {
       }
       if (HasExecutionReason) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExecutionReason);
+      }
+      if (HasInstanceReason) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) InstanceReason);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -533,6 +585,9 @@ namespace Google.Cloud.Run.V2 {
           break;
         case ReasonsOneofCase.ExecutionReason:
           ExecutionReason = other.ExecutionReason;
+          break;
+        case ReasonsOneofCase.InstanceReason:
+          InstanceReason = other.InstanceReason;
           break;
       }
 
@@ -593,6 +648,11 @@ namespace Google.Cloud.Run.V2 {
             reasonsCase_ = ReasonsOneofCase.ExecutionReason;
             break;
           }
+          case 96: {
+            reasons_ = input.ReadEnum();
+            reasonsCase_ = ReasonsOneofCase.InstanceReason;
+            break;
+          }
         }
       }
     #endif
@@ -648,6 +708,11 @@ namespace Google.Cloud.Run.V2 {
           case 88: {
             reasons_ = input.ReadEnum();
             reasonsCase_ = ReasonsOneofCase.ExecutionReason;
+            break;
+          }
+          case 96: {
+            reasons_ = input.ReadEnum();
+            reasonsCase_ = ReasonsOneofCase.InstanceReason;
             break;
           }
         }
@@ -876,6 +941,36 @@ namespace Google.Cloud.Run.V2 {
         /// A delayed execution is waiting for a start time.
         /// </summary>
         [pbr::OriginalName("DELAYED_START_PENDING")] DelayedStartPending = 6,
+        /// <summary>
+        /// A delayed execution exceeded the maximum runtime duration.
+        /// </summary>
+        [pbr::OriginalName("DELAYED_EXECUTION_EXCEEDING_DURATION_LIMIT")] DelayedExecutionExceedingDurationLimit = 7,
+      }
+
+      /// <summary>
+      /// Reasons specific to Instance resource.
+      /// </summary>
+      public enum InstanceReason {
+        /// <summary>
+        /// Default value.
+        /// </summary>
+        [pbr::OriginalName("INSTANCE_REASON_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Instance deleted.
+        /// </summary>
+        [pbr::OriginalName("INSTANCE_DELETED")] InstanceDeleted = 1,
+        /// <summary>
+        /// Instance stopped.
+        /// </summary>
+        [pbr::OriginalName("INSTANCE_STOPPED")] InstanceStopped = 2,
+        /// <summary>
+        /// Instance stopping.
+        /// </summary>
+        [pbr::OriginalName("INSTANCE_STOPPING")] InstanceStopping = 3,
+        /// <summary>
+        /// Instance exited with a non-zero exit code.
+        /// </summary>
+        [pbr::OriginalName("INSTANCE_NON_ZERO_EXIT_CODE")] InstanceNonZeroExitCode = 4,
       }
 
     }

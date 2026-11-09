@@ -39,66 +39,103 @@ namespace Google.Cloud.Run.V2 {
             "bhIbCgt1c2VfZGVmYXVsdBgBIAEoCEIE4kEBAUgAEkQKBnBvbGljeRgDIAEo",
             "CUIy4kEBAfpBKwopYmluYXJ5YXV0aG9yaXphdGlvbi5nb29nbGVhcGlzLmNv",
             "bS9Qb2xpY3lIABImChhicmVha2dsYXNzX2p1c3RpZmljYXRpb24YAiABKAlC",
-            "BOJBAQFCEQoPYmluYXV0aHpfbWV0aG9kIlUKD1JldmlzaW9uU2NhbGluZxIg",
-            "ChJtaW5faW5zdGFuY2VfY291bnQYASABKAVCBOJBAQESIAoSbWF4X2luc3Rh",
-            "bmNlX2NvdW50GAIgASgFQgTiQQEBIkUKC1NlcnZpY2VNZXNoEjYKBG1lc2gY",
-            "ASABKAlCKPpBJQojbmV0d29ya3NlcnZpY2VzLmdvb2dsZWFwaXMuY29tL01l",
-            "c2girQIKDlNlcnZpY2VTY2FsaW5nEiAKEm1pbl9pbnN0YW5jZV9jb3VudBgB",
-            "IAEoBUIE4kEBARJLCgxzY2FsaW5nX21vZGUYAyABKA4yLy5nb29nbGUuY2xv",
-            "dWQucnVuLnYyLlNlcnZpY2VTY2FsaW5nLlNjYWxpbmdNb2RlQgTiQQEBEiAK",
-            "Em1heF9pbnN0YW5jZV9jb3VudBgEIAEoBUIE4kEBARIoChVtYW51YWxfaW5z",
-            "dGFuY2VfY291bnQYBiABKAVCBOJBAQFIAIgBASJGCgtTY2FsaW5nTW9kZRIc",
-            "ChhTQ0FMSU5HX01PREVfVU5TUEVDSUZJRUQQABINCglBVVRPTUFUSUMQARIK",
-            "CgZNQU5VQUwQAkIYChZfbWFudWFsX2luc3RhbmNlX2NvdW50IlcKEVdvcmtl",
-            "clBvb2xTY2FsaW5nEigKFW1hbnVhbF9pbnN0YW5jZV9jb3VudBgGIAEoBUIE",
-            "4kEBAUgAiAEBQhgKFl9tYW51YWxfaW5zdGFuY2VfY291bnQiKQoMTm9kZVNl",
-            "bGVjdG9yEhkKC2FjY2VsZXJhdG9yGAEgASgJQgTiQQECIt4DCgtCdWlsZENv",
-            "bmZpZxI2CgRuYW1lGAEgASgJQijiQQED+kEhCh9jbG91ZGJ1aWxkLmdvb2ds",
-            "ZWFwaXMuY29tL0J1aWxkEhcKD3NvdXJjZV9sb2NhdGlvbhgCIAEoCRIdCg9m",
-            "dW5jdGlvbl90YXJnZXQYAyABKAlCBOJBAQESFwoJaW1hZ2VfdXJpGAQgASgJ",
-            "QgTiQQEBEhgKCmJhc2VfaW1hZ2UYBSABKAlCBOJBAQESJgoYZW5hYmxlX2F1",
-            "dG9tYXRpY191cGRhdGVzGAYgASgIQgTiQQEBEkcKC3dvcmtlcl9wb29sGAcg",
-            "ASgJQjLiQQEB+kErCiljbG91ZGJ1aWxkLmdvb2dsZWFwaXMuY29tL0J1aWxk",
-            "V29ya2VyUG9vbBJfChVlbnZpcm9ubWVudF92YXJpYWJsZXMYCCADKAsyOi5n",
-            "b29nbGUuY2xvdWQucnVuLnYyLkJ1aWxkQ29uZmlnLkVudmlyb25tZW50VmFy",
-            "aWFibGVzRW50cnlCBOJBAQESHQoPc2VydmljZV9hY2NvdW50GAkgASgJQgTi",
-            "QQEBGjsKGUVudmlyb25tZW50VmFyaWFibGVzRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgJOgI4ASqzAQoOSW5ncmVzc1RyYWZmaWMSHwobSU5H",
-            "UkVTU19UUkFGRklDX1VOU1BFQ0lGSUVEEAASFwoTSU5HUkVTU19UUkFGRklD",
-            "X0FMTBABEiEKHUlOR1JFU1NfVFJBRkZJQ19JTlRFUk5BTF9PTkxZEAISKgom",
-            "SU5HUkVTU19UUkFGRklDX0lOVEVSTkFMX0xPQURfQkFMQU5DRVIQAxIYChRJ",
-            "TkdSRVNTX1RSQUZGSUNfTk9ORRAEKn0KFEV4ZWN1dGlvbkVudmlyb25tZW50",
-            "EiUKIUVYRUNVVElPTl9FTlZJUk9OTUVOVF9VTlNQRUNJRklFRBAAEh4KGkVY",
-            "RUNVVElPTl9FTlZJUk9OTUVOVF9HRU4xEAESHgoaRVhFQ1VUSU9OX0VOVklS",
-            "T05NRU5UX0dFTjIQAipwCh1FbmNyeXB0aW9uS2V5UmV2b2NhdGlvbkFjdGlv",
-            "bhIwCixFTkNSWVBUSU9OX0tFWV9SRVZPQ0FUSU9OX0FDVElPTl9VTlNQRUNJ",
-            "RklFRBAAEg8KC1BSRVZFTlRfTkVXEAESDAoIU0hVVERPV04QAkL8AgoXY29t",
-            "Lmdvb2dsZS5jbG91ZC5ydW4udjJCE1ZlbmRvclNldHRpbmdzUHJvdG9QAVop",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9ydW4vYXBpdjIvcnVucGI7cnVucGLqQWMK",
-            "KWJpbmFyeWF1dGhvcml6YXRpb24uZ29vZ2xlYXBpcy5jb20vUG9saWN5Ehlw",
-            "cm9qZWN0cy97cHJvamVjdH0vcG9saWN5Ehtsb2NhdGlvbnMve2xvY2F0aW9u",
-            "fS9wb2xpY3nqQVwKI25ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9N",
-            "ZXNoEjVwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "bWVzaGVzL3ttZXNofepBWQofY2xvdWRidWlsZC5nb29nbGVhcGlzLmNvbS9C",
-            "dWlsZBI2cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
-            "L2J1aWxkcy97YnVpbGR9YgZwcm90bzM="));
+            "BOJBAQFCEQoPYmluYXV0aHpfbWV0aG9kItUBCg9SZXZpc2lvblNjYWxpbmcS",
+            "IAoSbWluX2luc3RhbmNlX2NvdW50GAEgASgFQgTiQQEBEiAKEm1heF9pbnN0",
+            "YW5jZV9jb3VudBgCIAEoBUIE4kEBARIiCg9jcHVfdXRpbGl6YXRpb24YBCAB",
+            "KAJCBOJBAQFIAIgBARIqChdjb25jdXJyZW5jeV91dGlsaXphdGlvbhgFIAEo",
+            "AkIE4kEBAUgBiAEBQhIKEF9jcHVfdXRpbGl6YXRpb25CGgoYX2NvbmN1cnJl",
+            "bmN5X3V0aWxpemF0aW9uIkUKC1NlcnZpY2VNZXNoEjYKBG1lc2gYASABKAlC",
+            "KPpBJQojbmV0d29ya3NlcnZpY2VzLmdvb2dsZWFwaXMuY29tL01lc2gidQoR",
+            "QW1iaWVudE5ldHdvcmtpbmcSGgoHZW5hYmxlZBgBIAEoCEIE4kEBAUgAiAEB",
+            "EjgKDWFtYmllbnRfc2NvcGUYAiABKA4yIS5nb29nbGUuY2xvdWQucnVuLnYy",
+            "LkFtYmllbnRTY29wZUIKCghfZW5hYmxlZCKtAgoOU2VydmljZVNjYWxpbmcS",
+            "IAoSbWluX2luc3RhbmNlX2NvdW50GAEgASgFQgTiQQEBEksKDHNjYWxpbmdf",
+            "bW9kZRgDIAEoDjIvLmdvb2dsZS5jbG91ZC5ydW4udjIuU2VydmljZVNjYWxp",
+            "bmcuU2NhbGluZ01vZGVCBOJBAQESIAoSbWF4X2luc3RhbmNlX2NvdW50GAQg",
+            "ASgFQgTiQQEBEigKFW1hbnVhbF9pbnN0YW5jZV9jb3VudBgGIAEoBUIE4kEB",
+            "AUgAiAEBIkYKC1NjYWxpbmdNb2RlEhwKGFNDQUxJTkdfTU9ERV9VTlNQRUNJ",
+            "RklFRBAAEg0KCUFVVE9NQVRJQxABEgoKBk1BTlVBTBACQhgKFl9tYW51YWxf",
+            "aW5zdGFuY2VfY291bnQiVwoRV29ya2VyUG9vbFNjYWxpbmcSKAoVbWFudWFs",
+            "X2luc3RhbmNlX2NvdW50GAYgASgFQgTiQQEBSACIAQFCGAoWX21hbnVhbF9p",
+            "bnN0YW5jZV9jb3VudCIpCgxOb2RlU2VsZWN0b3ISGQoLYWNjZWxlcmF0b3IY",
+            "ASABKAlCBOJBAQIi3gMKC0J1aWxkQ29uZmlnEjYKBG5hbWUYASABKAlCKOJB",
+            "AQP6QSEKH2Nsb3VkYnVpbGQuZ29vZ2xlYXBpcy5jb20vQnVpbGQSFwoPc291",
+            "cmNlX2xvY2F0aW9uGAIgASgJEh0KD2Z1bmN0aW9uX3RhcmdldBgDIAEoCUIE",
+            "4kEBARIXCglpbWFnZV91cmkYBCABKAlCBOJBAQESGAoKYmFzZV9pbWFnZRgF",
+            "IAEoCUIE4kEBARImChhlbmFibGVfYXV0b21hdGljX3VwZGF0ZXMYBiABKAhC",
+            "BOJBAQESRwoLd29ya2VyX3Bvb2wYByABKAlCMuJBAQH6QSsKKWNsb3VkYnVp",
+            "bGQuZ29vZ2xlYXBpcy5jb20vQnVpbGRXb3JrZXJQb29sEl8KFWVudmlyb25t",
+            "ZW50X3ZhcmlhYmxlcxgIIAMoCzI6Lmdvb2dsZS5jbG91ZC5ydW4udjIuQnVp",
+            "bGRDb25maWcuRW52aXJvbm1lbnRWYXJpYWJsZXNFbnRyeUIE4kEBARIdCg9z",
+            "ZXJ2aWNlX2FjY291bnQYCSABKAlCBOJBAQEaOwoZRW52aXJvbm1lbnRWYXJp",
+            "YWJsZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIsIB",
+            "ChZXb3JrbG9hZElkZW50aXR5Q29uZmlnEhYKCGlkZW50aXR5GAEgASgJQgTi",
+            "QQEBEj4KDWlkZW50aXR5X3R5cGUYAiABKA4yIS5nb29nbGUuY2xvdWQucnVu",
+            "LnYyLklkZW50aXR5VHlwZUIE4kEBARIvChxpZGVudGl0eV9jZXJ0aWZpY2F0",
+            "ZV9lbmFibGVkGAMgASgIQgTiQQEBSACIAQFCHwodX2lkZW50aXR5X2NlcnRp",
+            "ZmljYXRlX2VuYWJsZWQqYwoMQW1iaWVudFNjb3BlEh0KGUFNQklFTlRfU0NP",
+            "UEVfVU5TUEVDSUZJRUQQABIaChZBTUJJRU5UX1NDT1BFX1JFR0lPTkFMEAES",
+            "GAoUQU1CSUVOVF9TQ09QRV9HTE9CQUwQAiqzAQoOSW5ncmVzc1RyYWZmaWMS",
+            "HwobSU5HUkVTU19UUkFGRklDX1VOU1BFQ0lGSUVEEAASFwoTSU5HUkVTU19U",
+            "UkFGRklDX0FMTBABEiEKHUlOR1JFU1NfVFJBRkZJQ19JTlRFUk5BTF9PTkxZ",
+            "EAISKgomSU5HUkVTU19UUkFGRklDX0lOVEVSTkFMX0xPQURfQkFMQU5DRVIQ",
+            "AxIYChRJTkdSRVNTX1RSQUZGSUNfTk9ORRAEKn0KFEV4ZWN1dGlvbkVudmly",
+            "b25tZW50EiUKIUVYRUNVVElPTl9FTlZJUk9OTUVOVF9VTlNQRUNJRklFRBAA",
+            "Eh4KGkVYRUNVVElPTl9FTlZJUk9OTUVOVF9HRU4xEAESHgoaRVhFQ1VUSU9O",
+            "X0VOVklST05NRU5UX0dFTjIQAipwCh1FbmNyeXB0aW9uS2V5UmV2b2NhdGlv",
+            "bkFjdGlvbhIwCixFTkNSWVBUSU9OX0tFWV9SRVZPQ0FUSU9OX0FDVElPTl9V",
+            "TlNQRUNJRklFRBAAEg8KC1BSRVZFTlRfTkVXEAESDAoIU0hVVERPV04QAipy",
+            "CgxJZGVudGl0eVR5cGUSHQoZSURFTlRJVFlfVFlQRV9VTlNQRUNJRklFRBAA",
+            "EiEKHUlERU5USVRZX1RZUEVfU0VSVklDRV9BQ0NPVU5UEAESIAocSURFTlRJ",
+            "VFlfVFlQRV9BR0VOVF9JREVOVElUWRADKmwKDkZ1bmN0aW9uYWxUeXBlEh8K",
+            "G0ZVTkNUSU9OQUxfVFlQRV9VTlNQRUNJRklFRBAAEhkKFUZVTkNUSU9OQUxf",
+            "VFlQRV9BR0VOVBABEh4KGkZVTkNUSU9OQUxfVFlQRV9NQ1BfU0VSVkVSEAJC",
+            "/AIKF2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQhNWZW5kb3JTZXR0aW5nc1By",
+            "b3RvUAFaKWNsb3VkLmdvb2dsZS5jb20vZ28vcnVuL2FwaXYyL3J1bnBiO3J1",
+            "bnBi6kFjCiliaW5hcnlhdXRob3JpemF0aW9uLmdvb2dsZWFwaXMuY29tL1Bv",
+            "bGljeRIZcHJvamVjdHMve3Byb2plY3R9L3BvbGljeRIbbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vcG9saWN56kFcCiNuZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBp",
+            "cy5jb20vTWVzaBI1cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L21lc2hlcy97bWVzaH3qQVkKH2Nsb3VkYnVpbGQuZ29vZ2xlYXBp",
+            "cy5jb20vQnVpbGQSNnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9idWlsZHMve2J1aWxkfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Run.V2.IngressTraffic), typeof(global::Google.Cloud.Run.V2.ExecutionEnvironment), typeof(global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Run.V2.AmbientScope), typeof(global::Google.Cloud.Run.V2.IngressTraffic), typeof(global::Google.Cloud.Run.V2.ExecutionEnvironment), typeof(global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction), typeof(global::Google.Cloud.Run.V2.IdentityType), typeof(global::Google.Cloud.Run.V2.FunctionalType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.VpcAccess), global::Google.Cloud.Run.V2.VpcAccess.Parser, new[]{ "Connector", "Egress", "NetworkInterfaces" }, null, new[]{ typeof(global::Google.Cloud.Run.V2.VpcAccess.Types.VpcEgress) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.VpcAccess.Types.NetworkInterface), global::Google.Cloud.Run.V2.VpcAccess.Types.NetworkInterface.Parser, new[]{ "Network", "Subnetwork", "Tags" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.BinaryAuthorization), global::Google.Cloud.Run.V2.BinaryAuthorization.Parser, new[]{ "UseDefault", "Policy", "BreakglassJustification" }, new[]{ "BinauthzMethod" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionScaling), global::Google.Cloud.Run.V2.RevisionScaling.Parser, new[]{ "MinInstanceCount", "MaxInstanceCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionScaling), global::Google.Cloud.Run.V2.RevisionScaling.Parser, new[]{ "MinInstanceCount", "MaxInstanceCount", "CpuUtilization", "ConcurrencyUtilization" }, new[]{ "CpuUtilization", "ConcurrencyUtilization" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ServiceMesh), global::Google.Cloud.Run.V2.ServiceMesh.Parser, new[]{ "Mesh" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.AmbientNetworking), global::Google.Cloud.Run.V2.AmbientNetworking.Parser, new[]{ "Enabled", "AmbientScope" }, new[]{ "Enabled" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ServiceScaling), global::Google.Cloud.Run.V2.ServiceScaling.Parser, new[]{ "MinInstanceCount", "ScalingMode", "MaxInstanceCount", "ManualInstanceCount" }, new[]{ "ManualInstanceCount" }, new[]{ typeof(global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.WorkerPoolScaling), global::Google.Cloud.Run.V2.WorkerPoolScaling.Parser, new[]{ "ManualInstanceCount" }, new[]{ "ManualInstanceCount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.NodeSelector), global::Google.Cloud.Run.V2.NodeSelector.Parser, new[]{ "Accelerator" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.BuildConfig), global::Google.Cloud.Run.V2.BuildConfig.Parser, new[]{ "Name", "SourceLocation", "FunctionTarget", "ImageUri", "BaseImage", "EnableAutomaticUpdates", "WorkerPool", "EnvironmentVariables", "ServiceAccount" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.BuildConfig), global::Google.Cloud.Run.V2.BuildConfig.Parser, new[]{ "Name", "SourceLocation", "FunctionTarget", "ImageUri", "BaseImage", "EnableAutomaticUpdates", "WorkerPool", "EnvironmentVariables", "ServiceAccount" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.WorkloadIdentityConfig), global::Google.Cloud.Run.V2.WorkloadIdentityConfig.Parser, new[]{ "Identity", "IdentityType", "IdentityCertificateEnabled" }, new[]{ "IdentityCertificateEnabled" }, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Enums
+  /// <summary>
+  /// The ambient networking scopes of the instance.
+  /// </summary>
+  public enum AmbientScope {
+    /// <summary>
+    /// Unspecified.
+    /// </summary>
+    [pbr::OriginalName("AMBIENT_SCOPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Regional ambient networking.
+    /// </summary>
+    [pbr::OriginalName("AMBIENT_SCOPE_REGIONAL")] Regional = 1,
+    /// <summary>
+    /// Global ambient networking.
+    /// </summary>
+    [pbr::OriginalName("AMBIENT_SCOPE_GLOBAL")] Global = 2,
+  }
+
   /// <summary>
   /// Allowed ingress traffic for the Container.
   /// </summary>
@@ -159,6 +196,42 @@ namespace Google.Cloud.Run.V2 {
     /// Shuts down existing instances, and prevents creation of new ones.
     /// </summary>
     [pbr::OriginalName("SHUTDOWN")] Shutdown = 2,
+  }
+
+  /// <summary>
+  /// Identity type.
+  /// </summary>
+  public enum IdentityType {
+    /// <summary>
+    /// Unspecified
+    /// </summary>
+    [pbr::OriginalName("IDENTITY_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Service account identity.
+    /// </summary>
+    [pbr::OriginalName("IDENTITY_TYPE_SERVICE_ACCOUNT")] ServiceAccount = 1,
+    /// <summary>
+    /// Agent identity.
+    /// </summary>
+    [pbr::OriginalName("IDENTITY_TYPE_AGENT_IDENTITY")] AgentIdentity = 3,
+  }
+
+  /// <summary>
+  /// Represents the functional type.
+  /// </summary>
+  public enum FunctionalType {
+    /// <summary>
+    /// Specifies that the functional type is unspecified.
+    /// </summary>
+    [pbr::OriginalName("FUNCTIONAL_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Represents an AGENT functional type.
+    /// </summary>
+    [pbr::OriginalName("FUNCTIONAL_TYPE_AGENT")] Agent = 1,
+    /// <summary>
+    /// Represents an MCP_SERVER functional type.
+    /// </summary>
+    [pbr::OriginalName("FUNCTIONAL_TYPE_MCP_SERVER")] McpServer = 2,
   }
 
   #endregion
@@ -1112,6 +1185,7 @@ namespace Google.Cloud.Run.V2 {
   {
     private static readonly pb::MessageParser<RevisionScaling> _parser = new pb::MessageParser<RevisionScaling>(() => new RevisionScaling());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RevisionScaling> Parser { get { return _parser; } }
@@ -1139,8 +1213,11 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RevisionScaling(RevisionScaling other) : this() {
+      _hasBits0 = other._hasBits0;
       minInstanceCount_ = other.minInstanceCount_;
       maxInstanceCount_ = other.maxInstanceCount_;
+      cpuUtilization_ = other.cpuUtilization_;
+      concurrencyUtilization_ = other.concurrencyUtilization_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1184,6 +1261,72 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "cpu_utilization" field.</summary>
+    public const int CpuUtilizationFieldNumber = 4;
+    private readonly static float CpuUtilizationDefaultValue = 0F;
+
+    private float cpuUtilization_;
+    /// <summary>
+    /// Optional. Determines a threshold for CPU utilization before scaling begins.
+    /// Accepted values are between `0.1` and `0.90` (inclusive) or `0.0` to
+    /// disable CPU utilization as threshold for scaling. CPU and concurrency
+    /// scaling cannot both be disabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float CpuUtilization {
+      get { if ((_hasBits0 & 1) != 0) { return cpuUtilization_; } else { return CpuUtilizationDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        cpuUtilization_ = value;
+      }
+    }
+    /// <summary>Gets whether the "cpu_utilization" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCpuUtilization {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "cpu_utilization" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCpuUtilization() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "concurrency_utilization" field.</summary>
+    public const int ConcurrencyUtilizationFieldNumber = 5;
+    private readonly static float ConcurrencyUtilizationDefaultValue = 0F;
+
+    private float concurrencyUtilization_;
+    /// <summary>
+    /// Optional. Determines a threshold for concurrency utilization before scaling
+    /// begins. Accepted values are between `0.1` and `0.95` (inclusive) or `0.0`
+    /// to disable concurrency utilization as threshold for scaling. CPU and
+    /// concurrency scaling cannot both be disabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float ConcurrencyUtilization {
+      get { if ((_hasBits0 & 2) != 0) { return concurrencyUtilization_; } else { return ConcurrencyUtilizationDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        concurrencyUtilization_ = value;
+      }
+    }
+    /// <summary>Gets whether the "concurrency_utilization" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasConcurrencyUtilization {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "concurrency_utilization" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConcurrencyUtilization() {
+      _hasBits0 &= ~2;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1201,6 +1344,8 @@ namespace Google.Cloud.Run.V2 {
       }
       if (MinInstanceCount != other.MinInstanceCount) return false;
       if (MaxInstanceCount != other.MaxInstanceCount) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(CpuUtilization, other.CpuUtilization)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(ConcurrencyUtilization, other.ConcurrencyUtilization)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1210,6 +1355,8 @@ namespace Google.Cloud.Run.V2 {
       int hash = 1;
       if (MinInstanceCount != 0) hash ^= MinInstanceCount.GetHashCode();
       if (MaxInstanceCount != 0) hash ^= MaxInstanceCount.GetHashCode();
+      if (HasCpuUtilization) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(CpuUtilization);
+      if (HasConcurrencyUtilization) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(ConcurrencyUtilization);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1236,6 +1383,14 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(16);
         output.WriteInt32(MaxInstanceCount);
       }
+      if (HasCpuUtilization) {
+        output.WriteRawTag(37);
+        output.WriteFloat(CpuUtilization);
+      }
+      if (HasConcurrencyUtilization) {
+        output.WriteRawTag(45);
+        output.WriteFloat(ConcurrencyUtilization);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1254,6 +1409,14 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(16);
         output.WriteInt32(MaxInstanceCount);
       }
+      if (HasCpuUtilization) {
+        output.WriteRawTag(37);
+        output.WriteFloat(CpuUtilization);
+      }
+      if (HasConcurrencyUtilization) {
+        output.WriteRawTag(45);
+        output.WriteFloat(ConcurrencyUtilization);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1269,6 +1432,12 @@ namespace Google.Cloud.Run.V2 {
       }
       if (MaxInstanceCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxInstanceCount);
+      }
+      if (HasCpuUtilization) {
+        size += 1 + 4;
+      }
+      if (HasConcurrencyUtilization) {
+        size += 1 + 4;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1287,6 +1456,12 @@ namespace Google.Cloud.Run.V2 {
       }
       if (other.MaxInstanceCount != 0) {
         MaxInstanceCount = other.MaxInstanceCount;
+      }
+      if (other.HasCpuUtilization) {
+        CpuUtilization = other.CpuUtilization;
+      }
+      if (other.HasConcurrencyUtilization) {
+        ConcurrencyUtilization = other.ConcurrencyUtilization;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1315,6 +1490,14 @@ namespace Google.Cloud.Run.V2 {
             MaxInstanceCount = input.ReadInt32();
             break;
           }
+          case 37: {
+            CpuUtilization = input.ReadFloat();
+            break;
+          }
+          case 45: {
+            ConcurrencyUtilization = input.ReadFloat();
+            break;
+          }
         }
       }
     #endif
@@ -1340,6 +1523,14 @@ namespace Google.Cloud.Run.V2 {
           }
           case 16: {
             MaxInstanceCount = input.ReadInt32();
+            break;
+          }
+          case 37: {
+            CpuUtilization = input.ReadFloat();
+            break;
+          }
+          case 45: {
+            ConcurrencyUtilization = input.ReadFloat();
             break;
           }
         }
@@ -1557,6 +1748,267 @@ namespace Google.Cloud.Run.V2 {
   }
 
   /// <summary>
+  /// Configuration for Ambient Networking.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AmbientNetworking : pb::IMessage<AmbientNetworking>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AmbientNetworking> _parser = new pb::MessageParser<AmbientNetworking>(() => new AmbientNetworking());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AmbientNetworking> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AmbientNetworking() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AmbientNetworking(AmbientNetworking other) : this() {
+      _hasBits0 = other._hasBits0;
+      enabled_ = other.enabled_;
+      ambientScope_ = other.ambientScope_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AmbientNetworking Clone() {
+      return new AmbientNetworking(this);
+    }
+
+    /// <summary>Field number for the "enabled" field.</summary>
+    public const int EnabledFieldNumber = 1;
+    private readonly static bool EnabledDefaultValue = false;
+
+    private bool enabled_;
+    /// <summary>
+    /// Optional. Whether ambient networking is enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Enabled {
+      get { if ((_hasBits0 & 1) != 0) { return enabled_; } else { return EnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        enabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEnabled {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEnabled() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "ambient_scope" field.</summary>
+    public const int AmbientScopeFieldNumber = 2;
+    private global::Google.Cloud.Run.V2.AmbientScope ambientScope_ = global::Google.Cloud.Run.V2.AmbientScope.Unspecified;
+    /// <summary>
+    /// The ambient networking scope of the instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.AmbientScope AmbientScope {
+      get { return ambientScope_; }
+      set {
+        ambientScope_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AmbientNetworking);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AmbientNetworking other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Enabled != other.Enabled) return false;
+      if (AmbientScope != other.AmbientScope) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasEnabled) hash ^= Enabled.GetHashCode();
+      if (AmbientScope != global::Google.Cloud.Run.V2.AmbientScope.Unspecified) hash ^= AmbientScope.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasEnabled) {
+        output.WriteRawTag(8);
+        output.WriteBool(Enabled);
+      }
+      if (AmbientScope != global::Google.Cloud.Run.V2.AmbientScope.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) AmbientScope);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasEnabled) {
+        output.WriteRawTag(8);
+        output.WriteBool(Enabled);
+      }
+      if (AmbientScope != global::Google.Cloud.Run.V2.AmbientScope.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) AmbientScope);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasEnabled) {
+        size += 1 + 1;
+      }
+      if (AmbientScope != global::Google.Cloud.Run.V2.AmbientScope.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AmbientScope);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AmbientNetworking other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasEnabled) {
+        Enabled = other.Enabled;
+      }
+      if (other.AmbientScope != global::Google.Cloud.Run.V2.AmbientScope.Unspecified) {
+        AmbientScope = other.AmbientScope;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Enabled = input.ReadBool();
+            break;
+          }
+          case 16: {
+            AmbientScope = (global::Google.Cloud.Run.V2.AmbientScope) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Enabled = input.ReadBool();
+            break;
+          }
+          case 16: {
+            AmbientScope = (global::Google.Cloud.Run.V2.AmbientScope) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Scaling settings applied at the service level rather than
   /// at the revision level.
   /// </summary>
@@ -1576,7 +2028,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1950,7 +2402,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2170,7 +2622,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2375,7 +2827,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2512,8 +2964,8 @@ namespace Google.Cloud.Run.V2 {
     public const int WorkerPoolFieldNumber = 7;
     private string workerPool_ = "";
     /// <summary>
-    /// Optional. Name of the Cloud Build Custom Worker Pool that should be used to
-    /// build the Cloud Run function. The format of this field is
+    /// Optional. Name of the Cloud Build private pool that should be used to build
+    /// the Cloud Run function. The format of this field is
     /// `projects/{project}/locations/{region}/workerPools/{workerPool}` where
     /// `{project}` and `{region}` are the project id and region respectively where
     /// the worker pool is defined and `{workerPool}` is the short name of the
@@ -2873,6 +3325,310 @@ namespace Google.Cloud.Run.V2 {
           }
           case 74: {
             ServiceAccount = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Workload identity settings.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class WorkloadIdentityConfig : pb::IMessage<WorkloadIdentityConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<WorkloadIdentityConfig> _parser = new pb::MessageParser<WorkloadIdentityConfig>(() => new WorkloadIdentityConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<WorkloadIdentityConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WorkloadIdentityConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WorkloadIdentityConfig(WorkloadIdentityConfig other) : this() {
+      _hasBits0 = other._hasBits0;
+      identity_ = other.identity_;
+      identityType_ = other.identityType_;
+      identityCertificateEnabled_ = other.identityCertificateEnabled_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WorkloadIdentityConfig Clone() {
+      return new WorkloadIdentityConfig(this);
+    }
+
+    /// <summary>Field number for the "identity" field.</summary>
+    public const int IdentityFieldNumber = 1;
+    private string identity_ = "";
+    /// <summary>
+    /// Optional. The Revision's SPIFFE workload identity. Enables provisioning of
+    /// SPIFFE workload certificates.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Identity {
+      get { return identity_; }
+      set {
+        identity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "identity_type" field.</summary>
+    public const int IdentityTypeFieldNumber = 2;
+    private global::Google.Cloud.Run.V2.IdentityType identityType_ = global::Google.Cloud.Run.V2.IdentityType.Unspecified;
+    /// <summary>
+    /// Optional. The type of identity to use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.IdentityType IdentityType {
+      get { return identityType_; }
+      set {
+        identityType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "identity_certificate_enabled" field.</summary>
+    public const int IdentityCertificateEnabledFieldNumber = 3;
+    private readonly static bool IdentityCertificateEnabledDefaultValue = false;
+
+    private bool identityCertificateEnabled_;
+    /// <summary>
+    /// Optional. Controls whether an instance receives a MWLID certificate.
+    /// Corresponds to the intention of the original --[no-]identity-certificate
+    /// flag.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IdentityCertificateEnabled {
+      get { if ((_hasBits0 & 1) != 0) { return identityCertificateEnabled_; } else { return IdentityCertificateEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        identityCertificateEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "identity_certificate_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIdentityCertificateEnabled {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "identity_certificate_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIdentityCertificateEnabled() {
+      _hasBits0 &= ~1;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as WorkloadIdentityConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(WorkloadIdentityConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Identity != other.Identity) return false;
+      if (IdentityType != other.IdentityType) return false;
+      if (IdentityCertificateEnabled != other.IdentityCertificateEnabled) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Identity.Length != 0) hash ^= Identity.GetHashCode();
+      if (IdentityType != global::Google.Cloud.Run.V2.IdentityType.Unspecified) hash ^= IdentityType.GetHashCode();
+      if (HasIdentityCertificateEnabled) hash ^= IdentityCertificateEnabled.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Identity.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Identity);
+      }
+      if (IdentityType != global::Google.Cloud.Run.V2.IdentityType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) IdentityType);
+      }
+      if (HasIdentityCertificateEnabled) {
+        output.WriteRawTag(24);
+        output.WriteBool(IdentityCertificateEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Identity.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Identity);
+      }
+      if (IdentityType != global::Google.Cloud.Run.V2.IdentityType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) IdentityType);
+      }
+      if (HasIdentityCertificateEnabled) {
+        output.WriteRawTag(24);
+        output.WriteBool(IdentityCertificateEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Identity.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Identity);
+      }
+      if (IdentityType != global::Google.Cloud.Run.V2.IdentityType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IdentityType);
+      }
+      if (HasIdentityCertificateEnabled) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(WorkloadIdentityConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Identity.Length != 0) {
+        Identity = other.Identity;
+      }
+      if (other.IdentityType != global::Google.Cloud.Run.V2.IdentityType.Unspecified) {
+        IdentityType = other.IdentityType;
+      }
+      if (other.HasIdentityCertificateEnabled) {
+        IdentityCertificateEnabled = other.IdentityCertificateEnabled;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Identity = input.ReadString();
+            break;
+          }
+          case 16: {
+            IdentityType = (global::Google.Cloud.Run.V2.IdentityType) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            IdentityCertificateEnabled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Identity = input.ReadString();
+            break;
+          }
+          case 16: {
+            IdentityType = (global::Google.Cloud.Run.V2.IdentityType) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            IdentityCertificateEnabled = input.ReadBool();
             break;
           }
         }
