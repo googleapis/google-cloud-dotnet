@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.23.0, released 2026-11-09
+
+### New features
+
+- Add BEST_EFFORT Build Verification option
+
+### Documentation improvements
+
+- Deprecate `LEGACY_BUCKET` in enum `DefaultLogsBucketBehavior` is changed
+- Deprecate `private_service_connect` in message `.google.devtools.cloudbuild.v1.PrivatePoolV1Config`
+
 ## Version 2.22.0, released 2026-10-19
 
 ### New features
