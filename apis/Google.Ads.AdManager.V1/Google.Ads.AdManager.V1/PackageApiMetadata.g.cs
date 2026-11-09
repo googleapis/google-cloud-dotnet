@@ -48,6 +48,7 @@ namespace Google.Ads.AdManager.V1
             yield return AdBreakMessagesReflection.Descriptor;
             yield return AdBreakOptimizationTypeEnumReflection.Descriptor;
             yield return AdBreakServiceReflection.Descriptor;
+            yield return AdCategoryMessagesReflection.Descriptor;
             yield return AdReviewCenterAdEnumsReflection.Descriptor;
             yield return AdReviewCenterAdMessagesReflection.Descriptor;
             yield return AdReviewCenterAdServiceReflection.Descriptor;
@@ -251,6 +252,11 @@ namespace Google.Ads.AdManager.V1
             yield return PrivateMarketplaceEnumsReflection.Descriptor;
             yield return ProgrammaticBuyerMessagesReflection.Descriptor;
             yield return ProgrammaticBuyerServiceReflection.Descriptor;
+            yield return ProposalEnumsReflection.Descriptor;
+            yield return ProposalEnvironmentTypeEnumReflection.Descriptor;
+            yield return ProposalMessagesReflection.Descriptor;
+            yield return ProposalNegotiationStatusEnumReflection.Descriptor;
+            yield return ProposalServiceReflection.Descriptor;
             yield return ReachPartnerEnumReflection.Descriptor;
             yield return ReportDefinitionReflection.Descriptor;
             yield return ReportDeliveryReflection.Descriptor;
@@ -279,6 +285,7 @@ namespace Google.Ads.AdManager.V1
             yield return SlateServiceReflection.Descriptor;
             yield return SuggestedAdUnitMessagesReflection.Descriptor;
             yield return SuggestedAdUnitServiceReflection.Descriptor;
+            yield return SupplyPathTypeEnumReflection.Descriptor;
             yield return TargetPlatformEnumReflection.Descriptor;
             yield return TargetedVideoBumperTypeEnumReflection.Descriptor;
             yield return TargetingReflection.Descriptor;
@@ -313,6 +320,8 @@ namespace Google.Ads.AdManager.V1
             yield return YieldEnumsReflection.Descriptor;
             yield return YieldEnvironmentTypeEnumReflection.Descriptor;
             yield return YieldFormatEnumReflection.Descriptor;
+            yield return YieldGroupMessagesReflection.Descriptor;
+            yield return YieldGroupServiceReflection.Descriptor;
             yield return YieldPartnerMessagesReflection.Descriptor;
             yield return YieldPartnerServiceReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;

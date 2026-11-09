@@ -72,6 +72,18 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListCreativesResponse> __Marshaller_google_ads_admanager_v1_ListCreativesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListCreativesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.CreateCreativeRequest> __Marshaller_google_ads_admanager_v1_CreateCreativeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.CreateCreativeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.UpdateCreativeRequest> __Marshaller_google_ads_admanager_v1_UpdateCreativeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.UpdateCreativeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreateCreativesRequest> __Marshaller_google_ads_admanager_v1_BatchCreateCreativesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreateCreativesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreateCreativesResponse> __Marshaller_google_ads_admanager_v1_BatchCreateCreativesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreateCreativesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateCreativesRequest> __Marshaller_google_ads_admanager_v1_BatchUpdateCreativesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateCreativesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateCreativesResponse> __Marshaller_google_ads_admanager_v1_BatchUpdateCreativesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateCreativesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchActivateCreativesRequest> __Marshaller_google_ads_admanager_v1_BatchActivateCreativesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchActivateCreativesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchActivateCreativesResponse> __Marshaller_google_ads_admanager_v1_BatchActivateCreativesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchActivateCreativesResponse.Parser));
@@ -95,6 +107,38 @@ namespace Google.Ads.AdManager.V1 {
         "ListCreatives",
         __Marshaller_google_ads_admanager_v1_ListCreativesRequest,
         __Marshaller_google_ads_admanager_v1_ListCreativesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.CreateCreativeRequest, global::Google.Ads.AdManager.V1.Creative> __Method_CreateCreative = new grpc::Method<global::Google.Ads.AdManager.V1.CreateCreativeRequest, global::Google.Ads.AdManager.V1.Creative>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateCreative",
+        __Marshaller_google_ads_admanager_v1_CreateCreativeRequest,
+        __Marshaller_google_ads_admanager_v1_Creative);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.UpdateCreativeRequest, global::Google.Ads.AdManager.V1.Creative> __Method_UpdateCreative = new grpc::Method<global::Google.Ads.AdManager.V1.UpdateCreativeRequest, global::Google.Ads.AdManager.V1.Creative>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateCreative",
+        __Marshaller_google_ads_admanager_v1_UpdateCreativeRequest,
+        __Marshaller_google_ads_admanager_v1_Creative);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchCreateCreativesRequest, global::Google.Ads.AdManager.V1.BatchCreateCreativesResponse> __Method_BatchCreateCreatives = new grpc::Method<global::Google.Ads.AdManager.V1.BatchCreateCreativesRequest, global::Google.Ads.AdManager.V1.BatchCreateCreativesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchCreateCreatives",
+        __Marshaller_google_ads_admanager_v1_BatchCreateCreativesRequest,
+        __Marshaller_google_ads_admanager_v1_BatchCreateCreativesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateCreativesRequest, global::Google.Ads.AdManager.V1.BatchUpdateCreativesResponse> __Method_BatchUpdateCreatives = new grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateCreativesRequest, global::Google.Ads.AdManager.V1.BatchUpdateCreativesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchUpdateCreatives",
+        __Marshaller_google_ads_admanager_v1_BatchUpdateCreativesRequest,
+        __Marshaller_google_ads_admanager_v1_BatchUpdateCreativesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchActivateCreativesRequest, global::Google.Ads.AdManager.V1.BatchActivateCreativesResponse> __Method_BatchActivateCreatives = new grpc::Method<global::Google.Ads.AdManager.V1.BatchActivateCreativesRequest, global::Google.Ads.AdManager.V1.BatchActivateCreativesResponse>(
@@ -142,6 +186,54 @@ namespace Google.Ads.AdManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.ListCreativesResponse> ListCreatives(global::Google.Ads.AdManager.V1.ListCreativesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a `Creative` object.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.Creative> CreateCreative(global::Google.Ads.AdManager.V1.CreateCreativeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a `Creative` object.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.Creative> UpdateCreative(global::Google.Ads.AdManager.V1.UpdateCreativeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates `Creative` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchCreateCreativesResponse> BatchCreateCreatives(global::Google.Ads.AdManager.V1.BatchCreateCreativesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch updates `Creative` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchUpdateCreativesResponse> BatchUpdateCreatives(global::Google.Ads.AdManager.V1.BatchUpdateCreativesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -296,6 +388,198 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListCreatives, null, options, request);
       }
       /// <summary>
+      /// Creates a `Creative` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.Creative CreateCreative(global::Google.Ads.AdManager.V1.CreateCreativeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCreative(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a `Creative` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.Creative CreateCreative(global::Google.Ads.AdManager.V1.CreateCreativeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateCreative, null, options, request);
+      }
+      /// <summary>
+      /// Creates a `Creative` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.Creative> CreateCreativeAsync(global::Google.Ads.AdManager.V1.CreateCreativeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCreativeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a `Creative` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.Creative> CreateCreativeAsync(global::Google.Ads.AdManager.V1.CreateCreativeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateCreative, null, options, request);
+      }
+      /// <summary>
+      /// Updates a `Creative` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.Creative UpdateCreative(global::Google.Ads.AdManager.V1.UpdateCreativeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCreative(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a `Creative` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.Creative UpdateCreative(global::Google.Ads.AdManager.V1.UpdateCreativeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateCreative, null, options, request);
+      }
+      /// <summary>
+      /// Updates a `Creative` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.Creative> UpdateCreativeAsync(global::Google.Ads.AdManager.V1.UpdateCreativeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCreativeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a `Creative` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.Creative> UpdateCreativeAsync(global::Google.Ads.AdManager.V1.UpdateCreativeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateCreative, null, options, request);
+      }
+      /// <summary>
+      /// Creates `Creative` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchCreateCreativesResponse BatchCreateCreatives(global::Google.Ads.AdManager.V1.BatchCreateCreativesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateCreatives(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates `Creative` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchCreateCreativesResponse BatchCreateCreatives(global::Google.Ads.AdManager.V1.BatchCreateCreativesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchCreateCreatives, null, options, request);
+      }
+      /// <summary>
+      /// Creates `Creative` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchCreateCreativesResponse> BatchCreateCreativesAsync(global::Google.Ads.AdManager.V1.BatchCreateCreativesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateCreativesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates `Creative` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchCreateCreativesResponse> BatchCreateCreativesAsync(global::Google.Ads.AdManager.V1.BatchCreateCreativesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchCreateCreatives, null, options, request);
+      }
+      /// <summary>
+      /// Batch updates `Creative` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdateCreativesResponse BatchUpdateCreatives(global::Google.Ads.AdManager.V1.BatchUpdateCreativesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateCreatives(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch updates `Creative` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdateCreativesResponse BatchUpdateCreatives(global::Google.Ads.AdManager.V1.BatchUpdateCreativesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateCreatives, null, options, request);
+      }
+      /// <summary>
+      /// Batch updates `Creative` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdateCreativesResponse> BatchUpdateCreativesAsync(global::Google.Ads.AdManager.V1.BatchUpdateCreativesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateCreativesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch updates `Creative` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdateCreativesResponse> BatchUpdateCreativesAsync(global::Google.Ads.AdManager.V1.BatchUpdateCreativesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchUpdateCreatives, null, options, request);
+      }
+      /// <summary>
       /// Batch activates `Creative` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -407,6 +691,10 @@ namespace Google.Ads.AdManager.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetCreative, serviceImpl.GetCreative)
           .AddMethod(__Method_ListCreatives, serviceImpl.ListCreatives)
+          .AddMethod(__Method_CreateCreative, serviceImpl.CreateCreative)
+          .AddMethod(__Method_UpdateCreative, serviceImpl.UpdateCreative)
+          .AddMethod(__Method_BatchCreateCreatives, serviceImpl.BatchCreateCreatives)
+          .AddMethod(__Method_BatchUpdateCreatives, serviceImpl.BatchUpdateCreatives)
           .AddMethod(__Method_BatchActivateCreatives, serviceImpl.BatchActivateCreatives)
           .AddMethod(__Method_BatchDeactivateCreatives, serviceImpl.BatchDeactivateCreatives).Build();
     }
@@ -420,6 +708,10 @@ namespace Google.Ads.AdManager.V1 {
     {
       serviceBinder.AddMethod(__Method_GetCreative, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.GetCreativeRequest, global::Google.Ads.AdManager.V1.Creative>(serviceImpl.GetCreative));
       serviceBinder.AddMethod(__Method_ListCreatives, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.ListCreativesRequest, global::Google.Ads.AdManager.V1.ListCreativesResponse>(serviceImpl.ListCreatives));
+      serviceBinder.AddMethod(__Method_CreateCreative, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.CreateCreativeRequest, global::Google.Ads.AdManager.V1.Creative>(serviceImpl.CreateCreative));
+      serviceBinder.AddMethod(__Method_UpdateCreative, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.UpdateCreativeRequest, global::Google.Ads.AdManager.V1.Creative>(serviceImpl.UpdateCreative));
+      serviceBinder.AddMethod(__Method_BatchCreateCreatives, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchCreateCreativesRequest, global::Google.Ads.AdManager.V1.BatchCreateCreativesResponse>(serviceImpl.BatchCreateCreatives));
+      serviceBinder.AddMethod(__Method_BatchUpdateCreatives, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchUpdateCreativesRequest, global::Google.Ads.AdManager.V1.BatchUpdateCreativesResponse>(serviceImpl.BatchUpdateCreatives));
       serviceBinder.AddMethod(__Method_BatchActivateCreatives, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchActivateCreativesRequest, global::Google.Ads.AdManager.V1.BatchActivateCreativesResponse>(serviceImpl.BatchActivateCreatives));
       serviceBinder.AddMethod(__Method_BatchDeactivateCreatives, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchDeactivateCreativesRequest, global::Google.Ads.AdManager.V1.BatchDeactivateCreativesResponse>(serviceImpl.BatchDeactivateCreatives));
     }

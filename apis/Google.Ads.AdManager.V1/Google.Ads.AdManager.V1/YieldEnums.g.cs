@@ -34,18 +34,22 @@ namespace Google.Ads.AdManager.V1 {
             "YXR1cxIsCihZSUVMRF9QQVJUTkVSX1NFVFRJTkdfU1RBVFVTX1VOU1BFQ0lG",
             "SUVEEAASCgoGQUNUSVZFEAESDgoKREVQUkVDQVRFRBACIloKEVlpZWxkUGxh",
             "dGZvcm1FbnVtIkUKDVlpZWxkUGxhdGZvcm0SHgoaWUlFTERfUExBVEZPUk1f",
-            "VU5TUEVDSUZJRUQQABILCgdBTkRST0lEEAESBwoDSU9TEAJCwwEKG2NvbS5n",
-            "b29nbGUuYWRzLmFkbWFuYWdlci52MUIPWWllbGRFbnVtc1Byb3RvUAFaQGdv",
-            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFu",
-            "YWdlci92MTthZG1hbmFnZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5WMcoC",
-            "F0dvb2dsZVxBZHNcQWRNYW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFu",
-            "YWdlcjo6VjFiBnByb3RvMw=="));
+            "VU5TUEVDSUZJRUQQABILCgdBTkRST0lEEAESBwoDSU9TEAIijAEKFVlpZWxk",
+            "RW50aXR5U3RhdHVzRW51bSJzChFZaWVsZEVudGl0eVN0YXR1cxIjCh9ZSUVM",
+            "RF9FTlRJVFlfU1RBVFVTX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESEQoN",
+            "RVhQRVJJTUVOVElORxACEgwKCElOQUNUSVZFEAMSDAoIQVJDSElWRUQQBELD",
+            "AQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQg9ZaWVsZEVudW1zUHJv",
+            "dG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9h",
+            "ZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoCF0dvb2dsZS5BZHMuQWRNYW5h",
+            "Z2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFk",
+            "czo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.YieldIntegrationTypeEnum), global::Google.Ads.AdManager.V1.YieldIntegrationTypeEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.YieldIntegrationTypeEnum.Types.YieldIntegrationType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.YieldPartnerSettingStatusEnum), global::Google.Ads.AdManager.V1.YieldPartnerSettingStatusEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.YieldPartnerSettingStatusEnum.Types.YieldPartnerSettingStatus) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.YieldPlatformEnum), global::Google.Ads.AdManager.V1.YieldPlatformEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.YieldPlatformEnum.Types.YieldPlatform) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.YieldPlatformEnum), global::Google.Ads.AdManager.V1.YieldPlatformEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.YieldPlatformEnum.Types.YieldPlatform) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.YieldEntityStatusEnum), global::Google.Ads.AdManager.V1.YieldEntityStatusEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.YieldEntityStatusEnum.Types.YieldEntityStatus) }, null, null)
           }));
     }
     #endregion
@@ -626,6 +630,206 @@ namespace Google.Ads.AdManager.V1 {
         /// iOS platform.
         /// </summary>
         [pbr::OriginalName("IOS")] Ios = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Wrapper message for
+  /// [YieldEntityStatus][google.ads.admanager.v1.YieldEntityStatusEnum.YieldEntityStatus]
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class YieldEntityStatusEnum : pb::IMessage<YieldEntityStatusEnum>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<YieldEntityStatusEnum> _parser = new pb::MessageParser<YieldEntityStatusEnum>(() => new YieldEntityStatusEnum());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<YieldEntityStatusEnum> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.YieldEnumsReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public YieldEntityStatusEnum() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public YieldEntityStatusEnum(YieldEntityStatusEnum other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public YieldEntityStatusEnum Clone() {
+      return new YieldEntityStatusEnum(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as YieldEntityStatusEnum);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(YieldEntityStatusEnum other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(YieldEntityStatusEnum other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the YieldEntityStatusEnum message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Status of the yield group or ad source.
+      /// </summary>
+      public enum YieldEntityStatus {
+        /// <summary>
+        /// Default value. This value is unused.
+        /// </summary>
+        [pbr::OriginalName("YIELD_ENTITY_STATUS_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Indicates that the associated object is currently eligible to serve.
+        /// </summary>
+        [pbr::OriginalName("ACTIVE")] Active = 1,
+        /// <summary>
+        /// Indicates that the associated object is under experiment (only applicable
+        /// to yield groups).
+        /// </summary>
+        [pbr::OriginalName("EXPERIMENTING")] Experimenting = 2,
+        /// <summary>
+        /// Indicates that the associated object is not currently eligible to serve.
+        /// </summary>
+        [pbr::OriginalName("INACTIVE")] Inactive = 3,
+        /// <summary>
+        /// Indicates that the associated object is archived (deleted).
+        /// </summary>
+        [pbr::OriginalName("ARCHIVED")] Archived = 4,
       }
 
     }
