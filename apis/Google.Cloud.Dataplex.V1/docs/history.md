@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.16.0, released 2026-11-09
+
+### New features
+
+- Add `DataProductResult` message and `data_product_result` field to `DataDocumentationResult`
+
 ## Version 3.15.0, released 2026-05-29
 
 ### New features
