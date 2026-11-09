@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsConversationName = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]"),
                 Filter = "",
+                PendingWriteWaitSkipped = false,
             };
             // Make the request
             PagedEnumerable<ListMessagesResponse, StorageMessage> response = dataChatServiceClient.ListMessages(request);
