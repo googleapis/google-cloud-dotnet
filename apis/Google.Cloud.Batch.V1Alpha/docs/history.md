@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-alpha36, released 2026-11-09
+
+### New features
+
+- Update Batch proto documentation to support flex-mig disk overrides
+
+### Documentation improvements
+
+- Restrict `allowed_locations` region or zone values to the same region where the job is created
+
 ## Version 1.0.0-alpha35, released 2026-07-14
 
 ### New features
