@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.3.0, released 2026-11-09
+
+### New features
+
+- Add `CsamFilterSettings` and `csam_filter_settings` to `FilterConfig` for configuring CSAM detection enforcement and confidence thresholds
+
+### Documentation improvements
+
+- Update `filter_rule_settings` documentation comment in `FilterConfig`
+
 ## Version 1.2.0, released 2026-10-26
 
 ### New features
