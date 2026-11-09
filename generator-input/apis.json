@@ -5276,7 +5276,7 @@
     },
     {
       "id": "Google.Cloud.SaasPlatform.SaasServiceMgmt.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "App Lifecycle Manager",
       "productUrl": "https://docs.cloud.google.com/app-lifecycle-manager",
