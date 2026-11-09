@@ -3824,171 +3824,6 @@
             ]
         },
         {
-            "id": "Google.Shopping.Merchant.Accounts.V1Beta",
-            "currentVersion": "1.0.0-beta12",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-11-09T19:29:13.238522334Z",
-            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
-            "lastReleasedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
-            "apiPaths": [
-                "google/shopping/merchant/accounts/v1beta"
-            ],
-            "sourcePaths": [
-                "apis/Google.Shopping.Merchant.Accounts.V1Beta/Google.Shopping.Merchant.Accounts.V1Beta"
-            ]
-        },
-        {
-            "id": "Google.Shopping.Merchant.Conversions.V1Beta",
-            "currentVersion": "1.0.0-beta04",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-11-09T19:29:36.309876851Z",
-            "lastGeneratedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
-            "lastReleasedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
-            "apiPaths": [
-                "google/shopping/merchant/conversions/v1beta"
-            ],
-            "sourcePaths": [
-                "apis/Google.Shopping.Merchant.Conversions.V1Beta/Google.Shopping.Merchant.Conversions.V1Beta"
-            ]
-        },
-        {
-            "id": "Google.Shopping.Merchant.DataSources.V1Beta",
-            "currentVersion": "1.0.0-beta07",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-11-09T19:30:02.587768731Z",
-            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
-            "lastReleasedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
-            "apiPaths": [
-                "google/shopping/merchant/datasources/v1beta"
-            ],
-            "sourcePaths": [
-                "apis/Google.Shopping.Merchant.DataSources.V1Beta/Google.Shopping.Merchant.DataSources.V1Beta"
-            ]
-        },
-        {
-            "id": "Google.Shopping.Merchant.Inventories.V1Beta",
-            "currentVersion": "1.0.0-beta09",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-11-09T19:31:16.357374773Z",
-            "lastGeneratedCommit": "bff62c7778d391191f44ad7428d36957fe61d30a",
-            "lastReleasedCommit": "bff62c7778d391191f44ad7428d36957fe61d30a",
-            "apiPaths": [
-                "google/shopping/merchant/inventories/v1beta"
-            ],
-            "sourcePaths": [
-                "apis/Google.Shopping.Merchant.Inventories.V1Beta/Google.Shopping.Merchant.Inventories.V1Beta"
-            ]
-        },
-        {
-            "id": "Google.Shopping.Merchant.Lfp.V1Beta",
-            "currentVersion": "1.0.0-beta05",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-11-09T19:32:16.179255724Z",
-            "lastGeneratedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
-            "lastReleasedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
-            "apiPaths": [
-                "google/shopping/merchant/lfp/v1beta"
-            ],
-            "sourcePaths": [
-                "apis/Google.Shopping.Merchant.Lfp.V1Beta/Google.Shopping.Merchant.Lfp.V1Beta"
-            ]
-        },
-        {
-            "id": "Google.Shopping.Merchant.Notifications.V1Beta",
-            "currentVersion": "1.0.0-beta04",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-11-09T19:32:43.210318052Z",
-            "lastGeneratedCommit": "28769825ec5fa31815f172b0de490a84e74cb97a",
-            "lastReleasedCommit": "28769825ec5fa31815f172b0de490a84e74cb97a",
-            "apiPaths": [
-                "google/shopping/merchant/notifications/v1beta"
-            ],
-            "sourcePaths": [
-                "apis/Google.Shopping.Merchant.Notifications.V1Beta/Google.Shopping.Merchant.Notifications.V1Beta"
-            ]
-        },
-        {
-            "id": "Google.Shopping.Merchant.Products.V1Beta",
-            "currentVersion": "1.0.0-beta08",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-11-09T19:34:12.492241378Z",
-            "lastGeneratedCommit": "cde1a533be7af822956b19fda5a3b0c20a6dde0a",
-            "lastReleasedCommit": "cde1a533be7af822956b19fda5a3b0c20a6dde0a",
-            "apiPaths": [
-                "google/shopping/merchant/products/v1beta"
-            ],
-            "sourcePaths": [
-                "apis/Google.Shopping.Merchant.Products.V1Beta/Google.Shopping.Merchant.Products.V1Beta"
-            ]
-        },
-        {
-            "id": "Google.Shopping.Merchant.Promotions.V1Beta",
-            "currentVersion": "1.0.0-beta03",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-11-09T19:34:47.892429329Z",
-            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
-            "lastReleasedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
-            "apiPaths": [
-                "google/shopping/merchant/promotions/v1beta"
-            ],
-            "sourcePaths": [
-                "apis/Google.Shopping.Merchant.Promotions.V1Beta/Google.Shopping.Merchant.Promotions.V1Beta"
-            ]
-        },
-        {
-            "id": "Google.Shopping.Merchant.Quota.V1Beta",
-            "currentVersion": "1.0.0-beta05",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-11-09T19:36:06.998760395Z",
-            "lastGeneratedCommit": "3568ce2d811cc5062b3992f19b8bcc5846573659",
-            "lastReleasedCommit": "3568ce2d811cc5062b3992f19b8bcc5846573659",
-            "apiPaths": [
-                "google/shopping/merchant/quota/v1beta"
-            ],
-            "sourcePaths": [
-                "apis/Google.Shopping.Merchant.Quota.V1Beta/Google.Shopping.Merchant.Quota.V1Beta"
-            ]
-        },
-        {
-            "id": "Google.Shopping.Merchant.Reports.V1Beta",
-            "currentVersion": "1.0.0-beta05",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-11-09T19:36:47.954907464Z",
-            "lastGeneratedCommit": "28769825ec5fa31815f172b0de490a84e74cb97a",
-            "lastReleasedCommit": "28769825ec5fa31815f172b0de490a84e74cb97a",
-            "apiPaths": [
-                "google/shopping/merchant/reports/v1beta"
-            ],
-            "sourcePaths": [
-                "apis/Google.Shopping.Merchant.Reports.V1Beta/Google.Shopping.Merchant.Reports.V1Beta"
-            ]
-        },
-        {
-            "id": "Google.Shopping.Merchant.Reviews.V1Beta",
-            "currentVersion": "1.0.0-beta05",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-11-09T19:38:17.359915026Z",
-            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
-            "lastReleasedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
-            "apiPaths": [
-                "google/shopping/merchant/reviews/v1beta"
-            ],
-            "sourcePaths": [
-                "apis/Google.Shopping.Merchant.Reviews.V1Beta/Google.Shopping.Merchant.Reviews.V1Beta"
-            ]
-        },
-        {
             "id": "Google.Shopping.Type",
             "currentVersion": "1.1.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
@@ -4186,36 +4021,6 @@
             ],
             "sourcePaths": [
                 "apis/Google.Cloud.Lustre.V1/Google.Cloud.Lustre.V1"
-            ]
-        },
-        {
-            "id": "Google.Shopping.Merchant.IssueResolution.V1Beta",
-            "currentVersion": "1.0.0-beta06",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-11-09T20:07:11.250296547Z",
-            "lastGeneratedCommit": "2150bc63d0a90edf5bacd601ef477b503eb5cf72",
-            "lastReleasedCommit": "2150bc63d0a90edf5bacd601ef477b503eb5cf72",
-            "apiPaths": [
-                "google/shopping/merchant/issueresolution/v1beta"
-            ],
-            "sourcePaths": [
-                "apis/Google.Shopping.Merchant.IssueResolution.V1Beta/Google.Shopping.Merchant.IssueResolution.V1Beta"
-            ]
-        },
-        {
-            "id": "Google.Shopping.Merchant.OrderTracking.V1Beta",
-            "currentVersion": "1.0.0-beta04",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-11-09T20:07:32.577377594Z",
-            "lastGeneratedCommit": "f1859b90227eb09ecd2fa85c96e89b60dbf688b5",
-            "lastReleasedCommit": "f1859b90227eb09ecd2fa85c96e89b60dbf688b5",
-            "apiPaths": [
-                "google/shopping/merchant/ordertracking/v1beta"
-            ],
-            "sourcePaths": [
-                "apis/Google.Shopping.Merchant.OrderTracking.V1Beta/Google.Shopping.Merchant.OrderTracking.V1Beta"
             ]
         },
         {
@@ -5314,8 +5119,21 @@
         "google/cloud/securityposture/v1",
         "google/cloud/telcoautomation/v1alpha1",
         "google/maps/weather/v1",
+        "google/shopping/merchant/accounts/v1beta",
+        "google/shopping/merchant/conversions/v1beta",
+        "google/shopping/merchant/datasources/v1beta",
+        "google/shopping/merchant/inventories/v1beta",
+        "google/shopping/merchant/issueresolution/v1beta",
+        "google/shopping/merchant/lfp/v1beta",
+        "google/shopping/merchant/notifications/v1beta",
+        "google/shopping/merchant/ordertracking/v1beta",
+        "google/shopping/merchant/products/v1beta",
         "google/shopping/merchant/productstudio/v1alpha",
+        "google/shopping/merchant/promotions/v1beta",
+        "google/shopping/merchant/quota/v1beta",
         "google/shopping/merchant/reports/v1alpha",
+        "google/shopping/merchant/reports/v1beta",
+        "google/shopping/merchant/reviews/v1beta",
         "google/storage/v2"
     ]
 }

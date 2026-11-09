@@ -7381,28 +7381,6 @@
       "restNumericEnums": true
     },
     {
-      "id": "Google.Shopping.Merchant.Accounts.V1Beta",
-      "version": "1.0.0-beta12",
-      "type": "grpc",
-      "productName": "Merchant",
-      "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Recommended Google client library to access the Merchant Accounts API (v1beta) which allows developers to programmatically manage conversion sources.",
-      "tags": [
-        "shopping",
-        "accounts"
-      ],
-      "dependencies": {
-        "Google.Shopping.Type": "1.0.0"
-      },
-      "generator": "micro",
-      "protoPath": "google/shopping/merchant/accounts/v1beta",
-      "includeCommonResourcesProto": true,
-      "shortName": "merchantapi",
-      "serviceConfigFile": "merchantapi_v1beta.yaml",
-      "transport": "grpc+rest",
-      "restNumericEnums": true
-    },
-    {
       "id": "Google.Shopping.Merchant.Conversions.V1",
       "version": "1.1.0",
       "type": "grpc",
@@ -7419,26 +7397,6 @@
       "includeCommonResourcesProto": true,
       "shortName": "merchantapi",
       "serviceConfigFile": "merchantapi_v1.yaml",
-      "transport": "grpc+rest",
-      "restNumericEnums": true
-    },
-    {
-      "id": "Google.Shopping.Merchant.Conversions.V1Beta",
-      "version": "1.0.0-beta04",
-      "type": "grpc",
-      "productName": "Merchant",
-      "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Recommended Google client library to access the Merchant Conversions API (v1beta) which allows developers to programmatically manage conversion sources.",
-      "tags": [
-        "shopping",
-        "conversions"
-      ],
-      "dependencies": {},
-      "generator": "micro",
-      "protoPath": "google/shopping/merchant/conversions/v1beta",
-      "includeCommonResourcesProto": true,
-      "shortName": "merchantapi",
-      "serviceConfigFile": "merchantapi_v1beta.yaml",
       "transport": "grpc+rest",
       "restNumericEnums": true
     },
@@ -7466,29 +7424,6 @@
       "restNumericEnums": true
     },
     {
-      "id": "Google.Shopping.Merchant.DataSources.V1Beta",
-      "version": "1.0.0-beta07",
-      "type": "grpc",
-      "productName": "Merchant",
-      "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Recommended Google client library to access the Merchant Data Sources API (v1beta) which allows developers to programmatically manage data sources.",
-      "tags": [
-        "shopping",
-        "sources",
-        "datasources"
-      ],
-      "dependencies": {
-        "Google.Shopping.Type": "1.0.0"
-      },
-      "generator": "micro",
-      "protoPath": "google/shopping/merchant/datasources/v1beta",
-      "includeCommonResourcesProto": true,
-      "shortName": "merchantapi",
-      "serviceConfigFile": "merchantapi_v1beta.yaml",
-      "transport": "grpc+rest",
-      "restNumericEnums": true
-    },
-    {
       "id": "Google.Shopping.Merchant.Inventories.V1",
       "version": "1.4.0",
       "type": "grpc",
@@ -7509,28 +7444,6 @@
       "serviceConfigFile": "merchantapi_v1.yaml",
       "transport": "grpc+rest",
       "restNumericEnums": true
-    },
-    {
-      "id": "Google.Shopping.Merchant.Inventories.V1Beta",
-      "version": "1.0.0-beta09",
-      "type": "grpc",
-      "productName": "Merchant Inventories",
-      "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Recommended Google client library to access the Merchant Inventories API (v1beta) which allows developers to programmatically showcase products with local (in-store) or regional availability for free on Google.",
-      "tags": [
-        "shopping",
-        "inventory"
-      ],
-      "dependencies": {
-        "Google.Shopping.Type": "1.0.0"
-      },
-      "generator": "micro",
-      "protoPath": "google/shopping/merchant/inventories/v1beta",
-      "shortName": "merchantapi",
-      "serviceConfigFile": "merchantapi_v1beta.yaml",
-      "restNumericEnums": true,
-      "includeCommonResourcesProto": true,
-      "transport": "grpc+rest"
     },
     {
       "id": "Google.Shopping.Merchant.IssueResolution.V1",
@@ -7555,28 +7468,6 @@
       "restNumericEnums": true
     },
     {
-      "id": "Google.Shopping.Merchant.IssueResolution.V1Beta",
-      "version": "1.0.0-beta06",
-      "type": "grpc",
-      "productName": "Merchant",
-      "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Recommended Google client library to access the Merchant Issue Resolution API (v1beta).",
-      "tags": [
-        "shopping",
-        "issues"
-      ],
-      "dependencies": {
-        "Google.Shopping.Type": "1.0.0"
-      },
-      "generator": "micro",
-      "protoPath": "google/shopping/merchant/issueresolution/v1beta",
-      "includeCommonResourcesProto": true,
-      "shortName": "merchantapi",
-      "serviceConfigFile": "merchantapi_v1beta.yaml",
-      "transport": "grpc+rest",
-      "restNumericEnums": true
-    },
-    {
       "id": "Google.Shopping.Merchant.Lfp.V1",
       "version": "1.1.0",
       "type": "grpc",
@@ -7597,30 +7488,6 @@
       "includeCommonResourcesProto": true,
       "shortName": "merchantapi",
       "serviceConfigFile": "merchantapi_v1.yaml",
-      "transport": "grpc+rest",
-      "restNumericEnums": true
-    },
-    {
-      "id": "Google.Shopping.Merchant.Lfp.V1Beta",
-      "version": "1.0.0-beta05",
-      "type": "grpc",
-      "productName": "Merchant",
-      "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Recommended Google client library to access the Merchant Local Feeds Partnership (LFP) API (v1beta), which allows developers to programmatically manage their LFP resources.",
-      "tags": [
-        "shopping",
-        "local",
-        "feeds",
-        "partnership"
-      ],
-      "dependencies": {
-        "Google.Shopping.Type": "1.0.0"
-      },
-      "generator": "micro",
-      "protoPath": "google/shopping/merchant/lfp/v1beta",
-      "includeCommonResourcesProto": true,
-      "shortName": "merchantapi",
-      "serviceConfigFile": "merchantapi_v1beta.yaml",
       "transport": "grpc+rest",
       "restNumericEnums": true
     },
@@ -7662,28 +7529,6 @@
       "restNumericEnums": true
     },
     {
-      "id": "Google.Shopping.Merchant.Notifications.V1Beta",
-      "version": "1.0.0-beta04",
-      "type": "grpc",
-      "productName": "Merchant",
-      "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Recommended Google client library to access the Merchant Notifications API (v1beta) which allows developers to programmatically manage their Merchant Center notifications.",
-      "tags": [
-        "shopping",
-        "notifications"
-      ],
-      "dependencies": {
-        "Google.Shopping.Type": "1.0.0"
-      },
-      "generator": "micro",
-      "protoPath": "google/shopping/merchant/notifications/v1beta",
-      "includeCommonResourcesProto": true,
-      "shortName": "merchantapi",
-      "serviceConfigFile": "merchantapi_v1beta.yaml",
-      "transport": "grpc+rest",
-      "restNumericEnums": true
-    },
-    {
       "id": "Google.Shopping.Merchant.OrderTracking.V1",
       "version": "1.1.0",
       "type": "grpc",
@@ -7703,29 +7548,6 @@
       "includeCommonResourcesProto": true,
       "shortName": "merchantapi",
       "serviceConfigFile": "merchantapi_v1.yaml",
-      "transport": "grpc+rest",
-      "restNumericEnums": true
-    },
-    {
-      "id": "Google.Shopping.Merchant.OrderTracking.V1Beta",
-      "version": "1.0.0-beta04",
-      "type": "grpc",
-      "productName": "Merchant",
-      "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Recommended Google client library to access the Merchant Order Tracking API (v1beta).",
-      "tags": [
-        "shopping",
-        "orders",
-        "tracking"
-      ],
-      "dependencies": {
-        "Google.Shopping.Type": "1.0.0"
-      },
-      "generator": "micro",
-      "protoPath": "google/shopping/merchant/ordertracking/v1beta",
-      "includeCommonResourcesProto": true,
-      "shortName": "merchantapi",
-      "serviceConfigFile": "merchantapi_v1beta.yaml",
       "transport": "grpc+rest",
       "restNumericEnums": true
     },
@@ -7752,28 +7574,6 @@
       "restNumericEnums": true
     },
     {
-      "id": "Google.Shopping.Merchant.Products.V1Beta",
-      "version": "1.0.0-beta08",
-      "type": "grpc",
-      "productName": "Merchant",
-      "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Recommended Google client library to access the Merchant Products API (v1beta) which allows you to programmatically manage your Merchant Center accounts.",
-      "tags": [
-        "shopping",
-        "products"
-      ],
-      "dependencies": {
-        "Google.Shopping.Type": "1.0.0"
-      },
-      "generator": "micro",
-      "protoPath": "google/shopping/merchant/products/v1beta",
-      "includeCommonResourcesProto": true,
-      "shortName": "merchantapi",
-      "serviceConfigFile": "merchantapi_v1beta.yaml",
-      "transport": "grpc+rest",
-      "restNumericEnums": true
-    },
-    {
       "id": "Google.Shopping.Merchant.Promotions.V1",
       "version": "1.1.0",
       "type": "grpc",
@@ -7792,28 +7592,6 @@
       "includeCommonResourcesProto": true,
       "shortName": "merchantapi",
       "serviceConfigFile": "merchantapi_v1.yaml",
-      "transport": "grpc+rest",
-      "restNumericEnums": true
-    },
-    {
-      "id": "Google.Shopping.Merchant.Promotions.V1Beta",
-      "version": "1.0.0-beta03",
-      "type": "grpc",
-      "productName": "Merchant",
-      "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Recommended Google client library to access the Merchant Promotions API (v1beta) which allows you to programmatically manage your Merchant Center accounts.",
-      "tags": [
-        "shopping",
-        "promotions"
-      ],
-      "dependencies": {
-        "Google.Shopping.Type": "1.0.0"
-      },
-      "generator": "micro",
-      "protoPath": "google/shopping/merchant/promotions/v1beta",
-      "includeCommonResourcesProto": true,
-      "shortName": "merchantapi",
-      "serviceConfigFile": "merchantapi_v1beta.yaml",
       "transport": "grpc+rest",
       "restNumericEnums": true
     },
@@ -7838,26 +7616,6 @@
       "restNumericEnums": true
     },
     {
-      "id": "Google.Shopping.Merchant.Quota.V1Beta",
-      "version": "1.0.0-beta05",
-      "type": "grpc",
-      "productName": "Merchant",
-      "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Recommended Google client library to access the Merchant Quota API (v1beta) which allows you to programmatically manage your Merchant Center accounts.",
-      "tags": [
-        "shopping",
-        "quota"
-      ],
-      "dependencies": {},
-      "generator": "micro",
-      "protoPath": "google/shopping/merchant/quota/v1beta",
-      "includeCommonResourcesProto": true,
-      "shortName": "merchantapi",
-      "serviceConfigFile": "merchantapi_v1beta.yaml",
-      "transport": "grpc+rest",
-      "restNumericEnums": true
-    },
-    {
       "id": "Google.Shopping.Merchant.Reports.V1",
       "version": "1.2.0",
       "type": "grpc",
@@ -7877,28 +7635,6 @@
       "restNumericEnums": true
     },
     {
-      "id": "Google.Shopping.Merchant.Reports.V1Beta",
-      "version": "1.0.0-beta05",
-      "type": "grpc",
-      "productName": "Merchant",
-      "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Recommended Google client library to access the Merchant Reports API (v1beta) which allows you to programmatically manage your Merchant Center accounts.",
-      "tags": [
-        "shopping",
-        "reports"
-      ],
-      "dependencies": {
-        "Google.Shopping.Type": "1.0.0"
-      },
-      "generator": "micro",
-      "protoPath": "google/shopping/merchant/reports/v1beta",
-      "includeCommonResourcesProto": true,
-      "shortName": "merchantapi",
-      "serviceConfigFile": "merchantapi_v1beta.yaml",
-      "restNumericEnums": true,
-      "transport": "grpc+rest"
-    },
-    {
       "id": "Google.Shopping.Merchant.Reviews.V1",
       "version": "1.0.0-beta01",
       "type": "grpc",
@@ -7914,28 +7650,6 @@
       "includeCommonResourcesProto": true,
       "shortName": "merchantapi",
       "serviceConfigFile": "merchantapi_v1.yaml",
-      "transport": "grpc+rest",
-      "restNumericEnums": true
-    },
-    {
-      "id": "Google.Shopping.Merchant.Reviews.V1Beta",
-      "version": "1.0.0-beta05",
-      "type": "grpc",
-      "productName": "Merchant",
-      "productUrl": "https://developers.google.com/merchant/api",
-      "description": "Recommended Google client library to access the Merchant Reviews API (v1beta) which allows you to programmatically manage your Merchant Center accounts.",
-      "tags": [
-        "shopping",
-        "reviews"
-      ],
-      "dependencies": {
-        "Google.Shopping.Type": "1.0.0"
-      },
-      "generator": "micro",
-      "protoPath": "google/shopping/merchant/reviews/v1beta",
-      "includeCommonResourcesProto": true,
-      "shortName": "merchantapi",
-      "serviceConfigFile": "merchantapi_v1beta.yaml",
       "transport": "grpc+rest",
       "restNumericEnums": true
     },
