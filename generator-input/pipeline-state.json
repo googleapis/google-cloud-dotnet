@@ -2763,12 +2763,12 @@
         },
         {
             "id": "Google.Cloud.Run.V2",
-            "currentVersion": "2.19.0",
+            "currentVersion": "2.20.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-01-19T14:19:12.228945854Z",
+            "releaseTimestamp": "2026-11-09T19:26:52.265012114Z",
             "lastGeneratedCommit": "dbc4f61f7660eaaa387f9ae1a8221778ff8ebadc",
-            "lastReleasedCommit": "a79ccb6aba44d1285d11840033956a0bced351a2",
+            "lastReleasedCommit": "dbc4f61f7660eaaa387f9ae1a8221778ff8ebadc",
             "apiPaths": [
                 "google/cloud/run/v2"
             ],

@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.20.0, released 2026-11-09
+
+### New features
+
+- Add DISK medium to EmptyDirVolumeSource
+
+### Documentation improvements
+
+- Update EmptyDirVolumeSource comment to describe disk-backed storage
+- Clarify accepted values for EmptyDirVolumeSource.medium
+- An existing repeated string field custom_audiences is marked deprecated for WorkerPools API
+
 ## Version 2.19.0, released 2026-01-19
 
 ### New features
