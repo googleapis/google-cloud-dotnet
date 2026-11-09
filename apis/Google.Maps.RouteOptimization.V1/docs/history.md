@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.5.0, released 2026-11-09
+
+### New features
+
+- Add TWO_WHEELER to TravelMode enum
+- Add VisitType enum and visit_type field to ShipmentRoute.Visit
+
+### Documentation improvements
+
+- Add coverage documentation link for TravelMode.TWO_WHEELER
+- Clarify documentation for Shipment penalty_cost and duration limits
+- Specify that regional location-id values are not supported in parent fields
+- Remove experimental warnings from OptimizeToursLongRunning and OptimizeToursUri
+- Clarify terminology for high priority shipments (skipped and performed)
+- Mark google.longrunning.Operations methods as currently unsupported in yaml
+
 ## Version 1.4.0, released 2025-11-06
 
 ### New features
