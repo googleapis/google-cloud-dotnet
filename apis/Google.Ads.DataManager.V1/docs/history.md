@@ -1,5 +1,27 @@
 # Version history
 
+## Version 1.0.0-beta12, released 2026-11-09
+
+### New features
+
+- Add `ReportingService` with the `RetrievePartnerMatchReport` method for retrieving Partner Match reports for data partners
+- Add `PartnerMatchReportEntry` and related messages (`PartnerMatchAdvertiserAccount`, `PartnerMatchCampaign`, `PartnerMatchAdGroup`, `PartnerMatchUserList`, `PartnerMatchLineItem`) for Partner Match report rows
+- Add `CallInfo` message and `call_info` field to `Event` for sending information about the phone call that led to an event
+- Add `lead_id` to `AdIdentifiers` for sending the Google-generated ID issued when a user submits a lead form
+- Add `record_indices` to `ErrorCount` and `WarningCount` to identify the records in the request that had each error or warning reason
+- Add `INVALID_DATE`, `ENCRYPTION_NOT_SUPPORTED`, `UNSUPPORTED_ACCOUNT_TYPE_FOR_USER_LIST_DIRECT_LICENSE`, `DUPLICATE_ELEMENTS`, `UNSUPPORTED_BASELINE_LOCATION`, and `CONVERSION_PRECEDES_CALL` values to the `ErrorReason` enum
+- Deprecate the unused `REQUIRED_PREREQUISITE_LINK_MISSING` value of the `ErrorReason` enum
+- Add `PROCESSING_ERROR_REASON_DESTINATION_TOO_RECENTLY_CREATED`, `PROCESSING_ERROR_REASON_EXPIRED_CLICK`, `PROCESSING_ERROR_REASON_TOO_RECENT_CALL`, `PROCESSING_ERROR_REASON_EXPIRED_CALL`, and `PROCESSING_ERROR_REASON_INVALID_CALL` values to the `ProcessingErrorReason` enum
+- Add `PROCESSING_WARNING_REASON_CUSTOM_VARIABLE_NOT_ENABLED` and `PROCESSING_WARNING_REASON_CUSTOM_VARIABLE_NOT_PREDEFINED` values to the `ProcessingWarningReason` enum
+- Add `INVALID_NUMBER_FORMAT` value to the `WarningReason` enum
+
+### Documentation improvements
+
+- Document the required `login-account` authorization header for the `IngestAdEvents` method
+- Update the descriptions of the estimated member count fields of `UserList` to clarify that they count active members over the last 30 days
+- Update the description of `USER_IDENTIFIER_LIMIT_EXCEEDED` to refer to records instead of audience members
+- Update links to Google Analytics recommended events and user properties documentation
+
 ## Version 1.0.0-beta11, released 2026-09-28
 
 ### New features
