@@ -2478,12 +2478,12 @@
         },
         {
             "id": "Google.Cloud.Parallelstore.V1Beta",
-            "currentVersion": "1.0.0-beta09",
+            "currentVersion": "1.0.0-beta10",
             "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-06T08:50:17.428320767Z",
+            "releaseTimestamp": "2026-11-09T19:26:11.275756775Z",
             "lastGeneratedCommit": "4d2bfee25b0740d5b996dcd079ff5a562f8848b1",
-            "lastReleasedCommit": "1de7d6fbed8f10ea52bd7c557f68e9410a265212",
+            "lastReleasedCommit": "4d2bfee25b0740d5b996dcd079ff5a562f8848b1",
             "apiPaths": [
                 "google/cloud/parallelstore/v1beta"
             ],
