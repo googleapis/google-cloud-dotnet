@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.1.0, released 2026-11-09
+
+### New features
+
+- Add api_authentication, stateful_agent, input_variable_mapping, and output_variable_mapping to RemoteAgentTool
+
 ## Version 1.0.0, released 2026-08-10
 
 ### New features
