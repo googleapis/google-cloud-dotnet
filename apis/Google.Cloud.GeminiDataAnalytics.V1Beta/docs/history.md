@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta14, released 2026-11-09
+
+### New features
+
+- Add ListMessagesRequest.pending_write_wait_skipped to skip waiting for in-flight writes on the most recent turn
+
+### Documentation improvements
+
+- Clarify BigQuery Agent Analytics field behavior and validation on DataAgent
+
 ## Version 1.0.0-beta13, released 2026-10-26
 
 ### New features
