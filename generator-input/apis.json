@@ -4785,7 +4785,7 @@
     },
     {
       "id": "Google.Cloud.Parallelstore.V1",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "type": "grpc",
       "productName": "Parallelstore",
       "productUrl": "https://cloud.google.com/parallelstore?hl=en",
