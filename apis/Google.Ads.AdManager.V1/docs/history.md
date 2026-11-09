@@ -1,5 +1,41 @@
 # Version history
 
+## Version 1.0.0-beta14, released 2026-11-09
+
+### New features
+
+- Added `inventoryUrlTargeting`, `dateTimeRangeTargeting`, `dayPartTargeting`, `contextualTargeting`, `publisherProvidedSignalsTargeting`, and `buyerUserListTargeting` to `Targeting`
+- Added `InventoryUrl` resource
+- Added `AudienceSegmentCategoryService`
+- Added support for `InventorySizeTargeting`
+- Added `allocationDeliveryProfile` to `LineItem`
+- Added `AllocationDeliveryProfile` resource
+- Added LineItems on `RunDeliveryForecast` and `RunAvailabilityForecast` in ForecastService
+- Added `YieldPartnerService` with `GetYieldPartner` and `ListYieldPartners`
+- Added `ForecastAdjustmentService`
+- Added `TrafficForecastSegmentService`
+- Added `EUROPEAN_REGULATIONS_NON_BLOCKING_MESSAGES_SHOWN` report metric
+- Added `BEGIN_TO_RENDER_IMPRESSIONS` report metrics
+- Deprecate EntitySignalsMapping.audience_segment_id
+- Deprecate EntitySignalsMapping.content_bundle_id
+- Deprecate EntitySignalsMapping.custom_targeting_value_id
+- Deprecate EntitySignalsMapping.taxonomy_category_ids
+- Deprecate EntitySignalsMapping.rejected_taxonomy_category_ids
+- A new dimension `LINE_ITEM_TYPE_EXTENDED` is added to enum `Dimension`
+- A new dimension `LINE_ITEM_TYPE_EXTENDED_ALL` is added to enum `Dimension`
+- A new dimension `LINE_ITEM_TYPE_EXTENDED_NAME` is added to enum `Dimension`
+- Added new PUBLIC metric: EUROPEAN_REGULATIONS_FALLBACK_MESSAGES_SHOWN
+- Added `ChangeEventService`
+- Added write and preview operations for `LineItemCreativeAssociation`
+- Added support for filtering on `thirdPartyAudienceSegment.licenseType` in `ListAudienceSegments`
+- Added `key` and `createTime` fields to `DaiAuthenticationKey`
+- Added `SPONSORED_PRODUCT` report dimensions and metrics
+
+### Documentation improvements
+
+- Fix broken links and formatting in Ad Manager API documentation
+- Add additional documentation to AudienceSegmentService#ListAudienceSegmentsRequest.filter
+
 ## Version 1.0.0-beta13, released 2026-10-08
 
 ### New features
