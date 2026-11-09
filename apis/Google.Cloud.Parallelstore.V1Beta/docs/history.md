@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta10, released 2026-11-09
+
+### New features
+
+- Deprecate Google.Cloud.Parallelstore.V1 and Google.Cloud.Parallelstore.V1Beta
+
 ## Version 1.0.0-beta09, released 2025-11-06
 
 ### New features
