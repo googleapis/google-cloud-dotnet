@@ -1,5 +1,12 @@
 # Version history
 
+## Version 5.13.0-beta14, released 2026-11-09
+
+### New features
+
+- Add operation metrics for ReliableStreamReader.
+- Add attempt metrics for streaming RPCs.
+
 ## Version 5.13.0-beta13, released 2026-10-21
 
 ### New features
