@@ -3870,10 +3870,10 @@
         },
         {
             "id": "Google.Shopping.Merchant.Inventories.V1Beta",
-            "currentVersion": "1.0.0-beta08",
+            "currentVersion": "1.0.0-beta09",
             "generationAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-17T14:10:09.667015387Z",
+            "releaseTimestamp": "2026-11-09T19:31:16.357374773Z",
             "lastGeneratedCommit": "bff62c7778d391191f44ad7428d36957fe61d30a",
             "lastReleasedCommit": "bff62c7778d391191f44ad7428d36957fe61d30a",
             "apiPaths": [

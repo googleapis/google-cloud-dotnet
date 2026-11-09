@@ -7512,7 +7512,7 @@
     },
     {
       "id": "Google.Shopping.Merchant.Inventories.V1Beta",
-      "version": "1.0.0-beta08",
+      "version": "1.0.0-beta09",
       "type": "grpc",
       "productName": "Merchant Inventories",
       "productUrl": "https://developers.google.com/merchant/api",
