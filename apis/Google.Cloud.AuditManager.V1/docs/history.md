@@ -1,5 +1,13 @@
 # Version history
 
+## Version 1.4.0, released 2026-11-09
+
+### New features
+
+- Add parameter_overrides field to GenerateAuditReportRequest, GenerateAuditScopeReportRequest, and AuditSchedule
+- Add cloud_control_parameter_states output field to AuditReport
+- Add Parameter, ParamValue, StringList, ParameterOverrides, ParameterState, and CloudControlParameterStates messages
+
 ## Version 1.3.0, released 2026-09-11
 
 ### New features
