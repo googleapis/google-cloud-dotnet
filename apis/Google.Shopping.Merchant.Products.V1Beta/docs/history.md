@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta08, released 2026-11-09
+
+### New features
+
+- Deprecate Merchant API v1beta libraries
+
 ## Version 1.0.0-beta07, released 2025-11-17
 
 ### New features
