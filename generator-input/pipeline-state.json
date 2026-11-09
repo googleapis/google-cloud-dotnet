@@ -5288,10 +5288,12 @@
         },
         {
             "id": "Google.Cloud.SaasPlatform.SaasServiceMgmt.V1",
-            "nextVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2026-11-09T20:18:56.163419335Z",
             "lastGeneratedCommit": "3c0fb524083ae89e680689725a4c9c90de5f7ad2",
+            "lastReleasedCommit": "3c0fb524083ae89e680689725a4c9c90de5f7ad2",
             "apiPaths": [
                 "google/cloud/saasplatform/saasservicemgmt/v1"
             ],
