@@ -5252,7 +5252,7 @@
     },
     {
       "id": "Google.Cloud.Run.V2",
-      "version": "2.19.0",
+      "version": "2.20.0",
       "type": "grpc",
       "productName": "Cloud Run Admin",
       "productUrl": "https://cloud.google.com/run/docs",
