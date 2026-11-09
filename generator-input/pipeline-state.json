@@ -4842,12 +4842,12 @@
         },
         {
             "id": "Google.Cloud.VectorSearch.V1",
-            "currentVersion": "1.2.0",
+            "currentVersion": "1.3.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-09-21T19:22:12.533390424Z",
+            "releaseTimestamp": "2026-11-09T20:17:08.856759182Z",
             "lastGeneratedCommit": "d106d34b89b90887a7546d863a88de32d9f0c182",
-            "lastReleasedCommit": "633a102116a1a2cdbaf3c767a032d751029c4a13",
+            "lastReleasedCommit": "d106d34b89b90887a7546d863a88de32d9f0c182",
             "apiPaths": [
                 "google/cloud/vectorsearch/v1"
             ],
