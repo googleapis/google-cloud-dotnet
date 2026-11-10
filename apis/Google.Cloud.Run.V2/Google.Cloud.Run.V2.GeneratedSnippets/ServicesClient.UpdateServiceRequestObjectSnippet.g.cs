@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
                 ValidateOnly = false,
                 AllowMissing = false,
+                ForceNewRevision = false,
             };
             // Make the request
             Operation<Service, Service> response = servicesClient.UpdateService(request);

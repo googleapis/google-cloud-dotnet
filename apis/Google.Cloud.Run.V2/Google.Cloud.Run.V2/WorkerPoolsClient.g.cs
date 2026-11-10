@@ -294,11 +294,15 @@ namespace Google.Cloud.Run.V2
         /// The default WorkerPools scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/run</description></item>
+        /// <item><description>https://www.googleapis.com/auth/run.readonly</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/run",
+            "https://www.googleapis.com/auth/run.readonly",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -430,10 +434,11 @@ namespace Google.Cloud.Run.V2
         /// Required. The WorkerPool instance to create.
         /// </param>
         /// <param name="workerPoolId">
-        /// Required. The unique identifier for the WorkerPool. It must begin with
+        /// Optional. The unique identifier for the WorkerPool. It must begin with
         /// letter, and cannot end with hyphen; must contain fewer than 50 characters.
         /// The name of the worker pool becomes
         /// `{parent}/workerPools/{worker_pool_id}`.
+        /// If not provided, the server will generate a unique `worker_pool_id`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -442,7 +447,7 @@ namespace Google.Cloud.Run.V2
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 WorkerPool = gax::GaxPreconditions.CheckNotNull(workerPool, nameof(workerPool)),
-                WorkerPoolId = gax::GaxPreconditions.CheckNotNullOrEmpty(workerPoolId, nameof(workerPoolId)),
+                WorkerPoolId = workerPoolId ?? "",
             }, callSettings);
 
         /// <summary>
@@ -458,10 +463,11 @@ namespace Google.Cloud.Run.V2
         /// Required. The WorkerPool instance to create.
         /// </param>
         /// <param name="workerPoolId">
-        /// Required. The unique identifier for the WorkerPool. It must begin with
+        /// Optional. The unique identifier for the WorkerPool. It must begin with
         /// letter, and cannot end with hyphen; must contain fewer than 50 characters.
         /// The name of the worker pool becomes
         /// `{parent}/workerPools/{worker_pool_id}`.
+        /// If not provided, the server will generate a unique `worker_pool_id`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -470,7 +476,7 @@ namespace Google.Cloud.Run.V2
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 WorkerPool = gax::GaxPreconditions.CheckNotNull(workerPool, nameof(workerPool)),
-                WorkerPoolId = gax::GaxPreconditions.CheckNotNullOrEmpty(workerPoolId, nameof(workerPoolId)),
+                WorkerPoolId = workerPoolId ?? "",
             }, callSettings);
 
         /// <summary>
@@ -486,10 +492,11 @@ namespace Google.Cloud.Run.V2
         /// Required. The WorkerPool instance to create.
         /// </param>
         /// <param name="workerPoolId">
-        /// Required. The unique identifier for the WorkerPool. It must begin with
+        /// Optional. The unique identifier for the WorkerPool. It must begin with
         /// letter, and cannot end with hyphen; must contain fewer than 50 characters.
         /// The name of the worker pool becomes
         /// `{parent}/workerPools/{worker_pool_id}`.
+        /// If not provided, the server will generate a unique `worker_pool_id`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -509,10 +516,11 @@ namespace Google.Cloud.Run.V2
         /// Required. The WorkerPool instance to create.
         /// </param>
         /// <param name="workerPoolId">
-        /// Required. The unique identifier for the WorkerPool. It must begin with
+        /// Optional. The unique identifier for the WorkerPool. It must begin with
         /// letter, and cannot end with hyphen; must contain fewer than 50 characters.
         /// The name of the worker pool becomes
         /// `{parent}/workerPools/{worker_pool_id}`.
+        /// If not provided, the server will generate a unique `worker_pool_id`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -521,7 +529,7 @@ namespace Google.Cloud.Run.V2
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 WorkerPool = gax::GaxPreconditions.CheckNotNull(workerPool, nameof(workerPool)),
-                WorkerPoolId = gax::GaxPreconditions.CheckNotNullOrEmpty(workerPoolId, nameof(workerPoolId)),
+                WorkerPoolId = workerPoolId ?? "",
             }, callSettings);
 
         /// <summary>
@@ -537,10 +545,11 @@ namespace Google.Cloud.Run.V2
         /// Required. The WorkerPool instance to create.
         /// </param>
         /// <param name="workerPoolId">
-        /// Required. The unique identifier for the WorkerPool. It must begin with
+        /// Optional. The unique identifier for the WorkerPool. It must begin with
         /// letter, and cannot end with hyphen; must contain fewer than 50 characters.
         /// The name of the worker pool becomes
         /// `{parent}/workerPools/{worker_pool_id}`.
+        /// If not provided, the server will generate a unique `worker_pool_id`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -549,7 +558,7 @@ namespace Google.Cloud.Run.V2
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 WorkerPool = gax::GaxPreconditions.CheckNotNull(workerPool, nameof(workerPool)),
-                WorkerPoolId = gax::GaxPreconditions.CheckNotNullOrEmpty(workerPoolId, nameof(workerPoolId)),
+                WorkerPoolId = workerPoolId ?? "",
             }, callSettings);
 
         /// <summary>
@@ -565,10 +574,11 @@ namespace Google.Cloud.Run.V2
         /// Required. The WorkerPool instance to create.
         /// </param>
         /// <param name="workerPoolId">
-        /// Required. The unique identifier for the WorkerPool. It must begin with
+        /// Optional. The unique identifier for the WorkerPool. It must begin with
         /// letter, and cannot end with hyphen; must contain fewer than 50 characters.
         /// The name of the worker pool becomes
         /// `{parent}/workerPools/{worker_pool_id}`.
+        /// If not provided, the server will generate a unique `worker_pool_id`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

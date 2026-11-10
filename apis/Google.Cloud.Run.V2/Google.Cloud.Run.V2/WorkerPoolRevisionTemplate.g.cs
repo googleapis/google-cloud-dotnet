@@ -27,38 +27,41 @@ namespace Google.Cloud.Run.V2 {
             "Cjdnb29nbGUvY2xvdWQvcnVuL3YyL3dvcmtlcl9wb29sX3JldmlzaW9uX3Rl",
             "bXBsYXRlLnByb3RvEhNnb29nbGUuY2xvdWQucnVuLnYyGh9nb29nbGUvYXBp",
             "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
-            "b3RvGiFnb29nbGUvY2xvdWQvcnVuL3YyL2s4cy5taW4ucHJvdG8aKWdvb2ds",
-            "ZS9jbG91ZC9ydW4vdjIvdmVuZG9yX3NldHRpbmdzLnByb3RvGh5nb29nbGUv",
-            "cHJvdG9idWYvZHVyYXRpb24ucHJvdG8i6QcKGldvcmtlclBvb2xSZXZpc2lv",
-            "blRlbXBsYXRlEjYKCHJldmlzaW9uGAEgASgJQiTiQQEB+kEdChtydW4uZ29v",
-            "Z2xlYXBpcy5jb20vUmV2aXNpb24SUQoGbGFiZWxzGAIgAygLMjsuZ29vZ2xl",
-            "LmNsb3VkLnJ1bi52Mi5Xb3JrZXJQb29sUmV2aXNpb25UZW1wbGF0ZS5MYWJl",
-            "bHNFbnRyeUIE4kEBARJbCgthbm5vdGF0aW9ucxgDIAMoCzJALmdvb2dsZS5j",
-            "bG91ZC5ydW4udjIuV29ya2VyUG9vbFJldmlzaW9uVGVtcGxhdGUuQW5ub3Rh",
-            "dGlvbnNFbnRyeUIE4kEBARI4Cgp2cGNfYWNjZXNzGAQgASgLMh4uZ29vZ2xl",
-            "LmNsb3VkLnJ1bi52Mi5WcGNBY2Nlc3NCBOJBAQESHQoPc2VydmljZV9hY2Nv",
-            "dW50GAUgASgJQgTiQQEBEjIKCmNvbnRhaW5lcnMYBiADKAsyHi5nb29nbGUu",
-            "Y2xvdWQucnVuLnYyLkNvbnRhaW5lchIyCgd2b2x1bWVzGAcgAygLMhsuZ29v",
-            "Z2xlLmNsb3VkLnJ1bi52Mi5Wb2x1bWVCBOJBAQESPgoOZW5jcnlwdGlvbl9r",
-            "ZXkYCCABKAlCJvpBIwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRv",
-            "S2V5EjwKDHNlcnZpY2VfbWVzaBgJIAEoCzIgLmdvb2dsZS5jbG91ZC5ydW4u",
-            "djIuU2VydmljZU1lc2hCBOJBAQESYgogZW5jcnlwdGlvbl9rZXlfcmV2b2Nh",
-            "dGlvbl9hY3Rpb24YCiABKA4yMi5nb29nbGUuY2xvdWQucnVuLnYyLkVuY3J5",
-            "cHRpb25LZXlSZXZvY2F0aW9uQWN0aW9uQgTiQQEBEkkKIGVuY3J5cHRpb25f",
-            "a2V5X3NodXRkb3duX2R1cmF0aW9uGAsgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
-            "LkR1cmF0aW9uQgTiQQEBEj4KDW5vZGVfc2VsZWN0b3IYDSABKAsyIS5nb29n",
-            "bGUuY2xvdWQucnVuLnYyLk5vZGVTZWxlY3RvckIE4kEBARIwCh1ncHVfem9u",
-            "YWxfcmVkdW5kYW5jeV9kaXNhYmxlZBgQIAEoCEIE4kEBAUgAiAEBGi0KC0xh",
-            "YmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMgoQ",
-            "QW5ub3RhdGlvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBQiAKHl9ncHVfem9uYWxfcmVkdW5kYW5jeV9kaXNhYmxlZEJnChdjb20u",
-            "Z29vZ2xlLmNsb3VkLnJ1bi52MkIfV29ya2VyUG9vbFJldmlzaW9uVGVtcGxh",
-            "dGVQcm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL3J1bi9hcGl2Mi9ydW5w",
-            "YjtydW5wYmIGcHJvdG8z"));
+            "b3RvGiFnb29nbGUvY2xvdWQvcnVuL3YyL2s4cy5taW4ucHJvdG8aIWdvb2ds",
+            "ZS9jbG91ZC9ydW4vdjIvc2FuZGJveC5wcm90bxopZ29vZ2xlL2Nsb3VkL3J1",
+            "bi92Mi92ZW5kb3Jfc2V0dGluZ3MucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9k",
+            "dXJhdGlvbi5wcm90byLhCAoaV29ya2VyUG9vbFJldmlzaW9uVGVtcGxhdGUS",
+            "NgoIcmV2aXNpb24YASABKAlCJOJBAQH6QR0KG3J1bi5nb29nbGVhcGlzLmNv",
+            "bS9SZXZpc2lvbhJRCgZsYWJlbHMYAiADKAsyOy5nb29nbGUuY2xvdWQucnVu",
+            "LnYyLldvcmtlclBvb2xSZXZpc2lvblRlbXBsYXRlLkxhYmVsc0VudHJ5QgTi",
+            "QQEBElsKC2Fubm90YXRpb25zGAMgAygLMkAuZ29vZ2xlLmNsb3VkLnJ1bi52",
+            "Mi5Xb3JrZXJQb29sUmV2aXNpb25UZW1wbGF0ZS5Bbm5vdGF0aW9uc0VudHJ5",
+            "QgTiQQEBEjgKCnZwY19hY2Nlc3MYBCABKAsyHi5nb29nbGUuY2xvdWQucnVu",
+            "LnYyLlZwY0FjY2Vzc0IE4kEBARIdCg9zZXJ2aWNlX2FjY291bnQYBSABKAlC",
+            "BOJBAQESMgoKY29udGFpbmVycxgGIAMoCzIeLmdvb2dsZS5jbG91ZC5ydW4u",
+            "djIuQ29udGFpbmVyEkIKCXNhbmRib3hlcxgTIAEoCzIpLmdvb2dsZS5jbG91",
+            "ZC5ydW4udjIuU2FuZGJveENvbmZpZ3VyYXRpb25CBOJBAQESMgoHdm9sdW1l",
+            "cxgHIAMoCzIbLmdvb2dsZS5jbG91ZC5ydW4udjIuVm9sdW1lQgTiQQEBEj4K",
+            "DmVuY3J5cHRpb25fa2V5GAggASgJQib6QSMKIWNsb3Vka21zLmdvb2dsZWFw",
+            "aXMuY29tL0NyeXB0b0tleRI8CgxzZXJ2aWNlX21lc2gYCSABKAsyIC5nb29n",
+            "bGUuY2xvdWQucnVuLnYyLlNlcnZpY2VNZXNoQgTiQQEBEmIKIGVuY3J5cHRp",
+            "b25fa2V5X3Jldm9jYXRpb25fYWN0aW9uGAogASgOMjIuZ29vZ2xlLmNsb3Vk",
+            "LnJ1bi52Mi5FbmNyeXB0aW9uS2V5UmV2b2NhdGlvbkFjdGlvbkIE4kEBARJJ",
+            "CiBlbmNyeXB0aW9uX2tleV9zaHV0ZG93bl9kdXJhdGlvbhgLIAEoCzIZLmdv",
+            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbkIE4kEBARI+Cg1ub2RlX3NlbGVjdG9y",
+            "GA0gASgLMiEuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5Ob2RlU2VsZWN0b3JCBOJB",
+            "AQESMAodZ3B1X3pvbmFsX3JlZHVuZGFuY3lfZGlzYWJsZWQYECABKAhCBOJB",
+            "AQFIAIgBARIUCgZjbGllbnQYESABKAlCBOJBAQESHAoOY2xpZW50X3ZlcnNp",
+            "b24YEiABKAlCBOJBAQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
+            "BXZhbHVlGAIgASgJOgI4ARoyChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCIAoeX2dwdV96b25hbF9yZWR1bmRh",
+            "bmN5X2Rpc2FibGVkQmcKF2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQh9Xb3Jr",
+            "ZXJQb29sUmV2aXNpb25UZW1wbGF0ZVByb3RvUAFaKWNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vcnVuL2FwaXYyL3J1bnBiO3J1bnBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.SandboxReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.WorkerPoolRevisionTemplate), global::Google.Cloud.Run.V2.WorkerPoolRevisionTemplate.Parser, new[]{ "Revision", "Labels", "Annotations", "VpcAccess", "ServiceAccount", "Containers", "Volumes", "EncryptionKey", "ServiceMesh", "EncryptionKeyRevocationAction", "EncryptionKeyShutdownDuration", "NodeSelector", "GpuZonalRedundancyDisabled" }, new[]{ "GpuZonalRedundancyDisabled" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.WorkerPoolRevisionTemplate), global::Google.Cloud.Run.V2.WorkerPoolRevisionTemplate.Parser, new[]{ "Revision", "Labels", "Annotations", "VpcAccess", "ServiceAccount", "Containers", "Sandboxes", "Volumes", "EncryptionKey", "ServiceMesh", "EncryptionKeyRevocationAction", "EncryptionKeyShutdownDuration", "NodeSelector", "GpuZonalRedundancyDisabled", "Client", "ClientVersion" }, new[]{ "GpuZonalRedundancyDisabled" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -112,6 +115,7 @@ namespace Google.Cloud.Run.V2 {
       vpcAccess_ = other.vpcAccess_ != null ? other.vpcAccess_.Clone() : null;
       serviceAccount_ = other.serviceAccount_;
       containers_ = other.containers_.Clone();
+      sandboxes_ = other.sandboxes_ != null ? other.sandboxes_.Clone() : null;
       volumes_ = other.volumes_.Clone();
       encryptionKey_ = other.encryptionKey_;
       serviceMesh_ = other.serviceMesh_ != null ? other.serviceMesh_.Clone() : null;
@@ -119,6 +123,8 @@ namespace Google.Cloud.Run.V2 {
       encryptionKeyShutdownDuration_ = other.encryptionKeyShutdownDuration_ != null ? other.encryptionKeyShutdownDuration_.Clone() : null;
       nodeSelector_ = other.nodeSelector_ != null ? other.nodeSelector_.Clone() : null;
       gpuZonalRedundancyDisabled_ = other.gpuZonalRedundancyDisabled_;
+      client_ = other.client_;
+      clientVersion_ = other.clientVersion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -240,6 +246,21 @@ namespace Google.Cloud.Run.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Run.V2.Container> Containers {
       get { return containers_; }
+    }
+
+    /// <summary>Field number for the "sandboxes" field.</summary>
+    public const int SandboxesFieldNumber = 19;
+    private global::Google.Cloud.Run.V2.SandboxConfiguration sandboxes_;
+    /// <summary>
+    /// Optional. Configuration for sandboxes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.SandboxConfiguration Sandboxes {
+      get { return sandboxes_; }
+      set {
+        sandboxes_ = value;
+      }
     }
 
     /// <summary>Field number for the "volumes" field.</summary>
@@ -364,6 +385,36 @@ namespace Google.Cloud.Run.V2 {
       _hasBits0 &= ~1;
     }
 
+    /// <summary>Field number for the "client" field.</summary>
+    public const int ClientFieldNumber = 17;
+    private string client_ = "";
+    /// <summary>
+    /// Optional. Arbitrary identifier for the API client.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Client {
+      get { return client_; }
+      set {
+        client_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "client_version" field.</summary>
+    public const int ClientVersionFieldNumber = 18;
+    private string clientVersion_ = "";
+    /// <summary>
+    /// Optional. Arbitrary version identifier for the API client.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ClientVersion {
+      get { return clientVersion_; }
+      set {
+        clientVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -385,6 +436,7 @@ namespace Google.Cloud.Run.V2 {
       if (!object.Equals(VpcAccess, other.VpcAccess)) return false;
       if (ServiceAccount != other.ServiceAccount) return false;
       if(!containers_.Equals(other.containers_)) return false;
+      if (!object.Equals(Sandboxes, other.Sandboxes)) return false;
       if(!volumes_.Equals(other.volumes_)) return false;
       if (EncryptionKey != other.EncryptionKey) return false;
       if (!object.Equals(ServiceMesh, other.ServiceMesh)) return false;
@@ -392,6 +444,8 @@ namespace Google.Cloud.Run.V2 {
       if (!object.Equals(EncryptionKeyShutdownDuration, other.EncryptionKeyShutdownDuration)) return false;
       if (!object.Equals(NodeSelector, other.NodeSelector)) return false;
       if (GpuZonalRedundancyDisabled != other.GpuZonalRedundancyDisabled) return false;
+      if (Client != other.Client) return false;
+      if (ClientVersion != other.ClientVersion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -405,6 +459,7 @@ namespace Google.Cloud.Run.V2 {
       if (vpcAccess_ != null) hash ^= VpcAccess.GetHashCode();
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
       hash ^= containers_.GetHashCode();
+      if (sandboxes_ != null) hash ^= Sandboxes.GetHashCode();
       hash ^= volumes_.GetHashCode();
       if (EncryptionKey.Length != 0) hash ^= EncryptionKey.GetHashCode();
       if (serviceMesh_ != null) hash ^= ServiceMesh.GetHashCode();
@@ -412,6 +467,8 @@ namespace Google.Cloud.Run.V2 {
       if (encryptionKeyShutdownDuration_ != null) hash ^= EncryptionKeyShutdownDuration.GetHashCode();
       if (nodeSelector_ != null) hash ^= NodeSelector.GetHashCode();
       if (HasGpuZonalRedundancyDisabled) hash ^= GpuZonalRedundancyDisabled.GetHashCode();
+      if (Client.Length != 0) hash ^= Client.GetHashCode();
+      if (ClientVersion.Length != 0) hash ^= ClientVersion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -470,6 +527,18 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(128, 1);
         output.WriteBool(GpuZonalRedundancyDisabled);
       }
+      if (Client.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(Client);
+      }
+      if (ClientVersion.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(ClientVersion);
+      }
+      if (sandboxes_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(Sandboxes);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -520,6 +589,18 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(128, 1);
         output.WriteBool(GpuZonalRedundancyDisabled);
       }
+      if (Client.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(Client);
+      }
+      if (ClientVersion.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(ClientVersion);
+      }
+      if (sandboxes_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(Sandboxes);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -542,6 +623,9 @@ namespace Google.Cloud.Run.V2 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccount);
       }
       size += containers_.CalculateSize(_repeated_containers_codec);
+      if (sandboxes_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Sandboxes);
+      }
       size += volumes_.CalculateSize(_repeated_volumes_codec);
       if (EncryptionKey.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(EncryptionKey);
@@ -560,6 +644,12 @@ namespace Google.Cloud.Run.V2 {
       }
       if (HasGpuZonalRedundancyDisabled) {
         size += 2 + 1;
+      }
+      if (Client.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Client);
+      }
+      if (ClientVersion.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ClientVersion);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -588,6 +678,12 @@ namespace Google.Cloud.Run.V2 {
         ServiceAccount = other.ServiceAccount;
       }
       containers_.Add(other.containers_);
+      if (other.sandboxes_ != null) {
+        if (sandboxes_ == null) {
+          Sandboxes = new global::Google.Cloud.Run.V2.SandboxConfiguration();
+        }
+        Sandboxes.MergeFrom(other.Sandboxes);
+      }
       volumes_.Add(other.volumes_);
       if (other.EncryptionKey.Length != 0) {
         EncryptionKey = other.EncryptionKey;
@@ -615,6 +711,12 @@ namespace Google.Cloud.Run.V2 {
       }
       if (other.HasGpuZonalRedundancyDisabled) {
         GpuZonalRedundancyDisabled = other.GpuZonalRedundancyDisabled;
+      }
+      if (other.Client.Length != 0) {
+        Client = other.Client;
+      }
+      if (other.ClientVersion.Length != 0) {
+        ClientVersion = other.ClientVersion;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -699,6 +801,21 @@ namespace Google.Cloud.Run.V2 {
             GpuZonalRedundancyDisabled = input.ReadBool();
             break;
           }
+          case 138: {
+            Client = input.ReadString();
+            break;
+          }
+          case 146: {
+            ClientVersion = input.ReadString();
+            break;
+          }
+          case 154: {
+            if (sandboxes_ == null) {
+              Sandboxes = new global::Google.Cloud.Run.V2.SandboxConfiguration();
+            }
+            input.ReadMessage(Sandboxes);
+            break;
+          }
         }
       }
     #endif
@@ -780,6 +897,21 @@ namespace Google.Cloud.Run.V2 {
           }
           case 128: {
             GpuZonalRedundancyDisabled = input.ReadBool();
+            break;
+          }
+          case 138: {
+            Client = input.ReadString();
+            break;
+          }
+          case 146: {
+            ClientVersion = input.ReadString();
+            break;
+          }
+          case 154: {
+            if (sandboxes_ == null) {
+              Sandboxes = new global::Google.Cloud.Run.V2.SandboxConfiguration();
+            }
+            input.ReadMessage(Sandboxes);
             break;
           }
         }

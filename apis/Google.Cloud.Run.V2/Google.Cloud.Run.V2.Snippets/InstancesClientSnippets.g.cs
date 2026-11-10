@@ -20,7 +20,9 @@ namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.Iam.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Threading.Tasks;
     using gcrv = Google.Cloud.Run.V2;
@@ -212,6 +214,138 @@ namespace GoogleCSharpSnippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             Operation<gcrv::Instance, gcrv::Instance> retrievedResponse = await instancesClient.PollOnceCreateInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcrv::Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateInstance</summary>
+        public void UpdateInstanceRequestObject()
+        {
+            // Snippet: UpdateInstance(UpdateInstanceRequest, CallSettings)
+            // Create client
+            gcrv::InstancesClient instancesClient = gcrv::InstancesClient.Create();
+            // Initialize request argument(s)
+            gcrv::UpdateInstanceRequest request = new gcrv::UpdateInstanceRequest
+            {
+                UpdateMask = new FieldMask(),
+                Instance = new gcrv::Instance(),
+                ValidateOnly = false,
+                AllowMissing = false,
+            };
+            // Make the request
+            Operation<gcrv::Instance, gcrv::Instance> response = instancesClient.UpdateInstance(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcrv::Instance, gcrv::Instance> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcrv::Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcrv::Instance, gcrv::Instance> retrievedResponse = instancesClient.PollOnceUpdateInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcrv::Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateInstanceAsync</summary>
+        public async Task UpdateInstanceRequestObjectAsync()
+        {
+            // Snippet: UpdateInstanceAsync(UpdateInstanceRequest, CallSettings)
+            // Additional: UpdateInstanceAsync(UpdateInstanceRequest, CancellationToken)
+            // Create client
+            gcrv::InstancesClient instancesClient = await gcrv::InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            gcrv::UpdateInstanceRequest request = new gcrv::UpdateInstanceRequest
+            {
+                UpdateMask = new FieldMask(),
+                Instance = new gcrv::Instance(),
+                ValidateOnly = false,
+                AllowMissing = false,
+            };
+            // Make the request
+            Operation<gcrv::Instance, gcrv::Instance> response = await instancesClient.UpdateInstanceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcrv::Instance, gcrv::Instance> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcrv::Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcrv::Instance, gcrv::Instance> retrievedResponse = await instancesClient.PollOnceUpdateInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcrv::Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateInstance</summary>
+        public void UpdateInstance()
+        {
+            // Snippet: UpdateInstance(Instance, FieldMask, CallSettings)
+            // Create client
+            gcrv::InstancesClient instancesClient = gcrv::InstancesClient.Create();
+            // Initialize request argument(s)
+            gcrv::Instance instance = new gcrv::Instance();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<gcrv::Instance, gcrv::Instance> response = instancesClient.UpdateInstance(instance, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcrv::Instance, gcrv::Instance> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcrv::Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcrv::Instance, gcrv::Instance> retrievedResponse = instancesClient.PollOnceUpdateInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcrv::Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateInstanceAsync</summary>
+        public async Task UpdateInstanceAsync()
+        {
+            // Snippet: UpdateInstanceAsync(Instance, FieldMask, CallSettings)
+            // Additional: UpdateInstanceAsync(Instance, FieldMask, CancellationToken)
+            // Create client
+            gcrv::InstancesClient instancesClient = await gcrv::InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            gcrv::Instance instance = new gcrv::Instance();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<gcrv::Instance, gcrv::Instance> response = await instancesClient.UpdateInstanceAsync(instance, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcrv::Instance, gcrv::Instance> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcrv::Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcrv::Instance, gcrv::Instance> retrievedResponse = await instancesClient.PollOnceUpdateInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1144,6 +1278,113 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 gcrv::Instance retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicyRequestObject()
+        {
+            // Snippet: GetIamPolicy(GetIamPolicyRequest, CallSettings)
+            // Create client
+            gcrv::InstancesClient instancesClient = gcrv::InstancesClient.Create();
+            // Initialize request argument(s)
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Options = new GetPolicyOptions(),
+            };
+            // Make the request
+            Policy response = instancesClient.GetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)
+            // Additional: GetIamPolicyAsync(GetIamPolicyRequest, CancellationToken)
+            // Create client
+            gcrv::InstancesClient instancesClient = await gcrv::InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Options = new GetPolicyOptions(),
+            };
+            // Make the request
+            Policy response = await instancesClient.GetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicyRequestObject()
+        {
+            // Snippet: SetIamPolicy(SetIamPolicyRequest, CallSettings)
+            // Create client
+            gcrv::InstancesClient instancesClient = gcrv::InstancesClient.Create();
+            // Initialize request argument(s)
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Policy = new Policy(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Policy response = instancesClient.SetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)
+            // Additional: SetIamPolicyAsync(SetIamPolicyRequest, CancellationToken)
+            // Create client
+            gcrv::InstancesClient instancesClient = await gcrv::InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Policy = new Policy(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Policy response = await instancesClient.SetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissionsRequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsRequest, CallSettings)
+            // Create client
+            gcrv::InstancesClient instancesClient = gcrv::InstancesClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Permissions = { "", },
+            };
+            // Make the request
+            TestIamPermissionsResponse response = instancesClient.TestIamPermissions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsRequestObjectAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest, CancellationToken)
+            // Create client
+            gcrv::InstancesClient instancesClient = await gcrv::InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Permissions = { "", },
+            };
+            // Make the request
+            TestIamPermissionsResponse response = await instancesClient.TestIamPermissionsAsync(request);
             // End snippet
         }
     }

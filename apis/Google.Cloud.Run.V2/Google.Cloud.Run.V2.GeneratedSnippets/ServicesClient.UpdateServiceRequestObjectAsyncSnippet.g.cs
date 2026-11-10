@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
                 ValidateOnly = false,
                 AllowMissing = false,
+                ForceNewRevision = false,
             };
             // Make the request
             Operation<gcrv::Service, gcrv::Service> response = await servicesClient.UpdateServiceAsync(request);

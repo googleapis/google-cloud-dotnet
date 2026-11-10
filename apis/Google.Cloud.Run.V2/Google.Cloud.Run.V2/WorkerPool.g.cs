@@ -40,7 +40,7 @@ namespace Google.Cloud.Run.V2 {
             "ZVdvcmtlclBvb2xSZXF1ZXN0EjYKBnBhcmVudBgBIAEoCUIm4kEBAvpBHxId",
             "cnVuLmdvb2dsZWFwaXMuY29tL1dvcmtlclBvb2wSOgoLd29ya2VyX3Bvb2wY",
             "AiABKAsyHy5nb29nbGUuY2xvdWQucnVuLnYyLldvcmtlclBvb2xCBOJBAQIS",
-            "HAoOd29ya2VyX3Bvb2xfaWQYAyABKAlCBOJBAQISGwoNdmFsaWRhdGVfb25s",
+            "HAoOd29ya2VyX3Bvb2xfaWQYAyABKAlCBOJBAQESGwoNdmFsaWRhdGVfb25s",
             "eRgEIAEoCEIE4kEBASLoAQoXVXBkYXRlV29ya2VyUG9vbFJlcXVlc3QSNQoL",
             "dXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNr",
             "QgTiQQEBEjoKC3dvcmtlcl9wb29sGAEgASgLMh8uZ29vZ2xlLmNsb3VkLnJ1",
@@ -93,7 +93,7 @@ namespace Google.Cloud.Run.V2 {
             "KAk6AjgBOoEB6kF+Ch1ydW4uZ29vZ2xlYXBpcy5jb20vV29ya2VyUG9vbBJB",
             "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3dvcmtl",
             "clBvb2xzL3t3b3JrZXJfcG9vbH0qC3dvcmtlclBvb2xzMgp3b3JrZXJQb29s",
-            "UgEBMr4OCgtXb3JrZXJQb29scxKYAgoQQ3JlYXRlV29ya2VyUG9vbBIsLmdv",
+            "UgEBMpAPCgtXb3JrZXJQb29scxKYAgoQQ3JlYXRlV29ya2VyUG9vbBIsLmdv",
             "b2dsZS5jbG91ZC5ydW4udjIuQ3JlYXRlV29ya2VyUG9vbFJlcXVlc3QaHS5n",
             "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIrYBykEYCgpXb3JrZXJQb29s",
             "EgpXb3JrZXJQb29s2kEhcGFyZW50LHdvcmtlcl9wb29sLHdvcmtlcl9wb29s",
@@ -132,11 +132,13 @@ namespace Google.Cloud.Run.V2 {
             "EiguZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0Giku",
             "Z29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXNwb25zZSJRgtPk",
             "kwJLIkYvdjIve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovd29y",
-            "a2VyUG9vbHMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqGkbKQRJydW4uZ29v",
-            "Z2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
-            "L2Nsb3VkLXBsYXRmb3JtQlcKF2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQg9X",
-            "b3JrZXJQb29sUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9ydW4vYXBp",
-            "djIvcnVucGI7cnVucGJiBnByb3RvMw=="));
+            "a2VyUG9vbHMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqGpcBykEScnVuLmdv",
+            "b2dsZWFwaXMuY29t0kF/aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
+            "dXRoL3J1bixodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3J1bi5y",
+            "ZWFkb25seUJXChdjb20uZ29vZ2xlLmNsb3VkLnJ1bi52MkIPV29ya2VyUG9v",
+            "bFByb3RvUAFaKWNsb3VkLmdvb2dsZS5jb20vZ28vcnVuL2FwaXYyL3J1bnBi",
+            "O3J1bnBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.LaunchStageReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.RoutingReflection.Descriptor, global::Google.Cloud.Run.V2.ConditionReflection.Descriptor, global::Google.Cloud.Run.V2.InstanceSplitReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Cloud.Run.V2.WorkerPoolRevisionTemplateReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -241,10 +243,11 @@ namespace Google.Cloud.Run.V2 {
     public const int WorkerPoolIdFieldNumber = 3;
     private string workerPoolId_ = "";
     /// <summary>
-    /// Required. The unique identifier for the WorkerPool. It must begin with
+    /// Optional. The unique identifier for the WorkerPool. It must begin with
     /// letter, and cannot end with hyphen; must contain fewer than 50 characters.
     /// The name of the worker pool becomes
     /// `{parent}/workerPools/{worker_pool_id}`.
+    /// If not provided, the server will generate a unique `worker_pool_id`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
