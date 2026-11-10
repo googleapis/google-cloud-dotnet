@@ -2106,6 +2106,42 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gaav::ProposalServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddProposalServiceClient(this IServiceCollection services, sys::Action<gaav::ProposalServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gaav::ProposalServiceClientBuilder builder = new gaav::ProposalServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gaav::ProposalServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddProposalServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gaav::ProposalServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gaav::ProposalServiceClientBuilder builder = new gaav::ProposalServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gaav::ReportServiceClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -2546,6 +2582,42 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gaav::ViewabilityProviderServiceClientBuilder builder = new gaav::ViewabilityProviderServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gaav::YieldGroupServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddYieldGroupServiceClient(this IServiceCollection services, sys::Action<gaav::YieldGroupServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gaav::YieldGroupServiceClientBuilder builder = new gaav::YieldGroupServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gaav::YieldGroupServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddYieldGroupServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gaav::YieldGroupServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gaav::YieldGroupServiceClientBuilder builder = new gaav::YieldGroupServiceClientBuilder();
                 action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });

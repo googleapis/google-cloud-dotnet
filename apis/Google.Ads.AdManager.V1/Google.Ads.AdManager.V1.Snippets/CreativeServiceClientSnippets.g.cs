@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     using Google.Ads.AdManager.V1;
     using Google.Api.Gax;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
@@ -391,6 +392,385 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCreative</summary>
+        public void CreateCreativeRequestObject()
+        {
+            // Snippet: CreateCreative(CreateCreativeRequest, CallSettings)
+            // Create client
+            CreativeServiceClient creativeServiceClient = CreativeServiceClient.Create();
+            // Initialize request argument(s)
+            CreateCreativeRequest request = new CreateCreativeRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Creative = new Creative(),
+            };
+            // Make the request
+            Creative response = creativeServiceClient.CreateCreative(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCreativeAsync</summary>
+        public async Task CreateCreativeRequestObjectAsync()
+        {
+            // Snippet: CreateCreativeAsync(CreateCreativeRequest, CallSettings)
+            // Additional: CreateCreativeAsync(CreateCreativeRequest, CancellationToken)
+            // Create client
+            CreativeServiceClient creativeServiceClient = await CreativeServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateCreativeRequest request = new CreateCreativeRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Creative = new Creative(),
+            };
+            // Make the request
+            Creative response = await creativeServiceClient.CreateCreativeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCreative</summary>
+        public void CreateCreative()
+        {
+            // Snippet: CreateCreative(string, Creative, CallSettings)
+            // Create client
+            CreativeServiceClient creativeServiceClient = CreativeServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            Creative creative = new Creative();
+            // Make the request
+            Creative response = creativeServiceClient.CreateCreative(parent, creative);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCreativeAsync</summary>
+        public async Task CreateCreativeAsync()
+        {
+            // Snippet: CreateCreativeAsync(string, Creative, CallSettings)
+            // Additional: CreateCreativeAsync(string, Creative, CancellationToken)
+            // Create client
+            CreativeServiceClient creativeServiceClient = await CreativeServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            Creative creative = new Creative();
+            // Make the request
+            Creative response = await creativeServiceClient.CreateCreativeAsync(parent, creative);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCreative</summary>
+        public void CreateCreativeResourceNames()
+        {
+            // Snippet: CreateCreative(NetworkName, Creative, CallSettings)
+            // Create client
+            CreativeServiceClient creativeServiceClient = CreativeServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            Creative creative = new Creative();
+            // Make the request
+            Creative response = creativeServiceClient.CreateCreative(parent, creative);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCreativeAsync</summary>
+        public async Task CreateCreativeResourceNamesAsync()
+        {
+            // Snippet: CreateCreativeAsync(NetworkName, Creative, CallSettings)
+            // Additional: CreateCreativeAsync(NetworkName, Creative, CancellationToken)
+            // Create client
+            CreativeServiceClient creativeServiceClient = await CreativeServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            Creative creative = new Creative();
+            // Make the request
+            Creative response = await creativeServiceClient.CreateCreativeAsync(parent, creative);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCreative</summary>
+        public void UpdateCreativeRequestObject()
+        {
+            // Snippet: UpdateCreative(UpdateCreativeRequest, CallSettings)
+            // Create client
+            CreativeServiceClient creativeServiceClient = CreativeServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateCreativeRequest request = new UpdateCreativeRequest
+            {
+                Creative = new Creative(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Creative response = creativeServiceClient.UpdateCreative(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCreativeAsync</summary>
+        public async Task UpdateCreativeRequestObjectAsync()
+        {
+            // Snippet: UpdateCreativeAsync(UpdateCreativeRequest, CallSettings)
+            // Additional: UpdateCreativeAsync(UpdateCreativeRequest, CancellationToken)
+            // Create client
+            CreativeServiceClient creativeServiceClient = await CreativeServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateCreativeRequest request = new UpdateCreativeRequest
+            {
+                Creative = new Creative(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Creative response = await creativeServiceClient.UpdateCreativeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCreative</summary>
+        public void UpdateCreative()
+        {
+            // Snippet: UpdateCreative(Creative, FieldMask, CallSettings)
+            // Create client
+            CreativeServiceClient creativeServiceClient = CreativeServiceClient.Create();
+            // Initialize request argument(s)
+            Creative creative = new Creative();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Creative response = creativeServiceClient.UpdateCreative(creative, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCreativeAsync</summary>
+        public async Task UpdateCreativeAsync()
+        {
+            // Snippet: UpdateCreativeAsync(Creative, FieldMask, CallSettings)
+            // Additional: UpdateCreativeAsync(Creative, FieldMask, CancellationToken)
+            // Create client
+            CreativeServiceClient creativeServiceClient = await CreativeServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Creative creative = new Creative();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Creative response = await creativeServiceClient.UpdateCreativeAsync(creative, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateCreatives</summary>
+        public void BatchCreateCreativesRequestObject()
+        {
+            // Snippet: BatchCreateCreatives(BatchCreateCreativesRequest, CallSettings)
+            // Create client
+            CreativeServiceClient creativeServiceClient = CreativeServiceClient.Create();
+            // Initialize request argument(s)
+            BatchCreateCreativesRequest request = new BatchCreateCreativesRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Requests =
+                {
+                    new CreateCreativeRequest(),
+                },
+            };
+            // Make the request
+            BatchCreateCreativesResponse response = creativeServiceClient.BatchCreateCreatives(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateCreativesAsync</summary>
+        public async Task BatchCreateCreativesRequestObjectAsync()
+        {
+            // Snippet: BatchCreateCreativesAsync(BatchCreateCreativesRequest, CallSettings)
+            // Additional: BatchCreateCreativesAsync(BatchCreateCreativesRequest, CancellationToken)
+            // Create client
+            CreativeServiceClient creativeServiceClient = await CreativeServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchCreateCreativesRequest request = new BatchCreateCreativesRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Requests =
+                {
+                    new CreateCreativeRequest(),
+                },
+            };
+            // Make the request
+            BatchCreateCreativesResponse response = await creativeServiceClient.BatchCreateCreativesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateCreatives</summary>
+        public void BatchCreateCreatives()
+        {
+            // Snippet: BatchCreateCreatives(string, IEnumerable<CreateCreativeRequest>, CallSettings)
+            // Create client
+            CreativeServiceClient creativeServiceClient = CreativeServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<CreateCreativeRequest> requests = new CreateCreativeRequest[]
+            {
+                new CreateCreativeRequest(),
+            };
+            // Make the request
+            BatchCreateCreativesResponse response = creativeServiceClient.BatchCreateCreatives(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateCreativesAsync</summary>
+        public async Task BatchCreateCreativesAsync()
+        {
+            // Snippet: BatchCreateCreativesAsync(string, IEnumerable<CreateCreativeRequest>, CallSettings)
+            // Additional: BatchCreateCreativesAsync(string, IEnumerable<CreateCreativeRequest>, CancellationToken)
+            // Create client
+            CreativeServiceClient creativeServiceClient = await CreativeServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<CreateCreativeRequest> requests = new CreateCreativeRequest[]
+            {
+                new CreateCreativeRequest(),
+            };
+            // Make the request
+            BatchCreateCreativesResponse response = await creativeServiceClient.BatchCreateCreativesAsync(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateCreatives</summary>
+        public void BatchCreateCreativesResourceNames()
+        {
+            // Snippet: BatchCreateCreatives(NetworkName, IEnumerable<CreateCreativeRequest>, CallSettings)
+            // Create client
+            CreativeServiceClient creativeServiceClient = CreativeServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<CreateCreativeRequest> requests = new CreateCreativeRequest[]
+            {
+                new CreateCreativeRequest(),
+            };
+            // Make the request
+            BatchCreateCreativesResponse response = creativeServiceClient.BatchCreateCreatives(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateCreativesAsync</summary>
+        public async Task BatchCreateCreativesResourceNamesAsync()
+        {
+            // Snippet: BatchCreateCreativesAsync(NetworkName, IEnumerable<CreateCreativeRequest>, CallSettings)
+            // Additional: BatchCreateCreativesAsync(NetworkName, IEnumerable<CreateCreativeRequest>, CancellationToken)
+            // Create client
+            CreativeServiceClient creativeServiceClient = await CreativeServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<CreateCreativeRequest> requests = new CreateCreativeRequest[]
+            {
+                new CreateCreativeRequest(),
+            };
+            // Make the request
+            BatchCreateCreativesResponse response = await creativeServiceClient.BatchCreateCreativesAsync(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateCreatives</summary>
+        public void BatchUpdateCreativesRequestObject()
+        {
+            // Snippet: BatchUpdateCreatives(BatchUpdateCreativesRequest, CallSettings)
+            // Create client
+            CreativeServiceClient creativeServiceClient = CreativeServiceClient.Create();
+            // Initialize request argument(s)
+            BatchUpdateCreativesRequest request = new BatchUpdateCreativesRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Requests =
+                {
+                    new UpdateCreativeRequest(),
+                },
+            };
+            // Make the request
+            BatchUpdateCreativesResponse response = creativeServiceClient.BatchUpdateCreatives(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateCreativesAsync</summary>
+        public async Task BatchUpdateCreativesRequestObjectAsync()
+        {
+            // Snippet: BatchUpdateCreativesAsync(BatchUpdateCreativesRequest, CallSettings)
+            // Additional: BatchUpdateCreativesAsync(BatchUpdateCreativesRequest, CancellationToken)
+            // Create client
+            CreativeServiceClient creativeServiceClient = await CreativeServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchUpdateCreativesRequest request = new BatchUpdateCreativesRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Requests =
+                {
+                    new UpdateCreativeRequest(),
+                },
+            };
+            // Make the request
+            BatchUpdateCreativesResponse response = await creativeServiceClient.BatchUpdateCreativesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateCreatives</summary>
+        public void BatchUpdateCreatives()
+        {
+            // Snippet: BatchUpdateCreatives(string, IEnumerable<UpdateCreativeRequest>, CallSettings)
+            // Create client
+            CreativeServiceClient creativeServiceClient = CreativeServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<UpdateCreativeRequest> requests = new UpdateCreativeRequest[]
+            {
+                new UpdateCreativeRequest(),
+            };
+            // Make the request
+            BatchUpdateCreativesResponse response = creativeServiceClient.BatchUpdateCreatives(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateCreativesAsync</summary>
+        public async Task BatchUpdateCreativesAsync()
+        {
+            // Snippet: BatchUpdateCreativesAsync(string, IEnumerable<UpdateCreativeRequest>, CallSettings)
+            // Additional: BatchUpdateCreativesAsync(string, IEnumerable<UpdateCreativeRequest>, CancellationToken)
+            // Create client
+            CreativeServiceClient creativeServiceClient = await CreativeServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<UpdateCreativeRequest> requests = new UpdateCreativeRequest[]
+            {
+                new UpdateCreativeRequest(),
+            };
+            // Make the request
+            BatchUpdateCreativesResponse response = await creativeServiceClient.BatchUpdateCreativesAsync(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateCreatives</summary>
+        public void BatchUpdateCreativesResourceNames()
+        {
+            // Snippet: BatchUpdateCreatives(NetworkName, IEnumerable<UpdateCreativeRequest>, CallSettings)
+            // Create client
+            CreativeServiceClient creativeServiceClient = CreativeServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<UpdateCreativeRequest> requests = new UpdateCreativeRequest[]
+            {
+                new UpdateCreativeRequest(),
+            };
+            // Make the request
+            BatchUpdateCreativesResponse response = creativeServiceClient.BatchUpdateCreatives(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateCreativesAsync</summary>
+        public async Task BatchUpdateCreativesResourceNamesAsync()
+        {
+            // Snippet: BatchUpdateCreativesAsync(NetworkName, IEnumerable<UpdateCreativeRequest>, CallSettings)
+            // Additional: BatchUpdateCreativesAsync(NetworkName, IEnumerable<UpdateCreativeRequest>, CancellationToken)
+            // Create client
+            CreativeServiceClient creativeServiceClient = await CreativeServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<UpdateCreativeRequest> requests = new UpdateCreativeRequest[]
+            {
+                new UpdateCreativeRequest(),
+            };
+            // Make the request
+            BatchUpdateCreativesResponse response = await creativeServiceClient.BatchUpdateCreativesAsync(parent, requests);
             // End snippet
         }
 

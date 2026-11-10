@@ -185,20 +185,25 @@ namespace Google.Ads.AdManager.V1 {
             "cxgEIAMoCUIy4kEBAfpBKwopYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Rh",
             "eG9ub215Q2F0ZWdvcnkiXwoTVXNlckRvbWFpblRhcmdldGluZxIjChV0YXJn",
             "ZXRlZF91c2VyX2RvbWFpbnMYASADKAlCBOJBAQESIwoVZXhjbHVkZWRfdXNl",
-            "cl9kb21haW5zGAIgAygJQgTiQQEBImYKE0NvbnRleHR1YWxUYXJnZXRpbmcS",
-            "TwoXZXhjbHVkZWRfY29udGVudF9sYWJlbHMYBiADKAlCLuJBAQH6QScKJWFk",
-            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9Db250ZW50TGFiZWwiXwoWVmlkZW9Q",
-            "b3NpdGlvblRhcmdldGluZxJFCg92aWRlb19wb3NpdGlvbnMYASADKAsyJi5n",
-            "b29nbGUuYWRzLmFkbWFuYWdlci52MS5WaWRlb1Bvc2l0aW9uQgTiQQEBIqUD",
-            "Cg1WaWRlb1Bvc2l0aW9uEiAKDW1pZHJvbGxfaW5kZXgYASABKANCBOJBAQFI",
-            "AIgBARIoChVyZXZlcnNlX21pZHJvbGxfaW5kZXgYAiABKANCBOJBAQFIAYgB",
-            "ARIfCgxwb2RfcG9zaXRpb24YAyABKANCBOJBAQFIAogBARJaCg1wb3NpdGlv",
-            "bl90eXBlGAUgASgOMjguZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuVmlkZW9Q",
-            "b3NpdGlvbkVudW0uVmlkZW9Qb3NpdGlvbkIE4kEBAUgDiAEBEmwKC2J1bXBl",
-            "cl90eXBlGAYgASgOMkwuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuVGFyZ2V0",
-            "ZWRWaWRlb0J1bXBlclR5cGVFbnVtLlRhcmdldGVkVmlkZW9CdW1wZXJUeXBl",
-            "QgTiQQEBSASIAQFCEAoOX21pZHJvbGxfaW5kZXhCGAoWX3JldmVyc2VfbWlk",
-            "cm9sbF9pbmRleEIPCg1fcG9kX3Bvc2l0aW9uQhAKDl9wb3NpdGlvbl90eXBl",
+            "cl9kb21haW5zGAIgAygJQgTiQQEBIvoBChNDb250ZXh0dWFsVGFyZ2V0aW5n",
+            "EkgKEnRhcmdldGVkX3ZlcnRpY2FscxgEIAMoCUIs4kEBAfpBJQojYWRtYW5h",
+            "Z2VyLmdvb2dsZWFwaXMuY29tL0FkQ2F0ZWdvcnkSSAoSZXhjbHVkZWRfdmVy",
+            "dGljYWxzGAUgAygJQiziQQEB+kElCiNhZG1hbmFnZXIuZ29vZ2xlYXBpcy5j",
+            "b20vQWRDYXRlZ29yeRJPChdleGNsdWRlZF9jb250ZW50X2xhYmVscxgGIAMo",
+            "CUIu4kEBAfpBJwolYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0NvbnRlbnRM",
+            "YWJlbCJfChZWaWRlb1Bvc2l0aW9uVGFyZ2V0aW5nEkUKD3ZpZGVvX3Bvc2l0",
+            "aW9ucxgBIAMoCzImLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlZpZGVvUG9z",
+            "aXRpb25CBOJBAQEi8QMKDVZpZGVvUG9zaXRpb24SIAoNbWlkcm9sbF9pbmRl",
+            "eBgBIAEoA0IE4kEBAUgAiAEBEigKFXJldmVyc2VfbWlkcm9sbF9pbmRleBgC",
+            "IAEoA0IE4kEBAUgBiAEBEh8KDHBvZF9wb3NpdGlvbhgDIAEoA0IE4kEBAUgC",
+            "iAEBEj4KB2FkX3Nwb3QYByABKAlCKOJBAQH6QSEKH2FkbWFuYWdlci5nb29n",
+            "bGVhcGlzLmNvbS9BZFNwb3RIA4gBARJaCg1wb3NpdGlvbl90eXBlGAUgASgO",
+            "MjguZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuVmlkZW9Qb3NpdGlvbkVudW0u",
+            "VmlkZW9Qb3NpdGlvbkIE4kEBAUgEiAEBEmwKC2J1bXBlcl90eXBlGAYgASgO",
+            "MkwuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuVGFyZ2V0ZWRWaWRlb0J1bXBl",
+            "clR5cGVFbnVtLlRhcmdldGVkVmlkZW9CdW1wZXJUeXBlQgTiQQEBSAWIAQFC",
+            "EAoOX21pZHJvbGxfaW5kZXhCGAoWX3JldmVyc2VfbWlkcm9sbF9pbmRleEIP",
+            "Cg1fcG9kX3Bvc2l0aW9uQgoKCF9hZF9zcG90QhAKDl9wb3NpdGlvbl90eXBl",
             "Qg4KDF9idW1wZXJfdHlwZSJAChREYXRhU2VnbWVudFRhcmdldGluZxIoChpo",
             "YXNfZGF0YV9zZWdtZW50X3RhcmdldGluZxgCIAEoCEIE4kEBAyLiBAoWUmVx",
             "dWVzdEZvcm1hdFRhcmdldGluZxIjChBhcHBfb3Blbl9lbmFibGVkGAEgASgI",
@@ -273,9 +278,9 @@ namespace Google.Ads.AdManager.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.DateTimeRangeTargeting), global::Google.Ads.AdManager.V1.DateTimeRangeTargeting.Parser, new[]{ "TargetedRange" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.PublisherProvidedSignalsTargeting), global::Google.Ads.AdManager.V1.PublisherProvidedSignalsTargeting.Parser, new[]{ "TargetedTaxonomyCategories", "ExcludedTaxonomyCategories" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.UserDomainTargeting), global::Google.Ads.AdManager.V1.UserDomainTargeting.Parser, new[]{ "TargetedUserDomains", "ExcludedUserDomains" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ContextualTargeting), global::Google.Ads.AdManager.V1.ContextualTargeting.Parser, new[]{ "ExcludedContentLabels" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ContextualTargeting), global::Google.Ads.AdManager.V1.ContextualTargeting.Parser, new[]{ "TargetedVerticals", "ExcludedVerticals", "ExcludedContentLabels" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.VideoPositionTargeting), global::Google.Ads.AdManager.V1.VideoPositionTargeting.Parser, new[]{ "VideoPositions" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.VideoPosition), global::Google.Ads.AdManager.V1.VideoPosition.Parser, new[]{ "MidrollIndex", "ReverseMidrollIndex", "PodPosition", "PositionType", "BumperType" }, new[]{ "MidrollIndex", "ReverseMidrollIndex", "PodPosition", "PositionType", "BumperType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.VideoPosition), global::Google.Ads.AdManager.V1.VideoPosition.Parser, new[]{ "MidrollIndex", "ReverseMidrollIndex", "PodPosition", "AdSpot", "PositionType", "BumperType" }, new[]{ "MidrollIndex", "ReverseMidrollIndex", "PodPosition", "AdSpot", "PositionType", "BumperType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.DataSegmentTargeting), global::Google.Ads.AdManager.V1.DataSegmentTargeting.Parser, new[]{ "HasDataSegmentTargeting" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.RequestFormatTargeting), global::Google.Ads.AdManager.V1.RequestFormatTargeting.Parser, new[]{ "AppOpenEnabled", "RewardedEnabled", "RewardedInterstitialEnabled", "InterstitialEnabled", "AnchorEnabled", "BannerEnabled", "InstreamVideoEnabled", "InstreamAudioEnabled", "NativeAdvancedEnabled" }, new[]{ "AppOpenEnabled", "RewardedEnabled", "RewardedInterstitialEnabled", "InterstitialEnabled", "AnchorEnabled", "BannerEnabled", "InstreamVideoEnabled", "InstreamAudioEnabled", "NativeAdvancedEnabled" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ContentTargeting), global::Google.Ads.AdManager.V1.ContentTargeting.Parser, new[]{ "TargetedContent", "ExcludedContent", "TargetedContentBundles", "ExcludedContentBundles" }, null, null, null, null),
@@ -7220,6 +7225,8 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ContextualTargeting(ContextualTargeting other) : this() {
+      targetedVerticals_ = other.targetedVerticals_.Clone();
+      excludedVerticals_ = other.excludedVerticals_.Clone();
       excludedContentLabels_ = other.excludedContentLabels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -7228,6 +7235,38 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ContextualTargeting Clone() {
       return new ContextualTargeting(this);
+    }
+
+    /// <summary>Field number for the "targeted_verticals" field.</summary>
+    public const int TargetedVerticalsFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_targetedVerticals_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> targetedVerticals_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of verticals that should be targeted/included. Verticals
+    /// are `AdCategory` resources of type `VERTICAL`. Format:
+    /// `networks/{network_code}/adCategories/{ad_category_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> TargetedVerticals {
+      get { return targetedVerticals_; }
+    }
+
+    /// <summary>Field number for the "excluded_verticals" field.</summary>
+    public const int ExcludedVerticalsFieldNumber = 5;
+    private static readonly pb::FieldCodec<string> _repeated_excludedVerticals_codec
+        = pb::FieldCodec.ForString(42);
+    private readonly pbc::RepeatedField<string> excludedVerticals_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of verticals that should be excluded. Verticals are
+    /// `AdCategory` resources of type `VERTICAL`. Format:
+    /// `networks/{network_code}/adCategories/{ad_category_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ExcludedVerticals {
+      get { return excludedVerticals_; }
     }
 
     /// <summary>Field number for the "excluded_content_labels" field.</summary>
@@ -7259,6 +7298,8 @@ namespace Google.Ads.AdManager.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!targetedVerticals_.Equals(other.targetedVerticals_)) return false;
+      if(!excludedVerticals_.Equals(other.excludedVerticals_)) return false;
       if(!excludedContentLabels_.Equals(other.excludedContentLabels_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -7267,6 +7308,8 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= targetedVerticals_.GetHashCode();
+      hash ^= excludedVerticals_.GetHashCode();
       hash ^= excludedContentLabels_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -7286,6 +7329,8 @@ namespace Google.Ads.AdManager.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      targetedVerticals_.WriteTo(output, _repeated_targetedVerticals_codec);
+      excludedVerticals_.WriteTo(output, _repeated_excludedVerticals_codec);
       excludedContentLabels_.WriteTo(output, _repeated_excludedContentLabels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -7297,6 +7342,8 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      targetedVerticals_.WriteTo(ref output, _repeated_targetedVerticals_codec);
+      excludedVerticals_.WriteTo(ref output, _repeated_excludedVerticals_codec);
       excludedContentLabels_.WriteTo(ref output, _repeated_excludedContentLabels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -7308,6 +7355,8 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += targetedVerticals_.CalculateSize(_repeated_targetedVerticals_codec);
+      size += excludedVerticals_.CalculateSize(_repeated_excludedVerticals_codec);
       size += excludedContentLabels_.CalculateSize(_repeated_excludedContentLabels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7321,6 +7370,8 @@ namespace Google.Ads.AdManager.V1 {
       if (other == null) {
         return;
       }
+      targetedVerticals_.Add(other.targetedVerticals_);
+      excludedVerticals_.Add(other.excludedVerticals_);
       excludedContentLabels_.Add(other.excludedContentLabels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -7341,6 +7392,14 @@ namespace Google.Ads.AdManager.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 34: {
+            targetedVerticals_.AddEntriesFrom(input, _repeated_targetedVerticals_codec);
+            break;
+          }
+          case 42: {
+            excludedVerticals_.AddEntriesFrom(input, _repeated_excludedVerticals_codec);
+            break;
+          }
           case 50: {
             excludedContentLabels_.AddEntriesFrom(input, _repeated_excludedContentLabels_codec);
             break;
@@ -7364,6 +7423,14 @@ namespace Google.Ads.AdManager.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 34: {
+            targetedVerticals_.AddEntriesFrom(ref input, _repeated_targetedVerticals_codec);
+            break;
+          }
+          case 42: {
+            excludedVerticals_.AddEntriesFrom(ref input, _repeated_excludedVerticals_codec);
+            break;
+          }
           case 50: {
             excludedContentLabels_.AddEntriesFrom(ref input, _repeated_excludedContentLabels_codec);
             break;
@@ -7612,6 +7679,7 @@ namespace Google.Ads.AdManager.V1 {
       midrollIndex_ = other.midrollIndex_;
       reverseMidrollIndex_ = other.reverseMidrollIndex_;
       podPosition_ = other.podPosition_;
+      adSpot_ = other.adSpot_;
       positionType_ = other.positionType_;
       bumperType_ = other.bumperType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -7693,9 +7761,8 @@ namespace Google.Ads.AdManager.V1 {
 
     private long podPosition_;
     /// <summary>
-    /// Optional. The video position within a pod to target. This field must be
-    /// unset in order to target a specific video position (e.g. position_type),
-    /// bumper type (e.g. bumper_type), or custom ad spot (e.g. custom_spot_id).
+    /// Optional. The video position within a pod to target. If set, `adSpot`,
+    /// `bumperType`, and `positionType` must be unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7717,6 +7784,37 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearPodPosition() {
       _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "ad_spot" field.</summary>
+    public const int AdSpotFieldNumber = 7;
+    private readonly static string AdSpotDefaultValue = "";
+
+    private string adSpot_;
+    /// <summary>
+    /// Optional. The resource name of the custom ad spot to target. If set,
+    /// `bumperType`, `podPosition`, and `positionType` must be unset. Format:
+    /// `networks/{network_code}/adSpots/{ad_spot_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AdSpot {
+      get { return adSpot_ ?? AdSpotDefaultValue; }
+      set {
+        adSpot_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "ad_spot" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAdSpot {
+      get { return adSpot_ != null; }
+    }
+    /// <summary>Clears the value of the "ad_spot" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAdSpot() {
+      adSpot_ = null;
     }
 
     /// <summary>Field number for the "position_type" field.</summary>
@@ -7757,9 +7855,8 @@ namespace Google.Ads.AdManager.V1 {
 
     private global::Google.Ads.AdManager.V1.TargetedVideoBumperTypeEnum.Types.TargetedVideoBumperType bumperType_;
     /// <summary>
-    /// Optional. The video bumper type to target. This field must be unset in
-    /// order to target a specific video position (e.g. position_type), pod
-    /// position (e.g. pod_position), or custom ad spot (e.g. custom_spot_id).
+    /// Optional. The video bumper type to target. If set, `adSpot`, `podPosition`,
+    /// and `positionType` must be unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7801,6 +7898,7 @@ namespace Google.Ads.AdManager.V1 {
       if (MidrollIndex != other.MidrollIndex) return false;
       if (ReverseMidrollIndex != other.ReverseMidrollIndex) return false;
       if (PodPosition != other.PodPosition) return false;
+      if (AdSpot != other.AdSpot) return false;
       if (PositionType != other.PositionType) return false;
       if (BumperType != other.BumperType) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -7813,6 +7911,7 @@ namespace Google.Ads.AdManager.V1 {
       if (HasMidrollIndex) hash ^= MidrollIndex.GetHashCode();
       if (HasReverseMidrollIndex) hash ^= ReverseMidrollIndex.GetHashCode();
       if (HasPodPosition) hash ^= PodPosition.GetHashCode();
+      if (HasAdSpot) hash ^= AdSpot.GetHashCode();
       if (HasPositionType) hash ^= PositionType.GetHashCode();
       if (HasBumperType) hash ^= BumperType.GetHashCode();
       if (_unknownFields != null) {
@@ -7853,6 +7952,10 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(48);
         output.WriteEnum((int) BumperType);
       }
+      if (HasAdSpot) {
+        output.WriteRawTag(58);
+        output.WriteString(AdSpot);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7883,6 +7986,10 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(48);
         output.WriteEnum((int) BumperType);
       }
+      if (HasAdSpot) {
+        output.WriteRawTag(58);
+        output.WriteString(AdSpot);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7901,6 +8008,9 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (HasPodPosition) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(PodPosition);
+      }
+      if (HasAdSpot) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AdSpot);
       }
       if (HasPositionType) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PositionType);
@@ -7928,6 +8038,9 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (other.HasPodPosition) {
         PodPosition = other.PodPosition;
+      }
+      if (other.HasAdSpot) {
+        AdSpot = other.AdSpot;
       }
       if (other.HasPositionType) {
         PositionType = other.PositionType;
@@ -7974,6 +8087,10 @@ namespace Google.Ads.AdManager.V1 {
             BumperType = (global::Google.Ads.AdManager.V1.TargetedVideoBumperTypeEnum.Types.TargetedVideoBumperType) input.ReadEnum();
             break;
           }
+          case 58: {
+            AdSpot = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -8011,6 +8128,10 @@ namespace Google.Ads.AdManager.V1 {
           }
           case 48: {
             BumperType = (global::Google.Ads.AdManager.V1.TargetedVideoBumperTypeEnum.Types.TargetedVideoBumperType) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            AdSpot = input.ReadString();
             break;
           }
         }
