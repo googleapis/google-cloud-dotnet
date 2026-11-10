@@ -74,9 +74,11 @@ namespace Google.Cloud.OracleDatabase.V1
             yield return CommonReflection.Descriptor;
             yield return DatabaseReflection.Descriptor;
             yield return DatabaseCharacterSetReflection.Descriptor;
+            yield return DatabaseConnectionReflection.Descriptor;
             yield return DbNodeReflection.Descriptor;
             yield return DbServerReflection.Descriptor;
             yield return DbSystemReflection.Descriptor;
+            yield return DbSystemComputePerformanceReflection.Descriptor;
             yield return DbSystemInitialStorageSizeReflection.Descriptor;
             yield return DbSystemShapeReflection.Descriptor;
             yield return DbVersionReflection.Descriptor;
@@ -84,6 +86,8 @@ namespace Google.Cloud.OracleDatabase.V1
             yield return ExadataInfraReflection.Descriptor;
             yield return ExadbVmClusterReflection.Descriptor;
             yield return ExascaleDbStorageVaultReflection.Descriptor;
+            yield return ExecuteSqlReflection.Descriptor;
+            yield return FlexComponentReflection.Descriptor;
             yield return GiVersionReflection.Descriptor;
             yield return GoldengateConnectionReflection.Descriptor;
             yield return GoldengateConnectionAssignmentReflection.Descriptor;

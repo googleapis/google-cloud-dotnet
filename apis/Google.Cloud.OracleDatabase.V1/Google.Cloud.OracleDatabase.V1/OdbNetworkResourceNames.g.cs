@@ -341,4 +341,17 @@ namespace Google.Cloud.OracleDatabase.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class PscInterfaceConfig
+    {
+        /// <summary>
+        /// <see cref="NetworkAttachmentName"/>-typed view over the <see cref="NetworkAttachment"/> resource name
+        /// property.
+        /// </summary>
+        public NetworkAttachmentName NetworkAttachmentAsNetworkAttachmentName
+        {
+            get => string.IsNullOrEmpty(NetworkAttachment) ? null : NetworkAttachmentName.Parse(NetworkAttachment, allowUnparsed: true);
+            set => NetworkAttachment = value?.ToString() ?? "";
+        }
+    }
 }

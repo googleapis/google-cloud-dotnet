@@ -53,6 +53,8 @@ namespace Google.Cloud.OracleDatabase.V1
             GetCloudExadataInfrastructureSettings = existing.GetCloudExadataInfrastructureSettings;
             CreateCloudExadataInfrastructureSettings = existing.CreateCloudExadataInfrastructureSettings;
             CreateCloudExadataInfrastructureOperationsSettings = existing.CreateCloudExadataInfrastructureOperationsSettings.Clone();
+            UpdateCloudExadataInfrastructureSettings = existing.UpdateCloudExadataInfrastructureSettings;
+            UpdateCloudExadataInfrastructureOperationsSettings = existing.UpdateCloudExadataInfrastructureOperationsSettings.Clone();
             DeleteCloudExadataInfrastructureSettings = existing.DeleteCloudExadataInfrastructureSettings;
             DeleteCloudExadataInfrastructureOperationsSettings = existing.DeleteCloudExadataInfrastructureOperationsSettings.Clone();
             ConfigureExascaleCloudExadataInfrastructureSettings = existing.ConfigureExascaleCloudExadataInfrastructureSettings;
@@ -61,9 +63,20 @@ namespace Google.Cloud.OracleDatabase.V1
             GetCloudVmClusterSettings = existing.GetCloudVmClusterSettings;
             CreateCloudVmClusterSettings = existing.CreateCloudVmClusterSettings;
             CreateCloudVmClusterOperationsSettings = existing.CreateCloudVmClusterOperationsSettings.Clone();
+            UpdateCloudVmClusterSettings = existing.UpdateCloudVmClusterSettings;
+            UpdateCloudVmClusterOperationsSettings = existing.UpdateCloudVmClusterOperationsSettings.Clone();
             DeleteCloudVmClusterSettings = existing.DeleteCloudVmClusterSettings;
             DeleteCloudVmClusterOperationsSettings = existing.DeleteCloudVmClusterOperationsSettings.Clone();
+            EnableCloudVmClusterIdentityConnectorSettings = existing.EnableCloudVmClusterIdentityConnectorSettings;
+            EnableCloudVmClusterIdentityConnectorOperationsSettings = existing.EnableCloudVmClusterIdentityConnectorOperationsSettings.Clone();
+            DisableCloudVmClusterIdentityConnectorSettings = existing.DisableCloudVmClusterIdentityConnectorSettings;
+            DisableCloudVmClusterIdentityConnectorOperationsSettings = existing.DisableCloudVmClusterIdentityConnectorOperationsSettings.Clone();
+            EnableExadbVmClusterIdentityConnectorSettings = existing.EnableExadbVmClusterIdentityConnectorSettings;
+            EnableExadbVmClusterIdentityConnectorOperationsSettings = existing.EnableExadbVmClusterIdentityConnectorOperationsSettings.Clone();
+            DisableExadbVmClusterIdentityConnectorSettings = existing.DisableExadbVmClusterIdentityConnectorSettings;
+            DisableExadbVmClusterIdentityConnectorOperationsSettings = existing.DisableExadbVmClusterIdentityConnectorOperationsSettings.Clone();
             ListEntitlementsSettings = existing.ListEntitlementsSettings;
+            ListFlexComponentsSettings = existing.ListFlexComponentsSettings;
             ListDbServersSettings = existing.ListDbServersSettings;
             ListDbNodesSettings = existing.ListDbNodesSettings;
             ListGiVersionsSettings = existing.ListGiVersionsSettings;
@@ -100,12 +113,16 @@ namespace Google.Cloud.OracleDatabase.V1
             GetOdbNetworkSettings = existing.GetOdbNetworkSettings;
             CreateOdbNetworkSettings = existing.CreateOdbNetworkSettings;
             CreateOdbNetworkOperationsSettings = existing.CreateOdbNetworkOperationsSettings.Clone();
+            UpdateOdbNetworkSettings = existing.UpdateOdbNetworkSettings;
+            UpdateOdbNetworkOperationsSettings = existing.UpdateOdbNetworkOperationsSettings.Clone();
             DeleteOdbNetworkSettings = existing.DeleteOdbNetworkSettings;
             DeleteOdbNetworkOperationsSettings = existing.DeleteOdbNetworkOperationsSettings.Clone();
             ListOdbSubnetsSettings = existing.ListOdbSubnetsSettings;
             GetOdbSubnetSettings = existing.GetOdbSubnetSettings;
             CreateOdbSubnetSettings = existing.CreateOdbSubnetSettings;
             CreateOdbSubnetOperationsSettings = existing.CreateOdbSubnetOperationsSettings.Clone();
+            UpdateOdbSubnetSettings = existing.UpdateOdbSubnetSettings;
+            UpdateOdbSubnetOperationsSettings = existing.UpdateOdbSubnetOperationsSettings.Clone();
             DeleteOdbSubnetSettings = existing.DeleteOdbSubnetSettings;
             DeleteOdbSubnetOperationsSettings = existing.DeleteOdbSubnetOperationsSettings.Clone();
             ListOdbDnsZonesSettings = existing.ListOdbDnsZonesSettings;
@@ -128,9 +145,12 @@ namespace Google.Cloud.OracleDatabase.V1
             GetExascaleDbStorageVaultSettings = existing.GetExascaleDbStorageVaultSettings;
             CreateExascaleDbStorageVaultSettings = existing.CreateExascaleDbStorageVaultSettings;
             CreateExascaleDbStorageVaultOperationsSettings = existing.CreateExascaleDbStorageVaultOperationsSettings.Clone();
+            UpdateExascaleDbStorageVaultSettings = existing.UpdateExascaleDbStorageVaultSettings;
+            UpdateExascaleDbStorageVaultOperationsSettings = existing.UpdateExascaleDbStorageVaultOperationsSettings.Clone();
             DeleteExascaleDbStorageVaultSettings = existing.DeleteExascaleDbStorageVaultSettings;
             DeleteExascaleDbStorageVaultOperationsSettings = existing.DeleteExascaleDbStorageVaultOperationsSettings.Clone();
             ListDbSystemInitialStorageSizesSettings = existing.ListDbSystemInitialStorageSizesSettings;
+            ListDbSystemComputePerformancesSettings = existing.ListDbSystemComputePerformancesSettings;
             ListDatabasesSettings = existing.ListDatabasesSettings;
             GetDatabaseSettings = existing.GetDatabaseSettings;
             ListPluggableDatabasesSettings = existing.ListPluggableDatabasesSettings;
@@ -139,12 +159,16 @@ namespace Google.Cloud.OracleDatabase.V1
             GetDbSystemSettings = existing.GetDbSystemSettings;
             CreateDbSystemSettings = existing.CreateDbSystemSettings;
             CreateDbSystemOperationsSettings = existing.CreateDbSystemOperationsSettings.Clone();
+            UpdateDbSystemSettings = existing.UpdateDbSystemSettings;
+            UpdateDbSystemOperationsSettings = existing.UpdateDbSystemOperationsSettings.Clone();
             DeleteDbSystemSettings = existing.DeleteDbSystemSettings;
             DeleteDbSystemOperationsSettings = existing.DeleteDbSystemOperationsSettings.Clone();
             ListGoldengateDeploymentsSettings = existing.ListGoldengateDeploymentsSettings;
             GetGoldengateDeploymentSettings = existing.GetGoldengateDeploymentSettings;
             CreateGoldengateDeploymentSettings = existing.CreateGoldengateDeploymentSettings;
             CreateGoldengateDeploymentOperationsSettings = existing.CreateGoldengateDeploymentOperationsSettings.Clone();
+            UpdateGoldengateDeploymentSettings = existing.UpdateGoldengateDeploymentSettings;
+            UpdateGoldengateDeploymentOperationsSettings = existing.UpdateGoldengateDeploymentOperationsSettings.Clone();
             DeleteGoldengateDeploymentSettings = existing.DeleteGoldengateDeploymentSettings;
             DeleteGoldengateDeploymentOperationsSettings = existing.DeleteGoldengateDeploymentOperationsSettings.Clone();
             StopGoldengateDeploymentSettings = existing.StopGoldengateDeploymentSettings;
@@ -155,6 +179,8 @@ namespace Google.Cloud.OracleDatabase.V1
             GetGoldengateConnectionSettings = existing.GetGoldengateConnectionSettings;
             CreateGoldengateConnectionSettings = existing.CreateGoldengateConnectionSettings;
             CreateGoldengateConnectionOperationsSettings = existing.CreateGoldengateConnectionOperationsSettings.Clone();
+            UpdateGoldengateConnectionSettings = existing.UpdateGoldengateConnectionSettings;
+            UpdateGoldengateConnectionOperationsSettings = existing.UpdateGoldengateConnectionOperationsSettings.Clone();
             DeleteGoldengateConnectionSettings = existing.DeleteGoldengateConnectionSettings;
             DeleteGoldengateConnectionOperationsSettings = existing.DeleteGoldengateConnectionOperationsSettings.Clone();
             ListGoldengateDeploymentVersionsSettings = existing.ListGoldengateDeploymentVersionsSettings;
@@ -167,9 +193,21 @@ namespace Google.Cloud.OracleDatabase.V1
             GetGoldengateConnectionAssignmentSettings = existing.GetGoldengateConnectionAssignmentSettings;
             CreateGoldengateConnectionAssignmentSettings = existing.CreateGoldengateConnectionAssignmentSettings;
             CreateGoldengateConnectionAssignmentOperationsSettings = existing.CreateGoldengateConnectionAssignmentOperationsSettings.Clone();
+            UpdateGoldengateConnectionAssignmentSettings = existing.UpdateGoldengateConnectionAssignmentSettings;
+            UpdateGoldengateConnectionAssignmentOperationsSettings = existing.UpdateGoldengateConnectionAssignmentOperationsSettings.Clone();
             DeleteGoldengateConnectionAssignmentSettings = existing.DeleteGoldengateConnectionAssignmentSettings;
             DeleteGoldengateConnectionAssignmentOperationsSettings = existing.DeleteGoldengateConnectionAssignmentOperationsSettings.Clone();
             TestGoldengateConnectionAssignmentSettings = existing.TestGoldengateConnectionAssignmentSettings;
+            ListDatabaseConnectionsSettings = existing.ListDatabaseConnectionsSettings;
+            GetDatabaseConnectionSettings = existing.GetDatabaseConnectionSettings;
+            CreateDatabaseConnectionSettings = existing.CreateDatabaseConnectionSettings;
+            CreateDatabaseConnectionOperationsSettings = existing.CreateDatabaseConnectionOperationsSettings.Clone();
+            UpdateDatabaseConnectionSettings = existing.UpdateDatabaseConnectionSettings;
+            UpdateDatabaseConnectionOperationsSettings = existing.UpdateDatabaseConnectionOperationsSettings.Clone();
+            DeleteDatabaseConnectionSettings = existing.DeleteDatabaseConnectionSettings;
+            DeleteDatabaseConnectionOperationsSettings = existing.DeleteDatabaseConnectionOperationsSettings.Clone();
+            TestDatabaseConnectionSettings = existing.TestDatabaseConnectionSettings;
+            ExecuteSqlSettings = existing.ExecuteSqlSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -247,6 +285,37 @@ namespace Google.Cloud.OracleDatabase.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings CreateCloudExadataInfrastructureOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.UpdateCloudExadataInfrastructure</c> and
+        /// <c>OracleDatabaseClient.UpdateCloudExadataInfrastructureAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateCloudExadataInfrastructureSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.UpdateCloudExadataInfrastructure</c>
+        /// and <c>OracleDatabaseClient.UpdateCloudExadataInfrastructureAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateCloudExadataInfrastructureOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -388,6 +457,36 @@ namespace Google.Cloud.OracleDatabase.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.UpdateCloudVmCluster</c> and <c>OracleDatabaseClient.UpdateCloudVmClusterAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateCloudVmClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.UpdateCloudVmCluster</c> and
+        /// <c>OracleDatabaseClient.UpdateCloudVmClusterAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateCloudVmClusterOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>OracleDatabaseClient.DeleteCloudVmCluster</c> and <c>OracleDatabaseClient.DeleteCloudVmClusterAsync</c>.
         /// </summary>
         /// <remarks>
@@ -418,6 +517,130 @@ namespace Google.Cloud.OracleDatabase.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.EnableCloudVmClusterIdentityConnector</c> and
+        /// <c>OracleDatabaseClient.EnableCloudVmClusterIdentityConnectorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings EnableCloudVmClusterIdentityConnectorSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.EnableCloudVmClusterIdentityConnector</c>
+        ///  and <c>OracleDatabaseClient.EnableCloudVmClusterIdentityConnectorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings EnableCloudVmClusterIdentityConnectorOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.DisableCloudVmClusterIdentityConnector</c> and
+        /// <c>OracleDatabaseClient.DisableCloudVmClusterIdentityConnectorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DisableCloudVmClusterIdentityConnectorSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.DisableCloudVmClusterIdentityConnector</c>
+        ///  and <c>OracleDatabaseClient.DisableCloudVmClusterIdentityConnectorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DisableCloudVmClusterIdentityConnectorOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.EnableExadbVmClusterIdentityConnector</c> and
+        /// <c>OracleDatabaseClient.EnableExadbVmClusterIdentityConnectorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings EnableExadbVmClusterIdentityConnectorSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.EnableExadbVmClusterIdentityConnector</c>
+        ///  and <c>OracleDatabaseClient.EnableExadbVmClusterIdentityConnectorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings EnableExadbVmClusterIdentityConnectorOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.DisableExadbVmClusterIdentityConnector</c> and
+        /// <c>OracleDatabaseClient.DisableExadbVmClusterIdentityConnectorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DisableExadbVmClusterIdentityConnectorSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.DisableExadbVmClusterIdentityConnector</c>
+        ///  and <c>OracleDatabaseClient.DisableExadbVmClusterIdentityConnectorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DisableExadbVmClusterIdentityConnectorOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>OracleDatabaseClient.ListEntitlements</c> and <c>OracleDatabaseClient.ListEntitlementsAsync</c>.
         /// </summary>
         /// <remarks>
@@ -436,6 +659,27 @@ namespace Google.Cloud.OracleDatabase.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListEntitlementsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.ListFlexComponents</c> and <c>OracleDatabaseClient.ListFlexComponentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListFlexComponentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1062,6 +1306,36 @@ namespace Google.Cloud.OracleDatabase.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.UpdateOdbNetwork</c> and <c>OracleDatabaseClient.UpdateOdbNetworkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateOdbNetworkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.UpdateOdbNetwork</c> and
+        /// <c>OracleDatabaseClient.UpdateOdbNetworkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateOdbNetworkOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>OracleDatabaseClient.DeleteOdbNetwork</c> and <c>OracleDatabaseClient.DeleteOdbNetworkAsync</c>.
         /// </summary>
         /// <remarks>
@@ -1158,6 +1432,36 @@ namespace Google.Cloud.OracleDatabase.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings CreateOdbSubnetOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.UpdateOdbSubnet</c> and <c>OracleDatabaseClient.UpdateOdbSubnetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateOdbSubnetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.UpdateOdbSubnet</c> and
+        /// <c>OracleDatabaseClient.UpdateOdbSubnetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateOdbSubnetOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1534,6 +1838,37 @@ namespace Google.Cloud.OracleDatabase.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.UpdateExascaleDbStorageVault</c> and
+        /// <c>OracleDatabaseClient.UpdateExascaleDbStorageVaultAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateExascaleDbStorageVaultSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.UpdateExascaleDbStorageVault</c> and
+        /// <c>OracleDatabaseClient.UpdateExascaleDbStorageVaultAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateExascaleDbStorageVaultOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>OracleDatabaseClient.DeleteExascaleDbStorageVault</c> and
         /// <c>OracleDatabaseClient.DeleteExascaleDbStorageVaultAsync</c>.
         /// </summary>
@@ -1584,6 +1919,28 @@ namespace Google.Cloud.OracleDatabase.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListDbSystemInitialStorageSizesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.ListDbSystemComputePerformances</c> and
+        /// <c>OracleDatabaseClient.ListDbSystemComputePerformancesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDbSystemComputePerformancesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1744,6 +2101,36 @@ namespace Google.Cloud.OracleDatabase.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.UpdateDbSystem</c> and <c>OracleDatabaseClient.UpdateDbSystemAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateDbSystemSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.UpdateDbSystem</c> and
+        /// <c>OracleDatabaseClient.UpdateDbSystemAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateDbSystemOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>OracleDatabaseClient.DeleteDbSystem</c> and <c>OracleDatabaseClient.DeleteDbSystemAsync</c>.
         /// </summary>
         /// <remarks>
@@ -1843,6 +2230,37 @@ namespace Google.Cloud.OracleDatabase.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings CreateGoldengateDeploymentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.UpdateGoldengateDeployment</c> and
+        /// <c>OracleDatabaseClient.UpdateGoldengateDeploymentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateGoldengateDeploymentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.UpdateGoldengateDeployment</c> and
+        /// <c>OracleDatabaseClient.UpdateGoldengateDeploymentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateGoldengateDeploymentOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -2011,6 +2429,37 @@ namespace Google.Cloud.OracleDatabase.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings CreateGoldengateConnectionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.UpdateGoldengateConnection</c> and
+        /// <c>OracleDatabaseClient.UpdateGoldengateConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateGoldengateConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.UpdateGoldengateConnection</c> and
+        /// <c>OracleDatabaseClient.UpdateGoldengateConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateGoldengateConnectionOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -2254,6 +2703,37 @@ namespace Google.Cloud.OracleDatabase.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.UpdateGoldengateConnectionAssignment</c> and
+        /// <c>OracleDatabaseClient.UpdateGoldengateConnectionAssignmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateGoldengateConnectionAssignmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.UpdateGoldengateConnectionAssignment</c>
+        ///  and <c>OracleDatabaseClient.UpdateGoldengateConnectionAssignmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateGoldengateConnectionAssignmentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>OracleDatabaseClient.DeleteGoldengateConnectionAssignment</c> and
         /// <c>OracleDatabaseClient.DeleteGoldengateConnectionAssignmentAsync</c>.
         /// </summary>
@@ -2295,6 +2775,168 @@ namespace Google.Cloud.OracleDatabase.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings TestGoldengateConnectionAssignmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.ListDatabaseConnections</c> and <c>OracleDatabaseClient.ListDatabaseConnectionsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDatabaseConnectionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.GetDatabaseConnection</c> and <c>OracleDatabaseClient.GetDatabaseConnectionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDatabaseConnectionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.CreateDatabaseConnection</c> and
+        /// <c>OracleDatabaseClient.CreateDatabaseConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateDatabaseConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.CreateDatabaseConnection</c> and
+        /// <c>OracleDatabaseClient.CreateDatabaseConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateDatabaseConnectionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.UpdateDatabaseConnection</c> and
+        /// <c>OracleDatabaseClient.UpdateDatabaseConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateDatabaseConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.UpdateDatabaseConnection</c> and
+        /// <c>OracleDatabaseClient.UpdateDatabaseConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateDatabaseConnectionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.DeleteDatabaseConnection</c> and
+        /// <c>OracleDatabaseClient.DeleteDatabaseConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteDatabaseConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.DeleteDatabaseConnection</c> and
+        /// <c>OracleDatabaseClient.DeleteDatabaseConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteDatabaseConnectionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.TestDatabaseConnection</c> and <c>OracleDatabaseClient.TestDatabaseConnectionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings TestDatabaseConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.ExecuteSql</c> and <c>OracleDatabaseClient.ExecuteSqlAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExecuteSqlSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -2915,6 +3557,143 @@ namespace Google.Cloud.OracleDatabase.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<CloudExadataInfrastructure, OperationMetadata>> CreateCloudExadataInfrastructureAsync(gagr::LocationName parent, CloudExadataInfrastructure cloudExadataInfrastructure, string cloudExadataInfrastructureId, st::CancellationToken cancellationToken) =>
             CreateCloudExadataInfrastructureAsync(parent, cloudExadataInfrastructure, cloudExadataInfrastructureId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the parameters of a single Exadata Infrastructure.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CloudExadataInfrastructure, OperationMetadata> UpdateCloudExadataInfrastructure(UpdateCloudExadataInfrastructureRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single Exadata Infrastructure.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CloudExadataInfrastructure, OperationMetadata>> UpdateCloudExadataInfrastructureAsync(UpdateCloudExadataInfrastructureRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single Exadata Infrastructure.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CloudExadataInfrastructure, OperationMetadata>> UpdateCloudExadataInfrastructureAsync(UpdateCloudExadataInfrastructureRequest request, st::CancellationToken cancellationToken) =>
+            UpdateCloudExadataInfrastructureAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateCloudExadataInfrastructure</c>.</summary>
+        public virtual lro::OperationsClient UpdateCloudExadataInfrastructureOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateCloudExadataInfrastructure</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<CloudExadataInfrastructure, OperationMetadata> PollOnceUpdateCloudExadataInfrastructure(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CloudExadataInfrastructure, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateCloudExadataInfrastructureOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateCloudExadataInfrastructure</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<CloudExadataInfrastructure, OperationMetadata>> PollOnceUpdateCloudExadataInfrastructureAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CloudExadataInfrastructure, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateCloudExadataInfrastructureOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single Exadata Infrastructure.
+        /// </summary>
+        /// <param name="cloudExadataInfrastructure">
+        /// Required. The resource being updated. Note only `labels` can be updated.
+        /// The provided `labels` will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing `labels` and `update_mask` will not update the
+        /// labels. To clear all labels, specify `labels` in the `update_mask` and omit
+        /// or leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// Exadata resource by the update. The fields specified in the `update_mask`
+        /// are relative to the resource, not the full request. A field will be
+        /// overwritten if it is in the mask. If the user does not provide a mask then
+        /// the service treats this as an implied field mask equivalent to all fields
+        /// that are populated (have a non-empty value). To clear or unset a field, the
+        /// field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CloudExadataInfrastructure, OperationMetadata> UpdateCloudExadataInfrastructure(CloudExadataInfrastructure cloudExadataInfrastructure, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCloudExadataInfrastructure(new UpdateCloudExadataInfrastructureRequest
+            {
+                UpdateMask = updateMask,
+                CloudExadataInfrastructure = gax::GaxPreconditions.CheckNotNull(cloudExadataInfrastructure, nameof(cloudExadataInfrastructure)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single Exadata Infrastructure.
+        /// </summary>
+        /// <param name="cloudExadataInfrastructure">
+        /// Required. The resource being updated. Note only `labels` can be updated.
+        /// The provided `labels` will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing `labels` and `update_mask` will not update the
+        /// labels. To clear all labels, specify `labels` in the `update_mask` and omit
+        /// or leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// Exadata resource by the update. The fields specified in the `update_mask`
+        /// are relative to the resource, not the full request. A field will be
+        /// overwritten if it is in the mask. If the user does not provide a mask then
+        /// the service treats this as an implied field mask equivalent to all fields
+        /// that are populated (have a non-empty value). To clear or unset a field, the
+        /// field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CloudExadataInfrastructure, OperationMetadata>> UpdateCloudExadataInfrastructureAsync(CloudExadataInfrastructure cloudExadataInfrastructure, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCloudExadataInfrastructureAsync(new UpdateCloudExadataInfrastructureRequest
+            {
+                UpdateMask = updateMask,
+                CloudExadataInfrastructure = gax::GaxPreconditions.CheckNotNull(cloudExadataInfrastructure, nameof(cloudExadataInfrastructure)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single Exadata Infrastructure.
+        /// </summary>
+        /// <param name="cloudExadataInfrastructure">
+        /// Required. The resource being updated. Note only `labels` can be updated.
+        /// The provided `labels` will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing `labels` and `update_mask` will not update the
+        /// labels. To clear all labels, specify `labels` in the `update_mask` and omit
+        /// or leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// Exadata resource by the update. The fields specified in the `update_mask`
+        /// are relative to the resource, not the full request. A field will be
+        /// overwritten if it is in the mask. If the user does not provide a mask then
+        /// the service treats this as an implied field mask equivalent to all fields
+        /// that are populated (have a non-empty value). To clear or unset a field, the
+        /// field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CloudExadataInfrastructure, OperationMetadata>> UpdateCloudExadataInfrastructureAsync(CloudExadataInfrastructure cloudExadataInfrastructure, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateCloudExadataInfrastructureAsync(cloudExadataInfrastructure, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a single Exadata Infrastructure.
@@ -3694,6 +4473,137 @@ namespace Google.Cloud.OracleDatabase.V1
             CreateCloudVmClusterAsync(parent, cloudVmCluster, cloudVmClusterId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates the parameters of a single Vm Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CloudVmCluster, OperationMetadata> UpdateCloudVmCluster(UpdateCloudVmClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single Vm Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> UpdateCloudVmClusterAsync(UpdateCloudVmClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single Vm Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> UpdateCloudVmClusterAsync(UpdateCloudVmClusterRequest request, st::CancellationToken cancellationToken) =>
+            UpdateCloudVmClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateCloudVmCluster</c>.</summary>
+        public virtual lro::OperationsClient UpdateCloudVmClusterOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateCloudVmCluster</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<CloudVmCluster, OperationMetadata> PollOnceUpdateCloudVmCluster(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CloudVmCluster, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateCloudVmClusterOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateCloudVmCluster</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> PollOnceUpdateCloudVmClusterAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CloudVmCluster, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateCloudVmClusterOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single Vm Cluster.
+        /// </summary>
+        /// <param name="cloudVmCluster">
+        /// Required. The resource being updated. Note only `labels` can be updated.
+        /// The provided `labels` will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing `labels` and `update_mask` will not update the
+        /// labels. To clear all labels, specify `labels` in the `update_mask` and omit
+        /// or leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the VM Cluster should be
+        /// updated. A field specified in the mask is overwritten. If a mask isn't
+        /// provided, the service treats this as an implied field mask equivalent to
+        /// all fields that are populated (have a non-empty value). To clear or unset
+        /// a field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CloudVmCluster, OperationMetadata> UpdateCloudVmCluster(CloudVmCluster cloudVmCluster, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCloudVmCluster(new UpdateCloudVmClusterRequest
+            {
+                UpdateMask = updateMask,
+                CloudVmCluster = gax::GaxPreconditions.CheckNotNull(cloudVmCluster, nameof(cloudVmCluster)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single Vm Cluster.
+        /// </summary>
+        /// <param name="cloudVmCluster">
+        /// Required. The resource being updated. Note only `labels` can be updated.
+        /// The provided `labels` will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing `labels` and `update_mask` will not update the
+        /// labels. To clear all labels, specify `labels` in the `update_mask` and omit
+        /// or leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the VM Cluster should be
+        /// updated. A field specified in the mask is overwritten. If a mask isn't
+        /// provided, the service treats this as an implied field mask equivalent to
+        /// all fields that are populated (have a non-empty value). To clear or unset
+        /// a field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> UpdateCloudVmClusterAsync(CloudVmCluster cloudVmCluster, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCloudVmClusterAsync(new UpdateCloudVmClusterRequest
+            {
+                UpdateMask = updateMask,
+                CloudVmCluster = gax::GaxPreconditions.CheckNotNull(cloudVmCluster, nameof(cloudVmCluster)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single Vm Cluster.
+        /// </summary>
+        /// <param name="cloudVmCluster">
+        /// Required. The resource being updated. Note only `labels` can be updated.
+        /// The provided `labels` will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing `labels` and `update_mask` will not update the
+        /// labels. To clear all labels, specify `labels` in the `update_mask` and omit
+        /// or leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the VM Cluster should be
+        /// updated. A field specified in the mask is overwritten. If a mask isn't
+        /// provided, the service treats this as an implied field mask equivalent to
+        /// all fields that are populated (have a non-empty value). To clear or unset
+        /// a field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> UpdateCloudVmClusterAsync(CloudVmCluster cloudVmCluster, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateCloudVmClusterAsync(cloudVmCluster, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes a single VM Cluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3830,6 +4740,558 @@ namespace Google.Cloud.OracleDatabase.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCloudVmClusterAsync(CloudVmClusterName name, st::CancellationToken cancellationToken) =>
             DeleteCloudVmClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CloudVmCluster, OperationMetadata> EnableCloudVmClusterIdentityConnector(EnableCloudVmClusterIdentityConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> EnableCloudVmClusterIdentityConnectorAsync(EnableCloudVmClusterIdentityConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> EnableCloudVmClusterIdentityConnectorAsync(EnableCloudVmClusterIdentityConnectorRequest request, st::CancellationToken cancellationToken) =>
+            EnableCloudVmClusterIdentityConnectorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>EnableCloudVmClusterIdentityConnector</c>.</summary>
+        public virtual lro::OperationsClient EnableCloudVmClusterIdentityConnectorOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>EnableCloudVmClusterIdentityConnector</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<CloudVmCluster, OperationMetadata> PollOnceEnableCloudVmClusterIdentityConnector(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CloudVmCluster, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), EnableCloudVmClusterIdentityConnectorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>EnableCloudVmClusterIdentityConnector</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> PollOnceEnableCloudVmClusterIdentityConnectorAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CloudVmCluster, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), EnableCloudVmClusterIdentityConnectorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Cloud VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CloudVmCluster, OperationMetadata> EnableCloudVmClusterIdentityConnector(string name, gaxgrpc::CallSettings callSettings = null) =>
+            EnableCloudVmClusterIdentityConnector(new EnableCloudVmClusterIdentityConnectorRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Cloud VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> EnableCloudVmClusterIdentityConnectorAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            EnableCloudVmClusterIdentityConnectorAsync(new EnableCloudVmClusterIdentityConnectorRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Cloud VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> EnableCloudVmClusterIdentityConnectorAsync(string name, st::CancellationToken cancellationToken) =>
+            EnableCloudVmClusterIdentityConnectorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Cloud VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CloudVmCluster, OperationMetadata> EnableCloudVmClusterIdentityConnector(CloudVmClusterName name, gaxgrpc::CallSettings callSettings = null) =>
+            EnableCloudVmClusterIdentityConnector(new EnableCloudVmClusterIdentityConnectorRequest
+            {
+                CloudVmClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Cloud VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> EnableCloudVmClusterIdentityConnectorAsync(CloudVmClusterName name, gaxgrpc::CallSettings callSettings = null) =>
+            EnableCloudVmClusterIdentityConnectorAsync(new EnableCloudVmClusterIdentityConnectorRequest
+            {
+                CloudVmClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Cloud VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> EnableCloudVmClusterIdentityConnectorAsync(CloudVmClusterName name, st::CancellationToken cancellationToken) =>
+            EnableCloudVmClusterIdentityConnectorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CloudVmCluster, OperationMetadata> DisableCloudVmClusterIdentityConnector(DisableCloudVmClusterIdentityConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> DisableCloudVmClusterIdentityConnectorAsync(DisableCloudVmClusterIdentityConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> DisableCloudVmClusterIdentityConnectorAsync(DisableCloudVmClusterIdentityConnectorRequest request, st::CancellationToken cancellationToken) =>
+            DisableCloudVmClusterIdentityConnectorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DisableCloudVmClusterIdentityConnector</c>.</summary>
+        public virtual lro::OperationsClient DisableCloudVmClusterIdentityConnectorOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DisableCloudVmClusterIdentityConnector</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<CloudVmCluster, OperationMetadata> PollOnceDisableCloudVmClusterIdentityConnector(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CloudVmCluster, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DisableCloudVmClusterIdentityConnectorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DisableCloudVmClusterIdentityConnector</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> PollOnceDisableCloudVmClusterIdentityConnectorAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CloudVmCluster, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DisableCloudVmClusterIdentityConnectorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Cloud VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CloudVmCluster, OperationMetadata> DisableCloudVmClusterIdentityConnector(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DisableCloudVmClusterIdentityConnector(new DisableCloudVmClusterIdentityConnectorRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Cloud VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> DisableCloudVmClusterIdentityConnectorAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DisableCloudVmClusterIdentityConnectorAsync(new DisableCloudVmClusterIdentityConnectorRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Cloud VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> DisableCloudVmClusterIdentityConnectorAsync(string name, st::CancellationToken cancellationToken) =>
+            DisableCloudVmClusterIdentityConnectorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Cloud VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CloudVmCluster, OperationMetadata> DisableCloudVmClusterIdentityConnector(CloudVmClusterName name, gaxgrpc::CallSettings callSettings = null) =>
+            DisableCloudVmClusterIdentityConnector(new DisableCloudVmClusterIdentityConnectorRequest
+            {
+                CloudVmClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Cloud VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> DisableCloudVmClusterIdentityConnectorAsync(CloudVmClusterName name, gaxgrpc::CallSettings callSettings = null) =>
+            DisableCloudVmClusterIdentityConnectorAsync(new DisableCloudVmClusterIdentityConnectorRequest
+            {
+                CloudVmClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Cloud VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> DisableCloudVmClusterIdentityConnectorAsync(CloudVmClusterName name, st::CancellationToken cancellationToken) =>
+            DisableCloudVmClusterIdentityConnectorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExadbVmCluster, OperationMetadata> EnableExadbVmClusterIdentityConnector(EnableExadbVmClusterIdentityConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExadbVmCluster, OperationMetadata>> EnableExadbVmClusterIdentityConnectorAsync(EnableExadbVmClusterIdentityConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExadbVmCluster, OperationMetadata>> EnableExadbVmClusterIdentityConnectorAsync(EnableExadbVmClusterIdentityConnectorRequest request, st::CancellationToken cancellationToken) =>
+            EnableExadbVmClusterIdentityConnectorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>EnableExadbVmClusterIdentityConnector</c>.</summary>
+        public virtual lro::OperationsClient EnableExadbVmClusterIdentityConnectorOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>EnableExadbVmClusterIdentityConnector</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ExadbVmCluster, OperationMetadata> PollOnceEnableExadbVmClusterIdentityConnector(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExadbVmCluster, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), EnableExadbVmClusterIdentityConnectorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>EnableExadbVmClusterIdentityConnector</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ExadbVmCluster, OperationMetadata>> PollOnceEnableExadbVmClusterIdentityConnectorAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExadbVmCluster, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), EnableExadbVmClusterIdentityConnectorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Exadb VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExadbVmCluster, OperationMetadata> EnableExadbVmClusterIdentityConnector(string name, gaxgrpc::CallSettings callSettings = null) =>
+            EnableExadbVmClusterIdentityConnector(new EnableExadbVmClusterIdentityConnectorRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Exadb VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExadbVmCluster, OperationMetadata>> EnableExadbVmClusterIdentityConnectorAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            EnableExadbVmClusterIdentityConnectorAsync(new EnableExadbVmClusterIdentityConnectorRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Exadb VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExadbVmCluster, OperationMetadata>> EnableExadbVmClusterIdentityConnectorAsync(string name, st::CancellationToken cancellationToken) =>
+            EnableExadbVmClusterIdentityConnectorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Exadb VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExadbVmCluster, OperationMetadata> EnableExadbVmClusterIdentityConnector(ExadbVmClusterName name, gaxgrpc::CallSettings callSettings = null) =>
+            EnableExadbVmClusterIdentityConnector(new EnableExadbVmClusterIdentityConnectorRequest
+            {
+                ExadbVmClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Exadb VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExadbVmCluster, OperationMetadata>> EnableExadbVmClusterIdentityConnectorAsync(ExadbVmClusterName name, gaxgrpc::CallSettings callSettings = null) =>
+            EnableExadbVmClusterIdentityConnectorAsync(new EnableExadbVmClusterIdentityConnectorRequest
+            {
+                ExadbVmClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Exadb VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExadbVmCluster, OperationMetadata>> EnableExadbVmClusterIdentityConnectorAsync(ExadbVmClusterName name, st::CancellationToken cancellationToken) =>
+            EnableExadbVmClusterIdentityConnectorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExadbVmCluster, OperationMetadata> DisableExadbVmClusterIdentityConnector(DisableExadbVmClusterIdentityConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExadbVmCluster, OperationMetadata>> DisableExadbVmClusterIdentityConnectorAsync(DisableExadbVmClusterIdentityConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExadbVmCluster, OperationMetadata>> DisableExadbVmClusterIdentityConnectorAsync(DisableExadbVmClusterIdentityConnectorRequest request, st::CancellationToken cancellationToken) =>
+            DisableExadbVmClusterIdentityConnectorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DisableExadbVmClusterIdentityConnector</c>.</summary>
+        public virtual lro::OperationsClient DisableExadbVmClusterIdentityConnectorOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DisableExadbVmClusterIdentityConnector</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ExadbVmCluster, OperationMetadata> PollOnceDisableExadbVmClusterIdentityConnector(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExadbVmCluster, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DisableExadbVmClusterIdentityConnectorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DisableExadbVmClusterIdentityConnector</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ExadbVmCluster, OperationMetadata>> PollOnceDisableExadbVmClusterIdentityConnectorAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExadbVmCluster, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DisableExadbVmClusterIdentityConnectorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Exadb VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExadbVmCluster, OperationMetadata> DisableExadbVmClusterIdentityConnector(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DisableExadbVmClusterIdentityConnector(new DisableExadbVmClusterIdentityConnectorRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Exadb VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExadbVmCluster, OperationMetadata>> DisableExadbVmClusterIdentityConnectorAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DisableExadbVmClusterIdentityConnectorAsync(new DisableExadbVmClusterIdentityConnectorRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Exadb VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExadbVmCluster, OperationMetadata>> DisableExadbVmClusterIdentityConnectorAsync(string name, st::CancellationToken cancellationToken) =>
+            DisableExadbVmClusterIdentityConnectorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Exadb VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExadbVmCluster, OperationMetadata> DisableExadbVmClusterIdentityConnector(ExadbVmClusterName name, gaxgrpc::CallSettings callSettings = null) =>
+            DisableExadbVmClusterIdentityConnector(new DisableExadbVmClusterIdentityConnectorRequest
+            {
+                ExadbVmClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Exadb VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExadbVmCluster, OperationMetadata>> DisableExadbVmClusterIdentityConnectorAsync(ExadbVmClusterName name, gaxgrpc::CallSettings callSettings = null) =>
+            DisableExadbVmClusterIdentityConnectorAsync(new DisableExadbVmClusterIdentityConnectorRequest
+            {
+                ExadbVmClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Exadb VM Cluster in the following format:
+        /// projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExadbVmCluster, OperationMetadata>> DisableExadbVmClusterIdentityConnectorAsync(ExadbVmClusterName name, st::CancellationToken cancellationToken) =>
+            DisableExadbVmClusterIdentityConnectorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists the entitlements in a given project.
@@ -3983,6 +5445,160 @@ namespace Google.Cloud.OracleDatabase.V1
                 request.PageSize = pageSize.Value;
             }
             return ListEntitlementsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Flex Components in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FlexComponent"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFlexComponentsResponse, FlexComponent> ListFlexComponents(ListFlexComponentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Flex Components in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FlexComponent"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFlexComponentsResponse, FlexComponent> ListFlexComponentsAsync(ListFlexComponentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Flex Components in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListFlexComponentsRequest
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FlexComponent"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFlexComponentsResponse, FlexComponent> ListFlexComponents(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFlexComponentsRequest request = new ListFlexComponentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFlexComponents(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Flex Components in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListFlexComponentsRequest
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FlexComponent"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFlexComponentsResponse, FlexComponent> ListFlexComponentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFlexComponentsRequest request = new ListFlexComponentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFlexComponentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Flex Components in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListFlexComponentsRequest
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FlexComponent"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFlexComponentsResponse, FlexComponent> ListFlexComponents(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFlexComponentsRequest request = new ListFlexComponentsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFlexComponents(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Flex Components in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListFlexComponentsRequest
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FlexComponent"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFlexComponentsResponse, FlexComponent> ListFlexComponentsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFlexComponentsRequest request = new ListFlexComponentsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFlexComponentsAsync(request, callSettings);
         }
 
         /// <summary>
@@ -5364,14 +6980,20 @@ namespace Google.Cloud.OracleDatabase.V1
         /// Updates the parameters of a single Autonomous Database.
         /// </summary>
         /// <param name="autonomousDatabase">
-        /// Required. The resource being updated
+        /// Required. The Autonomous Database resource being updated.
+        /// For `labels`, the provided map completely replaces existing labels; any
+        /// existing keys not included will be deleted. To clear all labels, specify
+        /// `labels` in the `update_mask` and omit or leave the `labels` field empty in
+        /// the update request.
         /// </param>
         /// <param name="updateMask">
         /// Optional. Field mask is used to specify the fields to be overwritten in the
-        /// Exadata resource by the update. The fields specified in the update_mask are
-        /// relative to the resource, not the full request. A field will be overwritten
-        /// if it is in the mask. If the user does not provide a mask then all fields
-        /// will be overwritten.
+        /// Exadata resource by the update. The fields specified in the `update_mask`
+        /// are relative to the resource, not the full request. A field will be
+        /// overwritten if it is in the mask. If the user does not provide a mask then
+        /// the service treats this as an implied field mask equivalent to
+        /// all fields that are populated (have a non-empty value). To clear or unset
+        /// a field, the field must be explicitly specified in the `update_mask`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5386,14 +7008,20 @@ namespace Google.Cloud.OracleDatabase.V1
         /// Updates the parameters of a single Autonomous Database.
         /// </summary>
         /// <param name="autonomousDatabase">
-        /// Required. The resource being updated
+        /// Required. The Autonomous Database resource being updated.
+        /// For `labels`, the provided map completely replaces existing labels; any
+        /// existing keys not included will be deleted. To clear all labels, specify
+        /// `labels` in the `update_mask` and omit or leave the `labels` field empty in
+        /// the update request.
         /// </param>
         /// <param name="updateMask">
         /// Optional. Field mask is used to specify the fields to be overwritten in the
-        /// Exadata resource by the update. The fields specified in the update_mask are
-        /// relative to the resource, not the full request. A field will be overwritten
-        /// if it is in the mask. If the user does not provide a mask then all fields
-        /// will be overwritten.
+        /// Exadata resource by the update. The fields specified in the `update_mask`
+        /// are relative to the resource, not the full request. A field will be
+        /// overwritten if it is in the mask. If the user does not provide a mask then
+        /// the service treats this as an implied field mask equivalent to
+        /// all fields that are populated (have a non-empty value). To clear or unset
+        /// a field, the field must be explicitly specified in the `update_mask`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5408,14 +7036,20 @@ namespace Google.Cloud.OracleDatabase.V1
         /// Updates the parameters of a single Autonomous Database.
         /// </summary>
         /// <param name="autonomousDatabase">
-        /// Required. The resource being updated
+        /// Required. The Autonomous Database resource being updated.
+        /// For `labels`, the provided map completely replaces existing labels; any
+        /// existing keys not included will be deleted. To clear all labels, specify
+        /// `labels` in the `update_mask` and omit or leave the `labels` field empty in
+        /// the update request.
         /// </param>
         /// <param name="updateMask">
         /// Optional. Field mask is used to specify the fields to be overwritten in the
-        /// Exadata resource by the update. The fields specified in the update_mask are
-        /// relative to the resource, not the full request. A field will be overwritten
-        /// if it is in the mask. If the user does not provide a mask then all fields
-        /// will be overwritten.
+        /// Exadata resource by the update. The fields specified in the `update_mask`
+        /// are relative to the resource, not the full request. A field will be
+        /// overwritten if it is in the mask. If the user does not provide a mask then
+        /// the service treats this as an implied field mask equivalent to
+        /// all fields that are populated (have a non-empty value). To clear or unset
+        /// a field, the field must be explicitly specified in the `update_mask`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7913,6 +9547,145 @@ namespace Google.Cloud.OracleDatabase.V1
             CreateOdbNetworkAsync(parent, odbNetwork, odbNetworkId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates the `labels` and `service_connectivity_config` of a single
+        /// OdbNetwork.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<OdbNetwork, OperationMetadata> UpdateOdbNetwork(UpdateOdbNetworkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the `labels` and `service_connectivity_config` of a single
+        /// OdbNetwork.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OdbNetwork, OperationMetadata>> UpdateOdbNetworkAsync(UpdateOdbNetworkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the `labels` and `service_connectivity_config` of a single
+        /// OdbNetwork.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OdbNetwork, OperationMetadata>> UpdateOdbNetworkAsync(UpdateOdbNetworkRequest request, st::CancellationToken cancellationToken) =>
+            UpdateOdbNetworkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateOdbNetwork</c>.</summary>
+        public virtual lro::OperationsClient UpdateOdbNetworkOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateOdbNetwork</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<OdbNetwork, OperationMetadata> PollOnceUpdateOdbNetwork(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<OdbNetwork, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateOdbNetworkOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateOdbNetwork</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<OdbNetwork, OperationMetadata>> PollOnceUpdateOdbNetworkAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<OdbNetwork, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateOdbNetworkOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` and `service_connectivity_config` of a single
+        /// OdbNetwork.
+        /// </summary>
+        /// <param name="odbNetwork">
+        /// Required. The resource being updated. Note only `labels` and
+        /// `service_connectivity_config` can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the OdbNetwork should be
+        /// updated. A field specified in the mask is updated. If a mask isn't
+        /// provided, the service treats this as an implied field mask equivalent to
+        /// all fields that are populated (have a non-empty value). To clear or unset a
+        /// field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<OdbNetwork, OperationMetadata> UpdateOdbNetwork(OdbNetwork odbNetwork, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateOdbNetwork(new UpdateOdbNetworkRequest
+            {
+                UpdateMask = updateMask,
+                OdbNetwork = gax::GaxPreconditions.CheckNotNull(odbNetwork, nameof(odbNetwork)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` and `service_connectivity_config` of a single
+        /// OdbNetwork.
+        /// </summary>
+        /// <param name="odbNetwork">
+        /// Required. The resource being updated. Note only `labels` and
+        /// `service_connectivity_config` can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the OdbNetwork should be
+        /// updated. A field specified in the mask is updated. If a mask isn't
+        /// provided, the service treats this as an implied field mask equivalent to
+        /// all fields that are populated (have a non-empty value). To clear or unset a
+        /// field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OdbNetwork, OperationMetadata>> UpdateOdbNetworkAsync(OdbNetwork odbNetwork, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateOdbNetworkAsync(new UpdateOdbNetworkRequest
+            {
+                UpdateMask = updateMask,
+                OdbNetwork = gax::GaxPreconditions.CheckNotNull(odbNetwork, nameof(odbNetwork)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` and `service_connectivity_config` of a single
+        /// OdbNetwork.
+        /// </summary>
+        /// <param name="odbNetwork">
+        /// Required. The resource being updated. Note only `labels` and
+        /// `service_connectivity_config` can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the OdbNetwork should be
+        /// updated. A field specified in the mask is updated. If a mask isn't
+        /// provided, the service treats this as an implied field mask equivalent to
+        /// all fields that are populated (have a non-empty value). To clear or unset a
+        /// field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OdbNetwork, OperationMetadata>> UpdateOdbNetworkAsync(OdbNetwork odbNetwork, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateOdbNetworkAsync(odbNetwork, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes a single ODB Network.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -8512,6 +10285,136 @@ namespace Google.Cloud.OracleDatabase.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<OdbSubnet, OperationMetadata>> CreateOdbSubnetAsync(OdbNetworkName parent, OdbSubnet odbSubnet, string odbSubnetId, st::CancellationToken cancellationToken) =>
             CreateOdbSubnetAsync(parent, odbSubnet, odbSubnetId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the `labels` of a single ODB Subnet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<OdbSubnet, OperationMetadata> UpdateOdbSubnet(UpdateOdbSubnetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the `labels` of a single ODB Subnet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OdbSubnet, OperationMetadata>> UpdateOdbSubnetAsync(UpdateOdbSubnetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the `labels` of a single ODB Subnet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OdbSubnet, OperationMetadata>> UpdateOdbSubnetAsync(UpdateOdbSubnetRequest request, st::CancellationToken cancellationToken) =>
+            UpdateOdbSubnetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateOdbSubnet</c>.</summary>
+        public virtual lro::OperationsClient UpdateOdbSubnetOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateOdbSubnet</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<OdbSubnet, OperationMetadata> PollOnceUpdateOdbSubnet(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<OdbSubnet, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateOdbSubnetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateOdbSubnet</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<OdbSubnet, OperationMetadata>> PollOnceUpdateOdbSubnetAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<OdbSubnet, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateOdbSubnetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` of a single ODB Subnet.
+        /// </summary>
+        /// <param name="odbSubnet">
+        /// Required. The resource being updated. Note only labels can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the OdbSubnet should be
+        /// updated. A field specified in the mask is updated. If a mask isn't
+        /// provided, the service treats this as an implied field mask equivalent to
+        /// all fields that are populated (have a non-empty value). To clear or unset a
+        /// field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<OdbSubnet, OperationMetadata> UpdateOdbSubnet(OdbSubnet odbSubnet, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateOdbSubnet(new UpdateOdbSubnetRequest
+            {
+                UpdateMask = updateMask,
+                OdbSubnet = gax::GaxPreconditions.CheckNotNull(odbSubnet, nameof(odbSubnet)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` of a single ODB Subnet.
+        /// </summary>
+        /// <param name="odbSubnet">
+        /// Required. The resource being updated. Note only labels can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the OdbSubnet should be
+        /// updated. A field specified in the mask is updated. If a mask isn't
+        /// provided, the service treats this as an implied field mask equivalent to
+        /// all fields that are populated (have a non-empty value). To clear or unset a
+        /// field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OdbSubnet, OperationMetadata>> UpdateOdbSubnetAsync(OdbSubnet odbSubnet, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateOdbSubnetAsync(new UpdateOdbSubnetRequest
+            {
+                UpdateMask = updateMask,
+                OdbSubnet = gax::GaxPreconditions.CheckNotNull(odbSubnet, nameof(odbSubnet)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` of a single ODB Subnet.
+        /// </summary>
+        /// <param name="odbSubnet">
+        /// Required. The resource being updated. Note only labels can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the OdbSubnet should be
+        /// updated. A field specified in the mask is updated. If a mask isn't
+        /// provided, the service treats this as an implied field mask equivalent to
+        /// all fields that are populated (have a non-empty value). To clear or unset a
+        /// field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OdbSubnet, OperationMetadata>> UpdateOdbSubnetAsync(OdbSubnet odbSubnet, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateOdbSubnetAsync(odbSubnet, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a single ODB Subnet.
@@ -9922,12 +11825,19 @@ namespace Google.Cloud.OracleDatabase.V1
         /// existing exadb vm cluster, only pass the node count.
         /// </summary>
         /// <param name="exadbVmCluster">
-        /// Required. The resource being updated.
+        /// Required. The ExadbVmCluster resource being updated.
+        /// Mutable fields that can be updated include `labels` and
+        /// `properties.node_count`. For `labels`, the provided map completely
+        /// replaces existing labels; any existing keys not included will be deleted.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
         /// </param>
         /// <param name="updateMask">
         /// Optional. A mask specifying which fields in th VM Cluster should be
         /// updated. A field specified in the mask is overwritten. If a mask isn't
-        /// provided then all the fields in the VM Cluster are overwritten.
+        /// provided then the service treats this as an implied field mask equivalent
+        /// to all fields that are populated (have a non-empty value). To clear or
+        /// unset a field, the field must be explicitly specified in the `update_mask`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -9943,12 +11853,19 @@ namespace Google.Cloud.OracleDatabase.V1
         /// existing exadb vm cluster, only pass the node count.
         /// </summary>
         /// <param name="exadbVmCluster">
-        /// Required. The resource being updated.
+        /// Required. The ExadbVmCluster resource being updated.
+        /// Mutable fields that can be updated include `labels` and
+        /// `properties.node_count`. For `labels`, the provided map completely
+        /// replaces existing labels; any existing keys not included will be deleted.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
         /// </param>
         /// <param name="updateMask">
         /// Optional. A mask specifying which fields in th VM Cluster should be
         /// updated. A field specified in the mask is overwritten. If a mask isn't
-        /// provided then all the fields in the VM Cluster are overwritten.
+        /// provided then the service treats this as an implied field mask equivalent
+        /// to all fields that are populated (have a non-empty value). To clear or
+        /// unset a field, the field must be explicitly specified in the `update_mask`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -9964,12 +11881,19 @@ namespace Google.Cloud.OracleDatabase.V1
         /// existing exadb vm cluster, only pass the node count.
         /// </summary>
         /// <param name="exadbVmCluster">
-        /// Required. The resource being updated.
+        /// Required. The ExadbVmCluster resource being updated.
+        /// Mutable fields that can be updated include `labels` and
+        /// `properties.node_count`. For `labels`, the provided map completely
+        /// replaces existing labels; any existing keys not included will be deleted.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
         /// </param>
         /// <param name="updateMask">
         /// Optional. A mask specifying which fields in th VM Cluster should be
         /// updated. A field specified in the mask is overwritten. If a mask isn't
-        /// provided then all the fields in the VM Cluster are overwritten.
+        /// provided then the service treats this as an implied field mask equivalent
+        /// to all fields that are populated (have a non-empty value). To clear or
+        /// unset a field, the field must be explicitly specified in the `update_mask`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -10626,6 +12550,137 @@ namespace Google.Cloud.OracleDatabase.V1
             CreateExascaleDbStorageVaultAsync(parent, exascaleDbStorageVault, exascaleDbStorageVaultId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates the `labels` of a single ExascaleDbStorageVault.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExascaleDbStorageVault, OperationMetadata> UpdateExascaleDbStorageVault(UpdateExascaleDbStorageVaultRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the `labels` of a single ExascaleDbStorageVault.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExascaleDbStorageVault, OperationMetadata>> UpdateExascaleDbStorageVaultAsync(UpdateExascaleDbStorageVaultRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the `labels` of a single ExascaleDbStorageVault.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExascaleDbStorageVault, OperationMetadata>> UpdateExascaleDbStorageVaultAsync(UpdateExascaleDbStorageVaultRequest request, st::CancellationToken cancellationToken) =>
+            UpdateExascaleDbStorageVaultAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateExascaleDbStorageVault</c>.</summary>
+        public virtual lro::OperationsClient UpdateExascaleDbStorageVaultOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateExascaleDbStorageVault</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ExascaleDbStorageVault, OperationMetadata> PollOnceUpdateExascaleDbStorageVault(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExascaleDbStorageVault, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateExascaleDbStorageVaultOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateExascaleDbStorageVault</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ExascaleDbStorageVault, OperationMetadata>> PollOnceUpdateExascaleDbStorageVaultAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExascaleDbStorageVault, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateExascaleDbStorageVaultOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` of a single ExascaleDbStorageVault.
+        /// </summary>
+        /// <param name="exascaleDbStorageVault">
+        /// Required. The resource being updated. Note only labels can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the ExascaleDbStorageVault
+        /// should be updated. A field specified in the mask is updated. If a mask
+        /// isn't provided, the service treats this as an implied field mask equivalent
+        /// to all fields that are populated (have a non-empty value). To clear or
+        /// unset a field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExascaleDbStorageVault, OperationMetadata> UpdateExascaleDbStorageVault(ExascaleDbStorageVault exascaleDbStorageVault, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateExascaleDbStorageVault(new UpdateExascaleDbStorageVaultRequest
+            {
+                UpdateMask = updateMask,
+                ExascaleDbStorageVault = gax::GaxPreconditions.CheckNotNull(exascaleDbStorageVault, nameof(exascaleDbStorageVault)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` of a single ExascaleDbStorageVault.
+        /// </summary>
+        /// <param name="exascaleDbStorageVault">
+        /// Required. The resource being updated. Note only labels can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the ExascaleDbStorageVault
+        /// should be updated. A field specified in the mask is updated. If a mask
+        /// isn't provided, the service treats this as an implied field mask equivalent
+        /// to all fields that are populated (have a non-empty value). To clear or
+        /// unset a field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExascaleDbStorageVault, OperationMetadata>> UpdateExascaleDbStorageVaultAsync(ExascaleDbStorageVault exascaleDbStorageVault, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateExascaleDbStorageVaultAsync(new UpdateExascaleDbStorageVaultRequest
+            {
+                UpdateMask = updateMask,
+                ExascaleDbStorageVault = gax::GaxPreconditions.CheckNotNull(exascaleDbStorageVault, nameof(exascaleDbStorageVault)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` of a single ExascaleDbStorageVault.
+        /// </summary>
+        /// <param name="exascaleDbStorageVault">
+        /// Required. The resource being updated. Note only labels can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the ExascaleDbStorageVault
+        /// should be updated. A field specified in the mask is updated. If a mask
+        /// isn't provided, the service treats this as an implied field mask equivalent
+        /// to all fields that are populated (have a non-empty value). To clear or
+        /// unset a field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExascaleDbStorageVault, OperationMetadata>> UpdateExascaleDbStorageVaultAsync(ExascaleDbStorageVault exascaleDbStorageVault, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateExascaleDbStorageVaultAsync(exascaleDbStorageVault, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes a single ExascaleDB Storage Vault.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -10921,6 +12976,166 @@ namespace Google.Cloud.OracleDatabase.V1
                 request.PageSize = pageSize.Value;
             }
             return ListDbSystemInitialStorageSizesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the DbSystemComputePerformances for the given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DbSystemComputePerformance"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDbSystemComputePerformancesResponse, DbSystemComputePerformance> ListDbSystemComputePerformances(ListDbSystemComputePerformancesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the DbSystemComputePerformances for the given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DbSystemComputePerformance"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDbSystemComputePerformancesResponse, DbSystemComputePerformance> ListDbSystemComputePerformancesAsync(ListDbSystemComputePerformancesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the DbSystemComputePerformances for the given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListDbSystemComputePerformancesRequest
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DbSystemComputePerformance"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDbSystemComputePerformancesResponse, DbSystemComputePerformance> ListDbSystemComputePerformances(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDbSystemComputePerformancesRequest request = new ListDbSystemComputePerformancesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDbSystemComputePerformances(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the DbSystemComputePerformances for the given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListDbSystemComputePerformancesRequest
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DbSystemComputePerformance"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDbSystemComputePerformancesResponse, DbSystemComputePerformance> ListDbSystemComputePerformancesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDbSystemComputePerformancesRequest request = new ListDbSystemComputePerformancesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDbSystemComputePerformancesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the DbSystemComputePerformances for the given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListDbSystemComputePerformancesRequest
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DbSystemComputePerformance"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDbSystemComputePerformancesResponse, DbSystemComputePerformance> ListDbSystemComputePerformances(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDbSystemComputePerformancesRequest request = new ListDbSystemComputePerformancesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDbSystemComputePerformances(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the DbSystemComputePerformances for the given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListDbSystemComputePerformancesRequest
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DbSystemComputePerformance"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDbSystemComputePerformancesResponse, DbSystemComputePerformance> ListDbSystemComputePerformancesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDbSystemComputePerformancesRequest request = new ListDbSystemComputePerformancesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDbSystemComputePerformancesAsync(request, callSettings);
         }
 
         /// <summary>
@@ -11930,6 +14145,136 @@ namespace Google.Cloud.OracleDatabase.V1
             CreateDbSystemAsync(parent, dbSystem, dbSystemId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates the `labels` of a single DbSystem.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DbSystem, OperationMetadata> UpdateDbSystem(UpdateDbSystemRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the `labels` of a single DbSystem.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DbSystem, OperationMetadata>> UpdateDbSystemAsync(UpdateDbSystemRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the `labels` of a single DbSystem.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DbSystem, OperationMetadata>> UpdateDbSystemAsync(UpdateDbSystemRequest request, st::CancellationToken cancellationToken) =>
+            UpdateDbSystemAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateDbSystem</c>.</summary>
+        public virtual lro::OperationsClient UpdateDbSystemOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateDbSystem</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DbSystem, OperationMetadata> PollOnceUpdateDbSystem(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DbSystem, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDbSystemOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateDbSystem</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DbSystem, OperationMetadata>> PollOnceUpdateDbSystemAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DbSystem, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDbSystemOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` of a single DbSystem.
+        /// </summary>
+        /// <param name="dbSystem">
+        /// Required. The resource being updated. Note only labels can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request. To clear or unset a
+        /// field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the DbSystem should be updated.
+        /// A field specified in the mask is updated. If a mask isn't provided, the
+        /// service treats this as an implied field mask equivalent to all fields that
+        /// are populated (have a non-empty value).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DbSystem, OperationMetadata> UpdateDbSystem(DbSystem dbSystem, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDbSystem(new UpdateDbSystemRequest
+            {
+                UpdateMask = updateMask,
+                DbSystem = gax::GaxPreconditions.CheckNotNull(dbSystem, nameof(dbSystem)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` of a single DbSystem.
+        /// </summary>
+        /// <param name="dbSystem">
+        /// Required. The resource being updated. Note only labels can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request. To clear or unset a
+        /// field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the DbSystem should be updated.
+        /// A field specified in the mask is updated. If a mask isn't provided, the
+        /// service treats this as an implied field mask equivalent to all fields that
+        /// are populated (have a non-empty value).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DbSystem, OperationMetadata>> UpdateDbSystemAsync(DbSystem dbSystem, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDbSystemAsync(new UpdateDbSystemRequest
+            {
+                UpdateMask = updateMask,
+                DbSystem = gax::GaxPreconditions.CheckNotNull(dbSystem, nameof(dbSystem)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` of a single DbSystem.
+        /// </summary>
+        /// <param name="dbSystem">
+        /// Required. The resource being updated. Note only labels can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request. To clear or unset a
+        /// field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the DbSystem should be updated.
+        /// A field specified in the mask is updated. If a mask isn't provided, the
+        /// service treats this as an implied field mask equivalent to all fields that
+        /// are populated (have a non-empty value).
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DbSystem, OperationMetadata>> UpdateDbSystemAsync(DbSystem dbSystem, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateDbSystemAsync(dbSystem, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes a single DbSystem.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -12530,6 +14875,137 @@ namespace Google.Cloud.OracleDatabase.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> CreateGoldengateDeploymentAsync(gagr::LocationName parent, GoldengateDeployment goldengateDeployment, string goldengateDeploymentId, st::CancellationToken cancellationToken) =>
             CreateGoldengateDeploymentAsync(parent, goldengateDeployment, goldengateDeploymentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateDeployment, OperationMetadata> UpdateGoldengateDeployment(UpdateGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> UpdateGoldengateDeploymentAsync(UpdateGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> UpdateGoldengateDeploymentAsync(UpdateGoldengateDeploymentRequest request, st::CancellationToken cancellationToken) =>
+            UpdateGoldengateDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateGoldengateDeployment</c>.</summary>
+        public virtual lro::OperationsClient UpdateGoldengateDeploymentOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateGoldengateDeployment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<GoldengateDeployment, OperationMetadata> PollOnceUpdateGoldengateDeployment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoldengateDeployment, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateGoldengateDeploymentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateGoldengateDeployment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> PollOnceUpdateGoldengateDeploymentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoldengateDeployment, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateGoldengateDeploymentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="goldengateDeployment">
+        /// Required. The resource being updated. Note only labels can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the GoldengateDeployment should
+        /// be updated. A field specified in the mask is updated. If a mask isn't
+        /// provided, the service treats this as an implied field mask equivalent to
+        /// all fields that are populated (have a non-empty value). To clear or unset
+        /// a field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateDeployment, OperationMetadata> UpdateGoldengateDeployment(GoldengateDeployment goldengateDeployment, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateGoldengateDeployment(new UpdateGoldengateDeploymentRequest
+            {
+                UpdateMask = updateMask,
+                GoldengateDeployment = gax::GaxPreconditions.CheckNotNull(goldengateDeployment, nameof(goldengateDeployment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="goldengateDeployment">
+        /// Required. The resource being updated. Note only labels can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the GoldengateDeployment should
+        /// be updated. A field specified in the mask is updated. If a mask isn't
+        /// provided, the service treats this as an implied field mask equivalent to
+        /// all fields that are populated (have a non-empty value). To clear or unset
+        /// a field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> UpdateGoldengateDeploymentAsync(GoldengateDeployment goldengateDeployment, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateGoldengateDeploymentAsync(new UpdateGoldengateDeploymentRequest
+            {
+                UpdateMask = updateMask,
+                GoldengateDeployment = gax::GaxPreconditions.CheckNotNull(goldengateDeployment, nameof(goldengateDeployment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="goldengateDeployment">
+        /// Required. The resource being updated. Note only labels can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the GoldengateDeployment should
+        /// be updated. A field specified in the mask is updated. If a mask isn't
+        /// provided, the service treats this as an implied field mask equivalent to
+        /// all fields that are populated (have a non-empty value). To clear or unset
+        /// a field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> UpdateGoldengateDeploymentAsync(GoldengateDeployment goldengateDeployment, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateGoldengateDeploymentAsync(goldengateDeployment, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a single GoldengateDeployment.
@@ -13409,6 +15885,137 @@ namespace Google.Cloud.OracleDatabase.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<GoldengateConnection, OperationMetadata>> CreateGoldengateConnectionAsync(gagr::LocationName parent, GoldengateConnection goldengateConnection, string goldengateConnectionId, st::CancellationToken cancellationToken) =>
             CreateGoldengateConnectionAsync(parent, goldengateConnection, goldengateConnectionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateConnection, OperationMetadata> UpdateGoldengateConnection(UpdateGoldengateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnection, OperationMetadata>> UpdateGoldengateConnectionAsync(UpdateGoldengateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnection, OperationMetadata>> UpdateGoldengateConnectionAsync(UpdateGoldengateConnectionRequest request, st::CancellationToken cancellationToken) =>
+            UpdateGoldengateConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateGoldengateConnection</c>.</summary>
+        public virtual lro::OperationsClient UpdateGoldengateConnectionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateGoldengateConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<GoldengateConnection, OperationMetadata> PollOnceUpdateGoldengateConnection(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoldengateConnection, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateGoldengateConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateGoldengateConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnection, OperationMetadata>> PollOnceUpdateGoldengateConnectionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoldengateConnection, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateGoldengateConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateConnection.
+        /// </summary>
+        /// <param name="goldengateConnection">
+        /// Required. The resource being updated. Note only labels can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the GoldengateConnection should
+        /// be updated. A field specified in the mask is updated. If a mask isn't
+        /// provided, the service treats this as an implied field mask equivalent to
+        /// all fields that are populated (have a non-empty value). To clear or unset a
+        /// field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateConnection, OperationMetadata> UpdateGoldengateConnection(GoldengateConnection goldengateConnection, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateGoldengateConnection(new UpdateGoldengateConnectionRequest
+            {
+                UpdateMask = updateMask,
+                GoldengateConnection = gax::GaxPreconditions.CheckNotNull(goldengateConnection, nameof(goldengateConnection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateConnection.
+        /// </summary>
+        /// <param name="goldengateConnection">
+        /// Required. The resource being updated. Note only labels can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the GoldengateConnection should
+        /// be updated. A field specified in the mask is updated. If a mask isn't
+        /// provided, the service treats this as an implied field mask equivalent to
+        /// all fields that are populated (have a non-empty value). To clear or unset a
+        /// field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnection, OperationMetadata>> UpdateGoldengateConnectionAsync(GoldengateConnection goldengateConnection, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateGoldengateConnectionAsync(new UpdateGoldengateConnectionRequest
+            {
+                UpdateMask = updateMask,
+                GoldengateConnection = gax::GaxPreconditions.CheckNotNull(goldengateConnection, nameof(goldengateConnection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateConnection.
+        /// </summary>
+        /// <param name="goldengateConnection">
+        /// Required. The resource being updated. Note only labels can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the GoldengateConnection should
+        /// be updated. A field specified in the mask is updated. If a mask isn't
+        /// provided, the service treats this as an implied field mask equivalent to
+        /// all fields that are populated (have a non-empty value). To clear or unset a
+        /// field, the field must be explicitly specified in the `update_mask`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnection, OperationMetadata>> UpdateGoldengateConnectionAsync(GoldengateConnection goldengateConnection, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateGoldengateConnectionAsync(goldengateConnection, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a single GoldengateConnection.
@@ -14951,6 +17558,140 @@ namespace Google.Cloud.OracleDatabase.V1
             CreateGoldengateConnectionAssignmentAsync(parent, goldengateConnectionAssignment, goldengateConnectionAssignmentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates the `labels` of a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateConnectionAssignment, OperationMetadata> UpdateGoldengateConnectionAssignment(UpdateGoldengateConnectionAssignmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnectionAssignment, OperationMetadata>> UpdateGoldengateConnectionAssignmentAsync(UpdateGoldengateConnectionAssignmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnectionAssignment, OperationMetadata>> UpdateGoldengateConnectionAssignmentAsync(UpdateGoldengateConnectionAssignmentRequest request, st::CancellationToken cancellationToken) =>
+            UpdateGoldengateConnectionAssignmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateGoldengateConnectionAssignment</c>.</summary>
+        public virtual lro::OperationsClient UpdateGoldengateConnectionAssignmentOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateGoldengateConnectionAssignment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<GoldengateConnectionAssignment, OperationMetadata> PollOnceUpdateGoldengateConnectionAssignment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoldengateConnectionAssignment, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateGoldengateConnectionAssignmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateGoldengateConnectionAssignment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnectionAssignment, OperationMetadata>> PollOnceUpdateGoldengateConnectionAssignmentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoldengateConnectionAssignment, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateGoldengateConnectionAssignmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="goldengateConnectionAssignment">
+        /// Required. The resource being updated. Note only labels can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the
+        /// GoldengateConnectionAssignment should be updated. A field specified in the
+        /// mask is updated. If a mask isn't provided, the service treats this as an
+        /// implied field mask equivalent to all fields that are populated (have a
+        /// non-empty value). To clear or unset a field, the field must be explicitly
+        /// specified in the `update_mask`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateConnectionAssignment, OperationMetadata> UpdateGoldengateConnectionAssignment(GoldengateConnectionAssignment goldengateConnectionAssignment, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateGoldengateConnectionAssignment(new UpdateGoldengateConnectionAssignmentRequest
+            {
+                UpdateMask = updateMask,
+                GoldengateConnectionAssignment = gax::GaxPreconditions.CheckNotNull(goldengateConnectionAssignment, nameof(goldengateConnectionAssignment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="goldengateConnectionAssignment">
+        /// Required. The resource being updated. Note only labels can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the
+        /// GoldengateConnectionAssignment should be updated. A field specified in the
+        /// mask is updated. If a mask isn't provided, the service treats this as an
+        /// implied field mask equivalent to all fields that are populated (have a
+        /// non-empty value). To clear or unset a field, the field must be explicitly
+        /// specified in the `update_mask`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnectionAssignment, OperationMetadata>> UpdateGoldengateConnectionAssignmentAsync(GoldengateConnectionAssignment goldengateConnectionAssignment, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateGoldengateConnectionAssignmentAsync(new UpdateGoldengateConnectionAssignmentRequest
+            {
+                UpdateMask = updateMask,
+                GoldengateConnectionAssignment = gax::GaxPreconditions.CheckNotNull(goldengateConnectionAssignment, nameof(goldengateConnectionAssignment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="goldengateConnectionAssignment">
+        /// Required. The resource being updated. Note only labels can be updated.
+        /// The provided labels will completely replace the existing labels.
+        /// Any existing label keys that are not included in the update request will be
+        /// deleted. Not providing labels and update_mask will not update the labels.
+        /// To clear all labels, specify `labels` in the `update_mask` and omit or
+        /// leave the `labels` field empty in the update request.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the
+        /// GoldengateConnectionAssignment should be updated. A field specified in the
+        /// mask is updated. If a mask isn't provided, the service treats this as an
+        /// implied field mask equivalent to all fields that are populated (have a
+        /// non-empty value). To clear or unset a field, the field must be explicitly
+        /// specified in the `update_mask`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnectionAssignment, OperationMetadata>> UpdateGoldengateConnectionAssignmentAsync(GoldengateConnectionAssignment goldengateConnectionAssignment, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateGoldengateConnectionAssignmentAsync(goldengateConnectionAssignment, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes a single GoldengateConnectionAssignment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -15204,6 +17945,969 @@ namespace Google.Cloud.OracleDatabase.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<TestGoldengateConnectionAssignmentResponse> TestGoldengateConnectionAssignmentAsync(GoldengateConnectionAssignmentName name, st::CancellationToken cancellationToken) =>
             TestGoldengateConnectionAssignmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists DatabaseConnections in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatabaseConnection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDatabaseConnectionsResponse, DatabaseConnection> ListDatabaseConnections(ListDatabaseConnectionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists DatabaseConnections in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatabaseConnection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDatabaseConnectionsResponse, DatabaseConnection> ListDatabaseConnectionsAsync(ListDatabaseConnectionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists DatabaseConnections in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the DatabaseConnection in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatabaseConnection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDatabaseConnectionsResponse, DatabaseConnection> ListDatabaseConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabaseConnectionsRequest request = new ListDatabaseConnectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabaseConnections(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists DatabaseConnections in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the DatabaseConnection in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatabaseConnection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDatabaseConnectionsResponse, DatabaseConnection> ListDatabaseConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabaseConnectionsRequest request = new ListDatabaseConnectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabaseConnectionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists DatabaseConnections in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the DatabaseConnection in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatabaseConnection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDatabaseConnectionsResponse, DatabaseConnection> ListDatabaseConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabaseConnectionsRequest request = new ListDatabaseConnectionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabaseConnections(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists DatabaseConnections in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the DatabaseConnection in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatabaseConnection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDatabaseConnectionsResponse, DatabaseConnection> ListDatabaseConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabaseConnectionsRequest request = new ListDatabaseConnectionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabaseConnectionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DatabaseConnection GetDatabaseConnection(GetDatabaseConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatabaseConnection> GetDatabaseConnectionAsync(GetDatabaseConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatabaseConnection> GetDatabaseConnectionAsync(GetDatabaseConnectionRequest request, st::CancellationToken cancellationToken) =>
+            GetDatabaseConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatabaseConnection in the following format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DatabaseConnection GetDatabaseConnection(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDatabaseConnection(new GetDatabaseConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatabaseConnection in the following format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatabaseConnection> GetDatabaseConnectionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDatabaseConnectionAsync(new GetDatabaseConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatabaseConnection in the following format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatabaseConnection> GetDatabaseConnectionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetDatabaseConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatabaseConnection in the following format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DatabaseConnection GetDatabaseConnection(DatabaseConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDatabaseConnection(new GetDatabaseConnectionRequest
+            {
+                DatabaseConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatabaseConnection in the following format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatabaseConnection> GetDatabaseConnectionAsync(DatabaseConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDatabaseConnectionAsync(new GetDatabaseConnectionRequest
+            {
+                DatabaseConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatabaseConnection in the following format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DatabaseConnection> GetDatabaseConnectionAsync(DatabaseConnectionName name, st::CancellationToken cancellationToken) =>
+            GetDatabaseConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new DatabaseConnection in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DatabaseConnection, OperationMetadata> CreateDatabaseConnection(CreateDatabaseConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new DatabaseConnection in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatabaseConnection, OperationMetadata>> CreateDatabaseConnectionAsync(CreateDatabaseConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new DatabaseConnection in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatabaseConnection, OperationMetadata>> CreateDatabaseConnectionAsync(CreateDatabaseConnectionRequest request, st::CancellationToken cancellationToken) =>
+            CreateDatabaseConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateDatabaseConnection</c>.</summary>
+        public virtual lro::OperationsClient CreateDatabaseConnectionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateDatabaseConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DatabaseConnection, OperationMetadata> PollOnceCreateDatabaseConnection(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DatabaseConnection, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDatabaseConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateDatabaseConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DatabaseConnection, OperationMetadata>> PollOnceCreateDatabaseConnectionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DatabaseConnection, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDatabaseConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new DatabaseConnection in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the DatabaseConnection in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="databaseConnection">
+        /// Required. Details of the DatabaseConnection instance to create.
+        /// </param>
+        /// <param name="databaseConnectionId">
+        /// Required. The ID of the DatabaseConnection to create. This value is
+        /// restricted to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of
+        /// 63 characters in length. The value must start with a letter and end with a
+        /// letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DatabaseConnection, OperationMetadata> CreateDatabaseConnection(string parent, DatabaseConnection databaseConnection, string databaseConnectionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatabaseConnection(new CreateDatabaseConnectionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DatabaseConnectionId = gax::GaxPreconditions.CheckNotNullOrEmpty(databaseConnectionId, nameof(databaseConnectionId)),
+                DatabaseConnection = gax::GaxPreconditions.CheckNotNull(databaseConnection, nameof(databaseConnection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new DatabaseConnection in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the DatabaseConnection in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="databaseConnection">
+        /// Required. Details of the DatabaseConnection instance to create.
+        /// </param>
+        /// <param name="databaseConnectionId">
+        /// Required. The ID of the DatabaseConnection to create. This value is
+        /// restricted to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of
+        /// 63 characters in length. The value must start with a letter and end with a
+        /// letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatabaseConnection, OperationMetadata>> CreateDatabaseConnectionAsync(string parent, DatabaseConnection databaseConnection, string databaseConnectionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatabaseConnectionAsync(new CreateDatabaseConnectionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DatabaseConnectionId = gax::GaxPreconditions.CheckNotNullOrEmpty(databaseConnectionId, nameof(databaseConnectionId)),
+                DatabaseConnection = gax::GaxPreconditions.CheckNotNull(databaseConnection, nameof(databaseConnection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new DatabaseConnection in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the DatabaseConnection in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="databaseConnection">
+        /// Required. Details of the DatabaseConnection instance to create.
+        /// </param>
+        /// <param name="databaseConnectionId">
+        /// Required. The ID of the DatabaseConnection to create. This value is
+        /// restricted to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of
+        /// 63 characters in length. The value must start with a letter and end with a
+        /// letter or a number.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatabaseConnection, OperationMetadata>> CreateDatabaseConnectionAsync(string parent, DatabaseConnection databaseConnection, string databaseConnectionId, st::CancellationToken cancellationToken) =>
+            CreateDatabaseConnectionAsync(parent, databaseConnection, databaseConnectionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new DatabaseConnection in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the DatabaseConnection in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="databaseConnection">
+        /// Required. Details of the DatabaseConnection instance to create.
+        /// </param>
+        /// <param name="databaseConnectionId">
+        /// Required. The ID of the DatabaseConnection to create. This value is
+        /// restricted to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of
+        /// 63 characters in length. The value must start with a letter and end with a
+        /// letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DatabaseConnection, OperationMetadata> CreateDatabaseConnection(gagr::LocationName parent, DatabaseConnection databaseConnection, string databaseConnectionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatabaseConnection(new CreateDatabaseConnectionRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DatabaseConnectionId = gax::GaxPreconditions.CheckNotNullOrEmpty(databaseConnectionId, nameof(databaseConnectionId)),
+                DatabaseConnection = gax::GaxPreconditions.CheckNotNull(databaseConnection, nameof(databaseConnection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new DatabaseConnection in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the DatabaseConnection in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="databaseConnection">
+        /// Required. Details of the DatabaseConnection instance to create.
+        /// </param>
+        /// <param name="databaseConnectionId">
+        /// Required. The ID of the DatabaseConnection to create. This value is
+        /// restricted to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of
+        /// 63 characters in length. The value must start with a letter and end with a
+        /// letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatabaseConnection, OperationMetadata>> CreateDatabaseConnectionAsync(gagr::LocationName parent, DatabaseConnection databaseConnection, string databaseConnectionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatabaseConnectionAsync(new CreateDatabaseConnectionRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DatabaseConnectionId = gax::GaxPreconditions.CheckNotNullOrEmpty(databaseConnectionId, nameof(databaseConnectionId)),
+                DatabaseConnection = gax::GaxPreconditions.CheckNotNull(databaseConnection, nameof(databaseConnection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new DatabaseConnection in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the DatabaseConnection in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="databaseConnection">
+        /// Required. Details of the DatabaseConnection instance to create.
+        /// </param>
+        /// <param name="databaseConnectionId">
+        /// Required. The ID of the DatabaseConnection to create. This value is
+        /// restricted to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of
+        /// 63 characters in length. The value must start with a letter and end with a
+        /// letter or a number.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatabaseConnection, OperationMetadata>> CreateDatabaseConnectionAsync(gagr::LocationName parent, DatabaseConnection databaseConnection, string databaseConnectionId, st::CancellationToken cancellationToken) =>
+            CreateDatabaseConnectionAsync(parent, databaseConnection, databaseConnectionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the parameters of a single DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DatabaseConnection, OperationMetadata> UpdateDatabaseConnection(UpdateDatabaseConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatabaseConnection, OperationMetadata>> UpdateDatabaseConnectionAsync(UpdateDatabaseConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatabaseConnection, OperationMetadata>> UpdateDatabaseConnectionAsync(UpdateDatabaseConnectionRequest request, st::CancellationToken cancellationToken) =>
+            UpdateDatabaseConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateDatabaseConnection</c>.</summary>
+        public virtual lro::OperationsClient UpdateDatabaseConnectionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateDatabaseConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DatabaseConnection, OperationMetadata> PollOnceUpdateDatabaseConnection(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DatabaseConnection, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDatabaseConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateDatabaseConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DatabaseConnection, OperationMetadata>> PollOnceUpdateDatabaseConnectionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DatabaseConnection, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDatabaseConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single DatabaseConnection.
+        /// </summary>
+        /// <param name="databaseConnection">
+        /// Required. The resource being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the DatabaseConnection should
+        /// be updated. A field specified in the mask is overwritten. If a mask isn't
+        /// provided then all the fields in the DatabaseConnection are overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DatabaseConnection, OperationMetadata> UpdateDatabaseConnection(DatabaseConnection databaseConnection, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDatabaseConnection(new UpdateDatabaseConnectionRequest
+            {
+                UpdateMask = updateMask,
+                DatabaseConnection = gax::GaxPreconditions.CheckNotNull(databaseConnection, nameof(databaseConnection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single DatabaseConnection.
+        /// </summary>
+        /// <param name="databaseConnection">
+        /// Required. The resource being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the DatabaseConnection should
+        /// be updated. A field specified in the mask is overwritten. If a mask isn't
+        /// provided then all the fields in the DatabaseConnection are overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatabaseConnection, OperationMetadata>> UpdateDatabaseConnectionAsync(DatabaseConnection databaseConnection, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDatabaseConnectionAsync(new UpdateDatabaseConnectionRequest
+            {
+                UpdateMask = updateMask,
+                DatabaseConnection = gax::GaxPreconditions.CheckNotNull(databaseConnection, nameof(databaseConnection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single DatabaseConnection.
+        /// </summary>
+        /// <param name="databaseConnection">
+        /// Required. The resource being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. A mask specifying which fields in the DatabaseConnection should
+        /// be updated. A field specified in the mask is overwritten. If a mask isn't
+        /// provided then all the fields in the DatabaseConnection are overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatabaseConnection, OperationMetadata>> UpdateDatabaseConnectionAsync(DatabaseConnection databaseConnection, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateDatabaseConnectionAsync(databaseConnection, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDatabaseConnection(DeleteDatabaseConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDatabaseConnectionAsync(DeleteDatabaseConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDatabaseConnectionAsync(DeleteDatabaseConnectionRequest request, st::CancellationToken cancellationToken) =>
+            DeleteDatabaseConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteDatabaseConnection</c>.</summary>
+        public virtual lro::OperationsClient DeleteDatabaseConnectionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteDatabaseConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteDatabaseConnection(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDatabaseConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteDatabaseConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteDatabaseConnectionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDatabaseConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource in the following format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDatabaseConnection(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatabaseConnection(new DeleteDatabaseConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource in the following format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDatabaseConnectionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatabaseConnectionAsync(new DeleteDatabaseConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource in the following format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDatabaseConnectionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteDatabaseConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource in the following format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDatabaseConnection(DatabaseConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatabaseConnection(new DeleteDatabaseConnectionRequest
+            {
+                DatabaseConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource in the following format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDatabaseConnectionAsync(DatabaseConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatabaseConnectionAsync(new DeleteDatabaseConnectionRequest
+            {
+                DatabaseConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource in the following format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDatabaseConnectionAsync(DatabaseConnectionName name, st::CancellationToken cancellationToken) =>
+            DeleteDatabaseConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Tests connectivity of a DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TestDatabaseConnectionResponse TestDatabaseConnection(TestDatabaseConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Tests connectivity of a DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestDatabaseConnectionResponse> TestDatabaseConnectionAsync(TestDatabaseConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Tests connectivity of a DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestDatabaseConnectionResponse> TestDatabaseConnectionAsync(TestDatabaseConnectionRequest request, st::CancellationToken cancellationToken) =>
+            TestDatabaseConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Tests connectivity of a DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatabaseConnection to test.
+        /// Format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TestDatabaseConnectionResponse TestDatabaseConnection(string name, gaxgrpc::CallSettings callSettings = null) =>
+            TestDatabaseConnection(new TestDatabaseConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Tests connectivity of a DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatabaseConnection to test.
+        /// Format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestDatabaseConnectionResponse> TestDatabaseConnectionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            TestDatabaseConnectionAsync(new TestDatabaseConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Tests connectivity of a DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatabaseConnection to test.
+        /// Format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestDatabaseConnectionResponse> TestDatabaseConnectionAsync(string name, st::CancellationToken cancellationToken) =>
+            TestDatabaseConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Tests connectivity of a DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatabaseConnection to test.
+        /// Format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TestDatabaseConnectionResponse TestDatabaseConnection(DatabaseConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            TestDatabaseConnection(new TestDatabaseConnectionRequest
+            {
+                DatabaseConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Tests connectivity of a DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatabaseConnection to test.
+        /// Format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestDatabaseConnectionResponse> TestDatabaseConnectionAsync(DatabaseConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            TestDatabaseConnectionAsync(new TestDatabaseConnectionRequest
+            {
+                DatabaseConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Tests connectivity of a DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatabaseConnection to test.
+        /// Format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestDatabaseConnectionResponse> TestDatabaseConnectionAsync(DatabaseConnectionName name, st::CancellationToken cancellationToken) =>
+            TestDatabaseConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Executes a SQL statement on a DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExecuteSqlResponse ExecuteSql(ExecuteSqlRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Executes a SQL statement on a DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteSqlResponse> ExecuteSqlAsync(ExecuteSqlRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Executes a SQL statement on a DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteSqlResponse> ExecuteSqlAsync(ExecuteSqlRequest request, st::CancellationToken cancellationToken) =>
+            ExecuteSqlAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Executes a SQL statement on a DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatabaseConnection in the following format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+        /// </param>
+        /// <param name="sqlStatement">
+        /// Required. The SQL statement to execute.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExecuteSqlResponse ExecuteSql(string name, string sqlStatement, gaxgrpc::CallSettings callSettings = null) =>
+            ExecuteSql(new ExecuteSqlRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                SqlStatement = gax::GaxPreconditions.CheckNotNullOrEmpty(sqlStatement, nameof(sqlStatement)),
+            }, callSettings);
+
+        /// <summary>
+        /// Executes a SQL statement on a DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatabaseConnection in the following format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+        /// </param>
+        /// <param name="sqlStatement">
+        /// Required. The SQL statement to execute.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteSqlResponse> ExecuteSqlAsync(string name, string sqlStatement, gaxgrpc::CallSettings callSettings = null) =>
+            ExecuteSqlAsync(new ExecuteSqlRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                SqlStatement = gax::GaxPreconditions.CheckNotNullOrEmpty(sqlStatement, nameof(sqlStatement)),
+            }, callSettings);
+
+        /// <summary>
+        /// Executes a SQL statement on a DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatabaseConnection in the following format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+        /// </param>
+        /// <param name="sqlStatement">
+        /// Required. The SQL statement to execute.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteSqlResponse> ExecuteSqlAsync(string name, string sqlStatement, st::CancellationToken cancellationToken) =>
+            ExecuteSqlAsync(name, sqlStatement, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Executes a SQL statement on a DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatabaseConnection in the following format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+        /// </param>
+        /// <param name="sqlStatement">
+        /// Required. The SQL statement to execute.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExecuteSqlResponse ExecuteSql(DatabaseConnectionName name, string sqlStatement, gaxgrpc::CallSettings callSettings = null) =>
+            ExecuteSql(new ExecuteSqlRequest
+            {
+                DatabaseConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                SqlStatement = gax::GaxPreconditions.CheckNotNullOrEmpty(sqlStatement, nameof(sqlStatement)),
+            }, callSettings);
+
+        /// <summary>
+        /// Executes a SQL statement on a DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatabaseConnection in the following format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+        /// </param>
+        /// <param name="sqlStatement">
+        /// Required. The SQL statement to execute.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteSqlResponse> ExecuteSqlAsync(DatabaseConnectionName name, string sqlStatement, gaxgrpc::CallSettings callSettings = null) =>
+            ExecuteSqlAsync(new ExecuteSqlRequest
+            {
+                DatabaseConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                SqlStatement = gax::GaxPreconditions.CheckNotNullOrEmpty(sqlStatement, nameof(sqlStatement)),
+            }, callSettings);
+
+        /// <summary>
+        /// Executes a SQL statement on a DatabaseConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DatabaseConnection in the following format:
+        /// projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+        /// </param>
+        /// <param name="sqlStatement">
+        /// Required. The SQL statement to execute.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteSqlResponse> ExecuteSqlAsync(DatabaseConnectionName name, string sqlStatement, st::CancellationToken cancellationToken) =>
+            ExecuteSqlAsync(name, sqlStatement, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>OracleDatabase client wrapper implementation, for convenient use.</summary>
@@ -15218,6 +18922,8 @@ namespace Google.Cloud.OracleDatabase.V1
 
         private readonly gaxgrpc::ApiCall<CreateCloudExadataInfrastructureRequest, lro::Operation> _callCreateCloudExadataInfrastructure;
 
+        private readonly gaxgrpc::ApiCall<UpdateCloudExadataInfrastructureRequest, lro::Operation> _callUpdateCloudExadataInfrastructure;
+
         private readonly gaxgrpc::ApiCall<DeleteCloudExadataInfrastructureRequest, lro::Operation> _callDeleteCloudExadataInfrastructure;
 
         private readonly gaxgrpc::ApiCall<ConfigureExascaleCloudExadataInfrastructureRequest, lro::Operation> _callConfigureExascaleCloudExadataInfrastructure;
@@ -15228,9 +18934,21 @@ namespace Google.Cloud.OracleDatabase.V1
 
         private readonly gaxgrpc::ApiCall<CreateCloudVmClusterRequest, lro::Operation> _callCreateCloudVmCluster;
 
+        private readonly gaxgrpc::ApiCall<UpdateCloudVmClusterRequest, lro::Operation> _callUpdateCloudVmCluster;
+
         private readonly gaxgrpc::ApiCall<DeleteCloudVmClusterRequest, lro::Operation> _callDeleteCloudVmCluster;
 
+        private readonly gaxgrpc::ApiCall<EnableCloudVmClusterIdentityConnectorRequest, lro::Operation> _callEnableCloudVmClusterIdentityConnector;
+
+        private readonly gaxgrpc::ApiCall<DisableCloudVmClusterIdentityConnectorRequest, lro::Operation> _callDisableCloudVmClusterIdentityConnector;
+
+        private readonly gaxgrpc::ApiCall<EnableExadbVmClusterIdentityConnectorRequest, lro::Operation> _callEnableExadbVmClusterIdentityConnector;
+
+        private readonly gaxgrpc::ApiCall<DisableExadbVmClusterIdentityConnectorRequest, lro::Operation> _callDisableExadbVmClusterIdentityConnector;
+
         private readonly gaxgrpc::ApiCall<ListEntitlementsRequest, ListEntitlementsResponse> _callListEntitlements;
+
+        private readonly gaxgrpc::ApiCall<ListFlexComponentsRequest, ListFlexComponentsResponse> _callListFlexComponents;
 
         private readonly gaxgrpc::ApiCall<ListDbServersRequest, ListDbServersResponse> _callListDbServers;
 
@@ -15282,6 +19000,8 @@ namespace Google.Cloud.OracleDatabase.V1
 
         private readonly gaxgrpc::ApiCall<CreateOdbNetworkRequest, lro::Operation> _callCreateOdbNetwork;
 
+        private readonly gaxgrpc::ApiCall<UpdateOdbNetworkRequest, lro::Operation> _callUpdateOdbNetwork;
+
         private readonly gaxgrpc::ApiCall<DeleteOdbNetworkRequest, lro::Operation> _callDeleteOdbNetwork;
 
         private readonly gaxgrpc::ApiCall<ListOdbSubnetsRequest, ListOdbSubnetsResponse> _callListOdbSubnets;
@@ -15289,6 +19009,8 @@ namespace Google.Cloud.OracleDatabase.V1
         private readonly gaxgrpc::ApiCall<GetOdbSubnetRequest, OdbSubnet> _callGetOdbSubnet;
 
         private readonly gaxgrpc::ApiCall<CreateOdbSubnetRequest, lro::Operation> _callCreateOdbSubnet;
+
+        private readonly gaxgrpc::ApiCall<UpdateOdbSubnetRequest, lro::Operation> _callUpdateOdbSubnet;
 
         private readonly gaxgrpc::ApiCall<DeleteOdbSubnetRequest, lro::Operation> _callDeleteOdbSubnet;
 
@@ -15318,9 +19040,13 @@ namespace Google.Cloud.OracleDatabase.V1
 
         private readonly gaxgrpc::ApiCall<CreateExascaleDbStorageVaultRequest, lro::Operation> _callCreateExascaleDbStorageVault;
 
+        private readonly gaxgrpc::ApiCall<UpdateExascaleDbStorageVaultRequest, lro::Operation> _callUpdateExascaleDbStorageVault;
+
         private readonly gaxgrpc::ApiCall<DeleteExascaleDbStorageVaultRequest, lro::Operation> _callDeleteExascaleDbStorageVault;
 
         private readonly gaxgrpc::ApiCall<ListDbSystemInitialStorageSizesRequest, ListDbSystemInitialStorageSizesResponse> _callListDbSystemInitialStorageSizes;
+
+        private readonly gaxgrpc::ApiCall<ListDbSystemComputePerformancesRequest, ListDbSystemComputePerformancesResponse> _callListDbSystemComputePerformances;
 
         private readonly gaxgrpc::ApiCall<ListDatabasesRequest, ListDatabasesResponse> _callListDatabases;
 
@@ -15336,6 +19062,8 @@ namespace Google.Cloud.OracleDatabase.V1
 
         private readonly gaxgrpc::ApiCall<CreateDbSystemRequest, lro::Operation> _callCreateDbSystem;
 
+        private readonly gaxgrpc::ApiCall<UpdateDbSystemRequest, lro::Operation> _callUpdateDbSystem;
+
         private readonly gaxgrpc::ApiCall<DeleteDbSystemRequest, lro::Operation> _callDeleteDbSystem;
 
         private readonly gaxgrpc::ApiCall<ListGoldengateDeploymentsRequest, ListGoldengateDeploymentsResponse> _callListGoldengateDeployments;
@@ -15343,6 +19071,8 @@ namespace Google.Cloud.OracleDatabase.V1
         private readonly gaxgrpc::ApiCall<GetGoldengateDeploymentRequest, GoldengateDeployment> _callGetGoldengateDeployment;
 
         private readonly gaxgrpc::ApiCall<CreateGoldengateDeploymentRequest, lro::Operation> _callCreateGoldengateDeployment;
+
+        private readonly gaxgrpc::ApiCall<UpdateGoldengateDeploymentRequest, lro::Operation> _callUpdateGoldengateDeployment;
 
         private readonly gaxgrpc::ApiCall<DeleteGoldengateDeploymentRequest, lro::Operation> _callDeleteGoldengateDeployment;
 
@@ -15355,6 +19085,8 @@ namespace Google.Cloud.OracleDatabase.V1
         private readonly gaxgrpc::ApiCall<GetGoldengateConnectionRequest, GoldengateConnection> _callGetGoldengateConnection;
 
         private readonly gaxgrpc::ApiCall<CreateGoldengateConnectionRequest, lro::Operation> _callCreateGoldengateConnection;
+
+        private readonly gaxgrpc::ApiCall<UpdateGoldengateConnectionRequest, lro::Operation> _callUpdateGoldengateConnection;
 
         private readonly gaxgrpc::ApiCall<DeleteGoldengateConnectionRequest, lro::Operation> _callDeleteGoldengateConnection;
 
@@ -15376,9 +19108,25 @@ namespace Google.Cloud.OracleDatabase.V1
 
         private readonly gaxgrpc::ApiCall<CreateGoldengateConnectionAssignmentRequest, lro::Operation> _callCreateGoldengateConnectionAssignment;
 
+        private readonly gaxgrpc::ApiCall<UpdateGoldengateConnectionAssignmentRequest, lro::Operation> _callUpdateGoldengateConnectionAssignment;
+
         private readonly gaxgrpc::ApiCall<DeleteGoldengateConnectionAssignmentRequest, lro::Operation> _callDeleteGoldengateConnectionAssignment;
 
         private readonly gaxgrpc::ApiCall<TestGoldengateConnectionAssignmentRequest, TestGoldengateConnectionAssignmentResponse> _callTestGoldengateConnectionAssignment;
+
+        private readonly gaxgrpc::ApiCall<ListDatabaseConnectionsRequest, ListDatabaseConnectionsResponse> _callListDatabaseConnections;
+
+        private readonly gaxgrpc::ApiCall<GetDatabaseConnectionRequest, DatabaseConnection> _callGetDatabaseConnection;
+
+        private readonly gaxgrpc::ApiCall<CreateDatabaseConnectionRequest, lro::Operation> _callCreateDatabaseConnection;
+
+        private readonly gaxgrpc::ApiCall<UpdateDatabaseConnectionRequest, lro::Operation> _callUpdateDatabaseConnection;
+
+        private readonly gaxgrpc::ApiCall<DeleteDatabaseConnectionRequest, lro::Operation> _callDeleteDatabaseConnection;
+
+        private readonly gaxgrpc::ApiCall<TestDatabaseConnectionRequest, TestDatabaseConnectionResponse> _callTestDatabaseConnection;
+
+        private readonly gaxgrpc::ApiCall<ExecuteSqlRequest, ExecuteSqlResponse> _callExecuteSql;
 
         /// <summary>
         /// Constructs a client wrapper for the OracleDatabase service, with the specified gRPC client and settings.
@@ -15396,10 +19144,16 @@ namespace Google.Cloud.OracleDatabase.V1
                 Logger = logger,
             });
             CreateCloudExadataInfrastructureOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCloudExadataInfrastructureOperationsSettings, logger);
+            UpdateCloudExadataInfrastructureOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateCloudExadataInfrastructureOperationsSettings, logger);
             DeleteCloudExadataInfrastructureOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCloudExadataInfrastructureOperationsSettings, logger);
             ConfigureExascaleCloudExadataInfrastructureOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ConfigureExascaleCloudExadataInfrastructureOperationsSettings, logger);
             CreateCloudVmClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCloudVmClusterOperationsSettings, logger);
+            UpdateCloudVmClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateCloudVmClusterOperationsSettings, logger);
             DeleteCloudVmClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCloudVmClusterOperationsSettings, logger);
+            EnableCloudVmClusterIdentityConnectorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.EnableCloudVmClusterIdentityConnectorOperationsSettings, logger);
+            DisableCloudVmClusterIdentityConnectorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DisableCloudVmClusterIdentityConnectorOperationsSettings, logger);
+            EnableExadbVmClusterIdentityConnectorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.EnableExadbVmClusterIdentityConnectorOperationsSettings, logger);
+            DisableExadbVmClusterIdentityConnectorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DisableExadbVmClusterIdentityConnectorOperationsSettings, logger);
             CreateAutonomousDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAutonomousDatabaseOperationsSettings, logger);
             UpdateAutonomousDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAutonomousDatabaseOperationsSettings, logger);
             DeleteAutonomousDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAutonomousDatabaseOperationsSettings, logger);
@@ -15411,8 +19165,10 @@ namespace Google.Cloud.OracleDatabase.V1
             FailoverAutonomousDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.FailoverAutonomousDatabaseOperationsSettings, logger);
             RefreshAutonomousDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RefreshAutonomousDatabaseOperationsSettings, logger);
             CreateOdbNetworkOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateOdbNetworkOperationsSettings, logger);
+            UpdateOdbNetworkOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateOdbNetworkOperationsSettings, logger);
             DeleteOdbNetworkOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOdbNetworkOperationsSettings, logger);
             CreateOdbSubnetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateOdbSubnetOperationsSettings, logger);
+            UpdateOdbSubnetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateOdbSubnetOperationsSettings, logger);
             DeleteOdbSubnetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOdbSubnetOperationsSettings, logger);
             CreateOdbDnsZoneOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateOdbDnsZoneOperationsSettings, logger);
             DeleteOdbDnsZoneOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOdbDnsZoneOperationsSettings, logger);
@@ -15421,17 +19177,25 @@ namespace Google.Cloud.OracleDatabase.V1
             UpdateExadbVmClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateExadbVmClusterOperationsSettings, logger);
             RemoveVirtualMachineExadbVmClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RemoveVirtualMachineExadbVmClusterOperationsSettings, logger);
             CreateExascaleDbStorageVaultOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateExascaleDbStorageVaultOperationsSettings, logger);
+            UpdateExascaleDbStorageVaultOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateExascaleDbStorageVaultOperationsSettings, logger);
             DeleteExascaleDbStorageVaultOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteExascaleDbStorageVaultOperationsSettings, logger);
             CreateDbSystemOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDbSystemOperationsSettings, logger);
+            UpdateDbSystemOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDbSystemOperationsSettings, logger);
             DeleteDbSystemOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDbSystemOperationsSettings, logger);
             CreateGoldengateDeploymentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGoldengateDeploymentOperationsSettings, logger);
+            UpdateGoldengateDeploymentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGoldengateDeploymentOperationsSettings, logger);
             DeleteGoldengateDeploymentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGoldengateDeploymentOperationsSettings, logger);
             StopGoldengateDeploymentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopGoldengateDeploymentOperationsSettings, logger);
             StartGoldengateDeploymentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartGoldengateDeploymentOperationsSettings, logger);
             CreateGoldengateConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGoldengateConnectionOperationsSettings, logger);
+            UpdateGoldengateConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGoldengateConnectionOperationsSettings, logger);
             DeleteGoldengateConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGoldengateConnectionOperationsSettings, logger);
             CreateGoldengateConnectionAssignmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGoldengateConnectionAssignmentOperationsSettings, logger);
+            UpdateGoldengateConnectionAssignmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGoldengateConnectionAssignmentOperationsSettings, logger);
             DeleteGoldengateConnectionAssignmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGoldengateConnectionAssignmentOperationsSettings, logger);
+            CreateDatabaseConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDatabaseConnectionOperationsSettings, logger);
+            UpdateDatabaseConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDatabaseConnectionOperationsSettings, logger);
+            DeleteDatabaseConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDatabaseConnectionOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListCloudExadataInfrastructures = clientHelper.BuildApiCall<ListCloudExadataInfrastructuresRequest, ListCloudExadataInfrastructuresResponse>("ListCloudExadataInfrastructures", grpcClient.ListCloudExadataInfrastructuresAsync, grpcClient.ListCloudExadataInfrastructures, effectiveSettings.ListCloudExadataInfrastructuresSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCloudExadataInfrastructures);
@@ -15442,6 +19206,9 @@ namespace Google.Cloud.OracleDatabase.V1
             _callCreateCloudExadataInfrastructure = clientHelper.BuildApiCall<CreateCloudExadataInfrastructureRequest, lro::Operation>("CreateCloudExadataInfrastructure", grpcClient.CreateCloudExadataInfrastructureAsync, grpcClient.CreateCloudExadataInfrastructure, effectiveSettings.CreateCloudExadataInfrastructureSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCloudExadataInfrastructure);
             Modify_CreateCloudExadataInfrastructureApiCall(ref _callCreateCloudExadataInfrastructure);
+            _callUpdateCloudExadataInfrastructure = clientHelper.BuildApiCall<UpdateCloudExadataInfrastructureRequest, lro::Operation>("UpdateCloudExadataInfrastructure", grpcClient.UpdateCloudExadataInfrastructureAsync, grpcClient.UpdateCloudExadataInfrastructure, effectiveSettings.UpdateCloudExadataInfrastructureSettings).WithGoogleRequestParam("cloud_exadata_infrastructure.name", request => request.CloudExadataInfrastructure?.Name);
+            Modify_ApiCall(ref _callUpdateCloudExadataInfrastructure);
+            Modify_UpdateCloudExadataInfrastructureApiCall(ref _callUpdateCloudExadataInfrastructure);
             _callDeleteCloudExadataInfrastructure = clientHelper.BuildApiCall<DeleteCloudExadataInfrastructureRequest, lro::Operation>("DeleteCloudExadataInfrastructure", grpcClient.DeleteCloudExadataInfrastructureAsync, grpcClient.DeleteCloudExadataInfrastructure, effectiveSettings.DeleteCloudExadataInfrastructureSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCloudExadataInfrastructure);
             Modify_DeleteCloudExadataInfrastructureApiCall(ref _callDeleteCloudExadataInfrastructure);
@@ -15457,12 +19224,30 @@ namespace Google.Cloud.OracleDatabase.V1
             _callCreateCloudVmCluster = clientHelper.BuildApiCall<CreateCloudVmClusterRequest, lro::Operation>("CreateCloudVmCluster", grpcClient.CreateCloudVmClusterAsync, grpcClient.CreateCloudVmCluster, effectiveSettings.CreateCloudVmClusterSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCloudVmCluster);
             Modify_CreateCloudVmClusterApiCall(ref _callCreateCloudVmCluster);
+            _callUpdateCloudVmCluster = clientHelper.BuildApiCall<UpdateCloudVmClusterRequest, lro::Operation>("UpdateCloudVmCluster", grpcClient.UpdateCloudVmClusterAsync, grpcClient.UpdateCloudVmCluster, effectiveSettings.UpdateCloudVmClusterSettings).WithGoogleRequestParam("cloud_vm_cluster.name", request => request.CloudVmCluster?.Name);
+            Modify_ApiCall(ref _callUpdateCloudVmCluster);
+            Modify_UpdateCloudVmClusterApiCall(ref _callUpdateCloudVmCluster);
             _callDeleteCloudVmCluster = clientHelper.BuildApiCall<DeleteCloudVmClusterRequest, lro::Operation>("DeleteCloudVmCluster", grpcClient.DeleteCloudVmClusterAsync, grpcClient.DeleteCloudVmCluster, effectiveSettings.DeleteCloudVmClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCloudVmCluster);
             Modify_DeleteCloudVmClusterApiCall(ref _callDeleteCloudVmCluster);
+            _callEnableCloudVmClusterIdentityConnector = clientHelper.BuildApiCall<EnableCloudVmClusterIdentityConnectorRequest, lro::Operation>("EnableCloudVmClusterIdentityConnector", grpcClient.EnableCloudVmClusterIdentityConnectorAsync, grpcClient.EnableCloudVmClusterIdentityConnector, effectiveSettings.EnableCloudVmClusterIdentityConnectorSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callEnableCloudVmClusterIdentityConnector);
+            Modify_EnableCloudVmClusterIdentityConnectorApiCall(ref _callEnableCloudVmClusterIdentityConnector);
+            _callDisableCloudVmClusterIdentityConnector = clientHelper.BuildApiCall<DisableCloudVmClusterIdentityConnectorRequest, lro::Operation>("DisableCloudVmClusterIdentityConnector", grpcClient.DisableCloudVmClusterIdentityConnectorAsync, grpcClient.DisableCloudVmClusterIdentityConnector, effectiveSettings.DisableCloudVmClusterIdentityConnectorSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDisableCloudVmClusterIdentityConnector);
+            Modify_DisableCloudVmClusterIdentityConnectorApiCall(ref _callDisableCloudVmClusterIdentityConnector);
+            _callEnableExadbVmClusterIdentityConnector = clientHelper.BuildApiCall<EnableExadbVmClusterIdentityConnectorRequest, lro::Operation>("EnableExadbVmClusterIdentityConnector", grpcClient.EnableExadbVmClusterIdentityConnectorAsync, grpcClient.EnableExadbVmClusterIdentityConnector, effectiveSettings.EnableExadbVmClusterIdentityConnectorSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callEnableExadbVmClusterIdentityConnector);
+            Modify_EnableExadbVmClusterIdentityConnectorApiCall(ref _callEnableExadbVmClusterIdentityConnector);
+            _callDisableExadbVmClusterIdentityConnector = clientHelper.BuildApiCall<DisableExadbVmClusterIdentityConnectorRequest, lro::Operation>("DisableExadbVmClusterIdentityConnector", grpcClient.DisableExadbVmClusterIdentityConnectorAsync, grpcClient.DisableExadbVmClusterIdentityConnector, effectiveSettings.DisableExadbVmClusterIdentityConnectorSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDisableExadbVmClusterIdentityConnector);
+            Modify_DisableExadbVmClusterIdentityConnectorApiCall(ref _callDisableExadbVmClusterIdentityConnector);
             _callListEntitlements = clientHelper.BuildApiCall<ListEntitlementsRequest, ListEntitlementsResponse>("ListEntitlements", grpcClient.ListEntitlementsAsync, grpcClient.ListEntitlements, effectiveSettings.ListEntitlementsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEntitlements);
             Modify_ListEntitlementsApiCall(ref _callListEntitlements);
+            _callListFlexComponents = clientHelper.BuildApiCall<ListFlexComponentsRequest, ListFlexComponentsResponse>("ListFlexComponents", grpcClient.ListFlexComponentsAsync, grpcClient.ListFlexComponents, effectiveSettings.ListFlexComponentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListFlexComponents);
+            Modify_ListFlexComponentsApiCall(ref _callListFlexComponents);
             _callListDbServers = clientHelper.BuildApiCall<ListDbServersRequest, ListDbServersResponse>("ListDbServers", grpcClient.ListDbServersAsync, grpcClient.ListDbServers, effectiveSettings.ListDbServersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDbServers);
             Modify_ListDbServersApiCall(ref _callListDbServers);
@@ -15538,6 +19323,9 @@ namespace Google.Cloud.OracleDatabase.V1
             _callCreateOdbNetwork = clientHelper.BuildApiCall<CreateOdbNetworkRequest, lro::Operation>("CreateOdbNetwork", grpcClient.CreateOdbNetworkAsync, grpcClient.CreateOdbNetwork, effectiveSettings.CreateOdbNetworkSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateOdbNetwork);
             Modify_CreateOdbNetworkApiCall(ref _callCreateOdbNetwork);
+            _callUpdateOdbNetwork = clientHelper.BuildApiCall<UpdateOdbNetworkRequest, lro::Operation>("UpdateOdbNetwork", grpcClient.UpdateOdbNetworkAsync, grpcClient.UpdateOdbNetwork, effectiveSettings.UpdateOdbNetworkSettings).WithGoogleRequestParam("odb_network.name", request => request.OdbNetwork?.Name);
+            Modify_ApiCall(ref _callUpdateOdbNetwork);
+            Modify_UpdateOdbNetworkApiCall(ref _callUpdateOdbNetwork);
             _callDeleteOdbNetwork = clientHelper.BuildApiCall<DeleteOdbNetworkRequest, lro::Operation>("DeleteOdbNetwork", grpcClient.DeleteOdbNetworkAsync, grpcClient.DeleteOdbNetwork, effectiveSettings.DeleteOdbNetworkSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteOdbNetwork);
             Modify_DeleteOdbNetworkApiCall(ref _callDeleteOdbNetwork);
@@ -15550,6 +19338,9 @@ namespace Google.Cloud.OracleDatabase.V1
             _callCreateOdbSubnet = clientHelper.BuildApiCall<CreateOdbSubnetRequest, lro::Operation>("CreateOdbSubnet", grpcClient.CreateOdbSubnetAsync, grpcClient.CreateOdbSubnet, effectiveSettings.CreateOdbSubnetSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateOdbSubnet);
             Modify_CreateOdbSubnetApiCall(ref _callCreateOdbSubnet);
+            _callUpdateOdbSubnet = clientHelper.BuildApiCall<UpdateOdbSubnetRequest, lro::Operation>("UpdateOdbSubnet", grpcClient.UpdateOdbSubnetAsync, grpcClient.UpdateOdbSubnet, effectiveSettings.UpdateOdbSubnetSettings).WithGoogleRequestParam("odb_subnet.name", request => request.OdbSubnet?.Name);
+            Modify_ApiCall(ref _callUpdateOdbSubnet);
+            Modify_UpdateOdbSubnetApiCall(ref _callUpdateOdbSubnet);
             _callDeleteOdbSubnet = clientHelper.BuildApiCall<DeleteOdbSubnetRequest, lro::Operation>("DeleteOdbSubnet", grpcClient.DeleteOdbSubnetAsync, grpcClient.DeleteOdbSubnet, effectiveSettings.DeleteOdbSubnetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteOdbSubnet);
             Modify_DeleteOdbSubnetApiCall(ref _callDeleteOdbSubnet);
@@ -15592,12 +19383,18 @@ namespace Google.Cloud.OracleDatabase.V1
             _callCreateExascaleDbStorageVault = clientHelper.BuildApiCall<CreateExascaleDbStorageVaultRequest, lro::Operation>("CreateExascaleDbStorageVault", grpcClient.CreateExascaleDbStorageVaultAsync, grpcClient.CreateExascaleDbStorageVault, effectiveSettings.CreateExascaleDbStorageVaultSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateExascaleDbStorageVault);
             Modify_CreateExascaleDbStorageVaultApiCall(ref _callCreateExascaleDbStorageVault);
+            _callUpdateExascaleDbStorageVault = clientHelper.BuildApiCall<UpdateExascaleDbStorageVaultRequest, lro::Operation>("UpdateExascaleDbStorageVault", grpcClient.UpdateExascaleDbStorageVaultAsync, grpcClient.UpdateExascaleDbStorageVault, effectiveSettings.UpdateExascaleDbStorageVaultSettings).WithGoogleRequestParam("exascale_db_storage_vault.name", request => request.ExascaleDbStorageVault?.Name);
+            Modify_ApiCall(ref _callUpdateExascaleDbStorageVault);
+            Modify_UpdateExascaleDbStorageVaultApiCall(ref _callUpdateExascaleDbStorageVault);
             _callDeleteExascaleDbStorageVault = clientHelper.BuildApiCall<DeleteExascaleDbStorageVaultRequest, lro::Operation>("DeleteExascaleDbStorageVault", grpcClient.DeleteExascaleDbStorageVaultAsync, grpcClient.DeleteExascaleDbStorageVault, effectiveSettings.DeleteExascaleDbStorageVaultSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteExascaleDbStorageVault);
             Modify_DeleteExascaleDbStorageVaultApiCall(ref _callDeleteExascaleDbStorageVault);
             _callListDbSystemInitialStorageSizes = clientHelper.BuildApiCall<ListDbSystemInitialStorageSizesRequest, ListDbSystemInitialStorageSizesResponse>("ListDbSystemInitialStorageSizes", grpcClient.ListDbSystemInitialStorageSizesAsync, grpcClient.ListDbSystemInitialStorageSizes, effectiveSettings.ListDbSystemInitialStorageSizesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDbSystemInitialStorageSizes);
             Modify_ListDbSystemInitialStorageSizesApiCall(ref _callListDbSystemInitialStorageSizes);
+            _callListDbSystemComputePerformances = clientHelper.BuildApiCall<ListDbSystemComputePerformancesRequest, ListDbSystemComputePerformancesResponse>("ListDbSystemComputePerformances", grpcClient.ListDbSystemComputePerformancesAsync, grpcClient.ListDbSystemComputePerformances, effectiveSettings.ListDbSystemComputePerformancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListDbSystemComputePerformances);
+            Modify_ListDbSystemComputePerformancesApiCall(ref _callListDbSystemComputePerformances);
             _callListDatabases = clientHelper.BuildApiCall<ListDatabasesRequest, ListDatabasesResponse>("ListDatabases", grpcClient.ListDatabasesAsync, grpcClient.ListDatabases, effectiveSettings.ListDatabasesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDatabases);
             Modify_ListDatabasesApiCall(ref _callListDatabases);
@@ -15619,6 +19416,9 @@ namespace Google.Cloud.OracleDatabase.V1
             _callCreateDbSystem = clientHelper.BuildApiCall<CreateDbSystemRequest, lro::Operation>("CreateDbSystem", grpcClient.CreateDbSystemAsync, grpcClient.CreateDbSystem, effectiveSettings.CreateDbSystemSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDbSystem);
             Modify_CreateDbSystemApiCall(ref _callCreateDbSystem);
+            _callUpdateDbSystem = clientHelper.BuildApiCall<UpdateDbSystemRequest, lro::Operation>("UpdateDbSystem", grpcClient.UpdateDbSystemAsync, grpcClient.UpdateDbSystem, effectiveSettings.UpdateDbSystemSettings).WithGoogleRequestParam("db_system.name", request => request.DbSystem?.Name);
+            Modify_ApiCall(ref _callUpdateDbSystem);
+            Modify_UpdateDbSystemApiCall(ref _callUpdateDbSystem);
             _callDeleteDbSystem = clientHelper.BuildApiCall<DeleteDbSystemRequest, lro::Operation>("DeleteDbSystem", grpcClient.DeleteDbSystemAsync, grpcClient.DeleteDbSystem, effectiveSettings.DeleteDbSystemSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDbSystem);
             Modify_DeleteDbSystemApiCall(ref _callDeleteDbSystem);
@@ -15631,6 +19431,9 @@ namespace Google.Cloud.OracleDatabase.V1
             _callCreateGoldengateDeployment = clientHelper.BuildApiCall<CreateGoldengateDeploymentRequest, lro::Operation>("CreateGoldengateDeployment", grpcClient.CreateGoldengateDeploymentAsync, grpcClient.CreateGoldengateDeployment, effectiveSettings.CreateGoldengateDeploymentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateGoldengateDeployment);
             Modify_CreateGoldengateDeploymentApiCall(ref _callCreateGoldengateDeployment);
+            _callUpdateGoldengateDeployment = clientHelper.BuildApiCall<UpdateGoldengateDeploymentRequest, lro::Operation>("UpdateGoldengateDeployment", grpcClient.UpdateGoldengateDeploymentAsync, grpcClient.UpdateGoldengateDeployment, effectiveSettings.UpdateGoldengateDeploymentSettings).WithGoogleRequestParam("goldengate_deployment.name", request => request.GoldengateDeployment?.Name);
+            Modify_ApiCall(ref _callUpdateGoldengateDeployment);
+            Modify_UpdateGoldengateDeploymentApiCall(ref _callUpdateGoldengateDeployment);
             _callDeleteGoldengateDeployment = clientHelper.BuildApiCall<DeleteGoldengateDeploymentRequest, lro::Operation>("DeleteGoldengateDeployment", grpcClient.DeleteGoldengateDeploymentAsync, grpcClient.DeleteGoldengateDeployment, effectiveSettings.DeleteGoldengateDeploymentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteGoldengateDeployment);
             Modify_DeleteGoldengateDeploymentApiCall(ref _callDeleteGoldengateDeployment);
@@ -15649,6 +19452,9 @@ namespace Google.Cloud.OracleDatabase.V1
             _callCreateGoldengateConnection = clientHelper.BuildApiCall<CreateGoldengateConnectionRequest, lro::Operation>("CreateGoldengateConnection", grpcClient.CreateGoldengateConnectionAsync, grpcClient.CreateGoldengateConnection, effectiveSettings.CreateGoldengateConnectionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateGoldengateConnection);
             Modify_CreateGoldengateConnectionApiCall(ref _callCreateGoldengateConnection);
+            _callUpdateGoldengateConnection = clientHelper.BuildApiCall<UpdateGoldengateConnectionRequest, lro::Operation>("UpdateGoldengateConnection", grpcClient.UpdateGoldengateConnectionAsync, grpcClient.UpdateGoldengateConnection, effectiveSettings.UpdateGoldengateConnectionSettings).WithGoogleRequestParam("goldengate_connection.name", request => request.GoldengateConnection?.Name);
+            Modify_ApiCall(ref _callUpdateGoldengateConnection);
+            Modify_UpdateGoldengateConnectionApiCall(ref _callUpdateGoldengateConnection);
             _callDeleteGoldengateConnection = clientHelper.BuildApiCall<DeleteGoldengateConnectionRequest, lro::Operation>("DeleteGoldengateConnection", grpcClient.DeleteGoldengateConnectionAsync, grpcClient.DeleteGoldengateConnection, effectiveSettings.DeleteGoldengateConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteGoldengateConnection);
             Modify_DeleteGoldengateConnectionApiCall(ref _callDeleteGoldengateConnection);
@@ -15679,12 +19485,36 @@ namespace Google.Cloud.OracleDatabase.V1
             _callCreateGoldengateConnectionAssignment = clientHelper.BuildApiCall<CreateGoldengateConnectionAssignmentRequest, lro::Operation>("CreateGoldengateConnectionAssignment", grpcClient.CreateGoldengateConnectionAssignmentAsync, grpcClient.CreateGoldengateConnectionAssignment, effectiveSettings.CreateGoldengateConnectionAssignmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateGoldengateConnectionAssignment);
             Modify_CreateGoldengateConnectionAssignmentApiCall(ref _callCreateGoldengateConnectionAssignment);
+            _callUpdateGoldengateConnectionAssignment = clientHelper.BuildApiCall<UpdateGoldengateConnectionAssignmentRequest, lro::Operation>("UpdateGoldengateConnectionAssignment", grpcClient.UpdateGoldengateConnectionAssignmentAsync, grpcClient.UpdateGoldengateConnectionAssignment, effectiveSettings.UpdateGoldengateConnectionAssignmentSettings).WithGoogleRequestParam("goldengate_connection_assignment.name", request => request.GoldengateConnectionAssignment?.Name);
+            Modify_ApiCall(ref _callUpdateGoldengateConnectionAssignment);
+            Modify_UpdateGoldengateConnectionAssignmentApiCall(ref _callUpdateGoldengateConnectionAssignment);
             _callDeleteGoldengateConnectionAssignment = clientHelper.BuildApiCall<DeleteGoldengateConnectionAssignmentRequest, lro::Operation>("DeleteGoldengateConnectionAssignment", grpcClient.DeleteGoldengateConnectionAssignmentAsync, grpcClient.DeleteGoldengateConnectionAssignment, effectiveSettings.DeleteGoldengateConnectionAssignmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteGoldengateConnectionAssignment);
             Modify_DeleteGoldengateConnectionAssignmentApiCall(ref _callDeleteGoldengateConnectionAssignment);
             _callTestGoldengateConnectionAssignment = clientHelper.BuildApiCall<TestGoldengateConnectionAssignmentRequest, TestGoldengateConnectionAssignmentResponse>("TestGoldengateConnectionAssignment", grpcClient.TestGoldengateConnectionAssignmentAsync, grpcClient.TestGoldengateConnectionAssignment, effectiveSettings.TestGoldengateConnectionAssignmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callTestGoldengateConnectionAssignment);
             Modify_TestGoldengateConnectionAssignmentApiCall(ref _callTestGoldengateConnectionAssignment);
+            _callListDatabaseConnections = clientHelper.BuildApiCall<ListDatabaseConnectionsRequest, ListDatabaseConnectionsResponse>("ListDatabaseConnections", grpcClient.ListDatabaseConnectionsAsync, grpcClient.ListDatabaseConnections, effectiveSettings.ListDatabaseConnectionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListDatabaseConnections);
+            Modify_ListDatabaseConnectionsApiCall(ref _callListDatabaseConnections);
+            _callGetDatabaseConnection = clientHelper.BuildApiCall<GetDatabaseConnectionRequest, DatabaseConnection>("GetDatabaseConnection", grpcClient.GetDatabaseConnectionAsync, grpcClient.GetDatabaseConnection, effectiveSettings.GetDatabaseConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetDatabaseConnection);
+            Modify_GetDatabaseConnectionApiCall(ref _callGetDatabaseConnection);
+            _callCreateDatabaseConnection = clientHelper.BuildApiCall<CreateDatabaseConnectionRequest, lro::Operation>("CreateDatabaseConnection", grpcClient.CreateDatabaseConnectionAsync, grpcClient.CreateDatabaseConnection, effectiveSettings.CreateDatabaseConnectionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateDatabaseConnection);
+            Modify_CreateDatabaseConnectionApiCall(ref _callCreateDatabaseConnection);
+            _callUpdateDatabaseConnection = clientHelper.BuildApiCall<UpdateDatabaseConnectionRequest, lro::Operation>("UpdateDatabaseConnection", grpcClient.UpdateDatabaseConnectionAsync, grpcClient.UpdateDatabaseConnection, effectiveSettings.UpdateDatabaseConnectionSettings).WithGoogleRequestParam("database_connection.name", request => request.DatabaseConnection?.Name);
+            Modify_ApiCall(ref _callUpdateDatabaseConnection);
+            Modify_UpdateDatabaseConnectionApiCall(ref _callUpdateDatabaseConnection);
+            _callDeleteDatabaseConnection = clientHelper.BuildApiCall<DeleteDatabaseConnectionRequest, lro::Operation>("DeleteDatabaseConnection", grpcClient.DeleteDatabaseConnectionAsync, grpcClient.DeleteDatabaseConnection, effectiveSettings.DeleteDatabaseConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteDatabaseConnection);
+            Modify_DeleteDatabaseConnectionApiCall(ref _callDeleteDatabaseConnection);
+            _callTestDatabaseConnection = clientHelper.BuildApiCall<TestDatabaseConnectionRequest, TestDatabaseConnectionResponse>("TestDatabaseConnection", grpcClient.TestDatabaseConnectionAsync, grpcClient.TestDatabaseConnection, effectiveSettings.TestDatabaseConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callTestDatabaseConnection);
+            Modify_TestDatabaseConnectionApiCall(ref _callTestDatabaseConnection);
+            _callExecuteSql = clientHelper.BuildApiCall<ExecuteSqlRequest, ExecuteSqlResponse>("ExecuteSql", grpcClient.ExecuteSqlAsync, grpcClient.ExecuteSql, effectiveSettings.ExecuteSqlSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callExecuteSql);
+            Modify_ExecuteSqlApiCall(ref _callExecuteSql);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -15696,6 +19526,8 @@ namespace Google.Cloud.OracleDatabase.V1
 
         partial void Modify_CreateCloudExadataInfrastructureApiCall(ref gaxgrpc::ApiCall<CreateCloudExadataInfrastructureRequest, lro::Operation> call);
 
+        partial void Modify_UpdateCloudExadataInfrastructureApiCall(ref gaxgrpc::ApiCall<UpdateCloudExadataInfrastructureRequest, lro::Operation> call);
+
         partial void Modify_DeleteCloudExadataInfrastructureApiCall(ref gaxgrpc::ApiCall<DeleteCloudExadataInfrastructureRequest, lro::Operation> call);
 
         partial void Modify_ConfigureExascaleCloudExadataInfrastructureApiCall(ref gaxgrpc::ApiCall<ConfigureExascaleCloudExadataInfrastructureRequest, lro::Operation> call);
@@ -15706,9 +19538,21 @@ namespace Google.Cloud.OracleDatabase.V1
 
         partial void Modify_CreateCloudVmClusterApiCall(ref gaxgrpc::ApiCall<CreateCloudVmClusterRequest, lro::Operation> call);
 
+        partial void Modify_UpdateCloudVmClusterApiCall(ref gaxgrpc::ApiCall<UpdateCloudVmClusterRequest, lro::Operation> call);
+
         partial void Modify_DeleteCloudVmClusterApiCall(ref gaxgrpc::ApiCall<DeleteCloudVmClusterRequest, lro::Operation> call);
 
+        partial void Modify_EnableCloudVmClusterIdentityConnectorApiCall(ref gaxgrpc::ApiCall<EnableCloudVmClusterIdentityConnectorRequest, lro::Operation> call);
+
+        partial void Modify_DisableCloudVmClusterIdentityConnectorApiCall(ref gaxgrpc::ApiCall<DisableCloudVmClusterIdentityConnectorRequest, lro::Operation> call);
+
+        partial void Modify_EnableExadbVmClusterIdentityConnectorApiCall(ref gaxgrpc::ApiCall<EnableExadbVmClusterIdentityConnectorRequest, lro::Operation> call);
+
+        partial void Modify_DisableExadbVmClusterIdentityConnectorApiCall(ref gaxgrpc::ApiCall<DisableExadbVmClusterIdentityConnectorRequest, lro::Operation> call);
+
         partial void Modify_ListEntitlementsApiCall(ref gaxgrpc::ApiCall<ListEntitlementsRequest, ListEntitlementsResponse> call);
+
+        partial void Modify_ListFlexComponentsApiCall(ref gaxgrpc::ApiCall<ListFlexComponentsRequest, ListFlexComponentsResponse> call);
 
         partial void Modify_ListDbServersApiCall(ref gaxgrpc::ApiCall<ListDbServersRequest, ListDbServersResponse> call);
 
@@ -15760,6 +19604,8 @@ namespace Google.Cloud.OracleDatabase.V1
 
         partial void Modify_CreateOdbNetworkApiCall(ref gaxgrpc::ApiCall<CreateOdbNetworkRequest, lro::Operation> call);
 
+        partial void Modify_UpdateOdbNetworkApiCall(ref gaxgrpc::ApiCall<UpdateOdbNetworkRequest, lro::Operation> call);
+
         partial void Modify_DeleteOdbNetworkApiCall(ref gaxgrpc::ApiCall<DeleteOdbNetworkRequest, lro::Operation> call);
 
         partial void Modify_ListOdbSubnetsApiCall(ref gaxgrpc::ApiCall<ListOdbSubnetsRequest, ListOdbSubnetsResponse> call);
@@ -15767,6 +19613,8 @@ namespace Google.Cloud.OracleDatabase.V1
         partial void Modify_GetOdbSubnetApiCall(ref gaxgrpc::ApiCall<GetOdbSubnetRequest, OdbSubnet> call);
 
         partial void Modify_CreateOdbSubnetApiCall(ref gaxgrpc::ApiCall<CreateOdbSubnetRequest, lro::Operation> call);
+
+        partial void Modify_UpdateOdbSubnetApiCall(ref gaxgrpc::ApiCall<UpdateOdbSubnetRequest, lro::Operation> call);
 
         partial void Modify_DeleteOdbSubnetApiCall(ref gaxgrpc::ApiCall<DeleteOdbSubnetRequest, lro::Operation> call);
 
@@ -15796,9 +19644,13 @@ namespace Google.Cloud.OracleDatabase.V1
 
         partial void Modify_CreateExascaleDbStorageVaultApiCall(ref gaxgrpc::ApiCall<CreateExascaleDbStorageVaultRequest, lro::Operation> call);
 
+        partial void Modify_UpdateExascaleDbStorageVaultApiCall(ref gaxgrpc::ApiCall<UpdateExascaleDbStorageVaultRequest, lro::Operation> call);
+
         partial void Modify_DeleteExascaleDbStorageVaultApiCall(ref gaxgrpc::ApiCall<DeleteExascaleDbStorageVaultRequest, lro::Operation> call);
 
         partial void Modify_ListDbSystemInitialStorageSizesApiCall(ref gaxgrpc::ApiCall<ListDbSystemInitialStorageSizesRequest, ListDbSystemInitialStorageSizesResponse> call);
+
+        partial void Modify_ListDbSystemComputePerformancesApiCall(ref gaxgrpc::ApiCall<ListDbSystemComputePerformancesRequest, ListDbSystemComputePerformancesResponse> call);
 
         partial void Modify_ListDatabasesApiCall(ref gaxgrpc::ApiCall<ListDatabasesRequest, ListDatabasesResponse> call);
 
@@ -15814,6 +19666,8 @@ namespace Google.Cloud.OracleDatabase.V1
 
         partial void Modify_CreateDbSystemApiCall(ref gaxgrpc::ApiCall<CreateDbSystemRequest, lro::Operation> call);
 
+        partial void Modify_UpdateDbSystemApiCall(ref gaxgrpc::ApiCall<UpdateDbSystemRequest, lro::Operation> call);
+
         partial void Modify_DeleteDbSystemApiCall(ref gaxgrpc::ApiCall<DeleteDbSystemRequest, lro::Operation> call);
 
         partial void Modify_ListGoldengateDeploymentsApiCall(ref gaxgrpc::ApiCall<ListGoldengateDeploymentsRequest, ListGoldengateDeploymentsResponse> call);
@@ -15821,6 +19675,8 @@ namespace Google.Cloud.OracleDatabase.V1
         partial void Modify_GetGoldengateDeploymentApiCall(ref gaxgrpc::ApiCall<GetGoldengateDeploymentRequest, GoldengateDeployment> call);
 
         partial void Modify_CreateGoldengateDeploymentApiCall(ref gaxgrpc::ApiCall<CreateGoldengateDeploymentRequest, lro::Operation> call);
+
+        partial void Modify_UpdateGoldengateDeploymentApiCall(ref gaxgrpc::ApiCall<UpdateGoldengateDeploymentRequest, lro::Operation> call);
 
         partial void Modify_DeleteGoldengateDeploymentApiCall(ref gaxgrpc::ApiCall<DeleteGoldengateDeploymentRequest, lro::Operation> call);
 
@@ -15833,6 +19689,8 @@ namespace Google.Cloud.OracleDatabase.V1
         partial void Modify_GetGoldengateConnectionApiCall(ref gaxgrpc::ApiCall<GetGoldengateConnectionRequest, GoldengateConnection> call);
 
         partial void Modify_CreateGoldengateConnectionApiCall(ref gaxgrpc::ApiCall<CreateGoldengateConnectionRequest, lro::Operation> call);
+
+        partial void Modify_UpdateGoldengateConnectionApiCall(ref gaxgrpc::ApiCall<UpdateGoldengateConnectionRequest, lro::Operation> call);
 
         partial void Modify_DeleteGoldengateConnectionApiCall(ref gaxgrpc::ApiCall<DeleteGoldengateConnectionRequest, lro::Operation> call);
 
@@ -15854,9 +19712,25 @@ namespace Google.Cloud.OracleDatabase.V1
 
         partial void Modify_CreateGoldengateConnectionAssignmentApiCall(ref gaxgrpc::ApiCall<CreateGoldengateConnectionAssignmentRequest, lro::Operation> call);
 
+        partial void Modify_UpdateGoldengateConnectionAssignmentApiCall(ref gaxgrpc::ApiCall<UpdateGoldengateConnectionAssignmentRequest, lro::Operation> call);
+
         partial void Modify_DeleteGoldengateConnectionAssignmentApiCall(ref gaxgrpc::ApiCall<DeleteGoldengateConnectionAssignmentRequest, lro::Operation> call);
 
         partial void Modify_TestGoldengateConnectionAssignmentApiCall(ref gaxgrpc::ApiCall<TestGoldengateConnectionAssignmentRequest, TestGoldengateConnectionAssignmentResponse> call);
+
+        partial void Modify_ListDatabaseConnectionsApiCall(ref gaxgrpc::ApiCall<ListDatabaseConnectionsRequest, ListDatabaseConnectionsResponse> call);
+
+        partial void Modify_GetDatabaseConnectionApiCall(ref gaxgrpc::ApiCall<GetDatabaseConnectionRequest, DatabaseConnection> call);
+
+        partial void Modify_CreateDatabaseConnectionApiCall(ref gaxgrpc::ApiCall<CreateDatabaseConnectionRequest, lro::Operation> call);
+
+        partial void Modify_UpdateDatabaseConnectionApiCall(ref gaxgrpc::ApiCall<UpdateDatabaseConnectionRequest, lro::Operation> call);
+
+        partial void Modify_DeleteDatabaseConnectionApiCall(ref gaxgrpc::ApiCall<DeleteDatabaseConnectionRequest, lro::Operation> call);
+
+        partial void Modify_TestDatabaseConnectionApiCall(ref gaxgrpc::ApiCall<TestDatabaseConnectionRequest, TestDatabaseConnectionResponse> call);
+
+        partial void Modify_ExecuteSqlApiCall(ref gaxgrpc::ApiCall<ExecuteSqlRequest, ExecuteSqlResponse> call);
 
         partial void OnConstruction(OracleDatabase.OracleDatabaseClient grpcClient, OracleDatabaseSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -15872,6 +19746,8 @@ namespace Google.Cloud.OracleDatabase.V1
 
         partial void Modify_CreateCloudExadataInfrastructureRequest(ref CreateCloudExadataInfrastructureRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_UpdateCloudExadataInfrastructureRequest(ref UpdateCloudExadataInfrastructureRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteCloudExadataInfrastructureRequest(ref DeleteCloudExadataInfrastructureRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ConfigureExascaleCloudExadataInfrastructureRequest(ref ConfigureExascaleCloudExadataInfrastructureRequest request, ref gaxgrpc::CallSettings settings);
@@ -15882,9 +19758,21 @@ namespace Google.Cloud.OracleDatabase.V1
 
         partial void Modify_CreateCloudVmClusterRequest(ref CreateCloudVmClusterRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_UpdateCloudVmClusterRequest(ref UpdateCloudVmClusterRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteCloudVmClusterRequest(ref DeleteCloudVmClusterRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_EnableCloudVmClusterIdentityConnectorRequest(ref EnableCloudVmClusterIdentityConnectorRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DisableCloudVmClusterIdentityConnectorRequest(ref DisableCloudVmClusterIdentityConnectorRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_EnableExadbVmClusterIdentityConnectorRequest(ref EnableExadbVmClusterIdentityConnectorRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DisableExadbVmClusterIdentityConnectorRequest(ref DisableExadbVmClusterIdentityConnectorRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ListEntitlementsRequest(ref ListEntitlementsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListFlexComponentsRequest(ref ListFlexComponentsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListDbServersRequest(ref ListDbServersRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -15936,6 +19824,8 @@ namespace Google.Cloud.OracleDatabase.V1
 
         partial void Modify_CreateOdbNetworkRequest(ref CreateOdbNetworkRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_UpdateOdbNetworkRequest(ref UpdateOdbNetworkRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteOdbNetworkRequest(ref DeleteOdbNetworkRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListOdbSubnetsRequest(ref ListOdbSubnetsRequest request, ref gaxgrpc::CallSettings settings);
@@ -15943,6 +19833,8 @@ namespace Google.Cloud.OracleDatabase.V1
         partial void Modify_GetOdbSubnetRequest(ref GetOdbSubnetRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateOdbSubnetRequest(ref CreateOdbSubnetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateOdbSubnetRequest(ref UpdateOdbSubnetRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteOdbSubnetRequest(ref DeleteOdbSubnetRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -15972,9 +19864,13 @@ namespace Google.Cloud.OracleDatabase.V1
 
         partial void Modify_CreateExascaleDbStorageVaultRequest(ref CreateExascaleDbStorageVaultRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_UpdateExascaleDbStorageVaultRequest(ref UpdateExascaleDbStorageVaultRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteExascaleDbStorageVaultRequest(ref DeleteExascaleDbStorageVaultRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListDbSystemInitialStorageSizesRequest(ref ListDbSystemInitialStorageSizesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListDbSystemComputePerformancesRequest(ref ListDbSystemComputePerformancesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListDatabasesRequest(ref ListDatabasesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -15990,6 +19886,8 @@ namespace Google.Cloud.OracleDatabase.V1
 
         partial void Modify_CreateDbSystemRequest(ref CreateDbSystemRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_UpdateDbSystemRequest(ref UpdateDbSystemRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteDbSystemRequest(ref DeleteDbSystemRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListGoldengateDeploymentsRequest(ref ListGoldengateDeploymentsRequest request, ref gaxgrpc::CallSettings settings);
@@ -15997,6 +19895,8 @@ namespace Google.Cloud.OracleDatabase.V1
         partial void Modify_GetGoldengateDeploymentRequest(ref GetGoldengateDeploymentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateGoldengateDeploymentRequest(ref CreateGoldengateDeploymentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateGoldengateDeploymentRequest(ref UpdateGoldengateDeploymentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteGoldengateDeploymentRequest(ref DeleteGoldengateDeploymentRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -16009,6 +19909,8 @@ namespace Google.Cloud.OracleDatabase.V1
         partial void Modify_GetGoldengateConnectionRequest(ref GetGoldengateConnectionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateGoldengateConnectionRequest(ref CreateGoldengateConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateGoldengateConnectionRequest(ref UpdateGoldengateConnectionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteGoldengateConnectionRequest(ref DeleteGoldengateConnectionRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -16030,9 +19932,25 @@ namespace Google.Cloud.OracleDatabase.V1
 
         partial void Modify_CreateGoldengateConnectionAssignmentRequest(ref CreateGoldengateConnectionAssignmentRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_UpdateGoldengateConnectionAssignmentRequest(ref UpdateGoldengateConnectionAssignmentRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteGoldengateConnectionAssignmentRequest(ref DeleteGoldengateConnectionAssignmentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TestGoldengateConnectionAssignmentRequest(ref TestGoldengateConnectionAssignmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListDatabaseConnectionsRequest(ref ListDatabaseConnectionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetDatabaseConnectionRequest(ref GetDatabaseConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateDatabaseConnectionRequest(ref CreateDatabaseConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateDatabaseConnectionRequest(ref UpdateDatabaseConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteDatabaseConnectionRequest(ref DeleteDatabaseConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_TestDatabaseConnectionRequest(ref TestDatabaseConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExecuteSqlRequest(ref ExecuteSqlRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Exadata Infrastructures in a given project and location.
@@ -16107,6 +20025,33 @@ namespace Google.Cloud.OracleDatabase.V1
         {
             Modify_CreateCloudExadataInfrastructureRequest(ref request, ref callSettings);
             return new lro::Operation<CloudExadataInfrastructure, OperationMetadata>(await _callCreateCloudExadataInfrastructure.Async(request, callSettings).ConfigureAwait(false), CreateCloudExadataInfrastructureOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateCloudExadataInfrastructure</c>.</summary>
+        public override lro::OperationsClient UpdateCloudExadataInfrastructureOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of a single Exadata Infrastructure.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<CloudExadataInfrastructure, OperationMetadata> UpdateCloudExadataInfrastructure(UpdateCloudExadataInfrastructureRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCloudExadataInfrastructureRequest(ref request, ref callSettings);
+            return new lro::Operation<CloudExadataInfrastructure, OperationMetadata>(_callUpdateCloudExadataInfrastructure.Sync(request, callSettings), UpdateCloudExadataInfrastructureOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of a single Exadata Infrastructure.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<CloudExadataInfrastructure, OperationMetadata>> UpdateCloudExadataInfrastructureAsync(UpdateCloudExadataInfrastructureRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCloudExadataInfrastructureRequest(ref request, ref callSettings);
+            return new lro::Operation<CloudExadataInfrastructure, OperationMetadata>(await _callUpdateCloudExadataInfrastructure.Async(request, callSettings).ConfigureAwait(false), UpdateCloudExadataInfrastructureOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeleteCloudExadataInfrastructure</c>.</summary>
@@ -16240,6 +20185,33 @@ namespace Google.Cloud.OracleDatabase.V1
             return new lro::Operation<CloudVmCluster, OperationMetadata>(await _callCreateCloudVmCluster.Async(request, callSettings).ConfigureAwait(false), CreateCloudVmClusterOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>UpdateCloudVmCluster</c>.</summary>
+        public override lro::OperationsClient UpdateCloudVmClusterOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of a single Vm Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<CloudVmCluster, OperationMetadata> UpdateCloudVmCluster(UpdateCloudVmClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCloudVmClusterRequest(ref request, ref callSettings);
+            return new lro::Operation<CloudVmCluster, OperationMetadata>(_callUpdateCloudVmCluster.Sync(request, callSettings), UpdateCloudVmClusterOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of a single Vm Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> UpdateCloudVmClusterAsync(UpdateCloudVmClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCloudVmClusterRequest(ref request, ref callSettings);
+            return new lro::Operation<CloudVmCluster, OperationMetadata>(await _callUpdateCloudVmCluster.Async(request, callSettings).ConfigureAwait(false), UpdateCloudVmClusterOperationsClient);
+        }
+
         /// <summary>The long-running operations client for <c>DeleteCloudVmCluster</c>.</summary>
         public override lro::OperationsClient DeleteCloudVmClusterOperationsClient { get; }
 
@@ -16267,6 +20239,114 @@ namespace Google.Cloud.OracleDatabase.V1
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteCloudVmCluster.Async(request, callSettings).ConfigureAwait(false), DeleteCloudVmClusterOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>EnableCloudVmClusterIdentityConnector</c>.</summary>
+        public override lro::OperationsClient EnableCloudVmClusterIdentityConnectorOperationsClient { get; }
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<CloudVmCluster, OperationMetadata> EnableCloudVmClusterIdentityConnector(EnableCloudVmClusterIdentityConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EnableCloudVmClusterIdentityConnectorRequest(ref request, ref callSettings);
+            return new lro::Operation<CloudVmCluster, OperationMetadata>(_callEnableCloudVmClusterIdentityConnector.Sync(request, callSettings), EnableCloudVmClusterIdentityConnectorOperationsClient);
+        }
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> EnableCloudVmClusterIdentityConnectorAsync(EnableCloudVmClusterIdentityConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EnableCloudVmClusterIdentityConnectorRequest(ref request, ref callSettings);
+            return new lro::Operation<CloudVmCluster, OperationMetadata>(await _callEnableCloudVmClusterIdentityConnector.Async(request, callSettings).ConfigureAwait(false), EnableCloudVmClusterIdentityConnectorOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DisableCloudVmClusterIdentityConnector</c>.</summary>
+        public override lro::OperationsClient DisableCloudVmClusterIdentityConnectorOperationsClient { get; }
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<CloudVmCluster, OperationMetadata> DisableCloudVmClusterIdentityConnector(DisableCloudVmClusterIdentityConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DisableCloudVmClusterIdentityConnectorRequest(ref request, ref callSettings);
+            return new lro::Operation<CloudVmCluster, OperationMetadata>(_callDisableCloudVmClusterIdentityConnector.Sync(request, callSettings), DisableCloudVmClusterIdentityConnectorOperationsClient);
+        }
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for a Cloud VM Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<CloudVmCluster, OperationMetadata>> DisableCloudVmClusterIdentityConnectorAsync(DisableCloudVmClusterIdentityConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DisableCloudVmClusterIdentityConnectorRequest(ref request, ref callSettings);
+            return new lro::Operation<CloudVmCluster, OperationMetadata>(await _callDisableCloudVmClusterIdentityConnector.Async(request, callSettings).ConfigureAwait(false), DisableCloudVmClusterIdentityConnectorOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>EnableExadbVmClusterIdentityConnector</c>.</summary>
+        public override lro::OperationsClient EnableExadbVmClusterIdentityConnectorOperationsClient { get; }
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ExadbVmCluster, OperationMetadata> EnableExadbVmClusterIdentityConnector(EnableExadbVmClusterIdentityConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EnableExadbVmClusterIdentityConnectorRequest(ref request, ref callSettings);
+            return new lro::Operation<ExadbVmCluster, OperationMetadata>(_callEnableExadbVmClusterIdentityConnector.Sync(request, callSettings), EnableExadbVmClusterIdentityConnectorOperationsClient);
+        }
+
+        /// <summary>
+        /// Enables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ExadbVmCluster, OperationMetadata>> EnableExadbVmClusterIdentityConnectorAsync(EnableExadbVmClusterIdentityConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EnableExadbVmClusterIdentityConnectorRequest(ref request, ref callSettings);
+            return new lro::Operation<ExadbVmCluster, OperationMetadata>(await _callEnableExadbVmClusterIdentityConnector.Async(request, callSettings).ConfigureAwait(false), EnableExadbVmClusterIdentityConnectorOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DisableExadbVmClusterIdentityConnector</c>.</summary>
+        public override lro::OperationsClient DisableExadbVmClusterIdentityConnectorOperationsClient { get; }
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ExadbVmCluster, OperationMetadata> DisableExadbVmClusterIdentityConnector(DisableExadbVmClusterIdentityConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DisableExadbVmClusterIdentityConnectorRequest(ref request, ref callSettings);
+            return new lro::Operation<ExadbVmCluster, OperationMetadata>(_callDisableExadbVmClusterIdentityConnector.Sync(request, callSettings), DisableExadbVmClusterIdentityConnectorOperationsClient);
+        }
+
+        /// <summary>
+        /// Disables the Workload Identity Connector for an Exadb VM Cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ExadbVmCluster, OperationMetadata>> DisableExadbVmClusterIdentityConnectorAsync(DisableExadbVmClusterIdentityConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DisableExadbVmClusterIdentityConnectorRequest(ref request, ref callSettings);
+            return new lro::Operation<ExadbVmCluster, OperationMetadata>(await _callDisableExadbVmClusterIdentityConnector.Async(request, callSettings).ConfigureAwait(false), DisableExadbVmClusterIdentityConnectorOperationsClient);
+        }
+
         /// <summary>
         /// Lists the entitlements in a given project.
         /// </summary>
@@ -16289,6 +20369,30 @@ namespace Google.Cloud.OracleDatabase.V1
         {
             Modify_ListEntitlementsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListEntitlementsRequest, ListEntitlementsResponse, Entitlement>(_callListEntitlements, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Flex Components in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FlexComponent"/> resources.</returns>
+        public override gax::PagedEnumerable<ListFlexComponentsResponse, FlexComponent> ListFlexComponents(ListFlexComponentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListFlexComponentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListFlexComponentsRequest, ListFlexComponentsResponse, FlexComponent>(_callListFlexComponents, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Flex Components in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FlexComponent"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListFlexComponentsResponse, FlexComponent> ListFlexComponentsAsync(ListFlexComponentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListFlexComponentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListFlexComponentsRequest, ListFlexComponentsResponse, FlexComponent>(_callListFlexComponents, request, callSettings);
         }
 
         /// <summary>
@@ -16936,6 +21040,35 @@ namespace Google.Cloud.OracleDatabase.V1
             return new lro::Operation<OdbNetwork, OperationMetadata>(await _callCreateOdbNetwork.Async(request, callSettings).ConfigureAwait(false), CreateOdbNetworkOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>UpdateOdbNetwork</c>.</summary>
+        public override lro::OperationsClient UpdateOdbNetworkOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the `labels` and `service_connectivity_config` of a single
+        /// OdbNetwork.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<OdbNetwork, OperationMetadata> UpdateOdbNetwork(UpdateOdbNetworkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateOdbNetworkRequest(ref request, ref callSettings);
+            return new lro::Operation<OdbNetwork, OperationMetadata>(_callUpdateOdbNetwork.Sync(request, callSettings), UpdateOdbNetworkOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the `labels` and `service_connectivity_config` of a single
+        /// OdbNetwork.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<OdbNetwork, OperationMetadata>> UpdateOdbNetworkAsync(UpdateOdbNetworkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateOdbNetworkRequest(ref request, ref callSettings);
+            return new lro::Operation<OdbNetwork, OperationMetadata>(await _callUpdateOdbNetwork.Async(request, callSettings).ConfigureAwait(false), UpdateOdbNetworkOperationsClient);
+        }
+
         /// <summary>The long-running operations client for <c>DeleteOdbNetwork</c>.</summary>
         public override lro::OperationsClient DeleteOdbNetworkOperationsClient { get; }
 
@@ -17036,6 +21169,33 @@ namespace Google.Cloud.OracleDatabase.V1
         {
             Modify_CreateOdbSubnetRequest(ref request, ref callSettings);
             return new lro::Operation<OdbSubnet, OperationMetadata>(await _callCreateOdbSubnet.Async(request, callSettings).ConfigureAwait(false), CreateOdbSubnetOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateOdbSubnet</c>.</summary>
+        public override lro::OperationsClient UpdateOdbSubnetOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the `labels` of a single ODB Subnet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<OdbSubnet, OperationMetadata> UpdateOdbSubnet(UpdateOdbSubnetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateOdbSubnetRequest(ref request, ref callSettings);
+            return new lro::Operation<OdbSubnet, OperationMetadata>(_callUpdateOdbSubnet.Sync(request, callSettings), UpdateOdbSubnetOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the `labels` of a single ODB Subnet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<OdbSubnet, OperationMetadata>> UpdateOdbSubnetAsync(UpdateOdbSubnetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateOdbSubnetRequest(ref request, ref callSettings);
+            return new lro::Operation<OdbSubnet, OperationMetadata>(await _callUpdateOdbSubnet.Async(request, callSettings).ConfigureAwait(false), UpdateOdbSubnetOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeleteOdbSubnet</c>.</summary>
@@ -17404,6 +21564,33 @@ namespace Google.Cloud.OracleDatabase.V1
             return new lro::Operation<ExascaleDbStorageVault, OperationMetadata>(await _callCreateExascaleDbStorageVault.Async(request, callSettings).ConfigureAwait(false), CreateExascaleDbStorageVaultOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>UpdateExascaleDbStorageVault</c>.</summary>
+        public override lro::OperationsClient UpdateExascaleDbStorageVaultOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the `labels` of a single ExascaleDbStorageVault.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ExascaleDbStorageVault, OperationMetadata> UpdateExascaleDbStorageVault(UpdateExascaleDbStorageVaultRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateExascaleDbStorageVaultRequest(ref request, ref callSettings);
+            return new lro::Operation<ExascaleDbStorageVault, OperationMetadata>(_callUpdateExascaleDbStorageVault.Sync(request, callSettings), UpdateExascaleDbStorageVaultOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the `labels` of a single ExascaleDbStorageVault.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ExascaleDbStorageVault, OperationMetadata>> UpdateExascaleDbStorageVaultAsync(UpdateExascaleDbStorageVaultRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateExascaleDbStorageVaultRequest(ref request, ref callSettings);
+            return new lro::Operation<ExascaleDbStorageVault, OperationMetadata>(await _callUpdateExascaleDbStorageVault.Async(request, callSettings).ConfigureAwait(false), UpdateExascaleDbStorageVaultOperationsClient);
+        }
+
         /// <summary>The long-running operations client for <c>DeleteExascaleDbStorageVault</c>.</summary>
         public override lro::OperationsClient DeleteExascaleDbStorageVaultOperationsClient { get; }
 
@@ -17455,6 +21642,32 @@ namespace Google.Cloud.OracleDatabase.V1
         {
             Modify_ListDbSystemInitialStorageSizesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDbSystemInitialStorageSizesRequest, ListDbSystemInitialStorageSizesResponse, DbSystemInitialStorageSize>(_callListDbSystemInitialStorageSizes, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the DbSystemComputePerformances for the given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DbSystemComputePerformance"/> resources.</returns>
+        public override gax::PagedEnumerable<ListDbSystemComputePerformancesResponse, DbSystemComputePerformance> ListDbSystemComputePerformances(ListDbSystemComputePerformancesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDbSystemComputePerformancesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDbSystemComputePerformancesRequest, ListDbSystemComputePerformancesResponse, DbSystemComputePerformance>(_callListDbSystemComputePerformances, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the DbSystemComputePerformances for the given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DbSystemComputePerformance"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListDbSystemComputePerformancesResponse, DbSystemComputePerformance> ListDbSystemComputePerformancesAsync(ListDbSystemComputePerformancesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDbSystemComputePerformancesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDbSystemComputePerformancesRequest, ListDbSystemComputePerformancesResponse, DbSystemComputePerformance>(_callListDbSystemComputePerformances, request, callSettings);
         }
 
         /// <summary>
@@ -17630,6 +21843,33 @@ namespace Google.Cloud.OracleDatabase.V1
             return new lro::Operation<DbSystem, OperationMetadata>(await _callCreateDbSystem.Async(request, callSettings).ConfigureAwait(false), CreateDbSystemOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>UpdateDbSystem</c>.</summary>
+        public override lro::OperationsClient UpdateDbSystemOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the `labels` of a single DbSystem.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DbSystem, OperationMetadata> UpdateDbSystem(UpdateDbSystemRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDbSystemRequest(ref request, ref callSettings);
+            return new lro::Operation<DbSystem, OperationMetadata>(_callUpdateDbSystem.Sync(request, callSettings), UpdateDbSystemOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the `labels` of a single DbSystem.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DbSystem, OperationMetadata>> UpdateDbSystemAsync(UpdateDbSystemRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDbSystemRequest(ref request, ref callSettings);
+            return new lro::Operation<DbSystem, OperationMetadata>(await _callUpdateDbSystem.Async(request, callSettings).ConfigureAwait(false), UpdateDbSystemOperationsClient);
+        }
+
         /// <summary>The long-running operations client for <c>DeleteDbSystem</c>.</summary>
         public override lro::OperationsClient DeleteDbSystemOperationsClient { get; }
 
@@ -17730,6 +21970,33 @@ namespace Google.Cloud.OracleDatabase.V1
         {
             Modify_CreateGoldengateDeploymentRequest(ref request, ref callSettings);
             return new lro::Operation<GoldengateDeployment, OperationMetadata>(await _callCreateGoldengateDeployment.Async(request, callSettings).ConfigureAwait(false), CreateGoldengateDeploymentOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateGoldengateDeployment</c>.</summary>
+        public override lro::OperationsClient UpdateGoldengateDeploymentOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<GoldengateDeployment, OperationMetadata> UpdateGoldengateDeployment(UpdateGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateGoldengateDeploymentRequest(ref request, ref callSettings);
+            return new lro::Operation<GoldengateDeployment, OperationMetadata>(_callUpdateGoldengateDeployment.Sync(request, callSettings), UpdateGoldengateDeploymentOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> UpdateGoldengateDeploymentAsync(UpdateGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateGoldengateDeploymentRequest(ref request, ref callSettings);
+            return new lro::Operation<GoldengateDeployment, OperationMetadata>(await _callUpdateGoldengateDeployment.Async(request, callSettings).ConfigureAwait(false), UpdateGoldengateDeploymentOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeleteGoldengateDeployment</c>.</summary>
@@ -17886,6 +22153,33 @@ namespace Google.Cloud.OracleDatabase.V1
         {
             Modify_CreateGoldengateConnectionRequest(ref request, ref callSettings);
             return new lro::Operation<GoldengateConnection, OperationMetadata>(await _callCreateGoldengateConnection.Async(request, callSettings).ConfigureAwait(false), CreateGoldengateConnectionOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateGoldengateConnection</c>.</summary>
+        public override lro::OperationsClient UpdateGoldengateConnectionOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<GoldengateConnection, OperationMetadata> UpdateGoldengateConnection(UpdateGoldengateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateGoldengateConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<GoldengateConnection, OperationMetadata>(_callUpdateGoldengateConnection.Sync(request, callSettings), UpdateGoldengateConnectionOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<GoldengateConnection, OperationMetadata>> UpdateGoldengateConnectionAsync(UpdateGoldengateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateGoldengateConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<GoldengateConnection, OperationMetadata>(await _callUpdateGoldengateConnection.Async(request, callSettings).ConfigureAwait(false), UpdateGoldengateConnectionOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeleteGoldengateConnection</c>.</summary>
@@ -18140,6 +22434,33 @@ namespace Google.Cloud.OracleDatabase.V1
             return new lro::Operation<GoldengateConnectionAssignment, OperationMetadata>(await _callCreateGoldengateConnectionAssignment.Async(request, callSettings).ConfigureAwait(false), CreateGoldengateConnectionAssignmentOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>UpdateGoldengateConnectionAssignment</c>.</summary>
+        public override lro::OperationsClient UpdateGoldengateConnectionAssignmentOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<GoldengateConnectionAssignment, OperationMetadata> UpdateGoldengateConnectionAssignment(UpdateGoldengateConnectionAssignmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateGoldengateConnectionAssignmentRequest(ref request, ref callSettings);
+            return new lro::Operation<GoldengateConnectionAssignment, OperationMetadata>(_callUpdateGoldengateConnectionAssignment.Sync(request, callSettings), UpdateGoldengateConnectionAssignmentOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the `labels` of a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<GoldengateConnectionAssignment, OperationMetadata>> UpdateGoldengateConnectionAssignmentAsync(UpdateGoldengateConnectionAssignmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateGoldengateConnectionAssignmentRequest(ref request, ref callSettings);
+            return new lro::Operation<GoldengateConnectionAssignment, OperationMetadata>(await _callUpdateGoldengateConnectionAssignment.Async(request, callSettings).ConfigureAwait(false), UpdateGoldengateConnectionAssignmentOperationsClient);
+        }
+
         /// <summary>The long-running operations client for <c>DeleteGoldengateConnectionAssignment</c>.</summary>
         public override lro::OperationsClient DeleteGoldengateConnectionAssignmentOperationsClient { get; }
 
@@ -18190,6 +22511,183 @@ namespace Google.Cloud.OracleDatabase.V1
             Modify_TestGoldengateConnectionAssignmentRequest(ref request, ref callSettings);
             return _callTestGoldengateConnectionAssignment.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Lists DatabaseConnections in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DatabaseConnection"/> resources.</returns>
+        public override gax::PagedEnumerable<ListDatabaseConnectionsResponse, DatabaseConnection> ListDatabaseConnections(ListDatabaseConnectionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDatabaseConnectionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDatabaseConnectionsRequest, ListDatabaseConnectionsResponse, DatabaseConnection>(_callListDatabaseConnections, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists DatabaseConnections in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DatabaseConnection"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListDatabaseConnectionsResponse, DatabaseConnection> ListDatabaseConnectionsAsync(ListDatabaseConnectionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDatabaseConnectionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDatabaseConnectionsRequest, ListDatabaseConnectionsResponse, DatabaseConnection>(_callListDatabaseConnections, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DatabaseConnection GetDatabaseConnection(GetDatabaseConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDatabaseConnectionRequest(ref request, ref callSettings);
+            return _callGetDatabaseConnection.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DatabaseConnection> GetDatabaseConnectionAsync(GetDatabaseConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDatabaseConnectionRequest(ref request, ref callSettings);
+            return _callGetDatabaseConnection.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateDatabaseConnection</c>.</summary>
+        public override lro::OperationsClient CreateDatabaseConnectionOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new DatabaseConnection in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DatabaseConnection, OperationMetadata> CreateDatabaseConnection(CreateDatabaseConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDatabaseConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<DatabaseConnection, OperationMetadata>(_callCreateDatabaseConnection.Sync(request, callSettings), CreateDatabaseConnectionOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new DatabaseConnection in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DatabaseConnection, OperationMetadata>> CreateDatabaseConnectionAsync(CreateDatabaseConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDatabaseConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<DatabaseConnection, OperationMetadata>(await _callCreateDatabaseConnection.Async(request, callSettings).ConfigureAwait(false), CreateDatabaseConnectionOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateDatabaseConnection</c>.</summary>
+        public override lro::OperationsClient UpdateDatabaseConnectionOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of a single DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DatabaseConnection, OperationMetadata> UpdateDatabaseConnection(UpdateDatabaseConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDatabaseConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<DatabaseConnection, OperationMetadata>(_callUpdateDatabaseConnection.Sync(request, callSettings), UpdateDatabaseConnectionOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of a single DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DatabaseConnection, OperationMetadata>> UpdateDatabaseConnectionAsync(UpdateDatabaseConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDatabaseConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<DatabaseConnection, OperationMetadata>(await _callUpdateDatabaseConnection.Async(request, callSettings).ConfigureAwait(false), UpdateDatabaseConnectionOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteDatabaseConnection</c>.</summary>
+        public override lro::OperationsClient DeleteDatabaseConnectionOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteDatabaseConnection(DeleteDatabaseConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDatabaseConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteDatabaseConnection.Sync(request, callSettings), DeleteDatabaseConnectionOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDatabaseConnectionAsync(DeleteDatabaseConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDatabaseConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteDatabaseConnection.Async(request, callSettings).ConfigureAwait(false), DeleteDatabaseConnectionOperationsClient);
+        }
+
+        /// <summary>
+        /// Tests connectivity of a DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TestDatabaseConnectionResponse TestDatabaseConnection(TestDatabaseConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestDatabaseConnectionRequest(ref request, ref callSettings);
+            return _callTestDatabaseConnection.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Tests connectivity of a DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TestDatabaseConnectionResponse> TestDatabaseConnectionAsync(TestDatabaseConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestDatabaseConnectionRequest(ref request, ref callSettings);
+            return _callTestDatabaseConnection.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Executes a SQL statement on a DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ExecuteSqlResponse ExecuteSql(ExecuteSqlRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExecuteSqlRequest(ref request, ref callSettings);
+            return _callExecuteSql.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Executes a SQL statement on a DatabaseConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ExecuteSqlResponse> ExecuteSqlAsync(ExecuteSqlRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExecuteSqlRequest(ref request, ref callSettings);
+            return _callExecuteSql.Async(request, callSettings);
+        }
     }
 
     public partial class ListCloudExadataInfrastructuresRequest : gaxgrpc::IPageRequest
@@ -18201,6 +22699,10 @@ namespace Google.Cloud.OracleDatabase.V1
     }
 
     public partial class ListEntitlementsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListFlexComponentsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -18264,6 +22766,10 @@ namespace Google.Cloud.OracleDatabase.V1
     {
     }
 
+    public partial class ListDbSystemComputePerformancesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListDatabasesRequest : gaxgrpc::IPageRequest
     {
     }
@@ -18312,6 +22818,10 @@ namespace Google.Cloud.OracleDatabase.V1
     {
     }
 
+    public partial class ListDatabaseConnectionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListCloudExadataInfrastructuresResponse : gaxgrpc::IPageResponse<CloudExadataInfrastructure>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
@@ -18332,6 +22842,14 @@ namespace Google.Cloud.OracleDatabase.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Entitlement> GetEnumerator() => Entitlements.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListFlexComponentsResponse : gaxgrpc::IPageResponse<FlexComponent>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<FlexComponent> GetEnumerator() => FlexComponents.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
@@ -18457,6 +22975,14 @@ namespace Google.Cloud.OracleDatabase.V1
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
+    public partial class ListDbSystemComputePerformancesResponse : gaxgrpc::IPageResponse<DbSystemComputePerformance>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DbSystemComputePerformance> GetEnumerator() => DbSystemComputePerformances.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
     public partial class ListDatabasesResponse : gaxgrpc::IPageResponse<Database>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
@@ -18552,6 +23078,14 @@ namespace Google.Cloud.OracleDatabase.V1
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<GoldengateConnectionAssignment> GetEnumerator() =>
             GoldengateConnectionAssignments.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListDatabaseConnectionsResponse : gaxgrpc::IPageResponse<DatabaseConnection>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DatabaseConnection> GetEnumerator() => DatabaseConnections.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

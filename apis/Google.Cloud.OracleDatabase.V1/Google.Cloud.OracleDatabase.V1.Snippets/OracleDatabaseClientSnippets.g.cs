@@ -592,6 +592,136 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateCloudExadataInfrastructure</summary>
+        public void UpdateCloudExadataInfrastructureRequestObject()
+        {
+            // Snippet: UpdateCloudExadataInfrastructure(UpdateCloudExadataInfrastructureRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            UpdateCloudExadataInfrastructureRequest request = new UpdateCloudExadataInfrastructureRequest
+            {
+                UpdateMask = new FieldMask(),
+                CloudExadataInfrastructure = new CloudExadataInfrastructure(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<CloudExadataInfrastructure, OperationMetadata> response = oracleDatabaseClient.UpdateCloudExadataInfrastructure(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudExadataInfrastructure, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CloudExadataInfrastructure result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudExadataInfrastructure, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateCloudExadataInfrastructure(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudExadataInfrastructure retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCloudExadataInfrastructureAsync</summary>
+        public async Task UpdateCloudExadataInfrastructureRequestObjectAsync()
+        {
+            // Snippet: UpdateCloudExadataInfrastructureAsync(UpdateCloudExadataInfrastructureRequest, CallSettings)
+            // Additional: UpdateCloudExadataInfrastructureAsync(UpdateCloudExadataInfrastructureRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateCloudExadataInfrastructureRequest request = new UpdateCloudExadataInfrastructureRequest
+            {
+                UpdateMask = new FieldMask(),
+                CloudExadataInfrastructure = new CloudExadataInfrastructure(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<CloudExadataInfrastructure, OperationMetadata> response = await oracleDatabaseClient.UpdateCloudExadataInfrastructureAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudExadataInfrastructure, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CloudExadataInfrastructure result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudExadataInfrastructure, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateCloudExadataInfrastructureAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudExadataInfrastructure retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCloudExadataInfrastructure</summary>
+        public void UpdateCloudExadataInfrastructure()
+        {
+            // Snippet: UpdateCloudExadataInfrastructure(CloudExadataInfrastructure, FieldMask, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            CloudExadataInfrastructure cloudExadataInfrastructure = new CloudExadataInfrastructure();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<CloudExadataInfrastructure, OperationMetadata> response = oracleDatabaseClient.UpdateCloudExadataInfrastructure(cloudExadataInfrastructure, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudExadataInfrastructure, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CloudExadataInfrastructure result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudExadataInfrastructure, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateCloudExadataInfrastructure(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudExadataInfrastructure retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCloudExadataInfrastructureAsync</summary>
+        public async Task UpdateCloudExadataInfrastructureAsync()
+        {
+            // Snippet: UpdateCloudExadataInfrastructureAsync(CloudExadataInfrastructure, FieldMask, CallSettings)
+            // Additional: UpdateCloudExadataInfrastructureAsync(CloudExadataInfrastructure, FieldMask, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            CloudExadataInfrastructure cloudExadataInfrastructure = new CloudExadataInfrastructure();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<CloudExadataInfrastructure, OperationMetadata> response = await oracleDatabaseClient.UpdateCloudExadataInfrastructureAsync(cloudExadataInfrastructure, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudExadataInfrastructure, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CloudExadataInfrastructure result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudExadataInfrastructure, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateCloudExadataInfrastructureAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudExadataInfrastructure retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteCloudExadataInfrastructure</summary>
         public void DeleteCloudExadataInfrastructureRequestObject()
         {
@@ -1534,6 +1664,136 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateCloudVmCluster</summary>
+        public void UpdateCloudVmClusterRequestObject()
+        {
+            // Snippet: UpdateCloudVmCluster(UpdateCloudVmClusterRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            UpdateCloudVmClusterRequest request = new UpdateCloudVmClusterRequest
+            {
+                UpdateMask = new FieldMask(),
+                CloudVmCluster = new CloudVmCluster(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<CloudVmCluster, OperationMetadata> response = oracleDatabaseClient.UpdateCloudVmCluster(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudVmCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CloudVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudVmCluster, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateCloudVmCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCloudVmClusterAsync</summary>
+        public async Task UpdateCloudVmClusterRequestObjectAsync()
+        {
+            // Snippet: UpdateCloudVmClusterAsync(UpdateCloudVmClusterRequest, CallSettings)
+            // Additional: UpdateCloudVmClusterAsync(UpdateCloudVmClusterRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateCloudVmClusterRequest request = new UpdateCloudVmClusterRequest
+            {
+                UpdateMask = new FieldMask(),
+                CloudVmCluster = new CloudVmCluster(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<CloudVmCluster, OperationMetadata> response = await oracleDatabaseClient.UpdateCloudVmClusterAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudVmCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CloudVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudVmCluster, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateCloudVmClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCloudVmCluster</summary>
+        public void UpdateCloudVmCluster()
+        {
+            // Snippet: UpdateCloudVmCluster(CloudVmCluster, FieldMask, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            CloudVmCluster cloudVmCluster = new CloudVmCluster();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<CloudVmCluster, OperationMetadata> response = oracleDatabaseClient.UpdateCloudVmCluster(cloudVmCluster, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudVmCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CloudVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudVmCluster, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateCloudVmCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCloudVmClusterAsync</summary>
+        public async Task UpdateCloudVmClusterAsync()
+        {
+            // Snippet: UpdateCloudVmClusterAsync(CloudVmCluster, FieldMask, CallSettings)
+            // Additional: UpdateCloudVmClusterAsync(CloudVmCluster, FieldMask, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            CloudVmCluster cloudVmCluster = new CloudVmCluster();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<CloudVmCluster, OperationMetadata> response = await oracleDatabaseClient.UpdateCloudVmClusterAsync(cloudVmCluster, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudVmCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CloudVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudVmCluster, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateCloudVmClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteCloudVmCluster</summary>
         public void DeleteCloudVmClusterRequestObject()
         {
@@ -1717,6 +1977,738 @@ namespace GoogleCSharpSnippets
             {
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableCloudVmClusterIdentityConnector</summary>
+        public void EnableCloudVmClusterIdentityConnectorRequestObject()
+        {
+            // Snippet: EnableCloudVmClusterIdentityConnector(EnableCloudVmClusterIdentityConnectorRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            EnableCloudVmClusterIdentityConnectorRequest request = new EnableCloudVmClusterIdentityConnectorRequest
+            {
+                CloudVmClusterName = CloudVmClusterName.FromProjectLocationCloudVmCluster("[PROJECT]", "[LOCATION]", "[CLOUD_VM_CLUSTER]"),
+            };
+            // Make the request
+            Operation<CloudVmCluster, OperationMetadata> response = oracleDatabaseClient.EnableCloudVmClusterIdentityConnector(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudVmCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CloudVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudVmCluster, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceEnableCloudVmClusterIdentityConnector(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableCloudVmClusterIdentityConnectorAsync</summary>
+        public async Task EnableCloudVmClusterIdentityConnectorRequestObjectAsync()
+        {
+            // Snippet: EnableCloudVmClusterIdentityConnectorAsync(EnableCloudVmClusterIdentityConnectorRequest, CallSettings)
+            // Additional: EnableCloudVmClusterIdentityConnectorAsync(EnableCloudVmClusterIdentityConnectorRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            EnableCloudVmClusterIdentityConnectorRequest request = new EnableCloudVmClusterIdentityConnectorRequest
+            {
+                CloudVmClusterName = CloudVmClusterName.FromProjectLocationCloudVmCluster("[PROJECT]", "[LOCATION]", "[CLOUD_VM_CLUSTER]"),
+            };
+            // Make the request
+            Operation<CloudVmCluster, OperationMetadata> response = await oracleDatabaseClient.EnableCloudVmClusterIdentityConnectorAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudVmCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CloudVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudVmCluster, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceEnableCloudVmClusterIdentityConnectorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableCloudVmClusterIdentityConnector</summary>
+        public void EnableCloudVmClusterIdentityConnector()
+        {
+            // Snippet: EnableCloudVmClusterIdentityConnector(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/cloudVmClusters/[CLOUD_VM_CLUSTER]";
+            // Make the request
+            Operation<CloudVmCluster, OperationMetadata> response = oracleDatabaseClient.EnableCloudVmClusterIdentityConnector(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudVmCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CloudVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudVmCluster, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceEnableCloudVmClusterIdentityConnector(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableCloudVmClusterIdentityConnectorAsync</summary>
+        public async Task EnableCloudVmClusterIdentityConnectorAsync()
+        {
+            // Snippet: EnableCloudVmClusterIdentityConnectorAsync(string, CallSettings)
+            // Additional: EnableCloudVmClusterIdentityConnectorAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/cloudVmClusters/[CLOUD_VM_CLUSTER]";
+            // Make the request
+            Operation<CloudVmCluster, OperationMetadata> response = await oracleDatabaseClient.EnableCloudVmClusterIdentityConnectorAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudVmCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CloudVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudVmCluster, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceEnableCloudVmClusterIdentityConnectorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableCloudVmClusterIdentityConnector</summary>
+        public void EnableCloudVmClusterIdentityConnectorResourceNames()
+        {
+            // Snippet: EnableCloudVmClusterIdentityConnector(CloudVmClusterName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            CloudVmClusterName name = CloudVmClusterName.FromProjectLocationCloudVmCluster("[PROJECT]", "[LOCATION]", "[CLOUD_VM_CLUSTER]");
+            // Make the request
+            Operation<CloudVmCluster, OperationMetadata> response = oracleDatabaseClient.EnableCloudVmClusterIdentityConnector(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudVmCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CloudVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudVmCluster, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceEnableCloudVmClusterIdentityConnector(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableCloudVmClusterIdentityConnectorAsync</summary>
+        public async Task EnableCloudVmClusterIdentityConnectorResourceNamesAsync()
+        {
+            // Snippet: EnableCloudVmClusterIdentityConnectorAsync(CloudVmClusterName, CallSettings)
+            // Additional: EnableCloudVmClusterIdentityConnectorAsync(CloudVmClusterName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            CloudVmClusterName name = CloudVmClusterName.FromProjectLocationCloudVmCluster("[PROJECT]", "[LOCATION]", "[CLOUD_VM_CLUSTER]");
+            // Make the request
+            Operation<CloudVmCluster, OperationMetadata> response = await oracleDatabaseClient.EnableCloudVmClusterIdentityConnectorAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudVmCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CloudVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudVmCluster, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceEnableCloudVmClusterIdentityConnectorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableCloudVmClusterIdentityConnector</summary>
+        public void DisableCloudVmClusterIdentityConnectorRequestObject()
+        {
+            // Snippet: DisableCloudVmClusterIdentityConnector(DisableCloudVmClusterIdentityConnectorRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            DisableCloudVmClusterIdentityConnectorRequest request = new DisableCloudVmClusterIdentityConnectorRequest
+            {
+                CloudVmClusterName = CloudVmClusterName.FromProjectLocationCloudVmCluster("[PROJECT]", "[LOCATION]", "[CLOUD_VM_CLUSTER]"),
+            };
+            // Make the request
+            Operation<CloudVmCluster, OperationMetadata> response = oracleDatabaseClient.DisableCloudVmClusterIdentityConnector(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudVmCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CloudVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudVmCluster, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDisableCloudVmClusterIdentityConnector(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableCloudVmClusterIdentityConnectorAsync</summary>
+        public async Task DisableCloudVmClusterIdentityConnectorRequestObjectAsync()
+        {
+            // Snippet: DisableCloudVmClusterIdentityConnectorAsync(DisableCloudVmClusterIdentityConnectorRequest, CallSettings)
+            // Additional: DisableCloudVmClusterIdentityConnectorAsync(DisableCloudVmClusterIdentityConnectorRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            DisableCloudVmClusterIdentityConnectorRequest request = new DisableCloudVmClusterIdentityConnectorRequest
+            {
+                CloudVmClusterName = CloudVmClusterName.FromProjectLocationCloudVmCluster("[PROJECT]", "[LOCATION]", "[CLOUD_VM_CLUSTER]"),
+            };
+            // Make the request
+            Operation<CloudVmCluster, OperationMetadata> response = await oracleDatabaseClient.DisableCloudVmClusterIdentityConnectorAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudVmCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CloudVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudVmCluster, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDisableCloudVmClusterIdentityConnectorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableCloudVmClusterIdentityConnector</summary>
+        public void DisableCloudVmClusterIdentityConnector()
+        {
+            // Snippet: DisableCloudVmClusterIdentityConnector(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/cloudVmClusters/[CLOUD_VM_CLUSTER]";
+            // Make the request
+            Operation<CloudVmCluster, OperationMetadata> response = oracleDatabaseClient.DisableCloudVmClusterIdentityConnector(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudVmCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CloudVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudVmCluster, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDisableCloudVmClusterIdentityConnector(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableCloudVmClusterIdentityConnectorAsync</summary>
+        public async Task DisableCloudVmClusterIdentityConnectorAsync()
+        {
+            // Snippet: DisableCloudVmClusterIdentityConnectorAsync(string, CallSettings)
+            // Additional: DisableCloudVmClusterIdentityConnectorAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/cloudVmClusters/[CLOUD_VM_CLUSTER]";
+            // Make the request
+            Operation<CloudVmCluster, OperationMetadata> response = await oracleDatabaseClient.DisableCloudVmClusterIdentityConnectorAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudVmCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CloudVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudVmCluster, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDisableCloudVmClusterIdentityConnectorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableCloudVmClusterIdentityConnector</summary>
+        public void DisableCloudVmClusterIdentityConnectorResourceNames()
+        {
+            // Snippet: DisableCloudVmClusterIdentityConnector(CloudVmClusterName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            CloudVmClusterName name = CloudVmClusterName.FromProjectLocationCloudVmCluster("[PROJECT]", "[LOCATION]", "[CLOUD_VM_CLUSTER]");
+            // Make the request
+            Operation<CloudVmCluster, OperationMetadata> response = oracleDatabaseClient.DisableCloudVmClusterIdentityConnector(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudVmCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CloudVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudVmCluster, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDisableCloudVmClusterIdentityConnector(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableCloudVmClusterIdentityConnectorAsync</summary>
+        public async Task DisableCloudVmClusterIdentityConnectorResourceNamesAsync()
+        {
+            // Snippet: DisableCloudVmClusterIdentityConnectorAsync(CloudVmClusterName, CallSettings)
+            // Additional: DisableCloudVmClusterIdentityConnectorAsync(CloudVmClusterName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            CloudVmClusterName name = CloudVmClusterName.FromProjectLocationCloudVmCluster("[PROJECT]", "[LOCATION]", "[CLOUD_VM_CLUSTER]");
+            // Make the request
+            Operation<CloudVmCluster, OperationMetadata> response = await oracleDatabaseClient.DisableCloudVmClusterIdentityConnectorAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudVmCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CloudVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudVmCluster, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDisableCloudVmClusterIdentityConnectorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableExadbVmClusterIdentityConnector</summary>
+        public void EnableExadbVmClusterIdentityConnectorRequestObject()
+        {
+            // Snippet: EnableExadbVmClusterIdentityConnector(EnableExadbVmClusterIdentityConnectorRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            EnableExadbVmClusterIdentityConnectorRequest request = new EnableExadbVmClusterIdentityConnectorRequest
+            {
+                ExadbVmClusterName = ExadbVmClusterName.FromProjectLocationExadbVmCluster("[PROJECT]", "[LOCATION]", "[EXADB_VM_CLUSTER]"),
+            };
+            // Make the request
+            Operation<ExadbVmCluster, OperationMetadata> response = oracleDatabaseClient.EnableExadbVmClusterIdentityConnector(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExadbVmCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExadbVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExadbVmCluster, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceEnableExadbVmClusterIdentityConnector(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExadbVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableExadbVmClusterIdentityConnectorAsync</summary>
+        public async Task EnableExadbVmClusterIdentityConnectorRequestObjectAsync()
+        {
+            // Snippet: EnableExadbVmClusterIdentityConnectorAsync(EnableExadbVmClusterIdentityConnectorRequest, CallSettings)
+            // Additional: EnableExadbVmClusterIdentityConnectorAsync(EnableExadbVmClusterIdentityConnectorRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            EnableExadbVmClusterIdentityConnectorRequest request = new EnableExadbVmClusterIdentityConnectorRequest
+            {
+                ExadbVmClusterName = ExadbVmClusterName.FromProjectLocationExadbVmCluster("[PROJECT]", "[LOCATION]", "[EXADB_VM_CLUSTER]"),
+            };
+            // Make the request
+            Operation<ExadbVmCluster, OperationMetadata> response = await oracleDatabaseClient.EnableExadbVmClusterIdentityConnectorAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExadbVmCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExadbVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExadbVmCluster, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceEnableExadbVmClusterIdentityConnectorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExadbVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableExadbVmClusterIdentityConnector</summary>
+        public void EnableExadbVmClusterIdentityConnector()
+        {
+            // Snippet: EnableExadbVmClusterIdentityConnector(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/exadbVmClusters/[EXADB_VM_CLUSTER]";
+            // Make the request
+            Operation<ExadbVmCluster, OperationMetadata> response = oracleDatabaseClient.EnableExadbVmClusterIdentityConnector(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExadbVmCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExadbVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExadbVmCluster, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceEnableExadbVmClusterIdentityConnector(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExadbVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableExadbVmClusterIdentityConnectorAsync</summary>
+        public async Task EnableExadbVmClusterIdentityConnectorAsync()
+        {
+            // Snippet: EnableExadbVmClusterIdentityConnectorAsync(string, CallSettings)
+            // Additional: EnableExadbVmClusterIdentityConnectorAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/exadbVmClusters/[EXADB_VM_CLUSTER]";
+            // Make the request
+            Operation<ExadbVmCluster, OperationMetadata> response = await oracleDatabaseClient.EnableExadbVmClusterIdentityConnectorAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExadbVmCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExadbVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExadbVmCluster, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceEnableExadbVmClusterIdentityConnectorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExadbVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableExadbVmClusterIdentityConnector</summary>
+        public void EnableExadbVmClusterIdentityConnectorResourceNames()
+        {
+            // Snippet: EnableExadbVmClusterIdentityConnector(ExadbVmClusterName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            ExadbVmClusterName name = ExadbVmClusterName.FromProjectLocationExadbVmCluster("[PROJECT]", "[LOCATION]", "[EXADB_VM_CLUSTER]");
+            // Make the request
+            Operation<ExadbVmCluster, OperationMetadata> response = oracleDatabaseClient.EnableExadbVmClusterIdentityConnector(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExadbVmCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExadbVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExadbVmCluster, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceEnableExadbVmClusterIdentityConnector(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExadbVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableExadbVmClusterIdentityConnectorAsync</summary>
+        public async Task EnableExadbVmClusterIdentityConnectorResourceNamesAsync()
+        {
+            // Snippet: EnableExadbVmClusterIdentityConnectorAsync(ExadbVmClusterName, CallSettings)
+            // Additional: EnableExadbVmClusterIdentityConnectorAsync(ExadbVmClusterName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            ExadbVmClusterName name = ExadbVmClusterName.FromProjectLocationExadbVmCluster("[PROJECT]", "[LOCATION]", "[EXADB_VM_CLUSTER]");
+            // Make the request
+            Operation<ExadbVmCluster, OperationMetadata> response = await oracleDatabaseClient.EnableExadbVmClusterIdentityConnectorAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExadbVmCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExadbVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExadbVmCluster, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceEnableExadbVmClusterIdentityConnectorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExadbVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableExadbVmClusterIdentityConnector</summary>
+        public void DisableExadbVmClusterIdentityConnectorRequestObject()
+        {
+            // Snippet: DisableExadbVmClusterIdentityConnector(DisableExadbVmClusterIdentityConnectorRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            DisableExadbVmClusterIdentityConnectorRequest request = new DisableExadbVmClusterIdentityConnectorRequest
+            {
+                ExadbVmClusterName = ExadbVmClusterName.FromProjectLocationExadbVmCluster("[PROJECT]", "[LOCATION]", "[EXADB_VM_CLUSTER]"),
+            };
+            // Make the request
+            Operation<ExadbVmCluster, OperationMetadata> response = oracleDatabaseClient.DisableExadbVmClusterIdentityConnector(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExadbVmCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExadbVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExadbVmCluster, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDisableExadbVmClusterIdentityConnector(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExadbVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableExadbVmClusterIdentityConnectorAsync</summary>
+        public async Task DisableExadbVmClusterIdentityConnectorRequestObjectAsync()
+        {
+            // Snippet: DisableExadbVmClusterIdentityConnectorAsync(DisableExadbVmClusterIdentityConnectorRequest, CallSettings)
+            // Additional: DisableExadbVmClusterIdentityConnectorAsync(DisableExadbVmClusterIdentityConnectorRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            DisableExadbVmClusterIdentityConnectorRequest request = new DisableExadbVmClusterIdentityConnectorRequest
+            {
+                ExadbVmClusterName = ExadbVmClusterName.FromProjectLocationExadbVmCluster("[PROJECT]", "[LOCATION]", "[EXADB_VM_CLUSTER]"),
+            };
+            // Make the request
+            Operation<ExadbVmCluster, OperationMetadata> response = await oracleDatabaseClient.DisableExadbVmClusterIdentityConnectorAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExadbVmCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExadbVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExadbVmCluster, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDisableExadbVmClusterIdentityConnectorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExadbVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableExadbVmClusterIdentityConnector</summary>
+        public void DisableExadbVmClusterIdentityConnector()
+        {
+            // Snippet: DisableExadbVmClusterIdentityConnector(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/exadbVmClusters/[EXADB_VM_CLUSTER]";
+            // Make the request
+            Operation<ExadbVmCluster, OperationMetadata> response = oracleDatabaseClient.DisableExadbVmClusterIdentityConnector(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExadbVmCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExadbVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExadbVmCluster, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDisableExadbVmClusterIdentityConnector(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExadbVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableExadbVmClusterIdentityConnectorAsync</summary>
+        public async Task DisableExadbVmClusterIdentityConnectorAsync()
+        {
+            // Snippet: DisableExadbVmClusterIdentityConnectorAsync(string, CallSettings)
+            // Additional: DisableExadbVmClusterIdentityConnectorAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/exadbVmClusters/[EXADB_VM_CLUSTER]";
+            // Make the request
+            Operation<ExadbVmCluster, OperationMetadata> response = await oracleDatabaseClient.DisableExadbVmClusterIdentityConnectorAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExadbVmCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExadbVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExadbVmCluster, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDisableExadbVmClusterIdentityConnectorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExadbVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableExadbVmClusterIdentityConnector</summary>
+        public void DisableExadbVmClusterIdentityConnectorResourceNames()
+        {
+            // Snippet: DisableExadbVmClusterIdentityConnector(ExadbVmClusterName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            ExadbVmClusterName name = ExadbVmClusterName.FromProjectLocationExadbVmCluster("[PROJECT]", "[LOCATION]", "[EXADB_VM_CLUSTER]");
+            // Make the request
+            Operation<ExadbVmCluster, OperationMetadata> response = oracleDatabaseClient.DisableExadbVmClusterIdentityConnector(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExadbVmCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExadbVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExadbVmCluster, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDisableExadbVmClusterIdentityConnector(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExadbVmCluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableExadbVmClusterIdentityConnectorAsync</summary>
+        public async Task DisableExadbVmClusterIdentityConnectorResourceNamesAsync()
+        {
+            // Snippet: DisableExadbVmClusterIdentityConnectorAsync(ExadbVmClusterName, CallSettings)
+            // Additional: DisableExadbVmClusterIdentityConnectorAsync(ExadbVmClusterName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            ExadbVmClusterName name = ExadbVmClusterName.FromProjectLocationExadbVmCluster("[PROJECT]", "[LOCATION]", "[EXADB_VM_CLUSTER]");
+            // Make the request
+            Operation<ExadbVmCluster, OperationMetadata> response = await oracleDatabaseClient.DisableExadbVmClusterIdentityConnectorAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExadbVmCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExadbVmCluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExadbVmCluster, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDisableExadbVmClusterIdentityConnectorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExadbVmCluster retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1988,6 +2980,284 @@ namespace GoogleCSharpSnippets
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Entitlement item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFlexComponents</summary>
+        public void ListFlexComponentsRequestObject()
+        {
+            // Snippet: ListFlexComponents(ListFlexComponentsRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            ListFlexComponentsRequest request = new ListFlexComponentsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListFlexComponentsResponse, FlexComponent> response = oracleDatabaseClient.ListFlexComponents(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FlexComponent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFlexComponentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FlexComponent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FlexComponent> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FlexComponent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFlexComponentsAsync</summary>
+        public async Task ListFlexComponentsRequestObjectAsync()
+        {
+            // Snippet: ListFlexComponentsAsync(ListFlexComponentsRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            ListFlexComponentsRequest request = new ListFlexComponentsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListFlexComponentsResponse, FlexComponent> response = oracleDatabaseClient.ListFlexComponentsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (FlexComponent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListFlexComponentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FlexComponent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FlexComponent> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FlexComponent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFlexComponents</summary>
+        public void ListFlexComponents()
+        {
+            // Snippet: ListFlexComponents(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListFlexComponentsResponse, FlexComponent> response = oracleDatabaseClient.ListFlexComponents(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FlexComponent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFlexComponentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FlexComponent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FlexComponent> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FlexComponent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFlexComponentsAsync</summary>
+        public async Task ListFlexComponentsAsync()
+        {
+            // Snippet: ListFlexComponentsAsync(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListFlexComponentsResponse, FlexComponent> response = oracleDatabaseClient.ListFlexComponentsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (FlexComponent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListFlexComponentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FlexComponent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FlexComponent> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FlexComponent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFlexComponents</summary>
+        public void ListFlexComponentsResourceNames()
+        {
+            // Snippet: ListFlexComponents(LocationName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListFlexComponentsResponse, FlexComponent> response = oracleDatabaseClient.ListFlexComponents(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FlexComponent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFlexComponentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FlexComponent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FlexComponent> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FlexComponent item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFlexComponentsAsync</summary>
+        public async Task ListFlexComponentsResourceNamesAsync()
+        {
+            // Snippet: ListFlexComponentsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListFlexComponentsResponse, FlexComponent> response = oracleDatabaseClient.ListFlexComponentsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (FlexComponent item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListFlexComponentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FlexComponent item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FlexComponent> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FlexComponent item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -7245,6 +8515,136 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateOdbNetwork</summary>
+        public void UpdateOdbNetworkRequestObject()
+        {
+            // Snippet: UpdateOdbNetwork(UpdateOdbNetworkRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            UpdateOdbNetworkRequest request = new UpdateOdbNetworkRequest
+            {
+                UpdateMask = new FieldMask(),
+                OdbNetwork = new OdbNetwork(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<OdbNetwork, OperationMetadata> response = oracleDatabaseClient.UpdateOdbNetwork(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OdbNetwork, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            OdbNetwork result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OdbNetwork, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateOdbNetwork(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OdbNetwork retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateOdbNetworkAsync</summary>
+        public async Task UpdateOdbNetworkRequestObjectAsync()
+        {
+            // Snippet: UpdateOdbNetworkAsync(UpdateOdbNetworkRequest, CallSettings)
+            // Additional: UpdateOdbNetworkAsync(UpdateOdbNetworkRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateOdbNetworkRequest request = new UpdateOdbNetworkRequest
+            {
+                UpdateMask = new FieldMask(),
+                OdbNetwork = new OdbNetwork(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<OdbNetwork, OperationMetadata> response = await oracleDatabaseClient.UpdateOdbNetworkAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OdbNetwork, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            OdbNetwork result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OdbNetwork, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateOdbNetworkAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OdbNetwork retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateOdbNetwork</summary>
+        public void UpdateOdbNetwork()
+        {
+            // Snippet: UpdateOdbNetwork(OdbNetwork, FieldMask, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            OdbNetwork odbNetwork = new OdbNetwork();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<OdbNetwork, OperationMetadata> response = oracleDatabaseClient.UpdateOdbNetwork(odbNetwork, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OdbNetwork, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            OdbNetwork result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OdbNetwork, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateOdbNetwork(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OdbNetwork retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateOdbNetworkAsync</summary>
+        public async Task UpdateOdbNetworkAsync()
+        {
+            // Snippet: UpdateOdbNetworkAsync(OdbNetwork, FieldMask, CallSettings)
+            // Additional: UpdateOdbNetworkAsync(OdbNetwork, FieldMask, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            OdbNetwork odbNetwork = new OdbNetwork();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<OdbNetwork, OperationMetadata> response = await oracleDatabaseClient.UpdateOdbNetworkAsync(odbNetwork, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OdbNetwork, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            OdbNetwork result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OdbNetwork, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateOdbNetworkAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OdbNetwork retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteOdbNetwork</summary>
         public void DeleteOdbNetworkRequestObject()
         {
@@ -7985,6 +9385,136 @@ namespace GoogleCSharpSnippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             Operation<OdbSubnet, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceCreateOdbSubnetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OdbSubnet retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateOdbSubnet</summary>
+        public void UpdateOdbSubnetRequestObject()
+        {
+            // Snippet: UpdateOdbSubnet(UpdateOdbSubnetRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            UpdateOdbSubnetRequest request = new UpdateOdbSubnetRequest
+            {
+                UpdateMask = new FieldMask(),
+                OdbSubnet = new OdbSubnet(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<OdbSubnet, OperationMetadata> response = oracleDatabaseClient.UpdateOdbSubnet(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OdbSubnet, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            OdbSubnet result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OdbSubnet, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateOdbSubnet(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OdbSubnet retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateOdbSubnetAsync</summary>
+        public async Task UpdateOdbSubnetRequestObjectAsync()
+        {
+            // Snippet: UpdateOdbSubnetAsync(UpdateOdbSubnetRequest, CallSettings)
+            // Additional: UpdateOdbSubnetAsync(UpdateOdbSubnetRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateOdbSubnetRequest request = new UpdateOdbSubnetRequest
+            {
+                UpdateMask = new FieldMask(),
+                OdbSubnet = new OdbSubnet(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<OdbSubnet, OperationMetadata> response = await oracleDatabaseClient.UpdateOdbSubnetAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OdbSubnet, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            OdbSubnet result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OdbSubnet, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateOdbSubnetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OdbSubnet retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateOdbSubnet</summary>
+        public void UpdateOdbSubnet()
+        {
+            // Snippet: UpdateOdbSubnet(OdbSubnet, FieldMask, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            OdbSubnet odbSubnet = new OdbSubnet();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<OdbSubnet, OperationMetadata> response = oracleDatabaseClient.UpdateOdbSubnet(odbSubnet, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OdbSubnet, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            OdbSubnet result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OdbSubnet, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateOdbSubnet(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OdbSubnet retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateOdbSubnetAsync</summary>
+        public async Task UpdateOdbSubnetAsync()
+        {
+            // Snippet: UpdateOdbSubnetAsync(OdbSubnet, FieldMask, CallSettings)
+            // Additional: UpdateOdbSubnetAsync(OdbSubnet, FieldMask, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            OdbSubnet odbSubnet = new OdbSubnet();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<OdbSubnet, OperationMetadata> response = await oracleDatabaseClient.UpdateOdbSubnetAsync(odbSubnet, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OdbSubnet, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            OdbSubnet result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OdbSubnet, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateOdbSubnetAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -10562,6 +12092,136 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateExascaleDbStorageVault</summary>
+        public void UpdateExascaleDbStorageVaultRequestObject()
+        {
+            // Snippet: UpdateExascaleDbStorageVault(UpdateExascaleDbStorageVaultRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            UpdateExascaleDbStorageVaultRequest request = new UpdateExascaleDbStorageVaultRequest
+            {
+                UpdateMask = new FieldMask(),
+                ExascaleDbStorageVault = new ExascaleDbStorageVault(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ExascaleDbStorageVault, OperationMetadata> response = oracleDatabaseClient.UpdateExascaleDbStorageVault(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExascaleDbStorageVault, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExascaleDbStorageVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExascaleDbStorageVault, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateExascaleDbStorageVault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExascaleDbStorageVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExascaleDbStorageVaultAsync</summary>
+        public async Task UpdateExascaleDbStorageVaultRequestObjectAsync()
+        {
+            // Snippet: UpdateExascaleDbStorageVaultAsync(UpdateExascaleDbStorageVaultRequest, CallSettings)
+            // Additional: UpdateExascaleDbStorageVaultAsync(UpdateExascaleDbStorageVaultRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateExascaleDbStorageVaultRequest request = new UpdateExascaleDbStorageVaultRequest
+            {
+                UpdateMask = new FieldMask(),
+                ExascaleDbStorageVault = new ExascaleDbStorageVault(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ExascaleDbStorageVault, OperationMetadata> response = await oracleDatabaseClient.UpdateExascaleDbStorageVaultAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExascaleDbStorageVault, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExascaleDbStorageVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExascaleDbStorageVault, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateExascaleDbStorageVaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExascaleDbStorageVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExascaleDbStorageVault</summary>
+        public void UpdateExascaleDbStorageVault()
+        {
+            // Snippet: UpdateExascaleDbStorageVault(ExascaleDbStorageVault, FieldMask, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            ExascaleDbStorageVault exascaleDbStorageVault = new ExascaleDbStorageVault();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<ExascaleDbStorageVault, OperationMetadata> response = oracleDatabaseClient.UpdateExascaleDbStorageVault(exascaleDbStorageVault, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExascaleDbStorageVault, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExascaleDbStorageVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExascaleDbStorageVault, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateExascaleDbStorageVault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExascaleDbStorageVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExascaleDbStorageVaultAsync</summary>
+        public async Task UpdateExascaleDbStorageVaultAsync()
+        {
+            // Snippet: UpdateExascaleDbStorageVaultAsync(ExascaleDbStorageVault, FieldMask, CallSettings)
+            // Additional: UpdateExascaleDbStorageVaultAsync(ExascaleDbStorageVault, FieldMask, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            ExascaleDbStorageVault exascaleDbStorageVault = new ExascaleDbStorageVault();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<ExascaleDbStorageVault, OperationMetadata> response = await oracleDatabaseClient.UpdateExascaleDbStorageVaultAsync(exascaleDbStorageVault, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExascaleDbStorageVault, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExascaleDbStorageVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExascaleDbStorageVault, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateExascaleDbStorageVaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExascaleDbStorageVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteExascaleDbStorageVault</summary>
         public void DeleteExascaleDbStorageVaultRequestObject()
         {
@@ -11014,6 +12674,284 @@ namespace GoogleCSharpSnippets
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (DbSystemInitialStorageSize item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDbSystemComputePerformances</summary>
+        public void ListDbSystemComputePerformancesRequestObject()
+        {
+            // Snippet: ListDbSystemComputePerformances(ListDbSystemComputePerformancesRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            ListDbSystemComputePerformancesRequest request = new ListDbSystemComputePerformancesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListDbSystemComputePerformancesResponse, DbSystemComputePerformance> response = oracleDatabaseClient.ListDbSystemComputePerformances(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DbSystemComputePerformance item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDbSystemComputePerformancesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DbSystemComputePerformance item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DbSystemComputePerformance> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DbSystemComputePerformance item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDbSystemComputePerformancesAsync</summary>
+        public async Task ListDbSystemComputePerformancesRequestObjectAsync()
+        {
+            // Snippet: ListDbSystemComputePerformancesAsync(ListDbSystemComputePerformancesRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDbSystemComputePerformancesRequest request = new ListDbSystemComputePerformancesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDbSystemComputePerformancesResponse, DbSystemComputePerformance> response = oracleDatabaseClient.ListDbSystemComputePerformancesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DbSystemComputePerformance item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDbSystemComputePerformancesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DbSystemComputePerformance item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DbSystemComputePerformance> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DbSystemComputePerformance item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDbSystemComputePerformances</summary>
+        public void ListDbSystemComputePerformances()
+        {
+            // Snippet: ListDbSystemComputePerformances(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListDbSystemComputePerformancesResponse, DbSystemComputePerformance> response = oracleDatabaseClient.ListDbSystemComputePerformances(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DbSystemComputePerformance item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDbSystemComputePerformancesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DbSystemComputePerformance item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DbSystemComputePerformance> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DbSystemComputePerformance item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDbSystemComputePerformancesAsync</summary>
+        public async Task ListDbSystemComputePerformancesAsync()
+        {
+            // Snippet: ListDbSystemComputePerformancesAsync(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListDbSystemComputePerformancesResponse, DbSystemComputePerformance> response = oracleDatabaseClient.ListDbSystemComputePerformancesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DbSystemComputePerformance item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDbSystemComputePerformancesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DbSystemComputePerformance item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DbSystemComputePerformance> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DbSystemComputePerformance item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDbSystemComputePerformances</summary>
+        public void ListDbSystemComputePerformancesResourceNames()
+        {
+            // Snippet: ListDbSystemComputePerformances(LocationName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListDbSystemComputePerformancesResponse, DbSystemComputePerformance> response = oracleDatabaseClient.ListDbSystemComputePerformances(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DbSystemComputePerformance item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDbSystemComputePerformancesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DbSystemComputePerformance item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DbSystemComputePerformance> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DbSystemComputePerformance item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDbSystemComputePerformancesAsync</summary>
+        public async Task ListDbSystemComputePerformancesResourceNamesAsync()
+        {
+            // Snippet: ListDbSystemComputePerformancesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListDbSystemComputePerformancesResponse, DbSystemComputePerformance> response = oracleDatabaseClient.ListDbSystemComputePerformancesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DbSystemComputePerformance item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDbSystemComputePerformancesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DbSystemComputePerformance item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DbSystemComputePerformance> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DbSystemComputePerformance item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -12317,6 +14255,136 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateDbSystem</summary>
+        public void UpdateDbSystemRequestObject()
+        {
+            // Snippet: UpdateDbSystem(UpdateDbSystemRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            UpdateDbSystemRequest request = new UpdateDbSystemRequest
+            {
+                UpdateMask = new FieldMask(),
+                DbSystem = new DbSystem(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DbSystem, OperationMetadata> response = oracleDatabaseClient.UpdateDbSystem(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DbSystem, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DbSystem result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DbSystem, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateDbSystem(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DbSystem retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDbSystemAsync</summary>
+        public async Task UpdateDbSystemRequestObjectAsync()
+        {
+            // Snippet: UpdateDbSystemAsync(UpdateDbSystemRequest, CallSettings)
+            // Additional: UpdateDbSystemAsync(UpdateDbSystemRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDbSystemRequest request = new UpdateDbSystemRequest
+            {
+                UpdateMask = new FieldMask(),
+                DbSystem = new DbSystem(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DbSystem, OperationMetadata> response = await oracleDatabaseClient.UpdateDbSystemAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DbSystem, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DbSystem result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DbSystem, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateDbSystemAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DbSystem retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDbSystem</summary>
+        public void UpdateDbSystem()
+        {
+            // Snippet: UpdateDbSystem(DbSystem, FieldMask, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            DbSystem dbSystem = new DbSystem();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<DbSystem, OperationMetadata> response = oracleDatabaseClient.UpdateDbSystem(dbSystem, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DbSystem, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DbSystem result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DbSystem, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateDbSystem(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DbSystem retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDbSystemAsync</summary>
+        public async Task UpdateDbSystemAsync()
+        {
+            // Snippet: UpdateDbSystemAsync(DbSystem, FieldMask, CallSettings)
+            // Additional: UpdateDbSystemAsync(DbSystem, FieldMask, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            DbSystem dbSystem = new DbSystem();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<DbSystem, OperationMetadata> response = await oracleDatabaseClient.UpdateDbSystemAsync(dbSystem, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DbSystem, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DbSystem result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DbSystem, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateDbSystemAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DbSystem retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteDbSystem</summary>
         public void DeleteDbSystemRequestObject()
         {
@@ -13057,6 +15125,136 @@ namespace GoogleCSharpSnippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceCreateGoldengateDeploymentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGoldengateDeployment</summary>
+        public void UpdateGoldengateDeploymentRequestObject()
+        {
+            // Snippet: UpdateGoldengateDeployment(UpdateGoldengateDeploymentRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            UpdateGoldengateDeploymentRequest request = new UpdateGoldengateDeploymentRequest
+            {
+                UpdateMask = new FieldMask(),
+                GoldengateDeployment = new GoldengateDeployment(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = oracleDatabaseClient.UpdateGoldengateDeployment(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateGoldengateDeployment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGoldengateDeploymentAsync</summary>
+        public async Task UpdateGoldengateDeploymentRequestObjectAsync()
+        {
+            // Snippet: UpdateGoldengateDeploymentAsync(UpdateGoldengateDeploymentRequest, CallSettings)
+            // Additional: UpdateGoldengateDeploymentAsync(UpdateGoldengateDeploymentRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateGoldengateDeploymentRequest request = new UpdateGoldengateDeploymentRequest
+            {
+                UpdateMask = new FieldMask(),
+                GoldengateDeployment = new GoldengateDeployment(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = await oracleDatabaseClient.UpdateGoldengateDeploymentAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateGoldengateDeploymentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGoldengateDeployment</summary>
+        public void UpdateGoldengateDeployment()
+        {
+            // Snippet: UpdateGoldengateDeployment(GoldengateDeployment, FieldMask, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GoldengateDeployment goldengateDeployment = new GoldengateDeployment();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = oracleDatabaseClient.UpdateGoldengateDeployment(goldengateDeployment, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateGoldengateDeployment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGoldengateDeploymentAsync</summary>
+        public async Task UpdateGoldengateDeploymentAsync()
+        {
+            // Snippet: UpdateGoldengateDeploymentAsync(GoldengateDeployment, FieldMask, CallSettings)
+            // Additional: UpdateGoldengateDeploymentAsync(GoldengateDeployment, FieldMask, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GoldengateDeployment goldengateDeployment = new GoldengateDeployment();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = await oracleDatabaseClient.UpdateGoldengateDeploymentAsync(goldengateDeployment, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateGoldengateDeploymentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -14172,6 +16370,136 @@ namespace GoogleCSharpSnippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             Operation<GoldengateConnection, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceCreateGoldengateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGoldengateConnection</summary>
+        public void UpdateGoldengateConnectionRequestObject()
+        {
+            // Snippet: UpdateGoldengateConnection(UpdateGoldengateConnectionRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            UpdateGoldengateConnectionRequest request = new UpdateGoldengateConnectionRequest
+            {
+                UpdateMask = new FieldMask(),
+                GoldengateConnection = new GoldengateConnection(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<GoldengateConnection, OperationMetadata> response = oracleDatabaseClient.UpdateGoldengateConnection(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateConnection, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateGoldengateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGoldengateConnectionAsync</summary>
+        public async Task UpdateGoldengateConnectionRequestObjectAsync()
+        {
+            // Snippet: UpdateGoldengateConnectionAsync(UpdateGoldengateConnectionRequest, CallSettings)
+            // Additional: UpdateGoldengateConnectionAsync(UpdateGoldengateConnectionRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateGoldengateConnectionRequest request = new UpdateGoldengateConnectionRequest
+            {
+                UpdateMask = new FieldMask(),
+                GoldengateConnection = new GoldengateConnection(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<GoldengateConnection, OperationMetadata> response = await oracleDatabaseClient.UpdateGoldengateConnectionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateConnection, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateGoldengateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGoldengateConnection</summary>
+        public void UpdateGoldengateConnection()
+        {
+            // Snippet: UpdateGoldengateConnection(GoldengateConnection, FieldMask, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GoldengateConnection goldengateConnection = new GoldengateConnection();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<GoldengateConnection, OperationMetadata> response = oracleDatabaseClient.UpdateGoldengateConnection(goldengateConnection, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateConnection, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateGoldengateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGoldengateConnectionAsync</summary>
+        public async Task UpdateGoldengateConnectionAsync()
+        {
+            // Snippet: UpdateGoldengateConnectionAsync(GoldengateConnection, FieldMask, CallSettings)
+            // Additional: UpdateGoldengateConnectionAsync(GoldengateConnection, FieldMask, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GoldengateConnection goldengateConnection = new GoldengateConnection();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<GoldengateConnection, OperationMetadata> response = await oracleDatabaseClient.UpdateGoldengateConnectionAsync(goldengateConnection, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateConnection, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateGoldengateConnectionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -16598,6 +18926,136 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateGoldengateConnectionAssignment</summary>
+        public void UpdateGoldengateConnectionAssignmentRequestObject()
+        {
+            // Snippet: UpdateGoldengateConnectionAssignment(UpdateGoldengateConnectionAssignmentRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            UpdateGoldengateConnectionAssignmentRequest request = new UpdateGoldengateConnectionAssignmentRequest
+            {
+                UpdateMask = new FieldMask(),
+                GoldengateConnectionAssignment = new GoldengateConnectionAssignment(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<GoldengateConnectionAssignment, OperationMetadata> response = oracleDatabaseClient.UpdateGoldengateConnectionAssignment(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateConnectionAssignment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateConnectionAssignment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateConnectionAssignment, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateGoldengateConnectionAssignment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateConnectionAssignment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGoldengateConnectionAssignmentAsync</summary>
+        public async Task UpdateGoldengateConnectionAssignmentRequestObjectAsync()
+        {
+            // Snippet: UpdateGoldengateConnectionAssignmentAsync(UpdateGoldengateConnectionAssignmentRequest, CallSettings)
+            // Additional: UpdateGoldengateConnectionAssignmentAsync(UpdateGoldengateConnectionAssignmentRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateGoldengateConnectionAssignmentRequest request = new UpdateGoldengateConnectionAssignmentRequest
+            {
+                UpdateMask = new FieldMask(),
+                GoldengateConnectionAssignment = new GoldengateConnectionAssignment(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<GoldengateConnectionAssignment, OperationMetadata> response = await oracleDatabaseClient.UpdateGoldengateConnectionAssignmentAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateConnectionAssignment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateConnectionAssignment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateConnectionAssignment, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateGoldengateConnectionAssignmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateConnectionAssignment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGoldengateConnectionAssignment</summary>
+        public void UpdateGoldengateConnectionAssignment()
+        {
+            // Snippet: UpdateGoldengateConnectionAssignment(GoldengateConnectionAssignment, FieldMask, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GoldengateConnectionAssignment goldengateConnectionAssignment = new GoldengateConnectionAssignment();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<GoldengateConnectionAssignment, OperationMetadata> response = oracleDatabaseClient.UpdateGoldengateConnectionAssignment(goldengateConnectionAssignment, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateConnectionAssignment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateConnectionAssignment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateConnectionAssignment, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateGoldengateConnectionAssignment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateConnectionAssignment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGoldengateConnectionAssignmentAsync</summary>
+        public async Task UpdateGoldengateConnectionAssignmentAsync()
+        {
+            // Snippet: UpdateGoldengateConnectionAssignmentAsync(GoldengateConnectionAssignment, FieldMask, CallSettings)
+            // Additional: UpdateGoldengateConnectionAssignmentAsync(GoldengateConnectionAssignment, FieldMask, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GoldengateConnectionAssignment goldengateConnectionAssignment = new GoldengateConnectionAssignment();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<GoldengateConnectionAssignment, OperationMetadata> response = await oracleDatabaseClient.UpdateGoldengateConnectionAssignmentAsync(goldengateConnectionAssignment, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateConnectionAssignment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateConnectionAssignment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateConnectionAssignment, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateGoldengateConnectionAssignmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateConnectionAssignment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteGoldengateConnectionAssignment</summary>
         public void DeleteGoldengateConnectionAssignmentRequestObject()
         {
@@ -16869,6 +19327,1067 @@ namespace GoogleCSharpSnippets
             GoldengateConnectionAssignmentName name = GoldengateConnectionAssignmentName.FromProjectLocationGoldengateConnectionAssignment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_ASSIGNMENT]");
             // Make the request
             TestGoldengateConnectionAssignmentResponse response = await oracleDatabaseClient.TestGoldengateConnectionAssignmentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabaseConnections</summary>
+        public void ListDatabaseConnectionsRequestObject()
+        {
+            // Snippet: ListDatabaseConnections(ListDatabaseConnectionsRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            ListDatabaseConnectionsRequest request = new ListDatabaseConnectionsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListDatabaseConnectionsResponse, DatabaseConnection> response = oracleDatabaseClient.ListDatabaseConnections(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DatabaseConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDatabaseConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatabaseConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatabaseConnection> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatabaseConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabaseConnectionsAsync</summary>
+        public async Task ListDatabaseConnectionsRequestObjectAsync()
+        {
+            // Snippet: ListDatabaseConnectionsAsync(ListDatabaseConnectionsRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDatabaseConnectionsRequest request = new ListDatabaseConnectionsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDatabaseConnectionsResponse, DatabaseConnection> response = oracleDatabaseClient.ListDatabaseConnectionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DatabaseConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDatabaseConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatabaseConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatabaseConnection> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatabaseConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabaseConnections</summary>
+        public void ListDatabaseConnections()
+        {
+            // Snippet: ListDatabaseConnections(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListDatabaseConnectionsResponse, DatabaseConnection> response = oracleDatabaseClient.ListDatabaseConnections(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DatabaseConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDatabaseConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatabaseConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatabaseConnection> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatabaseConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabaseConnectionsAsync</summary>
+        public async Task ListDatabaseConnectionsAsync()
+        {
+            // Snippet: ListDatabaseConnectionsAsync(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListDatabaseConnectionsResponse, DatabaseConnection> response = oracleDatabaseClient.ListDatabaseConnectionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DatabaseConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDatabaseConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatabaseConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatabaseConnection> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatabaseConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabaseConnections</summary>
+        public void ListDatabaseConnectionsResourceNames()
+        {
+            // Snippet: ListDatabaseConnections(LocationName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListDatabaseConnectionsResponse, DatabaseConnection> response = oracleDatabaseClient.ListDatabaseConnections(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DatabaseConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDatabaseConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatabaseConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatabaseConnection> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatabaseConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabaseConnectionsAsync</summary>
+        public async Task ListDatabaseConnectionsResourceNamesAsync()
+        {
+            // Snippet: ListDatabaseConnectionsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListDatabaseConnectionsResponse, DatabaseConnection> response = oracleDatabaseClient.ListDatabaseConnectionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DatabaseConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDatabaseConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatabaseConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatabaseConnection> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatabaseConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatabaseConnection</summary>
+        public void GetDatabaseConnectionRequestObject()
+        {
+            // Snippet: GetDatabaseConnection(GetDatabaseConnectionRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GetDatabaseConnectionRequest request = new GetDatabaseConnectionRequest
+            {
+                DatabaseConnectionName = DatabaseConnectionName.FromProjectLocationDatabaseConnection("[PROJECT]", "[LOCATION]", "[DATABASE_CONNECTION]"),
+            };
+            // Make the request
+            DatabaseConnection response = oracleDatabaseClient.GetDatabaseConnection(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatabaseConnectionAsync</summary>
+        public async Task GetDatabaseConnectionRequestObjectAsync()
+        {
+            // Snippet: GetDatabaseConnectionAsync(GetDatabaseConnectionRequest, CallSettings)
+            // Additional: GetDatabaseConnectionAsync(GetDatabaseConnectionRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDatabaseConnectionRequest request = new GetDatabaseConnectionRequest
+            {
+                DatabaseConnectionName = DatabaseConnectionName.FromProjectLocationDatabaseConnection("[PROJECT]", "[LOCATION]", "[DATABASE_CONNECTION]"),
+            };
+            // Make the request
+            DatabaseConnection response = await oracleDatabaseClient.GetDatabaseConnectionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatabaseConnection</summary>
+        public void GetDatabaseConnection()
+        {
+            // Snippet: GetDatabaseConnection(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/databaseConnections/[DATABASE_CONNECTION]";
+            // Make the request
+            DatabaseConnection response = oracleDatabaseClient.GetDatabaseConnection(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatabaseConnectionAsync</summary>
+        public async Task GetDatabaseConnectionAsync()
+        {
+            // Snippet: GetDatabaseConnectionAsync(string, CallSettings)
+            // Additional: GetDatabaseConnectionAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/databaseConnections/[DATABASE_CONNECTION]";
+            // Make the request
+            DatabaseConnection response = await oracleDatabaseClient.GetDatabaseConnectionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatabaseConnection</summary>
+        public void GetDatabaseConnectionResourceNames()
+        {
+            // Snippet: GetDatabaseConnection(DatabaseConnectionName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            DatabaseConnectionName name = DatabaseConnectionName.FromProjectLocationDatabaseConnection("[PROJECT]", "[LOCATION]", "[DATABASE_CONNECTION]");
+            // Make the request
+            DatabaseConnection response = oracleDatabaseClient.GetDatabaseConnection(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatabaseConnectionAsync</summary>
+        public async Task GetDatabaseConnectionResourceNamesAsync()
+        {
+            // Snippet: GetDatabaseConnectionAsync(DatabaseConnectionName, CallSettings)
+            // Additional: GetDatabaseConnectionAsync(DatabaseConnectionName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            DatabaseConnectionName name = DatabaseConnectionName.FromProjectLocationDatabaseConnection("[PROJECT]", "[LOCATION]", "[DATABASE_CONNECTION]");
+            // Make the request
+            DatabaseConnection response = await oracleDatabaseClient.GetDatabaseConnectionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabaseConnection</summary>
+        public void CreateDatabaseConnectionRequestObject()
+        {
+            // Snippet: CreateDatabaseConnection(CreateDatabaseConnectionRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            CreateDatabaseConnectionRequest request = new CreateDatabaseConnectionRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                DatabaseConnectionId = "",
+                DatabaseConnection = new DatabaseConnection(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DatabaseConnection, OperationMetadata> response = oracleDatabaseClient.CreateDatabaseConnection(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatabaseConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DatabaseConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatabaseConnection, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceCreateDatabaseConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatabaseConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabaseConnectionAsync</summary>
+        public async Task CreateDatabaseConnectionRequestObjectAsync()
+        {
+            // Snippet: CreateDatabaseConnectionAsync(CreateDatabaseConnectionRequest, CallSettings)
+            // Additional: CreateDatabaseConnectionAsync(CreateDatabaseConnectionRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateDatabaseConnectionRequest request = new CreateDatabaseConnectionRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                DatabaseConnectionId = "",
+                DatabaseConnection = new DatabaseConnection(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DatabaseConnection, OperationMetadata> response = await oracleDatabaseClient.CreateDatabaseConnectionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatabaseConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DatabaseConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatabaseConnection, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceCreateDatabaseConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatabaseConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabaseConnection</summary>
+        public void CreateDatabaseConnection()
+        {
+            // Snippet: CreateDatabaseConnection(string, DatabaseConnection, string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            string databaseConnectionId = "";
+            // Make the request
+            Operation<DatabaseConnection, OperationMetadata> response = oracleDatabaseClient.CreateDatabaseConnection(parent, databaseConnection, databaseConnectionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatabaseConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DatabaseConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatabaseConnection, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceCreateDatabaseConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatabaseConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabaseConnectionAsync</summary>
+        public async Task CreateDatabaseConnectionAsync()
+        {
+            // Snippet: CreateDatabaseConnectionAsync(string, DatabaseConnection, string, CallSettings)
+            // Additional: CreateDatabaseConnectionAsync(string, DatabaseConnection, string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            string databaseConnectionId = "";
+            // Make the request
+            Operation<DatabaseConnection, OperationMetadata> response = await oracleDatabaseClient.CreateDatabaseConnectionAsync(parent, databaseConnection, databaseConnectionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatabaseConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DatabaseConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatabaseConnection, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceCreateDatabaseConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatabaseConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabaseConnection</summary>
+        public void CreateDatabaseConnectionResourceNames()
+        {
+            // Snippet: CreateDatabaseConnection(LocationName, DatabaseConnection, string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            string databaseConnectionId = "";
+            // Make the request
+            Operation<DatabaseConnection, OperationMetadata> response = oracleDatabaseClient.CreateDatabaseConnection(parent, databaseConnection, databaseConnectionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatabaseConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DatabaseConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatabaseConnection, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceCreateDatabaseConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatabaseConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabaseConnectionAsync</summary>
+        public async Task CreateDatabaseConnectionResourceNamesAsync()
+        {
+            // Snippet: CreateDatabaseConnectionAsync(LocationName, DatabaseConnection, string, CallSettings)
+            // Additional: CreateDatabaseConnectionAsync(LocationName, DatabaseConnection, string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            string databaseConnectionId = "";
+            // Make the request
+            Operation<DatabaseConnection, OperationMetadata> response = await oracleDatabaseClient.CreateDatabaseConnectionAsync(parent, databaseConnection, databaseConnectionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatabaseConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DatabaseConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatabaseConnection, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceCreateDatabaseConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatabaseConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatabaseConnection</summary>
+        public void UpdateDatabaseConnectionRequestObject()
+        {
+            // Snippet: UpdateDatabaseConnection(UpdateDatabaseConnectionRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            UpdateDatabaseConnectionRequest request = new UpdateDatabaseConnectionRequest
+            {
+                UpdateMask = new FieldMask(),
+                DatabaseConnection = new DatabaseConnection(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DatabaseConnection, OperationMetadata> response = oracleDatabaseClient.UpdateDatabaseConnection(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatabaseConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DatabaseConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatabaseConnection, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateDatabaseConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatabaseConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatabaseConnectionAsync</summary>
+        public async Task UpdateDatabaseConnectionRequestObjectAsync()
+        {
+            // Snippet: UpdateDatabaseConnectionAsync(UpdateDatabaseConnectionRequest, CallSettings)
+            // Additional: UpdateDatabaseConnectionAsync(UpdateDatabaseConnectionRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDatabaseConnectionRequest request = new UpdateDatabaseConnectionRequest
+            {
+                UpdateMask = new FieldMask(),
+                DatabaseConnection = new DatabaseConnection(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DatabaseConnection, OperationMetadata> response = await oracleDatabaseClient.UpdateDatabaseConnectionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatabaseConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DatabaseConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatabaseConnection, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateDatabaseConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatabaseConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatabaseConnection</summary>
+        public void UpdateDatabaseConnection()
+        {
+            // Snippet: UpdateDatabaseConnection(DatabaseConnection, FieldMask, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<DatabaseConnection, OperationMetadata> response = oracleDatabaseClient.UpdateDatabaseConnection(databaseConnection, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatabaseConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DatabaseConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatabaseConnection, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateDatabaseConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatabaseConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatabaseConnectionAsync</summary>
+        public async Task UpdateDatabaseConnectionAsync()
+        {
+            // Snippet: UpdateDatabaseConnectionAsync(DatabaseConnection, FieldMask, CallSettings)
+            // Additional: UpdateDatabaseConnectionAsync(DatabaseConnection, FieldMask, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<DatabaseConnection, OperationMetadata> response = await oracleDatabaseClient.UpdateDatabaseConnectionAsync(databaseConnection, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatabaseConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DatabaseConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatabaseConnection, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateDatabaseConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatabaseConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatabaseConnection</summary>
+        public void DeleteDatabaseConnectionRequestObject()
+        {
+            // Snippet: DeleteDatabaseConnection(DeleteDatabaseConnectionRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            DeleteDatabaseConnectionRequest request = new DeleteDatabaseConnectionRequest
+            {
+                DatabaseConnectionName = DatabaseConnectionName.FromProjectLocationDatabaseConnection("[PROJECT]", "[LOCATION]", "[DATABASE_CONNECTION]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = oracleDatabaseClient.DeleteDatabaseConnection(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDeleteDatabaseConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatabaseConnectionAsync</summary>
+        public async Task DeleteDatabaseConnectionRequestObjectAsync()
+        {
+            // Snippet: DeleteDatabaseConnectionAsync(DeleteDatabaseConnectionRequest, CallSettings)
+            // Additional: DeleteDatabaseConnectionAsync(DeleteDatabaseConnectionRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteDatabaseConnectionRequest request = new DeleteDatabaseConnectionRequest
+            {
+                DatabaseConnectionName = DatabaseConnectionName.FromProjectLocationDatabaseConnection("[PROJECT]", "[LOCATION]", "[DATABASE_CONNECTION]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await oracleDatabaseClient.DeleteDatabaseConnectionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDeleteDatabaseConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatabaseConnection</summary>
+        public void DeleteDatabaseConnection()
+        {
+            // Snippet: DeleteDatabaseConnection(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/databaseConnections/[DATABASE_CONNECTION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = oracleDatabaseClient.DeleteDatabaseConnection(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDeleteDatabaseConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatabaseConnectionAsync</summary>
+        public async Task DeleteDatabaseConnectionAsync()
+        {
+            // Snippet: DeleteDatabaseConnectionAsync(string, CallSettings)
+            // Additional: DeleteDatabaseConnectionAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/databaseConnections/[DATABASE_CONNECTION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await oracleDatabaseClient.DeleteDatabaseConnectionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDeleteDatabaseConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatabaseConnection</summary>
+        public void DeleteDatabaseConnectionResourceNames()
+        {
+            // Snippet: DeleteDatabaseConnection(DatabaseConnectionName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            DatabaseConnectionName name = DatabaseConnectionName.FromProjectLocationDatabaseConnection("[PROJECT]", "[LOCATION]", "[DATABASE_CONNECTION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = oracleDatabaseClient.DeleteDatabaseConnection(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDeleteDatabaseConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatabaseConnectionAsync</summary>
+        public async Task DeleteDatabaseConnectionResourceNamesAsync()
+        {
+            // Snippet: DeleteDatabaseConnectionAsync(DatabaseConnectionName, CallSettings)
+            // Additional: DeleteDatabaseConnectionAsync(DatabaseConnectionName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            DatabaseConnectionName name = DatabaseConnectionName.FromProjectLocationDatabaseConnection("[PROJECT]", "[LOCATION]", "[DATABASE_CONNECTION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await oracleDatabaseClient.DeleteDatabaseConnectionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDeleteDatabaseConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestDatabaseConnection</summary>
+        public void TestDatabaseConnectionRequestObject()
+        {
+            // Snippet: TestDatabaseConnection(TestDatabaseConnectionRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            TestDatabaseConnectionRequest request = new TestDatabaseConnectionRequest
+            {
+                DatabaseConnectionName = DatabaseConnectionName.FromProjectLocationDatabaseConnection("[PROJECT]", "[LOCATION]", "[DATABASE_CONNECTION]"),
+            };
+            // Make the request
+            TestDatabaseConnectionResponse response = oracleDatabaseClient.TestDatabaseConnection(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestDatabaseConnectionAsync</summary>
+        public async Task TestDatabaseConnectionRequestObjectAsync()
+        {
+            // Snippet: TestDatabaseConnectionAsync(TestDatabaseConnectionRequest, CallSettings)
+            // Additional: TestDatabaseConnectionAsync(TestDatabaseConnectionRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            TestDatabaseConnectionRequest request = new TestDatabaseConnectionRequest
+            {
+                DatabaseConnectionName = DatabaseConnectionName.FromProjectLocationDatabaseConnection("[PROJECT]", "[LOCATION]", "[DATABASE_CONNECTION]"),
+            };
+            // Make the request
+            TestDatabaseConnectionResponse response = await oracleDatabaseClient.TestDatabaseConnectionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestDatabaseConnection</summary>
+        public void TestDatabaseConnection()
+        {
+            // Snippet: TestDatabaseConnection(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/databaseConnections/[DATABASE_CONNECTION]";
+            // Make the request
+            TestDatabaseConnectionResponse response = oracleDatabaseClient.TestDatabaseConnection(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestDatabaseConnectionAsync</summary>
+        public async Task TestDatabaseConnectionAsync()
+        {
+            // Snippet: TestDatabaseConnectionAsync(string, CallSettings)
+            // Additional: TestDatabaseConnectionAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/databaseConnections/[DATABASE_CONNECTION]";
+            // Make the request
+            TestDatabaseConnectionResponse response = await oracleDatabaseClient.TestDatabaseConnectionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestDatabaseConnection</summary>
+        public void TestDatabaseConnectionResourceNames()
+        {
+            // Snippet: TestDatabaseConnection(DatabaseConnectionName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            DatabaseConnectionName name = DatabaseConnectionName.FromProjectLocationDatabaseConnection("[PROJECT]", "[LOCATION]", "[DATABASE_CONNECTION]");
+            // Make the request
+            TestDatabaseConnectionResponse response = oracleDatabaseClient.TestDatabaseConnection(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestDatabaseConnectionAsync</summary>
+        public async Task TestDatabaseConnectionResourceNamesAsync()
+        {
+            // Snippet: TestDatabaseConnectionAsync(DatabaseConnectionName, CallSettings)
+            // Additional: TestDatabaseConnectionAsync(DatabaseConnectionName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            DatabaseConnectionName name = DatabaseConnectionName.FromProjectLocationDatabaseConnection("[PROJECT]", "[LOCATION]", "[DATABASE_CONNECTION]");
+            // Make the request
+            TestDatabaseConnectionResponse response = await oracleDatabaseClient.TestDatabaseConnectionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteSql</summary>
+        public void ExecuteSqlRequestObject()
+        {
+            // Snippet: ExecuteSql(ExecuteSqlRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            ExecuteSqlRequest request = new ExecuteSqlRequest
+            {
+                DatabaseConnectionName = DatabaseConnectionName.FromProjectLocationDatabaseConnection("[PROJECT]", "[LOCATION]", "[DATABASE_CONNECTION]"),
+                SqlStatement = "",
+                Params = { new SqlParameter(), },
+            };
+            // Make the request
+            ExecuteSqlResponse response = oracleDatabaseClient.ExecuteSql(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteSqlAsync</summary>
+        public async Task ExecuteSqlRequestObjectAsync()
+        {
+            // Snippet: ExecuteSqlAsync(ExecuteSqlRequest, CallSettings)
+            // Additional: ExecuteSqlAsync(ExecuteSqlRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            ExecuteSqlRequest request = new ExecuteSqlRequest
+            {
+                DatabaseConnectionName = DatabaseConnectionName.FromProjectLocationDatabaseConnection("[PROJECT]", "[LOCATION]", "[DATABASE_CONNECTION]"),
+                SqlStatement = "",
+                Params = { new SqlParameter(), },
+            };
+            // Make the request
+            ExecuteSqlResponse response = await oracleDatabaseClient.ExecuteSqlAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteSql</summary>
+        public void ExecuteSql()
+        {
+            // Snippet: ExecuteSql(string, string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/databaseConnections/[DATABASE_CONNECTION]";
+            string sqlStatement = "";
+            // Make the request
+            ExecuteSqlResponse response = oracleDatabaseClient.ExecuteSql(name, sqlStatement);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteSqlAsync</summary>
+        public async Task ExecuteSqlAsync()
+        {
+            // Snippet: ExecuteSqlAsync(string, string, CallSettings)
+            // Additional: ExecuteSqlAsync(string, string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/databaseConnections/[DATABASE_CONNECTION]";
+            string sqlStatement = "";
+            // Make the request
+            ExecuteSqlResponse response = await oracleDatabaseClient.ExecuteSqlAsync(name, sqlStatement);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteSql</summary>
+        public void ExecuteSqlResourceNames()
+        {
+            // Snippet: ExecuteSql(DatabaseConnectionName, string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            DatabaseConnectionName name = DatabaseConnectionName.FromProjectLocationDatabaseConnection("[PROJECT]", "[LOCATION]", "[DATABASE_CONNECTION]");
+            string sqlStatement = "";
+            // Make the request
+            ExecuteSqlResponse response = oracleDatabaseClient.ExecuteSql(name, sqlStatement);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteSqlAsync</summary>
+        public async Task ExecuteSqlResourceNamesAsync()
+        {
+            // Snippet: ExecuteSqlAsync(DatabaseConnectionName, string, CallSettings)
+            // Additional: ExecuteSqlAsync(DatabaseConnectionName, string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            DatabaseConnectionName name = DatabaseConnectionName.FromProjectLocationDatabaseConnection("[PROJECT]", "[LOCATION]", "[DATABASE_CONNECTION]");
+            string sqlStatement = "";
+            // Make the request
+            ExecuteSqlResponse response = await oracleDatabaseClient.ExecuteSqlAsync(name, sqlStatement);
             // End snippet
         }
     }

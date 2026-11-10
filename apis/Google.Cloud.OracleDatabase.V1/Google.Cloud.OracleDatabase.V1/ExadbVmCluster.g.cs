@@ -29,7 +29,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "b29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jl",
             "c291cmNlLnByb3RvGitnb29nbGUvY2xvdWQvb3JhY2xlZGF0YWJhc2UvdjEv",
             "Y29tbW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
-            "Ghpnb29nbGUvdHlwZS9kYXRldGltZS5wcm90byLgBgoORXhhZGJWbUNsdXN0",
+            "Ghpnb29nbGUvdHlwZS9kYXRldGltZS5wcm90byKNBwoORXhhZGJWbUNsdXN0",
             "ZXISEgoEbmFtZRgBIAEoCUIE4kEBCBJSCgpwcm9wZXJ0aWVzGAIgASgLMjgu",
             "Z29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkV4YWRiVm1DbHVzdGVy",
             "UHJvcGVydGllc0IE4kEBAhIeCg9nY3Bfb3JhY2xlX3pvbmUYAyABKAlCBeJB",
@@ -44,7 +44,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxIcCg5lbnRpdGxlbWVu",
             "dF9pZBgLIAEoCUIE4kEBAxJTChJpZGVudGl0eV9jb25uZWN0b3IYDCABKAsy",
             "MS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuSWRlbnRpdHlDb25u",
-            "ZWN0b3JCBOJBAQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZh",
+            "ZWN0b3JCBOJBAQMSKwobaWRlbnRpdHlfY29ubmVjdG9yX2Rpc2FibGVkGA0g",
+            "ASgIQgbiQQMBBAUaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZh",
             "bHVlGAIgASgJOgI4ATqfAepBmwEKLG9yYWNsZWRhdGFiYXNlLmdvb2dsZWFw",
             "aXMuY29tL0V4YWRiVm1DbHVzdGVyEkpwcm9qZWN0cy97cHJvamVjdH0vbG9j",
             "YXRpb25zL3tsb2NhdGlvbn0vZXhhZGJWbUNsdXN0ZXJzL3tleGFkYl92bV9j",
@@ -92,7 +93,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OracleDatabase.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ExadbVmCluster), global::Google.Cloud.OracleDatabase.V1.ExadbVmCluster.Parser, new[]{ "Name", "Properties", "GcpOracleZone", "Labels", "OdbNetwork", "OdbSubnet", "BackupOdbSubnet", "DisplayName", "CreateTime", "EntitlementId", "IdentityConnector" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ExadbVmCluster), global::Google.Cloud.OracleDatabase.V1.ExadbVmCluster.Parser, new[]{ "Name", "Properties", "GcpOracleZone", "Labels", "OdbNetwork", "OdbSubnet", "BackupOdbSubnet", "DisplayName", "CreateTime", "EntitlementId", "IdentityConnector", "IdentityConnectorDisabled" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ExadbVmClusterStorageDetails), global::Google.Cloud.OracleDatabase.V1.ExadbVmClusterStorageDetails.Parser, new[]{ "SizeInGbsPerNode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ExadbVmClusterProperties), global::Google.Cloud.OracleDatabase.V1.ExadbVmClusterProperties.Parser, new[]{ "ClusterName", "GridImageId", "NodeCount", "EnabledEcpuCountPerNode", "AdditionalEcpuCountPerNode", "VmFileSystemStorage", "LicenseModel", "ExascaleDbStorageVault", "HostnamePrefix", "Hostname", "SshPublicKeys", "DataCollectionOptions", "TimeZone", "LifecycleState", "ShapeAttribute", "MemorySizeGb", "ScanListenerPortTcp", "OciUri", "GiVersion" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.ExadbVmClusterProperties.Types.LicenseModel), typeof(global::Google.Cloud.OracleDatabase.V1.ExadbVmClusterProperties.Types.ExadbVmClusterLifecycleState), typeof(global::Google.Cloud.OracleDatabase.V1.ExadbVmClusterProperties.Types.ShapeAttribute) }, null, null)
           }));
@@ -152,6 +153,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       entitlementId_ = other.entitlementId_;
       identityConnector_ = other.identityConnector_ != null ? other.identityConnector_.Clone() : null;
+      identityConnectorDisabled_ = other.identityConnectorDisabled_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -341,6 +343,25 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
     }
 
+    /// <summary>Field number for the "identity_connector_disabled" field.</summary>
+    public const int IdentityConnectorDisabledFieldNumber = 13;
+    private bool identityConnectorDisabled_;
+    /// <summary>
+    /// Optional. Input only. Immutable. If set to true, disables the automatic
+    /// provisioning of the Workload Identity Connector during creation. If set to
+    /// false or omitted, the Workload Identity Connector will be automatically
+    /// provisioned by default. Note: Provisioning the Workload Identity Connector
+    /// is a prerequisite for enabling Google Cloud CMEK.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IdentityConnectorDisabled {
+      get { return identityConnectorDisabled_; }
+      set {
+        identityConnectorDisabled_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -367,6 +388,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (EntitlementId != other.EntitlementId) return false;
       if (!object.Equals(IdentityConnector, other.IdentityConnector)) return false;
+      if (IdentityConnectorDisabled != other.IdentityConnectorDisabled) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -385,6 +407,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (EntitlementId.Length != 0) hash ^= EntitlementId.GetHashCode();
       if (identityConnector_ != null) hash ^= IdentityConnector.GetHashCode();
+      if (IdentityConnectorDisabled != false) hash ^= IdentityConnectorDisabled.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -444,6 +467,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(IdentityConnector);
       }
+      if (IdentityConnectorDisabled != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(IdentityConnectorDisabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -495,6 +522,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(IdentityConnector);
       }
+      if (IdentityConnectorDisabled != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(IdentityConnectorDisabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -535,6 +566,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (identityConnector_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(IdentityConnector);
+      }
+      if (IdentityConnectorDisabled != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -587,6 +621,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
           IdentityConnector = new global::Google.Cloud.OracleDatabase.V1.IdentityConnector();
         }
         IdentityConnector.MergeFrom(other.IdentityConnector);
+      }
+      if (other.IdentityConnectorDisabled != false) {
+        IdentityConnectorDisabled = other.IdentityConnectorDisabled;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -660,6 +697,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
             input.ReadMessage(IdentityConnector);
             break;
           }
+          case 104: {
+            IdentityConnectorDisabled = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -730,6 +771,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
               IdentityConnector = new global::Google.Cloud.OracleDatabase.V1.IdentityConnector();
             }
             input.ReadMessage(IdentityConnector);
+            break;
+          }
+          case 104: {
+            IdentityConnectorDisabled = input.ReadBool();
             break;
           }
         }

@@ -26,30 +26,34 @@ namespace Google.Cloud.OracleDatabase.V1 {
           string.Concat(
             "Citnb29nbGUvY2xvdWQvb3JhY2xlZGF0YWJhc2UvdjEvY29tbW9uLnByb3Rv",
             "Eh5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEaH2dvb2dsZS9hcGkv",
-            "ZmllbGRfYmVoYXZpb3IucHJvdG8iJgoPQ3VzdG9tZXJDb250YWN0EhMKBWVt",
-            "YWlsGAEgASgJQgTiQQECIpUCChFJZGVudGl0eUNvbm5lY3RvchIhChNzZXJ2",
-            "aWNlX2FnZW50X2VtYWlsGAEgASgJQgTiQQEDEmEKEGNvbm5lY3Rpb25fc3Rh",
-            "dGUYAiABKA4yQS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuSWRl",
-            "bnRpdHlDb25uZWN0b3IuQ29ubmVjdGlvblN0YXRlQgTiQQEDInoKD0Nvbm5l",
-            "Y3Rpb25TdGF0ZRIgChxDT05ORUNUSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAAS",
-            "DQoJQ09OTkVDVEVEEAESFwoTUEFSVElBTExZX0NPTk5FQ1RFRBACEhAKDERJ",
-            "U0NPTk5FQ1RFRBADEgsKB1VOS05PV04QBCKeAQobRGF0YUNvbGxlY3Rpb25P",
-            "cHRpb25zQ29tbW9uEisKHWlzX2RpYWdub3N0aWNzX2V2ZW50c19lbmFibGVk",
-            "GAEgASgIQgTiQQEBEioKHGlzX2hlYWx0aF9tb25pdG9yaW5nX2VuYWJsZWQY",
-            "AiABKAhCBOJBAQESJgoYaXNfaW5jaWRlbnRfbG9nc19lbmFibGVkGAMgASgI",
-            "QgTiQQEBKl0KDENvbXB1dGVNb2RlbBIdChlDT01QVVRFX01PREVMX1VOU1BF",
-            "Q0lGSUVEEAASFgoSQ09NUFVURV9NT0RFTF9FQ1BVEAESFgoSQ09NUFVURV9N",
-            "T0RFTF9PQ1BVEAJC5QEKImNvbS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJh",
-            "c2UudjFCC0NvbW1vblByb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vb3Jh",
-            "Y2xlZGF0YWJhc2UvYXBpdjEvb3JhY2xlZGF0YWJhc2VwYjtvcmFjbGVkYXRh",
-            "YmFzZXBiqgIeR29vZ2xlLkNsb3VkLk9yYWNsZURhdGFiYXNlLlYxygIeR29v",
-            "Z2xlXENsb3VkXE9yYWNsZURhdGFiYXNlXFYx6gIhR29vZ2xlOjpDbG91ZDo6",
-            "T3JhY2xlRGF0YWJhc2U6OlYxYgZwcm90bzM="));
+            "ZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJv",
+            "dG8iJgoPQ3VzdG9tZXJDb250YWN0EhMKBWVtYWlsGAEgASgJQgTiQQECIrMD",
+            "ChFJZGVudGl0eUNvbm5lY3RvchIhChNzZXJ2aWNlX2FnZW50X2VtYWlsGAEg",
+            "ASgJQgTiQQEDEmEKEGNvbm5lY3Rpb25fc3RhdGUYAiABKA4yQS5nb29nbGUu",
+            "Y2xvdWQub3JhY2xlZGF0YWJhc2UudjEuSWRlbnRpdHlDb25uZWN0b3IuQ29u",
+            "bmVjdGlvblN0YXRlQgTiQQEDElAKFndvcmtsb2FkX2lkZW50aXR5X3Bvb2wY",
+            "AyABKAlCMOJBAQP6QSkKJ2lhbS5nb29nbGVhcGlzLmNvbS9Xb3JrbG9hZElk",
+            "ZW50aXR5UG9vbBIjChVpZGVudGl0eV9jb25uZWN0b3JfaWQYBCABKAlCBOJB",
+            "AQMSJQoXbGlmZWN5Y2xlX3N0YXRlX2RldGFpbHMYBSABKAlCBOJBAQMiegoP",
+            "Q29ubmVjdGlvblN0YXRlEiAKHENPTk5FQ1RJT05fU1RBVEVfVU5TUEVDSUZJ",
+            "RUQQABINCglDT05ORUNURUQQARIXChNQQVJUSUFMTFlfQ09OTkVDVEVEEAIS",
+            "EAoMRElTQ09OTkVDVEVEEAMSCwoHVU5LTk9XThAEIp4BChtEYXRhQ29sbGVj",
+            "dGlvbk9wdGlvbnNDb21tb24SKwodaXNfZGlhZ25vc3RpY3NfZXZlbnRzX2Vu",
+            "YWJsZWQYASABKAhCBOJBAQESKgocaXNfaGVhbHRoX21vbml0b3JpbmdfZW5h",
+            "YmxlZBgCIAEoCEIE4kEBARImChhpc19pbmNpZGVudF9sb2dzX2VuYWJsZWQY",
+            "AyABKAhCBOJBAQEqXQoMQ29tcHV0ZU1vZGVsEh0KGUNPTVBVVEVfTU9ERUxf",
+            "VU5TUEVDSUZJRUQQABIWChJDT01QVVRFX01PREVMX0VDUFUQARIWChJDT01Q",
+            "VVRFX01PREVMX09DUFUQAkLlAQoiY29tLmdvb2dsZS5jbG91ZC5vcmFjbGVk",
+            "YXRhYmFzZS52MUILQ29tbW9uUHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by9vcmFjbGVkYXRhYmFzZS9hcGl2MS9vcmFjbGVkYXRhYmFzZXBiO29yYWNs",
+            "ZWRhdGFiYXNlcGKqAh5Hb29nbGUuQ2xvdWQuT3JhY2xlRGF0YWJhc2UuVjHK",
+            "Ah5Hb29nbGVcQ2xvdWRcT3JhY2xlRGF0YWJhc2VcVjHqAiFHb29nbGU6OkNs",
+            "b3VkOjpPcmFjbGVEYXRhYmFzZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.OracleDatabase.V1.ComputeModel), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CustomerContact), global::Google.Cloud.OracleDatabase.V1.CustomerContact.Parser, new[]{ "Email" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.IdentityConnector), global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Parser, new[]{ "ServiceAgentEmail", "ConnectionState" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Types.ConnectionState) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.IdentityConnector), global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Parser, new[]{ "ServiceAgentEmail", "ConnectionState", "WorkloadIdentityPool", "IdentityConnectorId", "LifecycleStateDetails" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Types.ConnectionState) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.DataCollectionOptionsCommon), global::Google.Cloud.OracleDatabase.V1.DataCollectionOptionsCommon.Parser, new[]{ "IsDiagnosticsEventsEnabled", "IsHealthMonitoringEnabled", "IsIncidentLogsEnabled" }, null, null, null, null)
           }));
     }
@@ -328,6 +332,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public IdentityConnector(IdentityConnector other) : this() {
       serviceAgentEmail_ = other.serviceAgentEmail_;
       connectionState_ = other.connectionState_;
+      workloadIdentityPool_ = other.workloadIdentityPool_;
+      identityConnectorId_ = other.identityConnectorId_;
+      lifecycleStateDetails_ = other.lifecycleStateDetails_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -369,6 +376,58 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
     }
 
+    /// <summary>Field number for the "workload_identity_pool" field.</summary>
+    public const int WorkloadIdentityPoolFieldNumber = 3;
+    private string workloadIdentityPool_ = "";
+    /// <summary>
+    /// Output only. The resource name of the Workload Identity Pool
+    /// configured for identity federation with OCI. This exact pool name can be
+    /// used to configure VPC Service Controls (VPC-SC) egress rules.
+    /// Format:
+    /// `projects/{project}/locations/global/workloadIdentityPools/{workload_identity_pool}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string WorkloadIdentityPool {
+      get { return workloadIdentityPool_; }
+      set {
+        workloadIdentityPool_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "identity_connector_id" field.</summary>
+    public const int IdentityConnectorIdFieldNumber = 4;
+    private string identityConnectorId_ = "";
+    /// <summary>
+    /// Output only. The unique partner identifier for the Identity Connector,
+    /// used to establish secure cross-cloud access between Google Cloud and OCI.
+    /// This corresponds directly to the ID of the OracleDbGcpIdentityConnector
+    /// resource in Oracle Cloud Infrastructure (OCI).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IdentityConnectorId {
+      get { return identityConnectorId_; }
+      set {
+        identityConnectorId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "lifecycle_state_details" field.</summary>
+    public const int LifecycleStateDetailsFieldNumber = 5;
+    private string lifecycleStateDetails_ = "";
+    /// <summary>
+    /// Output only. Additional information about the current lifecycle state.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LifecycleStateDetails {
+      get { return lifecycleStateDetails_; }
+      set {
+        lifecycleStateDetails_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -386,6 +445,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (ServiceAgentEmail != other.ServiceAgentEmail) return false;
       if (ConnectionState != other.ConnectionState) return false;
+      if (WorkloadIdentityPool != other.WorkloadIdentityPool) return false;
+      if (IdentityConnectorId != other.IdentityConnectorId) return false;
+      if (LifecycleStateDetails != other.LifecycleStateDetails) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -395,6 +457,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       int hash = 1;
       if (ServiceAgentEmail.Length != 0) hash ^= ServiceAgentEmail.GetHashCode();
       if (ConnectionState != global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Types.ConnectionState.Unspecified) hash ^= ConnectionState.GetHashCode();
+      if (WorkloadIdentityPool.Length != 0) hash ^= WorkloadIdentityPool.GetHashCode();
+      if (IdentityConnectorId.Length != 0) hash ^= IdentityConnectorId.GetHashCode();
+      if (LifecycleStateDetails.Length != 0) hash ^= LifecycleStateDetails.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -421,6 +486,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(16);
         output.WriteEnum((int) ConnectionState);
       }
+      if (WorkloadIdentityPool.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(WorkloadIdentityPool);
+      }
+      if (IdentityConnectorId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(IdentityConnectorId);
+      }
+      if (LifecycleStateDetails.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(LifecycleStateDetails);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -439,6 +516,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(16);
         output.WriteEnum((int) ConnectionState);
       }
+      if (WorkloadIdentityPool.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(WorkloadIdentityPool);
+      }
+      if (IdentityConnectorId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(IdentityConnectorId);
+      }
+      if (LifecycleStateDetails.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(LifecycleStateDetails);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -454,6 +543,15 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (ConnectionState != global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Types.ConnectionState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ConnectionState);
+      }
+      if (WorkloadIdentityPool.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WorkloadIdentityPool);
+      }
+      if (IdentityConnectorId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IdentityConnectorId);
+      }
+      if (LifecycleStateDetails.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LifecycleStateDetails);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -472,6 +570,15 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (other.ConnectionState != global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Types.ConnectionState.Unspecified) {
         ConnectionState = other.ConnectionState;
+      }
+      if (other.WorkloadIdentityPool.Length != 0) {
+        WorkloadIdentityPool = other.WorkloadIdentityPool;
+      }
+      if (other.IdentityConnectorId.Length != 0) {
+        IdentityConnectorId = other.IdentityConnectorId;
+      }
+      if (other.LifecycleStateDetails.Length != 0) {
+        LifecycleStateDetails = other.LifecycleStateDetails;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -500,6 +607,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
             ConnectionState = (global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Types.ConnectionState) input.ReadEnum();
             break;
           }
+          case 26: {
+            WorkloadIdentityPool = input.ReadString();
+            break;
+          }
+          case 34: {
+            IdentityConnectorId = input.ReadString();
+            break;
+          }
+          case 42: {
+            LifecycleStateDetails = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -525,6 +644,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
           }
           case 16: {
             ConnectionState = (global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Types.ConnectionState) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            WorkloadIdentityPool = input.ReadString();
+            break;
+          }
+          case 34: {
+            IdentityConnectorId = input.ReadString();
+            break;
+          }
+          case 42: {
+            LifecycleStateDetails = input.ReadString();
             break;
           }
         }
