@@ -28,81 +28,88 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "b25uZWN0aW9uX2Fzc2lnbm1lbnQucHJvdG8SHmdvb2dsZS5jbG91ZC5vcmFj",
             "bGVkYXRhYmFzZS52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
             "bxobZ29vZ2xlL2FwaS9maWVsZF9pbmZvLnByb3RvGhlnb29nbGUvYXBpL3Jl",
-            "c291cmNlLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
-            "IowFCh5Hb2xkZW5nYXRlQ29ubmVjdGlvbkFzc2lnbm1lbnQSEgoEbmFtZRgB",
-            "IAEoCUIE4kEBCBJiCgpwcm9wZXJ0aWVzGAIgASgLMkguZ29vZ2xlLmNsb3Vk",
-            "Lm9yYWNsZWRhdGFiYXNlLnYxLkdvbGRlbmdhdGVDb25uZWN0aW9uQXNzaWdu",
-            "bWVudFByb3BlcnRpZXNCBOJBAQISNQoLY3JlYXRlX3RpbWUYAyABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEmAKBmxhYmVscxgEIAMo",
-            "CzJKLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5Hb2xkZW5nYXRl",
-            "Q29ubmVjdGlvbkFzc2lnbm1lbnQuTGFiZWxzRW50cnlCBOJBAQESGgoMZGlz",
-            "cGxheV9uYW1lGAUgASgJQgTiQQEBEhwKDmVudGl0bGVtZW50X2lkGAYgASgJ",
-            "QgTiQQEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoCToCOAE67wHqQesBCjxvcmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNv",
-            "bS9Hb2xkZW5nYXRlQ29ubmVjdGlvbkFzc2lnbm1lbnQSanByb2plY3RzL3tw",
-            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9nb2xkZW5nYXRlQ29ubmVj",
-            "dGlvbkFzc2lnbm1lbnRzL3tnb2xkZW5nYXRlX2Nvbm5lY3Rpb25fYXNzaWdu",
-            "bWVudH0qH2dvbGRlbmdhdGVDb25uZWN0aW9uQXNzaWdubWVudHMyHmdvbGRl",
-            "bmdhdGVDb25uZWN0aW9uQXNzaWdubWVudCLSAwooR29sZGVuZ2F0ZUNvbm5l",
-            "Y3Rpb25Bc3NpZ25tZW50UHJvcGVydGllcxISCgRvY2lkGAEgASgJQgTiQQED",
-            "EloKFWdvbGRlbmdhdGVfY29ubmVjdGlvbhgCIAEoCUI74kEBAvpBNAoyb3Jh",
-            "Y2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20vR29sZGVuZ2F0ZUNvbm5lY3Rp",
-            "b24SWgoVZ29sZGVuZ2F0ZV9kZXBsb3ltZW50GAMgASgJQjviQQEC+kE0CjJv",
-            "cmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9Hb2xkZW5nYXRlRGVwbG95",
-            "bWVudBITCgVhbGlhcxgEIAEoCUIE4kEBAxJjCgVzdGF0ZRgFIAEoDjJOLmdv",
-            "b2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5Hb2xkZW5nYXRlQ29ubmVj",
-            "dGlvbkFzc2lnbm1lbnRQcm9wZXJ0aWVzLlN0YXRlQgTiQQEDImAKBVN0YXRl",
-            "EhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIKCgZBQ1RJ",
-            "VkUQAhIKCgZGQUlMRUQQAxIMCghVUERBVElORxAEEgwKCERFTEVUSU5HEAUi",
-            "5AEKKkxpc3RHb2xkZW5nYXRlQ29ubmVjdGlvbkFzc2lnbm1lbnRzUmVxdWVz",
-            "dBJVCgZwYXJlbnQYASABKAlCReJBAQL6QT4SPG9yYWNsZWRhdGFiYXNlLmdv",
-            "b2dsZWFwaXMuY29tL0dvbGRlbmdhdGVDb25uZWN0aW9uQXNzaWdubWVudBIX",
-            "CglwYWdlX3NpemUYAiABKAVCBOJBAQESGAoKcGFnZV90b2tlbhgDIAEoCUIE",
-            "4kEBARIUCgZmaWx0ZXIYBCABKAlCBOJBAQESFgoIb3JkZXJfYnkYBSABKAlC",
-            "BOJBAQEixgEKK0xpc3RHb2xkZW5nYXRlQ29ubmVjdGlvbkFzc2lnbm1lbnRz",
-            "UmVzcG9uc2USaQohZ29sZGVuZ2F0ZV9jb25uZWN0aW9uX2Fzc2lnbm1lbnRz",
-            "GAEgAygLMj4uZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkdvbGRl",
-            "bmdhdGVDb25uZWN0aW9uQXNzaWdubWVudBIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
-            "AiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAkifwooR2V0R29sZGVuZ2F0ZUNv",
-            "bm5lY3Rpb25Bc3NpZ25tZW50UmVxdWVzdBJTCgRuYW1lGAEgASgJQkXiQQEC",
-            "+kE+CjxvcmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9Hb2xkZW5nYXRl",
-            "Q29ubmVjdGlvbkFzc2lnbm1lbnQiyQIKK0NyZWF0ZUdvbGRlbmdhdGVDb25u",
-            "ZWN0aW9uQXNzaWdubWVudFJlcXVlc3QSVQoGcGFyZW50GAEgASgJQkXiQQEC",
-            "+kE+EjxvcmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9Hb2xkZW5nYXRl",
-            "Q29ubmVjdGlvbkFzc2lnbm1lbnQSMQojZ29sZGVuZ2F0ZV9jb25uZWN0aW9u",
-            "X2Fzc2lnbm1lbnRfaWQYAiABKAlCBOJBAQISbgogZ29sZGVuZ2F0ZV9jb25u",
-            "ZWN0aW9uX2Fzc2lnbm1lbnQYAyABKAsyPi5nb29nbGUuY2xvdWQub3JhY2xl",
-            "ZGF0YWJhc2UudjEuR29sZGVuZ2F0ZUNvbm5lY3Rpb25Bc3NpZ25tZW50QgTi",
-            "QQECEiAKCnJlcXVlc3RfaWQYBCABKAlCDOJBAQHijM/XCAIIASKcAgopVGVz",
-            "dEdvbGRlbmdhdGVDb25uZWN0aW9uQXNzaWdubWVudFJlcXVlc3QSUwoEbmFt",
-            "ZRgBIAEoCUJF4kEBAvpBPgo8b3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5j",
-            "b20vR29sZGVuZ2F0ZUNvbm5lY3Rpb25Bc3NpZ25tZW50EmYKBHR5cGUYAiAB",
-            "KA4yUi5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuVGVzdEdvbGRl",
-            "bmdhdGVDb25uZWN0aW9uQXNzaWdubWVudFJlcXVlc3QuVGVzdFR5cGVCBOJB",
-            "AQEiMgoIVGVzdFR5cGUSGQoVVEVTVF9UWVBFX1VOU1BFQ0lGSUVEEAASCwoH",
-            "REVGQVVMVBABIl0KHVRlc3RDb25uZWN0aW9uQXNzaWdubWVudEVycm9yEgwK",
-            "BGNvZGUYASABKAkSDwoHbWVzc2FnZRgCIAEoCRIOCgZhY3Rpb24YAyABKAkS",
-            "DQoFaXNzdWUYBCABKAkiigMKKlRlc3RHb2xkZW5nYXRlQ29ubmVjdGlvbkFz",
-            "c2lnbm1lbnRSZXNwb25zZRJqCgtyZXN1bHRfdHlwZRgBIAEoDjJVLmdvb2ds",
-            "ZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5UZXN0R29sZGVuZ2F0ZUNvbm5l",
-            "Y3Rpb25Bc3NpZ25tZW50UmVzcG9uc2UuUmVzdWx0VHlwZRJMCgVlcnJvchgC",
-            "IAEoCzI9Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5UZXN0Q29u",
-            "bmVjdGlvbkFzc2lnbm1lbnRFcnJvchJNCgZlcnJvcnMYAyADKAsyPS5nb29n",
-            "bGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuVGVzdENvbm5lY3Rpb25Bc3Np",
-            "Z25tZW50RXJyb3IiUwoKUmVzdWx0VHlwZRIbChdSRVNVTFRfVFlQRV9VTlNQ",
-            "RUNJRklFRBAAEg0KCVNVQ0NFRURFRBABEgoKBkZBSUxFRBACEg0KCVRJTUVE",
-            "X09VVBADIqQBCitEZWxldGVHb2xkZW5nYXRlQ29ubmVjdGlvbkFzc2lnbm1l",
-            "bnRSZXF1ZXN0ElMKBG5hbWUYASABKAlCReJBAQL6QT4KPG9yYWNsZWRhdGFi",
-            "YXNlLmdvb2dsZWFwaXMuY29tL0dvbGRlbmdhdGVDb25uZWN0aW9uQXNzaWdu",
-            "bWVudBIgCgpyZXF1ZXN0X2lkGAIgASgJQgziQQEB4ozP1wgCCAFC/QEKImNv",
-            "bS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjFCI0dvbGRlbmdhdGVD",
-            "b25uZWN0aW9uQXNzaWdubWVudFByb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vb3JhY2xlZGF0YWJhc2UvYXBpdjEvb3JhY2xlZGF0YWJhc2VwYjtvcmFj",
-            "bGVkYXRhYmFzZXBiqgIeR29vZ2xlLkNsb3VkLk9yYWNsZURhdGFiYXNlLlYx",
-            "ygIeR29vZ2xlXENsb3VkXE9yYWNsZURhdGFiYXNlXFYx6gIhR29vZ2xlOjpD",
-            "bG91ZDo6T3JhY2xlRGF0YWJhc2U6OlYxYgZwcm90bzM="));
+            "c291cmNlLnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90",
+            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKOBQoeR29sZGVu",
+            "Z2F0ZUNvbm5lY3Rpb25Bc3NpZ25tZW50EhIKBG5hbWUYASABKAlCBOJBAQgS",
+            "YwoKcHJvcGVydGllcxgCIAEoCzJILmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRh",
+            "YmFzZS52MS5Hb2xkZW5nYXRlQ29ubmVjdGlvbkFzc2lnbm1lbnRQcm9wZXJ0",
+            "aWVzQgXiQQICBRI1CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCBOJBAQMSYAoGbGFiZWxzGAQgAygLMkouZ29vZ2xl",
+            "LmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkdvbGRlbmdhdGVDb25uZWN0aW9u",
+            "QXNzaWdubWVudC5MYWJlbHNFbnRyeUIE4kEBARIbCgxkaXNwbGF5X25hbWUY",
+            "BSABKAlCBeJBAgEFEhwKDmVudGl0bGVtZW50X2lkGAYgASgJQgTiQQEDGi0K",
+            "C0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6",
+            "7wHqQesBCjxvcmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9Hb2xkZW5n",
+            "YXRlQ29ubmVjdGlvbkFzc2lnbm1lbnQSanByb2plY3RzL3twcm9qZWN0fS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9nb2xkZW5nYXRlQ29ubmVjdGlvbkFzc2ln",
+            "bm1lbnRzL3tnb2xkZW5nYXRlX2Nvbm5lY3Rpb25fYXNzaWdubWVudH0qH2dv",
+            "bGRlbmdhdGVDb25uZWN0aW9uQXNzaWdubWVudHMyHmdvbGRlbmdhdGVDb25u",
+            "ZWN0aW9uQXNzaWdubWVudCLSAwooR29sZGVuZ2F0ZUNvbm5lY3Rpb25Bc3Np",
+            "Z25tZW50UHJvcGVydGllcxISCgRvY2lkGAEgASgJQgTiQQEDEloKFWdvbGRl",
+            "bmdhdGVfY29ubmVjdGlvbhgCIAEoCUI74kEBAvpBNAoyb3JhY2xlZGF0YWJh",
+            "c2UuZ29vZ2xlYXBpcy5jb20vR29sZGVuZ2F0ZUNvbm5lY3Rpb24SWgoVZ29s",
+            "ZGVuZ2F0ZV9kZXBsb3ltZW50GAMgASgJQjviQQEC+kE0CjJvcmFjbGVkYXRh",
+            "YmFzZS5nb29nbGVhcGlzLmNvbS9Hb2xkZW5nYXRlRGVwbG95bWVudBITCgVh",
+            "bGlhcxgEIAEoCUIE4kEBAxJjCgVzdGF0ZRgFIAEoDjJOLmdvb2dsZS5jbG91",
+            "ZC5vcmFjbGVkYXRhYmFzZS52MS5Hb2xkZW5nYXRlQ29ubmVjdGlvbkFzc2ln",
+            "bm1lbnRQcm9wZXJ0aWVzLlN0YXRlQgTiQQEDImAKBVN0YXRlEhUKEVNUQVRF",
+            "X1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIKCgZBQ1RJVkUQAhIKCgZG",
+            "QUlMRUQQAxIMCghVUERBVElORxAEEgwKCERFTEVUSU5HEAUi5AEKKkxpc3RH",
+            "b2xkZW5nYXRlQ29ubmVjdGlvbkFzc2lnbm1lbnRzUmVxdWVzdBJVCgZwYXJl",
+            "bnQYASABKAlCReJBAQL6QT4SPG9yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMu",
+            "Y29tL0dvbGRlbmdhdGVDb25uZWN0aW9uQXNzaWdubWVudBIXCglwYWdlX3Np",
+            "emUYAiABKAVCBOJBAQESGAoKcGFnZV90b2tlbhgDIAEoCUIE4kEBARIUCgZm",
+            "aWx0ZXIYBCABKAlCBOJBAQESFgoIb3JkZXJfYnkYBSABKAlCBOJBAQEixgEK",
+            "K0xpc3RHb2xkZW5nYXRlQ29ubmVjdGlvbkFzc2lnbm1lbnRzUmVzcG9uc2US",
+            "aQohZ29sZGVuZ2F0ZV9jb25uZWN0aW9uX2Fzc2lnbm1lbnRzGAEgAygLMj4u",
+            "Z29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkdvbGRlbmdhdGVDb25u",
+            "ZWN0aW9uQXNzaWdubWVudBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEwoL",
+            "dW5yZWFjaGFibGUYAyADKAkifwooR2V0R29sZGVuZ2F0ZUNvbm5lY3Rpb25B",
+            "c3NpZ25tZW50UmVxdWVzdBJTCgRuYW1lGAEgASgJQkXiQQEC+kE+CjxvcmFj",
+            "bGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9Hb2xkZW5nYXRlQ29ubmVjdGlv",
+            "bkFzc2lnbm1lbnQiyQIKK0NyZWF0ZUdvbGRlbmdhdGVDb25uZWN0aW9uQXNz",
+            "aWdubWVudFJlcXVlc3QSVQoGcGFyZW50GAEgASgJQkXiQQEC+kE+EjxvcmFj",
+            "bGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9Hb2xkZW5nYXRlQ29ubmVjdGlv",
+            "bkFzc2lnbm1lbnQSMQojZ29sZGVuZ2F0ZV9jb25uZWN0aW9uX2Fzc2lnbm1l",
+            "bnRfaWQYAiABKAlCBOJBAQISbgogZ29sZGVuZ2F0ZV9jb25uZWN0aW9uX2Fz",
+            "c2lnbm1lbnQYAyABKAsyPi5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2Uu",
+            "djEuR29sZGVuZ2F0ZUNvbm5lY3Rpb25Bc3NpZ25tZW50QgTiQQECEiAKCnJl",
+            "cXVlc3RfaWQYBCABKAlCDOJBAQHijM/XCAIIASKcAgopVGVzdEdvbGRlbmdh",
+            "dGVDb25uZWN0aW9uQXNzaWdubWVudFJlcXVlc3QSUwoEbmFtZRgBIAEoCUJF",
+            "4kEBAvpBPgo8b3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20vR29sZGVu",
+            "Z2F0ZUNvbm5lY3Rpb25Bc3NpZ25tZW50EmYKBHR5cGUYAiABKA4yUi5nb29n",
+            "bGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuVGVzdEdvbGRlbmdhdGVDb25u",
+            "ZWN0aW9uQXNzaWdubWVudFJlcXVlc3QuVGVzdFR5cGVCBOJBAQEiMgoIVGVz",
+            "dFR5cGUSGQoVVEVTVF9UWVBFX1VOU1BFQ0lGSUVEEAASCwoHREVGQVVMVBAB",
+            "Il0KHVRlc3RDb25uZWN0aW9uQXNzaWdubWVudEVycm9yEgwKBGNvZGUYASAB",
+            "KAkSDwoHbWVzc2FnZRgCIAEoCRIOCgZhY3Rpb24YAyABKAkSDQoFaXNzdWUY",
+            "BCABKAkiigMKKlRlc3RHb2xkZW5nYXRlQ29ubmVjdGlvbkFzc2lnbm1lbnRS",
+            "ZXNwb25zZRJqCgtyZXN1bHRfdHlwZRgBIAEoDjJVLmdvb2dsZS5jbG91ZC5v",
+            "cmFjbGVkYXRhYmFzZS52MS5UZXN0R29sZGVuZ2F0ZUNvbm5lY3Rpb25Bc3Np",
+            "Z25tZW50UmVzcG9uc2UuUmVzdWx0VHlwZRJMCgVlcnJvchgCIAEoCzI9Lmdv",
+            "b2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5UZXN0Q29ubmVjdGlvbkFz",
+            "c2lnbm1lbnRFcnJvchJNCgZlcnJvcnMYAyADKAsyPS5nb29nbGUuY2xvdWQu",
+            "b3JhY2xlZGF0YWJhc2UudjEuVGVzdENvbm5lY3Rpb25Bc3NpZ25tZW50RXJy",
+            "b3IiUwoKUmVzdWx0VHlwZRIbChdSRVNVTFRfVFlQRV9VTlNQRUNJRklFRBAA",
+            "Eg0KCVNVQ0NFRURFRBABEgoKBkZBSUxFRBACEg0KCVRJTUVEX09VVBADIvYB",
+            "CitVcGRhdGVHb2xkZW5nYXRlQ29ubmVjdGlvbkFzc2lnbm1lbnRSZXF1ZXN0",
+            "EjUKC3VwZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxk",
+            "TWFza0IE4kEBARJuCiBnb2xkZW5nYXRlX2Nvbm5lY3Rpb25fYXNzaWdubWVu",
+            "dBgCIAEoCzI+Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5Hb2xk",
+            "ZW5nYXRlQ29ubmVjdGlvbkFzc2lnbm1lbnRCBOJBAQISIAoKcmVxdWVzdF9p",
+            "ZBgDIAEoCUIM4kEBAeKMz9cIAggBIqQBCitEZWxldGVHb2xkZW5nYXRlQ29u",
+            "bmVjdGlvbkFzc2lnbm1lbnRSZXF1ZXN0ElMKBG5hbWUYASABKAlCReJBAQL6",
+            "QT4KPG9yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL0dvbGRlbmdhdGVD",
+            "b25uZWN0aW9uQXNzaWdubWVudBIgCgpyZXF1ZXN0X2lkGAIgASgJQgziQQEB",
+            "4ozP1wgCCAFC/QEKImNvbS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2Uu",
+            "djFCI0dvbGRlbmdhdGVDb25uZWN0aW9uQXNzaWdubWVudFByb3RvUAFaSmNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vb3JhY2xlZGF0YWJhc2UvYXBpdjEvb3JhY2xl",
+            "ZGF0YWJhc2VwYjtvcmFjbGVkYXRhYmFzZXBiqgIeR29vZ2xlLkNsb3VkLk9y",
+            "YWNsZURhdGFiYXNlLlYxygIeR29vZ2xlXENsb3VkXE9yYWNsZURhdGFiYXNl",
+            "XFYx6gIhR29vZ2xlOjpDbG91ZDo6T3JhY2xlRGF0YWJhc2U6OlYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.GoldengateConnectionAssignment), global::Google.Cloud.OracleDatabase.V1.GoldengateConnectionAssignment.Parser, new[]{ "Name", "Properties", "CreateTime", "Labels", "DisplayName", "EntitlementId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.GoldengateConnectionAssignmentProperties), global::Google.Cloud.OracleDatabase.V1.GoldengateConnectionAssignmentProperties.Parser, new[]{ "Ocid", "GoldengateConnection", "GoldengateDeployment", "Alias", "State" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.GoldengateConnectionAssignmentProperties.Types.State) }, null, null),
@@ -113,6 +120,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.TestGoldengateConnectionAssignmentRequest), global::Google.Cloud.OracleDatabase.V1.TestGoldengateConnectionAssignmentRequest.Parser, new[]{ "Name", "Type" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.TestGoldengateConnectionAssignmentRequest.Types.TestType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.TestConnectionAssignmentError), global::Google.Cloud.OracleDatabase.V1.TestConnectionAssignmentError.Parser, new[]{ "Code", "Message", "Action", "Issue" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.TestGoldengateConnectionAssignmentResponse), global::Google.Cloud.OracleDatabase.V1.TestGoldengateConnectionAssignmentResponse.Parser, new[]{ "ResultType", "Error", "Errors" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.TestGoldengateConnectionAssignmentResponse.Types.ResultType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionAssignmentRequest), global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionAssignmentRequest.Parser, new[]{ "UpdateMask", "GoldengateConnectionAssignment", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.DeleteGoldengateConnectionAssignmentRequest), global::Google.Cloud.OracleDatabase.V1.DeleteGoldengateConnectionAssignmentRequest.Parser, new[]{ "Name", "RequestId" }, null, null, null, null)
           }));
     }
@@ -194,7 +202,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int PropertiesFieldNumber = 2;
     private global::Google.Cloud.OracleDatabase.V1.GoldengateConnectionAssignmentProperties properties_;
     /// <summary>
-    /// Required. The properties of the GoldengateConnectionAssignment.
+    /// Required. Immutable. The properties of the GoldengateConnectionAssignment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -239,7 +247,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int DisplayNameFieldNumber = 5;
     private string displayName_ = "";
     /// <summary>
-    /// Optional. The display name for the GoldengateConnectionAssignment.
+    /// Optional. Immutable. The display name for the
+    /// GoldengateConnectionAssignment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3040,6 +3049,325 @@ namespace Google.Cloud.OracleDatabase.V1 {
   }
 
   /// <summary>
+  /// Request message for updating a GoldengateConnectionAssignment.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateGoldengateConnectionAssignmentRequest : pb::IMessage<UpdateGoldengateConnectionAssignmentRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateGoldengateConnectionAssignmentRequest> _parser = new pb::MessageParser<UpdateGoldengateConnectionAssignmentRequest>(() => new UpdateGoldengateConnectionAssignmentRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateGoldengateConnectionAssignmentRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateConnectionAssignmentReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateGoldengateConnectionAssignmentRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateGoldengateConnectionAssignmentRequest(UpdateGoldengateConnectionAssignmentRequest other) : this() {
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      goldengateConnectionAssignment_ = other.goldengateConnectionAssignment_ != null ? other.goldengateConnectionAssignment_.Clone() : null;
+      requestId_ = other.requestId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateGoldengateConnectionAssignmentRequest Clone() {
+      return new UpdateGoldengateConnectionAssignmentRequest(this);
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Optional. A mask specifying which fields in the
+    /// GoldengateConnectionAssignment should be updated. A field specified in the
+    /// mask is updated. If a mask isn't provided, the service treats this as an
+    /// implied field mask equivalent to all fields that are populated (have a
+    /// non-empty value). To clear or unset a field, the field must be explicitly
+    /// specified in the `update_mask`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "goldengate_connection_assignment" field.</summary>
+    public const int GoldengateConnectionAssignmentFieldNumber = 2;
+    private global::Google.Cloud.OracleDatabase.V1.GoldengateConnectionAssignment goldengateConnectionAssignment_;
+    /// <summary>
+    /// Required. The resource being updated. Note only labels can be updated.
+    /// The provided labels will completely replace the existing labels.
+    /// Any existing label keys that are not included in the update request will be
+    /// deleted. Not providing labels and update_mask will not update the labels.
+    /// To clear all labels, specify `labels` in the `update_mask` and omit or
+    /// leave the `labels` field empty in the update request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.OracleDatabase.V1.GoldengateConnectionAssignment GoldengateConnectionAssignment {
+      get { return goldengateConnectionAssignment_; }
+      set {
+        goldengateConnectionAssignment_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 3;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. An optional ID to identify the request. This value is used to
+    /// identify duplicate requests. If you make a request with the same request ID
+    /// and the original request is still in progress or completed, the server
+    /// ignores the second request. This prevents clients from
+    /// accidentally creating duplicate commitments.
+    ///
+    /// The request ID must be a valid UUID with the exception that zero UUID is
+    /// not supported (00000000-0000-0000-0000-000000000000).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateGoldengateConnectionAssignmentRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateGoldengateConnectionAssignmentRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (!object.Equals(GoldengateConnectionAssignment, other.GoldengateConnectionAssignment)) return false;
+      if (RequestId != other.RequestId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (goldengateConnectionAssignment_ != null) hash ^= GoldengateConnectionAssignment.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (updateMask_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(UpdateMask);
+      }
+      if (goldengateConnectionAssignment_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(GoldengateConnectionAssignment);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (updateMask_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(UpdateMask);
+      }
+      if (goldengateConnectionAssignment_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(GoldengateConnectionAssignment);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (goldengateConnectionAssignment_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GoldengateConnectionAssignment);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateGoldengateConnectionAssignmentRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.goldengateConnectionAssignment_ != null) {
+        if (goldengateConnectionAssignment_ == null) {
+          GoldengateConnectionAssignment = new global::Google.Cloud.OracleDatabase.V1.GoldengateConnectionAssignment();
+        }
+        GoldengateConnectionAssignment.MergeFrom(other.GoldengateConnectionAssignment);
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 18: {
+            if (goldengateConnectionAssignment_ == null) {
+              GoldengateConnectionAssignment = new global::Google.Cloud.OracleDatabase.V1.GoldengateConnectionAssignment();
+            }
+            input.ReadMessage(GoldengateConnectionAssignment);
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 18: {
+            if (goldengateConnectionAssignment_ == null) {
+              GoldengateConnectionAssignment = new global::Google.Cloud.OracleDatabase.V1.GoldengateConnectionAssignment();
+            }
+            input.ReadMessage(GoldengateConnectionAssignment);
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request message for deleting a GoldengateConnectionAssignment.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -3057,7 +3385,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateConnectionAssignmentReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateConnectionAssignmentReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

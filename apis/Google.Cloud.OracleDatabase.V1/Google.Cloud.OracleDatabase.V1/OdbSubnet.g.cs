@@ -27,51 +27,57 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "Ci9nb29nbGUvY2xvdWQvb3JhY2xlZGF0YWJhc2UvdjEvb2RiX3N1Ym5ldC5w",
             "cm90bxIeZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxGh9nb29nbGUv",
             "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhtnb29nbGUvYXBpL2ZpZWxkX2lu",
-            "Zm8ucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9w",
-            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8ixgUKCU9kYlN1Ym5ldBISCgRuYW1l",
-            "GAEgASgJQgTiQQEIEhgKCmNpZHJfcmFuZ2UYAiABKAlCBOJBAQISSAoHcHVy",
-            "cG9zZRgDIAEoDjIxLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5P",
-            "ZGJTdWJuZXQuUHVycG9zZUIE4kEBAhJLCgZsYWJlbHMYBCADKAsyNS5nb29n",
-            "bGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuT2RiU3VibmV0LkxhYmVsc0Vu",
-            "dHJ5QgTiQQEBEjUKC2NyZWF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEIE4kEBAxJECgVzdGF0ZRgGIAEoDjIvLmdvb2dsZS5j",
-            "bG91ZC5vcmFjbGVkYXRhYmFzZS52MS5PZGJTdWJuZXQuU3RhdGVCBOJBAQMa",
-            "LQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
-            "ASJICgdQdXJwb3NlEhcKE1BVUlBPU0VfVU5TUEVDSUZJRUQQABIRCg1DTElF",
-            "TlRfU1VCTkVUEAESEQoNQkFDS1VQX1NVQk5FVBACIlwKBVN0YXRlEhUKEVNU",
-            "QVRFX1VOU1BFQ0lGSUVEEAASEAoMUFJPVklTSU9OSU5HEAESDQoJQVZBSUxB",
-            "QkxFEAISDwoLVEVSTUlOQVRJTkcQAxIKCgZGQUlMRUQQBDqfAepBmwEKJ29y",
-            "YWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL09kYlN1Ym5ldBJZcHJvamVj",
-            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L29kYk5ldHdvcmtz",
-            "L3tvZGJfbmV0d29ya30vb2RiU3VibmV0cy97b2RiX3N1Ym5ldH0qCm9kYlN1",
-            "Ym5ldHMyCW9kYlN1Ym5ldCLeAQoWQ3JlYXRlT2RiU3VibmV0UmVxdWVzdBJA",
-            "CgZwYXJlbnQYASABKAlCMOJBAQL6QSkSJ29yYWNsZWRhdGFiYXNlLmdvb2ds",
-            "ZWFwaXMuY29tL09kYlN1Ym5ldBIbCg1vZGJfc3VibmV0X2lkGAIgASgJQgTi",
-            "QQECEkMKCm9kYl9zdWJuZXQYAyABKAsyKS5nb29nbGUuY2xvdWQub3JhY2xl",
-            "ZGF0YWJhc2UudjEuT2RiU3VibmV0QgTiQQECEiAKCnJlcXVlc3RfaWQYBCAB",
-            "KAlCDOJBAQHijM/XCAIIASJ6ChZEZWxldGVPZGJTdWJuZXRSZXF1ZXN0Ej4K",
-            "BG5hbWUYASABKAlCMOJBAQL6QSkKJ29yYWNsZWRhdGFiYXNlLmdvb2dsZWFw",
-            "aXMuY29tL09kYlN1Ym5ldBIgCgpyZXF1ZXN0X2lkGAIgASgJQgziQQEB4ozP",
-            "1wgCCAEiugEKFUxpc3RPZGJTdWJuZXRzUmVxdWVzdBJACgZwYXJlbnQYASAB",
-            "KAlCMOJBAQL6QSkSJ29yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL09k",
-            "YlN1Ym5ldBIXCglwYWdlX3NpemUYAiABKAVCBOJBAQESGAoKcGFnZV90b2tl",
-            "bhgDIAEoCUIE4kEBARIUCgZmaWx0ZXIYBCABKAlCBOJBAQESFgoIb3JkZXJf",
-            "YnkYBSABKAlCBOJBAQEihgEKFkxpc3RPZGJTdWJuZXRzUmVzcG9uc2USPgoL",
-            "b2RiX3N1Ym5ldHMYASADKAsyKS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJh",
-            "c2UudjEuT2RiU3VibmV0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1",
-            "bnJlYWNoYWJsZRgDIAMoCSJVChNHZXRPZGJTdWJuZXRSZXF1ZXN0Ej4KBG5h",
-            "bWUYASABKAlCMOJBAQL6QSkKJ29yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMu",
-            "Y29tL09kYlN1Ym5ldELoAQoiY29tLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRh",
-            "YmFzZS52MUIOT2RiU3VibmV0UHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9vcmFjbGVkYXRhYmFzZS9hcGl2MS9vcmFjbGVkYXRhYmFzZXBiO29yYWNs",
-            "ZWRhdGFiYXNlcGKqAh5Hb29nbGUuQ2xvdWQuT3JhY2xlRGF0YWJhc2UuVjHK",
-            "Ah5Hb29nbGVcQ2xvdWRcT3JhY2xlRGF0YWJhc2VcVjHqAiFHb29nbGU6OkNs",
-            "b3VkOjpPcmFjbGVEYXRhYmFzZTo6VjFiBnByb3RvMw=="));
+            "Zm8ucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aIGdvb2dsZS9w",
+            "cm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGlt",
+            "ZXN0YW1wLnByb3RvIsgFCglPZGJTdWJuZXQSEgoEbmFtZRgBIAEoCUIE4kEB",
+            "CBIZCgpjaWRyX3JhbmdlGAIgASgJQgXiQQICBRJJCgdwdXJwb3NlGAMgASgO",
+            "MjEuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLk9kYlN1Ym5ldC5Q",
+            "dXJwb3NlQgXiQQICBRJLCgZsYWJlbHMYBCADKAsyNS5nb29nbGUuY2xvdWQu",
+            "b3JhY2xlZGF0YWJhc2UudjEuT2RiU3VibmV0LkxhYmVsc0VudHJ5QgTiQQEB",
+            "EjUKC2NyZWF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEIE4kEBAxJECgVzdGF0ZRgGIAEoDjIvLmdvb2dsZS5jbG91ZC5vcmFj",
+            "bGVkYXRhYmFzZS52MS5PZGJTdWJuZXQuU3RhdGVCBOJBAQMaLQoLTGFiZWxz",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJICgdQdXJw",
+            "b3NlEhcKE1BVUlBPU0VfVU5TUEVDSUZJRUQQABIRCg1DTElFTlRfU1VCTkVU",
+            "EAESEQoNQkFDS1VQX1NVQk5FVBACIlwKBVN0YXRlEhUKEVNUQVRFX1VOU1BF",
+            "Q0lGSUVEEAASEAoMUFJPVklTSU9OSU5HEAESDQoJQVZBSUxBQkxFEAISDwoL",
+            "VEVSTUlOQVRJTkcQAxIKCgZGQUlMRUQQBDqfAepBmwEKJ29yYWNsZWRhdGFi",
+            "YXNlLmdvb2dsZWFwaXMuY29tL09kYlN1Ym5ldBJZcHJvamVjdHMve3Byb2pl",
+            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L29kYk5ldHdvcmtzL3tvZGJfbmV0",
+            "d29ya30vb2RiU3VibmV0cy97b2RiX3N1Ym5ldH0qCm9kYlN1Ym5ldHMyCW9k",
+            "YlN1Ym5ldCLeAQoWQ3JlYXRlT2RiU3VibmV0UmVxdWVzdBJACgZwYXJlbnQY",
+            "ASABKAlCMOJBAQL6QSkSJ29yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29t",
+            "L09kYlN1Ym5ldBIbCg1vZGJfc3VibmV0X2lkGAIgASgJQgTiQQECEkMKCm9k",
+            "Yl9zdWJuZXQYAyABKAsyKS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2Uu",
+            "djEuT2RiU3VibmV0QgTiQQECEiAKCnJlcXVlc3RfaWQYBCABKAlCDOJBAQHi",
+            "jM/XCAIIASK2AQoWVXBkYXRlT2RiU3VibmV0UmVxdWVzdBI1Cgt1cGRhdGVf",
+            "bWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCBOJBAQES",
+            "QwoKb2RiX3N1Ym5ldBgCIAEoCzIpLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRh",
+            "YmFzZS52MS5PZGJTdWJuZXRCBOJBAQISIAoKcmVxdWVzdF9pZBgDIAEoCUIM",
+            "4kEBAeKMz9cIAggBInoKFkRlbGV0ZU9kYlN1Ym5ldFJlcXVlc3QSPgoEbmFt",
+            "ZRgBIAEoCUIw4kEBAvpBKQonb3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5j",
+            "b20vT2RiU3VibmV0EiAKCnJlcXVlc3RfaWQYAiABKAlCDOJBAQHijM/XCAII",
+            "ASK6AQoVTGlzdE9kYlN1Ym5ldHNSZXF1ZXN0EkAKBnBhcmVudBgBIAEoCUIw",
+            "4kEBAvpBKRInb3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20vT2RiU3Vi",
+            "bmV0EhcKCXBhZ2Vfc2l6ZRgCIAEoBUIE4kEBARIYCgpwYWdlX3Rva2VuGAMg",
+            "ASgJQgTiQQEBEhQKBmZpbHRlchgEIAEoCUIE4kEBARIWCghvcmRlcl9ieRgF",
+            "IAEoCUIE4kEBASKGAQoWTGlzdE9kYlN1Ym5ldHNSZXNwb25zZRI+CgtvZGJf",
+            "c3VibmV0cxgBIAMoCzIpLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52",
+            "MS5PZGJTdWJuZXQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVh",
+            "Y2hhYmxlGAMgAygJIlUKE0dldE9kYlN1Ym5ldFJlcXVlc3QSPgoEbmFtZRgB",
+            "IAEoCUIw4kEBAvpBKQonb3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20v",
+            "T2RiU3VibmV0QugBCiJjb20uZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNl",
+            "LnYxQg5PZGJTdWJuZXRQcm90b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL29y",
+            "YWNsZWRhdGFiYXNlL2FwaXYxL29yYWNsZWRhdGFiYXNlcGI7b3JhY2xlZGF0",
+            "YWJhc2VwYqoCHkdvb2dsZS5DbG91ZC5PcmFjbGVEYXRhYmFzZS5WMcoCHkdv",
+            "b2dsZVxDbG91ZFxPcmFjbGVEYXRhYmFzZVxWMeoCIUdvb2dsZTo6Q2xvdWQ6",
+            "Ok9yYWNsZURhdGFiYXNlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.OdbSubnet), global::Google.Cloud.OracleDatabase.V1.OdbSubnet.Parser, new[]{ "Name", "CidrRange", "Purpose", "Labels", "CreateTime", "State" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.OdbSubnet.Types.Purpose), typeof(global::Google.Cloud.OracleDatabase.V1.OdbSubnet.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CreateOdbSubnetRequest), global::Google.Cloud.OracleDatabase.V1.CreateOdbSubnetRequest.Parser, new[]{ "Parent", "OdbSubnetId", "OdbSubnet", "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.UpdateOdbSubnetRequest), global::Google.Cloud.OracleDatabase.V1.UpdateOdbSubnetRequest.Parser, new[]{ "UpdateMask", "OdbSubnet", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.DeleteOdbSubnetRequest), global::Google.Cloud.OracleDatabase.V1.DeleteOdbSubnetRequest.Parser, new[]{ "Name", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ListOdbSubnetsRequest), global::Google.Cloud.OracleDatabase.V1.ListOdbSubnetsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ListOdbSubnetsResponse), global::Google.Cloud.OracleDatabase.V1.ListOdbSubnetsResponse.Parser, new[]{ "OdbSubnets", "NextPageToken", "Unreachable" }, null, null, null, null),
@@ -155,7 +161,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int CidrRangeFieldNumber = 2;
     private string cidrRange_ = "";
     /// <summary>
-    /// Required. The CIDR range of the subnet.
+    /// Required. Immutable. The CIDR range of the subnet.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -170,7 +176,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int PurposeFieldNumber = 3;
     private global::Google.Cloud.OracleDatabase.V1.OdbSubnet.Types.Purpose purpose_ = global::Google.Cloud.OracleDatabase.V1.OdbSubnet.Types.Purpose.Unspecified;
     /// <summary>
-    /// Required. Purpose of the subnet.
+    /// Required. Immutable. Purpose of the subnet.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -882,6 +888,324 @@ namespace Google.Cloud.OracleDatabase.V1 {
   }
 
   /// <summary>
+  /// The request for `OdbSubnet.Update`.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateOdbSubnetRequest : pb::IMessage<UpdateOdbSubnetRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateOdbSubnetRequest> _parser = new pb::MessageParser<UpdateOdbSubnetRequest>(() => new UpdateOdbSubnetRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateOdbSubnetRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.OracleDatabase.V1.OdbSubnetReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateOdbSubnetRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateOdbSubnetRequest(UpdateOdbSubnetRequest other) : this() {
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      odbSubnet_ = other.odbSubnet_ != null ? other.odbSubnet_.Clone() : null;
+      requestId_ = other.requestId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateOdbSubnetRequest Clone() {
+      return new UpdateOdbSubnetRequest(this);
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Optional. A mask specifying which fields in the OdbSubnet should be
+    /// updated. A field specified in the mask is updated. If a mask isn't
+    /// provided, the service treats this as an implied field mask equivalent to
+    /// all fields that are populated (have a non-empty value). To clear or unset a
+    /// field, the field must be explicitly specified in the `update_mask`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "odb_subnet" field.</summary>
+    public const int OdbSubnetFieldNumber = 2;
+    private global::Google.Cloud.OracleDatabase.V1.OdbSubnet odbSubnet_;
+    /// <summary>
+    /// Required. The resource being updated. Note only labels can be updated.
+    /// The provided labels will completely replace the existing labels.
+    /// Any existing label keys that are not included in the update request will be
+    /// deleted. Not providing labels and update_mask will not update the labels.
+    /// To clear all labels, specify `labels` in the `update_mask` and omit or
+    /// leave the `labels` field empty in the update request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.OracleDatabase.V1.OdbSubnet OdbSubnet {
+      get { return odbSubnet_; }
+      set {
+        odbSubnet_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 3;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. An optional ID to identify the request. This value is used to
+    /// identify duplicate requests. If you make a request with the same request ID
+    /// and the original request is still in progress or completed, the server
+    /// ignores the second request. This prevents clients from
+    /// accidentally creating duplicate commitments.
+    ///
+    /// The request ID must be a valid UUID with the exception that zero UUID is
+    /// not supported (00000000-0000-0000-0000-000000000000).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateOdbSubnetRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateOdbSubnetRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (!object.Equals(OdbSubnet, other.OdbSubnet)) return false;
+      if (RequestId != other.RequestId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (odbSubnet_ != null) hash ^= OdbSubnet.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (updateMask_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(UpdateMask);
+      }
+      if (odbSubnet_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(OdbSubnet);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (updateMask_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(UpdateMask);
+      }
+      if (odbSubnet_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(OdbSubnet);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (odbSubnet_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OdbSubnet);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateOdbSubnetRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.odbSubnet_ != null) {
+        if (odbSubnet_ == null) {
+          OdbSubnet = new global::Google.Cloud.OracleDatabase.V1.OdbSubnet();
+        }
+        OdbSubnet.MergeFrom(other.OdbSubnet);
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 18: {
+            if (odbSubnet_ == null) {
+              OdbSubnet = new global::Google.Cloud.OracleDatabase.V1.OdbSubnet();
+            }
+            input.ReadMessage(OdbSubnet);
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 18: {
+            if (odbSubnet_ == null) {
+              OdbSubnet = new global::Google.Cloud.OracleDatabase.V1.OdbSubnet();
+            }
+            input.ReadMessage(OdbSubnet);
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// The request for `OdbSubnet.Delete`.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -899,7 +1223,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.OdbSubnetReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.OdbSubnetReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1151,7 +1475,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.OdbSubnetReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.OdbSubnetReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1518,7 +1842,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.OdbSubnetReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.OdbSubnetReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1781,7 +2105,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.OdbSubnetReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.OdbSubnetReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

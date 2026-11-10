@@ -29,100 +29,102 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
             "LnByb3RvGitnb29nbGUvY2xvdWQvb3JhY2xlZGF0YWJhc2UvdjEvY29tbW9u",
             "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhpnb29n",
-            "bGUvdHlwZS9kYXRldGltZS5wcm90byK8CQoOQ2xvdWRWbUNsdXN0ZXISEgoE",
-            "bmFtZRgBIAEoCUIE4kEBCBJhChZleGFkYXRhX2luZnJhc3RydWN0dXJlGAIg",
-            "ASgJQkHiQQEC+kE6CjhvcmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9D",
-            "bG91ZEV4YWRhdGFJbmZyYXN0cnVjdHVyZRIaCgxkaXNwbGF5X25hbWUYAyAB",
-            "KAlCBOJBAQESUgoKcHJvcGVydGllcxgGIAEoCzI4Lmdvb2dsZS5jbG91ZC5v",
-            "cmFjbGVkYXRhYmFzZS52MS5DbG91ZFZtQ2x1c3RlclByb3BlcnRpZXNCBOJB",
-            "AQESUAoGbGFiZWxzGAcgAygLMjouZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFi",
-            "YXNlLnYxLkNsb3VkVm1DbHVzdGVyLkxhYmVsc0VudHJ5QgTiQQEBEjUKC2Ny",
-            "ZWF0ZV90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE",
-            "4kEBAxISCgRjaWRyGAkgASgJQgTiQQEBEiAKEmJhY2t1cF9zdWJuZXRfY2lk",
-            "chgKIAEoCUIE4kEBARI4CgduZXR3b3JrGAsgASgJQifiQQEB+kEgCh5jb21w",
-            "dXRlLmdvb2dsZWFwaXMuY29tL05ldHdvcmsSHQoPZ2NwX29yYWNsZV96b25l",
-            "GAwgASgJQgTiQQEDEkYKC29kYl9uZXR3b3JrGA0gASgJQjHiQQEB+kEqCihv",
-            "cmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9PZGJOZXR3b3JrEkQKCm9k",
-            "Yl9zdWJuZXQYDiABKAlCMOJBAQH6QSkKJ29yYWNsZWRhdGFiYXNlLmdvb2ds",
-            "ZWFwaXMuY29tL09kYlN1Ym5ldBJLChFiYWNrdXBfb2RiX3N1Ym5ldBgPIAEo",
-            "CUIw4kEBAfpBKQonb3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20vT2Ri",
-            "U3VibmV0EkgKDG9kYl9kbnNfem9uZRgSIAEoCUIy4kECAQX6QSoKKG9yYWNs",
-            "ZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL09kYkRuc1pvbmUSUwoSaWRlbnRp",
-            "dHlfY29ubmVjdG9yGBAgASgLMjEuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFi",
-            "YXNlLnYxLklkZW50aXR5Q29ubmVjdG9yQgTiQQEDEmAKGWV4YXNjYWxlX2Ri",
-            "X3N0b3JhZ2VfdmF1bHQYESABKAlCPeJBAQH6QTYKNG9yYWNsZWRhdGFiYXNl",
-            "Lmdvb2dsZWFwaXMuY29tL0V4YXNjYWxlRGJTdG9yYWdlVmF1bHQaLQoLTGFi",
-            "ZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqfAepB",
-            "mwEKLG9yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL0Nsb3VkVm1DbHVz",
-            "dGVyEkpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "Y2xvdWRWbUNsdXN0ZXJzL3tjbG91ZF92bV9jbHVzdGVyfSoPY2xvdWRWbUNs",
-            "dXN0ZXJzMg5jbG91ZFZtQ2x1c3RlciLpEgoYQ2xvdWRWbUNsdXN0ZXJQcm9w",
-            "ZXJ0aWVzEhIKBG9jaWQYASABKAlCBOJBAQMSYAoMbGljZW5zZV90eXBlGAIg",
-            "ASgOMkQuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkNsb3VkVm1D",
-            "bHVzdGVyUHJvcGVydGllcy5MaWNlbnNlVHlwZUIE4kEBAhIYCgpnaV92ZXJz",
-            "aW9uGAMgASgJQgTiQQEBEi4KCXRpbWVfem9uZRgEIAEoCzIVLmdvb2dsZS50",
-            "eXBlLlRpbWVab25lQgTiQQEBEh0KD3NzaF9wdWJsaWNfa2V5cxgFIAMoCUIE",
-            "4kEBARIYCgpub2RlX2NvdW50GAYgASgFQgTiQQEBEhMKBXNoYXBlGAcgASgJ",
-            "QgTiQQEDEhgKCm9jcHVfY291bnQYCCABKAJCBOJBAQESHAoObWVtb3J5X3Np",
-            "emVfZ2IYCSABKAVCBOJBAQESJQoXZGJfbm9kZV9zdG9yYWdlX3NpemVfZ2IY",
-            "CiABKAVCBOJBAQESHQoPc3RvcmFnZV9zaXplX2diGAsgASgFQgTiQQEDEiIK",
-            "FGRhdGFfc3RvcmFnZV9zaXplX3RiGAwgASgBQgTiQQEBEmYKD2Rpc2tfcmVk",
-            "dW5kYW5jeRgNIAEoDjJHLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52",
-            "MS5DbG91ZFZtQ2x1c3RlclByb3BlcnRpZXMuRGlza1JlZHVuZGFuY3lCBOJB",
-            "AQESJgoYc3BhcnNlX2Rpc2tncm91cF9lbmFibGVkGA4gASgIQgTiQQEBEiIK",
-            "FGxvY2FsX2JhY2t1cF9lbmFibGVkGA8gASgIQgTiQQEBEh0KD2hvc3RuYW1l",
-            "X3ByZWZpeBgQIAEoCUIE4kEBARJoCiNkaWFnbm9zdGljc19kYXRhX2NvbGxl",
-            "Y3Rpb25fb3B0aW9ucxgTIAEoCzI1Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRh",
-            "YmFzZS52MS5EYXRhQ29sbGVjdGlvbk9wdGlvbnNCBOJBAQESUwoFc3RhdGUY",
-            "FCABKA4yPi5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuQ2xvdWRW",
-            "bUNsdXN0ZXJQcm9wZXJ0aWVzLlN0YXRlQgTiQQEDEiQKFnNjYW5fbGlzdGVu",
-            "ZXJfcG9ydF90Y3AYFSABKAVCBOJBAQESKAoac2Nhbl9saXN0ZW5lcl9wb3J0",
-            "X3RjcF9zc2wYFiABKAVCBOJBAQESFAoGZG9tYWluGBcgASgJQgTiQQEDEhYK",
-            "CHNjYW5fZG5zGBggASgJQgTiQQEDEhYKCGhvc3RuYW1lGBkgASgJQgTiQQED",
-            "EhwKDmNwdV9jb3JlX2NvdW50GBogASgFQgTiQQECEhwKDnN5c3RlbV92ZXJz",
-            "aW9uGBsgASgJQgTiQQEBEhkKC3NjYW5faXBfaWRzGBwgAygJQgTiQQEDEiAK",
-            "EnNjYW5fZG5zX3JlY29yZF9pZBgdIAEoCUIE4kEBAxIVCgdvY2lfdXJsGB4g",
-            "ASgJQgTiQQEDEh0KD2RiX3NlcnZlcl9vY2lkcxgfIAMoCUIE4kEBARIcCg5j",
-            "b21wYXJ0bWVudF9pZBggIAEoCUIE4kEBAxIdCg9kbnNfbGlzdGVuZXJfaXAY",
-            "IyABKAlCBOJBAQMSGgoMY2x1c3Rlcl9uYW1lGCQgASgJQgTiQQEBEkkKDWNv",
-            "bXB1dGVfbW9kZWwYJSABKA4yLC5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJh",
-            "c2UudjEuQ29tcHV0ZU1vZGVsQgTiQQEDEnUKF3N0b3JhZ2VfbWFuYWdlbWVu",
-            "dF90eXBlGCYgASgOMk4uZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYx",
-            "LkNsb3VkVm1DbHVzdGVyUHJvcGVydGllcy5TdG9yYWdlTWFuYWdlbWVudFR5",
-            "cGVCBOJBAQMSewobdm1fZmlsZV9zeXN0ZW1fc3RvcmFnZV90eXBlGCcgASgO",
-            "MlAuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkNsb3VkVm1DbHVz",
-            "dGVyUHJvcGVydGllcy5WbUZpbGVTeXN0ZW1TdG9yYWdlVHlwZUIE4kEBARJy",
-            "ChZ2bV9iYWNrdXBfc3RvcmFnZV90eXBlGCggASgOMkwuZ29vZ2xlLmNsb3Vk",
-            "Lm9yYWNsZWRhdGFiYXNlLnYxLkNsb3VkVm1DbHVzdGVyUHJvcGVydGllcy5W",
-            "bUJhY2t1cFN0b3JhZ2VUeXBlQgTiQQEBIl0KC0xpY2Vuc2VUeXBlEhwKGExJ",
-            "Q0VOU0VfVFlQRV9VTlNQRUNJRklFRBAAEhQKEExJQ0VOU0VfSU5DTFVERUQQ",
-            "ARIaChZCUklOR19ZT1VSX09XTl9MSUNFTlNFEAIiRwoORGlza1JlZHVuZGFu",
-            "Y3kSHwobRElTS19SRURVTkRBTkNZX1VOU1BFQ0lGSUVEEAASCAoESElHSBAB",
-            "EgoKBk5PUk1BTBACIpcBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAA",
-            "EhAKDFBST1ZJU0lPTklORxABEg0KCUFWQUlMQUJMRRACEgwKCFVQREFUSU5H",
-            "EAMSDwoLVEVSTUlOQVRJTkcQBBIOCgpURVJNSU5BVEVEEAUSCgoGRkFJTEVE",
-            "EAYSGwoXTUFJTlRFTkFOQ0VfSU5fUFJPR1JFU1MQByJXChVTdG9yYWdlTWFu",
-            "YWdlbWVudFR5cGUSJwojU1RPUkFHRV9NQU5BR0VNRU5UX1RZUEVfVU5TUEVD",
-            "SUZJRUQQABIHCgNBU00QARIMCghFWEFTQ0FMRRACIpcBChdWbUZpbGVTeXN0",
-            "ZW1TdG9yYWdlVHlwZRIrCidWTV9GSUxFX1NZU1RFTV9TVE9SQUdFX1RZUEVf",
-            "VU5TUEVDSUZJRUQQABIlCiFWTV9GSUxFX1NZU1RFTV9TVE9SQUdFX1RZUEVf",
-            "TE9DQUwQARIoCiRWTV9GSUxFX1NZU1RFTV9TVE9SQUdFX1RZUEVfRVhBU0NB",
-            "TEUQAiKEAQoTVm1CYWNrdXBTdG9yYWdlVHlwZRImCiJWTV9CQUNLVVBfU1RP",
-            "UkFHRV9UWVBFX1VOU1BFQ0lGSUVEEAASIAocVk1fQkFDS1VQX1NUT1JBR0Vf",
-            "VFlQRV9MT0NBTBABEiMKH1ZNX0JBQ0tVUF9TVE9SQUdFX1RZUEVfRVhBU0NB",
-            "TEUQAiKPAQoVRGF0YUNvbGxlY3Rpb25PcHRpb25zEigKGmRpYWdub3N0aWNz",
-            "X2V2ZW50c19lbmFibGVkGAEgASgIQgTiQQEBEicKGWhlYWx0aF9tb25pdG9y",
-            "aW5nX2VuYWJsZWQYAiABKAhCBOJBAQESIwoVaW5jaWRlbnRfbG9nc19lbmFi",
-            "bGVkGAMgASgIQgTiQQEBQu0BCiJjb20uZ29vZ2xlLmNsb3VkLm9yYWNsZWRh",
-            "dGFiYXNlLnYxQhNDbG91ZFZtQ2x1c3RlclByb3RvUAFaSmNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vb3JhY2xlZGF0YWJhc2UvYXBpdjEvb3JhY2xlZGF0YWJhc2Vw",
-            "YjtvcmFjbGVkYXRhYmFzZXBiqgIeR29vZ2xlLkNsb3VkLk9yYWNsZURhdGFi",
-            "YXNlLlYxygIeR29vZ2xlXENsb3VkXE9yYWNsZURhdGFiYXNlXFYx6gIhR29v",
-            "Z2xlOjpDbG91ZDo6T3JhY2xlRGF0YWJhc2U6OlYxYgZwcm90bzM="));
+            "bGUvdHlwZS9kYXRldGltZS5wcm90byLzCQoOQ2xvdWRWbUNsdXN0ZXISEgoE",
+            "bmFtZRgBIAEoCUIE4kEBCBJiChZleGFkYXRhX2luZnJhc3RydWN0dXJlGAIg",
+            "ASgJQkLiQQICBfpBOgo4b3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20v",
+            "Q2xvdWRFeGFkYXRhSW5mcmFzdHJ1Y3R1cmUSGwoMZGlzcGxheV9uYW1lGAMg",
+            "ASgJQgXiQQIBBRJTCgpwcm9wZXJ0aWVzGAYgASgLMjguZ29vZ2xlLmNsb3Vk",
+            "Lm9yYWNsZWRhdGFiYXNlLnYxLkNsb3VkVm1DbHVzdGVyUHJvcGVydGllc0IF",
+            "4kECAQUSUAoGbGFiZWxzGAcgAygLMjouZ29vZ2xlLmNsb3VkLm9yYWNsZWRh",
+            "dGFiYXNlLnYxLkNsb3VkVm1DbHVzdGVyLkxhYmVsc0VudHJ5QgTiQQEBEjUK",
+            "C2NyZWF0ZV90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEIE4kEBAxITCgRjaWRyGAkgASgJQgXiQQIBBRIhChJiYWNrdXBfc3VibmV0",
+            "X2NpZHIYCiABKAlCBeJBAgEFEjkKB25ldHdvcmsYCyABKAlCKOJBAgEF+kEg",
+            "Ch5jb21wdXRlLmdvb2dsZWFwaXMuY29tL05ldHdvcmsSHQoPZ2NwX29yYWNs",
+            "ZV96b25lGAwgASgJQgTiQQEDEkcKC29kYl9uZXR3b3JrGA0gASgJQjLiQQIB",
+            "BfpBKgoob3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20vT2RiTmV0d29y",
+            "axJFCgpvZGJfc3VibmV0GA4gASgJQjHiQQIBBfpBKQonb3JhY2xlZGF0YWJh",
+            "c2UuZ29vZ2xlYXBpcy5jb20vT2RiU3VibmV0EkwKEWJhY2t1cF9vZGJfc3Vi",
+            "bmV0GA8gASgJQjHiQQIBBfpBKQonb3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBp",
+            "cy5jb20vT2RiU3VibmV0EkgKDG9kYl9kbnNfem9uZRgSIAEoCUIy4kECAQX6",
+            "QSoKKG9yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL09kYkRuc1pvbmUS",
+            "UwoSaWRlbnRpdHlfY29ubmVjdG9yGBAgASgLMjEuZ29vZ2xlLmNsb3VkLm9y",
+            "YWNsZWRhdGFiYXNlLnYxLklkZW50aXR5Q29ubmVjdG9yQgTiQQEDEmEKGWV4",
+            "YXNjYWxlX2RiX3N0b3JhZ2VfdmF1bHQYESABKAlCPuJBAgEF+kE2CjRvcmFj",
+            "bGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9FeGFzY2FsZURiU3RvcmFnZVZh",
+            "dWx0EisKG2lkZW50aXR5X2Nvbm5lY3Rvcl9kaXNhYmxlZBgTIAEoCEIG4kED",
+            "AQQFGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
+            "CToCOAE6nwHqQZsBCixvcmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9D",
+            "bG91ZFZtQ2x1c3RlchJKcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
+            "bG9jYXRpb259L2Nsb3VkVm1DbHVzdGVycy97Y2xvdWRfdm1fY2x1c3Rlcn0q",
+            "D2Nsb3VkVm1DbHVzdGVyczIOY2xvdWRWbUNsdXN0ZXIi6RIKGENsb3VkVm1D",
+            "bHVzdGVyUHJvcGVydGllcxISCgRvY2lkGAEgASgJQgTiQQEDEmAKDGxpY2Vu",
+            "c2VfdHlwZRgCIAEoDjJELmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52",
+            "MS5DbG91ZFZtQ2x1c3RlclByb3BlcnRpZXMuTGljZW5zZVR5cGVCBOJBAQIS",
+            "GAoKZ2lfdmVyc2lvbhgDIAEoCUIE4kEBARIuCgl0aW1lX3pvbmUYBCABKAsy",
+            "FS5nb29nbGUudHlwZS5UaW1lWm9uZUIE4kEBARIdCg9zc2hfcHVibGljX2tl",
+            "eXMYBSADKAlCBOJBAQESGAoKbm9kZV9jb3VudBgGIAEoBUIE4kEBARITCgVz",
+            "aGFwZRgHIAEoCUIE4kEBAxIYCgpvY3B1X2NvdW50GAggASgCQgTiQQEBEhwK",
+            "Dm1lbW9yeV9zaXplX2diGAkgASgFQgTiQQEBEiUKF2RiX25vZGVfc3RvcmFn",
+            "ZV9zaXplX2diGAogASgFQgTiQQEBEh0KD3N0b3JhZ2Vfc2l6ZV9nYhgLIAEo",
+            "BUIE4kEBAxIiChRkYXRhX3N0b3JhZ2Vfc2l6ZV90YhgMIAEoAUIE4kEBARJm",
+            "Cg9kaXNrX3JlZHVuZGFuY3kYDSABKA4yRy5nb29nbGUuY2xvdWQub3JhY2xl",
+            "ZGF0YWJhc2UudjEuQ2xvdWRWbUNsdXN0ZXJQcm9wZXJ0aWVzLkRpc2tSZWR1",
+            "bmRhbmN5QgTiQQEBEiYKGHNwYXJzZV9kaXNrZ3JvdXBfZW5hYmxlZBgOIAEo",
+            "CEIE4kEBARIiChRsb2NhbF9iYWNrdXBfZW5hYmxlZBgPIAEoCEIE4kEBARId",
+            "Cg9ob3N0bmFtZV9wcmVmaXgYECABKAlCBOJBAQESaAojZGlhZ25vc3RpY3Nf",
+            "ZGF0YV9jb2xsZWN0aW9uX29wdGlvbnMYEyABKAsyNS5nb29nbGUuY2xvdWQu",
+            "b3JhY2xlZGF0YWJhc2UudjEuRGF0YUNvbGxlY3Rpb25PcHRpb25zQgTiQQEB",
+            "ElMKBXN0YXRlGBQgASgOMj4uZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNl",
+            "LnYxLkNsb3VkVm1DbHVzdGVyUHJvcGVydGllcy5TdGF0ZUIE4kEBAxIkChZz",
+            "Y2FuX2xpc3RlbmVyX3BvcnRfdGNwGBUgASgFQgTiQQEBEigKGnNjYW5fbGlz",
+            "dGVuZXJfcG9ydF90Y3Bfc3NsGBYgASgFQgTiQQEBEhQKBmRvbWFpbhgXIAEo",
+            "CUIE4kEBAxIWCghzY2FuX2RucxgYIAEoCUIE4kEBAxIWCghob3N0bmFtZRgZ",
+            "IAEoCUIE4kEBAxIcCg5jcHVfY29yZV9jb3VudBgaIAEoBUIE4kEBAhIcCg5z",
+            "eXN0ZW1fdmVyc2lvbhgbIAEoCUIE4kEBARIZCgtzY2FuX2lwX2lkcxgcIAMo",
+            "CUIE4kEBAxIgChJzY2FuX2Ruc19yZWNvcmRfaWQYHSABKAlCBOJBAQMSFQoH",
+            "b2NpX3VybBgeIAEoCUIE4kEBAxIdCg9kYl9zZXJ2ZXJfb2NpZHMYHyADKAlC",
+            "BOJBAQESHAoOY29tcGFydG1lbnRfaWQYICABKAlCBOJBAQMSHQoPZG5zX2xp",
+            "c3RlbmVyX2lwGCMgASgJQgTiQQEDEhoKDGNsdXN0ZXJfbmFtZRgkIAEoCUIE",
+            "4kEBARJJCg1jb21wdXRlX21vZGVsGCUgASgOMiwuZ29vZ2xlLmNsb3VkLm9y",
+            "YWNsZWRhdGFiYXNlLnYxLkNvbXB1dGVNb2RlbEIE4kEBAxJ1ChdzdG9yYWdl",
+            "X21hbmFnZW1lbnRfdHlwZRgmIAEoDjJOLmdvb2dsZS5jbG91ZC5vcmFjbGVk",
+            "YXRhYmFzZS52MS5DbG91ZFZtQ2x1c3RlclByb3BlcnRpZXMuU3RvcmFnZU1h",
+            "bmFnZW1lbnRUeXBlQgTiQQEDEnsKG3ZtX2ZpbGVfc3lzdGVtX3N0b3JhZ2Vf",
+            "dHlwZRgnIAEoDjJQLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5D",
+            "bG91ZFZtQ2x1c3RlclByb3BlcnRpZXMuVm1GaWxlU3lzdGVtU3RvcmFnZVR5",
+            "cGVCBOJBAQEScgoWdm1fYmFja3VwX3N0b3JhZ2VfdHlwZRgoIAEoDjJMLmdv",
+            "b2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5DbG91ZFZtQ2x1c3RlclBy",
+            "b3BlcnRpZXMuVm1CYWNrdXBTdG9yYWdlVHlwZUIE4kEBASJdCgtMaWNlbnNl",
+            "VHlwZRIcChhMSUNFTlNFX1RZUEVfVU5TUEVDSUZJRUQQABIUChBMSUNFTlNF",
+            "X0lOQ0xVREVEEAESGgoWQlJJTkdfWU9VUl9PV05fTElDRU5TRRACIkcKDkRp",
+            "c2tSZWR1bmRhbmN5Eh8KG0RJU0tfUkVEVU5EQU5DWV9VTlNQRUNJRklFRBAA",
+            "EggKBEhJR0gQARIKCgZOT1JNQUwQAiKXAQoFU3RhdGUSFQoRU1RBVEVfVU5T",
+            "UEVDSUZJRUQQABIQCgxQUk9WSVNJT05JTkcQARINCglBVkFJTEFCTEUQAhIM",
+            "CghVUERBVElORxADEg8KC1RFUk1JTkFUSU5HEAQSDgoKVEVSTUlOQVRFRBAF",
+            "EgoKBkZBSUxFRBAGEhsKF01BSU5URU5BTkNFX0lOX1BST0dSRVNTEAciVwoV",
+            "U3RvcmFnZU1hbmFnZW1lbnRUeXBlEicKI1NUT1JBR0VfTUFOQUdFTUVOVF9U",
+            "WVBFX1VOU1BFQ0lGSUVEEAASBwoDQVNNEAESDAoIRVhBU0NBTEUQAiKXAQoX",
+            "Vm1GaWxlU3lzdGVtU3RvcmFnZVR5cGUSKwonVk1fRklMRV9TWVNURU1fU1RP",
+            "UkFHRV9UWVBFX1VOU1BFQ0lGSUVEEAASJQohVk1fRklMRV9TWVNURU1fU1RP",
+            "UkFHRV9UWVBFX0xPQ0FMEAESKAokVk1fRklMRV9TWVNURU1fU1RPUkFHRV9U",
+            "WVBFX0VYQVNDQUxFEAIihAEKE1ZtQmFja3VwU3RvcmFnZVR5cGUSJgoiVk1f",
+            "QkFDS1VQX1NUT1JBR0VfVFlQRV9VTlNQRUNJRklFRBAAEiAKHFZNX0JBQ0tV",
+            "UF9TVE9SQUdFX1RZUEVfTE9DQUwQARIjCh9WTV9CQUNLVVBfU1RPUkFHRV9U",
+            "WVBFX0VYQVNDQUxFEAIijwEKFURhdGFDb2xsZWN0aW9uT3B0aW9ucxIoChpk",
+            "aWFnbm9zdGljc19ldmVudHNfZW5hYmxlZBgBIAEoCEIE4kEBARInChloZWFs",
+            "dGhfbW9uaXRvcmluZ19lbmFibGVkGAIgASgIQgTiQQEBEiMKFWluY2lkZW50",
+            "X2xvZ3NfZW5hYmxlZBgDIAEoCEIE4kEBAULtAQoiY29tLmdvb2dsZS5jbG91",
+            "ZC5vcmFjbGVkYXRhYmFzZS52MUITQ2xvdWRWbUNsdXN0ZXJQcm90b1ABWkpj",
+            "bG91ZC5nb29nbGUuY29tL2dvL29yYWNsZWRhdGFiYXNlL2FwaXYxL29yYWNs",
+            "ZWRhdGFiYXNlcGI7b3JhY2xlZGF0YWJhc2VwYqoCHkdvb2dsZS5DbG91ZC5P",
+            "cmFjbGVEYXRhYmFzZS5WMcoCHkdvb2dsZVxDbG91ZFxPcmFjbGVEYXRhYmFz",
+            "ZVxWMeoCIUdvb2dsZTo6Q2xvdWQ6Ok9yYWNsZURhdGFiYXNlOjpWMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OracleDatabase.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmCluster), global::Google.Cloud.OracleDatabase.V1.CloudVmCluster.Parser, new[]{ "Name", "ExadataInfrastructure", "DisplayName", "Properties", "Labels", "CreateTime", "Cidr", "BackupSubnetCidr", "Network", "GcpOracleZone", "OdbNetwork", "OdbSubnet", "BackupOdbSubnet", "OdbDnsZone", "IdentityConnector", "ExascaleDbStorageVault" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmCluster), global::Google.Cloud.OracleDatabase.V1.CloudVmCluster.Parser, new[]{ "Name", "ExadataInfrastructure", "DisplayName", "Properties", "Labels", "CreateTime", "Cidr", "BackupSubnetCidr", "Network", "GcpOracleZone", "OdbNetwork", "OdbSubnet", "BackupOdbSubnet", "OdbDnsZone", "IdentityConnector", "ExascaleDbStorageVault", "IdentityConnectorDisabled" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties), global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Parser, new[]{ "Ocid", "LicenseType", "GiVersion", "TimeZone", "SshPublicKeys", "NodeCount", "Shape", "OcpuCount", "MemorySizeGb", "DbNodeStorageSizeGb", "StorageSizeGb", "DataStorageSizeTb", "DiskRedundancy", "SparseDiskgroupEnabled", "LocalBackupEnabled", "HostnamePrefix", "DiagnosticsDataCollectionOptions", "State", "ScanListenerPortTcp", "ScanListenerPortTcpSsl", "Domain", "ScanDns", "Hostname", "CpuCoreCount", "SystemVersion", "ScanIpIds", "ScanDnsRecordId", "OciUrl", "DbServerOcids", "CompartmentId", "DnsListenerIp", "ClusterName", "ComputeModel", "StorageManagementType", "VmFileSystemStorageType", "VmBackupStorageType" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.LicenseType), typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.DiskRedundancy), typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.State), typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.StorageManagementType), typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmFileSystemStorageType), typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmBackupStorageType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.DataCollectionOptions), global::Google.Cloud.OracleDatabase.V1.DataCollectionOptions.Parser, new[]{ "DiagnosticsEventsEnabled", "HealthMonitoringEnabled", "IncidentLogsEnabled" }, null, null, null, null)
           }));
@@ -186,6 +188,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       odbDnsZone_ = other.odbDnsZone_;
       identityConnector_ = other.identityConnector_ != null ? other.identityConnector_.Clone() : null;
       exascaleDbStorageVault_ = other.exascaleDbStorageVault_;
+      identityConnectorDisabled_ = other.identityConnectorDisabled_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -215,8 +218,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int ExadataInfrastructureFieldNumber = 2;
     private string exadataInfrastructure_ = "";
     /// <summary>
-    /// Required. The name of the Exadata Infrastructure resource on which VM
-    /// cluster resource is created, in the following format:
+    /// Required. Immutable. The name of the Exadata Infrastructure resource on
+    /// which VM cluster resource is created, in the following format:
     /// projects/{project}/locations/{region}/cloudExadataInfrastuctures/{cloud_extradata_infrastructure}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -232,7 +235,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int DisplayNameFieldNumber = 3;
     private string displayName_ = "";
     /// <summary>
-    /// Optional. User friendly name for this resource.
+    /// Optional. Immutable. User friendly name for this resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -247,7 +250,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int PropertiesFieldNumber = 6;
     private global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties properties_;
     /// <summary>
-    /// Optional. Various properties of the VM Cluster.
+    /// Optional. Immutable. Various properties of the VM Cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -291,7 +294,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int CidrFieldNumber = 9;
     private string cidr_ = "";
     /// <summary>
-    /// Optional. Network settings. CIDR to use for cluster IP allocation.
+    /// Optional. Immutable. Network settings. CIDR to use for cluster IP
+    /// allocation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -306,7 +310,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int BackupSubnetCidrFieldNumber = 10;
     private string backupSubnetCidr_ = "";
     /// <summary>
-    /// Optional. CIDR range of the backup subnet.
+    /// Optional. Immutable. CIDR range of the backup subnet.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -321,7 +325,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int NetworkFieldNumber = 11;
     private string network_ = "";
     /// <summary>
-    /// Optional. The name of the VPC network.
+    /// Optional. Immutable. The name of the VPC network.
     /// Format: projects/{project}/global/networks/{network}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -354,8 +358,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int OdbNetworkFieldNumber = 13;
     private string odbNetwork_ = "";
     /// <summary>
-    /// Optional. The name of the OdbNetwork associated with the VM Cluster.
-    /// Format:
+    /// Optional. Immutable. The name of the OdbNetwork associated with the VM
+    /// Cluster. Format:
     /// projects/{project}/locations/{location}/odbNetworks/{odb_network}
     /// It is optional but if specified, this should match the parent ODBNetwork of
     /// the odb_subnet and backup_odb_subnet.
@@ -373,8 +377,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int OdbSubnetFieldNumber = 14;
     private string odbSubnet_ = "";
     /// <summary>
-    /// Optional. The name of the OdbSubnet associated with the VM Cluster for
-    /// IP allocation. Format:
+    /// Optional. Immutable. The name of the OdbSubnet associated with the VM
+    /// Cluster for IP allocation. Format:
     /// projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -390,8 +394,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int BackupOdbSubnetFieldNumber = 15;
     private string backupOdbSubnet_ = "";
     /// <summary>
-    /// Optional. The name of the backup OdbSubnet associated with the VM Cluster.
-    /// Format:
+    /// Optional. Immutable. The name of the backup OdbSubnet associated with the
+    /// VM Cluster. Format:
     /// projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -440,8 +444,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int ExascaleDbStorageVaultFieldNumber = 17;
     private string exascaleDbStorageVault_ = "";
     /// <summary>
-    /// Optional. The name of ExascaleDbStorageVault associated with the VM
-    /// Cluster. Format:
+    /// Optional. Immutable. The name of ExascaleDbStorageVault associated with the
+    /// VM Cluster. Format:
     /// projects/{project}/locations/{location}/exascaleDbStorageVaults/{exascale_db_storage_vault}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -450,6 +454,25 @@ namespace Google.Cloud.OracleDatabase.V1 {
       get { return exascaleDbStorageVault_; }
       set {
         exascaleDbStorageVault_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "identity_connector_disabled" field.</summary>
+    public const int IdentityConnectorDisabledFieldNumber = 19;
+    private bool identityConnectorDisabled_;
+    /// <summary>
+    /// Optional. Input only. Immutable. If set to true, disables the automatic
+    /// provisioning of the Workload Identity Connector during creation. If set to
+    /// false or omitted, the Workload Identity Connector will be automatically
+    /// provisioned by default. Note: Provisioning the Workload Identity Connector
+    /// is a prerequisite for enabling Google Cloud CMEK.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IdentityConnectorDisabled {
+      get { return identityConnectorDisabled_; }
+      set {
+        identityConnectorDisabled_ = value;
       }
     }
 
@@ -484,6 +507,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (OdbDnsZone != other.OdbDnsZone) return false;
       if (!object.Equals(IdentityConnector, other.IdentityConnector)) return false;
       if (ExascaleDbStorageVault != other.ExascaleDbStorageVault) return false;
+      if (IdentityConnectorDisabled != other.IdentityConnectorDisabled) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -507,6 +531,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (OdbDnsZone.Length != 0) hash ^= OdbDnsZone.GetHashCode();
       if (identityConnector_ != null) hash ^= IdentityConnector.GetHashCode();
       if (ExascaleDbStorageVault.Length != 0) hash ^= ExascaleDbStorageVault.GetHashCode();
+      if (IdentityConnectorDisabled != false) hash ^= IdentityConnectorDisabled.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -586,6 +611,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(146, 1);
         output.WriteString(OdbDnsZone);
       }
+      if (IdentityConnectorDisabled != false) {
+        output.WriteRawTag(152, 1);
+        output.WriteBool(IdentityConnectorDisabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -657,6 +686,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(146, 1);
         output.WriteString(OdbDnsZone);
       }
+      if (IdentityConnectorDisabled != false) {
+        output.WriteRawTag(152, 1);
+        output.WriteBool(IdentityConnectorDisabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -712,6 +745,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (ExascaleDbStorageVault.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(ExascaleDbStorageVault);
+      }
+      if (IdentityConnectorDisabled != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -779,6 +815,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (other.ExascaleDbStorageVault.Length != 0) {
         ExascaleDbStorageVault = other.ExascaleDbStorageVault;
+      }
+      if (other.IdentityConnectorDisabled != false) {
+        IdentityConnectorDisabled = other.IdentityConnectorDisabled;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -872,6 +911,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
             OdbDnsZone = input.ReadString();
             break;
           }
+          case 152: {
+            IdentityConnectorDisabled = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -962,6 +1005,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
           }
           case 146: {
             OdbDnsZone = input.ReadString();
+            break;
+          }
+          case 152: {
+            IdentityConnectorDisabled = input.ReadBool();
             break;
           }
         }

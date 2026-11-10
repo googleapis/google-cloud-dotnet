@@ -76,6 +76,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.UpdateCloudExadataInfrastructureRequest> __Marshaller_google_cloud_oracledatabase_v1_UpdateCloudExadataInfrastructureRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.UpdateCloudExadataInfrastructureRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.DeleteCloudExadataInfrastructureRequest> __Marshaller_google_cloud_oracledatabase_v1_DeleteCloudExadataInfrastructureRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.DeleteCloudExadataInfrastructureRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ConfigureExascaleCloudExadataInfrastructureRequest> __Marshaller_google_cloud_oracledatabase_v1_ConfigureExascaleCloudExadataInfrastructureRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ConfigureExascaleCloudExadataInfrastructureRequest.Parser));
@@ -90,11 +92,25 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.CreateCloudVmClusterRequest> __Marshaller_google_cloud_oracledatabase_v1_CreateCloudVmClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.CreateCloudVmClusterRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.UpdateCloudVmClusterRequest> __Marshaller_google_cloud_oracledatabase_v1_UpdateCloudVmClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.UpdateCloudVmClusterRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.DeleteCloudVmClusterRequest> __Marshaller_google_cloud_oracledatabase_v1_DeleteCloudVmClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.DeleteCloudVmClusterRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.EnableCloudVmClusterIdentityConnectorRequest> __Marshaller_google_cloud_oracledatabase_v1_EnableCloudVmClusterIdentityConnectorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.EnableCloudVmClusterIdentityConnectorRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.DisableCloudVmClusterIdentityConnectorRequest> __Marshaller_google_cloud_oracledatabase_v1_DisableCloudVmClusterIdentityConnectorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.DisableCloudVmClusterIdentityConnectorRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.EnableExadbVmClusterIdentityConnectorRequest> __Marshaller_google_cloud_oracledatabase_v1_EnableExadbVmClusterIdentityConnectorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.EnableExadbVmClusterIdentityConnectorRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.DisableExadbVmClusterIdentityConnectorRequest> __Marshaller_google_cloud_oracledatabase_v1_DisableExadbVmClusterIdentityConnectorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.DisableExadbVmClusterIdentityConnectorRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ListEntitlementsRequest> __Marshaller_google_cloud_oracledatabase_v1_ListEntitlementsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ListEntitlementsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ListEntitlementsResponse> __Marshaller_google_cloud_oracledatabase_v1_ListEntitlementsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ListEntitlementsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ListFlexComponentsRequest> __Marshaller_google_cloud_oracledatabase_v1_ListFlexComponentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ListFlexComponentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ListFlexComponentsResponse> __Marshaller_google_cloud_oracledatabase_v1_ListFlexComponentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ListFlexComponentsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ListDbServersRequest> __Marshaller_google_cloud_oracledatabase_v1_ListDbServersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ListDbServersRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -174,6 +190,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.CreateOdbNetworkRequest> __Marshaller_google_cloud_oracledatabase_v1_CreateOdbNetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.CreateOdbNetworkRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.UpdateOdbNetworkRequest> __Marshaller_google_cloud_oracledatabase_v1_UpdateOdbNetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.UpdateOdbNetworkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.DeleteOdbNetworkRequest> __Marshaller_google_cloud_oracledatabase_v1_DeleteOdbNetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.DeleteOdbNetworkRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ListOdbSubnetsRequest> __Marshaller_google_cloud_oracledatabase_v1_ListOdbSubnetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ListOdbSubnetsRequest.Parser));
@@ -185,6 +203,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.OdbSubnet> __Marshaller_google_cloud_oracledatabase_v1_OdbSubnet = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.OdbSubnet.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.CreateOdbSubnetRequest> __Marshaller_google_cloud_oracledatabase_v1_CreateOdbSubnetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.CreateOdbSubnetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.UpdateOdbSubnetRequest> __Marshaller_google_cloud_oracledatabase_v1_UpdateOdbSubnetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.UpdateOdbSubnetRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.DeleteOdbSubnetRequest> __Marshaller_google_cloud_oracledatabase_v1_DeleteOdbSubnetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.DeleteOdbSubnetRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -226,11 +246,17 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.CreateExascaleDbStorageVaultRequest> __Marshaller_google_cloud_oracledatabase_v1_CreateExascaleDbStorageVaultRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.CreateExascaleDbStorageVaultRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.UpdateExascaleDbStorageVaultRequest> __Marshaller_google_cloud_oracledatabase_v1_UpdateExascaleDbStorageVaultRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.UpdateExascaleDbStorageVaultRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.DeleteExascaleDbStorageVaultRequest> __Marshaller_google_cloud_oracledatabase_v1_DeleteExascaleDbStorageVaultRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.DeleteExascaleDbStorageVaultRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ListDbSystemInitialStorageSizesRequest> __Marshaller_google_cloud_oracledatabase_v1_ListDbSystemInitialStorageSizesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ListDbSystemInitialStorageSizesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ListDbSystemInitialStorageSizesResponse> __Marshaller_google_cloud_oracledatabase_v1_ListDbSystemInitialStorageSizesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ListDbSystemInitialStorageSizesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ListDbSystemComputePerformancesRequest> __Marshaller_google_cloud_oracledatabase_v1_ListDbSystemComputePerformancesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ListDbSystemComputePerformancesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ListDbSystemComputePerformancesResponse> __Marshaller_google_cloud_oracledatabase_v1_ListDbSystemComputePerformancesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ListDbSystemComputePerformancesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ListDatabasesRequest> __Marshaller_google_cloud_oracledatabase_v1_ListDatabasesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ListDatabasesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -258,6 +284,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.CreateDbSystemRequest> __Marshaller_google_cloud_oracledatabase_v1_CreateDbSystemRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.CreateDbSystemRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.UpdateDbSystemRequest> __Marshaller_google_cloud_oracledatabase_v1_UpdateDbSystemRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.UpdateDbSystemRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.DeleteDbSystemRequest> __Marshaller_google_cloud_oracledatabase_v1_DeleteDbSystemRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.DeleteDbSystemRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ListGoldengateDeploymentsRequest> __Marshaller_google_cloud_oracledatabase_v1_ListGoldengateDeploymentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ListGoldengateDeploymentsRequest.Parser));
@@ -269,6 +297,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.GoldengateDeployment> __Marshaller_google_cloud_oracledatabase_v1_GoldengateDeployment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.GoldengateDeployment.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.CreateGoldengateDeploymentRequest> __Marshaller_google_cloud_oracledatabase_v1_CreateGoldengateDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.CreateGoldengateDeploymentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateDeploymentRequest> __Marshaller_google_cloud_oracledatabase_v1_UpdateGoldengateDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateDeploymentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.DeleteGoldengateDeploymentRequest> __Marshaller_google_cloud_oracledatabase_v1_DeleteGoldengateDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.DeleteGoldengateDeploymentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -285,6 +315,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.GoldengateConnection> __Marshaller_google_cloud_oracledatabase_v1_GoldengateConnection = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.GoldengateConnection.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.CreateGoldengateConnectionRequest> __Marshaller_google_cloud_oracledatabase_v1_CreateGoldengateConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.CreateGoldengateConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionRequest> __Marshaller_google_cloud_oracledatabase_v1_UpdateGoldengateConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.DeleteGoldengateConnectionRequest> __Marshaller_google_cloud_oracledatabase_v1_DeleteGoldengateConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.DeleteGoldengateConnectionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -322,11 +354,35 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.CreateGoldengateConnectionAssignmentRequest> __Marshaller_google_cloud_oracledatabase_v1_CreateGoldengateConnectionAssignmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.CreateGoldengateConnectionAssignmentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionAssignmentRequest> __Marshaller_google_cloud_oracledatabase_v1_UpdateGoldengateConnectionAssignmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionAssignmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.DeleteGoldengateConnectionAssignmentRequest> __Marshaller_google_cloud_oracledatabase_v1_DeleteGoldengateConnectionAssignmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.DeleteGoldengateConnectionAssignmentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.TestGoldengateConnectionAssignmentRequest> __Marshaller_google_cloud_oracledatabase_v1_TestGoldengateConnectionAssignmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.TestGoldengateConnectionAssignmentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.TestGoldengateConnectionAssignmentResponse> __Marshaller_google_cloud_oracledatabase_v1_TestGoldengateConnectionAssignmentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.TestGoldengateConnectionAssignmentResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ListDatabaseConnectionsRequest> __Marshaller_google_cloud_oracledatabase_v1_ListDatabaseConnectionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ListDatabaseConnectionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ListDatabaseConnectionsResponse> __Marshaller_google_cloud_oracledatabase_v1_ListDatabaseConnectionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ListDatabaseConnectionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.GetDatabaseConnectionRequest> __Marshaller_google_cloud_oracledatabase_v1_GetDatabaseConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.GetDatabaseConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.DatabaseConnection> __Marshaller_google_cloud_oracledatabase_v1_DatabaseConnection = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.DatabaseConnection.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.CreateDatabaseConnectionRequest> __Marshaller_google_cloud_oracledatabase_v1_CreateDatabaseConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.CreateDatabaseConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.UpdateDatabaseConnectionRequest> __Marshaller_google_cloud_oracledatabase_v1_UpdateDatabaseConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.UpdateDatabaseConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.DeleteDatabaseConnectionRequest> __Marshaller_google_cloud_oracledatabase_v1_DeleteDatabaseConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.DeleteDatabaseConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.TestDatabaseConnectionRequest> __Marshaller_google_cloud_oracledatabase_v1_TestDatabaseConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.TestDatabaseConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.TestDatabaseConnectionResponse> __Marshaller_google_cloud_oracledatabase_v1_TestDatabaseConnectionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.TestDatabaseConnectionResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ExecuteSqlRequest> __Marshaller_google_cloud_oracledatabase_v1_ExecuteSqlRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ExecuteSqlRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ExecuteSqlResponse> __Marshaller_google_cloud_oracledatabase_v1_ExecuteSqlResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ExecuteSqlResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.ListCloudExadataInfrastructuresRequest, global::Google.Cloud.OracleDatabase.V1.ListCloudExadataInfrastructuresResponse> __Method_ListCloudExadataInfrastructures = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.ListCloudExadataInfrastructuresRequest, global::Google.Cloud.OracleDatabase.V1.ListCloudExadataInfrastructuresResponse>(
@@ -350,6 +406,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
         __ServiceName,
         "CreateCloudExadataInfrastructure",
         __Marshaller_google_cloud_oracledatabase_v1_CreateCloudExadataInfrastructureRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.UpdateCloudExadataInfrastructureRequest, global::Google.LongRunning.Operation> __Method_UpdateCloudExadataInfrastructure = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.UpdateCloudExadataInfrastructureRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateCloudExadataInfrastructure",
+        __Marshaller_google_cloud_oracledatabase_v1_UpdateCloudExadataInfrastructureRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -393,11 +457,51 @@ namespace Google.Cloud.OracleDatabase.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.UpdateCloudVmClusterRequest, global::Google.LongRunning.Operation> __Method_UpdateCloudVmCluster = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.UpdateCloudVmClusterRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateCloudVmCluster",
+        __Marshaller_google_cloud_oracledatabase_v1_UpdateCloudVmClusterRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.DeleteCloudVmClusterRequest, global::Google.LongRunning.Operation> __Method_DeleteCloudVmCluster = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.DeleteCloudVmClusterRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteCloudVmCluster",
         __Marshaller_google_cloud_oracledatabase_v1_DeleteCloudVmClusterRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.EnableCloudVmClusterIdentityConnectorRequest, global::Google.LongRunning.Operation> __Method_EnableCloudVmClusterIdentityConnector = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.EnableCloudVmClusterIdentityConnectorRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "EnableCloudVmClusterIdentityConnector",
+        __Marshaller_google_cloud_oracledatabase_v1_EnableCloudVmClusterIdentityConnectorRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.DisableCloudVmClusterIdentityConnectorRequest, global::Google.LongRunning.Operation> __Method_DisableCloudVmClusterIdentityConnector = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.DisableCloudVmClusterIdentityConnectorRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DisableCloudVmClusterIdentityConnector",
+        __Marshaller_google_cloud_oracledatabase_v1_DisableCloudVmClusterIdentityConnectorRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.EnableExadbVmClusterIdentityConnectorRequest, global::Google.LongRunning.Operation> __Method_EnableExadbVmClusterIdentityConnector = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.EnableExadbVmClusterIdentityConnectorRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "EnableExadbVmClusterIdentityConnector",
+        __Marshaller_google_cloud_oracledatabase_v1_EnableExadbVmClusterIdentityConnectorRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.DisableExadbVmClusterIdentityConnectorRequest, global::Google.LongRunning.Operation> __Method_DisableExadbVmClusterIdentityConnector = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.DisableExadbVmClusterIdentityConnectorRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DisableExadbVmClusterIdentityConnector",
+        __Marshaller_google_cloud_oracledatabase_v1_DisableExadbVmClusterIdentityConnectorRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -407,6 +511,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
         "ListEntitlements",
         __Marshaller_google_cloud_oracledatabase_v1_ListEntitlementsRequest,
         __Marshaller_google_cloud_oracledatabase_v1_ListEntitlementsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.ListFlexComponentsRequest, global::Google.Cloud.OracleDatabase.V1.ListFlexComponentsResponse> __Method_ListFlexComponents = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.ListFlexComponentsRequest, global::Google.Cloud.OracleDatabase.V1.ListFlexComponentsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListFlexComponents",
+        __Marshaller_google_cloud_oracledatabase_v1_ListFlexComponentsRequest,
+        __Marshaller_google_cloud_oracledatabase_v1_ListFlexComponentsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.ListDbServersRequest, global::Google.Cloud.OracleDatabase.V1.ListDbServersResponse> __Method_ListDbServers = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.ListDbServersRequest, global::Google.Cloud.OracleDatabase.V1.ListDbServersResponse>(
@@ -609,6 +721,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.UpdateOdbNetworkRequest, global::Google.LongRunning.Operation> __Method_UpdateOdbNetwork = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.UpdateOdbNetworkRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateOdbNetwork",
+        __Marshaller_google_cloud_oracledatabase_v1_UpdateOdbNetworkRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.DeleteOdbNetworkRequest, global::Google.LongRunning.Operation> __Method_DeleteOdbNetwork = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.DeleteOdbNetworkRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -638,6 +758,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
         __ServiceName,
         "CreateOdbSubnet",
         __Marshaller_google_cloud_oracledatabase_v1_CreateOdbSubnetRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.UpdateOdbSubnetRequest, global::Google.LongRunning.Operation> __Method_UpdateOdbSubnet = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.UpdateOdbSubnetRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateOdbSubnet",
+        __Marshaller_google_cloud_oracledatabase_v1_UpdateOdbSubnetRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -753,6 +881,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.UpdateExascaleDbStorageVaultRequest, global::Google.LongRunning.Operation> __Method_UpdateExascaleDbStorageVault = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.UpdateExascaleDbStorageVaultRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateExascaleDbStorageVault",
+        __Marshaller_google_cloud_oracledatabase_v1_UpdateExascaleDbStorageVaultRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.DeleteExascaleDbStorageVaultRequest, global::Google.LongRunning.Operation> __Method_DeleteExascaleDbStorageVault = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.DeleteExascaleDbStorageVaultRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -767,6 +903,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
         "ListDbSystemInitialStorageSizes",
         __Marshaller_google_cloud_oracledatabase_v1_ListDbSystemInitialStorageSizesRequest,
         __Marshaller_google_cloud_oracledatabase_v1_ListDbSystemInitialStorageSizesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.ListDbSystemComputePerformancesRequest, global::Google.Cloud.OracleDatabase.V1.ListDbSystemComputePerformancesResponse> __Method_ListDbSystemComputePerformances = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.ListDbSystemComputePerformancesRequest, global::Google.Cloud.OracleDatabase.V1.ListDbSystemComputePerformancesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDbSystemComputePerformances",
+        __Marshaller_google_cloud_oracledatabase_v1_ListDbSystemComputePerformancesRequest,
+        __Marshaller_google_cloud_oracledatabase_v1_ListDbSystemComputePerformancesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.ListDatabasesRequest, global::Google.Cloud.OracleDatabase.V1.ListDatabasesResponse> __Method_ListDatabases = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.ListDatabasesRequest, global::Google.Cloud.OracleDatabase.V1.ListDatabasesResponse>(
@@ -825,6 +969,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.UpdateDbSystemRequest, global::Google.LongRunning.Operation> __Method_UpdateDbSystem = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.UpdateDbSystemRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateDbSystem",
+        __Marshaller_google_cloud_oracledatabase_v1_UpdateDbSystemRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.DeleteDbSystemRequest, global::Google.LongRunning.Operation> __Method_DeleteDbSystem = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.DeleteDbSystemRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -854,6 +1006,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
         __ServiceName,
         "CreateGoldengateDeployment",
         __Marshaller_google_cloud_oracledatabase_v1_CreateGoldengateDeploymentRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateDeploymentRequest, global::Google.LongRunning.Operation> __Method_UpdateGoldengateDeployment = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateDeploymentRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateGoldengateDeployment",
+        __Marshaller_google_cloud_oracledatabase_v1_UpdateGoldengateDeploymentRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -902,6 +1062,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
         __ServiceName,
         "CreateGoldengateConnection",
         __Marshaller_google_cloud_oracledatabase_v1_CreateGoldengateConnectionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionRequest, global::Google.LongRunning.Operation> __Method_UpdateGoldengateConnection = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateGoldengateConnection",
+        __Marshaller_google_cloud_oracledatabase_v1_UpdateGoldengateConnectionRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -985,6 +1153,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionAssignmentRequest, global::Google.LongRunning.Operation> __Method_UpdateGoldengateConnectionAssignment = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionAssignmentRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateGoldengateConnectionAssignment",
+        __Marshaller_google_cloud_oracledatabase_v1_UpdateGoldengateConnectionAssignmentRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.DeleteGoldengateConnectionAssignmentRequest, global::Google.LongRunning.Operation> __Method_DeleteGoldengateConnectionAssignment = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.DeleteGoldengateConnectionAssignmentRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -999,6 +1175,62 @@ namespace Google.Cloud.OracleDatabase.V1 {
         "TestGoldengateConnectionAssignment",
         __Marshaller_google_cloud_oracledatabase_v1_TestGoldengateConnectionAssignmentRequest,
         __Marshaller_google_cloud_oracledatabase_v1_TestGoldengateConnectionAssignmentResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.ListDatabaseConnectionsRequest, global::Google.Cloud.OracleDatabase.V1.ListDatabaseConnectionsResponse> __Method_ListDatabaseConnections = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.ListDatabaseConnectionsRequest, global::Google.Cloud.OracleDatabase.V1.ListDatabaseConnectionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDatabaseConnections",
+        __Marshaller_google_cloud_oracledatabase_v1_ListDatabaseConnectionsRequest,
+        __Marshaller_google_cloud_oracledatabase_v1_ListDatabaseConnectionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.GetDatabaseConnectionRequest, global::Google.Cloud.OracleDatabase.V1.DatabaseConnection> __Method_GetDatabaseConnection = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.GetDatabaseConnectionRequest, global::Google.Cloud.OracleDatabase.V1.DatabaseConnection>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDatabaseConnection",
+        __Marshaller_google_cloud_oracledatabase_v1_GetDatabaseConnectionRequest,
+        __Marshaller_google_cloud_oracledatabase_v1_DatabaseConnection);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.CreateDatabaseConnectionRequest, global::Google.LongRunning.Operation> __Method_CreateDatabaseConnection = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.CreateDatabaseConnectionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateDatabaseConnection",
+        __Marshaller_google_cloud_oracledatabase_v1_CreateDatabaseConnectionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.UpdateDatabaseConnectionRequest, global::Google.LongRunning.Operation> __Method_UpdateDatabaseConnection = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.UpdateDatabaseConnectionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateDatabaseConnection",
+        __Marshaller_google_cloud_oracledatabase_v1_UpdateDatabaseConnectionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.DeleteDatabaseConnectionRequest, global::Google.LongRunning.Operation> __Method_DeleteDatabaseConnection = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.DeleteDatabaseConnectionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteDatabaseConnection",
+        __Marshaller_google_cloud_oracledatabase_v1_DeleteDatabaseConnectionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.TestDatabaseConnectionRequest, global::Google.Cloud.OracleDatabase.V1.TestDatabaseConnectionResponse> __Method_TestDatabaseConnection = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.TestDatabaseConnectionRequest, global::Google.Cloud.OracleDatabase.V1.TestDatabaseConnectionResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "TestDatabaseConnection",
+        __Marshaller_google_cloud_oracledatabase_v1_TestDatabaseConnectionRequest,
+        __Marshaller_google_cloud_oracledatabase_v1_TestDatabaseConnectionResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.ExecuteSqlRequest, global::Google.Cloud.OracleDatabase.V1.ExecuteSqlResponse> __Method_ExecuteSql = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.ExecuteSqlRequest, global::Google.Cloud.OracleDatabase.V1.ExecuteSqlResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExecuteSql",
+        __Marshaller_google_cloud_oracledatabase_v1_ExecuteSqlRequest,
+        __Marshaller_google_cloud_oracledatabase_v1_ExecuteSqlResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -1042,6 +1274,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateCloudExadataInfrastructure(global::Google.Cloud.OracleDatabase.V1.CreateCloudExadataInfrastructureRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of a single Exadata Infrastructure.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateCloudExadataInfrastructure(global::Google.Cloud.OracleDatabase.V1.UpdateCloudExadataInfrastructureRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1107,6 +1351,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
 
       /// <summary>
+      /// Updates the parameters of a single Vm Cluster.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateCloudVmCluster(global::Google.Cloud.OracleDatabase.V1.UpdateCloudVmClusterRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Deletes a single VM Cluster.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1119,6 +1375,54 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
 
       /// <summary>
+      /// Enables the Workload Identity Connector for a Cloud VM Cluster.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> EnableCloudVmClusterIdentityConnector(global::Google.Cloud.OracleDatabase.V1.EnableCloudVmClusterIdentityConnectorRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Disables the Workload Identity Connector for a Cloud VM Cluster.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DisableCloudVmClusterIdentityConnector(global::Google.Cloud.OracleDatabase.V1.DisableCloudVmClusterIdentityConnectorRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Enables the Workload Identity Connector for an Exadb VM Cluster.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> EnableExadbVmClusterIdentityConnector(global::Google.Cloud.OracleDatabase.V1.EnableExadbVmClusterIdentityConnectorRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Disables the Workload Identity Connector for an Exadb VM Cluster.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DisableExadbVmClusterIdentityConnector(global::Google.Cloud.OracleDatabase.V1.DisableExadbVmClusterIdentityConnectorRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Lists the entitlements in a given project.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1126,6 +1430,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OracleDatabase.V1.ListEntitlementsResponse> ListEntitlements(global::Google.Cloud.OracleDatabase.V1.ListEntitlementsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists Flex Components in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OracleDatabase.V1.ListFlexComponentsResponse> ListFlexComponents(global::Google.Cloud.OracleDatabase.V1.ListFlexComponentsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1436,6 +1752,19 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
 
       /// <summary>
+      /// Updates the `labels` and `service_connectivity_config` of a single
+      /// OdbNetwork.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateOdbNetwork(global::Google.Cloud.OracleDatabase.V1.UpdateOdbNetworkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Deletes a single ODB Network.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1479,6 +1808,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateOdbSubnet(global::Google.Cloud.OracleDatabase.V1.CreateOdbSubnetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the `labels` of a single ODB Subnet.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateOdbSubnet(global::Google.Cloud.OracleDatabase.V1.UpdateOdbSubnetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1655,6 +1996,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
 
       /// <summary>
+      /// Updates the `labels` of a single ExascaleDbStorageVault.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateExascaleDbStorageVault(global::Google.Cloud.OracleDatabase.V1.UpdateExascaleDbStorageVaultRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Deletes a single ExascaleDB Storage Vault.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1675,6 +2028,19 @@ namespace Google.Cloud.OracleDatabase.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OracleDatabase.V1.ListDbSystemInitialStorageSizesResponse> ListDbSystemInitialStorageSizes(global::Google.Cloud.OracleDatabase.V1.ListDbSystemInitialStorageSizesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all the DbSystemComputePerformances for the given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OracleDatabase.V1.ListDbSystemComputePerformancesResponse> ListDbSystemComputePerformances(global::Google.Cloud.OracleDatabase.V1.ListDbSystemComputePerformancesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1765,6 +2131,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
 
       /// <summary>
+      /// Updates the `labels` of a single DbSystem.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDbSystem(global::Google.Cloud.OracleDatabase.V1.UpdateDbSystemRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Deletes a single DbSystem.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1808,6 +2186,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateGoldengateDeployment(global::Google.Cloud.OracleDatabase.V1.CreateGoldengateDeploymentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the `labels` of a single GoldengateDeployment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateGoldengateDeployment(global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateDeploymentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1880,6 +2270,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateGoldengateConnection(global::Google.Cloud.OracleDatabase.V1.CreateGoldengateConnectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the `labels` of a single GoldengateConnection.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateGoldengateConnection(global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2006,6 +2408,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
 
       /// <summary>
+      /// Updates the `labels` of a single GoldengateConnectionAssignment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateGoldengateConnectionAssignment(global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionAssignmentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Deletes a single GoldengateConnectionAssignment.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -2025,6 +2439,90 @@ namespace Google.Cloud.OracleDatabase.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OracleDatabase.V1.TestGoldengateConnectionAssignmentResponse> TestGoldengateConnectionAssignment(global::Google.Cloud.OracleDatabase.V1.TestGoldengateConnectionAssignmentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists DatabaseConnections in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OracleDatabase.V1.ListDatabaseConnectionsResponse> ListDatabaseConnections(global::Google.Cloud.OracleDatabase.V1.ListDatabaseConnectionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OracleDatabase.V1.DatabaseConnection> GetDatabaseConnection(global::Google.Cloud.OracleDatabase.V1.GetDatabaseConnectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new DatabaseConnection in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateDatabaseConnection(global::Google.Cloud.OracleDatabase.V1.CreateDatabaseConnectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of a single DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDatabaseConnection(global::Google.Cloud.OracleDatabase.V1.UpdateDatabaseConnectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteDatabaseConnection(global::Google.Cloud.OracleDatabase.V1.DeleteDatabaseConnectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Tests connectivity of a DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OracleDatabase.V1.TestDatabaseConnectionResponse> TestDatabaseConnection(global::Google.Cloud.OracleDatabase.V1.TestDatabaseConnectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Executes a SQL statement on a DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OracleDatabase.V1.ExecuteSqlResponse> ExecuteSql(global::Google.Cloud.OracleDatabase.V1.ExecuteSqlRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2201,6 +2699,54 @@ namespace Google.Cloud.OracleDatabase.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateCloudExadataInfrastructureAsync(global::Google.Cloud.OracleDatabase.V1.CreateCloudExadataInfrastructureRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCloudExadataInfrastructure, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single Exadata Infrastructure.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateCloudExadataInfrastructure(global::Google.Cloud.OracleDatabase.V1.UpdateCloudExadataInfrastructureRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCloudExadataInfrastructure(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single Exadata Infrastructure.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateCloudExadataInfrastructure(global::Google.Cloud.OracleDatabase.V1.UpdateCloudExadataInfrastructureRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateCloudExadataInfrastructure, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single Exadata Infrastructure.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateCloudExadataInfrastructureAsync(global::Google.Cloud.OracleDatabase.V1.UpdateCloudExadataInfrastructureRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCloudExadataInfrastructureAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single Exadata Infrastructure.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateCloudExadataInfrastructureAsync(global::Google.Cloud.OracleDatabase.V1.UpdateCloudExadataInfrastructureRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateCloudExadataInfrastructure, null, options, request);
       }
       /// <summary>
       /// Deletes a single Exadata Infrastructure.
@@ -2443,6 +2989,54 @@ namespace Google.Cloud.OracleDatabase.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCloudVmCluster, null, options, request);
       }
       /// <summary>
+      /// Updates the parameters of a single Vm Cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateCloudVmCluster(global::Google.Cloud.OracleDatabase.V1.UpdateCloudVmClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCloudVmCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single Vm Cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateCloudVmCluster(global::Google.Cloud.OracleDatabase.V1.UpdateCloudVmClusterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateCloudVmCluster, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single Vm Cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateCloudVmClusterAsync(global::Google.Cloud.OracleDatabase.V1.UpdateCloudVmClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCloudVmClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single Vm Cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateCloudVmClusterAsync(global::Google.Cloud.OracleDatabase.V1.UpdateCloudVmClusterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateCloudVmCluster, null, options, request);
+      }
+      /// <summary>
       /// Deletes a single VM Cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2491,6 +3085,198 @@ namespace Google.Cloud.OracleDatabase.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteCloudVmCluster, null, options, request);
       }
       /// <summary>
+      /// Enables the Workload Identity Connector for a Cloud VM Cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation EnableCloudVmClusterIdentityConnector(global::Google.Cloud.OracleDatabase.V1.EnableCloudVmClusterIdentityConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EnableCloudVmClusterIdentityConnector(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Enables the Workload Identity Connector for a Cloud VM Cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation EnableCloudVmClusterIdentityConnector(global::Google.Cloud.OracleDatabase.V1.EnableCloudVmClusterIdentityConnectorRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_EnableCloudVmClusterIdentityConnector, null, options, request);
+      }
+      /// <summary>
+      /// Enables the Workload Identity Connector for a Cloud VM Cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EnableCloudVmClusterIdentityConnectorAsync(global::Google.Cloud.OracleDatabase.V1.EnableCloudVmClusterIdentityConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EnableCloudVmClusterIdentityConnectorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Enables the Workload Identity Connector for a Cloud VM Cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EnableCloudVmClusterIdentityConnectorAsync(global::Google.Cloud.OracleDatabase.V1.EnableCloudVmClusterIdentityConnectorRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_EnableCloudVmClusterIdentityConnector, null, options, request);
+      }
+      /// <summary>
+      /// Disables the Workload Identity Connector for a Cloud VM Cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DisableCloudVmClusterIdentityConnector(global::Google.Cloud.OracleDatabase.V1.DisableCloudVmClusterIdentityConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DisableCloudVmClusterIdentityConnector(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Disables the Workload Identity Connector for a Cloud VM Cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DisableCloudVmClusterIdentityConnector(global::Google.Cloud.OracleDatabase.V1.DisableCloudVmClusterIdentityConnectorRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DisableCloudVmClusterIdentityConnector, null, options, request);
+      }
+      /// <summary>
+      /// Disables the Workload Identity Connector for a Cloud VM Cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DisableCloudVmClusterIdentityConnectorAsync(global::Google.Cloud.OracleDatabase.V1.DisableCloudVmClusterIdentityConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DisableCloudVmClusterIdentityConnectorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Disables the Workload Identity Connector for a Cloud VM Cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DisableCloudVmClusterIdentityConnectorAsync(global::Google.Cloud.OracleDatabase.V1.DisableCloudVmClusterIdentityConnectorRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DisableCloudVmClusterIdentityConnector, null, options, request);
+      }
+      /// <summary>
+      /// Enables the Workload Identity Connector for an Exadb VM Cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation EnableExadbVmClusterIdentityConnector(global::Google.Cloud.OracleDatabase.V1.EnableExadbVmClusterIdentityConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EnableExadbVmClusterIdentityConnector(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Enables the Workload Identity Connector for an Exadb VM Cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation EnableExadbVmClusterIdentityConnector(global::Google.Cloud.OracleDatabase.V1.EnableExadbVmClusterIdentityConnectorRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_EnableExadbVmClusterIdentityConnector, null, options, request);
+      }
+      /// <summary>
+      /// Enables the Workload Identity Connector for an Exadb VM Cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EnableExadbVmClusterIdentityConnectorAsync(global::Google.Cloud.OracleDatabase.V1.EnableExadbVmClusterIdentityConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EnableExadbVmClusterIdentityConnectorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Enables the Workload Identity Connector for an Exadb VM Cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EnableExadbVmClusterIdentityConnectorAsync(global::Google.Cloud.OracleDatabase.V1.EnableExadbVmClusterIdentityConnectorRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_EnableExadbVmClusterIdentityConnector, null, options, request);
+      }
+      /// <summary>
+      /// Disables the Workload Identity Connector for an Exadb VM Cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DisableExadbVmClusterIdentityConnector(global::Google.Cloud.OracleDatabase.V1.DisableExadbVmClusterIdentityConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DisableExadbVmClusterIdentityConnector(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Disables the Workload Identity Connector for an Exadb VM Cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DisableExadbVmClusterIdentityConnector(global::Google.Cloud.OracleDatabase.V1.DisableExadbVmClusterIdentityConnectorRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DisableExadbVmClusterIdentityConnector, null, options, request);
+      }
+      /// <summary>
+      /// Disables the Workload Identity Connector for an Exadb VM Cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DisableExadbVmClusterIdentityConnectorAsync(global::Google.Cloud.OracleDatabase.V1.DisableExadbVmClusterIdentityConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DisableExadbVmClusterIdentityConnectorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Disables the Workload Identity Connector for an Exadb VM Cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DisableExadbVmClusterIdentityConnectorAsync(global::Google.Cloud.OracleDatabase.V1.DisableExadbVmClusterIdentityConnectorRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DisableExadbVmClusterIdentityConnector, null, options, request);
+      }
+      /// <summary>
       /// Lists the entitlements in a given project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2537,6 +3323,54 @@ namespace Google.Cloud.OracleDatabase.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OracleDatabase.V1.ListEntitlementsResponse> ListEntitlementsAsync(global::Google.Cloud.OracleDatabase.V1.ListEntitlementsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListEntitlements, null, options, request);
+      }
+      /// <summary>
+      /// Lists Flex Components in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OracleDatabase.V1.ListFlexComponentsResponse ListFlexComponents(global::Google.Cloud.OracleDatabase.V1.ListFlexComponentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListFlexComponents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Flex Components in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OracleDatabase.V1.ListFlexComponentsResponse ListFlexComponents(global::Google.Cloud.OracleDatabase.V1.ListFlexComponentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListFlexComponents, null, options, request);
+      }
+      /// <summary>
+      /// Lists Flex Components in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OracleDatabase.V1.ListFlexComponentsResponse> ListFlexComponentsAsync(global::Google.Cloud.OracleDatabase.V1.ListFlexComponentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListFlexComponentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Flex Components in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OracleDatabase.V1.ListFlexComponentsResponse> ListFlexComponentsAsync(global::Google.Cloud.OracleDatabase.V1.ListFlexComponentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListFlexComponents, null, options, request);
       }
       /// <summary>
       /// Lists the database servers of an Exadata Infrastructure instance.
@@ -3759,6 +4593,58 @@ namespace Google.Cloud.OracleDatabase.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateOdbNetwork, null, options, request);
       }
       /// <summary>
+      /// Updates the `labels` and `service_connectivity_config` of a single
+      /// OdbNetwork.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateOdbNetwork(global::Google.Cloud.OracleDatabase.V1.UpdateOdbNetworkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateOdbNetwork(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the `labels` and `service_connectivity_config` of a single
+      /// OdbNetwork.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateOdbNetwork(global::Google.Cloud.OracleDatabase.V1.UpdateOdbNetworkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateOdbNetwork, null, options, request);
+      }
+      /// <summary>
+      /// Updates the `labels` and `service_connectivity_config` of a single
+      /// OdbNetwork.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateOdbNetworkAsync(global::Google.Cloud.OracleDatabase.V1.UpdateOdbNetworkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateOdbNetworkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the `labels` and `service_connectivity_config` of a single
+      /// OdbNetwork.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateOdbNetworkAsync(global::Google.Cloud.OracleDatabase.V1.UpdateOdbNetworkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateOdbNetwork, null, options, request);
+      }
+      /// <summary>
       /// Deletes a single ODB Network.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -3949,6 +4835,54 @@ namespace Google.Cloud.OracleDatabase.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateOdbSubnetAsync(global::Google.Cloud.OracleDatabase.V1.CreateOdbSubnetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateOdbSubnet, null, options, request);
+      }
+      /// <summary>
+      /// Updates the `labels` of a single ODB Subnet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateOdbSubnet(global::Google.Cloud.OracleDatabase.V1.UpdateOdbSubnetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateOdbSubnet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the `labels` of a single ODB Subnet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateOdbSubnet(global::Google.Cloud.OracleDatabase.V1.UpdateOdbSubnetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateOdbSubnet, null, options, request);
+      }
+      /// <summary>
+      /// Updates the `labels` of a single ODB Subnet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateOdbSubnetAsync(global::Google.Cloud.OracleDatabase.V1.UpdateOdbSubnetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateOdbSubnetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the `labels` of a single ODB Subnet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateOdbSubnetAsync(global::Google.Cloud.OracleDatabase.V1.UpdateOdbSubnetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateOdbSubnet, null, options, request);
       }
       /// <summary>
       /// Deletes a single ODB Subnet.
@@ -4635,6 +5569,54 @@ namespace Google.Cloud.OracleDatabase.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateExascaleDbStorageVault, null, options, request);
       }
       /// <summary>
+      /// Updates the `labels` of a single ExascaleDbStorageVault.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateExascaleDbStorageVault(global::Google.Cloud.OracleDatabase.V1.UpdateExascaleDbStorageVaultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateExascaleDbStorageVault(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the `labels` of a single ExascaleDbStorageVault.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateExascaleDbStorageVault(global::Google.Cloud.OracleDatabase.V1.UpdateExascaleDbStorageVaultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateExascaleDbStorageVault, null, options, request);
+      }
+      /// <summary>
+      /// Updates the `labels` of a single ExascaleDbStorageVault.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateExascaleDbStorageVaultAsync(global::Google.Cloud.OracleDatabase.V1.UpdateExascaleDbStorageVaultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateExascaleDbStorageVaultAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the `labels` of a single ExascaleDbStorageVault.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateExascaleDbStorageVaultAsync(global::Google.Cloud.OracleDatabase.V1.UpdateExascaleDbStorageVaultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateExascaleDbStorageVault, null, options, request);
+      }
+      /// <summary>
       /// Deletes a single ExascaleDB Storage Vault.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4733,6 +5715,58 @@ namespace Google.Cloud.OracleDatabase.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OracleDatabase.V1.ListDbSystemInitialStorageSizesResponse> ListDbSystemInitialStorageSizesAsync(global::Google.Cloud.OracleDatabase.V1.ListDbSystemInitialStorageSizesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDbSystemInitialStorageSizes, null, options, request);
+      }
+      /// <summary>
+      /// Lists all the DbSystemComputePerformances for the given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OracleDatabase.V1.ListDbSystemComputePerformancesResponse ListDbSystemComputePerformances(global::Google.Cloud.OracleDatabase.V1.ListDbSystemComputePerformancesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDbSystemComputePerformances(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the DbSystemComputePerformances for the given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OracleDatabase.V1.ListDbSystemComputePerformancesResponse ListDbSystemComputePerformances(global::Google.Cloud.OracleDatabase.V1.ListDbSystemComputePerformancesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDbSystemComputePerformances, null, options, request);
+      }
+      /// <summary>
+      /// Lists all the DbSystemComputePerformances for the given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OracleDatabase.V1.ListDbSystemComputePerformancesResponse> ListDbSystemComputePerformancesAsync(global::Google.Cloud.OracleDatabase.V1.ListDbSystemComputePerformancesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDbSystemComputePerformancesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the DbSystemComputePerformances for the given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OracleDatabase.V1.ListDbSystemComputePerformancesResponse> ListDbSystemComputePerformancesAsync(global::Google.Cloud.OracleDatabase.V1.ListDbSystemComputePerformancesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDbSystemComputePerformances, null, options, request);
       }
       /// <summary>
       /// Lists all the Databases for the given project, location and DbSystem.
@@ -5075,6 +6109,54 @@ namespace Google.Cloud.OracleDatabase.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDbSystem, null, options, request);
       }
       /// <summary>
+      /// Updates the `labels` of a single DbSystem.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDbSystem(global::Google.Cloud.OracleDatabase.V1.UpdateDbSystemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDbSystem(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the `labels` of a single DbSystem.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDbSystem(global::Google.Cloud.OracleDatabase.V1.UpdateDbSystemRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateDbSystem, null, options, request);
+      }
+      /// <summary>
+      /// Updates the `labels` of a single DbSystem.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDbSystemAsync(global::Google.Cloud.OracleDatabase.V1.UpdateDbSystemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDbSystemAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the `labels` of a single DbSystem.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDbSystemAsync(global::Google.Cloud.OracleDatabase.V1.UpdateDbSystemRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateDbSystem, null, options, request);
+      }
+      /// <summary>
       /// Deletes a single DbSystem.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -5265,6 +6347,54 @@ namespace Google.Cloud.OracleDatabase.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateGoldengateDeploymentAsync(global::Google.Cloud.OracleDatabase.V1.CreateGoldengateDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateGoldengateDeployment, null, options, request);
+      }
+      /// <summary>
+      /// Updates the `labels` of a single GoldengateDeployment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateGoldengateDeployment(global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateGoldengateDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the `labels` of a single GoldengateDeployment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateGoldengateDeployment(global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateDeploymentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateGoldengateDeployment, null, options, request);
+      }
+      /// <summary>
+      /// Updates the `labels` of a single GoldengateDeployment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateGoldengateDeploymentAsync(global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateGoldengateDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the `labels` of a single GoldengateDeployment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateGoldengateDeploymentAsync(global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateDeploymentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateGoldengateDeployment, null, options, request);
       }
       /// <summary>
       /// Deletes a single GoldengateDeployment.
@@ -5553,6 +6683,54 @@ namespace Google.Cloud.OracleDatabase.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateGoldengateConnectionAsync(global::Google.Cloud.OracleDatabase.V1.CreateGoldengateConnectionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateGoldengateConnection, null, options, request);
+      }
+      /// <summary>
+      /// Updates the `labels` of a single GoldengateConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateGoldengateConnection(global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateGoldengateConnection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the `labels` of a single GoldengateConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateGoldengateConnection(global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateGoldengateConnection, null, options, request);
+      }
+      /// <summary>
+      /// Updates the `labels` of a single GoldengateConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateGoldengateConnectionAsync(global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateGoldengateConnectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the `labels` of a single GoldengateConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateGoldengateConnectionAsync(global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateGoldengateConnection, null, options, request);
       }
       /// <summary>
       /// Deletes a single GoldengateConnection.
@@ -6039,6 +7217,54 @@ namespace Google.Cloud.OracleDatabase.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateGoldengateConnectionAssignment, null, options, request);
       }
       /// <summary>
+      /// Updates the `labels` of a single GoldengateConnectionAssignment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateGoldengateConnectionAssignment(global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionAssignmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateGoldengateConnectionAssignment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the `labels` of a single GoldengateConnectionAssignment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateGoldengateConnectionAssignment(global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionAssignmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateGoldengateConnectionAssignment, null, options, request);
+      }
+      /// <summary>
+      /// Updates the `labels` of a single GoldengateConnectionAssignment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateGoldengateConnectionAssignmentAsync(global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionAssignmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateGoldengateConnectionAssignmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the `labels` of a single GoldengateConnectionAssignment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateGoldengateConnectionAssignmentAsync(global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionAssignmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateGoldengateConnectionAssignment, null, options, request);
+      }
+      /// <summary>
       /// Deletes a single GoldengateConnectionAssignment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -6134,6 +7360,342 @@ namespace Google.Cloud.OracleDatabase.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestGoldengateConnectionAssignment, null, options, request);
       }
+      /// <summary>
+      /// Lists DatabaseConnections in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OracleDatabase.V1.ListDatabaseConnectionsResponse ListDatabaseConnections(global::Google.Cloud.OracleDatabase.V1.ListDatabaseConnectionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDatabaseConnections(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists DatabaseConnections in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OracleDatabase.V1.ListDatabaseConnectionsResponse ListDatabaseConnections(global::Google.Cloud.OracleDatabase.V1.ListDatabaseConnectionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDatabaseConnections, null, options, request);
+      }
+      /// <summary>
+      /// Lists DatabaseConnections in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OracleDatabase.V1.ListDatabaseConnectionsResponse> ListDatabaseConnectionsAsync(global::Google.Cloud.OracleDatabase.V1.ListDatabaseConnectionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDatabaseConnectionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists DatabaseConnections in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OracleDatabase.V1.ListDatabaseConnectionsResponse> ListDatabaseConnectionsAsync(global::Google.Cloud.OracleDatabase.V1.ListDatabaseConnectionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDatabaseConnections, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OracleDatabase.V1.DatabaseConnection GetDatabaseConnection(global::Google.Cloud.OracleDatabase.V1.GetDatabaseConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDatabaseConnection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OracleDatabase.V1.DatabaseConnection GetDatabaseConnection(global::Google.Cloud.OracleDatabase.V1.GetDatabaseConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDatabaseConnection, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OracleDatabase.V1.DatabaseConnection> GetDatabaseConnectionAsync(global::Google.Cloud.OracleDatabase.V1.GetDatabaseConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDatabaseConnectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OracleDatabase.V1.DatabaseConnection> GetDatabaseConnectionAsync(global::Google.Cloud.OracleDatabase.V1.GetDatabaseConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDatabaseConnection, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new DatabaseConnection in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateDatabaseConnection(global::Google.Cloud.OracleDatabase.V1.CreateDatabaseConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDatabaseConnection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new DatabaseConnection in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateDatabaseConnection(global::Google.Cloud.OracleDatabase.V1.CreateDatabaseConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateDatabaseConnection, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new DatabaseConnection in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDatabaseConnectionAsync(global::Google.Cloud.OracleDatabase.V1.CreateDatabaseConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDatabaseConnectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new DatabaseConnection in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDatabaseConnectionAsync(global::Google.Cloud.OracleDatabase.V1.CreateDatabaseConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateDatabaseConnection, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDatabaseConnection(global::Google.Cloud.OracleDatabase.V1.UpdateDatabaseConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDatabaseConnection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDatabaseConnection(global::Google.Cloud.OracleDatabase.V1.UpdateDatabaseConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateDatabaseConnection, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDatabaseConnectionAsync(global::Google.Cloud.OracleDatabase.V1.UpdateDatabaseConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDatabaseConnectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDatabaseConnectionAsync(global::Google.Cloud.OracleDatabase.V1.UpdateDatabaseConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateDatabaseConnection, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteDatabaseConnection(global::Google.Cloud.OracleDatabase.V1.DeleteDatabaseConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDatabaseConnection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteDatabaseConnection(global::Google.Cloud.OracleDatabase.V1.DeleteDatabaseConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteDatabaseConnection, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDatabaseConnectionAsync(global::Google.Cloud.OracleDatabase.V1.DeleteDatabaseConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDatabaseConnectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDatabaseConnectionAsync(global::Google.Cloud.OracleDatabase.V1.DeleteDatabaseConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteDatabaseConnection, null, options, request);
+      }
+      /// <summary>
+      /// Tests connectivity of a DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OracleDatabase.V1.TestDatabaseConnectionResponse TestDatabaseConnection(global::Google.Cloud.OracleDatabase.V1.TestDatabaseConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TestDatabaseConnection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Tests connectivity of a DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OracleDatabase.V1.TestDatabaseConnectionResponse TestDatabaseConnection(global::Google.Cloud.OracleDatabase.V1.TestDatabaseConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_TestDatabaseConnection, null, options, request);
+      }
+      /// <summary>
+      /// Tests connectivity of a DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OracleDatabase.V1.TestDatabaseConnectionResponse> TestDatabaseConnectionAsync(global::Google.Cloud.OracleDatabase.V1.TestDatabaseConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TestDatabaseConnectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Tests connectivity of a DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OracleDatabase.V1.TestDatabaseConnectionResponse> TestDatabaseConnectionAsync(global::Google.Cloud.OracleDatabase.V1.TestDatabaseConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_TestDatabaseConnection, null, options, request);
+      }
+      /// <summary>
+      /// Executes a SQL statement on a DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OracleDatabase.V1.ExecuteSqlResponse ExecuteSql(global::Google.Cloud.OracleDatabase.V1.ExecuteSqlRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExecuteSql(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Executes a SQL statement on a DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OracleDatabase.V1.ExecuteSqlResponse ExecuteSql(global::Google.Cloud.OracleDatabase.V1.ExecuteSqlRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExecuteSql, null, options, request);
+      }
+      /// <summary>
+      /// Executes a SQL statement on a DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OracleDatabase.V1.ExecuteSqlResponse> ExecuteSqlAsync(global::Google.Cloud.OracleDatabase.V1.ExecuteSqlRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExecuteSqlAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Executes a SQL statement on a DatabaseConnection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OracleDatabase.V1.ExecuteSqlResponse> ExecuteSqlAsync(global::Google.Cloud.OracleDatabase.V1.ExecuteSqlRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExecuteSql, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override OracleDatabaseClient NewInstance(ClientBaseConfiguration configuration)
@@ -6151,13 +7713,20 @@ namespace Google.Cloud.OracleDatabase.V1 {
           .AddMethod(__Method_ListCloudExadataInfrastructures, serviceImpl.ListCloudExadataInfrastructures)
           .AddMethod(__Method_GetCloudExadataInfrastructure, serviceImpl.GetCloudExadataInfrastructure)
           .AddMethod(__Method_CreateCloudExadataInfrastructure, serviceImpl.CreateCloudExadataInfrastructure)
+          .AddMethod(__Method_UpdateCloudExadataInfrastructure, serviceImpl.UpdateCloudExadataInfrastructure)
           .AddMethod(__Method_DeleteCloudExadataInfrastructure, serviceImpl.DeleteCloudExadataInfrastructure)
           .AddMethod(__Method_ConfigureExascaleCloudExadataInfrastructure, serviceImpl.ConfigureExascaleCloudExadataInfrastructure)
           .AddMethod(__Method_ListCloudVmClusters, serviceImpl.ListCloudVmClusters)
           .AddMethod(__Method_GetCloudVmCluster, serviceImpl.GetCloudVmCluster)
           .AddMethod(__Method_CreateCloudVmCluster, serviceImpl.CreateCloudVmCluster)
+          .AddMethod(__Method_UpdateCloudVmCluster, serviceImpl.UpdateCloudVmCluster)
           .AddMethod(__Method_DeleteCloudVmCluster, serviceImpl.DeleteCloudVmCluster)
+          .AddMethod(__Method_EnableCloudVmClusterIdentityConnector, serviceImpl.EnableCloudVmClusterIdentityConnector)
+          .AddMethod(__Method_DisableCloudVmClusterIdentityConnector, serviceImpl.DisableCloudVmClusterIdentityConnector)
+          .AddMethod(__Method_EnableExadbVmClusterIdentityConnector, serviceImpl.EnableExadbVmClusterIdentityConnector)
+          .AddMethod(__Method_DisableExadbVmClusterIdentityConnector, serviceImpl.DisableExadbVmClusterIdentityConnector)
           .AddMethod(__Method_ListEntitlements, serviceImpl.ListEntitlements)
+          .AddMethod(__Method_ListFlexComponents, serviceImpl.ListFlexComponents)
           .AddMethod(__Method_ListDbServers, serviceImpl.ListDbServers)
           .AddMethod(__Method_ListDbNodes, serviceImpl.ListDbNodes)
           .AddMethod(__Method_ListGiVersions, serviceImpl.ListGiVersions)
@@ -6183,10 +7752,12 @@ namespace Google.Cloud.OracleDatabase.V1 {
           .AddMethod(__Method_ListOdbNetworks, serviceImpl.ListOdbNetworks)
           .AddMethod(__Method_GetOdbNetwork, serviceImpl.GetOdbNetwork)
           .AddMethod(__Method_CreateOdbNetwork, serviceImpl.CreateOdbNetwork)
+          .AddMethod(__Method_UpdateOdbNetwork, serviceImpl.UpdateOdbNetwork)
           .AddMethod(__Method_DeleteOdbNetwork, serviceImpl.DeleteOdbNetwork)
           .AddMethod(__Method_ListOdbSubnets, serviceImpl.ListOdbSubnets)
           .AddMethod(__Method_GetOdbSubnet, serviceImpl.GetOdbSubnet)
           .AddMethod(__Method_CreateOdbSubnet, serviceImpl.CreateOdbSubnet)
+          .AddMethod(__Method_UpdateOdbSubnet, serviceImpl.UpdateOdbSubnet)
           .AddMethod(__Method_DeleteOdbSubnet, serviceImpl.DeleteOdbSubnet)
           .AddMethod(__Method_ListOdbDnsZones, serviceImpl.ListOdbDnsZones)
           .AddMethod(__Method_GetOdbDnsZone, serviceImpl.GetOdbDnsZone)
@@ -6201,8 +7772,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
           .AddMethod(__Method_ListExascaleDbStorageVaults, serviceImpl.ListExascaleDbStorageVaults)
           .AddMethod(__Method_GetExascaleDbStorageVault, serviceImpl.GetExascaleDbStorageVault)
           .AddMethod(__Method_CreateExascaleDbStorageVault, serviceImpl.CreateExascaleDbStorageVault)
+          .AddMethod(__Method_UpdateExascaleDbStorageVault, serviceImpl.UpdateExascaleDbStorageVault)
           .AddMethod(__Method_DeleteExascaleDbStorageVault, serviceImpl.DeleteExascaleDbStorageVault)
           .AddMethod(__Method_ListDbSystemInitialStorageSizes, serviceImpl.ListDbSystemInitialStorageSizes)
+          .AddMethod(__Method_ListDbSystemComputePerformances, serviceImpl.ListDbSystemComputePerformances)
           .AddMethod(__Method_ListDatabases, serviceImpl.ListDatabases)
           .AddMethod(__Method_GetDatabase, serviceImpl.GetDatabase)
           .AddMethod(__Method_ListPluggableDatabases, serviceImpl.ListPluggableDatabases)
@@ -6210,16 +7783,19 @@ namespace Google.Cloud.OracleDatabase.V1 {
           .AddMethod(__Method_ListDbSystems, serviceImpl.ListDbSystems)
           .AddMethod(__Method_GetDbSystem, serviceImpl.GetDbSystem)
           .AddMethod(__Method_CreateDbSystem, serviceImpl.CreateDbSystem)
+          .AddMethod(__Method_UpdateDbSystem, serviceImpl.UpdateDbSystem)
           .AddMethod(__Method_DeleteDbSystem, serviceImpl.DeleteDbSystem)
           .AddMethod(__Method_ListGoldengateDeployments, serviceImpl.ListGoldengateDeployments)
           .AddMethod(__Method_GetGoldengateDeployment, serviceImpl.GetGoldengateDeployment)
           .AddMethod(__Method_CreateGoldengateDeployment, serviceImpl.CreateGoldengateDeployment)
+          .AddMethod(__Method_UpdateGoldengateDeployment, serviceImpl.UpdateGoldengateDeployment)
           .AddMethod(__Method_DeleteGoldengateDeployment, serviceImpl.DeleteGoldengateDeployment)
           .AddMethod(__Method_StopGoldengateDeployment, serviceImpl.StopGoldengateDeployment)
           .AddMethod(__Method_StartGoldengateDeployment, serviceImpl.StartGoldengateDeployment)
           .AddMethod(__Method_ListGoldengateConnections, serviceImpl.ListGoldengateConnections)
           .AddMethod(__Method_GetGoldengateConnection, serviceImpl.GetGoldengateConnection)
           .AddMethod(__Method_CreateGoldengateConnection, serviceImpl.CreateGoldengateConnection)
+          .AddMethod(__Method_UpdateGoldengateConnection, serviceImpl.UpdateGoldengateConnection)
           .AddMethod(__Method_DeleteGoldengateConnection, serviceImpl.DeleteGoldengateConnection)
           .AddMethod(__Method_ListGoldengateDeploymentVersions, serviceImpl.ListGoldengateDeploymentVersions)
           .AddMethod(__Method_ListGoldengateDeploymentTypes, serviceImpl.ListGoldengateDeploymentTypes)
@@ -6230,8 +7806,16 @@ namespace Google.Cloud.OracleDatabase.V1 {
           .AddMethod(__Method_ListGoldengateConnectionAssignments, serviceImpl.ListGoldengateConnectionAssignments)
           .AddMethod(__Method_GetGoldengateConnectionAssignment, serviceImpl.GetGoldengateConnectionAssignment)
           .AddMethod(__Method_CreateGoldengateConnectionAssignment, serviceImpl.CreateGoldengateConnectionAssignment)
+          .AddMethod(__Method_UpdateGoldengateConnectionAssignment, serviceImpl.UpdateGoldengateConnectionAssignment)
           .AddMethod(__Method_DeleteGoldengateConnectionAssignment, serviceImpl.DeleteGoldengateConnectionAssignment)
-          .AddMethod(__Method_TestGoldengateConnectionAssignment, serviceImpl.TestGoldengateConnectionAssignment).Build();
+          .AddMethod(__Method_TestGoldengateConnectionAssignment, serviceImpl.TestGoldengateConnectionAssignment)
+          .AddMethod(__Method_ListDatabaseConnections, serviceImpl.ListDatabaseConnections)
+          .AddMethod(__Method_GetDatabaseConnection, serviceImpl.GetDatabaseConnection)
+          .AddMethod(__Method_CreateDatabaseConnection, serviceImpl.CreateDatabaseConnection)
+          .AddMethod(__Method_UpdateDatabaseConnection, serviceImpl.UpdateDatabaseConnection)
+          .AddMethod(__Method_DeleteDatabaseConnection, serviceImpl.DeleteDatabaseConnection)
+          .AddMethod(__Method_TestDatabaseConnection, serviceImpl.TestDatabaseConnection)
+          .AddMethod(__Method_ExecuteSql, serviceImpl.ExecuteSql).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -6244,13 +7828,20 @@ namespace Google.Cloud.OracleDatabase.V1 {
       serviceBinder.AddMethod(__Method_ListCloudExadataInfrastructures, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListCloudExadataInfrastructuresRequest, global::Google.Cloud.OracleDatabase.V1.ListCloudExadataInfrastructuresResponse>(serviceImpl.ListCloudExadataInfrastructures));
       serviceBinder.AddMethod(__Method_GetCloudExadataInfrastructure, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.GetCloudExadataInfrastructureRequest, global::Google.Cloud.OracleDatabase.V1.CloudExadataInfrastructure>(serviceImpl.GetCloudExadataInfrastructure));
       serviceBinder.AddMethod(__Method_CreateCloudExadataInfrastructure, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.CreateCloudExadataInfrastructureRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateCloudExadataInfrastructure));
+      serviceBinder.AddMethod(__Method_UpdateCloudExadataInfrastructure, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.UpdateCloudExadataInfrastructureRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateCloudExadataInfrastructure));
       serviceBinder.AddMethod(__Method_DeleteCloudExadataInfrastructure, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.DeleteCloudExadataInfrastructureRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteCloudExadataInfrastructure));
       serviceBinder.AddMethod(__Method_ConfigureExascaleCloudExadataInfrastructure, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ConfigureExascaleCloudExadataInfrastructureRequest, global::Google.LongRunning.Operation>(serviceImpl.ConfigureExascaleCloudExadataInfrastructure));
       serviceBinder.AddMethod(__Method_ListCloudVmClusters, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListCloudVmClustersRequest, global::Google.Cloud.OracleDatabase.V1.ListCloudVmClustersResponse>(serviceImpl.ListCloudVmClusters));
       serviceBinder.AddMethod(__Method_GetCloudVmCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.GetCloudVmClusterRequest, global::Google.Cloud.OracleDatabase.V1.CloudVmCluster>(serviceImpl.GetCloudVmCluster));
       serviceBinder.AddMethod(__Method_CreateCloudVmCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.CreateCloudVmClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateCloudVmCluster));
+      serviceBinder.AddMethod(__Method_UpdateCloudVmCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.UpdateCloudVmClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateCloudVmCluster));
       serviceBinder.AddMethod(__Method_DeleteCloudVmCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.DeleteCloudVmClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteCloudVmCluster));
+      serviceBinder.AddMethod(__Method_EnableCloudVmClusterIdentityConnector, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.EnableCloudVmClusterIdentityConnectorRequest, global::Google.LongRunning.Operation>(serviceImpl.EnableCloudVmClusterIdentityConnector));
+      serviceBinder.AddMethod(__Method_DisableCloudVmClusterIdentityConnector, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.DisableCloudVmClusterIdentityConnectorRequest, global::Google.LongRunning.Operation>(serviceImpl.DisableCloudVmClusterIdentityConnector));
+      serviceBinder.AddMethod(__Method_EnableExadbVmClusterIdentityConnector, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.EnableExadbVmClusterIdentityConnectorRequest, global::Google.LongRunning.Operation>(serviceImpl.EnableExadbVmClusterIdentityConnector));
+      serviceBinder.AddMethod(__Method_DisableExadbVmClusterIdentityConnector, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.DisableExadbVmClusterIdentityConnectorRequest, global::Google.LongRunning.Operation>(serviceImpl.DisableExadbVmClusterIdentityConnector));
       serviceBinder.AddMethod(__Method_ListEntitlements, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListEntitlementsRequest, global::Google.Cloud.OracleDatabase.V1.ListEntitlementsResponse>(serviceImpl.ListEntitlements));
+      serviceBinder.AddMethod(__Method_ListFlexComponents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListFlexComponentsRequest, global::Google.Cloud.OracleDatabase.V1.ListFlexComponentsResponse>(serviceImpl.ListFlexComponents));
       serviceBinder.AddMethod(__Method_ListDbServers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListDbServersRequest, global::Google.Cloud.OracleDatabase.V1.ListDbServersResponse>(serviceImpl.ListDbServers));
       serviceBinder.AddMethod(__Method_ListDbNodes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListDbNodesRequest, global::Google.Cloud.OracleDatabase.V1.ListDbNodesResponse>(serviceImpl.ListDbNodes));
       serviceBinder.AddMethod(__Method_ListGiVersions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListGiVersionsRequest, global::Google.Cloud.OracleDatabase.V1.ListGiVersionsResponse>(serviceImpl.ListGiVersions));
@@ -6276,10 +7867,12 @@ namespace Google.Cloud.OracleDatabase.V1 {
       serviceBinder.AddMethod(__Method_ListOdbNetworks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListOdbNetworksRequest, global::Google.Cloud.OracleDatabase.V1.ListOdbNetworksResponse>(serviceImpl.ListOdbNetworks));
       serviceBinder.AddMethod(__Method_GetOdbNetwork, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.GetOdbNetworkRequest, global::Google.Cloud.OracleDatabase.V1.OdbNetwork>(serviceImpl.GetOdbNetwork));
       serviceBinder.AddMethod(__Method_CreateOdbNetwork, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.CreateOdbNetworkRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateOdbNetwork));
+      serviceBinder.AddMethod(__Method_UpdateOdbNetwork, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.UpdateOdbNetworkRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateOdbNetwork));
       serviceBinder.AddMethod(__Method_DeleteOdbNetwork, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.DeleteOdbNetworkRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteOdbNetwork));
       serviceBinder.AddMethod(__Method_ListOdbSubnets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListOdbSubnetsRequest, global::Google.Cloud.OracleDatabase.V1.ListOdbSubnetsResponse>(serviceImpl.ListOdbSubnets));
       serviceBinder.AddMethod(__Method_GetOdbSubnet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.GetOdbSubnetRequest, global::Google.Cloud.OracleDatabase.V1.OdbSubnet>(serviceImpl.GetOdbSubnet));
       serviceBinder.AddMethod(__Method_CreateOdbSubnet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.CreateOdbSubnetRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateOdbSubnet));
+      serviceBinder.AddMethod(__Method_UpdateOdbSubnet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.UpdateOdbSubnetRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateOdbSubnet));
       serviceBinder.AddMethod(__Method_DeleteOdbSubnet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.DeleteOdbSubnetRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteOdbSubnet));
       serviceBinder.AddMethod(__Method_ListOdbDnsZones, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesRequest, global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesResponse>(serviceImpl.ListOdbDnsZones));
       serviceBinder.AddMethod(__Method_GetOdbDnsZone, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.GetOdbDnsZoneRequest, global::Google.Cloud.OracleDatabase.V1.OdbDnsZone>(serviceImpl.GetOdbDnsZone));
@@ -6294,8 +7887,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
       serviceBinder.AddMethod(__Method_ListExascaleDbStorageVaults, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListExascaleDbStorageVaultsRequest, global::Google.Cloud.OracleDatabase.V1.ListExascaleDbStorageVaultsResponse>(serviceImpl.ListExascaleDbStorageVaults));
       serviceBinder.AddMethod(__Method_GetExascaleDbStorageVault, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.GetExascaleDbStorageVaultRequest, global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVault>(serviceImpl.GetExascaleDbStorageVault));
       serviceBinder.AddMethod(__Method_CreateExascaleDbStorageVault, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.CreateExascaleDbStorageVaultRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateExascaleDbStorageVault));
+      serviceBinder.AddMethod(__Method_UpdateExascaleDbStorageVault, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.UpdateExascaleDbStorageVaultRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateExascaleDbStorageVault));
       serviceBinder.AddMethod(__Method_DeleteExascaleDbStorageVault, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.DeleteExascaleDbStorageVaultRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteExascaleDbStorageVault));
       serviceBinder.AddMethod(__Method_ListDbSystemInitialStorageSizes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListDbSystemInitialStorageSizesRequest, global::Google.Cloud.OracleDatabase.V1.ListDbSystemInitialStorageSizesResponse>(serviceImpl.ListDbSystemInitialStorageSizes));
+      serviceBinder.AddMethod(__Method_ListDbSystemComputePerformances, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListDbSystemComputePerformancesRequest, global::Google.Cloud.OracleDatabase.V1.ListDbSystemComputePerformancesResponse>(serviceImpl.ListDbSystemComputePerformances));
       serviceBinder.AddMethod(__Method_ListDatabases, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListDatabasesRequest, global::Google.Cloud.OracleDatabase.V1.ListDatabasesResponse>(serviceImpl.ListDatabases));
       serviceBinder.AddMethod(__Method_GetDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.GetDatabaseRequest, global::Google.Cloud.OracleDatabase.V1.Database>(serviceImpl.GetDatabase));
       serviceBinder.AddMethod(__Method_ListPluggableDatabases, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListPluggableDatabasesRequest, global::Google.Cloud.OracleDatabase.V1.ListPluggableDatabasesResponse>(serviceImpl.ListPluggableDatabases));
@@ -6303,16 +7898,19 @@ namespace Google.Cloud.OracleDatabase.V1 {
       serviceBinder.AddMethod(__Method_ListDbSystems, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListDbSystemsRequest, global::Google.Cloud.OracleDatabase.V1.ListDbSystemsResponse>(serviceImpl.ListDbSystems));
       serviceBinder.AddMethod(__Method_GetDbSystem, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.GetDbSystemRequest, global::Google.Cloud.OracleDatabase.V1.DbSystem>(serviceImpl.GetDbSystem));
       serviceBinder.AddMethod(__Method_CreateDbSystem, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.CreateDbSystemRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDbSystem));
+      serviceBinder.AddMethod(__Method_UpdateDbSystem, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.UpdateDbSystemRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDbSystem));
       serviceBinder.AddMethod(__Method_DeleteDbSystem, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.DeleteDbSystemRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDbSystem));
       serviceBinder.AddMethod(__Method_ListGoldengateDeployments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListGoldengateDeploymentsRequest, global::Google.Cloud.OracleDatabase.V1.ListGoldengateDeploymentsResponse>(serviceImpl.ListGoldengateDeployments));
       serviceBinder.AddMethod(__Method_GetGoldengateDeployment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.GetGoldengateDeploymentRequest, global::Google.Cloud.OracleDatabase.V1.GoldengateDeployment>(serviceImpl.GetGoldengateDeployment));
       serviceBinder.AddMethod(__Method_CreateGoldengateDeployment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.CreateGoldengateDeploymentRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateGoldengateDeployment));
+      serviceBinder.AddMethod(__Method_UpdateGoldengateDeployment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateDeploymentRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateGoldengateDeployment));
       serviceBinder.AddMethod(__Method_DeleteGoldengateDeployment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.DeleteGoldengateDeploymentRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteGoldengateDeployment));
       serviceBinder.AddMethod(__Method_StopGoldengateDeployment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.StopGoldengateDeploymentRequest, global::Google.LongRunning.Operation>(serviceImpl.StopGoldengateDeployment));
       serviceBinder.AddMethod(__Method_StartGoldengateDeployment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.StartGoldengateDeploymentRequest, global::Google.LongRunning.Operation>(serviceImpl.StartGoldengateDeployment));
       serviceBinder.AddMethod(__Method_ListGoldengateConnections, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListGoldengateConnectionsRequest, global::Google.Cloud.OracleDatabase.V1.ListGoldengateConnectionsResponse>(serviceImpl.ListGoldengateConnections));
       serviceBinder.AddMethod(__Method_GetGoldengateConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.GetGoldengateConnectionRequest, global::Google.Cloud.OracleDatabase.V1.GoldengateConnection>(serviceImpl.GetGoldengateConnection));
       serviceBinder.AddMethod(__Method_CreateGoldengateConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.CreateGoldengateConnectionRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateGoldengateConnection));
+      serviceBinder.AddMethod(__Method_UpdateGoldengateConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateGoldengateConnection));
       serviceBinder.AddMethod(__Method_DeleteGoldengateConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.DeleteGoldengateConnectionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteGoldengateConnection));
       serviceBinder.AddMethod(__Method_ListGoldengateDeploymentVersions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListGoldengateDeploymentVersionsRequest, global::Google.Cloud.OracleDatabase.V1.ListGoldengateDeploymentVersionsResponse>(serviceImpl.ListGoldengateDeploymentVersions));
       serviceBinder.AddMethod(__Method_ListGoldengateDeploymentTypes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListGoldengateDeploymentTypesRequest, global::Google.Cloud.OracleDatabase.V1.ListGoldengateDeploymentTypesResponse>(serviceImpl.ListGoldengateDeploymentTypes));
@@ -6323,8 +7921,16 @@ namespace Google.Cloud.OracleDatabase.V1 {
       serviceBinder.AddMethod(__Method_ListGoldengateConnectionAssignments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListGoldengateConnectionAssignmentsRequest, global::Google.Cloud.OracleDatabase.V1.ListGoldengateConnectionAssignmentsResponse>(serviceImpl.ListGoldengateConnectionAssignments));
       serviceBinder.AddMethod(__Method_GetGoldengateConnectionAssignment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.GetGoldengateConnectionAssignmentRequest, global::Google.Cloud.OracleDatabase.V1.GoldengateConnectionAssignment>(serviceImpl.GetGoldengateConnectionAssignment));
       serviceBinder.AddMethod(__Method_CreateGoldengateConnectionAssignment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.CreateGoldengateConnectionAssignmentRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateGoldengateConnectionAssignment));
+      serviceBinder.AddMethod(__Method_UpdateGoldengateConnectionAssignment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateConnectionAssignmentRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateGoldengateConnectionAssignment));
       serviceBinder.AddMethod(__Method_DeleteGoldengateConnectionAssignment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.DeleteGoldengateConnectionAssignmentRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteGoldengateConnectionAssignment));
       serviceBinder.AddMethod(__Method_TestGoldengateConnectionAssignment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.TestGoldengateConnectionAssignmentRequest, global::Google.Cloud.OracleDatabase.V1.TestGoldengateConnectionAssignmentResponse>(serviceImpl.TestGoldengateConnectionAssignment));
+      serviceBinder.AddMethod(__Method_ListDatabaseConnections, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListDatabaseConnectionsRequest, global::Google.Cloud.OracleDatabase.V1.ListDatabaseConnectionsResponse>(serviceImpl.ListDatabaseConnections));
+      serviceBinder.AddMethod(__Method_GetDatabaseConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.GetDatabaseConnectionRequest, global::Google.Cloud.OracleDatabase.V1.DatabaseConnection>(serviceImpl.GetDatabaseConnection));
+      serviceBinder.AddMethod(__Method_CreateDatabaseConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.CreateDatabaseConnectionRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDatabaseConnection));
+      serviceBinder.AddMethod(__Method_UpdateDatabaseConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.UpdateDatabaseConnectionRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDatabaseConnection));
+      serviceBinder.AddMethod(__Method_DeleteDatabaseConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.DeleteDatabaseConnectionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDatabaseConnection));
+      serviceBinder.AddMethod(__Method_TestDatabaseConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.TestDatabaseConnectionRequest, global::Google.Cloud.OracleDatabase.V1.TestDatabaseConnectionResponse>(serviceImpl.TestDatabaseConnection));
+      serviceBinder.AddMethod(__Method_ExecuteSql, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ExecuteSqlRequest, global::Google.Cloud.OracleDatabase.V1.ExecuteSqlResponse>(serviceImpl.ExecuteSql));
     }
 
   }

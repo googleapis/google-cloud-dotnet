@@ -28,193 +28,199 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "ZXBsb3ltZW50LnByb3RvEh5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2Uu",
             "djEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aG2dvb2dsZS9h",
             "cGkvZmllbGRfaW5mby5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90",
-            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxobZ29vZ2xlL3R5",
-            "cGUvZGF5b2Z3ZWVrLnByb3RvIv8FChRHb2xkZW5nYXRlRGVwbG95bWVudBIS",
-            "CgRuYW1lGAEgASgJQgTiQQEIElgKCnByb3BlcnRpZXMYAiABKAsyPi5nb29n",
-            "bGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuR29sZGVuZ2F0ZURlcGxveW1l",
-            "bnRQcm9wZXJ0aWVzQgTiQQECEh0KD2djcF9vcmFjbGVfem9uZRgDIAEoCUIE",
-            "4kEBARJWCgZsYWJlbHMYBCADKAsyQC5nb29nbGUuY2xvdWQub3JhY2xlZGF0",
-            "YWJhc2UudjEuR29sZGVuZ2F0ZURlcGxveW1lbnQuTGFiZWxzRW50cnlCBOJB",
-            "AQESRgoLb2RiX25ldHdvcmsYBSABKAlCMeJBAQH6QSoKKG9yYWNsZWRhdGFi",
-            "YXNlLmdvb2dsZWFwaXMuY29tL09kYk5ldHdvcmsSRAoKb2RiX3N1Ym5ldBgG",
-            "IAEoCUIw4kEBAvpBKQonb3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20v",
-            "T2RiU3VibmV0EhwKDmVudGl0bGVtZW50X2lkGAcgASgJQgTiQQEDEhoKDGRp",
-            "c3BsYXlfbmFtZRgIIAEoCUIE4kEBAhI1CgtjcmVhdGVfdGltZRgJIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMSFQoHb2NpX3VybBgK",
-            "IAEoCUIE4kEBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
-            "dWUYAiABKAk6AjgBOrwB6kG4AQoyb3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBp",
-            "cy5jb20vR29sZGVuZ2F0ZURlcGxveW1lbnQSVXByb2plY3RzL3twcm9qZWN0",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9nb2xkZW5nYXRlRGVwbG95bWVudHMv",
-            "e2dvbGRlbmdhdGVfZGVwbG95bWVudH0qFWdvbGRlbmdhdGVEZXBsb3ltZW50",
-            "czIUZ29sZGVuZ2F0ZURlcGxveW1lbnQi1BsKHkdvbGRlbmdhdGVEZXBsb3lt",
-            "ZW50UHJvcGVydGllcxISCgRvY2lkGAEgASgJQgTiQQEDEoABCg9saWZlY3lj",
-            "bGVfc3RhdGUYAiABKA4yYS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2Uu",
-            "djEuR29sZGVuZ2F0ZURlcGxveW1lbnRQcm9wZXJ0aWVzLkdvbGRlbmdhdGVE",
-            "ZXBsb3ltZW50TGlmZWN5Y2xlU3RhdGVCBOJBAQMSaAoNbGljZW5zZV9tb2Rl",
-            "bBgDIAEoDjJLLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5Hb2xk",
-            "ZW5nYXRlRGVwbG95bWVudFByb3BlcnRpZXMuTGljZW5zZU1vZGVsQgTiQQEB",
-            "Eh4KEGVudmlyb25tZW50X3R5cGUYBCABKAlCBOJBAQESHAoOY3B1X2NvcmVf",
-            "Y291bnQYBSABKAVCBOJBAQESJQoXaXNfYXV0b19zY2FsaW5nX2VuYWJsZWQY",
-            "BiABKAhCBOJBAQESGQoLZGVzY3JpcHRpb24YByABKAlCBOJBAQESHQoPZGVw",
-            "bG95bWVudF90eXBlGAggASgJQgTiQQECEk8KCG9nZ19kYXRhGAkgASgLMjcu",
-            "Z29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkdvbGRlbmdhdGVPZ2dE",
-            "ZXBsb3ltZW50QgTiQQECEl0KEm1haW50ZW5hbmNlX3dpbmRvdxgKIAEoCzI7",
-            "Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5Hb2xkZW5nYXRlTWFp",
-            "bnRlbmFuY2VXaW5kb3dCBOJBAQESXQoSbWFpbnRlbmFuY2VfY29uZmlnGAsg",
-            "ASgLMjsuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkdvbGRlbmdh",
-            "dGVNYWludGVuYW5jZUNvbmZpZ0IE4kEBARISCgRmcWRuGAwgASgJQgTiQQED",
-            "EocBChNsaWZlY3ljbGVfc3ViX3N0YXRlGA0gASgOMmQuZ29vZ2xlLmNsb3Vk",
-            "Lm9yYWNsZWRhdGFiYXNlLnYxLkdvbGRlbmdhdGVEZXBsb3ltZW50UHJvcGVy",
-            "dGllcy5Hb2xkZW5nYXRlRGVwbG95bWVudExpZmVjeWNsZVN1YlN0YXRlQgTi",
-            "QQEDEnMKCGNhdGVnb3J5GA4gASgOMlsuZ29vZ2xlLmNsb3VkLm9yYWNsZWRh",
-            "dGFiYXNlLnYxLkdvbGRlbmdhdGVEZXBsb3ltZW50UHJvcGVydGllcy5Hb2xk",
-            "ZW5nYXRlRGVwbG95bWVudENhdGVnb3J5QgTiQQEDEiIKFGRlcGxveW1lbnRf",
-            "YmFja3VwX2lkGA8gASgJQgTiQQEDEjUKC3VwZGF0ZV90aW1lGBAgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxIfChFsaWZlY3ljbGVf",
-            "ZGV0YWlscxgRIAEoCUIE4kEBAxIVCgdoZWFsdGh5GBIgASgIQgTiQQEDEiUK",
-            "F2xvYWRfYmFsYW5jZXJfc3VibmV0X2lkGBMgASgJQgTiQQEDEh4KEGxvYWRf",
-            "YmFsYW5jZXJfaWQYFCABKAlCBOJBAQMSFQoHbnNnX2lkcxgVIAMoCUIE4kEB",
-            "AxIXCglpc19wdWJsaWMYFiABKAhCBOJBAQMSJwoRcHVibGljX2lwX2FkZHJl",
-            "c3MYFyABKAlCDOJBAQPijM/XCAIIBBIoChJwcml2YXRlX2lwX2FkZHJlc3MY",
-            "GCABKAlCDOJBAQPijM/XCAIIBBIcCg5kZXBsb3ltZW50X3VybBgZIAEoCUIE",
-            "4kEBAxIfChFpc19sYXRlc3RfdmVyc2lvbhgaIAEoCEIE4kEBAxI/ChV1cGdy",
-            "YWRlX3JlcXVpcmVkX3RpbWUYGyABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgTiQQEDEicKGXN0b3JhZ2VfdXRpbGl6YXRpb25fYnl0ZXMYHCAB",
-            "KANCBOJBAQMSMwolaXNfc3RvcmFnZV91dGlsaXphdGlvbl9saW1pdF9leGNl",
-            "ZWRlZBgdIAEoCEIE4kEBAxJiChpkZXBsb3ltZW50X2RpYWdub3N0aWNfZGF0",
-            "YRgeIAEoCzI4Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5EZXBs",
-            "b3ltZW50RGlhZ25vc3RpY0RhdGFCBOJBAQMSVwoPYmFja3VwX3NjaGVkdWxl",
-            "GB8gASgLMjguZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkdvbGRl",
-            "bmdhdGVCYWNrdXBTY2hlZHVsZUIE4kEBAxI/ChVuZXh0X21haW50ZW5hbmNl",
-            "X3RpbWUYICABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQED",
-            "EoQBChxuZXh0X21haW50ZW5hbmNlX2FjdGlvbl90eXBlGCEgASgOMlguZ29v",
-            "Z2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkdvbGRlbmdhdGVEZXBsb3lt",
-            "ZW50UHJvcGVydGllcy5OZXh0TWFpbnRlbmFuY2VBY3Rpb25UeXBlQgTiQQED",
-            "EioKHG5leHRfbWFpbnRlbmFuY2VfZGVzY3JpcHRpb24YIiABKAlCBOJBAQMS",
-            "Rgocb2dnX3ZlcnNpb25fc3VwcG9ydF9lbmRfdGltZRgjIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMSRAoLaW5ncmVzc19pcHMYJCAD",
-            "KAsyKS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuSW5ncmVzc0lw",
-            "QgTiQQEDEnoKD2RlcGxveW1lbnRfcm9sZRglIAEoDjJbLmdvb2dsZS5jbG91",
-            "ZC5vcmFjbGVkYXRhYmFzZS52MS5Hb2xkZW5nYXRlRGVwbG95bWVudFByb3Bl",
-            "cnRpZXMuR29sZGVuZ2F0ZURlcGxveW1lbnRSb2xlVHlwZUIE4kEBAxJDChls",
-            "YXN0X2JhY2t1cF9zY2hlZHVsZV90aW1lGCYgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEIE4kEBAxJDChluZXh0X2JhY2t1cF9zY2hlZHVsZV90",
-            "aW1lGCcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxI6",
-            "ChByb2xlX2NoYW5nZV90aW1lGCggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEIE4kEBAxJNCgVsb2NrcxgpIAMoCzI4Lmdvb2dsZS5jbG91ZC5v",
-            "cmFjbGVkYXRhYmFzZS52MS5Hb2xkZW5nYXRlRGVwbG95bWVudExvY2tCBOJB",
-            "AQMSTQoKcGxhY2VtZW50cxgqIAMoCzIzLmdvb2dsZS5jbG91ZC5vcmFjbGVk",
-            "YXRhYmFzZS52MS5Hb2xkZW5nYXRlUGxhY2VtZW50QgTiQQEDIpkCCiJHb2xk",
-            "ZW5nYXRlRGVwbG95bWVudExpZmVjeWNsZVN0YXRlEjUKMUdPTERFTkdBVEVf",
-            "REVQTE9ZTUVOVF9MSUZFQ1lDTEVfU1RBVEVfVU5TUEVDSUZJRUQQABIMCghD",
-            "UkVBVElORxABEgwKCFVQREFUSU5HEAISCgoGQUNUSVZFEAMSDAoISU5BQ1RJ",
-            "VkUQBBIMCghERUxFVElORxAFEgsKB0RFTEVURUQQBhIKCgZGQUlMRUQQBxIT",
-            "Cg9ORUVEU19BVFRFTlRJT04QCBIPCgtJTl9QUk9HUkVTUxAJEg4KCkNBTkNF",
-            "TExJTkcQChINCglDQU5DRUxMRUQQCxINCglTVUNDRUVERUQQDBILCgdXQUlU",
-            "SU5HEA0iXwoMTGljZW5zZU1vZGVsEh0KGUxJQ0VOU0VfTU9ERUxfVU5TUEVD",
-            "SUZJRUQQABIUChBMSUNFTlNFX0lOQ0xVREVEEAESGgoWQlJJTkdfWU9VUl9P",
-            "V05fTElDRU5TRRACItoBCiVHb2xkZW5nYXRlRGVwbG95bWVudExpZmVjeWNs",
-            "ZVN1YlN0YXRlEjkKNUdPTERFTkdBVEVfREVQTE9ZTUVOVF9MSUZFQ1lDTEVf",
-            "U1VCX1NUQVRFX1VOU1BFQ0lGSUVEEAASDgoKUkVDT1ZFUklORxABEgwKCFNU",
-            "QVJUSU5HEAISDAoIU1RPUFBJTkcQAxIKCgZNT1ZJTkcQBBINCglVUEdSQURJ",
-            "TkcQBRINCglSRVNUT1JJTkcQBhIOCgpCQUNLSU5HX1VQEAcSEAoMUk9MTElO",
-            "R19CQUNLEAgieQocR29sZGVuZ2F0ZURlcGxveW1lbnRDYXRlZ29yeRIuCipH",
-            "T0xERU5HQVRFX0RFUExPWU1FTlRfQ0FURUdPUllfVU5TUEVDSUZJRUQQABIU",
-            "ChBEQVRBX1JFUExJQ0FUSU9OEAESEwoPREFUQV9UUkFOU0ZPUk1TEAIiVgoZ",
-            "TmV4dE1haW50ZW5hbmNlQWN0aW9uVHlwZRIsCihORVhUX01BSU5URU5BTkNF",
-            "X0FDVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASCwoHVVBHUkFERRABImkKHEdv",
-            "bGRlbmdhdGVEZXBsb3ltZW50Um9sZVR5cGUSLworR09MREVOR0FURV9ERVBM",
-            "T1lNRU5UX1JPTEVfVFlQRV9VTlNQRUNJRklFRBAAEgsKB1BSSU1BUlkQARIL",
-            "CgdTVEFOREJZEAIiggUKF0dvbGRlbmdhdGVPZ2dEZXBsb3ltZW50Eh4KDmFk",
-            "bWluX3Bhc3N3b3JkGAMgASgJQgTiQQEBSAASXQodYWRtaW5fcGFzc3dvcmRf",
-            "c2VjcmV0X3ZlcnNpb24YCiABKAlCNOJBAgEE+kEsCipzZWNyZXRtYW5hZ2Vy",
-            "Lmdvb2dsZWFwaXMuY29tL1NlY3JldFZlcnNpb25IABIYCgpkZXBsb3ltZW50",
-            "GAEgASgJQgTiQQECEhwKDmFkbWluX3VzZXJuYW1lGAIgASgJQgTiQQECEhkK",
-            "C29nZ192ZXJzaW9uGAQgASgJQgTiQQEBEhkKC2NlcnRpZmljYXRlGAUgASgJ",
-            "QgTiQQEDEmcKEGNyZWRlbnRpYWxfc3RvcmUYBiABKA4yRy5nb29nbGUuY2xv",
-            "dWQub3JhY2xlZGF0YWJhc2UudjEuR29sZGVuZ2F0ZU9nZ0RlcGxveW1lbnQu",
-            "Q3JlZGVudGlhbFN0b3JlQgTiQQEDEiAKEmlkZW50aXR5X2RvbWFpbl9pZBgH",
-            "IAEoCUIE4kEBAxIgChJwYXNzd29yZF9zZWNyZXRfaWQYCCABKAlCBOJBAQMS",
-            "YAoTZ3JvdXBfcm9sZXNfbWFwcGluZxgJIAEoCzI9Lmdvb2dsZS5jbG91ZC5v",
-            "cmFjbGVkYXRhYmFzZS52MS5Hb2xkZW5nYXRlR3JvdXBUb1JvbGVzTWFwcGlu",
-            "Z0IE4kEBAyJMCg9DcmVkZW50aWFsU3RvcmUSIAocQ1JFREVOVElBTF9TVE9S",
-            "RV9VTlNQRUNJRklFRBAAEg4KCkdPTERFTkdBVEUQARIHCgNJQU0QAkIdChtk",
-            "ZXBsb3ltZW50X3Bhc3N3b3JkX29wdGlvbnMiYgobR29sZGVuZ2F0ZU1haW50",
-            "ZW5hbmNlV2luZG93EikKA2RheRgBIAEoDjIWLmdvb2dsZS50eXBlLkRheU9m",
-            "V2Vla0IE4kEBAhIYCgpzdGFydF9ob3VyGAIgASgFQgTiQQECIpwCChtHb2xk",
-            "ZW5nYXRlTWFpbnRlbmFuY2VDb25maWcSNQonaXNfaW50ZXJpbV9yZWxlYXNl",
-            "X2F1dG9fdXBncmFkZV9lbmFibGVkGAEgASgIQgTiQQEBEjEKI2ludGVyaW1f",
-            "cmVsZWFzZV91cGdyYWRlX3BlcmlvZF9kYXlzGAIgASgFQgTiQQEBEjAKImJ1",
-            "bmRsZV9yZWxlYXNlX3VwZ3JhZGVfcGVyaW9kX2RheXMYAyABKAVCBOJBAQES",
-            "LwohbWFqb3JfcmVsZWFzZV91cGdyYWRlX3BlcmlvZF9kYXlzGAQgASgFQgTi",
-            "QQEBEjAKInNlY3VyaXR5X3BhdGNoX3VwZ3JhZGVfcGVyaW9kX2RheXMYBSAB",
-            "KAVCBOJBAQEiqgMKGERlcGxveW1lbnREaWFnbm9zdGljRGF0YRIXCgluYW1l",
-            "c3BhY2UYASABKAlCBOJBAQMSFAoGYnVja2V0GAIgASgJQgTiQQEDEhQKBm9i",
-            "amVjdBgDIAEoCUIE4kEBAxJoChBkaWFnbm9zdGljX3N0YXRlGAQgASgOMkgu",
-            "Z29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkRlcGxveW1lbnREaWFn",
-            "bm9zdGljRGF0YS5EaWFnbm9zdGljU3RhdGVCBOJBAQMSPwoVZGlhZ25vc3Rp",
-            "Y19zdGFydF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEIE4kEBAxI9ChNkaWFnbm9zdGljX2VuZF90aW1lGAYgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAyJfCg9EaWFnbm9zdGljU3RhdGUS",
-            "IAocRElBR05PU1RJQ19TVEFURV9VTlNQRUNJRklFRBAAEg8KC0lOX1BST0dS",
-            "RVNTEAESDQoJU1VDQ0VFREVEEAISCgoGRkFJTEVEEAMirgMKGEdvbGRlbmdh",
-            "dGVCYWNrdXBTY2hlZHVsZRIUCgZidWNrZXQYASABKAlCBOJBAQMSHAoOY29t",
-            "cGFydG1lbnRfaWQYAiABKAlCBOJBAQMSewoaZnJlcXVlbmN5X2JhY2t1cF9z",
-            "Y2hlZHVsZWQYAyABKA4yUS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2Uu",
-            "djEuR29sZGVuZ2F0ZUJhY2t1cFNjaGVkdWxlLkZyZXF1ZW5jeUJhY2t1cFNj",
-            "aGVkdWxlZEIE4kEBAxIbCg1tZXRhZGF0YV9vbmx5GAQgASgIQgTiQQEDEhcK",
-            "CW5hbWVzcGFjZRgFIAEoCUIE4kEBAxI/ChViYWNrdXBfc2NoZWR1bGVkX3Rp",
-            "bWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDImoK",
-            "GEZyZXF1ZW5jeUJhY2t1cFNjaGVkdWxlZBIqCiZGUkVRVUVOQ1lfQkFDS1VQ",
-            "X1NDSEVEVUxFRF9VTlNQRUNJRklFRBAAEgkKBURBSUxZEAESCgoGV0VFS0xZ",
-            "EAISCwoHTU9OVEhMWRADIjUKCUluZ3Jlc3NJcBIoChJpbmdyZXNzX2lwX2Fk",
-            "ZHJlc3MYASABKAlCDOJBAQPijM/XCAIIBCK9AgoYR29sZGVuZ2F0ZURlcGxv",
-            "eW1lbnRMb2NrElUKBHR5cGUYASABKA4yQS5nb29nbGUuY2xvdWQub3JhY2xl",
-            "ZGF0YWJhc2UudjEuR29sZGVuZ2F0ZURlcGxveW1lbnRMb2NrLkxvY2tUeXBl",
-            "QgTiQQEDEhwKDmNvbXBhcnRtZW50X2lkGAIgASgJQgTiQQEDEiEKE3JlbGF0",
-            "ZWRfcmVzb3VyY2VfaWQYAyABKAlCBOJBAQMSFQoHbWVzc2FnZRgEIAEoCUIE",
-            "4kEBAxI1CgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXBCBOJBAQMiOwoITG9ja1R5cGUSGQoVTE9DS19UWVBFX1VOU1BF",
-            "Q0lGSUVEEAASCAoERlVMTBABEgoKBkRFTEVURRACIlQKE0dvbGRlbmdhdGVQ",
-            "bGFjZW1lbnQSIQoTYXZhaWxhYmlsaXR5X2RvbWFpbhgBIAEoCUIE4kEBAxIa",
-            "CgxmYXVsdF9kb21haW4YAiABKAlCBOJBAQMipAEKHUdvbGRlbmdhdGVHcm91",
-            "cFRvUm9sZXNNYXBwaW5nEh8KEXNlY3VyaXR5X2dyb3VwX2lkGAEgASgJQgTi",
-            "QQEDEiQKFmFkbWluaXN0cmF0b3JfZ3JvdXBfaWQYAiABKAlCBOJBAQMSHwoR",
-            "b3BlcmF0b3JfZ3JvdXBfaWQYAyABKAlCBOJBAQMSGwoNdXNlcl9ncm91cF9p",
-            "ZBgEIAEoCUIE4kEBAyKVAgohQ3JlYXRlR29sZGVuZ2F0ZURlcGxveW1lbnRS",
-            "ZXF1ZXN0EksKBnBhcmVudBgBIAEoCUI74kEBAvpBNBIyb3JhY2xlZGF0YWJh",
-            "c2UuZ29vZ2xlYXBpcy5jb20vR29sZGVuZ2F0ZURlcGxveW1lbnQSJgoYZ29s",
-            "ZGVuZ2F0ZV9kZXBsb3ltZW50X2lkGAIgASgJQgTiQQECElkKFWdvbGRlbmdh",
-            "dGVfZGVwbG95bWVudBgDIAEoCzI0Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRh",
-            "YmFzZS52MS5Hb2xkZW5nYXRlRGVwbG95bWVudEIE4kEBAhIgCgpyZXF1ZXN0",
-            "X2lkGAQgASgJQgziQQEB4ozP1wgCCAEikAEKIURlbGV0ZUdvbGRlbmdhdGVE",
-            "ZXBsb3ltZW50UmVxdWVzdBJJCgRuYW1lGAEgASgJQjviQQEC+kE0CjJvcmFj",
-            "bGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9Hb2xkZW5nYXRlRGVwbG95bWVu",
-            "dBIgCgpyZXF1ZXN0X2lkGAIgASgJQgziQQEB4ozP1wgCCAEiawoeR2V0R29s",
-            "ZGVuZ2F0ZURlcGxveW1lbnRSZXF1ZXN0EkkKBG5hbWUYASABKAlCO+JBAQL6",
-            "QTQKMm9yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL0dvbGRlbmdhdGVE",
-            "ZXBsb3ltZW50ItABCiBMaXN0R29sZGVuZ2F0ZURlcGxveW1lbnRzUmVxdWVz",
+            "bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9w",
+            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8aG2dvb2dsZS90eXBlL2RheW9md2Vl",
+            "ay5wcm90byKEBgoUR29sZGVuZ2F0ZURlcGxveW1lbnQSEgoEbmFtZRgBIAEo",
+            "CUIE4kEBCBJZCgpwcm9wZXJ0aWVzGAIgASgLMj4uZ29vZ2xlLmNsb3VkLm9y",
+            "YWNsZWRhdGFiYXNlLnYxLkdvbGRlbmdhdGVEZXBsb3ltZW50UHJvcGVydGll",
+            "c0IF4kECAgUSHgoPZ2NwX29yYWNsZV96b25lGAMgASgJQgXiQQIBBRJWCgZs",
+            "YWJlbHMYBCADKAsyQC5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEu",
+            "R29sZGVuZ2F0ZURlcGxveW1lbnQuTGFiZWxzRW50cnlCBOJBAQESRwoLb2Ri",
+            "X25ldHdvcmsYBSABKAlCMuJBAgEF+kEqCihvcmFjbGVkYXRhYmFzZS5nb29n",
+            "bGVhcGlzLmNvbS9PZGJOZXR3b3JrEkUKCm9kYl9zdWJuZXQYBiABKAlCMeJB",
+            "AgIF+kEpCidvcmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9PZGJTdWJu",
+            "ZXQSHAoOZW50aXRsZW1lbnRfaWQYByABKAlCBOJBAQMSGwoMZGlzcGxheV9u",
+            "YW1lGAggASgJQgXiQQICBRI1CgtjcmVhdGVfdGltZRgJIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMSFQoHb2NpX3VybBgKIAEoCUIE",
+            "4kEBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBOrwB6kG4AQoyb3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20v",
+            "R29sZGVuZ2F0ZURlcGxveW1lbnQSVXByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9nb2xkZW5nYXRlRGVwbG95bWVudHMve2dvbGRl",
+            "bmdhdGVfZGVwbG95bWVudH0qFWdvbGRlbmdhdGVEZXBsb3ltZW50czIUZ29s",
+            "ZGVuZ2F0ZURlcGxveW1lbnQi1BsKHkdvbGRlbmdhdGVEZXBsb3ltZW50UHJv",
+            "cGVydGllcxISCgRvY2lkGAEgASgJQgTiQQEDEoABCg9saWZlY3ljbGVfc3Rh",
+            "dGUYAiABKA4yYS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuR29s",
+            "ZGVuZ2F0ZURlcGxveW1lbnRQcm9wZXJ0aWVzLkdvbGRlbmdhdGVEZXBsb3lt",
+            "ZW50TGlmZWN5Y2xlU3RhdGVCBOJBAQMSaAoNbGljZW5zZV9tb2RlbBgDIAEo",
+            "DjJLLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5Hb2xkZW5nYXRl",
+            "RGVwbG95bWVudFByb3BlcnRpZXMuTGljZW5zZU1vZGVsQgTiQQEBEh4KEGVu",
+            "dmlyb25tZW50X3R5cGUYBCABKAlCBOJBAQESHAoOY3B1X2NvcmVfY291bnQY",
+            "BSABKAVCBOJBAQESJQoXaXNfYXV0b19zY2FsaW5nX2VuYWJsZWQYBiABKAhC",
+            "BOJBAQESGQoLZGVzY3JpcHRpb24YByABKAlCBOJBAQESHQoPZGVwbG95bWVu",
+            "dF90eXBlGAggASgJQgTiQQECEk8KCG9nZ19kYXRhGAkgASgLMjcuZ29vZ2xl",
+            "LmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkdvbGRlbmdhdGVPZ2dEZXBsb3lt",
+            "ZW50QgTiQQECEl0KEm1haW50ZW5hbmNlX3dpbmRvdxgKIAEoCzI7Lmdvb2ds",
+            "ZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5Hb2xkZW5nYXRlTWFpbnRlbmFu",
+            "Y2VXaW5kb3dCBOJBAQESXQoSbWFpbnRlbmFuY2VfY29uZmlnGAsgASgLMjsu",
+            "Z29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkdvbGRlbmdhdGVNYWlu",
+            "dGVuYW5jZUNvbmZpZ0IE4kEBARISCgRmcWRuGAwgASgJQgTiQQEDEocBChNs",
+            "aWZlY3ljbGVfc3ViX3N0YXRlGA0gASgOMmQuZ29vZ2xlLmNsb3VkLm9yYWNs",
+            "ZWRhdGFiYXNlLnYxLkdvbGRlbmdhdGVEZXBsb3ltZW50UHJvcGVydGllcy5H",
+            "b2xkZW5nYXRlRGVwbG95bWVudExpZmVjeWNsZVN1YlN0YXRlQgTiQQEDEnMK",
+            "CGNhdGVnb3J5GA4gASgOMlsuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNl",
+            "LnYxLkdvbGRlbmdhdGVEZXBsb3ltZW50UHJvcGVydGllcy5Hb2xkZW5nYXRl",
+            "RGVwbG95bWVudENhdGVnb3J5QgTiQQEDEiIKFGRlcGxveW1lbnRfYmFja3Vw",
+            "X2lkGA8gASgJQgTiQQEDEjUKC3VwZGF0ZV90aW1lGBAgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxIfChFsaWZlY3ljbGVfZGV0YWls",
+            "cxgRIAEoCUIE4kEBAxIVCgdoZWFsdGh5GBIgASgIQgTiQQEDEiUKF2xvYWRf",
+            "YmFsYW5jZXJfc3VibmV0X2lkGBMgASgJQgTiQQEDEh4KEGxvYWRfYmFsYW5j",
+            "ZXJfaWQYFCABKAlCBOJBAQMSFQoHbnNnX2lkcxgVIAMoCUIE4kEBAxIXCglp",
+            "c19wdWJsaWMYFiABKAhCBOJBAQMSJwoRcHVibGljX2lwX2FkZHJlc3MYFyAB",
+            "KAlCDOJBAQPijM/XCAIIBBIoChJwcml2YXRlX2lwX2FkZHJlc3MYGCABKAlC",
+            "DOJBAQPijM/XCAIIBBIcCg5kZXBsb3ltZW50X3VybBgZIAEoCUIE4kEBAxIf",
+            "ChFpc19sYXRlc3RfdmVyc2lvbhgaIAEoCEIE4kEBAxI/ChV1cGdyYWRlX3Jl",
+            "cXVpcmVkX3RpbWUYGyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgTiQQEDEicKGXN0b3JhZ2VfdXRpbGl6YXRpb25fYnl0ZXMYHCABKANCBOJB",
+            "AQMSMwolaXNfc3RvcmFnZV91dGlsaXphdGlvbl9saW1pdF9leGNlZWRlZBgd",
+            "IAEoCEIE4kEBAxJiChpkZXBsb3ltZW50X2RpYWdub3N0aWNfZGF0YRgeIAEo",
+            "CzI4Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5EZXBsb3ltZW50",
+            "RGlhZ25vc3RpY0RhdGFCBOJBAQMSVwoPYmFja3VwX3NjaGVkdWxlGB8gASgL",
+            "MjguZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkdvbGRlbmdhdGVC",
+            "YWNrdXBTY2hlZHVsZUIE4kEBAxI/ChVuZXh0X21haW50ZW5hbmNlX3RpbWUY",
+            "ICABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEoQBChxu",
+            "ZXh0X21haW50ZW5hbmNlX2FjdGlvbl90eXBlGCEgASgOMlguZ29vZ2xlLmNs",
+            "b3VkLm9yYWNsZWRhdGFiYXNlLnYxLkdvbGRlbmdhdGVEZXBsb3ltZW50UHJv",
+            "cGVydGllcy5OZXh0TWFpbnRlbmFuY2VBY3Rpb25UeXBlQgTiQQEDEioKHG5l",
+            "eHRfbWFpbnRlbmFuY2VfZGVzY3JpcHRpb24YIiABKAlCBOJBAQMSRgocb2dn",
+            "X3ZlcnNpb25fc3VwcG9ydF9lbmRfdGltZRgjIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCBOJBAQMSRAoLaW5ncmVzc19pcHMYJCADKAsyKS5n",
+            "b29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuSW5ncmVzc0lwQgTiQQED",
+            "EnoKD2RlcGxveW1lbnRfcm9sZRglIAEoDjJbLmdvb2dsZS5jbG91ZC5vcmFj",
+            "bGVkYXRhYmFzZS52MS5Hb2xkZW5nYXRlRGVwbG95bWVudFByb3BlcnRpZXMu",
+            "R29sZGVuZ2F0ZURlcGxveW1lbnRSb2xlVHlwZUIE4kEBAxJDChlsYXN0X2Jh",
+            "Y2t1cF9zY2hlZHVsZV90aW1lGCYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEIE4kEBAxJDChluZXh0X2JhY2t1cF9zY2hlZHVsZV90aW1lGCcg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxI6ChByb2xl",
+            "X2NoYW5nZV90aW1lGCggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEIE4kEBAxJNCgVsb2NrcxgpIAMoCzI4Lmdvb2dsZS5jbG91ZC5vcmFjbGVk",
+            "YXRhYmFzZS52MS5Hb2xkZW5nYXRlRGVwbG95bWVudExvY2tCBOJBAQMSTQoK",
+            "cGxhY2VtZW50cxgqIAMoCzIzLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFz",
+            "ZS52MS5Hb2xkZW5nYXRlUGxhY2VtZW50QgTiQQEDIpkCCiJHb2xkZW5nYXRl",
+            "RGVwbG95bWVudExpZmVjeWNsZVN0YXRlEjUKMUdPTERFTkdBVEVfREVQTE9Z",
+            "TUVOVF9MSUZFQ1lDTEVfU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElO",
+            "RxABEgwKCFVQREFUSU5HEAISCgoGQUNUSVZFEAMSDAoISU5BQ1RJVkUQBBIM",
+            "CghERUxFVElORxAFEgsKB0RFTEVURUQQBhIKCgZGQUlMRUQQBxITCg9ORUVE",
+            "U19BVFRFTlRJT04QCBIPCgtJTl9QUk9HUkVTUxAJEg4KCkNBTkNFTExJTkcQ",
+            "ChINCglDQU5DRUxMRUQQCxINCglTVUNDRUVERUQQDBILCgdXQUlUSU5HEA0i",
+            "XwoMTGljZW5zZU1vZGVsEh0KGUxJQ0VOU0VfTU9ERUxfVU5TUEVDSUZJRUQQ",
+            "ABIUChBMSUNFTlNFX0lOQ0xVREVEEAESGgoWQlJJTkdfWU9VUl9PV05fTElD",
+            "RU5TRRACItoBCiVHb2xkZW5nYXRlRGVwbG95bWVudExpZmVjeWNsZVN1YlN0",
+            "YXRlEjkKNUdPTERFTkdBVEVfREVQTE9ZTUVOVF9MSUZFQ1lDTEVfU1VCX1NU",
+            "QVRFX1VOU1BFQ0lGSUVEEAASDgoKUkVDT1ZFUklORxABEgwKCFNUQVJUSU5H",
+            "EAISDAoIU1RPUFBJTkcQAxIKCgZNT1ZJTkcQBBINCglVUEdSQURJTkcQBRIN",
+            "CglSRVNUT1JJTkcQBhIOCgpCQUNLSU5HX1VQEAcSEAoMUk9MTElOR19CQUNL",
+            "EAgieQocR29sZGVuZ2F0ZURlcGxveW1lbnRDYXRlZ29yeRIuCipHT0xERU5H",
+            "QVRFX0RFUExPWU1FTlRfQ0FURUdPUllfVU5TUEVDSUZJRUQQABIUChBEQVRB",
+            "X1JFUExJQ0FUSU9OEAESEwoPREFUQV9UUkFOU0ZPUk1TEAIiVgoZTmV4dE1h",
+            "aW50ZW5hbmNlQWN0aW9uVHlwZRIsCihORVhUX01BSU5URU5BTkNFX0FDVElP",
+            "Tl9UWVBFX1VOU1BFQ0lGSUVEEAASCwoHVVBHUkFERRABImkKHEdvbGRlbmdh",
+            "dGVEZXBsb3ltZW50Um9sZVR5cGUSLworR09MREVOR0FURV9ERVBMT1lNRU5U",
+            "X1JPTEVfVFlQRV9VTlNQRUNJRklFRBAAEgsKB1BSSU1BUlkQARILCgdTVEFO",
+            "REJZEAIigwUKF0dvbGRlbmdhdGVPZ2dEZXBsb3ltZW50Eh8KDmFkbWluX3Bh",
+            "c3N3b3JkGAMgASgJQgXiQQIBBEgAEl0KHWFkbWluX3Bhc3N3b3JkX3NlY3Jl",
+            "dF92ZXJzaW9uGAogASgJQjTiQQIBBPpBLAoqc2VjcmV0bWFuYWdlci5nb29n",
+            "bGVhcGlzLmNvbS9TZWNyZXRWZXJzaW9uSAASGAoKZGVwbG95bWVudBgBIAEo",
+            "CUIE4kEBAhIcCg5hZG1pbl91c2VybmFtZRgCIAEoCUIE4kEBAhIZCgtvZ2df",
+            "dmVyc2lvbhgEIAEoCUIE4kEBARIZCgtjZXJ0aWZpY2F0ZRgFIAEoCUIE4kEB",
+            "AxJnChBjcmVkZW50aWFsX3N0b3JlGAYgASgOMkcuZ29vZ2xlLmNsb3VkLm9y",
+            "YWNsZWRhdGFiYXNlLnYxLkdvbGRlbmdhdGVPZ2dEZXBsb3ltZW50LkNyZWRl",
+            "bnRpYWxTdG9yZUIE4kEBAxIgChJpZGVudGl0eV9kb21haW5faWQYByABKAlC",
+            "BOJBAQMSIAoScGFzc3dvcmRfc2VjcmV0X2lkGAggASgJQgTiQQEDEmAKE2dy",
+            "b3VwX3JvbGVzX21hcHBpbmcYCSABKAsyPS5nb29nbGUuY2xvdWQub3JhY2xl",
+            "ZGF0YWJhc2UudjEuR29sZGVuZ2F0ZUdyb3VwVG9Sb2xlc01hcHBpbmdCBOJB",
+            "AQMiTAoPQ3JlZGVudGlhbFN0b3JlEiAKHENSRURFTlRJQUxfU1RPUkVfVU5T",
+            "UEVDSUZJRUQQABIOCgpHT0xERU5HQVRFEAESBwoDSUFNEAJCHQobZGVwbG95",
+            "bWVudF9wYXNzd29yZF9vcHRpb25zImIKG0dvbGRlbmdhdGVNYWludGVuYW5j",
+            "ZVdpbmRvdxIpCgNkYXkYASABKA4yFi5nb29nbGUudHlwZS5EYXlPZldlZWtC",
+            "BOJBAQISGAoKc3RhcnRfaG91chgCIAEoBUIE4kEBAiKcAgobR29sZGVuZ2F0",
+            "ZU1haW50ZW5hbmNlQ29uZmlnEjUKJ2lzX2ludGVyaW1fcmVsZWFzZV9hdXRv",
+            "X3VwZ3JhZGVfZW5hYmxlZBgBIAEoCEIE4kEBARIxCiNpbnRlcmltX3JlbGVh",
+            "c2VfdXBncmFkZV9wZXJpb2RfZGF5cxgCIAEoBUIE4kEBARIwCiJidW5kbGVf",
+            "cmVsZWFzZV91cGdyYWRlX3BlcmlvZF9kYXlzGAMgASgFQgTiQQEBEi8KIW1h",
+            "am9yX3JlbGVhc2VfdXBncmFkZV9wZXJpb2RfZGF5cxgEIAEoBUIE4kEBARIw",
+            "CiJzZWN1cml0eV9wYXRjaF91cGdyYWRlX3BlcmlvZF9kYXlzGAUgASgFQgTi",
+            "QQEBIqoDChhEZXBsb3ltZW50RGlhZ25vc3RpY0RhdGESFwoJbmFtZXNwYWNl",
+            "GAEgASgJQgTiQQEDEhQKBmJ1Y2tldBgCIAEoCUIE4kEBAxIUCgZvYmplY3QY",
+            "AyABKAlCBOJBAQMSaAoQZGlhZ25vc3RpY19zdGF0ZRgEIAEoDjJILmdvb2ds",
+            "ZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5EZXBsb3ltZW50RGlhZ25vc3Rp",
+            "Y0RhdGEuRGlhZ25vc3RpY1N0YXRlQgTiQQEDEj8KFWRpYWdub3N0aWNfc3Rh",
+            "cnRfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJB",
+            "AQMSPQoTZGlhZ25vc3RpY19lbmRfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCBOJBAQMiXwoPRGlhZ25vc3RpY1N0YXRlEiAKHERJ",
+            "QUdOT1NUSUNfU1RBVEVfVU5TUEVDSUZJRUQQABIPCgtJTl9QUk9HUkVTUxAB",
+            "Eg0KCVNVQ0NFRURFRBACEgoKBkZBSUxFRBADIq4DChhHb2xkZW5nYXRlQmFj",
+            "a3VwU2NoZWR1bGUSFAoGYnVja2V0GAEgASgJQgTiQQEDEhwKDmNvbXBhcnRt",
+            "ZW50X2lkGAIgASgJQgTiQQEDEnsKGmZyZXF1ZW5jeV9iYWNrdXBfc2NoZWR1",
+            "bGVkGAMgASgOMlEuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkdv",
+            "bGRlbmdhdGVCYWNrdXBTY2hlZHVsZS5GcmVxdWVuY3lCYWNrdXBTY2hlZHVs",
+            "ZWRCBOJBAQMSGwoNbWV0YWRhdGFfb25seRgEIAEoCEIE4kEBAxIXCgluYW1l",
+            "c3BhY2UYBSABKAlCBOJBAQMSPwoVYmFja3VwX3NjaGVkdWxlZF90aW1lGAYg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAyJqChhGcmVx",
+            "dWVuY3lCYWNrdXBTY2hlZHVsZWQSKgomRlJFUVVFTkNZX0JBQ0tVUF9TQ0hF",
+            "RFVMRURfVU5TUEVDSUZJRUQQABIJCgVEQUlMWRABEgoKBldFRUtMWRACEgsK",
+            "B01PTlRITFkQAyI1CglJbmdyZXNzSXASKAoSaW5ncmVzc19pcF9hZGRyZXNz",
+            "GAEgASgJQgziQQED4ozP1wgCCAQivQIKGEdvbGRlbmdhdGVEZXBsb3ltZW50",
+            "TG9jaxJVCgR0eXBlGAEgASgOMkEuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFi",
+            "YXNlLnYxLkdvbGRlbmdhdGVEZXBsb3ltZW50TG9jay5Mb2NrVHlwZUIE4kEB",
+            "AxIcCg5jb21wYXJ0bWVudF9pZBgCIAEoCUIE4kEBAxIhChNyZWxhdGVkX3Jl",
+            "c291cmNlX2lkGAMgASgJQgTiQQEDEhUKB21lc3NhZ2UYBCABKAlCBOJBAQMS",
+            "NQoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgTiQQEDIjsKCExvY2tUeXBlEhkKFUxPQ0tfVFlQRV9VTlNQRUNJRklF",
+            "RBAAEggKBEZVTEwQARIKCgZERUxFVEUQAiJUChNHb2xkZW5nYXRlUGxhY2Vt",
+            "ZW50EiEKE2F2YWlsYWJpbGl0eV9kb21haW4YASABKAlCBOJBAQMSGgoMZmF1",
+            "bHRfZG9tYWluGAIgASgJQgTiQQEDIqQBCh1Hb2xkZW5nYXRlR3JvdXBUb1Jv",
+            "bGVzTWFwcGluZxIfChFzZWN1cml0eV9ncm91cF9pZBgBIAEoCUIE4kEBAxIk",
+            "ChZhZG1pbmlzdHJhdG9yX2dyb3VwX2lkGAIgASgJQgTiQQEDEh8KEW9wZXJh",
+            "dG9yX2dyb3VwX2lkGAMgASgJQgTiQQEDEhsKDXVzZXJfZ3JvdXBfaWQYBCAB",
+            "KAlCBOJBAQMilQIKIUNyZWF0ZUdvbGRlbmdhdGVEZXBsb3ltZW50UmVxdWVz",
             "dBJLCgZwYXJlbnQYASABKAlCO+JBAQL6QTQSMm9yYWNsZWRhdGFiYXNlLmdv",
-            "b2dsZWFwaXMuY29tL0dvbGRlbmdhdGVEZXBsb3ltZW50EhcKCXBhZ2Vfc2l6",
-            "ZRgCIAEoBUIE4kEBARIYCgpwYWdlX3Rva2VuGAMgASgJQgTiQQEBEhQKBmZp",
-            "bHRlchgEIAEoCUIE4kEBARIWCghvcmRlcl9ieRgFIAEoCUIE4kEBASKtAQoh",
-            "TGlzdEdvbGRlbmdhdGVEZXBsb3ltZW50c1Jlc3BvbnNlElQKFmdvbGRlbmdh",
-            "dGVfZGVwbG95bWVudHMYASADKAsyNC5nb29nbGUuY2xvdWQub3JhY2xlZGF0",
-            "YWJhc2UudjEuR29sZGVuZ2F0ZURlcGxveW1lbnQSFwoPbmV4dF9wYWdlX3Rv",
-            "a2VuGAIgASgJEhkKC3VucmVhY2hhYmxlGAMgAygJQgTiQQEBImwKH1N0b3BH",
-            "b2xkZW5nYXRlRGVwbG95bWVudFJlcXVlc3QSSQoEbmFtZRgBIAEoCUI74kEB",
-            "AvpBNAoyb3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20vR29sZGVuZ2F0",
-            "ZURlcGxveW1lbnQibQogU3RhcnRHb2xkZW5nYXRlRGVwbG95bWVudFJlcXVl",
-            "c3QSSQoEbmFtZRgBIAEoCUI74kEBAvpBNAoyb3JhY2xlZGF0YWJhc2UuZ29v",
-            "Z2xlYXBpcy5jb20vR29sZGVuZ2F0ZURlcGxveW1lbnRC8wEKImNvbS5nb29n",
-            "bGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjFCGUdvbGRlbmdhdGVEZXBsb3lt",
-            "ZW50UHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9vcmFjbGVkYXRhYmFz",
-            "ZS9hcGl2MS9vcmFjbGVkYXRhYmFzZXBiO29yYWNsZWRhdGFiYXNlcGKqAh5H",
-            "b29nbGUuQ2xvdWQuT3JhY2xlRGF0YWJhc2UuVjHKAh5Hb29nbGVcQ2xvdWRc",
-            "T3JhY2xlRGF0YWJhc2VcVjHqAiFHb29nbGU6OkNsb3VkOjpPcmFjbGVEYXRh",
-            "YmFzZTo6VjFiBnByb3RvMw=="));
+            "b2dsZWFwaXMuY29tL0dvbGRlbmdhdGVEZXBsb3ltZW50EiYKGGdvbGRlbmdh",
+            "dGVfZGVwbG95bWVudF9pZBgCIAEoCUIE4kEBAhJZChVnb2xkZW5nYXRlX2Rl",
+            "cGxveW1lbnQYAyABKAsyNC5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2Uu",
+            "djEuR29sZGVuZ2F0ZURlcGxveW1lbnRCBOJBAQISIAoKcmVxdWVzdF9pZBgE",
+            "IAEoCUIM4kEBAeKMz9cIAggBItcBCiFVcGRhdGVHb2xkZW5nYXRlRGVwbG95",
+            "bWVudFJlcXVlc3QSNQoLdXBkYXRlX21hc2sYASABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuRmllbGRNYXNrQgTiQQEBElkKFWdvbGRlbmdhdGVfZGVwbG95bWVu",
+            "dBgCIAEoCzI0Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5Hb2xk",
+            "ZW5nYXRlRGVwbG95bWVudEIE4kEBAhIgCgpyZXF1ZXN0X2lkGAMgASgJQgzi",
+            "QQEB4ozP1wgCCAEikAEKIURlbGV0ZUdvbGRlbmdhdGVEZXBsb3ltZW50UmVx",
+            "dWVzdBJJCgRuYW1lGAEgASgJQjviQQEC+kE0CjJvcmFjbGVkYXRhYmFzZS5n",
+            "b29nbGVhcGlzLmNvbS9Hb2xkZW5nYXRlRGVwbG95bWVudBIgCgpyZXF1ZXN0",
+            "X2lkGAIgASgJQgziQQEB4ozP1wgCCAEiawoeR2V0R29sZGVuZ2F0ZURlcGxv",
+            "eW1lbnRSZXF1ZXN0EkkKBG5hbWUYASABKAlCO+JBAQL6QTQKMm9yYWNsZWRh",
+            "dGFiYXNlLmdvb2dsZWFwaXMuY29tL0dvbGRlbmdhdGVEZXBsb3ltZW50ItAB",
+            "CiBMaXN0R29sZGVuZ2F0ZURlcGxveW1lbnRzUmVxdWVzdBJLCgZwYXJlbnQY",
+            "ASABKAlCO+JBAQL6QTQSMm9yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29t",
+            "L0dvbGRlbmdhdGVEZXBsb3ltZW50EhcKCXBhZ2Vfc2l6ZRgCIAEoBUIE4kEB",
+            "ARIYCgpwYWdlX3Rva2VuGAMgASgJQgTiQQEBEhQKBmZpbHRlchgEIAEoCUIE",
+            "4kEBARIWCghvcmRlcl9ieRgFIAEoCUIE4kEBASKtAQohTGlzdEdvbGRlbmdh",
+            "dGVEZXBsb3ltZW50c1Jlc3BvbnNlElQKFmdvbGRlbmdhdGVfZGVwbG95bWVu",
+            "dHMYASADKAsyNC5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuR29s",
+            "ZGVuZ2F0ZURlcGxveW1lbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhkK",
+            "C3VucmVhY2hhYmxlGAMgAygJQgTiQQEBImwKH1N0b3BHb2xkZW5nYXRlRGVw",
+            "bG95bWVudFJlcXVlc3QSSQoEbmFtZRgBIAEoCUI74kEBAvpBNAoyb3JhY2xl",
+            "ZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20vR29sZGVuZ2F0ZURlcGxveW1lbnQi",
+            "bQogU3RhcnRHb2xkZW5nYXRlRGVwbG95bWVudFJlcXVlc3QSSQoEbmFtZRgB",
+            "IAEoCUI74kEBAvpBNAoyb3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20v",
+            "R29sZGVuZ2F0ZURlcGxveW1lbnRC8wEKImNvbS5nb29nbGUuY2xvdWQub3Jh",
+            "Y2xlZGF0YWJhc2UudjFCGUdvbGRlbmdhdGVEZXBsb3ltZW50UHJvdG9QAVpK",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9vcmFjbGVkYXRhYmFzZS9hcGl2MS9vcmFj",
+            "bGVkYXRhYmFzZXBiO29yYWNsZWRhdGFiYXNlcGKqAh5Hb29nbGUuQ2xvdWQu",
+            "T3JhY2xlRGF0YWJhc2UuVjHKAh5Hb29nbGVcQ2xvdWRcT3JhY2xlRGF0YWJh",
+            "c2VcVjHqAiFHb29nbGU6OkNsb3VkOjpPcmFjbGVEYXRhYmFzZTo6VjFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.GoldengateDeployment), global::Google.Cloud.OracleDatabase.V1.GoldengateDeployment.Parser, new[]{ "Name", "Properties", "GcpOracleZone", "Labels", "OdbNetwork", "OdbSubnet", "EntitlementId", "DisplayName", "CreateTime", "OciUrl" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentProperties), global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentProperties.Parser, new[]{ "Ocid", "LifecycleState", "LicenseModel", "EnvironmentType", "CpuCoreCount", "IsAutoScalingEnabled", "Description", "DeploymentType", "OggData", "MaintenanceWindow", "MaintenanceConfig", "Fqdn", "LifecycleSubState", "Category", "DeploymentBackupId", "UpdateTime", "LifecycleDetails", "Healthy", "LoadBalancerSubnetId", "LoadBalancerId", "NsgIds", "IsPublic", "PublicIpAddress", "PrivateIpAddress", "DeploymentUrl", "IsLatestVersion", "UpgradeRequiredTime", "StorageUtilizationBytes", "IsStorageUtilizationLimitExceeded", "DeploymentDiagnosticData", "BackupSchedule", "NextMaintenanceTime", "NextMaintenanceActionType", "NextMaintenanceDescription", "OggVersionSupportEndTime", "IngressIps", "DeploymentRole", "LastBackupScheduleTime", "NextBackupScheduleTime", "RoleChangeTime", "Locks", "Placements" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentProperties.Types.GoldengateDeploymentLifecycleState), typeof(global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentProperties.Types.LicenseModel), typeof(global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentProperties.Types.GoldengateDeploymentLifecycleSubState), typeof(global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentProperties.Types.GoldengateDeploymentCategory), typeof(global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentProperties.Types.NextMaintenanceActionType), typeof(global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentProperties.Types.GoldengateDeploymentRoleType) }, null, null),
@@ -228,6 +234,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.GoldengatePlacement), global::Google.Cloud.OracleDatabase.V1.GoldengatePlacement.Parser, new[]{ "AvailabilityDomain", "FaultDomain" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.GoldengateGroupToRolesMapping), global::Google.Cloud.OracleDatabase.V1.GoldengateGroupToRolesMapping.Parser, new[]{ "SecurityGroupId", "AdministratorGroupId", "OperatorGroupId", "UserGroupId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CreateGoldengateDeploymentRequest), global::Google.Cloud.OracleDatabase.V1.CreateGoldengateDeploymentRequest.Parser, new[]{ "Parent", "GoldengateDeploymentId", "GoldengateDeployment", "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateDeploymentRequest), global::Google.Cloud.OracleDatabase.V1.UpdateGoldengateDeploymentRequest.Parser, new[]{ "UpdateMask", "GoldengateDeployment", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.DeleteGoldengateDeploymentRequest), global::Google.Cloud.OracleDatabase.V1.DeleteGoldengateDeploymentRequest.Parser, new[]{ "Name", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.GetGoldengateDeploymentRequest), global::Google.Cloud.OracleDatabase.V1.GetGoldengateDeploymentRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ListGoldengateDeploymentsRequest), global::Google.Cloud.OracleDatabase.V1.ListGoldengateDeploymentsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
@@ -318,7 +325,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int PropertiesFieldNumber = 2;
     private global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentProperties properties_;
     /// <summary>
-    /// Required. The properties of the GoldengateDeployment.
+    /// Required. Immutable. The properties of the GoldengateDeployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -333,9 +340,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int GcpOracleZoneFieldNumber = 3;
     private string gcpOracleZone_ = "";
     /// <summary>
-    /// Optional. The GCP Oracle zone where Oracle GoldengateDeployment is hosted.
-    /// Example: us-east4-b-r2.
-    /// If not specified, the system will pick a zone based on availability.
+    /// Optional. Immutable. The GCP Oracle zone where Oracle GoldengateDeployment
+    /// is hosted. Example: us-east4-b-r2. If not specified, the system will pick a
+    /// zone based on availability.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -364,7 +371,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int OdbNetworkFieldNumber = 5;
     private string odbNetwork_ = "";
     /// <summary>
-    /// Optional. The name of the OdbNetwork associated with the
+    /// Optional. Immutable. The name of the OdbNetwork associated with the
     /// GoldengateDeployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -380,7 +387,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int OdbSubnetFieldNumber = 6;
     private string odbSubnet_ = "";
     /// <summary>
-    /// Required. The name of the OdbSubnet associated with the
+    /// Required. Immutable. The name of the OdbSubnet associated with the
     /// GoldengateDeployment for IP allocation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -412,7 +419,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int DisplayNameFieldNumber = 8;
     private string displayName_ = "";
     /// <summary>
-    /// Required. The display name for the GoldengateDeployment.
+    /// Required. Immutable. The display name for the GoldengateDeployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2980,7 +2987,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     /// <summary>Field number for the "admin_password" field.</summary>
     public const int AdminPasswordFieldNumber = 3;
     /// <summary>
-    /// Optional. The Goldengate deployment console password in plain text.
+    /// Optional. Input only. The Goldengate deployment console password in plain
+    /// text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6613,6 +6621,324 @@ namespace Google.Cloud.OracleDatabase.V1 {
   }
 
   /// <summary>
+  /// The request for `GoldengateDeployment.Update`.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateGoldengateDeploymentRequest : pb::IMessage<UpdateGoldengateDeploymentRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateGoldengateDeploymentRequest> _parser = new pb::MessageParser<UpdateGoldengateDeploymentRequest>(() => new UpdateGoldengateDeploymentRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateGoldengateDeploymentRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateGoldengateDeploymentRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateGoldengateDeploymentRequest(UpdateGoldengateDeploymentRequest other) : this() {
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      goldengateDeployment_ = other.goldengateDeployment_ != null ? other.goldengateDeployment_.Clone() : null;
+      requestId_ = other.requestId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateGoldengateDeploymentRequest Clone() {
+      return new UpdateGoldengateDeploymentRequest(this);
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Optional. A mask specifying which fields in the GoldengateDeployment should
+    /// be updated. A field specified in the mask is updated. If a mask isn't
+    /// provided, the service treats this as an implied field mask equivalent to
+    /// all fields that are populated (have a non-empty value). To clear or unset
+    /// a field, the field must be explicitly specified in the `update_mask`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "goldengate_deployment" field.</summary>
+    public const int GoldengateDeploymentFieldNumber = 2;
+    private global::Google.Cloud.OracleDatabase.V1.GoldengateDeployment goldengateDeployment_;
+    /// <summary>
+    /// Required. The resource being updated. Note only labels can be updated.
+    /// The provided labels will completely replace the existing labels.
+    /// Any existing label keys that are not included in the update request will be
+    /// deleted. Not providing labels and update_mask will not update the labels.
+    /// To clear all labels, specify `labels` in the `update_mask` and omit or
+    /// leave the `labels` field empty in the update request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.OracleDatabase.V1.GoldengateDeployment GoldengateDeployment {
+      get { return goldengateDeployment_; }
+      set {
+        goldengateDeployment_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 3;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. An optional ID to identify the request. This value is used to
+    /// identify duplicate requests. If you make a request with the same request ID
+    /// and the original request is still in progress or completed, the server
+    /// ignores the second request. This prevents clients from
+    /// accidentally creating duplicate commitments.
+    ///
+    /// The request ID must be a valid UUID with the exception that zero UUID is
+    /// not supported (00000000-0000-0000-0000-000000000000).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateGoldengateDeploymentRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateGoldengateDeploymentRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (!object.Equals(GoldengateDeployment, other.GoldengateDeployment)) return false;
+      if (RequestId != other.RequestId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (goldengateDeployment_ != null) hash ^= GoldengateDeployment.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (updateMask_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(UpdateMask);
+      }
+      if (goldengateDeployment_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(GoldengateDeployment);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (updateMask_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(UpdateMask);
+      }
+      if (goldengateDeployment_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(GoldengateDeployment);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (goldengateDeployment_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GoldengateDeployment);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateGoldengateDeploymentRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.goldengateDeployment_ != null) {
+        if (goldengateDeployment_ == null) {
+          GoldengateDeployment = new global::Google.Cloud.OracleDatabase.V1.GoldengateDeployment();
+        }
+        GoldengateDeployment.MergeFrom(other.GoldengateDeployment);
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 18: {
+            if (goldengateDeployment_ == null) {
+              GoldengateDeployment = new global::Google.Cloud.OracleDatabase.V1.GoldengateDeployment();
+            }
+            input.ReadMessage(GoldengateDeployment);
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 18: {
+            if (goldengateDeployment_ == null) {
+              GoldengateDeployment = new global::Google.Cloud.OracleDatabase.V1.GoldengateDeployment();
+            }
+            input.ReadMessage(GoldengateDeployment);
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// The request for `GoldengateDeployment.Delete`.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -6630,7 +6956,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6882,7 +7208,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7087,7 +7413,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7455,7 +7781,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7717,7 +8043,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7922,7 +8248,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

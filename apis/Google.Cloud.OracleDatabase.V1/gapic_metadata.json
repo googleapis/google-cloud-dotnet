@@ -34,6 +34,12 @@
                 "CreateCloudVmClusterAsync"
               ]
             },
+            "CreateDatabaseConnection": {
+              "methods": [
+                "CreateDatabaseConnection",
+                "CreateDatabaseConnectionAsync"
+              ]
+            },
             "CreateDbSystem": {
               "methods": [
                 "CreateDbSystem",
@@ -106,6 +112,12 @@
                 "DeleteCloudVmClusterAsync"
               ]
             },
+            "DeleteDatabaseConnection": {
+              "methods": [
+                "DeleteDatabaseConnection",
+                "DeleteDatabaseConnectionAsync"
+              ]
+            },
             "DeleteDbSystem": {
               "methods": [
                 "DeleteDbSystem",
@@ -160,6 +172,36 @@
                 "DeleteOdbSubnetAsync"
               ]
             },
+            "DisableCloudVmClusterIdentityConnector": {
+              "methods": [
+                "DisableCloudVmClusterIdentityConnector",
+                "DisableCloudVmClusterIdentityConnectorAsync"
+              ]
+            },
+            "DisableExadbVmClusterIdentityConnector": {
+              "methods": [
+                "DisableExadbVmClusterIdentityConnector",
+                "DisableExadbVmClusterIdentityConnectorAsync"
+              ]
+            },
+            "EnableCloudVmClusterIdentityConnector": {
+              "methods": [
+                "EnableCloudVmClusterIdentityConnector",
+                "EnableCloudVmClusterIdentityConnectorAsync"
+              ]
+            },
+            "EnableExadbVmClusterIdentityConnector": {
+              "methods": [
+                "EnableExadbVmClusterIdentityConnector",
+                "EnableExadbVmClusterIdentityConnectorAsync"
+              ]
+            },
+            "ExecuteSql": {
+              "methods": [
+                "ExecuteSql",
+                "ExecuteSqlAsync"
+              ]
+            },
             "FailoverAutonomousDatabase": {
               "methods": [
                 "FailoverAutonomousDatabase",
@@ -200,6 +242,12 @@
               "methods": [
                 "GetDatabase",
                 "GetDatabaseAsync"
+              ]
+            },
+            "GetDatabaseConnection": {
+              "methods": [
+                "GetDatabaseConnection",
+                "GetDatabaseConnectionAsync"
               ]
             },
             "GetDbSystem": {
@@ -304,6 +352,12 @@
                 "ListDatabaseCharacterSetsAsync"
               ]
             },
+            "ListDatabaseConnections": {
+              "methods": [
+                "ListDatabaseConnections",
+                "ListDatabaseConnectionsAsync"
+              ]
+            },
             "ListDatabases": {
               "methods": [
                 "ListDatabases",
@@ -320,6 +374,12 @@
               "methods": [
                 "ListDbServers",
                 "ListDbServersAsync"
+              ]
+            },
+            "ListDbSystemComputePerformances": {
+              "methods": [
+                "ListDbSystemComputePerformances",
+                "ListDbSystemComputePerformancesAsync"
               ]
             },
             "ListDbSystemInitialStorageSizes": {
@@ -362,6 +422,12 @@
               "methods": [
                 "ListExascaleDbStorageVaults",
                 "ListExascaleDbStorageVaultsAsync"
+              ]
+            },
+            "ListFlexComponents": {
+              "methods": [
+                "ListFlexComponents",
+                "ListFlexComponentsAsync"
               ]
             },
             "ListGiVersions": {
@@ -496,6 +562,12 @@
                 "SwitchoverAutonomousDatabaseAsync"
               ]
             },
+            "TestDatabaseConnection": {
+              "methods": [
+                "TestDatabaseConnection",
+                "TestDatabaseConnectionAsync"
+              ]
+            },
             "TestGoldengateConnectionAssignment": {
               "methods": [
                 "TestGoldengateConnectionAssignment",
@@ -508,10 +580,70 @@
                 "UpdateAutonomousDatabaseAsync"
               ]
             },
+            "UpdateCloudExadataInfrastructure": {
+              "methods": [
+                "UpdateCloudExadataInfrastructure",
+                "UpdateCloudExadataInfrastructureAsync"
+              ]
+            },
+            "UpdateCloudVmCluster": {
+              "methods": [
+                "UpdateCloudVmCluster",
+                "UpdateCloudVmClusterAsync"
+              ]
+            },
+            "UpdateDatabaseConnection": {
+              "methods": [
+                "UpdateDatabaseConnection",
+                "UpdateDatabaseConnectionAsync"
+              ]
+            },
+            "UpdateDbSystem": {
+              "methods": [
+                "UpdateDbSystem",
+                "UpdateDbSystemAsync"
+              ]
+            },
             "UpdateExadbVmCluster": {
               "methods": [
                 "UpdateExadbVmCluster",
                 "UpdateExadbVmClusterAsync"
+              ]
+            },
+            "UpdateExascaleDbStorageVault": {
+              "methods": [
+                "UpdateExascaleDbStorageVault",
+                "UpdateExascaleDbStorageVaultAsync"
+              ]
+            },
+            "UpdateGoldengateConnection": {
+              "methods": [
+                "UpdateGoldengateConnection",
+                "UpdateGoldengateConnectionAsync"
+              ]
+            },
+            "UpdateGoldengateConnectionAssignment": {
+              "methods": [
+                "UpdateGoldengateConnectionAssignment",
+                "UpdateGoldengateConnectionAssignmentAsync"
+              ]
+            },
+            "UpdateGoldengateDeployment": {
+              "methods": [
+                "UpdateGoldengateDeployment",
+                "UpdateGoldengateDeploymentAsync"
+              ]
+            },
+            "UpdateOdbNetwork": {
+              "methods": [
+                "UpdateOdbNetwork",
+                "UpdateOdbNetworkAsync"
+              ]
+            },
+            "UpdateOdbSubnet": {
+              "methods": [
+                "UpdateOdbSubnet",
+                "UpdateOdbSubnetAsync"
               ]
             }
           }

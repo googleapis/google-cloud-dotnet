@@ -28,79 +28,86 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "c3RvcmFnZV92YXVsdC5wcm90bxIeZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFi",
             "YXNlLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhtnb29n",
             "bGUvYXBpL2ZpZWxkX2luZm8ucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2Uu",
-            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aGmdvb2ds",
-            "ZS90eXBlL2RhdGV0aW1lLnByb3RvIs8FChZFeGFzY2FsZURiU3RvcmFnZVZh",
-            "dWx0EhIKBG5hbWUYASABKAlCBOJBAQgSGgoMZGlzcGxheV9uYW1lGAIgASgJ",
-            "QgTiQQECEh0KD2djcF9vcmFjbGVfem9uZRgDIAEoCUIE4kEBARJaCgpwcm9w",
-            "ZXJ0aWVzGAQgASgLMkAuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYx",
-            "LkV4YXNjYWxlRGJTdG9yYWdlVmF1bHRQcm9wZXJ0aWVzQgTiQQECEjUKC2Ny",
-            "ZWF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE",
-            "4kEBAxIcCg5lbnRpdGxlbWVudF9pZBgGIAEoCUIE4kEBAxJYCgZsYWJlbHMY",
-            "ByADKAsyQi5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuRXhhc2Nh",
-            "bGVEYlN0b3JhZ2VWYXVsdC5MYWJlbHNFbnRyeUIE4kEBARJhChZleGFkYXRh",
-            "X2luZnJhc3RydWN0dXJlGAggASgJQkHiQQEB+kE6CjhvcmFjbGVkYXRhYmFz",
-            "ZS5nb29nbGVhcGlzLmNvbS9DbG91ZEV4YWRhdGFJbmZyYXN0cnVjdHVyZRot",
-            "CgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
-            "OsgB6kHEAQo0b3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20vRXhhc2Nh",
-            "bGVEYlN0b3JhZ2VWYXVsdBJbcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L2V4YXNjYWxlRGJTdG9yYWdlVmF1bHRzL3tleGFzY2Fs",
-            "ZV9kYl9zdG9yYWdlX3ZhdWx0fSoXZXhhc2NhbGVEYlN0b3JhZ2VWYXVsdHMy",
-            "FmV4YXNjYWxlRGJTdG9yYWdlVmF1bHQikAcKIEV4YXNjYWxlRGJTdG9yYWdl",
-            "VmF1bHRQcm9wZXJ0aWVzEhIKBG9jaWQYASABKAlCBOJBAQMSLgoJdGltZV96",
-            "b25lGAIgASgLMhUuZ29vZ2xlLnR5cGUuVGltZVpvbmVCBOJBAQMSYwobZXhh",
-            "c2NhbGVfZGJfc3RvcmFnZV9kZXRhaWxzGAMgASgLMjguZ29vZ2xlLmNsb3Vk",
-            "Lm9yYWNsZWRhdGFiYXNlLnYxLkV4YXNjYWxlRGJTdG9yYWdlRGV0YWlsc0IE",
-            "4kEBAhJbCgVzdGF0ZRgEIAEoDjJGLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRh",
-            "YmFzZS52MS5FeGFzY2FsZURiU3RvcmFnZVZhdWx0UHJvcGVydGllcy5TdGF0",
-            "ZUIE4kEBAxIZCgtkZXNjcmlwdGlvbhgFIAEoCUIE4kEBARIcCg52bV9jbHVz",
-            "dGVyX2lkcxgGIAMoCUIE4kEBAxIeChB2bV9jbHVzdGVyX2NvdW50GAkgASgF",
-            "QgTiQQEDEiwKHmFkZGl0aW9uYWxfZmxhc2hfY2FjaGVfcGVyY2VudBgHIAEo",
-            "BUIE4kEBARIVCgdvY2lfdXJpGAggASgJQgTiQQEDEngKGWF0dGFjaGVkX3No",
-            "YXBlX2F0dHJpYnV0ZXMYCiADKA4yTy5nb29nbGUuY2xvdWQub3JhY2xlZGF0",
-            "YWJhc2UudjEuRXhhc2NhbGVEYlN0b3JhZ2VWYXVsdFByb3BlcnRpZXMuU2hh",
-            "cGVBdHRyaWJ1dGVCBOJBAQMSeQoaYXZhaWxhYmxlX3NoYXBlX2F0dHJpYnV0",
-            "ZXMYCyADKA4yTy5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuRXhh",
-            "c2NhbGVEYlN0b3JhZ2VWYXVsdFByb3BlcnRpZXMuU2hhcGVBdHRyaWJ1dGVC",
-            "BOJBAQMiegoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIQCgxQUk9W",
-            "SVNJT05JTkcQARINCglBVkFJTEFCTEUQAhIMCghVUERBVElORxADEg8KC1RF",
-            "Uk1JTkFUSU5HEAQSDgoKVEVSTUlOQVRFRBAFEgoKBkZBSUxFRBAGIlcKDlNo",
-            "YXBlQXR0cmlidXRlEh8KG1NIQVBFX0FUVFJJQlVURV9VTlNQRUNJRklFRBAA",
-            "EhEKDVNNQVJUX1NUT1JBR0UQARIRCg1CTE9DS19TVE9SQUdFEAIiWgoYRXhh",
-            "c2NhbGVEYlN0b3JhZ2VEZXRhaWxzEiAKEmF2YWlsYWJsZV9zaXplX2dicxgB",
-            "IAEoBUIE4kEBAxIcCg50b3RhbF9zaXplX2dicxgCIAEoBUIE4kEBAiJvCiBH",
-            "ZXRFeGFzY2FsZURiU3RvcmFnZVZhdWx0UmVxdWVzdBJLCgRuYW1lGAEgASgJ",
-            "Qj3iQQEC+kE2CjRvcmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9FeGFz",
-            "Y2FsZURiU3RvcmFnZVZhdWx0ItQBCiJMaXN0RXhhc2NhbGVEYlN0b3JhZ2VW",
-            "YXVsdHNSZXF1ZXN0Ek0KBnBhcmVudBgBIAEoCUI94kEBAvpBNhI0b3JhY2xl",
-            "ZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20vRXhhc2NhbGVEYlN0b3JhZ2VWYXVs",
-            "dBIXCglwYWdlX3NpemUYAiABKAVCBOJBAQESGAoKcGFnZV90b2tlbhgDIAEo",
-            "CUIE4kEBARIUCgZmaWx0ZXIYBCABKAlCBOJBAQESFgoIb3JkZXJfYnkYBSAB",
-            "KAlCBOJBAQEirwEKI0xpc3RFeGFzY2FsZURiU3RvcmFnZVZhdWx0c1Jlc3Bv",
-            "bnNlEloKGmV4YXNjYWxlX2RiX3N0b3JhZ2VfdmF1bHRzGAEgAygLMjYuZ29v",
-            "Z2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkV4YXNjYWxlRGJTdG9yYWdl",
-            "VmF1bHQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVhY2hhYmxl",
-            "GAMgAygJIqMCCiNDcmVhdGVFeGFzY2FsZURiU3RvcmFnZVZhdWx0UmVxdWVz",
-            "dBJNCgZwYXJlbnQYASABKAlCPeJBAQL6QTYSNG9yYWNsZWRhdGFiYXNlLmdv",
-            "b2dsZWFwaXMuY29tL0V4YXNjYWxlRGJTdG9yYWdlVmF1bHQSKgocZXhhc2Nh",
-            "bGVfZGJfc3RvcmFnZV92YXVsdF9pZBgCIAEoCUIE4kEBAhJfChlleGFzY2Fs",
-            "ZV9kYl9zdG9yYWdlX3ZhdWx0GAMgASgLMjYuZ29vZ2xlLmNsb3VkLm9yYWNs",
-            "ZWRhdGFiYXNlLnYxLkV4YXNjYWxlRGJTdG9yYWdlVmF1bHRCBOJBAQISIAoK",
-            "cmVxdWVzdF9pZBgEIAEoCUIM4kEBAeKMz9cIAggBIpQBCiNEZWxldGVFeGFz",
+            "cHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29n",
+            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhpnb29nbGUvdHlwZS9kYXRl",
+            "dGltZS5wcm90byLTBQoWRXhhc2NhbGVEYlN0b3JhZ2VWYXVsdBISCgRuYW1l",
+            "GAEgASgJQgTiQQEIEhsKDGRpc3BsYXlfbmFtZRgCIAEoCUIF4kECAgUSHgoP",
+            "Z2NwX29yYWNsZV96b25lGAMgASgJQgXiQQIBBRJbCgpwcm9wZXJ0aWVzGAQg",
+            "ASgLMkAuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkV4YXNjYWxl",
+            "RGJTdG9yYWdlVmF1bHRQcm9wZXJ0aWVzQgXiQQICBRI1CgtjcmVhdGVfdGlt",
+            "ZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMSHAoO",
+            "ZW50aXRsZW1lbnRfaWQYBiABKAlCBOJBAQMSWAoGbGFiZWxzGAcgAygLMkIu",
+            "Z29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkV4YXNjYWxlRGJTdG9y",
+            "YWdlVmF1bHQuTGFiZWxzRW50cnlCBOJBAQESYgoWZXhhZGF0YV9pbmZyYXN0",
+            "cnVjdHVyZRgIIAEoCUJC4kECAQX6QToKOG9yYWNsZWRhdGFiYXNlLmdvb2ds",
+            "ZWFwaXMuY29tL0Nsb3VkRXhhZGF0YUluZnJhc3RydWN0dXJlGi0KC0xhYmVs",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6yAHqQcQB",
+            "CjRvcmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9FeGFzY2FsZURiU3Rv",
+            "cmFnZVZhdWx0Eltwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
+            "dGlvbn0vZXhhc2NhbGVEYlN0b3JhZ2VWYXVsdHMve2V4YXNjYWxlX2RiX3N0",
+            "b3JhZ2VfdmF1bHR9KhdleGFzY2FsZURiU3RvcmFnZVZhdWx0czIWZXhhc2Nh",
+            "bGVEYlN0b3JhZ2VWYXVsdCKQBwogRXhhc2NhbGVEYlN0b3JhZ2VWYXVsdFBy",
+            "b3BlcnRpZXMSEgoEb2NpZBgBIAEoCUIE4kEBAxIuCgl0aW1lX3pvbmUYAiAB",
+            "KAsyFS5nb29nbGUudHlwZS5UaW1lWm9uZUIE4kEBAxJjChtleGFzY2FsZV9k",
+            "Yl9zdG9yYWdlX2RldGFpbHMYAyABKAsyOC5nb29nbGUuY2xvdWQub3JhY2xl",
+            "ZGF0YWJhc2UudjEuRXhhc2NhbGVEYlN0b3JhZ2VEZXRhaWxzQgTiQQECElsK",
+            "BXN0YXRlGAQgASgOMkYuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYx",
+            "LkV4YXNjYWxlRGJTdG9yYWdlVmF1bHRQcm9wZXJ0aWVzLlN0YXRlQgTiQQED",
+            "EhkKC2Rlc2NyaXB0aW9uGAUgASgJQgTiQQEBEhwKDnZtX2NsdXN0ZXJfaWRz",
+            "GAYgAygJQgTiQQEDEh4KEHZtX2NsdXN0ZXJfY291bnQYCSABKAVCBOJBAQMS",
+            "LAoeYWRkaXRpb25hbF9mbGFzaF9jYWNoZV9wZXJjZW50GAcgASgFQgTiQQEB",
+            "EhUKB29jaV91cmkYCCABKAlCBOJBAQMSeAoZYXR0YWNoZWRfc2hhcGVfYXR0",
+            "cmlidXRlcxgKIAMoDjJPLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52",
+            "MS5FeGFzY2FsZURiU3RvcmFnZVZhdWx0UHJvcGVydGllcy5TaGFwZUF0dHJp",
+            "YnV0ZUIE4kEBAxJ5ChphdmFpbGFibGVfc2hhcGVfYXR0cmlidXRlcxgLIAMo",
+            "DjJPLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5FeGFzY2FsZURi",
+            "U3RvcmFnZVZhdWx0UHJvcGVydGllcy5TaGFwZUF0dHJpYnV0ZUIE4kEBAyJ6",
+            "CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEhAKDFBST1ZJU0lPTklO",
+            "RxABEg0KCUFWQUlMQUJMRRACEgwKCFVQREFUSU5HEAMSDwoLVEVSTUlOQVRJ",
+            "TkcQBBIOCgpURVJNSU5BVEVEEAUSCgoGRkFJTEVEEAYiVwoOU2hhcGVBdHRy",
+            "aWJ1dGUSHwobU0hBUEVfQVRUUklCVVRFX1VOU1BFQ0lGSUVEEAASEQoNU01B",
+            "UlRfU1RPUkFHRRABEhEKDUJMT0NLX1NUT1JBR0UQAiJaChhFeGFzY2FsZURi",
+            "U3RvcmFnZURldGFpbHMSIAoSYXZhaWxhYmxlX3NpemVfZ2JzGAEgASgFQgTi",
+            "QQEDEhwKDnRvdGFsX3NpemVfZ2JzGAIgASgFQgTiQQECIt8BCiNVcGRhdGVF",
+            "eGFzY2FsZURiU3RvcmFnZVZhdWx0UmVxdWVzdBI1Cgt1cGRhdGVfbWFzaxgB",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCBOJBAQESXwoZZXhh",
+            "c2NhbGVfZGJfc3RvcmFnZV92YXVsdBgCIAEoCzI2Lmdvb2dsZS5jbG91ZC5v",
+            "cmFjbGVkYXRhYmFzZS52MS5FeGFzY2FsZURiU3RvcmFnZVZhdWx0QgTiQQEC",
+            "EiAKCnJlcXVlc3RfaWQYAyABKAlCDOJBAQHijM/XCAIIASJvCiBHZXRFeGFz",
             "Y2FsZURiU3RvcmFnZVZhdWx0UmVxdWVzdBJLCgRuYW1lGAEgASgJQj3iQQEC",
             "+kE2CjRvcmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9FeGFzY2FsZURi",
-            "U3RvcmFnZVZhdWx0EiAKCnJlcXVlc3RfaWQYAiABKAlCDOJBAQHijM/XCAII",
-            "AUL1AQoiY29tLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MUIbRXhh",
-            "c2NhbGVEYlN0b3JhZ2VWYXVsdFByb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vb3JhY2xlZGF0YWJhc2UvYXBpdjEvb3JhY2xlZGF0YWJhc2VwYjtvcmFj",
-            "bGVkYXRhYmFzZXBiqgIeR29vZ2xlLkNsb3VkLk9yYWNsZURhdGFiYXNlLlYx",
-            "ygIeR29vZ2xlXENsb3VkXE9yYWNsZURhdGFiYXNlXFYx6gIhR29vZ2xlOjpD",
-            "bG91ZDo6T3JhY2xlRGF0YWJhc2U6OlYxYgZwcm90bzM="));
+            "U3RvcmFnZVZhdWx0ItQBCiJMaXN0RXhhc2NhbGVEYlN0b3JhZ2VWYXVsdHNS",
+            "ZXF1ZXN0Ek0KBnBhcmVudBgBIAEoCUI94kEBAvpBNhI0b3JhY2xlZGF0YWJh",
+            "c2UuZ29vZ2xlYXBpcy5jb20vRXhhc2NhbGVEYlN0b3JhZ2VWYXVsdBIXCglw",
+            "YWdlX3NpemUYAiABKAVCBOJBAQESGAoKcGFnZV90b2tlbhgDIAEoCUIE4kEB",
+            "ARIUCgZmaWx0ZXIYBCABKAlCBOJBAQESFgoIb3JkZXJfYnkYBSABKAlCBOJB",
+            "AQEirwEKI0xpc3RFeGFzY2FsZURiU3RvcmFnZVZhdWx0c1Jlc3BvbnNlEloK",
+            "GmV4YXNjYWxlX2RiX3N0b3JhZ2VfdmF1bHRzGAEgAygLMjYuZ29vZ2xlLmNs",
+            "b3VkLm9yYWNsZWRhdGFiYXNlLnYxLkV4YXNjYWxlRGJTdG9yYWdlVmF1bHQS",
+            "FwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMgAygJ",
+            "IqMCCiNDcmVhdGVFeGFzY2FsZURiU3RvcmFnZVZhdWx0UmVxdWVzdBJNCgZw",
+            "YXJlbnQYASABKAlCPeJBAQL6QTYSNG9yYWNsZWRhdGFiYXNlLmdvb2dsZWFw",
+            "aXMuY29tL0V4YXNjYWxlRGJTdG9yYWdlVmF1bHQSKgocZXhhc2NhbGVfZGJf",
+            "c3RvcmFnZV92YXVsdF9pZBgCIAEoCUIE4kEBAhJfChlleGFzY2FsZV9kYl9z",
+            "dG9yYWdlX3ZhdWx0GAMgASgLMjYuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFi",
+            "YXNlLnYxLkV4YXNjYWxlRGJTdG9yYWdlVmF1bHRCBOJBAQISIAoKcmVxdWVz",
+            "dF9pZBgEIAEoCUIM4kEBAeKMz9cIAggBIpQBCiNEZWxldGVFeGFzY2FsZURi",
+            "U3RvcmFnZVZhdWx0UmVxdWVzdBJLCgRuYW1lGAEgASgJQj3iQQEC+kE2CjRv",
+            "cmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9FeGFzY2FsZURiU3RvcmFn",
+            "ZVZhdWx0EiAKCnJlcXVlc3RfaWQYAiABKAlCDOJBAQHijM/XCAIIAUL1AQoi",
+            "Y29tLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MUIbRXhhc2NhbGVE",
+            "YlN0b3JhZ2VWYXVsdFByb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vb3Jh",
+            "Y2xlZGF0YWJhc2UvYXBpdjEvb3JhY2xlZGF0YWJhc2VwYjtvcmFjbGVkYXRh",
+            "YmFzZXBiqgIeR29vZ2xlLkNsb3VkLk9yYWNsZURhdGFiYXNlLlYxygIeR29v",
+            "Z2xlXENsb3VkXE9yYWNsZURhdGFiYXNlXFYx6gIhR29vZ2xlOjpDbG91ZDo6",
+            "T3JhY2xlRGF0YWJhc2U6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVault), global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVault.Parser, new[]{ "Name", "DisplayName", "GcpOracleZone", "Properties", "CreateTime", "EntitlementId", "Labels", "ExadataInfrastructure" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVaultProperties), global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVaultProperties.Parser, new[]{ "Ocid", "TimeZone", "ExascaleDbStorageDetails", "State", "Description", "VmClusterIds", "VmClusterCount", "AdditionalFlashCachePercent", "OciUri", "AttachedShapeAttributes", "AvailableShapeAttributes" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVaultProperties.Types.State), typeof(global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVaultProperties.Types.ShapeAttribute) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageDetails), global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageDetails.Parser, new[]{ "AvailableSizeGbs", "TotalSizeGbs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.UpdateExascaleDbStorageVaultRequest), global::Google.Cloud.OracleDatabase.V1.UpdateExascaleDbStorageVaultRequest.Parser, new[]{ "UpdateMask", "ExascaleDbStorageVault", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.GetExascaleDbStorageVaultRequest), global::Google.Cloud.OracleDatabase.V1.GetExascaleDbStorageVaultRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ListExascaleDbStorageVaultsRequest), global::Google.Cloud.OracleDatabase.V1.ListExascaleDbStorageVaultsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ListExascaleDbStorageVaultsResponse), global::Google.Cloud.OracleDatabase.V1.ListExascaleDbStorageVaultsResponse.Parser, new[]{ "ExascaleDbStorageVaults", "NextPageToken", "Unreachable" }, null, null, null, null),
@@ -189,8 +196,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Required. The display name for the ExascaleDbStorageVault. The name does
-    /// not have to be unique within your project. The name must be 1-255
+    /// Required. Immutable. The display name for the ExascaleDbStorageVault. The
+    /// name does not have to be unique within your project. The name must be 1-255
     /// characters long and can only contain alphanumeric characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -206,9 +213,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int GcpOracleZoneFieldNumber = 3;
     private string gcpOracleZone_ = "";
     /// <summary>
-    /// Optional. The GCP Oracle zone where Oracle ExascaleDbStorageVault is
-    /// hosted. Example: us-east4-b-r2. If not specified, the system will pick a
-    /// zone based on availability.
+    /// Optional. Immutable. The GCP Oracle zone where Oracle
+    /// ExascaleDbStorageVault is hosted. Example: us-east4-b-r2. If not specified,
+    /// the system will pick a zone based on availability.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -223,7 +230,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int PropertiesFieldNumber = 4;
     private global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVaultProperties properties_;
     /// <summary>
-    /// Required. The properties of the ExascaleDbStorageVault.
+    /// Required. Immutable. The properties of the ExascaleDbStorageVault.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -283,7 +290,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int ExadataInfrastructureFieldNumber = 8;
     private string exadataInfrastructure_ = "";
     /// <summary>
-    /// Optional. The Exadata Infrastructure resource on which
+    /// Optional. Immutable. The Exadata Infrastructure resource on which
     /// ExascaleDbStorageVault
     /// resource is created, in the following format:
     /// projects/{project}/locations/{region}/cloudExadataInfrastuctures/{cloud_extradata_infrastructure}
@@ -1521,6 +1528,324 @@ namespace Google.Cloud.OracleDatabase.V1 {
   }
 
   /// <summary>
+  /// The request for `ExascaleDbStorageVault.Update`.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateExascaleDbStorageVaultRequest : pb::IMessage<UpdateExascaleDbStorageVaultRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateExascaleDbStorageVaultRequest> _parser = new pb::MessageParser<UpdateExascaleDbStorageVaultRequest>(() => new UpdateExascaleDbStorageVaultRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateExascaleDbStorageVaultRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVaultReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateExascaleDbStorageVaultRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateExascaleDbStorageVaultRequest(UpdateExascaleDbStorageVaultRequest other) : this() {
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      exascaleDbStorageVault_ = other.exascaleDbStorageVault_ != null ? other.exascaleDbStorageVault_.Clone() : null;
+      requestId_ = other.requestId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateExascaleDbStorageVaultRequest Clone() {
+      return new UpdateExascaleDbStorageVaultRequest(this);
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Optional. A mask specifying which fields in the ExascaleDbStorageVault
+    /// should be updated. A field specified in the mask is updated. If a mask
+    /// isn't provided, the service treats this as an implied field mask equivalent
+    /// to all fields that are populated (have a non-empty value). To clear or
+    /// unset a field, the field must be explicitly specified in the `update_mask`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "exascale_db_storage_vault" field.</summary>
+    public const int ExascaleDbStorageVaultFieldNumber = 2;
+    private global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVault exascaleDbStorageVault_;
+    /// <summary>
+    /// Required. The resource being updated. Note only labels can be updated.
+    /// The provided labels will completely replace the existing labels.
+    /// Any existing label keys that are not included in the update request will be
+    /// deleted. Not providing labels and update_mask will not update the labels.
+    /// To clear all labels, specify `labels` in the `update_mask` and omit or
+    /// leave the `labels` field empty in the update request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVault ExascaleDbStorageVault {
+      get { return exascaleDbStorageVault_; }
+      set {
+        exascaleDbStorageVault_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 3;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. An optional ID to identify the request. This value is used to
+    /// identify duplicate requests. If you make a request with the same request ID
+    /// and the original request is still in progress or completed, the server
+    /// ignores the second request. This prevents clients from
+    /// accidentally creating duplicate commitments.
+    ///
+    /// The request ID must be a valid UUID with the exception that zero UUID is
+    /// not supported (00000000-0000-0000-0000-000000000000).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateExascaleDbStorageVaultRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateExascaleDbStorageVaultRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (!object.Equals(ExascaleDbStorageVault, other.ExascaleDbStorageVault)) return false;
+      if (RequestId != other.RequestId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (exascaleDbStorageVault_ != null) hash ^= ExascaleDbStorageVault.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (updateMask_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(UpdateMask);
+      }
+      if (exascaleDbStorageVault_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ExascaleDbStorageVault);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (updateMask_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(UpdateMask);
+      }
+      if (exascaleDbStorageVault_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ExascaleDbStorageVault);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (exascaleDbStorageVault_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExascaleDbStorageVault);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateExascaleDbStorageVaultRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.exascaleDbStorageVault_ != null) {
+        if (exascaleDbStorageVault_ == null) {
+          ExascaleDbStorageVault = new global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVault();
+        }
+        ExascaleDbStorageVault.MergeFrom(other.ExascaleDbStorageVault);
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 18: {
+            if (exascaleDbStorageVault_ == null) {
+              ExascaleDbStorageVault = new global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVault();
+            }
+            input.ReadMessage(ExascaleDbStorageVault);
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 18: {
+            if (exascaleDbStorageVault_ == null) {
+              ExascaleDbStorageVault = new global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVault();
+            }
+            input.ReadMessage(ExascaleDbStorageVault);
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// The request for `ExascaleDbStorageVault.Get`.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1538,7 +1863,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVaultReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVaultReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1743,7 +2068,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVaultReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVaultReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2112,7 +2437,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVaultReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVaultReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2378,7 +2703,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVaultReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVaultReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2727,7 +3052,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVaultReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.ExascaleDbStorageVaultReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
