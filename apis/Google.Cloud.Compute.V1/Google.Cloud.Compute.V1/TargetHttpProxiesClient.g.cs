@@ -303,7 +303,7 @@ namespace Google.Cloud.Compute.V1
     }
 
     /// <summary>
-    /// TargetHttpProxies client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// TargetHttpProxies client wrapper, for convenient use. This client implements API version 2026-11-01.
     /// </summary>
     /// <remarks>
     /// The TargetHttpProxies API.
@@ -1152,7 +1152,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
-                ApiVersion = "2026-09-01",
+                ApiVersion = "2026-11-01",
             });
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);

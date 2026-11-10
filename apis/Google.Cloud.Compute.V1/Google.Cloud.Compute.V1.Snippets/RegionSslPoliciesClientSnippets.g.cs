@@ -229,6 +229,76 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicyRequestObject()
+        {
+            // Snippet: GetIamPolicy(GetIamPolicyRegionSslPolicyRequest, CallSettings)
+            // Create client
+            RegionSslPoliciesClient regionSslPoliciesClient = RegionSslPoliciesClient.Create();
+            // Initialize request argument(s)
+            GetIamPolicyRegionSslPolicyRequest request = new GetIamPolicyRegionSslPolicyRequest
+            {
+                Region = "",
+                Resource = "",
+                Project = "",
+                OptionsRequestedPolicyVersion = 0,
+            };
+            // Make the request
+            Policy response = regionSslPoliciesClient.GetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: GetIamPolicyAsync(GetIamPolicyRegionSslPolicyRequest, CallSettings)
+            // Additional: GetIamPolicyAsync(GetIamPolicyRegionSslPolicyRequest, CancellationToken)
+            // Create client
+            RegionSslPoliciesClient regionSslPoliciesClient = await RegionSslPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            GetIamPolicyRegionSslPolicyRequest request = new GetIamPolicyRegionSslPolicyRequest
+            {
+                Region = "",
+                Resource = "",
+                Project = "",
+                OptionsRequestedPolicyVersion = 0,
+            };
+            // Make the request
+            Policy response = await regionSslPoliciesClient.GetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicy()
+        {
+            // Snippet: GetIamPolicy(string, string, string, CallSettings)
+            // Create client
+            RegionSslPoliciesClient regionSslPoliciesClient = RegionSslPoliciesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            // Make the request
+            Policy response = regionSslPoliciesClient.GetIamPolicy(project, region, resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyAsync()
+        {
+            // Snippet: GetIamPolicyAsync(string, string, string, CallSettings)
+            // Additional: GetIamPolicyAsync(string, string, string, CancellationToken)
+            // Create client
+            RegionSslPoliciesClient regionSslPoliciesClient = await RegionSslPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            // Make the request
+            Policy response = await regionSslPoliciesClient.GetIamPolicyAsync(project, region, resource);
+            // End snippet
+        }
+
         /// <summary>Snippet for Insert</summary>
         public void InsertRequestObject()
         {
@@ -764,6 +834,150 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Operation retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicyRequestObject()
+        {
+            // Snippet: SetIamPolicy(SetIamPolicyRegionSslPolicyRequest, CallSettings)
+            // Create client
+            RegionSslPoliciesClient regionSslPoliciesClient = RegionSslPoliciesClient.Create();
+            // Initialize request argument(s)
+            SetIamPolicyRegionSslPolicyRequest request = new SetIamPolicyRegionSslPolicyRequest
+            {
+                Region = "",
+                Resource = "",
+                Project = "",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
+            };
+            // Make the request
+            Policy response = regionSslPoliciesClient.SetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: SetIamPolicyAsync(SetIamPolicyRegionSslPolicyRequest, CallSettings)
+            // Additional: SetIamPolicyAsync(SetIamPolicyRegionSslPolicyRequest, CancellationToken)
+            // Create client
+            RegionSslPoliciesClient regionSslPoliciesClient = await RegionSslPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            SetIamPolicyRegionSslPolicyRequest request = new SetIamPolicyRegionSslPolicyRequest
+            {
+                Region = "",
+                Resource = "",
+                Project = "",
+                RegionSetPolicyRequestResource = new RegionSetPolicyRequest(),
+            };
+            // Make the request
+            Policy response = await regionSslPoliciesClient.SetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicy()
+        {
+            // Snippet: SetIamPolicy(string, string, string, RegionSetPolicyRequest, CallSettings)
+            // Create client
+            RegionSslPoliciesClient regionSslPoliciesClient = RegionSslPoliciesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            RegionSetPolicyRequest regionSetPolicyRequestResource = new RegionSetPolicyRequest();
+            // Make the request
+            Policy response = regionSslPoliciesClient.SetIamPolicy(project, region, resource, regionSetPolicyRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyAsync()
+        {
+            // Snippet: SetIamPolicyAsync(string, string, string, RegionSetPolicyRequest, CallSettings)
+            // Additional: SetIamPolicyAsync(string, string, string, RegionSetPolicyRequest, CancellationToken)
+            // Create client
+            RegionSslPoliciesClient regionSslPoliciesClient = await RegionSslPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            RegionSetPolicyRequest regionSetPolicyRequestResource = new RegionSetPolicyRequest();
+            // Make the request
+            Policy response = await regionSslPoliciesClient.SetIamPolicyAsync(project, region, resource, regionSetPolicyRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissionsRequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsRegionSslPolicyRequest, CallSettings)
+            // Create client
+            RegionSslPoliciesClient regionSslPoliciesClient = RegionSslPoliciesClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsRegionSslPolicyRequest request = new TestIamPermissionsRegionSslPolicyRequest
+            {
+                Region = "",
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = regionSslPoliciesClient.TestIamPermissions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsRequestObjectAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsRegionSslPolicyRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsRegionSslPolicyRequest, CancellationToken)
+            // Create client
+            RegionSslPoliciesClient regionSslPoliciesClient = await RegionSslPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            TestIamPermissionsRegionSslPolicyRequest request = new TestIamPermissionsRegionSslPolicyRequest
+            {
+                Region = "",
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = await regionSslPoliciesClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions()
+        {
+            // Snippet: TestIamPermissions(string, string, string, TestPermissionsRequest, CallSettings)
+            // Create client
+            RegionSslPoliciesClient regionSslPoliciesClient = RegionSslPoliciesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = regionSslPoliciesClient.TestIamPermissions(project, region, resource, testPermissionsRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(string, string, string, TestPermissionsRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(string, string, string, TestPermissionsRequest, CancellationToken)
+            // Create client
+            RegionSslPoliciesClient regionSslPoliciesClient = await RegionSslPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = await regionSslPoliciesClient.TestIamPermissionsAsync(project, region, resource, testPermissionsRequestResource);
             // End snippet
         }
     }

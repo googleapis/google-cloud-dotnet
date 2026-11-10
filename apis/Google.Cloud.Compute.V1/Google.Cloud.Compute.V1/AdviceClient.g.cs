@@ -144,7 +144,7 @@ namespace Google.Cloud.Compute.V1
         protected override gaxgrpc::ChannelPool GetChannelPool() => AdviceClient.ChannelPool;
     }
 
-    /// <summary>Advice client wrapper, for convenient use. This client implements API version 2026-09-01.</summary>
+    /// <summary>Advice client wrapper, for convenient use. This client implements API version 2026-11-01.</summary>
     /// <remarks>
     /// The Advice API.
     /// </remarks>
@@ -550,7 +550,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
-                ApiVersion = "2026-09-01",
+                ApiVersion = "2026-11-01",
             });
             _callCalendarMode = clientHelper.BuildApiCall<CalendarModeAdviceRpcRequest, CalendarModeAdviceResponse>("CalendarMode", grpcClient.CalendarModeAsync, grpcClient.CalendarMode, effectiveSettings.CalendarModeSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callCalendarMode);

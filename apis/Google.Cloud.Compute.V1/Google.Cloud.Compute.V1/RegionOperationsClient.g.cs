@@ -178,7 +178,7 @@ namespace Google.Cloud.Compute.V1
     }
 
     /// <summary>
-    /// RegionOperations client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// RegionOperations client wrapper, for convenient use. This client implements API version 2026-11-01.
     /// </summary>
     /// <remarks>
     /// The RegionOperations API.
@@ -753,7 +753,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
-                ApiVersion = "2026-09-01",
+                ApiVersion = "2026-11-01",
             });
             _callDelete = clientHelper.BuildApiCall<DeleteRegionOperationRequest, DeleteRegionOperationResponse>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("operation", request => request.Operation);
             Modify_ApiCall(ref _callDelete);

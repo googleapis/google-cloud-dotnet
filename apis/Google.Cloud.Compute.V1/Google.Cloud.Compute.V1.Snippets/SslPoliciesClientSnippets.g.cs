@@ -416,6 +416,72 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicyRequestObject()
+        {
+            // Snippet: GetIamPolicy(GetIamPolicySslPolicyRequest, CallSettings)
+            // Create client
+            SslPoliciesClient sslPoliciesClient = SslPoliciesClient.Create();
+            // Initialize request argument(s)
+            GetIamPolicySslPolicyRequest request = new GetIamPolicySslPolicyRequest
+            {
+                Resource = "",
+                Project = "",
+                OptionsRequestedPolicyVersion = 0,
+            };
+            // Make the request
+            Policy response = sslPoliciesClient.GetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: GetIamPolicyAsync(GetIamPolicySslPolicyRequest, CallSettings)
+            // Additional: GetIamPolicyAsync(GetIamPolicySslPolicyRequest, CancellationToken)
+            // Create client
+            SslPoliciesClient sslPoliciesClient = await SslPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            GetIamPolicySslPolicyRequest request = new GetIamPolicySslPolicyRequest
+            {
+                Resource = "",
+                Project = "",
+                OptionsRequestedPolicyVersion = 0,
+            };
+            // Make the request
+            Policy response = await sslPoliciesClient.GetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicy()
+        {
+            // Snippet: GetIamPolicy(string, string, CallSettings)
+            // Create client
+            SslPoliciesClient sslPoliciesClient = SslPoliciesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            // Make the request
+            Policy response = sslPoliciesClient.GetIamPolicy(project, resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyAsync()
+        {
+            // Snippet: GetIamPolicyAsync(string, string, CallSettings)
+            // Additional: GetIamPolicyAsync(string, string, CancellationToken)
+            // Create client
+            SslPoliciesClient sslPoliciesClient = await SslPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            // Make the request
+            Policy response = await sslPoliciesClient.GetIamPolicyAsync(project, resource);
+            // End snippet
+        }
+
         /// <summary>Snippet for Insert</summary>
         public void InsertRequestObject()
         {
@@ -935,6 +1001,142 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Operation retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicyRequestObject()
+        {
+            // Snippet: SetIamPolicy(SetIamPolicySslPolicyRequest, CallSettings)
+            // Create client
+            SslPoliciesClient sslPoliciesClient = SslPoliciesClient.Create();
+            // Initialize request argument(s)
+            SetIamPolicySslPolicyRequest request = new SetIamPolicySslPolicyRequest
+            {
+                Resource = "",
+                Project = "",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
+            };
+            // Make the request
+            Policy response = sslPoliciesClient.SetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: SetIamPolicyAsync(SetIamPolicySslPolicyRequest, CallSettings)
+            // Additional: SetIamPolicyAsync(SetIamPolicySslPolicyRequest, CancellationToken)
+            // Create client
+            SslPoliciesClient sslPoliciesClient = await SslPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            SetIamPolicySslPolicyRequest request = new SetIamPolicySslPolicyRequest
+            {
+                Resource = "",
+                Project = "",
+                GlobalSetPolicyRequestResource = new GlobalSetPolicyRequest(),
+            };
+            // Make the request
+            Policy response = await sslPoliciesClient.SetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicy()
+        {
+            // Snippet: SetIamPolicy(string, string, GlobalSetPolicyRequest, CallSettings)
+            // Create client
+            SslPoliciesClient sslPoliciesClient = SslPoliciesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            GlobalSetPolicyRequest globalSetPolicyRequestResource = new GlobalSetPolicyRequest();
+            // Make the request
+            Policy response = sslPoliciesClient.SetIamPolicy(project, resource, globalSetPolicyRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyAsync()
+        {
+            // Snippet: SetIamPolicyAsync(string, string, GlobalSetPolicyRequest, CallSettings)
+            // Additional: SetIamPolicyAsync(string, string, GlobalSetPolicyRequest, CancellationToken)
+            // Create client
+            SslPoliciesClient sslPoliciesClient = await SslPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            GlobalSetPolicyRequest globalSetPolicyRequestResource = new GlobalSetPolicyRequest();
+            // Make the request
+            Policy response = await sslPoliciesClient.SetIamPolicyAsync(project, resource, globalSetPolicyRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissionsRequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsSslPolicyRequest, CallSettings)
+            // Create client
+            SslPoliciesClient sslPoliciesClient = SslPoliciesClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsSslPolicyRequest request = new TestIamPermissionsSslPolicyRequest
+            {
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = sslPoliciesClient.TestIamPermissions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsRequestObjectAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsSslPolicyRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsSslPolicyRequest, CancellationToken)
+            // Create client
+            SslPoliciesClient sslPoliciesClient = await SslPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            TestIamPermissionsSslPolicyRequest request = new TestIamPermissionsSslPolicyRequest
+            {
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = await sslPoliciesClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions()
+        {
+            // Snippet: TestIamPermissions(string, string, TestPermissionsRequest, CallSettings)
+            // Create client
+            SslPoliciesClient sslPoliciesClient = SslPoliciesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = sslPoliciesClient.TestIamPermissions(project, resource, testPermissionsRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(string, string, TestPermissionsRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(string, string, TestPermissionsRequest, CancellationToken)
+            // Create client
+            SslPoliciesClient sslPoliciesClient = await SslPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = await sslPoliciesClient.TestIamPermissionsAsync(project, resource, testPermissionsRequestResource);
             // End snippet
         }
     }

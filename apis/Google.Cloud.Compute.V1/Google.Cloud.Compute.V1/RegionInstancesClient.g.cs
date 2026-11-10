@@ -140,7 +140,7 @@ namespace Google.Cloud.Compute.V1
     }
 
     /// <summary>
-    /// RegionInstances client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// RegionInstances client wrapper, for convenient use. This client implements API version 2026-11-01.
     /// </summary>
     /// <remarks>
     /// The RegionInstances API.
@@ -370,7 +370,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
-                ApiVersion = "2026-09-01",
+                ApiVersion = "2026-11-01",
             });
             BulkInsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.BulkInsertOperationsSettings, logger);
             _callBulkInsert = clientHelper.BuildApiCall<BulkInsertRegionInstanceRequest, Operation>("BulkInsert", grpcClient.BulkInsertAsync, grpcClient.BulkInsert, effectiveSettings.BulkInsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);

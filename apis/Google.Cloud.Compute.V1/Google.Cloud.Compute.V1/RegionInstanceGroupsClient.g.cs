@@ -212,7 +212,7 @@ namespace Google.Cloud.Compute.V1
     }
 
     /// <summary>
-    /// RegionInstanceGroups client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// RegionInstanceGroups client wrapper, for convenient use. This client implements API version 2026-11-01.
     /// </summary>
     /// <remarks>
     /// The RegionInstanceGroups API.
@@ -864,7 +864,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
-                ApiVersion = "2026-09-01",
+                ApiVersion = "2026-11-01",
             });
             SetNamedPortsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetNamedPortsOperationsSettings, logger);
             _callGet = clientHelper.BuildApiCall<GetRegionInstanceGroupRequest, InstanceGroup>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group", request => request.InstanceGroup);

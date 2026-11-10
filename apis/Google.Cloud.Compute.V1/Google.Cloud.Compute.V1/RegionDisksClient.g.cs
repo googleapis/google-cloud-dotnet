@@ -616,7 +616,7 @@ namespace Google.Cloud.Compute.V1
     }
 
     /// <summary>
-    /// RegionDisks client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// RegionDisks client wrapper, for convenient use. This client implements API version 2026-11-01.
     /// </summary>
     /// <remarks>
     /// The RegionDisks API.
@@ -2910,7 +2910,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
-                ApiVersion = "2026-09-01",
+                ApiVersion = "2026-11-01",
             });
             AddResourcePoliciesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.AddResourcePoliciesOperationsSettings, logger);
             BulkInsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.BulkInsertOperationsSettings, logger);

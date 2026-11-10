@@ -315,7 +315,7 @@ namespace Google.Cloud.Compute.V1
     }
 
     /// <summary>
-    /// PublicAdvertisedPrefixes client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// PublicAdvertisedPrefixes client wrapper, for convenient use. This client implements API version 2026-11-01.
     /// </summary>
     /// <remarks>
     /// The PublicAdvertisedPrefixes API.
@@ -1154,7 +1154,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
-                ApiVersion = "2026-09-01",
+                ApiVersion = "2026-11-01",
             });
             AnnounceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AnnounceOperationsSettings, logger);
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
