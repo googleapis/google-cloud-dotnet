@@ -188,11 +188,15 @@ namespace Google.Cloud.Run.V2
         /// The default Revisions scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/run</description></item>
+        /// <item><description>https://www.googleapis.com/auth/run.readonly</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/run",
+            "https://www.googleapis.com/auth/run.readonly",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>

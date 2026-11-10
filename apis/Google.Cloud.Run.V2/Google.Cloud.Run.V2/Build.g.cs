@@ -55,17 +55,18 @@ namespace Google.Cloud.Run.V2 {
             "ZXJhdGlvbhIWCg5iYXNlX2ltYWdlX3VyaRgCIAEoCRIaChJiYXNlX2ltYWdl",
             "X3dhcm5pbmcYAyABKAkiVQoNU3RvcmFnZVNvdXJjZRIUCgZidWNrZXQYASAB",
             "KAlCBOJBAQISFAoGb2JqZWN0GAIgASgJQgTiQQECEhgKCmdlbmVyYXRpb24Y",
-            "AyABKANCBOJBAQEy8QEKBkJ1aWxkcxKeAQoLU3VibWl0QnVpbGQSJy5nb29n",
+            "AyABKANCBOJBAQEylQIKBkJ1aWxkcxKeAQoLU3VibWl0QnVpbGQSJy5nb29n",
             "bGUuY2xvdWQucnVuLnYyLlN1Ym1pdEJ1aWxkUmVxdWVzdBooLmdvb2dsZS5j",
             "bG91ZC5ydW4udjIuU3VibWl0QnVpbGRSZXNwb25zZSI8gtPkkwI2IjEvdjIv",
             "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9idWlsZHM6c3VibWl0",
-            "OgEqGkbKQRJydW4uZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29n",
-            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQsMBChdjb20uZ29vZ2xl",
-            "LmNsb3VkLnJ1bi52MkIKQnVpbGRQcm90b1ABWiljbG91ZC5nb29nbGUuY29t",
-            "L2dvL3J1bi9hcGl2Mi9ydW5wYjtydW5wYupBbgopY2xvdWRidWlsZC5nb29n",
-            "bGVhcGlzLmNvbS9CdWlsZFdvcmtlclBvb2wSQXByb2plY3RzL3twcm9qZWN0",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS93b3JrZXJQb29scy97d29ya2VyX3Bv",
-            "b2x9YgZwcm90bzM="));
+            "OgEqGmrKQRJydW4uZ29vZ2xlYXBpcy5jb23SQVJodHRwczovL3d3dy5nb29n",
+            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdv",
+            "b2dsZWFwaXMuY29tL2F1dGgvcnVuQsMBChdjb20uZ29vZ2xlLmNsb3VkLnJ1",
+            "bi52MkIKQnVpbGRQcm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL3J1bi9h",
+            "cGl2Mi9ydW5wYjtydW5wYupBbgopY2xvdWRidWlsZC5nb29nbGVhcGlzLmNv",
+            "bS9CdWlsZFdvcmtlclBvb2wSQXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufS93b3JrZXJQb29scy97d29ya2VyX3Bvb2x9YgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.LaunchStageReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -247,8 +248,8 @@ namespace Google.Cloud.Run.V2 {
     public const int WorkerPoolFieldNumber = 7;
     private string workerPool_ = "";
     /// <summary>
-    /// Optional. Name of the Cloud Build Custom Worker Pool that should be used to
-    /// build the function. The format of this field is
+    /// Optional. Name of the Cloud Build private pool that should be used to build
+    /// the function. The format of this field is
     /// `projects/{project}/locations/{region}/workerPools/{workerPool}` where
     /// `{project}` and `{region}` are the project id and region respectively where
     /// the worker pool is defined and `{workerPool}` is the short name of the

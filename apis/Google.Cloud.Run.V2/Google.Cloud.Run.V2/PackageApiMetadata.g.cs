@@ -68,7 +68,9 @@ namespace Google.Cloud.Run.V2
             yield return K8SMinReflection.Descriptor;
             yield return RevisionReflection.Descriptor;
             yield return RevisionTemplateReflection.Descriptor;
+            yield return SandboxReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
+            yield return SourceUploadReflection.Descriptor;
             yield return StatusReflection.Descriptor;
             yield return TaskReflection.Descriptor;
             yield return TaskTemplateReflection.Descriptor;

@@ -29,76 +29,82 @@ namespace Google.Cloud.Run.V2 {
             "ZS9hcGkvY2xpZW50LnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9y",
             "LnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiNnb29nbGUvY2xv",
             "dWQvcnVuL3YyL2NvbmRpdGlvbi5wcm90bxohZ29vZ2xlL2Nsb3VkL3J1bi92",
-            "Mi9rOHMubWluLnByb3RvGilnb29nbGUvY2xvdWQvcnVuL3YyL3ZlbmRvcl9z",
-            "ZXR0aW5ncy5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3Rv",
-            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhdnb29nbGUvcnBj",
-            "L3N0YXR1cy5wcm90byJACg5HZXRUYXNrUmVxdWVzdBIuCgRuYW1lGAEgASgJ",
-            "QiDiQQEC+kEZChdydW4uZ29vZ2xlYXBpcy5jb20vVGFzayKBAQoQTGlzdFRh",
-            "c2tzUmVxdWVzdBIwCgZwYXJlbnQYASABKAlCIOJBAQL6QRkSF3J1bi5nb29n",
-            "bGVhcGlzLmNvbS9UYXNrEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rv",
-            "a2VuGAMgASgJEhQKDHNob3dfZGVsZXRlZBgEIAEoCCJWChFMaXN0VGFza3NS",
-            "ZXNwb25zZRIoCgV0YXNrcxgBIAMoCzIZLmdvb2dsZS5jbG91ZC5ydW4udjIu",
-            "VGFzaxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki5g0KBFRhc2sSEgoEbmFt",
-            "ZRgBIAEoCUIE4kEBAxIRCgN1aWQYAiABKAlCBOJBAQMSGAoKZ2VuZXJhdGlv",
-            "bhgDIAEoA0IE4kEBAxI7CgZsYWJlbHMYBCADKAsyJS5nb29nbGUuY2xvdWQu",
-            "cnVuLnYyLlRhc2suTGFiZWxzRW50cnlCBOJBAQMSRQoLYW5ub3RhdGlvbnMY",
-            "BSADKAsyKi5nb29nbGUuY2xvdWQucnVuLnYyLlRhc2suQW5ub3RhdGlvbnNF",
-            "bnRyeUIE4kEBAxI1CgtjcmVhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCBOJBAQMSOAoOc2NoZWR1bGVkX3RpbWUYIiABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEjQKCnN0YXJ0X3Rp",
-            "bWUYGyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEjkK",
-            "D2NvbXBsZXRpb25fdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCBOJBAQMSNQoLdXBkYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgTiQQEDEjUKC2RlbGV0ZV90aW1lGAkgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxI1CgtleHBpcmVfdGlt",
-            "ZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMSLAoD",
-            "am9iGAwgASgJQh/iQQED+kEYChZydW4uZ29vZ2xlYXBpcy5jb20vSm9iEjgK",
-            "CWV4ZWN1dGlvbhgNIAEoCUIl4kEBA/pBHgoccnVuLmdvb2dsZWFwaXMuY29t",
-            "L0V4ZWN1dGlvbhIyCgpjb250YWluZXJzGA4gAygLMh4uZ29vZ2xlLmNsb3Vk",
-            "LnJ1bi52Mi5Db250YWluZXISLAoHdm9sdW1lcxgPIAMoCzIbLmdvb2dsZS5j",
-            "bG91ZC5ydW4udjIuVm9sdW1lEhMKC21heF9yZXRyaWVzGBAgASgFEioKB3Rp",
-            "bWVvdXQYESABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SFwoPc2Vy",
-            "dmljZV9hY2NvdW50GBIgASgJEkgKFWV4ZWN1dGlvbl9lbnZpcm9ubWVudBgU",
-            "IAEoDjIpLmdvb2dsZS5jbG91ZC5ydW4udjIuRXhlY3V0aW9uRW52aXJvbm1l",
-            "bnQSGQoLcmVjb25jaWxpbmcYFSABKAhCBOJBAQMSOAoKY29uZGl0aW9ucxgW",
-            "IAMoCzIeLmdvb2dsZS5jbG91ZC5ydW4udjIuQ29uZGl0aW9uQgTiQQEDEiEK",
-            "E29ic2VydmVkX2dlbmVyYXRpb24YFyABKANCBOJBAQMSEwoFaW5kZXgYGCAB",
-            "KAVCBOJBAQMSFQoHcmV0cmllZBgZIAEoBUIE4kEBAxJJChNsYXN0X2F0dGVt",
-            "cHRfcmVzdWx0GBogASgLMiYuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5UYXNrQXR0",
-            "ZW1wdFJlc3VsdEIE4kEBAxJCCg5lbmNyeXB0aW9uX2tleRgcIAEoCUIq4kEB",
-            "A/pBIwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5EjgKCnZw",
-            "Y19hY2Nlc3MYHSABKAsyHi5nb29nbGUuY2xvdWQucnVuLnYyLlZwY0FjY2Vz",
-            "c0IE4kEBAxIVCgdsb2dfdXJpGCAgASgJQgTiQQEDEhsKDXNhdGlzZmllc19w",
-            "enMYISABKAhCBOJBAQMSPgoNbm9kZV9zZWxlY3RvchgkIAEoCzIhLmdvb2ds",
-            "ZS5jbG91ZC5ydW4udjIuTm9kZVNlbGVjdG9yQgTiQQEDEjEKHWdwdV96b25h",
-            "bF9yZWR1bmRhbmN5X2Rpc2FibGVkGCUgASgIQgXiQQIBA0gAiAEBEhIKBGV0",
-            "YWcYYyABKAlCBOJBAQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
-            "BXZhbHVlGAIgASgJOgI4ARoyChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgB",
-            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6d+pBdAoXcnVuLmdvb2dsZWFwaXMu",
-            "Y29tL1Rhc2sSVnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
-            "aW9ufS9qb2JzL3tqb2J9L2V4ZWN1dGlvbnMve2V4ZWN1dGlvbn0vdGFza3Mv",
-            "e3Rhc2t9UgEBQiAKHl9ncHVfem9uYWxfcmVkdW5kYW5jeV9kaXNhYmxlZCJx",
-            "ChFUYXNrQXR0ZW1wdFJlc3VsdBIoCgZzdGF0dXMYASABKAsyEi5nb29nbGUu",
-            "cnBjLlN0YXR1c0IE4kEBAxIXCglleGl0X2NvZGUYAiABKAVCBOJBAQMSGQoL",
-            "dGVybV9zaWduYWwYAyABKAVCBOJBAQMylgMKBVRhc2tzEpcBCgdHZXRUYXNr",
-            "EiMuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5HZXRUYXNrUmVxdWVzdBoZLmdvb2ds",
-            "ZS5jbG91ZC5ydW4udjIuVGFzayJM2kEEbmFtZYLT5JMCPxI9L3YyL3tuYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qL2V4ZWN1dGlvbnMvKi90",
-            "YXNrcy8qfRKqAQoJTGlzdFRhc2tzEiUuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5M",
-            "aXN0VGFza3NSZXF1ZXN0GiYuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5MaXN0VGFz",
-            "a3NSZXNwb25zZSJO2kEGcGFyZW50gtPkkwI/Ej0vdjIve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL2pvYnMvKi9leGVjdXRpb25zLyp9L3Rhc2tz",
-            "GkbKQRJydW4uZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVh",
-            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQlEKF2NvbS5nb29nbGUuY2xv",
-            "dWQucnVuLnYyQglUYXNrUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9y",
-            "dW4vYXBpdjIvcnVucGI7cnVucGJiBnByb3RvMw=="));
+            "Mi9rOHMubWluLnByb3RvGiFnb29nbGUvY2xvdWQvcnVuL3YyL3NhbmRib3gu",
+            "cHJvdG8aKWdvb2dsZS9jbG91ZC9ydW4vdjIvdmVuZG9yX3NldHRpbmdzLnBy",
+            "b3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9w",
+            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnBy",
+            "b3RvIkAKDkdldFRhc2tSZXF1ZXN0Ei4KBG5hbWUYASABKAlCIOJBAQL6QRkK",
+            "F3J1bi5nb29nbGVhcGlzLmNvbS9UYXNrIoEBChBMaXN0VGFza3NSZXF1ZXN0",
+            "EjAKBnBhcmVudBgBIAEoCUIg4kEBAvpBGRIXcnVuLmdvb2dsZWFwaXMuY29t",
+            "L1Rhc2sSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkS",
+            "FAoMc2hvd19kZWxldGVkGAQgASgIIlYKEUxpc3RUYXNrc1Jlc3BvbnNlEigK",
+            "BXRhc2tzGAEgAygLMhkuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5UYXNrEhcKD25l",
+            "eHRfcGFnZV90b2tlbhgCIAEoCSL5DgoEVGFzaxISCgRuYW1lGAEgASgJQgTi",
+            "QQEDEhEKA3VpZBgCIAEoCUIE4kEBAxIYCgpnZW5lcmF0aW9uGAMgASgDQgTi",
+            "QQEDEjsKBmxhYmVscxgEIAMoCzIlLmdvb2dsZS5jbG91ZC5ydW4udjIuVGFz",
+            "ay5MYWJlbHNFbnRyeUIE4kEBAxJFCgthbm5vdGF0aW9ucxgFIAMoCzIqLmdv",
+            "b2dsZS5jbG91ZC5ydW4udjIuVGFzay5Bbm5vdGF0aW9uc0VudHJ5QgTiQQED",
+            "EjUKC2NyZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEIE4kEBAxI4Cg5zY2hlZHVsZWRfdGltZRgiIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMSNAoKc3RhcnRfdGltZRgbIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMSOQoPY29tcGxldGlv",
+            "bl90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEB",
+            "AxI1Cgt1cGRhdGVfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCBOJBAQMSNQoLZGVsZXRlX3RpbWUYCSABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgTiQQEDEjUKC2V4cGlyZV90aW1lGAogASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxIsCgNqb2IYDCABKAlC",
+            "H+JBAQP6QRgKFnJ1bi5nb29nbGVhcGlzLmNvbS9Kb2ISOAoJZXhlY3V0aW9u",
+            "GA0gASgJQiXiQQED+kEeChxydW4uZ29vZ2xlYXBpcy5jb20vRXhlY3V0aW9u",
+            "EjIKCmNvbnRhaW5lcnMYDiADKAsyHi5nb29nbGUuY2xvdWQucnVuLnYyLkNv",
+            "bnRhaW5lchI8CglzYW5kYm94ZXMYKCABKAsyKS5nb29nbGUuY2xvdWQucnVu",
+            "LnYyLlNhbmRib3hDb25maWd1cmF0aW9uEiwKB3ZvbHVtZXMYDyADKAsyGy5n",
+            "b29nbGUuY2xvdWQucnVuLnYyLlZvbHVtZRITCgttYXhfcmV0cmllcxgQIAEo",
+            "BRIqCgd0aW1lb3V0GBEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
+            "EhcKD3NlcnZpY2VfYWNjb3VudBgSIAEoCRJIChVleGVjdXRpb25fZW52aXJv",
+            "bm1lbnQYFCABKA4yKS5nb29nbGUuY2xvdWQucnVuLnYyLkV4ZWN1dGlvbkVu",
+            "dmlyb25tZW50EhkKC3JlY29uY2lsaW5nGBUgASgIQgTiQQEDEjgKCmNvbmRp",
+            "dGlvbnMYFiADKAsyHi5nb29nbGUuY2xvdWQucnVuLnYyLkNvbmRpdGlvbkIE",
+            "4kEBAxIhChNvYnNlcnZlZF9nZW5lcmF0aW9uGBcgASgDQgTiQQEDEhMKBWlu",
+            "ZGV4GBggASgFQgTiQQEDEhUKB3JldHJpZWQYGSABKAVCBOJBAQMSSQoTbGFz",
+            "dF9hdHRlbXB0X3Jlc3VsdBgaIAEoCzImLmdvb2dsZS5jbG91ZC5ydW4udjIu",
+            "VGFza0F0dGVtcHRSZXN1bHRCBOJBAQMSQgoOZW5jcnlwdGlvbl9rZXkYHCAB",
+            "KAlCKuJBAQP6QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tl",
+            "eRI4Cgp2cGNfYWNjZXNzGB0gASgLMh4uZ29vZ2xlLmNsb3VkLnJ1bi52Mi5W",
+            "cGNBY2Nlc3NCBOJBAQMSFQoHbG9nX3VyaRggIAEoCUIE4kEBAxIbCg1zYXRp",
+            "c2ZpZXNfcHpzGCEgASgIQgTiQQEDEj4KDW5vZGVfc2VsZWN0b3IYJCABKAsy",
+            "IS5nb29nbGUuY2xvdWQucnVuLnYyLk5vZGVTZWxlY3RvckIE4kEBAxIxCh1n",
+            "cHVfem9uYWxfcmVkdW5kYW5jeV9kaXNhYmxlZBglIAEoCEIF4kECAQNIAIgB",
+            "ARJTChh3b3JrbG9hZF9pZGVudGl0eV9jb25maWcYJiABKAsyKy5nb29nbGUu",
+            "Y2xvdWQucnVuLnYyLldvcmtsb2FkSWRlbnRpdHlDb25maWdCBOJBAQESEgoE",
+            "ZXRhZxhjIAEoCUIE4kEBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkS",
+            "DQoFdmFsdWUYAiABKAk6AjgBGjIKEEFubm90YXRpb25zRW50cnkSCwoDa2V5",
+            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATp36kF0ChdydW4uZ29vZ2xlYXBp",
+            "cy5jb20vVGFzaxJWcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L2pvYnMve2pvYn0vZXhlY3V0aW9ucy97ZXhlY3V0aW9ufS90YXNr",
+            "cy97dGFza31SAQFCIAoeX2dwdV96b25hbF9yZWR1bmRhbmN5X2Rpc2FibGVk",
+            "InEKEVRhc2tBdHRlbXB0UmVzdWx0EigKBnN0YXR1cxgBIAEoCzISLmdvb2ds",
+            "ZS5ycGMuU3RhdHVzQgTiQQEDEhcKCWV4aXRfY29kZRgCIAEoBUIE4kEBAxIZ",
+            "Cgt0ZXJtX3NpZ25hbBgDIAEoBUIE4kEBAzLoAwoFVGFza3MSlwEKB0dldFRh",
+            "c2sSIy5nb29nbGUuY2xvdWQucnVuLnYyLkdldFRhc2tSZXF1ZXN0GhkuZ29v",
+            "Z2xlLmNsb3VkLnJ1bi52Mi5UYXNrIkzaQQRuYW1lgtPkkwI/Ej0vdjIve25h",
+            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9qb2JzLyovZXhlY3V0aW9ucy8q",
+            "L3Rhc2tzLyp9EqoBCglMaXN0VGFza3MSJS5nb29nbGUuY2xvdWQucnVuLnYy",
+            "Lkxpc3RUYXNrc1JlcXVlc3QaJi5nb29nbGUuY2xvdWQucnVuLnYyLkxpc3RU",
+            "YXNrc1Jlc3BvbnNlIk7aQQZwYXJlbnSC0+STAj8SPS92Mi97cGFyZW50PXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyovam9icy8qL2V4ZWN1dGlvbnMvKn0vdGFz",
+            "a3MalwHKQRJydW4uZ29vZ2xlYXBpcy5jb23SQX9odHRwczovL3d3dy5nb29n",
+            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdv",
+            "b2dsZWFwaXMuY29tL2F1dGgvcnVuLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
+            "Y29tL2F1dGgvcnVuLnJlYWRvbmx5QlEKF2NvbS5nb29nbGUuY2xvdWQucnVu",
+            "LnYyQglUYXNrUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9ydW4vYXBp",
+            "djIvcnVucGI7cnVucGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.ConditionReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.ConditionReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.SandboxReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.GetTaskRequest), global::Google.Cloud.Run.V2.GetTaskRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListTasksRequest), global::Google.Cloud.Run.V2.ListTasksRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "ShowDeleted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListTasksResponse), global::Google.Cloud.Run.V2.ListTasksResponse.Parser, new[]{ "Tasks", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Task), global::Google.Cloud.Run.V2.Task.Parser, new[]{ "Name", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "ScheduledTime", "StartTime", "CompletionTime", "UpdateTime", "DeleteTime", "ExpireTime", "Job", "Execution", "Containers", "Volumes", "MaxRetries", "Timeout", "ServiceAccount", "ExecutionEnvironment", "Reconciling", "Conditions", "ObservedGeneration", "Index", "Retried", "LastAttemptResult", "EncryptionKey", "VpcAccess", "LogUri", "SatisfiesPzs", "NodeSelector", "GpuZonalRedundancyDisabled", "Etag" }, new[]{ "GpuZonalRedundancyDisabled" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Task), global::Google.Cloud.Run.V2.Task.Parser, new[]{ "Name", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "ScheduledTime", "StartTime", "CompletionTime", "UpdateTime", "DeleteTime", "ExpireTime", "Job", "Execution", "Containers", "Sandboxes", "Volumes", "MaxRetries", "Timeout", "ServiceAccount", "ExecutionEnvironment", "Reconciling", "Conditions", "ObservedGeneration", "Index", "Retried", "LastAttemptResult", "EncryptionKey", "VpcAccess", "LogUri", "SatisfiesPzs", "NodeSelector", "GpuZonalRedundancyDisabled", "WorkloadIdentityConfig", "Etag" }, new[]{ "GpuZonalRedundancyDisabled" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.TaskAttemptResult), global::Google.Cloud.Run.V2.TaskAttemptResult.Parser, new[]{ "Status", "ExitCode", "TermSignal" }, null, null, null, null)
           }));
     }
@@ -929,6 +935,7 @@ namespace Google.Cloud.Run.V2 {
       job_ = other.job_;
       execution_ = other.execution_;
       containers_ = other.containers_.Clone();
+      sandboxes_ = other.sandboxes_ != null ? other.sandboxes_.Clone() : null;
       volumes_ = other.volumes_.Clone();
       maxRetries_ = other.maxRetries_;
       timeout_ = other.timeout_ != null ? other.timeout_.Clone() : null;
@@ -946,6 +953,7 @@ namespace Google.Cloud.Run.V2 {
       satisfiesPzs_ = other.satisfiesPzs_;
       nodeSelector_ = other.nodeSelector_ != null ? other.nodeSelector_.Clone() : null;
       gpuZonalRedundancyDisabled_ = other.gpuZonalRedundancyDisabled_;
+      workloadIdentityConfig_ = other.workloadIdentityConfig_ != null ? other.workloadIdentityConfig_.Clone() : null;
       etag_ = other.etag_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1198,6 +1206,21 @@ namespace Google.Cloud.Run.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Run.V2.Container> Containers {
       get { return containers_; }
+    }
+
+    /// <summary>Field number for the "sandboxes" field.</summary>
+    public const int SandboxesFieldNumber = 40;
+    private global::Google.Cloud.Run.V2.SandboxConfiguration sandboxes_;
+    /// <summary>
+    /// Configuration for sandboxes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.SandboxConfiguration Sandboxes {
+      get { return sandboxes_; }
+      set {
+        sandboxes_ = value;
+      }
     }
 
     /// <summary>Field number for the "volumes" field.</summary>
@@ -1484,6 +1507,21 @@ namespace Google.Cloud.Run.V2 {
       _hasBits0 &= ~1;
     }
 
+    /// <summary>Field number for the "workload_identity_config" field.</summary>
+    public const int WorkloadIdentityConfigFieldNumber = 38;
+    private global::Google.Cloud.Run.V2.WorkloadIdentityConfig workloadIdentityConfig_;
+    /// <summary>
+    /// Optional. The Task's workload identity settings.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.WorkloadIdentityConfig WorkloadIdentityConfig {
+      get { return workloadIdentityConfig_; }
+      set {
+        workloadIdentityConfig_ = value;
+      }
+    }
+
     /// <summary>Field number for the "etag" field.</summary>
     public const int EtagFieldNumber = 99;
     private string etag_ = "";
@@ -1530,6 +1568,7 @@ namespace Google.Cloud.Run.V2 {
       if (Job != other.Job) return false;
       if (Execution != other.Execution) return false;
       if(!containers_.Equals(other.containers_)) return false;
+      if (!object.Equals(Sandboxes, other.Sandboxes)) return false;
       if(!volumes_.Equals(other.volumes_)) return false;
       if (MaxRetries != other.MaxRetries) return false;
       if (!object.Equals(Timeout, other.Timeout)) return false;
@@ -1547,6 +1586,7 @@ namespace Google.Cloud.Run.V2 {
       if (SatisfiesPzs != other.SatisfiesPzs) return false;
       if (!object.Equals(NodeSelector, other.NodeSelector)) return false;
       if (GpuZonalRedundancyDisabled != other.GpuZonalRedundancyDisabled) return false;
+      if (!object.Equals(WorkloadIdentityConfig, other.WorkloadIdentityConfig)) return false;
       if (Etag != other.Etag) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1570,6 +1610,7 @@ namespace Google.Cloud.Run.V2 {
       if (Job.Length != 0) hash ^= Job.GetHashCode();
       if (Execution.Length != 0) hash ^= Execution.GetHashCode();
       hash ^= containers_.GetHashCode();
+      if (sandboxes_ != null) hash ^= Sandboxes.GetHashCode();
       hash ^= volumes_.GetHashCode();
       if (MaxRetries != 0) hash ^= MaxRetries.GetHashCode();
       if (timeout_ != null) hash ^= Timeout.GetHashCode();
@@ -1587,6 +1628,7 @@ namespace Google.Cloud.Run.V2 {
       if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
       if (nodeSelector_ != null) hash ^= NodeSelector.GetHashCode();
       if (HasGpuZonalRedundancyDisabled) hash ^= GpuZonalRedundancyDisabled.GetHashCode();
+      if (workloadIdentityConfig_ != null) hash ^= WorkloadIdentityConfig.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1719,6 +1761,14 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(168, 2);
         output.WriteBool(GpuZonalRedundancyDisabled);
       }
+      if (workloadIdentityConfig_ != null) {
+        output.WriteRawTag(178, 2);
+        output.WriteMessage(WorkloadIdentityConfig);
+      }
+      if (sandboxes_ != null) {
+        output.WriteRawTag(194, 2);
+        output.WriteMessage(Sandboxes);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -1846,6 +1896,14 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(168, 2);
         output.WriteBool(GpuZonalRedundancyDisabled);
       }
+      if (workloadIdentityConfig_ != null) {
+        output.WriteRawTag(178, 2);
+        output.WriteMessage(WorkloadIdentityConfig);
+      }
+      if (sandboxes_ != null) {
+        output.WriteRawTag(194, 2);
+        output.WriteMessage(Sandboxes);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -1899,6 +1957,9 @@ namespace Google.Cloud.Run.V2 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Execution);
       }
       size += containers_.CalculateSize(_repeated_containers_codec);
+      if (sandboxes_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Sandboxes);
+      }
       size += volumes_.CalculateSize(_repeated_volumes_codec);
       if (MaxRetries != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(MaxRetries);
@@ -1945,6 +2006,9 @@ namespace Google.Cloud.Run.V2 {
       }
       if (HasGpuZonalRedundancyDisabled) {
         size += 2 + 1;
+      }
+      if (workloadIdentityConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(WorkloadIdentityConfig);
       }
       if (Etag.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Etag);
@@ -2021,6 +2085,12 @@ namespace Google.Cloud.Run.V2 {
         Execution = other.Execution;
       }
       containers_.Add(other.containers_);
+      if (other.sandboxes_ != null) {
+        if (sandboxes_ == null) {
+          Sandboxes = new global::Google.Cloud.Run.V2.SandboxConfiguration();
+        }
+        Sandboxes.MergeFrom(other.Sandboxes);
+      }
       volumes_.Add(other.volumes_);
       if (other.MaxRetries != 0) {
         MaxRetries = other.MaxRetries;
@@ -2079,6 +2149,12 @@ namespace Google.Cloud.Run.V2 {
       }
       if (other.HasGpuZonalRedundancyDisabled) {
         GpuZonalRedundancyDisabled = other.GpuZonalRedundancyDisabled;
+      }
+      if (other.workloadIdentityConfig_ != null) {
+        if (workloadIdentityConfig_ == null) {
+          WorkloadIdentityConfig = new global::Google.Cloud.Run.V2.WorkloadIdentityConfig();
+        }
+        WorkloadIdentityConfig.MergeFrom(other.WorkloadIdentityConfig);
       }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
@@ -2263,6 +2339,20 @@ namespace Google.Cloud.Run.V2 {
             GpuZonalRedundancyDisabled = input.ReadBool();
             break;
           }
+          case 306: {
+            if (workloadIdentityConfig_ == null) {
+              WorkloadIdentityConfig = new global::Google.Cloud.Run.V2.WorkloadIdentityConfig();
+            }
+            input.ReadMessage(WorkloadIdentityConfig);
+            break;
+          }
+          case 322: {
+            if (sandboxes_ == null) {
+              Sandboxes = new global::Google.Cloud.Run.V2.SandboxConfiguration();
+            }
+            input.ReadMessage(Sandboxes);
+            break;
+          }
           case 794: {
             Etag = input.ReadString();
             break;
@@ -2445,6 +2535,20 @@ namespace Google.Cloud.Run.V2 {
           }
           case 296: {
             GpuZonalRedundancyDisabled = input.ReadBool();
+            break;
+          }
+          case 306: {
+            if (workloadIdentityConfig_ == null) {
+              WorkloadIdentityConfig = new global::Google.Cloud.Run.V2.WorkloadIdentityConfig();
+            }
+            input.ReadMessage(WorkloadIdentityConfig);
+            break;
+          }
+          case 322: {
+            if (sandboxes_ == null) {
+              Sandboxes = new global::Google.Cloud.Run.V2.SandboxConfiguration();
+            }
+            input.ReadMessage(Sandboxes);
             break;
           }
           case 794: {

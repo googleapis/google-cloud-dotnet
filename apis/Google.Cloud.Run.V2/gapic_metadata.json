@@ -70,6 +70,12 @@
                 "DeleteInstanceAsync"
               ]
             },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
             "GetInstance": {
               "methods": [
                 "GetInstance",
@@ -82,6 +88,12 @@
                 "ListInstancesAsync"
               ]
             },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
             "StartInstance": {
               "methods": [
                 "StartInstance",
@@ -92,6 +104,18 @@
               "methods": [
                 "StopInstance",
                 "StopInstanceAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
+            "UpdateInstance": {
+              "methods": [
+                "UpdateInstance",
+                "UpdateInstanceAsync"
               ]
             }
           }
@@ -239,6 +263,21 @@
               "methods": [
                 "UpdateService",
                 "UpdateServiceAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "SourceUpload": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SourceUploadClient",
+          "rpcs": {
+            "UploadSource": {
+              "methods": [
+                "UploadSource",
+                "UploadSourceAsync"
               ]
             }
           }
