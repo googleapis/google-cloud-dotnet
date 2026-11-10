@@ -910,10 +910,28 @@
                 "BatchActivateCreativesAsync"
               ]
             },
+            "BatchCreateCreatives": {
+              "methods": [
+                "BatchCreateCreatives",
+                "BatchCreateCreativesAsync"
+              ]
+            },
             "BatchDeactivateCreatives": {
               "methods": [
                 "BatchDeactivateCreatives",
                 "BatchDeactivateCreativesAsync"
+              ]
+            },
+            "BatchUpdateCreatives": {
+              "methods": [
+                "BatchUpdateCreatives",
+                "BatchUpdateCreativesAsync"
+              ]
+            },
+            "CreateCreative": {
+              "methods": [
+                "CreateCreative",
+                "CreateCreativeAsync"
               ]
             },
             "GetCreative": {
@@ -926,6 +944,12 @@
               "methods": [
                 "ListCreatives",
                 "ListCreativesAsync"
+              ]
+            },
+            "UpdateCreative": {
+              "methods": [
+                "UpdateCreative",
+                "UpdateCreativeAsync"
               ]
             }
           }
@@ -2444,6 +2468,123 @@
         }
       }
     },
+    "ProposalService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ProposalServiceClient",
+          "rpcs": {
+            "BatchArchiveProposals": {
+              "methods": [
+                "BatchArchiveProposals",
+                "BatchArchiveProposalsAsync"
+              ]
+            },
+            "BatchCreateProposals": {
+              "methods": [
+                "BatchCreateProposals",
+                "BatchCreateProposalsAsync"
+              ]
+            },
+            "BatchDiscardDraftProposals": {
+              "methods": [
+                "BatchDiscardDraftProposals",
+                "BatchDiscardDraftProposalsAsync"
+              ]
+            },
+            "BatchPauseProposals": {
+              "methods": [
+                "BatchPauseProposals",
+                "BatchPauseProposalsAsync"
+              ]
+            },
+            "BatchPushToOrderProposals": {
+              "methods": [
+                "BatchPushToOrderProposals",
+                "BatchPushToOrderProposalsAsync"
+              ]
+            },
+            "BatchRedraftProposals": {
+              "methods": [
+                "BatchRedraftProposals",
+                "BatchRedraftProposalsAsync"
+              ]
+            },
+            "BatchRequestBuyerAcceptProposals": {
+              "methods": [
+                "BatchRequestBuyerAcceptProposals",
+                "BatchRequestBuyerAcceptProposalsAsync"
+              ]
+            },
+            "BatchRequestBuyerReviewProposals": {
+              "methods": [
+                "BatchRequestBuyerReviewProposals",
+                "BatchRequestBuyerReviewProposalsAsync"
+              ]
+            },
+            "BatchReserveProposals": {
+              "methods": [
+                "BatchReserveProposals",
+                "BatchReserveProposalsAsync"
+              ]
+            },
+            "BatchResumeProposals": {
+              "methods": [
+                "BatchResumeProposals",
+                "BatchResumeProposalsAsync"
+              ]
+            },
+            "BatchTerminateProposals": {
+              "methods": [
+                "BatchTerminateProposals",
+                "BatchTerminateProposalsAsync"
+              ]
+            },
+            "BatchUnarchiveProposals": {
+              "methods": [
+                "BatchUnarchiveProposals",
+                "BatchUnarchiveProposalsAsync"
+              ]
+            },
+            "BatchUpdateProposals": {
+              "methods": [
+                "BatchUpdateProposals",
+                "BatchUpdateProposalsAsync"
+              ]
+            },
+            "CreateProposal": {
+              "methods": [
+                "CreateProposal",
+                "CreateProposalAsync"
+              ]
+            },
+            "FetchMarketplaceComments": {
+              "methods": [
+                "FetchMarketplaceComments",
+                "FetchMarketplaceCommentsAsync"
+              ]
+            },
+            "GetProposal": {
+              "methods": [
+                "GetProposal",
+                "GetProposalAsync"
+              ]
+            },
+            "ListProposals": {
+              "methods": [
+                "ListProposals",
+                "ListProposalsAsync"
+              ]
+            },
+            "UpdateProposal": {
+              "methods": [
+                "UpdateProposal",
+                "UpdateProposalAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "ReportService": {
       "clients": {
         "grpc": {
@@ -2963,6 +3104,69 @@
               "methods": [
                 "UpdateViewabilityProvider",
                 "UpdateViewabilityProviderAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "YieldGroupService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "YieldGroupServiceClient",
+          "rpcs": {
+            "BatchActivateYieldGroups": {
+              "methods": [
+                "BatchActivateYieldGroups",
+                "BatchActivateYieldGroupsAsync"
+              ]
+            },
+            "BatchArchiveYieldGroups": {
+              "methods": [
+                "BatchArchiveYieldGroups",
+                "BatchArchiveYieldGroupsAsync"
+              ]
+            },
+            "BatchCreateYieldGroups": {
+              "methods": [
+                "BatchCreateYieldGroups",
+                "BatchCreateYieldGroupsAsync"
+              ]
+            },
+            "BatchDeactivateYieldGroups": {
+              "methods": [
+                "BatchDeactivateYieldGroups",
+                "BatchDeactivateYieldGroupsAsync"
+              ]
+            },
+            "BatchUpdateYieldGroups": {
+              "methods": [
+                "BatchUpdateYieldGroups",
+                "BatchUpdateYieldGroupsAsync"
+              ]
+            },
+            "CreateYieldGroup": {
+              "methods": [
+                "CreateYieldGroup",
+                "CreateYieldGroupAsync"
+              ]
+            },
+            "GetYieldGroup": {
+              "methods": [
+                "GetYieldGroup",
+                "GetYieldGroupAsync"
+              ]
+            },
+            "ListYieldGroups": {
+              "methods": [
+                "ListYieldGroups",
+                "ListYieldGroupsAsync"
+              ]
+            },
+            "UpdateYieldGroup": {
+              "methods": [
+                "UpdateYieldGroup",
+                "UpdateYieldGroupAsync"
               ]
             }
           }

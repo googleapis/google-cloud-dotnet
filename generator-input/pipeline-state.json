@@ -7,7 +7,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-11-09T19:11:52.159912305Z",
-            "lastGeneratedCommit": "ad34d6bd2aac2be6121727baa1f07047ce5ed720",
+            "lastGeneratedCommit": "5adfa535e19786ded0e87ab1c4cf2bece46741bc",
             "lastReleasedCommit": "ad34d6bd2aac2be6121727baa1f07047ce5ed720",
             "apiPaths": [
                 "google/ads/admanager/v1"

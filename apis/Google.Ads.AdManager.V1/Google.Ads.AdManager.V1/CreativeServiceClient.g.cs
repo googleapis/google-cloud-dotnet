@@ -27,6 +27,7 @@ using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Ads.AdManager.V1
 {
@@ -47,6 +48,10 @@ namespace Google.Ads.AdManager.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetCreativeSettings = existing.GetCreativeSettings;
             ListCreativesSettings = existing.ListCreativesSettings;
+            CreateCreativeSettings = existing.CreateCreativeSettings;
+            UpdateCreativeSettings = existing.UpdateCreativeSettings;
+            BatchCreateCreativesSettings = existing.BatchCreateCreativesSettings;
+            BatchUpdateCreativesSettings = existing.BatchUpdateCreativesSettings;
             BatchActivateCreativesSettings = existing.BatchActivateCreativesSettings;
             BatchDeactivateCreativesSettings = existing.BatchDeactivateCreativesSettings;
             OnCopy(existing);
@@ -77,6 +82,56 @@ namespace Google.Ads.AdManager.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListCreativesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CreativeServiceClient.CreateCreative</c> and <c>CreativeServiceClient.CreateCreativeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateCreativeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CreativeServiceClient.UpdateCreative</c> and <c>CreativeServiceClient.UpdateCreativeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateCreativeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CreativeServiceClient.BatchCreateCreatives</c> and <c>CreativeServiceClient.BatchCreateCreativesAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchCreateCreativesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CreativeServiceClient.BatchUpdateCreatives</c> and <c>CreativeServiceClient.BatchUpdateCreativesAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchUpdateCreativesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -513,6 +568,551 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
+        /// Creates a `Creative` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Creative CreateCreative(CreateCreativeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a `Creative` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Creative> CreateCreativeAsync(CreateCreativeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a `Creative` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Creative> CreateCreativeAsync(CreateCreativeRequest request, st::CancellationToken cancellationToken) =>
+            CreateCreativeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a `Creative` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `Creative` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="creative">
+        /// Required. The `Creative` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Creative CreateCreative(string parent, Creative creative, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCreative(new CreateCreativeRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Creative = gax::GaxPreconditions.CheckNotNull(creative, nameof(creative)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `Creative` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `Creative` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="creative">
+        /// Required. The `Creative` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Creative> CreateCreativeAsync(string parent, Creative creative, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCreativeAsync(new CreateCreativeRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Creative = gax::GaxPreconditions.CheckNotNull(creative, nameof(creative)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `Creative` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `Creative` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="creative">
+        /// Required. The `Creative` to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Creative> CreateCreativeAsync(string parent, Creative creative, st::CancellationToken cancellationToken) =>
+            CreateCreativeAsync(parent, creative, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a `Creative` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `Creative` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="creative">
+        /// Required. The `Creative` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Creative CreateCreative(NetworkName parent, Creative creative, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCreative(new CreateCreativeRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Creative = gax::GaxPreconditions.CheckNotNull(creative, nameof(creative)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `Creative` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `Creative` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="creative">
+        /// Required. The `Creative` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Creative> CreateCreativeAsync(NetworkName parent, Creative creative, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCreativeAsync(new CreateCreativeRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Creative = gax::GaxPreconditions.CheckNotNull(creative, nameof(creative)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `Creative` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `Creative` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="creative">
+        /// Required. The `Creative` to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Creative> CreateCreativeAsync(NetworkName parent, Creative creative, st::CancellationToken cancellationToken) =>
+            CreateCreativeAsync(parent, creative, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a `Creative` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Creative UpdateCreative(UpdateCreativeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a `Creative` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Creative> UpdateCreativeAsync(UpdateCreativeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a `Creative` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Creative> UpdateCreativeAsync(UpdateCreativeRequest request, st::CancellationToken cancellationToken) =>
+            UpdateCreativeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a `Creative` object.
+        /// </summary>
+        /// <param name="creative">
+        /// Required. The `Creative` to update.
+        /// 
+        /// The `Creative`'s name is used to identify the `Creative` to update. Format:
+        /// `networks/{network_code}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Creative UpdateCreative(Creative creative, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCreative(new UpdateCreativeRequest
+            {
+                Creative = gax::GaxPreconditions.CheckNotNull(creative, nameof(creative)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a `Creative` object.
+        /// </summary>
+        /// <param name="creative">
+        /// Required. The `Creative` to update.
+        /// 
+        /// The `Creative`'s name is used to identify the `Creative` to update. Format:
+        /// `networks/{network_code}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Creative> UpdateCreativeAsync(Creative creative, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCreativeAsync(new UpdateCreativeRequest
+            {
+                Creative = gax::GaxPreconditions.CheckNotNull(creative, nameof(creative)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a `Creative` object.
+        /// </summary>
+        /// <param name="creative">
+        /// Required. The `Creative` to update.
+        /// 
+        /// The `Creative`'s name is used to identify the `Creative` to update. Format:
+        /// `networks/{network_code}/creatives/{creative_id}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Creative> UpdateCreativeAsync(Creative creative, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateCreativeAsync(creative, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates `Creative` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateCreativesResponse BatchCreateCreatives(BatchCreateCreativesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates `Creative` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCreativesResponse> BatchCreateCreativesAsync(BatchCreateCreativesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates `Creative` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCreativesResponse> BatchCreateCreativesAsync(BatchCreateCreativesRequest request, st::CancellationToken cancellationToken) =>
+            BatchCreateCreativesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates `Creative` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Creatives` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateCreativeRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Creative` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateCreativesResponse BatchCreateCreatives(string parent, scg::IEnumerable<CreateCreativeRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateCreatives(new BatchCreateCreativesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates `Creative` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Creatives` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateCreativeRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Creative` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCreativesResponse> BatchCreateCreativesAsync(string parent, scg::IEnumerable<CreateCreativeRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateCreativesAsync(new BatchCreateCreativesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates `Creative` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Creatives` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateCreativeRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Creative` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCreativesResponse> BatchCreateCreativesAsync(string parent, scg::IEnumerable<CreateCreativeRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateCreativesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates `Creative` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Creatives` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateCreativeRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Creative` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateCreativesResponse BatchCreateCreatives(NetworkName parent, scg::IEnumerable<CreateCreativeRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateCreatives(new BatchCreateCreativesRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates `Creative` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Creatives` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateCreativeRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Creative` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCreativesResponse> BatchCreateCreativesAsync(NetworkName parent, scg::IEnumerable<CreateCreativeRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateCreativesAsync(new BatchCreateCreativesRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates `Creative` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Creatives` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateCreativeRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Creative` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCreativesResponse> BatchCreateCreativesAsync(NetworkName parent, scg::IEnumerable<CreateCreativeRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateCreativesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch updates `Creative` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateCreativesResponse BatchUpdateCreatives(BatchUpdateCreativesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch updates `Creative` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCreativesResponse> BatchUpdateCreativesAsync(BatchUpdateCreativesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch updates `Creative` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCreativesResponse> BatchUpdateCreativesAsync(BatchUpdateCreativesRequest request, st::CancellationToken cancellationToken) =>
+            BatchUpdateCreativesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch updates `Creative` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Creatives` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateCreativeRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Creative` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateCreativesResponse BatchUpdateCreatives(string parent, scg::IEnumerable<UpdateCreativeRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateCreatives(new BatchUpdateCreativesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch updates `Creative` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Creatives` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateCreativeRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Creative` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCreativesResponse> BatchUpdateCreativesAsync(string parent, scg::IEnumerable<UpdateCreativeRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateCreativesAsync(new BatchUpdateCreativesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch updates `Creative` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Creatives` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateCreativeRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Creative` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCreativesResponse> BatchUpdateCreativesAsync(string parent, scg::IEnumerable<UpdateCreativeRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchUpdateCreativesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch updates `Creative` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Creatives` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateCreativeRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Creative` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateCreativesResponse BatchUpdateCreatives(NetworkName parent, scg::IEnumerable<UpdateCreativeRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateCreatives(new BatchUpdateCreativesRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch updates `Creative` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Creatives` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateCreativeRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Creative` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCreativesResponse> BatchUpdateCreativesAsync(NetworkName parent, scg::IEnumerable<UpdateCreativeRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateCreativesAsync(new BatchUpdateCreativesRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch updates `Creative` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Creatives` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateCreativeRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Creative` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCreativesResponse> BatchUpdateCreativesAsync(NetworkName parent, scg::IEnumerable<UpdateCreativeRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchUpdateCreativesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Batch activates `Creative` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -813,6 +1413,14 @@ namespace Google.Ads.AdManager.V1
 
         private readonly gaxgrpc::ApiCall<ListCreativesRequest, ListCreativesResponse> _callListCreatives;
 
+        private readonly gaxgrpc::ApiCall<CreateCreativeRequest, Creative> _callCreateCreative;
+
+        private readonly gaxgrpc::ApiCall<UpdateCreativeRequest, Creative> _callUpdateCreative;
+
+        private readonly gaxgrpc::ApiCall<BatchCreateCreativesRequest, BatchCreateCreativesResponse> _callBatchCreateCreatives;
+
+        private readonly gaxgrpc::ApiCall<BatchUpdateCreativesRequest, BatchUpdateCreativesResponse> _callBatchUpdateCreatives;
+
         private readonly gaxgrpc::ApiCall<BatchActivateCreativesRequest, BatchActivateCreativesResponse> _callBatchActivateCreatives;
 
         private readonly gaxgrpc::ApiCall<BatchDeactivateCreativesRequest, BatchDeactivateCreativesResponse> _callBatchDeactivateCreatives;
@@ -838,6 +1446,18 @@ namespace Google.Ads.AdManager.V1
             _callListCreatives = clientHelper.BuildApiCall<ListCreativesRequest, ListCreativesResponse>("ListCreatives", grpcClient.ListCreativesAsync, grpcClient.ListCreatives, effectiveSettings.ListCreativesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCreatives);
             Modify_ListCreativesApiCall(ref _callListCreatives);
+            _callCreateCreative = clientHelper.BuildApiCall<CreateCreativeRequest, Creative>("CreateCreative", grpcClient.CreateCreativeAsync, grpcClient.CreateCreative, effectiveSettings.CreateCreativeSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateCreative);
+            Modify_CreateCreativeApiCall(ref _callCreateCreative);
+            _callUpdateCreative = clientHelper.BuildApiCall<UpdateCreativeRequest, Creative>("UpdateCreative", grpcClient.UpdateCreativeAsync, grpcClient.UpdateCreative, effectiveSettings.UpdateCreativeSettings).WithGoogleRequestParam("creative.name", request => request.Creative?.Name);
+            Modify_ApiCall(ref _callUpdateCreative);
+            Modify_UpdateCreativeApiCall(ref _callUpdateCreative);
+            _callBatchCreateCreatives = clientHelper.BuildApiCall<BatchCreateCreativesRequest, BatchCreateCreativesResponse>("BatchCreateCreatives", grpcClient.BatchCreateCreativesAsync, grpcClient.BatchCreateCreatives, effectiveSettings.BatchCreateCreativesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchCreateCreatives);
+            Modify_BatchCreateCreativesApiCall(ref _callBatchCreateCreatives);
+            _callBatchUpdateCreatives = clientHelper.BuildApiCall<BatchUpdateCreativesRequest, BatchUpdateCreativesResponse>("BatchUpdateCreatives", grpcClient.BatchUpdateCreativesAsync, grpcClient.BatchUpdateCreatives, effectiveSettings.BatchUpdateCreativesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchUpdateCreatives);
+            Modify_BatchUpdateCreativesApiCall(ref _callBatchUpdateCreatives);
             _callBatchActivateCreatives = clientHelper.BuildApiCall<BatchActivateCreativesRequest, BatchActivateCreativesResponse>("BatchActivateCreatives", grpcClient.BatchActivateCreativesAsync, grpcClient.BatchActivateCreatives, effectiveSettings.BatchActivateCreativesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchActivateCreatives);
             Modify_BatchActivateCreativesApiCall(ref _callBatchActivateCreatives);
@@ -853,6 +1473,14 @@ namespace Google.Ads.AdManager.V1
 
         partial void Modify_ListCreativesApiCall(ref gaxgrpc::ApiCall<ListCreativesRequest, ListCreativesResponse> call);
 
+        partial void Modify_CreateCreativeApiCall(ref gaxgrpc::ApiCall<CreateCreativeRequest, Creative> call);
+
+        partial void Modify_UpdateCreativeApiCall(ref gaxgrpc::ApiCall<UpdateCreativeRequest, Creative> call);
+
+        partial void Modify_BatchCreateCreativesApiCall(ref gaxgrpc::ApiCall<BatchCreateCreativesRequest, BatchCreateCreativesResponse> call);
+
+        partial void Modify_BatchUpdateCreativesApiCall(ref gaxgrpc::ApiCall<BatchUpdateCreativesRequest, BatchUpdateCreativesResponse> call);
+
         partial void Modify_BatchActivateCreativesApiCall(ref gaxgrpc::ApiCall<BatchActivateCreativesRequest, BatchActivateCreativesResponse> call);
 
         partial void Modify_BatchDeactivateCreativesApiCall(ref gaxgrpc::ApiCall<BatchDeactivateCreativesRequest, BatchDeactivateCreativesResponse> call);
@@ -865,6 +1493,14 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_GetCreativeRequest(ref GetCreativeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListCreativesRequest(ref ListCreativesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateCreativeRequest(ref CreateCreativeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateCreativeRequest(ref UpdateCreativeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchCreateCreativesRequest(ref BatchCreateCreativesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchUpdateCreativesRequest(ref BatchUpdateCreativesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BatchActivateCreativesRequest(ref BatchActivateCreativesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -916,6 +1552,102 @@ namespace Google.Ads.AdManager.V1
         {
             Modify_ListCreativesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListCreativesRequest, ListCreativesResponse, Creative>(_callListCreatives, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a `Creative` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Creative CreateCreative(CreateCreativeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCreativeRequest(ref request, ref callSettings);
+            return _callCreateCreative.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a `Creative` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Creative> CreateCreativeAsync(CreateCreativeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCreativeRequest(ref request, ref callSettings);
+            return _callCreateCreative.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a `Creative` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Creative UpdateCreative(UpdateCreativeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCreativeRequest(ref request, ref callSettings);
+            return _callUpdateCreative.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a `Creative` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Creative> UpdateCreativeAsync(UpdateCreativeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCreativeRequest(ref request, ref callSettings);
+            return _callUpdateCreative.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates `Creative` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchCreateCreativesResponse BatchCreateCreatives(BatchCreateCreativesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateCreativesRequest(ref request, ref callSettings);
+            return _callBatchCreateCreatives.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates `Creative` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchCreateCreativesResponse> BatchCreateCreativesAsync(BatchCreateCreativesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateCreativesRequest(ref request, ref callSettings);
+            return _callBatchCreateCreatives.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Batch updates `Creative` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchUpdateCreativesResponse BatchUpdateCreatives(BatchUpdateCreativesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateCreativesRequest(ref request, ref callSettings);
+            return _callBatchUpdateCreatives.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Batch updates `Creative` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchUpdateCreativesResponse> BatchUpdateCreativesAsync(BatchUpdateCreativesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateCreativesRequest(ref request, ref callSettings);
+            return _callBatchUpdateCreatives.Async(request, callSettings);
         }
 
         /// <summary>

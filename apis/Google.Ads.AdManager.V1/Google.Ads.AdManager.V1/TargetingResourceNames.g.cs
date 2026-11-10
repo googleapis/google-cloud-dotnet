@@ -369,12 +369,38 @@ namespace Google.Ads.AdManager.V1
     public partial class ContextualTargeting
     {
         /// <summary>
+        /// <see cref="AdCategoryName"/>-typed view over the <see cref="TargetedVerticals"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<AdCategoryName> TargetedVerticalsAsAdCategoryNames
+        {
+            get => new gax::ResourceNameList<AdCategoryName>(TargetedVerticals, s => string.IsNullOrEmpty(s) ? null : AdCategoryName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="AdCategoryName"/>-typed view over the <see cref="ExcludedVerticals"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<AdCategoryName> ExcludedVerticalsAsAdCategoryNames
+        {
+            get => new gax::ResourceNameList<AdCategoryName>(ExcludedVerticals, s => string.IsNullOrEmpty(s) ? null : AdCategoryName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
         /// <see cref="ContentLabelName"/>-typed view over the <see cref="ExcludedContentLabels"/> resource name
         /// property.
         /// </summary>
         public gax::ResourceNameList<ContentLabelName> ExcludedContentLabelsAsContentLabelNames
         {
             get => new gax::ResourceNameList<ContentLabelName>(ExcludedContentLabels, s => string.IsNullOrEmpty(s) ? null : ContentLabelName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class VideoPosition
+    {
+        /// <summary><see cref="AdSpotName"/>-typed view over the <see cref="AdSpot"/> resource name property.</summary>
+        public AdSpotName AdSpotAsAdSpotName
+        {
+            get => string.IsNullOrEmpty(AdSpot) ? null : AdSpotName.Parse(AdSpot, allowUnparsed: true);
+            set => AdSpot = value?.ToString() ?? "";
         }
     }
 
