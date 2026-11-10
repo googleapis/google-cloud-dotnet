@@ -686,7 +686,7 @@ namespace Google.Cloud.Compute.V1
     }
 
     /// <summary>
-    /// NetworkFirewallPolicies client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// NetworkFirewallPolicies client wrapper, for convenient use. This client implements API version 2026-11-01.
     /// </summary>
     /// <remarks>
     /// The NetworkFirewallPolicies API.
@@ -2919,7 +2919,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
-                ApiVersion = "2026-09-01",
+                ApiVersion = "2026-11-01",
             });
             AddAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddAssociationOperationsSettings, logger);
             AddPacketMirroringRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddPacketMirroringRuleOperationsSettings, logger);

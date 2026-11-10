@@ -49,12 +49,15 @@ namespace Google.Cloud.Compute.V1
             DeleteSettings = existing.DeleteSettings;
             DeleteOperationsSettings = existing.DeleteOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
+            GetIamPolicySettings = existing.GetIamPolicySettings;
             InsertSettings = existing.InsertSettings;
             InsertOperationsSettings = existing.InsertOperationsSettings.Clone();
             ListSettings = existing.ListSettings;
             ListAvailableFeaturesSettings = existing.ListAvailableFeaturesSettings;
             PatchSettings = existing.PatchSettings;
             PatchOperationsSettings = existing.PatchOperationsSettings.Clone();
+            SetIamPolicySettings = existing.SetIamPolicySettings;
+            TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             OnCopy(existing);
         }
 
@@ -110,6 +113,27 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RegionSslPoliciesClient.GetIamPolicy</c> and <c>RegionSslPoliciesClient.GetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetIamPolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -214,6 +238,31 @@ namespace Google.Cloud.Compute.V1
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RegionSslPoliciesClient.SetIamPolicy</c> and <c>RegionSslPoliciesClient.SetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RegionSslPoliciesClient.TestIamPermissions</c> and <c>RegionSslPoliciesClient.TestIamPermissionsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="RegionSslPoliciesSettings"/> object.</returns>
         public RegionSslPoliciesSettings Clone() => new RegionSslPoliciesSettings(this);
@@ -272,7 +321,7 @@ namespace Google.Cloud.Compute.V1
     }
 
     /// <summary>
-    /// RegionSslPolicies client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// RegionSslPolicies client wrapper, for convenient use. This client implements API version 2026-11-01.
     /// </summary>
     /// <remarks>
     /// The RegionSslPolicies API.
@@ -578,6 +627,100 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SslPolicy> GetAsync(string project, string region, string sslPolicy, st::CancellationToken cancellationToken) =>
             GetAsync(project, region, sslPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Policy GetIamPolicy(GetIamPolicyRegionSslPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> GetIamPolicyAsync(GetIamPolicyRegionSslPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> GetIamPolicyAsync(GetIamPolicyRegionSslPolicyRequest request, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Policy GetIamPolicy(string project, string region, string resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicy(new GetIamPolicyRegionSslPolicyRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> GetIamPolicyAsync(string project, string region, string resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicyAsync(new GetIamPolicyRegionSslPolicyRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> GetIamPolicyAsync(string project, string region, string resource, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(project, region, resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new policy in the specified project and region using the data
@@ -1005,6 +1148,210 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> PatchAsync(string project, string region, string sslPolicy, SslPolicy sslPolicyResource, st::CancellationToken cancellationToken) =>
             PatchAsync(project, region, sslPolicy, sslPolicyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Policy SetIamPolicy(SetIamPolicyRegionSslPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> SetIamPolicyAsync(SetIamPolicyRegionSslPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> SetIamPolicyAsync(SetIamPolicyRegionSslPolicyRequest request, st::CancellationToken cancellationToken) =>
+            SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="regionSetPolicyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Policy SetIamPolicy(string project, string region, string resource, RegionSetPolicyRequest regionSetPolicyRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicy(new SetIamPolicyRegionSslPolicyRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                RegionSetPolicyRequestResource = gax::GaxPreconditions.CheckNotNull(regionSetPolicyRequestResource, nameof(regionSetPolicyRequestResource)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="regionSetPolicyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> SetIamPolicyAsync(string project, string region, string resource, RegionSetPolicyRequest regionSetPolicyRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicyAsync(new SetIamPolicyRegionSslPolicyRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                RegionSetPolicyRequestResource = gax::GaxPreconditions.CheckNotNull(regionSetPolicyRequestResource, nameof(regionSetPolicyRequestResource)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="regionSetPolicyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> SetIamPolicyAsync(string project, string region, string resource, RegionSetPolicyRequest regionSetPolicyRequestResource, st::CancellationToken cancellationToken) =>
+            SetIamPolicyAsync(project, region, resource, regionSetPolicyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TestPermissionsResponse TestIamPermissions(TestIamPermissionsRegionSslPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestPermissionsResponse> TestIamPermissionsAsync(TestIamPermissionsRegionSslPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestPermissionsResponse> TestIamPermissionsAsync(TestIamPermissionsRegionSslPolicyRequest request, st::CancellationToken cancellationToken) =>
+            TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="testPermissionsRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TestPermissionsResponse TestIamPermissions(string project, string region, string resource, TestPermissionsRequest testPermissionsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            TestIamPermissions(new TestIamPermissionsRegionSslPolicyRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                TestPermissionsRequestResource = gax::GaxPreconditions.CheckNotNull(testPermissionsRequestResource, nameof(testPermissionsRequestResource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="testPermissionsRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestPermissionsResponse> TestIamPermissionsAsync(string project, string region, string resource, TestPermissionsRequest testPermissionsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            TestIamPermissionsAsync(new TestIamPermissionsRegionSslPolicyRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                TestPermissionsRequestResource = gax::GaxPreconditions.CheckNotNull(testPermissionsRequestResource, nameof(testPermissionsRequestResource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="testPermissionsRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestPermissionsResponse> TestIamPermissionsAsync(string project, string region, string resource, TestPermissionsRequest testPermissionsRequestResource, st::CancellationToken cancellationToken) =>
+            TestIamPermissionsAsync(project, region, resource, testPermissionsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>RegionSslPolicies client wrapper implementation, for convenient use.</summary>
@@ -1017,6 +1364,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<GetRegionSslPolicyRequest, SslPolicy> _callGet;
 
+        private readonly gaxgrpc::ApiCall<GetIamPolicyRegionSslPolicyRequest, Policy> _callGetIamPolicy;
+
         private readonly gaxgrpc::ApiCall<InsertRegionSslPolicyRequest, Operation> _callInsert;
 
         private readonly gaxgrpc::ApiCall<ListRegionSslPoliciesRequest, SslPoliciesList> _callList;
@@ -1024,6 +1373,10 @@ namespace Google.Cloud.Compute.V1
         private readonly gaxgrpc::ApiCall<ListAvailableFeaturesRegionSslPoliciesRequest, SslPoliciesListAvailableFeaturesResponse> _callListAvailableFeatures;
 
         private readonly gaxgrpc::ApiCall<PatchRegionSslPolicyRequest, Operation> _callPatch;
+
+        private readonly gaxgrpc::ApiCall<SetIamPolicyRegionSslPolicyRequest, Policy> _callSetIamPolicy;
+
+        private readonly gaxgrpc::ApiCall<TestIamPermissionsRegionSslPolicyRequest, TestPermissionsResponse> _callTestIamPermissions;
 
         /// <summary>
         /// Constructs a client wrapper for the RegionSslPolicies service, with the specified gRPC client and settings.
@@ -1039,7 +1392,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
-                ApiVersion = "2026-09-01",
+                ApiVersion = "2026-11-01",
             });
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings, logger);
@@ -1050,6 +1403,9 @@ namespace Google.Cloud.Compute.V1
             _callGet = clientHelper.BuildApiCall<GetRegionSslPolicyRequest, SslPolicy>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("ssl_policy", request => request.SslPolicy);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
+            _callGetIamPolicy = clientHelper.BuildApiCall<GetIamPolicyRegionSslPolicyRequest, Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callGetIamPolicy);
+            Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
             _callInsert = clientHelper.BuildApiCall<InsertRegionSslPolicyRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
@@ -1062,6 +1418,12 @@ namespace Google.Cloud.Compute.V1
             _callPatch = clientHelper.BuildApiCall<PatchRegionSslPolicyRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("ssl_policy", request => request.SslPolicy);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
+            _callSetIamPolicy = clientHelper.BuildApiCall<SetIamPolicyRegionSslPolicyRequest, Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callSetIamPolicy);
+            Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
+            _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsRegionSslPolicyRequest, TestPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callTestIamPermissions);
+            Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1071,6 +1433,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_GetApiCall(ref gaxgrpc::ApiCall<GetRegionSslPolicyRequest, SslPolicy> call);
 
+        partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<GetIamPolicyRegionSslPolicyRequest, Policy> call);
+
         partial void Modify_InsertApiCall(ref gaxgrpc::ApiCall<InsertRegionSslPolicyRequest, Operation> call);
 
         partial void Modify_ListApiCall(ref gaxgrpc::ApiCall<ListRegionSslPoliciesRequest, SslPoliciesList> call);
@@ -1078,6 +1442,10 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_ListAvailableFeaturesApiCall(ref gaxgrpc::ApiCall<ListAvailableFeaturesRegionSslPoliciesRequest, SslPoliciesListAvailableFeaturesResponse> call);
 
         partial void Modify_PatchApiCall(ref gaxgrpc::ApiCall<PatchRegionSslPolicyRequest, Operation> call);
+
+        partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<SetIamPolicyRegionSslPolicyRequest, Policy> call);
+
+        partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<TestIamPermissionsRegionSslPolicyRequest, TestPermissionsResponse> call);
 
         partial void OnConstruction(RegionSslPolicies.RegionSslPoliciesClient grpcClient, RegionSslPoliciesSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1088,6 +1456,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_GetRegionSslPolicyRequest(ref GetRegionSslPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_GetIamPolicyRegionSslPolicyRequest(ref GetIamPolicyRegionSslPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_InsertRegionSslPolicyRequest(ref InsertRegionSslPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListRegionSslPoliciesRequest(ref ListRegionSslPoliciesRequest request, ref gaxgrpc::CallSettings settings);
@@ -1095,6 +1465,10 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_ListAvailableFeaturesRegionSslPoliciesRequest(ref ListAvailableFeaturesRegionSslPoliciesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PatchRegionSslPolicyRequest(ref PatchRegionSslPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetIamPolicyRegionSslPolicyRequest(ref SetIamPolicyRegionSslPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_TestIamPermissionsRegionSslPolicyRequest(ref TestIamPermissionsRegionSslPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>Delete</c>.</summary>
         public override lro::OperationsClient DeleteOperationsClient { get; }
@@ -1155,6 +1529,32 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_GetRegionSslPolicyRequest(ref request, ref callSettings);
             return _callGet.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Policy GetIamPolicy(GetIamPolicyRegionSslPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyRegionSslPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Policy> GetIamPolicyAsync(GetIamPolicyRegionSslPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyRegionSslPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>Insert</c>.</summary>
@@ -1275,6 +1675,56 @@ namespace Google.Cloud.Compute.V1
             GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
+        }
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Policy SetIamPolicy(SetIamPolicyRegionSslPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyRegionSslPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Policy> SetIamPolicyAsync(SetIamPolicyRegionSslPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyRegionSslPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TestPermissionsResponse TestIamPermissions(TestIamPermissionsRegionSslPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestIamPermissionsRegionSslPolicyRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TestPermissionsResponse> TestIamPermissionsAsync(TestIamPermissionsRegionSslPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestIamPermissionsRegionSslPolicyRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Async(request, callSettings);
         }
     }
 

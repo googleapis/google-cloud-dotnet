@@ -150443,6 +150443,214 @@
       ]
     },
     {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_GetIamPolicy_sync",
+      "title": "GetIamPolicyRequestObject",
+      "description": "Snippet for GetIamPolicy",
+      "file": "RegionSslPoliciesClient.GetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.GetIamPolicyRegionSslPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.Policy",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.GetIamPolicy",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_GetIamPolicy_async",
+      "title": "GetIamPolicyRequestObjectAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "RegionSslPoliciesClient.GetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.GetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.GetIamPolicyRegionSslPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Policy>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.GetIamPolicy",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_GetIamPolicy_sync_flattened",
+      "title": "GetIamPolicy",
+      "description": "Snippet for GetIamPolicy",
+      "file": "RegionSslPoliciesClient.GetIamPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "region"
+          },
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.Policy",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.GetIamPolicy",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_GetIamPolicy_async_flattened",
+      "title": "GetIamPolicyAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "RegionSslPoliciesClient.GetIamPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.GetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "region"
+          },
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Policy>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.GetIamPolicy",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "compute_v1_generated_RegionSslPolicies_Insert_sync",
       "title": "InsertRequestObject",
       "description": "Snippet for Insert",
@@ -151278,6 +151486,438 @@
         {
           "start": 38,
           "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_SetIamPolicy_sync",
+      "title": "SetIamPolicyRequestObject",
+      "description": "Snippet for SetIamPolicy",
+      "file": "RegionSslPoliciesClient.SetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.SetIamPolicyRegionSslPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.Policy",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.SetIamPolicy",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_SetIamPolicy_async",
+      "title": "SetIamPolicyRequestObjectAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "RegionSslPoliciesClient.SetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.SetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.SetIamPolicyRegionSslPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Policy>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.SetIamPolicy",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_SetIamPolicy_sync_flattened",
+      "title": "SetIamPolicy",
+      "description": "Snippet for SetIamPolicy",
+      "file": "RegionSslPoliciesClient.SetIamPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "region"
+          },
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Compute.V1.RegionSetPolicyRequest",
+            "name": "regionSetPolicyRequestResource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.Policy",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.SetIamPolicy",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_SetIamPolicy_async_flattened",
+      "title": "SetIamPolicyAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "RegionSslPoliciesClient.SetIamPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.SetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "region"
+          },
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Compute.V1.RegionSetPolicyRequest",
+            "name": "regionSetPolicyRequestResource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Policy>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.SetIamPolicy",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_TestIamPermissions_sync",
+      "title": "TestIamPermissionsRequestObject",
+      "description": "Snippet for TestIamPermissions",
+      "file": "RegionSslPoliciesClient.TestIamPermissionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissions",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.TestIamPermissionsRegionSslPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.TestPermissionsResponse",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.TestIamPermissions",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_TestIamPermissions_async",
+      "title": "TestIamPermissionsRequestObjectAsync",
+      "description": "Snippet for TestIamPermissionsAsync",
+      "file": "RegionSslPoliciesClient.TestIamPermissionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissionsAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.TestIamPermissionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.TestIamPermissionsRegionSslPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.TestPermissionsResponse>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.TestIamPermissions",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_TestIamPermissions_sync_flattened",
+      "title": "TestIamPermissions",
+      "description": "Snippet for TestIamPermissions",
+      "file": "RegionSslPoliciesClient.TestIamPermissionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissions",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "region"
+          },
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Compute.V1.TestPermissionsRequest",
+            "name": "testPermissionsRequestResource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.TestPermissionsResponse",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.TestIamPermissions",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_RegionSslPolicies_TestIamPermissions_async_flattened",
+      "title": "TestIamPermissionsAsync",
+      "description": "Snippet for TestIamPermissionsAsync",
+      "file": "RegionSslPoliciesClient.TestIamPermissionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissionsAsync",
+        "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient.TestIamPermissionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "region"
+          },
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Compute.V1.TestPermissionsRequest",
+            "name": "testPermissionsRequestResource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.TestPermissionsResponse>",
+        "client": {
+          "shortName": "RegionSslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.RegionSslPoliciesClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.compute.v1.RegionSslPolicies.TestIamPermissions",
+          "service": {
+            "shortName": "RegionSslPolicies",
+            "fullName": "google.cloud.compute.v1.RegionSslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
           "type": "SHORT"
         }
       ]
@@ -181763,6 +182403,206 @@
       ]
     },
     {
+      "regionTag": "compute_v1_generated_SslPolicies_GetIamPolicy_sync",
+      "title": "GetIamPolicyRequestObject",
+      "description": "Snippet for GetIamPolicy",
+      "file": "SslPoliciesClient.GetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.GetIamPolicySslPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.Policy",
+        "client": {
+          "shortName": "SslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.compute.v1.SslPolicies.GetIamPolicy",
+          "service": {
+            "shortName": "SslPolicies",
+            "fullName": "google.cloud.compute.v1.SslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_SslPolicies_GetIamPolicy_async",
+      "title": "GetIamPolicyRequestObjectAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "SslPoliciesClient.GetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient.GetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.GetIamPolicySslPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Policy>",
+        "client": {
+          "shortName": "SslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.compute.v1.SslPolicies.GetIamPolicy",
+          "service": {
+            "shortName": "SslPolicies",
+            "fullName": "google.cloud.compute.v1.SslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_SslPolicies_GetIamPolicy_sync_flattened",
+      "title": "GetIamPolicy",
+      "description": "Snippet for GetIamPolicy",
+      "file": "SslPoliciesClient.GetIamPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.Policy",
+        "client": {
+          "shortName": "SslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.compute.v1.SslPolicies.GetIamPolicy",
+          "service": {
+            "shortName": "SslPolicies",
+            "fullName": "google.cloud.compute.v1.SslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_SslPolicies_GetIamPolicy_async_flattened",
+      "title": "GetIamPolicyAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "SslPoliciesClient.GetIamPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient.GetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Policy>",
+        "client": {
+          "shortName": "SslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.compute.v1.SslPolicies.GetIamPolicy",
+          "service": {
+            "shortName": "SslPolicies",
+            "fullName": "google.cloud.compute.v1.SslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "compute_v1_generated_SslPolicies_Insert_sync",
       "title": "InsertRequestObject",
       "description": "Snippet for Insert",
@@ -182566,6 +183406,422 @@
         {
           "start": 38,
           "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_SslPolicies_SetIamPolicy_sync",
+      "title": "SetIamPolicyRequestObject",
+      "description": "Snippet for SetIamPolicy",
+      "file": "SslPoliciesClient.SetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.SetIamPolicySslPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.Policy",
+        "client": {
+          "shortName": "SslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.compute.v1.SslPolicies.SetIamPolicy",
+          "service": {
+            "shortName": "SslPolicies",
+            "fullName": "google.cloud.compute.v1.SslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_SslPolicies_SetIamPolicy_async",
+      "title": "SetIamPolicyRequestObjectAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "SslPoliciesClient.SetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient.SetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.SetIamPolicySslPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Policy>",
+        "client": {
+          "shortName": "SslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.compute.v1.SslPolicies.SetIamPolicy",
+          "service": {
+            "shortName": "SslPolicies",
+            "fullName": "google.cloud.compute.v1.SslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_SslPolicies_SetIamPolicy_sync_flattened",
+      "title": "SetIamPolicy",
+      "description": "Snippet for SetIamPolicy",
+      "file": "SslPoliciesClient.SetIamPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Compute.V1.GlobalSetPolicyRequest",
+            "name": "globalSetPolicyRequestResource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.Policy",
+        "client": {
+          "shortName": "SslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.compute.v1.SslPolicies.SetIamPolicy",
+          "service": {
+            "shortName": "SslPolicies",
+            "fullName": "google.cloud.compute.v1.SslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_SslPolicies_SetIamPolicy_async_flattened",
+      "title": "SetIamPolicyAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "SslPoliciesClient.SetIamPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient.SetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Compute.V1.GlobalSetPolicyRequest",
+            "name": "globalSetPolicyRequestResource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Policy>",
+        "client": {
+          "shortName": "SslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.compute.v1.SslPolicies.SetIamPolicy",
+          "service": {
+            "shortName": "SslPolicies",
+            "fullName": "google.cloud.compute.v1.SslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_SslPolicies_TestIamPermissions_sync",
+      "title": "TestIamPermissionsRequestObject",
+      "description": "Snippet for TestIamPermissions",
+      "file": "SslPoliciesClient.TestIamPermissionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissions",
+        "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.TestIamPermissionsSslPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.TestPermissionsResponse",
+        "client": {
+          "shortName": "SslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.compute.v1.SslPolicies.TestIamPermissions",
+          "service": {
+            "shortName": "SslPolicies",
+            "fullName": "google.cloud.compute.v1.SslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_SslPolicies_TestIamPermissions_async",
+      "title": "TestIamPermissionsRequestObjectAsync",
+      "description": "Snippet for TestIamPermissionsAsync",
+      "file": "SslPoliciesClient.TestIamPermissionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissionsAsync",
+        "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient.TestIamPermissionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.TestIamPermissionsSslPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.TestPermissionsResponse>",
+        "client": {
+          "shortName": "SslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.compute.v1.SslPolicies.TestIamPermissions",
+          "service": {
+            "shortName": "SslPolicies",
+            "fullName": "google.cloud.compute.v1.SslPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_SslPolicies_TestIamPermissions_sync_flattened",
+      "title": "TestIamPermissions",
+      "description": "Snippet for TestIamPermissions",
+      "file": "SslPoliciesClient.TestIamPermissionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissions",
+        "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Compute.V1.TestPermissionsRequest",
+            "name": "testPermissionsRequestResource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.TestPermissionsResponse",
+        "client": {
+          "shortName": "SslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.compute.v1.SslPolicies.TestIamPermissions",
+          "service": {
+            "shortName": "SslPolicies",
+            "fullName": "google.cloud.compute.v1.SslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_SslPolicies_TestIamPermissions_async_flattened",
+      "title": "TestIamPermissionsAsync",
+      "description": "Snippet for TestIamPermissionsAsync",
+      "file": "SslPoliciesClient.TestIamPermissionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissionsAsync",
+        "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient.TestIamPermissionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Compute.V1.TestPermissionsRequest",
+            "name": "testPermissionsRequestResource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.TestPermissionsResponse>",
+        "client": {
+          "shortName": "SslPoliciesClient",
+          "fullName": "Google.Cloud.Compute.V1.SslPoliciesClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.compute.v1.SslPolicies.TestIamPermissions",
+          "service": {
+            "shortName": "SslPolicies",
+            "fullName": "google.cloud.compute.v1.SslPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
           "type": "SHORT"
         }
       ]

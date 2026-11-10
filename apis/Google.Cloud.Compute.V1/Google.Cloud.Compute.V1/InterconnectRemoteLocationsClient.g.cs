@@ -154,7 +154,7 @@ namespace Google.Cloud.Compute.V1
     }
 
     /// <summary>
-    /// InterconnectRemoteLocations client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// InterconnectRemoteLocations client wrapper, for convenient use. This client implements API version 2026-11-01.
     /// </summary>
     /// <remarks>
     /// The InterconnectRemoteLocations API.
@@ -445,7 +445,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
-                ApiVersion = "2026-09-01",
+                ApiVersion = "2026-11-01",
             });
             _callGet = clientHelper.BuildApiCall<GetInterconnectRemoteLocationRequest, InterconnectRemoteLocation>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("interconnect_remote_location", request => request.InterconnectRemoteLocation);
             Modify_ApiCall(ref _callGet);

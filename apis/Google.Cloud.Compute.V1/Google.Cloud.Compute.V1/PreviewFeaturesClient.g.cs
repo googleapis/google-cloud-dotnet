@@ -185,7 +185,7 @@ namespace Google.Cloud.Compute.V1
     }
 
     /// <summary>
-    /// PreviewFeatures client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// PreviewFeatures client wrapper, for convenient use. This client implements API version 2026-11-01.
     /// </summary>
     /// <remarks>
     /// The PreviewFeatures API.
@@ -580,7 +580,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
-                ApiVersion = "2026-09-01",
+                ApiVersion = "2026-11-01",
             });
             UpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.UpdateOperationsSettings, logger);
             _callGet = clientHelper.BuildApiCall<GetPreviewFeatureRequest, PreviewFeature>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("preview_feature", request => request.PreviewFeature);

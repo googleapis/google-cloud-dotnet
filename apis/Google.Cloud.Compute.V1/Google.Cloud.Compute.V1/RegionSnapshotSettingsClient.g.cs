@@ -164,7 +164,7 @@ namespace Google.Cloud.Compute.V1
     }
 
     /// <summary>
-    /// RegionSnapshotSettings client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// RegionSnapshotSettings client wrapper, for convenient use. This client implements API version 2026-11-01.
     /// </summary>
     /// <remarks>
     /// The RegionSnapshotSettings API.
@@ -473,7 +473,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
-                ApiVersion = "2026-09-01",
+                ApiVersion = "2026-11-01",
             });
             PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchOperationsSettings, logger);
             _callGet = clientHelper.BuildApiCall<GetRegionSnapshotSettingRequest, SnapshotSettings>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);

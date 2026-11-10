@@ -152,7 +152,7 @@ namespace Google.Cloud.Compute.V1
     }
 
     /// <summary>
-    /// ManagedRulesets client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// ManagedRulesets client wrapper, for convenient use. This client implements API version 2026-11-01.
     /// </summary>
     /// <remarks>
     /// The ManagedRulesets API.
@@ -427,7 +427,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
-                ApiVersion = "2026-09-01",
+                ApiVersion = "2026-11-01",
             });
             _callGet = clientHelper.BuildApiCall<GetManagedRulesetRequest, ManagedRuleset>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("managed_ruleset", request => request.ManagedRuleset);
             Modify_ApiCall(ref _callGet);

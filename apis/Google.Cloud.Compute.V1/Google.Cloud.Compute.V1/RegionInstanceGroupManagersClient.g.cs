@@ -796,7 +796,7 @@ namespace Google.Cloud.Compute.V1
     }
 
     /// <summary>
-    /// RegionInstanceGroupManagers client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// RegionInstanceGroupManagers client wrapper, for convenient use. This client implements API version 2026-11-01.
     /// </summary>
     /// <remarks>
     /// The RegionInstanceGroupManagers API.
@@ -4718,7 +4718,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
-                ApiVersion = "2026-09-01",
+                ApiVersion = "2026-11-01",
             });
             AbandonInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.AbandonInstancesOperationsSettings, logger);
             ApplyUpdatesToInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.ApplyUpdatesToInstancesOperationsSettings, logger);

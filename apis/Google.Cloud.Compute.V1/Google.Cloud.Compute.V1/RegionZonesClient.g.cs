@@ -129,7 +129,7 @@ namespace Google.Cloud.Compute.V1
     }
 
     /// <summary>
-    /// RegionZones client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// RegionZones client wrapper, for convenient use. This client implements API version 2026-11-01.
     /// </summary>
     /// <remarks>
     /// The RegionZones API.
@@ -337,7 +337,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
-                ApiVersion = "2026-09-01",
+                ApiVersion = "2026-11-01",
             });
             _callList = clientHelper.BuildApiCall<ListRegionZonesRequest, ZoneList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callList);

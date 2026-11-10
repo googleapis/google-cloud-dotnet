@@ -176,7 +176,7 @@ namespace Google.Cloud.Compute.V1
     }
 
     /// <summary>
-    /// LicenseCodes client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// LicenseCodes client wrapper, for convenient use. This client implements API version 2026-11-01.
     /// </summary>
     /// <remarks>
     /// The LicenseCodes API.
@@ -712,7 +712,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
-                ApiVersion = "2026-09-01",
+                ApiVersion = "2026-11-01",
             });
             _callGet = clientHelper.BuildApiCall<GetLicenseCodeRequest, LicenseCode>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("license_code", request => request.LicenseCode);
             Modify_ApiCall(ref _callGet);

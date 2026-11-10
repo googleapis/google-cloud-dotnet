@@ -456,7 +456,7 @@ namespace Google.Cloud.Compute.V1
     }
 
     /// <summary>
-    /// TargetPools client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// TargetPools client wrapper, for convenient use. This client implements API version 2026-11-01.
     /// </summary>
     /// <remarks>
     /// The TargetPools API.
@@ -2079,7 +2079,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
-                ApiVersion = "2026-09-01",
+                ApiVersion = "2026-11-01",
             });
             AddHealthCheckOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.AddHealthCheckOperationsSettings, logger);
             AddInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.AddInstanceOperationsSettings, logger);

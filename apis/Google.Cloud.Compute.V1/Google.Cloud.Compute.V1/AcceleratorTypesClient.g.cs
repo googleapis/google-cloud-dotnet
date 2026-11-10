@@ -174,7 +174,7 @@ namespace Google.Cloud.Compute.V1
     }
 
     /// <summary>
-    /// AcceleratorTypes client wrapper, for convenient use. This client implements API version 2026-09-01.
+    /// AcceleratorTypes client wrapper, for convenient use. This client implements API version 2026-11-01.
     /// </summary>
     /// <remarks>
     /// Services
@@ -578,7 +578,7 @@ namespace Google.Cloud.Compute.V1
             {
                 Settings = effectiveSettings,
                 Logger = logger,
-                ApiVersion = "2026-09-01",
+                ApiVersion = "2026-11-01",
             });
             _callAggregatedList = clientHelper.BuildApiCall<AggregatedListAcceleratorTypesRequest, AcceleratorTypeAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);
