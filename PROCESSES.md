@@ -146,6 +146,13 @@ corresponding library is:
   code, and regenerate projects (which will update Renovate and the
   README). See [this PR as an
   example](https://github.com/googleapis/google-cloud-dotnet/pull/13012).
+  Look up the API path in
+  [googleapis](https://github.com/googleapis/googleapis).
+  The API path is found in the `apiPath` of the `pipeline-state.json` entry.
+  If the service's `yaml` file (usually `<service-name>.yaml`) has a
+  `dotnet_settings` field, then add this API path to the `ignoredApiPaths`
+  near the bottom of `pipeline-state.json` to prevent future configuration
+  attempts.
 
 ## Updating the .NET SDK
 
