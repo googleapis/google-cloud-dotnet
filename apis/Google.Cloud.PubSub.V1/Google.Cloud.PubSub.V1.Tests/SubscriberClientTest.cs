@@ -1251,44 +1251,12 @@ namespace Google.Cloud.PubSub.V1.Tests
             }
         }
 
-        [Fact]
-        public void ShutdownWhenWaitingOnMoveNext()
-        {
-            var msgs = new[] { ServerAction.Data(TimeSpan.Zero, new[] { "msg1" }), ServerAction.Inf() };
-            using (var fake = Fake.CreateClientForSingleResponseStream(msgs, streamPongPeriod: TimeSpan.FromSeconds(15)))
-            {
-                var th = fake.TaskHelper;
-                var handledMsgs = new List<string>();
-                fake.Scheduler.Run(async () =>
-                {
-                    var startTask = fake.Subscriber.StartAsync((msg, ct) =>
-                    {
-                        handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
-                        return Task.FromResult(SubscriberClient.Reply.Ack);
-                    });
-                    // Wait 5s. At T=0s, msg1 is processed instantly. At T=5s, the subscriber is actively
-                    // blocked waiting on the next message (Inf() interval) with the Pong Monitor loop engaged.
-                    await th.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(5), CancellationToken.None));
-                    var stopTask = fake.Subscriber.StopAsync(new ShutdownOptions { Mode = ShutdownMode.WaitForProcessing });
-
-                    // StopAsync cancels the in-flight read and its engaged Pong Monitor loop, exiting instantly.
-                    await th.ConfigureAwait(stopTask);
-                    await th.ConfigureAwait(startTask);
-
-                    var elapsed = fake.Scheduler.Clock.GetCurrentDateTimeUtc() - fake.Time0;
-                    Assert.True(elapsed.TotalSeconds < 30, $"Shutdown waited for the ping/pong interval. Elapsed seconds: {elapsed.TotalSeconds}");
-                    Assert.Equal(new[] { "msg1" }, handledMsgs);
-                    Assert.Equal(1, fake.Subscribers[0].StreamingPulls.Count);
-                });
-            }
-        }
-
-        [Fact]
-        public void KeepAliveMonitor_NoUnobservedTaskExceptionOnStreamCloseOrShutdown()
+        private static void AssertNoUnobservedTaskExceptions(Action action)
         {
             var unobservedExceptions = new List<Exception>();
             EventHandler<UnobservedTaskExceptionEventArgs> handler = (_, args) =>
             {
+                args.SetObserved();
                 lock (unobservedExceptions)
                 {
                     unobservedExceptions.Add(args.Exception);
@@ -1297,12 +1265,40 @@ namespace Google.Cloud.PubSub.V1.Tests
             TaskScheduler.UnobservedTaskException += handler;
             try
             {
-                // Stream 1 closes with an expected Unavailable exception (simulating normal ~30m rotation).
-                // Stream 2 stays alive until explicit subscriber shutdown.
-                var unavailable = new RpcException(new Status(StatusCode.Unavailable, "Stream closed normally."));
-                var msgs1 = new[] { ServerAction.Data(TimeSpan.Zero, new[] { "msg1" }), ServerAction.BadMoveNext(TimeSpan.FromSeconds(1), unavailable) };
-                var msgs2 = new[] { ServerAction.Data(TimeSpan.Zero, new[] { "msg2" }), ServerAction.Inf() };
-                using (var fake = Fake.Create(new List<IEnumerable<ServerAction>> { msgs1, msgs2 }, streamPongPeriod: TimeSpan.FromSeconds(15)))
+                action();
+                for (int i = 0; i < 3; i++)
+                {
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+                    GC.Collect();
+                }
+                Assert.Empty(unobservedExceptions);
+            }
+            finally
+            {
+                TaskScheduler.UnobservedTaskException -= handler;
+            }
+        }
+
+        [Theory]
+        [InlineData(false)]
+        [InlineData(true)]
+        public void ShutdownWhenWaitingOnMoveNext(bool streamClosedByServer)
+        {
+            AssertNoUnobservedTaskExceptions(() =>
+            {
+                var serverActions = streamClosedByServer
+                    ? new[]
+                    {
+                        new[] { ServerAction.Data(TimeSpan.Zero, new[] { "msg1" }), ServerAction.BadMoveNext(TimeSpan.FromSeconds(1), new RpcException(new Status(StatusCode.Unavailable, "Stream closed normally."))) },
+                        new[] { ServerAction.Data(TimeSpan.Zero, new[] { "msg2" }), ServerAction.Inf() }
+                    }
+                    : new[]
+                    {
+                        new[] { ServerAction.Data(TimeSpan.Zero, new[] { "msg1" }), ServerAction.Inf() }
+                    };
+
+                using (var fake = Fake.Create(serverActions, streamPongPeriod: TimeSpan.FromSeconds(15)))
                 {
                     var th = fake.TaskHelper;
                     var handledMsgs = new List<string>();
@@ -1313,31 +1309,23 @@ namespace Google.Cloud.PubSub.V1.Tests
                             handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
                             return Task.FromResult(SubscriberClient.Reply.Ack);
                         });
-                        // Wait for stream 1 to fail and restart onto stream 2
+                        // Wait 5s. At T=0s, msg1 is processed. If streamClosedByServer is true, stream 1 fails at T=1s
+                        // and restarts onto stream 2, processing msg2. Then the subscriber waits on Inf() with
+                        // the Pong Monitor loop engaged.
                         await th.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(5), CancellationToken.None));
                         var stopTask = fake.Subscriber.StopAsync(new ShutdownOptions { Mode = ShutdownMode.WaitForProcessing });
+
+                        // StopAsync cancels the in-flight read and its engaged Pong Monitor loop, exiting instantly.
                         await th.ConfigureAwait(stopTask);
                         await th.ConfigureAwait(startTask);
 
-                        Assert.Equal(new[] { "msg1", "msg2" }, handledMsgs);
-                        Assert.Equal(2, fake.Subscribers[0].StreamingPulls.Count);
+                        var elapsed = fake.Scheduler.Clock.GetCurrentDateTimeUtc() - fake.Time0;
+                        Assert.True(elapsed.TotalSeconds < 30, $"Shutdown waited for the ping/pong interval. Elapsed seconds: {elapsed.TotalSeconds}");
+                        Assert.Equal(streamClosedByServer ? new[] { "msg1", "msg2" } : new[] { "msg1" }, handledMsgs);
+                        Assert.Equal(streamClosedByServer ? 2 : 1, fake.Subscribers[0].StreamingPulls.Count);
                     });
                 }
-
-                // Force finalization to detect any unobserved faulted tasks.
-                for (int i = 0; i < 3; i++)
-                {
-                    GC.Collect();
-                    GC.WaitForPendingFinalizers();
-                    GC.Collect();
-                }
-
-                Assert.Empty(unobservedExceptions);
-            }
-            finally
-            {
-                TaskScheduler.UnobservedTaskException -= handler;
-            }
+            });
         }
 
         [Theory, PairwiseData]
