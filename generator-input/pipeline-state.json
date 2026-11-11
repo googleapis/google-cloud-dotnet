@@ -5087,6 +5087,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.Parallelstore.V1/Google.Cloud.Parallelstore.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.Parallelstore.V1Beta",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/parallelstore/v1beta"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.Parallelstore.V1Beta/Google.Cloud.Parallelstore.V1Beta"
+            ]
         }
     ],
     "ignoredApiPaths": [

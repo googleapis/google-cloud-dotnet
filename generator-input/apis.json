@@ -4804,6 +4804,26 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.Parallelstore.V1Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Parallelstore",
+      "productUrl": "https://cloud.google.com/parallelstore?hl=en",
+      "description": "",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/parallelstore/v1beta",
+      "includeCommonResourcesProto": true,
+      "shortName": "parallelstore",
+      "serviceConfigFile": "parallelstore_v1beta.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.ParameterManager.V1",
       "version": "1.1.0",
       "type": "grpc",
