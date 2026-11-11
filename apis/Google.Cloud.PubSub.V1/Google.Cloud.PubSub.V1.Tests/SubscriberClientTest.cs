@@ -1283,6 +1283,63 @@ namespace Google.Cloud.PubSub.V1.Tests
             }
         }
 
+        [Fact]
+        public void KeepAliveMonitor_NoUnobservedTaskExceptionOnStreamCloseOrShutdown()
+        {
+            var unobservedExceptions = new List<Exception>();
+            EventHandler<UnobservedTaskExceptionEventArgs> handler = (_, args) =>
+            {
+                lock (unobservedExceptions)
+                {
+                    unobservedExceptions.Add(args.Exception);
+                }
+            };
+            TaskScheduler.UnobservedTaskException += handler;
+            try
+            {
+                // Stream 1 closes with an expected Unavailable exception (simulating normal ~30m rotation).
+                // Stream 2 stays alive until explicit subscriber shutdown.
+                var unavailable = new RpcException(new Status(StatusCode.Unavailable, "Stream closed normally."));
+                var msgs1 = new[] { ServerAction.Data(TimeSpan.Zero, new[] { "msg1" }), ServerAction.BadMoveNext(TimeSpan.FromSeconds(1), unavailable) };
+                var msgs2 = new[] { ServerAction.Data(TimeSpan.Zero, new[] { "msg2" }), ServerAction.Inf() };
+                using (var fake = Fake.Create(new List<IEnumerable<ServerAction>> { msgs1, msgs2 }, streamPongPeriod: TimeSpan.FromSeconds(15)))
+                {
+                    var th = fake.TaskHelper;
+                    var handledMsgs = new List<string>();
+                    fake.Scheduler.Run(async () =>
+                    {
+                        var startTask = fake.Subscriber.StartAsync((msg, ct) =>
+                        {
+                            handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
+                            return Task.FromResult(SubscriberClient.Reply.Ack);
+                        });
+                        // Wait for stream 1 to fail and restart onto stream 2
+                        await th.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(5), CancellationToken.None));
+                        var stopTask = fake.Subscriber.StopAsync(new ShutdownOptions { Mode = ShutdownMode.WaitForProcessing });
+                        await th.ConfigureAwait(stopTask);
+                        await th.ConfigureAwait(startTask);
+
+                        Assert.Equal(new[] { "msg1", "msg2" }, handledMsgs);
+                        Assert.Equal(2, fake.Subscribers[0].StreamingPulls.Count);
+                    });
+                }
+
+                // Force finalization to detect any unobserved faulted tasks.
+                for (int i = 0; i < 3; i++)
+                {
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+                    GC.Collect();
+                }
+
+                Assert.Empty(unobservedExceptions);
+            }
+            finally
+            {
+                TaskScheduler.UnobservedTaskException -= handler;
+            }
+        }
+
         [Theory, PairwiseData]
         public void OrderingKeysManyMsgs(
             [CombinatorialValues(73, 100, 404, 1409, 5402)] int msgCount,
