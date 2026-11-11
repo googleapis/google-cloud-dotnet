@@ -5075,6 +5075,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.SaasPlatform.SaasServiceMgmt.V1/Google.Cloud.SaasPlatform.SaasServiceMgmt.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.Parallelstore.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/parallelstore/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.Parallelstore.V1/Google.Cloud.Parallelstore.V1"
+            ]
         }
     ],
     "ignoredApiPaths": [
