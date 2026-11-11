@@ -1493,10 +1493,10 @@ public sealed partial class SubscriberClientImpl
                         RecordPong();
                         delayCts.Cancel();
                     }
-                    catch (Exception) when (delay.Status == TaskStatus.RanToCompletion)
+                    catch (Exception)
                     {
-                        // No-op. We do this to observe the exception that will be thrown when deadline
-                        // hits and the original task fails.
+                        // No-op. Any exception in original is observed and handled by the caller
+                        // via moveNextTask in HandlePullMessageData.
                     }
                 }
 
