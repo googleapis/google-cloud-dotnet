@@ -21,6 +21,7 @@ using System.Threading.Tasks;
 // This class uses TaskHelper.ConfigureAwait, rather than directly calling .ConfigureAwait().
 // When running in a non-test environment this indirectly calls .ConfigureAwait(false).
 // Disable the ConfigureAwaitChecker warning:
+#pragma warning disable CAC001
 #pragma warning disable CAC002
 
 namespace Google.Cloud.PubSub.V1;
@@ -45,10 +46,12 @@ public sealed partial class SubscriberClientImpl
             }
         }
 
+        // Guards _byteCount, _elementCount, _keyedTaskQs, and _waiters.
         private readonly object _lock = new object();
         private readonly Action<Task> _registerTaskFn;
         private readonly TaskHelper _taskHelper;
-        private readonly AsyncAutoResetEvent _event;
+        // Waiters blocked while flow-control limits are reached; added and drained under _lock, signaled outside _lock.
+        private readonly List<TaskCompletionSource<int>> _waiters = new List<TaskCompletionSource<int>>();
         // Tracking of messages with ordering-keys.
         private readonly Dictionary<string, Queue<FnInfo>> _keyedTaskQs = new Dictionary<string, Queue<FnInfo>>();
 
@@ -64,7 +67,6 @@ public sealed partial class SubscriberClientImpl
             MaxOutstandingElementCount = maxOutstandingElementCount;
             _registerTaskFn = registerTaskFn;
             _taskHelper = taskHelper;
-            _event = new AsyncAutoResetEvent(taskHelper);
         }
 
         /// <summary>
@@ -83,12 +85,15 @@ public sealed partial class SubscriberClientImpl
         /// </summary>
         /// <param name="byteCount">The number of bytes in the element associated with <paramref name="fn"/>.</param>
         /// <param name="orderingKey">The ordering key for this message. Empty string if no ordering key.</param>
+        /// <param name="cancellationToken">Token cancelled when message handling is stopped.</param>
         /// <param name="fn">The function to execute.</param>
         /// <returns>A Task that completes once <paramref name="fn"/> has been scheduled for execution.</returns>
-        internal async Task Process(long byteCount, string orderingKey, Func<Task> fn)
+        internal async Task Process(long byteCount, string orderingKey, CancellationToken cancellationToken, Func<Task> fn)
         {
             while (true)
             {
+                cancellationToken.ThrowIfCancellationRequested();
+                TaskCompletionSource<int> waiterTcs;
                 lock (_lock)
                 {
                     if (IsFlowOk())
@@ -123,10 +128,22 @@ public sealed partial class SubscriberClientImpl
                         }
                         break;
                     }
+                    // Register waiter under _lock so a concurrent completion cannot be missed before awaiting.
+                    waiterTcs = new TaskCompletionSource<int>();
+                    _waiters.Add(waiterTcs);
                 }
-                // Flow not OK, wait until a previous fn completes.
-                // CancellationToken not required, as the fn() will always drain on cancellation.
-                await _taskHelper.ConfigureAwait(_event.WaitAsync(CancellationToken.None));
+                // Flow not OK, wait until a previous fn completes or handler operations are cancelled.
+                using (cancellationToken.Register(() =>
+                {
+                    lock (_lock)
+                    {
+                        _waiters.Remove(waiterTcs);
+                    }
+                    waiterTcs.TrySetCanceled(cancellationToken);
+                }))
+                {
+                    await _taskHelper.ConfigureAwait(waiterTcs.Task);
+                }
             }
             // Execute the user code for this message.
             ExecuteFunction(orderingKey, byteCount, fn);
@@ -138,7 +155,7 @@ public sealed partial class SubscriberClientImpl
             // Register the function, so we can be sure it's completed during shutdown.
             Task task = _taskHelper.Run(async () => await _taskHelper.ConfigureAwaitWithFinally(fn, () =>
             {
-                bool setEvent;
+                TaskCompletionSource<int>[] waitersToSignal = null;
                 FnInfo nextFn = default;
                 lock (_lock)
                 {
@@ -156,11 +173,13 @@ public sealed partial class SubscriberClientImpl
                             _keyedTaskQs.Remove(orderingKey);
                         }
                     }
-                    bool preIsFlowOk = IsFlowOk();
                     _byteCount -= byteCount;
                     _elementCount -= 1;
-                    // If moving from flow-bad to flow-OK, then trigger the next execution.
-                    setEvent = !preIsFlowOk && IsFlowOk();
+                    if (IsFlowOk() && _waiters.Count > 0)
+                    {
+                        waitersToSignal = _waiters.ToArray();
+                        _waiters.Clear();
+                    }
                 }
                 if (nextFn.Fn != null)
                 {
@@ -168,9 +187,12 @@ public sealed partial class SubscriberClientImpl
                     // this is not a recursive call, as this code is within a `Task.Run` :)
                     ExecuteFunction(orderingKey, nextFn.ByteCount, nextFn.Fn);
                 }
-                if (setEvent)
+                if (waitersToSignal != null)
                 {
-                    _event.Set();
+                    foreach (var waiter in waitersToSignal)
+                    {
+                        waiter.TrySetResult(0);
+                    }
                 }
             }));
             _registerTaskFn(task);

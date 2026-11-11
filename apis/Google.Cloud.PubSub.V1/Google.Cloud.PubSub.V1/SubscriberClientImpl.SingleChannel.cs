@@ -555,7 +555,7 @@ public sealed partial class SubscriberClientImpl
                 var msg = msgs[msgIndex];
                 msgs[msgIndex] = null;
                 // Prepare to call user message handler, _flow.Process(...) enforces the user-handler concurrency constraints.
-                await _taskHelper.ConfigureAwait(_flow.Process(msg.CalculateSize(), _messageOrderingEnabled ? msg.Message.OrderingKey ?? "" : "", async () =>
+                await _taskHelper.ConfigureAwait(_flow.Process(msg.CalculateSize(), _messageOrderingEnabled ? msg.Message.OrderingKey ?? "" : "", _handlerCts.Token, async () =>
                 {
                     // If handler operations are cancelled,throw.
                     // We do it here also because we may have been delayed by flow control.

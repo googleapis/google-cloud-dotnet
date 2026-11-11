@@ -2449,6 +2449,94 @@ namespace Google.Cloud.PubSub.V1.Tests
             }
         }
 
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public async Task FlowControl_MultiChannelConcurrentBatches_NoLostWakeup(bool limitByElements)
+        {
+            var oneMsgBytes = FakeSubscriberServiceApiClient.MakeReceivedMessage("m0", "m0").CalculateSize();
+            var flowControlSettings = limitByElements
+                ? new FlowControlSettings(maxOutstandingElementCount: 2, maxOutstandingByteCount: null)
+                : new FlowControlSettings(maxOutstandingElementCount: null, maxOutstandingByteCount: oneMsgBytes * 2);
+
+            for (int iteration = 0; iteration < 3000; iteration++)
+            {
+                var streams = new List<List<ServerAction>>
+                {
+                    new() { ServerAction.Data(TimeSpan.Zero, new[] { "m0", "m1", "m2", "m3" }), ServerAction.Data(TimeSpan.FromDays(1), Array.Empty<string>()) },
+                    new() { ServerAction.Data(TimeSpan.Zero, new[] { "m4", "m5" }), ServerAction.Data(TimeSpan.FromDays(1), Array.Empty<string>()) },
+                    new() { ServerAction.Data(TimeSpan.Zero, new[] { "m6", "m7" }), ServerAction.Data(TimeSpan.FromDays(1), Array.Empty<string>()) },
+                    new() { ServerAction.Data(TimeSpan.Zero, new[] { "m8", "m9" }), ServerAction.Data(TimeSpan.FromDays(1), Array.Empty<string>()) }
+                };
+                using var streamsEn = ((IEnumerable<IEnumerable<ServerAction>>) streams).GetEnumerator();
+                var clients = Enumerable.Range(0, 4)
+                    .Select(_ => new FakeSubscriberServiceApiClient(
+                        streamsEn, SystemScheduler.Instance, SystemClock.Instance, TaskHelper.Default,
+                        TimeSpan.Zero, useMsgAsId: true, ackModifyAckDeadlineAction: null,
+                        isExactlyOnceDelivery: false, messageOrderingEnabled: false))
+                    .ToList();
+                var settings = new SubscriberClient.Settings
+                {
+                    FlowControlSettings = flowControlSettings
+                };
+                var subscriber = new SubscriberClientImpl(new SubscriptionName("projectid", "subscriptionid"), clients, settings, shutdown: null);
+
+                int received = 0;
+                var startTask = subscriber.StartAsync((msg, ct) =>
+                {
+                    if (Interlocked.Increment(ref received) == 10)
+                    {
+                        _ = subscriber.StopAsync(new ShutdownOptions { Mode = ShutdownMode.NackImmediately, Timeout = TimeSpan.FromSeconds(1) });
+                    }
+                    return Task.FromResult(Reply.Ack);
+                });
+
+                var completed = await Task.WhenAny(startTask, Task.Delay(TimeSpan.FromSeconds(2)));
+                if (completed != startTask)
+                {
+                    var hardStopTask = subscriber.StopAsync(new ShutdownOptions(), new CancellationToken(true));
+                    var hardStopCompleted = await Task.WhenAny(hardStopTask, Task.Delay(TimeSpan.FromSeconds(1)));
+                    Assert.Fail($"Iteration {iteration} deadlocked after {received}/10 messages (hardStopCompleted={hardStopCompleted == hardStopTask}).");
+                }
+                await startTask;
+                Assert.Equal(10, received);
+            }
+        }
+
+        [Theory, CombinatorialData]
+        public void Shutdown_CancelsFlowBlockedBatchImmediately(ShutdownMode mode)
+        {
+            var msgs = new[]
+            {
+                ServerAction.Data(TimeSpan.Zero, new[] { "msg0", "msg1" }),
+                ServerAction.Inf()
+            };
+            // flowMaxElements=1 keeps msg1 waiting in Flow.Process while msg0 is in the handler.
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, flowMaxElements: 1, useMsgAsId: true);
+            fake.Scheduler.Run(async () =>
+            {
+                var handled = new List<string>();
+                var startTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                {
+                    handled.Locked(() => handled.Add(msg.Data.ToStringUtf8()));
+                    // Simulate a handler performing an uninterruptible operation that ignores ct.
+                    await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
+                    return Reply.Ack;
+                });
+
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None));
+                Assert.Equal(new[] { "msg0" }, handled);
+
+                // Timeout=15s (< 30s grace window) triggers handler cancellation at T=1s in both modes.
+                await fake.TaskHelper.ConfigureAwait(
+                    fake.Subscriber.StopAsync(new ShutdownOptions { Mode = mode, Timeout = TimeSpan.FromSeconds(15) }));
+
+                // Flow.Process must cancel msg1 immediately at T=1s so the pull stream closes at T=1s, not T=10s.
+                Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(1) }, fake.Subscribers[0].WriteCompletes);
+                Assert.Equal(new[] { "msg0" }, handled);
+            });
+        }
+
         /// <summary>
         /// Creates a sequence of failing streaming pull responses, optionally followed by one "never responds" streaming pull.
         /// The nested aspect is because each streaming pull can (theoretically) consist of multiple responses.

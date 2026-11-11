@@ -179,6 +179,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
 
             // Watchdog to report progress and fail test on deadlock
             CancellationTokenSource watchdogCts = new CancellationTokenSource();
+            var watchdogTrippedTcs = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);
             Task.Run(async () =>
             {
                 var debugOutputPeriod1 = debugOutputPeriod ?? TimeSpan.FromSeconds(1);
@@ -195,9 +196,11 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                     {
                         if (noProgressCount > 60)
                         {
-                            // Deadlock, shutdown subscriber, and cancel
+                            // Deadlock, shutdown publisher and subscriber, and cancel
                             Console.WriteLine("Deadlock detected. Cancelling test");
+                            publisher.ShutdownAsync(new CancellationToken(true));
                             subscriber.StopAsync(new ShutdownOptions(), new CancellationToken(true));
+                            watchdogTrippedTcs.TrySetResult(true);
                             watchdogCts.Cancel();
                             break;
                         }
@@ -213,46 +216,74 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 }
             });
 
-            for (int i = 0; i < messageCount; i++)
+            try
             {
-                if (watchdogCts.IsCancellationRequested)
+                for (int i = 0; i < messageCount; i++)
                 {
-                    Assert.Fail("Test cancelled by watchdog");
+                    if (watchdogCts.IsCancellationRequested)
+                    {
+                        Assert.Fail("Test cancelled by watchdog");
+                    }
+                    if (subTask.IsCompleted)
+                    {
+                        break;
+                    }
+                    if (i > 0 && interPublishDelay is TimeSpan delay)
+                    {
+                        await Task.Delay(delay, watchdogCts.Token);
+                    }
+                    var msgSize = rnd.Next(minMessageSize, maxMessageSize + 1);
+                    var msg = new byte[msgSize];
+                    rnd.NextBytes(msg);
+                    // Insert an int ID into message
+                    Array.Copy(BitConverter.GetBytes(i), msg, 4);
+                    sentSum += msg.Sum(x => (long)x);
+                    // Send message, and record Task
+                    var pubTask = publisher.PublishAsync(msg);
+                    Interlocked.Increment(ref sentCount);
+                    activePubs.Locked(() => activePubs.Add(pubTask));
+                    // Remove Task from active when the message has been sent to server
+                    pubTask.ContinueWith(t => activePubs.Locked(() => activePubs.Remove(pubTask)));
+                    // If too many messages are currently in flight, wait a bit
+                    while (activePubs.Locked(() => activePubs.Count) >= maxMessagesInFlight)
+                    {
+                        await Task.Delay(TimeSpan.FromMilliseconds(1), watchdogCts.Token);
+                    }
                 }
-                if (subTask.IsCompleted)
+                Console.WriteLine("Publishing complete");
+                // Wait for all messages to be sent to server
+                var allPubsTask = Task.WhenAll(activePubs.Locked(() => activePubs.ToArray()));
+                if (await Task.WhenAny(allPubsTask, watchdogTrippedTcs.Task) != allPubsTask)
                 {
-                    break;
+                    Assert.Fail("Test cancelled by watchdog while waiting for publishing to complete");
                 }
-                if (i > 0 && interPublishDelay is TimeSpan delay)
+                await allPubsTask;
+                Console.WriteLine("Publishing completed sending to server");
+
+                // Wait for subscriber to finish shutdown
+                if (await Task.WhenAny(subTask, watchdogTrippedTcs.Task) != subTask)
                 {
-                    await Task.Delay(delay, watchdogCts.Token);
+                    Assert.Fail("Test cancelled by watchdog while waiting for subscriber to complete");
                 }
-                var msgSize = rnd.Next(minMessageSize, maxMessageSize + 1);
-                var msg = new byte[msgSize];
-                rnd.NextBytes(msg);
-                // Insert an int ID into message
-                Array.Copy(BitConverter.GetBytes(i), msg, 4);
-                sentSum += msg.Sum(x => (long)x);
-                // Send message, and record Task
-                var pubTask = publisher.PublishAsync(msg);
-                Interlocked.Increment(ref sentCount);
-                activePubs.Locked(() => activePubs.Add(pubTask));
-                // Remove Task from active when the message has been sent to server
-                pubTask.ContinueWith(t => activePubs.Locked(() => activePubs.Remove(pubTask)));
-                // If too many messages are currently in flight, wait a bit
-                while (activePubs.Locked(() => activePubs.Count) >= maxMessagesInFlight)
+                await subTask;
+            }
+            catch (OperationCanceledException) when (watchdogTrippedTcs.Task.IsCompleted)
+            {
+                Assert.Fail("Test cancelled by watchdog");
+            }
+            finally
+            {
+                watchdogCts.Cancel();
+                if (watchdogTrippedTcs.Task.IsCompleted)
                 {
-                    await Task.Delay(TimeSpan.FromMilliseconds(1));
+                    // Bound channel teardown so a wedged publisher cannot hang the test runner after watchdog abort.
+                    await Task.WhenAny(publisher.ShutdownAsync(new CancellationToken(true)), Task.Delay(TimeSpan.FromSeconds(5)));
+                }
+                else
+                {
+                    await publisher.ShutdownAsync(TimeSpan.FromSeconds(15));
                 }
             }
-            Console.WriteLine("Publishing complete");
-            // Wait for all messages to be sent to server
-            await Task.WhenAll(activePubs.Locked(() => activePubs.ToArray()));
-            Console.WriteLine("Publishing completed sending to server");
-
-            // Wait for subscriber to finish shutdown
-            await subTask;
-            watchdogCts.Cancel();
             Console.WriteLine("Subscriber finished shutdown");
             Console.WriteLine($"Sent: {sentCount}; Recv: {recvCount}");
 
