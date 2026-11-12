@@ -7644,6 +7644,325 @@
       ]
     },
     {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateWorkspaceLongRunning_sync",
+      "title": "CreateWorkspaceLongRunningRequestObject",
+      "description": "Snippet for CreateWorkspaceLongRunning",
+      "file": "DataformClient.CreateWorkspaceLongRunningRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkspaceLongRunning",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateWorkspaceLongRunning",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CreateWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataform.V1Beta1.Workspace, Google.Cloud.Dataform.V1Beta1.CreateWorkspaceMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateWorkspaceLongRunning",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateWorkspaceLongRunning",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateWorkspaceLongRunning_async",
+      "title": "CreateWorkspaceLongRunningRequestObjectAsync",
+      "description": "Snippet for CreateWorkspaceLongRunningAsync",
+      "file": "DataformClient.CreateWorkspaceLongRunningRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkspaceLongRunningAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateWorkspaceLongRunningAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CreateWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataform.V1Beta1.Workspace, Google.Cloud.Dataform.V1Beta1.CreateWorkspaceMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateWorkspaceLongRunning",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateWorkspaceLongRunning",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateWorkspaceLongRunning_sync_flattened",
+      "title": "CreateWorkspaceLongRunning",
+      "description": "Snippet for CreateWorkspaceLongRunning",
+      "file": "DataformClient.CreateWorkspaceLongRunningSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkspaceLongRunning",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateWorkspaceLongRunning",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Workspace",
+            "name": "workspace"
+          },
+          {
+            "type": "System.String",
+            "name": "workspaceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataform.V1Beta1.Workspace, Google.Cloud.Dataform.V1Beta1.CreateWorkspaceMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateWorkspaceLongRunning",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateWorkspaceLongRunning",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateWorkspaceLongRunning_async_flattened",
+      "title": "CreateWorkspaceLongRunningAsync",
+      "description": "Snippet for CreateWorkspaceLongRunningAsync",
+      "file": "DataformClient.CreateWorkspaceLongRunningAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkspaceLongRunningAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateWorkspaceLongRunningAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Workspace",
+            "name": "workspace"
+          },
+          {
+            "type": "System.String",
+            "name": "workspaceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataform.V1Beta1.Workspace, Google.Cloud.Dataform.V1Beta1.CreateWorkspaceMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateWorkspaceLongRunning",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateWorkspaceLongRunning",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateWorkspaceLongRunning_sync_flattened_resourceNames",
+      "title": "CreateWorkspaceLongRunningResourceNames",
+      "description": "Snippet for CreateWorkspaceLongRunning",
+      "file": "DataformClient.CreateWorkspaceLongRunningResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkspaceLongRunning",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateWorkspaceLongRunning",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Workspace",
+            "name": "workspace"
+          },
+          {
+            "type": "System.String",
+            "name": "workspaceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataform.V1Beta1.Workspace, Google.Cloud.Dataform.V1Beta1.CreateWorkspaceMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateWorkspaceLongRunning",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateWorkspaceLongRunning",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CreateWorkspaceLongRunning_async_flattened_resourceNames",
+      "title": "CreateWorkspaceLongRunningResourceNamesAsync",
+      "description": "Snippet for CreateWorkspaceLongRunningAsync",
+      "file": "DataformClient.CreateWorkspaceLongRunningResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkspaceLongRunningAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CreateWorkspaceLongRunningAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Workspace",
+            "name": "workspace"
+          },
+          {
+            "type": "System.String",
+            "name": "workspaceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataform.V1Beta1.Workspace, Google.Cloud.Dataform.V1Beta1.CreateWorkspaceMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CreateWorkspaceLongRunning",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CreateWorkspaceLongRunning",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dataform_v1beta1_generated_Dataform_DeleteWorkspace_sync",
       "title": "DeleteWorkspaceRequestObject",
       "description": "Snippet for DeleteWorkspace",

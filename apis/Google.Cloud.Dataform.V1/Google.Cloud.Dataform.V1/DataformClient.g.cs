@@ -84,6 +84,8 @@ namespace Google.Cloud.Dataform.V1
             ListWorkspacesSettings = existing.ListWorkspacesSettings;
             GetWorkspaceSettings = existing.GetWorkspaceSettings;
             CreateWorkspaceSettings = existing.CreateWorkspaceSettings;
+            CreateWorkspaceLongRunningSettings = existing.CreateWorkspaceLongRunningSettings;
+            CreateWorkspaceLongRunningOperationsSettings = existing.CreateWorkspaceLongRunningOperationsSettings.Clone();
             DeleteWorkspaceSettings = existing.DeleteWorkspaceSettings;
             InstallNpmPackagesSettings = existing.InstallNpmPackagesSettings;
             PullGitCommitsSettings = existing.PullGitCommitsSettings;
@@ -569,6 +571,36 @@ namespace Google.Cloud.Dataform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CreateWorkspaceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.CreateWorkspaceLongRunning</c> and <c>DataformClient.CreateWorkspaceLongRunningAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateWorkspaceLongRunningSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataformClient.CreateWorkspaceLongRunning</c> and
+        /// <c>DataformClient.CreateWorkspaceLongRunningAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateWorkspaceLongRunningOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -4650,6 +4682,194 @@ namespace Google.Cloud.Dataform.V1
             CreateWorkspaceAsync(parent, workspace, workspaceId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a new Workspace in a given Repository asynchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Workspace, CreateWorkspaceMetadata> CreateWorkspaceLongRunning(CreateWorkspaceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new Workspace in a given Repository asynchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Workspace, CreateWorkspaceMetadata>> CreateWorkspaceLongRunningAsync(CreateWorkspaceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new Workspace in a given Repository asynchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Workspace, CreateWorkspaceMetadata>> CreateWorkspaceLongRunningAsync(CreateWorkspaceRequest request, st::CancellationToken cancellationToken) =>
+            CreateWorkspaceLongRunningAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateWorkspaceLongRunning</c>.</summary>
+        public virtual lro::OperationsClient CreateWorkspaceLongRunningOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateWorkspaceLongRunning</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Workspace, CreateWorkspaceMetadata> PollOnceCreateWorkspaceLongRunning(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Workspace, CreateWorkspaceMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateWorkspaceLongRunningOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateWorkspaceLongRunning</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Workspace, CreateWorkspaceMetadata>> PollOnceCreateWorkspaceLongRunningAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Workspace, CreateWorkspaceMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateWorkspaceLongRunningOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new Workspace in a given Repository asynchronously.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the workspace. Must be in the
+        /// format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="workspace">
+        /// Required. The workspace to create.
+        /// </param>
+        /// <param name="workspaceId">
+        /// Required. The ID to use for the workspace, which will become the final
+        /// component of the workspace's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Workspace, CreateWorkspaceMetadata> CreateWorkspaceLongRunning(string parent, Workspace workspace, string workspaceId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWorkspaceLongRunning(new CreateWorkspaceRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Workspace = gax::GaxPreconditions.CheckNotNull(workspace, nameof(workspace)),
+                WorkspaceId = gax::GaxPreconditions.CheckNotNullOrEmpty(workspaceId, nameof(workspaceId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Workspace in a given Repository asynchronously.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the workspace. Must be in the
+        /// format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="workspace">
+        /// Required. The workspace to create.
+        /// </param>
+        /// <param name="workspaceId">
+        /// Required. The ID to use for the workspace, which will become the final
+        /// component of the workspace's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Workspace, CreateWorkspaceMetadata>> CreateWorkspaceLongRunningAsync(string parent, Workspace workspace, string workspaceId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWorkspaceLongRunningAsync(new CreateWorkspaceRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Workspace = gax::GaxPreconditions.CheckNotNull(workspace, nameof(workspace)),
+                WorkspaceId = gax::GaxPreconditions.CheckNotNullOrEmpty(workspaceId, nameof(workspaceId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Workspace in a given Repository asynchronously.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the workspace. Must be in the
+        /// format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="workspace">
+        /// Required. The workspace to create.
+        /// </param>
+        /// <param name="workspaceId">
+        /// Required. The ID to use for the workspace, which will become the final
+        /// component of the workspace's resource name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Workspace, CreateWorkspaceMetadata>> CreateWorkspaceLongRunningAsync(string parent, Workspace workspace, string workspaceId, st::CancellationToken cancellationToken) =>
+            CreateWorkspaceLongRunningAsync(parent, workspace, workspaceId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new Workspace in a given Repository asynchronously.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the workspace. Must be in the
+        /// format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="workspace">
+        /// Required. The workspace to create.
+        /// </param>
+        /// <param name="workspaceId">
+        /// Required. The ID to use for the workspace, which will become the final
+        /// component of the workspace's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Workspace, CreateWorkspaceMetadata> CreateWorkspaceLongRunning(RepositoryName parent, Workspace workspace, string workspaceId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWorkspaceLongRunning(new CreateWorkspaceRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Workspace = gax::GaxPreconditions.CheckNotNull(workspace, nameof(workspace)),
+                WorkspaceId = gax::GaxPreconditions.CheckNotNullOrEmpty(workspaceId, nameof(workspaceId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Workspace in a given Repository asynchronously.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the workspace. Must be in the
+        /// format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="workspace">
+        /// Required. The workspace to create.
+        /// </param>
+        /// <param name="workspaceId">
+        /// Required. The ID to use for the workspace, which will become the final
+        /// component of the workspace's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Workspace, CreateWorkspaceMetadata>> CreateWorkspaceLongRunningAsync(RepositoryName parent, Workspace workspace, string workspaceId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateWorkspaceLongRunningAsync(new CreateWorkspaceRequest
+            {
+                ParentAsRepositoryName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Workspace = gax::GaxPreconditions.CheckNotNull(workspace, nameof(workspace)),
+                WorkspaceId = gax::GaxPreconditions.CheckNotNullOrEmpty(workspaceId, nameof(workspaceId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Workspace in a given Repository asynchronously.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The repository in which to create the workspace. Must be in the
+        /// format `projects/*/locations/*/repositories/*`.
+        /// </param>
+        /// <param name="workspace">
+        /// Required. The workspace to create.
+        /// </param>
+        /// <param name="workspaceId">
+        /// Required. The ID to use for the workspace, which will become the final
+        /// component of the workspace's resource name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Workspace, CreateWorkspaceMetadata>> CreateWorkspaceLongRunningAsync(RepositoryName parent, Workspace workspace, string workspaceId, st::CancellationToken cancellationToken) =>
+            CreateWorkspaceLongRunningAsync(parent, workspace, workspaceId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes a single Workspace.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -8079,6 +8299,8 @@ namespace Google.Cloud.Dataform.V1
 
         private readonly gaxgrpc::ApiCall<CreateWorkspaceRequest, Workspace> _callCreateWorkspace;
 
+        private readonly gaxgrpc::ApiCall<CreateWorkspaceRequest, lro::Operation> _callCreateWorkspaceLongRunning;
+
         private readonly gaxgrpc::ApiCall<DeleteWorkspaceRequest, wkt::Empty> _callDeleteWorkspace;
 
         private readonly gaxgrpc::ApiCall<InstallNpmPackagesRequest, InstallNpmPackagesResponse> _callInstallNpmPackages;
@@ -8186,6 +8408,7 @@ namespace Google.Cloud.Dataform.V1
             DeleteFolderTreeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFolderTreeOperationsSettings, logger);
             MoveFolderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MoveFolderOperationsSettings, logger);
             MoveRepositoryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MoveRepositoryOperationsSettings, logger);
+            CreateWorkspaceLongRunningOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateWorkspaceLongRunningOperationsSettings, logger);
             CreateCompilationResultLongRunningOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCompilationResultLongRunningOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
@@ -8279,6 +8502,9 @@ namespace Google.Cloud.Dataform.V1
             _callCreateWorkspace = clientHelper.BuildApiCall<CreateWorkspaceRequest, Workspace>("CreateWorkspace", grpcClient.CreateWorkspaceAsync, grpcClient.CreateWorkspace, effectiveSettings.CreateWorkspaceSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateWorkspace);
             Modify_CreateWorkspaceApiCall(ref _callCreateWorkspace);
+            _callCreateWorkspaceLongRunning = clientHelper.BuildApiCall<CreateWorkspaceRequest, lro::Operation>("CreateWorkspaceLongRunning", grpcClient.CreateWorkspaceLongRunningAsync, grpcClient.CreateWorkspaceLongRunning, effectiveSettings.CreateWorkspaceLongRunningSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateWorkspaceLongRunning);
+            Modify_CreateWorkspaceLongRunningApiCall(ref _callCreateWorkspaceLongRunning);
             _callDeleteWorkspace = clientHelper.BuildApiCall<DeleteWorkspaceRequest, wkt::Empty>("DeleteWorkspace", grpcClient.DeleteWorkspaceAsync, grpcClient.DeleteWorkspace, effectiveSettings.DeleteWorkspaceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteWorkspace);
             Modify_DeleteWorkspaceApiCall(ref _callDeleteWorkspace);
@@ -8475,6 +8701,8 @@ namespace Google.Cloud.Dataform.V1
         partial void Modify_GetWorkspaceApiCall(ref gaxgrpc::ApiCall<GetWorkspaceRequest, Workspace> call);
 
         partial void Modify_CreateWorkspaceApiCall(ref gaxgrpc::ApiCall<CreateWorkspaceRequest, Workspace> call);
+
+        partial void Modify_CreateWorkspaceLongRunningApiCall(ref gaxgrpc::ApiCall<CreateWorkspaceRequest, lro::Operation> call);
 
         partial void Modify_DeleteWorkspaceApiCall(ref gaxgrpc::ApiCall<DeleteWorkspaceRequest, wkt::Empty> call);
 
@@ -9506,6 +9734,33 @@ namespace Google.Cloud.Dataform.V1
         {
             Modify_CreateWorkspaceRequest(ref request, ref callSettings);
             return _callCreateWorkspace.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateWorkspaceLongRunning</c>.</summary>
+        public override lro::OperationsClient CreateWorkspaceLongRunningOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new Workspace in a given Repository asynchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Workspace, CreateWorkspaceMetadata> CreateWorkspaceLongRunning(CreateWorkspaceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateWorkspaceRequest(ref request, ref callSettings);
+            return new lro::Operation<Workspace, CreateWorkspaceMetadata>(_callCreateWorkspaceLongRunning.Sync(request, callSettings), CreateWorkspaceLongRunningOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new Workspace in a given Repository asynchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Workspace, CreateWorkspaceMetadata>> CreateWorkspaceLongRunningAsync(CreateWorkspaceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateWorkspaceRequest(ref request, ref callSettings);
+            return new lro::Operation<Workspace, CreateWorkspaceMetadata>(await _callCreateWorkspaceLongRunning.Async(request, callSettings).ConfigureAwait(false), CreateWorkspaceLongRunningOperationsClient);
         }
 
         /// <summary>
