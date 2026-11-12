@@ -4013,6 +4013,201 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateWorkspaceLongRunning</summary>
+        public void CreateWorkspaceLongRunningRequestObject()
+        {
+            // Snippet: CreateWorkspaceLongRunning(CreateWorkspaceRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::CreateWorkspaceRequest request = new gcdv::CreateWorkspaceRequest
+            {
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                Workspace = new gcdv::Workspace(),
+                WorkspaceId = "",
+            };
+            // Make the request
+            Operation<gcdv::Workspace, gcdv::CreateWorkspaceMetadata> response = dataformClient.CreateWorkspaceLongRunning(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::Workspace, gcdv::CreateWorkspaceMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdv::Workspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::Workspace, gcdv::CreateWorkspaceMetadata> retrievedResponse = dataformClient.PollOnceCreateWorkspaceLongRunning(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::Workspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWorkspaceLongRunningAsync</summary>
+        public async Task CreateWorkspaceLongRunningRequestObjectAsync()
+        {
+            // Snippet: CreateWorkspaceLongRunningAsync(CreateWorkspaceRequest, CallSettings)
+            // Additional: CreateWorkspaceLongRunningAsync(CreateWorkspaceRequest, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::CreateWorkspaceRequest request = new gcdv::CreateWorkspaceRequest
+            {
+                ParentAsRepositoryName = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                Workspace = new gcdv::Workspace(),
+                WorkspaceId = "",
+            };
+            // Make the request
+            Operation<gcdv::Workspace, gcdv::CreateWorkspaceMetadata> response = await dataformClient.CreateWorkspaceLongRunningAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::Workspace, gcdv::CreateWorkspaceMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdv::Workspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::Workspace, gcdv::CreateWorkspaceMetadata> retrievedResponse = await dataformClient.PollOnceCreateWorkspaceLongRunningAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::Workspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWorkspaceLongRunning</summary>
+        public void CreateWorkspaceLongRunning()
+        {
+            // Snippet: CreateWorkspaceLongRunning(string, Workspace, string, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            gcdv::Workspace workspace = new gcdv::Workspace();
+            string workspaceId = "";
+            // Make the request
+            Operation<gcdv::Workspace, gcdv::CreateWorkspaceMetadata> response = dataformClient.CreateWorkspaceLongRunning(parent, workspace, workspaceId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::Workspace, gcdv::CreateWorkspaceMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdv::Workspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::Workspace, gcdv::CreateWorkspaceMetadata> retrievedResponse = dataformClient.PollOnceCreateWorkspaceLongRunning(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::Workspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWorkspaceLongRunningAsync</summary>
+        public async Task CreateWorkspaceLongRunningAsync()
+        {
+            // Snippet: CreateWorkspaceLongRunningAsync(string, Workspace, string, CallSettings)
+            // Additional: CreateWorkspaceLongRunningAsync(string, Workspace, string, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            gcdv::Workspace workspace = new gcdv::Workspace();
+            string workspaceId = "";
+            // Make the request
+            Operation<gcdv::Workspace, gcdv::CreateWorkspaceMetadata> response = await dataformClient.CreateWorkspaceLongRunningAsync(parent, workspace, workspaceId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::Workspace, gcdv::CreateWorkspaceMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdv::Workspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::Workspace, gcdv::CreateWorkspaceMetadata> retrievedResponse = await dataformClient.PollOnceCreateWorkspaceLongRunningAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::Workspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWorkspaceLongRunning</summary>
+        public void CreateWorkspaceLongRunningResourceNames()
+        {
+            // Snippet: CreateWorkspaceLongRunning(RepositoryName, Workspace, string, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::Workspace workspace = new gcdv::Workspace();
+            string workspaceId = "";
+            // Make the request
+            Operation<gcdv::Workspace, gcdv::CreateWorkspaceMetadata> response = dataformClient.CreateWorkspaceLongRunning(parent, workspace, workspaceId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::Workspace, gcdv::CreateWorkspaceMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdv::Workspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::Workspace, gcdv::CreateWorkspaceMetadata> retrievedResponse = dataformClient.PollOnceCreateWorkspaceLongRunning(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::Workspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateWorkspaceLongRunningAsync</summary>
+        public async Task CreateWorkspaceLongRunningResourceNamesAsync()
+        {
+            // Snippet: CreateWorkspaceLongRunningAsync(RepositoryName, Workspace, string, CallSettings)
+            // Additional: CreateWorkspaceLongRunningAsync(RepositoryName, Workspace, string, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::RepositoryName parent = gcdv::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcdv::Workspace workspace = new gcdv::Workspace();
+            string workspaceId = "";
+            // Make the request
+            Operation<gcdv::Workspace, gcdv::CreateWorkspaceMetadata> response = await dataformClient.CreateWorkspaceLongRunningAsync(parent, workspace, workspaceId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdv::Workspace, gcdv::CreateWorkspaceMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdv::Workspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdv::Workspace, gcdv::CreateWorkspaceMetadata> retrievedResponse = await dataformClient.PollOnceCreateWorkspaceLongRunningAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdv::Workspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteWorkspace</summary>
         public void DeleteWorkspaceRequestObject()
         {

@@ -582,6 +582,14 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         __Marshaller_google_cloud_dataform_v1beta1_Workspace);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.CreateWorkspaceRequest, global::Google.LongRunning.Operation> __Method_CreateWorkspaceLongRunning = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.CreateWorkspaceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateWorkspaceLongRunning",
+        __Marshaller_google_cloud_dataform_v1beta1_CreateWorkspaceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.DeleteWorkspaceRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteWorkspace = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.DeleteWorkspaceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -1376,6 +1384,18 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataform.V1Beta1.Workspace> CreateWorkspace(global::Google.Cloud.Dataform.V1Beta1.CreateWorkspaceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new Workspace in a given Repository asynchronously.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateWorkspaceLongRunning(global::Google.Cloud.Dataform.V1Beta1.CreateWorkspaceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -3592,6 +3612,54 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.Workspace> CreateWorkspaceAsync(global::Google.Cloud.Dataform.V1Beta1.CreateWorkspaceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateWorkspace, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new Workspace in a given Repository asynchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateWorkspaceLongRunning(global::Google.Cloud.Dataform.V1Beta1.CreateWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateWorkspaceLongRunning(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new Workspace in a given Repository asynchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateWorkspaceLongRunning(global::Google.Cloud.Dataform.V1Beta1.CreateWorkspaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateWorkspaceLongRunning, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new Workspace in a given Repository asynchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateWorkspaceLongRunningAsync(global::Google.Cloud.Dataform.V1Beta1.CreateWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateWorkspaceLongRunningAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new Workspace in a given Repository asynchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateWorkspaceLongRunningAsync(global::Google.Cloud.Dataform.V1Beta1.CreateWorkspaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateWorkspaceLongRunning, null, options, request);
       }
       /// <summary>
       /// Deletes a single Workspace.
@@ -6150,6 +6218,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
           .AddMethod(__Method_ListWorkspaces, serviceImpl.ListWorkspaces)
           .AddMethod(__Method_GetWorkspace, serviceImpl.GetWorkspace)
           .AddMethod(__Method_CreateWorkspace, serviceImpl.CreateWorkspace)
+          .AddMethod(__Method_CreateWorkspaceLongRunning, serviceImpl.CreateWorkspaceLongRunning)
           .AddMethod(__Method_DeleteWorkspace, serviceImpl.DeleteWorkspace)
           .AddMethod(__Method_InstallNpmPackages, serviceImpl.InstallNpmPackages)
           .AddMethod(__Method_PullGitCommits, serviceImpl.PullGitCommits)
@@ -6240,6 +6309,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       serviceBinder.AddMethod(__Method_ListWorkspaces, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.ListWorkspacesRequest, global::Google.Cloud.Dataform.V1Beta1.ListWorkspacesResponse>(serviceImpl.ListWorkspaces));
       serviceBinder.AddMethod(__Method_GetWorkspace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.GetWorkspaceRequest, global::Google.Cloud.Dataform.V1Beta1.Workspace>(serviceImpl.GetWorkspace));
       serviceBinder.AddMethod(__Method_CreateWorkspace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.CreateWorkspaceRequest, global::Google.Cloud.Dataform.V1Beta1.Workspace>(serviceImpl.CreateWorkspace));
+      serviceBinder.AddMethod(__Method_CreateWorkspaceLongRunning, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.CreateWorkspaceRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateWorkspaceLongRunning));
       serviceBinder.AddMethod(__Method_DeleteWorkspace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.DeleteWorkspaceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteWorkspace));
       serviceBinder.AddMethod(__Method_InstallNpmPackages, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.InstallNpmPackagesRequest, global::Google.Cloud.Dataform.V1Beta1.InstallNpmPackagesResponse>(serviceImpl.InstallNpmPackages));
       serviceBinder.AddMethod(__Method_PullGitCommits, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest, global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsResponse>(serviceImpl.PullGitCommits));

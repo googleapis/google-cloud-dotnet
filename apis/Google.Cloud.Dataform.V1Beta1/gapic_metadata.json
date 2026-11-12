@@ -94,6 +94,12 @@
                 "CreateWorkspaceAsync"
               ]
             },
+            "CreateWorkspaceLongRunning": {
+              "methods": [
+                "CreateWorkspaceLongRunning",
+                "CreateWorkspaceLongRunningAsync"
+              ]
+            },
             "DeleteBranch": {
               "methods": [
                 "DeleteBranch",
