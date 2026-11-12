@@ -70,7 +70,7 @@ namespace Google.Cloud.Datastore.V1
 
         /// <inheritdoc />
         public IEnumerator<Entity> GetEnumerator() =>
-            _responses.SelectMany(r => r.Batch.EntityResults.Select(er => er.Entity)).GetEnumerator();
+            _responses.SelectMany(r => r.Batch?.EntityResults.Select(er => er.Entity) ?? Enumerable.Empty<Entity>()).GetEnumerator();
 
         /// <summary>
         /// This method is for advanced use cases only, where more diagnostic information is required;
