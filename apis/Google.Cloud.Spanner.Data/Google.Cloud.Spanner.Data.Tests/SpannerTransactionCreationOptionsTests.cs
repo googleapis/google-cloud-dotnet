@@ -56,6 +56,7 @@ public class SpannerTransactionCreationOptionsTests
 
         Assert.Null(readWrite.TimestampBound);
         Assert.Null(readWrite.TransactionId);
+        Assert.Null(readWrite.EffectiveTimestampBound);
         Assert.Equal(TransactionMode.ReadWrite, readWrite.TransactionMode);
         Assert.False(readWrite.IsDetached);
         Assert.False(readWrite.IsSingleUse);
@@ -73,6 +74,7 @@ public class SpannerTransactionCreationOptionsTests
 
         Assert.Null(partitionedDml.TimestampBound);
         Assert.Null(partitionedDml.TransactionId);
+        Assert.Null(partitionedDml.EffectiveTimestampBound);
         Assert.Equal(TransactionMode.ReadWrite, partitionedDml.TransactionMode);
         Assert.False(partitionedDml.IsDetached);
         Assert.False(partitionedDml.IsSingleUse);
@@ -90,6 +92,7 @@ public class SpannerTransactionCreationOptionsTests
 
         Assert.Equal(TimestampBound.Strong, readOnly.TimestampBound);
         Assert.Null(readOnly.TransactionId);
+        Assert.Equal(TimestampBound.Strong, readOnly.EffectiveTimestampBound);
         Assert.Equal(TransactionMode.ReadOnly, readOnly.TransactionMode);
         Assert.False(readOnly.IsDetached);
         Assert.False(readOnly.IsSingleUse);
@@ -106,6 +109,7 @@ public class SpannerTransactionCreationOptionsTests
         var options = SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(null);
         Assert.Equal(TimestampBound.Strong, options.TimestampBound);
         Assert.Null(options.TransactionId);
+        Assert.Equal(TimestampBound.Strong, options.EffectiveTimestampBound);
         Assert.Equal(TransactionMode.ReadOnly, options.TransactionMode);
         Assert.False(options.IsDetached);
         Assert.False(options.IsSingleUse);
@@ -123,6 +127,7 @@ public class SpannerTransactionCreationOptionsTests
         var options = SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(timestampBound);
         Assert.Equal(timestampBound, options.TimestampBound);
         Assert.Null(options.TransactionId);
+        Assert.Equal(timestampBound, options.EffectiveTimestampBound);
         Assert.Equal(TransactionMode.ReadOnly, options.TransactionMode);
         Assert.False(options.IsDetached);
         Assert.True(options.IsSingleUse);
@@ -145,13 +150,14 @@ public class SpannerTransactionCreationOptionsTests
         var options = SpannerTransactionCreationOptions.FromReadOnlyTransactionId(transactionId);
         Assert.Equal(transactionId, options.TransactionId);
         Assert.Null(options.TimestampBound);
+        Assert.Equal(TimestampBound.Strong, options.EffectiveTimestampBound);
         Assert.Equal(TransactionMode.ReadOnly, options.TransactionMode);
         Assert.True(options.IsDetached);
         Assert.False(options.IsSingleUse);
         Assert.False(options.IsPartitionedDml);
         Assert.False(options.ExcludeFromChangeStreams);
         Assert.Equal(IsolationLevel.Unspecified, options.IsolationLevel);
-        Assert.Null(options.GetTransactionOptions());
+        Assert.Equal(TimestampBound.Strong.ToTransactionOptions(), options.GetTransactionOptions());
         Assert.Equal(ReadLockMode.Unspecified, options.ReadLockMode);
     }
 

@@ -129,8 +129,10 @@ public sealed class ManagedTransaction : IAsyncDisposable
     // These are internal properties that are only needed while we support the session pool.
     // Marking as deprecated from the start so we remove then on the next major version.
 
-    [Obsolete("Used by session pool only.")]
-    internal bool Shared => _shared;
+    /// <summary>
+    /// Whether this transaction is shared or not.
+    /// </summary>
+    public bool Shared => _shared;
 
     private ManagedTransaction(
         SpannerClient client, TimeSpan? transactionOperationsTimeout,
