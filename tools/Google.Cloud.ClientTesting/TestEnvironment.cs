@@ -29,6 +29,8 @@ namespace Google.Cloud.ClientTesting
         public const string ProjectLocationEnvironmentVariable = "TEST_PROJECT_LOCATION";
         public const string GoogleApplicationCredentialsEnvironmentVariable = "GOOGLE_APPLICATION_CREDENTIALS";
         public const string GoogleCloudTestsInVpcScEnvironmentVariable = "GOOGLE_CLOUD_TESTS_IN_VPCSC";
+        public const string GoogleCloudTestsInCiEnvironmentVariable = "GOOGLE_CLOUD_TESTS_IN_CI";
+        public const string GoogleCloudTestsInLibrarianEnvironmentVariable = "GOOGLE_CLOUD_TESTS_IN_LIBRARIAN";
 
         /// <summary>
         /// Returns the project ID to use for testing.
@@ -78,6 +80,24 @@ namespace Google.Cloud.ClientTesting
         public static bool IsRestrictedEnvironment() => string.IsNullOrEmpty(Environment.GetEnvironmentVariable(GoogleApplicationCredentialsEnvironmentVariable));
 
         /// <summary>
+        /// Returns true if the tests are running in a CI environment
+        /// (detected by the presence of the GOOGLE_CLOUD_TESTS_IN_CI environment variable).
+        /// </summary>
+        public static bool IsCiEnvironment() => IsEnvironmentVariableSet(GoogleCloudTestsInCiEnvironmentVariable);
+
+        /// <summary>
+        /// Returns true if the tests are running in a Librarian environment
+        /// (detected by the presence of the GOOGLE_CLOUD_TESTS_IN_LIBRARIAN environment variable).
+        /// </summary>
+        public static bool IsLibrarianEnvironment() => IsEnvironmentVariableSet(GoogleCloudTestsInLibrarianEnvironmentVariable);
+
+        /// <summary>
+        /// Returns true if the tests are running in a local environment
+        /// (detected by the absence of both the CI and Librarian environment variables).
+        /// </summary>
+        public static bool IsLocalEnvironment() => !IsCiEnvironment() && !IsLibrarianEnvironment();
+
+        /// <summary>
         /// Throws a <see cref="SkipException"/> if the tests are running in a VPC-SC constrained environment.
         /// Note that tests can be skipped in this situation even if the MUST_NOT_SKIP_TESTS environment variable is set.
         /// </summary>
@@ -101,6 +121,45 @@ namespace Google.Cloud.ClientTesting
                 throw new SkipException("Test skipped in restricted environment");
             }
         }
+
+        /// <summary>
+        /// Throws a <see cref="SkipException"/> if the tests are running in a CI environment.
+        /// Note that tests can be skipped in this situation even if the MUST_NOT_SKIP_TESTS environment variable is set.
+        /// </summary>
+        public static void SkipOnCiEnvironment()
+        {
+            if (IsCiEnvironment())
+            {
+                throw new SkipException("Test skipped in CI environment");
+            }
+        }
+
+        /// <summary>
+        /// Throws a <see cref="SkipException"/> if the tests are running in a Librarian environment.
+        /// Note that tests can be skipped in this situation even if the MUST_NOT_SKIP_TESTS environment variable is set.
+        /// </summary>
+        public static void SkipOnLibrarianEnvironment()
+        {
+            if (IsLibrarianEnvironment())
+            {
+                throw new SkipException("Test skipped in Librarian environment");
+            }
+        }
+
+        /// <summary>
+        /// Throws a <see cref="SkipException"/> if the tests are running in a local environment.
+        /// Note that tests can be skipped in this situation even if the MUST_NOT_SKIP_TESTS environment variable is set.
+        /// </summary>
+        public static void SkipOnLocalEnvironment()
+        {
+            if (IsLocalEnvironment())
+            {
+                throw new SkipException("Test skipped in local environment");
+            }
+        }
+
+        private static bool IsEnvironmentVariableSet(string variable) =>
+            !string.IsNullOrEmpty(Environment.GetEnvironmentVariable(variable));
 
         /// <summary>
         /// Finds the conformance-tests directory, throwing an exception if it's not present.
