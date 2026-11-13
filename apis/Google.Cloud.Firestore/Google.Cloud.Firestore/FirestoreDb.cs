@@ -448,7 +448,7 @@ namespace Google.Cloud.Firestore
                     // If the transaction has expired, don't roll back, but do retry.
                     case StatusCode.InvalidArgument when e.Message?.IndexOf("transaction has expired", StringComparison.Ordinal) >= 0:
                         rollback = false;
-                        return true;
+                        return attemptsLeft > 0;
                     default:
                         return false;
                 }
