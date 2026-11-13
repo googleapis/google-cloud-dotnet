@@ -169,6 +169,24 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(actualAttempts, client.RollbackRequests.Count);
         }
 
+        [Theory]
+        [InlineData(null)]
+        [InlineData(2)]
+        public async Task RunTransactionAsync_TooManyRetries_ExpiredTransaction(int? userSpecifiedAttempts)
+        {
+            int actualAttempts = userSpecifiedAttempts ?? TransactionOptions.Default.MaxAttempts;
+            var options = userSpecifiedAttempts == null ? null : TransactionOptions.ForMaxAttempts(userSpecifiedAttempts.Value);
+
+            var client = new TransactionTestingClient(actualAttempts, CreateRpcException(StatusCode.InvalidArgument, "The referenced transaction has expired or is no longer valid."));
+            var db = FirestoreDb.Create("proj", "db", client);
+            var exception = await Assert.ThrowsAsync<RpcException>(() => db.RunTransactionAsync(CreateCountingCallback(), options));
+            Assert.Equal(StatusCode.InvalidArgument, exception.Status.StatusCode);
+            Assert.Contains("The referenced transaction has expired or is no longer valid.", exception.Message);
+            // We should have as many attempts as we were allowed, and none should be rolled back by us.
+            Assert.Equal(actualAttempts, client.CommitRequests.Count);
+            Assert.Empty(client.RollbackRequests);
+        }
+
         [Fact]
         public async Task RunTransactionAsync_CustomRetrySettings()
         {
