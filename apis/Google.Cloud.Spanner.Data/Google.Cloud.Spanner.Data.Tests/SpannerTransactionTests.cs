@@ -16,6 +16,7 @@ using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Cloud.Spanner.V1.Tests;
 using System;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Spanner.Data.Tests;
@@ -45,6 +46,54 @@ public class SpannerTransactionTests
         SpannerTransaction transaction = connection.BeginTransaction();
 
         Assert.Null(transaction.TransactionOptions.MaxCommitDelay);
+    }
+
+    [Fact]
+    public void Connection_IsNullAfterDispose()
+    {
+        SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+        spannerClientMock.SetupCreateSessionAsync();
+        SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
+        SpannerTransaction transaction = connection.BeginTransaction();
+
+        Assert.Same(connection, transaction.Connection);
+
+        transaction.Dispose();
+
+        Assert.Null(transaction.Connection);
+    }
+
+    [Fact]
+    public async Task Connection_IsNullAfterCommit()
+    {
+        SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+        spannerClientMock.SetupCreateSessionAsync().SetupExecuteStreamingSql().SetupCommitAsync();
+        SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
+        SpannerTransaction transaction = connection.BeginTransaction();
+
+        using (var command = connection.CreateSelectCommand("SELECT 1"))
+        {
+            command.Transaction = transaction;
+            using var reader = await command.ExecuteReaderAsync();
+            Assert.True(reader.HasRows);
+        }
+
+        await transaction.CommitAsync();
+
+        Assert.Null(transaction.Connection);
+    }
+
+    [Fact]
+    public async Task Connection_IsNullAfterRollback()
+    {
+        SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+        spannerClientMock.SetupCreateSessionAsync().SetupRollbackAsync();
+        SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
+        SpannerTransaction transaction = connection.BeginTransaction();
+
+        await transaction.RollbackAsync();
+
+        Assert.Null(transaction.Connection);
     }
 
     [Theory, MemberData(nameof(ValidMaxCommitDelayValues))]
