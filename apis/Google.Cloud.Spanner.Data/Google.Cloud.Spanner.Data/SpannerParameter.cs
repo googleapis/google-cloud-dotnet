@@ -32,6 +32,7 @@ namespace Google.Cloud.Spanner.Data
         public static object CommitTimestamp => Data.CommitTimestamp.Instance;
 
         private SpannerDbType _spannerDbType;
+        private string _parameterName = string.Empty;
 
         internal const string PayloadParameterName = "payload";
 
@@ -65,7 +66,11 @@ namespace Google.Cloud.Spanner.Data
         public override bool IsNullable { get; set; } = true;
 
         /// <inheritdoc />
-        public override string ParameterName { get; set; }
+        public override string ParameterName
+        {
+            get => _parameterName;
+            set => _parameterName = value ?? string.Empty;
+        }
 
         /// <inheritdoc />
         public override int Size
