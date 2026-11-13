@@ -935,6 +935,30 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public void ExecuteNonQuery_SelectReturnsMinusOne()
+        {
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock.SetupCreateSessionAsync().SetupExecuteStreamingSql();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateSelectCommand("SELECT 1");
+
+            Assert.Equal(-1, command.ExecuteNonQuery());
+        }
+
+        [Fact]
+        public async Task ExecuteNonQueryAsync_SelectReturnsMinusOne()
+        {
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock.SetupCreateSessionAsync().SetupExecuteStreamingSql();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateSelectCommand("SELECT 1");
+
+            Assert.Equal(-1, await command.ExecuteNonQueryAsync());
+        }
+
+        [Fact]
         public async Task MaxCommitDelay_DefaultsToNull_ImplicitTransaction()
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
