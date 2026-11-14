@@ -19,6 +19,7 @@ using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 using TypeCode = Google.Cloud.Spanner.V1.TypeCode;
 
@@ -130,6 +131,39 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Throws<ArgumentException>(() => reader.GetBytes(0, 0L, null, 0, 0));
         }
 
+        [Fact]
+        public async Task GetOrdinal_CaseInsensitiveFallback()
+        {
+            var reader = CreateSpannerDataReader(
+                new[] { CreateResultSet(new[] { Value.ForString("value") }) },
+                CreateMetadata("id"));
+
+            Assert.Equal(0, reader.GetOrdinal("Id"));
+            Assert.Equal(0, await reader.GetOrdinalAsync("ID"));
+        }
+
+        [Fact]
+        public void GetOrdinal_ExactCaseMatchPrecedesFallback()
+        {
+            var reader = CreateSpannerDataReader(
+                new[] { CreateResultSet(new[] { Value.ForString("lower"), Value.ForString("upper") }) },
+                CreateMetadata("id", "ID"));
+
+            Assert.Equal(1, reader.GetOrdinal("ID"));
+            Assert.Equal(0, reader.GetOrdinal("Id"));
+        }
+
+        [Fact]
+        public async Task GetOrdinal_UnknownColumnThrowsIndexOutOfRangeException()
+        {
+            var reader = CreateSpannerDataReader(
+                new[] { CreateResultSet(new[] { Value.ForString("value") }) },
+                CreateMetadata("id"));
+
+            Assert.Throws<IndexOutOfRangeException>(() => reader.GetOrdinal("missing"));
+            await Assert.ThrowsAsync<IndexOutOfRangeException>(() => reader.GetOrdinalAsync("missing"));
+        }
+
         private static SpannerDataReader CreateTestReader(byte[] bytes)
         {
             var results = new []
@@ -175,5 +209,22 @@ namespace Google.Cloud.Spanner.Data.Tests
                     }
                 }
             };
+
+        private static ResultSetMetadata CreateMetadata(params string[] fieldNames) =>
+            new ResultSetMetadata
+            {
+                RowType = new StructType
+                {
+                    Fields =
+                    {
+                        fieldNames.Select(name => new StructType.Types.Field
+                        {
+                            Name = name,
+                            Type = new V1.Type { Code = TypeCode.String }
+                        })
+                    }
+                }
+            };
+
     }
 }
