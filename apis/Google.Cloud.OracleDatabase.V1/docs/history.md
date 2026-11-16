@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.10.0, released 2026-11-16
+
+### New features
+
+- Add Workload Identity Connector, DatabaseConnection, ExecuteSql, FlexComponent, DbSystemComputePerformance and Update RPCs to the Oracle Database v1 API
+
+### Documentation improvements
+
+- Update field comments to note immutable and input-only fields on Oracle Database v1 resources and Update requests
+
 ## Version 1.9.0, released 2026-10-27
 
 ### New features
