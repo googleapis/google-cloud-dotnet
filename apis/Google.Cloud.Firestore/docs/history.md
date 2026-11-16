@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.7.0, released 2026-11-16
+
+### Bug fixes
+
+- Enforce maximum retry attempts on expired transactions
+
 ## Version 4.6.0, released 2026-10-26
 
 ### New features
