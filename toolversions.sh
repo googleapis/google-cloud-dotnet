@@ -13,7 +13,7 @@ declare -r PROTOC_VERSION=3.31.0
 declare -r GRPC_VERSION=2.60.0
 if [[ $GAPIC_GENERATOR_VERSION == "" ]]
 then
-  declare -r GAPIC_GENERATOR_VERSION=v1.4.36
+  declare -r GAPIC_GENERATOR_VERSION=v1.4.41
 else
   echo "Using GAPIC generator override: ${GAPIC_GENERATOR_VERSION}"
 fi
