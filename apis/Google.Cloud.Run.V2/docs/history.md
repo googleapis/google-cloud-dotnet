@@ -1,5 +1,28 @@
 # Version history
 
+## Version 2.21.0, released 2026-11-16
+
+### New features
+
+- Add ambient_networking to Service
+- Add workload_identity_config to Service and Jobs to support Agent Identity
+- Add sandbox_launcher and sandboxes fields to support launching sandboxes from a container
+- Add functional_type to Service and Job
+- Add ssh_enabled to Service and Instance
+- Add inlined_source to SourceCode
+- Add SourceUpload service with UploadSource RPC
+- Add UpdateInstance and IAM policy RPCs, restart_policy and default_uri_disabled to Instance
+- Add instance_reason to Condition
+- Add delay_execution to ExecutionTemplate and RunJobRequest overrides
+- Add force_new_revision to UpdateServiceRequest
+- Add cpu_utilization and concurrency_utilization to RevisionScaling
+- Add client and client_version to RevisionTemplate, ExecutionTemplate and WorkerPoolRevisionTemplate
+- Make service_id, job_id, worker_pool_id and instance_id optional in create requests
+
+### Documentation improvements
+
+- Update comments for Instances, Instance, Container, VolumeMount, CloudSqlInstance, GCSVolumeSource, launch_stage, worker_pool, and the resource ID fields in create requests
+
 ## Version 2.20.0, released 2026-11-09
 
 ### New features
