@@ -1,5 +1,22 @@
 # Version history
 
+## Version 1.0.0-beta15, released 2026-11-16
+
+### New features
+
+- Added create and update methods for `Creative`
+- Added `targetedVerticals` and `excludedVerticals` to `ContextualTargeting`
+- Added `AdCategory` resource
+- Added `YieldGroupService`
+- Added `ProposalService`
+- Added the `CURATOR` enum value to `ReportDefinition.TimeZoneSource` to run reports in the time zone from the curator's account settings.
+- Added `adSpot` to `VideoPosition`
+
+### Documentation improvements
+
+- Changed `YieldAdSource.ad_source_id` field behavior from `OUTPUT_ONLY` to `OPTIONAL` and `NON_EMPTY_DEFAULT`
+- Updated `VideoPosition.podPosition` and `VideoPosition.bumperType` comments to reference `adSpot`
+
 ## Version 1.0.0-beta14, released 2026-11-09
 
 ### New features
