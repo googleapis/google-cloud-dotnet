@@ -1,5 +1,27 @@
 # Version history
 
+## Version 4.3.0, released 2026-11-16
+
+### New features
+
+- Update Compute Engine v1 API artifacts to revision 20261026 and api_version 2026-11-01
+- Add GetIamPolicy, SetIamPolicy, and TestIamPermissions RPCs to RegionSslPolicies and SslPolicies services
+- Add BackendServiceDynamicForwarding message and dynamic_forwarding field to BackendService
+- Add ConfidentialParavisorConfig message and confidential_paravisor_config field to ConfidentialInstanceConfig
+- Add DynamicCompressionPolicy and ImageOptimizationPolicy messages and fields to HttpRouteAction
+- Add backend_service, content_type, and http_status fields to CacheInvalidationRule and BYPASS_CACHE to CachePolicy.CacheMode
+- Add I_p_addresses, availability_group, child_forwarding_rules, and parent_forwarding_rule fields to ForwardingRule
+- Add source_machine_image, source_machine_image_disk_device_name, source_machine_image_encryption_key, and source_machine_image_id fields to Disk
+- Add excluded_disks and included_disks fields to MachineImageParams
+- Add UrlMapStatus and UrlMapQuotaUsage messages and status and quota_usage fields to UrlMap and UrlMapValidationResult
+- Add protection_tier field to Scheduling and ResourceStatusScheduling, purpose field to PublicDelegatedPrefix and PublicDelegatedPrefixPublicDelegatedSubPrefix, policy_source field to FirewallPolicy, flow_management field to WireProperties, and identity_type field to WorkloadIdentityConfig
+- Add ip_collection field to AccessConfig, network_attachment and service_class_id fields to Address, additional_tags field to Network, and depreferenced field to RouterStatusBgpPeerStatus
+- Add MEMORY_OPTIMIZED_X5 values to Commitment.Type, EXTERNAL_PASSTHROUGH to BackendService and ForwardingRule LoadBalancingScheme, and new enum values to Address.Purpose, InstanceGroupManagerStatusAcceleratorTopology.State, NetworkAttachmentConnectedEndpoint.Status, NetworkProfileNetworkFeatures.AddressPurposes, and UpcomingMaintenance.MaintenanceReasons
+
+### Documentation improvements
+
+- Update documentation in proto definitions
+
 ## Version 4.2.0, released 2026-11-02
 
 ### New features
