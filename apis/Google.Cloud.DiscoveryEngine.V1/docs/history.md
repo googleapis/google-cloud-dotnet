@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.19.0, released 2026-11-17
+
+### New features
+
+- Add ProvisionIntent, pre_provision_mode, provision_intent and idp_config to ProvisionProjectRequest in v1 and v1beta
+- Add locations HTTP binding to ProjectService.ProvisionProject in v1beta
+
 ## Version 1.18.0, released 2026-11-09
 
 ### Bug fixes
