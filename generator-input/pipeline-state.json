@@ -5078,7 +5078,6 @@
         }
     ],
     "ignoredApiPaths": [
-        "google/cloud/appoptimize/v1alpha",
         "google/cloud/configdelivery/v1alpha",
         "google/cloud/geminidataanalytics/v1alpha",
         "google/cloud/networksecurity/v1alpha1",
