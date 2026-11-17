@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.4.0, released 2026-11-17
+
+### New features
+
+- Add `MULTI_REGIONAL` value to `Scope.Type` enum in apphub v1
+
 ## Version 1.3.0, released 2026-10-05
 
 ### New features
