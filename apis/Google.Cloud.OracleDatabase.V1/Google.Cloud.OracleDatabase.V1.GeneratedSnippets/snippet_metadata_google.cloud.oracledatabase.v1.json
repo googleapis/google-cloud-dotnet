@@ -15443,6 +15443,206 @@
       ]
     },
     {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_UpdateOdbDnsZone_sync",
+      "title": "UpdateOdbDnsZoneRequestObject",
+      "description": "Snippet for UpdateOdbDnsZone",
+      "file": "OracleDatabaseClient.UpdateOdbDnsZoneRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateOdbDnsZone",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.UpdateOdbDnsZone",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.UpdateOdbDnsZoneRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.OdbDnsZone, Google.Cloud.OracleDatabase.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "UpdateOdbDnsZone",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.UpdateOdbDnsZone",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_UpdateOdbDnsZone_async",
+      "title": "UpdateOdbDnsZoneRequestObjectAsync",
+      "description": "Snippet for UpdateOdbDnsZoneAsync",
+      "file": "OracleDatabaseClient.UpdateOdbDnsZoneRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateOdbDnsZoneAsync",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.UpdateOdbDnsZoneAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.UpdateOdbDnsZoneRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.OdbDnsZone, Google.Cloud.OracleDatabase.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "UpdateOdbDnsZone",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.UpdateOdbDnsZone",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_UpdateOdbDnsZone_sync_flattened",
+      "title": "UpdateOdbDnsZone",
+      "description": "Snippet for UpdateOdbDnsZone",
+      "file": "OracleDatabaseClient.UpdateOdbDnsZoneSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateOdbDnsZone",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.UpdateOdbDnsZone",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.OdbDnsZone",
+            "name": "odbDnsZone"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.OdbDnsZone, Google.Cloud.OracleDatabase.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "UpdateOdbDnsZone",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.UpdateOdbDnsZone",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_UpdateOdbDnsZone_async_flattened",
+      "title": "UpdateOdbDnsZoneAsync",
+      "description": "Snippet for UpdateOdbDnsZoneAsync",
+      "file": "OracleDatabaseClient.UpdateOdbDnsZoneAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateOdbDnsZoneAsync",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.UpdateOdbDnsZoneAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.OdbDnsZone",
+            "name": "odbDnsZone"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.OdbDnsZone, Google.Cloud.OracleDatabase.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "UpdateOdbDnsZone",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.UpdateOdbDnsZone",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "oracledatabase_v1_generated_OracleDatabase_DeleteOdbDnsZone_sync",
       "title": "DeleteOdbDnsZoneRequestObject",
       "description": "Snippet for DeleteOdbDnsZone",

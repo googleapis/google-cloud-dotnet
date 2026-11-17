@@ -10273,6 +10273,136 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateOdbDnsZone</summary>
+        public void UpdateOdbDnsZoneRequestObject()
+        {
+            // Snippet: UpdateOdbDnsZone(UpdateOdbDnsZoneRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            UpdateOdbDnsZoneRequest request = new UpdateOdbDnsZoneRequest
+            {
+                UpdateMask = new FieldMask(),
+                OdbDnsZone = new OdbDnsZone(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<OdbDnsZone, OperationMetadata> response = oracleDatabaseClient.UpdateOdbDnsZone(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OdbDnsZone, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            OdbDnsZone result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OdbDnsZone, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateOdbDnsZone(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OdbDnsZone retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateOdbDnsZoneAsync</summary>
+        public async Task UpdateOdbDnsZoneRequestObjectAsync()
+        {
+            // Snippet: UpdateOdbDnsZoneAsync(UpdateOdbDnsZoneRequest, CallSettings)
+            // Additional: UpdateOdbDnsZoneAsync(UpdateOdbDnsZoneRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateOdbDnsZoneRequest request = new UpdateOdbDnsZoneRequest
+            {
+                UpdateMask = new FieldMask(),
+                OdbDnsZone = new OdbDnsZone(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<OdbDnsZone, OperationMetadata> response = await oracleDatabaseClient.UpdateOdbDnsZoneAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OdbDnsZone, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            OdbDnsZone result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OdbDnsZone, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateOdbDnsZoneAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OdbDnsZone retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateOdbDnsZone</summary>
+        public void UpdateOdbDnsZone()
+        {
+            // Snippet: UpdateOdbDnsZone(OdbDnsZone, FieldMask, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            OdbDnsZone odbDnsZone = new OdbDnsZone();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<OdbDnsZone, OperationMetadata> response = oracleDatabaseClient.UpdateOdbDnsZone(odbDnsZone, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OdbDnsZone, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            OdbDnsZone result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OdbDnsZone, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceUpdateOdbDnsZone(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OdbDnsZone retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateOdbDnsZoneAsync</summary>
+        public async Task UpdateOdbDnsZoneAsync()
+        {
+            // Snippet: UpdateOdbDnsZoneAsync(OdbDnsZone, FieldMask, CallSettings)
+            // Additional: UpdateOdbDnsZoneAsync(OdbDnsZone, FieldMask, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            OdbDnsZone odbDnsZone = new OdbDnsZone();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<OdbDnsZone, OperationMetadata> response = await oracleDatabaseClient.UpdateOdbDnsZoneAsync(odbDnsZone, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OdbDnsZone, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            OdbDnsZone result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OdbDnsZone, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceUpdateOdbDnsZoneAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OdbDnsZone retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteOdbDnsZone</summary>
         public void DeleteOdbDnsZoneRequestObject()
         {
