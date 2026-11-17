@@ -27,53 +27,59 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "CjFnb29nbGUvY2xvdWQvb3JhY2xlZGF0YWJhc2UvdjEvb2RiX2Ruc196b25l",
             "LnByb3RvEh5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEaH2dvb2ds",
             "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aG2dvb2dsZS9hcGkvZmllbGRf",
-            "aW5mby5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxofZ29vZ2xl",
-            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLGBAoKT2RiRG5zWm9uZRISCgRu",
-            "YW1lGAEgASgJQgTiQQEIEhUKBmRvbWFpbhgCIAEoCUIF4kECAgUSTAoGbGFi",
-            "ZWxzGAMgAygLMjYuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLk9k",
-            "YkRuc1pvbmUuTGFiZWxzRW50cnlCBOJBAQESRQoFc3RhdGUYBCABKA4yMC5n",
-            "b29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuT2RiRG5zWm9uZS5TdGF0",
-            "ZUIE4kEBAxI1CgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBCBOJBAQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgJOgI4ASJqCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJ",
-            "RklFRBAAEhAKDFBST1ZJU0lPTklORxABEg0KCUFWQUlMQUJMRRACEgwKCElO",
-            "QUNUSVZFEAMSDwoLVEVSTUlOQVRJTkcQBBIKCgZGQUlMRUQQBTqlAepBoQEK",
-            "KG9yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL09kYkRuc1pvbmUSXHBy",
-            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9vZGJOZXR3",
-            "b3Jrcy97b2RiX25ldHdvcmt9L29kYkRuc1pvbmVzL3tvZGJfZG5zX3pvbmV9",
-            "KgtvZGJEbnNab25lczIKb2RiRG5zWm9uZSLlAQoXQ3JlYXRlT2RiRG5zWm9u",
-            "ZVJlcXVlc3QSQQoGcGFyZW50GAEgASgJQjHiQQEC+kEqEihvcmFjbGVkYXRh",
-            "YmFzZS5nb29nbGVhcGlzLmNvbS9PZGJEbnNab25lEh0KD29kYl9kbnNfem9u",
-            "ZV9pZBgCIAEoCUIE4kEBAhJGCgxvZGJfZG5zX3pvbmUYAyABKAsyKi5nb29n",
-            "bGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuT2RiRG5zWm9uZUIE4kEBAhIg",
-            "CgpyZXF1ZXN0X2lkGAQgASgJQgziQQEB4ozP1wgCCAEifAoXRGVsZXRlT2Ri",
-            "RG5zWm9uZVJlcXVlc3QSPwoEbmFtZRgBIAEoCUIx4kEBAvpBKgoob3JhY2xl",
-            "ZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20vT2RiRG5zWm9uZRIgCgpyZXF1ZXN0",
-            "X2lkGAIgASgJQgziQQEB4ozP1wgCCAEivAEKFkxpc3RPZGJEbnNab25lc1Jl",
-            "cXVlc3QSQQoGcGFyZW50GAEgASgJQjHiQQEC+kEqEihvcmFjbGVkYXRhYmFz",
-            "ZS5nb29nbGVhcGlzLmNvbS9PZGJEbnNab25lEhcKCXBhZ2Vfc2l6ZRgCIAEo",
-            "BUIE4kEBARIYCgpwYWdlX3Rva2VuGAMgASgJQgTiQQEBEhQKBmZpbHRlchgE",
-            "IAEoCUIE4kEBARIWCghvcmRlcl9ieRgFIAEoCUIE4kEBASKKAQoXTGlzdE9k",
-            "YkRuc1pvbmVzUmVzcG9uc2USQQoNb2RiX2Ruc196b25lcxgBIAMoCzIqLmdv",
-            "b2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5PZGJEbnNab25lEhcKD25l",
-            "eHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJlYWNoYWJsZRgDIAMoCSJXChRH",
-            "ZXRPZGJEbnNab25lUmVxdWVzdBI/CgRuYW1lGAEgASgJQjHiQQEC+kEqCihv",
-            "cmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9PZGJEbnNab25lQukBCiJj",
-            "b20uZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxQg9PZGJEbnNab25l",
-            "UHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9vcmFjbGVkYXRhYmFzZS9h",
-            "cGl2MS9vcmFjbGVkYXRhYmFzZXBiO29yYWNsZWRhdGFiYXNlcGKqAh5Hb29n",
-            "bGUuQ2xvdWQuT3JhY2xlRGF0YWJhc2UuVjHKAh5Hb29nbGVcQ2xvdWRcT3Jh",
-            "Y2xlRGF0YWJhc2VcVjHqAiFHb29nbGU6OkNsb3VkOjpPcmFjbGVEYXRhYmFz",
-            "ZTo6VjFiBnByb3RvMw=="));
+            "aW5mby5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxogZ29vZ2xl",
+            "L3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
+            "aW1lc3RhbXAucHJvdG8ixgQKCk9kYkRuc1pvbmUSEgoEbmFtZRgBIAEoCUIE",
+            "4kEBCBIVCgZkb21haW4YAiABKAlCBeJBAgIFEkwKBmxhYmVscxgDIAMoCzI2",
+            "Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5PZGJEbnNab25lLkxh",
+            "YmVsc0VudHJ5QgTiQQEBEkUKBXN0YXRlGAQgASgOMjAuZ29vZ2xlLmNsb3Vk",
+            "Lm9yYWNsZWRhdGFiYXNlLnYxLk9kYkRuc1pvbmUuU3RhdGVCBOJBAQMSNQoL",
+            "Y3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgTiQQEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
+            "IAEoCToCOAEiagoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIQCgxQ",
+            "Uk9WSVNJT05JTkcQARINCglBVkFJTEFCTEUQAhIMCghJTkFDVElWRRADEg8K",
+            "C1RFUk1JTkFUSU5HEAQSCgoGRkFJTEVEEAU6pQHqQaEBCihvcmFjbGVkYXRh",
+            "YmFzZS5nb29nbGVhcGlzLmNvbS9PZGJEbnNab25lElxwcm9qZWN0cy97cHJv",
+            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vb2RiTmV0d29ya3Mve29kYl9u",
+            "ZXR3b3JrfS9vZGJEbnNab25lcy97b2RiX2Ruc196b25lfSoLb2RiRG5zWm9u",
+            "ZXMyCm9kYkRuc1pvbmUi5QEKF0NyZWF0ZU9kYkRuc1pvbmVSZXF1ZXN0EkEK",
+            "BnBhcmVudBgBIAEoCUIx4kEBAvpBKhIob3JhY2xlZGF0YWJhc2UuZ29vZ2xl",
+            "YXBpcy5jb20vT2RiRG5zWm9uZRIdCg9vZGJfZG5zX3pvbmVfaWQYAiABKAlC",
+            "BOJBAQISRgoMb2RiX2Ruc196b25lGAMgASgLMiouZ29vZ2xlLmNsb3VkLm9y",
+            "YWNsZWRhdGFiYXNlLnYxLk9kYkRuc1pvbmVCBOJBAQISIAoKcmVxdWVzdF9p",
+            "ZBgEIAEoCUIM4kEBAeKMz9cIAggBInwKF0RlbGV0ZU9kYkRuc1pvbmVSZXF1",
+            "ZXN0Ej8KBG5hbWUYASABKAlCMeJBAQL6QSoKKG9yYWNsZWRhdGFiYXNlLmdv",
+            "b2dsZWFwaXMuY29tL09kYkRuc1pvbmUSIAoKcmVxdWVzdF9pZBgCIAEoCUIM",
+            "4kEBAeKMz9cIAggBIrwBChZMaXN0T2RiRG5zWm9uZXNSZXF1ZXN0EkEKBnBh",
+            "cmVudBgBIAEoCUIx4kEBAvpBKhIob3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBp",
+            "cy5jb20vT2RiRG5zWm9uZRIXCglwYWdlX3NpemUYAiABKAVCBOJBAQESGAoK",
+            "cGFnZV90b2tlbhgDIAEoCUIE4kEBARIUCgZmaWx0ZXIYBCABKAlCBOJBAQES",
+            "FgoIb3JkZXJfYnkYBSABKAlCBOJBAQEiigEKF0xpc3RPZGJEbnNab25lc1Jl",
+            "c3BvbnNlEkEKDW9kYl9kbnNfem9uZXMYASADKAsyKi5nb29nbGUuY2xvdWQu",
+            "b3JhY2xlZGF0YWJhc2UudjEuT2RiRG5zWm9uZRIXCg9uZXh0X3BhZ2VfdG9r",
+            "ZW4YAiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAkiVwoUR2V0T2RiRG5zWm9u",
+            "ZVJlcXVlc3QSPwoEbmFtZRgBIAEoCUIx4kEBAvpBKgoob3JhY2xlZGF0YWJh",
+            "c2UuZ29vZ2xlYXBpcy5jb20vT2RiRG5zWm9uZSK6AQoXVXBkYXRlT2RiRG5z",
+            "Wm9uZVJlcXVlc3QSNQoLdXBkYXRlX21hc2sYASABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuRmllbGRNYXNrQgTiQQEBEkYKDG9kYl9kbnNfem9uZRgCIAEoCzIq",
+            "Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5PZGJEbnNab25lQgTi",
+            "QQECEiAKCnJlcXVlc3RfaWQYAyABKAlCDOJBAQHijM/XCAIIAULpAQoiY29t",
+            "Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MUIPT2RiRG5zWm9uZVBy",
+            "b3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vb3JhY2xlZGF0YWJhc2UvYXBp",
+            "djEvb3JhY2xlZGF0YWJhc2VwYjtvcmFjbGVkYXRhYmFzZXBiqgIeR29vZ2xl",
+            "LkNsb3VkLk9yYWNsZURhdGFiYXNlLlYxygIeR29vZ2xlXENsb3VkXE9yYWNs",
+            "ZURhdGFiYXNlXFYx6gIhR29vZ2xlOjpDbG91ZDo6T3JhY2xlRGF0YWJhc2U6",
+            "OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.OdbDnsZone), global::Google.Cloud.OracleDatabase.V1.OdbDnsZone.Parser, new[]{ "Name", "Domain", "Labels", "State", "CreateTime" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.OdbDnsZone.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CreateOdbDnsZoneRequest), global::Google.Cloud.OracleDatabase.V1.CreateOdbDnsZoneRequest.Parser, new[]{ "Parent", "OdbDnsZoneId", "OdbDnsZone", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.DeleteOdbDnsZoneRequest), global::Google.Cloud.OracleDatabase.V1.DeleteOdbDnsZoneRequest.Parser, new[]{ "Name", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesRequest), global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesResponse), global::Google.Cloud.OracleDatabase.V1.ListOdbDnsZonesResponse.Parser, new[]{ "OdbDnsZones", "NextPageToken", "Unreachable" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.GetOdbDnsZoneRequest), global::Google.Cloud.OracleDatabase.V1.GetOdbDnsZoneRequest.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.GetOdbDnsZoneRequest), global::Google.Cloud.OracleDatabase.V1.GetOdbDnsZoneRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.UpdateOdbDnsZoneRequest), global::Google.Cloud.OracleDatabase.V1.UpdateOdbDnsZoneRequest.Parser, new[]{ "UpdateMask", "OdbDnsZone", "RequestId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1904,6 +1910,324 @@ namespace Google.Cloud.OracleDatabase.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request for `OdbDnsZone.Update`.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateOdbDnsZoneRequest : pb::IMessage<UpdateOdbDnsZoneRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateOdbDnsZoneRequest> _parser = new pb::MessageParser<UpdateOdbDnsZoneRequest>(() => new UpdateOdbDnsZoneRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateOdbDnsZoneRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.OracleDatabase.V1.OdbDnsZoneReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateOdbDnsZoneRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateOdbDnsZoneRequest(UpdateOdbDnsZoneRequest other) : this() {
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      odbDnsZone_ = other.odbDnsZone_ != null ? other.odbDnsZone_.Clone() : null;
+      requestId_ = other.requestId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateOdbDnsZoneRequest Clone() {
+      return new UpdateOdbDnsZoneRequest(this);
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Optional. A mask specifying which fields in the OdbDnsZone should be
+    /// updated. A field specified in the mask is updated. If a mask isn't
+    /// provided, the service treats this as an implied field mask equivalent to
+    /// all fields that are populated (have a non-empty value). To clear or unset a
+    /// field, the field must be explicitly specified in the `update_mask`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "odb_dns_zone" field.</summary>
+    public const int OdbDnsZoneFieldNumber = 2;
+    private global::Google.Cloud.OracleDatabase.V1.OdbDnsZone odbDnsZone_;
+    /// <summary>
+    /// Required. The resource being updated. Note only labels can be updated.
+    /// The provided labels will completely replace the existing labels.
+    /// Any existing label keys that are not included in the update request will be
+    /// deleted. Not providing labels and update_mask will not update the labels.
+    /// To clear all labels, specify `labels` in the `update_mask` and omit or
+    /// leave the `labels` field empty in the update request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.OracleDatabase.V1.OdbDnsZone OdbDnsZone {
+      get { return odbDnsZone_; }
+      set {
+        odbDnsZone_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 3;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. An optional ID to identify the request. This value is used to
+    /// identify duplicate requests. If you make a request with the same request ID
+    /// and the original request is still in progress or completed, the server
+    /// ignores the second request. This prevents clients from
+    /// accidentally creating duplicate commitments.
+    ///
+    /// The request ID must be a valid UUID with the exception that zero UUID is
+    /// not supported (00000000-0000-0000-0000-000000000000).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateOdbDnsZoneRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateOdbDnsZoneRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (!object.Equals(OdbDnsZone, other.OdbDnsZone)) return false;
+      if (RequestId != other.RequestId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (odbDnsZone_ != null) hash ^= OdbDnsZone.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (updateMask_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(UpdateMask);
+      }
+      if (odbDnsZone_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(OdbDnsZone);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (updateMask_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(UpdateMask);
+      }
+      if (odbDnsZone_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(OdbDnsZone);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (odbDnsZone_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OdbDnsZone);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateOdbDnsZoneRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.odbDnsZone_ != null) {
+        if (odbDnsZone_ == null) {
+          OdbDnsZone = new global::Google.Cloud.OracleDatabase.V1.OdbDnsZone();
+        }
+        OdbDnsZone.MergeFrom(other.OdbDnsZone);
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 18: {
+            if (odbDnsZone_ == null) {
+              OdbDnsZone = new global::Google.Cloud.OracleDatabase.V1.OdbDnsZone();
+            }
+            input.ReadMessage(OdbDnsZone);
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 18: {
+            if (odbDnsZone_ == null) {
+              OdbDnsZone = new global::Google.Cloud.OracleDatabase.V1.OdbDnsZone();
+            }
+            input.ReadMessage(OdbDnsZone);
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
             break;
           }
         }
