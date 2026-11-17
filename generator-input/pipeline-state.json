@@ -1193,12 +1193,12 @@
         },
         {
             "id": "Google.Cloud.Dataform.V1Beta1",
-            "currentVersion": "1.0.0-beta16",
+            "currentVersion": "1.0.0-beta17",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-11-09T19:18:10.415477534Z",
+            "releaseTimestamp": "2026-11-17T19:53:23.784788741Z",
             "lastGeneratedCommit": "ac683aa72f2329dd8bae638500c3e06b9fdafc29",
-            "lastReleasedCommit": "2b22f99c5e5b2d5f7a706dec0c57ac7701dbf00b",
+            "lastReleasedCommit": "ac683aa72f2329dd8bae638500c3e06b9fdafc29",
             "apiPaths": [
                 "google/cloud/dataform/v1beta1"
             ],
