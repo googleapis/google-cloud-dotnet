@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.28.0, released 2026-11-17
+
+### New features
+
+- Add enum attestation format for additional firmware
+
 ## Version 3.27.0, released 2026-09-11
 
 ### New features
