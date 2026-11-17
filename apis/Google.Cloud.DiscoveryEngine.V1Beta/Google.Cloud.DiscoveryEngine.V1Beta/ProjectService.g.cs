@@ -28,39 +28,49 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "X3NlcnZpY2UucHJvdG8SI2dvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUu",
             "djFiZXRhGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhdnb29nbGUv",
             "YXBpL2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
-            "cm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoxZ29vZ2xlL2Nsb3Vk",
-            "L2Rpc2NvdmVyeWVuZ2luZS92MWJldGEvcHJvamVjdC5wcm90bxojZ29vZ2xl",
-            "L2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8iwwIKF1Byb3Zpc2lvblBy",
-            "b2plY3RSZXF1ZXN0EjwKBG5hbWUYASABKAlCLuBBAvpBKAomZGlzY292ZXJ5",
-            "ZW5naW5lLmdvb2dsZWFwaXMuY29tL1Byb2plY3QSIgoVYWNjZXB0X2RhdGFf",
-            "dXNlX3Rlcm1zGAIgASgIQgPgQQISIwoWZGF0YV91c2VfdGVybXNfdmVyc2lv",
-            "bhgDIAEoCUID4EECEmEKC3NhYXNfcGFyYW1zGAQgASgLMkcuZ29vZ2xlLmNs",
-            "b3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuUHJvdmlzaW9uUHJvamVjdFJl",
-            "cXVlc3QuU2Fhc1BhcmFtc0ID4EEBGj4KClNhYXNQYXJhbXMSGwoOYWNjZXB0",
-            "X2Jpel9xb3MYASABKAhCA+BBARITCgZpc19iaXoYAiABKAhCA+BBASIaChhQ",
-            "cm92aXNpb25Qcm9qZWN0TWV0YWRhdGEy+gMKDlByb2plY3RTZXJ2aWNlEpUC",
-            "ChBQcm92aXNpb25Qcm9qZWN0EjwuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVu",
-            "Z2luZS52MWJldGEuUHJvdmlzaW9uUHJvamVjdFJlcXVlc3QaHS5nb29nbGUu",
-            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqMBykFrCitnb29nbGUuY2xvdWQuZGlz",
-            "Y292ZXJ5ZW5naW5lLnYxYmV0YS5Qcm9qZWN0Ejxnb29nbGUuY2xvdWQuZGlz",
-            "Y292ZXJ5ZW5naW5lLnYxYmV0YS5Qcm92aXNpb25Qcm9qZWN0TWV0YWRhdGHa",
-            "QQRuYW1lgtPkkwIoIiMvdjFiZXRhL3tuYW1lPXByb2plY3RzLyp9OnByb3Zp",
-            "c2lvbjoBKhrPAcpBHmRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbdJB",
-            "qgFodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
-            "b3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGlzY292ZXJ5",
-            "ZW5naW5lLnJlYWR3cml0ZSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL2Rpc2NvdmVyeWVuZ2luZS5zZXJ2aW5nLnJlYWR3cml0ZUKaAgonY29t",
-            "Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhQhNQcm9qZWN0",
-            "U2VydmljZVByb3RvUAFaUWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5",
-            "ZW5naW5lL2FwaXYxYmV0YS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3Zlcnll",
-            "bmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoCI0dvb2dsZS5DbG91ZC5EaXNj",
-            "b3ZlcnlFbmdpbmUuVjFCZXRhygIjR29vZ2xlXENsb3VkXERpc2NvdmVyeUVu",
-            "Z2luZVxWMWJldGHqAiZHb29nbGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6",
-            "OlYxYmV0YWIGcHJvdG8z"));
+            "cm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxowZ29vZ2xlL2Nsb3Vk",
+            "L2Rpc2NvdmVyeWVuZ2luZS92MWJldGEvY29tbW9uLnByb3RvGjFnb29nbGUv",
+            "Y2xvdWQvZGlzY292ZXJ5ZW5naW5lL3YxYmV0YS9wcm9qZWN0LnByb3RvGiNn",
+            "b29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90byKQBQoXUHJvdmlz",
+            "aW9uUHJvamVjdFJlcXVlc3QSPQoEbmFtZRgBIAEoCUIv4kEBAvpBKAomZGlz",
+            "Y292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL1Byb2plY3QSIwoVYWNjZXB0",
+            "X2RhdGFfdXNlX3Rlcm1zGAIgASgIQgTiQQECEiQKFmRhdGFfdXNlX3Rlcm1z",
+            "X3ZlcnNpb24YAyABKAlCBOJBAQISYgoLc2Fhc19wYXJhbXMYBCABKAsyRy5n",
+            "b29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5Qcm92aXNpb25Q",
+            "cm9qZWN0UmVxdWVzdC5TYWFzUGFyYW1zQgTiQQEBEmwKEHByb3Zpc2lvbl9p",
+            "bnRlbnQYBSABKA4yTC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYx",
+            "YmV0YS5Qcm92aXNpb25Qcm9qZWN0UmVxdWVzdC5Qcm92aXNpb25JbnRlbnRC",
+            "BOJBAQESSAoKaWRwX2NvbmZpZxgGIAEoCzIuLmdvb2dsZS5jbG91ZC5kaXNj",
+            "b3ZlcnllbmdpbmUudjFiZXRhLklkcENvbmZpZ0IE4kEBARIgChJwcmVfcHJv",
+            "dmlzaW9uX21vZGUYCCABKAhCBOJBAQEaQAoKU2Fhc1BhcmFtcxIcCg5hY2Nl",
+            "cHRfYml6X3FvcxgBIAEoCEIE4kEBARIUCgZpc19iaXoYAiABKAhCBOJBAQEi",
+            "awoPUHJvdmlzaW9uSW50ZW50EiAKHFBST1ZJU0lPTl9JTlRFTlRfVU5TUEVD",
+            "SUZJRUQQABIZChVQUk9WSVNJT05fSU5URU5UX1NPQkkQARIbChdQUk9WSVNJ",
+            "T05fSU5URU5UX0xFR0FDWRACIhoKGFByb3Zpc2lvblByb2plY3RNZXRhZGF0",
+            "YTKwBAoOUHJvamVjdFNlcnZpY2USywIKEFByb3Zpc2lvblByb2plY3QSPC5n",
+            "b29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5Qcm92aXNpb25Q",
+            "cm9qZWN0UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
+            "2QHKQWsKK2dvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLlBy",
+            "b2plY3QSPGdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLlBy",
+            "b3Zpc2lvblByb2plY3RNZXRhZGF0YdpBBG5hbWWC0+STAl4iIy92MWJldGEv",
+            "e25hbWU9cHJvamVjdHMvKn06cHJvdmlzaW9uOgEqWjQiLy92MWJldGEve25h",
+            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn06cHJvdmlzaW9uOgEqGs8BykEe",
+            "ZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29t0kGqAWh0dHBzOi8vd3d3",
+            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93",
+            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaXNjb3ZlcnllbmdpbmUucmVhZHdy",
+            "aXRlLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGlzY292ZXJ5",
+            "ZW5naW5lLnNlcnZpbmcucmVhZHdyaXRlQpoCCidjb20uZ29vZ2xlLmNsb3Vk",
+            "LmRpc2NvdmVyeWVuZ2luZS52MWJldGFCE1Byb2plY3RTZXJ2aWNlUHJvdG9Q",
+            "AVpRY2xvdWQuZ29vZ2xlLmNvbS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjFi",
+            "ZXRhL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElT",
+            "Q09WRVJZRU5HSU5FqgIjR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5W",
+            "MUJldGHKAiNHb29nbGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYxYmV0YeoC",
+            "Jkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFiZXRhYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.ProjectReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.CommonReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.ProjectReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest), global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest.Parser, new[]{ "Name", "AcceptDataUseTerms", "DataUseTermsVersion", "SaasParams" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest.Types.SaasParams), global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest.Types.SaasParams.Parser, new[]{ "AcceptBizQos", "IsBiz" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest), global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest.Parser, new[]{ "Name", "AcceptDataUseTerms", "DataUseTermsVersion", "SaasParams", "ProvisionIntent", "IdpConfig", "PreProvisionMode" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest.Types.ProvisionIntent) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest.Types.SaasParams), global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest.Types.SaasParams.Parser, new[]{ "AcceptBizQos", "IsBiz" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectMetadata), global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectMetadata.Parser, null, null, null, null, null)
           }));
     }
@@ -112,6 +122,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       acceptDataUseTerms_ = other.acceptDataUseTerms_;
       dataUseTermsVersion_ = other.dataUseTermsVersion_;
       saasParams_ = other.saasParams_ != null ? other.saasParams_.Clone() : null;
+      provisionIntent_ = other.provisionIntent_;
+      idpConfig_ = other.idpConfig_ != null ? other.idpConfig_.Clone() : null;
+      preProvisionMode_ = other.preProvisionMode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -189,6 +202,65 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "provision_intent" field.</summary>
+    public const int ProvisionIntentFieldNumber = 5;
+    private global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest.Types.ProvisionIntent provisionIntent_ = global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest.Types.ProvisionIntent.Unspecified;
+    /// <summary>
+    /// Optional. The caller states whether the provisioning is for the new or the
+    /// classic Gemini Enterprise experience.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest.Types.ProvisionIntent ProvisionIntent {
+      get { return provisionIntent_; }
+      set {
+        provisionIntent_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "idp_config" field.</summary>
+    public const int IdpConfigFieldNumber = 6;
+    private global::Google.Cloud.DiscoveryEngine.V1Beta.IdpConfig idpConfig_;
+    /// <summary>
+    /// Optional. The identity provider for this location. When provided, the
+    /// location's [AclConfig][google.cloud.discoveryengine.v1beta.AclConfig] is
+    /// set from it as part of provisioning.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1Beta.IdpConfig IdpConfig {
+      get { return idpConfig_; }
+      set {
+        idpConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "pre_provision_mode" field.</summary>
+    public const int PreProvisionModeFieldNumber = 8;
+    private bool preProvisionMode_;
+    /// <summary>
+    /// Optional. Runs only the common project-level pre-provisioning steps
+    /// (service agents, agent identity pools, project-scoped extension bindings,
+    /// App Hub registry, Sobi agent default identity, and Sobi default Model Armor
+    /// template) without reading or writing the Customer, Collection, or UserStore
+    /// tables, CapabilityConfig, tenant project, default engine, or trial licenses
+    /// when `true`.
+    ///
+    /// Assumes no customer exists yet. Customer-level or non-SOBI fields
+    /// (`accept_data_use_terms`, `data_use_terms_version`, `saas_params`,
+    /// `idp_config`, and `PROVISION_INTENT_LEGACY`) are rejected with
+    /// `INVALID_ARGUMENT`, and the returned completed `Operation` has an empty
+    /// response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool PreProvisionMode {
+      get { return preProvisionMode_; }
+      set {
+        preProvisionMode_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -208,6 +280,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (AcceptDataUseTerms != other.AcceptDataUseTerms) return false;
       if (DataUseTermsVersion != other.DataUseTermsVersion) return false;
       if (!object.Equals(SaasParams, other.SaasParams)) return false;
+      if (ProvisionIntent != other.ProvisionIntent) return false;
+      if (!object.Equals(IdpConfig, other.IdpConfig)) return false;
+      if (PreProvisionMode != other.PreProvisionMode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -219,6 +294,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (AcceptDataUseTerms != false) hash ^= AcceptDataUseTerms.GetHashCode();
       if (DataUseTermsVersion.Length != 0) hash ^= DataUseTermsVersion.GetHashCode();
       if (saasParams_ != null) hash ^= SaasParams.GetHashCode();
+      if (ProvisionIntent != global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest.Types.ProvisionIntent.Unspecified) hash ^= ProvisionIntent.GetHashCode();
+      if (idpConfig_ != null) hash ^= IdpConfig.GetHashCode();
+      if (PreProvisionMode != false) hash ^= PreProvisionMode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -253,6 +331,18 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(34);
         output.WriteMessage(SaasParams);
       }
+      if (ProvisionIntent != global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest.Types.ProvisionIntent.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) ProvisionIntent);
+      }
+      if (idpConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(IdpConfig);
+      }
+      if (PreProvisionMode != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(PreProvisionMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -279,6 +369,18 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(34);
         output.WriteMessage(SaasParams);
       }
+      if (ProvisionIntent != global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest.Types.ProvisionIntent.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) ProvisionIntent);
+      }
+      if (idpConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(IdpConfig);
+      }
+      if (PreProvisionMode != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(PreProvisionMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -300,6 +402,15 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (saasParams_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SaasParams);
+      }
+      if (ProvisionIntent != global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest.Types.ProvisionIntent.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ProvisionIntent);
+      }
+      if (idpConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IdpConfig);
+      }
+      if (PreProvisionMode != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -327,6 +438,18 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           SaasParams = new global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest.Types.SaasParams();
         }
         SaasParams.MergeFrom(other.SaasParams);
+      }
+      if (other.ProvisionIntent != global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest.Types.ProvisionIntent.Unspecified) {
+        ProvisionIntent = other.ProvisionIntent;
+      }
+      if (other.idpConfig_ != null) {
+        if (idpConfig_ == null) {
+          IdpConfig = new global::Google.Cloud.DiscoveryEngine.V1Beta.IdpConfig();
+        }
+        IdpConfig.MergeFrom(other.IdpConfig);
+      }
+      if (other.PreProvisionMode != false) {
+        PreProvisionMode = other.PreProvisionMode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -364,6 +487,21 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
               SaasParams = new global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest.Types.SaasParams();
             }
             input.ReadMessage(SaasParams);
+            break;
+          }
+          case 40: {
+            ProvisionIntent = (global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest.Types.ProvisionIntent) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            if (idpConfig_ == null) {
+              IdpConfig = new global::Google.Cloud.DiscoveryEngine.V1Beta.IdpConfig();
+            }
+            input.ReadMessage(IdpConfig);
+            break;
+          }
+          case 64: {
+            PreProvisionMode = input.ReadBool();
             break;
           }
         }
@@ -404,6 +542,21 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             input.ReadMessage(SaasParams);
             break;
           }
+          case 40: {
+            ProvisionIntent = (global::Google.Cloud.DiscoveryEngine.V1Beta.ProvisionProjectRequest.Types.ProvisionIntent) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            if (idpConfig_ == null) {
+              IdpConfig = new global::Google.Cloud.DiscoveryEngine.V1Beta.IdpConfig();
+            }
+            input.ReadMessage(IdpConfig);
+            break;
+          }
+          case 64: {
+            PreProvisionMode = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -414,6 +567,25 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Which experience the caller is provisioning.
+      /// </summary>
+      public enum ProvisionIntent {
+        /// <summary>
+        /// Unspecified.
+        /// </summary>
+        [pbr::OriginalName("PROVISION_INTENT_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The caller is provisioning for the new Gemini Enterprise experience.
+        /// </summary>
+        [pbr::OriginalName("PROVISION_INTENT_SOBI")] Sobi = 1,
+        /// <summary>
+        /// The caller is provisioning for the classic Gemini Enterprise
+        /// experience.
+        /// </summary>
+        [pbr::OriginalName("PROVISION_INTENT_LEGACY")] Legacy = 2,
+      }
+
       /// <summary>
       /// Parameters for Agentspace.
       /// </summary>
