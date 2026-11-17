@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.4.0, released 2026-11-17
+
+### New features
+
+- API regeneration: 20261112T170133Z (#16101)
+- Added method `CreateWorkspaceLongRunning` and message `CreateWorkspaceMetadata` to service `Dataform` to create workspaces asynchronously
+
 ## Version 1.3.0, released 2026-11-09
 
 ### New features
