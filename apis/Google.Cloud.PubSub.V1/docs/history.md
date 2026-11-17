@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.40.0, released 2026-11-17
+
+### New features
+
+- Add `ZSTD` to `Compression.CompressionAlgorithm`
+
+### Bug fixes
+
+- Prevent unobserved task exception on stream close and shutdown
+
 ## Version 3.39.0, released 2026-10-08
 
 ### New features
