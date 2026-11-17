@@ -5091,21 +5091,8 @@
         "google/cloud/securityposture/v1",
         "google/cloud/telcoautomation/v1alpha1",
         "google/maps/weather/v1",
-        "google/shopping/merchant/accounts/v1beta",
-        "google/shopping/merchant/conversions/v1beta",
-        "google/shopping/merchant/datasources/v1beta",
-        "google/shopping/merchant/inventories/v1beta",
-        "google/shopping/merchant/issueresolution/v1beta",
-        "google/shopping/merchant/lfp/v1beta",
-        "google/shopping/merchant/notifications/v1beta",
-        "google/shopping/merchant/ordertracking/v1beta",
-        "google/shopping/merchant/products/v1beta",
         "google/shopping/merchant/productstudio/v1alpha",
-        "google/shopping/merchant/promotions/v1beta",
-        "google/shopping/merchant/quota/v1beta",
         "google/shopping/merchant/reports/v1alpha",
-        "google/shopping/merchant/reports/v1beta",
-        "google/shopping/merchant/reviews/v1beta",
         "google/storage/v2"
     ]
 }
