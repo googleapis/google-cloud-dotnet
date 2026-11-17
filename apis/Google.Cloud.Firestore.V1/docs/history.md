@@ -4,6 +4,12 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
+## Version 4.7.0, released 2026-11-17
+
+### Bug fixes
+
+- Enforce maximum retry attempts on expired transactions
+
 ## Version 4.6.0, released 2026-10-26
 
 ### New features
