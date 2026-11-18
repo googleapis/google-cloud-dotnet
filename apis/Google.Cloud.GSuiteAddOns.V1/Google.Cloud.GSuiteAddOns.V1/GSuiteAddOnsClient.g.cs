@@ -56,6 +56,8 @@ namespace Google.Cloud.GSuiteAddOns.V1
             InstallDeploymentSettings = existing.InstallDeploymentSettings;
             UninstallDeploymentSettings = existing.UninstallDeploymentSettings;
             GetInstallStatusSettings = existing.GetInstallStatusSettings;
+            GetChatAppConfigSettings = existing.GetChatAppConfigSettings;
+            UpdateChatAppConfigSettings = existing.UpdateChatAppConfigSettings;
             OnCopy(existing);
         }
 
@@ -223,6 +225,48 @@ namespace Google.Cloud.GSuiteAddOns.V1
         /// </remarks>
         public gaxgrpc::CallSettings GetInstallStatusSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(10000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>GSuiteAddOnsClient.GetChatAppConfig</c> and <c>GSuiteAddOnsClient.GetChatAppConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 10 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetChatAppConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(10000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>GSuiteAddOnsClient.UpdateChatAppConfig</c> and <c>GSuiteAddOnsClient.UpdateChatAppConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 10 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateChatAppConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(10000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="GSuiteAddOnsSettings"/> object.</returns>
         public GSuiteAddOnsSettings Clone() => new GSuiteAddOnsSettings(this);
@@ -281,34 +325,7 @@ namespace Google.Cloud.GSuiteAddOns.V1
 
     /// <summary>GSuiteAddOns client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// A service for managing Google Workspace add-ons deployments.
-    /// 
-    /// A Google Workspace add-on is a third-party embedded component that can be
-    /// installed in Google Workspace Applications like Gmail, Calendar, Drive, and
-    /// the Google Docs, Sheets, and Slides editors. Google Workspace add-ons can
-    /// display UI cards, receive contextual information from the host application,
-    /// and perform actions in the host application (See:
-    /// https://developers.google.com/gsuite/add-ons/overview for more information).
-    /// 
-    /// A Google Workspace add-on deployment resource specifies metadata about the
-    /// add-on, including a specification of the entry points in the host application
-    /// that trigger add-on executions (see:
-    /// https://developers.google.com/gsuite/add-ons/concepts/gsuite-manifests).
-    /// Add-on deployments defined via the Google Workspace add-ons API define their
-    /// entrypoints using HTTPS URLs (See:
-    /// https://developers.google.com/gsuite/add-ons/guides/alternate-runtimes),
-    /// 
-    /// A Google Workspace add-on deployment can be installed in developer mode,
-    /// which allows an add-on developer to test the experience an end-user would see
-    /// when installing and running the add-on in their G Suite applications.  When
-    /// running in developer mode, more detailed error messages are exposed in the
-    /// add-on UI to aid in debugging.
-    /// 
-    /// A Google Workspace add-on deployment can be published to Google Workspace
-    /// Marketplace, which allows other Google Workspace users to discover and
-    /// install the add-on.  See:
-    /// https://developers.google.com/gsuite/add-ons/how-tos/publish-add-on-overview
-    /// for details.
+    /// A service for managing Google Workspace add-ons.
     /// </remarks>
     public abstract partial class GSuiteAddOnsClient
     {
@@ -323,11 +340,13 @@ namespace Google.Cloud.GSuiteAddOns.V1
         /// The default GSuiteAddOns scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/cloud-platform.read-only</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -1524,38 +1543,310 @@ namespace Google.Cloud.GSuiteAddOns.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<InstallStatus> GetInstallStatusAsync(InstallStatusName name, st::CancellationToken cancellationToken) =>
             GetInstallStatusAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the Chat app configuration of a project. Only Chat apps built as
+        /// Google Workspace add-ons are supported. Each Google Cloud project has
+        /// exactly one Chat app configuration.
+        /// 
+        /// Requires authenticating and authorizing with user credentials and the
+        /// `gsuiteaddons.chatAppConfigs.get` and `chat.bots.get` IAM permissions on
+        /// the project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChatAppConfig GetChatAppConfig(GetChatAppConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the Chat app configuration of a project. Only Chat apps built as
+        /// Google Workspace add-ons are supported. Each Google Cloud project has
+        /// exactly one Chat app configuration.
+        /// 
+        /// Requires authenticating and authorizing with user credentials and the
+        /// `gsuiteaddons.chatAppConfigs.get` and `chat.bots.get` IAM permissions on
+        /// the project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChatAppConfig> GetChatAppConfigAsync(GetChatAppConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the Chat app configuration of a project. Only Chat apps built as
+        /// Google Workspace add-ons are supported. Each Google Cloud project has
+        /// exactly one Chat app configuration.
+        /// 
+        /// Requires authenticating and authorizing with user credentials and the
+        /// `gsuiteaddons.chatAppConfigs.get` and `chat.bots.get` IAM permissions on
+        /// the project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChatAppConfig> GetChatAppConfigAsync(GetChatAppConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetChatAppConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the Chat app configuration of a project. Only Chat apps built as
+        /// Google Workspace add-ons are supported. Each Google Cloud project has
+        /// exactly one Chat app configuration.
+        /// 
+        /// Requires authenticating and authorizing with user credentials and the
+        /// `gsuiteaddons.chatAppConfigs.get` and `chat.bots.get` IAM permissions on
+        /// the project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Chat app configuration.
+        /// 
+        /// Format: `projects/{project}/chatAppConfig`, where `{project}` is the Google
+        /// Cloud project number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChatAppConfig GetChatAppConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetChatAppConfig(new GetChatAppConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the Chat app configuration of a project. Only Chat apps built as
+        /// Google Workspace add-ons are supported. Each Google Cloud project has
+        /// exactly one Chat app configuration.
+        /// 
+        /// Requires authenticating and authorizing with user credentials and the
+        /// `gsuiteaddons.chatAppConfigs.get` and `chat.bots.get` IAM permissions on
+        /// the project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Chat app configuration.
+        /// 
+        /// Format: `projects/{project}/chatAppConfig`, where `{project}` is the Google
+        /// Cloud project number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChatAppConfig> GetChatAppConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetChatAppConfigAsync(new GetChatAppConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the Chat app configuration of a project. Only Chat apps built as
+        /// Google Workspace add-ons are supported. Each Google Cloud project has
+        /// exactly one Chat app configuration.
+        /// 
+        /// Requires authenticating and authorizing with user credentials and the
+        /// `gsuiteaddons.chatAppConfigs.get` and `chat.bots.get` IAM permissions on
+        /// the project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Chat app configuration.
+        /// 
+        /// Format: `projects/{project}/chatAppConfig`, where `{project}` is the Google
+        /// Cloud project number.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChatAppConfig> GetChatAppConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetChatAppConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the Chat app configuration of a project. Only Chat apps built as
+        /// Google Workspace add-ons are supported. Each Google Cloud project has
+        /// exactly one Chat app configuration.
+        /// 
+        /// Requires authenticating and authorizing with user credentials and the
+        /// `gsuiteaddons.chatAppConfigs.get` and `chat.bots.get` IAM permissions on
+        /// the project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Chat app configuration.
+        /// 
+        /// Format: `projects/{project}/chatAppConfig`, where `{project}` is the Google
+        /// Cloud project number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChatAppConfig GetChatAppConfig(ChatAppConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetChatAppConfig(new GetChatAppConfigRequest
+            {
+                ChatAppConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the Chat app configuration of a project. Only Chat apps built as
+        /// Google Workspace add-ons are supported. Each Google Cloud project has
+        /// exactly one Chat app configuration.
+        /// 
+        /// Requires authenticating and authorizing with user credentials and the
+        /// `gsuiteaddons.chatAppConfigs.get` and `chat.bots.get` IAM permissions on
+        /// the project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Chat app configuration.
+        /// 
+        /// Format: `projects/{project}/chatAppConfig`, where `{project}` is the Google
+        /// Cloud project number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChatAppConfig> GetChatAppConfigAsync(ChatAppConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetChatAppConfigAsync(new GetChatAppConfigRequest
+            {
+                ChatAppConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the Chat app configuration of a project. Only Chat apps built as
+        /// Google Workspace add-ons are supported. Each Google Cloud project has
+        /// exactly one Chat app configuration.
+        /// 
+        /// Requires authenticating and authorizing with user credentials and the
+        /// `gsuiteaddons.chatAppConfigs.get` and `chat.bots.get` IAM permissions on
+        /// the project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Chat app configuration.
+        /// 
+        /// Format: `projects/{project}/chatAppConfig`, where `{project}` is the Google
+        /// Cloud project number.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChatAppConfig> GetChatAppConfigAsync(ChatAppConfigName name, st::CancellationToken cancellationToken) =>
+            GetChatAppConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the Chat app configuration of a project. Only Chat apps built as
+        /// Google Workspace add-ons are supported. Each Google Cloud project has
+        /// exactly one Chat app configuration.
+        /// 
+        /// Requires authenticating and authorizing with user credentials and the
+        /// `gsuiteaddons.chatAppConfigs.update`, `chat.bots.update` and
+        /// `chat.bots.get` IAM permissions on the project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChatAppConfig UpdateChatAppConfig(UpdateChatAppConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the Chat app configuration of a project. Only Chat apps built as
+        /// Google Workspace add-ons are supported. Each Google Cloud project has
+        /// exactly one Chat app configuration.
+        /// 
+        /// Requires authenticating and authorizing with user credentials and the
+        /// `gsuiteaddons.chatAppConfigs.update`, `chat.bots.update` and
+        /// `chat.bots.get` IAM permissions on the project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChatAppConfig> UpdateChatAppConfigAsync(UpdateChatAppConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the Chat app configuration of a project. Only Chat apps built as
+        /// Google Workspace add-ons are supported. Each Google Cloud project has
+        /// exactly one Chat app configuration.
+        /// 
+        /// Requires authenticating and authorizing with user credentials and the
+        /// `gsuiteaddons.chatAppConfigs.update`, `chat.bots.update` and
+        /// `chat.bots.get` IAM permissions on the project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChatAppConfig> UpdateChatAppConfigAsync(UpdateChatAppConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateChatAppConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the Chat app configuration of a project. Only Chat apps built as
+        /// Google Workspace add-ons are supported. Each Google Cloud project has
+        /// exactly one Chat app configuration.
+        /// 
+        /// Requires authenticating and authorizing with user credentials and the
+        /// `gsuiteaddons.chatAppConfigs.update`, `chat.bots.update` and
+        /// `chat.bots.get` IAM permissions on the project.
+        /// </summary>
+        /// <param name="chatAppConfig">
+        /// Required. The app configuration to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// 
+        /// If omitted, only the fields with non-empty values in the provided Chat app
+        /// configuration are updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChatAppConfig UpdateChatAppConfig(ChatAppConfig chatAppConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateChatAppConfig(new UpdateChatAppConfigRequest
+            {
+                ChatAppConfig = gax::GaxPreconditions.CheckNotNull(chatAppConfig, nameof(chatAppConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the Chat app configuration of a project. Only Chat apps built as
+        /// Google Workspace add-ons are supported. Each Google Cloud project has
+        /// exactly one Chat app configuration.
+        /// 
+        /// Requires authenticating and authorizing with user credentials and the
+        /// `gsuiteaddons.chatAppConfigs.update`, `chat.bots.update` and
+        /// `chat.bots.get` IAM permissions on the project.
+        /// </summary>
+        /// <param name="chatAppConfig">
+        /// Required. The app configuration to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// 
+        /// If omitted, only the fields with non-empty values in the provided Chat app
+        /// configuration are updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChatAppConfig> UpdateChatAppConfigAsync(ChatAppConfig chatAppConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateChatAppConfigAsync(new UpdateChatAppConfigRequest
+            {
+                ChatAppConfig = gax::GaxPreconditions.CheckNotNull(chatAppConfig, nameof(chatAppConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the Chat app configuration of a project. Only Chat apps built as
+        /// Google Workspace add-ons are supported. Each Google Cloud project has
+        /// exactly one Chat app configuration.
+        /// 
+        /// Requires authenticating and authorizing with user credentials and the
+        /// `gsuiteaddons.chatAppConfigs.update`, `chat.bots.update` and
+        /// `chat.bots.get` IAM permissions on the project.
+        /// </summary>
+        /// <param name="chatAppConfig">
+        /// Required. The app configuration to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// 
+        /// If omitted, only the fields with non-empty values in the provided Chat app
+        /// configuration are updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChatAppConfig> UpdateChatAppConfigAsync(ChatAppConfig chatAppConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateChatAppConfigAsync(chatAppConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>GSuiteAddOns client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// A service for managing Google Workspace add-ons deployments.
-    /// 
-    /// A Google Workspace add-on is a third-party embedded component that can be
-    /// installed in Google Workspace Applications like Gmail, Calendar, Drive, and
-    /// the Google Docs, Sheets, and Slides editors. Google Workspace add-ons can
-    /// display UI cards, receive contextual information from the host application,
-    /// and perform actions in the host application (See:
-    /// https://developers.google.com/gsuite/add-ons/overview for more information).
-    /// 
-    /// A Google Workspace add-on deployment resource specifies metadata about the
-    /// add-on, including a specification of the entry points in the host application
-    /// that trigger add-on executions (see:
-    /// https://developers.google.com/gsuite/add-ons/concepts/gsuite-manifests).
-    /// Add-on deployments defined via the Google Workspace add-ons API define their
-    /// entrypoints using HTTPS URLs (See:
-    /// https://developers.google.com/gsuite/add-ons/guides/alternate-runtimes),
-    /// 
-    /// A Google Workspace add-on deployment can be installed in developer mode,
-    /// which allows an add-on developer to test the experience an end-user would see
-    /// when installing and running the add-on in their G Suite applications.  When
-    /// running in developer mode, more detailed error messages are exposed in the
-    /// add-on UI to aid in debugging.
-    /// 
-    /// A Google Workspace add-on deployment can be published to Google Workspace
-    /// Marketplace, which allows other Google Workspace users to discover and
-    /// install the add-on.  See:
-    /// https://developers.google.com/gsuite/add-ons/how-tos/publish-add-on-overview
-    /// for details.
+    /// A service for managing Google Workspace add-ons.
     /// </remarks>
     public sealed partial class GSuiteAddOnsClientImpl : GSuiteAddOnsClient
     {
@@ -1576,6 +1867,10 @@ namespace Google.Cloud.GSuiteAddOns.V1
         private readonly gaxgrpc::ApiCall<UninstallDeploymentRequest, wkt::Empty> _callUninstallDeployment;
 
         private readonly gaxgrpc::ApiCall<GetInstallStatusRequest, InstallStatus> _callGetInstallStatus;
+
+        private readonly gaxgrpc::ApiCall<GetChatAppConfigRequest, ChatAppConfig> _callGetChatAppConfig;
+
+        private readonly gaxgrpc::ApiCall<UpdateChatAppConfigRequest, ChatAppConfig> _callUpdateChatAppConfig;
 
         /// <summary>
         /// Constructs a client wrapper for the GSuiteAddOns service, with the specified gRPC client and settings.
@@ -1619,6 +1914,12 @@ namespace Google.Cloud.GSuiteAddOns.V1
             _callGetInstallStatus = clientHelper.BuildApiCall<GetInstallStatusRequest, InstallStatus>("GetInstallStatus", grpcClient.GetInstallStatusAsync, grpcClient.GetInstallStatus, effectiveSettings.GetInstallStatusSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetInstallStatus);
             Modify_GetInstallStatusApiCall(ref _callGetInstallStatus);
+            _callGetChatAppConfig = clientHelper.BuildApiCall<GetChatAppConfigRequest, ChatAppConfig>("GetChatAppConfig", grpcClient.GetChatAppConfigAsync, grpcClient.GetChatAppConfig, effectiveSettings.GetChatAppConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetChatAppConfig);
+            Modify_GetChatAppConfigApiCall(ref _callGetChatAppConfig);
+            _callUpdateChatAppConfig = clientHelper.BuildApiCall<UpdateChatAppConfigRequest, ChatAppConfig>("UpdateChatAppConfig", grpcClient.UpdateChatAppConfigAsync, grpcClient.UpdateChatAppConfig, effectiveSettings.UpdateChatAppConfigSettings).WithGoogleRequestParam("chat_app_config.name", request => request.ChatAppConfig?.Name);
+            Modify_ApiCall(ref _callUpdateChatAppConfig);
+            Modify_UpdateChatAppConfigApiCall(ref _callUpdateChatAppConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1642,6 +1943,10 @@ namespace Google.Cloud.GSuiteAddOns.V1
 
         partial void Modify_GetInstallStatusApiCall(ref gaxgrpc::ApiCall<GetInstallStatusRequest, InstallStatus> call);
 
+        partial void Modify_GetChatAppConfigApiCall(ref gaxgrpc::ApiCall<GetChatAppConfigRequest, ChatAppConfig> call);
+
+        partial void Modify_UpdateChatAppConfigApiCall(ref gaxgrpc::ApiCall<UpdateChatAppConfigRequest, ChatAppConfig> call);
+
         partial void OnConstruction(GSuiteAddOns.GSuiteAddOnsClient grpcClient, GSuiteAddOnsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC GSuiteAddOns client</summary>
@@ -1664,6 +1969,10 @@ namespace Google.Cloud.GSuiteAddOns.V1
         partial void Modify_UninstallDeploymentRequest(ref UninstallDeploymentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetInstallStatusRequest(ref GetInstallStatusRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetChatAppConfigRequest(ref GetChatAppConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateChatAppConfigRequest(ref UpdateChatAppConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Gets the authorization information for deployments in a given project.
@@ -1887,6 +2196,78 @@ namespace Google.Cloud.GSuiteAddOns.V1
         {
             Modify_GetInstallStatusRequest(ref request, ref callSettings);
             return _callGetInstallStatus.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the Chat app configuration of a project. Only Chat apps built as
+        /// Google Workspace add-ons are supported. Each Google Cloud project has
+        /// exactly one Chat app configuration.
+        /// 
+        /// Requires authenticating and authorizing with user credentials and the
+        /// `gsuiteaddons.chatAppConfigs.get` and `chat.bots.get` IAM permissions on
+        /// the project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ChatAppConfig GetChatAppConfig(GetChatAppConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetChatAppConfigRequest(ref request, ref callSettings);
+            return _callGetChatAppConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the Chat app configuration of a project. Only Chat apps built as
+        /// Google Workspace add-ons are supported. Each Google Cloud project has
+        /// exactly one Chat app configuration.
+        /// 
+        /// Requires authenticating and authorizing with user credentials and the
+        /// `gsuiteaddons.chatAppConfigs.get` and `chat.bots.get` IAM permissions on
+        /// the project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ChatAppConfig> GetChatAppConfigAsync(GetChatAppConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetChatAppConfigRequest(ref request, ref callSettings);
+            return _callGetChatAppConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the Chat app configuration of a project. Only Chat apps built as
+        /// Google Workspace add-ons are supported. Each Google Cloud project has
+        /// exactly one Chat app configuration.
+        /// 
+        /// Requires authenticating and authorizing with user credentials and the
+        /// `gsuiteaddons.chatAppConfigs.update`, `chat.bots.update` and
+        /// `chat.bots.get` IAM permissions on the project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ChatAppConfig UpdateChatAppConfig(UpdateChatAppConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateChatAppConfigRequest(ref request, ref callSettings);
+            return _callUpdateChatAppConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the Chat app configuration of a project. Only Chat apps built as
+        /// Google Workspace add-ons are supported. Each Google Cloud project has
+        /// exactly one Chat app configuration.
+        /// 
+        /// Requires authenticating and authorizing with user credentials and the
+        /// `gsuiteaddons.chatAppConfigs.update`, `chat.bots.update` and
+        /// `chat.bots.get` IAM permissions on the project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ChatAppConfig> UpdateChatAppConfigAsync(UpdateChatAppConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateChatAppConfigRequest(ref request, ref callSettings);
+            return _callUpdateChatAppConfig.Async(request, callSettings);
         }
     }
 

@@ -24,34 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.GSuiteAddOns.V1 {
   /// <summary>
-  /// A service for managing Google Workspace add-ons deployments.
-  ///
-  /// A Google Workspace add-on is a third-party embedded component that can be
-  /// installed in Google Workspace Applications like Gmail, Calendar, Drive, and
-  /// the Google Docs, Sheets, and Slides editors. Google Workspace add-ons can
-  /// display UI cards, receive contextual information from the host application,
-  /// and perform actions in the host application (See:
-  /// https://developers.google.com/gsuite/add-ons/overview for more information).
-  ///
-  /// A Google Workspace add-on deployment resource specifies metadata about the
-  /// add-on, including a specification of the entry points in the host application
-  /// that trigger add-on executions (see:
-  /// https://developers.google.com/gsuite/add-ons/concepts/gsuite-manifests).
-  /// Add-on deployments defined via the Google Workspace add-ons API define their
-  /// entrypoints using HTTPS URLs (See:
-  /// https://developers.google.com/gsuite/add-ons/guides/alternate-runtimes),
-  ///
-  /// A Google Workspace add-on deployment can be installed in developer mode,
-  /// which allows an add-on developer to test the experience an end-user would see
-  /// when installing and running the add-on in their G Suite applications.  When
-  /// running in developer mode, more detailed error messages are exposed in the
-  /// add-on UI to aid in debugging.
-  ///
-  /// A Google Workspace add-on deployment can be published to Google Workspace
-  /// Marketplace, which allows other Google Workspace users to discover and
-  /// install the add-on.  See:
-  /// https://developers.google.com/gsuite/add-ons/how-tos/publish-add-on-overview
-  /// for details.
+  /// A service for managing Google Workspace add-ons.
   /// </summary>
   public static partial class GSuiteAddOns
   {
@@ -118,6 +91,12 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest> __Marshaller_google_cloud_gsuiteaddons_v1_GetInstallStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.InstallStatus> __Marshaller_google_cloud_gsuiteaddons_v1_InstallStatus = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.InstallStatus.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.GetChatAppConfigRequest> __Marshaller_google_cloud_gsuiteaddons_v1_GetChatAppConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.GetChatAppConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.ChatAppConfig> __Marshaller_google_cloud_gsuiteaddons_v1_ChatAppConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.ChatAppConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.UpdateChatAppConfigRequest> __Marshaller_google_cloud_gsuiteaddons_v1_UpdateChatAppConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.UpdateChatAppConfigRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest, global::Google.Cloud.GSuiteAddOns.V1.Authorization> __Method_GetAuthorization = new grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest, global::Google.Cloud.GSuiteAddOns.V1.Authorization>(
@@ -190,6 +169,22 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
         "GetInstallStatus",
         __Marshaller_google_cloud_gsuiteaddons_v1_GetInstallStatusRequest,
         __Marshaller_google_cloud_gsuiteaddons_v1_InstallStatus);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.GetChatAppConfigRequest, global::Google.Cloud.GSuiteAddOns.V1.ChatAppConfig> __Method_GetChatAppConfig = new grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.GetChatAppConfigRequest, global::Google.Cloud.GSuiteAddOns.V1.ChatAppConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetChatAppConfig",
+        __Marshaller_google_cloud_gsuiteaddons_v1_GetChatAppConfigRequest,
+        __Marshaller_google_cloud_gsuiteaddons_v1_ChatAppConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.UpdateChatAppConfigRequest, global::Google.Cloud.GSuiteAddOns.V1.ChatAppConfig> __Method_UpdateChatAppConfig = new grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.UpdateChatAppConfigRequest, global::Google.Cloud.GSuiteAddOns.V1.ChatAppConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateChatAppConfig",
+        __Marshaller_google_cloud_gsuiteaddons_v1_UpdateChatAppConfigRequest,
+        __Marshaller_google_cloud_gsuiteaddons_v1_ChatAppConfig);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -309,6 +304,42 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GSuiteAddOns.V1.InstallStatus> GetInstallStatus(global::Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the Chat app configuration of a project. Only Chat apps built as
+      /// Google Workspace add-ons are supported. Each Google Cloud project has
+      /// exactly one Chat app configuration.
+      ///
+      /// Requires authenticating and authorizing with user credentials and the
+      /// `gsuiteaddons.chatAppConfigs.get` and `chat.bots.get` IAM permissions on
+      /// the project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GSuiteAddOns.V1.ChatAppConfig> GetChatAppConfig(global::Google.Cloud.GSuiteAddOns.V1.GetChatAppConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the Chat app configuration of a project. Only Chat apps built as
+      /// Google Workspace add-ons are supported. Each Google Cloud project has
+      /// exactly one Chat app configuration.
+      ///
+      /// Requires authenticating and authorizing with user credentials and the
+      /// `gsuiteaddons.chatAppConfigs.update`, `chat.bots.update` and
+      /// `chat.bots.get` IAM permissions on the project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GSuiteAddOns.V1.ChatAppConfig> UpdateChatAppConfig(global::Google.Cloud.GSuiteAddOns.V1.UpdateChatAppConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -790,6 +821,150 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetInstallStatus, null, options, request);
       }
+      /// <summary>
+      /// Gets the Chat app configuration of a project. Only Chat apps built as
+      /// Google Workspace add-ons are supported. Each Google Cloud project has
+      /// exactly one Chat app configuration.
+      ///
+      /// Requires authenticating and authorizing with user credentials and the
+      /// `gsuiteaddons.chatAppConfigs.get` and `chat.bots.get` IAM permissions on
+      /// the project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GSuiteAddOns.V1.ChatAppConfig GetChatAppConfig(global::Google.Cloud.GSuiteAddOns.V1.GetChatAppConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetChatAppConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the Chat app configuration of a project. Only Chat apps built as
+      /// Google Workspace add-ons are supported. Each Google Cloud project has
+      /// exactly one Chat app configuration.
+      ///
+      /// Requires authenticating and authorizing with user credentials and the
+      /// `gsuiteaddons.chatAppConfigs.get` and `chat.bots.get` IAM permissions on
+      /// the project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GSuiteAddOns.V1.ChatAppConfig GetChatAppConfig(global::Google.Cloud.GSuiteAddOns.V1.GetChatAppConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetChatAppConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets the Chat app configuration of a project. Only Chat apps built as
+      /// Google Workspace add-ons are supported. Each Google Cloud project has
+      /// exactly one Chat app configuration.
+      ///
+      /// Requires authenticating and authorizing with user credentials and the
+      /// `gsuiteaddons.chatAppConfigs.get` and `chat.bots.get` IAM permissions on
+      /// the project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GSuiteAddOns.V1.ChatAppConfig> GetChatAppConfigAsync(global::Google.Cloud.GSuiteAddOns.V1.GetChatAppConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetChatAppConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the Chat app configuration of a project. Only Chat apps built as
+      /// Google Workspace add-ons are supported. Each Google Cloud project has
+      /// exactly one Chat app configuration.
+      ///
+      /// Requires authenticating and authorizing with user credentials and the
+      /// `gsuiteaddons.chatAppConfigs.get` and `chat.bots.get` IAM permissions on
+      /// the project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GSuiteAddOns.V1.ChatAppConfig> GetChatAppConfigAsync(global::Google.Cloud.GSuiteAddOns.V1.GetChatAppConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetChatAppConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates the Chat app configuration of a project. Only Chat apps built as
+      /// Google Workspace add-ons are supported. Each Google Cloud project has
+      /// exactly one Chat app configuration.
+      ///
+      /// Requires authenticating and authorizing with user credentials and the
+      /// `gsuiteaddons.chatAppConfigs.update`, `chat.bots.update` and
+      /// `chat.bots.get` IAM permissions on the project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GSuiteAddOns.V1.ChatAppConfig UpdateChatAppConfig(global::Google.Cloud.GSuiteAddOns.V1.UpdateChatAppConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateChatAppConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the Chat app configuration of a project. Only Chat apps built as
+      /// Google Workspace add-ons are supported. Each Google Cloud project has
+      /// exactly one Chat app configuration.
+      ///
+      /// Requires authenticating and authorizing with user credentials and the
+      /// `gsuiteaddons.chatAppConfigs.update`, `chat.bots.update` and
+      /// `chat.bots.get` IAM permissions on the project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GSuiteAddOns.V1.ChatAppConfig UpdateChatAppConfig(global::Google.Cloud.GSuiteAddOns.V1.UpdateChatAppConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateChatAppConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates the Chat app configuration of a project. Only Chat apps built as
+      /// Google Workspace add-ons are supported. Each Google Cloud project has
+      /// exactly one Chat app configuration.
+      ///
+      /// Requires authenticating and authorizing with user credentials and the
+      /// `gsuiteaddons.chatAppConfigs.update`, `chat.bots.update` and
+      /// `chat.bots.get` IAM permissions on the project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GSuiteAddOns.V1.ChatAppConfig> UpdateChatAppConfigAsync(global::Google.Cloud.GSuiteAddOns.V1.UpdateChatAppConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateChatAppConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the Chat app configuration of a project. Only Chat apps built as
+      /// Google Workspace add-ons are supported. Each Google Cloud project has
+      /// exactly one Chat app configuration.
+      ///
+      /// Requires authenticating and authorizing with user credentials and the
+      /// `gsuiteaddons.chatAppConfigs.update`, `chat.bots.update` and
+      /// `chat.bots.get` IAM permissions on the project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GSuiteAddOns.V1.ChatAppConfig> UpdateChatAppConfigAsync(global::Google.Cloud.GSuiteAddOns.V1.UpdateChatAppConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateChatAppConfig, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override GSuiteAddOnsClient NewInstance(ClientBaseConfiguration configuration)
@@ -812,7 +987,9 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
           .AddMethod(__Method_DeleteDeployment, serviceImpl.DeleteDeployment)
           .AddMethod(__Method_InstallDeployment, serviceImpl.InstallDeployment)
           .AddMethod(__Method_UninstallDeployment, serviceImpl.UninstallDeployment)
-          .AddMethod(__Method_GetInstallStatus, serviceImpl.GetInstallStatus).Build();
+          .AddMethod(__Method_GetInstallStatus, serviceImpl.GetInstallStatus)
+          .AddMethod(__Method_GetChatAppConfig, serviceImpl.GetChatAppConfig)
+          .AddMethod(__Method_UpdateChatAppConfig, serviceImpl.UpdateChatAppConfig).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -831,6 +1008,8 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       serviceBinder.AddMethod(__Method_InstallDeployment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GSuiteAddOns.V1.InstallDeploymentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.InstallDeployment));
       serviceBinder.AddMethod(__Method_UninstallDeployment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GSuiteAddOns.V1.UninstallDeploymentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.UninstallDeployment));
       serviceBinder.AddMethod(__Method_GetInstallStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest, global::Google.Cloud.GSuiteAddOns.V1.InstallStatus>(serviceImpl.GetInstallStatus));
+      serviceBinder.AddMethod(__Method_GetChatAppConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GSuiteAddOns.V1.GetChatAppConfigRequest, global::Google.Cloud.GSuiteAddOns.V1.ChatAppConfig>(serviceImpl.GetChatAppConfig));
+      serviceBinder.AddMethod(__Method_UpdateChatAppConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GSuiteAddOns.V1.UpdateChatAppConfigRequest, global::Google.Cloud.GSuiteAddOns.V1.ChatAppConfig>(serviceImpl.UpdateChatAppConfig));
     }
 
   }

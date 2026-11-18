@@ -2552,6 +2552,493 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetChatAppConfig_sync",
+      "title": "GetChatAppConfigRequestObject",
+      "description": "Snippet for GetChatAppConfig",
+      "file": "GSuiteAddOnsClient.GetChatAppConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetChatAppConfig",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetChatAppConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.GetChatAppConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GSuiteAddOns.V1.ChatAppConfig",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetChatAppConfig",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetChatAppConfig",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetChatAppConfig_async",
+      "title": "GetChatAppConfigRequestObjectAsync",
+      "description": "Snippet for GetChatAppConfigAsync",
+      "file": "GSuiteAddOnsClient.GetChatAppConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetChatAppConfigAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetChatAppConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.GetChatAppConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.ChatAppConfig>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetChatAppConfig",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetChatAppConfig",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetChatAppConfig_sync_flattened",
+      "title": "GetChatAppConfig",
+      "description": "Snippet for GetChatAppConfig",
+      "file": "GSuiteAddOnsClient.GetChatAppConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetChatAppConfig",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetChatAppConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GSuiteAddOns.V1.ChatAppConfig",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetChatAppConfig",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetChatAppConfig",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetChatAppConfig_async_flattened",
+      "title": "GetChatAppConfigAsync",
+      "description": "Snippet for GetChatAppConfigAsync",
+      "file": "GSuiteAddOnsClient.GetChatAppConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetChatAppConfigAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetChatAppConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.ChatAppConfig>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetChatAppConfig",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetChatAppConfig",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetChatAppConfig_sync_flattened_resourceNames",
+      "title": "GetChatAppConfigResourceNames",
+      "description": "Snippet for GetChatAppConfig",
+      "file": "GSuiteAddOnsClient.GetChatAppConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetChatAppConfig",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetChatAppConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.ChatAppConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GSuiteAddOns.V1.ChatAppConfig",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetChatAppConfig",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetChatAppConfig",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetChatAppConfig_async_flattened_resourceNames",
+      "title": "GetChatAppConfigResourceNamesAsync",
+      "description": "Snippet for GetChatAppConfigAsync",
+      "file": "GSuiteAddOnsClient.GetChatAppConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetChatAppConfigAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetChatAppConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.ChatAppConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.ChatAppConfig>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetChatAppConfig",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetChatAppConfig",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_UpdateChatAppConfig_sync",
+      "title": "UpdateChatAppConfigRequestObject",
+      "description": "Snippet for UpdateChatAppConfig",
+      "file": "GSuiteAddOnsClient.UpdateChatAppConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateChatAppConfig",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.UpdateChatAppConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.UpdateChatAppConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GSuiteAddOns.V1.ChatAppConfig",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "UpdateChatAppConfig",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.UpdateChatAppConfig",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_UpdateChatAppConfig_async",
+      "title": "UpdateChatAppConfigRequestObjectAsync",
+      "description": "Snippet for UpdateChatAppConfigAsync",
+      "file": "GSuiteAddOnsClient.UpdateChatAppConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateChatAppConfigAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.UpdateChatAppConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.UpdateChatAppConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.ChatAppConfig>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "UpdateChatAppConfig",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.UpdateChatAppConfig",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_UpdateChatAppConfig_sync_flattened",
+      "title": "UpdateChatAppConfig",
+      "description": "Snippet for UpdateChatAppConfig",
+      "file": "GSuiteAddOnsClient.UpdateChatAppConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateChatAppConfig",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.UpdateChatAppConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.ChatAppConfig",
+            "name": "chatAppConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GSuiteAddOns.V1.ChatAppConfig",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "UpdateChatAppConfig",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.UpdateChatAppConfig",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_UpdateChatAppConfig_async_flattened",
+      "title": "UpdateChatAppConfigAsync",
+      "description": "Snippet for UpdateChatAppConfigAsync",
+      "file": "GSuiteAddOnsClient.UpdateChatAppConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateChatAppConfigAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.UpdateChatAppConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.ChatAppConfig",
+            "name": "chatAppConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.ChatAppConfig>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "UpdateChatAppConfig",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.UpdateChatAppConfig",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

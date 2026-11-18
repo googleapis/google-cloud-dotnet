@@ -28,6 +28,12 @@
                 "GetAuthorizationAsync"
               ]
             },
+            "GetChatAppConfig": {
+              "methods": [
+                "GetChatAppConfig",
+                "GetChatAppConfigAsync"
+              ]
+            },
             "GetDeployment": {
               "methods": [
                 "GetDeployment",
@@ -62,6 +68,12 @@
               "methods": [
                 "UninstallDeployment",
                 "UninstallDeploymentAsync"
+              ]
+            },
+            "UpdateChatAppConfig": {
+              "methods": [
+                "UpdateChatAppConfig",
+                "UpdateChatAppConfigAsync"
               ]
             }
           }
