@@ -115,6 +115,51 @@
           }
         }
       }
+    },
+    "SecretOperationsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SecretOperationsServiceClient",
+          "rpcs": {
+            "CreateBackup": {
+              "methods": [
+                "CreateBackup",
+                "CreateBackupAsync"
+              ]
+            },
+            "DeleteBackup": {
+              "methods": [
+                "DeleteBackup",
+                "DeleteBackupAsync"
+              ]
+            },
+            "GetBackup": {
+              "methods": [
+                "GetBackup",
+                "GetBackupAsync"
+              ]
+            },
+            "ListBackups": {
+              "methods": [
+                "ListBackups",
+                "ListBackupsAsync"
+              ]
+            },
+            "RestoreBackup": {
+              "methods": [
+                "RestoreBackup",
+                "RestoreBackupAsync"
+              ]
+            },
+            "UpdateBackup": {
+              "methods": [
+                "UpdateBackup",
+                "UpdateBackupAsync"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }

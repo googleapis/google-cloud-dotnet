@@ -18,6 +18,7 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
 using gpr = Google.Protobuf.Reflection;
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 
@@ -41,13 +42,30 @@ namespace Google.Cloud.SecretManager.V1
                     // { "get": "/v1/{name=projects/*}/locations" }
                     proto::ByteString.FromBase64("Eh8vdjEve25hbWU9cHJvamVjdHMvKn0vbG9jYXRpb25z")
                 },
+                {
+                    "google.longrunning.Operations.CancelOperation",
+                    // { "post": "/v1/{name=projects/*/locations/*/operations/*}:cancel" }
+                    proto::ByteString.FromBase64("IjUvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9OmNhbmNlbA==")
+                },
+                {
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v1/{name=projects/*/locations/*/operations/*}" }
+                    proto::ByteString.FromBase64("Ei4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9")
+                },
+                {
+                    "google.longrunning.Operations.ListOperations",
+                    // { "get": "/v1/{name=projects/*/locations/*}/operations" }
+                    proto::ByteString.FromBase64("EiwvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vb3BlcmF0aW9ucw==")
+                },
             });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return gcl::LocationsReflection.Descriptor;
+            yield return OperationsServiceReflection.Descriptor;
             yield return ResourcesReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }
