@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.GSuiteAddOns.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Threading.Tasks;
 
@@ -981,6 +982,159 @@ namespace GoogleCSharpSnippets
             InstallStatusName name = InstallStatusName.FromProjectDeployment("[PROJECT]", "[DEPLOYMENT]");
             // Make the request
             InstallStatus response = await gSuiteAddOnsClient.GetInstallStatusAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChatAppConfig</summary>
+        public void GetChatAppConfigRequestObject()
+        {
+            // Snippet: GetChatAppConfig(GetChatAppConfigRequest, CallSettings)
+            // Create client
+            GSuiteAddOnsClient gSuiteAddOnsClient = GSuiteAddOnsClient.Create();
+            // Initialize request argument(s)
+            GetChatAppConfigRequest request = new GetChatAppConfigRequest
+            {
+                ChatAppConfigName = ChatAppConfigName.FromProject("[PROJECT]"),
+                View = GetChatAppConfigRequest.Types.ChatAppConfigView.Unspecified,
+            };
+            // Make the request
+            ChatAppConfig response = gSuiteAddOnsClient.GetChatAppConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChatAppConfigAsync</summary>
+        public async Task GetChatAppConfigRequestObjectAsync()
+        {
+            // Snippet: GetChatAppConfigAsync(GetChatAppConfigRequest, CallSettings)
+            // Additional: GetChatAppConfigAsync(GetChatAppConfigRequest, CancellationToken)
+            // Create client
+            GSuiteAddOnsClient gSuiteAddOnsClient = await GSuiteAddOnsClient.CreateAsync();
+            // Initialize request argument(s)
+            GetChatAppConfigRequest request = new GetChatAppConfigRequest
+            {
+                ChatAppConfigName = ChatAppConfigName.FromProject("[PROJECT]"),
+                View = GetChatAppConfigRequest.Types.ChatAppConfigView.Unspecified,
+            };
+            // Make the request
+            ChatAppConfig response = await gSuiteAddOnsClient.GetChatAppConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChatAppConfig</summary>
+        public void GetChatAppConfig()
+        {
+            // Snippet: GetChatAppConfig(string, CallSettings)
+            // Create client
+            GSuiteAddOnsClient gSuiteAddOnsClient = GSuiteAddOnsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/chatAppConfig";
+            // Make the request
+            ChatAppConfig response = gSuiteAddOnsClient.GetChatAppConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChatAppConfigAsync</summary>
+        public async Task GetChatAppConfigAsync()
+        {
+            // Snippet: GetChatAppConfigAsync(string, CallSettings)
+            // Additional: GetChatAppConfigAsync(string, CancellationToken)
+            // Create client
+            GSuiteAddOnsClient gSuiteAddOnsClient = await GSuiteAddOnsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/chatAppConfig";
+            // Make the request
+            ChatAppConfig response = await gSuiteAddOnsClient.GetChatAppConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChatAppConfig</summary>
+        public void GetChatAppConfigResourceNames()
+        {
+            // Snippet: GetChatAppConfig(ChatAppConfigName, CallSettings)
+            // Create client
+            GSuiteAddOnsClient gSuiteAddOnsClient = GSuiteAddOnsClient.Create();
+            // Initialize request argument(s)
+            ChatAppConfigName name = ChatAppConfigName.FromProject("[PROJECT]");
+            // Make the request
+            ChatAppConfig response = gSuiteAddOnsClient.GetChatAppConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChatAppConfigAsync</summary>
+        public async Task GetChatAppConfigResourceNamesAsync()
+        {
+            // Snippet: GetChatAppConfigAsync(ChatAppConfigName, CallSettings)
+            // Additional: GetChatAppConfigAsync(ChatAppConfigName, CancellationToken)
+            // Create client
+            GSuiteAddOnsClient gSuiteAddOnsClient = await GSuiteAddOnsClient.CreateAsync();
+            // Initialize request argument(s)
+            ChatAppConfigName name = ChatAppConfigName.FromProject("[PROJECT]");
+            // Make the request
+            ChatAppConfig response = await gSuiteAddOnsClient.GetChatAppConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateChatAppConfig</summary>
+        public void UpdateChatAppConfigRequestObject()
+        {
+            // Snippet: UpdateChatAppConfig(UpdateChatAppConfigRequest, CallSettings)
+            // Create client
+            GSuiteAddOnsClient gSuiteAddOnsClient = GSuiteAddOnsClient.Create();
+            // Initialize request argument(s)
+            UpdateChatAppConfigRequest request = new UpdateChatAppConfigRequest
+            {
+                ChatAppConfig = new ChatAppConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ChatAppConfig response = gSuiteAddOnsClient.UpdateChatAppConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateChatAppConfigAsync</summary>
+        public async Task UpdateChatAppConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateChatAppConfigAsync(UpdateChatAppConfigRequest, CallSettings)
+            // Additional: UpdateChatAppConfigAsync(UpdateChatAppConfigRequest, CancellationToken)
+            // Create client
+            GSuiteAddOnsClient gSuiteAddOnsClient = await GSuiteAddOnsClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateChatAppConfigRequest request = new UpdateChatAppConfigRequest
+            {
+                ChatAppConfig = new ChatAppConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ChatAppConfig response = await gSuiteAddOnsClient.UpdateChatAppConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateChatAppConfig</summary>
+        public void UpdateChatAppConfig()
+        {
+            // Snippet: UpdateChatAppConfig(ChatAppConfig, FieldMask, CallSettings)
+            // Create client
+            GSuiteAddOnsClient gSuiteAddOnsClient = GSuiteAddOnsClient.Create();
+            // Initialize request argument(s)
+            ChatAppConfig chatAppConfig = new ChatAppConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ChatAppConfig response = gSuiteAddOnsClient.UpdateChatAppConfig(chatAppConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateChatAppConfigAsync</summary>
+        public async Task UpdateChatAppConfigAsync()
+        {
+            // Snippet: UpdateChatAppConfigAsync(ChatAppConfig, FieldMask, CallSettings)
+            // Additional: UpdateChatAppConfigAsync(ChatAppConfig, FieldMask, CancellationToken)
+            // Create client
+            GSuiteAddOnsClient gSuiteAddOnsClient = await GSuiteAddOnsClient.CreateAsync();
+            // Initialize request argument(s)
+            ChatAppConfig chatAppConfig = new ChatAppConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ChatAppConfig response = await gSuiteAddOnsClient.UpdateChatAppConfigAsync(chatAppConfig, updateMask);
             // End snippet
         }
     }
