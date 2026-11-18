@@ -316,6 +316,7 @@
       "description": "Agent Registry is a centralized, unified catalog that lets you store, discover, and govern Model Context Protocol (MCP) servers, tools, and AI agents within Google Cloud.",
       "tags": [],
       "dependencies": {
+        "Google.Cloud.AppHub.V1": "1.4.0",
         "Google.Cloud.Location": "2.4.0",
         "Google.LongRunning": "3.5.0"
       },
