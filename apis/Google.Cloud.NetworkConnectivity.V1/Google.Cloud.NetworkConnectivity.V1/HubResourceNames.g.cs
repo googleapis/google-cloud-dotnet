@@ -1258,6 +1258,300 @@ namespace Google.Cloud.NetworkConnectivity.V1
         public static bool operator !=(GroupName a, GroupName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>GatewayAdvertisedRoute</c> resource.</summary>
+    public sealed partial class GatewayAdvertisedRouteName : gax::IResourceName, sys::IEquatable<GatewayAdvertisedRouteName>
+    {
+        /// <summary>The possible contents of <see cref="GatewayAdvertisedRouteName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// projects/{project}/locations/{location}/spokes/{spoke}/gatewayAdvertisedRoutes/{gateway_advertised_route}</c>
+            /// .
+            /// </summary>
+            ProjectLocationSpokeGatewayAdvertisedRoute = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationSpokeGatewayAdvertisedRoute = new gax::PathTemplate("projects/{project}/locations/{location}/spokes/{spoke}/gatewayAdvertisedRoutes/{gateway_advertised_route}");
+
+        /// <summary>Creates a <see cref="GatewayAdvertisedRouteName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="GatewayAdvertisedRouteName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static GatewayAdvertisedRouteName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new GatewayAdvertisedRouteName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="GatewayAdvertisedRouteName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/spokes/{spoke}/gatewayAdvertisedRoutes/{gateway_advertised_route}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="spokeId">The <c>Spoke</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="gatewayAdvertisedRouteId">
+        /// The <c>GatewayAdvertisedRoute</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// A new instance of <see cref="GatewayAdvertisedRouteName"/> constructed from the provided ids.
+        /// </returns>
+        public static GatewayAdvertisedRouteName FromProjectLocationSpokeGatewayAdvertisedRoute(string projectId, string locationId, string spokeId, string gatewayAdvertisedRouteId) =>
+            new GatewayAdvertisedRouteName(ResourceNameType.ProjectLocationSpokeGatewayAdvertisedRoute, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), spokeId: gax::GaxPreconditions.CheckNotNullOrEmpty(spokeId, nameof(spokeId)), gatewayAdvertisedRouteId: gax::GaxPreconditions.CheckNotNullOrEmpty(gatewayAdvertisedRouteId, nameof(gatewayAdvertisedRouteId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="GatewayAdvertisedRouteName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/spokes/{spoke}/gatewayAdvertisedRoutes/{gateway_advertised_route}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="spokeId">The <c>Spoke</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="gatewayAdvertisedRouteId">
+        /// The <c>GatewayAdvertisedRoute</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="GatewayAdvertisedRouteName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/spokes/{spoke}/gatewayAdvertisedRoutes/{gateway_advertised_route}</c>
+        /// .
+        /// </returns>
+        public static string Format(string projectId, string locationId, string spokeId, string gatewayAdvertisedRouteId) =>
+            FormatProjectLocationSpokeGatewayAdvertisedRoute(projectId, locationId, spokeId, gatewayAdvertisedRouteId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="GatewayAdvertisedRouteName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/spokes/{spoke}/gatewayAdvertisedRoutes/{gateway_advertised_route}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="spokeId">The <c>Spoke</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="gatewayAdvertisedRouteId">
+        /// The <c>GatewayAdvertisedRoute</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="GatewayAdvertisedRouteName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/spokes/{spoke}/gatewayAdvertisedRoutes/{gateway_advertised_route}</c>
+        /// .
+        /// </returns>
+        public static string FormatProjectLocationSpokeGatewayAdvertisedRoute(string projectId, string locationId, string spokeId, string gatewayAdvertisedRouteId) =>
+            s_projectLocationSpokeGatewayAdvertisedRoute.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(spokeId, nameof(spokeId)), gax::GaxPreconditions.CheckNotNullOrEmpty(gatewayAdvertisedRouteId, nameof(gatewayAdvertisedRouteId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="GatewayAdvertisedRouteName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/spokes/{spoke}/gatewayAdvertisedRoutes/{gateway_advertised_route}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="gatewayAdvertisedRouteName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="GatewayAdvertisedRouteName"/> if successful.</returns>
+        public static GatewayAdvertisedRouteName Parse(string gatewayAdvertisedRouteName) =>
+            Parse(gatewayAdvertisedRouteName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="GatewayAdvertisedRouteName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/spokes/{spoke}/gatewayAdvertisedRoutes/{gateway_advertised_route}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="gatewayAdvertisedRouteName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="GatewayAdvertisedRouteName"/> if successful.</returns>
+        public static GatewayAdvertisedRouteName Parse(string gatewayAdvertisedRouteName, bool allowUnparsed) =>
+            TryParse(gatewayAdvertisedRouteName, allowUnparsed, out GatewayAdvertisedRouteName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="GatewayAdvertisedRouteName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/spokes/{spoke}/gatewayAdvertisedRoutes/{gateway_advertised_route}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="gatewayAdvertisedRouteName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="GatewayAdvertisedRouteName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string gatewayAdvertisedRouteName, out GatewayAdvertisedRouteName result) =>
+            TryParse(gatewayAdvertisedRouteName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="GatewayAdvertisedRouteName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/spokes/{spoke}/gatewayAdvertisedRoutes/{gateway_advertised_route}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="gatewayAdvertisedRouteName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="GatewayAdvertisedRouteName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string gatewayAdvertisedRouteName, bool allowUnparsed, out GatewayAdvertisedRouteName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(gatewayAdvertisedRouteName, nameof(gatewayAdvertisedRouteName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationSpokeGatewayAdvertisedRoute.TryParseName(gatewayAdvertisedRouteName, out resourceName))
+            {
+                result = FromProjectLocationSpokeGatewayAdvertisedRoute(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(gatewayAdvertisedRouteName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private GatewayAdvertisedRouteName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string gatewayAdvertisedRouteId = null, string locationId = null, string projectId = null, string spokeId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            GatewayAdvertisedRouteId = gatewayAdvertisedRouteId;
+            LocationId = locationId;
+            ProjectId = projectId;
+            SpokeId = spokeId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="GatewayAdvertisedRouteName"/> class from the component parts of
+        /// pattern
+        /// <c>projects/{project}/locations/{location}/spokes/{spoke}/gatewayAdvertisedRoutes/{gateway_advertised_route}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="spokeId">The <c>Spoke</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="gatewayAdvertisedRouteId">
+        /// The <c>GatewayAdvertisedRoute</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        public GatewayAdvertisedRouteName(string projectId, string locationId, string spokeId, string gatewayAdvertisedRouteId) : this(ResourceNameType.ProjectLocationSpokeGatewayAdvertisedRoute, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), spokeId: gax::GaxPreconditions.CheckNotNullOrEmpty(spokeId, nameof(spokeId)), gatewayAdvertisedRouteId: gax::GaxPreconditions.CheckNotNullOrEmpty(gatewayAdvertisedRouteId, nameof(gatewayAdvertisedRouteId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>GatewayAdvertisedRoute</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed
+        /// resource name.
+        /// </summary>
+        public string GatewayAdvertisedRouteId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>Spoke</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string SpokeId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationSpokeGatewayAdvertisedRoute: return s_projectLocationSpokeGatewayAdvertisedRoute.Expand(ProjectId, LocationId, SpokeId, GatewayAdvertisedRouteId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as GatewayAdvertisedRouteName);
+
+        /// <inheritdoc/>
+        public bool Equals(GatewayAdvertisedRouteName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(GatewayAdvertisedRouteName a, GatewayAdvertisedRouteName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(GatewayAdvertisedRouteName a, GatewayAdvertisedRouteName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>VpnTunnel</c> resource.</summary>
     public sealed partial class VpnTunnelName : gax::IResourceName, sys::IEquatable<VpnTunnelName>
     {
@@ -1742,6 +2036,261 @@ namespace Google.Cloud.NetworkConnectivity.V1
         public static bool operator !=(InstanceName a, InstanceName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>SACAttachment</c> resource.</summary>
+    public sealed partial class SACAttachmentName : gax::IResourceName, sys::IEquatable<SACAttachmentName>
+    {
+        /// <summary>The possible contents of <see cref="SACAttachmentName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/sacAttachments/{sac_attachment}</c>
+            /// .
+            /// </summary>
+            ProjectLocationSacAttachment = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationSacAttachment = new gax::PathTemplate("projects/{project}/locations/{location}/sacAttachments/{sac_attachment}");
+
+        /// <summary>Creates a <see cref="SACAttachmentName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="SACAttachmentName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static SACAttachmentName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new SACAttachmentName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="SACAttachmentName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/sacAttachments/{sac_attachment}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="sacAttachmentId">The <c>SacAttachment</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="SACAttachmentName"/> constructed from the provided ids.</returns>
+        public static SACAttachmentName FromProjectLocationSacAttachment(string projectId, string locationId, string sacAttachmentId) =>
+            new SACAttachmentName(ResourceNameType.ProjectLocationSacAttachment, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), sacAttachmentId: gax::GaxPreconditions.CheckNotNullOrEmpty(sacAttachmentId, nameof(sacAttachmentId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SACAttachmentName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/sacAttachments/{sac_attachment}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="sacAttachmentId">The <c>SacAttachment</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SACAttachmentName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/sacAttachments/{sac_attachment}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string sacAttachmentId) =>
+            FormatProjectLocationSacAttachment(projectId, locationId, sacAttachmentId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SACAttachmentName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/sacAttachments/{sac_attachment}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="sacAttachmentId">The <c>SacAttachment</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SACAttachmentName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/sacAttachments/{sac_attachment}</c>.
+        /// </returns>
+        public static string FormatProjectLocationSacAttachment(string projectId, string locationId, string sacAttachmentId) =>
+            s_projectLocationSacAttachment.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(sacAttachmentId, nameof(sacAttachmentId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="SACAttachmentName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/sacAttachments/{sac_attachment}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="sACAttachmentName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="SACAttachmentName"/> if successful.</returns>
+        public static SACAttachmentName Parse(string sACAttachmentName) => Parse(sACAttachmentName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="SACAttachmentName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/sacAttachments/{sac_attachment}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="sACAttachmentName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="SACAttachmentName"/> if successful.</returns>
+        public static SACAttachmentName Parse(string sACAttachmentName, bool allowUnparsed) =>
+            TryParse(sACAttachmentName, allowUnparsed, out SACAttachmentName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="SACAttachmentName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/sacAttachments/{sac_attachment}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="sACAttachmentName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="SACAttachmentName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string sACAttachmentName, out SACAttachmentName result) =>
+            TryParse(sACAttachmentName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="SACAttachmentName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/sacAttachments/{sac_attachment}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="sACAttachmentName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="SACAttachmentName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string sACAttachmentName, bool allowUnparsed, out SACAttachmentName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(sACAttachmentName, nameof(sACAttachmentName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationSacAttachment.TryParseName(sACAttachmentName, out resourceName))
+            {
+                result = FromProjectLocationSacAttachment(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(sACAttachmentName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private SACAttachmentName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string sacAttachmentId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            ProjectId = projectId;
+            SacAttachmentId = sacAttachmentId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="SACAttachmentName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/sacAttachments/{sac_attachment}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="sacAttachmentId">The <c>SacAttachment</c> ID. Must not be <c>null</c> or empty.</param>
+        public SACAttachmentName(string projectId, string locationId, string sacAttachmentId) : this(ResourceNameType.ProjectLocationSacAttachment, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), sacAttachmentId: gax::GaxPreconditions.CheckNotNullOrEmpty(sacAttachmentId, nameof(sacAttachmentId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>SacAttachment</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string SacAttachmentId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationSacAttachment: return s_projectLocationSacAttachment.Expand(ProjectId, LocationId, SacAttachmentId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as SACAttachmentName);
+
+        /// <inheritdoc/>
+        public bool Equals(SACAttachmentName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(SACAttachmentName a, SACAttachmentName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(SACAttachmentName a, SACAttachmentName b) => !(a == b);
+    }
+
     public partial class Hub
     {
         /// <summary>
@@ -1830,6 +2379,15 @@ namespace Google.Cloud.NetworkConnectivity.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcnv::GroupName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="RouteTableName"/>-typed view over the <see cref="RouteTable"/> resource name property.
+        /// </summary>
+        public RouteTableName RouteTableAsRouteTableName
+        {
+            get => string.IsNullOrEmpty(RouteTable) ? null : RouteTableName.Parse(RouteTable, allowUnparsed: true);
+            set => RouteTable = value?.ToString() ?? "";
         }
     }
 
@@ -2163,6 +2721,77 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
     }
 
+    public partial class Gateway
+    {
+        /// <summary>
+        /// <see cref="SACAttachmentName"/>-typed view over the <see cref="SacAttachment"/> resource name property.
+        /// </summary>
+        public SACAttachmentName SacAttachmentAsSACAttachmentName
+        {
+            get => string.IsNullOrEmpty(SacAttachment) ? null : SACAttachmentName.Parse(SacAttachment, allowUnparsed: true);
+            set => SacAttachment = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GatewayAdvertisedRoute
+    {
+        /// <summary>
+        /// <see cref="gcnv::GatewayAdvertisedRouteName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gcnv::GatewayAdvertisedRouteName GatewayAdvertisedRouteName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::GatewayAdvertisedRouteName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateGatewayAdvertisedRouteRequest
+    {
+        /// <summary><see cref="SpokeName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public SpokeName ParentAsSpokeName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SpokeName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetGatewayAdvertisedRouteRequest
+    {
+        /// <summary>
+        /// <see cref="gcnv::GatewayAdvertisedRouteName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gcnv::GatewayAdvertisedRouteName GatewayAdvertisedRouteName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::GatewayAdvertisedRouteName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListGatewayAdvertisedRoutesRequest
+    {
+        /// <summary><see cref="SpokeName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public SpokeName ParentAsSpokeName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SpokeName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteGatewayAdvertisedRouteRequest
+    {
+        /// <summary>
+        /// <see cref="gcnv::GatewayAdvertisedRouteName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gcnv::GatewayAdvertisedRouteName GatewayAdvertisedRouteName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::GatewayAdvertisedRouteName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class LinkedProducerVpcNetwork
     {
         /// <summary>
@@ -2271,6 +2900,16 @@ namespace Google.Cloud.NetworkConnectivity.V1
         {
             get => string.IsNullOrEmpty(VpcNetwork) ? null : NetworkName.Parse(VpcNetwork, allowUnparsed: true);
             set => VpcNetwork = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class NextHopSpoke
+    {
+        /// <summary><see cref="SpokeName"/>-typed view over the <see cref="Uri"/> resource name property.</summary>
+        public SpokeName UriAsSpokeName
+        {
+            get => string.IsNullOrEmpty(Uri) ? null : SpokeName.Parse(Uri, allowUnparsed: true);
+            set => Uri = value?.ToString() ?? "";
         }
     }
 

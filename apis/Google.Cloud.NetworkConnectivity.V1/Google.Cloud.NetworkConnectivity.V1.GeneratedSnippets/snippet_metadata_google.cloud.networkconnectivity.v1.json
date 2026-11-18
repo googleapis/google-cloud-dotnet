@@ -15294,6 +15294,1418 @@
       ]
     },
     {
+      "regionTag": "networkconnectivity_v1_generated_HubService_CreateGatewayAdvertisedRoute_sync",
+      "title": "CreateGatewayAdvertisedRouteRequestObject",
+      "description": "Snippet for CreateGatewayAdvertisedRoute",
+      "file": "HubServiceClient.CreateGatewayAdvertisedRouteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGatewayAdvertisedRoute",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.CreateGatewayAdvertisedRoute",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.CreateGatewayAdvertisedRouteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.CreateGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_CreateGatewayAdvertisedRoute_async",
+      "title": "CreateGatewayAdvertisedRouteRequestObjectAsync",
+      "description": "Snippet for CreateGatewayAdvertisedRouteAsync",
+      "file": "HubServiceClient.CreateGatewayAdvertisedRouteRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGatewayAdvertisedRouteAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.CreateGatewayAdvertisedRouteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.CreateGatewayAdvertisedRouteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.CreateGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_CreateGatewayAdvertisedRoute_sync_flattened",
+      "title": "CreateGatewayAdvertisedRoute",
+      "description": "Snippet for CreateGatewayAdvertisedRoute",
+      "file": "HubServiceClient.CreateGatewayAdvertisedRouteSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGatewayAdvertisedRoute",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.CreateGatewayAdvertisedRoute",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute",
+            "name": "gatewayAdvertisedRoute"
+          },
+          {
+            "type": "System.String",
+            "name": "gatewayAdvertisedRouteId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.CreateGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_CreateGatewayAdvertisedRoute_async_flattened",
+      "title": "CreateGatewayAdvertisedRouteAsync",
+      "description": "Snippet for CreateGatewayAdvertisedRouteAsync",
+      "file": "HubServiceClient.CreateGatewayAdvertisedRouteAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGatewayAdvertisedRouteAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.CreateGatewayAdvertisedRouteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute",
+            "name": "gatewayAdvertisedRoute"
+          },
+          {
+            "type": "System.String",
+            "name": "gatewayAdvertisedRouteId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.CreateGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_CreateGatewayAdvertisedRoute_sync_flattened_resourceNames",
+      "title": "CreateGatewayAdvertisedRouteResourceNames",
+      "description": "Snippet for CreateGatewayAdvertisedRoute",
+      "file": "HubServiceClient.CreateGatewayAdvertisedRouteResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGatewayAdvertisedRoute",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.CreateGatewayAdvertisedRoute",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.SpokeName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute",
+            "name": "gatewayAdvertisedRoute"
+          },
+          {
+            "type": "System.String",
+            "name": "gatewayAdvertisedRouteId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.CreateGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_CreateGatewayAdvertisedRoute_async_flattened_resourceNames",
+      "title": "CreateGatewayAdvertisedRouteResourceNamesAsync",
+      "description": "Snippet for CreateGatewayAdvertisedRouteAsync",
+      "file": "HubServiceClient.CreateGatewayAdvertisedRouteResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGatewayAdvertisedRouteAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.CreateGatewayAdvertisedRouteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.SpokeName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute",
+            "name": "gatewayAdvertisedRoute"
+          },
+          {
+            "type": "System.String",
+            "name": "gatewayAdvertisedRouteId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.CreateGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_GetGatewayAdvertisedRoute_sync",
+      "title": "GetGatewayAdvertisedRouteRequestObject",
+      "description": "Snippet for GetGatewayAdvertisedRoute",
+      "file": "HubServiceClient.GetGatewayAdvertisedRouteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGatewayAdvertisedRoute",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.GetGatewayAdvertisedRoute",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GetGatewayAdvertisedRouteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "GetGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.GetGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_GetGatewayAdvertisedRoute_async",
+      "title": "GetGatewayAdvertisedRouteRequestObjectAsync",
+      "description": "Snippet for GetGatewayAdvertisedRouteAsync",
+      "file": "HubServiceClient.GetGatewayAdvertisedRouteRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGatewayAdvertisedRouteAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.GetGatewayAdvertisedRouteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GetGatewayAdvertisedRouteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "GetGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.GetGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_GetGatewayAdvertisedRoute_sync_flattened",
+      "title": "GetGatewayAdvertisedRoute",
+      "description": "Snippet for GetGatewayAdvertisedRoute",
+      "file": "HubServiceClient.GetGatewayAdvertisedRouteSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGatewayAdvertisedRoute",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.GetGatewayAdvertisedRoute",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "GetGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.GetGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_GetGatewayAdvertisedRoute_async_flattened",
+      "title": "GetGatewayAdvertisedRouteAsync",
+      "description": "Snippet for GetGatewayAdvertisedRouteAsync",
+      "file": "HubServiceClient.GetGatewayAdvertisedRouteAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGatewayAdvertisedRouteAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.GetGatewayAdvertisedRouteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "GetGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.GetGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_GetGatewayAdvertisedRoute_sync_flattened_resourceNames",
+      "title": "GetGatewayAdvertisedRouteResourceNames",
+      "description": "Snippet for GetGatewayAdvertisedRoute",
+      "file": "HubServiceClient.GetGatewayAdvertisedRouteResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGatewayAdvertisedRoute",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.GetGatewayAdvertisedRoute",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRouteName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "GetGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.GetGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_GetGatewayAdvertisedRoute_async_flattened_resourceNames",
+      "title": "GetGatewayAdvertisedRouteResourceNamesAsync",
+      "description": "Snippet for GetGatewayAdvertisedRouteAsync",
+      "file": "HubServiceClient.GetGatewayAdvertisedRouteResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGatewayAdvertisedRouteAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.GetGatewayAdvertisedRouteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRouteName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "GetGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.GetGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_ListGatewayAdvertisedRoutes_sync",
+      "title": "ListGatewayAdvertisedRoutesRequestObject",
+      "description": "Snippet for ListGatewayAdvertisedRoutes",
+      "file": "HubServiceClient.ListGatewayAdvertisedRoutesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGatewayAdvertisedRoutes",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.ListGatewayAdvertisedRoutes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesResponse, Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "ListGatewayAdvertisedRoutes",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.ListGatewayAdvertisedRoutes",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_ListGatewayAdvertisedRoutes_async",
+      "title": "ListGatewayAdvertisedRoutesRequestObjectAsync",
+      "description": "Snippet for ListGatewayAdvertisedRoutesAsync",
+      "file": "HubServiceClient.ListGatewayAdvertisedRoutesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGatewayAdvertisedRoutesAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.ListGatewayAdvertisedRoutesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesResponse, Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "ListGatewayAdvertisedRoutes",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.ListGatewayAdvertisedRoutes",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_ListGatewayAdvertisedRoutes_sync_flattened",
+      "title": "ListGatewayAdvertisedRoutes",
+      "description": "Snippet for ListGatewayAdvertisedRoutes",
+      "file": "HubServiceClient.ListGatewayAdvertisedRoutesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGatewayAdvertisedRoutes",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.ListGatewayAdvertisedRoutes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesResponse, Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "ListGatewayAdvertisedRoutes",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.ListGatewayAdvertisedRoutes",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_ListGatewayAdvertisedRoutes_async_flattened",
+      "title": "ListGatewayAdvertisedRoutesAsync",
+      "description": "Snippet for ListGatewayAdvertisedRoutesAsync",
+      "file": "HubServiceClient.ListGatewayAdvertisedRoutesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGatewayAdvertisedRoutesAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.ListGatewayAdvertisedRoutesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesResponse, Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "ListGatewayAdvertisedRoutes",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.ListGatewayAdvertisedRoutes",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_ListGatewayAdvertisedRoutes_sync_flattened_resourceNames",
+      "title": "ListGatewayAdvertisedRoutesResourceNames",
+      "description": "Snippet for ListGatewayAdvertisedRoutes",
+      "file": "HubServiceClient.ListGatewayAdvertisedRoutesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGatewayAdvertisedRoutes",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.ListGatewayAdvertisedRoutes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.SpokeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesResponse, Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "ListGatewayAdvertisedRoutes",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.ListGatewayAdvertisedRoutes",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_ListGatewayAdvertisedRoutes_async_flattened_resourceNames",
+      "title": "ListGatewayAdvertisedRoutesResourceNamesAsync",
+      "description": "Snippet for ListGatewayAdvertisedRoutesAsync",
+      "file": "HubServiceClient.ListGatewayAdvertisedRoutesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGatewayAdvertisedRoutesAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.ListGatewayAdvertisedRoutesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.SpokeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesResponse, Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "ListGatewayAdvertisedRoutes",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.ListGatewayAdvertisedRoutes",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_UpdateGatewayAdvertisedRoute_sync",
+      "title": "UpdateGatewayAdvertisedRouteRequestObject",
+      "description": "Snippet for UpdateGatewayAdvertisedRoute",
+      "file": "HubServiceClient.UpdateGatewayAdvertisedRouteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGatewayAdvertisedRoute",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.UpdateGatewayAdvertisedRoute",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.UpdateGatewayAdvertisedRouteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.UpdateGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_UpdateGatewayAdvertisedRoute_async",
+      "title": "UpdateGatewayAdvertisedRouteRequestObjectAsync",
+      "description": "Snippet for UpdateGatewayAdvertisedRouteAsync",
+      "file": "HubServiceClient.UpdateGatewayAdvertisedRouteRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGatewayAdvertisedRouteAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.UpdateGatewayAdvertisedRouteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.UpdateGatewayAdvertisedRouteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.UpdateGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_UpdateGatewayAdvertisedRoute_sync_flattened",
+      "title": "UpdateGatewayAdvertisedRoute",
+      "description": "Snippet for UpdateGatewayAdvertisedRoute",
+      "file": "HubServiceClient.UpdateGatewayAdvertisedRouteSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGatewayAdvertisedRoute",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.UpdateGatewayAdvertisedRoute",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute",
+            "name": "gatewayAdvertisedRoute"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.UpdateGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_UpdateGatewayAdvertisedRoute_async_flattened",
+      "title": "UpdateGatewayAdvertisedRouteAsync",
+      "description": "Snippet for UpdateGatewayAdvertisedRouteAsync",
+      "file": "HubServiceClient.UpdateGatewayAdvertisedRouteAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGatewayAdvertisedRouteAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.UpdateGatewayAdvertisedRouteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute",
+            "name": "gatewayAdvertisedRoute"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.UpdateGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_DeleteGatewayAdvertisedRoute_sync",
+      "title": "DeleteGatewayAdvertisedRouteRequestObject",
+      "description": "Snippet for DeleteGatewayAdvertisedRoute",
+      "file": "HubServiceClient.DeleteGatewayAdvertisedRouteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGatewayAdvertisedRoute",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.DeleteGatewayAdvertisedRoute",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.DeleteGatewayAdvertisedRouteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.DeleteGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_DeleteGatewayAdvertisedRoute_async",
+      "title": "DeleteGatewayAdvertisedRouteRequestObjectAsync",
+      "description": "Snippet for DeleteGatewayAdvertisedRouteAsync",
+      "file": "HubServiceClient.DeleteGatewayAdvertisedRouteRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGatewayAdvertisedRouteAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.DeleteGatewayAdvertisedRouteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.DeleteGatewayAdvertisedRouteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.DeleteGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_DeleteGatewayAdvertisedRoute_sync_flattened",
+      "title": "DeleteGatewayAdvertisedRoute",
+      "description": "Snippet for DeleteGatewayAdvertisedRoute",
+      "file": "HubServiceClient.DeleteGatewayAdvertisedRouteSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGatewayAdvertisedRoute",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.DeleteGatewayAdvertisedRoute",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.DeleteGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_DeleteGatewayAdvertisedRoute_async_flattened",
+      "title": "DeleteGatewayAdvertisedRouteAsync",
+      "description": "Snippet for DeleteGatewayAdvertisedRouteAsync",
+      "file": "HubServiceClient.DeleteGatewayAdvertisedRouteAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGatewayAdvertisedRouteAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.DeleteGatewayAdvertisedRouteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.DeleteGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_DeleteGatewayAdvertisedRoute_sync_flattened_resourceNames",
+      "title": "DeleteGatewayAdvertisedRouteResourceNames",
+      "description": "Snippet for DeleteGatewayAdvertisedRoute",
+      "file": "HubServiceClient.DeleteGatewayAdvertisedRouteResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGatewayAdvertisedRoute",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.DeleteGatewayAdvertisedRoute",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRouteName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.DeleteGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_HubService_DeleteGatewayAdvertisedRoute_async_flattened_resourceNames",
+      "title": "DeleteGatewayAdvertisedRouteResourceNamesAsync",
+      "description": "Snippet for DeleteGatewayAdvertisedRouteAsync",
+      "file": "HubServiceClient.DeleteGatewayAdvertisedRouteResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGatewayAdvertisedRouteAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.DeleteGatewayAdvertisedRouteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRouteName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "HubServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGatewayAdvertisedRoute",
+          "fullName": "google.cloud.networkconnectivity.v1.HubService.DeleteGatewayAdvertisedRoute",
+          "service": {
+            "shortName": "HubService",
+            "fullName": "google.cloud.networkconnectivity.v1.HubService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "networkconnectivity_v1_generated_InternalRangeService_ListInternalRanges_sync",
       "title": "ListInternalRangesRequestObject",
       "description": "Snippet for ListInternalRanges",
