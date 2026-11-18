@@ -84,6 +84,14 @@ namespace Google.Cloud.NetworkConnectivity.V1
             ListGroupsSettings = existing.ListGroupsSettings;
             UpdateGroupSettings = existing.UpdateGroupSettings;
             UpdateGroupOperationsSettings = existing.UpdateGroupOperationsSettings.Clone();
+            CreateGatewayAdvertisedRouteSettings = existing.CreateGatewayAdvertisedRouteSettings;
+            CreateGatewayAdvertisedRouteOperationsSettings = existing.CreateGatewayAdvertisedRouteOperationsSettings.Clone();
+            GetGatewayAdvertisedRouteSettings = existing.GetGatewayAdvertisedRouteSettings;
+            ListGatewayAdvertisedRoutesSettings = existing.ListGatewayAdvertisedRoutesSettings;
+            UpdateGatewayAdvertisedRouteSettings = existing.UpdateGatewayAdvertisedRouteSettings;
+            UpdateGatewayAdvertisedRouteOperationsSettings = existing.UpdateGatewayAdvertisedRouteOperationsSettings.Clone();
+            DeleteGatewayAdvertisedRouteSettings = existing.DeleteGatewayAdvertisedRouteSettings;
+            DeleteGatewayAdvertisedRouteOperationsSettings = existing.DeleteGatewayAdvertisedRouteOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -663,6 +671,155 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateGroupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>HubServiceClient.CreateGatewayAdvertisedRoute</c> and
+        /// <c>HubServiceClient.CreateGatewayAdvertisedRouteAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateGatewayAdvertisedRouteSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>HubServiceClient.CreateGatewayAdvertisedRoute</c> and
+        /// <c>HubServiceClient.CreateGatewayAdvertisedRouteAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateGatewayAdvertisedRouteOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>HubServiceClient.GetGatewayAdvertisedRoute</c> and <c>HubServiceClient.GetGatewayAdvertisedRouteAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetGatewayAdvertisedRouteSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>HubServiceClient.ListGatewayAdvertisedRoutes</c> and <c>HubServiceClient.ListGatewayAdvertisedRoutesAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListGatewayAdvertisedRoutesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>HubServiceClient.UpdateGatewayAdvertisedRoute</c> and
+        /// <c>HubServiceClient.UpdateGatewayAdvertisedRouteAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateGatewayAdvertisedRouteSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>HubServiceClient.UpdateGatewayAdvertisedRoute</c> and
+        /// <c>HubServiceClient.UpdateGatewayAdvertisedRouteAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateGatewayAdvertisedRouteOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>HubServiceClient.DeleteGatewayAdvertisedRoute</c> and
+        /// <c>HubServiceClient.DeleteGatewayAdvertisedRouteAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteGatewayAdvertisedRouteSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>HubServiceClient.DeleteGatewayAdvertisedRoute</c> and
+        /// <c>HubServiceClient.DeleteGatewayAdvertisedRouteAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteGatewayAdvertisedRouteOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -4080,6 +4237,697 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Group, OperationMetadata>> UpdateGroupAsync(Group group, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateGroupAsync(group, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GatewayAdvertisedRoute, OperationMetadata> CreateGatewayAdvertisedRoute(CreateGatewayAdvertisedRouteRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GatewayAdvertisedRoute, OperationMetadata>> CreateGatewayAdvertisedRouteAsync(CreateGatewayAdvertisedRouteRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GatewayAdvertisedRoute, OperationMetadata>> CreateGatewayAdvertisedRouteAsync(CreateGatewayAdvertisedRouteRequest request, st::CancellationToken cancellationToken) =>
+            CreateGatewayAdvertisedRouteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateGatewayAdvertisedRoute</c>.</summary>
+        public virtual lro::OperationsClient CreateGatewayAdvertisedRouteOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateGatewayAdvertisedRoute</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<GatewayAdvertisedRoute, OperationMetadata> PollOnceCreateGatewayAdvertisedRoute(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GatewayAdvertisedRoute, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateGatewayAdvertisedRouteOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateGatewayAdvertisedRoute</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<GatewayAdvertisedRoute, OperationMetadata>> PollOnceCreateGatewayAdvertisedRouteAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GatewayAdvertisedRoute, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateGatewayAdvertisedRouteOperationsClient, callSettings);
+
+        /// <summary>
+        /// Create a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource.
+        /// </param>
+        /// <param name="gatewayAdvertisedRoute">
+        /// Required. Initial values for the new gateway advertised route.
+        /// </param>
+        /// <param name="gatewayAdvertisedRouteId">
+        /// Required. Unique id for the route to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GatewayAdvertisedRoute, OperationMetadata> CreateGatewayAdvertisedRoute(string parent, GatewayAdvertisedRoute gatewayAdvertisedRoute, string gatewayAdvertisedRouteId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateGatewayAdvertisedRoute(new CreateGatewayAdvertisedRouteRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                GatewayAdvertisedRouteId = gax::GaxPreconditions.CheckNotNullOrEmpty(gatewayAdvertisedRouteId, nameof(gatewayAdvertisedRouteId)),
+                GatewayAdvertisedRoute = gax::GaxPreconditions.CheckNotNull(gatewayAdvertisedRoute, nameof(gatewayAdvertisedRoute)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource.
+        /// </param>
+        /// <param name="gatewayAdvertisedRoute">
+        /// Required. Initial values for the new gateway advertised route.
+        /// </param>
+        /// <param name="gatewayAdvertisedRouteId">
+        /// Required. Unique id for the route to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GatewayAdvertisedRoute, OperationMetadata>> CreateGatewayAdvertisedRouteAsync(string parent, GatewayAdvertisedRoute gatewayAdvertisedRoute, string gatewayAdvertisedRouteId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateGatewayAdvertisedRouteAsync(new CreateGatewayAdvertisedRouteRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                GatewayAdvertisedRouteId = gax::GaxPreconditions.CheckNotNullOrEmpty(gatewayAdvertisedRouteId, nameof(gatewayAdvertisedRouteId)),
+                GatewayAdvertisedRoute = gax::GaxPreconditions.CheckNotNull(gatewayAdvertisedRoute, nameof(gatewayAdvertisedRoute)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource.
+        /// </param>
+        /// <param name="gatewayAdvertisedRoute">
+        /// Required. Initial values for the new gateway advertised route.
+        /// </param>
+        /// <param name="gatewayAdvertisedRouteId">
+        /// Required. Unique id for the route to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GatewayAdvertisedRoute, OperationMetadata>> CreateGatewayAdvertisedRouteAsync(string parent, GatewayAdvertisedRoute gatewayAdvertisedRoute, string gatewayAdvertisedRouteId, st::CancellationToken cancellationToken) =>
+            CreateGatewayAdvertisedRouteAsync(parent, gatewayAdvertisedRoute, gatewayAdvertisedRouteId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource.
+        /// </param>
+        /// <param name="gatewayAdvertisedRoute">
+        /// Required. Initial values for the new gateway advertised route.
+        /// </param>
+        /// <param name="gatewayAdvertisedRouteId">
+        /// Required. Unique id for the route to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GatewayAdvertisedRoute, OperationMetadata> CreateGatewayAdvertisedRoute(SpokeName parent, GatewayAdvertisedRoute gatewayAdvertisedRoute, string gatewayAdvertisedRouteId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateGatewayAdvertisedRoute(new CreateGatewayAdvertisedRouteRequest
+            {
+                ParentAsSpokeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                GatewayAdvertisedRouteId = gax::GaxPreconditions.CheckNotNullOrEmpty(gatewayAdvertisedRouteId, nameof(gatewayAdvertisedRouteId)),
+                GatewayAdvertisedRoute = gax::GaxPreconditions.CheckNotNull(gatewayAdvertisedRoute, nameof(gatewayAdvertisedRoute)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource.
+        /// </param>
+        /// <param name="gatewayAdvertisedRoute">
+        /// Required. Initial values for the new gateway advertised route.
+        /// </param>
+        /// <param name="gatewayAdvertisedRouteId">
+        /// Required. Unique id for the route to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GatewayAdvertisedRoute, OperationMetadata>> CreateGatewayAdvertisedRouteAsync(SpokeName parent, GatewayAdvertisedRoute gatewayAdvertisedRoute, string gatewayAdvertisedRouteId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateGatewayAdvertisedRouteAsync(new CreateGatewayAdvertisedRouteRequest
+            {
+                ParentAsSpokeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                GatewayAdvertisedRouteId = gax::GaxPreconditions.CheckNotNullOrEmpty(gatewayAdvertisedRouteId, nameof(gatewayAdvertisedRouteId)),
+                GatewayAdvertisedRoute = gax::GaxPreconditions.CheckNotNull(gatewayAdvertisedRoute, nameof(gatewayAdvertisedRoute)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource.
+        /// </param>
+        /// <param name="gatewayAdvertisedRoute">
+        /// Required. Initial values for the new gateway advertised route.
+        /// </param>
+        /// <param name="gatewayAdvertisedRouteId">
+        /// Required. Unique id for the route to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GatewayAdvertisedRoute, OperationMetadata>> CreateGatewayAdvertisedRouteAsync(SpokeName parent, GatewayAdvertisedRoute gatewayAdvertisedRoute, string gatewayAdvertisedRouteId, st::CancellationToken cancellationToken) =>
+            CreateGatewayAdvertisedRouteAsync(parent, gatewayAdvertisedRoute, gatewayAdvertisedRouteId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GatewayAdvertisedRoute GetGatewayAdvertisedRoute(GetGatewayAdvertisedRouteRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GatewayAdvertisedRoute> GetGatewayAdvertisedRouteAsync(GetGatewayAdvertisedRouteRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GatewayAdvertisedRoute> GetGatewayAdvertisedRouteAsync(GetGatewayAdvertisedRouteRequest request, st::CancellationToken cancellationToken) =>
+            GetGatewayAdvertisedRouteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the gateway advertised route to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GatewayAdvertisedRoute GetGatewayAdvertisedRoute(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGatewayAdvertisedRoute(new GetGatewayAdvertisedRouteRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the gateway advertised route to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GatewayAdvertisedRoute> GetGatewayAdvertisedRouteAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGatewayAdvertisedRouteAsync(new GetGatewayAdvertisedRouteRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the gateway advertised route to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GatewayAdvertisedRoute> GetGatewayAdvertisedRouteAsync(string name, st::CancellationToken cancellationToken) =>
+            GetGatewayAdvertisedRouteAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the gateway advertised route to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GatewayAdvertisedRoute GetGatewayAdvertisedRoute(GatewayAdvertisedRouteName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGatewayAdvertisedRoute(new GetGatewayAdvertisedRouteRequest
+            {
+                GatewayAdvertisedRouteName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the gateway advertised route to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GatewayAdvertisedRoute> GetGatewayAdvertisedRouteAsync(GatewayAdvertisedRouteName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGatewayAdvertisedRouteAsync(new GetGatewayAdvertisedRouteRequest
+            {
+                GatewayAdvertisedRouteName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the gateway advertised route to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GatewayAdvertisedRoute> GetGatewayAdvertisedRouteAsync(GatewayAdvertisedRouteName name, st::CancellationToken cancellationToken) =>
+            GetGatewayAdvertisedRouteAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List GatewayAdvertisedRoutes
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GatewayAdvertisedRoute"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGatewayAdvertisedRoutesResponse, GatewayAdvertisedRoute> ListGatewayAdvertisedRoutes(ListGatewayAdvertisedRoutesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List GatewayAdvertisedRoutes
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GatewayAdvertisedRoute"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGatewayAdvertisedRoutesResponse, GatewayAdvertisedRoute> ListGatewayAdvertisedRoutesAsync(ListGatewayAdvertisedRoutesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List GatewayAdvertisedRoutes
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource's name.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GatewayAdvertisedRoute"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGatewayAdvertisedRoutesResponse, GatewayAdvertisedRoute> ListGatewayAdvertisedRoutes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGatewayAdvertisedRoutesRequest request = new ListGatewayAdvertisedRoutesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGatewayAdvertisedRoutes(request, callSettings);
+        }
+
+        /// <summary>
+        /// List GatewayAdvertisedRoutes
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource's name.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GatewayAdvertisedRoute"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGatewayAdvertisedRoutesResponse, GatewayAdvertisedRoute> ListGatewayAdvertisedRoutesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGatewayAdvertisedRoutesRequest request = new ListGatewayAdvertisedRoutesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGatewayAdvertisedRoutesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// List GatewayAdvertisedRoutes
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource's name.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GatewayAdvertisedRoute"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGatewayAdvertisedRoutesResponse, GatewayAdvertisedRoute> ListGatewayAdvertisedRoutes(SpokeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGatewayAdvertisedRoutesRequest request = new ListGatewayAdvertisedRoutesRequest
+            {
+                ParentAsSpokeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGatewayAdvertisedRoutes(request, callSettings);
+        }
+
+        /// <summary>
+        /// List GatewayAdvertisedRoutes
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource's name.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GatewayAdvertisedRoute"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGatewayAdvertisedRoutesResponse, GatewayAdvertisedRoute> ListGatewayAdvertisedRoutesAsync(SpokeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGatewayAdvertisedRoutesRequest request = new ListGatewayAdvertisedRoutesRequest
+            {
+                ParentAsSpokeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGatewayAdvertisedRoutesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Update a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GatewayAdvertisedRoute, OperationMetadata> UpdateGatewayAdvertisedRoute(UpdateGatewayAdvertisedRouteRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GatewayAdvertisedRoute, OperationMetadata>> UpdateGatewayAdvertisedRouteAsync(UpdateGatewayAdvertisedRouteRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GatewayAdvertisedRoute, OperationMetadata>> UpdateGatewayAdvertisedRouteAsync(UpdateGatewayAdvertisedRouteRequest request, st::CancellationToken cancellationToken) =>
+            UpdateGatewayAdvertisedRouteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateGatewayAdvertisedRoute</c>.</summary>
+        public virtual lro::OperationsClient UpdateGatewayAdvertisedRouteOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateGatewayAdvertisedRoute</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<GatewayAdvertisedRoute, OperationMetadata> PollOnceUpdateGatewayAdvertisedRoute(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GatewayAdvertisedRoute, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateGatewayAdvertisedRouteOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateGatewayAdvertisedRoute</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<GatewayAdvertisedRoute, OperationMetadata>> PollOnceUpdateGatewayAdvertisedRouteAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GatewayAdvertisedRoute, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateGatewayAdvertisedRouteOperationsClient, callSettings);
+
+        /// <summary>
+        /// Update a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="gatewayAdvertisedRoute">
+        /// Required. The gateway advertised route to update.
+        /// 
+        /// The gateway advertised route's `name` field is used to identify the gateway
+        /// advertised route to update. Format:
+        /// `projects/{project}/locations/{location}/spokes/{spoke}/gatewayAdvertisedRoutes/{gatewayAdvertisedRoute}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. In the case of an update to an existing group, field mask is used
+        /// to specify the fields to be overwritten. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field is
+        /// overwritten if it is in the mask. If the user does not provide a mask, then
+        /// all fields are overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GatewayAdvertisedRoute, OperationMetadata> UpdateGatewayAdvertisedRoute(GatewayAdvertisedRoute gatewayAdvertisedRoute, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateGatewayAdvertisedRoute(new UpdateGatewayAdvertisedRouteRequest
+            {
+                UpdateMask = updateMask,
+                GatewayAdvertisedRoute = gax::GaxPreconditions.CheckNotNull(gatewayAdvertisedRoute, nameof(gatewayAdvertisedRoute)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="gatewayAdvertisedRoute">
+        /// Required. The gateway advertised route to update.
+        /// 
+        /// The gateway advertised route's `name` field is used to identify the gateway
+        /// advertised route to update. Format:
+        /// `projects/{project}/locations/{location}/spokes/{spoke}/gatewayAdvertisedRoutes/{gatewayAdvertisedRoute}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. In the case of an update to an existing group, field mask is used
+        /// to specify the fields to be overwritten. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field is
+        /// overwritten if it is in the mask. If the user does not provide a mask, then
+        /// all fields are overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GatewayAdvertisedRoute, OperationMetadata>> UpdateGatewayAdvertisedRouteAsync(GatewayAdvertisedRoute gatewayAdvertisedRoute, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateGatewayAdvertisedRouteAsync(new UpdateGatewayAdvertisedRouteRequest
+            {
+                UpdateMask = updateMask,
+                GatewayAdvertisedRoute = gax::GaxPreconditions.CheckNotNull(gatewayAdvertisedRoute, nameof(gatewayAdvertisedRoute)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="gatewayAdvertisedRoute">
+        /// Required. The gateway advertised route to update.
+        /// 
+        /// The gateway advertised route's `name` field is used to identify the gateway
+        /// advertised route to update. Format:
+        /// `projects/{project}/locations/{location}/spokes/{spoke}/gatewayAdvertisedRoutes/{gatewayAdvertisedRoute}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. In the case of an update to an existing group, field mask is used
+        /// to specify the fields to be overwritten. The fields specified in the
+        /// update_mask are relative to the resource, not the full request. A field is
+        /// overwritten if it is in the mask. If the user does not provide a mask, then
+        /// all fields are overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GatewayAdvertisedRoute, OperationMetadata>> UpdateGatewayAdvertisedRouteAsync(GatewayAdvertisedRoute gatewayAdvertisedRoute, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateGatewayAdvertisedRouteAsync(gatewayAdvertisedRoute, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteGatewayAdvertisedRoute(DeleteGatewayAdvertisedRouteRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGatewayAdvertisedRouteAsync(DeleteGatewayAdvertisedRouteRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGatewayAdvertisedRouteAsync(DeleteGatewayAdvertisedRouteRequest request, st::CancellationToken cancellationToken) =>
+            DeleteGatewayAdvertisedRouteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteGatewayAdvertisedRoute</c>.</summary>
+        public virtual lro::OperationsClient DeleteGatewayAdvertisedRouteOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteGatewayAdvertisedRoute</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteGatewayAdvertisedRoute(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteGatewayAdvertisedRouteOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteGatewayAdvertisedRoute</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteGatewayAdvertisedRouteAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteGatewayAdvertisedRouteOperationsClient, callSettings);
+
+        /// <summary>
+        /// Delete a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the gateway advertised route to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteGatewayAdvertisedRoute(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteGatewayAdvertisedRoute(new DeleteGatewayAdvertisedRouteRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the gateway advertised route to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGatewayAdvertisedRouteAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteGatewayAdvertisedRouteAsync(new DeleteGatewayAdvertisedRouteRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the gateway advertised route to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGatewayAdvertisedRouteAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteGatewayAdvertisedRouteAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the gateway advertised route to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteGatewayAdvertisedRoute(GatewayAdvertisedRouteName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteGatewayAdvertisedRoute(new DeleteGatewayAdvertisedRouteRequest
+            {
+                GatewayAdvertisedRouteName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the gateway advertised route to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGatewayAdvertisedRouteAsync(GatewayAdvertisedRouteName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteGatewayAdvertisedRouteAsync(new DeleteGatewayAdvertisedRouteRequest
+            {
+                GatewayAdvertisedRouteName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the gateway advertised route to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGatewayAdvertisedRouteAsync(GatewayAdvertisedRouteName name, st::CancellationToken cancellationToken) =>
+            DeleteGatewayAdvertisedRouteAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>HubService client wrapper implementation, for convenient use.</summary>
@@ -4136,6 +4984,16 @@ namespace Google.Cloud.NetworkConnectivity.V1
 
         private readonly gaxgrpc::ApiCall<UpdateGroupRequest, lro::Operation> _callUpdateGroup;
 
+        private readonly gaxgrpc::ApiCall<CreateGatewayAdvertisedRouteRequest, lro::Operation> _callCreateGatewayAdvertisedRoute;
+
+        private readonly gaxgrpc::ApiCall<GetGatewayAdvertisedRouteRequest, GatewayAdvertisedRoute> _callGetGatewayAdvertisedRoute;
+
+        private readonly gaxgrpc::ApiCall<ListGatewayAdvertisedRoutesRequest, ListGatewayAdvertisedRoutesResponse> _callListGatewayAdvertisedRoutes;
+
+        private readonly gaxgrpc::ApiCall<UpdateGatewayAdvertisedRouteRequest, lro::Operation> _callUpdateGatewayAdvertisedRoute;
+
+        private readonly gaxgrpc::ApiCall<DeleteGatewayAdvertisedRouteRequest, lro::Operation> _callDeleteGatewayAdvertisedRoute;
+
         /// <summary>
         /// Constructs a client wrapper for the HubService service, with the specified gRPC client and settings.
         /// </summary>
@@ -4162,6 +5020,9 @@ namespace Google.Cloud.NetworkConnectivity.V1
             RejectSpokeUpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RejectSpokeUpdateOperationsSettings, logger);
             DeleteSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSpokeOperationsSettings, logger);
             UpdateGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGroupOperationsSettings, logger);
+            CreateGatewayAdvertisedRouteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGatewayAdvertisedRouteOperationsSettings, logger);
+            UpdateGatewayAdvertisedRouteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGatewayAdvertisedRouteOperationsSettings, logger);
+            DeleteGatewayAdvertisedRouteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGatewayAdvertisedRouteOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListHubs = clientHelper.BuildApiCall<ListHubsRequest, ListHubsResponse>("ListHubs", grpcClient.ListHubsAsync, grpcClient.ListHubs, effectiveSettings.ListHubsSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -4233,6 +5094,21 @@ namespace Google.Cloud.NetworkConnectivity.V1
             _callUpdateGroup = clientHelper.BuildApiCall<UpdateGroupRequest, lro::Operation>("UpdateGroup", grpcClient.UpdateGroupAsync, grpcClient.UpdateGroup, effectiveSettings.UpdateGroupSettings).WithGoogleRequestParam("group.name", request => request.Group?.Name);
             Modify_ApiCall(ref _callUpdateGroup);
             Modify_UpdateGroupApiCall(ref _callUpdateGroup);
+            _callCreateGatewayAdvertisedRoute = clientHelper.BuildApiCall<CreateGatewayAdvertisedRouteRequest, lro::Operation>("CreateGatewayAdvertisedRoute", grpcClient.CreateGatewayAdvertisedRouteAsync, grpcClient.CreateGatewayAdvertisedRoute, effectiveSettings.CreateGatewayAdvertisedRouteSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateGatewayAdvertisedRoute);
+            Modify_CreateGatewayAdvertisedRouteApiCall(ref _callCreateGatewayAdvertisedRoute);
+            _callGetGatewayAdvertisedRoute = clientHelper.BuildApiCall<GetGatewayAdvertisedRouteRequest, GatewayAdvertisedRoute>("GetGatewayAdvertisedRoute", grpcClient.GetGatewayAdvertisedRouteAsync, grpcClient.GetGatewayAdvertisedRoute, effectiveSettings.GetGatewayAdvertisedRouteSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetGatewayAdvertisedRoute);
+            Modify_GetGatewayAdvertisedRouteApiCall(ref _callGetGatewayAdvertisedRoute);
+            _callListGatewayAdvertisedRoutes = clientHelper.BuildApiCall<ListGatewayAdvertisedRoutesRequest, ListGatewayAdvertisedRoutesResponse>("ListGatewayAdvertisedRoutes", grpcClient.ListGatewayAdvertisedRoutesAsync, grpcClient.ListGatewayAdvertisedRoutes, effectiveSettings.ListGatewayAdvertisedRoutesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListGatewayAdvertisedRoutes);
+            Modify_ListGatewayAdvertisedRoutesApiCall(ref _callListGatewayAdvertisedRoutes);
+            _callUpdateGatewayAdvertisedRoute = clientHelper.BuildApiCall<UpdateGatewayAdvertisedRouteRequest, lro::Operation>("UpdateGatewayAdvertisedRoute", grpcClient.UpdateGatewayAdvertisedRouteAsync, grpcClient.UpdateGatewayAdvertisedRoute, effectiveSettings.UpdateGatewayAdvertisedRouteSettings).WithGoogleRequestParam("gateway_advertised_route.name", request => request.GatewayAdvertisedRoute?.Name);
+            Modify_ApiCall(ref _callUpdateGatewayAdvertisedRoute);
+            Modify_UpdateGatewayAdvertisedRouteApiCall(ref _callUpdateGatewayAdvertisedRoute);
+            _callDeleteGatewayAdvertisedRoute = clientHelper.BuildApiCall<DeleteGatewayAdvertisedRouteRequest, lro::Operation>("DeleteGatewayAdvertisedRoute", grpcClient.DeleteGatewayAdvertisedRouteAsync, grpcClient.DeleteGatewayAdvertisedRoute, effectiveSettings.DeleteGatewayAdvertisedRouteSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteGatewayAdvertisedRoute);
+            Modify_DeleteGatewayAdvertisedRouteApiCall(ref _callDeleteGatewayAdvertisedRoute);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4283,6 +5159,16 @@ namespace Google.Cloud.NetworkConnectivity.V1
         partial void Modify_ListGroupsApiCall(ref gaxgrpc::ApiCall<ListGroupsRequest, ListGroupsResponse> call);
 
         partial void Modify_UpdateGroupApiCall(ref gaxgrpc::ApiCall<UpdateGroupRequest, lro::Operation> call);
+
+        partial void Modify_CreateGatewayAdvertisedRouteApiCall(ref gaxgrpc::ApiCall<CreateGatewayAdvertisedRouteRequest, lro::Operation> call);
+
+        partial void Modify_GetGatewayAdvertisedRouteApiCall(ref gaxgrpc::ApiCall<GetGatewayAdvertisedRouteRequest, GatewayAdvertisedRoute> call);
+
+        partial void Modify_ListGatewayAdvertisedRoutesApiCall(ref gaxgrpc::ApiCall<ListGatewayAdvertisedRoutesRequest, ListGatewayAdvertisedRoutesResponse> call);
+
+        partial void Modify_UpdateGatewayAdvertisedRouteApiCall(ref gaxgrpc::ApiCall<UpdateGatewayAdvertisedRouteRequest, lro::Operation> call);
+
+        partial void Modify_DeleteGatewayAdvertisedRouteApiCall(ref gaxgrpc::ApiCall<DeleteGatewayAdvertisedRouteRequest, lro::Operation> call);
 
         partial void OnConstruction(HubService.HubServiceClient grpcClient, HubServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -4340,6 +5226,16 @@ namespace Google.Cloud.NetworkConnectivity.V1
         partial void Modify_ListGroupsRequest(ref ListGroupsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateGroupRequest(ref UpdateGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateGatewayAdvertisedRouteRequest(ref CreateGatewayAdvertisedRouteRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetGatewayAdvertisedRouteRequest(ref GetGatewayAdvertisedRouteRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListGatewayAdvertisedRoutesRequest(ref ListGatewayAdvertisedRoutesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateGatewayAdvertisedRouteRequest(ref UpdateGatewayAdvertisedRouteRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteGatewayAdvertisedRouteRequest(ref DeleteGatewayAdvertisedRouteRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists the Network Connectivity Center hubs associated with a given project.
@@ -4943,6 +5839,135 @@ namespace Google.Cloud.NetworkConnectivity.V1
             Modify_UpdateGroupRequest(ref request, ref callSettings);
             return new lro::Operation<Group, OperationMetadata>(await _callUpdateGroup.Async(request, callSettings).ConfigureAwait(false), UpdateGroupOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>CreateGatewayAdvertisedRoute</c>.</summary>
+        public override lro::OperationsClient CreateGatewayAdvertisedRouteOperationsClient { get; }
+
+        /// <summary>
+        /// Create a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<GatewayAdvertisedRoute, OperationMetadata> CreateGatewayAdvertisedRoute(CreateGatewayAdvertisedRouteRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateGatewayAdvertisedRouteRequest(ref request, ref callSettings);
+            return new lro::Operation<GatewayAdvertisedRoute, OperationMetadata>(_callCreateGatewayAdvertisedRoute.Sync(request, callSettings), CreateGatewayAdvertisedRouteOperationsClient);
+        }
+
+        /// <summary>
+        /// Create a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<GatewayAdvertisedRoute, OperationMetadata>> CreateGatewayAdvertisedRouteAsync(CreateGatewayAdvertisedRouteRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateGatewayAdvertisedRouteRequest(ref request, ref callSettings);
+            return new lro::Operation<GatewayAdvertisedRoute, OperationMetadata>(await _callCreateGatewayAdvertisedRoute.Async(request, callSettings).ConfigureAwait(false), CreateGatewayAdvertisedRouteOperationsClient);
+        }
+
+        /// <summary>
+        /// Get a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GatewayAdvertisedRoute GetGatewayAdvertisedRoute(GetGatewayAdvertisedRouteRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGatewayAdvertisedRouteRequest(ref request, ref callSettings);
+            return _callGetGatewayAdvertisedRoute.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GatewayAdvertisedRoute> GetGatewayAdvertisedRouteAsync(GetGatewayAdvertisedRouteRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGatewayAdvertisedRouteRequest(ref request, ref callSettings);
+            return _callGetGatewayAdvertisedRoute.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List GatewayAdvertisedRoutes
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GatewayAdvertisedRoute"/> resources.</returns>
+        public override gax::PagedEnumerable<ListGatewayAdvertisedRoutesResponse, GatewayAdvertisedRoute> ListGatewayAdvertisedRoutes(ListGatewayAdvertisedRoutesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListGatewayAdvertisedRoutesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListGatewayAdvertisedRoutesRequest, ListGatewayAdvertisedRoutesResponse, GatewayAdvertisedRoute>(_callListGatewayAdvertisedRoutes, request, callSettings);
+        }
+
+        /// <summary>
+        /// List GatewayAdvertisedRoutes
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GatewayAdvertisedRoute"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListGatewayAdvertisedRoutesResponse, GatewayAdvertisedRoute> ListGatewayAdvertisedRoutesAsync(ListGatewayAdvertisedRoutesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListGatewayAdvertisedRoutesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListGatewayAdvertisedRoutesRequest, ListGatewayAdvertisedRoutesResponse, GatewayAdvertisedRoute>(_callListGatewayAdvertisedRoutes, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateGatewayAdvertisedRoute</c>.</summary>
+        public override lro::OperationsClient UpdateGatewayAdvertisedRouteOperationsClient { get; }
+
+        /// <summary>
+        /// Update a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<GatewayAdvertisedRoute, OperationMetadata> UpdateGatewayAdvertisedRoute(UpdateGatewayAdvertisedRouteRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateGatewayAdvertisedRouteRequest(ref request, ref callSettings);
+            return new lro::Operation<GatewayAdvertisedRoute, OperationMetadata>(_callUpdateGatewayAdvertisedRoute.Sync(request, callSettings), UpdateGatewayAdvertisedRouteOperationsClient);
+        }
+
+        /// <summary>
+        /// Update a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<GatewayAdvertisedRoute, OperationMetadata>> UpdateGatewayAdvertisedRouteAsync(UpdateGatewayAdvertisedRouteRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateGatewayAdvertisedRouteRequest(ref request, ref callSettings);
+            return new lro::Operation<GatewayAdvertisedRoute, OperationMetadata>(await _callUpdateGatewayAdvertisedRoute.Async(request, callSettings).ConfigureAwait(false), UpdateGatewayAdvertisedRouteOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteGatewayAdvertisedRoute</c>.</summary>
+        public override lro::OperationsClient DeleteGatewayAdvertisedRouteOperationsClient { get; }
+
+        /// <summary>
+        /// Delete a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteGatewayAdvertisedRoute(DeleteGatewayAdvertisedRouteRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteGatewayAdvertisedRouteRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteGatewayAdvertisedRoute.Sync(request, callSettings), DeleteGatewayAdvertisedRouteOperationsClient);
+        }
+
+        /// <summary>
+        /// Delete a GatewayAdvertisedRoute
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGatewayAdvertisedRouteAsync(DeleteGatewayAdvertisedRouteRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteGatewayAdvertisedRouteRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteGatewayAdvertisedRoute.Async(request, callSettings).ConfigureAwait(false), DeleteGatewayAdvertisedRouteOperationsClient);
+        }
     }
 
     public partial class ListHubsRequest : gaxgrpc::IPageRequest
@@ -4970,6 +5995,10 @@ namespace Google.Cloud.NetworkConnectivity.V1
     }
 
     public partial class ListGroupsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListGatewayAdvertisedRoutesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -5025,6 +6054,14 @@ namespace Google.Cloud.NetworkConnectivity.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Group> GetEnumerator() => Groups.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListGatewayAdvertisedRoutesResponse : gaxgrpc::IPageResponse<GatewayAdvertisedRoute>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<GatewayAdvertisedRoute> GetEnumerator() => GatewayAdvertisedRoutes.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

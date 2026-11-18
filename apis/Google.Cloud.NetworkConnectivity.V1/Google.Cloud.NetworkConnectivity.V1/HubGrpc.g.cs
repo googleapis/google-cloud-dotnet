@@ -3,7 +3,7 @@
 //     source: google/cloud/networkconnectivity/v1/hub.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -137,6 +137,20 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.ListGroupsResponse> __Marshaller_google_cloud_networkconnectivity_v1_ListGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.ListGroupsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.UpdateGroupRequest> __Marshaller_google_cloud_networkconnectivity_v1_UpdateGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.UpdateGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.CreateGatewayAdvertisedRouteRequest> __Marshaller_google_cloud_networkconnectivity_v1_CreateGatewayAdvertisedRouteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.CreateGatewayAdvertisedRouteRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.GetGatewayAdvertisedRouteRequest> __Marshaller_google_cloud_networkconnectivity_v1_GetGatewayAdvertisedRouteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.GetGatewayAdvertisedRouteRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute> __Marshaller_google_cloud_networkconnectivity_v1_GatewayAdvertisedRoute = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesRequest> __Marshaller_google_cloud_networkconnectivity_v1_ListGatewayAdvertisedRoutesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesResponse> __Marshaller_google_cloud_networkconnectivity_v1_ListGatewayAdvertisedRoutesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.UpdateGatewayAdvertisedRouteRequest> __Marshaller_google_cloud_networkconnectivity_v1_UpdateGatewayAdvertisedRouteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.UpdateGatewayAdvertisedRouteRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.DeleteGatewayAdvertisedRouteRequest> __Marshaller_google_cloud_networkconnectivity_v1_DeleteGatewayAdvertisedRouteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.DeleteGatewayAdvertisedRouteRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.ListHubsRequest, global::Google.Cloud.NetworkConnectivity.V1.ListHubsResponse> __Method_ListHubs = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.ListHubsRequest, global::Google.Cloud.NetworkConnectivity.V1.ListHubsResponse>(
@@ -320,6 +334,46 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         __ServiceName,
         "UpdateGroup",
         __Marshaller_google_cloud_networkconnectivity_v1_UpdateGroupRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.CreateGatewayAdvertisedRouteRequest, global::Google.LongRunning.Operation> __Method_CreateGatewayAdvertisedRoute = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.CreateGatewayAdvertisedRouteRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateGatewayAdvertisedRoute",
+        __Marshaller_google_cloud_networkconnectivity_v1_CreateGatewayAdvertisedRouteRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.GetGatewayAdvertisedRouteRequest, global::Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute> __Method_GetGatewayAdvertisedRoute = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.GetGatewayAdvertisedRouteRequest, global::Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetGatewayAdvertisedRoute",
+        __Marshaller_google_cloud_networkconnectivity_v1_GetGatewayAdvertisedRouteRequest,
+        __Marshaller_google_cloud_networkconnectivity_v1_GatewayAdvertisedRoute);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesRequest, global::Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesResponse> __Method_ListGatewayAdvertisedRoutes = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesRequest, global::Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListGatewayAdvertisedRoutes",
+        __Marshaller_google_cloud_networkconnectivity_v1_ListGatewayAdvertisedRoutesRequest,
+        __Marshaller_google_cloud_networkconnectivity_v1_ListGatewayAdvertisedRoutesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.UpdateGatewayAdvertisedRouteRequest, global::Google.LongRunning.Operation> __Method_UpdateGatewayAdvertisedRoute = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.UpdateGatewayAdvertisedRouteRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateGatewayAdvertisedRoute",
+        __Marshaller_google_cloud_networkconnectivity_v1_UpdateGatewayAdvertisedRouteRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.DeleteGatewayAdvertisedRouteRequest, global::Google.LongRunning.Operation> __Method_DeleteGatewayAdvertisedRoute = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.DeleteGatewayAdvertisedRouteRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteGatewayAdvertisedRoute",
+        __Marshaller_google_cloud_networkconnectivity_v1_DeleteGatewayAdvertisedRouteRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -613,6 +667,66 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateGroup(global::Google.Cloud.NetworkConnectivity.V1.UpdateGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Create a GatewayAdvertisedRoute
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateGatewayAdvertisedRoute(global::Google.Cloud.NetworkConnectivity.V1.CreateGatewayAdvertisedRouteRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get a GatewayAdvertisedRoute
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute> GetGatewayAdvertisedRoute(global::Google.Cloud.NetworkConnectivity.V1.GetGatewayAdvertisedRouteRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List GatewayAdvertisedRoutes
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesResponse> ListGatewayAdvertisedRoutes(global::Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Update a GatewayAdvertisedRoute
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateGatewayAdvertisedRoute(global::Google.Cloud.NetworkConnectivity.V1.UpdateGatewayAdvertisedRouteRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Delete a GatewayAdvertisedRoute
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteGatewayAdvertisedRoute(global::Google.Cloud.NetworkConnectivity.V1.DeleteGatewayAdvertisedRouteRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1786,6 +1900,246 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateGroup, null, options, request);
       }
+      /// <summary>
+      /// Create a GatewayAdvertisedRoute
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateGatewayAdvertisedRoute(global::Google.Cloud.NetworkConnectivity.V1.CreateGatewayAdvertisedRouteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateGatewayAdvertisedRoute(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a GatewayAdvertisedRoute
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateGatewayAdvertisedRoute(global::Google.Cloud.NetworkConnectivity.V1.CreateGatewayAdvertisedRouteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateGatewayAdvertisedRoute, null, options, request);
+      }
+      /// <summary>
+      /// Create a GatewayAdvertisedRoute
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateGatewayAdvertisedRouteAsync(global::Google.Cloud.NetworkConnectivity.V1.CreateGatewayAdvertisedRouteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateGatewayAdvertisedRouteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a GatewayAdvertisedRoute
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateGatewayAdvertisedRouteAsync(global::Google.Cloud.NetworkConnectivity.V1.CreateGatewayAdvertisedRouteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateGatewayAdvertisedRoute, null, options, request);
+      }
+      /// <summary>
+      /// Get a GatewayAdvertisedRoute
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute GetGatewayAdvertisedRoute(global::Google.Cloud.NetworkConnectivity.V1.GetGatewayAdvertisedRouteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetGatewayAdvertisedRoute(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a GatewayAdvertisedRoute
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute GetGatewayAdvertisedRoute(global::Google.Cloud.NetworkConnectivity.V1.GetGatewayAdvertisedRouteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetGatewayAdvertisedRoute, null, options, request);
+      }
+      /// <summary>
+      /// Get a GatewayAdvertisedRoute
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute> GetGatewayAdvertisedRouteAsync(global::Google.Cloud.NetworkConnectivity.V1.GetGatewayAdvertisedRouteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetGatewayAdvertisedRouteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a GatewayAdvertisedRoute
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute> GetGatewayAdvertisedRouteAsync(global::Google.Cloud.NetworkConnectivity.V1.GetGatewayAdvertisedRouteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetGatewayAdvertisedRoute, null, options, request);
+      }
+      /// <summary>
+      /// List GatewayAdvertisedRoutes
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesResponse ListGatewayAdvertisedRoutes(global::Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListGatewayAdvertisedRoutes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List GatewayAdvertisedRoutes
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesResponse ListGatewayAdvertisedRoutes(global::Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListGatewayAdvertisedRoutes, null, options, request);
+      }
+      /// <summary>
+      /// List GatewayAdvertisedRoutes
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesResponse> ListGatewayAdvertisedRoutesAsync(global::Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListGatewayAdvertisedRoutesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List GatewayAdvertisedRoutes
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesResponse> ListGatewayAdvertisedRoutesAsync(global::Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListGatewayAdvertisedRoutes, null, options, request);
+      }
+      /// <summary>
+      /// Update a GatewayAdvertisedRoute
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateGatewayAdvertisedRoute(global::Google.Cloud.NetworkConnectivity.V1.UpdateGatewayAdvertisedRouteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateGatewayAdvertisedRoute(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update a GatewayAdvertisedRoute
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateGatewayAdvertisedRoute(global::Google.Cloud.NetworkConnectivity.V1.UpdateGatewayAdvertisedRouteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateGatewayAdvertisedRoute, null, options, request);
+      }
+      /// <summary>
+      /// Update a GatewayAdvertisedRoute
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateGatewayAdvertisedRouteAsync(global::Google.Cloud.NetworkConnectivity.V1.UpdateGatewayAdvertisedRouteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateGatewayAdvertisedRouteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update a GatewayAdvertisedRoute
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateGatewayAdvertisedRouteAsync(global::Google.Cloud.NetworkConnectivity.V1.UpdateGatewayAdvertisedRouteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateGatewayAdvertisedRoute, null, options, request);
+      }
+      /// <summary>
+      /// Delete a GatewayAdvertisedRoute
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteGatewayAdvertisedRoute(global::Google.Cloud.NetworkConnectivity.V1.DeleteGatewayAdvertisedRouteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteGatewayAdvertisedRoute(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete a GatewayAdvertisedRoute
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteGatewayAdvertisedRoute(global::Google.Cloud.NetworkConnectivity.V1.DeleteGatewayAdvertisedRouteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteGatewayAdvertisedRoute, null, options, request);
+      }
+      /// <summary>
+      /// Delete a GatewayAdvertisedRoute
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteGatewayAdvertisedRouteAsync(global::Google.Cloud.NetworkConnectivity.V1.DeleteGatewayAdvertisedRouteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteGatewayAdvertisedRouteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete a GatewayAdvertisedRoute
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteGatewayAdvertisedRouteAsync(global::Google.Cloud.NetworkConnectivity.V1.DeleteGatewayAdvertisedRouteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteGatewayAdvertisedRoute, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override HubServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -1822,7 +2176,12 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
           .AddMethod(__Method_ListRouteTables, serviceImpl.ListRouteTables)
           .AddMethod(__Method_GetGroup, serviceImpl.GetGroup)
           .AddMethod(__Method_ListGroups, serviceImpl.ListGroups)
-          .AddMethod(__Method_UpdateGroup, serviceImpl.UpdateGroup).Build();
+          .AddMethod(__Method_UpdateGroup, serviceImpl.UpdateGroup)
+          .AddMethod(__Method_CreateGatewayAdvertisedRoute, serviceImpl.CreateGatewayAdvertisedRoute)
+          .AddMethod(__Method_GetGatewayAdvertisedRoute, serviceImpl.GetGatewayAdvertisedRoute)
+          .AddMethod(__Method_ListGatewayAdvertisedRoutes, serviceImpl.ListGatewayAdvertisedRoutes)
+          .AddMethod(__Method_UpdateGatewayAdvertisedRoute, serviceImpl.UpdateGatewayAdvertisedRoute)
+          .AddMethod(__Method_DeleteGatewayAdvertisedRoute, serviceImpl.DeleteGatewayAdvertisedRoute).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1855,6 +2214,11 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       serviceBinder.AddMethod(__Method_GetGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.GetGroupRequest, global::Google.Cloud.NetworkConnectivity.V1.Group>(serviceImpl.GetGroup));
       serviceBinder.AddMethod(__Method_ListGroups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.ListGroupsRequest, global::Google.Cloud.NetworkConnectivity.V1.ListGroupsResponse>(serviceImpl.ListGroups));
       serviceBinder.AddMethod(__Method_UpdateGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.UpdateGroupRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateGroup));
+      serviceBinder.AddMethod(__Method_CreateGatewayAdvertisedRoute, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.CreateGatewayAdvertisedRouteRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateGatewayAdvertisedRoute));
+      serviceBinder.AddMethod(__Method_GetGatewayAdvertisedRoute, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.GetGatewayAdvertisedRouteRequest, global::Google.Cloud.NetworkConnectivity.V1.GatewayAdvertisedRoute>(serviceImpl.GetGatewayAdvertisedRoute));
+      serviceBinder.AddMethod(__Method_ListGatewayAdvertisedRoutes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesRequest, global::Google.Cloud.NetworkConnectivity.V1.ListGatewayAdvertisedRoutesResponse>(serviceImpl.ListGatewayAdvertisedRoutes));
+      serviceBinder.AddMethod(__Method_UpdateGatewayAdvertisedRoute, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.UpdateGatewayAdvertisedRouteRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateGatewayAdvertisedRoute));
+      serviceBinder.AddMethod(__Method_DeleteGatewayAdvertisedRoute, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.DeleteGatewayAdvertisedRouteRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteGatewayAdvertisedRoute));
     }
 
   }

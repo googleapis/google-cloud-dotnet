@@ -4361,5 +4361,884 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for CreateGatewayAdvertisedRoute</summary>
+        public void CreateGatewayAdvertisedRouteRequestObject()
+        {
+            // Snippet: CreateGatewayAdvertisedRoute(CreateGatewayAdvertisedRouteRequest, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            CreateGatewayAdvertisedRouteRequest request = new CreateGatewayAdvertisedRouteRequest
+            {
+                ParentAsSpokeName = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]"),
+                GatewayAdvertisedRouteId = "",
+                GatewayAdvertisedRoute = new GatewayAdvertisedRoute(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<GatewayAdvertisedRoute, OperationMetadata> response = hubServiceClient.CreateGatewayAdvertisedRoute(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GatewayAdvertisedRoute, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GatewayAdvertisedRoute result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GatewayAdvertisedRoute, OperationMetadata> retrievedResponse = hubServiceClient.PollOnceCreateGatewayAdvertisedRoute(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GatewayAdvertisedRoute retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGatewayAdvertisedRouteAsync</summary>
+        public async Task CreateGatewayAdvertisedRouteRequestObjectAsync()
+        {
+            // Snippet: CreateGatewayAdvertisedRouteAsync(CreateGatewayAdvertisedRouteRequest, CallSettings)
+            // Additional: CreateGatewayAdvertisedRouteAsync(CreateGatewayAdvertisedRouteRequest, CancellationToken)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateGatewayAdvertisedRouteRequest request = new CreateGatewayAdvertisedRouteRequest
+            {
+                ParentAsSpokeName = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]"),
+                GatewayAdvertisedRouteId = "",
+                GatewayAdvertisedRoute = new GatewayAdvertisedRoute(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<GatewayAdvertisedRoute, OperationMetadata> response = await hubServiceClient.CreateGatewayAdvertisedRouteAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GatewayAdvertisedRoute, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GatewayAdvertisedRoute result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GatewayAdvertisedRoute, OperationMetadata> retrievedResponse = await hubServiceClient.PollOnceCreateGatewayAdvertisedRouteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GatewayAdvertisedRoute retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGatewayAdvertisedRoute</summary>
+        public void CreateGatewayAdvertisedRoute()
+        {
+            // Snippet: CreateGatewayAdvertisedRoute(string, GatewayAdvertisedRoute, string, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/spokes/[SPOKE]";
+            GatewayAdvertisedRoute gatewayAdvertisedRoute = new GatewayAdvertisedRoute();
+            string gatewayAdvertisedRouteId = "";
+            // Make the request
+            Operation<GatewayAdvertisedRoute, OperationMetadata> response = hubServiceClient.CreateGatewayAdvertisedRoute(parent, gatewayAdvertisedRoute, gatewayAdvertisedRouteId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GatewayAdvertisedRoute, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GatewayAdvertisedRoute result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GatewayAdvertisedRoute, OperationMetadata> retrievedResponse = hubServiceClient.PollOnceCreateGatewayAdvertisedRoute(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GatewayAdvertisedRoute retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGatewayAdvertisedRouteAsync</summary>
+        public async Task CreateGatewayAdvertisedRouteAsync()
+        {
+            // Snippet: CreateGatewayAdvertisedRouteAsync(string, GatewayAdvertisedRoute, string, CallSettings)
+            // Additional: CreateGatewayAdvertisedRouteAsync(string, GatewayAdvertisedRoute, string, CancellationToken)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/spokes/[SPOKE]";
+            GatewayAdvertisedRoute gatewayAdvertisedRoute = new GatewayAdvertisedRoute();
+            string gatewayAdvertisedRouteId = "";
+            // Make the request
+            Operation<GatewayAdvertisedRoute, OperationMetadata> response = await hubServiceClient.CreateGatewayAdvertisedRouteAsync(parent, gatewayAdvertisedRoute, gatewayAdvertisedRouteId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GatewayAdvertisedRoute, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GatewayAdvertisedRoute result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GatewayAdvertisedRoute, OperationMetadata> retrievedResponse = await hubServiceClient.PollOnceCreateGatewayAdvertisedRouteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GatewayAdvertisedRoute retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGatewayAdvertisedRoute</summary>
+        public void CreateGatewayAdvertisedRouteResourceNames()
+        {
+            // Snippet: CreateGatewayAdvertisedRoute(SpokeName, GatewayAdvertisedRoute, string, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            SpokeName parent = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]");
+            GatewayAdvertisedRoute gatewayAdvertisedRoute = new GatewayAdvertisedRoute();
+            string gatewayAdvertisedRouteId = "";
+            // Make the request
+            Operation<GatewayAdvertisedRoute, OperationMetadata> response = hubServiceClient.CreateGatewayAdvertisedRoute(parent, gatewayAdvertisedRoute, gatewayAdvertisedRouteId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GatewayAdvertisedRoute, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GatewayAdvertisedRoute result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GatewayAdvertisedRoute, OperationMetadata> retrievedResponse = hubServiceClient.PollOnceCreateGatewayAdvertisedRoute(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GatewayAdvertisedRoute retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGatewayAdvertisedRouteAsync</summary>
+        public async Task CreateGatewayAdvertisedRouteResourceNamesAsync()
+        {
+            // Snippet: CreateGatewayAdvertisedRouteAsync(SpokeName, GatewayAdvertisedRoute, string, CallSettings)
+            // Additional: CreateGatewayAdvertisedRouteAsync(SpokeName, GatewayAdvertisedRoute, string, CancellationToken)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SpokeName parent = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]");
+            GatewayAdvertisedRoute gatewayAdvertisedRoute = new GatewayAdvertisedRoute();
+            string gatewayAdvertisedRouteId = "";
+            // Make the request
+            Operation<GatewayAdvertisedRoute, OperationMetadata> response = await hubServiceClient.CreateGatewayAdvertisedRouteAsync(parent, gatewayAdvertisedRoute, gatewayAdvertisedRouteId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GatewayAdvertisedRoute, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GatewayAdvertisedRoute result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GatewayAdvertisedRoute, OperationMetadata> retrievedResponse = await hubServiceClient.PollOnceCreateGatewayAdvertisedRouteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GatewayAdvertisedRoute retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGatewayAdvertisedRoute</summary>
+        public void GetGatewayAdvertisedRouteRequestObject()
+        {
+            // Snippet: GetGatewayAdvertisedRoute(GetGatewayAdvertisedRouteRequest, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            GetGatewayAdvertisedRouteRequest request = new GetGatewayAdvertisedRouteRequest
+            {
+                GatewayAdvertisedRouteName = GatewayAdvertisedRouteName.FromProjectLocationSpokeGatewayAdvertisedRoute("[PROJECT]", "[LOCATION]", "[SPOKE]", "[GATEWAY_ADVERTISED_ROUTE]"),
+            };
+            // Make the request
+            GatewayAdvertisedRoute response = hubServiceClient.GetGatewayAdvertisedRoute(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGatewayAdvertisedRouteAsync</summary>
+        public async Task GetGatewayAdvertisedRouteRequestObjectAsync()
+        {
+            // Snippet: GetGatewayAdvertisedRouteAsync(GetGatewayAdvertisedRouteRequest, CallSettings)
+            // Additional: GetGatewayAdvertisedRouteAsync(GetGatewayAdvertisedRouteRequest, CancellationToken)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetGatewayAdvertisedRouteRequest request = new GetGatewayAdvertisedRouteRequest
+            {
+                GatewayAdvertisedRouteName = GatewayAdvertisedRouteName.FromProjectLocationSpokeGatewayAdvertisedRoute("[PROJECT]", "[LOCATION]", "[SPOKE]", "[GATEWAY_ADVERTISED_ROUTE]"),
+            };
+            // Make the request
+            GatewayAdvertisedRoute response = await hubServiceClient.GetGatewayAdvertisedRouteAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGatewayAdvertisedRoute</summary>
+        public void GetGatewayAdvertisedRoute()
+        {
+            // Snippet: GetGatewayAdvertisedRoute(string, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/spokes/[SPOKE]/gatewayAdvertisedRoutes/[GATEWAY_ADVERTISED_ROUTE]";
+            // Make the request
+            GatewayAdvertisedRoute response = hubServiceClient.GetGatewayAdvertisedRoute(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGatewayAdvertisedRouteAsync</summary>
+        public async Task GetGatewayAdvertisedRouteAsync()
+        {
+            // Snippet: GetGatewayAdvertisedRouteAsync(string, CallSettings)
+            // Additional: GetGatewayAdvertisedRouteAsync(string, CancellationToken)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/spokes/[SPOKE]/gatewayAdvertisedRoutes/[GATEWAY_ADVERTISED_ROUTE]";
+            // Make the request
+            GatewayAdvertisedRoute response = await hubServiceClient.GetGatewayAdvertisedRouteAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGatewayAdvertisedRoute</summary>
+        public void GetGatewayAdvertisedRouteResourceNames()
+        {
+            // Snippet: GetGatewayAdvertisedRoute(GatewayAdvertisedRouteName, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            GatewayAdvertisedRouteName name = GatewayAdvertisedRouteName.FromProjectLocationSpokeGatewayAdvertisedRoute("[PROJECT]", "[LOCATION]", "[SPOKE]", "[GATEWAY_ADVERTISED_ROUTE]");
+            // Make the request
+            GatewayAdvertisedRoute response = hubServiceClient.GetGatewayAdvertisedRoute(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGatewayAdvertisedRouteAsync</summary>
+        public async Task GetGatewayAdvertisedRouteResourceNamesAsync()
+        {
+            // Snippet: GetGatewayAdvertisedRouteAsync(GatewayAdvertisedRouteName, CallSettings)
+            // Additional: GetGatewayAdvertisedRouteAsync(GatewayAdvertisedRouteName, CancellationToken)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GatewayAdvertisedRouteName name = GatewayAdvertisedRouteName.FromProjectLocationSpokeGatewayAdvertisedRoute("[PROJECT]", "[LOCATION]", "[SPOKE]", "[GATEWAY_ADVERTISED_ROUTE]");
+            // Make the request
+            GatewayAdvertisedRoute response = await hubServiceClient.GetGatewayAdvertisedRouteAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGatewayAdvertisedRoutes</summary>
+        public void ListGatewayAdvertisedRoutesRequestObject()
+        {
+            // Snippet: ListGatewayAdvertisedRoutes(ListGatewayAdvertisedRoutesRequest, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            ListGatewayAdvertisedRoutesRequest request = new ListGatewayAdvertisedRoutesRequest
+            {
+                ParentAsSpokeName = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListGatewayAdvertisedRoutesResponse, GatewayAdvertisedRoute> response = hubServiceClient.ListGatewayAdvertisedRoutes(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GatewayAdvertisedRoute item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGatewayAdvertisedRoutesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GatewayAdvertisedRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GatewayAdvertisedRoute> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GatewayAdvertisedRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGatewayAdvertisedRoutesAsync</summary>
+        public async Task ListGatewayAdvertisedRoutesRequestObjectAsync()
+        {
+            // Snippet: ListGatewayAdvertisedRoutesAsync(ListGatewayAdvertisedRoutesRequest, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListGatewayAdvertisedRoutesRequest request = new ListGatewayAdvertisedRoutesRequest
+            {
+                ParentAsSpokeName = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListGatewayAdvertisedRoutesResponse, GatewayAdvertisedRoute> response = hubServiceClient.ListGatewayAdvertisedRoutesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GatewayAdvertisedRoute item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGatewayAdvertisedRoutesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GatewayAdvertisedRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GatewayAdvertisedRoute> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GatewayAdvertisedRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGatewayAdvertisedRoutes</summary>
+        public void ListGatewayAdvertisedRoutes()
+        {
+            // Snippet: ListGatewayAdvertisedRoutes(string, string, int?, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/spokes/[SPOKE]";
+            // Make the request
+            PagedEnumerable<ListGatewayAdvertisedRoutesResponse, GatewayAdvertisedRoute> response = hubServiceClient.ListGatewayAdvertisedRoutes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GatewayAdvertisedRoute item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGatewayAdvertisedRoutesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GatewayAdvertisedRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GatewayAdvertisedRoute> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GatewayAdvertisedRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGatewayAdvertisedRoutesAsync</summary>
+        public async Task ListGatewayAdvertisedRoutesAsync()
+        {
+            // Snippet: ListGatewayAdvertisedRoutesAsync(string, string, int?, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/spokes/[SPOKE]";
+            // Make the request
+            PagedAsyncEnumerable<ListGatewayAdvertisedRoutesResponse, GatewayAdvertisedRoute> response = hubServiceClient.ListGatewayAdvertisedRoutesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GatewayAdvertisedRoute item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGatewayAdvertisedRoutesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GatewayAdvertisedRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GatewayAdvertisedRoute> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GatewayAdvertisedRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGatewayAdvertisedRoutes</summary>
+        public void ListGatewayAdvertisedRoutesResourceNames()
+        {
+            // Snippet: ListGatewayAdvertisedRoutes(SpokeName, string, int?, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            SpokeName parent = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]");
+            // Make the request
+            PagedEnumerable<ListGatewayAdvertisedRoutesResponse, GatewayAdvertisedRoute> response = hubServiceClient.ListGatewayAdvertisedRoutes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GatewayAdvertisedRoute item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGatewayAdvertisedRoutesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GatewayAdvertisedRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GatewayAdvertisedRoute> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GatewayAdvertisedRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGatewayAdvertisedRoutesAsync</summary>
+        public async Task ListGatewayAdvertisedRoutesResourceNamesAsync()
+        {
+            // Snippet: ListGatewayAdvertisedRoutesAsync(SpokeName, string, int?, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SpokeName parent = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]");
+            // Make the request
+            PagedAsyncEnumerable<ListGatewayAdvertisedRoutesResponse, GatewayAdvertisedRoute> response = hubServiceClient.ListGatewayAdvertisedRoutesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GatewayAdvertisedRoute item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGatewayAdvertisedRoutesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GatewayAdvertisedRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GatewayAdvertisedRoute> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GatewayAdvertisedRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGatewayAdvertisedRoute</summary>
+        public void UpdateGatewayAdvertisedRouteRequestObject()
+        {
+            // Snippet: UpdateGatewayAdvertisedRoute(UpdateGatewayAdvertisedRouteRequest, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateGatewayAdvertisedRouteRequest request = new UpdateGatewayAdvertisedRouteRequest
+            {
+                UpdateMask = new FieldMask(),
+                GatewayAdvertisedRoute = new GatewayAdvertisedRoute(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<GatewayAdvertisedRoute, OperationMetadata> response = hubServiceClient.UpdateGatewayAdvertisedRoute(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GatewayAdvertisedRoute, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GatewayAdvertisedRoute result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GatewayAdvertisedRoute, OperationMetadata> retrievedResponse = hubServiceClient.PollOnceUpdateGatewayAdvertisedRoute(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GatewayAdvertisedRoute retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGatewayAdvertisedRouteAsync</summary>
+        public async Task UpdateGatewayAdvertisedRouteRequestObjectAsync()
+        {
+            // Snippet: UpdateGatewayAdvertisedRouteAsync(UpdateGatewayAdvertisedRouteRequest, CallSettings)
+            // Additional: UpdateGatewayAdvertisedRouteAsync(UpdateGatewayAdvertisedRouteRequest, CancellationToken)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateGatewayAdvertisedRouteRequest request = new UpdateGatewayAdvertisedRouteRequest
+            {
+                UpdateMask = new FieldMask(),
+                GatewayAdvertisedRoute = new GatewayAdvertisedRoute(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<GatewayAdvertisedRoute, OperationMetadata> response = await hubServiceClient.UpdateGatewayAdvertisedRouteAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GatewayAdvertisedRoute, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GatewayAdvertisedRoute result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GatewayAdvertisedRoute, OperationMetadata> retrievedResponse = await hubServiceClient.PollOnceUpdateGatewayAdvertisedRouteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GatewayAdvertisedRoute retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGatewayAdvertisedRoute</summary>
+        public void UpdateGatewayAdvertisedRoute()
+        {
+            // Snippet: UpdateGatewayAdvertisedRoute(GatewayAdvertisedRoute, FieldMask, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            GatewayAdvertisedRoute gatewayAdvertisedRoute = new GatewayAdvertisedRoute();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<GatewayAdvertisedRoute, OperationMetadata> response = hubServiceClient.UpdateGatewayAdvertisedRoute(gatewayAdvertisedRoute, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GatewayAdvertisedRoute, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GatewayAdvertisedRoute result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GatewayAdvertisedRoute, OperationMetadata> retrievedResponse = hubServiceClient.PollOnceUpdateGatewayAdvertisedRoute(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GatewayAdvertisedRoute retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateGatewayAdvertisedRouteAsync</summary>
+        public async Task UpdateGatewayAdvertisedRouteAsync()
+        {
+            // Snippet: UpdateGatewayAdvertisedRouteAsync(GatewayAdvertisedRoute, FieldMask, CallSettings)
+            // Additional: UpdateGatewayAdvertisedRouteAsync(GatewayAdvertisedRoute, FieldMask, CancellationToken)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GatewayAdvertisedRoute gatewayAdvertisedRoute = new GatewayAdvertisedRoute();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<GatewayAdvertisedRoute, OperationMetadata> response = await hubServiceClient.UpdateGatewayAdvertisedRouteAsync(gatewayAdvertisedRoute, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GatewayAdvertisedRoute, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GatewayAdvertisedRoute result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GatewayAdvertisedRoute, OperationMetadata> retrievedResponse = await hubServiceClient.PollOnceUpdateGatewayAdvertisedRouteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GatewayAdvertisedRoute retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGatewayAdvertisedRoute</summary>
+        public void DeleteGatewayAdvertisedRouteRequestObject()
+        {
+            // Snippet: DeleteGatewayAdvertisedRoute(DeleteGatewayAdvertisedRouteRequest, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteGatewayAdvertisedRouteRequest request = new DeleteGatewayAdvertisedRouteRequest
+            {
+                GatewayAdvertisedRouteName = GatewayAdvertisedRouteName.FromProjectLocationSpokeGatewayAdvertisedRoute("[PROJECT]", "[LOCATION]", "[SPOKE]", "[GATEWAY_ADVERTISED_ROUTE]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = hubServiceClient.DeleteGatewayAdvertisedRoute(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = hubServiceClient.PollOnceDeleteGatewayAdvertisedRoute(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGatewayAdvertisedRouteAsync</summary>
+        public async Task DeleteGatewayAdvertisedRouteRequestObjectAsync()
+        {
+            // Snippet: DeleteGatewayAdvertisedRouteAsync(DeleteGatewayAdvertisedRouteRequest, CallSettings)
+            // Additional: DeleteGatewayAdvertisedRouteAsync(DeleteGatewayAdvertisedRouteRequest, CancellationToken)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteGatewayAdvertisedRouteRequest request = new DeleteGatewayAdvertisedRouteRequest
+            {
+                GatewayAdvertisedRouteName = GatewayAdvertisedRouteName.FromProjectLocationSpokeGatewayAdvertisedRoute("[PROJECT]", "[LOCATION]", "[SPOKE]", "[GATEWAY_ADVERTISED_ROUTE]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await hubServiceClient.DeleteGatewayAdvertisedRouteAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await hubServiceClient.PollOnceDeleteGatewayAdvertisedRouteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGatewayAdvertisedRoute</summary>
+        public void DeleteGatewayAdvertisedRoute()
+        {
+            // Snippet: DeleteGatewayAdvertisedRoute(string, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/spokes/[SPOKE]/gatewayAdvertisedRoutes/[GATEWAY_ADVERTISED_ROUTE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = hubServiceClient.DeleteGatewayAdvertisedRoute(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = hubServiceClient.PollOnceDeleteGatewayAdvertisedRoute(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGatewayAdvertisedRouteAsync</summary>
+        public async Task DeleteGatewayAdvertisedRouteAsync()
+        {
+            // Snippet: DeleteGatewayAdvertisedRouteAsync(string, CallSettings)
+            // Additional: DeleteGatewayAdvertisedRouteAsync(string, CancellationToken)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/spokes/[SPOKE]/gatewayAdvertisedRoutes/[GATEWAY_ADVERTISED_ROUTE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await hubServiceClient.DeleteGatewayAdvertisedRouteAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await hubServiceClient.PollOnceDeleteGatewayAdvertisedRouteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGatewayAdvertisedRoute</summary>
+        public void DeleteGatewayAdvertisedRouteResourceNames()
+        {
+            // Snippet: DeleteGatewayAdvertisedRoute(GatewayAdvertisedRouteName, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            GatewayAdvertisedRouteName name = GatewayAdvertisedRouteName.FromProjectLocationSpokeGatewayAdvertisedRoute("[PROJECT]", "[LOCATION]", "[SPOKE]", "[GATEWAY_ADVERTISED_ROUTE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = hubServiceClient.DeleteGatewayAdvertisedRoute(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = hubServiceClient.PollOnceDeleteGatewayAdvertisedRoute(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGatewayAdvertisedRouteAsync</summary>
+        public async Task DeleteGatewayAdvertisedRouteResourceNamesAsync()
+        {
+            // Snippet: DeleteGatewayAdvertisedRouteAsync(GatewayAdvertisedRouteName, CallSettings)
+            // Additional: DeleteGatewayAdvertisedRouteAsync(GatewayAdvertisedRouteName, CancellationToken)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GatewayAdvertisedRouteName name = GatewayAdvertisedRouteName.FromProjectLocationSpokeGatewayAdvertisedRoute("[PROJECT]", "[LOCATION]", "[SPOKE]", "[GATEWAY_ADVERTISED_ROUTE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await hubServiceClient.DeleteGatewayAdvertisedRouteAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await hubServiceClient.PollOnceDeleteGatewayAdvertisedRouteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }
