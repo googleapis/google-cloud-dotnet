@@ -19,6 +19,7 @@ using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
 using gcsv = Google.Cloud.SecretManager.V1;
 using gpr = Google.Protobuf.Reflection;
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 using sys = System;
@@ -60,6 +61,42 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gcsv::SecretManagerServiceClientBuilder builder = new gcsv::SecretManagerServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcsv::SecretOperationsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddSecretOperationsServiceClient(this IServiceCollection services, sys::Action<gcsv::SecretOperationsServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcsv::SecretOperationsServiceClientBuilder builder = new gcsv::SecretOperationsServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcsv::SecretOperationsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddSecretOperationsServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcsv::SecretOperationsServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcsv::SecretOperationsServiceClientBuilder builder = new gcsv::SecretOperationsServiceClientBuilder();
                 action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
