@@ -20,8 +20,10 @@ using Google.Cloud.PubSub.V1.Tests.Tasks;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
+using NSubstitute;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -1322,6 +1324,68 @@ namespace Google.Cloud.PubSub.V1.Tests
             finally
             {
                 TaskScheduler.UnobservedTaskException -= handler;
+            }
+        }
+
+        [Fact]
+        public void StreamPing_NoUnobservedTaskExceptionOnInitialWriteFailure()
+        {
+            var failure = new IOException("Initial StreamingPull write failed.");
+            int unobserved = 0;
+            EventHandler<UnobservedTaskExceptionEventArgs> handler = (_, args) =>
+            {
+                if (args.Exception.Flatten().InnerExceptions.Contains(failure))
+                {
+                    args.SetObserved();
+                    Interlocked.Increment(ref unobserved);
+                }
+            };
+            TaskScheduler.UnobservedTaskException += handler;
+            try
+            {
+                using (var scheduler = new TestScheduler())
+                {
+                    var stream = new FailingInitialWriteStream(failure);
+                    var apiClient = Substitute.For<SubscriberServiceApiClient>();
+                    apiClient.StreamingPull(Arg.Any<CallSettings>(), Arg.Any<BidirectionalStreamingSettings>()).Returns(stream);
+                    var settings = new Settings { Scheduler = scheduler, Clock = scheduler.Clock };
+                    var subscriber = new SubscriberClientImpl(
+                        SubscriptionName.FromProjectSubscription("project", "subscription"),
+                        new[] { apiClient }, settings, () => Task.CompletedTask, scheduler.TaskHelper);
+                    scheduler.Run(async () =>
+                    {
+                        var completion = subscriber.StartAsync((_, _) => Task.FromResult(Reply.Ack));
+                        var error = await scheduler.TaskHelper.ConfigureAwaitHideErrors(() => completion);
+                        Assert.Same(failure, error);
+                    });
+                }
+
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+                Assert.Equal(0, Volatile.Read(ref unobserved));
+            }
+            finally
+            {
+                TaskScheduler.UnobservedTaskException -= handler;
+            }
+        }
+
+        private sealed class FailingInitialWriteStream : SubscriberServiceApiClient.StreamingPullStream
+        {
+            private readonly IOException _failure;
+            private readonly TaskCompletionSource<object> _initialWrite = new TaskCompletionSource<object>();
+
+            internal FailingInitialWriteStream(IOException failure) => _failure = failure;
+
+            public override Task WriteAsync(StreamingPullRequest request)
+            {
+                if (request.Subscription.Length != 0)
+                {
+                    return _initialWrite.Task;
+                }
+                // The queued ping and the initial write fault on separate tasks.
+                _initialWrite.SetException(_failure);
+                return Task.FromException(_failure);
             }
         }
 

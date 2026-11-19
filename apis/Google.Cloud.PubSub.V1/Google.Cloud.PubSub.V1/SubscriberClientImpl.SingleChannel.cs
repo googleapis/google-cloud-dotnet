@@ -1198,16 +1198,18 @@ public sealed partial class SubscriberClientImpl
             if (_pull != null)
             {
                 _keepAliveMonitor.RecordPing();
-                // Write an empty message to the stream.
-                // Don't wait for this to complete, it doesn't matter if or when it completes.
-                // This is only a best-effort attempt to reduce duplicate messages.
+                // The ping is best effort. Observe write failures without blocking the event loop.
                 try
                 {
-                    _pull.WriteAsync(new StreamingPullRequest());
+                    _ = _pull.WriteAsync(new StreamingPullRequest()).ContinueWith(
+                        static task => { _ = task.Exception; },
+                        CancellationToken.None,
+                        TaskContinuationOptions.OnlyOnFaulted | TaskContinuationOptions.ExecuteSynchronously,
+                        _taskHelper.TaskScheduler);
                 }
                 catch
                 {
-                    // Ignore any errors.
+                    // Ignore synchronous write failures too.
                 }
             }
         }
