@@ -2041,6 +2041,78 @@ namespace Google.Cloud.PubSub.V1.Tests
             });
         }
 
+        [Theory, CombinatorialData]
+        public void ExactlyOnceDelivery_ReceiptModAck_MultipleChunks(ShutdownMode shutdownMode)
+        {
+            // With flowMaxElements = 40, _maxAckExtendSendCount is 10, so 25 messages split across 3 receipt ModAck RPCs.
+            var batch = Enumerable.Range(1, 25).Select(i => $"{i}").ToArray();
+            var msgs = new[]
+            {
+                ServerAction.Data(TimeSpan.Zero, batch),
+                ServerAction.Inf()
+            };
+
+            using var fake = Fake.CreateClientForSingleResponseStream(msgs, flowMaxElements: 40, useMsgAsId: true, isExactlyOnceDelivery: true);
+
+            fake.Scheduler.Run(async () =>
+            {
+                var handledMsgs = new List<string>();
+                var doneTask = fake.Subscriber.StartAsync((msg, ct) =>
+                {
+                    handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
+                    return Task.FromResult(SubscriberClient.Reply.Ack);
+                });
+
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(10), CancellationToken.None));
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(new ShutdownOptions { Mode = shutdownMode }));
+                Assert.Equivalent(batch, handledMsgs, strict: true);
+            });
+        }
+
+        [Theory, CombinatorialData]
+        public void ExactlyOnceDelivery_ReceiptModAck_MultipleChunks_MixedFault([CombinatorialValues(true, false)] bool succeedOnRetry, ShutdownMode shutdownMode)
+        {
+            // With flowMaxElements = 40, _maxAckExtendSendCount is 10:
+            // Chunk 1 ("1".."10") has transient failure "2"; chunk 2 ("11".."20") has permanent failure "13"; chunk 3 ("21".."25") succeeds.
+            var batch = Enumerable.Range(1, 25).Select(i => $"{i}").ToArray();
+            var msgs = new[]
+            {
+                ServerAction.Data(TimeSpan.Zero, batch),
+                ServerAction.Inf()
+            };
+
+            var errorInfo = new Rpc.ErrorInfo
+            {
+                Domain = "pubsub.googleapis.com",
+                Reason = "broken",
+                Metadata =
+                {
+                    { "2", "TRANSIENT_FAILURE_UNORDERED_ACK_ID" },
+                    { "13", "PERMANENT_FAILURE_INVALID_ACK_ID" }
+                }
+            };
+            var exception = GetExactlyOnceDeliveryMixedException(errorInfo, StatusCode.OK);
+            var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: succeedOnRetry ? 2 : 400);
+
+            using var fake = Fake.CreateClientForSingleResponseStream(
+                msgs, flowMaxElements: 40, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
+
+            fake.Scheduler.Run(async () =>
+            {
+                var handledMsgs = new List<string>();
+                var doneTask = fake.Subscriber.StartAsync((msg, ct) =>
+                {
+                    handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
+                    return Task.FromResult(SubscriberClient.Reply.Ack);
+                });
+
+                await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
+                await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(new ShutdownOptions { Mode = shutdownMode }));
+                var expected = succeedOnRetry ? batch.Except(new[] { "13" }) : batch.Except(new[] { "2", "13" });
+                Assert.Equivalent(expected, handledMsgs, strict: true);
+            });
+        }
+
         [Fact]
         public void TestAckErrorForMixedErrorInfoMetadata()
         {
