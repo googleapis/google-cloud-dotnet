@@ -1195,13 +1195,14 @@ public sealed partial class SubscriberClientImpl
             // If the stream is closed, then all gRPC-buffered messages have their server-side
             // expiry timers started, when the client hasn't yet started processing these messages.
             // This can lead to unncessarily duplicated messages.
-            if (_pull != null)
+            var pull = _pull;
+            if (pull is not null)
             {
                 _keepAliveMonitor.RecordPing();
                 // The ping is best effort. Observe write failures without blocking the event loop.
                 try
                 {
-                    _ = _pull.WriteAsync(new StreamingPullRequest()).ContinueWith(
+                    _ = pull.WriteAsync(new StreamingPullRequest()).ContinueWith(
                         static task => { _ = task.Exception; },
                         CancellationToken.None,
                         TaskContinuationOptions.OnlyOnFaulted | TaskContinuationOptions.ExecuteSynchronously,

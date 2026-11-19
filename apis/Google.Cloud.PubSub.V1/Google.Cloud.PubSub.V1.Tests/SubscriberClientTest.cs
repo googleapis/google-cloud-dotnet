@@ -1384,7 +1384,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     return _initialWrite.Task;
                 }
                 // The queued ping and the initial write fault on separate tasks.
-                _initialWrite.SetException(_failure);
+                _initialWrite.TrySetException(_failure);
                 return Task.FromException(_failure);
             }
         }
