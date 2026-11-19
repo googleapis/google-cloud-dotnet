@@ -22,6 +22,18 @@
                 "CreateServiceAsync"
               ]
             },
+            "CreateSkill": {
+              "methods": [
+                "CreateSkill",
+                "CreateSkillAsync"
+              ]
+            },
+            "CreateSkillRevision": {
+              "methods": [
+                "CreateSkillRevision",
+                "CreateSkillRevisionAsync"
+              ]
+            },
             "DeleteBinding": {
               "methods": [
                 "DeleteBinding",
@@ -32,6 +44,18 @@
               "methods": [
                 "DeleteService",
                 "DeleteServiceAsync"
+              ]
+            },
+            "DeleteSkill": {
+              "methods": [
+                "DeleteSkill",
+                "DeleteSkillAsync"
+              ]
+            },
+            "DeleteSkillRevision": {
+              "methods": [
+                "DeleteSkillRevision",
+                "DeleteSkillRevisionAsync"
               ]
             },
             "FetchAvailableBindings": {
@@ -46,6 +70,30 @@
                 "GetAgentAsync"
               ]
             },
+            "GetAiApplication": {
+              "methods": [
+                "GetAiApplication",
+                "GetAiApplicationAsync"
+              ]
+            },
+            "GetAiApplicationAgent": {
+              "methods": [
+                "GetAiApplicationAgent",
+                "GetAiApplicationAgentAsync"
+              ]
+            },
+            "GetAiApplicationEndpoint": {
+              "methods": [
+                "GetAiApplicationEndpoint",
+                "GetAiApplicationEndpointAsync"
+              ]
+            },
+            "GetAiApplicationMcpServer": {
+              "methods": [
+                "GetAiApplicationMcpServer",
+                "GetAiApplicationMcpServerAsync"
+              ]
+            },
             "GetBinding": {
               "methods": [
                 "GetBinding",
@@ -58,10 +106,22 @@
                 "GetEndpointAsync"
               ]
             },
+            "GetFinding": {
+              "methods": [
+                "GetFinding",
+                "GetFindingAsync"
+              ]
+            },
             "GetMcpServer": {
               "methods": [
                 "GetMcpServer",
                 "GetMcpServerAsync"
+              ]
+            },
+            "GetPublisher": {
+              "methods": [
+                "GetPublisher",
+                "GetPublisherAsync"
               ]
             },
             "GetService": {
@@ -70,10 +130,52 @@
                 "GetServiceAsync"
               ]
             },
+            "GetSkill": {
+              "methods": [
+                "GetSkill",
+                "GetSkillAsync"
+              ]
+            },
+            "GetSkillEncryptionSpec": {
+              "methods": [
+                "GetSkillEncryptionSpec",
+                "GetSkillEncryptionSpecAsync"
+              ]
+            },
+            "GetSkillRevision": {
+              "methods": [
+                "GetSkillRevision",
+                "GetSkillRevisionAsync"
+              ]
+            },
             "ListAgents": {
               "methods": [
                 "ListAgents",
                 "ListAgentsAsync"
+              ]
+            },
+            "ListAiApplicationAgents": {
+              "methods": [
+                "ListAiApplicationAgents",
+                "ListAiApplicationAgentsAsync"
+              ]
+            },
+            "ListAiApplicationEndpoints": {
+              "methods": [
+                "ListAiApplicationEndpoints",
+                "ListAiApplicationEndpointsAsync"
+              ]
+            },
+            "ListAiApplicationMcpServers": {
+              "methods": [
+                "ListAiApplicationMcpServers",
+                "ListAiApplicationMcpServersAsync"
+              ]
+            },
+            "ListAiApplications": {
+              "methods": [
+                "ListAiApplications",
+                "ListAiApplicationsAsync"
               ]
             },
             "ListBindings": {
@@ -88,16 +190,40 @@
                 "ListEndpointsAsync"
               ]
             },
+            "ListFindings": {
+              "methods": [
+                "ListFindings",
+                "ListFindingsAsync"
+              ]
+            },
             "ListMcpServers": {
               "methods": [
                 "ListMcpServers",
                 "ListMcpServersAsync"
               ]
             },
+            "ListPublishers": {
+              "methods": [
+                "ListPublishers",
+                "ListPublishersAsync"
+              ]
+            },
             "ListServices": {
               "methods": [
                 "ListServices",
                 "ListServicesAsync"
+              ]
+            },
+            "ListSkillRevisions": {
+              "methods": [
+                "ListSkillRevisions",
+                "ListSkillRevisionsAsync"
+              ]
+            },
+            "ListSkills": {
+              "methods": [
+                "ListSkills",
+                "ListSkillsAsync"
               ]
             },
             "SearchAgents": {
@@ -112,6 +238,12 @@
                 "SearchMcpServersAsync"
               ]
             },
+            "SearchSkills": {
+              "methods": [
+                "SearchSkills",
+                "SearchSkillsAsync"
+              ]
+            },
             "UpdateBinding": {
               "methods": [
                 "UpdateBinding",
@@ -122,6 +254,18 @@
               "methods": [
                 "UpdateService",
                 "UpdateServiceAsync"
+              ]
+            },
+            "UpdateSkill": {
+              "methods": [
+                "UpdateSkill",
+                "UpdateSkillAsync"
+              ]
+            },
+            "UpdateSkillEncryptionSpec": {
+              "methods": [
+                "UpdateSkillEncryptionSpec",
+                "UpdateSkillEncryptionSpecAsync"
               ]
             }
           }

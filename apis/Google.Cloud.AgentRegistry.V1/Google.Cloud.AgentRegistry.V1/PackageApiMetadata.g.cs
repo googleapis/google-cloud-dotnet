@@ -68,11 +68,15 @@ namespace Google.Cloud.AgentRegistry.V1
         {
             yield return AgentReflection.Descriptor;
             yield return AgentregistryServiceReflection.Descriptor;
+            yield return AiApplicationReflection.Descriptor;
             yield return BindingReflection.Descriptor;
             yield return EndpointReflection.Descriptor;
+            yield return FindingReflection.Descriptor;
             yield return McpServerReflection.Descriptor;
             yield return PropertiesReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
+            yield return SkillReflection.Descriptor;
+            yield return SkillEncryptionSpecReflection.Descriptor;
             yield return gcl::LocationsReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }

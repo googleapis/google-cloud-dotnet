@@ -34,9 +34,17 @@ namespace Google.Cloud.AgentRegistry.V1
             /// A resource name with pattern <c>projects/{project}/locations/{location}/agents/{agent}</c>.
             /// </summary>
             ProjectLocationAgent = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/aiApplications/{ai_application}/agents/{agent}</c>.
+            /// </summary>
+            ProjectLocationAiApplicationAgent = 2,
         }
 
         private static gax::PathTemplate s_projectLocationAgent = new gax::PathTemplate("projects/{project}/locations/{location}/agents/{agent}");
+
+        private static gax::PathTemplate s_projectLocationAiApplicationAgent = new gax::PathTemplate("projects/{project}/locations/{location}/aiApplications/{ai_application}/agents/{agent}");
 
         /// <summary>Creates a <see cref="AgentName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -56,6 +64,18 @@ namespace Google.Cloud.AgentRegistry.V1
         /// <returns>A new instance of <see cref="AgentName"/> constructed from the provided ids.</returns>
         public static AgentName FromProjectLocationAgent(string projectId, string locationId, string agentId) =>
             new AgentName(ResourceNameType.ProjectLocationAgent, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), agentId: gax::GaxPreconditions.CheckNotNullOrEmpty(agentId, nameof(agentId)));
+
+        /// <summary>
+        /// Creates a <see cref="AgentName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/aiApplications/{ai_application}/agents/{agent}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="aiApplicationId">The <c>AiApplication</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="agentId">The <c>Agent</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AgentName"/> constructed from the provided ids.</returns>
+        public static AgentName FromProjectLocationAiApplicationAgent(string projectId, string locationId, string aiApplicationId, string agentId) =>
+            new AgentName(ResourceNameType.ProjectLocationAiApplicationAgent, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), aiApplicationId: gax::GaxPreconditions.CheckNotNullOrEmpty(aiApplicationId, nameof(aiApplicationId)), agentId: gax::GaxPreconditions.CheckNotNullOrEmpty(agentId, nameof(agentId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="AgentName"/> with pattern
@@ -85,11 +105,31 @@ namespace Google.Cloud.AgentRegistry.V1
         public static string FormatProjectLocationAgent(string projectId, string locationId, string agentId) =>
             s_projectLocationAgent.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(agentId, nameof(agentId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AgentName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/aiApplications/{ai_application}/agents/{agent}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="aiApplicationId">The <c>AiApplication</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="agentId">The <c>Agent</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AgentName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/aiApplications/{ai_application}/agents/{agent}</c>.
+        /// </returns>
+        public static string FormatProjectLocationAiApplicationAgent(string projectId, string locationId, string aiApplicationId, string agentId) =>
+            s_projectLocationAiApplicationAgent.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(aiApplicationId, nameof(aiApplicationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(agentId, nameof(agentId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="AgentName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/locations/{location}/agents/{agent}</c></description></item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/aiApplications/{ai_application}/agents/{agent}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="agentName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -104,6 +144,11 @@ namespace Google.Cloud.AgentRegistry.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/locations/{location}/agents/{agent}</c></description></item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/aiApplications/{ai_application}/agents/{agent}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -124,6 +169,11 @@ namespace Google.Cloud.AgentRegistry.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/locations/{location}/agents/{agent}</c></description></item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/aiApplications/{ai_application}/agents/{agent}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="agentName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -141,6 +191,11 @@ namespace Google.Cloud.AgentRegistry.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/locations/{location}/agents/{agent}</c></description></item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/aiApplications/{ai_application}/agents/{agent}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -163,6 +218,11 @@ namespace Google.Cloud.AgentRegistry.V1
                 result = FromProjectLocationAgent(resourceName[0], resourceName[1], resourceName[2]);
                 return true;
             }
+            if (s_projectLocationAiApplicationAgent.TryParseName(agentName, out resourceName))
+            {
+                result = FromProjectLocationAiApplicationAgent(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(agentName, out gax::UnparsedResourceName unparsedResourceName))
@@ -175,11 +235,12 @@ namespace Google.Cloud.AgentRegistry.V1
             return false;
         }
 
-        private AgentName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string agentId = null, string locationId = null, string projectId = null)
+        private AgentName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string agentId = null, string aiApplicationId = null, string locationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             AgentId = agentId;
+            AiApplicationId = aiApplicationId;
             LocationId = locationId;
             ProjectId = projectId;
         }
@@ -205,17 +266,23 @@ namespace Google.Cloud.AgentRegistry.V1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Agent</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Agent</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string AgentId { get; }
 
         /// <summary>
-        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>AiApplication</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string AiApplicationId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string LocationId { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
 
@@ -230,6 +297,7 @@ namespace Google.Cloud.AgentRegistry.V1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectLocationAgent: return s_projectLocationAgent.Expand(ProjectId, LocationId, AgentId);
+                case ResourceNameType.ProjectLocationAiApplicationAgent: return s_projectLocationAiApplicationAgent.Expand(ProjectId, LocationId, AiApplicationId, AgentId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
