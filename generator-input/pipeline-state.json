@@ -4461,7 +4461,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-08-10T23:05:55.486520156Z",
-            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
+            "lastGeneratedCommit": "5ce024537af135bb2a0d3228072dd660047956aa",
             "lastReleasedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
             "apiPaths": [
                 "google/cloud/gkerecommender/v1"
