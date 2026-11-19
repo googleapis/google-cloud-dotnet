@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.AgentRegistry.V1 {
   /// <summary>
-  /// Service for managing Agents, Endpoints, McpServers, Services, and Bindings.
+  /// Service for managing Agent Registry resources.
   /// </summary>
   public static partial class AgentRegistry
   {
@@ -129,6 +129,84 @@ namespace Google.Cloud.AgentRegistry.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.FetchAvailableBindingsRequest> __Marshaller_google_cloud_agentregistry_v1_FetchAvailableBindingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.FetchAvailableBindingsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.FetchAvailableBindingsResponse> __Marshaller_google_cloud_agentregistry_v1_FetchAvailableBindingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.FetchAvailableBindingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.CreateSkillRequest> __Marshaller_google_cloud_agentregistry_v1_CreateSkillRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.CreateSkillRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.GetSkillRequest> __Marshaller_google_cloud_agentregistry_v1_GetSkillRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.GetSkillRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.Skill> __Marshaller_google_cloud_agentregistry_v1_Skill = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.Skill.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.UpdateSkillRequest> __Marshaller_google_cloud_agentregistry_v1_UpdateSkillRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.UpdateSkillRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.DeleteSkillRequest> __Marshaller_google_cloud_agentregistry_v1_DeleteSkillRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.DeleteSkillRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.ListSkillsRequest> __Marshaller_google_cloud_agentregistry_v1_ListSkillsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.ListSkillsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.ListSkillsResponse> __Marshaller_google_cloud_agentregistry_v1_ListSkillsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.ListSkillsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.SearchSkillsRequest> __Marshaller_google_cloud_agentregistry_v1_SearchSkillsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.SearchSkillsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.SearchSkillsResponse> __Marshaller_google_cloud_agentregistry_v1_SearchSkillsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.SearchSkillsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.CreateSkillRevisionRequest> __Marshaller_google_cloud_agentregistry_v1_CreateSkillRevisionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.CreateSkillRevisionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.GetSkillRevisionRequest> __Marshaller_google_cloud_agentregistry_v1_GetSkillRevisionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.GetSkillRevisionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.SkillRevision> __Marshaller_google_cloud_agentregistry_v1_SkillRevision = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.SkillRevision.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.DeleteSkillRevisionRequest> __Marshaller_google_cloud_agentregistry_v1_DeleteSkillRevisionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.DeleteSkillRevisionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.ListSkillRevisionsRequest> __Marshaller_google_cloud_agentregistry_v1_ListSkillRevisionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.ListSkillRevisionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.ListSkillRevisionsResponse> __Marshaller_google_cloud_agentregistry_v1_ListSkillRevisionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.ListSkillRevisionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.GetPublisherRequest> __Marshaller_google_cloud_agentregistry_v1_GetPublisherRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.GetPublisherRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.Publisher> __Marshaller_google_cloud_agentregistry_v1_Publisher = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.Publisher.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.ListPublishersRequest> __Marshaller_google_cloud_agentregistry_v1_ListPublishersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.ListPublishersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.ListPublishersResponse> __Marshaller_google_cloud_agentregistry_v1_ListPublishersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.ListPublishersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.GetAiApplicationRequest> __Marshaller_google_cloud_agentregistry_v1_GetAiApplicationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.GetAiApplicationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.AiApplication> __Marshaller_google_cloud_agentregistry_v1_AiApplication = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.AiApplication.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationsRequest> __Marshaller_google_cloud_agentregistry_v1_ListAiApplicationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.ListAiApplicationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationsResponse> __Marshaller_google_cloud_agentregistry_v1_ListAiApplicationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.ListAiApplicationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.GetAiApplicationAgentRequest> __Marshaller_google_cloud_agentregistry_v1_GetAiApplicationAgentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.GetAiApplicationAgentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationAgentsRequest> __Marshaller_google_cloud_agentregistry_v1_ListAiApplicationAgentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.ListAiApplicationAgentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationAgentsResponse> __Marshaller_google_cloud_agentregistry_v1_ListAiApplicationAgentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.ListAiApplicationAgentsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.GetAiApplicationMcpServerRequest> __Marshaller_google_cloud_agentregistry_v1_GetAiApplicationMcpServerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.GetAiApplicationMcpServerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationMcpServersRequest> __Marshaller_google_cloud_agentregistry_v1_ListAiApplicationMcpServersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.ListAiApplicationMcpServersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationMcpServersResponse> __Marshaller_google_cloud_agentregistry_v1_ListAiApplicationMcpServersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.ListAiApplicationMcpServersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.GetFindingRequest> __Marshaller_google_cloud_agentregistry_v1_GetFindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.GetFindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.Finding> __Marshaller_google_cloud_agentregistry_v1_Finding = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.Finding.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.ListFindingsRequest> __Marshaller_google_cloud_agentregistry_v1_ListFindingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.ListFindingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.ListFindingsResponse> __Marshaller_google_cloud_agentregistry_v1_ListFindingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.ListFindingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.GetAiApplicationEndpointRequest> __Marshaller_google_cloud_agentregistry_v1_GetAiApplicationEndpointRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.GetAiApplicationEndpointRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationEndpointsRequest> __Marshaller_google_cloud_agentregistry_v1_ListAiApplicationEndpointsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.ListAiApplicationEndpointsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationEndpointsResponse> __Marshaller_google_cloud_agentregistry_v1_ListAiApplicationEndpointsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.ListAiApplicationEndpointsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.GetSkillEncryptionSpecRequest> __Marshaller_google_cloud_agentregistry_v1_GetSkillEncryptionSpecRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.GetSkillEncryptionSpecRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.SkillEncryptionSpec> __Marshaller_google_cloud_agentregistry_v1_SkillEncryptionSpec = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.SkillEncryptionSpec.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AgentRegistry.V1.UpdateSkillEncryptionSpecRequest> __Marshaller_google_cloud_agentregistry_v1_UpdateSkillEncryptionSpecRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AgentRegistry.V1.UpdateSkillEncryptionSpecRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.ListAgentsRequest, global::Google.Cloud.AgentRegistry.V1.ListAgentsResponse> __Method_ListAgents = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.ListAgentsRequest, global::Google.Cloud.AgentRegistry.V1.ListAgentsResponse>(
@@ -281,6 +359,198 @@ namespace Google.Cloud.AgentRegistry.V1 {
         "FetchAvailableBindings",
         __Marshaller_google_cloud_agentregistry_v1_FetchAvailableBindingsRequest,
         __Marshaller_google_cloud_agentregistry_v1_FetchAvailableBindingsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.CreateSkillRequest, global::Google.LongRunning.Operation> __Method_CreateSkill = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.CreateSkillRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateSkill",
+        __Marshaller_google_cloud_agentregistry_v1_CreateSkillRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.GetSkillRequest, global::Google.Cloud.AgentRegistry.V1.Skill> __Method_GetSkill = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.GetSkillRequest, global::Google.Cloud.AgentRegistry.V1.Skill>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSkill",
+        __Marshaller_google_cloud_agentregistry_v1_GetSkillRequest,
+        __Marshaller_google_cloud_agentregistry_v1_Skill);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.UpdateSkillRequest, global::Google.LongRunning.Operation> __Method_UpdateSkill = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.UpdateSkillRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSkill",
+        __Marshaller_google_cloud_agentregistry_v1_UpdateSkillRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.DeleteSkillRequest, global::Google.LongRunning.Operation> __Method_DeleteSkill = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.DeleteSkillRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteSkill",
+        __Marshaller_google_cloud_agentregistry_v1_DeleteSkillRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.ListSkillsRequest, global::Google.Cloud.AgentRegistry.V1.ListSkillsResponse> __Method_ListSkills = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.ListSkillsRequest, global::Google.Cloud.AgentRegistry.V1.ListSkillsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSkills",
+        __Marshaller_google_cloud_agentregistry_v1_ListSkillsRequest,
+        __Marshaller_google_cloud_agentregistry_v1_ListSkillsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.SearchSkillsRequest, global::Google.Cloud.AgentRegistry.V1.SearchSkillsResponse> __Method_SearchSkills = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.SearchSkillsRequest, global::Google.Cloud.AgentRegistry.V1.SearchSkillsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SearchSkills",
+        __Marshaller_google_cloud_agentregistry_v1_SearchSkillsRequest,
+        __Marshaller_google_cloud_agentregistry_v1_SearchSkillsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.CreateSkillRevisionRequest, global::Google.LongRunning.Operation> __Method_CreateSkillRevision = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.CreateSkillRevisionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateSkillRevision",
+        __Marshaller_google_cloud_agentregistry_v1_CreateSkillRevisionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.GetSkillRevisionRequest, global::Google.Cloud.AgentRegistry.V1.SkillRevision> __Method_GetSkillRevision = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.GetSkillRevisionRequest, global::Google.Cloud.AgentRegistry.V1.SkillRevision>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSkillRevision",
+        __Marshaller_google_cloud_agentregistry_v1_GetSkillRevisionRequest,
+        __Marshaller_google_cloud_agentregistry_v1_SkillRevision);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.DeleteSkillRevisionRequest, global::Google.LongRunning.Operation> __Method_DeleteSkillRevision = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.DeleteSkillRevisionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteSkillRevision",
+        __Marshaller_google_cloud_agentregistry_v1_DeleteSkillRevisionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.ListSkillRevisionsRequest, global::Google.Cloud.AgentRegistry.V1.ListSkillRevisionsResponse> __Method_ListSkillRevisions = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.ListSkillRevisionsRequest, global::Google.Cloud.AgentRegistry.V1.ListSkillRevisionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSkillRevisions",
+        __Marshaller_google_cloud_agentregistry_v1_ListSkillRevisionsRequest,
+        __Marshaller_google_cloud_agentregistry_v1_ListSkillRevisionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.GetPublisherRequest, global::Google.Cloud.AgentRegistry.V1.Publisher> __Method_GetPublisher = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.GetPublisherRequest, global::Google.Cloud.AgentRegistry.V1.Publisher>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetPublisher",
+        __Marshaller_google_cloud_agentregistry_v1_GetPublisherRequest,
+        __Marshaller_google_cloud_agentregistry_v1_Publisher);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.ListPublishersRequest, global::Google.Cloud.AgentRegistry.V1.ListPublishersResponse> __Method_ListPublishers = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.ListPublishersRequest, global::Google.Cloud.AgentRegistry.V1.ListPublishersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListPublishers",
+        __Marshaller_google_cloud_agentregistry_v1_ListPublishersRequest,
+        __Marshaller_google_cloud_agentregistry_v1_ListPublishersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.GetAiApplicationRequest, global::Google.Cloud.AgentRegistry.V1.AiApplication> __Method_GetAiApplication = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.GetAiApplicationRequest, global::Google.Cloud.AgentRegistry.V1.AiApplication>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAiApplication",
+        __Marshaller_google_cloud_agentregistry_v1_GetAiApplicationRequest,
+        __Marshaller_google_cloud_agentregistry_v1_AiApplication);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationsRequest, global::Google.Cloud.AgentRegistry.V1.ListAiApplicationsResponse> __Method_ListAiApplications = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationsRequest, global::Google.Cloud.AgentRegistry.V1.ListAiApplicationsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAiApplications",
+        __Marshaller_google_cloud_agentregistry_v1_ListAiApplicationsRequest,
+        __Marshaller_google_cloud_agentregistry_v1_ListAiApplicationsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.GetAiApplicationAgentRequest, global::Google.Cloud.AgentRegistry.V1.Agent> __Method_GetAiApplicationAgent = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.GetAiApplicationAgentRequest, global::Google.Cloud.AgentRegistry.V1.Agent>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAiApplicationAgent",
+        __Marshaller_google_cloud_agentregistry_v1_GetAiApplicationAgentRequest,
+        __Marshaller_google_cloud_agentregistry_v1_Agent);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationAgentsRequest, global::Google.Cloud.AgentRegistry.V1.ListAiApplicationAgentsResponse> __Method_ListAiApplicationAgents = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationAgentsRequest, global::Google.Cloud.AgentRegistry.V1.ListAiApplicationAgentsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAiApplicationAgents",
+        __Marshaller_google_cloud_agentregistry_v1_ListAiApplicationAgentsRequest,
+        __Marshaller_google_cloud_agentregistry_v1_ListAiApplicationAgentsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.GetAiApplicationMcpServerRequest, global::Google.Cloud.AgentRegistry.V1.McpServer> __Method_GetAiApplicationMcpServer = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.GetAiApplicationMcpServerRequest, global::Google.Cloud.AgentRegistry.V1.McpServer>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAiApplicationMcpServer",
+        __Marshaller_google_cloud_agentregistry_v1_GetAiApplicationMcpServerRequest,
+        __Marshaller_google_cloud_agentregistry_v1_McpServer);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationMcpServersRequest, global::Google.Cloud.AgentRegistry.V1.ListAiApplicationMcpServersResponse> __Method_ListAiApplicationMcpServers = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationMcpServersRequest, global::Google.Cloud.AgentRegistry.V1.ListAiApplicationMcpServersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAiApplicationMcpServers",
+        __Marshaller_google_cloud_agentregistry_v1_ListAiApplicationMcpServersRequest,
+        __Marshaller_google_cloud_agentregistry_v1_ListAiApplicationMcpServersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.GetFindingRequest, global::Google.Cloud.AgentRegistry.V1.Finding> __Method_GetFinding = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.GetFindingRequest, global::Google.Cloud.AgentRegistry.V1.Finding>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetFinding",
+        __Marshaller_google_cloud_agentregistry_v1_GetFindingRequest,
+        __Marshaller_google_cloud_agentregistry_v1_Finding);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.ListFindingsRequest, global::Google.Cloud.AgentRegistry.V1.ListFindingsResponse> __Method_ListFindings = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.ListFindingsRequest, global::Google.Cloud.AgentRegistry.V1.ListFindingsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListFindings",
+        __Marshaller_google_cloud_agentregistry_v1_ListFindingsRequest,
+        __Marshaller_google_cloud_agentregistry_v1_ListFindingsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.GetAiApplicationEndpointRequest, global::Google.Cloud.AgentRegistry.V1.Endpoint> __Method_GetAiApplicationEndpoint = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.GetAiApplicationEndpointRequest, global::Google.Cloud.AgentRegistry.V1.Endpoint>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAiApplicationEndpoint",
+        __Marshaller_google_cloud_agentregistry_v1_GetAiApplicationEndpointRequest,
+        __Marshaller_google_cloud_agentregistry_v1_Endpoint);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationEndpointsRequest, global::Google.Cloud.AgentRegistry.V1.ListAiApplicationEndpointsResponse> __Method_ListAiApplicationEndpoints = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationEndpointsRequest, global::Google.Cloud.AgentRegistry.V1.ListAiApplicationEndpointsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAiApplicationEndpoints",
+        __Marshaller_google_cloud_agentregistry_v1_ListAiApplicationEndpointsRequest,
+        __Marshaller_google_cloud_agentregistry_v1_ListAiApplicationEndpointsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.GetSkillEncryptionSpecRequest, global::Google.Cloud.AgentRegistry.V1.SkillEncryptionSpec> __Method_GetSkillEncryptionSpec = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.GetSkillEncryptionSpecRequest, global::Google.Cloud.AgentRegistry.V1.SkillEncryptionSpec>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSkillEncryptionSpec",
+        __Marshaller_google_cloud_agentregistry_v1_GetSkillEncryptionSpecRequest,
+        __Marshaller_google_cloud_agentregistry_v1_SkillEncryptionSpec);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AgentRegistry.V1.UpdateSkillEncryptionSpecRequest, global::Google.LongRunning.Operation> __Method_UpdateSkillEncryptionSpec = new grpc::Method<global::Google.Cloud.AgentRegistry.V1.UpdateSkillEncryptionSpecRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSkillEncryptionSpec",
+        __Marshaller_google_cloud_agentregistry_v1_UpdateSkillEncryptionSpecRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -516,6 +786,310 @@ namespace Google.Cloud.AgentRegistry.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AgentRegistry.V1.FetchAvailableBindingsResponse> FetchAvailableBindings(global::Google.Cloud.AgentRegistry.V1.FetchAvailableBindingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// =========================================================================
+      /// # Skills Collection APIs
+      ///
+      /// Creates a Skill resource container, optionally publishing the initial
+      /// SkillRevision inline in a single, atomic CRUD roundtrip.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateSkill(global::Google.Cloud.AgentRegistry.V1.CreateSkillRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetches the active configuration and metadata of a Skill.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AgentRegistry.V1.Skill> GetSkill(global::Google.Cloud.AgentRegistry.V1.GetSkillRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates Skill metadata or overrides active pointers/state using REST
+      /// standard PATCH.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateSkill(global::Google.Cloud.AgentRegistry.V1.UpdateSkillRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a Skill container along with all its revisions.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteSkill(global::Google.Cloud.AgentRegistry.V1.DeleteSkillRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists logical Skills available in a project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AgentRegistry.V1.ListSkillsResponse> ListSkills(global::Google.Cloud.AgentRegistry.V1.ListSkillsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Custom deep-search method to filter by frontmatter or query SKILL.md text
+      /// blobs.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AgentRegistry.V1.SearchSkillsResponse> SearchSkills(global::Google.Cloud.AgentRegistry.V1.SearchSkillsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new immutable revision and triggers validation pipelines.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateSkillRevision(global::Google.Cloud.AgentRegistry.V1.CreateSkillRevisionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single immutable Revision.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AgentRegistry.V1.SkillRevision> GetSkillRevision(global::Google.Cloud.AgentRegistry.V1.GetSkillRevisionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a specific revision (restricted to admins to purge accidentally
+      /// committed secrets).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteSkillRevision(global::Google.Cloud.AgentRegistry.V1.DeleteSkillRevisionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all revisions belonging to a parent Skill.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AgentRegistry.V1.ListSkillRevisionsResponse> ListSkillRevisions(global::Google.Cloud.AgentRegistry.V1.ListSkillRevisionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetches details of a specific Publisher.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AgentRegistry.V1.Publisher> GetPublisher(global::Google.Cloud.AgentRegistry.V1.GetPublisherRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all Publishers in a location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AgentRegistry.V1.ListPublishersResponse> ListPublishers(global::Google.Cloud.AgentRegistry.V1.ListPublishersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single AI Application.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AgentRegistry.V1.AiApplication> GetAiApplication(global::Google.Cloud.AgentRegistry.V1.GetAiApplicationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists AI Applications in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationsResponse> ListAiApplications(global::Google.Cloud.AgentRegistry.V1.ListAiApplicationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single Agent under an AI Application.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AgentRegistry.V1.Agent> GetAiApplicationAgent(global::Google.Cloud.AgentRegistry.V1.GetAiApplicationAgentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists Agents under an AI Application.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationAgentsResponse> ListAiApplicationAgents(global::Google.Cloud.AgentRegistry.V1.ListAiApplicationAgentsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single McpServer under an AI Application.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AgentRegistry.V1.McpServer> GetAiApplicationMcpServer(global::Google.Cloud.AgentRegistry.V1.GetAiApplicationMcpServerRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists McpServers under an AI Application.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationMcpServersResponse> ListAiApplicationMcpServers(global::Google.Cloud.AgentRegistry.V1.ListAiApplicationMcpServersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single Finding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AgentRegistry.V1.Finding> GetFinding(global::Google.Cloud.AgentRegistry.V1.GetFindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists Findings in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AgentRegistry.V1.ListFindingsResponse> ListFindings(global::Google.Cloud.AgentRegistry.V1.ListFindingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single Endpoint under an AI Application.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AgentRegistry.V1.Endpoint> GetAiApplicationEndpoint(global::Google.Cloud.AgentRegistry.V1.GetAiApplicationEndpointRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists Endpoints under an AI Application.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationEndpointsResponse> ListAiApplicationEndpoints(global::Google.Cloud.AgentRegistry.V1.ListAiApplicationEndpointsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// =========================================================================
+      /// # Skill Encryption Spec Service Methods
+      ///
+      /// Gets the customer-managed encryption key (CMEK) configuration for Skills in
+      /// a specific project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AgentRegistry.V1.SkillEncryptionSpec> GetSkillEncryptionSpec(global::Google.Cloud.AgentRegistry.V1.GetSkillEncryptionSpecRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the customer-managed encryption key (CMEK) configuration for Skills
+      /// in a specific project and location.
+      ///
+      /// This method is only allowed when no Skills exist in the target project and
+      /// location. If any Skill already exists in the location, the request fails
+      /// with `FAILED_PRECONDITION`.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateSkillEncryptionSpec(global::Google.Cloud.AgentRegistry.V1.UpdateSkillEncryptionSpecRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1461,6 +2035,1222 @@ namespace Google.Cloud.AgentRegistry.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_FetchAvailableBindings, null, options, request);
       }
+      /// <summary>
+      /// =========================================================================
+      /// # Skills Collection APIs
+      ///
+      /// Creates a Skill resource container, optionally publishing the initial
+      /// SkillRevision inline in a single, atomic CRUD roundtrip.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateSkill(global::Google.Cloud.AgentRegistry.V1.CreateSkillRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSkill(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// =========================================================================
+      /// # Skills Collection APIs
+      ///
+      /// Creates a Skill resource container, optionally publishing the initial
+      /// SkillRevision inline in a single, atomic CRUD roundtrip.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateSkill(global::Google.Cloud.AgentRegistry.V1.CreateSkillRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateSkill, null, options, request);
+      }
+      /// <summary>
+      /// =========================================================================
+      /// # Skills Collection APIs
+      ///
+      /// Creates a Skill resource container, optionally publishing the initial
+      /// SkillRevision inline in a single, atomic CRUD roundtrip.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateSkillAsync(global::Google.Cloud.AgentRegistry.V1.CreateSkillRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSkillAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// =========================================================================
+      /// # Skills Collection APIs
+      ///
+      /// Creates a Skill resource container, optionally publishing the initial
+      /// SkillRevision inline in a single, atomic CRUD roundtrip.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateSkillAsync(global::Google.Cloud.AgentRegistry.V1.CreateSkillRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateSkill, null, options, request);
+      }
+      /// <summary>
+      /// Fetches the active configuration and metadata of a Skill.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.Skill GetSkill(global::Google.Cloud.AgentRegistry.V1.GetSkillRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSkill(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches the active configuration and metadata of a Skill.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.Skill GetSkill(global::Google.Cloud.AgentRegistry.V1.GetSkillRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSkill, null, options, request);
+      }
+      /// <summary>
+      /// Fetches the active configuration and metadata of a Skill.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.Skill> GetSkillAsync(global::Google.Cloud.AgentRegistry.V1.GetSkillRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSkillAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches the active configuration and metadata of a Skill.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.Skill> GetSkillAsync(global::Google.Cloud.AgentRegistry.V1.GetSkillRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSkill, null, options, request);
+      }
+      /// <summary>
+      /// Updates Skill metadata or overrides active pointers/state using REST
+      /// standard PATCH.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateSkill(global::Google.Cloud.AgentRegistry.V1.UpdateSkillRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSkill(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates Skill metadata or overrides active pointers/state using REST
+      /// standard PATCH.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateSkill(global::Google.Cloud.AgentRegistry.V1.UpdateSkillRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSkill, null, options, request);
+      }
+      /// <summary>
+      /// Updates Skill metadata or overrides active pointers/state using REST
+      /// standard PATCH.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateSkillAsync(global::Google.Cloud.AgentRegistry.V1.UpdateSkillRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSkillAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates Skill metadata or overrides active pointers/state using REST
+      /// standard PATCH.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateSkillAsync(global::Google.Cloud.AgentRegistry.V1.UpdateSkillRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSkill, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Skill container along with all its revisions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteSkill(global::Google.Cloud.AgentRegistry.V1.DeleteSkillRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSkill(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Skill container along with all its revisions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteSkill(global::Google.Cloud.AgentRegistry.V1.DeleteSkillRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteSkill, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Skill container along with all its revisions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteSkillAsync(global::Google.Cloud.AgentRegistry.V1.DeleteSkillRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSkillAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Skill container along with all its revisions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteSkillAsync(global::Google.Cloud.AgentRegistry.V1.DeleteSkillRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteSkill, null, options, request);
+      }
+      /// <summary>
+      /// Lists logical Skills available in a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.ListSkillsResponse ListSkills(global::Google.Cloud.AgentRegistry.V1.ListSkillsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSkills(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists logical Skills available in a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.ListSkillsResponse ListSkills(global::Google.Cloud.AgentRegistry.V1.ListSkillsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSkills, null, options, request);
+      }
+      /// <summary>
+      /// Lists logical Skills available in a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.ListSkillsResponse> ListSkillsAsync(global::Google.Cloud.AgentRegistry.V1.ListSkillsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSkillsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists logical Skills available in a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.ListSkillsResponse> ListSkillsAsync(global::Google.Cloud.AgentRegistry.V1.ListSkillsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSkills, null, options, request);
+      }
+      /// <summary>
+      /// Custom deep-search method to filter by frontmatter or query SKILL.md text
+      /// blobs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.SearchSkillsResponse SearchSkills(global::Google.Cloud.AgentRegistry.V1.SearchSkillsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchSkills(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Custom deep-search method to filter by frontmatter or query SKILL.md text
+      /// blobs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.SearchSkillsResponse SearchSkills(global::Google.Cloud.AgentRegistry.V1.SearchSkillsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SearchSkills, null, options, request);
+      }
+      /// <summary>
+      /// Custom deep-search method to filter by frontmatter or query SKILL.md text
+      /// blobs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.SearchSkillsResponse> SearchSkillsAsync(global::Google.Cloud.AgentRegistry.V1.SearchSkillsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchSkillsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Custom deep-search method to filter by frontmatter or query SKILL.md text
+      /// blobs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.SearchSkillsResponse> SearchSkillsAsync(global::Google.Cloud.AgentRegistry.V1.SearchSkillsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SearchSkills, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new immutable revision and triggers validation pipelines.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateSkillRevision(global::Google.Cloud.AgentRegistry.V1.CreateSkillRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSkillRevision(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new immutable revision and triggers validation pipelines.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateSkillRevision(global::Google.Cloud.AgentRegistry.V1.CreateSkillRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateSkillRevision, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new immutable revision and triggers validation pipelines.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateSkillRevisionAsync(global::Google.Cloud.AgentRegistry.V1.CreateSkillRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSkillRevisionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new immutable revision and triggers validation pipelines.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateSkillRevisionAsync(global::Google.Cloud.AgentRegistry.V1.CreateSkillRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateSkillRevision, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single immutable Revision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.SkillRevision GetSkillRevision(global::Google.Cloud.AgentRegistry.V1.GetSkillRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSkillRevision(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single immutable Revision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.SkillRevision GetSkillRevision(global::Google.Cloud.AgentRegistry.V1.GetSkillRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSkillRevision, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single immutable Revision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.SkillRevision> GetSkillRevisionAsync(global::Google.Cloud.AgentRegistry.V1.GetSkillRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSkillRevisionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single immutable Revision.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.SkillRevision> GetSkillRevisionAsync(global::Google.Cloud.AgentRegistry.V1.GetSkillRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSkillRevision, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a specific revision (restricted to admins to purge accidentally
+      /// committed secrets).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteSkillRevision(global::Google.Cloud.AgentRegistry.V1.DeleteSkillRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSkillRevision(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a specific revision (restricted to admins to purge accidentally
+      /// committed secrets).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteSkillRevision(global::Google.Cloud.AgentRegistry.V1.DeleteSkillRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteSkillRevision, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a specific revision (restricted to admins to purge accidentally
+      /// committed secrets).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteSkillRevisionAsync(global::Google.Cloud.AgentRegistry.V1.DeleteSkillRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSkillRevisionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a specific revision (restricted to admins to purge accidentally
+      /// committed secrets).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteSkillRevisionAsync(global::Google.Cloud.AgentRegistry.V1.DeleteSkillRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteSkillRevision, null, options, request);
+      }
+      /// <summary>
+      /// Lists all revisions belonging to a parent Skill.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.ListSkillRevisionsResponse ListSkillRevisions(global::Google.Cloud.AgentRegistry.V1.ListSkillRevisionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSkillRevisions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all revisions belonging to a parent Skill.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.ListSkillRevisionsResponse ListSkillRevisions(global::Google.Cloud.AgentRegistry.V1.ListSkillRevisionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSkillRevisions, null, options, request);
+      }
+      /// <summary>
+      /// Lists all revisions belonging to a parent Skill.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.ListSkillRevisionsResponse> ListSkillRevisionsAsync(global::Google.Cloud.AgentRegistry.V1.ListSkillRevisionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSkillRevisionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all revisions belonging to a parent Skill.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.ListSkillRevisionsResponse> ListSkillRevisionsAsync(global::Google.Cloud.AgentRegistry.V1.ListSkillRevisionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSkillRevisions, null, options, request);
+      }
+      /// <summary>
+      /// Fetches details of a specific Publisher.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.Publisher GetPublisher(global::Google.Cloud.AgentRegistry.V1.GetPublisherRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPublisher(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches details of a specific Publisher.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.Publisher GetPublisher(global::Google.Cloud.AgentRegistry.V1.GetPublisherRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetPublisher, null, options, request);
+      }
+      /// <summary>
+      /// Fetches details of a specific Publisher.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.Publisher> GetPublisherAsync(global::Google.Cloud.AgentRegistry.V1.GetPublisherRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPublisherAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches details of a specific Publisher.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.Publisher> GetPublisherAsync(global::Google.Cloud.AgentRegistry.V1.GetPublisherRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetPublisher, null, options, request);
+      }
+      /// <summary>
+      /// Lists all Publishers in a location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.ListPublishersResponse ListPublishers(global::Google.Cloud.AgentRegistry.V1.ListPublishersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPublishers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all Publishers in a location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.ListPublishersResponse ListPublishers(global::Google.Cloud.AgentRegistry.V1.ListPublishersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListPublishers, null, options, request);
+      }
+      /// <summary>
+      /// Lists all Publishers in a location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.ListPublishersResponse> ListPublishersAsync(global::Google.Cloud.AgentRegistry.V1.ListPublishersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPublishersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all Publishers in a location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.ListPublishersResponse> ListPublishersAsync(global::Google.Cloud.AgentRegistry.V1.ListPublishersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListPublishers, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.AiApplication GetAiApplication(global::Google.Cloud.AgentRegistry.V1.GetAiApplicationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAiApplication(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.AiApplication GetAiApplication(global::Google.Cloud.AgentRegistry.V1.GetAiApplicationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAiApplication, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.AiApplication> GetAiApplicationAsync(global::Google.Cloud.AgentRegistry.V1.GetAiApplicationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAiApplicationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.AiApplication> GetAiApplicationAsync(global::Google.Cloud.AgentRegistry.V1.GetAiApplicationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAiApplication, null, options, request);
+      }
+      /// <summary>
+      /// Lists AI Applications in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.ListAiApplicationsResponse ListAiApplications(global::Google.Cloud.AgentRegistry.V1.ListAiApplicationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAiApplications(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists AI Applications in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.ListAiApplicationsResponse ListAiApplications(global::Google.Cloud.AgentRegistry.V1.ListAiApplicationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAiApplications, null, options, request);
+      }
+      /// <summary>
+      /// Lists AI Applications in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationsResponse> ListAiApplicationsAsync(global::Google.Cloud.AgentRegistry.V1.ListAiApplicationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAiApplicationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists AI Applications in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationsResponse> ListAiApplicationsAsync(global::Google.Cloud.AgentRegistry.V1.ListAiApplicationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAiApplications, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single Agent under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.Agent GetAiApplicationAgent(global::Google.Cloud.AgentRegistry.V1.GetAiApplicationAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAiApplicationAgent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single Agent under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.Agent GetAiApplicationAgent(global::Google.Cloud.AgentRegistry.V1.GetAiApplicationAgentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAiApplicationAgent, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single Agent under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.Agent> GetAiApplicationAgentAsync(global::Google.Cloud.AgentRegistry.V1.GetAiApplicationAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAiApplicationAgentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single Agent under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.Agent> GetAiApplicationAgentAsync(global::Google.Cloud.AgentRegistry.V1.GetAiApplicationAgentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAiApplicationAgent, null, options, request);
+      }
+      /// <summary>
+      /// Lists Agents under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.ListAiApplicationAgentsResponse ListAiApplicationAgents(global::Google.Cloud.AgentRegistry.V1.ListAiApplicationAgentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAiApplicationAgents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Agents under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.ListAiApplicationAgentsResponse ListAiApplicationAgents(global::Google.Cloud.AgentRegistry.V1.ListAiApplicationAgentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAiApplicationAgents, null, options, request);
+      }
+      /// <summary>
+      /// Lists Agents under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationAgentsResponse> ListAiApplicationAgentsAsync(global::Google.Cloud.AgentRegistry.V1.ListAiApplicationAgentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAiApplicationAgentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Agents under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationAgentsResponse> ListAiApplicationAgentsAsync(global::Google.Cloud.AgentRegistry.V1.ListAiApplicationAgentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAiApplicationAgents, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single McpServer under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.McpServer GetAiApplicationMcpServer(global::Google.Cloud.AgentRegistry.V1.GetAiApplicationMcpServerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAiApplicationMcpServer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single McpServer under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.McpServer GetAiApplicationMcpServer(global::Google.Cloud.AgentRegistry.V1.GetAiApplicationMcpServerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAiApplicationMcpServer, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single McpServer under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.McpServer> GetAiApplicationMcpServerAsync(global::Google.Cloud.AgentRegistry.V1.GetAiApplicationMcpServerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAiApplicationMcpServerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single McpServer under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.McpServer> GetAiApplicationMcpServerAsync(global::Google.Cloud.AgentRegistry.V1.GetAiApplicationMcpServerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAiApplicationMcpServer, null, options, request);
+      }
+      /// <summary>
+      /// Lists McpServers under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.ListAiApplicationMcpServersResponse ListAiApplicationMcpServers(global::Google.Cloud.AgentRegistry.V1.ListAiApplicationMcpServersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAiApplicationMcpServers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists McpServers under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.ListAiApplicationMcpServersResponse ListAiApplicationMcpServers(global::Google.Cloud.AgentRegistry.V1.ListAiApplicationMcpServersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAiApplicationMcpServers, null, options, request);
+      }
+      /// <summary>
+      /// Lists McpServers under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationMcpServersResponse> ListAiApplicationMcpServersAsync(global::Google.Cloud.AgentRegistry.V1.ListAiApplicationMcpServersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAiApplicationMcpServersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists McpServers under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationMcpServersResponse> ListAiApplicationMcpServersAsync(global::Google.Cloud.AgentRegistry.V1.ListAiApplicationMcpServersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAiApplicationMcpServers, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single Finding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.Finding GetFinding(global::Google.Cloud.AgentRegistry.V1.GetFindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetFinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single Finding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.Finding GetFinding(global::Google.Cloud.AgentRegistry.V1.GetFindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetFinding, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single Finding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.Finding> GetFindingAsync(global::Google.Cloud.AgentRegistry.V1.GetFindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetFindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single Finding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.Finding> GetFindingAsync(global::Google.Cloud.AgentRegistry.V1.GetFindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetFinding, null, options, request);
+      }
+      /// <summary>
+      /// Lists Findings in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.ListFindingsResponse ListFindings(global::Google.Cloud.AgentRegistry.V1.ListFindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListFindings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Findings in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.ListFindingsResponse ListFindings(global::Google.Cloud.AgentRegistry.V1.ListFindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListFindings, null, options, request);
+      }
+      /// <summary>
+      /// Lists Findings in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.ListFindingsResponse> ListFindingsAsync(global::Google.Cloud.AgentRegistry.V1.ListFindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListFindingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Findings in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.ListFindingsResponse> ListFindingsAsync(global::Google.Cloud.AgentRegistry.V1.ListFindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListFindings, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single Endpoint under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.Endpoint GetAiApplicationEndpoint(global::Google.Cloud.AgentRegistry.V1.GetAiApplicationEndpointRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAiApplicationEndpoint(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single Endpoint under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.Endpoint GetAiApplicationEndpoint(global::Google.Cloud.AgentRegistry.V1.GetAiApplicationEndpointRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAiApplicationEndpoint, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single Endpoint under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.Endpoint> GetAiApplicationEndpointAsync(global::Google.Cloud.AgentRegistry.V1.GetAiApplicationEndpointRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAiApplicationEndpointAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single Endpoint under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.Endpoint> GetAiApplicationEndpointAsync(global::Google.Cloud.AgentRegistry.V1.GetAiApplicationEndpointRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAiApplicationEndpoint, null, options, request);
+      }
+      /// <summary>
+      /// Lists Endpoints under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.ListAiApplicationEndpointsResponse ListAiApplicationEndpoints(global::Google.Cloud.AgentRegistry.V1.ListAiApplicationEndpointsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAiApplicationEndpoints(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Endpoints under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.ListAiApplicationEndpointsResponse ListAiApplicationEndpoints(global::Google.Cloud.AgentRegistry.V1.ListAiApplicationEndpointsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAiApplicationEndpoints, null, options, request);
+      }
+      /// <summary>
+      /// Lists Endpoints under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationEndpointsResponse> ListAiApplicationEndpointsAsync(global::Google.Cloud.AgentRegistry.V1.ListAiApplicationEndpointsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAiApplicationEndpointsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Endpoints under an AI Application.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationEndpointsResponse> ListAiApplicationEndpointsAsync(global::Google.Cloud.AgentRegistry.V1.ListAiApplicationEndpointsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAiApplicationEndpoints, null, options, request);
+      }
+      /// <summary>
+      /// =========================================================================
+      /// # Skill Encryption Spec Service Methods
+      ///
+      /// Gets the customer-managed encryption key (CMEK) configuration for Skills in
+      /// a specific project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.SkillEncryptionSpec GetSkillEncryptionSpec(global::Google.Cloud.AgentRegistry.V1.GetSkillEncryptionSpecRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSkillEncryptionSpec(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// =========================================================================
+      /// # Skill Encryption Spec Service Methods
+      ///
+      /// Gets the customer-managed encryption key (CMEK) configuration for Skills in
+      /// a specific project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AgentRegistry.V1.SkillEncryptionSpec GetSkillEncryptionSpec(global::Google.Cloud.AgentRegistry.V1.GetSkillEncryptionSpecRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSkillEncryptionSpec, null, options, request);
+      }
+      /// <summary>
+      /// =========================================================================
+      /// # Skill Encryption Spec Service Methods
+      ///
+      /// Gets the customer-managed encryption key (CMEK) configuration for Skills in
+      /// a specific project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.SkillEncryptionSpec> GetSkillEncryptionSpecAsync(global::Google.Cloud.AgentRegistry.V1.GetSkillEncryptionSpecRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSkillEncryptionSpecAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// =========================================================================
+      /// # Skill Encryption Spec Service Methods
+      ///
+      /// Gets the customer-managed encryption key (CMEK) configuration for Skills in
+      /// a specific project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AgentRegistry.V1.SkillEncryptionSpec> GetSkillEncryptionSpecAsync(global::Google.Cloud.AgentRegistry.V1.GetSkillEncryptionSpecRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSkillEncryptionSpec, null, options, request);
+      }
+      /// <summary>
+      /// Updates the customer-managed encryption key (CMEK) configuration for Skills
+      /// in a specific project and location.
+      ///
+      /// This method is only allowed when no Skills exist in the target project and
+      /// location. If any Skill already exists in the location, the request fails
+      /// with `FAILED_PRECONDITION`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateSkillEncryptionSpec(global::Google.Cloud.AgentRegistry.V1.UpdateSkillEncryptionSpecRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSkillEncryptionSpec(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the customer-managed encryption key (CMEK) configuration for Skills
+      /// in a specific project and location.
+      ///
+      /// This method is only allowed when no Skills exist in the target project and
+      /// location. If any Skill already exists in the location, the request fails
+      /// with `FAILED_PRECONDITION`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateSkillEncryptionSpec(global::Google.Cloud.AgentRegistry.V1.UpdateSkillEncryptionSpecRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSkillEncryptionSpec, null, options, request);
+      }
+      /// <summary>
+      /// Updates the customer-managed encryption key (CMEK) configuration for Skills
+      /// in a specific project and location.
+      ///
+      /// This method is only allowed when no Skills exist in the target project and
+      /// location. If any Skill already exists in the location, the request fails
+      /// with `FAILED_PRECONDITION`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateSkillEncryptionSpecAsync(global::Google.Cloud.AgentRegistry.V1.UpdateSkillEncryptionSpecRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSkillEncryptionSpecAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the customer-managed encryption key (CMEK) configuration for Skills
+      /// in a specific project and location.
+      ///
+      /// This method is only allowed when no Skills exist in the target project and
+      /// location. If any Skill already exists in the location, the request fails
+      /// with `FAILED_PRECONDITION`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateSkillEncryptionSpecAsync(global::Google.Cloud.AgentRegistry.V1.UpdateSkillEncryptionSpecRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSkillEncryptionSpec, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AgentRegistryClient NewInstance(ClientBaseConfiguration configuration)
@@ -1493,7 +3283,31 @@ namespace Google.Cloud.AgentRegistry.V1 {
           .AddMethod(__Method_CreateBinding, serviceImpl.CreateBinding)
           .AddMethod(__Method_UpdateBinding, serviceImpl.UpdateBinding)
           .AddMethod(__Method_DeleteBinding, serviceImpl.DeleteBinding)
-          .AddMethod(__Method_FetchAvailableBindings, serviceImpl.FetchAvailableBindings).Build();
+          .AddMethod(__Method_FetchAvailableBindings, serviceImpl.FetchAvailableBindings)
+          .AddMethod(__Method_CreateSkill, serviceImpl.CreateSkill)
+          .AddMethod(__Method_GetSkill, serviceImpl.GetSkill)
+          .AddMethod(__Method_UpdateSkill, serviceImpl.UpdateSkill)
+          .AddMethod(__Method_DeleteSkill, serviceImpl.DeleteSkill)
+          .AddMethod(__Method_ListSkills, serviceImpl.ListSkills)
+          .AddMethod(__Method_SearchSkills, serviceImpl.SearchSkills)
+          .AddMethod(__Method_CreateSkillRevision, serviceImpl.CreateSkillRevision)
+          .AddMethod(__Method_GetSkillRevision, serviceImpl.GetSkillRevision)
+          .AddMethod(__Method_DeleteSkillRevision, serviceImpl.DeleteSkillRevision)
+          .AddMethod(__Method_ListSkillRevisions, serviceImpl.ListSkillRevisions)
+          .AddMethod(__Method_GetPublisher, serviceImpl.GetPublisher)
+          .AddMethod(__Method_ListPublishers, serviceImpl.ListPublishers)
+          .AddMethod(__Method_GetAiApplication, serviceImpl.GetAiApplication)
+          .AddMethod(__Method_ListAiApplications, serviceImpl.ListAiApplications)
+          .AddMethod(__Method_GetAiApplicationAgent, serviceImpl.GetAiApplicationAgent)
+          .AddMethod(__Method_ListAiApplicationAgents, serviceImpl.ListAiApplicationAgents)
+          .AddMethod(__Method_GetAiApplicationMcpServer, serviceImpl.GetAiApplicationMcpServer)
+          .AddMethod(__Method_ListAiApplicationMcpServers, serviceImpl.ListAiApplicationMcpServers)
+          .AddMethod(__Method_GetFinding, serviceImpl.GetFinding)
+          .AddMethod(__Method_ListFindings, serviceImpl.ListFindings)
+          .AddMethod(__Method_GetAiApplicationEndpoint, serviceImpl.GetAiApplicationEndpoint)
+          .AddMethod(__Method_ListAiApplicationEndpoints, serviceImpl.ListAiApplicationEndpoints)
+          .AddMethod(__Method_GetSkillEncryptionSpec, serviceImpl.GetSkillEncryptionSpec)
+          .AddMethod(__Method_UpdateSkillEncryptionSpec, serviceImpl.UpdateSkillEncryptionSpec).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1522,6 +3336,30 @@ namespace Google.Cloud.AgentRegistry.V1 {
       serviceBinder.AddMethod(__Method_UpdateBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.UpdateBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateBinding));
       serviceBinder.AddMethod(__Method_DeleteBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.DeleteBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteBinding));
       serviceBinder.AddMethod(__Method_FetchAvailableBindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.FetchAvailableBindingsRequest, global::Google.Cloud.AgentRegistry.V1.FetchAvailableBindingsResponse>(serviceImpl.FetchAvailableBindings));
+      serviceBinder.AddMethod(__Method_CreateSkill, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.CreateSkillRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateSkill));
+      serviceBinder.AddMethod(__Method_GetSkill, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.GetSkillRequest, global::Google.Cloud.AgentRegistry.V1.Skill>(serviceImpl.GetSkill));
+      serviceBinder.AddMethod(__Method_UpdateSkill, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.UpdateSkillRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateSkill));
+      serviceBinder.AddMethod(__Method_DeleteSkill, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.DeleteSkillRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteSkill));
+      serviceBinder.AddMethod(__Method_ListSkills, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.ListSkillsRequest, global::Google.Cloud.AgentRegistry.V1.ListSkillsResponse>(serviceImpl.ListSkills));
+      serviceBinder.AddMethod(__Method_SearchSkills, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.SearchSkillsRequest, global::Google.Cloud.AgentRegistry.V1.SearchSkillsResponse>(serviceImpl.SearchSkills));
+      serviceBinder.AddMethod(__Method_CreateSkillRevision, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.CreateSkillRevisionRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateSkillRevision));
+      serviceBinder.AddMethod(__Method_GetSkillRevision, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.GetSkillRevisionRequest, global::Google.Cloud.AgentRegistry.V1.SkillRevision>(serviceImpl.GetSkillRevision));
+      serviceBinder.AddMethod(__Method_DeleteSkillRevision, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.DeleteSkillRevisionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteSkillRevision));
+      serviceBinder.AddMethod(__Method_ListSkillRevisions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.ListSkillRevisionsRequest, global::Google.Cloud.AgentRegistry.V1.ListSkillRevisionsResponse>(serviceImpl.ListSkillRevisions));
+      serviceBinder.AddMethod(__Method_GetPublisher, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.GetPublisherRequest, global::Google.Cloud.AgentRegistry.V1.Publisher>(serviceImpl.GetPublisher));
+      serviceBinder.AddMethod(__Method_ListPublishers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.ListPublishersRequest, global::Google.Cloud.AgentRegistry.V1.ListPublishersResponse>(serviceImpl.ListPublishers));
+      serviceBinder.AddMethod(__Method_GetAiApplication, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.GetAiApplicationRequest, global::Google.Cloud.AgentRegistry.V1.AiApplication>(serviceImpl.GetAiApplication));
+      serviceBinder.AddMethod(__Method_ListAiApplications, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationsRequest, global::Google.Cloud.AgentRegistry.V1.ListAiApplicationsResponse>(serviceImpl.ListAiApplications));
+      serviceBinder.AddMethod(__Method_GetAiApplicationAgent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.GetAiApplicationAgentRequest, global::Google.Cloud.AgentRegistry.V1.Agent>(serviceImpl.GetAiApplicationAgent));
+      serviceBinder.AddMethod(__Method_ListAiApplicationAgents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationAgentsRequest, global::Google.Cloud.AgentRegistry.V1.ListAiApplicationAgentsResponse>(serviceImpl.ListAiApplicationAgents));
+      serviceBinder.AddMethod(__Method_GetAiApplicationMcpServer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.GetAiApplicationMcpServerRequest, global::Google.Cloud.AgentRegistry.V1.McpServer>(serviceImpl.GetAiApplicationMcpServer));
+      serviceBinder.AddMethod(__Method_ListAiApplicationMcpServers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationMcpServersRequest, global::Google.Cloud.AgentRegistry.V1.ListAiApplicationMcpServersResponse>(serviceImpl.ListAiApplicationMcpServers));
+      serviceBinder.AddMethod(__Method_GetFinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.GetFindingRequest, global::Google.Cloud.AgentRegistry.V1.Finding>(serviceImpl.GetFinding));
+      serviceBinder.AddMethod(__Method_ListFindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.ListFindingsRequest, global::Google.Cloud.AgentRegistry.V1.ListFindingsResponse>(serviceImpl.ListFindings));
+      serviceBinder.AddMethod(__Method_GetAiApplicationEndpoint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.GetAiApplicationEndpointRequest, global::Google.Cloud.AgentRegistry.V1.Endpoint>(serviceImpl.GetAiApplicationEndpoint));
+      serviceBinder.AddMethod(__Method_ListAiApplicationEndpoints, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.ListAiApplicationEndpointsRequest, global::Google.Cloud.AgentRegistry.V1.ListAiApplicationEndpointsResponse>(serviceImpl.ListAiApplicationEndpoints));
+      serviceBinder.AddMethod(__Method_GetSkillEncryptionSpec, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.GetSkillEncryptionSpecRequest, global::Google.Cloud.AgentRegistry.V1.SkillEncryptionSpec>(serviceImpl.GetSkillEncryptionSpec));
+      serviceBinder.AddMethod(__Method_UpdateSkillEncryptionSpec, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AgentRegistry.V1.UpdateSkillEncryptionSpecRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateSkillEncryptionSpec));
     }
 
   }

@@ -29,40 +29,40 @@ namespace Google.Cloud.AgentRegistry.V1 {
             "aWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90",
             "bxouZ29vZ2xlL2Nsb3VkL2FnZW50cmVnaXN0cnkvdjEvcHJvcGVydGllcy5w",
             "cm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xlL3By",
-            "b3RvYnVmL3RpbWVzdGFtcC5wcm90byLfCQoHU2VydmljZRJLCgphZ2VudF9z",
+            "b3RvYnVmL3RpbWVzdGFtcC5wcm90byLyCQoHU2VydmljZRJMCgphZ2VudF9z",
             "cGVjGAUgASgLMjAuZ29vZ2xlLmNsb3VkLmFnZW50cmVnaXN0cnkudjEuU2Vy",
-            "dmljZS5BZ2VudFNwZWNCA+BBAUgAElQKD21jcF9zZXJ2ZXJfc3BlYxgGIAEo",
-            "CzI0Lmdvb2dsZS5jbG91ZC5hZ2VudHJlZ2lzdHJ5LnYxLlNlcnZpY2UuTWNw",
-            "U2VydmVyU3BlY0ID4EEBSAASUQoNZW5kcG9pbnRfc3BlYxgHIAEoCzIzLmdv",
-            "b2dsZS5jbG91ZC5hZ2VudHJlZ2lzdHJ5LnYxLlNlcnZpY2UuRW5kcG9pbnRT",
-            "cGVjQgPgQQFIABIRCgRuYW1lGAEgASgJQgPgQQgSGQoMZGlzcGxheV9uYW1l",
-            "GAIgASgJQgPgQQESGAoLZGVzY3JpcHRpb24YAyABKAlCA+BBARJBCgppbnRl",
-            "cmZhY2VzGAQgAygLMiguZ29vZ2xlLmNsb3VkLmFnZW50cmVnaXN0cnkudjEu",
-            "SW50ZXJmYWNlQgPgQQESHgoRcmVnaXN0cnlfcmVzb3VyY2UYCiABKAlCA+BB",
-            "AxI0CgtjcmVhdGVfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAxrDAQoJQWdlbnRTcGVjEkgKBHR5cGUYASAB",
-            "KA4yNS5nb29nbGUuY2xvdWQuYWdlbnRyZWdpc3RyeS52MS5TZXJ2aWNlLkFn",
-            "ZW50U3BlYy5UeXBlQgPgQQISLQoHY29udGVudBgCIAEoCzIXLmdvb2dsZS5w",
-            "cm90b2J1Zi5TdHJ1Y3RCA+BBASI9CgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJ",
-            "RUQQABILCgdOT19TUEVDEAESEgoOQTJBX0FHRU5UX0NBUkQQAhrGAQoNTWNw",
-            "U2VydmVyU3BlYxJMCgR0eXBlGAEgASgOMjkuZ29vZ2xlLmNsb3VkLmFnZW50",
-            "cmVnaXN0cnkudjEuU2VydmljZS5NY3BTZXJ2ZXJTcGVjLlR5cGVCA+BBAhIt",
-            "Cgdjb250ZW50GAIgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEID4EEB",
-            "IjgKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEgsKB05PX1NQRUMQARIN",
-            "CglUT09MX1NQRUMQAhq1AQoMRW5kcG9pbnRTcGVjEksKBHR5cGUYASABKA4y",
-            "OC5nb29nbGUuY2xvdWQuYWdlbnRyZWdpc3RyeS52MS5TZXJ2aWNlLkVuZHBv",
-            "aW50U3BlYy5UeXBlQgPgQQISLQoHY29udGVudBgCIAEoCzIXLmdvb2dsZS5w",
-            "cm90b2J1Zi5TdHJ1Y3RCA+BBASIpCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJ",
-            "RUQQABILCgdOT19TUEVDEAE6eOpBdQokYWdlbnRyZWdpc3RyeS5nb29nbGVh",
-            "cGlzLmNvbS9TZXJ2aWNlEjpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
-            "L3tsb2NhdGlvbn0vc2VydmljZXMve3NlcnZpY2V9KghzZXJ2aWNlczIHc2Vy",
-            "dmljZUIGCgRzcGVjQt8BCiFjb20uZ29vZ2xlLmNsb3VkLmFnZW50cmVnaXN0",
-            "cnkudjFCDFNlcnZpY2VQcm90b1ABWkdjbG91ZC5nb29nbGUuY29tL2dvL2Fn",
-            "ZW50cmVnaXN0cnkvYXBpdjEvYWdlbnRyZWdpc3RyeXBiO2FnZW50cmVnaXN0",
-            "cnlwYqoCHUdvb2dsZS5DbG91ZC5BZ2VudFJlZ2lzdHJ5LlYxygIdR29vZ2xl",
-            "XENsb3VkXEFnZW50UmVnaXN0cnlcVjHqAiBHb29nbGU6OkNsb3VkOjpBZ2Vu",
-            "dFJlZ2lzdHJ5OjpWMWIGcHJvdG8z"));
+            "dmljZS5BZ2VudFNwZWNCBOJBAQFIABJVCg9tY3Bfc2VydmVyX3NwZWMYBiAB",
+            "KAsyNC5nb29nbGUuY2xvdWQuYWdlbnRyZWdpc3RyeS52MS5TZXJ2aWNlLk1j",
+            "cFNlcnZlclNwZWNCBOJBAQFIABJSCg1lbmRwb2ludF9zcGVjGAcgASgLMjMu",
+            "Z29vZ2xlLmNsb3VkLmFnZW50cmVnaXN0cnkudjEuU2VydmljZS5FbmRwb2lu",
+            "dFNwZWNCBOJBAQFIABISCgRuYW1lGAEgASgJQgTiQQEIEhoKDGRpc3BsYXlf",
+            "bmFtZRgCIAEoCUIE4kEBARIZCgtkZXNjcmlwdGlvbhgDIAEoCUIE4kEBARJC",
+            "CgppbnRlcmZhY2VzGAQgAygLMiguZ29vZ2xlLmNsb3VkLmFnZW50cmVnaXN0",
+            "cnkudjEuSW50ZXJmYWNlQgTiQQEBEh8KEXJlZ2lzdHJ5X3Jlc291cmNlGAog",
+            "ASgJQgTiQQEDEjUKC2NyZWF0ZV90aW1lGAggASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEIE4kEBAxI1Cgt1cGRhdGVfdGltZRgJIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMaxgEKCUFnZW50U3BlYxJK",
+            "CgR0eXBlGAEgASgOMjUuZ29vZ2xlLmNsb3VkLmFnZW50cmVnaXN0cnkudjEu",
+            "U2VydmljZS5BZ2VudFNwZWMuVHlwZUIF4kECAgUSLgoHY29udGVudBgCIAEo",
+            "CzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCBOJBAQEiPQoEVHlwZRIUChBU",
+            "WVBFX1VOU1BFQ0lGSUVEEAASCwoHTk9fU1BFQxABEhIKDkEyQV9BR0VOVF9D",
+            "QVJEEAIayQEKDU1jcFNlcnZlclNwZWMSTgoEdHlwZRgBIAEoDjI5Lmdvb2ds",
+            "ZS5jbG91ZC5hZ2VudHJlZ2lzdHJ5LnYxLlNlcnZpY2UuTWNwU2VydmVyU3Bl",
+            "Yy5UeXBlQgXiQQICBRIuCgdjb250ZW50GAIgASgLMhcuZ29vZ2xlLnByb3Rv",
+            "YnVmLlN0cnVjdEIE4kEBASI4CgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQ",
+            "ABILCgdOT19TUEVDEAESDQoJVE9PTF9TUEVDEAIauAEKDEVuZHBvaW50U3Bl",
+            "YxJNCgR0eXBlGAEgASgOMjguZ29vZ2xlLmNsb3VkLmFnZW50cmVnaXN0cnku",
+            "djEuU2VydmljZS5FbmRwb2ludFNwZWMuVHlwZUIF4kECAgUSLgoHY29udGVu",
+            "dBgCIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCBOJBAQEiKQoEVHlw",
+            "ZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCwoHTk9fU1BFQxABOnjqQXUKJGFn",
+            "ZW50cmVnaXN0cnkuZ29vZ2xlYXBpcy5jb20vU2VydmljZRI6cHJvamVjdHMv",
+            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3NlcnZpY2VzL3tzZXJ2",
+            "aWNlfSoIc2VydmljZXMyB3NlcnZpY2VCBgoEc3BlY0LfAQohY29tLmdvb2ds",
+            "ZS5jbG91ZC5hZ2VudHJlZ2lzdHJ5LnYxQgxTZXJ2aWNlUHJvdG9QAVpHY2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9hZ2VudHJlZ2lzdHJ5L2FwaXYxL2FnZW50cmVn",
+            "aXN0cnlwYjthZ2VudHJlZ2lzdHJ5cGKqAh1Hb29nbGUuQ2xvdWQuQWdlbnRS",
+            "ZWdpc3RyeS5WMcoCHUdvb2dsZVxDbG91ZFxBZ2VudFJlZ2lzdHJ5XFYx6gIg",
+            "R29vZ2xlOjpDbG91ZDo6QWdlbnRSZWdpc3RyeTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AgentRegistry.V1.PropertiesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -788,7 +788,7 @@ namespace Google.Cloud.AgentRegistry.V1 {
         public const int TypeFieldNumber = 1;
         private global::Google.Cloud.AgentRegistry.V1.Service.Types.AgentSpec.Types.Type type_ = global::Google.Cloud.AgentRegistry.V1.Service.Types.AgentSpec.Types.Type.Unspecified;
         /// <summary>
-        /// Required. The type of the agent spec content.
+        /// Required. Immutable. The type of the agent spec content.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1070,7 +1070,7 @@ namespace Google.Cloud.AgentRegistry.V1 {
         public const int TypeFieldNumber = 1;
         private global::Google.Cloud.AgentRegistry.V1.Service.Types.McpServerSpec.Types.Type type_ = global::Google.Cloud.AgentRegistry.V1.Service.Types.McpServerSpec.Types.Type.Unspecified;
         /// <summary>
-        /// Required. The type of the MCP Server spec content.
+        /// Required. Immutable. The type of the MCP Server spec content.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1276,7 +1276,8 @@ namespace Google.Cloud.AgentRegistry.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// The type of the MCP Server spec.
+          /// The type of the MCP Server spec. Additional values may be added in the
+          /// future.
           /// </summary>
           public enum Type {
             /// <summary>
@@ -1352,7 +1353,7 @@ namespace Google.Cloud.AgentRegistry.V1 {
         public const int TypeFieldNumber = 1;
         private global::Google.Cloud.AgentRegistry.V1.Service.Types.EndpointSpec.Types.Type type_ = global::Google.Cloud.AgentRegistry.V1.Service.Types.EndpointSpec.Types.Type.Unspecified;
         /// <summary>
-        /// Required. The type of the endpoint spec content.
+        /// Required. Immutable. The type of the endpoint spec content.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1557,7 +1558,8 @@ namespace Google.Cloud.AgentRegistry.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// The type of the endpoint spec.
+          /// The type of the endpoint spec. Additional values may be added in the
+          /// future.
           /// </summary>
           public enum Type {
             /// <summary>

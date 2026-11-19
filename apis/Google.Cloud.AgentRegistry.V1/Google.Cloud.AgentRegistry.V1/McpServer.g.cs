@@ -29,37 +29,41 @@ namespace Google.Cloud.AgentRegistry.V1 {
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
             "cm90bxouZ29vZ2xlL2Nsb3VkL2FnZW50cmVnaXN0cnkvdjEvcHJvcGVydGll",
             "cy5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xl",
-            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKuBwoJTWNwU2VydmVyEhEKBG5h",
-            "bWUYASABKAlCA+BBCBIaCg1tY3Bfc2VydmVyX2lkGAkgASgJQgPgQQMSGQoM",
-            "ZGlzcGxheV9uYW1lGAIgASgJQgPgQQMSGAoLZGVzY3JpcHRpb24YAyABKAlC",
-            "A+BBAxJBCgppbnRlcmZhY2VzGAQgAygLMiguZ29vZ2xlLmNsb3VkLmFnZW50",
-            "cmVnaXN0cnkudjEuSW50ZXJmYWNlQgPgQQMSQQoFdG9vbHMYBSADKAsyLS5n",
-            "b29nbGUuY2xvdWQuYWdlbnRyZWdpc3RyeS52MS5NY3BTZXJ2ZXIuVG9vbEID",
-            "4EEDEjQKC2NyZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcEID4EEDElEKCmF0dHJpYnV0ZXMYCCADKAsyOC5n",
-            "b29nbGUuY2xvdWQuYWdlbnRyZWdpc3RyeS52MS5NY3BTZXJ2ZXIuQXR0cmli",
-            "dXRlc0VudHJ5QgPgQQMapAIKBFRvb2wSEQoEbmFtZRgBIAEoCUID4EEDEhgK",
-            "C2Rlc2NyaXB0aW9uGAIgASgJQgPgQQMSUwoLYW5ub3RhdGlvbnMYAyABKAsy",
-            "OS5nb29nbGUuY2xvdWQuYWdlbnRyZWdpc3RyeS52MS5NY3BTZXJ2ZXIuVG9v",
-            "bC5Bbm5vdGF0aW9uc0ID4EEDGpkBCgtBbm5vdGF0aW9ucxISCgV0aXRsZRgB",
-            "IAEoCUID4EEDEh0KEGRlc3RydWN0aXZlX2hpbnQYAiABKAhCA+BBAxIcCg9p",
-            "ZGVtcG90ZW50X2hpbnQYAyABKAhCA+BBAxIcCg9vcGVuX3dvcmxkX2hpbnQY",
-            "BCABKAhCA+BBAxIbCg5yZWFkX29ubHlfaGludBgFIAEoCEID4EEDGkoKD0F0",
-            "dHJpYnV0ZXNFbnRyeRILCgNrZXkYASABKAkSJgoFdmFsdWUYAiABKAsyFy5n",
-            "b29nbGUucHJvdG9idWYuU3RydWN0OgI4ATqEAepBgAEKJmFnZW50cmVnaXN0",
-            "cnkuZ29vZ2xlYXBpcy5jb20vTWNwU2VydmVyEj9wcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbWNwU2VydmVycy97bWNwX3NlcnZl",
-            "cn0qCm1jcFNlcnZlcnMyCW1jcFNlcnZlckLhAQohY29tLmdvb2dsZS5jbG91",
-            "ZC5hZ2VudHJlZ2lzdHJ5LnYxQg5NY3BTZXJ2ZXJQcm90b1ABWkdjbG91ZC5n",
-            "b29nbGUuY29tL2dvL2FnZW50cmVnaXN0cnkvYXBpdjEvYWdlbnRyZWdpc3Ry",
-            "eXBiO2FnZW50cmVnaXN0cnlwYqoCHUdvb2dsZS5DbG91ZC5BZ2VudFJlZ2lz",
-            "dHJ5LlYxygIdR29vZ2xlXENsb3VkXEFnZW50UmVnaXN0cnlcVjHqAiBHb29n",
-            "bGU6OkNsb3VkOjpBZ2VudFJlZ2lzdHJ5OjpWMWIGcHJvdG8z"));
+            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLUCAoJTWNwU2VydmVyEhIKBG5h",
+            "bWUYASABKAlCBOJBAQgSGwoNbWNwX3NlcnZlcl9pZBgJIAEoCUIE4kEBAxIa",
+            "CgxkaXNwbGF5X25hbWUYAiABKAlCBOJBAQMSGQoLZGVzY3JpcHRpb24YAyAB",
+            "KAlCBOJBAQMSQgoKaW50ZXJmYWNlcxgEIAMoCzIoLmdvb2dsZS5jbG91ZC5h",
+            "Z2VudHJlZ2lzdHJ5LnYxLkludGVyZmFjZUIE4kEBAxJCCgV0b29scxgFIAMo",
+            "CzItLmdvb2dsZS5jbG91ZC5hZ2VudHJlZ2lzdHJ5LnYxLk1jcFNlcnZlci5U",
+            "b29sQgTiQQEDEjUKC2NyZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEIE4kEBAxI1Cgt1cGRhdGVfdGltZRgHIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMSUgoKYXR0cmlidXRlcxgI",
+            "IAMoCzI4Lmdvb2dsZS5jbG91ZC5hZ2VudHJlZ2lzdHJ5LnYxLk1jcFNlcnZl",
+            "ci5BdHRyaWJ1dGVzRW50cnlCBOJBAQMa4AIKBFRvb2wSEgoEbmFtZRgBIAEo",
+            "CUIE4kEBAxIZCgtkZXNjcmlwdGlvbhgCIAEoCUIE4kEBAxJUCgthbm5vdGF0",
+            "aW9ucxgDIAEoCzI5Lmdvb2dsZS5jbG91ZC5hZ2VudHJlZ2lzdHJ5LnYxLk1j",
+            "cFNlcnZlci5Ub29sLkFubm90YXRpb25zQgTiQQEDEjIKBG1ldGEYBCABKAsy",
+            "Fy5nb29nbGUucHJvdG9idWYuU3RydWN0QgTiQQEDUgVfbWV0YRqeAQoLQW5u",
+            "b3RhdGlvbnMSEwoFdGl0bGUYASABKAlCBOJBAQMSHgoQZGVzdHJ1Y3RpdmVf",
+            "aGludBgCIAEoCEIE4kEBAxIdCg9pZGVtcG90ZW50X2hpbnQYAyABKAhCBOJB",
+            "AQMSHQoPb3Blbl93b3JsZF9oaW50GAQgASgIQgTiQQEDEhwKDnJlYWRfb25s",
+            "eV9oaW50GAUgASgIQgTiQQEDGkoKD0F0dHJpYnV0ZXNFbnRyeRILCgNrZXkY",
+            "ASABKAkSJgoFdmFsdWUYAiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0",
+            "OgI4ATrlAepB4QEKJmFnZW50cmVnaXN0cnkuZ29vZ2xlYXBpcy5jb20vTWNw",
+            "U2VydmVyEj9wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vbWNwU2VydmVycy97bWNwX3NlcnZlcn0SX3Byb2plY3RzL3twcm9qZWN0",
+            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9haUFwcGxpY2F0aW9ucy97YWlfYXBw",
+            "bGljYXRpb259L21jcFNlcnZlcnMve21jcF9zZXJ2ZXJ9KgptY3BTZXJ2ZXJz",
+            "MgltY3BTZXJ2ZXJC4QEKIWNvbS5nb29nbGUuY2xvdWQuYWdlbnRyZWdpc3Ry",
+            "eS52MUIOTWNwU2VydmVyUHJvdG9QAVpHY2xvdWQuZ29vZ2xlLmNvbS9nby9h",
+            "Z2VudHJlZ2lzdHJ5L2FwaXYxL2FnZW50cmVnaXN0cnlwYjthZ2VudHJlZ2lz",
+            "dHJ5cGKqAh1Hb29nbGUuQ2xvdWQuQWdlbnRSZWdpc3RyeS5WMcoCHUdvb2ds",
+            "ZVxDbG91ZFxBZ2VudFJlZ2lzdHJ5XFYx6gIgR29vZ2xlOjpDbG91ZDo6QWdl",
+            "bnRSZWdpc3RyeTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AgentRegistry.V1.PropertiesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AgentRegistry.V1.McpServer), global::Google.Cloud.AgentRegistry.V1.McpServer.Parser, new[]{ "Name", "McpServerId", "DisplayName", "Description", "Interfaces", "Tools", "CreateTime", "UpdateTime", "Attributes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AgentRegistry.V1.McpServer.Types.Tool), global::Google.Cloud.AgentRegistry.V1.McpServer.Types.Tool.Parser, new[]{ "Name", "Description", "Annotations" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AgentRegistry.V1.McpServer.Types.Tool.Types.Annotations), global::Google.Cloud.AgentRegistry.V1.McpServer.Types.Tool.Types.Annotations.Parser, new[]{ "Title", "DestructiveHint", "IdempotentHint", "OpenWorldHint", "ReadOnlyHint" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AgentRegistry.V1.McpServer), global::Google.Cloud.AgentRegistry.V1.McpServer.Parser, new[]{ "Name", "McpServerId", "DisplayName", "Description", "Interfaces", "Tools", "CreateTime", "UpdateTime", "Attributes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AgentRegistry.V1.McpServer.Types.Tool), global::Google.Cloud.AgentRegistry.V1.McpServer.Types.Tool.Parser, new[]{ "Name", "Description", "Annotations", "Meta" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AgentRegistry.V1.McpServer.Types.Tool.Types.Annotations), global::Google.Cloud.AgentRegistry.V1.McpServer.Types.Tool.Types.Annotations.Parser, new[]{ "Title", "DestructiveHint", "IdempotentHint", "OpenWorldHint", "ReadOnlyHint" }, null, null, null, null)}),
             null, })
           }));
     }
@@ -628,6 +632,7 @@ namespace Google.Cloud.AgentRegistry.V1 {
           name_ = other.name_;
           description_ = other.description_;
           annotations_ = other.annotations_ != null ? other.annotations_.Clone() : null;
+          meta_ = other.meta_ != null ? other.meta_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -682,6 +687,22 @@ namespace Google.Cloud.AgentRegistry.V1 {
           }
         }
 
+        /// <summary>Field number for the "meta" field.</summary>
+        public const int MetaFieldNumber = 4;
+        private global::Google.Protobuf.WellKnownTypes.Struct meta_;
+        /// <summary>
+        /// Output only. Protocol-level tool metadata conforming to MCP _meta
+        /// specification. Output only.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Struct Meta {
+          get { return meta_; }
+          set {
+            meta_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -700,6 +721,7 @@ namespace Google.Cloud.AgentRegistry.V1 {
           if (Name != other.Name) return false;
           if (Description != other.Description) return false;
           if (!object.Equals(Annotations, other.Annotations)) return false;
+          if (!object.Equals(Meta, other.Meta)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -710,6 +732,7 @@ namespace Google.Cloud.AgentRegistry.V1 {
           if (Name.Length != 0) hash ^= Name.GetHashCode();
           if (Description.Length != 0) hash ^= Description.GetHashCode();
           if (annotations_ != null) hash ^= Annotations.GetHashCode();
+          if (meta_ != null) hash ^= Meta.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -740,6 +763,10 @@ namespace Google.Cloud.AgentRegistry.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(Annotations);
           }
+          if (meta_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(Meta);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -762,6 +789,10 @@ namespace Google.Cloud.AgentRegistry.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(Annotations);
           }
+          if (meta_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(Meta);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -780,6 +811,9 @@ namespace Google.Cloud.AgentRegistry.V1 {
           }
           if (annotations_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Annotations);
+          }
+          if (meta_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Meta);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -804,6 +838,12 @@ namespace Google.Cloud.AgentRegistry.V1 {
               Annotations = new global::Google.Cloud.AgentRegistry.V1.McpServer.Types.Tool.Types.Annotations();
             }
             Annotations.MergeFrom(other.Annotations);
+          }
+          if (other.meta_ != null) {
+            if (meta_ == null) {
+              Meta = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            Meta.MergeFrom(other.Meta);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -839,6 +879,13 @@ namespace Google.Cloud.AgentRegistry.V1 {
                 input.ReadMessage(Annotations);
                 break;
               }
+              case 34: {
+                if (meta_ == null) {
+                  Meta = new global::Google.Protobuf.WellKnownTypes.Struct();
+                }
+                input.ReadMessage(Meta);
+                break;
+              }
             }
           }
         #endif
@@ -871,6 +918,13 @@ namespace Google.Cloud.AgentRegistry.V1 {
                   Annotations = new global::Google.Cloud.AgentRegistry.V1.McpServer.Types.Tool.Types.Annotations();
                 }
                 input.ReadMessage(Annotations);
+                break;
+              }
+              case 34: {
+                if (meta_ == null) {
+                  Meta = new global::Google.Protobuf.WellKnownTypes.Struct();
+                }
+                input.ReadMessage(Meta);
                 break;
               }
             }

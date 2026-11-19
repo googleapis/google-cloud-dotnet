@@ -26,19 +26,20 @@ namespace Google.Cloud.AgentRegistry.V1 {
           string.Concat(
             "Ci5nb29nbGUvY2xvdWQvYWdlbnRyZWdpc3RyeS92MS9wcm9wZXJ0aWVzLnBy",
             "b3RvEh1nb29nbGUuY2xvdWQuYWdlbnRyZWdpc3RyeS52MRofZ29vZ2xlL2Fw",
-            "aS9maWVsZF9iZWhhdmlvci5wcm90byLRAQoJSW50ZXJmYWNlEhAKA3VybBgB",
-            "IAEoCUID4EECElcKEHByb3RvY29sX2JpbmRpbmcYAiABKA4yOC5nb29nbGUu",
-            "Y2xvdWQuYWdlbnRyZWdpc3RyeS52MS5JbnRlcmZhY2UuUHJvdG9jb2xCaW5k",
-            "aW5nQgPgQQIiWQoPUHJvdG9jb2xCaW5kaW5nEiAKHFBST1RPQ09MX0JJTkRJ",
-            "TkdfVU5TUEVDSUZJRUQQABILCgdKU09OUlBDEAESCAoER1JQQxACEg0KCUhU",
-            "VFBfSlNPThADQuIBCiFjb20uZ29vZ2xlLmNsb3VkLmFnZW50cmVnaXN0cnku",
-            "djFCD1Byb3BlcnRpZXNQcm90b1ABWkdjbG91ZC5nb29nbGUuY29tL2dvL2Fn",
-            "ZW50cmVnaXN0cnkvYXBpdjEvYWdlbnRyZWdpc3RyeXBiO2FnZW50cmVnaXN0",
-            "cnlwYqoCHUdvb2dsZS5DbG91ZC5BZ2VudFJlZ2lzdHJ5LlYxygIdR29vZ2xl",
-            "XENsb3VkXEFnZW50UmVnaXN0cnlcVjHqAiBHb29nbGU6OkNsb3VkOjpBZ2Vu",
-            "dFJlZ2lzdHJ5OjpWMWIGcHJvdG8z"));
+            "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
+            "cm90byLTAQoJSW50ZXJmYWNlEhEKA3VybBgBIAEoCUIE4kEBAhJYChBwcm90",
+            "b2NvbF9iaW5kaW5nGAIgASgOMjguZ29vZ2xlLmNsb3VkLmFnZW50cmVnaXN0",
+            "cnkudjEuSW50ZXJmYWNlLlByb3RvY29sQmluZGluZ0IE4kEBAiJZCg9Qcm90",
+            "b2NvbEJpbmRpbmcSIAocUFJPVE9DT0xfQklORElOR19VTlNQRUNJRklFRBAA",
+            "EgsKB0pTT05SUEMQARIICgRHUlBDEAISDQoJSFRUUF9KU09OEANC4gEKIWNv",
+            "bS5nb29nbGUuY2xvdWQuYWdlbnRyZWdpc3RyeS52MUIPUHJvcGVydGllc1By",
+            "b3RvUAFaR2Nsb3VkLmdvb2dsZS5jb20vZ28vYWdlbnRyZWdpc3RyeS9hcGl2",
+            "MS9hZ2VudHJlZ2lzdHJ5cGI7YWdlbnRyZWdpc3RyeXBiqgIdR29vZ2xlLkNs",
+            "b3VkLkFnZW50UmVnaXN0cnkuVjHKAh1Hb29nbGVcQ2xvdWRcQWdlbnRSZWdp",
+            "c3RyeVxWMeoCIEdvb2dsZTo6Q2xvdWQ6OkFnZW50UmVnaXN0cnk6OlYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AgentRegistry.V1.Interface), global::Google.Cloud.AgentRegistry.V1.Interface.Parser, new[]{ "Url", "ProtocolBinding" }, null, new[]{ typeof(global::Google.Cloud.AgentRegistry.V1.Interface.Types.ProtocolBinding) }, null, null)
           }));
