@@ -4981,7 +4981,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-10-19T19:16:03.268224311Z",
-            "lastGeneratedCommit": "9fe792aa92a62a86c97001e079da43d3757ffb9f",
+            "lastGeneratedCommit": "984d83793d5b3461ffdefe4fc81e0112cb6c94fb",
             "lastReleasedCommit": "9fe792aa92a62a86c97001e079da43d3757ffb9f",
             "apiPaths": [
                 "google/devicesandservices/health/v4beta"
