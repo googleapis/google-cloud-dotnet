@@ -749,6 +749,7 @@
         {
             "id": "Google.Cloud.Bigtable.Admin.V2",
             "currentVersion": "3.36.0",
+            "nextVersion": "4.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-09-28T20:03:18.733443896Z",
