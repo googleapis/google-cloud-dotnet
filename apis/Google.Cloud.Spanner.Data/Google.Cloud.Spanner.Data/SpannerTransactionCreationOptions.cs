@@ -62,6 +62,9 @@ public sealed class SpannerTransactionCreationOptions
     /// </summary>
     public TransactionId TransactionId { get; }
 
+    internal TimestampBound EffectiveTimestampBound => TimestampBound ?? TransactionId?.TimestampBound;
+    private TransactionOptions EffectiveTimestampBoundTxnOptions => EffectiveTimestampBound?.ToTransactionOptions();
+
     /// <summary>
     /// Whether these options should result in a detached transaction or in one that's tracked by a session pool.
     /// This will always be true when <see cref="TransactionId"/> is set. Otherwise it will be false unless explicitly
@@ -206,9 +209,15 @@ public sealed class SpannerTransactionCreationOptions
     /// </summary>
     internal TransactionOptions GetTransactionOptions()
     {
-        var options = IsPartitionedDml ? new TransactionOptions { PartitionedDml = new PartitionedDml() } :
-            TransactionMode == TransactionMode.ReadWrite ? new TransactionOptions { ReadWrite = new ReadWrite() } :
-            TimestampBound?.ToTransactionOptions();
+        TransactionOptions options = this switch
+        {
+            { IsPartitionedDml: true } => new TransactionOptions { PartitionedDml = new PartitionedDml() },
+            { TransactionMode: TransactionMode.ReadWrite } => new TransactionOptions { ReadWrite = new ReadWrite() },
+            { EffectiveTimestampBoundTxnOptions: var txnOptions } when txnOptions is not null => txnOptions,
+            { TransactionId: var txnId } when txnId is not null => new TransactionOptions { ReadOnly = new ReadOnly() },
+            _ => null
+        };
+
         if (options is not null)
         {
             options.ExcludeTxnFromChangeStreams = ExcludeFromChangeStreams;
@@ -233,11 +242,11 @@ public sealed class SpannerTransactionCreationOptions
         return options;
     }
 
-    /// <summary>
-    /// Returns a new instance identical to this one except for the value of <see cref="IsDetached"/>.
-    /// If <see cref="TransactionId"/> is set, <see cref="IsDetached"/> cannot be false.
-    /// </summary>
-    public SpannerTransactionCreationOptions WithIsDetached(bool isDetached) =>
+/// <summary>
+/// Returns a new instance identical to this one except for the value of <see cref="IsDetached"/>.
+/// If <see cref="TransactionId"/> is set, <see cref="IsDetached"/> cannot be false.
+/// </summary>
+public SpannerTransactionCreationOptions WithIsDetached(bool isDetached) =>
         isDetached == IsDetached ? this : new SpannerTransactionCreationOptions(TimestampBound, TransactionId, isDetached, IsSingleUse, IsPartitionedDml, ExcludeFromChangeStreams, IsolationLevel, ReadLockMode);
 
     /// <summary>

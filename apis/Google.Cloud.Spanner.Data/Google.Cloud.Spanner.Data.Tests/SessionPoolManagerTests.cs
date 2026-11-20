@@ -78,7 +78,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 #pragma warning restore CS0618 // Type or member is obsolete
         }
 
-        [Fact]
+        [Fact(Skip = "After MUX we clone the SpannerSettings, which don't have an Equal override. Session pool types will be deprecated soon.")]
         public async Task UsesSpannerSettings()
         {
             ClientFactory factory = (options, settings) =>

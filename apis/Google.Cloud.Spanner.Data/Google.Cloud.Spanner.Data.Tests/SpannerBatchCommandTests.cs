@@ -50,9 +50,8 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var connection = new SpannerConnection();
             var managedTransaction = ManagedTransaction.FromTransaction(SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger), new Session(), ByteString.CopyFromUtf8("transactionId"), new V1.TransactionOptions { ReadOnly = new V1.TransactionOptions.Types.ReadOnly() }, null);
-            var session = new PooledSession(managedTransaction);
 
-            var transaction = new SpannerTransaction(connection, session, SpannerTransactionCreationOptions.ReadWrite, transactionOptions: null, isRetriable: false);
+            var transaction = new SpannerTransaction(connection, managedTransaction, SpannerTransactionCreationOptions.ReadWrite, transactionOptions: null, isRetriable: false);
             var command = new SpannerBatchCommand(transaction);
 
             Assert.Empty(command.Commands);
