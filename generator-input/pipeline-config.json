@@ -6,6 +6,10 @@
         {
           "name": "SOURCELINK_REPO",
           "defaultValue": "https://github.com/googleapis/google-cloud-dotnet"
+        },
+        {
+          "name": "GOOGLE_CLOUD_TESTS_IN_LIBRARIAN",
+          "defaultValue": "true"
         }
       ]
     },
@@ -35,6 +39,10 @@
         {
           "name": "SOURCELINK_REPO",
           "defaultValue": "https://github.com/googleapis/google-cloud-dotnet"
+        },
+        {
+          "name": "GOOGLE_CLOUD_TESTS_IN_LIBRARIAN",
+          "defaultValue": "true"
         }
       ]
     },
