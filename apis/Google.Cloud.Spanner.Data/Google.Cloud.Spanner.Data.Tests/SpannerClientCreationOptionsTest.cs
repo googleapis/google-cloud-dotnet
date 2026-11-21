@@ -132,6 +132,22 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public async Task CredentialFile_WithWrongCredentialType_Fails()
+        {
+            var builder = new SpannerConnectionStringBuilder("CredentialFile=SpannerEF-8dfc036f6000.json;CredentialType=authorized_user");
+            var options = new SpannerClientCreationOptions(builder);
+            await Assert.ThrowsAsync<InvalidOperationException>(() => options.CreateSpannerClientAsync(new Spanner.V1.SpannerSettings()));
+        }
+
+        [Fact]
+        public async Task CredentialFile_WithCorrectCredentialType_Succeeds()
+        {
+            var builder = new SpannerConnectionStringBuilder("CredentialFile=SpannerEF-8dfc036f6000.json;CredentialType=service_account");
+            var options = new SpannerClientCreationOptions(builder);
+            Assert.NotNull(await options.CreateSpannerClientAsync(new Spanner.V1.SpannerSettings()));
+        }
+
+        [Fact]
         public async Task CredentialFileP12Error()
         {
             var builder = new SpannerConnectionStringBuilder("CredentialFile=SpannerEF-8dfc036f6000.p12");
