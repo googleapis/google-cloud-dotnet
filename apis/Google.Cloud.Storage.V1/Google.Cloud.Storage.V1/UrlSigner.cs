@@ -40,6 +40,8 @@ namespace Google.Cloud.Storage.V1
 
         private const string CredentialsDefaultAlgorithm = "GOOG4-RSA-SHA256";
 
+        private const string UniverseDomainEnvironmentVariable = "GOOGLE_CLOUD_UNIVERSE_DOMAIN";
+
         /// <summary>
         /// Gets a special HTTP method which can be used to create a signed URL for initiating a resumable upload.
         /// See https://cloud.google.com/storage/docs/access-control/signed-urls#signing-resumable for more information.
@@ -55,13 +57,13 @@ namespace Google.Cloud.Storage.V1
 
         private readonly BlobSignerProvider _blobSignerProvider;
         private readonly IClock _clock;
-        private readonly DefaultOptionsOverrides _defaultOptionsOverrides;
+        private readonly DefaultOptionsOverridesProvider _defaultOptionsOverridesProvider;
 
-        private UrlSigner(BlobSignerProvider blobSignerProvider, IClock clock, DefaultOptionsOverrides defaultOptionsOverrides)
+        private UrlSigner(BlobSignerProvider blobSignerProvider, IClock clock, DefaultOptionsOverridesProvider defaultOptionsOverridesProvider)
         {
             _blobSignerProvider = blobSignerProvider;
             _clock = clock;
-            _defaultOptionsOverrides = defaultOptionsOverrides;
+            _defaultOptionsOverridesProvider = defaultOptionsOverridesProvider;
         }
 
         /// <summary>
@@ -71,8 +73,14 @@ namespace Google.Cloud.Storage.V1
         /// <remarks>
         /// Signing happens locally using the private key included on the service account credential.
         /// </remarks>
-        public static UrlSigner FromCredential(ServiceAccountCredential credential) =>
-            FromBlobSigner(new CredentialBlobSigner(GaxPreconditions.CheckNotNull(credential, nameof(credential)), credential.Id, CredentialsDefaultAlgorithm));
+        public static UrlSigner FromCredential(ServiceAccountCredential credential)
+        {
+            GaxPreconditions.CheckNotNull(credential, nameof(credential));
+            return new UrlSigner(
+                new BlobSignerProvider(new CredentialBlobSigner(credential, credential.Id, CredentialsDefaultAlgorithm)),
+                SystemClock.Instance,
+                new DefaultOptionsOverridesProvider(DefaultOptionsOverrides.FromUniverseDomain(credential.UniverseDomain)));
+        }
 
         /// <summary>
         /// Creates a new <see cref="UrlSigner"/> instance for an impersonated credential.
@@ -84,8 +92,15 @@ namespace Google.Cloud.Storage.V1
         /// as compared with <see cref="FromCredential(ServiceAccountCredential)"/>
         /// and that counts towards IAM API quoata consumption.
         /// </remarks>
-        public static UrlSigner FromCredential(ImpersonatedCredential credential) =>
-            FromBlobSigner(new CredentialBlobSigner(GaxPreconditions.CheckNotNull(credential, nameof(credential)), credential.TargetPrincipal, CredentialsDefaultAlgorithm));
+        public static UrlSigner FromCredential(ImpersonatedCredential credential)
+        {
+            GaxPreconditions.CheckNotNull(credential, nameof(credential));
+            return new UrlSigner(
+                new BlobSignerProvider(new CredentialBlobSigner(credential, credential.TargetPrincipal, CredentialsDefaultAlgorithm)),
+                SystemClock.Instance,
+                new DefaultOptionsOverridesProvider(async () => DefaultOptionsOverrides.FromUniverseDomain(
+                    await credential.ToGoogleCredential().GetUniverseDomainAsync(default).ConfigureAwait(false))));
+        }
 
         /// <summary>
         /// Creates a new <see cref="UrlSigner"/> instance for a compute credential.
@@ -106,10 +121,14 @@ namespace Google.Cloud.Storage.V1
         public static UrlSigner FromCredential(ComputeCredential credential)
         {
             GaxPreconditions.CheckNotNull(credential, nameof(credential));
-            return FromBlobSignerAsyncProvider(async () => new CredentialBlobSigner(
-                credential,
-                await credential.GetDefaultServiceAccountEmailAsync().ConfigureAwait(false),
-                CredentialsDefaultAlgorithm));
+            return new UrlSigner(
+                new BlobSignerProvider(async () => new CredentialBlobSigner(
+                    credential,
+                    await credential.GetDefaultServiceAccountEmailAsync().ConfigureAwait(false),
+                    CredentialsDefaultAlgorithm)),
+                SystemClock.Instance,
+                new DefaultOptionsOverridesProvider(async () => DefaultOptionsOverrides.FromUniverseDomain(
+                    await credential.ToGoogleCredential().GetUniverseDomainAsync(default).ConfigureAwait(false))));
         }
 
         /// <summary>
@@ -245,36 +264,26 @@ namespace Google.Cloud.Storage.V1
 
         /// <summary>
         /// Creates a new <see cref="UrlSigner"/> instance for a custom blob signer.
+        /// <para>
+        /// Note: The Universe Domain used for signing defaults to "googleapis.com" for this method and does
+        /// not rely on a Universe specified in credentials.
+        /// </para>
         /// </summary>
         /// <param name="signer">The blob signer to use. Must not be null.</param>
         /// <returns>A new <see cref="UrlSigner"/> using the specified blob signer.</returns>
         public static UrlSigner FromBlobSigner(IBlobSigner signer) =>
-            new UrlSigner(new BlobSignerProvider(signer), SystemClock.Instance, null);
-
-        /// <summary>
-        /// Creates a new <see cref="UrlSigner"/> instance for a custom blob signer obtained
-        /// from the given blob signer provider.
-        /// Note the provider will be only called once, and the returned blob signer will be reused
-        /// for subsequent signing operations with this URL signer.
-        /// </summary>
-        /// <param name="signerAsyncProvider">
-        /// The blob signer async provider to use. Must not be null.
-        /// When called, must not return a null reference or a task which completes with a null result.
-        /// </param>
-        /// <returns>A new <see cref="UrlSigner"/> that will use a blob signer obtained from the specified provider function.</returns>
-        private static UrlSigner FromBlobSignerAsyncProvider(Func<Task<IBlobSigner>> signerAsyncProvider) =>
-            new UrlSigner(new BlobSignerProvider(signerAsyncProvider), SystemClock.Instance, null);
+            new(new BlobSignerProvider(signer), SystemClock.Instance, null);
 
         /// <summary>
         /// Only available for testing purposes, this allows the clock used for signature generation to be replaced.
         /// </summary>
-        internal UrlSigner WithClock(IClock clock) => new UrlSigner(_blobSignerProvider, clock, _defaultOptionsOverrides);
+        internal UrlSigner WithClock(IClock clock) => new UrlSigner(_blobSignerProvider, clock, _defaultOptionsOverridesProvider);
 
         /// <summary>
         /// Returns a URL signer identical to this one, except for the default options overrides used for signing.
         /// </summary>
         internal UrlSigner WithDefaultOptionsOverride(DefaultOptionsOverrides optionsOverrides) =>
-            new UrlSigner(_blobSignerProvider, _clock, optionsOverrides);
+            new UrlSigner(_blobSignerProvider, _clock, new DefaultOptionsOverridesProvider(optionsOverrides));
 
         /// <summary>
         /// Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
@@ -338,9 +347,16 @@ namespace Google.Cloud.Storage.V1
         /// <returns>
         /// The signed URL which can be used to provide access to a bucket or object for a limited amount of time.
         /// </returns>
-        public string Sign(RequestTemplate requestTemplate, Options options) =>
-            GetEffectiveSigner(GaxPreconditions.CheckNotNull(options, nameof(options)).SigningVersion).Sign(
-                GaxPreconditions.CheckNotNull(requestTemplate, nameof(requestTemplate)), options.WithDefaultOptionsOverrides(_defaultOptionsOverrides), _blobSignerProvider, _clock);
+        public string Sign(RequestTemplate requestTemplate, Options options)
+        {
+            GaxPreconditions.CheckNotNull(requestTemplate, nameof(requestTemplate));
+            GaxPreconditions.CheckNotNull(options, nameof(options));
+
+            var defaultOptionsOverrides = _defaultOptionsOverridesProvider?.GetDefaultOptionsOverrides();
+
+            return GetEffectiveSigner(options.SigningVersion).Sign(
+                requestTemplate, options.WithDefaultOptionsOverrides(defaultOptionsOverrides), _blobSignerProvider, _clock);
+        }
 
         /// <summary>
         /// Signs the given post policy. The result can be used to make form posting requests matching the conditions
@@ -365,9 +381,16 @@ namespace Google.Cloud.Storage.V1
         /// Must not be null.</param>
         /// <param name="options">The options used to generate the signed post policy. Must not be null.</param>
         /// <returns>The signed post policy, which contains all the fields that should be including in the form to post.</returns>
-        public SignedPostPolicy Sign(PostPolicy postPolicy, Options options) =>
-            GetEffectiveSigner(GaxPreconditions.CheckNotNull(options, nameof(options)).SigningVersion).Sign(
-                GaxPreconditions.CheckNotNull(postPolicy, nameof(postPolicy)), options.WithDefaultOptionsOverrides(_defaultOptionsOverrides), _blobSignerProvider, _clock);
+        public SignedPostPolicy Sign(PostPolicy postPolicy, Options options)
+        {
+            GaxPreconditions.CheckNotNull(postPolicy, nameof(postPolicy));
+            GaxPreconditions.CheckNotNull(options, nameof(options));
+
+            var defaultOptionsOverrides = _defaultOptionsOverridesProvider?.GetDefaultOptionsOverrides();
+
+            return GetEffectiveSigner(options.SigningVersion).Sign(
+                postPolicy, options.WithDefaultOptionsOverrides(defaultOptionsOverrides), _blobSignerProvider, _clock);
+        }
 
         /// <summary>
         /// Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
@@ -435,9 +458,18 @@ namespace Google.Cloud.Storage.V1
         /// A task representing the asynchronous operation, with a result returning the
         /// signed URL which can be used to provide access to a bucket or object for a limited amount of time.
         /// </returns>
-        public Task<string> SignAsync(RequestTemplate requestTemplate, Options options, CancellationToken cancellationToken = default) =>
-            GetEffectiveSigner(GaxPreconditions.CheckNotNull(options, nameof(options)).SigningVersion).SignAsync(
-                GaxPreconditions.CheckNotNull(requestTemplate, nameof(requestTemplate)), options.WithDefaultOptionsOverrides(_defaultOptionsOverrides), _blobSignerProvider, _clock, cancellationToken);
+        public async Task<string> SignAsync(RequestTemplate requestTemplate, Options options, CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckNotNull(requestTemplate, nameof(requestTemplate));
+            GaxPreconditions.CheckNotNull(options, nameof(options));
+
+            var defaultOptionsOverrides = _defaultOptionsOverridesProvider is null
+                ? null
+                : await _defaultOptionsOverridesProvider.GetDefaultOptionsOverridesAsync(cancellationToken).ConfigureAwait(false);
+
+            return await GetEffectiveSigner(options.SigningVersion).SignAsync(
+                requestTemplate, options.WithDefaultOptionsOverrides(defaultOptionsOverrides), _blobSignerProvider, _clock, cancellationToken).ConfigureAwait(false);
+        }
 
         /// <summary>
         /// Signs the given post policy. The result can be used to make form posting requests matching the conditions
@@ -463,9 +495,18 @@ namespace Google.Cloud.Storage.V1
         /// <param name="options">The options used to generate the signed post policy. Must not be null.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>The signed post policy, which contains all the fields that should be including in the form to post.</returns>
-        public Task<SignedPostPolicy> SignAsync(PostPolicy postPolicy, Options options, CancellationToken cancellationToken = default) =>
-            GetEffectiveSigner(GaxPreconditions.CheckNotNull(options, nameof(options)).SigningVersion).SignAsync(
-                GaxPreconditions.CheckNotNull(postPolicy, nameof(postPolicy)), options.WithDefaultOptionsOverrides(_defaultOptionsOverrides), _blobSignerProvider, _clock, cancellationToken);
+        public async Task<SignedPostPolicy> SignAsync(PostPolicy postPolicy, Options options, CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckNotNull(postPolicy, nameof(postPolicy));
+            GaxPreconditions.CheckNotNull(options, nameof(options));
+
+            var defaultOptionsOverrides = _defaultOptionsOverridesProvider is null
+                ? null
+                : await _defaultOptionsOverridesProvider.GetDefaultOptionsOverridesAsync(cancellationToken).ConfigureAwait(false);
+
+            return await GetEffectiveSigner(options.SigningVersion).SignAsync(
+                postPolicy, options.WithDefaultOptionsOverrides(defaultOptionsOverrides), _blobSignerProvider, _clock, cancellationToken).ConfigureAwait(false);
+        }
 
         private ISigner GetEffectiveSigner(SigningVersion signingVersion) =>
             signingVersion switch

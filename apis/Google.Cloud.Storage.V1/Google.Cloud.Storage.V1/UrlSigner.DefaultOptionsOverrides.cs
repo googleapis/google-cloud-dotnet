@@ -2,15 +2,20 @@
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at 
+// You may obtain a copy of the License at
 //
-// https://www.apache.org/licenses/LICENSE-2.0 
+// https://www.apache.org/licenses/LICENSE-2.0
 //
-// Unless required by applicable law or agreed to in writing, software 
+// Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and 
+// See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Google.Api.Gax;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Storage.V1;
 public sealed partial class UrlSigner
@@ -29,6 +34,11 @@ public sealed partial class UrlSigner
             Host = host;
             Port = port;
         }
+
+        internal static DefaultOptionsOverrides FromUniverseDomain(string universeDomain) =>
+            string.IsNullOrWhiteSpace(universeDomain)
+                ? null
+                : new DefaultOptionsOverrides(scheme: null, host: $"storage.{universeDomain}", port: null);
 
         /// <summary>
         /// A scheme to be used by the <see cref="UrlSigner"/> signing operations if
@@ -50,5 +60,41 @@ public sealed partial class UrlSigner
         /// no port will be used.
         /// </summary>
         internal int? Port { get; }
+    }
+
+    /// <summary>
+    /// Class to allow <see cref="UrlSigner"/> to obtain <see cref="DefaultOptionsOverrides"/>
+    /// either synchronously or asynchronously (for example, when fetching the universe domain
+    /// from the Compute Engine metadata server).
+    /// </summary>
+    private sealed class DefaultOptionsOverridesProvider
+    {
+        private readonly DefaultOptionsOverrides _defaultOptionsOverrides;
+        private readonly Lazy<Task<DefaultOptionsOverrides>> _cachedOverridesTask;
+
+        internal DefaultOptionsOverridesProvider(DefaultOptionsOverrides defaultOptionsOverrides) =>
+            _defaultOptionsOverrides = defaultOptionsOverrides;
+
+        internal DefaultOptionsOverridesProvider(Func<Task<DefaultOptionsOverrides>> overridesAsyncProvider)
+        {
+            GaxPreconditions.CheckNotNull(overridesAsyncProvider, nameof(overridesAsyncProvider));
+            _cachedOverridesTask = new Lazy<Task<DefaultOptionsOverrides>>(overridesAsyncProvider, LazyThreadSafetyMode.ExecutionAndPublication);
+        }
+
+        internal DefaultOptionsOverrides GetDefaultOptionsOverrides() => _cachedOverridesTask switch
+        {
+            null => _defaultOptionsOverrides,
+            // Even when calling Sign synchronously, the underlying credential may resolve its
+            // universe domain asynchronously (e.g. ComputeCredential or ImpersonatedCredential).
+            _ => _cachedOverridesTask.Value.ResultWithUnwrappedExceptions()
+        };
+
+        internal Task<DefaultOptionsOverrides> GetDefaultOptionsOverridesAsync(CancellationToken cancellationToken = default) => _cachedOverridesTask switch
+        {
+            null => Task.FromResult(_defaultOptionsOverrides),
+            _ => cancellationToken.IsCancellationRequested
+                ? Task.FromCanceled<DefaultOptionsOverrides>(cancellationToken)
+                : _cachedOverridesTask.Value
+        };
     }
 }
