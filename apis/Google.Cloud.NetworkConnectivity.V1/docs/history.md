@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.15.0, released 2026-11-23
+
+### New features
+
+- Add `export_psc_config` (`ExportPscConfig`) to `Hub` and `PSC_GLOBAL_GAPI` to `RouteType`
+- Add `Gateway`, `GatewayAdvertisedRoute`, and gateway advertised route CRUD RPCs to `HubService`
+- Add hybrid spoke import/export range fields and `NextHopSpoke` on `Route`
+- Add `GATEWAY_SPOKES` and `TRANSPORTS` to `LocationFeature` and `HYBRID_INSPECTION` to `PresetTopology`
+
+### Documentation improvements
+
+- Mark `routing_vpcs`, `field_paths_pending_update`, and `proposed_include_export_ranges` as `OUTPUT_ONLY` and update comments in `hub.proto`
+
 ## Version 2.14.0, released 2026-01-26
 
 ### New features
