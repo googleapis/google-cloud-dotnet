@@ -93,6 +93,26 @@ namespace Google.Cloud.Spanner.Data.Tests
             EqualityTester.AssertEqual(options, new[] { equalOptions }, unequalOptions);
         }
 
+        [Fact]
+        public void Equality_UniverseDomain()
+        {
+            string dataSource = "projects/p1/instances/i1/databases/d1";
+            var builder = new SpannerConnectionStringBuilder { DataSource = dataSource, UniverseDomain = "universe1.com" };
+            var equalBuilder = new SpannerConnectionStringBuilder($"Data Source={dataSource}; UniverseDomain=universe1.com");
+
+            var unequalBuilders = new[]
+            {
+                new SpannerConnectionStringBuilder { DataSource = dataSource, UniverseDomain = "universe2.com" },
+                new SpannerConnectionStringBuilder { DataSource = dataSource },
+            };
+
+            var options = new SpannerClientCreationOptions(builder);
+            var equalOptions = new SpannerClientCreationOptions(equalBuilder);
+            var unequalOptions = unequalBuilders.Select(b => new SpannerClientCreationOptions(b)).ToArray();
+
+            EqualityTester.AssertEqual(options, new[] { equalOptions }, unequalOptions);
+        }
+
         [Theory]
         [InlineData("UniverseDomain=test-domain.test", "test-domain.test", null)]
         [InlineData("Host=test-host;Port=567", null, "test-host:567")]
