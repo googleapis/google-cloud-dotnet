@@ -79,6 +79,29 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public async Task DifferentUniverseDomain_DifferentSessionPools()
+        {
+            int factoryCalls = 0;
+            ClientFactory factory = (options, settings) =>
+            {
+                factoryCalls++;
+                return Task.FromResult<SpannerClient>(new FailingSpannerClient());
+            };
+            var manager = new SessionPoolManager(new SessionPoolOptions(), SessionPoolManager.CreateDefaultSpannerSettings(), Logger.DefaultLogger, factory);
+
+            var options1 = new SpannerClientCreationOptions(new SpannerConnectionStringBuilder(ConnectionString));
+            var options2 = new SpannerClientCreationOptions(new SpannerConnectionStringBuilder(ConnectionString) { UniverseDomain = "myuniverse.com" });
+
+            var pool1 = await manager.AcquireSessionPoolAsync(options1);
+            var pool2 = await manager.AcquireSessionPoolAsync(options2);
+            Assert.NotSame(pool1, pool2);
+            Assert.Equal(2, factoryCalls);
+#pragma warning disable CS0618 // Type or member is obsolete
+            Assert.Equal(2, manager.GetStatistics().Count);
+#pragma warning restore CS0618 // Type or member is obsolete
+        }
+
+        [Fact]
         public async Task UsesSpannerSettings()
         {
             ClientFactory factory = (options, settings) =>

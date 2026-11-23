@@ -121,7 +121,8 @@ namespace Google.Cloud.Spanner.Data
             Equals(ClientBuilder.AffinityChannelPoolConfiguration, other.ClientBuilder.AffinityChannelPoolConfiguration) &&
             ClientBuilder.LeaderRoutingEnabled == other.ClientBuilder.LeaderRoutingEnabled &&
             Equals(ClientBuilder.DirectedReadOptions, other.ClientBuilder.DirectedReadOptions) &&
-            Equals(ClientBuilder.GrpcAdapter, other.ClientBuilder.GrpcAdapter);
+            Equals(ClientBuilder.GrpcAdapter, other.ClientBuilder.GrpcAdapter) &&
+            Equals(ClientBuilder.UniverseDomain, other.ClientBuilder.UniverseDomain);
 
         public override int GetHashCode()
         {
@@ -139,6 +140,7 @@ namespace Google.Cloud.Spanner.Data
                 hash = hash * 23 + (ClientBuilder.LeaderRoutingEnabled.GetHashCode());
                 hash = hash * 23 + (ClientBuilder.DirectedReadOptions?.GetHashCode() ?? 0);
                 hash = hash * 23 + (ClientBuilder.GrpcAdapter?.GetHashCode() ?? 0);
+                hash = hash * 23 + (ClientBuilder.UniverseDomain?.GetHashCode() ?? 0);
                 return hash;
             }
         }
