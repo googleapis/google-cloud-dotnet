@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.17.0, released 2026-11-23
+
+### New features
+
+- Add support for instance flexibility policy in Cloud Batch
+
 ## Version 2.16.0, released 2026-08-31
 
 ### New features
