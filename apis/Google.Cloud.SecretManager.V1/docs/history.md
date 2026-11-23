@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.1.0, released 2026-11-23
+
+### New features
+
+- Add SecretOperationsService for creating, managing, and restoring secret backups
+- Add Backup resource and OperationMetadata message definitions
+- Add State enum and state field to Secret resource
+
 ## Version 3.0.0, released 2026-11-02
 
 ### New features
