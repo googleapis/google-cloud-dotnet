@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.0.0, released 2026-11-23
+
+### Bug fixes
+
+- Remove unused preview storage_size_gib field from MemoryLayer.MemoryConfig
+
 ## Version 3.36.0, released 2026-09-28
 
 ### New features
