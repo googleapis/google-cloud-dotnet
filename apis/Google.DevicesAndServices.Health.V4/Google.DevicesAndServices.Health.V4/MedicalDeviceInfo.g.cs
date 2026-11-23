@@ -26,17 +26,17 @@ namespace Google.DevicesAndServices.Health.V4 {
           string.Concat(
             "Cj1nb29nbGUvZGV2aWNlc2FuZHNlcnZpY2VzL2hlYWx0aC92NC9tZWRpY2Fs",
             "X2RldmljZV9pbmZvLnByb3RvEiNnb29nbGUuZGV2aWNlc2FuZHNlcnZpY2Vz",
-            "LmhlYWx0aC52NBofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90byKp",
-            "AQoRTWVkaWNhbERldmljZUluZm8SHgoRYWxnb3JpdGhtX3ZlcnNpb24YASAB",
-            "KAlCA+BBAxIcCg9zZXJ2aWNlX3ZlcnNpb24YAiABKAlCA+BBAxIdChBmaXJt",
-            "d2FyZV92ZXJzaW9uGAMgASgJQgPgQQMSHAoPZmVhdHVyZV92ZXJzaW9uGAQg",
-            "ASgJQgPgQQMSGQoMZGV2aWNlX21vZGVsGAUgASgJQgPgQQNCiAIKJ2NvbS5n",
-            "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NEIWTWVkaWNhbERl",
-            "dmljZUluZm9Qcm90b1ABWk5nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
-            "b29nbGVhcGlzL2RldmljZXNhbmRzZXJ2aWNlcy9oZWFsdGgvYXBpdjQ7aGVh",
-            "bHRocGKqAiNHb29nbGUuRGV2aWNlc0FuZFNlcnZpY2VzLkhlYWx0aC5WNMoC",
-            "I0dvb2dsZVxEZXZpY2VzQW5kU2VydmljZXNcSGVhbHRoXFY06gImR29vZ2xl",
-            "OjpEZXZpY2VzQW5kU2VydmljZXM6OkhlYWx0aDo6VjRiBnByb3RvMw=="));
+            "LmhlYWx0aC52NBofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90byKu",
+            "AQoRTWVkaWNhbERldmljZUluZm8SHwoRYWxnb3JpdGhtX3ZlcnNpb24YASAB",
+            "KAlCBOJBAQMSHQoPc2VydmljZV92ZXJzaW9uGAIgASgJQgTiQQEDEh4KEGZp",
+            "cm13YXJlX3ZlcnNpb24YAyABKAlCBOJBAQMSHQoPZmVhdHVyZV92ZXJzaW9u",
+            "GAQgASgJQgTiQQEDEhoKDGRldmljZV9tb2RlbBgFIAEoCUIE4kEBA0KIAgon",
+            "Y29tLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0QhZNZWRp",
+            "Y2FsRGV2aWNlSW5mb1Byb3RvUAFaTmdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvZGV2aWNlc2FuZHNlcnZpY2VzL2hlYWx0aC9hcGl2",
+            "NDtoZWFsdGhwYqoCI0dvb2dsZS5EZXZpY2VzQW5kU2VydmljZXMuSGVhbHRo",
+            "LlY0ygIjR29vZ2xlXERldmljZXNBbmRTZXJ2aWNlc1xIZWFsdGhcVjTqAiZH",
+            "b29nbGU6OkRldmljZXNBbmRTZXJ2aWNlczo6SGVhbHRoOjpWNGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

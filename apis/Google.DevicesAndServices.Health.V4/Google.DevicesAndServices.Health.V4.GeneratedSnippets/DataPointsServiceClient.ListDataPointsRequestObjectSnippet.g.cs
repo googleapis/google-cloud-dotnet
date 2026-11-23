@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsDataTypeName = DataTypeName.FromUserDataType("[USER]", "[DATA_TYPE]"),
                 Filter = "",
+                DataSourceFamily = "",
             };
             // Make the request
             PagedEnumerable<ListDataPointsResponse, DataPoint> response = dataPointsServiceClient.ListDataPoints(request);
