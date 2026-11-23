@@ -309,7 +309,7 @@
     },
     {
       "id": "Google.Cloud.AgentRegistry.V1",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "type": "grpc",
       "productName": "Agent Registry",
       "productUrl": "https://docs.cloud.google.com/agent-registry/overview",
