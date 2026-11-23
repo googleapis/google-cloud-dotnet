@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.5.0, released 2026-11-23
+
+### New features
+
+- Add the Apps Script Meet add-on manifest type (`google.apps.script.type.meet.MeetAddOnManifest`)
+
 ## Version 2.4.0, released 2025-11-03
 
 ### New features
