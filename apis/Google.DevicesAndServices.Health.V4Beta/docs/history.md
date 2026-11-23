@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2026-11-23
+
+### New features
+
+- Add OvulationTest.test_type (TestType enum) and OvulationTestResult.OWN_METHOD
+- Add LIMBS_SWELLING, FACE_SWELLING, and NASAL_CONGESTION to SymptomValue
+- Add location.readonly and *.writeonly OAuth scopes
+
+### Documentation improvements
+
+- Update DailyRollUpDataPointsRequest.page_size limits
+
 ## Version 1.0.0-beta02, released 2026-10-19
 
 ### New features
