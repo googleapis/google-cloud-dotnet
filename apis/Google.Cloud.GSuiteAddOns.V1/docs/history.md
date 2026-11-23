@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.6.0, released 2026-11-23
+
+### New features
+
+- Add GetChatAppConfig and UpdateChatAppConfig methods
+
 ## Version 2.5.0, released 2025-11-05
 
 ### New features
