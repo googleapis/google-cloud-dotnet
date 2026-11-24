@@ -172,12 +172,12 @@ namespace Google.Cloud.Spanner.Data
 
             async Task<ReliableStreamReader> Impl()
             {
-                PooledSession session = await _connection.AcquireSessionAsync(_creationOptions, cancellationToken, out _).ConfigureAwait(false);
+                ManagedTransaction managedTransaction = await _connection.BeginManagedTransactionAsync(_creationOptions, cancellationToken, out _).ConfigureAwait(false);
                 var callSettings = _connection.CreateCallSettings(
                     request.GetCallSettings,
                     cancellationToken);
-                var reader = request.ExecuteReadOrQueryStreamReader(session, callSettings);
-                reader.StreamClosed += delegate { session.ReleaseToPool(forceDelete: false); };
+                var reader = request.ExecuteReadOrQueryStreamReader(managedTransaction, callSettings);
+                reader.StreamClosed += delegate { _ = Task.Run(() => managedTransaction.DisposeAsync()); };
                 return reader;
             }
         }
