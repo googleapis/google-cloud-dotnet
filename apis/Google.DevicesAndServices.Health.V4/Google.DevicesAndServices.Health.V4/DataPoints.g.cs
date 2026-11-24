@@ -35,154 +35,155 @@ namespace Google.DevicesAndServices.Health.V4 {
             "YXRhX3NvdXJjZS5wcm90bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlv",
             "bnMucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxofZ29v",
             "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0",
-            "dXMucHJvdG8aGmdvb2dsZS90eXBlL2ludGVydmFsLnByb3RvIuMdCglEYXRh",
-            "UG9pbnQSQAoFc3RlcHMYBCABKAsyKi5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
-            "Y2VzLmhlYWx0aC52NC5TdGVwc0ID4EEBSAASQgoGZmxvb3JzGAUgASgLMisu",
-            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRmxvb3JzQgPg",
-            "QQFIABJJCgpoZWFydF9yYXRlGAYgASgLMi4uZ29vZ2xlLmRldmljZXNhbmRz",
-            "ZXJ2aWNlcy5oZWFsdGgudjQuSGVhcnRSYXRlQgPgQQFIABJACgVzbGVlcBgI",
-            "IAEoCzIqLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlNs",
-            "ZWVwQgPgQQFIABJjChhkYWlseV9yZXN0aW5nX2hlYXJ0X3JhdGUYCSABKAsy",
-            "Oi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5EYWlseVJl",
-            "c3RpbmdIZWFydFJhdGVCA+BBAUgAEmsKHGRhaWx5X2hlYXJ0X3JhdGVfdmFy",
-            "aWFiaWxpdHkYCiABKAsyPi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhl",
-            "YWx0aC52NC5EYWlseUhlYXJ0UmF0ZVZhcmlhYmlsaXR5QgPgQQFIABJGCghl",
-            "eGVyY2lzZRgLIAEoCzItLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
-            "bHRoLnY0LkV4ZXJjaXNlQgPgQQFIABJCCgZ3ZWlnaHQYDCABKAsyKy5nb29n",
-            "bGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5XZWlnaHRCA+BBAUgA",
-            "EkYKCGFsdGl0dWRlGA0gASgLMi0uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNl",
-            "cy5oZWFsdGgudjQuQWx0aXR1ZGVCA+BBAUgAEkYKCGRpc3RhbmNlGA4gASgL",
-            "Mi0uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRGlzdGFu",
-            "Y2VCA+BBAUgAEkUKCGJvZHlfZmF0GA8gASgLMiwuZ29vZ2xlLmRldmljZXNh",
-            "bmRzZXJ2aWNlcy5oZWFsdGgudjQuQm9keUZhdEID4EEBSAASWgoTYWN0aXZl",
-            "X3pvbmVfbWludXRlcxgRIAEoCzI2Lmdvb2dsZS5kZXZpY2VzYW5kc2Vydmlj",
-            "ZXMuaGVhbHRoLnY0LkFjdGl2ZVpvbmVNaW51dGVzQgPgQQFIABJgChZoZWFy",
-            "dF9yYXRlX3ZhcmlhYmlsaXR5GBMgASgLMjkuZ29vZ2xlLmRldmljZXNhbmRz",
-            "ZXJ2aWNlcy5oZWFsdGgudjQuSGVhcnRSYXRlVmFyaWFiaWxpdHlCA+BBAUgA",
-            "EnkKI2RhaWx5X3NsZWVwX3RlbXBlcmF0dXJlX2Rlcml2YXRpb25zGBQgASgL",
-            "MkUuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRGFpbHlT",
-            "bGVlcFRlbXBlcmF0dXJlRGVyaXZhdGlvbnNCA+BBAUgAElUKEHNlZGVudGFy",
-            "eV9wZXJpb2QYFSABKAsyNC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhl",
-            "YWx0aC52NC5TZWRlbnRhcnlQZXJpb2RCA+BBAUgAEkoKC3J1bl92bzJfbWF4",
-            "GBYgASgLMi4uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQu",
-            "UnVuVk8yTWF4QgPgQQFIABJXChFveHlnZW5fc2F0dXJhdGlvbhgYIAEoCzI1",
-            "Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0Lk94eWdlblNh",
-            "dHVyYXRpb25CA+BBAUgAEmIKF2RhaWx5X294eWdlbl9zYXR1cmF0aW9uGBkg",
+            "dXMucHJvdG8aGmdvb2dsZS90eXBlL2ludGVydmFsLnByb3RvIo8eCglEYXRh",
+            "UG9pbnQSQQoFc3RlcHMYBCABKAsyKi5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
+            "Y2VzLmhlYWx0aC52NC5TdGVwc0IE4kEBAUgAEkMKBmZsb29ycxgFIAEoCzIr",
+            "Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkZsb29yc0IE",
+            "4kEBAUgAEkoKCmhlYXJ0X3JhdGUYBiABKAsyLi5nb29nbGUuZGV2aWNlc2Fu",
+            "ZHNlcnZpY2VzLmhlYWx0aC52NC5IZWFydFJhdGVCBOJBAQFIABJBCgVzbGVl",
+            "cBgIIAEoCzIqLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0",
+            "LlNsZWVwQgTiQQEBSAASZAoYZGFpbHlfcmVzdGluZ19oZWFydF9yYXRlGAkg",
             "ASgLMjouZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRGFp",
-            "bHlPeHlnZW5TYXR1cmF0aW9uQgPgQQFIABJRCg5hY3Rpdml0eV9sZXZlbBga",
-            "IAEoCzIyLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkFj",
-            "dGl2aXR5TGV2ZWxCA+BBAUgAEkMKB3ZvMl9tYXgYGyABKAsyKy5nb29nbGUu",
-            "ZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5WTzJNYXhCA+BBAUgAEk4K",
-            "DWRhaWx5X3ZvMl9tYXgYHCABKAsyMC5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
-            "Y2VzLmhlYWx0aC52NC5EYWlseVZPMk1heEID4EEBSAASTwoNbnV0cml0aW9u",
-            "X2xvZxgdIAEoCzIxLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRo",
-            "LnY0Lk51dHJpdGlvbkxvZ0ID4EEBSAASbgodaXJyZWd1bGFyX3JoeXRobV9u",
-            "b3RpZmljYXRpb24YHiABKAsyQC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2Vz",
-            "LmhlYWx0aC52NC5JcnJlZ3VsYXJSaHl0aG1Ob3RpZmljYXRpb25CA+BBAUgA",
-            "ElgKEWVsZWN0cm9jYXJkaW9ncmFtGB8gASgLMjYuZ29vZ2xlLmRldmljZXNh",
-            "bmRzZXJ2aWNlcy5oZWFsdGgudjQuRWxlY3Ryb2NhcmRpb2dyYW1CA+BBAUgA",
-            "El8KFmRhaWx5X2hlYXJ0X3JhdGVfem9uZXMYICABKAsyOC5nb29nbGUuZGV2",
-            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5EYWlseUhlYXJ0UmF0ZVpvbmVz",
-            "QgPgQQFIABJPCg1oeWRyYXRpb25fbG9nGCEgASgLMjEuZ29vZ2xlLmRldmlj",
-            "ZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuSHlkcmF0aW9uTG9nQgPgQQFIABI+",
-            "CgRmb29kGCIgASgLMikuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFs",
-            "dGgudjQuRm9vZEID4EEBSAASYAoXdGltZV9pbl9oZWFydF9yYXRlX3pvbmUY",
-            "IyABKAsyOC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5U",
-            "aW1lSW5IZWFydFJhdGVab25lQgPgQQFIABJRCg5hY3RpdmVfbWludXRlcxgk",
-            "IAEoCzIyLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkFj",
-            "dGl2ZU1pbnV0ZXNCA+BBAUgAEm8KHnJlc3BpcmF0b3J5X3JhdGVfc2xlZXBf",
-            "c3VtbWFyeRglIAEoCzJALmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
-            "bHRoLnY0LlJlc3BpcmF0b3J5UmF0ZVNsZWVwU3VtbWFyeUID4EEBSAASYAoW",
-            "ZGFpbHlfcmVzcGlyYXRvcnlfcmF0ZRgmIAEoCzI5Lmdvb2dsZS5kZXZpY2Vz",
-            "YW5kc2VydmljZXMuaGVhbHRoLnY0LkRhaWx5UmVzcGlyYXRvcnlSYXRlQgPg",
-            "QQFIABJWChFzd2ltX2xlbmd0aHNfZGF0YRgnIAEoCzI0Lmdvb2dsZS5kZXZp",
-            "Y2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlN3aW1MZW5ndGhzRGF0YUID4EEB",
-            "SAASQgoGaGVpZ2h0GCggASgLMisuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNl",
-            "cy5oZWFsdGgudjQuSGVpZ2h0QgPgQQFIABJaChNiYXNhbF9lbmVyZ3lfYnVy",
-            "bmVkGCkgASgLMjYuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgu",
-            "djQuQmFzYWxFbmVyZ3lCdXJuZWRCA+BBAUgAEl4KFWNvcmVfYm9keV90ZW1w",
-            "ZXJhdHVyZRgqIAEoCzI4Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
-            "bHRoLnY0LkNvcmVCb2R5VGVtcGVyYXR1cmVCA+BBAUgAElwKFGFjdGl2ZV9l",
-            "bmVyZ3lfYnVybmVkGCwgASgLMjcuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNl",
-            "cy5oZWFsdGgudjQuQWN0aXZlRW5lcmd5QnVybmVkQgPgQQFIABJeChVmb29k",
-            "X21lYXN1cmVtZW50X3VuaXQYLSABKAsyOC5nb29nbGUuZGV2aWNlc2FuZHNl",
-            "cnZpY2VzLmhlYWx0aC52NC5Gb29kTWVhc3VyZW1lbnRVbml0QgPgQQFIABJP",
-            "Cg1ibG9vZF9nbHVjb3NlGC4gASgLMjEuZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
-            "aWNlcy5oZWFsdGgudjQuQmxvb2RHbHVjb3NlQgPgQQFIABJVChBtZW5zdHJ1",
-            "YWxfcGVyaW9kGDEgASgLMjQuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5o",
-            "ZWFsdGgudjQuTWVuc3RydWFsUGVyaW9kQgPgQQFIABJRCg5vdnVsYXRpb25f",
-            "dGVzdBgyIAEoCzIyLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRo",
-            "LnY0Lk92dWxhdGlvblRlc3RCA+BBAUgAEkYKCHN5bXB0b21zGDQgASgLMi0u",
-            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuU3ltcHRvbXNC",
-            "A+BBAUgAEkAKBW1vb2RzGDUgASgLMiouZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
-            "aWNlcy5oZWFsdGgudjQuTW9vZHNCA+BBAUgAEhEKBG5hbWUYASABKAlCA+BB",
-            "CBJJCgtkYXRhX3NvdXJjZRgDIAEoCzIvLmdvb2dsZS5kZXZpY2VzYW5kc2Vy",
-            "dmljZXMuaGVhbHRoLnY0LkRhdGFTb3VyY2VCA+BBATp36kF0Ch9oZWFsdGgu",
-            "Z29vZ2xlYXBpcy5jb20vRGF0YVBvaW50Ejp1c2Vycy97dXNlcn0vZGF0YVR5",
-            "cGVzL3tkYXRhX3R5cGV9L2RhdGFQb2ludHMve2RhdGFfcG9pbnR9KgpkYXRh",
-            "UG9pbnRzMglkYXRhUG9pbnRCBgoEZGF0YSLsFQoTUmVjb25jaWxlZERhdGFQ",
-            "b2ludBI7CgVzdGVwcxgEIAEoCzIqLmdvb2dsZS5kZXZpY2VzYW5kc2Vydmlj",
-            "ZXMuaGVhbHRoLnY0LlN0ZXBzSAASPQoGZmxvb3JzGAUgASgLMisuZ29vZ2xl",
-            "LmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRmxvb3JzSAASRAoKaGVh",
-            "cnRfcmF0ZRgGIAEoCzIuLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
-            "bHRoLnY0LkhlYXJ0UmF0ZUgAEjsKBXNsZWVwGAggASgLMiouZ29vZ2xlLmRl",
-            "dmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuU2xlZXBIABJeChhkYWlseV9y",
-            "ZXN0aW5nX2hlYXJ0X3JhdGUYCSABKAsyOi5nb29nbGUuZGV2aWNlc2FuZHNl",
-            "cnZpY2VzLmhlYWx0aC52NC5EYWlseVJlc3RpbmdIZWFydFJhdGVIABJmChxk",
-            "YWlseV9oZWFydF9yYXRlX3ZhcmlhYmlsaXR5GAogASgLMj4uZ29vZ2xlLmRl",
-            "dmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRGFpbHlIZWFydFJhdGVWYXJp",
-            "YWJpbGl0eUgAEkEKCGV4ZXJjaXNlGAsgASgLMi0uZ29vZ2xlLmRldmljZXNh",
-            "bmRzZXJ2aWNlcy5oZWFsdGgudjQuRXhlcmNpc2VIABI9CgZ3ZWlnaHQYDCAB",
-            "KAsyKy5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5XZWln",
-            "aHRIABJBCghhbHRpdHVkZRgNIAEoCzItLmdvb2dsZS5kZXZpY2VzYW5kc2Vy",
-            "dmljZXMuaGVhbHRoLnY0LkFsdGl0dWRlSAASQQoIZGlzdGFuY2UYDiABKAsy",
-            "LS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5EaXN0YW5j",
-            "ZUgAEkAKCGJvZHlfZmF0GA8gASgLMiwuZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
-            "aWNlcy5oZWFsdGgudjQuQm9keUZhdEgAElUKE2FjdGl2ZV96b25lX21pbnV0",
-            "ZXMYESABKAsyNi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52",
-            "NC5BY3RpdmVab25lTWludXRlc0gAElsKFmhlYXJ0X3JhdGVfdmFyaWFiaWxp",
-            "dHkYEyABKAsyOS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52",
-            "NC5IZWFydFJhdGVWYXJpYWJpbGl0eUgAEnQKI2RhaWx5X3NsZWVwX3RlbXBl",
-            "cmF0dXJlX2Rlcml2YXRpb25zGBQgASgLMkUuZ29vZ2xlLmRldmljZXNhbmRz",
-            "ZXJ2aWNlcy5oZWFsdGgudjQuRGFpbHlTbGVlcFRlbXBlcmF0dXJlRGVyaXZh",
-            "dGlvbnNIABJQChBzZWRlbnRhcnlfcGVyaW9kGBUgASgLMjQuZ29vZ2xlLmRl",
-            "dmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuU2VkZW50YXJ5UGVyaW9kSAAS",
-            "RQoLcnVuX3ZvMl9tYXgYFiABKAsyLi5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
-            "Y2VzLmhlYWx0aC52NC5SdW5WTzJNYXhIABJSChFveHlnZW5fc2F0dXJhdGlv",
-            "bhgYIAEoCzI1Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0",
-            "Lk94eWdlblNhdHVyYXRpb25IABJdChdkYWlseV9veHlnZW5fc2F0dXJhdGlv",
-            "bhgZIAEoCzI6Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0",
-            "LkRhaWx5T3h5Z2VuU2F0dXJhdGlvbkgAEkwKDmFjdGl2aXR5X2xldmVsGBog",
-            "ASgLMjIuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuQWN0",
-            "aXZpdHlMZXZlbEgAEj4KB3ZvMl9tYXgYGyABKAsyKy5nb29nbGUuZGV2aWNl",
-            "c2FuZHNlcnZpY2VzLmhlYWx0aC52NC5WTzJNYXhIABJJCg1kYWlseV92bzJf",
-            "bWF4GBwgASgLMjAuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgu",
-            "djQuRGFpbHlWTzJNYXhIABJKCg1udXRyaXRpb25fbG9nGB0gASgLMjEuZ29v",
-            "Z2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuTnV0cml0aW9uTG9n",
-            "SAASWgoWZGFpbHlfaGVhcnRfcmF0ZV96b25lcxggIAEoCzI4Lmdvb2dsZS5k",
-            "ZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkRhaWx5SGVhcnRSYXRlWm9u",
-            "ZXNIABJKCg1oeWRyYXRpb25fbG9nGCEgASgLMjEuZ29vZ2xlLmRldmljZXNh",
-            "bmRzZXJ2aWNlcy5oZWFsdGgudjQuSHlkcmF0aW9uTG9nSAASWwoXdGltZV9p",
-            "bl9oZWFydF9yYXRlX3pvbmUYIyABKAsyOC5nb29nbGUuZGV2aWNlc2FuZHNl",
-            "cnZpY2VzLmhlYWx0aC52NC5UaW1lSW5IZWFydFJhdGVab25lSAASTAoOYWN0",
-            "aXZlX21pbnV0ZXMYJCABKAsyMi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2Vz",
-            "LmhlYWx0aC52NC5BY3RpdmVNaW51dGVzSAASagoecmVzcGlyYXRvcnlfcmF0",
-            "ZV9zbGVlcF9zdW1tYXJ5GCUgASgLMkAuZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
-            "aWNlcy5oZWFsdGgudjQuUmVzcGlyYXRvcnlSYXRlU2xlZXBTdW1tYXJ5SAAS",
-            "WwoWZGFpbHlfcmVzcGlyYXRvcnlfcmF0ZRgmIAEoCzI5Lmdvb2dsZS5kZXZp",
-            "Y2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkRhaWx5UmVzcGlyYXRvcnlSYXRl",
-            "SAASUQoRc3dpbV9sZW5ndGhzX2RhdGEYJyABKAsyNC5nb29nbGUuZGV2aWNl",
-            "c2FuZHNlcnZpY2VzLmhlYWx0aC52NC5Td2ltTGVuZ3Roc0RhdGFIABI9CgZo",
-            "ZWlnaHQYKCABKAsyKy5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0",
-            "aC52NC5IZWlnaHRIABJVChNiYXNhbF9lbmVyZ3lfYnVybmVkGCkgASgLMjYu",
+            "bHlSZXN0aW5nSGVhcnRSYXRlQgTiQQEBSAASbAocZGFpbHlfaGVhcnRfcmF0",
+            "ZV92YXJpYWJpbGl0eRgKIAEoCzI+Lmdvb2dsZS5kZXZpY2VzYW5kc2Vydmlj",
+            "ZXMuaGVhbHRoLnY0LkRhaWx5SGVhcnRSYXRlVmFyaWFiaWxpdHlCBOJBAQFI",
+            "ABJHCghleGVyY2lzZRgLIAEoCzItLmdvb2dsZS5kZXZpY2VzYW5kc2Vydmlj",
+            "ZXMuaGVhbHRoLnY0LkV4ZXJjaXNlQgTiQQEBSAASQwoGd2VpZ2h0GAwgASgL",
+            "MisuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuV2VpZ2h0",
+            "QgTiQQEBSAASRwoIYWx0aXR1ZGUYDSABKAsyLS5nb29nbGUuZGV2aWNlc2Fu",
+            "ZHNlcnZpY2VzLmhlYWx0aC52NC5BbHRpdHVkZUIE4kEBAUgAEkcKCGRpc3Rh",
+            "bmNlGA4gASgLMi0uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgu",
+            "djQuRGlzdGFuY2VCBOJBAQFIABJGCghib2R5X2ZhdBgPIAEoCzIsLmdvb2ds",
+            "ZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkJvZHlGYXRCBOJBAQFI",
+            "ABJbChNhY3RpdmVfem9uZV9taW51dGVzGBEgASgLMjYuZ29vZ2xlLmRldmlj",
+            "ZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuQWN0aXZlWm9uZU1pbnV0ZXNCBOJB",
+            "AQFIABJhChZoZWFydF9yYXRlX3ZhcmlhYmlsaXR5GBMgASgLMjkuZ29vZ2xl",
+            "LmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuSGVhcnRSYXRlVmFyaWFi",
+            "aWxpdHlCBOJBAQFIABJ6CiNkYWlseV9zbGVlcF90ZW1wZXJhdHVyZV9kZXJp",
+            "dmF0aW9ucxgUIAEoCzJFLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
+            "bHRoLnY0LkRhaWx5U2xlZXBUZW1wZXJhdHVyZURlcml2YXRpb25zQgTiQQEB",
+            "SAASVgoQc2VkZW50YXJ5X3BlcmlvZBgVIAEoCzI0Lmdvb2dsZS5kZXZpY2Vz",
+            "YW5kc2VydmljZXMuaGVhbHRoLnY0LlNlZGVudGFyeVBlcmlvZEIE4kEBAUgA",
+            "EksKC3J1bl92bzJfbWF4GBYgASgLMi4uZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
+            "aWNlcy5oZWFsdGgudjQuUnVuVk8yTWF4QgTiQQEBSAASWAoRb3h5Z2VuX3Nh",
+            "dHVyYXRpb24YGCABKAsyNS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhl",
+            "YWx0aC52NC5PeHlnZW5TYXR1cmF0aW9uQgTiQQEBSAASYwoXZGFpbHlfb3h5",
+            "Z2VuX3NhdHVyYXRpb24YGSABKAsyOi5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
+            "Y2VzLmhlYWx0aC52NC5EYWlseU94eWdlblNhdHVyYXRpb25CBOJBAQFIABJS",
+            "Cg5hY3Rpdml0eV9sZXZlbBgaIAEoCzIyLmdvb2dsZS5kZXZpY2VzYW5kc2Vy",
+            "dmljZXMuaGVhbHRoLnY0LkFjdGl2aXR5TGV2ZWxCBOJBAQFIABJECgd2bzJf",
+            "bWF4GBsgASgLMisuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgu",
+            "djQuVk8yTWF4QgTiQQEBSAASTwoNZGFpbHlfdm8yX21heBgcIAEoCzIwLmdv",
+            "b2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkRhaWx5Vk8yTWF4",
+            "QgTiQQEBSAASUAoNbnV0cml0aW9uX2xvZxgdIAEoCzIxLmdvb2dsZS5kZXZp",
+            "Y2VzYW5kc2VydmljZXMuaGVhbHRoLnY0Lk51dHJpdGlvbkxvZ0IE4kEBAUgA",
+            "Em8KHWlycmVndWxhcl9yaHl0aG1fbm90aWZpY2F0aW9uGB4gASgLMkAuZ29v",
+            "Z2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuSXJyZWd1bGFyUmh5",
+            "dGhtTm90aWZpY2F0aW9uQgTiQQEBSAASWQoRZWxlY3Ryb2NhcmRpb2dyYW0Y",
+            "HyABKAsyNi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5F",
+            "bGVjdHJvY2FyZGlvZ3JhbUIE4kEBAUgAEmAKFmRhaWx5X2hlYXJ0X3JhdGVf",
+            "em9uZXMYICABKAsyOC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0",
+            "aC52NC5EYWlseUhlYXJ0UmF0ZVpvbmVzQgTiQQEBSAASUAoNaHlkcmF0aW9u",
+            "X2xvZxghIAEoCzIxLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRo",
+            "LnY0Lkh5ZHJhdGlvbkxvZ0IE4kEBAUgAEj8KBGZvb2QYIiABKAsyKS5nb29n",
+            "bGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5Gb29kQgTiQQEBSAAS",
+            "YQoXdGltZV9pbl9oZWFydF9yYXRlX3pvbmUYIyABKAsyOC5nb29nbGUuZGV2",
+            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5UaW1lSW5IZWFydFJhdGVab25l",
+            "QgTiQQEBSAASUgoOYWN0aXZlX21pbnV0ZXMYJCABKAsyMi5nb29nbGUuZGV2",
+            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5BY3RpdmVNaW51dGVzQgTiQQEB",
+            "SAAScAoecmVzcGlyYXRvcnlfcmF0ZV9zbGVlcF9zdW1tYXJ5GCUgASgLMkAu",
+            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuUmVzcGlyYXRv",
+            "cnlSYXRlU2xlZXBTdW1tYXJ5QgTiQQEBSAASYQoWZGFpbHlfcmVzcGlyYXRv",
+            "cnlfcmF0ZRgmIAEoCzI5Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
+            "bHRoLnY0LkRhaWx5UmVzcGlyYXRvcnlSYXRlQgTiQQEBSAASVwoRc3dpbV9s",
+            "ZW5ndGhzX2RhdGEYJyABKAsyNC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2Vz",
+            "LmhlYWx0aC52NC5Td2ltTGVuZ3Roc0RhdGFCBOJBAQFIABJDCgZoZWlnaHQY",
+            "KCABKAsyKy5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5I",
+            "ZWlnaHRCBOJBAQFIABJbChNiYXNhbF9lbmVyZ3lfYnVybmVkGCkgASgLMjYu",
             "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuQmFzYWxFbmVy",
-            "Z3lCdXJuZWRIABJZChVjb3JlX2JvZHlfdGVtcGVyYXR1cmUYKiABKAsyOC5n",
-            "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5Db3JlQm9keVRl",
-            "bXBlcmF0dXJlSAASVwoUYWN0aXZlX2VuZXJneV9idXJuZWQYLCABKAsyNy5n",
-            "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5BY3RpdmVFbmVy",
-            "Z3lCdXJuZWRIABJKCg1ibG9vZF9nbHVjb3NlGC4gASgLMjEuZ29vZ2xlLmRl",
-            "dmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuQmxvb2RHbHVjb3NlSAASHAoP",
-            "ZGF0YV9wb2ludF9uYW1lGAEgASgJQgPgQQhCBgoEZGF0YSKvDwoPUm9sbHVw",
+            "Z3lCdXJuZWRCBOJBAQFIABJfChVjb3JlX2JvZHlfdGVtcGVyYXR1cmUYKiAB",
+            "KAsyOC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5Db3Jl",
+            "Qm9keVRlbXBlcmF0dXJlQgTiQQEBSAASXQoUYWN0aXZlX2VuZXJneV9idXJu",
+            "ZWQYLCABKAsyNy5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52",
+            "NC5BY3RpdmVFbmVyZ3lCdXJuZWRCBOJBAQFIABJfChVmb29kX21lYXN1cmVt",
+            "ZW50X3VuaXQYLSABKAsyOC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhl",
+            "YWx0aC52NC5Gb29kTWVhc3VyZW1lbnRVbml0QgTiQQEBSAASUAoNYmxvb2Rf",
+            "Z2x1Y29zZRguIAEoCzIxLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
+            "bHRoLnY0LkJsb29kR2x1Y29zZUIE4kEBAUgAElYKEG1lbnN0cnVhbF9wZXJp",
+            "b2QYMSABKAsyNC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52",
+            "NC5NZW5zdHJ1YWxQZXJpb2RCBOJBAQFIABJSCg5vdnVsYXRpb25fdGVzdBgy",
+            "IAEoCzIyLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0Lk92",
+            "dWxhdGlvblRlc3RCBOJBAQFIABJHCghzeW1wdG9tcxg0IAEoCzItLmdvb2ds",
+            "ZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlN5bXB0b21zQgTiQQEB",
+            "SAASQQoFbW9vZHMYNSABKAsyKi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2Vz",
+            "LmhlYWx0aC52NC5Nb29kc0IE4kEBAUgAEhIKBG5hbWUYASABKAlCBOJBAQgS",
+            "SgoLZGF0YV9zb3VyY2UYAyABKAsyLy5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
+            "Y2VzLmhlYWx0aC52NC5EYXRhU291cmNlQgTiQQEBOnfqQXQKH2hlYWx0aC5n",
+            "b29nbGVhcGlzLmNvbS9EYXRhUG9pbnQSOnVzZXJzL3t1c2VyfS9kYXRhVHlw",
+            "ZXMve2RhdGFfdHlwZX0vZGF0YVBvaW50cy97ZGF0YV9wb2ludH0qCmRhdGFQ",
+            "b2ludHMyCWRhdGFQb2ludEIGCgRkYXRhIu0VChNSZWNvbmNpbGVkRGF0YVBv",
+            "aW50EjsKBXN0ZXBzGAQgASgLMiouZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNl",
+            "cy5oZWFsdGgudjQuU3RlcHNIABI9CgZmbG9vcnMYBSABKAsyKy5nb29nbGUu",
+            "ZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5GbG9vcnNIABJECgpoZWFy",
+            "dF9yYXRlGAYgASgLMi4uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFs",
+            "dGgudjQuSGVhcnRSYXRlSAASOwoFc2xlZXAYCCABKAsyKi5nb29nbGUuZGV2",
+            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5TbGVlcEgAEl4KGGRhaWx5X3Jl",
+            "c3RpbmdfaGVhcnRfcmF0ZRgJIAEoCzI6Lmdvb2dsZS5kZXZpY2VzYW5kc2Vy",
+            "dmljZXMuaGVhbHRoLnY0LkRhaWx5UmVzdGluZ0hlYXJ0UmF0ZUgAEmYKHGRh",
+            "aWx5X2hlYXJ0X3JhdGVfdmFyaWFiaWxpdHkYCiABKAsyPi5nb29nbGUuZGV2",
+            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5EYWlseUhlYXJ0UmF0ZVZhcmlh",
+            "YmlsaXR5SAASQQoIZXhlcmNpc2UYCyABKAsyLS5nb29nbGUuZGV2aWNlc2Fu",
+            "ZHNlcnZpY2VzLmhlYWx0aC52NC5FeGVyY2lzZUgAEj0KBndlaWdodBgMIAEo",
+            "CzIrLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LldlaWdo",
+            "dEgAEkEKCGFsdGl0dWRlGA0gASgLMi0uZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
+            "aWNlcy5oZWFsdGgudjQuQWx0aXR1ZGVIABJBCghkaXN0YW5jZRgOIAEoCzIt",
+            "Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkRpc3RhbmNl",
+            "SAASQAoIYm9keV9mYXQYDyABKAsyLC5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
+            "Y2VzLmhlYWx0aC52NC5Cb2R5RmF0SAASVQoTYWN0aXZlX3pvbmVfbWludXRl",
+            "cxgRIAEoCzI2Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0",
+            "LkFjdGl2ZVpvbmVNaW51dGVzSAASWwoWaGVhcnRfcmF0ZV92YXJpYWJpbGl0",
+            "eRgTIAEoCzI5Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0",
+            "LkhlYXJ0UmF0ZVZhcmlhYmlsaXR5SAASdAojZGFpbHlfc2xlZXBfdGVtcGVy",
+            "YXR1cmVfZGVyaXZhdGlvbnMYFCABKAsyRS5nb29nbGUuZGV2aWNlc2FuZHNl",
+            "cnZpY2VzLmhlYWx0aC52NC5EYWlseVNsZWVwVGVtcGVyYXR1cmVEZXJpdmF0",
+            "aW9uc0gAElAKEHNlZGVudGFyeV9wZXJpb2QYFSABKAsyNC5nb29nbGUuZGV2",
+            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5TZWRlbnRhcnlQZXJpb2RIABJF",
+            "CgtydW5fdm8yX21heBgWIAEoCzIuLmdvb2dsZS5kZXZpY2VzYW5kc2Vydmlj",
+            "ZXMuaGVhbHRoLnY0LlJ1blZPMk1heEgAElIKEW94eWdlbl9zYXR1cmF0aW9u",
+            "GBggASgLMjUuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQu",
+            "T3h5Z2VuU2F0dXJhdGlvbkgAEl0KF2RhaWx5X294eWdlbl9zYXR1cmF0aW9u",
+            "GBkgASgLMjouZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQu",
+            "RGFpbHlPeHlnZW5TYXR1cmF0aW9uSAASTAoOYWN0aXZpdHlfbGV2ZWwYGiAB",
+            "KAsyMi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5BY3Rp",
+            "dml0eUxldmVsSAASPgoHdm8yX21heBgbIAEoCzIrLmdvb2dsZS5kZXZpY2Vz",
+            "YW5kc2VydmljZXMuaGVhbHRoLnY0LlZPMk1heEgAEkkKDWRhaWx5X3ZvMl9t",
+            "YXgYHCABKAsyMC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52",
+            "NC5EYWlseVZPMk1heEgAEkoKDW51dHJpdGlvbl9sb2cYHSABKAsyMS5nb29n",
+            "bGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5OdXRyaXRpb25Mb2dI",
+            "ABJaChZkYWlseV9oZWFydF9yYXRlX3pvbmVzGCAgASgLMjguZ29vZ2xlLmRl",
+            "dmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRGFpbHlIZWFydFJhdGVab25l",
+            "c0gAEkoKDWh5ZHJhdGlvbl9sb2cYISABKAsyMS5nb29nbGUuZGV2aWNlc2Fu",
+            "ZHNlcnZpY2VzLmhlYWx0aC52NC5IeWRyYXRpb25Mb2dIABJbChd0aW1lX2lu",
+            "X2hlYXJ0X3JhdGVfem9uZRgjIAEoCzI4Lmdvb2dsZS5kZXZpY2VzYW5kc2Vy",
+            "dmljZXMuaGVhbHRoLnY0LlRpbWVJbkhlYXJ0UmF0ZVpvbmVIABJMCg5hY3Rp",
+            "dmVfbWludXRlcxgkIAEoCzIyLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMu",
+            "aGVhbHRoLnY0LkFjdGl2ZU1pbnV0ZXNIABJqCh5yZXNwaXJhdG9yeV9yYXRl",
+            "X3NsZWVwX3N1bW1hcnkYJSABKAsyQC5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
+            "Y2VzLmhlYWx0aC52NC5SZXNwaXJhdG9yeVJhdGVTbGVlcFN1bW1hcnlIABJb",
+            "ChZkYWlseV9yZXNwaXJhdG9yeV9yYXRlGCYgASgLMjkuZ29vZ2xlLmRldmlj",
+            "ZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRGFpbHlSZXNwaXJhdG9yeVJhdGVI",
+            "ABJRChFzd2ltX2xlbmd0aHNfZGF0YRgnIAEoCzI0Lmdvb2dsZS5kZXZpY2Vz",
+            "YW5kc2VydmljZXMuaGVhbHRoLnY0LlN3aW1MZW5ndGhzRGF0YUgAEj0KBmhl",
+            "aWdodBgoIAEoCzIrLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRo",
+            "LnY0LkhlaWdodEgAElUKE2Jhc2FsX2VuZXJneV9idXJuZWQYKSABKAsyNi5n",
+            "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5CYXNhbEVuZXJn",
+            "eUJ1cm5lZEgAElkKFWNvcmVfYm9keV90ZW1wZXJhdHVyZRgqIAEoCzI4Lmdv",
+            "b2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkNvcmVCb2R5VGVt",
+            "cGVyYXR1cmVIABJXChRhY3RpdmVfZW5lcmd5X2J1cm5lZBgsIAEoCzI3Lmdv",
+            "b2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkFjdGl2ZUVuZXJn",
+            "eUJ1cm5lZEgAEkoKDWJsb29kX2dsdWNvc2UYLiABKAsyMS5nb29nbGUuZGV2",
+            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5CbG9vZEdsdWNvc2VIABIdCg9k",
+            "YXRhX3BvaW50X25hbWUYASABKAlCBOJBAQhCBgoEZGF0YSKvDwoPUm9sbHVw",
             "RGF0YVBvaW50EkYKBXN0ZXBzGAUgASgLMjUuZ29vZ2xlLmRldmljZXNhbmRz",
             "ZXJ2aWNlcy5oZWFsdGgudjQuU3RlcHNSb2xsdXBWYWx1ZUgAEkgKBmZsb29y",
             "cxgGIAEoCzI2Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0",
@@ -277,63 +278,65 @@ namespace Google.DevicesAndServices.Health.V4 {
             "aWxfc3RhcnRfdGltZRgBIAEoCzIyLmdvb2dsZS5kZXZpY2VzYW5kc2Vydmlj",
             "ZXMuaGVhbHRoLnY0LkNpdmlsRGF0ZVRpbWUSSgoOY2l2aWxfZW5kX3RpbWUY",
             "AiABKAsyMi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5D",
-            "aXZpbERhdGVUaW1lQgcKBXZhbHVlIkwKE0dldERhdGFQb2ludFJlcXVlc3QS",
-            "NQoEbmFtZRgBIAEoCUIn4EEC+kEhCh9oZWFsdGguZ29vZ2xlYXBpcy5jb20v",
-            "RGF0YVBvaW50IpUBChVMaXN0RGF0YVBvaW50c1JlcXVlc3QSNgoGcGFyZW50",
-            "GAEgASgJQibgQQL6QSAKHmhlYWx0aC5nb29nbGVhcGlzLmNvbS9EYXRhVHlw",
-            "ZRIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJ",
-            "QgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQEidgoWTGlzdERhdGFQb2ludHNS",
-            "ZXNwb25zZRJDCgtkYXRhX3BvaW50cxgBIAMoCzIuLmdvb2dsZS5kZXZpY2Vz",
-            "YW5kc2VydmljZXMuaGVhbHRoLnY0LkRhdGFQb2ludBIXCg9uZXh0X3BhZ2Vf",
-            "dG9rZW4YAiABKAkimgEKFkNyZWF0ZURhdGFQb2ludFJlcXVlc3QSNwoGcGFy",
-            "ZW50GAEgASgJQifgQQL6QSESH2hlYWx0aC5nb29nbGVhcGlzLmNvbS9EYXRh",
-            "UG9pbnQSRwoKZGF0YV9wb2ludBgCIAEoCzIuLmdvb2dsZS5kZXZpY2VzYW5k",
-            "c2VydmljZXMuaGVhbHRoLnY0LkRhdGFQb2ludEID4EECIiIKIENyZWF0ZURh",
-            "dGFQb2ludE9wZXJhdGlvbk1ldGFkYXRhImEKFlVwZGF0ZURhdGFQb2ludFJl",
-            "cXVlc3QSRwoKZGF0YV9wb2ludBgBIAEoCzIuLmdvb2dsZS5kZXZpY2VzYW5k",
-            "c2VydmljZXMuaGVhbHRoLnY0LkRhdGFQb2ludEID4EECIiIKIFVwZGF0ZURh",
-            "dGFQb2ludE9wZXJhdGlvbk1ldGFkYXRhIo4BChxCYXRjaERlbGV0ZURhdGFQ",
-            "b2ludHNSZXF1ZXN0EjYKBnBhcmVudBgBIAEoCUIm4EEB+kEgCh5oZWFsdGgu",
-            "Z29vZ2xlYXBpcy5jb20vRGF0YVR5cGUSNgoFbmFtZXMYAiADKAlCJ+BBAvpB",
-            "IQofaGVhbHRoLmdvb2dsZWFwaXMuY29tL0RhdGFQb2ludCJkCh1CYXRjaERl",
-            "bGV0ZURhdGFQb2ludHNSZXNwb25zZRJDCgtkYXRhX3BvaW50cxgBIAMoCzIu",
-            "Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkRhdGFQb2lu",
-            "dCLtAQomQmF0Y2hEZWxldGVEYXRhUG9pbnRzT3BlcmF0aW9uTWV0YWRhdGES",
-            "eAoPZmFpbGVkX3JlcXVlc3RzGAEgAygLMl8uZ29vZ2xlLmRldmljZXNhbmRz",
-            "ZXJ2aWNlcy5oZWFsdGgudjQuQmF0Y2hEZWxldGVEYXRhUG9pbnRzT3BlcmF0",
-            "aW9uTWV0YWRhdGEuRmFpbGVkUmVxdWVzdHNFbnRyeRpJChNGYWlsZWRSZXF1",
-            "ZXN0c0VudHJ5EgsKA2tleRgBIAEoBRIhCgV2YWx1ZRgCIAEoCzISLmdvb2ds",
-            "ZS5ycGMuU3RhdHVzOgI4ASKYAQoaUmVjb25jaWxlRGF0YVBvaW50c1JlcXVl",
-            "c3QSEwoGcGFyZW50GAEgASgJQgPgQQISFgoJcGFnZV9zaXplGAIgASgFQgPg",
-            "QQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEhMKBmZpbHRlchgEIAEoCUID",
-            "4EEBEh8KEmRhdGFfc291cmNlX2ZhbWlseRgFIAEoCUID4EEBIoUBChtSZWNv",
-            "bmNpbGVEYXRhUG9pbnRzUmVzcG9uc2USTQoLZGF0YV9wb2ludHMYASADKAsy",
-            "OC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5SZWNvbmNp",
-            "bGVkRGF0YVBvaW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKDAgoXUm9s",
-            "bFVwRGF0YVBvaW50c1JlcXVlc3QSNgoGcGFyZW50GAEgASgJQibgQQL6QSAK",
-            "HmhlYWx0aC5nb29nbGVhcGlzLmNvbS9EYXRhVHlwZRIpCgVyYW5nZRgCIAEo",
-            "CzIVLmdvb2dsZS50eXBlLkludGVydmFsQgPgQQISMwoLd2luZG93X3NpemUY",
-            "AyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAhIWCglwYWdl",
-            "X3NpemUYBCABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAUgASgJQgPgQQESHwoS",
-            "ZGF0YV9zb3VyY2VfZmFtaWx5GAcgASgJQgPgQQEihQEKGFJvbGxVcERhdGFQ",
-            "b2ludHNSZXNwb25zZRJQChJyb2xsdXBfZGF0YV9wb2ludHMYASADKAsyNC5n",
-            "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5Sb2xsdXBEYXRh",
-            "UG9pbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIpMCChxEYWlseVJvbGxV",
-            "cERhdGFQb2ludHNSZXF1ZXN0EjYKBnBhcmVudBgBIAEoCUIm4EEC+kEgCh5o",
-            "ZWFsdGguZ29vZ2xlYXBpcy5jb20vRGF0YVR5cGUSSgoFcmFuZ2UYAiABKAsy",
-            "Ni5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5DaXZpbFRp",
-            "bWVJbnRlcnZhbEID4EECEh0KEHdpbmRvd19zaXplX2RheXMYAyABKAVCA+BB",
-            "ARIWCglwYWdlX3NpemUYBCABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAUgASgJ",
-            "QgPgQQESHwoSZGF0YV9zb3VyY2VfZmFtaWx5GAcgASgJQgPgQQEidgodRGFp",
-            "bHlSb2xsVXBEYXRhUG9pbnRzUmVzcG9uc2USVQoScm9sbHVwX2RhdGFfcG9p",
-            "bnRzGAEgAygLMjkuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgu",
-            "djQuRGFpbHlSb2xsdXBEYXRhUG9pbnQiewoIRGF0YVR5cGUSEQoEbmFtZRgB",
-            "IAEoCUID4EEIOlzqQVkKHmhlYWx0aC5nb29nbGVhcGlzLmNvbS9EYXRhVHlw",
-            "ZRIidXNlcnMve3VzZXJ9L2RhdGFUeXBlcy97ZGF0YV90eXBlfSoJZGF0YVR5",
-            "cGVzMghkYXRhVHlwZSJsChhFeHBvcnRFeGVyY2lzZVRjeFJlcXVlc3QSNQoE",
-            "bmFtZRgBIAEoCUIn4EEC+kEhCh9oZWFsdGguZ29vZ2xlYXBpcy5jb20vRGF0",
-            "YVBvaW50EhkKDHBhcnRpYWxfZGF0YRgCIAEoCEID4EEBIi0KGUV4cG9ydEV4",
-            "ZXJjaXNlVGN4UmVzcG9uc2USEAoIdGN4X2RhdGEYAiABKAkyhBgKEURhdGFQ",
+            "aXZpbERhdGVUaW1lQgcKBXZhbHVlIk0KE0dldERhdGFQb2ludFJlcXVlc3QS",
+            "NgoEbmFtZRgBIAEoCUIo4kEBAvpBIQofaGVhbHRoLmdvb2dsZWFwaXMuY29t",
+            "L0RhdGFQb2ludCK7AQoVTGlzdERhdGFQb2ludHNSZXF1ZXN0EjcKBnBhcmVu",
+            "dBgBIAEoCUIn4kEBAvpBIAoeaGVhbHRoLmdvb2dsZWFwaXMuY29tL0RhdGFU",
+            "eXBlEhcKCXBhZ2Vfc2l6ZRgCIAEoBUIE4kEBARIYCgpwYWdlX3Rva2VuGAMg",
+            "ASgJQgTiQQEBEhQKBmZpbHRlchgEIAEoCUIE4kEBARIgChJkYXRhX3NvdXJj",
+            "ZV9mYW1pbHkYBSABKAlCBOJBAQEidgoWTGlzdERhdGFQb2ludHNSZXNwb25z",
+            "ZRJDCgtkYXRhX3BvaW50cxgBIAMoCzIuLmdvb2dsZS5kZXZpY2VzYW5kc2Vy",
+            "dmljZXMuaGVhbHRoLnY0LkRhdGFQb2ludBIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
+            "AiABKAkinAEKFkNyZWF0ZURhdGFQb2ludFJlcXVlc3QSOAoGcGFyZW50GAEg",
+            "ASgJQijiQQEC+kEhEh9oZWFsdGguZ29vZ2xlYXBpcy5jb20vRGF0YVBvaW50",
+            "EkgKCmRhdGFfcG9pbnQYAiABKAsyLi5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
+            "Y2VzLmhlYWx0aC52NC5EYXRhUG9pbnRCBOJBAQIiIgogQ3JlYXRlRGF0YVBv",
+            "aW50T3BlcmF0aW9uTWV0YWRhdGEiYgoWVXBkYXRlRGF0YVBvaW50UmVxdWVz",
+            "dBJICgpkYXRhX3BvaW50GAEgASgLMi4uZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
+            "aWNlcy5oZWFsdGgudjQuRGF0YVBvaW50QgTiQQECIiIKIFVwZGF0ZURhdGFQ",
+            "b2ludE9wZXJhdGlvbk1ldGFkYXRhIpABChxCYXRjaERlbGV0ZURhdGFQb2lu",
+            "dHNSZXF1ZXN0EjcKBnBhcmVudBgBIAEoCUIn4kEBAfpBIAoeaGVhbHRoLmdv",
+            "b2dsZWFwaXMuY29tL0RhdGFUeXBlEjcKBW5hbWVzGAIgAygJQijiQQEC+kEh",
+            "Ch9oZWFsdGguZ29vZ2xlYXBpcy5jb20vRGF0YVBvaW50ImQKHUJhdGNoRGVs",
+            "ZXRlRGF0YVBvaW50c1Jlc3BvbnNlEkMKC2RhdGFfcG9pbnRzGAEgAygLMi4u",
+            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRGF0YVBvaW50",
+            "Iu0BCiZCYXRjaERlbGV0ZURhdGFQb2ludHNPcGVyYXRpb25NZXRhZGF0YRJ4",
+            "Cg9mYWlsZWRfcmVxdWVzdHMYASADKAsyXy5nb29nbGUuZGV2aWNlc2FuZHNl",
+            "cnZpY2VzLmhlYWx0aC52NC5CYXRjaERlbGV0ZURhdGFQb2ludHNPcGVyYXRp",
+            "b25NZXRhZGF0YS5GYWlsZWRSZXF1ZXN0c0VudHJ5GkkKE0ZhaWxlZFJlcXVl",
+            "c3RzRW50cnkSCwoDa2V5GAEgASgFEiEKBXZhbHVlGAIgASgLMhIuZ29vZ2xl",
+            "LnJwYy5TdGF0dXM6AjgBIp0BChpSZWNvbmNpbGVEYXRhUG9pbnRzUmVxdWVz",
+            "dBIUCgZwYXJlbnQYASABKAlCBOJBAQISFwoJcGFnZV9zaXplGAIgASgFQgTi",
+            "QQEBEhgKCnBhZ2VfdG9rZW4YAyABKAlCBOJBAQESFAoGZmlsdGVyGAQgASgJ",
+            "QgTiQQEBEiAKEmRhdGFfc291cmNlX2ZhbWlseRgFIAEoCUIE4kEBASKFAQob",
+            "UmVjb25jaWxlRGF0YVBvaW50c1Jlc3BvbnNlEk0KC2RhdGFfcG9pbnRzGAEg",
+            "AygLMjguZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuUmVj",
+            "b25jaWxlZERhdGFQb2ludBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiiQIK",
+            "F1JvbGxVcERhdGFQb2ludHNSZXF1ZXN0EjcKBnBhcmVudBgBIAEoCUIn4kEB",
+            "AvpBIAoeaGVhbHRoLmdvb2dsZWFwaXMuY29tL0RhdGFUeXBlEioKBXJhbmdl",
+            "GAIgASgLMhUuZ29vZ2xlLnR5cGUuSW50ZXJ2YWxCBOJBAQISNAoLd2luZG93",
+            "X3NpemUYAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CBOJBAQIS",
+            "FwoJcGFnZV9zaXplGAQgASgFQgTiQQEBEhgKCnBhZ2VfdG9rZW4YBSABKAlC",
+            "BOJBAQESIAoSZGF0YV9zb3VyY2VfZmFtaWx5GAcgASgJQgTiQQEBIoUBChhS",
+            "b2xsVXBEYXRhUG9pbnRzUmVzcG9uc2USUAoScm9sbHVwX2RhdGFfcG9pbnRz",
+            "GAEgAygLMjQuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQu",
+            "Um9sbHVwRGF0YVBvaW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKZAgoc",
+            "RGFpbHlSb2xsVXBEYXRhUG9pbnRzUmVxdWVzdBI3CgZwYXJlbnQYASABKAlC",
+            "J+JBAQL6QSAKHmhlYWx0aC5nb29nbGVhcGlzLmNvbS9EYXRhVHlwZRJLCgVy",
+            "YW5nZRgCIAEoCzI2Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRo",
+            "LnY0LkNpdmlsVGltZUludGVydmFsQgTiQQECEh4KEHdpbmRvd19zaXplX2Rh",
+            "eXMYAyABKAVCBOJBAQESFwoJcGFnZV9zaXplGAQgASgFQgTiQQEBEhgKCnBh",
+            "Z2VfdG9rZW4YBSABKAlCBOJBAQESIAoSZGF0YV9zb3VyY2VfZmFtaWx5GAcg",
+            "ASgJQgTiQQEBIo8BCh1EYWlseVJvbGxVcERhdGFQb2ludHNSZXNwb25zZRJV",
+            "ChJyb2xsdXBfZGF0YV9wb2ludHMYASADKAsyOS5nb29nbGUuZGV2aWNlc2Fu",
+            "ZHNlcnZpY2VzLmhlYWx0aC52NC5EYWlseVJvbGx1cERhdGFQb2ludBIXCg9u",
+            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkifAoIRGF0YVR5cGUSEgoEbmFtZRgBIAEo",
+            "CUIE4kEBCDpc6kFZCh5oZWFsdGguZ29vZ2xlYXBpcy5jb20vRGF0YVR5cGUS",
+            "InVzZXJzL3t1c2VyfS9kYXRhVHlwZXMve2RhdGFfdHlwZX0qCWRhdGFUeXBl",
+            "czIIZGF0YVR5cGUibgoYRXhwb3J0RXhlcmNpc2VUY3hSZXF1ZXN0EjYKBG5h",
+            "bWUYASABKAlCKOJBAQL6QSEKH2hlYWx0aC5nb29nbGVhcGlzLmNvbS9EYXRh",
+            "UG9pbnQSGgoMcGFydGlhbF9kYXRhGAIgASgIQgTiQQEBIi0KGUV4cG9ydEV4",
+            "ZXJjaXNlVGN4UmVzcG9uc2USEAoIdGN4X2RhdGEYAiABKAky+BgKEURhdGFQ",
             "b2ludHNTZXJ2aWNlErQBCgxHZXREYXRhUG9pbnQSOC5nb29nbGUuZGV2aWNl",
             "c2FuZHNlcnZpY2VzLmhlYWx0aC52NC5HZXREYXRhUG9pbnRSZXF1ZXN0Gi4u",
             "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRGF0YVBvaW50",
@@ -379,36 +382,38 @@ namespace Google.DevicesAndServices.Health.V4 {
             "ZVRjeFJlcXVlc3QaPi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0",
             "aC52NC5FeHBvcnRFeGVyY2lzZVRjeFJlc3BvbnNlIkzaQQRuYW1lgtPkkwI/",
             "Ej0vdjQve25hbWU9dXNlcnMvKi9kYXRhVHlwZXMvKi9kYXRhUG9pbnRzLyp9",
-            "OmV4cG9ydEV4ZXJjaXNlVGN4Gv8HykEVaGVhbHRoLmdvb2dsZWFwaXMuY29t",
-            "0kHjB2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZ29vZ2xlaGVh",
+            "OmV4cG9ydEV4ZXJjaXNlVGN4GvMIykEVaGVhbHRoLmdvb2dsZWFwaXMuY29t",
+            "0kHXCGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZ29vZ2xlaGVh",
             "bHRoLmFjdGl2aXR5X2FuZF9maXRuZXNzLnJlYWRvbmx5LGh0dHBzOi8vd3d3",
             "Lmdvb2dsZWFwaXMuY29tL2F1dGgvZ29vZ2xlaGVhbHRoLmFjdGl2aXR5X2Fu",
             "ZF9maXRuZXNzLndyaXRlb25seSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
-            "bS9hdXRoL2dvb2dsZWhlYWx0aC5oZWFsdGhfbWV0cmljc19hbmRfbWVhc3Vy",
-            "ZW1lbnRzLnJlYWRvbmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
-            "dGgvZ29vZ2xlaGVhbHRoLmhlYWx0aF9tZXRyaWNzX2FuZF9tZWFzdXJlbWVu",
-            "dHMud3JpdGVvbmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
-            "Z29vZ2xlaGVhbHRoLmxvY2F0aW9uLnJlYWRvbmx5LGh0dHBzOi8vd3d3Lmdv",
-            "b2dsZWFwaXMuY29tL2F1dGgvZ29vZ2xlaGVhbHRoLmxvZ2dlZF9zeW1wdG9t",
-            "cy5yZWFkb25seSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2dv",
-            "b2dsZWhlYWx0aC5sb2dnZWRfc3ltcHRvbXMud3JpdGVvbmx5LGh0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZ29vZ2xlaGVhbHRoLm1pbmRmdWxu",
-            "ZXNzLnJlYWRvbmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
-            "Z29vZ2xlaGVhbHRoLm1pbmRmdWxuZXNzLndyaXRlb25seSxodHRwczovL3d3",
-            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2dvb2dsZWhlYWx0aC5udXRyaXRpb24u",
-            "d3JpdGVvbmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZ29v",
-            "Z2xlaGVhbHRoLnJlcHJvZHVjdGl2ZV9oZWFsdGgucmVhZG9ubHksaHR0cHM6",
-            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9nb29nbGVoZWFsdGgucmVwcm9k",
-            "dWN0aXZlX2hlYWx0aC53cml0ZW9ubHksaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
-            "cy5jb20vYXV0aC9nb29nbGVoZWFsdGguc2xlZXAucmVhZG9ubHksaHR0cHM6",
-            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9nb29nbGVoZWFsdGguc2xlZXAu",
-            "d3JpdGVvbmx5QoECCidjb20uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5o",
-            "ZWFsdGgudjRCD0RhdGFQb2ludHNQcm90b1ABWk5nb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2RldmljZXNhbmRzZXJ2aWNlcy9oZWFs",
-            "dGgvYXBpdjQ7aGVhbHRocGKqAiNHb29nbGUuRGV2aWNlc0FuZFNlcnZpY2Vz",
-            "LkhlYWx0aC5WNMoCI0dvb2dsZVxEZXZpY2VzQW5kU2VydmljZXNcSGVhbHRo",
-            "XFY06gImR29vZ2xlOjpEZXZpY2VzQW5kU2VydmljZXM6OkhlYWx0aDo6VjRi",
-            "BnByb3RvMw=="));
+            "bS9hdXRoL2dvb2dsZWhlYWx0aC5lY2cucmVhZG9ubHksaHR0cHM6Ly93d3cu",
+            "Z29vZ2xlYXBpcy5jb20vYXV0aC9nb29nbGVoZWFsdGguaGVhbHRoX21ldHJp",
+            "Y3NfYW5kX21lYXN1cmVtZW50cy5yZWFkb25seSxodHRwczovL3d3dy5nb29n",
+            "bGVhcGlzLmNvbS9hdXRoL2dvb2dsZWhlYWx0aC5oZWFsdGhfbWV0cmljc19h",
+            "bmRfbWVhc3VyZW1lbnRzLndyaXRlb25seSxodHRwczovL3d3dy5nb29nbGVh",
+            "cGlzLmNvbS9hdXRoL2dvb2dsZWhlYWx0aC5pcm4ucmVhZG9ubHksaHR0cHM6",
+            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9nb29nbGVoZWFsdGgubG9jYXRp",
+            "b24ucmVhZG9ubHksaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9n",
+            "b29nbGVoZWFsdGgubG9nZ2VkX3N5bXB0b21zLnJlYWRvbmx5LGh0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZ29vZ2xlaGVhbHRoLmxvZ2dlZF9z",
+            "eW1wdG9tcy53cml0ZW9ubHksaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
+            "YXV0aC9nb29nbGVoZWFsdGgubWluZGZ1bG5lc3MucmVhZG9ubHksaHR0cHM6",
+            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9nb29nbGVoZWFsdGgubWluZGZ1",
+            "bG5lc3Mud3JpdGVvbmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
+            "dGgvZ29vZ2xlaGVhbHRoLm51dHJpdGlvbi53cml0ZW9ubHksaHR0cHM6Ly93",
+            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9nb29nbGVoZWFsdGgucmVwcm9kdWN0",
+            "aXZlX2hlYWx0aC5yZWFkb25seSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
+            "bS9hdXRoL2dvb2dsZWhlYWx0aC5yZXByb2R1Y3RpdmVfaGVhbHRoLndyaXRl",
+            "b25seSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2dvb2dsZWhl",
+            "YWx0aC5zbGVlcC5yZWFkb25seSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
+            "bS9hdXRoL2dvb2dsZWhlYWx0aC5zbGVlcC53cml0ZW9ubHlCgQIKJ2NvbS5n",
+            "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NEIPRGF0YVBvaW50",
+            "c1Byb3RvUAFaTmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
+            "aXMvZGV2aWNlc2FuZHNlcnZpY2VzL2hlYWx0aC9hcGl2NDtoZWFsdGhwYqoC",
+            "I0dvb2dsZS5EZXZpY2VzQW5kU2VydmljZXMuSGVhbHRoLlY0ygIjR29vZ2xl",
+            "XERldmljZXNBbmRTZXJ2aWNlc1xIZWFsdGhcVjTqAiZHb29nbGU6OkRldmlj",
+            "ZXNBbmRTZXJ2aWNlczo6SGVhbHRoOjpWNGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.DevicesAndServices.Health.V4.DataCoordinatesReflection.Descriptor, global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor, global::Google.DevicesAndServices.Health.V4.DataSourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.IntervalReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -417,7 +422,7 @@ namespace Google.DevicesAndServices.Health.V4 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.RollupDataPoint), global::Google.DevicesAndServices.Health.V4.RollupDataPoint.Parser, new[]{ "Steps", "Floors", "HeartRate", "Weight", "Altitude", "Distance", "BodyFat", "TotalCalories", "ActiveZoneMinutes", "SedentaryPeriod", "RunVo2Max", "CaloriesInHeartRateZone", "ActivityLevel", "NutritionLog", "HydrationLog", "TimeInHeartRateZone", "ActiveMinutes", "SwimLengthsData", "CoreBodyTemperature", "ActiveEnergyBurned", "BloodGlucose", "StartTime", "EndTime" }, new[]{ "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyRollupDataPoint), global::Google.DevicesAndServices.Health.V4.DailyRollupDataPoint.Parser, new[]{ "Steps", "Floors", "HeartRate", "RestingHeartRatePersonalRange", "HeartRateVariabilityPersonalRange", "Weight", "Altitude", "Distance", "BodyFat", "TotalCalories", "ActiveZoneMinutes", "SedentaryPeriod", "RunVo2Max", "CaloriesInHeartRateZone", "ActivityLevel", "NutritionLog", "HydrationLog", "TimeInHeartRateZone", "ActiveMinutes", "SwimLengthsData", "CoreBodyTemperature", "ActiveEnergyBurned", "BloodGlucose", "CivilStartTime", "CivilEndTime" }, new[]{ "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.GetDataPointRequest), global::Google.DevicesAndServices.Health.V4.GetDataPointRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ListDataPointsRequest), global::Google.DevicesAndServices.Health.V4.ListDataPointsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ListDataPointsRequest), global::Google.DevicesAndServices.Health.V4.ListDataPointsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "DataSourceFamily" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ListDataPointsResponse), global::Google.DevicesAndServices.Health.V4.ListDataPointsResponse.Parser, new[]{ "DataPoints", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.CreateDataPointRequest), global::Google.DevicesAndServices.Health.V4.CreateDataPointRequest.Parser, new[]{ "Parent", "DataPoint" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.CreateDataPointOperationMetadata), global::Google.DevicesAndServices.Health.V4.CreateDataPointOperationMetadata.Parser, null, null, null, null, null),
@@ -431,7 +436,7 @@ namespace Google.DevicesAndServices.Health.V4 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.RollUpDataPointsRequest), global::Google.DevicesAndServices.Health.V4.RollUpDataPointsRequest.Parser, new[]{ "Parent", "Range", "WindowSize", "PageSize", "PageToken", "DataSourceFamily" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.RollUpDataPointsResponse), global::Google.DevicesAndServices.Health.V4.RollUpDataPointsResponse.Parser, new[]{ "RollupDataPoints", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyRollUpDataPointsRequest), global::Google.DevicesAndServices.Health.V4.DailyRollUpDataPointsRequest.Parser, new[]{ "Parent", "Range", "WindowSizeDays", "PageSize", "PageToken", "DataSourceFamily" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyRollUpDataPointsResponse), global::Google.DevicesAndServices.Health.V4.DailyRollUpDataPointsResponse.Parser, new[]{ "RollupDataPoints" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyRollUpDataPointsResponse), global::Google.DevicesAndServices.Health.V4.DailyRollUpDataPointsResponse.Parser, new[]{ "RollupDataPoints", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DataType), global::Google.DevicesAndServices.Health.V4.DataType.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ExportExerciseTcxRequest), global::Google.DevicesAndServices.Health.V4.ExportExerciseTcxRequest.Parser, new[]{ "Name", "PartialData" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ExportExerciseTcxResponse), global::Google.DevicesAndServices.Health.V4.ExportExerciseTcxResponse.Parser, new[]{ "TcxData" }, null, null, null, null)
@@ -1290,11 +1295,18 @@ namespace Google.DevicesAndServices.Health.V4 {
     ///
     /// Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
     ///
-    /// Example:
-    /// `users/abcd1234/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+    /// ## Examples:
     ///
-    /// The `{user}` ID is a system-generated identifier, as described in
-    /// [Identity.health_user_id][google.devicesandservices.health.v4.Identity.health_user_id].
+    /// ##
+    /// `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+    ///
+    /// `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+    ///
+    /// The `{user}` can be either the alias `me` or the authenticated user's
+    /// numeric Health User ID, which can be retrieved by calling
+    /// [GetIdentity][google.devicesandservices.health.v4.HealthProfileService.GetIdentity]
+    /// (see
+    /// [Identity.health_user_id][google.devicesandservices.health.v4.Identity.health_user_id]).
     ///
     /// The `{data_type}` ID corresponds to the kebab-case version of the field
     /// names in the [DataPoint
@@ -3809,11 +3821,18 @@ namespace Google.DevicesAndServices.Health.V4 {
     ///
     /// Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
     ///
-    /// Example:
-    /// `users/abcd1234/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+    /// ## Examples:
     ///
-    /// The `{user}` ID is a system-generated identifier, as described in
-    /// [Identity.health_user_id][google.devicesandservices.health.v4.Identity.health_user_id].
+    /// ##
+    /// `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+    ///
+    /// `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+    ///
+    /// The `{user}` can be either the alias `me` or the authenticated user's
+    /// numeric Health User ID, which can be retrieved by calling
+    /// [GetIdentity][google.devicesandservices.health.v4.HealthProfileService.GetIdentity]
+    /// (see
+    /// [Identity.health_user_id][google.devicesandservices.health.v4.Identity.health_user_id]).
     ///
     /// The `{data_type}` ID corresponds to the kebab-case version of the field
     /// names in the [DataPoint
@@ -8480,6 +8499,17 @@ namespace Google.DevicesAndServices.Health.V4 {
     ///
     /// Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
     ///
+    /// ## Examples:
+    ///
+    /// ##
+    /// `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+    ///
+    /// `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+    ///
+    /// The `{user}` can be either the alias `me` or the authenticated user's
+    /// numeric Health User ID (retrieved via
+    /// [GetIdentity][google.devicesandservices.health.v4.HealthProfileService.GetIdentity]).
+    ///
     /// See
     /// [DataPoint.name][google.devicesandservices.health.v4.DataPoint.name]
     /// for examples and possible values.
@@ -8676,6 +8706,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
       filter_ = other.filter_;
+      dataSourceFamily_ = other.dataSourceFamily_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8691,10 +8722,16 @@ namespace Google.DevicesAndServices.Health.V4 {
     /// <summary>
     /// Required. Parent data type of the Data Point collection.
     ///
-    /// Format: `users/me/dataTypes/{data_type}`, e.g.:
+    /// Format: `users/{user}/dataTypes/{data_type}`, e.g.:
     ///
     /// - `users/me/dataTypes/steps`
+    /// - `users/1234567890/dataTypes/steps`
     /// - `users/me/dataTypes/weight`
+    /// - `users/1234567890/dataTypes/weight`
+    ///
+    /// The `{user}` can be either the alias `me` or the authenticated user's
+    /// numeric Health User ID (retrieved via
+    /// [GetIdentity][google.devicesandservices.health.v4.HealthProfileService.GetIdentity]).
     ///
     /// For a list of the supported data types see the [DataPoint
     /// data][google.devicesandservices.health.v4.DataPoint] union
@@ -8857,6 +8894,63 @@ namespace Google.DevicesAndServices.Health.V4 {
       }
     }
 
+    /// <summary>Field number for the "data_source_family" field.</summary>
+    public const int DataSourceFamilyFieldNumber = 5;
+    private string dataSourceFamily_ = "";
+    /// <summary>
+    /// Optional. The data source family name to filter by.
+    ///
+    /// If empty, data points from all available data sources will be returned.
+    ///
+    /// Format: `users/{user}/dataSourceFamilies/{data_source_family}`
+    ///
+    /// The `{user}` can be either the alias `me` or the authenticated user's
+    /// numeric Health User ID, retrieved via
+    /// [GetIdentity][google.devicesandservices.health.v4.HealthProfileService.GetIdentity]
+    /// (e.g. `users/me/dataSourceFamilies/...` or
+    /// `users/1234567890/dataSourceFamilies/...`).
+    ///
+    /// The supported values are:
+    ///
+    /// - `users/{user}/dataSourceFamilies/all-sources` - Default value. Includes
+    /// data from all available data sources.
+    /// - `users/{user}/dataSourceFamilies/google-wearables` - Includes data from
+    /// Google and Fitbit tracker devices (such as Fitbit trackers and Pixel
+    /// Watch). Excludes manually logged data.
+    /// - `users/{user}/dataSourceFamilies/google-sources` - Includes first-party
+    /// Google data, such as data from tracker devices, manually logged data, and
+    /// Health Connect.
+    /// - `users/{user}/dataSourceFamilies/self-sources` - Includes only the data
+    /// the calling client wrote through this API, that is, data points whose data
+    /// source was registered through this API with the same OAuth client ID as
+    /// the caller.
+    ///
+    /// Callers that were only granted write scopes for the requested data types
+    /// may only read the data they wrote themselves: their requests are
+    /// implicitly restricted to `self-sources`, and requesting any other data
+    /// source family fails with `PERMISSION_DENIED`.
+    ///
+    /// If no data point matches the requested data source family, the response is
+    /// an empty list rather than an error.
+    ///
+    /// Filtering by data source family is not supported for the `sleep`, `food`
+    /// and `food-measurement-unit` data types, because the underlying listing
+    /// implementation cannot restrict results by data source. Such requests fail
+    /// with `INVALID_ARGUMENT` when the data source family is set explicitly, and
+    /// with `PERMISSION_DENIED` when the restriction is only implied by the
+    /// caller's scopes. For `sleep`, use
+    /// [ReconcileDataPoints][google.devicesandservices.health.v4.DataPointsService.ReconcileDataPoints]
+    /// instead.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DataSourceFamily {
+      get { return dataSourceFamily_; }
+      set {
+        dataSourceFamily_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -8876,6 +8970,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
       if (Filter != other.Filter) return false;
+      if (DataSourceFamily != other.DataSourceFamily) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8887,6 +8982,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (DataSourceFamily.Length != 0) hash ^= DataSourceFamily.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8921,6 +9017,10 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(34);
         output.WriteString(Filter);
       }
+      if (DataSourceFamily.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(DataSourceFamily);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8947,6 +9047,10 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(34);
         output.WriteString(Filter);
       }
+      if (DataSourceFamily.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(DataSourceFamily);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8968,6 +9072,9 @@ namespace Google.DevicesAndServices.Health.V4 {
       }
       if (Filter.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (DataSourceFamily.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DataSourceFamily);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8992,6 +9099,9 @@ namespace Google.DevicesAndServices.Health.V4 {
       }
       if (other.Filter.Length != 0) {
         Filter = other.Filter;
+      }
+      if (other.DataSourceFamily.Length != 0) {
+        DataSourceFamily = other.DataSourceFamily;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9028,6 +9138,10 @@ namespace Google.DevicesAndServices.Health.V4 {
             Filter = input.ReadString();
             break;
           }
+          case 42: {
+            DataSourceFamily = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -9061,6 +9175,10 @@ namespace Google.DevicesAndServices.Health.V4 {
           }
           case 34: {
             Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            DataSourceFamily = input.ReadString();
             break;
           }
         }
@@ -9357,7 +9475,15 @@ namespace Google.DevicesAndServices.Health.V4 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent resource name where the data point will be created.
-    /// Format: `users/{user}/dataTypes/{data_type}`
+    ///
+    /// Format: `users/{user}/dataTypes/{data_type}`, e.g.:
+    ///
+    /// - `users/me/dataTypes/steps`
+    /// - `users/1234567890/dataTypes/steps`
+    ///
+    /// The `{user}` can be either the alias `me` or the authenticated user's
+    /// numeric Health User ID (retrieved via
+    /// [GetIdentity][google.devicesandservices.health.v4.HealthProfileService.GetIdentity]).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9778,6 +9904,17 @@ namespace Google.DevicesAndServices.Health.V4 {
     /// The data point's `name` field is used to identify the data point to update.
     ///
     /// Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
+    ///
+    /// ## Examples:
+    ///
+    /// ##
+    /// `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+    ///
+    /// `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+    ///
+    /// The `{user}` can be either the alias `me` or the authenticated user's
+    /// numeric Health User ID (retrieved via
+    /// [GetIdentity][google.devicesandservices.health.v4.HealthProfileService.GetIdentity]).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10156,10 +10293,17 @@ namespace Google.DevicesAndServices.Health.V4 {
     private string parent_ = "";
     /// <summary>
     /// Optional. Parent (data type) for the Data Point collection
-    /// Format: `users/me/dataTypes/{data_type}`, e.g.:
+    ///
+    /// Format: `users/{user}/dataTypes/{data_type}`, e.g.:
     ///
     /// - `users/me/dataTypes/steps`
+    /// - `users/1234567890/dataTypes/steps`
     /// - `users/me/dataTypes/-`
+    /// - `users/1234567890/dataTypes/-`
+    ///
+    /// The `{user}` can be either the alias `me` or the authenticated user's
+    /// numeric Health User ID (retrieved via
+    /// [GetIdentity][google.devicesandservices.health.v4.HealthProfileService.GetIdentity]).
     ///
     /// For a list of the supported data types see the
     /// [DataPoint
@@ -10797,10 +10941,16 @@ namespace Google.DevicesAndServices.Health.V4 {
     /// <summary>
     /// Required. Parent data type of the Data Point collection.
     ///
-    /// Format: `users/me/dataTypes/{data_type}`, e.g.:
+    /// Format: `users/{user}/dataTypes/{data_type}`, e.g.:
     ///
     /// - `users/me/dataTypes/steps`
+    /// - `users/1234567890/dataTypes/steps`
     /// - `users/me/dataTypes/heart-rate`
+    /// - `users/1234567890/dataTypes/heart-rate`
+    ///
+    /// The `{user}` can be either the alias `me` or the authenticated user's
+    /// numeric Health User ID (retrieved via
+    /// [GetIdentity][google.devicesandservices.health.v4.HealthProfileService.GetIdentity]).
     ///
     /// For a list of the supported data types see the
     /// [DataPoint
@@ -10879,18 +11029,26 @@ namespace Google.DevicesAndServices.Health.V4 {
     ///
     /// If empty, data points from all data sources will be reconciled.
     ///
-    /// Format: `users/me/dataSourceFamilies/{data_source_family}`
+    /// Format: `users/{user}/dataSourceFamilies/{data_source_family}`
     ///
-    /// - `users/me/dataSourceFamilies/all-sources` - Default value. Includes data
-    /// from all available data sources.
-    /// - `users/me/dataSourceFamilies/google-wearables` - Includes data from
+    /// The `{user}` can be either the alias `me` or the authenticated user's
+    /// numeric Health User ID, retrieved via
+    /// [GetIdentity][google.devicesandservices.health.v4.HealthProfileService.GetIdentity]
+    /// (e.g. `users/me/dataSourceFamilies/...` or
+    /// `users/1234567890/dataSourceFamilies/...`).
+    ///
+    /// The supported values are:
+    ///
+    /// - `users/{user}/dataSourceFamilies/all-sources` - Default value. Includes
+    /// data from all available data sources.
+    /// - `users/{user}/dataSourceFamilies/google-wearables` - Includes data from
     /// Google and Fitbit tracker devices (such as Fitbit trackers and Pixel
     /// Watch). Excludes manually logged data.
-    /// - `users/me/dataSourceFamilies/google-sources` - Includes first-party
+    /// - `users/{user}/dataSourceFamilies/google-sources` - Includes first-party
     /// Google data, such as data from tracker devices, manually logged data, and
     /// Health Connect.
-    /// - `users/me/dataSourceFamilies/self-sources` - Includes only the data the
-    /// calling client wrote through this API, that is, data points whose data
+    /// - `users/{user}/dataSourceFamilies/self-sources` - Includes only the data
+    /// the calling client wrote through this API, that is, data points whose data
     /// source was registered through this API with the same OAuth client ID as
     /// the caller.
     ///
@@ -11443,7 +11601,13 @@ namespace Google.DevicesAndServices.Health.V4 {
     /// Format: `users/{user}/dataTypes/{data_type}`, e.g.:
     ///
     /// - `users/me/dataTypes/steps`
+    /// - `users/1234567890/dataTypes/steps`
     /// - `users/me/dataTypes/distance`
+    /// - `users/1234567890/dataTypes/distance`
+    ///
+    /// The `{user}` can be either the alias `me` or the authenticated user's
+    /// numeric Health User ID (retrieved via
+    /// [GetIdentity][google.devicesandservices.health.v4.HealthProfileService.GetIdentity]).
     ///
     /// For a list of the supported data types see the [RollupDataPoint
     /// value][google.devicesandservices.health.v4.RollupDataPoint]
@@ -11539,20 +11703,26 @@ namespace Google.DevicesAndServices.Health.V4 {
     ///
     /// If empty, data points from all available data sources will be rolled up.
     ///
-    /// Format: `users/me/dataSourceFamilies/{data_source_family}`
+    /// Format: `users/{user}/dataSourceFamilies/{data_source_family}`
+    ///
+    /// The `{user}` can be either the alias `me` or the authenticated user's
+    /// numeric Health User ID, retrieved via
+    /// [GetIdentity][google.devicesandservices.health.v4.HealthProfileService.GetIdentity]
+    /// (e.g. `users/me/dataSourceFamilies/...` or
+    /// `users/1234567890/dataSourceFamilies/...`).
     ///
     /// The supported values are:
     ///
-    /// - `users/me/dataSourceFamilies/all-sources` - Default value. Includes data
-    /// from all available data sources.
-    /// - `users/me/dataSourceFamilies/google-wearables` - Includes data from
+    /// - `users/{user}/dataSourceFamilies/all-sources` - Default value. Includes
+    /// data from all available data sources.
+    /// - `users/{user}/dataSourceFamilies/google-wearables` - Includes data from
     /// Google and Fitbit tracker devices (such as Fitbit trackers and Pixel
     /// Watch). Excludes manually logged data.
-    /// - `users/me/dataSourceFamilies/google-sources` - Includes first-party
+    /// - `users/{user}/dataSourceFamilies/google-sources` - Includes first-party
     /// Google data, such as data from tracker devices, manually logged data, and
     /// Health Connect.
-    /// - `users/me/dataSourceFamilies/self-sources` - Includes only the data the
-    /// calling client wrote through this API, that is, data points whose data
+    /// - `users/{user}/dataSourceFamilies/self-sources` - Includes only the data
+    /// the calling client wrote through this API, that is, data points whose data
     /// source was registered through this API with the same OAuth client ID as
     /// the caller.
     ///
@@ -12148,7 +12318,13 @@ namespace Google.DevicesAndServices.Health.V4 {
     /// Format: `users/{user}/dataTypes/{data_type}`, e.g.:
     ///
     /// - `users/me/dataTypes/steps`
+    /// - `users/1234567890/dataTypes/steps`
     /// - `users/me/dataTypes/distance`
+    /// - `users/1234567890/dataTypes/distance`
+    ///
+    /// The `{user}` can be either the alias `me` or the authenticated user's
+    /// numeric Health User ID (retrieved via
+    /// [GetIdentity][google.devicesandservices.health.v4.HealthProfileService.GetIdentity]).
     ///
     /// For a list of the supported data types see the [DailyRollupDataPoint
     /// value][google.devicesandservices.health.v4.DailyRollupDataPoint]
@@ -12207,9 +12383,10 @@ namespace Google.DevicesAndServices.Health.V4 {
     private int pageSize_;
     /// <summary>
     /// Optional. The maximum number of data points to return.
-    /// If unspecified, at most 1440 data points will be returned.
-    /// The maximum page size is 10000; values above that will be truncated
-    /// accordingly.
+    /// If unspecified, at most `90` data points will be returned.
+    /// The maximum page size is `90`.
+    /// For `calories-in-heart-rate-zone`, `heart-rate`, `active-minutes`, and
+    /// `total-calories`, the default and maximum page size is `14`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12224,7 +12401,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     public const int PageTokenFieldNumber = 5;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. The `next_page_token` from a previous request, if any.
+    /// Optional. The next_page_token from a previous request, if any.
     /// All other request fields need to be the same as in the initial request
     /// when the page token is specified.
     /// </summary>
@@ -12244,20 +12421,26 @@ namespace Google.DevicesAndServices.Health.V4 {
     /// Optional. The data source family name to roll up.
     /// If empty, data points from all available data sources will be rolled up.
     ///
-    /// Format: `users/me/dataSourceFamilies/{data_source_family}`
+    /// Format: `users/{user}/dataSourceFamilies/{data_source_family}`
+    ///
+    /// The `{user}` can be either the alias `me` or the authenticated user's
+    /// numeric Health User ID, retrieved via
+    /// [GetIdentity][google.devicesandservices.health.v4.HealthProfileService.GetIdentity]
+    /// (e.g. `users/me/dataSourceFamilies/...` or
+    /// `users/1234567890/dataSourceFamilies/...`).
     ///
     /// The supported values are:
     ///
-    /// - `users/me/dataSourceFamilies/all-sources` - Default value. Includes data
-    /// from all available data sources.
-    /// - `users/me/dataSourceFamilies/google-wearables` - Includes data from
+    /// - `users/{user}/dataSourceFamilies/all-sources` - Default value. Includes
+    /// data from all available data sources.
+    /// - `users/{user}/dataSourceFamilies/google-wearables` - Includes data from
     /// Google and Fitbit tracker devices (such as Fitbit trackers and Pixel
     /// Watch). Excludes manually logged data.
-    /// - `users/me/dataSourceFamilies/google-sources` - Includes first-party
+    /// - `users/{user}/dataSourceFamilies/google-sources` - Includes first-party
     /// Google data, such as data from tracker devices, manually logged data, and
     /// Health Connect.
-    /// - `users/me/dataSourceFamilies/self-sources` - Includes only the data the
-    /// calling client wrote through this API, that is, data points whose data
+    /// - `users/{user}/dataSourceFamilies/self-sources` - Includes only the data
+    /// the calling client wrote through this API, that is, data points whose data
     /// source was registered through this API with the same OAuth client ID as
     /// the caller.
     ///
@@ -12587,6 +12770,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DailyRollUpDataPointsResponse(DailyRollUpDataPointsResponse other) : this() {
       rollupDataPoints_ = other.rollupDataPoints_.Clone();
+      nextPageToken_ = other.nextPageToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -12610,6 +12794,22 @@ namespace Google.DevicesAndServices.Health.V4 {
       get { return rollupDataPoints_; }
     }
 
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// A token, which can be sent as `page_token` to retrieve the next page.
+    /// If this field is omitted, there are no subsequent pages.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -12626,6 +12826,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         return true;
       }
       if(!rollupDataPoints_.Equals(other.rollupDataPoints_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -12634,6 +12835,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= rollupDataPoints_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -12653,6 +12855,10 @@ namespace Google.DevicesAndServices.Health.V4 {
       output.WriteRawMessage(this);
     #else
       rollupDataPoints_.WriteTo(output, _repeated_rollupDataPoints_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -12664,6 +12870,10 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       rollupDataPoints_.WriteTo(ref output, _repeated_rollupDataPoints_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -12675,6 +12885,9 @@ namespace Google.DevicesAndServices.Health.V4 {
     public int CalculateSize() {
       int size = 0;
       size += rollupDataPoints_.CalculateSize(_repeated_rollupDataPoints_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -12688,6 +12901,9 @@ namespace Google.DevicesAndServices.Health.V4 {
         return;
       }
       rollupDataPoints_.Add(other.rollupDataPoints_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -12711,6 +12927,10 @@ namespace Google.DevicesAndServices.Health.V4 {
             rollupDataPoints_.AddEntriesFrom(input, _repeated_rollupDataPoints_codec);
             break;
           }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -12732,6 +12952,10 @@ namespace Google.DevicesAndServices.Health.V4 {
             break;
           case 10: {
             rollupDataPoints_.AddEntriesFrom(ref input, _repeated_rollupDataPoints_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
             break;
           }
         }
@@ -12799,7 +13023,14 @@ namespace Google.DevicesAndServices.Health.V4 {
     /// <summary>
     /// Identifier. The resource name of the data type.
     ///
-    /// Format: `users/{user}/dataTypes/{data_type}`
+    /// Format: `users/{user}/dataTypes/{data_type}`, e.g.:
+    ///
+    /// - `users/me/dataTypes/steps`
+    /// - `users/1234567890/dataTypes/steps`
+    ///
+    /// The `{user}` can be either the alias `me` or the authenticated user's
+    /// numeric Health User ID (retrieved via
+    /// [GetIdentity][google.devicesandservices.health.v4.HealthProfileService.GetIdentity]).
     ///
     /// See
     /// [DataPoint.name][google.devicesandservices.health.v4.DataPoint.name]
@@ -13011,10 +13242,14 @@ namespace Google.DevicesAndServices.Health.V4 {
     /// Required. The resource name of the exercise data point to export.
     ///
     /// Format: `users/{user}/dataTypes/exercise/dataPoints/{data_point}`
-    /// Example: `users/me/dataTypes/exercise/dataPoints/2026443605080188808`
     ///
-    /// The `{user}` is the alias `"me"` currently. Future versions may support
-    /// user IDs.
+    /// Examples:
+    /// - `users/me/dataTypes/exercise/dataPoints/2026443605080188808`
+    /// - `users/1234567890/dataTypes/exercise/dataPoints/2026443605080188808`
+    ///
+    /// The `{user}` can be either the alias `me` or the authenticated user's
+    /// numeric Health User ID (retrieved via
+    /// [GetIdentity][google.devicesandservices.health.v4.HealthProfileService.GetIdentity]).
     /// The `{data_point}` ID maps to the exercise ID, which is a long integer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
