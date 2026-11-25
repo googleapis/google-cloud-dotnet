@@ -873,13 +873,7 @@ public sealed partial class SubscriberClientImpl
 
                     if (hasExtendIds)
                     {
-                        if (IsReceiptModAckResponse(ids, hasExtendIds))
-                        {
-                            // Extends being retried for receipt ModAck.
-                            // Update all temporary and permanent failures.
-                            UpdateModAckStatus(ids, ackError);
-                        }
-
+                        TryUpdateReceiptModAckStatus(ids, ackError);
                         RetryExtends(extendIds, ackError);
                     }
                 }
@@ -893,14 +887,11 @@ public sealed partial class SubscriberClientImpl
             {
                 // Everything succeeded. Update _retryableIds dictionary.
                 UpdateRetryableIds(ids, default);
-
-                if (IsReceiptModAckResponse(ids, hasExtendIds))
-                {
-                    // Everything succeeded for receipt ModAcks, so update the status as success and set the event.
-                    UpdateModAckStatus(ids, default);
-                    _eventReceiptModAckForExactlyOnceDelivery.Set();
-                }
+                TryUpdateReceiptModAckStatus(ids, default);
             }
+
+            // Signal if all receipt ModAcks in the current batch have reached a final status.
+            TrySignalReceiptModAckComplete();
 
             // Perform push so that other messages can be processed.
             StartPush();
@@ -941,13 +932,6 @@ public sealed partial class SubscriberClientImpl
                 {
                     // Retry for 10 seconds or 3 attempts only.
                     RetryTemporaryFailures(Enumerable.Empty<string>(), null, extendIdsToRetry, extendsToRetry => _extendQueue.Locked(() => _extendQueue.Requeue(extendsToRetry)), 10);
-                }
-                else if (IsReceiptModAckResponse(extendIds.Select(j => j.Id), true))
-                {
-                    // If we are here, it means we have no retryable error for the receipt ModAcks at this time.
-                    // Failures are already updated in the _receiptModAckStatusLookup dictionary.
-                    // Set the signal that receipt ModAck event is done.
-                    _eventReceiptModAckForExactlyOnceDelivery.Set();
                 }
             }
 
@@ -1003,14 +987,6 @@ public sealed partial class SubscriberClientImpl
                     retriesToSchedule.Add((candidateRetryId, retryInfo));
                 }
 
-                if (IsReceiptModAckResponse(idsToRetry, hasExtends) && !retriesToSchedule.Any(j => _receiptModAckStatusLookup.ContainsKey(j.id)))
-                {
-                    // If we are here, it means that we are retrying temporary failures of receipt ModAcks for exactly once delivery,
-                    // and the temporary error is no longer retryable as the retry timeout has expired.
-                    // Signal that receipt ModAck event has completed.
-                    _eventReceiptModAckForExactlyOnceDelivery.Set();
-                }
-
                 // We can have ids with different backoff values.
                 // Group on the backoff and add them to the corresponding queue in the increasing order of backoff.
                 var retryGroups = retriesToSchedule.GroupBy(info => info.info.Backoff).OrderBy(group => group.Key);
@@ -1058,19 +1034,24 @@ public sealed partial class SubscriberClientImpl
 
             // This local method is used exclusively for exactly-once delivery flow.
             // It updates the `_receiptModAckStatusLookup` dictionary with the latest receipt ModAck response status for each Ack ID.
-            void UpdateModAckStatus(IEnumerable<string> allIds, AckError ackError)
+            void TryUpdateReceiptModAckStatus(IEnumerable<string> allIds, AckError ackError)
             {
+                if (!IsReceiptModAckResponse(allIds, hasExtendIds))
+                {
+                    return;
+                }
+
                 var permanentFailureIds = ackError?.PermanentFailureIds ?? Enumerable.Empty<string>();
                 var temporaryFailureIds = ackError?.TemporaryFailureIds ?? Enumerable.Empty<string>();
                 var allFailureIds = permanentFailureIds.Concat(temporaryFailureIds);
                 // Successful Ids = AllIds - (TemporaryFailures + Permanent failures)
                 var successfulIds = allIds.Except(allFailureIds);
 
-                // Update failed status. The value of false represents failure.
-                UpdateReceiptModAckStatus(allFailureIds, false);
-
-                // Update success status. The value of true represents success.
-                UpdateReceiptModAckStatus(successfulIds, true);
+                // Update failed (false) and successful (true) statuses only for IDs in _receiptModAckStatusLookup.
+                // An extend RPC can also include periodic renewals for still-in-flight messages from earlier batches,
+                // which must not be added to the current batch's lookup.
+                UpdateReceiptModAckStatus(allFailureIds.Where(_receiptModAckStatusLookup.ContainsKey), status: false);
+                UpdateReceiptModAckStatus(successfulIds.Where(_receiptModAckStatusLookup.ContainsKey), status: true);
             }
 
             // This local method is used to determine if the current response is for receipt ModAck. It is used exclusively for exactly-once delivery.
@@ -1080,6 +1061,18 @@ public sealed partial class SubscriberClientImpl
             // 3. The response contains at least one Ack ID that is present in the `_receiptModAckStatusLookup` dictionary. This condition helps reduce reduce noise due to extends that may occur simultaneously with receipt ModAck.
             bool IsReceiptModAckResponse(IEnumerable<string> allIds, bool hasExtends) =>
                 hasExtends && _receiptModAckForExactlyOnceDelivery && allIds.Any(_receiptModAckStatusLookup.ContainsKey);
+
+            void TrySignalReceiptModAckComplete()
+            {
+                if (IsReceiptModAckResponse(ids, hasExtendIds) &&
+                    // Every modack has a status (non-null) of success or permanent failure (no active retries).
+                    _receiptModAckStatusLookup.All(kv => kv.Value.HasValue && !_retryableIds.ContainsKey(kv.Key)))
+                {
+                    // Clear the flag before signaling so later responses cannot signal twice.
+                    _receiptModAckForExactlyOnceDelivery = false;
+                    _eventReceiptModAckForExactlyOnceDelivery.Set();
+                }
+            }
         }
 
         private void HandleAckResponse(Task writeTask, List<string> ackIds, List<string> nackIds, List<TimedId> extendIds)
