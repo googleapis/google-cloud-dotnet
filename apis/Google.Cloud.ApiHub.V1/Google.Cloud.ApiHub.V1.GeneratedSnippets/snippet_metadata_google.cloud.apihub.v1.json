@@ -3722,6 +3722,309 @@
       ]
     },
     {
+      "regionTag": "apihub_v1_generated_ApiHub_FetchAdditionalSpecContent_sync",
+      "title": "FetchAdditionalSpecContentRequestObject",
+      "description": "Snippet for FetchAdditionalSpecContent",
+      "file": "ApiHubClient.FetchAdditionalSpecContentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchAdditionalSpecContent",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient.FetchAdditionalSpecContent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentResponse",
+        "client": {
+          "shortName": "ApiHubClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient"
+        },
+        "method": {
+          "shortName": "FetchAdditionalSpecContent",
+          "fullName": "google.cloud.apihub.v1.ApiHub.FetchAdditionalSpecContent",
+          "service": {
+            "shortName": "ApiHub",
+            "fullName": "google.cloud.apihub.v1.ApiHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHub_FetchAdditionalSpecContent_async",
+      "title": "FetchAdditionalSpecContentRequestObjectAsync",
+      "description": "Snippet for FetchAdditionalSpecContentAsync",
+      "file": "ApiHubClient.FetchAdditionalSpecContentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchAdditionalSpecContentAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient.FetchAdditionalSpecContentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentResponse>",
+        "client": {
+          "shortName": "ApiHubClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient"
+        },
+        "method": {
+          "shortName": "FetchAdditionalSpecContent",
+          "fullName": "google.cloud.apihub.v1.ApiHub.FetchAdditionalSpecContent",
+          "service": {
+            "shortName": "ApiHub",
+            "fullName": "google.cloud.apihub.v1.ApiHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHub_FetchAdditionalSpecContent_sync_flattened",
+      "title": "FetchAdditionalSpecContent",
+      "description": "Snippet for FetchAdditionalSpecContent",
+      "file": "ApiHubClient.FetchAdditionalSpecContentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchAdditionalSpecContent",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient.FetchAdditionalSpecContent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.SpecContentType",
+            "name": "specContentType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentResponse",
+        "client": {
+          "shortName": "ApiHubClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient"
+        },
+        "method": {
+          "shortName": "FetchAdditionalSpecContent",
+          "fullName": "google.cloud.apihub.v1.ApiHub.FetchAdditionalSpecContent",
+          "service": {
+            "shortName": "ApiHub",
+            "fullName": "google.cloud.apihub.v1.ApiHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHub_FetchAdditionalSpecContent_async_flattened",
+      "title": "FetchAdditionalSpecContentAsync",
+      "description": "Snippet for FetchAdditionalSpecContentAsync",
+      "file": "ApiHubClient.FetchAdditionalSpecContentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchAdditionalSpecContentAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient.FetchAdditionalSpecContentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.SpecContentType",
+            "name": "specContentType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentResponse>",
+        "client": {
+          "shortName": "ApiHubClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient"
+        },
+        "method": {
+          "shortName": "FetchAdditionalSpecContent",
+          "fullName": "google.cloud.apihub.v1.ApiHub.FetchAdditionalSpecContent",
+          "service": {
+            "shortName": "ApiHub",
+            "fullName": "google.cloud.apihub.v1.ApiHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHub_FetchAdditionalSpecContent_sync_flattened_resourceNames",
+      "title": "FetchAdditionalSpecContentResourceNames",
+      "description": "Snippet for FetchAdditionalSpecContent",
+      "file": "ApiHubClient.FetchAdditionalSpecContentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchAdditionalSpecContent",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient.FetchAdditionalSpecContent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.SpecName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.SpecContentType",
+            "name": "specContentType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentResponse",
+        "client": {
+          "shortName": "ApiHubClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient"
+        },
+        "method": {
+          "shortName": "FetchAdditionalSpecContent",
+          "fullName": "google.cloud.apihub.v1.ApiHub.FetchAdditionalSpecContent",
+          "service": {
+            "shortName": "ApiHub",
+            "fullName": "google.cloud.apihub.v1.ApiHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHub_FetchAdditionalSpecContent_async_flattened_resourceNames",
+      "title": "FetchAdditionalSpecContentResourceNamesAsync",
+      "description": "Snippet for FetchAdditionalSpecContentAsync",
+      "file": "ApiHubClient.FetchAdditionalSpecContentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchAdditionalSpecContentAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient.FetchAdditionalSpecContentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.SpecName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.SpecContentType",
+            "name": "specContentType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentResponse>",
+        "client": {
+          "shortName": "ApiHubClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient"
+        },
+        "method": {
+          "shortName": "FetchAdditionalSpecContent",
+          "fullName": "google.cloud.apihub.v1.ApiHub.FetchAdditionalSpecContent",
+          "service": {
+            "shortName": "ApiHub",
+            "fullName": "google.cloud.apihub.v1.ApiHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "apihub_v1_generated_ApiHub_ListSpecs_sync",
       "title": "ListSpecsRequestObject",
       "description": "Snippet for ListSpecs",
@@ -10765,6 +11068,1553 @@
           "service": {
             "shortName": "ApiHub",
             "fullName": "google.cloud.apihub.v1.ApiHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHub_RetrieveApiViews_sync",
+      "title": "RetrieveApiViewsRequestObject",
+      "description": "Snippet for RetrieveApiViews",
+      "file": "ApiHubClient.RetrieveApiViewsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveApiViews",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient.RetrieveApiViews",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.RetrieveApiViewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiHub.V1.RetrieveApiViewsResponse, Google.Cloud.ApiHub.V1.ApiView>",
+        "client": {
+          "shortName": "ApiHubClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient"
+        },
+        "method": {
+          "shortName": "RetrieveApiViews",
+          "fullName": "google.cloud.apihub.v1.ApiHub.RetrieveApiViews",
+          "service": {
+            "shortName": "ApiHub",
+            "fullName": "google.cloud.apihub.v1.ApiHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHub_RetrieveApiViews_async",
+      "title": "RetrieveApiViewsRequestObjectAsync",
+      "description": "Snippet for RetrieveApiViewsAsync",
+      "file": "ApiHubClient.RetrieveApiViewsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveApiViewsAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient.RetrieveApiViewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.RetrieveApiViewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiHub.V1.RetrieveApiViewsResponse, Google.Cloud.ApiHub.V1.ApiView>",
+        "client": {
+          "shortName": "ApiHubClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient"
+        },
+        "method": {
+          "shortName": "RetrieveApiViews",
+          "fullName": "google.cloud.apihub.v1.ApiHub.RetrieveApiViews",
+          "service": {
+            "shortName": "ApiHub",
+            "fullName": "google.cloud.apihub.v1.ApiHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHub_RetrieveApiViews_sync_flattened",
+      "title": "RetrieveApiViews",
+      "description": "Snippet for RetrieveApiViews",
+      "file": "ApiHubClient.RetrieveApiViewsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveApiViews",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient.RetrieveApiViews",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.ApiViewType",
+            "name": "view"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiHub.V1.RetrieveApiViewsResponse, Google.Cloud.ApiHub.V1.ApiView>",
+        "client": {
+          "shortName": "ApiHubClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient"
+        },
+        "method": {
+          "shortName": "RetrieveApiViews",
+          "fullName": "google.cloud.apihub.v1.ApiHub.RetrieveApiViews",
+          "service": {
+            "shortName": "ApiHub",
+            "fullName": "google.cloud.apihub.v1.ApiHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHub_RetrieveApiViews_async_flattened",
+      "title": "RetrieveApiViewsAsync",
+      "description": "Snippet for RetrieveApiViewsAsync",
+      "file": "ApiHubClient.RetrieveApiViewsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveApiViewsAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient.RetrieveApiViewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.ApiViewType",
+            "name": "view"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiHub.V1.RetrieveApiViewsResponse, Google.Cloud.ApiHub.V1.ApiView>",
+        "client": {
+          "shortName": "ApiHubClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient"
+        },
+        "method": {
+          "shortName": "RetrieveApiViews",
+          "fullName": "google.cloud.apihub.v1.ApiHub.RetrieveApiViews",
+          "service": {
+            "shortName": "ApiHub",
+            "fullName": "google.cloud.apihub.v1.ApiHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHub_RetrieveApiViews_sync_flattened_resourceNames",
+      "title": "RetrieveApiViewsResourceNames",
+      "description": "Snippet for RetrieveApiViews",
+      "file": "ApiHubClient.RetrieveApiViewsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveApiViews",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient.RetrieveApiViews",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.ApiViewType",
+            "name": "view"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiHub.V1.RetrieveApiViewsResponse, Google.Cloud.ApiHub.V1.ApiView>",
+        "client": {
+          "shortName": "ApiHubClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient"
+        },
+        "method": {
+          "shortName": "RetrieveApiViews",
+          "fullName": "google.cloud.apihub.v1.ApiHub.RetrieveApiViews",
+          "service": {
+            "shortName": "ApiHub",
+            "fullName": "google.cloud.apihub.v1.ApiHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHub_RetrieveApiViews_async_flattened_resourceNames",
+      "title": "RetrieveApiViewsResourceNamesAsync",
+      "description": "Snippet for RetrieveApiViewsAsync",
+      "file": "ApiHubClient.RetrieveApiViewsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveApiViewsAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient.RetrieveApiViewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.ApiViewType",
+            "name": "view"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiHub.V1.RetrieveApiViewsResponse, Google.Cloud.ApiHub.V1.ApiView>",
+        "client": {
+          "shortName": "ApiHubClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient"
+        },
+        "method": {
+          "shortName": "RetrieveApiViews",
+          "fullName": "google.cloud.apihub.v1.ApiHub.RetrieveApiViews",
+          "service": {
+            "shortName": "ApiHub",
+            "fullName": "google.cloud.apihub.v1.ApiHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHub_ConfigureAndDeployServer_sync",
+      "title": "ConfigureAndDeployServerRequestObject",
+      "description": "Snippet for ConfigureAndDeployServer",
+      "file": "ApiHubClient.ConfigureAndDeployServerRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ConfigureAndDeployServer",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient.ConfigureAndDeployServer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.ConfigureAndDeployServerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiHub.V1.ConfigureAndDeployServerResponse, Google.Cloud.ApiHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ApiHubClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient"
+        },
+        "method": {
+          "shortName": "ConfigureAndDeployServer",
+          "fullName": "google.cloud.apihub.v1.ApiHub.ConfigureAndDeployServer",
+          "service": {
+            "shortName": "ApiHub",
+            "fullName": "google.cloud.apihub.v1.ApiHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHub_ConfigureAndDeployServer_async",
+      "title": "ConfigureAndDeployServerRequestObjectAsync",
+      "description": "Snippet for ConfigureAndDeployServerAsync",
+      "file": "ApiHubClient.ConfigureAndDeployServerRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ConfigureAndDeployServerAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient.ConfigureAndDeployServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.ConfigureAndDeployServerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiHub.V1.ConfigureAndDeployServerResponse, Google.Cloud.ApiHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ApiHubClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient"
+        },
+        "method": {
+          "shortName": "ConfigureAndDeployServer",
+          "fullName": "google.cloud.apihub.v1.ApiHub.ConfigureAndDeployServer",
+          "service": {
+            "shortName": "ApiHub",
+            "fullName": "google.cloud.apihub.v1.ApiHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHub_ConfigureAndDeployServer_sync_flattened",
+      "title": "ConfigureAndDeployServer",
+      "description": "Snippet for ConfigureAndDeployServer",
+      "file": "ApiHubClient.ConfigureAndDeployServerSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ConfigureAndDeployServer",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient.ConfigureAndDeployServer",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.McpServerConfig",
+            "name": "mcpServerConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiHub.V1.ConfigureAndDeployServerResponse, Google.Cloud.ApiHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ApiHubClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient"
+        },
+        "method": {
+          "shortName": "ConfigureAndDeployServer",
+          "fullName": "google.cloud.apihub.v1.ApiHub.ConfigureAndDeployServer",
+          "service": {
+            "shortName": "ApiHub",
+            "fullName": "google.cloud.apihub.v1.ApiHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHub_ConfigureAndDeployServer_async_flattened",
+      "title": "ConfigureAndDeployServerAsync",
+      "description": "Snippet for ConfigureAndDeployServerAsync",
+      "file": "ApiHubClient.ConfigureAndDeployServerAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ConfigureAndDeployServerAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient.ConfigureAndDeployServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.McpServerConfig",
+            "name": "mcpServerConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiHub.V1.ConfigureAndDeployServerResponse, Google.Cloud.ApiHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ApiHubClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient"
+        },
+        "method": {
+          "shortName": "ConfigureAndDeployServer",
+          "fullName": "google.cloud.apihub.v1.ApiHub.ConfigureAndDeployServer",
+          "service": {
+            "shortName": "ApiHub",
+            "fullName": "google.cloud.apihub.v1.ApiHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHub_ConfigureAndDeployServer_sync_flattened_resourceNames",
+      "title": "ConfigureAndDeployServerResourceNames",
+      "description": "Snippet for ConfigureAndDeployServer",
+      "file": "ApiHubClient.ConfigureAndDeployServerResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ConfigureAndDeployServer",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient.ConfigureAndDeployServer",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.McpServerConfig",
+            "name": "mcpServerConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiHub.V1.ConfigureAndDeployServerResponse, Google.Cloud.ApiHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ApiHubClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient"
+        },
+        "method": {
+          "shortName": "ConfigureAndDeployServer",
+          "fullName": "google.cloud.apihub.v1.ApiHub.ConfigureAndDeployServer",
+          "service": {
+            "shortName": "ApiHub",
+            "fullName": "google.cloud.apihub.v1.ApiHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHub_ConfigureAndDeployServer_async_flattened_resourceNames",
+      "title": "ConfigureAndDeployServerResourceNamesAsync",
+      "description": "Snippet for ConfigureAndDeployServerAsync",
+      "file": "ApiHubClient.ConfigureAndDeployServerResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ConfigureAndDeployServerAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient.ConfigureAndDeployServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.McpServerConfig",
+            "name": "mcpServerConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiHub.V1.ConfigureAndDeployServerResponse, Google.Cloud.ApiHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ApiHubClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubClient"
+        },
+        "method": {
+          "shortName": "ConfigureAndDeployServer",
+          "fullName": "google.cloud.apihub.v1.ApiHub.ConfigureAndDeployServer",
+          "service": {
+            "shortName": "ApiHub",
+            "fullName": "google.cloud.apihub.v1.ApiHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubAddon_GetAddon_sync",
+      "title": "GetAddonRequestObject",
+      "description": "Snippet for GetAddon",
+      "file": "ApiHubAddonClient.GetAddonRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAddon",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient.GetAddon",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.GetAddonRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ApiHub.V1.Addon",
+        "client": {
+          "shortName": "ApiHubAddonClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient"
+        },
+        "method": {
+          "shortName": "GetAddon",
+          "fullName": "google.cloud.apihub.v1.ApiHubAddon.GetAddon",
+          "service": {
+            "shortName": "ApiHubAddon",
+            "fullName": "google.cloud.apihub.v1.ApiHubAddon"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubAddon_GetAddon_async",
+      "title": "GetAddonRequestObjectAsync",
+      "description": "Snippet for GetAddonAsync",
+      "file": "ApiHubAddonClient.GetAddonRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAddonAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient.GetAddonAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.GetAddonRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiHub.V1.Addon>",
+        "client": {
+          "shortName": "ApiHubAddonClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient"
+        },
+        "method": {
+          "shortName": "GetAddon",
+          "fullName": "google.cloud.apihub.v1.ApiHubAddon.GetAddon",
+          "service": {
+            "shortName": "ApiHubAddon",
+            "fullName": "google.cloud.apihub.v1.ApiHubAddon"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubAddon_GetAddon_sync_flattened",
+      "title": "GetAddon",
+      "description": "Snippet for GetAddon",
+      "file": "ApiHubAddonClient.GetAddonSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAddon",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient.GetAddon",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ApiHub.V1.Addon",
+        "client": {
+          "shortName": "ApiHubAddonClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient"
+        },
+        "method": {
+          "shortName": "GetAddon",
+          "fullName": "google.cloud.apihub.v1.ApiHubAddon.GetAddon",
+          "service": {
+            "shortName": "ApiHubAddon",
+            "fullName": "google.cloud.apihub.v1.ApiHubAddon"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubAddon_GetAddon_async_flattened",
+      "title": "GetAddonAsync",
+      "description": "Snippet for GetAddonAsync",
+      "file": "ApiHubAddonClient.GetAddonAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAddonAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient.GetAddonAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiHub.V1.Addon>",
+        "client": {
+          "shortName": "ApiHubAddonClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient"
+        },
+        "method": {
+          "shortName": "GetAddon",
+          "fullName": "google.cloud.apihub.v1.ApiHubAddon.GetAddon",
+          "service": {
+            "shortName": "ApiHubAddon",
+            "fullName": "google.cloud.apihub.v1.ApiHubAddon"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubAddon_GetAddon_sync_flattened_resourceNames",
+      "title": "GetAddonResourceNames",
+      "description": "Snippet for GetAddon",
+      "file": "ApiHubAddonClient.GetAddonResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAddon",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient.GetAddon",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.AddonName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ApiHub.V1.Addon",
+        "client": {
+          "shortName": "ApiHubAddonClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient"
+        },
+        "method": {
+          "shortName": "GetAddon",
+          "fullName": "google.cloud.apihub.v1.ApiHubAddon.GetAddon",
+          "service": {
+            "shortName": "ApiHubAddon",
+            "fullName": "google.cloud.apihub.v1.ApiHubAddon"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubAddon_GetAddon_async_flattened_resourceNames",
+      "title": "GetAddonResourceNamesAsync",
+      "description": "Snippet for GetAddonAsync",
+      "file": "ApiHubAddonClient.GetAddonResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAddonAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient.GetAddonAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.AddonName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiHub.V1.Addon>",
+        "client": {
+          "shortName": "ApiHubAddonClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient"
+        },
+        "method": {
+          "shortName": "GetAddon",
+          "fullName": "google.cloud.apihub.v1.ApiHubAddon.GetAddon",
+          "service": {
+            "shortName": "ApiHubAddon",
+            "fullName": "google.cloud.apihub.v1.ApiHubAddon"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubAddon_ManageAddonConfig_sync",
+      "title": "ManageAddonConfigRequestObject",
+      "description": "Snippet for ManageAddonConfig",
+      "file": "ApiHubAddonClient.ManageAddonConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ManageAddonConfig",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient.ManageAddonConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.ManageAddonConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiHub.V1.Addon, Google.Cloud.ApiHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ApiHubAddonClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient"
+        },
+        "method": {
+          "shortName": "ManageAddonConfig",
+          "fullName": "google.cloud.apihub.v1.ApiHubAddon.ManageAddonConfig",
+          "service": {
+            "shortName": "ApiHubAddon",
+            "fullName": "google.cloud.apihub.v1.ApiHubAddon"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubAddon_ManageAddonConfig_async",
+      "title": "ManageAddonConfigRequestObjectAsync",
+      "description": "Snippet for ManageAddonConfigAsync",
+      "file": "ApiHubAddonClient.ManageAddonConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ManageAddonConfigAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient.ManageAddonConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.ManageAddonConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiHub.V1.Addon, Google.Cloud.ApiHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ApiHubAddonClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient"
+        },
+        "method": {
+          "shortName": "ManageAddonConfig",
+          "fullName": "google.cloud.apihub.v1.ApiHubAddon.ManageAddonConfig",
+          "service": {
+            "shortName": "ApiHubAddon",
+            "fullName": "google.cloud.apihub.v1.ApiHubAddon"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubAddon_ManageAddonConfig_sync_flattened",
+      "title": "ManageAddonConfig",
+      "description": "Snippet for ManageAddonConfig",
+      "file": "ApiHubAddonClient.ManageAddonConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ManageAddonConfig",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient.ManageAddonConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.AddonConfig",
+            "name": "config"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiHub.V1.Addon, Google.Cloud.ApiHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ApiHubAddonClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient"
+        },
+        "method": {
+          "shortName": "ManageAddonConfig",
+          "fullName": "google.cloud.apihub.v1.ApiHubAddon.ManageAddonConfig",
+          "service": {
+            "shortName": "ApiHubAddon",
+            "fullName": "google.cloud.apihub.v1.ApiHubAddon"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubAddon_ManageAddonConfig_async_flattened",
+      "title": "ManageAddonConfigAsync",
+      "description": "Snippet for ManageAddonConfigAsync",
+      "file": "ApiHubAddonClient.ManageAddonConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ManageAddonConfigAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient.ManageAddonConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.AddonConfig",
+            "name": "config"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiHub.V1.Addon, Google.Cloud.ApiHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ApiHubAddonClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient"
+        },
+        "method": {
+          "shortName": "ManageAddonConfig",
+          "fullName": "google.cloud.apihub.v1.ApiHubAddon.ManageAddonConfig",
+          "service": {
+            "shortName": "ApiHubAddon",
+            "fullName": "google.cloud.apihub.v1.ApiHubAddon"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubAddon_ManageAddonConfig_sync_flattened_resourceNames",
+      "title": "ManageAddonConfigResourceNames",
+      "description": "Snippet for ManageAddonConfig",
+      "file": "ApiHubAddonClient.ManageAddonConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ManageAddonConfig",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient.ManageAddonConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.AddonName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.AddonConfig",
+            "name": "config"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiHub.V1.Addon, Google.Cloud.ApiHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ApiHubAddonClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient"
+        },
+        "method": {
+          "shortName": "ManageAddonConfig",
+          "fullName": "google.cloud.apihub.v1.ApiHubAddon.ManageAddonConfig",
+          "service": {
+            "shortName": "ApiHubAddon",
+            "fullName": "google.cloud.apihub.v1.ApiHubAddon"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubAddon_ManageAddonConfig_async_flattened_resourceNames",
+      "title": "ManageAddonConfigResourceNamesAsync",
+      "description": "Snippet for ManageAddonConfigAsync",
+      "file": "ApiHubAddonClient.ManageAddonConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ManageAddonConfigAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient.ManageAddonConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.AddonName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.AddonConfig",
+            "name": "config"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiHub.V1.Addon, Google.Cloud.ApiHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ApiHubAddonClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient"
+        },
+        "method": {
+          "shortName": "ManageAddonConfig",
+          "fullName": "google.cloud.apihub.v1.ApiHubAddon.ManageAddonConfig",
+          "service": {
+            "shortName": "ApiHubAddon",
+            "fullName": "google.cloud.apihub.v1.ApiHubAddon"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubAddon_ListAddons_sync",
+      "title": "ListAddonsRequestObject",
+      "description": "Snippet for ListAddons",
+      "file": "ApiHubAddonClient.ListAddonsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAddons",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient.ListAddons",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.ListAddonsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiHub.V1.ListAddonsResponse, Google.Cloud.ApiHub.V1.Addon>",
+        "client": {
+          "shortName": "ApiHubAddonClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient"
+        },
+        "method": {
+          "shortName": "ListAddons",
+          "fullName": "google.cloud.apihub.v1.ApiHubAddon.ListAddons",
+          "service": {
+            "shortName": "ApiHubAddon",
+            "fullName": "google.cloud.apihub.v1.ApiHubAddon"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubAddon_ListAddons_async",
+      "title": "ListAddonsRequestObjectAsync",
+      "description": "Snippet for ListAddonsAsync",
+      "file": "ApiHubAddonClient.ListAddonsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAddonsAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient.ListAddonsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.ListAddonsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiHub.V1.ListAddonsResponse, Google.Cloud.ApiHub.V1.Addon>",
+        "client": {
+          "shortName": "ApiHubAddonClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient"
+        },
+        "method": {
+          "shortName": "ListAddons",
+          "fullName": "google.cloud.apihub.v1.ApiHubAddon.ListAddons",
+          "service": {
+            "shortName": "ApiHubAddon",
+            "fullName": "google.cloud.apihub.v1.ApiHubAddon"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubAddon_ListAddons_sync_flattened",
+      "title": "ListAddons",
+      "description": "Snippet for ListAddons",
+      "file": "ApiHubAddonClient.ListAddonsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAddons",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient.ListAddons",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiHub.V1.ListAddonsResponse, Google.Cloud.ApiHub.V1.Addon>",
+        "client": {
+          "shortName": "ApiHubAddonClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient"
+        },
+        "method": {
+          "shortName": "ListAddons",
+          "fullName": "google.cloud.apihub.v1.ApiHubAddon.ListAddons",
+          "service": {
+            "shortName": "ApiHubAddon",
+            "fullName": "google.cloud.apihub.v1.ApiHubAddon"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubAddon_ListAddons_async_flattened",
+      "title": "ListAddonsAsync",
+      "description": "Snippet for ListAddonsAsync",
+      "file": "ApiHubAddonClient.ListAddonsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAddonsAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient.ListAddonsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiHub.V1.ListAddonsResponse, Google.Cloud.ApiHub.V1.Addon>",
+        "client": {
+          "shortName": "ApiHubAddonClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient"
+        },
+        "method": {
+          "shortName": "ListAddons",
+          "fullName": "google.cloud.apihub.v1.ApiHubAddon.ListAddons",
+          "service": {
+            "shortName": "ApiHubAddon",
+            "fullName": "google.cloud.apihub.v1.ApiHubAddon"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubAddon_ListAddons_sync_flattened_resourceNames",
+      "title": "ListAddonsResourceNames",
+      "description": "Snippet for ListAddons",
+      "file": "ApiHubAddonClient.ListAddonsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAddons",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient.ListAddons",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiHub.V1.ListAddonsResponse, Google.Cloud.ApiHub.V1.Addon>",
+        "client": {
+          "shortName": "ApiHubAddonClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient"
+        },
+        "method": {
+          "shortName": "ListAddons",
+          "fullName": "google.cloud.apihub.v1.ApiHubAddon.ListAddons",
+          "service": {
+            "shortName": "ApiHubAddon",
+            "fullName": "google.cloud.apihub.v1.ApiHubAddon"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubAddon_ListAddons_async_flattened_resourceNames",
+      "title": "ListAddonsResourceNamesAsync",
+      "description": "Snippet for ListAddonsAsync",
+      "file": "ApiHubAddonClient.ListAddonsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAddonsAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient.ListAddonsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiHub.V1.ListAddonsResponse, Google.Cloud.ApiHub.V1.Addon>",
+        "client": {
+          "shortName": "ApiHubAddonClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubAddonClient"
+        },
+        "method": {
+          "shortName": "ListAddons",
+          "fullName": "google.cloud.apihub.v1.ApiHubAddon.ListAddons",
+          "service": {
+            "shortName": "ApiHubAddon",
+            "fullName": "google.cloud.apihub.v1.ApiHubAddon"
           }
         }
       },
@@ -19239,6 +21089,357 @@
       ]
     },
     {
+      "regionTag": "apihub_v1_generated_ApiHubPlugin_ManagePluginInstanceSourceData_sync",
+      "title": "ManagePluginInstanceSourceDataRequestObject",
+      "description": "Snippet for ManagePluginInstanceSourceData",
+      "file": "ApiHubPluginClient.ManagePluginInstanceSourceDataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ManagePluginInstanceSourceData",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubPluginClient.ManagePluginInstanceSourceData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.ManagePluginInstanceSourceDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ApiHub.V1.ManagePluginInstanceSourceDataResponse",
+        "client": {
+          "shortName": "ApiHubPluginClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubPluginClient"
+        },
+        "method": {
+          "shortName": "ManagePluginInstanceSourceData",
+          "fullName": "google.cloud.apihub.v1.ApiHubPlugin.ManagePluginInstanceSourceData",
+          "service": {
+            "shortName": "ApiHubPlugin",
+            "fullName": "google.cloud.apihub.v1.ApiHubPlugin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubPlugin_ManagePluginInstanceSourceData_async",
+      "title": "ManagePluginInstanceSourceDataRequestObjectAsync",
+      "description": "Snippet for ManagePluginInstanceSourceDataAsync",
+      "file": "ApiHubPluginClient.ManagePluginInstanceSourceDataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ManagePluginInstanceSourceDataAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubPluginClient.ManagePluginInstanceSourceDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.ManagePluginInstanceSourceDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiHub.V1.ManagePluginInstanceSourceDataResponse>",
+        "client": {
+          "shortName": "ApiHubPluginClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubPluginClient"
+        },
+        "method": {
+          "shortName": "ManagePluginInstanceSourceData",
+          "fullName": "google.cloud.apihub.v1.ApiHubPlugin.ManagePluginInstanceSourceData",
+          "service": {
+            "shortName": "ApiHubPlugin",
+            "fullName": "google.cloud.apihub.v1.ApiHubPlugin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubPlugin_ManagePluginInstanceSourceData_sync_flattened",
+      "title": "ManagePluginInstanceSourceData",
+      "description": "Snippet for ManagePluginInstanceSourceData",
+      "file": "ApiHubPluginClient.ManagePluginInstanceSourceDataSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ManagePluginInstanceSourceData",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubPluginClient.ManagePluginInstanceSourceData",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.ManagePluginInstanceSourceDataRequest+Types+DataType",
+            "name": "dataType"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.ManagePluginInstanceSourceDataRequest+Types+Action",
+            "name": "action"
+          },
+          {
+            "type": "System.String",
+            "name": "relativePath"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "data"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ApiHub.V1.ManagePluginInstanceSourceDataResponse",
+        "client": {
+          "shortName": "ApiHubPluginClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubPluginClient"
+        },
+        "method": {
+          "shortName": "ManagePluginInstanceSourceData",
+          "fullName": "google.cloud.apihub.v1.ApiHubPlugin.ManagePluginInstanceSourceData",
+          "service": {
+            "shortName": "ApiHubPlugin",
+            "fullName": "google.cloud.apihub.v1.ApiHubPlugin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubPlugin_ManagePluginInstanceSourceData_async_flattened",
+      "title": "ManagePluginInstanceSourceDataAsync",
+      "description": "Snippet for ManagePluginInstanceSourceDataAsync",
+      "file": "ApiHubPluginClient.ManagePluginInstanceSourceDataAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ManagePluginInstanceSourceDataAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubPluginClient.ManagePluginInstanceSourceDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.ManagePluginInstanceSourceDataRequest+Types+DataType",
+            "name": "dataType"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.ManagePluginInstanceSourceDataRequest+Types+Action",
+            "name": "action"
+          },
+          {
+            "type": "System.String",
+            "name": "relativePath"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "data"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiHub.V1.ManagePluginInstanceSourceDataResponse>",
+        "client": {
+          "shortName": "ApiHubPluginClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubPluginClient"
+        },
+        "method": {
+          "shortName": "ManagePluginInstanceSourceData",
+          "fullName": "google.cloud.apihub.v1.ApiHubPlugin.ManagePluginInstanceSourceData",
+          "service": {
+            "shortName": "ApiHubPlugin",
+            "fullName": "google.cloud.apihub.v1.ApiHubPlugin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubPlugin_ManagePluginInstanceSourceData_sync_flattened_resourceNames",
+      "title": "ManagePluginInstanceSourceDataResourceNames",
+      "description": "Snippet for ManagePluginInstanceSourceData",
+      "file": "ApiHubPluginClient.ManagePluginInstanceSourceDataResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ManagePluginInstanceSourceData",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubPluginClient.ManagePluginInstanceSourceData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.PluginInstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.ManagePluginInstanceSourceDataRequest+Types+DataType",
+            "name": "dataType"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.ManagePluginInstanceSourceDataRequest+Types+Action",
+            "name": "action"
+          },
+          {
+            "type": "System.String",
+            "name": "relativePath"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "data"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ApiHub.V1.ManagePluginInstanceSourceDataResponse",
+        "client": {
+          "shortName": "ApiHubPluginClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubPluginClient"
+        },
+        "method": {
+          "shortName": "ManagePluginInstanceSourceData",
+          "fullName": "google.cloud.apihub.v1.ApiHubPlugin.ManagePluginInstanceSourceData",
+          "service": {
+            "shortName": "ApiHubPlugin",
+            "fullName": "google.cloud.apihub.v1.ApiHubPlugin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_ApiHubPlugin_ManagePluginInstanceSourceData_async_flattened_resourceNames",
+      "title": "ManagePluginInstanceSourceDataResourceNamesAsync",
+      "description": "Snippet for ManagePluginInstanceSourceDataAsync",
+      "file": "ApiHubPluginClient.ManagePluginInstanceSourceDataResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ManagePluginInstanceSourceDataAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ApiHubPluginClient.ManagePluginInstanceSourceDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.PluginInstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.ManagePluginInstanceSourceDataRequest+Types+DataType",
+            "name": "dataType"
+          },
+          {
+            "type": "Google.Cloud.ApiHub.V1.ManagePluginInstanceSourceDataRequest+Types+Action",
+            "name": "action"
+          },
+          {
+            "type": "System.String",
+            "name": "relativePath"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "data"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiHub.V1.ManagePluginInstanceSourceDataResponse>",
+        "client": {
+          "shortName": "ApiHubPluginClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ApiHubPluginClient"
+        },
+        "method": {
+          "shortName": "ManagePluginInstanceSourceData",
+          "fullName": "google.cloud.apihub.v1.ApiHubPlugin.ManagePluginInstanceSourceData",
+          "service": {
+            "shortName": "ApiHubPlugin",
+            "fullName": "google.cloud.apihub.v1.ApiHubPlugin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "apihub_v1_generated_HostProjectRegistrationService_CreateHostProjectRegistration_sync",
       "title": "CreateHostProjectRegistrationRequestObject",
       "description": "Snippet for CreateHostProjectRegistration",
@@ -21922,6 +24123,206 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_Provisioning_UpdateApiHubInstance_sync",
+      "title": "UpdateApiHubInstanceRequestObject",
+      "description": "Snippet for UpdateApiHubInstance",
+      "file": "ProvisioningClient.UpdateApiHubInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateApiHubInstance",
+        "fullName": "Google.Cloud.ApiHub.V1.ProvisioningClient.UpdateApiHubInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.UpdateApiHubInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiHub.V1.ApiHubInstance, Google.Cloud.ApiHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ProvisioningClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ProvisioningClient"
+        },
+        "method": {
+          "shortName": "UpdateApiHubInstance",
+          "fullName": "google.cloud.apihub.v1.Provisioning.UpdateApiHubInstance",
+          "service": {
+            "shortName": "Provisioning",
+            "fullName": "google.cloud.apihub.v1.Provisioning"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_Provisioning_UpdateApiHubInstance_async",
+      "title": "UpdateApiHubInstanceRequestObjectAsync",
+      "description": "Snippet for UpdateApiHubInstanceAsync",
+      "file": "ProvisioningClient.UpdateApiHubInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateApiHubInstanceAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ProvisioningClient.UpdateApiHubInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.UpdateApiHubInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiHub.V1.ApiHubInstance, Google.Cloud.ApiHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ProvisioningClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ProvisioningClient"
+        },
+        "method": {
+          "shortName": "UpdateApiHubInstance",
+          "fullName": "google.cloud.apihub.v1.Provisioning.UpdateApiHubInstance",
+          "service": {
+            "shortName": "Provisioning",
+            "fullName": "google.cloud.apihub.v1.Provisioning"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_Provisioning_UpdateApiHubInstance_sync_flattened",
+      "title": "UpdateApiHubInstance",
+      "description": "Snippet for UpdateApiHubInstance",
+      "file": "ProvisioningClient.UpdateApiHubInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateApiHubInstance",
+        "fullName": "Google.Cloud.ApiHub.V1.ProvisioningClient.UpdateApiHubInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.ApiHubInstance",
+            "name": "apiHubInstance"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiHub.V1.ApiHubInstance, Google.Cloud.ApiHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ProvisioningClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ProvisioningClient"
+        },
+        "method": {
+          "shortName": "UpdateApiHubInstance",
+          "fullName": "google.cloud.apihub.v1.Provisioning.UpdateApiHubInstance",
+          "service": {
+            "shortName": "Provisioning",
+            "fullName": "google.cloud.apihub.v1.Provisioning"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apihub_v1_generated_Provisioning_UpdateApiHubInstance_async_flattened",
+      "title": "UpdateApiHubInstanceAsync",
+      "description": "Snippet for UpdateApiHubInstanceAsync",
+      "file": "ProvisioningClient.UpdateApiHubInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateApiHubInstanceAsync",
+        "fullName": "Google.Cloud.ApiHub.V1.ProvisioningClient.UpdateApiHubInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiHub.V1.ApiHubInstance",
+            "name": "apiHubInstance"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiHub.V1.ApiHubInstance, Google.Cloud.ApiHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ProvisioningClient",
+          "fullName": "Google.Cloud.ApiHub.V1.ProvisioningClient"
+        },
+        "method": {
+          "shortName": "UpdateApiHubInstance",
+          "fullName": "google.cloud.apihub.v1.Provisioning.UpdateApiHubInstance",
+          "service": {
+            "shortName": "Provisioning",
+            "fullName": "google.cloud.apihub.v1.Provisioning"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
           "type": "SHORT"
         }
       ]

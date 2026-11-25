@@ -5,6 +5,99 @@
   "protoPackage": "google.cloud.aiplatform.v1",
   "libraryPackage": "Google.Cloud.AIPlatform.V1",
   "services": {
+    "AgentAnomalyDetectionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AgentAnomalyDetectionServiceClient",
+          "rpcs": {
+            "AggregateAnalyzedSessions": {
+              "methods": [
+                "AggregateAnalyzedSessions",
+                "AggregateAnalyzedSessionsAsync"
+              ]
+            },
+            "ClearTrainingData": {
+              "methods": [
+                "ClearTrainingData",
+                "ClearTrainingDataAsync"
+              ]
+            },
+            "CreateAgentAnomalyDetectionScope": {
+              "methods": [
+                "CreateAgentAnomalyDetectionScope",
+                "CreateAgentAnomalyDetectionScopeAsync"
+              ]
+            },
+            "DeleteAgentAnomalyDetectionScope": {
+              "methods": [
+                "DeleteAgentAnomalyDetectionScope",
+                "DeleteAgentAnomalyDetectionScopeAsync"
+              ]
+            },
+            "DisableMonitoredAgent": {
+              "methods": [
+                "DisableMonitoredAgent",
+                "DisableMonitoredAgentAsync"
+              ]
+            },
+            "EnableMonitoredAgent": {
+              "methods": [
+                "EnableMonitoredAgent",
+                "EnableMonitoredAgentAsync"
+              ]
+            },
+            "GetAgentAnomalyDetectionScope": {
+              "methods": [
+                "GetAgentAnomalyDetectionScope",
+                "GetAgentAnomalyDetectionScopeAsync"
+              ]
+            },
+            "GetAnalyzedInvocation": {
+              "methods": [
+                "GetAnalyzedInvocation",
+                "GetAnalyzedInvocationAsync"
+              ]
+            },
+            "GetAnalyzedSession": {
+              "methods": [
+                "GetAnalyzedSession",
+                "GetAnalyzedSessionAsync"
+              ]
+            },
+            "GetMonitoredAgent": {
+              "methods": [
+                "GetMonitoredAgent",
+                "GetMonitoredAgentAsync"
+              ]
+            },
+            "ListAgentAnomalyDetectionScopes": {
+              "methods": [
+                "ListAgentAnomalyDetectionScopes",
+                "ListAgentAnomalyDetectionScopesAsync"
+              ]
+            },
+            "ListAnalyzedInvocations": {
+              "methods": [
+                "ListAnalyzedInvocations",
+                "ListAnalyzedInvocationsAsync"
+              ]
+            },
+            "ListAnalyzedSessions": {
+              "methods": [
+                "ListAnalyzedSessions",
+                "ListAnalyzedSessionsAsync"
+              ]
+            },
+            "ListMonitoredAgents": {
+              "methods": [
+                "ListMonitoredAgents",
+                "ListMonitoredAgentsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "DataFoundryService": {
       "clients": {
         "grpc": {

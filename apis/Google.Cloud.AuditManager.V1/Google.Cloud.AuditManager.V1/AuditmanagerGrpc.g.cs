@@ -215,7 +215,8 @@ namespace Google.Cloud.AuditManager.V1 {
     public abstract partial class AuditManagerBase
     {
       /// <summary>
-      /// Creates a new audit schedule in a given project and location.
+      /// Creates a new audit schedule in a given location for an organization,
+      /// folder, or project.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -251,7 +252,8 @@ namespace Google.Cloud.AuditManager.V1 {
       }
 
       /// <summary>
-      /// Lists audit schedules in a given project and location.
+      /// Lists audit schedules in a given location for an organization, folder, or
+      /// project.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -404,7 +406,8 @@ namespace Google.Cloud.AuditManager.V1 {
       }
 
       /// <summary>
-      /// Creates a new audit schedule in a given project and location.
+      /// Creates a new audit schedule in a given location for an organization,
+      /// folder, or project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -417,7 +420,8 @@ namespace Google.Cloud.AuditManager.V1 {
         return CreateAuditSchedule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new audit schedule in a given project and location.
+      /// Creates a new audit schedule in a given location for an organization,
+      /// folder, or project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -428,7 +432,8 @@ namespace Google.Cloud.AuditManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateAuditSchedule, null, options, request);
       }
       /// <summary>
-      /// Creates a new audit schedule in a given project and location.
+      /// Creates a new audit schedule in a given location for an organization,
+      /// folder, or project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -441,7 +446,8 @@ namespace Google.Cloud.AuditManager.V1 {
         return CreateAuditScheduleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new audit schedule in a given project and location.
+      /// Creates a new audit schedule in a given location for an organization,
+      /// folder, or project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -548,7 +554,8 @@ namespace Google.Cloud.AuditManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetAuditSchedule, null, options, request);
       }
       /// <summary>
-      /// Lists audit schedules in a given project and location.
+      /// Lists audit schedules in a given location for an organization, folder, or
+      /// project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -561,7 +568,8 @@ namespace Google.Cloud.AuditManager.V1 {
         return ListAuditSchedules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists audit schedules in a given project and location.
+      /// Lists audit schedules in a given location for an organization, folder, or
+      /// project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -572,7 +580,8 @@ namespace Google.Cloud.AuditManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListAuditSchedules, null, options, request);
       }
       /// <summary>
-      /// Lists audit schedules in a given project and location.
+      /// Lists audit schedules in a given location for an organization, folder, or
+      /// project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -585,7 +594,8 @@ namespace Google.Cloud.AuditManager.V1 {
         return ListAuditSchedulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists audit schedules in a given project and location.
+      /// Lists audit schedules in a given location for an organization, folder, or
+      /// project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

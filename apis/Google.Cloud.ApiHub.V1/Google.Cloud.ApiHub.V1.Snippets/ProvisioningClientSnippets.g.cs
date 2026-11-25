@@ -490,6 +490,134 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateApiHubInstance</summary>
+        public void UpdateApiHubInstanceRequestObject()
+        {
+            // Snippet: UpdateApiHubInstance(UpdateApiHubInstanceRequest, CallSettings)
+            // Create client
+            ProvisioningClient provisioningClient = ProvisioningClient.Create();
+            // Initialize request argument(s)
+            UpdateApiHubInstanceRequest request = new UpdateApiHubInstanceRequest
+            {
+                ApiHubInstance = new ApiHubInstance(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<ApiHubInstance, OperationMetadata> response = provisioningClient.UpdateApiHubInstance(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ApiHubInstance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ApiHubInstance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ApiHubInstance, OperationMetadata> retrievedResponse = provisioningClient.PollOnceUpdateApiHubInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ApiHubInstance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateApiHubInstanceAsync</summary>
+        public async Task UpdateApiHubInstanceRequestObjectAsync()
+        {
+            // Snippet: UpdateApiHubInstanceAsync(UpdateApiHubInstanceRequest, CallSettings)
+            // Additional: UpdateApiHubInstanceAsync(UpdateApiHubInstanceRequest, CancellationToken)
+            // Create client
+            ProvisioningClient provisioningClient = await ProvisioningClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateApiHubInstanceRequest request = new UpdateApiHubInstanceRequest
+            {
+                ApiHubInstance = new ApiHubInstance(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<ApiHubInstance, OperationMetadata> response = await provisioningClient.UpdateApiHubInstanceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ApiHubInstance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ApiHubInstance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ApiHubInstance, OperationMetadata> retrievedResponse = await provisioningClient.PollOnceUpdateApiHubInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ApiHubInstance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateApiHubInstance</summary>
+        public void UpdateApiHubInstance()
+        {
+            // Snippet: UpdateApiHubInstance(ApiHubInstance, FieldMask, CallSettings)
+            // Create client
+            ProvisioningClient provisioningClient = ProvisioningClient.Create();
+            // Initialize request argument(s)
+            ApiHubInstance apiHubInstance = new ApiHubInstance();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<ApiHubInstance, OperationMetadata> response = provisioningClient.UpdateApiHubInstance(apiHubInstance, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ApiHubInstance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ApiHubInstance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ApiHubInstance, OperationMetadata> retrievedResponse = provisioningClient.PollOnceUpdateApiHubInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ApiHubInstance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateApiHubInstanceAsync</summary>
+        public async Task UpdateApiHubInstanceAsync()
+        {
+            // Snippet: UpdateApiHubInstanceAsync(ApiHubInstance, FieldMask, CallSettings)
+            // Additional: UpdateApiHubInstanceAsync(ApiHubInstance, FieldMask, CancellationToken)
+            // Create client
+            ProvisioningClient provisioningClient = await ProvisioningClient.CreateAsync();
+            // Initialize request argument(s)
+            ApiHubInstance apiHubInstance = new ApiHubInstance();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<ApiHubInstance, OperationMetadata> response = await provisioningClient.UpdateApiHubInstanceAsync(apiHubInstance, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ApiHubInstance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ApiHubInstance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ApiHubInstance, OperationMetadata> retrievedResponse = await provisioningClient.PollOnceUpdateApiHubInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ApiHubInstance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for LookupApiHubInstance</summary>
         public void LookupApiHubInstanceRequestObject()
         {

@@ -11,6 +11,4216 @@
   },
   "snippets": [
     {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetAgentAnomalyDetectionScope_sync",
+      "title": "GetAgentAnomalyDetectionScopeRequestObject",
+      "description": "Snippet for GetAgentAnomalyDetectionScope",
+      "file": "AgentAnomalyDetectionServiceClient.GetAgentAnomalyDetectionScopeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgentAnomalyDetectionScope",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetAgentAnomalyDetectionScope",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetAgentAnomalyDetectionScopeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetAgentAnomalyDetectionScope",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetAgentAnomalyDetectionScope",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetAgentAnomalyDetectionScope_async",
+      "title": "GetAgentAnomalyDetectionScopeRequestObjectAsync",
+      "description": "Snippet for GetAgentAnomalyDetectionScopeAsync",
+      "file": "AgentAnomalyDetectionServiceClient.GetAgentAnomalyDetectionScopeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgentAnomalyDetectionScopeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetAgentAnomalyDetectionScopeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetAgentAnomalyDetectionScopeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetAgentAnomalyDetectionScope",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetAgentAnomalyDetectionScope",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetAgentAnomalyDetectionScope_sync_flattened",
+      "title": "GetAgentAnomalyDetectionScope",
+      "description": "Snippet for GetAgentAnomalyDetectionScope",
+      "file": "AgentAnomalyDetectionServiceClient.GetAgentAnomalyDetectionScopeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgentAnomalyDetectionScope",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetAgentAnomalyDetectionScope",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetAgentAnomalyDetectionScope",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetAgentAnomalyDetectionScope",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetAgentAnomalyDetectionScope_async_flattened",
+      "title": "GetAgentAnomalyDetectionScopeAsync",
+      "description": "Snippet for GetAgentAnomalyDetectionScopeAsync",
+      "file": "AgentAnomalyDetectionServiceClient.GetAgentAnomalyDetectionScopeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgentAnomalyDetectionScopeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetAgentAnomalyDetectionScopeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetAgentAnomalyDetectionScope",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetAgentAnomalyDetectionScope",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetAgentAnomalyDetectionScope_sync_flattened_resourceNames",
+      "title": "GetAgentAnomalyDetectionScopeResourceNames",
+      "description": "Snippet for GetAgentAnomalyDetectionScope",
+      "file": "AgentAnomalyDetectionServiceClient.GetAgentAnomalyDetectionScopeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgentAnomalyDetectionScope",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetAgentAnomalyDetectionScope",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScopeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetAgentAnomalyDetectionScope",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetAgentAnomalyDetectionScope",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetAgentAnomalyDetectionScope_async_flattened_resourceNames",
+      "title": "GetAgentAnomalyDetectionScopeResourceNamesAsync",
+      "description": "Snippet for GetAgentAnomalyDetectionScopeAsync",
+      "file": "AgentAnomalyDetectionServiceClient.GetAgentAnomalyDetectionScopeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgentAnomalyDetectionScopeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetAgentAnomalyDetectionScopeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScopeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetAgentAnomalyDetectionScope",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetAgentAnomalyDetectionScope",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetMonitoredAgent_sync",
+      "title": "GetMonitoredAgentRequestObject",
+      "description": "Snippet for GetMonitoredAgent",
+      "file": "AgentAnomalyDetectionServiceClient.GetMonitoredAgentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMonitoredAgent",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetMonitoredAgent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetMonitoredAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.MonitoredAgent",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetMonitoredAgent",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetMonitoredAgent",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetMonitoredAgent_async",
+      "title": "GetMonitoredAgentRequestObjectAsync",
+      "description": "Snippet for GetMonitoredAgentAsync",
+      "file": "AgentAnomalyDetectionServiceClient.GetMonitoredAgentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMonitoredAgentAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetMonitoredAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetMonitoredAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.MonitoredAgent>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetMonitoredAgent",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetMonitoredAgent",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetMonitoredAgent_sync_flattened",
+      "title": "GetMonitoredAgent",
+      "description": "Snippet for GetMonitoredAgent",
+      "file": "AgentAnomalyDetectionServiceClient.GetMonitoredAgentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMonitoredAgent",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetMonitoredAgent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.MonitoredAgent",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetMonitoredAgent",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetMonitoredAgent",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetMonitoredAgent_async_flattened",
+      "title": "GetMonitoredAgentAsync",
+      "description": "Snippet for GetMonitoredAgentAsync",
+      "file": "AgentAnomalyDetectionServiceClient.GetMonitoredAgentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMonitoredAgentAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetMonitoredAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.MonitoredAgent>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetMonitoredAgent",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetMonitoredAgent",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetMonitoredAgent_sync_flattened_resourceNames",
+      "title": "GetMonitoredAgentResourceNames",
+      "description": "Snippet for GetMonitoredAgent",
+      "file": "AgentAnomalyDetectionServiceClient.GetMonitoredAgentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMonitoredAgent",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetMonitoredAgent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.MonitoredAgentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.MonitoredAgent",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetMonitoredAgent",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetMonitoredAgent",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetMonitoredAgent_async_flattened_resourceNames",
+      "title": "GetMonitoredAgentResourceNamesAsync",
+      "description": "Snippet for GetMonitoredAgentAsync",
+      "file": "AgentAnomalyDetectionServiceClient.GetMonitoredAgentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMonitoredAgentAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetMonitoredAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.MonitoredAgentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.MonitoredAgent>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetMonitoredAgent",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetMonitoredAgent",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListMonitoredAgents_sync",
+      "title": "ListMonitoredAgentsRequestObject",
+      "description": "Snippet for ListMonitoredAgents",
+      "file": "AgentAnomalyDetectionServiceClient.ListMonitoredAgentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMonitoredAgents",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListMonitoredAgents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListMonitoredAgentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListMonitoredAgentsResponse, Google.Cloud.AIPlatform.V1.MonitoredAgent>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListMonitoredAgents",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListMonitoredAgents",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListMonitoredAgents_async",
+      "title": "ListMonitoredAgentsRequestObjectAsync",
+      "description": "Snippet for ListMonitoredAgentsAsync",
+      "file": "AgentAnomalyDetectionServiceClient.ListMonitoredAgentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMonitoredAgentsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListMonitoredAgentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListMonitoredAgentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListMonitoredAgentsResponse, Google.Cloud.AIPlatform.V1.MonitoredAgent>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListMonitoredAgents",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListMonitoredAgents",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListMonitoredAgents_sync_flattened",
+      "title": "ListMonitoredAgents",
+      "description": "Snippet for ListMonitoredAgents",
+      "file": "AgentAnomalyDetectionServiceClient.ListMonitoredAgentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMonitoredAgents",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListMonitoredAgents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListMonitoredAgentsResponse, Google.Cloud.AIPlatform.V1.MonitoredAgent>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListMonitoredAgents",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListMonitoredAgents",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListMonitoredAgents_async_flattened",
+      "title": "ListMonitoredAgentsAsync",
+      "description": "Snippet for ListMonitoredAgentsAsync",
+      "file": "AgentAnomalyDetectionServiceClient.ListMonitoredAgentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMonitoredAgentsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListMonitoredAgentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListMonitoredAgentsResponse, Google.Cloud.AIPlatform.V1.MonitoredAgent>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListMonitoredAgents",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListMonitoredAgents",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListMonitoredAgents_sync_flattened_resourceNames",
+      "title": "ListMonitoredAgentsResourceNames",
+      "description": "Snippet for ListMonitoredAgents",
+      "file": "AgentAnomalyDetectionServiceClient.ListMonitoredAgentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMonitoredAgents",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListMonitoredAgents",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListMonitoredAgentsResponse, Google.Cloud.AIPlatform.V1.MonitoredAgent>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListMonitoredAgents",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListMonitoredAgents",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListMonitoredAgents_async_flattened_resourceNames",
+      "title": "ListMonitoredAgentsResourceNamesAsync",
+      "description": "Snippet for ListMonitoredAgentsAsync",
+      "file": "AgentAnomalyDetectionServiceClient.ListMonitoredAgentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMonitoredAgentsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListMonitoredAgentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListMonitoredAgentsResponse, Google.Cloud.AIPlatform.V1.MonitoredAgent>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListMonitoredAgents",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListMonitoredAgents",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_EnableMonitoredAgent_sync",
+      "title": "EnableMonitoredAgentRequestObject",
+      "description": "Snippet for EnableMonitoredAgent",
+      "file": "AgentAnomalyDetectionServiceClient.EnableMonitoredAgentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableMonitoredAgent",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.EnableMonitoredAgent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.EnableMonitoredAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.MonitoredAgent, Google.Cloud.AIPlatform.V1.EnableMonitoredAgentOperationMetadata>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "EnableMonitoredAgent",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.EnableMonitoredAgent",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_EnableMonitoredAgent_async",
+      "title": "EnableMonitoredAgentRequestObjectAsync",
+      "description": "Snippet for EnableMonitoredAgentAsync",
+      "file": "AgentAnomalyDetectionServiceClient.EnableMonitoredAgentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableMonitoredAgentAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.EnableMonitoredAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.EnableMonitoredAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.MonitoredAgent, Google.Cloud.AIPlatform.V1.EnableMonitoredAgentOperationMetadata>>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "EnableMonitoredAgent",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.EnableMonitoredAgent",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_EnableMonitoredAgent_sync_flattened",
+      "title": "EnableMonitoredAgent",
+      "description": "Snippet for EnableMonitoredAgent",
+      "file": "AgentAnomalyDetectionServiceClient.EnableMonitoredAgentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableMonitoredAgent",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.EnableMonitoredAgent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.MonitoredAgent, Google.Cloud.AIPlatform.V1.EnableMonitoredAgentOperationMetadata>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "EnableMonitoredAgent",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.EnableMonitoredAgent",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_EnableMonitoredAgent_async_flattened",
+      "title": "EnableMonitoredAgentAsync",
+      "description": "Snippet for EnableMonitoredAgentAsync",
+      "file": "AgentAnomalyDetectionServiceClient.EnableMonitoredAgentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableMonitoredAgentAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.EnableMonitoredAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.MonitoredAgent, Google.Cloud.AIPlatform.V1.EnableMonitoredAgentOperationMetadata>>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "EnableMonitoredAgent",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.EnableMonitoredAgent",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_EnableMonitoredAgent_sync_flattened_resourceNames",
+      "title": "EnableMonitoredAgentResourceNames",
+      "description": "Snippet for EnableMonitoredAgent",
+      "file": "AgentAnomalyDetectionServiceClient.EnableMonitoredAgentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableMonitoredAgent",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.EnableMonitoredAgent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.MonitoredAgentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.MonitoredAgent, Google.Cloud.AIPlatform.V1.EnableMonitoredAgentOperationMetadata>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "EnableMonitoredAgent",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.EnableMonitoredAgent",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_EnableMonitoredAgent_async_flattened_resourceNames",
+      "title": "EnableMonitoredAgentResourceNamesAsync",
+      "description": "Snippet for EnableMonitoredAgentAsync",
+      "file": "AgentAnomalyDetectionServiceClient.EnableMonitoredAgentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableMonitoredAgentAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.EnableMonitoredAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.MonitoredAgentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.MonitoredAgent, Google.Cloud.AIPlatform.V1.EnableMonitoredAgentOperationMetadata>>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "EnableMonitoredAgent",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.EnableMonitoredAgent",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_DisableMonitoredAgent_sync",
+      "title": "DisableMonitoredAgentRequestObject",
+      "description": "Snippet for DisableMonitoredAgent",
+      "file": "AgentAnomalyDetectionServiceClient.DisableMonitoredAgentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableMonitoredAgent",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.DisableMonitoredAgent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DisableMonitoredAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.MonitoredAgent, Google.Cloud.AIPlatform.V1.DisableMonitoredAgentOperationMetadata>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "DisableMonitoredAgent",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.DisableMonitoredAgent",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_DisableMonitoredAgent_async",
+      "title": "DisableMonitoredAgentRequestObjectAsync",
+      "description": "Snippet for DisableMonitoredAgentAsync",
+      "file": "AgentAnomalyDetectionServiceClient.DisableMonitoredAgentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableMonitoredAgentAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.DisableMonitoredAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DisableMonitoredAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.MonitoredAgent, Google.Cloud.AIPlatform.V1.DisableMonitoredAgentOperationMetadata>>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "DisableMonitoredAgent",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.DisableMonitoredAgent",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_DisableMonitoredAgent_sync_flattened",
+      "title": "DisableMonitoredAgent",
+      "description": "Snippet for DisableMonitoredAgent",
+      "file": "AgentAnomalyDetectionServiceClient.DisableMonitoredAgentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableMonitoredAgent",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.DisableMonitoredAgent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.MonitoredAgent, Google.Cloud.AIPlatform.V1.DisableMonitoredAgentOperationMetadata>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "DisableMonitoredAgent",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.DisableMonitoredAgent",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_DisableMonitoredAgent_async_flattened",
+      "title": "DisableMonitoredAgentAsync",
+      "description": "Snippet for DisableMonitoredAgentAsync",
+      "file": "AgentAnomalyDetectionServiceClient.DisableMonitoredAgentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableMonitoredAgentAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.DisableMonitoredAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.MonitoredAgent, Google.Cloud.AIPlatform.V1.DisableMonitoredAgentOperationMetadata>>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "DisableMonitoredAgent",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.DisableMonitoredAgent",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_DisableMonitoredAgent_sync_flattened_resourceNames",
+      "title": "DisableMonitoredAgentResourceNames",
+      "description": "Snippet for DisableMonitoredAgent",
+      "file": "AgentAnomalyDetectionServiceClient.DisableMonitoredAgentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableMonitoredAgent",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.DisableMonitoredAgent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.MonitoredAgentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.MonitoredAgent, Google.Cloud.AIPlatform.V1.DisableMonitoredAgentOperationMetadata>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "DisableMonitoredAgent",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.DisableMonitoredAgent",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_DisableMonitoredAgent_async_flattened_resourceNames",
+      "title": "DisableMonitoredAgentResourceNamesAsync",
+      "description": "Snippet for DisableMonitoredAgentAsync",
+      "file": "AgentAnomalyDetectionServiceClient.DisableMonitoredAgentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableMonitoredAgentAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.DisableMonitoredAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.MonitoredAgentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.MonitoredAgent, Google.Cloud.AIPlatform.V1.DisableMonitoredAgentOperationMetadata>>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "DisableMonitoredAgent",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.DisableMonitoredAgent",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_DeleteAgentAnomalyDetectionScope_sync",
+      "title": "DeleteAgentAnomalyDetectionScopeRequestObject",
+      "description": "Snippet for DeleteAgentAnomalyDetectionScope",
+      "file": "AgentAnomalyDetectionServiceClient.DeleteAgentAnomalyDetectionScopeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAgentAnomalyDetectionScope",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.DeleteAgentAnomalyDetectionScope",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeleteAgentAnomalyDetectionScopeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteAgentAnomalyDetectionScopeOperationMetadata>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAgentAnomalyDetectionScope",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.DeleteAgentAnomalyDetectionScope",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_DeleteAgentAnomalyDetectionScope_async",
+      "title": "DeleteAgentAnomalyDetectionScopeRequestObjectAsync",
+      "description": "Snippet for DeleteAgentAnomalyDetectionScopeAsync",
+      "file": "AgentAnomalyDetectionServiceClient.DeleteAgentAnomalyDetectionScopeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAgentAnomalyDetectionScopeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.DeleteAgentAnomalyDetectionScopeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeleteAgentAnomalyDetectionScopeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteAgentAnomalyDetectionScopeOperationMetadata>>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAgentAnomalyDetectionScope",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.DeleteAgentAnomalyDetectionScope",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_DeleteAgentAnomalyDetectionScope_sync_flattened",
+      "title": "DeleteAgentAnomalyDetectionScope",
+      "description": "Snippet for DeleteAgentAnomalyDetectionScope",
+      "file": "AgentAnomalyDetectionServiceClient.DeleteAgentAnomalyDetectionScopeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAgentAnomalyDetectionScope",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.DeleteAgentAnomalyDetectionScope",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteAgentAnomalyDetectionScopeOperationMetadata>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAgentAnomalyDetectionScope",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.DeleteAgentAnomalyDetectionScope",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_DeleteAgentAnomalyDetectionScope_async_flattened",
+      "title": "DeleteAgentAnomalyDetectionScopeAsync",
+      "description": "Snippet for DeleteAgentAnomalyDetectionScopeAsync",
+      "file": "AgentAnomalyDetectionServiceClient.DeleteAgentAnomalyDetectionScopeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAgentAnomalyDetectionScopeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.DeleteAgentAnomalyDetectionScopeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteAgentAnomalyDetectionScopeOperationMetadata>>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAgentAnomalyDetectionScope",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.DeleteAgentAnomalyDetectionScope",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_DeleteAgentAnomalyDetectionScope_sync_flattened_resourceNames",
+      "title": "DeleteAgentAnomalyDetectionScopeResourceNames",
+      "description": "Snippet for DeleteAgentAnomalyDetectionScope",
+      "file": "AgentAnomalyDetectionServiceClient.DeleteAgentAnomalyDetectionScopeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAgentAnomalyDetectionScope",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.DeleteAgentAnomalyDetectionScope",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScopeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteAgentAnomalyDetectionScopeOperationMetadata>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAgentAnomalyDetectionScope",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.DeleteAgentAnomalyDetectionScope",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_DeleteAgentAnomalyDetectionScope_async_flattened_resourceNames",
+      "title": "DeleteAgentAnomalyDetectionScopeResourceNamesAsync",
+      "description": "Snippet for DeleteAgentAnomalyDetectionScopeAsync",
+      "file": "AgentAnomalyDetectionServiceClient.DeleteAgentAnomalyDetectionScopeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAgentAnomalyDetectionScopeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.DeleteAgentAnomalyDetectionScopeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScopeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteAgentAnomalyDetectionScopeOperationMetadata>>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAgentAnomalyDetectionScope",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.DeleteAgentAnomalyDetectionScope",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_CreateAgentAnomalyDetectionScope_sync",
+      "title": "CreateAgentAnomalyDetectionScopeRequestObject",
+      "description": "Snippet for CreateAgentAnomalyDetectionScope",
+      "file": "AgentAnomalyDetectionServiceClient.CreateAgentAnomalyDetectionScopeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAgentAnomalyDetectionScope",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.CreateAgentAnomalyDetectionScope",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CreateAgentAnomalyDetectionScopeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope, Google.Cloud.AIPlatform.V1.CreateAgentAnomalyDetectionScopeOperationMetadata>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAgentAnomalyDetectionScope",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.CreateAgentAnomalyDetectionScope",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_CreateAgentAnomalyDetectionScope_async",
+      "title": "CreateAgentAnomalyDetectionScopeRequestObjectAsync",
+      "description": "Snippet for CreateAgentAnomalyDetectionScopeAsync",
+      "file": "AgentAnomalyDetectionServiceClient.CreateAgentAnomalyDetectionScopeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAgentAnomalyDetectionScopeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.CreateAgentAnomalyDetectionScopeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CreateAgentAnomalyDetectionScopeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope, Google.Cloud.AIPlatform.V1.CreateAgentAnomalyDetectionScopeOperationMetadata>>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAgentAnomalyDetectionScope",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.CreateAgentAnomalyDetectionScope",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_CreateAgentAnomalyDetectionScope_sync_flattened",
+      "title": "CreateAgentAnomalyDetectionScope",
+      "description": "Snippet for CreateAgentAnomalyDetectionScope",
+      "file": "AgentAnomalyDetectionServiceClient.CreateAgentAnomalyDetectionScopeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAgentAnomalyDetectionScope",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.CreateAgentAnomalyDetectionScope",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope",
+            "name": "agentAnomalyDetectionScope"
+          },
+          {
+            "type": "System.String",
+            "name": "agentAnomalyDetectionScopeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope, Google.Cloud.AIPlatform.V1.CreateAgentAnomalyDetectionScopeOperationMetadata>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAgentAnomalyDetectionScope",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.CreateAgentAnomalyDetectionScope",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_CreateAgentAnomalyDetectionScope_async_flattened",
+      "title": "CreateAgentAnomalyDetectionScopeAsync",
+      "description": "Snippet for CreateAgentAnomalyDetectionScopeAsync",
+      "file": "AgentAnomalyDetectionServiceClient.CreateAgentAnomalyDetectionScopeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAgentAnomalyDetectionScopeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.CreateAgentAnomalyDetectionScopeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope",
+            "name": "agentAnomalyDetectionScope"
+          },
+          {
+            "type": "System.String",
+            "name": "agentAnomalyDetectionScopeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope, Google.Cloud.AIPlatform.V1.CreateAgentAnomalyDetectionScopeOperationMetadata>>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAgentAnomalyDetectionScope",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.CreateAgentAnomalyDetectionScope",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_CreateAgentAnomalyDetectionScope_sync_flattened_resourceNames",
+      "title": "CreateAgentAnomalyDetectionScopeResourceNames",
+      "description": "Snippet for CreateAgentAnomalyDetectionScope",
+      "file": "AgentAnomalyDetectionServiceClient.CreateAgentAnomalyDetectionScopeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAgentAnomalyDetectionScope",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.CreateAgentAnomalyDetectionScope",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope",
+            "name": "agentAnomalyDetectionScope"
+          },
+          {
+            "type": "System.String",
+            "name": "agentAnomalyDetectionScopeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope, Google.Cloud.AIPlatform.V1.CreateAgentAnomalyDetectionScopeOperationMetadata>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAgentAnomalyDetectionScope",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.CreateAgentAnomalyDetectionScope",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_CreateAgentAnomalyDetectionScope_async_flattened_resourceNames",
+      "title": "CreateAgentAnomalyDetectionScopeResourceNamesAsync",
+      "description": "Snippet for CreateAgentAnomalyDetectionScopeAsync",
+      "file": "AgentAnomalyDetectionServiceClient.CreateAgentAnomalyDetectionScopeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAgentAnomalyDetectionScopeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.CreateAgentAnomalyDetectionScopeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope",
+            "name": "agentAnomalyDetectionScope"
+          },
+          {
+            "type": "System.String",
+            "name": "agentAnomalyDetectionScopeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope, Google.Cloud.AIPlatform.V1.CreateAgentAnomalyDetectionScopeOperationMetadata>>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAgentAnomalyDetectionScope",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.CreateAgentAnomalyDetectionScope",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListAgentAnomalyDetectionScopes_sync",
+      "title": "ListAgentAnomalyDetectionScopesRequestObject",
+      "description": "Snippet for ListAgentAnomalyDetectionScopes",
+      "file": "AgentAnomalyDetectionServiceClient.ListAgentAnomalyDetectionScopesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgentAnomalyDetectionScopes",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListAgentAnomalyDetectionScopes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListAgentAnomalyDetectionScopesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListAgentAnomalyDetectionScopesResponse, Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListAgentAnomalyDetectionScopes",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListAgentAnomalyDetectionScopes",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListAgentAnomalyDetectionScopes_async",
+      "title": "ListAgentAnomalyDetectionScopesRequestObjectAsync",
+      "description": "Snippet for ListAgentAnomalyDetectionScopesAsync",
+      "file": "AgentAnomalyDetectionServiceClient.ListAgentAnomalyDetectionScopesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgentAnomalyDetectionScopesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListAgentAnomalyDetectionScopesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListAgentAnomalyDetectionScopesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListAgentAnomalyDetectionScopesResponse, Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListAgentAnomalyDetectionScopes",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListAgentAnomalyDetectionScopes",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListAgentAnomalyDetectionScopes_sync_flattened",
+      "title": "ListAgentAnomalyDetectionScopes",
+      "description": "Snippet for ListAgentAnomalyDetectionScopes",
+      "file": "AgentAnomalyDetectionServiceClient.ListAgentAnomalyDetectionScopesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgentAnomalyDetectionScopes",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListAgentAnomalyDetectionScopes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListAgentAnomalyDetectionScopesResponse, Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListAgentAnomalyDetectionScopes",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListAgentAnomalyDetectionScopes",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListAgentAnomalyDetectionScopes_async_flattened",
+      "title": "ListAgentAnomalyDetectionScopesAsync",
+      "description": "Snippet for ListAgentAnomalyDetectionScopesAsync",
+      "file": "AgentAnomalyDetectionServiceClient.ListAgentAnomalyDetectionScopesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgentAnomalyDetectionScopesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListAgentAnomalyDetectionScopesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListAgentAnomalyDetectionScopesResponse, Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListAgentAnomalyDetectionScopes",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListAgentAnomalyDetectionScopes",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListAgentAnomalyDetectionScopes_sync_flattened_resourceNames",
+      "title": "ListAgentAnomalyDetectionScopesResourceNames",
+      "description": "Snippet for ListAgentAnomalyDetectionScopes",
+      "file": "AgentAnomalyDetectionServiceClient.ListAgentAnomalyDetectionScopesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgentAnomalyDetectionScopes",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListAgentAnomalyDetectionScopes",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListAgentAnomalyDetectionScopesResponse, Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListAgentAnomalyDetectionScopes",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListAgentAnomalyDetectionScopes",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListAgentAnomalyDetectionScopes_async_flattened_resourceNames",
+      "title": "ListAgentAnomalyDetectionScopesResourceNamesAsync",
+      "description": "Snippet for ListAgentAnomalyDetectionScopesAsync",
+      "file": "AgentAnomalyDetectionServiceClient.ListAgentAnomalyDetectionScopesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgentAnomalyDetectionScopesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListAgentAnomalyDetectionScopesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListAgentAnomalyDetectionScopesResponse, Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionScope>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListAgentAnomalyDetectionScopes",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListAgentAnomalyDetectionScopes",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListAnalyzedSessions_sync",
+      "title": "ListAnalyzedSessionsRequestObject",
+      "description": "Snippet for ListAnalyzedSessions",
+      "file": "AgentAnomalyDetectionServiceClient.ListAnalyzedSessionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAnalyzedSessions",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListAnalyzedSessions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListAnalyzedSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListAnalyzedSessionsResponse, Google.Cloud.AIPlatform.V1.AnalyzedSession>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListAnalyzedSessions",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListAnalyzedSessions",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListAnalyzedSessions_async",
+      "title": "ListAnalyzedSessionsRequestObjectAsync",
+      "description": "Snippet for ListAnalyzedSessionsAsync",
+      "file": "AgentAnomalyDetectionServiceClient.ListAnalyzedSessionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAnalyzedSessionsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListAnalyzedSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListAnalyzedSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListAnalyzedSessionsResponse, Google.Cloud.AIPlatform.V1.AnalyzedSession>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListAnalyzedSessions",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListAnalyzedSessions",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListAnalyzedSessions_sync_flattened",
+      "title": "ListAnalyzedSessions",
+      "description": "Snippet for ListAnalyzedSessions",
+      "file": "AgentAnomalyDetectionServiceClient.ListAnalyzedSessionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAnalyzedSessions",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListAnalyzedSessions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListAnalyzedSessionsResponse, Google.Cloud.AIPlatform.V1.AnalyzedSession>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListAnalyzedSessions",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListAnalyzedSessions",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListAnalyzedSessions_async_flattened",
+      "title": "ListAnalyzedSessionsAsync",
+      "description": "Snippet for ListAnalyzedSessionsAsync",
+      "file": "AgentAnomalyDetectionServiceClient.ListAnalyzedSessionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAnalyzedSessionsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListAnalyzedSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListAnalyzedSessionsResponse, Google.Cloud.AIPlatform.V1.AnalyzedSession>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListAnalyzedSessions",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListAnalyzedSessions",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListAnalyzedSessions_sync_flattened_resourceNames",
+      "title": "ListAnalyzedSessionsResourceNames",
+      "description": "Snippet for ListAnalyzedSessions",
+      "file": "AgentAnomalyDetectionServiceClient.ListAnalyzedSessionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAnalyzedSessions",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListAnalyzedSessions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.MonitoredAgentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListAnalyzedSessionsResponse, Google.Cloud.AIPlatform.V1.AnalyzedSession>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListAnalyzedSessions",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListAnalyzedSessions",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListAnalyzedSessions_async_flattened_resourceNames",
+      "title": "ListAnalyzedSessionsResourceNamesAsync",
+      "description": "Snippet for ListAnalyzedSessionsAsync",
+      "file": "AgentAnomalyDetectionServiceClient.ListAnalyzedSessionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAnalyzedSessionsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListAnalyzedSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.MonitoredAgentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListAnalyzedSessionsResponse, Google.Cloud.AIPlatform.V1.AnalyzedSession>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListAnalyzedSessions",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListAnalyzedSessions",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetAnalyzedSession_sync",
+      "title": "GetAnalyzedSessionRequestObject",
+      "description": "Snippet for GetAnalyzedSession",
+      "file": "AgentAnomalyDetectionServiceClient.GetAnalyzedSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnalyzedSession",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetAnalyzedSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetAnalyzedSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.AnalyzedSession",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetAnalyzedSession",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetAnalyzedSession",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetAnalyzedSession_async",
+      "title": "GetAnalyzedSessionRequestObjectAsync",
+      "description": "Snippet for GetAnalyzedSessionAsync",
+      "file": "AgentAnomalyDetectionServiceClient.GetAnalyzedSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnalyzedSessionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetAnalyzedSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetAnalyzedSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.AnalyzedSession>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetAnalyzedSession",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetAnalyzedSession",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetAnalyzedSession_sync_flattened",
+      "title": "GetAnalyzedSession",
+      "description": "Snippet for GetAnalyzedSession",
+      "file": "AgentAnomalyDetectionServiceClient.GetAnalyzedSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnalyzedSession",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetAnalyzedSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.AnalyzedSession",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetAnalyzedSession",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetAnalyzedSession",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetAnalyzedSession_async_flattened",
+      "title": "GetAnalyzedSessionAsync",
+      "description": "Snippet for GetAnalyzedSessionAsync",
+      "file": "AgentAnomalyDetectionServiceClient.GetAnalyzedSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnalyzedSessionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetAnalyzedSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.AnalyzedSession>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetAnalyzedSession",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetAnalyzedSession",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetAnalyzedSession_sync_flattened_resourceNames",
+      "title": "GetAnalyzedSessionResourceNames",
+      "description": "Snippet for GetAnalyzedSession",
+      "file": "AgentAnomalyDetectionServiceClient.GetAnalyzedSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnalyzedSession",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetAnalyzedSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AnalyzedSessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.AnalyzedSession",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetAnalyzedSession",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetAnalyzedSession",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetAnalyzedSession_async_flattened_resourceNames",
+      "title": "GetAnalyzedSessionResourceNamesAsync",
+      "description": "Snippet for GetAnalyzedSessionAsync",
+      "file": "AgentAnomalyDetectionServiceClient.GetAnalyzedSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnalyzedSessionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetAnalyzedSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AnalyzedSessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.AnalyzedSession>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetAnalyzedSession",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetAnalyzedSession",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListAnalyzedInvocations_sync",
+      "title": "ListAnalyzedInvocationsRequestObject",
+      "description": "Snippet for ListAnalyzedInvocations",
+      "file": "AgentAnomalyDetectionServiceClient.ListAnalyzedInvocationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAnalyzedInvocations",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListAnalyzedInvocations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListAnalyzedInvocationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListAnalyzedInvocationsResponse, Google.Cloud.AIPlatform.V1.AnalyzedInvocation>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListAnalyzedInvocations",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListAnalyzedInvocations",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListAnalyzedInvocations_async",
+      "title": "ListAnalyzedInvocationsRequestObjectAsync",
+      "description": "Snippet for ListAnalyzedInvocationsAsync",
+      "file": "AgentAnomalyDetectionServiceClient.ListAnalyzedInvocationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAnalyzedInvocationsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListAnalyzedInvocationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListAnalyzedInvocationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListAnalyzedInvocationsResponse, Google.Cloud.AIPlatform.V1.AnalyzedInvocation>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListAnalyzedInvocations",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListAnalyzedInvocations",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListAnalyzedInvocations_sync_flattened",
+      "title": "ListAnalyzedInvocations",
+      "description": "Snippet for ListAnalyzedInvocations",
+      "file": "AgentAnomalyDetectionServiceClient.ListAnalyzedInvocationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAnalyzedInvocations",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListAnalyzedInvocations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListAnalyzedInvocationsResponse, Google.Cloud.AIPlatform.V1.AnalyzedInvocation>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListAnalyzedInvocations",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListAnalyzedInvocations",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListAnalyzedInvocations_async_flattened",
+      "title": "ListAnalyzedInvocationsAsync",
+      "description": "Snippet for ListAnalyzedInvocationsAsync",
+      "file": "AgentAnomalyDetectionServiceClient.ListAnalyzedInvocationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAnalyzedInvocationsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListAnalyzedInvocationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListAnalyzedInvocationsResponse, Google.Cloud.AIPlatform.V1.AnalyzedInvocation>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListAnalyzedInvocations",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListAnalyzedInvocations",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListAnalyzedInvocations_sync_flattened_resourceNames",
+      "title": "ListAnalyzedInvocationsResourceNames",
+      "description": "Snippet for ListAnalyzedInvocations",
+      "file": "AgentAnomalyDetectionServiceClient.ListAnalyzedInvocationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAnalyzedInvocations",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListAnalyzedInvocations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AnalyzedSessionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListAnalyzedInvocationsResponse, Google.Cloud.AIPlatform.V1.AnalyzedInvocation>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListAnalyzedInvocations",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListAnalyzedInvocations",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ListAnalyzedInvocations_async_flattened_resourceNames",
+      "title": "ListAnalyzedInvocationsResourceNamesAsync",
+      "description": "Snippet for ListAnalyzedInvocationsAsync",
+      "file": "AgentAnomalyDetectionServiceClient.ListAnalyzedInvocationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAnalyzedInvocationsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ListAnalyzedInvocationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AnalyzedSessionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListAnalyzedInvocationsResponse, Google.Cloud.AIPlatform.V1.AnalyzedInvocation>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListAnalyzedInvocations",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ListAnalyzedInvocations",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetAnalyzedInvocation_sync",
+      "title": "GetAnalyzedInvocationRequestObject",
+      "description": "Snippet for GetAnalyzedInvocation",
+      "file": "AgentAnomalyDetectionServiceClient.GetAnalyzedInvocationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnalyzedInvocation",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetAnalyzedInvocation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetAnalyzedInvocationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.AnalyzedInvocation",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetAnalyzedInvocation",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetAnalyzedInvocation",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetAnalyzedInvocation_async",
+      "title": "GetAnalyzedInvocationRequestObjectAsync",
+      "description": "Snippet for GetAnalyzedInvocationAsync",
+      "file": "AgentAnomalyDetectionServiceClient.GetAnalyzedInvocationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnalyzedInvocationAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetAnalyzedInvocationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetAnalyzedInvocationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.AnalyzedInvocation>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetAnalyzedInvocation",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetAnalyzedInvocation",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetAnalyzedInvocation_sync_flattened",
+      "title": "GetAnalyzedInvocation",
+      "description": "Snippet for GetAnalyzedInvocation",
+      "file": "AgentAnomalyDetectionServiceClient.GetAnalyzedInvocationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnalyzedInvocation",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetAnalyzedInvocation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.AnalyzedInvocation",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetAnalyzedInvocation",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetAnalyzedInvocation",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetAnalyzedInvocation_async_flattened",
+      "title": "GetAnalyzedInvocationAsync",
+      "description": "Snippet for GetAnalyzedInvocationAsync",
+      "file": "AgentAnomalyDetectionServiceClient.GetAnalyzedInvocationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnalyzedInvocationAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetAnalyzedInvocationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.AnalyzedInvocation>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetAnalyzedInvocation",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetAnalyzedInvocation",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetAnalyzedInvocation_sync_flattened_resourceNames",
+      "title": "GetAnalyzedInvocationResourceNames",
+      "description": "Snippet for GetAnalyzedInvocation",
+      "file": "AgentAnomalyDetectionServiceClient.GetAnalyzedInvocationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnalyzedInvocation",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetAnalyzedInvocation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AnalyzedInvocationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.AnalyzedInvocation",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetAnalyzedInvocation",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetAnalyzedInvocation",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_GetAnalyzedInvocation_async_flattened_resourceNames",
+      "title": "GetAnalyzedInvocationResourceNamesAsync",
+      "description": "Snippet for GetAnalyzedInvocationAsync",
+      "file": "AgentAnomalyDetectionServiceClient.GetAnalyzedInvocationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnalyzedInvocationAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.GetAnalyzedInvocationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AnalyzedInvocationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.AnalyzedInvocation>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetAnalyzedInvocation",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.GetAnalyzedInvocation",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_AggregateAnalyzedSessions_sync",
+      "title": "AggregateAnalyzedSessionsRequestObject",
+      "description": "Snippet for AggregateAnalyzedSessions",
+      "file": "AgentAnomalyDetectionServiceClient.AggregateAnalyzedSessionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateAnalyzedSessions",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.AggregateAnalyzedSessions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AggregateAnalyzedSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.AggregateAnalyzedSessionsResponse, Google.Cloud.AIPlatform.V1.AggregateAnalyzedSessionsResponse+Types+AgentAggregate>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "AggregateAnalyzedSessions",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.AggregateAnalyzedSessions",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_AggregateAnalyzedSessions_async",
+      "title": "AggregateAnalyzedSessionsRequestObjectAsync",
+      "description": "Snippet for AggregateAnalyzedSessionsAsync",
+      "file": "AgentAnomalyDetectionServiceClient.AggregateAnalyzedSessionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateAnalyzedSessionsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.AggregateAnalyzedSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AggregateAnalyzedSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.AggregateAnalyzedSessionsResponse, Google.Cloud.AIPlatform.V1.AggregateAnalyzedSessionsResponse+Types+AgentAggregate>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "AggregateAnalyzedSessions",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.AggregateAnalyzedSessions",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_AggregateAnalyzedSessions_sync_flattened",
+      "title": "AggregateAnalyzedSessions",
+      "description": "Snippet for AggregateAnalyzedSessions",
+      "file": "AgentAnomalyDetectionServiceClient.AggregateAnalyzedSessionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateAnalyzedSessions",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.AggregateAnalyzedSessions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.AggregateAnalyzedSessionsResponse, Google.Cloud.AIPlatform.V1.AggregateAnalyzedSessionsResponse+Types+AgentAggregate>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "AggregateAnalyzedSessions",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.AggregateAnalyzedSessions",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_AggregateAnalyzedSessions_async_flattened",
+      "title": "AggregateAnalyzedSessionsAsync",
+      "description": "Snippet for AggregateAnalyzedSessionsAsync",
+      "file": "AgentAnomalyDetectionServiceClient.AggregateAnalyzedSessionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateAnalyzedSessionsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.AggregateAnalyzedSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.AggregateAnalyzedSessionsResponse, Google.Cloud.AIPlatform.V1.AggregateAnalyzedSessionsResponse+Types+AgentAggregate>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "AggregateAnalyzedSessions",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.AggregateAnalyzedSessions",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_AggregateAnalyzedSessions_sync_flattened_resourceNames",
+      "title": "AggregateAnalyzedSessionsResourceNames",
+      "description": "Snippet for AggregateAnalyzedSessions",
+      "file": "AgentAnomalyDetectionServiceClient.AggregateAnalyzedSessionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateAnalyzedSessions",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.AggregateAnalyzedSessions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.MonitoredAgentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.AggregateAnalyzedSessionsResponse, Google.Cloud.AIPlatform.V1.AggregateAnalyzedSessionsResponse+Types+AgentAggregate>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "AggregateAnalyzedSessions",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.AggregateAnalyzedSessions",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_AggregateAnalyzedSessions_async_flattened_resourceNames",
+      "title": "AggregateAnalyzedSessionsResourceNamesAsync",
+      "description": "Snippet for AggregateAnalyzedSessionsAsync",
+      "file": "AgentAnomalyDetectionServiceClient.AggregateAnalyzedSessionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateAnalyzedSessionsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.AggregateAnalyzedSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.MonitoredAgentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.AggregateAnalyzedSessionsResponse, Google.Cloud.AIPlatform.V1.AggregateAnalyzedSessionsResponse+Types+AgentAggregate>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "AggregateAnalyzedSessions",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.AggregateAnalyzedSessions",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ClearTrainingData_sync",
+      "title": "ClearTrainingDataRequestObject",
+      "description": "Snippet for ClearTrainingData",
+      "file": "AgentAnomalyDetectionServiceClient.ClearTrainingDataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ClearTrainingData",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ClearTrainingData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ClearTrainingDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ClearTrainingDataResponse, Google.Cloud.AIPlatform.V1.ClearTrainingDataOperationMetadata>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ClearTrainingData",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ClearTrainingData",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ClearTrainingData_async",
+      "title": "ClearTrainingDataRequestObjectAsync",
+      "description": "Snippet for ClearTrainingDataAsync",
+      "file": "AgentAnomalyDetectionServiceClient.ClearTrainingDataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ClearTrainingDataAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ClearTrainingDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ClearTrainingDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ClearTrainingDataResponse, Google.Cloud.AIPlatform.V1.ClearTrainingDataOperationMetadata>>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ClearTrainingData",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ClearTrainingData",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ClearTrainingData_sync_flattened",
+      "title": "ClearTrainingData",
+      "description": "Snippet for ClearTrainingData",
+      "file": "AgentAnomalyDetectionServiceClient.ClearTrainingDataSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ClearTrainingData",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ClearTrainingData",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ClearTrainingDataResponse, Google.Cloud.AIPlatform.V1.ClearTrainingDataOperationMetadata>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ClearTrainingData",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ClearTrainingData",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ClearTrainingData_async_flattened",
+      "title": "ClearTrainingDataAsync",
+      "description": "Snippet for ClearTrainingDataAsync",
+      "file": "AgentAnomalyDetectionServiceClient.ClearTrainingDataAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ClearTrainingDataAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ClearTrainingDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ClearTrainingDataResponse, Google.Cloud.AIPlatform.V1.ClearTrainingDataOperationMetadata>>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ClearTrainingData",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ClearTrainingData",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ClearTrainingData_sync_flattened_resourceNames",
+      "title": "ClearTrainingDataResourceNames",
+      "description": "Snippet for ClearTrainingData",
+      "file": "AgentAnomalyDetectionServiceClient.ClearTrainingDataResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ClearTrainingData",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ClearTrainingData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.MonitoredAgentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ClearTrainingDataResponse, Google.Cloud.AIPlatform.V1.ClearTrainingDataOperationMetadata>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ClearTrainingData",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ClearTrainingData",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_AgentAnomalyDetectionService_ClearTrainingData_async_flattened_resourceNames",
+      "title": "ClearTrainingDataResourceNamesAsync",
+      "description": "Snippet for ClearTrainingDataAsync",
+      "file": "AgentAnomalyDetectionServiceClient.ClearTrainingDataResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ClearTrainingDataAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient.ClearTrainingDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.MonitoredAgentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ClearTrainingDataResponse, Google.Cloud.AIPlatform.V1.ClearTrainingDataOperationMetadata>>",
+        "client": {
+          "shortName": "AgentAnomalyDetectionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.AgentAnomalyDetectionServiceClient"
+        },
+        "method": {
+          "shortName": "ClearTrainingData",
+          "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService.ClearTrainingData",
+          "service": {
+            "shortName": "AgentAnomalyDetectionService",
+            "fullName": "google.cloud.aiplatform.v1.AgentAnomalyDetectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_DataFoundryService_GenerateSyntheticData_sync",
       "title": "GenerateSyntheticDataRequestObject",
       "description": "Snippet for GenerateSyntheticData",

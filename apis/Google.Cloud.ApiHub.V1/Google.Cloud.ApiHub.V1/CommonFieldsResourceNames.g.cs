@@ -3802,6 +3802,14 @@ namespace Google.Cloud.ApiHub.V1
             get => string.IsNullOrEmpty(Name) ? null : gcav::SpecName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="DeploymentName"/>-typed view over the <see cref="Deployments"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<DeploymentName> DeploymentsAsDeploymentNames
+        {
+            get => new gax::ResourceNameList<DeploymentName>(Deployments, s => string.IsNullOrEmpty(s) ? null : DeploymentName.Parse(s, allowUnparsed: true));
+        }
     }
 
     public partial class Deployment
@@ -3813,6 +3821,20 @@ namespace Google.Cloud.ApiHub.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcav::DeploymentName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary><see cref="SpecName"/>-typed view over the <see cref="Specs"/> resource name property.</summary>
+        public gax::ResourceNameList<SpecName> SpecsAsSpecNames
+        {
+            get => new gax::ResourceNameList<SpecName>(Specs, s => string.IsNullOrEmpty(s) ? null : SpecName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="ApiOperationName"/>-typed view over the <see cref="ApiOperations"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<ApiOperationName> ApiOperationsAsApiOperationNames
+        {
+            get => new gax::ResourceNameList<ApiOperationName>(ApiOperations, s => string.IsNullOrEmpty(s) ? null : ApiOperationName.Parse(s, allowUnparsed: true));
         }
     }
 
@@ -3832,6 +3854,14 @@ namespace Google.Cloud.ApiHub.V1
         {
             get => string.IsNullOrEmpty(Spec) ? null : SpecName.Parse(Spec, allowUnparsed: true);
             set => Spec = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="DeploymentName"/>-typed view over the <see cref="Deployments"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<DeploymentName> DeploymentsAsDeploymentNames
+        {
+            get => new gax::ResourceNameList<DeploymentName>(Deployments, s => string.IsNullOrEmpty(s) ? null : DeploymentName.Parse(s, allowUnparsed: true));
         }
     }
 

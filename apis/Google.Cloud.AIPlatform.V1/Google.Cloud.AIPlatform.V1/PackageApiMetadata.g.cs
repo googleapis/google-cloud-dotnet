@@ -88,6 +88,7 @@ namespace Google.Cloud.AIPlatform.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AcceleratorTypeReflection.Descriptor;
+            yield return AgentAnomalyDetectionServiceReflection.Descriptor;
             yield return AnnotationReflection.Descriptor;
             yield return AnnotationSpecReflection.Descriptor;
             yield return ApiAuthReflection.Descriptor;

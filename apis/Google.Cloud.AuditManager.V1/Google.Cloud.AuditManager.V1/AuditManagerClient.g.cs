@@ -426,7 +426,8 @@ namespace Google.Cloud.AuditManager.V1
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new audit schedule in a given project and location.
+        /// Creates a new audit schedule in a given location for an organization,
+        /// folder, or project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -435,7 +436,8 @@ namespace Google.Cloud.AuditManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new audit schedule in a given project and location.
+        /// Creates a new audit schedule in a given location for an organization,
+        /// folder, or project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -444,7 +446,8 @@ namespace Google.Cloud.AuditManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new audit schedule in a given project and location.
+        /// Creates a new audit schedule in a given location for an organization,
+        /// folder, or project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -453,14 +456,16 @@ namespace Google.Cloud.AuditManager.V1
             CreateAuditScheduleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new audit schedule in a given project and location.
+        /// Creates a new audit schedule in a given location for an organization,
+        /// folder, or project.
         /// </summary>
         /// <param name="parent">
-        /// Required. Project or folder that this audit schedule is for, in one of the
-        /// following formats:
+        /// Required. Project, folder, or organization that this audit schedule is for,
+        /// in one of the following formats:
         /// 
         /// * `projects/{project}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="auditSchedule">
         /// Required. Audit schedule to create.
@@ -480,14 +485,16 @@ namespace Google.Cloud.AuditManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new audit schedule in a given project and location.
+        /// Creates a new audit schedule in a given location for an organization,
+        /// folder, or project.
         /// </summary>
         /// <param name="parent">
-        /// Required. Project or folder that this audit schedule is for, in one of the
-        /// following formats:
+        /// Required. Project, folder, or organization that this audit schedule is for,
+        /// in one of the following formats:
         /// 
         /// * `projects/{project}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="auditSchedule">
         /// Required. Audit schedule to create.
@@ -507,14 +514,16 @@ namespace Google.Cloud.AuditManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new audit schedule in a given project and location.
+        /// Creates a new audit schedule in a given location for an organization,
+        /// folder, or project.
         /// </summary>
         /// <param name="parent">
-        /// Required. Project or folder that this audit schedule is for, in one of the
-        /// following formats:
+        /// Required. Project, folder, or organization that this audit schedule is for,
+        /// in one of the following formats:
         /// 
         /// * `projects/{project}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="auditSchedule">
         /// Required. Audit schedule to create.
@@ -529,14 +538,16 @@ namespace Google.Cloud.AuditManager.V1
             CreateAuditScheduleAsync(parent, auditSchedule, auditScheduleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new audit schedule in a given project and location.
+        /// Creates a new audit schedule in a given location for an organization,
+        /// folder, or project.
         /// </summary>
         /// <param name="parent">
-        /// Required. Project or folder that this audit schedule is for, in one of the
-        /// following formats:
+        /// Required. Project, folder, or organization that this audit schedule is for,
+        /// in one of the following formats:
         /// 
         /// * `projects/{project}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="auditSchedule">
         /// Required. Audit schedule to create.
@@ -556,14 +567,16 @@ namespace Google.Cloud.AuditManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new audit schedule in a given project and location.
+        /// Creates a new audit schedule in a given location for an organization,
+        /// folder, or project.
         /// </summary>
         /// <param name="parent">
-        /// Required. Project or folder that this audit schedule is for, in one of the
-        /// following formats:
+        /// Required. Project, folder, or organization that this audit schedule is for,
+        /// in one of the following formats:
         /// 
         /// * `projects/{project}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="auditSchedule">
         /// Required. Audit schedule to create.
@@ -583,14 +596,16 @@ namespace Google.Cloud.AuditManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new audit schedule in a given project and location.
+        /// Creates a new audit schedule in a given location for an organization,
+        /// folder, or project.
         /// </summary>
         /// <param name="parent">
-        /// Required. Project or folder that this audit schedule is for, in one of the
-        /// following formats:
+        /// Required. Project, folder, or organization that this audit schedule is for,
+        /// in one of the following formats:
         /// 
         /// * `projects/{project}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="auditSchedule">
         /// Required. Audit schedule to create.
@@ -605,14 +620,16 @@ namespace Google.Cloud.AuditManager.V1
             CreateAuditScheduleAsync(parent, auditSchedule, auditScheduleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new audit schedule in a given project and location.
+        /// Creates a new audit schedule in a given location for an organization,
+        /// folder, or project.
         /// </summary>
         /// <param name="parent">
-        /// Required. Project or folder that this audit schedule is for, in one of the
-        /// following formats:
+        /// Required. Project, folder, or organization that this audit schedule is for,
+        /// in one of the following formats:
         /// 
         /// * `projects/{project}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="auditSchedule">
         /// Required. Audit schedule to create.
@@ -632,14 +649,16 @@ namespace Google.Cloud.AuditManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new audit schedule in a given project and location.
+        /// Creates a new audit schedule in a given location for an organization,
+        /// folder, or project.
         /// </summary>
         /// <param name="parent">
-        /// Required. Project or folder that this audit schedule is for, in one of the
-        /// following formats:
+        /// Required. Project, folder, or organization that this audit schedule is for,
+        /// in one of the following formats:
         /// 
         /// * `projects/{project}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="auditSchedule">
         /// Required. Audit schedule to create.
@@ -659,14 +678,16 @@ namespace Google.Cloud.AuditManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new audit schedule in a given project and location.
+        /// Creates a new audit schedule in a given location for an organization,
+        /// folder, or project.
         /// </summary>
         /// <param name="parent">
-        /// Required. Project or folder that this audit schedule is for, in one of the
-        /// following formats:
+        /// Required. Project, folder, or organization that this audit schedule is for,
+        /// in one of the following formats:
         /// 
         /// * `projects/{project}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="auditSchedule">
         /// Required. Audit schedule to create.
@@ -681,14 +702,16 @@ namespace Google.Cloud.AuditManager.V1
             CreateAuditScheduleAsync(parent, auditSchedule, auditScheduleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new audit schedule in a given project and location.
+        /// Creates a new audit schedule in a given location for an organization,
+        /// folder, or project.
         /// </summary>
         /// <param name="parent">
-        /// Required. Project or folder that this audit schedule is for, in one of the
-        /// following formats:
+        /// Required. Project, folder, or organization that this audit schedule is for,
+        /// in one of the following formats:
         /// 
         /// * `projects/{project}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="auditSchedule">
         /// Required. Audit schedule to create.
@@ -708,14 +731,16 @@ namespace Google.Cloud.AuditManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new audit schedule in a given project and location.
+        /// Creates a new audit schedule in a given location for an organization,
+        /// folder, or project.
         /// </summary>
         /// <param name="parent">
-        /// Required. Project or folder that this audit schedule is for, in one of the
-        /// following formats:
+        /// Required. Project, folder, or organization that this audit schedule is for,
+        /// in one of the following formats:
         /// 
         /// * `projects/{project}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="auditSchedule">
         /// Required. Audit schedule to create.
@@ -735,14 +760,16 @@ namespace Google.Cloud.AuditManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new audit schedule in a given project and location.
+        /// Creates a new audit schedule in a given location for an organization,
+        /// folder, or project.
         /// </summary>
         /// <param name="parent">
-        /// Required. Project or folder that this audit schedule is for, in one of the
-        /// following formats:
+        /// Required. Project, folder, or organization that this audit schedule is for,
+        /// in one of the following formats:
         /// 
         /// * `projects/{project}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="auditSchedule">
         /// Required. Audit schedule to create.
@@ -757,14 +784,16 @@ namespace Google.Cloud.AuditManager.V1
             CreateAuditScheduleAsync(parent, auditSchedule, auditScheduleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new audit schedule in a given project and location.
+        /// Creates a new audit schedule in a given location for an organization,
+        /// folder, or project.
         /// </summary>
         /// <param name="parent">
-        /// Required. Project or folder that this audit schedule is for, in one of the
-        /// following formats:
+        /// Required. Project, folder, or organization that this audit schedule is for,
+        /// in one of the following formats:
         /// 
         /// * `projects/{project}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="auditSchedule">
         /// Required. Audit schedule to create.
@@ -784,14 +813,16 @@ namespace Google.Cloud.AuditManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new audit schedule in a given project and location.
+        /// Creates a new audit schedule in a given location for an organization,
+        /// folder, or project.
         /// </summary>
         /// <param name="parent">
-        /// Required. Project or folder that this audit schedule is for, in one of the
-        /// following formats:
+        /// Required. Project, folder, or organization that this audit schedule is for,
+        /// in one of the following formats:
         /// 
         /// * `projects/{project}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="auditSchedule">
         /// Required. Audit schedule to create.
@@ -811,14 +842,16 @@ namespace Google.Cloud.AuditManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new audit schedule in a given project and location.
+        /// Creates a new audit schedule in a given location for an organization,
+        /// folder, or project.
         /// </summary>
         /// <param name="parent">
-        /// Required. Project or folder that this audit schedule is for, in one of the
-        /// following formats:
+        /// Required. Project, folder, or organization that this audit schedule is for,
+        /// in one of the following formats:
         /// 
         /// * `projects/{project}/locations/{location}`
         /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="auditSchedule">
         /// Required. Audit schedule to create.
@@ -1045,7 +1078,8 @@ namespace Google.Cloud.AuditManager.V1
             GetAuditScheduleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists audit schedules in a given project and location.
+        /// Lists audit schedules in a given location for an organization, folder, or
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1054,7 +1088,8 @@ namespace Google.Cloud.AuditManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists audit schedules in a given project and location.
+        /// Lists audit schedules in a given location for an organization, folder, or
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1063,7 +1098,8 @@ namespace Google.Cloud.AuditManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists audit schedules in a given project and location.
+        /// Lists audit schedules in a given location for an organization, folder, or
+        /// project.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent for the audit schedule, in one of the following formats:
@@ -1100,7 +1136,8 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Lists audit schedules in a given project and location.
+        /// Lists audit schedules in a given location for an organization, folder, or
+        /// project.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent for the audit schedule, in one of the following formats:
@@ -1137,7 +1174,8 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Lists audit schedules in a given project and location.
+        /// Lists audit schedules in a given location for an organization, folder, or
+        /// project.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent for the audit schedule, in one of the following formats:
@@ -1174,7 +1212,8 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Lists audit schedules in a given project and location.
+        /// Lists audit schedules in a given location for an organization, folder, or
+        /// project.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent for the audit schedule, in one of the following formats:
@@ -1211,7 +1250,8 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Lists audit schedules in a given project and location.
+        /// Lists audit schedules in a given location for an organization, folder, or
+        /// project.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent for the audit schedule, in one of the following formats:
@@ -1248,7 +1288,8 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Lists audit schedules in a given project and location.
+        /// Lists audit schedules in a given location for an organization, folder, or
+        /// project.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent for the audit schedule, in one of the following formats:
@@ -1285,7 +1326,8 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Lists audit schedules in a given project and location.
+        /// Lists audit schedules in a given location for an organization, folder, or
+        /// project.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent for the audit schedule, in one of the following formats:
@@ -1322,7 +1364,8 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Lists audit schedules in a given project and location.
+        /// Lists audit schedules in a given location for an organization, folder, or
+        /// project.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent for the audit schedule, in one of the following formats:
@@ -1359,7 +1402,8 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Lists audit schedules in a given project and location.
+        /// Lists audit schedules in a given location for an organization, folder, or
+        /// project.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent for the audit schedule, in one of the following formats:
@@ -1396,7 +1440,8 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Lists audit schedules in a given project and location.
+        /// Lists audit schedules in a given location for an organization, folder, or
+        /// project.
         /// </summary>
         /// <param name="parent">
         /// Required. Parent for the audit schedule, in one of the following formats:
@@ -3064,7 +3109,8 @@ namespace Google.Cloud.AuditManager.V1
         partial void Modify_ListControlsRequest(ref ListControlsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Creates a new audit schedule in a given project and location.
+        /// Creates a new audit schedule in a given location for an organization,
+        /// folder, or project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3076,7 +3122,8 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Creates a new audit schedule in a given project and location.
+        /// Creates a new audit schedule in a given location for an organization,
+        /// folder, or project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3136,7 +3183,8 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Lists audit schedules in a given project and location.
+        /// Lists audit schedules in a given location for an organization, folder, or
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3148,7 +3196,8 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Lists audit schedules in a given project and location.
+        /// Lists audit schedules in a given location for an organization, folder, or
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

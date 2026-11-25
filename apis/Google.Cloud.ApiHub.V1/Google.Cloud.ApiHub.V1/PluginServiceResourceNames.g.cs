@@ -710,4 +710,16 @@ namespace Google.Cloud.ApiHub.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class ManagePluginInstanceSourceDataRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::PluginInstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::PluginInstanceName PluginInstanceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::PluginInstanceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

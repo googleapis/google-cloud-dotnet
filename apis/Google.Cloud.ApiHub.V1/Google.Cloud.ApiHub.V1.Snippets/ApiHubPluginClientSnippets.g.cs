@@ -20,6 +20,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.ApiHub.V1;
     using Google.LongRunning;
+    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Threading.Tasks;
@@ -2219,6 +2220,117 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ManagePluginInstanceSourceData</summary>
+        public void ManagePluginInstanceSourceDataRequestObject()
+        {
+            // Snippet: ManagePluginInstanceSourceData(ManagePluginInstanceSourceDataRequest, CallSettings)
+            // Create client
+            ApiHubPluginClient apiHubPluginClient = ApiHubPluginClient.Create();
+            // Initialize request argument(s)
+            ManagePluginInstanceSourceDataRequest request = new ManagePluginInstanceSourceDataRequest
+            {
+                PluginInstanceName = PluginInstanceName.FromProjectLocationPluginInstance("[PROJECT]", "[LOCATION]", "[PLUGIN]", "[INSTANCE]"),
+                DataType = ManagePluginInstanceSourceDataRequest.Types.DataType.Unspecified,
+                Action = ManagePluginInstanceSourceDataRequest.Types.Action.Unspecified,
+                RelativePath = "",
+                Data = ByteString.Empty,
+            };
+            // Make the request
+            ManagePluginInstanceSourceDataResponse response = apiHubPluginClient.ManagePluginInstanceSourceData(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ManagePluginInstanceSourceDataAsync</summary>
+        public async Task ManagePluginInstanceSourceDataRequestObjectAsync()
+        {
+            // Snippet: ManagePluginInstanceSourceDataAsync(ManagePluginInstanceSourceDataRequest, CallSettings)
+            // Additional: ManagePluginInstanceSourceDataAsync(ManagePluginInstanceSourceDataRequest, CancellationToken)
+            // Create client
+            ApiHubPluginClient apiHubPluginClient = await ApiHubPluginClient.CreateAsync();
+            // Initialize request argument(s)
+            ManagePluginInstanceSourceDataRequest request = new ManagePluginInstanceSourceDataRequest
+            {
+                PluginInstanceName = PluginInstanceName.FromProjectLocationPluginInstance("[PROJECT]", "[LOCATION]", "[PLUGIN]", "[INSTANCE]"),
+                DataType = ManagePluginInstanceSourceDataRequest.Types.DataType.Unspecified,
+                Action = ManagePluginInstanceSourceDataRequest.Types.Action.Unspecified,
+                RelativePath = "",
+                Data = ByteString.Empty,
+            };
+            // Make the request
+            ManagePluginInstanceSourceDataResponse response = await apiHubPluginClient.ManagePluginInstanceSourceDataAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ManagePluginInstanceSourceData</summary>
+        public void ManagePluginInstanceSourceData()
+        {
+            // Snippet: ManagePluginInstanceSourceData(string, ManagePluginInstanceSourceDataRequest.Types.DataType, ManagePluginInstanceSourceDataRequest.Types.Action, string, ByteString, CallSettings)
+            // Create client
+            ApiHubPluginClient apiHubPluginClient = ApiHubPluginClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/plugins/[PLUGIN]/instances/[INSTANCE]";
+            ManagePluginInstanceSourceDataRequest.Types.DataType dataType = ManagePluginInstanceSourceDataRequest.Types.DataType.Unspecified;
+            ManagePluginInstanceSourceDataRequest.Types.Action action = ManagePluginInstanceSourceDataRequest.Types.Action.Unspecified;
+            string relativePath = "";
+            ByteString data = ByteString.Empty;
+            // Make the request
+            ManagePluginInstanceSourceDataResponse response = apiHubPluginClient.ManagePluginInstanceSourceData(name, dataType, action, relativePath, data);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ManagePluginInstanceSourceDataAsync</summary>
+        public async Task ManagePluginInstanceSourceDataAsync()
+        {
+            // Snippet: ManagePluginInstanceSourceDataAsync(string, ManagePluginInstanceSourceDataRequest.Types.DataType, ManagePluginInstanceSourceDataRequest.Types.Action, string, ByteString, CallSettings)
+            // Additional: ManagePluginInstanceSourceDataAsync(string, ManagePluginInstanceSourceDataRequest.Types.DataType, ManagePluginInstanceSourceDataRequest.Types.Action, string, ByteString, CancellationToken)
+            // Create client
+            ApiHubPluginClient apiHubPluginClient = await ApiHubPluginClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/plugins/[PLUGIN]/instances/[INSTANCE]";
+            ManagePluginInstanceSourceDataRequest.Types.DataType dataType = ManagePluginInstanceSourceDataRequest.Types.DataType.Unspecified;
+            ManagePluginInstanceSourceDataRequest.Types.Action action = ManagePluginInstanceSourceDataRequest.Types.Action.Unspecified;
+            string relativePath = "";
+            ByteString data = ByteString.Empty;
+            // Make the request
+            ManagePluginInstanceSourceDataResponse response = await apiHubPluginClient.ManagePluginInstanceSourceDataAsync(name, dataType, action, relativePath, data);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ManagePluginInstanceSourceData</summary>
+        public void ManagePluginInstanceSourceDataResourceNames()
+        {
+            // Snippet: ManagePluginInstanceSourceData(PluginInstanceName, ManagePluginInstanceSourceDataRequest.Types.DataType, ManagePluginInstanceSourceDataRequest.Types.Action, string, ByteString, CallSettings)
+            // Create client
+            ApiHubPluginClient apiHubPluginClient = ApiHubPluginClient.Create();
+            // Initialize request argument(s)
+            PluginInstanceName name = PluginInstanceName.FromProjectLocationPluginInstance("[PROJECT]", "[LOCATION]", "[PLUGIN]", "[INSTANCE]");
+            ManagePluginInstanceSourceDataRequest.Types.DataType dataType = ManagePluginInstanceSourceDataRequest.Types.DataType.Unspecified;
+            ManagePluginInstanceSourceDataRequest.Types.Action action = ManagePluginInstanceSourceDataRequest.Types.Action.Unspecified;
+            string relativePath = "";
+            ByteString data = ByteString.Empty;
+            // Make the request
+            ManagePluginInstanceSourceDataResponse response = apiHubPluginClient.ManagePluginInstanceSourceData(name, dataType, action, relativePath, data);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ManagePluginInstanceSourceDataAsync</summary>
+        public async Task ManagePluginInstanceSourceDataResourceNamesAsync()
+        {
+            // Snippet: ManagePluginInstanceSourceDataAsync(PluginInstanceName, ManagePluginInstanceSourceDataRequest.Types.DataType, ManagePluginInstanceSourceDataRequest.Types.Action, string, ByteString, CallSettings)
+            // Additional: ManagePluginInstanceSourceDataAsync(PluginInstanceName, ManagePluginInstanceSourceDataRequest.Types.DataType, ManagePluginInstanceSourceDataRequest.Types.Action, string, ByteString, CancellationToken)
+            // Create client
+            ApiHubPluginClient apiHubPluginClient = await ApiHubPluginClient.CreateAsync();
+            // Initialize request argument(s)
+            PluginInstanceName name = PluginInstanceName.FromProjectLocationPluginInstance("[PROJECT]", "[LOCATION]", "[PLUGIN]", "[INSTANCE]");
+            ManagePluginInstanceSourceDataRequest.Types.DataType dataType = ManagePluginInstanceSourceDataRequest.Types.DataType.Unspecified;
+            ManagePluginInstanceSourceDataRequest.Types.Action action = ManagePluginInstanceSourceDataRequest.Types.Action.Unspecified;
+            string relativePath = "";
+            ByteString data = ByteString.Empty;
+            // Make the request
+            ManagePluginInstanceSourceDataResponse response = await apiHubPluginClient.ManagePluginInstanceSourceDataAsync(name, dataType, action, relativePath, data);
             // End snippet
         }
     }

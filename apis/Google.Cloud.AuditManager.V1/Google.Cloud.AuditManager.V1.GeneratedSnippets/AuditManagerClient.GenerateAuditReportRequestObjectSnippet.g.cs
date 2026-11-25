@@ -49,6 +49,10 @@ namespace GoogleCSharpSnippets
                     },
                 },
                 ValidateOnly = false,
+                ReportExportFormats =
+                {
+                    ReportExportFormat.Unspecified,
+                },
             };
             // Make the request
             Operation<AuditReport, OperationMetadata> response = auditManagerClient.GenerateAuditReport(request);
