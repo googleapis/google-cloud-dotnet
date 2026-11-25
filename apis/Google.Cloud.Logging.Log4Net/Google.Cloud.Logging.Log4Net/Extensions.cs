@@ -12,11 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Apis.Auth.OAuth2;
-using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
-using Grpc.Auth;
-using Grpc.Core;
 using System;
 
 namespace Google.Cloud.Logging.Log4Net
@@ -35,11 +31,6 @@ namespace Google.Cloud.Logging.Log4Net
                     break;
             }
             return Timestamp.FromDateTime(dt);
-        }
-
-        public static ChannelCredentials ToChannelCredential(this GoogleCredential credential)
-        {
-            return GoogleGrpcCredentials.ToChannelCredentials(credential);
         }
     }
 }
