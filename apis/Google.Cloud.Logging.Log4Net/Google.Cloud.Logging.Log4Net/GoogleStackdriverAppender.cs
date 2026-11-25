@@ -225,27 +225,23 @@ namespace Google.Cloud.Logging.Log4Net
         }
 
         private LoggingServiceV2Client BuildLoggingServiceClient() =>
-            new LoggingServiceV2ClientBuilder
-            {
-                ChannelCredentials = GetCredentialFromConfiguration()?.ToChannelCredential()
-            }.Build();
+            CreateLoggingServiceClientBuilder().Build();
 
-        private GoogleCredential GetCredentialFromConfiguration()
+        // Visible for testing.
+        internal LoggingServiceV2ClientBuilder CreateLoggingServiceClientBuilder()
         {
-            var credential =
-                !string.IsNullOrWhiteSpace(CredentialFile) ? CredentialFactory.FromFile(CredentialFile, CredentialType) :
+            var credential = GetCredentialFromConfiguration();
+            return new LoggingServiceV2ClientBuilder
+            {
+                GoogleCredential = credential,
+                Scopes = credential is null ? null : s_oAuthScopes,
+            };
+        }
+
+        private GoogleCredential GetCredentialFromConfiguration() =>
+            !string.IsNullOrWhiteSpace(CredentialFile) ? CredentialFactory.FromFile(CredentialFile, CredentialType) :
                 !string.IsNullOrWhiteSpace(CredentialJson) ? CredentialFactory.FromJson(CredentialJson, CredentialType) :
                 null;
-            if (credential == null)
-            {
-                return null;
-            }
-            if (credential.IsCreateScopedRequired)
-            {
-                credential = credential.CreateScoped(s_oAuthScopes);
-            }
-            return credential;
-        }
 
         private void ActivateLogIdAndResource()
         {

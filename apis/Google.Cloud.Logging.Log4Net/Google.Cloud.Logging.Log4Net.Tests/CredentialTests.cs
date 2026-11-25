@@ -113,6 +113,34 @@ public class CredentialTests
          AssertNotActivated(appender);
     }
 
+    [Fact]
+    public void CreateLoggingServiceClientBuilder_ConfiguredCredential_SetsGoogleCredentialAndScopes()
+    {
+        var appender = new GoogleStackdriverAppender
+        {
+            CredentialJson = FakeServiceAccountCredential,
+        };
+
+        var builder = appender.CreateLoggingServiceClientBuilder();
+
+        Assert.NotNull(builder.GoogleCredential);
+        Assert.Null(builder.ChannelCredentials);
+        Assert.Equal(GoogleStackdriverAppender.s_oAuthScopes, builder.Scopes);
+        Assert.True(builder.UseJwtAccessWithScopes);
+    }
+
+    [Fact]
+    public void CreateLoggingServiceClientBuilder_NoConfiguredCredential_LeavesCredentialAndScopesUnset()
+    {
+        var appender = new GoogleStackdriverAppender();
+
+        var builder = appender.CreateLoggingServiceClientBuilder();
+
+        Assert.Null(builder.GoogleCredential);
+        Assert.Null(builder.ChannelCredentials);
+        Assert.Null(builder.Scopes);
+    }
+
     private static string GetXml(string attributes) =>
         "<log4net>" +
         "<appender name='CloudLogger' type='Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender, Google.Cloud.Logging.Log4Net'>" +
