@@ -72,7 +72,9 @@ namespace Google.Cloud.Datastore.V1
 
         /// <inheritdoc />
         public IAsyncEnumerator<Entity> GetAsyncEnumerator(CancellationToken cancellationToken) =>
-            _responses.SelectMany(r => r.Batch.EntityResults.Select(er => er.Entity).ToAsyncEnumerable()).GetAsyncEnumerator(cancellationToken);
+            _responses.SelectMany(r => r.Batch?.EntityResults.Select(er => er.Entity).ToAsyncEnumerable()
+                ?? Enumerable.Empty<Entity>().ToAsyncEnumerable())
+            .GetAsyncEnumerator(cancellationToken);
 
         /// <summary>
         /// This method is for advanced use cases only, where more diagnostic information is required;

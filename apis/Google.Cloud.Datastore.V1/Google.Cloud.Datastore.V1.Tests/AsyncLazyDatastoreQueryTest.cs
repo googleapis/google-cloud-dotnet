@@ -91,6 +91,16 @@ namespace Google.Cloud.Datastore.V1.Tests
         }
 
         [Fact]
+        public async Task AsEntities_ExplainOnlyResponse()
+        {
+            // Explain-only responses contain metrics, but no batch of results.
+            var responses = new[] { new RunQueryResponse { ExplainMetrics = new ExplainMetrics() } };
+            var query = new AsyncLazyDatastoreQuery(responses.ToAsyncEnumerable());
+            Assert.Empty(await query.ToListAsync());
+            Assert.Empty((await query.GetAllResultsAsync()).Entities);
+        }
+
+        [Fact]
         public async Task GetAllResultsAsync()
         {
             var query = new AsyncLazyDatastoreQuery(_responses.Select(r => r.Clone()).ToAsyncEnumerable());
